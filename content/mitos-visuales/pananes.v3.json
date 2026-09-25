@@ -851,7 +851,7 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-24"
   },
   "myths": {
     "al-duende": {
@@ -943,6 +943,21 @@
           "entity_id": "hoja_utileria_panan",
           "role": "plot_object",
           "note": "Cinco objetos menores de la vida cotidiana altoandina que aparecen en cuadro sin que ningún relato se cuente por ellos: el instrumento de cuerda del duende, el machete con que se traza la cruz, la montura y los aperos del caballo de la Cangagua, la vasija del hervido y el arado con su yugo. El arado y el yugo entran aquí aunque la yunta misma se resuelva con los animales de la Waka."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: las mujeres que bajan a lavar la ropa a la quebrada, de las que el duende se enamora."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base: la lavandera que el duende escoge y persigue todo el día haciéndose el niño bueno."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base: los menores de cinco años con los que juega el duende vuelto otro niño del sector, junto a las alcantarillas."
         }
       ]
     },
@@ -1015,6 +1030,21 @@
           "entity_id": "elementos_inventados_retirados",
           "role": "secondary",
           "note": "Bolsa de elementos que el canon retiró por inventados y que se conserva en el inventario para que la exclusión quede escrita y no se vuelva a colar. No se dibuja nada de lo que contiene."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los hombres que bajaban de peones a trabajar al otro lado del río, en Ecuador, y volvían con lo que podían llevar a la casa."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: «hombres y mujeres bajaban de peones» por los valles de las quebradas; la mujer adulta camina el mismo jornal."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Tipo base: los mayores de Panán que advierten que a malas horas no hay que andar cerca del chuchun."
         }
       ]
     },
@@ -1092,6 +1122,11 @@
           "entity_id": "insumos_y_procedimiento_de_la_medicina_propia",
           "role": "plot_object",
           "note": "Sensible: prácticas de curación. Cubre guanto, albarrecín, marco, chapil, ruda, esencias de plantas, ovillos de lana roja, negra y verde, prendas de la persona afectada y cigarrillo, y el procedimiento completo. Verificado: la ficha del duende dice que no se presenta una fórmula medicinal como recomendación clínica; la de la entundada dice que no se enseña una receta y que el procedimiento depende de quien cura. Fichar el kit o la secuencia sería publicar la preparación. La figura del médico tradicional sí tiene ficha: el lenguaje sí, el ejemplar no."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base: los niños a los que el shutún deja con síntomas de espanto, advertidos por los papás de no irse tarde a los chercheres y a las moras."
         }
       ]
     },
@@ -1154,6 +1189,16 @@
           "entity_id": "elementos_inventados_retirados",
           "role": "secondary",
           "note": "Bolsa de elementos retirados por inventados, conservada en el inventario para que la exclusión quede escrita. No se dibuja nada de lo que contiene."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Tipo base: los mayores que dicen que ahí nace la precipitación y se acuerdan de granizadas de seis horas."
+        },
+        {
+          "entity_id": "tipo_anciana",
+          "role": "secondary",
+          "note": "Tipo base: entre los mayores que recuerdan las granizadas está la mayora que echa ceniza de leña cuando la tormenta empieza."
         }
       ]
     },
@@ -1241,6 +1286,11 @@
           "entity_id": "talladores_de_san_antonio_de_ibarra",
           "role": "secondary",
           "note": "El corpus registra que la comunidad envió la madera a Ibarra para que fuera tallada y nada más: no hay taller, oficio ni figura descrita."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: el leñador que da el hachazo, ve sangre en la corteza y sale a buscar paisanos; comunero de ruana y sombrero, sin rasgo propio."
         }
       ]
     },
@@ -1313,6 +1363,21 @@
           "entity_id": "hoja_utileria_panan",
           "role": "plot_object",
           "note": "Cinco objetos menores de la vida cotidiana altoandina que aparecen en cuadro sin que ningún relato se cuente por ellos: el instrumento de cuerda del duende, el machete con que se traza la cruz, la montura y los aperos del caballo de la Cangagua, la vasija del hervido y el arado con su yugo. El arado y el yugo entran aquí aunque la yunta misma se resuelva con los animales de la Waka."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: la mujer que no alcanza a cubrirse, saca el machete, corta una cruz en la tierra y dice tres veces la oración."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base: las mujeres que se cubren la cabeza cuando el arco se abre sobre la quebrada."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Tipo base: los mayores que leen el arco como anuncio de invierno y páramo cosechero."
         }
       ]
     },
@@ -1514,6 +1579,11 @@
           "entity_id": "hoja_utileria_panan",
           "role": "plot_object",
           "note": "Cinco objetos menores de la vida cotidiana altoandina que aparecen en cuadro sin que ningún relato se cuente por ellos: el instrumento de cuerda del duende, el machete con que se traza la cruz, la montura y los aperos del caballo de la Cangagua, la vasija del hervido y el arado con su yugo. El arado y el yugo entran aquí aunque la yunta misma se resuelva con los animales de la Waka."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: el comunero que vuelve de noche a caballo y amarra el animal en las matas; se dibuja con este tipo y nunca con los rasgos del testimoniante nombrado."
         }
       ]
     },
@@ -1581,6 +1651,21 @@
           "entity_id": "elementos_inventados_retirados",
           "role": "secondary",
           "note": "Bolsa de elementos retirados por inventados, que aquí cubre las auras, las siluetas luminosas y los ojos brillantes con que se suele resolver lo pesado. En esta biblia lo pesado se muestra como clima."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: el borracho al que la Vieja entunda en el callejón o la quebrada; comunero cualquiera, sin caricatura."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: la madre que va con el niño quedado hasta el sitio exacto donde se asustó, con la última prenda que tenía puesta."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base: el niño quedado al que se le friegan las piernitas con ruda para sentarle el espíritu."
         }
       ]
     },
@@ -1688,6 +1773,11 @@
           "entity_id": "hoja_utileria_panan",
           "role": "plot_object",
           "note": "Cinco objetos menores de la vida cotidiana altoandina que aparecen en cuadro sin que ningún relato se cuente por ellos: el instrumento de cuerda del duende, el machete con que se traza la cruz, la montura y los aperos del caballo de la Cangagua, la vasija del hervido y el arado con su yugo. El arado y el yugo entran aquí aunque la yunta misma se resuelva con los animales de la Waka."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: el que ara con la yunta en la finca del terrateniente y los que buscan huaca de a dos, uno cava y el otro vigila."
         }
       ]
     },
@@ -1765,6 +1855,11 @@
           "entity_id": "maria_panana_como_figura",
           "role": "secondary",
           "note": "Excluida por contención del canon: la memoria digital comunitaria la narra como «el feto o guagua que se estaba criando dentro de la laguna» y el canon declara que no lo sostiene. No se le da cuerpo, ni de espaldas, ni en sombra, ni como silueta."
+        },
+        {
+          "entity_id": "tipo_anciana",
+          "role": "secondary",
+          "note": "Tipo base: «cuentan las abuelas» la laguna anterior; la anciana es quien cuenta y señala hasta dónde llegaba el agua."
         }
       ]
     },
@@ -1882,6 +1977,26 @@
           "entity_id": "hoja_utileria_panan",
           "role": "plot_object",
           "note": "Cinco objetos menores de la vida cotidiana altoandina que aparecen en cuadro sin que ningún relato se cuente por ellos: el instrumento de cuerda del duende, el machete con que se traza la cruz, la montura y los aperos del caballo de la Cangagua, la vasija del hervido y el arado con su yugo. El arado y el yugo entran aquí aunque la yunta misma se resuelva con los animales de la Waka."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los comuneros de Puscuelán que sirvieron de peones en la hacienda La Lechuza."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: la mujer que saca el machete y corta el cueche en cruz sobre la tierra."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base: las mujeres que se cubren la cabeza para que no las alcance la llovizna del cueche."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Tipo base: los mayores que cuentan al cueche como espíritu de las montañas."
         }
       ]
     },
@@ -1974,6 +2089,11 @@
           "entity_id": "maria_panana_como_figura",
           "role": "secondary",
           "note": "Verificado: «La laguna no debe convertirse en un retrato inventado de una reina solitaria» y «No se inventa una biografía de María Panana ni se afirma que viva físicamente dentro de la laguna». Es referente de títulos, tierras y luchas de recuperación, sin una sola línea de descripción física."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Tipo base: los mayores que repiten que son de aquí mismo y que la tierra los albergará en sus últimos días."
         }
       ]
     },
@@ -2066,6 +2186,11 @@
           "entity_id": "novenario_promesa_y_misa_de_honras",
           "role": "magic_subject",
           "note": "La memoria recomienda un novenario y una promesa frente a La Vieja y una misa de honras frente al Ánima, sin describir una sola escena. La ficha además declara que las oraciones y misas pertenecen a versiones cristianizadas: montarlas sería escribir el rito."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: el hombre que pasa junto a las cantinas y sigue a la Viuda; también el que se tiende en cruz ante el Ánima."
         }
       ]
     },
@@ -2123,11 +2248,479 @@
           "entity_id": "waka_como_concepto_simbolico",
           "role": "magic_subject",
           "note": "El propio canon dice que el apartado 4.2.6 es interpretativo y no contiene una trama autónoma, y que la página anterior lo había convertido en aventura con cofre visible. Lo visualizable de la Waka son sus formas animales, que sí tienen ficha; el concepto no se dibuja."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Tipo base: los mayores que recorren el territorio para proteger de la usurpación la riqueza hecha tierra, sin sacar nada."
+        },
+        {
+          "entity_id": "tipo_anciana",
+          "role": "secondary",
+          "note": "Tipo base: la mayora que recorre el territorio con los mayores; va erguida, cobijada con la ruana."
         }
       ]
     }
   },
   "entities": {
+    "tipo_hombre_adulto": {
+      "name": "Comunero de Panán adulto (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base del hombre adulto de Panán: individualiza la gramática del colectivo de comuneros en un solo cuerpo —ruana de lana de oveja, sombrero de paño, ropa de mercado y botas— para el peón, el leñador, el jinete, el que ara con la yunta y el que busca huaca.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_hombre_adulto__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-chuchun-y-las-tres-quebradas",
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo",
+        "la-cangagua-o-la-chorrera-del-duende",
+        "la-entundada-el-quedado-el-espanto",
+        "la-huacas",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan",
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "evidence": [
+        {
+          "myth": "el-chuchun-y-las-tres-quebradas",
+          "field": "mito",
+          "note": "Los hombres: ruana de lana de oveja y sombrero; el corpus de Panán confirma la tríada identitaria «la minga, la vestimenta, la ruana, el sombrero» (dossier §6.2)"
+        },
+        {
+          "myth": "la-lechuza-y-el-cuichi-de-cuchicuelan",
+          "field": "mito",
+          "note": "La confección propia «es totalmente desechada a favor de los vestidos confeccionados por la industria textil»; sólo se tejen en guanga cobijas y ruanas de lana de oveja (dossier §6.2)"
+        },
+        {
+          "myth": "la-huacas",
+          "field": "mito",
+          "note": "Caballo, montura, yunta y machete son capa B/C; las botas de caucho sólo desde 1970 (dossier §0 y §5)"
+        }
+      ],
+      "census_note": "Tipo base del hombre adulto de Panán: individualiza la gramática del colectivo de comuneros en un solo cuerpo —ruana de lana de oveja, sombrero de paño, ropa de mercado y botas— para el peón, el leñador, el jinete, el que ara con la yunta y el que busca huaca.",
+      "design": {
+        "silhouette": "Hombre adulto de pie, de perfil de tres cuartos, con una ruana de lana gruesa que le cae hasta medio muslo y le cuadra los hombros, sombrero de paño negro de copa baja y ala corta, pantalón de mercado oscuro metido en botas de caucho; las manos salen por debajo de la ruana, una sostiene el cabo de un machete envainado junto a la pierna.",
+        "materials": [
+          "cuerpo en papel de un tono bajo la ropa; manos en papel de piel de un solo tono",
+          "cara aparte: óvalo plano de piel de un solo tono con los rasgos recortados como piezas separadas, sin arrugas modeladas",
+          "ruana de lana de oveja hilada gruesa, tejida en guanga, en papel de fibra con el canto acolchado y el hilo marcado por surcos",
+          "sombrero de paño negro en disco y copa baja de papel mate",
+          "pantalón y camisa de mercado en papel liso de color apagado",
+          "botas de caucho en dos piezas por pierna, de canto liso",
+          "pelo negro corto en una sola pieza bajo el ala del sombrero"
+        ],
+        "palette": "Lana sin teñir —crudo, gris pardo, café— en la ruana, negro del sombrero y las botas, azul o café apagado del pantalón de mercado: ningún color fuerte a la vista.",
+        "scale": "Figura entera en 9:16; el cerco del potrero le llega a la cintura, que es la medida de referencia del colectivo.",
+        "continuity": [
+          "nunca de ñapanga ni de traje folclórico de carnaval",
+          "ningún patrón de ruana concreto: sólo textura de lana hilada y, a lo sumo, una franja lisa",
+          "en láminas anteriores a 1970 las botas de caucho se cambian por alpargata o pie descalzo, como en la hoja de época de hacienda del colectivo",
+          "ninguna lámina con este tipo reproduce la cara de un comunero nombrado en las fuentes",
+          "no aparece en escena del tiempo delantero: allí no hay lana, sombrero ni machete"
+        ],
+        "documented": [
+          "los hombres de Panán visten ruana de lana de oveja y sombrero (dossier §6.2)",
+          "«la minga, la vestimenta, la ruana, el sombrero» son marcadores identitarios declarados por el corpus (dossier §6.2)",
+          "la ropa es de confección industrial salvo ruanas y cobijas tejidas en guanga con lana de oveja (dossier §6.2)",
+          "botas de caucho desde los años setenta; caballo, montura, yunta y machete son capa B/C (dossier §0 y §5)"
+        ],
+        "editorial": [
+          "el corte y el color del pantalón y la camisa de mercado no están documentados: decisión editorial reversible dentro de «vestidos confeccionados por la industria textil»",
+          "el pelo corto y el rostro son construcción editorial: el corpus no describe cuerpos",
+          "el machete envainado en la mano es decisión editorial tomada del gesto documentado de cortar la cruz; retirable"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_mujer_adulta": {
+      "name": "Comunera de Panán adulta (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base de la mujer adulta de Panán: saco de lana, falda de tela con pliegues sobre refajos de franjas de colores fuertes que sólo asoman al caminar, ruana vieja terciada como chalina, sombrero de paño negro y botas de caucho. Es la lavandera, la peona, la madre del quedado y la que corta la cruz ante el cueche.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_mujer_adulta__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "al-duende",
+        "el-chuchun-y-las-tres-quebradas",
+        "el-cueche",
+        "la-entundada-el-quedado-el-espanto",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "evidence": [
+        {
+          "myth": "el-cueche",
+          "field": "mito",
+          "note": "Una mayora Pastos de Cumbal «viste con sacos de lana, una falda de tela con pliegues y, por debajo, refajos… de franjas de colores fuertes… cobijada con una vieja ruana que usa como chalina… sombrero de paño negro» y botas de caucho (dossier §6.2, matriz 14)"
+        },
+        {
+          "myth": "al-duende",
+          "field": "mito",
+          "note": "El traje de ñapanga es de fiesta y representación y «no es el vestuario cotidiano de Panán»; usarlo como tal exotiza (dossier §6.2)"
+        }
+      ],
+      "census_note": "Tipo base de la mujer adulta de Panán: saco de lana, falda de tela con pliegues sobre refajos de franjas de colores fuertes que sólo asoman al caminar, ruana vieja terciada como chalina, sombrero de paño negro y botas de caucho. Es la lavandera, la peona, la madre del quedado y la que corta la cruz ante el cueche.",
+      "design": {
+        "silhouette": "Mujer adulta de pie y erguida, con saco de lana abotonado, falda de tela con pliegues hasta media pierna bajo la cual asoma un dedo de refajo de franjas vivas, una ruana vieja terciada sobre un hombro como chalina, sombrero de paño negro y botas de caucho; en una mano un atado de ropa húmeda, la otra suelta.",
+        "materials": [
+          "cuerpo bajo la ropa en planos grandes; manos en papel de piel de un solo tono",
+          "cara aparte: óvalo plano de piel de un solo tono con los rasgos recortados como piezas separadas",
+          "saco de lana en papel de fibra con el hilo marcado por surcos",
+          "falda de tela con pliegues en tiras paralelas de papel mate",
+          "refajo de franjas en tiras estrechas de papel saturado, visible sólo bajo el borde de la falda",
+          "ruana vieja de lana hilada gruesa, en papel acolchado de canto gastado",
+          "sombrero de paño negro de copa baja y botas de caucho de canto liso",
+          "pelo negro recogido atrás en una sola pieza bajo el sombrero"
+        ],
+        "palette": "Gama de lana sin teñir y tintes apagados en toda la figura, con las franjas de rosado, azul y verde fuerte asomando un dedo bajo la falda: el color va oculto.",
+        "scale": "Figura entera en 9:16, de la misma talla que el hombre adulto; el atado de ropa es del tamaño de su torso.",
+        "continuity": [
+          "nunca blusa bordada, bolsicón azul o morado episcopal ni pañolón con fleco de seda: eso es la ñapanga de fiesta",
+          "el refajo sólo asoma; nunca se muestra entero ni como falda exterior",
+          "ningún patrón de refajo o ruana concreto: franjas lisas, sin diseño copiado",
+          "en láminas anteriores a 1970 las botas de caucho se cambian por alpargata o pie descalzo",
+          "no se parece a La Vieja: va erguida, sin follones oscuros ni pañolón"
+        ],
+        "documented": [
+          "saco de lana, falda de tela con pliegues, refajos de lana de franjas de colores fuertes debajo, ruana vieja como chalina, sombrero de paño negro y botas de caucho: la ropa real de una mayora Pastos de Cumbal documentada en 2020 (dossier §6.2, matriz 14)",
+          "los colores de los refajos son rosados, azules y verdes, y van bajo la falda para abrigar (dossier §6.2)",
+          "la ñapanga es traje de fiesta y no el cotidiano de Panán (dossier §6.2)",
+          "las mujeres bajan a lavar a la quebrada, se cubren la cabeza ante el arco y cortan la cruz en la tierra con el machete (canon, al-duende, el-cueche)"
+        ],
+        "editorial": [
+          "el retrato documentado es de una mayora de ochenta años; extenderlo a la mujer adulta es inferencia sobre el mismo repertorio de vestido, y es reversible",
+          "el pelo recogido, el rostro y la complexión son construcción editorial",
+          "el atado de ropa en la mano es decisión editorial para anclarla a la escena de las lavanderas"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_mujer_joven": {
+      "name": "Comunera de Panán joven (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base de la mujer joven de Panán: el mismo repertorio de saco de lana, falda plisada y refajo oculto, con la ruana levantada sobre la cabeza en el gesto documentado de cubrirse cuando se abre el arco del cueche.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_mujer_joven__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "al-duende",
+        "el-cueche",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "evidence": [
+        {
+          "myth": "el-cueche",
+          "field": "mito",
+          "note": "«Cuando el arco se abre sobre la quebrada, las mujeres se cubren la cabeza para no ser meadas» (canon)"
+        },
+        {
+          "myth": "la-lechuza-y-el-cuichi-de-cuchicuelan",
+          "field": "mito",
+          "note": "El ojeado del cueche sobre las mujeres es do_not_visualize: el arco sí, el síntoma no (dossier §9, matriz 34)"
+        }
+      ],
+      "census_note": "Tipo base de la mujer joven de Panán: el mismo repertorio de saco de lana, falda plisada y refajo oculto, con la ruana levantada sobre la cabeza en el gesto documentado de cubrirse cuando se abre el arco del cueche.",
+      "design": {
+        "silhouette": "Muchacha delgada de pie y de perfil, con saco de lana, falda de tela con pliegues sobre el refajo que asoma un dedo, y la ruana levantada con las dos manos sobre la cabeza como capucha, de modo que el borde de lana le enmarca la cara; sin sombrero, que queda en la mano o no está.",
+        "materials": [
+          "cuerpo bajo la ropa en planos grandes y más estrechos; manos en papel de piel de un solo tono",
+          "cara aparte: óvalo plano de piel de un solo tono con los rasgos recortados como piezas separadas",
+          "saco de lana en papel de fibra con surcos de hilo",
+          "falda de tela con pliegues en tiras paralelas de papel mate",
+          "refajo de franjas en tiras estrechas de papel saturado bajo el borde",
+          "ruana de lana hilada gruesa en papel acolchado, levantada en arco sobre la cabeza",
+          "pelo negro largo en una sola pieza que asoma bajo la ruana"
+        ],
+        "palette": "La misma gama apagada de la comunera adulta, con la ruana algo más clara y el dedo de franja viva bajo la falda como único color fuerte.",
+        "scale": "Figura entera en 9:16, algo más baja y delgada que la mujer adulta; la ruana alzada suma un palmo a su silueta.",
+        "continuity": [
+          "nunca de ñapanga",
+          "ningún síntoma del ojeado del cueche: ni vientre inflamado, ni cabello blanqueado, ni granos",
+          "no es la Viuda: su rostro se ve y no hay nada espectral en ella",
+          "en láminas anteriores a 1970, sin botas de caucho"
+        ],
+        "documented": [
+          "el repertorio de vestido —saco de lana, falda con pliegues, refajos de franjas de colores fuertes, ruana— está documentado para las mujeres Pastos de Cumbal (dossier §6.2)",
+          "las mujeres se cubren la cabeza cuando el arco del cueche se abre sobre la quebrada (canon, el-cueche y la-lechuza-y-el-cuichi-de-cuchicuelan)",
+          "el ojeado del cueche no se visualiza (dossier §9, matriz 34)"
+        ],
+        "editorial": [
+          "extender a la mujer joven el vestido documentado en una mayora es inferencia reversible",
+          "que se cubra con la ruana y no con otra prenda es decisión editorial: el canon dice que se cubren la cabeza, no con qué",
+          "pelo largo, rostro y edad son construcción editorial"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "inferred",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_nino": {
+      "name": "Niño de Panán (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base de los niños de Panán: los menores del sector con los que juega el duende, los que el shutún deja con espanto y el quedado al que su madre va a traerle el espíritu. Ropa de mercado con una ruana pequeña de lana.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_nino__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "al-duende",
+        "el-chutun",
+        "la-entundada-el-quedado-el-espanto"
+      ],
+      "evidence": [
+        {
+          "myth": "al-duende",
+          "field": "mito",
+          "note": "El duende «se vuelve otro niño del sector y juega con los menores de cinco años» junto a las alcantarillas (canon)"
+        },
+        {
+          "myth": "la-entundada-el-quedado-el-espanto",
+          "field": "mito",
+          "note": "Cuando el quedado es un niño se lleva «la última prenda que tenía puesta» al sitio del susto (canon)"
+        }
+      ],
+      "census_note": "Tipo base de los niños de Panán: los menores del sector con los que juega el duende, los que el shutún deja con espanto y el quedado al que su madre va a traerle el espíritu. Ropa de mercado con una ruana pequeña de lana.",
+      "design": {
+        "silhouette": "Niño de cuatro o cinco años de pie, con una ruana pequeña de lana que le llega a las rodillas, pantalón de mercado y botas de caucho algo grandes; la cabeza descubierta, una mano en el borde de la ruana y la mirada hacia un lado, como quien sigue a un compañero que ya no está.",
+        "materials": [
+          "cuerpo bajo la ropa en pocas piezas cortas; manos en papel de piel de un solo tono",
+          "cara aparte: óvalo plano más redondo, de piel de un solo tono, con los rasgos recortados como piezas separadas",
+          "ruana pequeña de lana hilada gruesa en papel acolchado",
+          "pantalón de mercado en papel liso apagado y botas de caucho de canto liso",
+          "pelo negro corto en una sola pieza"
+        ],
+        "palette": "Crudo o gris de la ruana, azul apagado del pantalón y negro de las botas: la gama del colectivo en pequeño.",
+        "scale": "A la altura de la cadera del adulto, como fija la gramática del colectivo; en 9:16 con aire alrededor.",
+        "continuity": [
+          "el niño del sector y el duende vuelto niño no se distinguen por la ropa: la diferencia la pone la escena, no el tipo",
+          "nunca se muestra el procedimiento de la cura del quedado sobre su cuerpo",
+          "en láminas anteriores a 1970, sin botas de caucho"
+        ],
+        "documented": [
+          "niños del sector, menores de cinco años, juegan junto a las alcantarillas (canon, al-duende)",
+          "la ropa de Panán es de confección industrial salvo ruanas y cobijas de lana de oveja (dossier §6.2)",
+          "botas de caucho desde los años setenta (dossier §0)"
+        ],
+        "editorial": [
+          "la ruana infantil no está documentada aparte: se infiere de la ruana como prenda identitaria y es reversible",
+          "edad concreta, pelo y rostro son construcción editorial"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "inferred",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_anciano": {
+      "name": "Mayor de Panán (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base del hombre mayor de Panán: el mayor que advierte, recuerda y recorre el territorio para cuidarlo. Ruana de lana, sombrero de paño, erguido, con un palo de caminar liso que no es vara de justicia.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_anciano__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-chuchun-y-las-tres-quebradas",
+        "el-cualchio-y-la-olla-del-granizo",
+        "el-cueche",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan",
+        "la-tuta",
+        "la-waka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-waka",
+          "field": "mito",
+          "note": "«Los mayores recorren el territorio por eso. No van a sacar nada: van a proteger de la usurpación la riqueza que está hecha tierra» (canon)"
+        },
+        {
+          "myth": "la-tuta",
+          "field": "mito",
+          "note": "Los hombres visten ruana de lana de oveja y sombrero; la ruana y el sombrero son marcadores identitarios (dossier §6.2)"
+        },
+        {
+          "myth": "el-cueche",
+          "field": "mito",
+          "note": "La vara de justicia lleva corona, crucifijo, argolla y anillos según cargo, y no se reproduce un bastón existente (dossier §5)"
+        }
+      ],
+      "census_note": "Tipo base del hombre mayor de Panán: el mayor que advierte, recuerda y recorre el territorio para cuidarlo. Ruana de lana, sombrero de paño, erguido, con un palo de caminar liso que no es vara de justicia.",
+      "design": {
+        "silhouette": "Hombre mayor erguido, caminando por el filo del potrero con una ruana larga de lana que le cae a la rodilla, sombrero de paño negro de ala algo caída, pantalón de mercado y botas de caucho; en la mano derecha un palo de caminar liso, sin anillos ni remate.",
+        "materials": [
+          "cuerpo bajo la ropa en planos grandes; manos en papel de piel de un solo tono con dos pliegues recortados en los nudillos",
+          "cara aparte: óvalo plano de piel de un solo tono con los rasgos recortados aparte y dos pliegues recortados en la frente",
+          "ruana de lana hilada gruesa en papel acolchado, de canto gastado",
+          "sombrero de paño negro de copa baja",
+          "palo de caminar como una sola tira de madera parda sin talla",
+          "pelo gris corto en una sola pieza bajo el ala"
+        ],
+        "palette": "Lana sin teñir en la ruana, negro del sombrero, gris del pelo y pardo del palo: nada saturado.",
+        "scale": "Figura entera en 9:16, de la talla de los adultos y erguido, no encorvado, como fija la gramática del colectivo.",
+        "continuity": [
+          "el palo de caminar nunca lleva corona, crucifijo, argolla, anillos ni cabeza de animal: no es vara de justicia ni autoridad",
+          "no es médico tradicional: no lleva plantas, escoba de limpia ni kit",
+          "no aparece cavando ni con objetos de huaca: los mayores protegen, no sacan",
+          "ningún rostro de mayor nombrado en las fuentes"
+        ],
+        "documented": [
+          "ruana de lana de oveja y sombrero son el vestido de los hombres (dossier §6.2)",
+          "los mayores advierten, leen el clima y recorren el territorio para protegerlo (canon, el-chuchun, el-cueche, la-waka)",
+          "la vara de justicia tiene gramática documentada y es objeto colonial-republicano de cargo (dossier §5)"
+        ],
+        "editorial": [
+          "el palo de caminar liso es decisión editorial para dar al mayor su recorrido sin confundirlo con la vara de mando; retirable",
+          "el pelo gris, el rostro y la edad son construcción editorial"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_anciana": {
+      "name": "Mayora de Panán (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base de la mujer mayor de Panán, construido sobre el único retrato de vestido cotidiano que el dossier documenta: delgadita, erguida, con saco de lana, falda plisada sobre refajos de franjas rosadas, azules y verdes, ruana vieja como chalina, sombrero de paño negro y botas de caucho puntudas. Es la abuela que cuenta la laguna anterior; nunca La Vieja.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_anciana__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-cualchio-y-la-olla-del-granizo",
+        "la-laguna-de-maria-panana",
+        "la-waka"
+      ],
+      "evidence": [
+        {
+          "myth": "la-laguna-de-maria-panana",
+          "field": "mito",
+          "note": "«Cuentan las abuelas que en el resguardo había una gran laguna» y los mayores señalan hasta dónde llegaba el agua (canon)"
+        },
+        {
+          "myth": "la-waka",
+          "field": "mito",
+          "note": "La mayora de Cumbal «es delgadita, siempre camina erguida y cobijada con una vieja ruana que usa como chalina», con botas de caucho azules «de las puntudas» y sombrero de paño negro (dossier §6.2, matriz 14)"
+        }
+      ],
+      "census_note": "Tipo base de la mujer mayor de Panán, construido sobre el único retrato de vestido cotidiano que el dossier documenta: delgadita, erguida, con saco de lana, falda plisada sobre refajos de franjas rosadas, azules y verdes, ruana vieja como chalina, sombrero de paño negro y botas de caucho puntudas. Es la abuela que cuenta la laguna anterior; nunca La Vieja.",
+      "design": {
+        "silhouette": "Mujer mayor delgadita y erguida, de pie con una mano señalando hacia abajo y a lo lejos, como quien marca hasta dónde llegaba el agua; saco de lana, falda de tela con pliegues con un dedo de refajo de franjas bajo el borde, ruana vieja terciada como chalina, sombrero de paño negro y botas de caucho puntudas.",
+        "materials": [
+          "cuerpo bajo la ropa en planos grandes y estrechos; manos en papel de piel de un solo tono con pliegues recortados",
+          "cara aparte: óvalo plano de piel de un solo tono con los rasgos recortados aparte y dos o tres pliegues recortados",
+          "saco de lana en papel de fibra con surcos de hilo",
+          "falda de tela con pliegues en tiras paralelas de papel mate",
+          "refajo de franjas rosadas, azules y verdes en tiras estrechas de papel saturado, visible sólo bajo el borde",
+          "ruana vieja de lana, gastada en el canto, en papel acolchado",
+          "sombrero de paño negro y botas de caucho puntudas en papel liso",
+          "pelo gris recogido en una sola pieza bajo el sombrero"
+        ],
+        "palette": "Lana sin teñir y tintes apagados, el negro del sombrero, el gris del pelo, las botas en un azul liso y el dedo de rosado, azul y verde bajo la falda.",
+        "scale": "Figura entera en 9:16, algo más baja que la comunera adulta pero igual de erguida.",
+        "continuity": [
+          "no es La Vieja: ni follones de bayetilla oscuros, ni pañolón, ni joroba, ni cabello enredado",
+          "no retrata a la mayora nombrada del testimonio: el lenguaje del vestido sí, el ejemplar no",
+          "ningún patrón concreto de refajo o ruana",
+          "en láminas anteriores a 1970, sin botas de caucho"
+        ],
+        "documented": [
+          "saco de lana, falda de tela con pliegues, refajos de lana de franjas de colores fuertes —rosados, azules y verdes— debajo, ruana vieja como chalina, sombrero de paño negro y botas de caucho puntudas: vestido de una mayora Pastos de Cumbal de ochenta años, documentado en 2020 (dossier §6.2, matriz 14)",
+          "delgadita y siempre erguida (dossier §6.2)",
+          "las abuelas cuentan la laguna anterior y los mayores señalan hasta dónde llegaba el agua (canon, la-laguna-de-maria-panana)"
+        ],
+        "editorial": [
+          "el gesto de señalar el nivel del agua es decisión editorial tomada del relato",
+          "rostro y peinado recogido son construcción editorial: la fuente describe el vestido, no la cara"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
+    },
     "duende_de_panan": {
       "name": "El duende de Panán",
       "kind": "criatura",
@@ -6584,6 +7177,575 @@
     }
   },
   "models": {
+    "tipo_hombre_adulto__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_hombre_adulto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-chuchun-y-las-tres-quebradas",
+          "field": "mito",
+          "note": "Los hombres: ruana de lana de oveja y sombrero; el corpus de Panán confirma la tríada identitaria «la minga, la vestimenta, la ruana, el sombrero» (dossier §6.2)"
+        },
+        {
+          "myth": "la-lechuza-y-el-cuichi-de-cuchicuelan",
+          "field": "mito",
+          "note": "La confección propia «es totalmente desechada a favor de los vestidos confeccionados por la industria textil»; sólo se tejen en guanga cobijas y ruanas de lana de oveja (dossier §6.2)"
+        },
+        {
+          "myth": "la-huacas",
+          "field": "mito",
+          "note": "Caballo, montura, yunta y machete son capa B/C; las botas de caucho sólo desde 1970 (dossier §0 y §5)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre adulto de pie, de perfil de tres cuartos, con una ruana de lana gruesa que le cae hasta medio muslo y le cuadra los hombros, sombrero de paño negro de copa baja y ala corta, pantalón de mercado oscuro metido en botas de caucho; las manos salen por debajo de la ruana, una sostiene el cabo de un machete envainado junto a la pierna.",
+        "materials": [
+          "cuerpo en papel de un tono bajo la ropa; manos en papel de piel de un solo tono",
+          "cara aparte: óvalo plano de piel de un solo tono con los rasgos recortados como piezas separadas, sin arrugas modeladas",
+          "ruana de lana de oveja hilada gruesa, tejida en guanga, en papel de fibra con el canto acolchado y el hilo marcado por surcos",
+          "sombrero de paño negro en disco y copa baja de papel mate",
+          "pantalón y camisa de mercado en papel liso de color apagado",
+          "botas de caucho en dos piezas por pierna, de canto liso",
+          "pelo negro corto en una sola pieza bajo el ala del sombrero"
+        ],
+        "palette_logic": "Lana sin teñir —crudo, gris pardo, café— en la ruana, negro del sombrero y las botas, azul o café apagado del pantalón de mercado: ningún color fuerte a la vista.",
+        "scale": "Figura entera en 9:16; el cerco del potrero le llega a la cintura, que es la medida de referencia del colectivo.",
+        "continuity_markers": [
+          "nunca de ñapanga ni de traje folclórico de carnaval",
+          "ningún patrón de ruana concreto: sólo textura de lana hilada y, a lo sumo, una franja lisa",
+          "en láminas anteriores a 1970 las botas de caucho se cambian por alpargata o pie descalzo, como en la hoja de época de hacienda del colectivo",
+          "ninguna lámina con este tipo reproduce la cara de un comunero nombrado en las fuentes",
+          "no aparece en escena del tiempo delantero: allí no hay lana, sombrero ni machete"
+        ],
+        "documented_features": [
+          "los hombres de Panán visten ruana de lana de oveja y sombrero (dossier §6.2)",
+          "«la minga, la vestimenta, la ruana, el sombrero» son marcadores identitarios declarados por el corpus (dossier §6.2)",
+          "la ropa es de confección industrial salvo ruanas y cobijas tejidas en guanga con lana de oveja (dossier §6.2)",
+          "botas de caucho desde los años setenta; caballo, montura, yunta y machete son capa B/C (dossier §0 y §5)"
+        ],
+        "editorial_features": [
+          "el corte y el color del pantalón y la camisa de mercado no están documentados: decisión editorial reversible dentro de «vestidos confeccionados por la industria textil»",
+          "el pelo corto y el rostro son construcción editorial: el corpus no describe cuerpos",
+          "el machete envainado en la mano es decisión editorial tomada del gesto documentado de cortar la cruz; retirable"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Panán V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia, con quilling reservado a lo que en el territorio se enrolla o se trenza: el agua de la chorrera, la crin y la cola trenzadas del caballo, el hilo de lana de la guanga, el arco del Cueche y los caminos de luz de los minacuros. Sin trama decorativa de relleno.",
+        "primary_request": "identidad corporal completa y legible para Comunero de Panán adulto (tipo). Hombre adulto de pie, de perfil de tres cuartos, con una ruana de lana gruesa que le cae hasta medio muslo y le cuadra los hombros, sombrero de paño negro de copa baja y ala corta, pantalón de mercado oscuro metido en botas de caucho; las manos salen por debajo de la ruana, una sostiene el cabo de un machete envainado junto a la pierna.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera en 9:16; el cerco del potrero le llega a la cintura, que es la medida de referencia del colectivo.",
+        "lighting_mood": "Luz difusa de altura bajo cielo cubierto, que es la condición habitual entre 2.800 y 3.800 metros: contraste bajo, sombras blandas y largas, sin sol duro salvo cuando la escena lo exige. La niebla es un plano de papel entre capas que borra el fondo y deja el primer plano nítido. Las dos únicas fuentes de luz propia que el corpus autoriza son los minacuros de La Tuta y la llamarada de medianoche de la huaca; todo lo demás se ilumina desde el cielo.",
+        "materials_textures": "cuerpo en papel de un tono bajo la ropa; manos en papel de piel de un solo tono; cara aparte: óvalo plano de piel de un solo tono con los rasgos recortados como piezas separadas, sin arrugas modeladas; ruana de lana de oveja hilada gruesa, tejida en guanga, en papel de fibra con el canto acolchado y el hilo marcado por surcos; sombrero de paño negro en disco y copa baja de papel mate; pantalón y camisa de mercado en papel liso de color apagado; botas de caucho en dos piezas por pierna, de canto liso; pelo negro corto en una sola pieza bajo el ala del sombrero",
+        "era": "Tres capas que no se mezclan. A, tiempo delantero: barro cocido, piedra, madera y fibra, sin oveja, sin trigo, cebada ni haba, sin caballo, hierro, machete, teja ni cruz. B, colonial y republicana, hasta los años sesenta: bahareque de chaclas con barro pisado y cubierta de paja, lana de oveja, caballo y montura, machete, arado y yunta, cruz y chapil, sin teja, cemento ni ladrillo. C, contemporánea, desde los años setenta: teja de barro, cemento, hierro y ladrillo, botas de caucho, ropa de mercado, potrero, pino sembrado.",
+        "constraints": [
+          "documentado: los hombres de Panán visten ruana de lana de oveja y sombrero (dossier §6.2)",
+          "documentado: «la minga, la vestimenta, la ruana, el sombrero» son marcadores identitarios declarados por el corpus (dossier §6.2)",
+          "documentado: la ropa es de confección industrial salvo ruanas y cobijas tejidas en guanga con lana de oveja (dossier §6.2)",
+          "documentado: botas de caucho desde los años setenta; caballo, montura, yunta y machete son capa B/C (dossier §0 y §5)",
+          "La base del mundo es tierra pardo muy oscura casi negra sobre carne de cangagua amarillo pálido, con pajonal ocre y verdes grises de páramo; el páramo nariñense nunca es verde brillante.",
+          "El verde vivo existe sólo en dos sitios y hay que reservarlo para ellos: el potrero de pasto lechero y el agua de la laguna verde.",
+          "El color saturado aparece únicamente donde el corpus lo nombra: los cuatro del duende —rojo, verde, amarillo, negro—, las cuatro variantes del arco del Cueche —multicolor, colorado, negro y blanco— y el blanco del Ánima; el resto de la lámina se mantiene en la gama del territorio.",
+          "Nada de oro ni metal brillante: el corpus nombra «oro» una sola vez y para negarlo. En el vestuario, el color fuerte va oculto —los refajos de franjas debajo de la falda—, nunca en la superficie.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas, no de modelado.",
+          "Sin anacronismo de época: nada de teja de barro, cemento, ladrillo, zinc ni botas de caucho antes de 1970, y nada de lana, caballo, machete, arado, teja ni cruz en escena precolombina.",
+          "Sin dragón europeo en la figura de tres cabezas: ni alas, ni garras, ni cuernos, ni fuego, ni escamas de saurio; la palabra de la fuente es «culebra».",
+          "Sin reproducir un ejemplar real: ni la Piedra de los Machines, ni el Sol de los Pastos como emblema, ni una pieza de cerámica documentada, ni un bastón existente, ni un patrón de ruana o de refajo concreto.",
+          "Sin rasgos que permitan ubicar un sitio: ni perfil de montaña único, ni confluencia legible como mapa, ni sendero de acceso, ni volcán en erupción, humo o cráter.",
+          "Sin fantasía intercambiable: ni aura, ni chispas, ni niebla luminosa, ni ojos brillantes, ni tocados panindígenas; lo pesado se muestra como clima —niebla que sube, chiflón, granizo—.",
+          "Sin cuerpo para María Panana, la Madre de Agua, los espíritus de la Madre Tierra ni la Virgen; sin cofre ni tesoro dorado; y sin ninguna escena de rito, cura, danza o excavación."
+        ],
+        "technique_close": "En el plano corto, el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte, apoyadas encima; el cuerpo se construye por planos superpuestos, nunca modelado. Los animales se resuelven con pocas piezas planas grandes y el borde recortado en dientes: el pelaje del caballo, la pluma de la lechuza y la lana de la ruana son recortes de canto, no fibras individuales. El agua es papel translúcido en láminas superpuestas; la niebla es vitela o papel de seda entre capas, nunca aerógrafo."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_adulta__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_adulta"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-cueche",
+          "field": "mito",
+          "note": "Una mayora Pastos de Cumbal «viste con sacos de lana, una falda de tela con pliegues y, por debajo, refajos… de franjas de colores fuertes… cobijada con una vieja ruana que usa como chalina… sombrero de paño negro» y botas de caucho (dossier §6.2, matriz 14)"
+        },
+        {
+          "myth": "al-duende",
+          "field": "mito",
+          "note": "El traje de ñapanga es de fiesta y representación y «no es el vestuario cotidiano de Panán»; usarlo como tal exotiza (dossier §6.2)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer adulta de pie y erguida, con saco de lana abotonado, falda de tela con pliegues hasta media pierna bajo la cual asoma un dedo de refajo de franjas vivas, una ruana vieja terciada sobre un hombro como chalina, sombrero de paño negro y botas de caucho; en una mano un atado de ropa húmeda, la otra suelta.",
+        "materials": [
+          "cuerpo bajo la ropa en planos grandes; manos en papel de piel de un solo tono",
+          "cara aparte: óvalo plano de piel de un solo tono con los rasgos recortados como piezas separadas",
+          "saco de lana en papel de fibra con el hilo marcado por surcos",
+          "falda de tela con pliegues en tiras paralelas de papel mate",
+          "refajo de franjas en tiras estrechas de papel saturado, visible sólo bajo el borde de la falda",
+          "ruana vieja de lana hilada gruesa, en papel acolchado de canto gastado",
+          "sombrero de paño negro de copa baja y botas de caucho de canto liso",
+          "pelo negro recogido atrás en una sola pieza bajo el sombrero"
+        ],
+        "palette_logic": "Gama de lana sin teñir y tintes apagados en toda la figura, con las franjas de rosado, azul y verde fuerte asomando un dedo bajo la falda: el color va oculto.",
+        "scale": "Figura entera en 9:16, de la misma talla que el hombre adulto; el atado de ropa es del tamaño de su torso.",
+        "continuity_markers": [
+          "nunca blusa bordada, bolsicón azul o morado episcopal ni pañolón con fleco de seda: eso es la ñapanga de fiesta",
+          "el refajo sólo asoma; nunca se muestra entero ni como falda exterior",
+          "ningún patrón de refajo o ruana concreto: franjas lisas, sin diseño copiado",
+          "en láminas anteriores a 1970 las botas de caucho se cambian por alpargata o pie descalzo",
+          "no se parece a La Vieja: va erguida, sin follones oscuros ni pañolón"
+        ],
+        "documented_features": [
+          "saco de lana, falda de tela con pliegues, refajos de lana de franjas de colores fuertes debajo, ruana vieja como chalina, sombrero de paño negro y botas de caucho: la ropa real de una mayora Pastos de Cumbal documentada en 2020 (dossier §6.2, matriz 14)",
+          "los colores de los refajos son rosados, azules y verdes, y van bajo la falda para abrigar (dossier §6.2)",
+          "la ñapanga es traje de fiesta y no el cotidiano de Panán (dossier §6.2)",
+          "las mujeres bajan a lavar a la quebrada, se cubren la cabeza ante el arco y cortan la cruz en la tierra con el machete (canon, al-duende, el-cueche)"
+        ],
+        "editorial_features": [
+          "el retrato documentado es de una mayora de ochenta años; extenderlo a la mujer adulta es inferencia sobre el mismo repertorio de vestido, y es reversible",
+          "el pelo recogido, el rostro y la complexión son construcción editorial",
+          "el atado de ropa en la mano es decisión editorial para anclarla a la escena de las lavanderas"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Panán V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia, con quilling reservado a lo que en el territorio se enrolla o se trenza: el agua de la chorrera, la crin y la cola trenzadas del caballo, el hilo de lana de la guanga, el arco del Cueche y los caminos de luz de los minacuros. Sin trama decorativa de relleno.",
+        "primary_request": "identidad corporal completa y legible para Comunera de Panán adulta (tipo). Mujer adulta de pie y erguida, con saco de lana abotonado, falda de tela con pliegues hasta media pierna bajo la cual asoma un dedo de refajo de franjas vivas, una ruana vieja terciada sobre un hombro como chalina, sombrero de paño negro y botas de caucho; en una mano un atado de ropa húmeda, la otra suelta.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera en 9:16, de la misma talla que el hombre adulto; el atado de ropa es del tamaño de su torso.",
+        "lighting_mood": "Luz difusa de altura bajo cielo cubierto, que es la condición habitual entre 2.800 y 3.800 metros: contraste bajo, sombras blandas y largas, sin sol duro salvo cuando la escena lo exige. La niebla es un plano de papel entre capas que borra el fondo y deja el primer plano nítido. Las dos únicas fuentes de luz propia que el corpus autoriza son los minacuros de La Tuta y la llamarada de medianoche de la huaca; todo lo demás se ilumina desde el cielo.",
+        "materials_textures": "cuerpo bajo la ropa en planos grandes; manos en papel de piel de un solo tono; cara aparte: óvalo plano de piel de un solo tono con los rasgos recortados como piezas separadas; saco de lana en papel de fibra con el hilo marcado por surcos; falda de tela con pliegues en tiras paralelas de papel mate; refajo de franjas en tiras estrechas de papel saturado, visible sólo bajo el borde de la falda; ruana vieja de lana hilada gruesa, en papel acolchado de canto gastado; sombrero de paño negro de copa baja y botas de caucho de canto liso; pelo negro recogido atrás en una sola pieza bajo el sombrero",
+        "era": "Tres capas que no se mezclan. A, tiempo delantero: barro cocido, piedra, madera y fibra, sin oveja, sin trigo, cebada ni haba, sin caballo, hierro, machete, teja ni cruz. B, colonial y republicana, hasta los años sesenta: bahareque de chaclas con barro pisado y cubierta de paja, lana de oveja, caballo y montura, machete, arado y yunta, cruz y chapil, sin teja, cemento ni ladrillo. C, contemporánea, desde los años setenta: teja de barro, cemento, hierro y ladrillo, botas de caucho, ropa de mercado, potrero, pino sembrado.",
+        "constraints": [
+          "documentado: saco de lana, falda de tela con pliegues, refajos de lana de franjas de colores fuertes debajo, ruana vieja como chalina, sombrero de paño negro y botas de caucho: la ropa real de una mayora Pastos de Cumbal documentada en 2020 (dossier §6.2, matriz 14)",
+          "documentado: los colores de los refajos son rosados, azules y verdes, y van bajo la falda para abrigar (dossier §6.2)",
+          "documentado: la ñapanga es traje de fiesta y no el cotidiano de Panán (dossier §6.2)",
+          "documentado: las mujeres bajan a lavar a la quebrada, se cubren la cabeza ante el arco y cortan la cruz en la tierra con el machete (canon, al-duende, el-cueche)",
+          "La base del mundo es tierra pardo muy oscura casi negra sobre carne de cangagua amarillo pálido, con pajonal ocre y verdes grises de páramo; el páramo nariñense nunca es verde brillante.",
+          "El verde vivo existe sólo en dos sitios y hay que reservarlo para ellos: el potrero de pasto lechero y el agua de la laguna verde.",
+          "El color saturado aparece únicamente donde el corpus lo nombra: los cuatro del duende —rojo, verde, amarillo, negro—, las cuatro variantes del arco del Cueche —multicolor, colorado, negro y blanco— y el blanco del Ánima; el resto de la lámina se mantiene en la gama del territorio.",
+          "Nada de oro ni metal brillante: el corpus nombra «oro» una sola vez y para negarlo. En el vestuario, el color fuerte va oculto —los refajos de franjas debajo de la falda—, nunca en la superficie.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas, no de modelado.",
+          "Sin anacronismo de época: nada de teja de barro, cemento, ladrillo, zinc ni botas de caucho antes de 1970, y nada de lana, caballo, machete, arado, teja ni cruz en escena precolombina.",
+          "Sin dragón europeo en la figura de tres cabezas: ni alas, ni garras, ni cuernos, ni fuego, ni escamas de saurio; la palabra de la fuente es «culebra».",
+          "Sin reproducir un ejemplar real: ni la Piedra de los Machines, ni el Sol de los Pastos como emblema, ni una pieza de cerámica documentada, ni un bastón existente, ni un patrón de ruana o de refajo concreto.",
+          "Sin rasgos que permitan ubicar un sitio: ni perfil de montaña único, ni confluencia legible como mapa, ni sendero de acceso, ni volcán en erupción, humo o cráter.",
+          "Sin fantasía intercambiable: ni aura, ni chispas, ni niebla luminosa, ni ojos brillantes, ni tocados panindígenas; lo pesado se muestra como clima —niebla que sube, chiflón, granizo—.",
+          "Sin cuerpo para María Panana, la Madre de Agua, los espíritus de la Madre Tierra ni la Virgen; sin cofre ni tesoro dorado; y sin ninguna escena de rito, cura, danza o excavación."
+        ],
+        "technique_close": "En el plano corto, el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte, apoyadas encima; el cuerpo se construye por planos superpuestos, nunca modelado. Los animales se resuelven con pocas piezas planas grandes y el borde recortado en dientes: el pelaje del caballo, la pluma de la lechuza y la lana de la ruana son recortes de canto, no fibras individuales. El agua es papel translúcido en láminas superpuestas; la niebla es vitela o papel de seda entre capas, nunca aerógrafo."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_joven__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_joven"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-cueche",
+          "field": "mito",
+          "note": "«Cuando el arco se abre sobre la quebrada, las mujeres se cubren la cabeza para no ser meadas» (canon)"
+        },
+        {
+          "myth": "la-lechuza-y-el-cuichi-de-cuchicuelan",
+          "field": "mito",
+          "note": "El ojeado del cueche sobre las mujeres es do_not_visualize: el arco sí, el síntoma no (dossier §9, matriz 34)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Muchacha delgada de pie y de perfil, con saco de lana, falda de tela con pliegues sobre el refajo que asoma un dedo, y la ruana levantada con las dos manos sobre la cabeza como capucha, de modo que el borde de lana le enmarca la cara; sin sombrero, que queda en la mano o no está.",
+        "materials": [
+          "cuerpo bajo la ropa en planos grandes y más estrechos; manos en papel de piel de un solo tono",
+          "cara aparte: óvalo plano de piel de un solo tono con los rasgos recortados como piezas separadas",
+          "saco de lana en papel de fibra con surcos de hilo",
+          "falda de tela con pliegues en tiras paralelas de papel mate",
+          "refajo de franjas en tiras estrechas de papel saturado bajo el borde",
+          "ruana de lana hilada gruesa en papel acolchado, levantada en arco sobre la cabeza",
+          "pelo negro largo en una sola pieza que asoma bajo la ruana"
+        ],
+        "palette_logic": "La misma gama apagada de la comunera adulta, con la ruana algo más clara y el dedo de franja viva bajo la falda como único color fuerte.",
+        "scale": "Figura entera en 9:16, algo más baja y delgada que la mujer adulta; la ruana alzada suma un palmo a su silueta.",
+        "continuity_markers": [
+          "nunca de ñapanga",
+          "ningún síntoma del ojeado del cueche: ni vientre inflamado, ni cabello blanqueado, ni granos",
+          "no es la Viuda: su rostro se ve y no hay nada espectral en ella",
+          "en láminas anteriores a 1970, sin botas de caucho"
+        ],
+        "documented_features": [
+          "el repertorio de vestido —saco de lana, falda con pliegues, refajos de franjas de colores fuertes, ruana— está documentado para las mujeres Pastos de Cumbal (dossier §6.2)",
+          "las mujeres se cubren la cabeza cuando el arco del cueche se abre sobre la quebrada (canon, el-cueche y la-lechuza-y-el-cuichi-de-cuchicuelan)",
+          "el ojeado del cueche no se visualiza (dossier §9, matriz 34)"
+        ],
+        "editorial_features": [
+          "extender a la mujer joven el vestido documentado en una mayora es inferencia reversible",
+          "que se cubra con la ruana y no con otra prenda es decisión editorial: el canon dice que se cubren la cabeza, no con qué",
+          "pelo largo, rostro y edad son construcción editorial"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Panán V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia, con quilling reservado a lo que en el territorio se enrolla o se trenza: el agua de la chorrera, la crin y la cola trenzadas del caballo, el hilo de lana de la guanga, el arco del Cueche y los caminos de luz de los minacuros. Sin trama decorativa de relleno.",
+        "primary_request": "identidad corporal completa y legible para Comunera de Panán joven (tipo). Muchacha delgada de pie y de perfil, con saco de lana, falda de tela con pliegues sobre el refajo que asoma un dedo, y la ruana levantada con las dos manos sobre la cabeza como capucha, de modo que el borde de lana le enmarca la cara; sin sombrero, que queda en la mano o no está.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera en 9:16, algo más baja y delgada que la mujer adulta; la ruana alzada suma un palmo a su silueta.",
+        "lighting_mood": "Luz difusa de altura bajo cielo cubierto, que es la condición habitual entre 2.800 y 3.800 metros: contraste bajo, sombras blandas y largas, sin sol duro salvo cuando la escena lo exige. La niebla es un plano de papel entre capas que borra el fondo y deja el primer plano nítido. Las dos únicas fuentes de luz propia que el corpus autoriza son los minacuros de La Tuta y la llamarada de medianoche de la huaca; todo lo demás se ilumina desde el cielo.",
+        "materials_textures": "cuerpo bajo la ropa en planos grandes y más estrechos; manos en papel de piel de un solo tono; cara aparte: óvalo plano de piel de un solo tono con los rasgos recortados como piezas separadas; saco de lana en papel de fibra con surcos de hilo; falda de tela con pliegues en tiras paralelas de papel mate; refajo de franjas en tiras estrechas de papel saturado bajo el borde; ruana de lana hilada gruesa en papel acolchado, levantada en arco sobre la cabeza; pelo negro largo en una sola pieza que asoma bajo la ruana",
+        "era": "Tres capas que no se mezclan. A, tiempo delantero: barro cocido, piedra, madera y fibra, sin oveja, sin trigo, cebada ni haba, sin caballo, hierro, machete, teja ni cruz. B, colonial y republicana, hasta los años sesenta: bahareque de chaclas con barro pisado y cubierta de paja, lana de oveja, caballo y montura, machete, arado y yunta, cruz y chapil, sin teja, cemento ni ladrillo. C, contemporánea, desde los años setenta: teja de barro, cemento, hierro y ladrillo, botas de caucho, ropa de mercado, potrero, pino sembrado.",
+        "constraints": [
+          "documentado: el repertorio de vestido —saco de lana, falda con pliegues, refajos de franjas de colores fuertes, ruana— está documentado para las mujeres Pastos de Cumbal (dossier §6.2)",
+          "documentado: las mujeres se cubren la cabeza cuando el arco del cueche se abre sobre la quebrada (canon, el-cueche y la-lechuza-y-el-cuichi-de-cuchicuelan)",
+          "documentado: el ojeado del cueche no se visualiza (dossier §9, matriz 34)",
+          "La base del mundo es tierra pardo muy oscura casi negra sobre carne de cangagua amarillo pálido, con pajonal ocre y verdes grises de páramo; el páramo nariñense nunca es verde brillante.",
+          "El verde vivo existe sólo en dos sitios y hay que reservarlo para ellos: el potrero de pasto lechero y el agua de la laguna verde.",
+          "El color saturado aparece únicamente donde el corpus lo nombra: los cuatro del duende —rojo, verde, amarillo, negro—, las cuatro variantes del arco del Cueche —multicolor, colorado, negro y blanco— y el blanco del Ánima; el resto de la lámina se mantiene en la gama del territorio.",
+          "Nada de oro ni metal brillante: el corpus nombra «oro» una sola vez y para negarlo. En el vestuario, el color fuerte va oculto —los refajos de franjas debajo de la falda—, nunca en la superficie.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas, no de modelado.",
+          "Sin anacronismo de época: nada de teja de barro, cemento, ladrillo, zinc ni botas de caucho antes de 1970, y nada de lana, caballo, machete, arado, teja ni cruz en escena precolombina.",
+          "Sin dragón europeo en la figura de tres cabezas: ni alas, ni garras, ni cuernos, ni fuego, ni escamas de saurio; la palabra de la fuente es «culebra».",
+          "Sin reproducir un ejemplar real: ni la Piedra de los Machines, ni el Sol de los Pastos como emblema, ni una pieza de cerámica documentada, ni un bastón existente, ni un patrón de ruana o de refajo concreto.",
+          "Sin rasgos que permitan ubicar un sitio: ni perfil de montaña único, ni confluencia legible como mapa, ni sendero de acceso, ni volcán en erupción, humo o cráter.",
+          "Sin fantasía intercambiable: ni aura, ni chispas, ni niebla luminosa, ni ojos brillantes, ni tocados panindígenas; lo pesado se muestra como clima —niebla que sube, chiflón, granizo—.",
+          "Sin cuerpo para María Panana, la Madre de Agua, los espíritus de la Madre Tierra ni la Virgen; sin cofre ni tesoro dorado; y sin ninguna escena de rito, cura, danza o excavación."
+        ],
+        "technique_close": "En el plano corto, el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte, apoyadas encima; el cuerpo se construye por planos superpuestos, nunca modelado. Los animales se resuelven con pocas piezas planas grandes y el borde recortado en dientes: el pelaje del caballo, la pluma de la lechuza y la lana de la ruana son recortes de canto, no fibras individuales. El agua es papel translúcido en láminas superpuestas; la niebla es vitela o papel de seda entre capas, nunca aerógrafo."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_nino__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_nino"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "al-duende",
+          "field": "mito",
+          "note": "El duende «se vuelve otro niño del sector y juega con los menores de cinco años» junto a las alcantarillas (canon)"
+        },
+        {
+          "myth": "la-entundada-el-quedado-el-espanto",
+          "field": "mito",
+          "note": "Cuando el quedado es un niño se lleva «la última prenda que tenía puesta» al sitio del susto (canon)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Niño de cuatro o cinco años de pie, con una ruana pequeña de lana que le llega a las rodillas, pantalón de mercado y botas de caucho algo grandes; la cabeza descubierta, una mano en el borde de la ruana y la mirada hacia un lado, como quien sigue a un compañero que ya no está.",
+        "materials": [
+          "cuerpo bajo la ropa en pocas piezas cortas; manos en papel de piel de un solo tono",
+          "cara aparte: óvalo plano más redondo, de piel de un solo tono, con los rasgos recortados como piezas separadas",
+          "ruana pequeña de lana hilada gruesa en papel acolchado",
+          "pantalón de mercado en papel liso apagado y botas de caucho de canto liso",
+          "pelo negro corto en una sola pieza"
+        ],
+        "palette_logic": "Crudo o gris de la ruana, azul apagado del pantalón y negro de las botas: la gama del colectivo en pequeño.",
+        "scale": "A la altura de la cadera del adulto, como fija la gramática del colectivo; en 9:16 con aire alrededor.",
+        "continuity_markers": [
+          "el niño del sector y el duende vuelto niño no se distinguen por la ropa: la diferencia la pone la escena, no el tipo",
+          "nunca se muestra el procedimiento de la cura del quedado sobre su cuerpo",
+          "en láminas anteriores a 1970, sin botas de caucho"
+        ],
+        "documented_features": [
+          "niños del sector, menores de cinco años, juegan junto a las alcantarillas (canon, al-duende)",
+          "la ropa de Panán es de confección industrial salvo ruanas y cobijas de lana de oveja (dossier §6.2)",
+          "botas de caucho desde los años setenta (dossier §0)"
+        ],
+        "editorial_features": [
+          "la ruana infantil no está documentada aparte: se infiere de la ruana como prenda identitaria y es reversible",
+          "edad concreta, pelo y rostro son construcción editorial"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Panán V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia, con quilling reservado a lo que en el territorio se enrolla o se trenza: el agua de la chorrera, la crin y la cola trenzadas del caballo, el hilo de lana de la guanga, el arco del Cueche y los caminos de luz de los minacuros. Sin trama decorativa de relleno.",
+        "primary_request": "identidad corporal completa y legible para Niño de Panán (tipo). Niño de cuatro o cinco años de pie, con una ruana pequeña de lana que le llega a las rodillas, pantalón de mercado y botas de caucho algo grandes; la cabeza descubierta, una mano en el borde de la ruana y la mirada hacia un lado, como quien sigue a un compañero que ya no está.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; A la altura de la cadera del adulto, como fija la gramática del colectivo; en 9:16 con aire alrededor.",
+        "lighting_mood": "Luz difusa de altura bajo cielo cubierto, que es la condición habitual entre 2.800 y 3.800 metros: contraste bajo, sombras blandas y largas, sin sol duro salvo cuando la escena lo exige. La niebla es un plano de papel entre capas que borra el fondo y deja el primer plano nítido. Las dos únicas fuentes de luz propia que el corpus autoriza son los minacuros de La Tuta y la llamarada de medianoche de la huaca; todo lo demás se ilumina desde el cielo.",
+        "materials_textures": "cuerpo bajo la ropa en pocas piezas cortas; manos en papel de piel de un solo tono; cara aparte: óvalo plano más redondo, de piel de un solo tono, con los rasgos recortados como piezas separadas; ruana pequeña de lana hilada gruesa en papel acolchado; pantalón de mercado en papel liso apagado y botas de caucho de canto liso; pelo negro corto en una sola pieza",
+        "era": "Tres capas que no se mezclan. A, tiempo delantero: barro cocido, piedra, madera y fibra, sin oveja, sin trigo, cebada ni haba, sin caballo, hierro, machete, teja ni cruz. B, colonial y republicana, hasta los años sesenta: bahareque de chaclas con barro pisado y cubierta de paja, lana de oveja, caballo y montura, machete, arado y yunta, cruz y chapil, sin teja, cemento ni ladrillo. C, contemporánea, desde los años setenta: teja de barro, cemento, hierro y ladrillo, botas de caucho, ropa de mercado, potrero, pino sembrado.",
+        "constraints": [
+          "documentado: niños del sector, menores de cinco años, juegan junto a las alcantarillas (canon, al-duende)",
+          "documentado: la ropa de Panán es de confección industrial salvo ruanas y cobijas de lana de oveja (dossier §6.2)",
+          "documentado: botas de caucho desde los años setenta (dossier §0)",
+          "La base del mundo es tierra pardo muy oscura casi negra sobre carne de cangagua amarillo pálido, con pajonal ocre y verdes grises de páramo; el páramo nariñense nunca es verde brillante.",
+          "El verde vivo existe sólo en dos sitios y hay que reservarlo para ellos: el potrero de pasto lechero y el agua de la laguna verde.",
+          "El color saturado aparece únicamente donde el corpus lo nombra: los cuatro del duende —rojo, verde, amarillo, negro—, las cuatro variantes del arco del Cueche —multicolor, colorado, negro y blanco— y el blanco del Ánima; el resto de la lámina se mantiene en la gama del territorio.",
+          "Nada de oro ni metal brillante: el corpus nombra «oro» una sola vez y para negarlo. En el vestuario, el color fuerte va oculto —los refajos de franjas debajo de la falda—, nunca en la superficie.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas, no de modelado.",
+          "Sin anacronismo de época: nada de teja de barro, cemento, ladrillo, zinc ni botas de caucho antes de 1970, y nada de lana, caballo, machete, arado, teja ni cruz en escena precolombina.",
+          "Sin dragón europeo en la figura de tres cabezas: ni alas, ni garras, ni cuernos, ni fuego, ni escamas de saurio; la palabra de la fuente es «culebra».",
+          "Sin reproducir un ejemplar real: ni la Piedra de los Machines, ni el Sol de los Pastos como emblema, ni una pieza de cerámica documentada, ni un bastón existente, ni un patrón de ruana o de refajo concreto.",
+          "Sin rasgos que permitan ubicar un sitio: ni perfil de montaña único, ni confluencia legible como mapa, ni sendero de acceso, ni volcán en erupción, humo o cráter.",
+          "Sin fantasía intercambiable: ni aura, ni chispas, ni niebla luminosa, ni ojos brillantes, ni tocados panindígenas; lo pesado se muestra como clima —niebla que sube, chiflón, granizo—.",
+          "Sin cuerpo para María Panana, la Madre de Agua, los espíritus de la Madre Tierra ni la Virgen; sin cofre ni tesoro dorado; y sin ninguna escena de rito, cura, danza o excavación."
+        ],
+        "technique_close": "En el plano corto, el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte, apoyadas encima; el cuerpo se construye por planos superpuestos, nunca modelado. Los animales se resuelven con pocas piezas planas grandes y el borde recortado en dientes: el pelaje del caballo, la pluma de la lechuza y la lana de la ruana son recortes de canto, no fibras individuales. El agua es papel translúcido en láminas superpuestas; la niebla es vitela o papel de seda entre capas, nunca aerógrafo."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_anciano__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_anciano"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-waka",
+          "field": "mito",
+          "note": "«Los mayores recorren el territorio por eso. No van a sacar nada: van a proteger de la usurpación la riqueza que está hecha tierra» (canon)"
+        },
+        {
+          "myth": "la-tuta",
+          "field": "mito",
+          "note": "Los hombres visten ruana de lana de oveja y sombrero; la ruana y el sombrero son marcadores identitarios (dossier §6.2)"
+        },
+        {
+          "myth": "el-cueche",
+          "field": "mito",
+          "note": "La vara de justicia lleva corona, crucifijo, argolla y anillos según cargo, y no se reproduce un bastón existente (dossier §5)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre mayor erguido, caminando por el filo del potrero con una ruana larga de lana que le cae a la rodilla, sombrero de paño negro de ala algo caída, pantalón de mercado y botas de caucho; en la mano derecha un palo de caminar liso, sin anillos ni remate.",
+        "materials": [
+          "cuerpo bajo la ropa en planos grandes; manos en papel de piel de un solo tono con dos pliegues recortados en los nudillos",
+          "cara aparte: óvalo plano de piel de un solo tono con los rasgos recortados aparte y dos pliegues recortados en la frente",
+          "ruana de lana hilada gruesa en papel acolchado, de canto gastado",
+          "sombrero de paño negro de copa baja",
+          "palo de caminar como una sola tira de madera parda sin talla",
+          "pelo gris corto en una sola pieza bajo el ala"
+        ],
+        "palette_logic": "Lana sin teñir en la ruana, negro del sombrero, gris del pelo y pardo del palo: nada saturado.",
+        "scale": "Figura entera en 9:16, de la talla de los adultos y erguido, no encorvado, como fija la gramática del colectivo.",
+        "continuity_markers": [
+          "el palo de caminar nunca lleva corona, crucifijo, argolla, anillos ni cabeza de animal: no es vara de justicia ni autoridad",
+          "no es médico tradicional: no lleva plantas, escoba de limpia ni kit",
+          "no aparece cavando ni con objetos de huaca: los mayores protegen, no sacan",
+          "ningún rostro de mayor nombrado en las fuentes"
+        ],
+        "documented_features": [
+          "ruana de lana de oveja y sombrero son el vestido de los hombres (dossier §6.2)",
+          "los mayores advierten, leen el clima y recorren el territorio para protegerlo (canon, el-chuchun, el-cueche, la-waka)",
+          "la vara de justicia tiene gramática documentada y es objeto colonial-republicano de cargo (dossier §5)"
+        ],
+        "editorial_features": [
+          "el palo de caminar liso es decisión editorial para dar al mayor su recorrido sin confundirlo con la vara de mando; retirable",
+          "el pelo gris, el rostro y la edad son construcción editorial"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Panán V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia, con quilling reservado a lo que en el territorio se enrolla o se trenza: el agua de la chorrera, la crin y la cola trenzadas del caballo, el hilo de lana de la guanga, el arco del Cueche y los caminos de luz de los minacuros. Sin trama decorativa de relleno.",
+        "primary_request": "identidad corporal completa y legible para Mayor de Panán (tipo). Hombre mayor erguido, caminando por el filo del potrero con una ruana larga de lana que le cae a la rodilla, sombrero de paño negro de ala algo caída, pantalón de mercado y botas de caucho; en la mano derecha un palo de caminar liso, sin anillos ni remate.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera en 9:16, de la talla de los adultos y erguido, no encorvado, como fija la gramática del colectivo.",
+        "lighting_mood": "Luz difusa de altura bajo cielo cubierto, que es la condición habitual entre 2.800 y 3.800 metros: contraste bajo, sombras blandas y largas, sin sol duro salvo cuando la escena lo exige. La niebla es un plano de papel entre capas que borra el fondo y deja el primer plano nítido. Las dos únicas fuentes de luz propia que el corpus autoriza son los minacuros de La Tuta y la llamarada de medianoche de la huaca; todo lo demás se ilumina desde el cielo.",
+        "materials_textures": "cuerpo bajo la ropa en planos grandes; manos en papel de piel de un solo tono con dos pliegues recortados en los nudillos; cara aparte: óvalo plano de piel de un solo tono con los rasgos recortados aparte y dos pliegues recortados en la frente; ruana de lana hilada gruesa en papel acolchado, de canto gastado; sombrero de paño negro de copa baja; palo de caminar como una sola tira de madera parda sin talla; pelo gris corto en una sola pieza bajo el ala",
+        "era": "Tres capas que no se mezclan. A, tiempo delantero: barro cocido, piedra, madera y fibra, sin oveja, sin trigo, cebada ni haba, sin caballo, hierro, machete, teja ni cruz. B, colonial y republicana, hasta los años sesenta: bahareque de chaclas con barro pisado y cubierta de paja, lana de oveja, caballo y montura, machete, arado y yunta, cruz y chapil, sin teja, cemento ni ladrillo. C, contemporánea, desde los años setenta: teja de barro, cemento, hierro y ladrillo, botas de caucho, ropa de mercado, potrero, pino sembrado.",
+        "constraints": [
+          "documentado: ruana de lana de oveja y sombrero son el vestido de los hombres (dossier §6.2)",
+          "documentado: los mayores advierten, leen el clima y recorren el territorio para protegerlo (canon, el-chuchun, el-cueche, la-waka)",
+          "documentado: la vara de justicia tiene gramática documentada y es objeto colonial-republicano de cargo (dossier §5)",
+          "La base del mundo es tierra pardo muy oscura casi negra sobre carne de cangagua amarillo pálido, con pajonal ocre y verdes grises de páramo; el páramo nariñense nunca es verde brillante.",
+          "El verde vivo existe sólo en dos sitios y hay que reservarlo para ellos: el potrero de pasto lechero y el agua de la laguna verde.",
+          "El color saturado aparece únicamente donde el corpus lo nombra: los cuatro del duende —rojo, verde, amarillo, negro—, las cuatro variantes del arco del Cueche —multicolor, colorado, negro y blanco— y el blanco del Ánima; el resto de la lámina se mantiene en la gama del territorio.",
+          "Nada de oro ni metal brillante: el corpus nombra «oro» una sola vez y para negarlo. En el vestuario, el color fuerte va oculto —los refajos de franjas debajo de la falda—, nunca en la superficie.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas, no de modelado.",
+          "Sin anacronismo de época: nada de teja de barro, cemento, ladrillo, zinc ni botas de caucho antes de 1970, y nada de lana, caballo, machete, arado, teja ni cruz en escena precolombina.",
+          "Sin dragón europeo en la figura de tres cabezas: ni alas, ni garras, ni cuernos, ni fuego, ni escamas de saurio; la palabra de la fuente es «culebra».",
+          "Sin reproducir un ejemplar real: ni la Piedra de los Machines, ni el Sol de los Pastos como emblema, ni una pieza de cerámica documentada, ni un bastón existente, ni un patrón de ruana o de refajo concreto.",
+          "Sin rasgos que permitan ubicar un sitio: ni perfil de montaña único, ni confluencia legible como mapa, ni sendero de acceso, ni volcán en erupción, humo o cráter.",
+          "Sin fantasía intercambiable: ni aura, ni chispas, ni niebla luminosa, ni ojos brillantes, ni tocados panindígenas; lo pesado se muestra como clima —niebla que sube, chiflón, granizo—.",
+          "Sin cuerpo para María Panana, la Madre de Agua, los espíritus de la Madre Tierra ni la Virgen; sin cofre ni tesoro dorado; y sin ninguna escena de rito, cura, danza o excavación."
+        ],
+        "technique_close": "En el plano corto, el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte, apoyadas encima; el cuerpo se construye por planos superpuestos, nunca modelado. Los animales se resuelven con pocas piezas planas grandes y el borde recortado en dientes: el pelaje del caballo, la pluma de la lechuza y la lana de la ruana son recortes de canto, no fibras individuales. El agua es papel translúcido en láminas superpuestas; la niebla es vitela o papel de seda entre capas, nunca aerógrafo."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_anciana__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_anciana"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-laguna-de-maria-panana",
+          "field": "mito",
+          "note": "«Cuentan las abuelas que en el resguardo había una gran laguna» y los mayores señalan hasta dónde llegaba el agua (canon)"
+        },
+        {
+          "myth": "la-waka",
+          "field": "mito",
+          "note": "La mayora de Cumbal «es delgadita, siempre camina erguida y cobijada con una vieja ruana que usa como chalina», con botas de caucho azules «de las puntudas» y sombrero de paño negro (dossier §6.2, matriz 14)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer mayor delgadita y erguida, de pie con una mano señalando hacia abajo y a lo lejos, como quien marca hasta dónde llegaba el agua; saco de lana, falda de tela con pliegues con un dedo de refajo de franjas bajo el borde, ruana vieja terciada como chalina, sombrero de paño negro y botas de caucho puntudas.",
+        "materials": [
+          "cuerpo bajo la ropa en planos grandes y estrechos; manos en papel de piel de un solo tono con pliegues recortados",
+          "cara aparte: óvalo plano de piel de un solo tono con los rasgos recortados aparte y dos o tres pliegues recortados",
+          "saco de lana en papel de fibra con surcos de hilo",
+          "falda de tela con pliegues en tiras paralelas de papel mate",
+          "refajo de franjas rosadas, azules y verdes en tiras estrechas de papel saturado, visible sólo bajo el borde",
+          "ruana vieja de lana, gastada en el canto, en papel acolchado",
+          "sombrero de paño negro y botas de caucho puntudas en papel liso",
+          "pelo gris recogido en una sola pieza bajo el sombrero"
+        ],
+        "palette_logic": "Lana sin teñir y tintes apagados, el negro del sombrero, el gris del pelo, las botas en un azul liso y el dedo de rosado, azul y verde bajo la falda.",
+        "scale": "Figura entera en 9:16, algo más baja que la comunera adulta pero igual de erguida.",
+        "continuity_markers": [
+          "no es La Vieja: ni follones de bayetilla oscuros, ni pañolón, ni joroba, ni cabello enredado",
+          "no retrata a la mayora nombrada del testimonio: el lenguaje del vestido sí, el ejemplar no",
+          "ningún patrón concreto de refajo o ruana",
+          "en láminas anteriores a 1970, sin botas de caucho"
+        ],
+        "documented_features": [
+          "saco de lana, falda de tela con pliegues, refajos de lana de franjas de colores fuertes —rosados, azules y verdes— debajo, ruana vieja como chalina, sombrero de paño negro y botas de caucho puntudas: vestido de una mayora Pastos de Cumbal de ochenta años, documentado en 2020 (dossier §6.2, matriz 14)",
+          "delgadita y siempre erguida (dossier §6.2)",
+          "las abuelas cuentan la laguna anterior y los mayores señalan hasta dónde llegaba el agua (canon, la-laguna-de-maria-panana)"
+        ],
+        "editorial_features": [
+          "el gesto de señalar el nivel del agua es decisión editorial tomada del relato",
+          "rostro y peinado recogido son construcción editorial: la fuente describe el vestido, no la cara"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Panán V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia, con quilling reservado a lo que en el territorio se enrolla o se trenza: el agua de la chorrera, la crin y la cola trenzadas del caballo, el hilo de lana de la guanga, el arco del Cueche y los caminos de luz de los minacuros. Sin trama decorativa de relleno.",
+        "primary_request": "identidad corporal completa y legible para Mayora de Panán (tipo). Mujer mayor delgadita y erguida, de pie con una mano señalando hacia abajo y a lo lejos, como quien marca hasta dónde llegaba el agua; saco de lana, falda de tela con pliegues con un dedo de refajo de franjas bajo el borde, ruana vieja terciada como chalina, sombrero de paño negro y botas de caucho puntudas.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera en 9:16, algo más baja que la comunera adulta pero igual de erguida.",
+        "lighting_mood": "Luz difusa de altura bajo cielo cubierto, que es la condición habitual entre 2.800 y 3.800 metros: contraste bajo, sombras blandas y largas, sin sol duro salvo cuando la escena lo exige. La niebla es un plano de papel entre capas que borra el fondo y deja el primer plano nítido. Las dos únicas fuentes de luz propia que el corpus autoriza son los minacuros de La Tuta y la llamarada de medianoche de la huaca; todo lo demás se ilumina desde el cielo.",
+        "materials_textures": "cuerpo bajo la ropa en planos grandes y estrechos; manos en papel de piel de un solo tono con pliegues recortados; cara aparte: óvalo plano de piel de un solo tono con los rasgos recortados aparte y dos o tres pliegues recortados; saco de lana en papel de fibra con surcos de hilo; falda de tela con pliegues en tiras paralelas de papel mate; refajo de franjas rosadas, azules y verdes en tiras estrechas de papel saturado, visible sólo bajo el borde; ruana vieja de lana, gastada en el canto, en papel acolchado; sombrero de paño negro y botas de caucho puntudas en papel liso; pelo gris recogido en una sola pieza bajo el sombrero",
+        "era": "Tres capas que no se mezclan. A, tiempo delantero: barro cocido, piedra, madera y fibra, sin oveja, sin trigo, cebada ni haba, sin caballo, hierro, machete, teja ni cruz. B, colonial y republicana, hasta los años sesenta: bahareque de chaclas con barro pisado y cubierta de paja, lana de oveja, caballo y montura, machete, arado y yunta, cruz y chapil, sin teja, cemento ni ladrillo. C, contemporánea, desde los años setenta: teja de barro, cemento, hierro y ladrillo, botas de caucho, ropa de mercado, potrero, pino sembrado.",
+        "constraints": [
+          "documentado: saco de lana, falda de tela con pliegues, refajos de lana de franjas de colores fuertes —rosados, azules y verdes— debajo, ruana vieja como chalina, sombrero de paño negro y botas de caucho puntudas: vestido de una mayora Pastos de Cumbal de ochenta años, documentado en 2020 (dossier §6.2, matriz 14)",
+          "documentado: delgadita y siempre erguida (dossier §6.2)",
+          "documentado: las abuelas cuentan la laguna anterior y los mayores señalan hasta dónde llegaba el agua (canon, la-laguna-de-maria-panana)",
+          "La base del mundo es tierra pardo muy oscura casi negra sobre carne de cangagua amarillo pálido, con pajonal ocre y verdes grises de páramo; el páramo nariñense nunca es verde brillante.",
+          "El verde vivo existe sólo en dos sitios y hay que reservarlo para ellos: el potrero de pasto lechero y el agua de la laguna verde.",
+          "El color saturado aparece únicamente donde el corpus lo nombra: los cuatro del duende —rojo, verde, amarillo, negro—, las cuatro variantes del arco del Cueche —multicolor, colorado, negro y blanco— y el blanco del Ánima; el resto de la lámina se mantiene en la gama del territorio.",
+          "Nada de oro ni metal brillante: el corpus nombra «oro» una sola vez y para negarlo. En el vestuario, el color fuerte va oculto —los refajos de franjas debajo de la falda—, nunca en la superficie.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas, no de modelado.",
+          "Sin anacronismo de época: nada de teja de barro, cemento, ladrillo, zinc ni botas de caucho antes de 1970, y nada de lana, caballo, machete, arado, teja ni cruz en escena precolombina.",
+          "Sin dragón europeo en la figura de tres cabezas: ni alas, ni garras, ni cuernos, ni fuego, ni escamas de saurio; la palabra de la fuente es «culebra».",
+          "Sin reproducir un ejemplar real: ni la Piedra de los Machines, ni el Sol de los Pastos como emblema, ni una pieza de cerámica documentada, ni un bastón existente, ni un patrón de ruana o de refajo concreto.",
+          "Sin rasgos que permitan ubicar un sitio: ni perfil de montaña único, ni confluencia legible como mapa, ni sendero de acceso, ni volcán en erupción, humo o cráter.",
+          "Sin fantasía intercambiable: ni aura, ni chispas, ni niebla luminosa, ni ojos brillantes, ni tocados panindígenas; lo pesado se muestra como clima —niebla que sube, chiflón, granizo—.",
+          "Sin cuerpo para María Panana, la Madre de Agua, los espíritus de la Madre Tierra ni la Virgen; sin cofre ni tesoro dorado; y sin ninguna escena de rito, cura, danza o excavación."
+        ],
+        "technique_close": "En el plano corto, el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte, apoyadas encima; el cuerpo se construye por planos superpuestos, nunca modelado. Los animales se resuelven con pocas piezas planas grandes y el borde recortado en dientes: el pelaje del caballo, la pluma de la lechuza y la lana de la ruana son recortes de canto, no fibras individuales. El agua es papel translúcido en láminas superpuestas; la niebla es vitela o papel de seda entre capas, nunca aerógrafo."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
     "duende_de_panan__identity_sheet": {
       "purpose": "identity_sheet",
       "entity_refs": [

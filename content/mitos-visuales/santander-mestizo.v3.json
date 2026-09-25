@@ -1301,16 +1301,16 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura terminó sin una sola entidad propia: el mozo, la calle empedrada, el río de Oro y el monasterio de las Clarisas ya venían de relatos más antiguos y mejor fechados, y lo único exclusivo de esta página —los tenis marca Tiburón y los «destellos ochentosos»— está fuera de época por un siglo. Es una pieza literaria moderna disfrazada de leyenda y se produce entera desde el estrato del XIX, sin abrir ninguna hoja nueva.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "La reescritura quita los «destellos ochentosos» y deja el cuento en tarde de sol poniente: el parroquiano, los tres muchachos, la Calle Diez, las Clarisas, el viejo chasis y el Río de Oro que se encrespa al tajo de la navaja Campana; los tenis Tiburón siguen fuera de época y la página se sigue produciendo por herencia, ahora con el tipo base de hombre adulto como su cuerpo.",
         "previous_note": "La lectura terminó sin una sola entidad propia: el mozo, la calle empedrada, el río de Oro y el monasterio de las Clarisas ya venían de relatos más antiguos y mejor fechados, y lo único exclusivo de esta página —los tenis marca Tiburón y los «destellos ochentosos»— está fuera de época por un siglo. Es una pieza literaria moderna disfrazada de leyenda y se produce entera desde el estrato del XIX, sin abrir ninguna hoja nueva."
       },
       "entity_refs": [
         {
           "entity_id": "mozo_del_pueblo",
           "role": "primary",
-          "note": "Ocho relatos y un solo muchacho: Nepito, Antoninito, Balbino, Remigio, Tenorio, Carlos Vicente Gómez, el parroquiano de la Calle Diez, Ritornelio. Es el que sale de noche y se topa con el espanto. Ritornelio entra aquí con una salvaguarda expresa: el corpus lo llama «el bobito» y el contrato debe tratarlo con dignidad, sin caricatura de discapacidad."
+          "note": "El parroquiano de Piedecuesta que cruza la Calle Diez con paso lento, se sabe seguido, se mete al río y lo corta con la navaja. Conduce la página entera y sigue siendo la primaria."
         },
         {
           "entity_id": "iglesia_de_pueblo",
@@ -1320,12 +1320,12 @@
         {
           "entity_id": "calle_empedrada",
           "role": "setting",
-          "note": "El escenario de nueve relatos y, con el camino de herradura, el verdadero protagonista del corpus: adoquín y piedra, esquinas, zaguanes, el empedrado de Umpalá, el camino de la Pedregosa vieja. Los puentes —el de Plata, el Maldito, el vehicular de Tres Esquinas— entran aquí; no cambian de materia ni de luz."
+          "note": "La Calle Diez de Piedecuesta al caer la tarde, con las sombras de los tres muchachos alargadas sobre los adoquines. «El viejo chasis», por donde el parroquiano se desvía camino del río, es un nombre de lugar que sólo sitúa y queda embebido aquí, sin ficha."
         },
         {
           "entity_id": "rio_y_quebradas",
           "role": "setting",
-          "note": "Ocho relatos: el río de Oro que ni es río ni es oro, el Manco, el Hato, el Umpalá, la quebrada Salvavidas, la quebradita del Puente de Plata, el Mogoticos. El salto y su velo de agua son un estado de este mismo sistema —la caverna de detrás la lleva la ficha de cueva—, y la piedra con la mancha del río también."
+          "note": "El Río de Oro «que ni es río ni es de oro»: lecho de piedras resbaladizas que el parroquiano vadea y que, al tajo de la navaja, se encrespa hacia atrás y arrastra a los tres perseguidores corriente abajo. Es la vega tabacalera del dossier; el encrespamiento es acción de una escena, no un estado nuevo del río."
         },
         {
           "entity_id": "templos_nombrados",
@@ -1335,22 +1335,27 @@
         {
           "entity_id": "mozos_nombrados",
           "role": "secondary",
-          "note": "Ocho nombres, un cuerpo. Los tres perseguidores adolescentes del río de Oro y el escultor de mármoles entran aquí. Ritornelio lleva salvaguarda de dignidad explícita en la ficha que lo cubre."
+          "note": "Los tres muchachos que siguen al parroquiano imitándole los pasos y entran al río chapoteando detrás de él: mismo cuerpo que el mozo del pueblo, en grupo de tres."
         },
         {
           "entity_id": "hacha_navaja_y_baston",
           "role": "plot_object",
-          "note": "Herramientas de mano de tres relatos. El hacha se dibuja como herramienta, nunca en uso: el infanticidio no se representa."
+          "note": "La navaja marca Campana del bolsillo derecho, con la que el parroquiano «corta las aguas». Se dibuja cerrada o en la mano, nunca contra un cuerpo."
         },
         {
           "entity_id": "tenis_marca_tiburon",
           "role": "plot_object",
-          "note": "El resto de la página —la Calle Diez, el río de Oro, la navaja— sí cabe en el denominador."
+          "note": "Los tenis marca Tiburón siguen en el texto reescrito —«parecían hechos para pisar aquel lecho de piedras»— y siguen fuera de época: la historia del relato la fecha en la segunda mitad del siglo XX. Excluidos; el pie se dibuja con alpargata desde el estrato del XIX."
         },
         {
           "entity_id": "hoja_utileria_casa_y_fiesta",
           "role": "plot_object",
-          "note": "Fogón de leña, olleta de chocolate espumado, jarro de plata, amasijos, lechón, arepa, tabaco veguero, tiple, violín, guitarra, cohetes, gallardetes, banderas, radio, letrero pintado, hacha, navaja de marca campana y bastón de sereno. La mesa, la música y la mano de obra del pueblo."
+          "note": "Aporta sólo la navaja de bolsillo marca Campana; nada más de la mesa ni de la fiesta aparece en esta página."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "El parroquiano es un hombre de pueblo: su cuerpo, su cara y su camisa salen del tipo base, y la página los hereda desde el estrato del XIX."
         }
       ]
     },
@@ -1376,71 +1381,136 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "Lo que separó esta lectura fue la poda: la página es una composición híbrida de 2016 y hubo que quitarle la piedra de sacrificios, el cacique y los sucesos coloniales inventados antes de contar nada. Lo que queda es un enano ensombrerado con tiple en la caverna de detrás del salto, en la quebrada La Honda, y un llanto por la tala de árboles y la merma del caudal que es memoria contemporánea: la lámina puede sostenerlo, pero no puede fecharlo en el XIX.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "La reescritura deshace la poda: Muki vuelve a ser un ángel arpista desterrado, la cascada baja ahora de la Mesa de Géridas por la quebrada El Roble y regresan los guanes, el cacique, la piedra de sacrificios, los hombres come oro con sus armas, la avalancha del dique y los suicidios; se añaden los conquistadores, las armas, las aves ciegas y el monasterio en ruina, se excluye la piedra de sacrificios, sale la niebla de páramo y el duende queda con tiple y sombrero, sin apoyarse en nada de lo restituido.",
         "previous_note": "Lo que separó esta lectura fue la poda: la página es una composición híbrida de 2016 y hubo que quitarle la piedra de sacrificios, el cacique y los sucesos coloniales inventados antes de contar nada. Lo que queda es un enano ensombrerado con tiple en la caverna de detrás del salto, en la quebrada La Honda, y un llanto por la tala de árboles y la merma del caudal que es memoria contemporánea: la lámina puede sostenerlo, pero no puede fecharlo en el XIX."
       },
       "entity_refs": [
         {
           "entity_id": "duende_del_salto",
           "role": "primary",
-          "note": "Conduce el relato: hechiza con el tiple, provoca avalanchas, sabotea construcciones. Lo santandereano: enano ensombrerado con tiple en la caverna tras el Salto del Duende, en la quebrada La Honda, y el desenlace es una escuela rural que lleva su nombre. AVISO: la composición es un híbrido moderno de 2016 y el universo ya podó de ella las atribuciones guanes, los suicidios y los sucesos coloniales inventados — el contrato no puede apoyarse en la piedra de sacrificios ni en el cacique."
+          "note": "Sigue conduciendo el relato y sigue siendo la primaria: Muki, el enano ensombrerado con tiple que guarda la caverna tras el velo de agua, encanta a las doncellas, rompe el dique contra los invasores, sabotea el monasterio y atrapa al cazador antes de sellar la entrada."
         },
         {
           "entity_id": "mujer_del_pueblo",
           "role": "secondary",
-          "note": "Diez relatos y un solo pliego: Rebeca, Maribella, Eumelia viva, Cantera con su yegua Pinta, doña María de Velasco, Ramona la cocinera, la mujer de Tona, la esposa de Cirilo, las doncellas del salto, las muchachas del baile. Ninguna trae un rasgo que la separe visualmente de las otras; lo que cambia es el acto."
+          "note": "Las mujeres de los alrededores que piden que las libren del acoso del duende: la mujer del pueblo, sin rasgo propio."
         },
         {
           "entity_id": "cueva_de_tesoro",
           "role": "setting",
-          "note": "El mayor ahorro de lugar del censo: ocho cuevas nombradas —la de la Pisca, el Cenicero, la Calentana, la del Indio, Cachalú, la del ermitaño en Ocaña, la caverna tras el salto, el túnel de El Clarinete— y la peña que la Máncara abre con un lamento, todas en un solo modelo espacial. El contrato prohíbe expresamente mostrar excavación, guaquería, restos humanos o tesoro espectacular."
+          "note": "La caverna tras el salto, llena de filones de oro, esmeraldas y tesoros juntados durante siglos, que Muki guarda y al final sella. Se dibuja cerrada o tras el velo; ningún tesoro a la vista sale de su hoja."
         },
         {
           "entity_id": "rio_y_quebradas",
           "role": "setting",
-          "note": "Ocho relatos: el río de Oro que ni es río ni es oro, el Manco, el Hato, el Umpalá, la quebrada Salvavidas, la quebradita del Puente de Plata, el Mogoticos. El salto y su velo de agua son un estado de este mismo sistema —la caverna de detrás la lleva la ficha de cueva—, y la piedra con la mancha del río también."
+          "note": "La cascada de la quebrada El Roble, que baja por las estribaciones occidentales de la Mesa de Géridas y abre un cañón: su velo tapa la caverna y en sequía mengua y deja ver la entrada. El dique roto y la avalancha que arrastra a los invasores son acción de una escena del mismo sistema fluvial, sin cuerpos arrastrados en la lámina."
         },
         {
           "entity_id": "salto_y_cascada",
           "role": "setting",
-          "note": "Estado del mismo sistema fluvial ya fichado —caída y velo de agua—; la caverna de detrás la lleva la ficha de cueva."
+          "note": "La caída y el velo de agua de la quebrada El Roble —antes quebrada La Honda en la lectura congelada—: estado del sistema fluvial ya fichado, con dos registros, velo cerrado y entrada descubierta en sequía."
         },
         {
           "entity_id": "cuevas_nombradas",
           "role": "setting",
-          "note": "Siete topónimos para un mismo modelo espacial. Aquí está el mayor ahorro del censo: siete pliegos evitados sin perder ninguna escena."
-        },
-        {
-          "entity_id": "niebla_de_paramo",
-          "role": "magic_subject",
-          "note": "Es el clima del pliego de páramo, no un fenómeno aparte."
+          "note": "La caverna del salto sigue siendo uno de los topónimos del mismo modelo espacial de cueva."
         },
         {
           "entity_id": "mujeres_nombradas",
           "role": "secondary",
-          "note": "Doce mujeres nombradas y ni un rasgo que las separe visualmente. Oliva se cubre además por la ficha de las fiqueras, que es donde trabaja."
+          "note": "Las doncellas solteras que oyen el tiple y siguen a Muki hacia la caverna: se dibujan antes de entrar, de pie a la orilla del velo, nunca dentro."
         },
         {
           "entity_id": "tiple_violin_y_cohetes",
           "role": "plot_object",
-          "note": "El tiple del duende es el único con función narrativa; el resto es aparejo de fiesta y cabe en la misma hoja."
+          "note": "El tiple de Muki, su arma para atraer a las doncellas, y los violines y guitarras que la gente lleva al atardecer para calmarlo: la música es la única defensa del relato."
         },
         {
           "entity_id": "pueblos_indigenas_nombrados",
           "role": "secondary",
-          "note": "Además, en duende-del-salto la atribución guane está declarada como fabricación moderna y ya fue podada. Talabalí queda fichado aparte por ser el único con descripción."
+          "note": "Los guanes vuelven al texto reescrito: veneran a Muki como divinidad menor, le llevan ofrendas de oro y piedras, su cacique arroja joyas en la piedra de sacrificios, y otros indígenas guían a los invasores. Sigue excluido: el dossier no documenta ningún culto guane y la atribución es de la composición de 2016."
         },
         {
           "entity_id": "escuela_de_el_duende",
           "role": "setting",
-          "note": "Además pertenece a la capa moderna de 2016 de esa composición híbrida."
+          "note": "La Escuela de El Duende vuelve a nombrarse como desenlace —la ruina con huertas donde los niños cantaban sin nombrarlo— y sigue excluida por la misma razón: capa de 2016 que ningún momento pone en escena."
         },
         {
           "entity_id": "hoja_utileria_casa_y_fiesta",
           "role": "plot_object",
-          "note": "Fogón de leña, olleta de chocolate espumado, jarro de plata, amasijos, lechón, arepa, tabaco veguero, tiple, violín, guitarra, cohetes, gallardetes, banderas, radio, letrero pintado, hacha, navaja de marca campana y bastón de sereno. La mesa, la música y la mano de obra del pueblo."
+          "note": "Aporta el tiple del duende y los violines y guitarras de los vecinos; nada de la mesa ni del fogón aparece en esta página."
+        },
+        {
+          "entity_id": "canon_del_chicamocha",
+          "role": "setting",
+          "note": "La Mesa de Géridas, hoy de Los Santos, de cuyas estribaciones occidentales baja la cascada por el cañón de la quebrada El Roble: el borde seco de la mesa enmarca el salto."
+        },
+        {
+          "entity_id": "conquistadores",
+          "role": "secondary",
+          "note": "Los «hombres come oro» de pelo dorado y piel pálida, con armas de fuego, picos y espadas, que se acercan a la caverna guiados por indígenas: se dibujan en marcha hacia el salto, nunca arrastrados por la avalancha."
+        },
+        {
+          "entity_id": "macana_espada_y_jaula",
+          "role": "plot_object",
+          "note": "Las armas de fuego, los picos y las espadas de los hombres come oro."
+        },
+        {
+          "entity_id": "hoja_utileria_armas_coloniales",
+          "role": "plot_object",
+          "note": "Aporta las armas de fuego y las espadas de los invasores, en reposo o al hombro."
+        },
+        {
+          "entity_id": "restos_humanos_y_guaqueria",
+          "role": "plot_object",
+          "note": "«Las tumbas sagradas cayeron en manos de los extranjeros»: es guaquería, y queda fuera de toda lámina por la regla del osario."
+        },
+        {
+          "entity_id": "gente_del_pueblo",
+          "role": "secondary",
+          "note": "La gente que decide enfrentar al duende con música y lleva violines y guitarras al Salto al atardecer, y la que resuelve levantar el monasterio."
+        },
+        {
+          "entity_id": "campesinos_nombrados",
+          "role": "secondary",
+          "note": "El cazador que da con la entrada de la caverna y queda atrapado: el campesino labriego con otra herramienta, dibujado ante la entrada y nunca preso."
+        },
+        {
+          "entity_id": "aves_ciegas_y_reptiles",
+          "role": "secondary",
+          "note": "Las aves ciegas y los reptiles que entran a la caverna en sequía buscando humedad: ambiente de la cueva, sin ficha."
+        },
+        {
+          "entity_id": "piedra_de_sacrificios",
+          "role": "setting",
+          "note": "La piedra de sacrificios del cacique, las brujas y seres oscuros reunidos sobre ella y los suicidios desde lo alto del salto: detectados y excluidos."
+        },
+        {
+          "entity_id": "monasterio_del_salto",
+          "role": "setting",
+          "note": "El monasterio a medio levantar en lo alto del salto que Muki sabotea y que acaba en ruina con huertas: embebido en la fábrica del templo."
+        },
+        {
+          "entity_id": "iglesia_de_pueblo",
+          "role": "setting",
+          "note": "Presta su fábrica al monasterio inacabado del salto; ninguna iglesia de pueblo aparece en la escena."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Las doncellas solteras que siguen el tiple son el tipo base de mujer joven."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Las mujeres de los alrededores que piden que las libren del duende salen del tipo base de mujer adulta."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Los vecinos que llevan violines y guitarras y el cazador que da con la cueva salen del tipo base de hombre adulto."
         }
       ]
     },
@@ -1466,16 +1536,16 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura separó el cuerpo del espanto de la maquinaria de barrio que lo sostiene: la túnica de llamas que arde sin consumirla, la antorcha y la canilla son de la aparición, pero las campanas de San Antonio a medianoche los miércoles y sábados, los serenos con bastón y el vecindario rezando tras las puertas son el reloj y el escenario, y son ellos los que fechan la escena antes del alumbrado eléctrico. La página cita a Arenas Mantilla con página exacta y ninguna se pudo verificar contra el impreso.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "La reescritura le quita al ánima la canilla —y con ella la única excepción a la regla del osario— y le da cara transparente y dolorida, vaivén de quien flota y a don Policarpo Avendaño como primer testigo; se rediseña la ficha de Benedicta sin hueso, se embebe a don Policarpo en el tipo base de hombre y el reloj de campanas, serenos y devotas sigue fechando la escena antes de la luz eléctrica.",
         "previous_note": "La lectura separó el cuerpo del espanto de la maquinaria de barrio que lo sostiene: la túnica de llamas que arde sin consumirla, la antorcha y la canilla son de la aparición, pero las campanas de San Antonio a medianoche los miércoles y sábados, los serenos con bastón y el vecindario rezando tras las puertas son el reloj y el escenario, y son ellos los que fechan la escena antes del alumbrado eléctrico. La página cita a Arenas Mantilla con página exacta y ninguna se pudo verificar contra el impreso."
       },
       "entity_refs": [
         {
           "entity_id": "anima_coy",
           "role": "primary",
-          "note": "Conduce el acto entero: sale a medianoche los miércoles y sábados por San Antonio pidiendo oraciones por Rosario. Silueta irrepetible en el corpus — bulto blanco con túnica de llamas que arde sin consumirla, antorcha y una canilla en la mano, pasos que suenan a cascos de mula. Fuente: Arenas Mantilla, Crónicas y romances 1960, pp. 404-406."
+          "note": "Sigue conduciendo el relato y sigue siendo la primaria: Benedicta Rovira con su túnica de llamas y su antorcha, la cara transparente y dolorida, pidiendo oraciones por Rosario. El canon reescrito le quita la canilla y le da el vaivén de quien flota."
         },
         {
           "entity_id": "animas_en_pena",
@@ -1495,7 +1565,7 @@
         {
           "entity_id": "mula_de_carga",
           "role": "secondary",
-          "note": "El animal que mueve este mundo: La Ojigacha, La Chenga y el resto de la recua de Mateo, la mula que llevan a herrar, la mula cuyos cascos anuncian al Ánima Coy. Viva y aparejada, distinta de las dos mulas espectrales."
+          "note": "Sólo como sonido: sus pasos «sonaban como cascos de mula». Ninguna mula entra en la lámina del ánima; el ref queda para que la continuidad sonora no le invente una."
         },
         {
           "entity_id": "casa_de_bahareque",
@@ -1515,22 +1585,22 @@
         {
           "entity_id": "chulo_y_guala",
           "role": "secondary",
-          "note": "Aparecen como comparación («brincando como un chulo») y como topónimo (el Callejón de la Guala); ningún acto propio."
+          "note": "Comparación de marcha —«pasa brincando, como un chulo o un cabro»—: ni el chulo ni el cabro entran en escena."
         },
         {
           "entity_id": "dependencias_de_la_casa",
           "role": "setting",
-          "note": "Partes de la casa campesina, no edificios: van en su contrato."
+          "note": "El pozo al que Benedicta echó a Rosario, que en tiempos de sequía había sido su única salvación: se dibuja cerrado y quieto; el acto no se representa."
         },
         {
           "entity_id": "ninos_nombrados",
           "role": "secondary",
-          "note": "Cuatro niños sin rasgo distintivo. Del niño indígena de Cachalú el corpus no da traje ni rasgo, así que su contrato no puede ir más allá de la figura infantil genérica."
+          "note": "Rosario, la hija pequeña de Benedicta, sólo nombrada en la súplica: no aparece en escena y su muerte no se dibuja."
         },
         {
           "entity_id": "serenos_y_vecindario",
           "role": "secondary",
-          "note": "Cinco modos de multitud que una sola gramática de grupo cubre. El bastón del sereno va en hoja de utilería."
+          "note": "Las señoras devotas que rezan credos y salves tras la puerta, los que miran detrás de las cortinas, los serenos de ronda con bastón y los hombres valientes que intentan salirle al paso."
         },
         {
           "entity_id": "velas_y_camandula",
@@ -1540,12 +1610,12 @@
         {
           "entity_id": "hacha_navaja_y_baston",
           "role": "plot_object",
-          "note": "Herramientas de mano de tres relatos. El hacha se dibuja como herramienta, nunca en uso: el infanticidio no se representa."
+          "note": "Los bastones de los serenos que hacen la ronda; el hacha y la navaja no aparecen en esta página."
         },
         {
           "entity_id": "olor_a_azufre_e_incienso",
           "role": "magic_subject",
-          "note": "Entra en el contrato del Diablo del camino como marcador narrativo, no como imagen."
+          "note": "El «olor espeso a azufre» y la «bruma agria» que se pega a la piel de quien mira tras las cortinas: marcador narrativo, no imagen; la bruma no se añade al cuadro."
         },
         {
           "entity_id": "hoja_utileria_devocion",
@@ -1556,6 +1626,21 @@
           "entity_id": "hoja_utileria_casa_y_fiesta",
           "role": "plot_object",
           "note": "Fogón de leña, olleta de chocolate espumado, jarro de plata, amasijos, lechón, arepa, tabaco veguero, tiple, violín, guitarra, cohetes, gallardetes, banderas, radio, letrero pintado, hacha, navaja de marca campana y bastón de sereno. La mesa, la música y la mano de obra del pueblo."
+        },
+        {
+          "entity_id": "policarpo_avendano",
+          "role": "secondary",
+          "note": "Don Policarpo Avendaño, el primero en oír los pasos de cascos de mula y en decir «Es ella»: vecino sin rasgo, cubierto por el tipo base."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Don Policarpo, los serenos y los hombres valientes que salen al paso son el hombre de pueblo del tipo base."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Las señoras devotas que rezan tras las puertas cerradas son la mujer de pueblo del tipo base."
         }
       ]
     },
@@ -1581,56 +1666,61 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "Es el relato donde la extracción dio el resultado más incómodo: la figura del título —Sugamuxi o don Alonso— tiene voz, cargo y una frase memorable, pero de cuerpo sólo «ojos profundos», y lo mismo ocurre con el cacique Andrés Guatesique, que es carácter y no cuerpo. Fichar su vestuario sería inventar iconografía muisca o guane que este corpus mestizo no documenta y que no puede tomarse prestada de otra comunidad, así que la protagonía producible se queda en los caballeros criollos y en los conquistadores, y el cacique existe en la página como voz y no como lámina.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "La reescritura restaura el texto de Otero D'Costa de 1936 y separa del todo la viñeta muisca de Sugamuxi del juicio de Dubigara: entra el licenciado Morantes, el río que no corre hacia arriba y la plaza de Vélez, salen los conquistadores —ya no hay armas ni conquista, sólo encomenderos y la Real Audiencia— y el cacique, risueño y de dientes blanquísimos, sigue siendo voz y no lámina.",
         "previous_note": "Es el relato donde la extracción dio el resultado más incómodo: la figura del título —Sugamuxi o don Alonso— tiene voz, cargo y una frase memorable, pero de cuerpo sólo «ojos profundos», y lo mismo ocurre con el cacique Andrés Guatesique, que es carácter y no cuerpo. Fichar su vestuario sería inventar iconografía muisca o guane que este corpus mestizo no documenta y que no puede tomarse prestada de otra comunidad, así que la protagonía producible se queda en los caballeros criollos y en los conquistadores, y el cacique existe en la página como voz y no como lámina."
       },
       "entity_refs": [
         {
           "entity_id": "hidalgo_criollo_colonial",
           "role": "primary",
-          "note": "Cinco caballeros de cinco relatos en un solo pliego: don Juan de Velasco, don Celedonio, don Juan Bautista de Olarte, don Juan de Arteaga Gamboa y don Anselmo Landínez de Chinchánchez. Todos visten el mismo registro colonial y ninguno trae un rasgo que lo separe de los otros. El coto de don Anselmo NO se ficha: el universo retira expresamente la ecuación entre bocio, apariencia corporal y falta de inteligencia."
-        },
-        {
-          "entity_id": "conquistadores",
-          "role": "secondary",
-          "note": "Cuatro relatos: los de las armaduras relucientes que echan sal a la laguna, los arcabuces de la Villa de San Carlos, los hombres armados de Velasco en Bucarica. Grupo, no individuos: ninguno tiene nombre ni rostro en el corpus."
+          "note": "Sigue siendo la primaria producible: don Juan Bautista de Olarte, provincial de la Santa Hermandad de Vélez a fines del XVII, que manda al criado a cobrar el tributo, llama al cacique y acaba cobrándole al mestizo la otra mitad. Mismo registro colonial que los demás caballeros del corpus."
         },
         {
           "entity_id": "monte_y_vereda",
           "role": "setting",
-          "note": "El lomerío verde donde vive todo lo que no está en el pueblo: cerros, potreros, cañaduzales, cacaotales, labrantíos de maíz, guarumos, matarratones, palmas de cera, arrayanes y el ganado que sestea. El cerro y la Loma de la Cantera —nombrados en tres relatos— entran aquí: son el mismo lomerío y su ficha aparte no añadiría silueta."
+          "note": "Dubigara, la comarca donde hoy se asienta Barichara, y el labrantío de maíz de Pirinoche que el mestizo compra: el lomerío verde de vereda en su estrato colonial."
         },
         {
           "entity_id": "vegetacion_de_vereda",
           "role": "plot_object",
-          "note": "Siete especies de fondo repartidas en ocho relatos; ninguna conduce un acto. La gramática del paisaje las cubre a todas."
+          "note": "El labrantío de maíz que Pirinoche vende por veinte pesos: la única planta con función en el relato. La ceiba es sólo comparación."
         },
         {
           "entity_id": "hidalgos_nombrados",
           "role": "secondary",
-          "note": "Cinco caballeros del mismo registro colonial y ni un rasgo propio. El mestizo tramposo que no le paga a Pirinoche entra también aquí, un peldaño más abajo en la escala social pero con el mismo traje."
+          "note": "Olarte, el licenciado Morantes que clama en Vélez que no faltaba más, y el mestizo criado del encomendero que compra el labrantío y no paga —un peldaño más abajo, con el mismo traje—. La bolsa de cordón de la que salen los pesos de buen oro es su única utilería."
         },
         {
           "entity_id": "sugamuxi_don_alonso",
           "role": "secondary",
-          "note": "El universo pide expresamente reencuadrar esta sátira colonial sin inventar tradición guane. La exclusión es esa instrucción cumplida."
+          "note": "La viñeta de apertura sigue siendo muisca y boyacense —Sugamuxi, sacerdote de Iraca bautizado don Alonso, en Sogamoso, con jueces y corregidores de la Real Audiencia—: fuera por la misma instrucción de no inventar tradición."
         },
         {
           "entity_id": "cacique_andres_guatesique",
           "role": "secondary",
-          "note": "Con Pirinoche, el indio de Dubigara al que no le pagan, ocurre lo mismo y queda cubierto por esta misma exclusión."
+          "note": "Don Andrés Guatesique, cacique de Dubigara, risueño y de dientes blanquísimos —el único rasgo corporal del canon reescrito—, y Pirinoche, el indio al que no le pagan: siguen fuera por la misma razón, sin iconografía guane documentada."
         },
         {
           "entity_id": "escenas_de_agresion",
           "role": "magic_subject",
-          "note": "Cada uno de los tres relatos conserva su escena: el juicio del cacique, el mendigo en la puerta, la mujer esperando en la esquina."
+          "note": "Los veinte azotes que el cacique manda dar al mestizo y los otros veinte que manda Olarte: siguen en el texto y siguen fuera de toda lámina."
         },
         {
           "entity_id": "ciudad_de_paga",
           "role": "setting",
-          "note": "La ciudad de Paga en el-cacique-salomon."
+          "note": "La «ciudad de Paga, donde vivían antiguamente los paganos»: juego de palabras del deudor, no lugar."
+        },
+        {
+          "entity_id": "rio_y_quebradas",
+          "role": "setting",
+          "note": "El río que la gente de Sugamuxi va a mirar para ver si corre hacia arriba o hacia abajo: agua que baja, como siempre. Nueva mención del canon reescrito, absorbida por el sistema fluvial y sin topónimo."
+        },
+        {
+          "entity_id": "plaza_del_pueblo",
+          "role": "setting",
+          "note": "Vélez, sede del encomendero, donde se arma la zafacoca al ver llegar al mestizo derrengado y donde Olarte recibe al cacique: la plaza y su casa de gobierno en el estrato colonial."
         }
       ]
     },
@@ -1656,21 +1746,21 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "Lo que esta lectura separó es que el Carriazo es a la vez el guardián y el objeto: hay que vencerlo para desenterrar las tres cargas de oro bajo el roble de la vereda San Isidro, de modo que no puede tener cuerpo estable —golpea con «caricias de lana que después se convertían en rocas»— y el desenterrar, que es el final, no se representa. Su forma de chivo con cachos es variante del mismo ser y no un segundo cuerpo, y lo que castiga es la codicia y el lindero traspasado, no la tala.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "La reescritura convierte al Carriazo en ciclo plural —primero un sitio del camino real de San Isidro, luego el Conde usurero del XVII que enterró tres cargas de oro, y un guardián visto como demonio o como chivo—, conserva las tres pruebas y los tres aspirantes y cambia el golpe a «suave como de lana y después duro como piedras»: se corrige la cita del contrato del Carriazo, se declara su forma demoníaca bajo el Diablo del camino y se suma el tipo base de hombre para Silvio, Reyes y Carmelo.",
         "previous_note": "Lo que esta lectura separó es que el Carriazo es a la vez el guardián y el objeto: hay que vencerlo para desenterrar las tres cargas de oro bajo el roble de la vereda San Isidro, de modo que no puede tener cuerpo estable —golpea con «caricias de lana que después se convertían en rocas»— y el desenterrar, que es el final, no se representa. Su forma de chivo con cachos es variante del mismo ser y no un segundo cuerpo, y lo que castiga es la codicia y el lindero traspasado, no la tala."
       },
       "entity_refs": [
         {
           "entity_id": "carriazo",
           "role": "primary",
-          "note": "Es a la vez el guardián y el objeto del relato: hay que vencerlo para desenterrar las tres cargas de oro bajo el roble de la vereda San Isidro. Golpea —«caricias de lana que después se convertían en rocas»—. La forma de chivo con cachos queda embebida: es variante del mismo ser, no un segundo cuerpo. El desenterrar no se representa: el marco editorial prohíbe guaquería y excavación."
+          "note": "Sigue siendo la primaria: el Carriazo, que primero fue un punto del camino real y luego el Conde usurero del XVII que enterró tres cargas de oro bajo un roble, guarda el entierro con figura de demonio o de chivo y golpea «suave, como de lana, y después duro como piedras». El desenterrar de Carmelo no se representa."
         },
         {
           "entity_id": "diablo_del_camino",
           "role": "magic_subject",
-          "note": "Seis relatos y una sola ficha: el que ríe y baja la ladera derribando árboles ante el arriero Mateo, el que se lleva la campana del caracolí, el que pacta con Galeacer y con el padre de Silvestre. Lo santandereano: se le llama Mandingas, huele a azufre e incienso mezclados, el bosque amanece intacto y su dominio es el borde del cañón del Chicamocha. El contrato debe dejarlo sin cuerpo fijo: ninguno de los seis relatos lo describe, y ahí está su gracia."
+          "note": "«Unos lo han visto con figura de demonio»: la forma demoníaca del Carriazo se resuelve con la sombra sin anatomía del Diablo del camino, no con un cuerpo nuevo."
         },
         {
           "entity_id": "campesino_labriego",
@@ -1680,7 +1770,7 @@
         {
           "entity_id": "nino_campesino",
           "role": "secondary",
-          "note": "Siete relatos y una sola figura de escala: Alberto Díaz a los siete años, el paje del padre Esteban, el niño indígena que guía al párroco de Cachalú, los que se descubren la cabeza ante la Puerta del Perdón, los que oyen los cuentos junto al fogón. Una biblia necesita una referencia de escala infantil y este corpus la pide en siete páginas."
+          "note": "«En la región no hay niño que no la sepa»: la historia contada a los niños de San Isidro, La Vega y La Chíngara, sin niño en la acción."
         },
         {
           "entity_id": "chivo_y_cabro",
@@ -1700,22 +1790,22 @@
         {
           "entity_id": "tienda_de_pueblo",
           "role": "setting",
-          "note": "Cinco relatos y un solo local que da a la calle: la tienda «La Gran Luz», el hotel Bochinche, el negocio de golosinas y aspirinas de Félix con su letrero, la tienda de la Piquituerta, las cantinas donde Reyes Suárez contaba. La fragua del herrero comparte esta gramática de fachada; lo suyo de dentro va en la ficha del herrero."
+          "note": "Las cantinas donde Reyes Suárez contaba cómo se sentían los golpes del espanto."
         },
         {
           "entity_id": "camino_de_herradura",
           "role": "setting",
-          "note": "Ocho relatos ocurren encima de él: el camino real de San Isidro, el ramal viejo de la vía Curos, la ruta de San Rafael a Piedecuesta, el camino a Chiquinquirá. Su gramática lleva la luna llena, que el corpus usa como reloj, y la cruz alta de camino con letrero que los vecinos levantan donde alguien cayó."
+          "note": "El camino real de la vereda San Isidro, al oriente de Piedecuesta, que comunicaba con otros ramales y por cuyo punto se orientaban los colonos: el Carriazo fue primero ese sitio del camino."
         },
         {
           "entity_id": "monte_y_vereda",
           "role": "setting",
-          "note": "El lomerío verde donde vive todo lo que no está en el pueblo: cerros, potreros, cañaduzales, cacaotales, labrantíos de maíz, guarumos, matarratones, palmas de cera, arrayanes y el ganado que sestea. El cerro y la Loma de la Cantera —nombrados en tres relatos— entran aquí: son el mismo lomerío y su ficha aparte no añadiría silueta."
+          "note": "La vereda San Isidro y, en la difusión del relato, La Vega y La Chíngara: nombres que sólo sitúan y quedan embebidos en el lomerío verde."
         },
         {
           "entity_id": "rio_y_quebradas",
           "role": "setting",
-          "note": "Ocho relatos: el río de Oro que ni es río ni es oro, el Manco, el Hato, el Umpalá, la quebrada Salvavidas, la quebradita del Puente de Plata, el Mogoticos. El salto y su velo de agua son un estado de este mismo sistema —la caverna de detrás la lleva la ficha de cueva—, y la piedra con la mancha del río también."
+          "note": "El río Manco, en cuyas orillas fértiles está la vereda San Isidro."
         },
         {
           "entity_id": "entierro_y_guaca",
@@ -1730,7 +1820,7 @@
         {
           "entity_id": "vegetacion_de_vereda",
           "role": "plot_object",
-          "note": "Siete especies de fondo repartidas en ocho relatos; ninguna conduce un acto. La gramática del paisaje las cubre a todas."
+          "note": "Las palmas de cera «tan altas que parecían rozar las nubes» de San Isidro: fondo de la vereda."
         },
         {
           "entity_id": "luna_llena",
@@ -1740,12 +1830,17 @@
         {
           "entity_id": "campesinos_nombrados",
           "role": "secondary",
-          "note": "Diez nombres para una sola silueta. Ninguno trae un rasgo físico que lo separe de los demás y el que busca entierros sólo cambia de herramienta."
+          "note": "Silvio, zarandeado «como si fuera barro»; Reyes Suárez, que lo desafió dos veces y lo mataron a la entrada del pueblo —la muerte no se dibuja—; y Carmelo, el muchacho de temple firme que prepara ritos en luna llena y pasa las tres pruebas."
         },
         {
           "entity_id": "restos_humanos_y_guaqueria",
           "role": "plot_object",
-          "note": "Salvedad verificada: la canilla que carga el Ánima Coy sí se ficha, porque es parte del cuerpo del espanto y no un resto exhumado. La distinción tiene que quedar en los dos contratos."
+          "note": "Carmelo «sacó el tesoro de la tierra» tras las ceremonias: el acto de desenterrar sigue en el texto y sigue fuera de lámina."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Silvio, Reyes Suárez y Carmelo son campesinos de la vereda: su cuerpo y su cara salen del tipo base de hombre adulto."
         }
       ]
     },
@@ -1771,41 +1866,41 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura tuvo que retirar la capa racializada con que la página explica al abusador —nada de «el indio lascivo»— y quedarse con el mandón y su abuso: Arnefo quema el rancho de Ardila y el cerro responde con temblor y lluvia de ceniza, que se leen como variante del mismo castigo del cielo que aparece en otros cuatro relatos y no como fenómeno aparte.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "La reescritura restaura el romance de Arenas con su lenguaje racializado atribuido —la villa «negra», Arnefo «indio de cara sombría»—, llama a Cantera niña de mejillas sonrosadas y pone la Villa del Cacho entre cuatro cerros; la ficha del hacendado deja escrito que esas frases no se traducen en rasgo, Cantera se dibuja sólo en la huida, se embeben los ocho topónimos de veredas y la Virgen de bronce que corona hoy el cerro queda fuera por ser del siglo XXI. No se le ponen los tipos base: la escena es colonial y los tipos fijan el XIX.",
         "previous_note": "La lectura tuvo que retirar la capa racializada con que la página explica al abusador —nada de «el indio lascivo»— y quedarse con el mandón y su abuso: Arnefo quema el rancho de Ardila y el cerro responde con temblor y lluvia de ceniza, que se leen como variante del mismo castigo del cielo que aparece en otros cuatro relatos y no como fenómeno aparte."
       },
       "entity_refs": [
         {
           "entity_id": "hacendado_impio",
           "role": "primary",
-          "note": "Tres relatos, un solo tipo: el rico de Mogotes que cierra la puerta, don Nazario que hizo de sus tierras un imperio de caña y maltrató a sus peones, y Arnefo que quema el rancho de Ardila. Del último el universo retira la historia racializada —nada de «el indio lascivo»—, de modo que la ficha es el mandón y su abuso, no una raza."
+          "note": "Sigue siendo la primaria: Arnefo, que al morir don Bernardino Ardila se hace dueño de El Zanjón, Riolato, La Curtida, El Tirol, Mensulí y La Cidra, juzga con furia, quiere apoderarse de Cantera y quema el rancho del viejo. El canon reescrito restaura el retrato racializado de Arenas —«indio de cara sombría», «lascivia»— y la ficha no lo traslada: se dibuja el mandón, no una raza, y su baile entre las llamas queda fuera de imagen."
         },
         {
           "entity_id": "mujer_del_pueblo",
           "role": "secondary",
-          "note": "Diez relatos y un solo pliego: Rebeca, Maribella, Eumelia viva, Cantera con su yegua Pinta, doña María de Velasco, Ramona la cocinera, la mujer de Tona, la esposa de Cirilo, las doncellas del salto, las muchachas del baile. Ninguna trae un rasgo que la separe visualmente de las otras; lo que cambia es el acto."
+          "note": "Cantera, la hija de don Bernardino Ardila, «niña de mejillas sonrosadas que cantaba como un ruiseñor»: se dibuja como muchacha a caballo en la huida, nunca en la escena del acoso. El canon reescrito la llama niña; la ficha no la sexualiza en ninguna vista."
         },
         {
           "entity_id": "caballo_de_silla",
           "role": "secondary",
-          "note": "Seis relatos en un pliego: el alazán negro de Félix con su marca blanca en la frente, la bestia de Bolívar, la del padre Esteban con el paje en el anca, la yegua Pinta de Cantera, los caballos del rico de Mogotes. La chispa de la herradura contra el empedrado —el mecanismo entero de El diablo de Umpalá— es una regla de este mismo contrato, no otra ficha."
+          "note": "La yegua Pinta en que Cantera huye por El Molino hasta el alto de Sevilla."
         },
         {
           "entity_id": "casa_de_bahareque",
           "role": "setting",
-          "note": "El techo bajo el que pasa medio corpus, y por eso un solo pliego, con la ruina resuelta dentro del contrato y no en un pliego aparte: barro, bahareque, zinc y paja en La Urgua, barro y cañabrava con techo de zinc en Villanueva, la choza de Silvestre, el rancho de Reyes, y la casa abandonada de tapia de El Reventón con la ventana rota. El patio con su pozo, la corraleja, el gallinero, el baño comunal y la cerca de arrayanes son partes de esta ficha, no fichas."
+          "note": "El rancho de don Bernardino Ardila que Arnefo incendia para borrar hasta su recuerdo: se dibuja entero o ya en humo, sin nadie dentro y sin el baile del usurpador."
         },
         {
           "entity_id": "plaza_del_pueblo",
           "role": "setting",
-          "note": "Siete relatos: la plaza desde la que se ve el cerro de la Cantera, la de Bucarica con su palenque de doctrina, la de Monguí, aquella donde amanece Petra. La Casa Consistorial, el Palacio Municipal y los arcos, gallardetes y banderas de la recepción al Libertador son gramática de esta ficha, no fichas propias."
+          "note": "La plaza de la Villa del Cacho —luego San Carlos y Piedecuesta— desde la que se ve el cerro que lleva el nombre de la niña."
         },
         {
           "entity_id": "monte_y_vereda",
           "role": "setting",
-          "note": "El lomerío verde donde vive todo lo que no está en el pueblo: cerros, potreros, cañaduzales, cacaotales, labrantíos de maíz, guarumos, matarratones, palmas de cera, arrayanes y el ganado que sestea. El cerro y la Loma de la Cantera —nombrados en tres relatos— entran aquí: son el mismo lomerío y su ficha aparte no añadiría silueta."
+          "note": "Los cuatro cerros que rodean la villa como murallas, y las veredas que Arnefo se apropia y por donde huye Cantera —El Zanjón, Riolato, La Curtida, El Tirol, Mensulí, La Cidra, El Molino, el alto de Sevilla—: topónimos que sólo sitúan y quedan embebidos en el lomerío."
         },
         {
           "entity_id": "tormenta_de_montana",
@@ -1820,17 +1915,17 @@
         {
           "entity_id": "cerro_de_la_cantera",
           "role": "setting",
-          "note": "Nombrado en tres relatos y visible desde la plaza, pero visualmente es el mismo lomerío verde del resto de la vereda: una ficha propia no añadiría silueta."
+          "note": "El cerro de la Cantera, que queda de todo aquello y se ve desde la plaza. La Virgen de bronce que hoy lo corona, y el parque metropolitano, son del siglo XXI según la historia del relato y no entran en ninguna lámina."
         },
         {
           "entity_id": "temblor_y_lluvia_de_ceniza",
           "role": "magic_subject",
-          "note": "Variante del mismo castigo del cielo ya fichado; entra como fase del contrato de tormenta."
+          "note": "En lo más fuerte de la danza de Arnefo la tierra tiembla, sale un estruendo del cielo y cae una lluvia de ceniza: fase del contrato de tormenta. La peste y el saqueo que siguen no se dibujan."
         },
         {
           "entity_id": "mujeres_nombradas",
           "role": "secondary",
-          "note": "Doce mujeres nombradas y ni un rasgo que las separe visualmente. Oliva se cubre además por la ficha de las fiqueras, que es donde trabaja."
+          "note": "Cantera, que no se deja, monta la yegua Pinta, cruza por El Molino y sube al alto de Sevilla: sus mejillas sonrosadas son el único rasgo y van como color de la cara, no como ficha aparte."
         }
       ]
     },
@@ -1856,36 +1951,36 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "Es el único relato del corpus que se explica a sí mismo sin sobrenatural y la lectura lo respetó: el caballo de Félix María Rueda, bien herrado, sacaba chispas al chocar las herraduras contra las piedras, de modo que la chispa es una regla del contrato del caballo de silla y no una criatura. Sobre asfalto la lámina se apaga, y por eso el empedrado de Umpalá es aquí escenario obligatorio y no decorado; los zamarros y el sombrero gris de ala ancha son correctos porque él es jinete nocturno, no porque sean el uniforme del corpus.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "La reescritura le quita a Félix los zamarros, el sombrero gris y el bigote rasposo y le da a cambio un ancla blanca en la frente del alazán, un mamón junto a la Casa Consistorial, refranes, aguardiente y la finca «Las Quince Letras»: se rediseña su ficha con la ropa de montura como decisión desde el dossier, se corrige la marca del caballo en su contrato y la explicación humana de las chispas sigue intacta.",
         "previous_note": "Es el único relato del corpus que se explica a sí mismo sin sobrenatural y la lectura lo respetó: el caballo de Félix María Rueda, bien herrado, sacaba chispas al chocar las herraduras contra las piedras, de modo que la chispa es una regla del contrato del caballo de silla y no una criatura. Sobre asfalto la lámina se apaga, y por eso el empedrado de Umpalá es aquí escenario obligatorio y no decorado; los zamarros y el sombrero gris de ala ancha son correctos porque él es jinete nocturno, no porque sean el uniforme del corpus."
       },
       "entity_refs": [
         {
           "entity_id": "felix_el_diablo",
           "role": "primary",
-          "note": "Hombre real, no criatura: el universo editorial elimina expresamente al demonio literal y deja que las chispas sean de las herraduras. Vestuario documentado: zamarros y sombrero gris de ala ancha, bigote rasposo. Comerciante de cabros, ovejas y camuros y jinete nocturno por el empedrado de Umpalá."
+          "note": "Sigue siendo la primaria: Félix María Rueda, comerciante de cabros de Umpalá, de refranes y aguardiente, que de noche cruza el empedrado al galope y deja crecer la conseja del diablo hasta que unas mujeres lo reconocen. El canon reescrito le quita los zamarros, el sombrero gris y el bigote."
         },
         {
           "entity_id": "caballo_de_silla",
           "role": "secondary",
-          "note": "Seis relatos en un pliego: el alazán negro de Félix con su marca blanca en la frente, la bestia de Bolívar, la del padre Esteban con el paje en el anca, la yegua Pinta de Cantera, los caballos del rico de Mogotes. La chispa de la herradura contra el empedrado —el mecanismo entero de El diablo de Umpalá— es una regla de este mismo contrato, no otra ficha."
+          "note": "El alazán de Félix al galope: su ancla blanca y sus chispas son reglas de este contrato."
         },
         {
           "entity_id": "chivo_y_cabro",
           "role": "secondary",
-          "note": "Dos relatos: los cabros, ovejas y camuros que comercia Félix y el chivo con cachos en que aparece el Carriazo. Una sola ficha de cabra da las dos lecturas y ahorra la ficha aparte del estado-chivo."
+          "note": "Los cabros, ovejos y camuros que Félix compra y vende entre cuartos de cebo y mercados, y los de su finca del Salado, «Las Quince Letras». La inseminación artificial que allí practica no se dibuja."
         },
         {
           "entity_id": "tienda_de_pueblo",
           "role": "setting",
-          "note": "Cinco relatos y un solo local que da a la calle: la tienda «La Gran Luz», el hotel Bochinche, el negocio de golosinas y aspirinas de Félix con su letrero, la tienda de la Piquituerta, las cantinas donde Reyes Suárez contaba. La fragua del herrero comparte esta gramática de fachada; lo suyo de dentro va en la ficha del herrero."
+          "note": "Su negocio de golosinas y aspirinas en una esquina, con el letrero en la pared y el aguardiente antes de trabajar."
         },
         {
           "entity_id": "plaza_del_pueblo",
           "role": "setting",
-          "note": "Siete relatos: la plaza desde la que se ve el cerro de la Cantera, la de Bucarica con su palenque de doctrina, la de Monguí, aquella donde amanece Petra. La Casa Consistorial, el Palacio Municipal y los arcos, gallardetes y banderas de la recepción al Libertador son gramática de esta ficha, no fichas propias."
+          "note": "La plaza de Umpalá donde nació Félix, a la sombra de un mamón, al pie de la Casa Consistorial y junto al Palacio Municipal: el mamón es un árbol de plaza que queda embebido aquí."
         },
         {
           "entity_id": "calle_empedrada",
@@ -1895,7 +1990,7 @@
         {
           "entity_id": "alazan_de_felix",
           "role": "secondary",
-          "note": "Caballo real, no espectro; la marca blanca en la frente y las herraduras que sacan chispas son marcadores de continuidad dentro del pliego del caballo de silla."
+          "note": "El alazán negro de pura sangre, con un ancla blanca en la frente —antes «marca blanca»—, bien herrado."
         },
         {
           "entity_id": "chispas_de_herradura",
@@ -1910,27 +2005,37 @@
         {
           "entity_id": "mujeres_nombradas",
           "role": "secondary",
-          "note": "Doce mujeres nombradas y ni un rasgo que las separe visualmente. Oliva se cubre además por la ficha de las fiqueras, que es donde trabaja."
+          "note": "Las mujeres del pueblo que descubren quién es el jinete y lo apodan Félix el Diablo."
         },
         {
           "entity_id": "ruana_zamarros_y_sombrero",
           "role": "plot_object",
-          "note": "El vestuario que las fuentes sí documentan. Nota de exactitud: la palabra «alpargata» no aparece ni una vez en el material editorial, así que no entra en la hoja sin una fuente que la respalde."
+          "note": "El canon reescrito ya no nombra los zamarros ni el sombrero gris: se le ponen a Félix desde la ropa de montura que documenta Ancízar, como decisión reversible y no como dato del relato."
         },
         {
           "entity_id": "radio_y_letrero",
           "role": "plot_object",
-          "note": "Dos objetos de ambiente del siglo XX rural que sitúan la época sin costar pliego."
+          "note": "El letrero que empieza «En la calle cuarta vive un sobandero...»; el radio no aparece en esta página."
         },
         {
           "entity_id": "hoja_utileria_vestuario",
           "role": "plot_object",
-          "note": "Ruana, zamarros, sombrero gris de ala ancha, botas, saco, correa ancha, cobija blanca de lana, sayal oscuro, hábito ceniciento, manto penitencial, miriñaque y crinolina. Sólo prendas que las fuentes nombran: la alpargata no aparece ni una vez en el material editorial y por eso no entra."
+          "note": "Aporta la ropa de montura de Félix —zamarros y sombrero de ala ancha— como decisión desde el dossier, no desde el relato."
         },
         {
           "entity_id": "hoja_utileria_casa_y_fiesta",
           "role": "plot_object",
-          "note": "Fogón de leña, olleta de chocolate espumado, jarro de plata, amasijos, lechón, arepa, tabaco veguero, tiple, violín, guitarra, cohetes, gallardetes, banderas, radio, letrero pintado, hacha, navaja de marca campana y bastón de sereno. La mesa, la música y la mano de obra del pueblo."
+          "note": "El letrero pintado del negocio y el aguardiente de la esquina."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Félix tiene ficha propia, pero su cuerpo y su cara salen del tipo base de hombre adulto: el relato no le describe ninguno."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Las mujeres del pueblo que descubren al jinete salen del tipo base de mujer adulta."
         }
       ]
     },
@@ -5064,7 +5169,7 @@
     "anima_coy": {
       "name": "El Ánima Coy (Benedicta Rovira)",
       "kind": "criatura",
-      "description": "Conduce el acto entero: sale a medianoche los miércoles y sábados por San Antonio pidiendo oraciones por Rosario. Silueta irrepetible en el corpus — bulto blanco con túnica de llamas que arde sin consumirla, antorcha y una canilla en la mano, pasos que suenan a cascos de mula. Fuente: Arenas Mantilla, Crónicas y romances 1960, pp. 404-406.",
+      "description": "Conduce el acto entero: el ánima de Benedicta Rovira sale a medianoche los miércoles y sábados, al toque de las campanas de San Antonio, pidiendo oraciones y limosnas por su hija Rosario. Silueta irrepetible en el corpus: túnica de llamas que arde sin consumirla, una antorcha como única luz, cara transparente y dolorida, un vaivén como si flotara y pasos que suenan a cascos de mula. El canon reescrito ya no le da la canilla.",
       "aliases": [],
       "states": [
         "canonico"
@@ -5085,39 +5190,40 @@
       "evidence": [
         {
           "myth": "el-anima-coy",
-          "field": "content",
-          "note": "Nada de lo anterior se dibuja. El hoyo abierto, el hueso, la momia, la mortaja, la calavera suelta y el acto de guaquear quedan fuera de toda lámina, aunque la fuente los describa y aunque un tercio del corpus se cuente por ellos. Lo que se produce es el baúl cerrado, la moneda suelta, la olleta de ceniza y el azadón en reposo. La única excepción declarada es la canilla que carga el Ánima Coy, que es parte del cuerpo del espanto y no un resto exhumado, y así tiene que decirlo su contrato."
+          "field": "mito",
+          "note": "«Va envuelta en una túnica de llamas que arde sin consumirla, y lleva en la mano una antorcha, la única luz que la alumbra. Camina con un vaivén extraño, como si flotara. Tiene la cara transparente y dolorida»."
         },
         {
           "myth": "el-anima-coy",
-          "field": "content",
-          "note": "El Ánima Coy es la silueta más irrepetible del corpus y toda ella es de época: túnica de llamas que arde sin consumirla, antorcha de mano, una canilla, pasos que suenan a cascos de mula, olor espeso a azufre, campanas de San Antonio a medianoche los miércoles y sábados, y una vecindad que reza tras las puertas cerradas mientras los serenos patrullan con bastón. La antorcha y el bastón de sereno fechan la escena antes del alumbrado eléctrico."
+          "field": "mito",
+          "note": "Las devotas rezan credos y salves con las puertas cerradas mientras pasa, los serenos hacen la ronda con sus bastones y por donde pasa queda un olor espeso a azufre: la antorcha y el bastón fechan la escena antes del alumbrado eléctrico."
         }
       ],
-      "census_note": "Conduce el acto entero: sale a medianoche los miércoles y sábados por San Antonio pidiendo oraciones por Rosario. Silueta irrepetible en el corpus — bulto blanco con túnica de llamas que arde sin consumirla, antorcha y una canilla en la mano, pasos que suenan a cascos de mula. Fuente: Arenas Mantilla, Crónicas y romances 1960, pp. 404-406.",
+      "census_note": "Conduce el acto entero: el ánima de Benedicta Rovira sale a medianoche los miércoles y sábados, al toque de las campanas de San Antonio, pidiendo oraciones y limosnas por su hija Rosario. Silueta irrepetible en el corpus: túnica de llamas que arde sin consumirla, una antorcha como única luz, cara transparente y dolorida, un vaivén como si flotara y pasos que suenan a cascos de mula. El canon reescrito ya no le da la canilla.",
       "design": {
-        "silhouette": "Bulto blanco envuelto en una túnica de llamas que arde sin consumirla, con una antorcha encendida en una mano y un hueso largo de canilla en la otra, avanzando por el centro de la calle mientras las puertas se cierran a los lados.",
+        "silhouette": "Figura de mujer envuelta de pies a cabeza en una túnica de llamas que arde sin consumirla, con una antorcha encendida en una mano y la otra vacía, suspendida apenas sobre el empedrado en un vaivén como si flotara, avanzando por el centro de la calle mientras las puertas se cierran a los lados; la cara es un óvalo transparente y dolorido.",
         "materials": [
-          "papel blanco mate del sudario, en pocos planos grandes",
-          "lenguas de llama recortadas pieza a pieza y superpuestas sobre el blanco, sin quemarlo",
-          "madera y estopa de la antorcha",
-          "un solo hueso largo, liso y sin articulación legible"
+          "túnica en pocos planos grandes de papel claro con las lenguas de llama recortadas pieza a pieza y superpuestas, sin quemar el borde",
+          "madera y estopa de la antorcha, con la llama como única fuente de luz del cuadro",
+          "la cara: un óvalo de papel translúcido de un solo tono, con cejas y boca recortadas aparte en gesto de dolor, sin modelado y sin calavera"
         ],
         "palette": "Blanco de sudario y naranja de llama contra el negro de una calle sin alumbrado: no hay tercer color y el naranja no llega al segundo plano.",
         "scale": "Altura de mujer adulta, siempre en el eje de la calle y a media distancia: nunca en primer plano cerrado y nunca de cuerpo entero contra el cielo.",
         "continuity": [
           "la túnica arde y no se consume: las llamas no dejan borde quemado en el papel",
-          "la antorcha y el bastón de los serenos fechan la escena antes del alumbrado eléctrico y no pueden convivir con una bombilla",
-          "la canilla es parte del cuerpo del espanto y no un resto exhumado, y así tiene que decirlo el contrato: es la única excepción declarada a la regla del osario"
+          "la antorcha es la única luz que la alumbra, y ella y el bastón de los serenos fechan la escena antes del alumbrado eléctrico: no pueden convivir con una bombilla",
+          "la mano libre va vacía: la canilla que le daba la lectura congelada ya no está en el canon reescrito, y con ella cae la excepción a la regla del osario"
         ],
         "documented": [
+          "el relato reescrito le da túnica de llamas que arde sin consumirla, antorcha como única luz, cara transparente y dolorida, vaivén como si flotara, pasos que suenan a cascos de mula y olor espeso a azufre; sale a medianoche los miércoles y sábados con las campanas de San Antonio",
           "la luz de la escena está documentada por Ancízar para estas provincias: vela de sebo y candil de aceite en el interior, y el primer alumbrado eléctrico de la región no llega hasta el 30 de agosto de 1891, en Bucaramanga",
           "el patrullaje nocturno con bastón y el vecindario rezando tras las puertas pertenecen al mismo mundo sin alumbrado público"
         ],
         "editorial": [
-          "la fuente que el censo cita —Arenas Mantilla, Crónicas y romances, 1960, pp. 404-406— no se pudo leer: ninguna página se verificó contra el impreso, de modo que el cuerpo del Ánima Coy descansa en la paráfrasis de la página del proyecto y es reversible",
-          "los pasos que suenan a cascos de mula y el olor espeso a azufre son indicios sonoros y olfativos que no se dibujan: la lámina no añade mula ni humo",
-          "el rostro no se completa: el sudario lo deja en sombra, sin deformación y sin calavera"
+          "la fuente que se le atribuye —Arenas Mantilla, Crónicas y romances— no se pudo leer y su sumario editorial no incluye el romance: el cuerpo del Ánima Coy descansa en el texto del proyecto y es reversible",
+          "que la túnica sea clara bajo las llamas es decisión de dibujo: el relato no le da color",
+          "los pasos que suenan a cascos de mula y el olor a azufre son indicios sonoros y olfativos que no se dibujan: la lámina no añade mula ni humo",
+          "el rostro transparente se dibuja dolorido y nunca deformado: ni calavera ni desfiguración; las noches en que pasa brincando o arrastrando los pies son registros de marcha, no estados de la ficha"
         ],
         "states_to_model": []
       },
@@ -5357,7 +5463,7 @@
     "duende_del_salto": {
       "name": "El Duende del Salto (Muki)",
       "kind": "criatura",
-      "description": "Conduce el relato: hechiza con el tiple, provoca avalanchas, sabotea construcciones. Lo santandereano: enano ensombrerado con tiple en la caverna tras el Salto del Duende, en la quebrada La Honda, y el desenlace es una escuela rural que lleva su nombre. AVISO: la composición es un híbrido moderno de 2016 y el universo ya podó de ella las atribuciones guanes, los suicidios y los sucesos coloniales inventados — el contrato no puede apoyarse en la piedra de sacrificios ni en el cacique.",
+      "description": "Conduce el relato: Muki, ángel arpista desterrado, guarda la caverna de oro y esmeraldas tras la cascada que baja de la Mesa de Géridas por el cañón de la quebrada El Roble; encanta con su tiple a las doncellas, rompe el dique y suelta la avalancha, sabotea el monasterio con manos invisibles y al final sella la entrada. Lo santandereano: enano ensombrerado con tiple tras el velo de agua. AVISO: la composición es un híbrido moderno de 2016; el texto reescrito vuelve a traer la veneración guane, el cacique, la piedra de sacrificios y los suicidios, y el contrato no se apoya en ninguno.",
       "aliases": [],
       "states": [
         "canonico"
@@ -5410,15 +5516,16 @@
         "continuity": [
           "la cara nunca se ve, en ninguna vista: el sombrero es la ficha",
           "el tiple está siempre con él, tocado o cruzado sobre las rodillas",
-          "el desenlace de la página —una escuela rural que lleva su nombre— no entra en la lámina"
+          "el desenlace de la página —la ruina con huertas y la escuela rural que lleva su nombre— no entra en la lámina"
         ],
         "documented": [
           "es una de las tres únicas figuras panregionales de este corpus que heredan de verdad una lámina ya producida: el Duende del Salto hereda `el_duende` del censo nacional, y esta hoja se escribe como variante local de aquélla y no como ficha nueva",
-          "lo santandereano y localizable es el escenario: la caverna detrás del Salto del Duende, en la quebrada La Honda"
+          "el relato reescrito lo llama «el enano ensombrerado» y le da un tiple; lo localizable es el escenario: la caverna detrás de la cascada que baja por las estribaciones occidentales de la Mesa de Géridas, hoy de Los Santos, donde la quebrada El Roble abre un cañón"
         ],
         "editorial": [
-          "la página es una composición híbrida de 2016 y ya quedaron podadas de ella las atribuciones guanes, los suicidios y los sucesos coloniales inventados: el contrato no puede apoyarse en la piedra de sacrificios ni en el cacique",
-          "que llore la tala de árboles y la disminución del caudal es memoria contemporánea declarada: la lámina puede sostenerlo pero no puede fecharlo en el XIX",
+          "la página es una composición híbrida de 2016: el texto reescrito vuelve a traer la veneración guane, el cacique, la piedra de sacrificios, los hombres come oro y los suicidios desde lo alto del salto, y ninguno entra en el contrato, que no puede apoyarse en ellos",
+          "su pasado de ángel arpista expulsado del cielo es genealogía narrada y no un estado: no se dibuja ángel ni arpa",
+          "que la tala de los árboles le baje el caudal a la cascada es memoria contemporánea declarada: la lámina puede sostenerlo pero no puede fecharlo en el XIX",
           "su estatura exacta, su edad y su ropa no están descritas y son reversibles"
         ],
         "states_to_model": []
@@ -5624,8 +5731,8 @@
         "palette": "Gris de lana sucia que se endurece en gris de piedra: una sola gama y ningún color que ayude a decidir qué es.",
         "scale": "Del tamaño de un hombre agachado, al pie de un árbol que lo multiplica por cinco.",
         "continuity": [
-          "no tiene cuerpo estable: golpea con «caricias de lana que después se convertían en rocas», y las dos materias se cortan con el mismo perfil",
-          "la forma de chivo con cachos es variante del mismo ser y no un segundo cuerpo",
+          "no tiene cuerpo estable: sus golpes son «al principio suaves, como de lana, y después duros como piedras», y las dos materias se cortan con el mismo perfil",
+          "unos lo han visto con figura de demonio y otros de chivo: la forma de chivo con cachos es variante del mismo ser y no un segundo cuerpo, y la de demonio se resuelve con la sombra sin anatomía del Diablo del camino",
           "el desenterrar NO se representa: ni hoyo, ni azadón en uso, ni tesoro a la vista"
         ],
         "documented": [
@@ -5635,7 +5742,7 @@
         "editorial": [
           "esta hoja absorbe además al Biato, corrigiendo la exclusión del censo: función idéntica —guardián que ofrece riqueza a quien lo venza y esclaviza a quien se rinda— y escenario ya fichado, de modo que la lámina debe sostener las dos localizaciones, el roble de la vereda San Isidro y la cima de Buena Vista, sin darle cuerpo estable a ninguno de los dos",
           "ni el Carriazo ni el Biato tienen un solo rasgo descrito: toda la solución de lana y roca es editorial y reversible",
-          "el título nobiliario —«Conde del Carriazo»— no se traduce en vestuario: no hay casaca, ni sombrero, ni insignia"
+          "el título nobiliario —«Conde del Carriazo», usurero llegado a la vereda en el siglo XVII— no se traduce en vestuario: el conde vivo no aparece en escena y la hoja no le da casaca, sombrero ni insignia"
         ],
         "states_to_model": []
       },
@@ -6654,6 +6761,329 @@
         "documented_core"
       ]
     },
+    "tipo_hombre_adulto": {
+      "name": "Tipo base: hombre adulto de Piedecuesta (siglo XIX)",
+      "kind": "personaje",
+      "description": "Ficha de tipo que fija cuerpo, cara y vestido del hombre de pueblo del corredor Piedecuesta–Girón–Los Santos en el estrato republicano del XIX, que es el grueso del corpus. Campesino, arriero, herrero, parroquiano y vecino se derivan de este cuerpo y cambian oficio y prenda de camino, no proporción ni cara.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "cuento-fantastico",
+        "duende-del-salto",
+        "el-anima-coy",
+        "el-carriazo-de-vereda-san-isidro",
+        "el-diablo-de-umpala"
+      ],
+      "evidence": [
+        {
+          "myth": "cuento-fantastico",
+          "field": "mito",
+          "note": "El parroquiano de Piedecuesta cruza la Calle Diez, se desvía por el viejo chasis y vadea el Río de Oro: la figura humana del relato es el hombre de pueblo del corredor, que la página hereda del estrato del XIX."
+        },
+        {
+          "myth": "el-anima-coy",
+          "field": "mito",
+          "note": "Los serenos hacen la ronda con sus bastones y los hombres más valientes intentan salirle al paso al ánima."
+        },
+        {
+          "myth": "el-carriazo-de-vereda-san-isidro",
+          "field": "mito",
+          "note": "Silvio, Reyes Suárez y Carmelo, los tres aspirantes al oro del roble, son hombres de la vereda San Isidro."
+        }
+      ],
+      "design": {
+        "silhouette": "Hombre de pueblo de pie, de frente y en cuerpo —sin ruana—: camisa blanca de lienzo de manga larga, pantalón de manta hasta el tobillo, sombrero de nacuma de ala mediana y alpargatas; el cuerpo es un bloque recto de pocas piezas grandes y la cara va aparte, como un óvalo plano.",
+        "materials": [
+          "camisa blanca de lienzo y pantalón de manta cruda o de manta rayada, en pocos planos grandes con el pliegue marcado por el canto",
+          "sombrero de nacuma o de palma, en una sola corona y un ala, con la trama del tejido insinuada por dos o tres líneas y no hebra por hebra",
+          "alpargatas de fique de suela gruesa",
+          "cuerpo: cuello, antebrazos y manos en piezas planas grandes de papel de un solo tono de piel",
+          "cara: óvalo plano de papel en un solo tono de piel, con cejas, ojos y boca recortados aparte y pegados encima, sin modelado ni relieve esculpido"
+        ],
+        "palette": "Blanco sucio de camisa y crudo de manta, la paja clara del sombrero como nota más alta y la piel en un solo tono mestizo medio; nada de negro de luto ni de ruana roja dentro del pueblo.",
+        "scale": "Cuerpo entero, de frente y a estatura adulta media: es la regla de medida de todas las figuras masculinas del corpus.",
+        "continuity": [
+          "sin ruana dentro del pueblo: la ruana sólo aparece plegada a la espalda cuando el hombre va de camino o a caballo",
+          "campesino, arriero, herrero, mozo y vecino salen de este cuerpo: cambian la herramienta y la prenda de camino, nunca la cara ni la proporción",
+          "cuerpo y cara se construyen por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, nunca un busto esculpido"
+        ],
+        "documented": [
+          "Ancízar, sobre Piedecuesta en 1850-51: «En el pueblo no se ven ruanas: los hombres andan en cuerpo […] con pantalon de manta, camisa blanca, sombrero de nacuma o de palma, i alpargatas»; el pueblo está a 1.009 metros, en tierra templada de 24° a 26°",
+          "la ruana y los zamarros son ropa de camino y de montura, no de pueblo: el caminante de oficio Luis Réyes lleva «pantalon de manta rayada, camisa de lienzo, alpargatas i ancho sombrero de ramo: la ruana plegada i a la espalda»",
+          "los agricultores llevan «alpargates gruesos, ya gastados i empolvados en largo servicio», y las alpargatas y los obrajes de fique figuran entre las manufacturas del cantón junto a los sombreros de nacuma",
+          "el sombrero de nacuma tiene origen y fecha: hacia 1820-22 el presbítero Felipe Salgar, cura de Girón, hizo enseñar a su feligresía a preparar el cogollo de la palma"
+        ],
+        "editorial": [
+          "no hay fotografía de época de este reparto: el corte del cuello, el largo de la camisa y el cierre del pantalón son reconstrucción reversible",
+          "el tono de piel no lo documenta el dossier: se decide un mestizo medio en un solo tono plano, sin rasgos marcados de ningún grupo, y es decisión reversible",
+          "sin bigote ni barba por defecto: el corpus no describe la cara de ningún hombre del pueblo"
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_adulta": {
+      "name": "Tipo base: mujer adulta de Piedecuesta (siglo XIX)",
+      "kind": "personaje",
+      "description": "Ficha de tipo que fija cuerpo, cara y vestido de la mujer de pueblo del corredor en el XIX: la cocinera, la madre, la vecina que reza tras la puerta, la hilandera y la mujer de la vereda salen de este cuerpo.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "duende-del-salto",
+        "el-anima-coy",
+        "el-diablo-de-umpala"
+      ],
+      "evidence": [
+        {
+          "myth": "el-anima-coy",
+          "field": "mito",
+          "note": "«Las señoras devotas, con las puertas bien cerradas, rezan credos y salves mientras pasa»."
+        },
+        {
+          "myth": "el-diablo-de-umpala",
+          "field": "mito",
+          "note": "«Hasta que unas mujeres del pueblo descubrieron quién era el jinete. Desde entonces lo llamaron Félix el Diablo»."
+        }
+      ],
+      "design": {
+        "silhouette": "Mujer adulta de pie y de frente, con enaguas largas hasta el tobillo, pañolón cruzado sobre el pecho, el pelo partido en dos trenzas grandes que caen a la espalda y el alpargate asomando bajo la falda; el cuerpo es una campana de pocas piezas y la cara va aparte, como un óvalo plano.",
+        "materials": [
+          "enaguas de bayeta fina o de musolina y zaraza, con el estampado menudo de la zaraza insinuado en pocas piezas",
+          "pañolón o mantellina cruzada sobre el pecho",
+          "alpargata sujetada por una trenza de colores",
+          "dos trenzas en piezas planas grandes, nunca mechón por mechón",
+          "cuerpo: cuello, antebrazos y manos en piezas planas grandes de papel de un solo tono de piel",
+          "cara: óvalo plano de papel en un solo tono de piel, con cejas, ojos y boca recortados aparte y pegados encima, sin modelado ni relieve esculpido"
+        ],
+        "palette": "Crudos y estampados menudos de zaraza con un solo color vivo en la trenza de la alpargata; la piel en un solo tono mestizo medio y nada de negro de luto por defecto.",
+        "scale": "Cuerpo entero y frontal, un palmo más baja que el tipo de hombre adulto; el alpargate al borde de la falda fija la línea del suelo.",
+        "continuity": [
+          "las dos trenzas a la espalda se repiten en todas las vistas y en todas las mujeres que salen de este cuerpo",
+          "figura entera, sin mutilación y sin desnudo; el rostro puede quedar en sombra, nunca deformado",
+          "cuerpo y cara se construyen por separado: óvalo plano de un solo tono con los rasgos recortados aparte, nunca un busto esculpido"
+        ],
+        "documented": [
+          "Ancízar, sobre las mujeres de estas provincias en 1850-51: enaguas de bayeta fina o de musolina y zaraza, pañolón o mantellina, «alpargate blanco i diminuto, finamente labrado» o la alpargata sujetada por una trenza de colores, y el pelo «dividiéndola en dos trenzas magníficas que deja caer a la espalda»",
+          "las tejedoras de sombreros se reúnen de noche «diez o doce en casa de una amiga, costean a escote un buen candil de aceite, i sentadas en derredor sobre esteras puestas en el suelo, siguen tejiendo»"
+        ],
+        "editorial": [
+          "la falda oscura con pañolón negro que uno espera es capa posterior y no se le impone al XIX: corrección declarada y reversible",
+          "la hechura del corpiño y el largo de la manga no están documentados: reconstrucción reversible",
+          "el tono de piel no lo documenta el dossier: mestizo medio en un solo tono plano, decisión reversible"
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_joven": {
+      "name": "Tipo base: mujer joven de Piedecuesta (siglo XIX)",
+      "kind": "personaje",
+      "description": "Ficha de tipo de la muchacha soltera del corredor en el XIX: la moza del baile, la hija de la casa, la joven tejedora. Mismo vestido que la mujer adulta, en el registro fino que Ancízar describe.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "duende-del-salto"
+      ],
+      "evidence": [
+        {
+          "myth": "duende-del-salto",
+          "field": "mito",
+          "note": "Las doncellas solteras que oyen el tiple de Muki y lo siguen hacia adentro son muchachas del corredor."
+        }
+      ],
+      "design": {
+        "silhouette": "Muchacha de pie, más delgada y erguida que la mujer adulta, con enaguas de musolina hasta el tobillo, mantellina ligera sobre los hombros, las dos trenzas largas a la espalda y el alpargate blanco diminuto a la vista; la cara aparte, como un óvalo plano.",
+        "materials": [
+          "enaguas de musolina y zaraza, más claras que las de la mujer adulta",
+          "mantellina ligera sobre los hombros",
+          "alpargate blanco y diminuto, finamente labrado",
+          "dos trenzas largas en piezas planas grandes",
+          "cuerpo: cuello, antebrazos y manos en piezas planas grandes de papel de un solo tono de piel",
+          "cara: óvalo plano de papel en un solo tono de piel, con cejas, ojos y boca recortados aparte y pegados encima, sin modelado ni relieve esculpido"
+        ],
+        "palette": "Blancos y crudos de musolina con el estampado menudo de la zaraza; el alpargate blanco es el punto más claro de la figura.",
+        "scale": "Cuerpo entero y frontal, a la altura de la mujer adulta o apenas menor; la delgadez y la postura, no la estatura, marcan la edad.",
+        "continuity": [
+          "las dos trenzas a la espalda la unen con el tipo de mujer adulta: es la misma gente en otra edad",
+          "figura entera y vestida: la juventud no se dice con escote ni con falda corta",
+          "cuerpo y cara por separado: óvalo plano de un solo tono con los rasgos recortados aparte"
+        ],
+        "documented": [
+          "Ancízar, sobre las mujeres de estas provincias en 1850-51: enaguas de bayeta fina o de musolina y zaraza, pañolón o mantellina, «alpargate blanco i diminuto, finamente labrado» o la alpargata sujetada por una trenza de colores, y el pelo «dividiéndola en dos trenzas magníficas que deja caer a la espalda»",
+          "el oficio del sombrero de nacuma se enseñó a las jóvenes: hacia 1820-22 el cura de Girón Felipe Salgar se lo hizo enseñar a las muchachas de su feligresía «porque donde vive el trabajo no entra el pecado», y las tejedoras trabajaban de noche bajo el candil, remataban el sábado y vendían el domingo"
+        ],
+        "editorial": [
+          "el dossier no separa el vestido de la joven del de la adulta: la musolina más clara y el alpargate labrado se asignan a la joven como decisión reversible",
+          "ninguna prenda de baile de salón: el miriñaque y la crinolina no existen en 1828 y quedan fuera",
+          "el tono de piel no lo documenta el dossier: mestizo medio en un solo tono plano, decisión reversible"
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_nino": {
+      "name": "Tipo base: niño de Piedecuesta (siglo XIX)",
+      "kind": "personaje",
+      "description": "Ficha de tipo del niño de pueblo y de vereda del corredor: el hijo que acompaña al padre, el paje, el nieto que escucha. El dossier no documenta ropa infantil; se deriva del vestido documentado del hombre a escala de niño.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [],
+      "evidence": [],
+      "design": {
+        "silhouette": "Niño de unos siete años de pie junto a la línea de un adulto, con camisa blanca de lienzo por fuera, calzón de manta a media pierna y pie descalzo o alpargata, la cabeza descubierta o un sombrerito de palma en la mano; la cara aparte, como un óvalo plano grande respecto del cuerpo.",
+        "materials": [
+          "camisa blanca de lienzo y calzón de manta cruda, en dos o tres planos",
+          "sombrerito de palma o de nacuma, sin trama hebra por hebra",
+          "pie descalzo o alpargata pequeña de fique",
+          "cuerpo: cuello, brazos y piernas en piezas planas grandes de un solo tono de piel",
+          "cara: óvalo plano de papel en un solo tono de piel, con cejas, ojos y boca recortados aparte y pegados encima, sin modelado ni relieve esculpido"
+        ],
+        "palette": "Blanco sucio y crudo de manta, la piel en un solo tono mestizo medio; ningún color vivo que no lleve también el adulto al que acompaña.",
+        "scale": "Cuerpo entero, a la altura de la cintura del tipo de hombre adulto: siempre se lee por relación con un adulto.",
+        "continuity": [
+          "mismo vestido que el hombre adulto a otra escala: el niño no trae prendas de ciudad ni de otra época",
+          "nunca en peligro dibujado: los niños del corpus que mueren o son maltratados no se representan en el acto",
+          "cuerpo y cara por separado: óvalo plano de un solo tono con los rasgos recortados aparte"
+        ],
+        "documented": [
+          "Ancízar, sobre Piedecuesta en 1850-51: «En el pueblo no se ven ruanas: los hombres andan en cuerpo […] con pantalon de manta, camisa blanca, sombrero de nacuma o de palma, i alpargatas»; el pueblo está a 1.009 metros, en tierra templada de 24° a 26°",
+          "los agricultores llevan «alpargates gruesos, ya gastados i empolvados en largo servicio»: la alpargata de fique es la del pueblo y la de la vereda"
+        ],
+        "editorial": [
+          "el dossier no documenta ninguna prenda infantil: el calzón a media pierna, el pie descalzo y el sombrerito son una derivación a escala del vestido del hombre, reversible en cuanto aparezca fuente",
+          "el tono de piel no lo documenta el dossier: mestizo medio en un solo tono plano, decisión reversible"
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_anciano": {
+      "name": "Tipo base: anciano de Piedecuesta (siglo XIX)",
+      "kind": "personaje",
+      "description": "Ficha de tipo del viejo del pueblo y de la vereda: el abuelo que cuenta, el viejo que no cree en la conseja. Mismo vestido documentado que el hombre adulto; la edad se dice con la postura y el pelo.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [],
+      "evidence": [],
+      "design": {
+        "silhouette": "Hombre viejo de pie, un poco encorvado y con el peso adelantado, en cuerpo y sin ruana, camisa blanca de lienzo, pantalón de manta y alpargatas gastadas, el sombrero de nacuma en la mano y el pelo blanco en dos o tres piezas planas; la cara aparte, como un óvalo plano.",
+        "materials": [
+          "camisa blanca de lienzo y pantalón de manta cruda, más gastados y con los pliegues más caídos que en el hombre adulto",
+          "sombrero de nacuma o de palma, en una corona y un ala",
+          "alpargates gruesos, gastados y empolvados",
+          "pelo blanco en dos o tres piezas planas grandes, nunca hebra por hebra",
+          "cuerpo: cuello, antebrazos y manos en piezas planas de un solo tono de piel, las manos un poco más grandes que en el tipo adulto",
+          "cara: óvalo plano de papel en un solo tono de piel, con cejas, ojos y boca recortados aparte y pegados encima, sin modelado ni relieve esculpido"
+        ],
+        "palette": "Blanco sucio y crudo de manta, el blanco del pelo como segunda nota clara junto a la paja del sombrero; la piel en un solo tono mestizo medio, algo más oscura por el sol.",
+        "scale": "Cuerpo entero, apenas más bajo que el tipo de hombre adulto por la curvatura de la espalda.",
+        "continuity": [
+          "mismo vestido que el hombre adulto: la vejez no cambia de ropa, cambia de postura y de pelo",
+          "sin ruana dentro del pueblo, como el hombre adulto",
+          "cuerpo y cara por separado: óvalo plano de un solo tono con los rasgos recortados aparte, las arrugas como dos o tres cortes y no como relieve"
+        ],
+        "documented": [
+          "Ancízar, sobre Piedecuesta en 1850-51: «En el pueblo no se ven ruanas: los hombres andan en cuerpo […] con pantalon de manta, camisa blanca, sombrero de nacuma o de palma, i alpargatas»; el pueblo está a 1.009 metros, en tierra templada de 24° a 26°",
+          "el que le cuenta a Ancízar la fábula de la Mancarita junto a la laguna Encantada es un viejo —el «Viejo de la montaña»— que no cree en ella: la vejez que narra y descree está en la fuente más antigua del corpus"
+        ],
+        "editorial": [
+          "la curvatura, el pelo blanco y las manos grandes son decisión de dibujo para leer la edad sin cambiar el vestido, reversibles",
+          "el tono de piel no lo documenta el dossier: mestizo medio en un solo tono plano, decisión reversible"
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_anciana": {
+      "name": "Tipo base: anciana de Piedecuesta (siglo XIX)",
+      "kind": "personaje",
+      "description": "Ficha de tipo de la vieja del pueblo: la abuela que narra junto al fogón, la curandera, la vecina que reza. Mismo vestido documentado que la mujer adulta; la edad se dice con la postura, el pelo y el pañolón.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [],
+      "evidence": [],
+      "design": {
+        "silhouette": "Mujer vieja de pie o sentada en un banco bajo, con enaguas largas de bayeta, el pañolón subido sobre los hombros y cruzado, las dos trenzas ya canosas a la espalda y el alpargate bajo la falda; la cara aparte, como un óvalo plano.",
+        "materials": [
+          "enaguas de bayeta fina, más oscuras y gastadas que las de la mujer adulta",
+          "pañolón o mantellina cruzada y subida sobre los hombros",
+          "alpargata sujetada por una trenza",
+          "dos trenzas canosas en piezas planas grandes",
+          "cuerpo: cuello, antebrazos y manos en piezas planas de un solo tono de piel",
+          "cara: óvalo plano de papel en un solo tono de piel, con cejas, ojos y boca recortados aparte y pegados encima, sin modelado ni relieve esculpido"
+        ],
+        "palette": "Crudos y pardos de bayeta con el gris claro de las trenzas; la piel en un solo tono mestizo medio y nada de negro de luto por defecto.",
+        "scale": "Cuerpo entero, un poco más baja que el tipo de mujer adulta por la curvatura; sentada, a la altura del fogón.",
+        "continuity": [
+          "mismo vestido que la mujer adulta: la vejez cambia la postura, el color del pelo y el peso del pañolón, no la hechura",
+          "las dos trenzas a la espalda se conservan, ahora canosas",
+          "cuerpo y cara por separado: óvalo plano de un solo tono con los rasgos recortados aparte, las arrugas como dos o tres cortes y no como relieve"
+        ],
+        "documented": [
+          "Ancízar, sobre las mujeres de estas provincias en 1850-51: enaguas de bayeta fina o de musolina y zaraza, pañolón o mantellina, «alpargate blanco i diminuto, finamente labrado» o la alpargata sujetada por una trenza de colores, y el pelo «dividiéndola en dos trenzas magníficas que deja caer a la espalda»"
+        ],
+        "editorial": [
+          "el pañolón subido sobre los hombros, las trenzas canosas y la bayeta más oscura son decisión de dibujo para leer la edad sin cambiar el vestido, reversibles",
+          "el tono de piel no lo documenta el dossier: mestizo medio en un solo tono plano, decisión reversible"
+        ],
+        "states_to_model": []
+      }
+    },
     "arriero": {
       "name": "El arriero y su recua",
       "kind": "personaje",
@@ -7104,7 +7534,7 @@
     "felix_el_diablo": {
       "name": "Félix María Rueda, «El Diablo» de Umpalá",
       "kind": "personaje",
-      "description": "Hombre real, no criatura: el universo editorial elimina expresamente al demonio literal y deja que las chispas sean de las herraduras. Vestuario documentado: zamarros y sombrero gris de ala ancha, bigote rasposo. Comerciante de cabros, ovejas y camuros y jinete nocturno por el empedrado de Umpalá.",
+      "description": "Hombre real, no criatura: Félix María Rueda, nacido en Umpalá a la sombra de un mamón, comerciante de cabros, ovejos y camuros, hombre de refranes y de aguardiente, que de noche cruza al galope el empedrado en un alazán negro de pura sangre con un ancla blanca en la frente; las chispas son de las herraduras y el apodo se lo ponen las mujeres que lo descubren. El canon reescrito no le describe ropa ni cara.",
       "aliases": [],
       "states": [
         "canonico"
@@ -7141,12 +7571,10 @@
       ],
       "census_note": "Hombre real, no criatura: el universo editorial elimina expresamente al demonio literal y deja que las chispas sean de las herraduras. Vestuario documentado: zamarros y sombrero gris de ala ancha, bigote rasposo. Comerciante de cabros, ovejas y camuros y jinete nocturno por el empedrado de Umpalá.",
       "design": {
-        "silhouette": "Jinete nocturno con zamarros flojos y colgantes y un sombrero gris de ala muy ancha, inclinado sobre el cuello de un alazán negro, con las chispas saltando del empedrado bajo los cascos y no de él.",
+        "silhouette": "Jinete oscuro inclinado sobre el cuello de un alazán negro de pura sangre con un ancla blanca en la frente, cruzando al galope una calle empedrada, con las chispas saltando del empedrado bajo los cascos y no de él.",
         "materials": [
-          "zamarros de cuero, flojos y colgantes sobre el pantalón",
-          "sombrero gris de grandes alas",
-          "ruana arriscada sobre un hombro",
-          "bigote rasposo en dos piezas planas pequeñas",
+          "ropa oscura de montura en pocos planos grandes: zamarros de cuero flojos sobre el pantalón y sombrero de ala ancha, como decisión desde la ropa de montura documentada y no desde el relato",
+          "cuerpo: manos y cuello en piezas planas de un solo tono de piel; cara: óvalo plano de un solo tono con los rasgos recortados aparte, en sombra bajo el ala",
           "piedra de empedrado y herradura, que son el mecanismo de la lámina"
         ],
         "palette": "Pardos de cuero y gris de sombrero sobre el negro del caballo y el gris azulado del empedrado; la chispa es la única nota caliente y está en el suelo.",
@@ -7157,12 +7585,12 @@
           "es hombre y no criatura: sin cuernos, sin ojos rojos, sin humo"
         ],
         "documented": [
-          "Ancízar documenta la ropa de camino y de montura de estas provincias: «los zamarros flojos i colgantes, la roja i amarilla ruana un tanto arriscada», y «zamarros de piel de leon, ámplia ruana listada i sombrero de grandes alas cubierto de hule blanco»",
-          "sus zamarros y su sombrero de ala ancha son correctos porque él es jinete nocturno, y no porque sean el uniforme del corpus: en el pueblo no se veían ruanas"
+          "el relato reescrito lo hace jinete nocturno de un alazán negro de pura sangre, «con un ancla blanca en la frente, bien herrado», cuyas herraduras chocan contra las piedras de Umpalá y sueltan chispas: los que miran de lejos ven «un jinete oscuro dejando un rastro de lumbre»",
+          "Ancízar documenta la ropa de camino y de montura de estas provincias: «los zamarros flojos i colgantes, la roja i amarilla ruana un tanto arriscada», y «zamarros de piel de leon, ámplia ruana listada i sombrero de grandes alas cubierto de hule blanco»"
         ],
         "editorial": [
-          "el universo editorial elimina expresamente al demonio literal de esta página y la ficha lo produce como comerciante de cabros, ovejas y camuros que cabalga de noche",
-          "el bigote rasposo es el único rasgo de cara que el relato da: lo demás es reversible",
+          "el canon reescrito ya no le da zamarros, sombrero gris ni bigote rasposo: la ropa de montura se le pone desde el dossier como decisión reversible, y la cara queda sin rasgo propio",
+          "el universo editorial elimina expresamente al demonio literal de esta página y la ficha lo produce como comerciante de cabros, ovejos y camuros que cabalga de noche",
           "el letrero pintado de su negocio de golosinas y aspirinas va en la hoja de casa y fiesta, no en su figura"
         ],
         "states_to_model": []
@@ -7554,7 +7982,7 @@
           "en 1845 el cantón de Bucaramanga producía 30.000 cargas de panela: el trapiche es empresa y no estampa"
         ],
         "editorial": [
-          "del relato de Arnefo queda retirada la historia racializada —nada de «el indio lascivo»—, de modo que la ficha es el mandón y su abuso y no una raza",
+          "el canon reescrito restaura el lenguaje racializado de Arenas —«un indio de cara sombría, famoso por su lascivia sin freno», y «la gente de la villa era negra»— y lo atribuye al autor: la ficha sigue siendo el mandón y su abuso y no una raza, y ninguna de esas frases se traduce en rasgo",
           "ninguno de los tres tiene rostro ni edad descritos",
           "la fusta se muestra colgada o en reposo y nunca levantada"
         ],
@@ -7908,7 +8336,8 @@
         "la-mula-maneada",
         "la-vista-del-libertador",
         "el-quijote-piedecuestano",
-        "el-fantasma-de-el-horizonte"
+        "el-fantasma-de-el-horizonte",
+        "duende-del-salto"
       ],
       "evidence": [
         {
@@ -7940,6 +8369,11 @@
           "myth": "el-anima-coy",
           "field": "content",
           "note": "La barbacoa —cuatro hombres sin cabeza cargando una parihuela con un difunto— sale cuando los caminos se pueblan de romeros hacia Chiquinquirá, y esa romería está documentada: Ancízar la describe como el lugar donde se ven a la vez «todos los matices del traje peculiar a cada provincia», con la guaricha bogotana «la patita encerrada en blanco alpargate». La lámina de la barbacoa necesita camino de romería, no camino solitario, y es la única silueta descabezada que el corpus autoriza, resuelta por silueta y nunca por herida."
+        },
+        {
+          "myth": "duende-del-salto",
+          "field": "mito",
+          "note": "La gente de los alrededores decide enfrentar a Muki con música: violines y guitarras al atardecer en el Salto del Duende."
         }
       ],
       "census_note": "Una sola gramática de grupo para todos los modos de multitud del corpus: el vecindario que reza tras la puerta y mira por las rendijas, los serenos con bastón, las patrullas nocturnas armadas, la romería a Chiquinquirá, el gentío de la plaza, los revolucionarios de la tienda en 1896. Nueve relatos ahorrados en un pliego.",
@@ -8079,7 +8513,7 @@
         "lagunas-encantadas",
         "el-quijote-piedecuestano",
         "talabad",
-        "el-cacique-salomon"
+        "duende-del-salto"
       ],
       "evidence": [
         {
@@ -8101,6 +8535,11 @@
           "myth": "lagunas-encantadas",
           "field": "content",
           "note": "Los conquistadores del corpus son grupo y no individuos —ninguno tiene nombre ni rostro— y su época es la de las entradas a Guane y Bucarica entre 1540 y 1560: arcabuces y armaduras de esa mitad de siglo, no armadura de parada ni yelmo de torneo. Es la misma década en que Martín Galiano hizo a los indios del Socorro «guerra de esterminio, cruel i traidora», según el registro que Ancízar recoge, y por eso el grupo se dibuja como tropa de entrada y no como cortejo."
+        },
+        {
+          "myth": "duende-del-salto",
+          "field": "mito",
+          "note": "El texto reescrito vuelve a traer la conquista: los «hombres come oro», de pelo dorado y piel pálida, disparan armas de fuego, avanzan con picos y espadas y la avalancha del dique roto los arrastra."
         }
       ],
       "census_note": "Cuatro relatos: los de las armaduras relucientes que echan sal a la laguna, los arcabuces de la Villa de San Carlos, los hombres armados de Velasco en Bucarica. Grupo, no individuos: ninguno tiene nombre ni rostro en el corpus.",
@@ -8317,13 +8756,13 @@
           "papel liso de un solo tono en pocas piezas planas grandes",
           "silla de cuero labrado y estribo de metal",
           "herradura de metal mate y piedra de empedrado",
-          "marca blanca en la frente, una sola pieza recortada, en la variante del alazán de Félix"
+          "un ancla blanca en la frente, una sola pieza recortada, en la variante del alazán de Félix"
         ],
         "palette": "Negro o alazán sobre el gris azulado del empedrado; la chispa es un punto naranja mínimo y no ilumina nada a su alrededor.",
         "scale": "Caballo de silla adulto con el jinete puesto: la cruz queda por encima de la cabeza de un hombre a pie.",
         "continuity": [
           "la chispa de la herradura contra el empedrado es una regla de este contrato y no otra ficha: sin empedrado no hay chispa",
-          "la marca blanca en la frente identifica al alazán de Félix y no se le pone a ningún otro",
+          "el ancla blanca en la frente identifica al alazán de Félix y no se le pone a ningún otro",
           "seis relatos y un pliego: la bestia de Bolívar, la del padre Esteban con el paje en el anca, la yegua Pinta y los caballos del rico comparten cuerpo y cambian de aparejo"
         ],
         "documented": [
@@ -8331,7 +8770,7 @@
           "la ropa de montura documentada —zamarros, ruana arriscada, sombrero de grandes alas con funda de hule— pertenece al jinete y no al animal, y así se reparte"
         ],
         "editorial": [
-          "ninguno de los seis caballos tiene alzada ni capa descritas salvo el alazán negro con marca blanca: lo demás es reversible",
+          "ninguno de los seis caballos tiene alzada ni capa descritas salvo el alazán negro de pura sangre con un ancla blanca en la frente: lo demás es reversible",
           "no hay fotografía de época de una calle empedrada de Piedecuesta: el tamaño y el asiento de la piedra son reconstrucción, y la carencia se declara",
           "el caballo negro de Galeacer NO sale de esta ficha: es un hombre dentro de un animal y tiene hoja propia"
         ],
@@ -8943,7 +9382,8 @@
         "cuento-fantastico",
         "tal-para-cual",
         "la-puerta-del-perdon",
-        "lo-que-ensenan-las-cuevas"
+        "lo-que-ensenan-las-cuevas",
+        "duende-del-salto"
       ],
       "evidence": [
         {
@@ -9246,7 +9686,8 @@
         "el-quijote-piedecuestano",
         "la-vista-del-libertador",
         "la-puerta-del-perdon",
-        "el-diablo-de-umpala"
+        "el-diablo-de-umpala",
+        "el-cacique-salomon"
       ],
       "evidence": [
         {
@@ -9638,7 +10079,8 @@
       "myth_refs": [
         "la-cueva-del-diablo",
         "la-cueva-de-la-pisca",
-        "lagunas-encantadas"
+        "lagunas-encantadas",
+        "duende-del-salto"
       ],
       "evidence": [
         {
@@ -10048,7 +10490,8 @@
         "la-mechuda",
         "la-lampara-de-petroleo",
         "duende-del-salto",
-        "la-piedra-del-muerto"
+        "la-piedra-del-muerto",
+        "el-cacique-salomon"
       ],
       "evidence": [
         {
@@ -10784,9 +11227,9 @@
       "coverage_note": "Montura nombrada sin rasgo que la separe salvo la capa pinta, que va en el contrato del caballo de silla."
     },
     "alazan_de_felix": {
-      "name": "El alazán negro con marca blanca en la frente",
+      "name": "El alazán negro con un ancla blanca en la frente",
       "kind": "animal",
-      "description": "Caballo real, no espectro; la marca blanca en la frente y las herraduras que sacan chispas son marcadores de continuidad dentro del pliego del caballo de silla.",
+      "description": "Caballo real, no espectro: alazán negro de pura sangre, bien herrado; el ancla blanca en la frente y las herraduras que sacan chispas son marcadores de continuidad dentro del pliego del caballo de silla.",
       "aliases": [],
       "states": [
         "canonico"
@@ -10809,7 +11252,7 @@
       ],
       "census_note": "Caballo real, no espectro; la marca blanca en la frente y las herraduras que sacan chispas son marcadores de continuidad dentro del pliego del caballo de silla.",
       "covered_by": "caballo_de_silla",
-      "coverage_note": "Caballo real, no espectro; la marca blanca en la frente y las herraduras que sacan chispas son marcadores de continuidad dentro del pliego del caballo de silla."
+      "coverage_note": "Caballo real, no espectro: alazán negro de pura sangre, bien herrado; el ancla blanca en la frente y las herraduras que sacan chispas son marcadores de continuidad dentro del pliego del caballo de silla."
     },
     "chispas_de_herradura": {
       "name": "Las chispas de la herradura contra el empedrado",
@@ -11447,8 +11890,7 @@
       "legacy_model_refs": [],
       "myth_refs": [
         "el-doctor-galeacer",
-        "la-mancarita",
-        "duende-del-salto"
+        "la-mancarita"
       ],
       "evidence": [
         {
@@ -11510,7 +11952,8 @@
         "la-campana-del-diablo",
         "el-carriazo-de-vereda-san-isidro",
         "el-trapiche-ardiendo",
-        "la-cueva-de-la-pisca"
+        "la-cueva-de-la-pisca",
+        "duende-del-salto"
       ],
       "evidence": [
         {
@@ -12436,7 +12879,8 @@
       "legacy_model_refs": [],
       "myth_refs": [
         "talabad",
-        "el-quijote-piedecuestano"
+        "el-quijote-piedecuestano",
+        "duende-del-salto"
       ],
       "evidence": [
         {
@@ -13158,7 +13602,8 @@
         "el-reventon-de-jacobo",
         "la-monedita-en-la-alcancia",
         "el-carriazo-de-vereda-san-isidro",
-        "lo-que-ensenan-las-cuevas"
+        "lo-que-ensenan-las-cuevas",
+        "duende-del-salto"
       ],
       "evidence": [
         {
@@ -13906,7 +14351,8 @@
       "myth_refs": [
         "talabad",
         "el-quijote-piedecuestano",
-        "tal-para-cual"
+        "tal-para-cual",
+        "duende-del-salto"
       ],
       "evidence": [
         {
@@ -14050,6 +14496,113 @@
       "evidence_basis_mix": [
         "documented_core"
       ]
+    },
+    "aves_ciegas_y_reptiles": {
+      "name": "Las aves ciegas y los reptiles de la caverna",
+      "kind": "animal",
+      "description": "En tiempo de sequía, cuando el agua mengua y la entrada queda a la vista, entran a la caverna aves ciegas y reptiles en busca de humedad.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "editorial_interpretation",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "duende-del-salto"
+      ],
+      "evidence": [
+        {
+          "myth": "duende-del-salto",
+          "field": "mito",
+          "note": "En sequía, con la entrada a la vista, «entraban aves ciegas y reptiles en busca de humedad»."
+        }
+      ],
+      "covered_by": "cueva_de_tesoro",
+      "coverage_note": "Fauna de ambiente de la caverna en sequía: se dibuja dentro del modelo espacial de la cueva, como pocas siluetas oscuras en la boca, sin ficha propia."
+    },
+    "piedra_de_sacrificios": {
+      "name": "La piedra de sacrificios del salto, sus brujas y los suicidios",
+      "kind": "lugar",
+      "description": "La piedra donde el cacique guane arroja joyas y objetos de ceremonia, donde luego se reúnen brujas y seres oscuros, y lo alto del salto desde donde siguen los suicidios.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "uncertain",
+      "sensitivity": "sensitive",
+      "visual_status": "excluded",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "duende-del-salto"
+      ],
+      "evidence": [
+        {
+          "myth": "duende-del-salto",
+          "field": "mito",
+          "note": "«El cacique visitaba la piedra de sacrificios para arrojar joyas y objetos de ceremonia»; más tarde «sobre la piedra de sacrificios se reunían brujas y seres oscuros, y desde lo alto del salto seguían los suicidios»."
+        }
+      ],
+      "exclusion_reason": "El texto reescrito la devuelve, pero es atribución arqueológica y ritual guane inventada por la composición de 2016 —el dossier no documenta culto, ceremonia ni sacrificio guane— y los suicidios no se representan: su propio research_notes dice que la reclasificación retira la historia guane y los suicidios."
+    },
+    "monasterio_del_salto": {
+      "name": "El monasterio del salto, que quedó en ruina con huertas",
+      "kind": "arquitectura",
+      "description": "El monasterio que se resolvió levantar en lo alto del salto para encerrar a Muki, saboteado con manos invisibles y terminado como ruina con huertas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "editorial_interpretation",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "duende-del-salto"
+      ],
+      "evidence": [
+        {
+          "myth": "duende-del-salto",
+          "field": "mito",
+          "note": "«Para encerrarlo del todo se resolvió levantar un monasterio en lo alto del salto», que Muki saboteaba «con manos invisibles» y que terminó siendo «una ruina con huertas»."
+        }
+      ],
+      "covered_by": "iglesia_de_pueblo",
+      "coverage_note": "Misma fábrica de tapia, cal y teja que la iglesia del pueblo, sin rematar: se dibuja como muro a medio levantar con huertas, dentro del modelo espacial del templo y sin la escuela que lo ocupó después."
+    },
+    "policarpo_avendano": {
+      "name": "Don Policarpo Avendaño",
+      "kind": "personaje",
+      "description": "El vecino que siempre es el primero en advertir que viene Benedicta, porque sus pasos suenan como cascos de mula, y que la reconoce pálido: «Es ella, sin duda».",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "editorial_interpretation",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-anima-coy"
+      ],
+      "evidence": [
+        {
+          "myth": "el-anima-coy",
+          "field": "mito",
+          "note": "«Don Policarpo Avendaño era siempre el primero en advertir que venía, porque sus pasos sonaban como cascos de mula. «Es ella, sin duda», decía, pálido»."
+        }
+      ],
+      "covered_by": "tipo_hombre_adulto",
+      "coverage_note": "Nombre nuevo del canon reescrito sin ningún rasgo físico: es un hombre del pueblo tras su puerta, dibujado desde el tipo base de hombre adulto, pálido de susto."
     }
   },
   "models": {

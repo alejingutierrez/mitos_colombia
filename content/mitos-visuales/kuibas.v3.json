@@ -796,7 +796,7 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-24"
   },
   "myths": {
     "creacion-kuibas": {
@@ -908,6 +908,21 @@
           "entity_id": "hoja_utileria_kuiba",
           "role": "plot_object",
           "note": "Cinco piezas menores en una hoja: los alimentos de los dos relatos y la única herramienta nombrada. Sime y jojomo se dibujan diferenciados y con su nombre, porque el relato insiste en que son dos alimentos nuevos y distintos; ninguna pieza se diseña con adornos ni acabados que la fuente no da."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los fragmentos de costra se vuelven personas, y el hombre adulto es la figura que aprende de Boupé a hacer arco y flecha y a cazar; fija cuerpo, cara y guayuco de corteza para el colectivo."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: entre las primeras personas que imitan a los pájaros y prueban los frutos, que cualquiera de los dos sexos recoge; fija la tela de corteza y el cuerpo femenino adulto del colectivo."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base: presta la figura joven al grupo recién caído que duerme, ve el primer Sol y aprende a bañarse; sin ningún marcador de la iniciación femenina, que está fuera de alcance."
         }
       ]
     },
@@ -1030,11 +1045,465 @@
           "entity_id": "hoja_utileria_kuiba",
           "role": "plot_object",
           "note": "Cinco piezas menores en una hoja: los alimentos de los dos relatos y la única herramienta nombrada. Sime y jojomo se dibujan diferenciados y con su nombre, porque el relato insiste en que son dos alimentos nuevos y distintos; ninguna pieza se diseña con adornos ni acabados que la fuente no da."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: presta el cuerpo a los que se ríen de Namon y a los que construyen canoas y balsas; la canoa se enseña de padre a hijo."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: presta el cuerpo a las sobrevivientes sobre las balsas y a quien saca el sime con el palo de cavar cuando baja el agua."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base: figura joven entre los sobrevivientes sobre las balsas; mismo vestido de corteza que las adultas."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base: «los niños sentían hambre»; fija la escala infantil que el colectivo `ninos_con_hambre` declara embebida, sin cuerpo de víctima."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Tipo base: el grupo que Namon avisa ya existe y tiene generaciones; el anciano completa la unidad doméstica de los que duermen bajo el mismo refugio."
+        },
+        {
+          "entity_id": "tipo_anciana",
+          "role": "secondary",
+          "note": "Tipo base: la anciana completa la unidad uxorilocal —la pareja mayor con sus hijas— entre los sobrevivientes; figura sentada, nunca desvalida."
         }
       ]
     }
   },
   "entities": {
+    "tipo_hombre_adulto": {
+      "name": "Hombre kuiva adulto (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base del hombre adulto kuiva del tiempo mítico: fija cuerpo, cara, guayuco de corteza y postura para toda figura masculina adulta del corpus —los que aprenden de Boupé, los que se ríen de Namon, los que construyen canoas y balsas—. Boupé se construye sobre él sin añadirle nada.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_hombre_adulto__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-kuibas",
+        "namon-y-la-inundacion"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-kuibas",
+          "field": "mito",
+          "note": "Coppens registra para el Capanaparo «guayucos de corteza de árboles» en los hombres, y Arcand incluye «bark cloth» entre los ocho objetos de la cultura material; el corte no está documentado (dossier §6)"
+        },
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "«Las mujeres producen vegetales… y los hombres cazan animales»; arco y flecha y canoa monóxila, cuya hechura se enseña de padre a hijo (dossier §1 y §6)"
+        }
+      ],
+      "census_note": "Tipo base del hombre adulto kuiva del tiempo mítico: fija cuerpo, cara, guayuco de corteza y postura para toda figura masculina adulta del corpus —los que aprenden de Boupé, los que se ríen de Namon, los que construyen canoas y balsas—. Boupé se construye sobre él sin añadirle nada.",
+      "design": {
+        "silhouette": "Hombre adulto enjuto y de pie, descalzo, con el torso y las piernas desnudos y una sola banda de tela de corteza ceñida a la cadera que cae en un paño corto por delante; en una mano un arco largo destensado que le llega al hombro, la otra abierta junto al muslo. Nada sobre la cabeza, nada al cuello, nada en los brazos.",
+        "materials": [
+          "cuerpo en papel de piel de un solo tono, en piezas planas grandes para torso, brazos y piernas, sin sombreado de músculo",
+          "cara aparte: óvalo plano de un solo tono con ojos, cejas, nariz y boca recortados como piezas separadas",
+          "papel de corteza apelmazada, crudo a pardo, sin trama de tejido, para el guayuco",
+          "cuerda de fibra en papel torcido para atar el guayuco a la cintura",
+          "pelo en papel negro mate, una sola pieza grande",
+          "arco de madera clara de canto vivo y flechas largas como piezas recortadas aparte"
+        ],
+        "palette": "Piel de un solo tono, crudo y pardo de corteza, negro del pelo y la madera clara del arco; ningún acento de color, porque el único color saturado del corpus es la costra roja del cielo.",
+        "scale": "Figura entera de pie en 9:16, a la misma altura que las mujeres adultas; el arco destensado mide casi lo que él y fija la escala de la hoja de utilería.",
+        "continuity": [
+          "sin pintura corporal de ningún diseño ni color, en ninguna lámina",
+          "sin collar, sin plumas, sin tocado y sin aro de cabeza",
+          "el guayuco es de corteza sin borlas ni flecos: nada del guayuco sikuani",
+          "sin machete, sin hierro, sin anzuelo y sin ropa de tela",
+          "Boupé usa este mismo cuerpo y este mismo guayuco sin distinción alguna"
+        ],
+        "documented": [
+          "guayuco de corteza de árboles en los hombres, registrado por Coppens para los cuiva del Capanaparo (dossier §6)",
+          "la tela de corteza está entre los ocho objetos de la cultura material que lista Arcand (dossier §0.2 y §6)",
+          "los hombres cazan con arco y flecha; la canoa monóxila se enseña de padre a hijo (dossier §1 y §6)",
+          "la pintura corporal existe como una de las tres artes cuiva y ninguna fuente describe diseño, color ni pigmento: la figura va sin pintura por ausencia documentada (dossier §6 y §11)"
+        ],
+        "editorial": [
+          "el corte del guayuco —banda a la cadera con paño corto por delante— es decisión editorial reversible: el dossier documenta la materia, no la hechura",
+          "el pelo negro en una sola pieza, su largo y su corte no están documentados: construcción editorial retirable",
+          "rostro, complexión y edad concreta son construcción editorial: ninguna fuente describe un cuerpo kuiva",
+          "que no lleve ningún adorno es decisión editorial coherente con el colectivo: el dossier no documenta adornos y no se inventan"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "inferred",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_mujer_adulta": {
+      "name": "Mujer kuiva adulta (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base de la mujer adulta kuiva: fija cuerpo, cara y tela de corteza para las figuras femeninas del colectivo, sentada en el suelo o en la hamaca, con la cesta koté o el palo de cavar con que se saca el sime.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_mujer_adulta__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-kuibas",
+        "namon-y-la-inundacion"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-kuibas",
+          "field": "mito",
+          "note": "«Los frutos pueden ser recogidos por cualquiera de los dos sexos»; las mujeres producen vegetales (dossier §6)"
+        },
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "El palo de cavar y la cesta koté están entre los ocho objetos, y el palo de cavar es lo que permite sacar el sime que Namon hace aparecer (dossier §0.2)"
+        }
+      ],
+      "census_note": "Tipo base de la mujer adulta kuiva: fija cuerpo, cara y tela de corteza para las figuras femeninas del colectivo, sentada en el suelo o en la hamaca, con la cesta koté o el palo de cavar con que se saca el sime.",
+      "design": {
+        "silhouette": "Mujer adulta sentada directamente en el suelo, con las piernas dobladas a un lado, torso desnudo y una tela de corteza envuelta a la cadera que le cubre hasta las rodillas; una cesta koté de tiras de palma apoyada contra la cadera y un palo de cavar recto tendido en el suelo a su lado.",
+        "materials": [
+          "cuerpo en papel de piel de un solo tono, en piezas planas grandes, sin volumen modelado",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados como piezas separadas",
+          "papel de corteza apelmazada, crudo a pardo, sin trama, para la tela envuelta a la cadera",
+          "cesta koté en tiras de papel de hoja de palma, sin patrón de tejido reconocible",
+          "palo de cavar como una sola pieza recta de madera clara",
+          "pelo en papel negro mate, una sola pieza grande"
+        ],
+        "palette": "La misma gama que el hombre —piel de un tono, crudo y pardo de corteza, negro del pelo— con el verde pajizo de la koté como único matiz vegetal.",
+        "scale": "Figura entera en 9:16; sentada, la cabeza queda a la altura de la cadera de un hombre de pie; la koté cabe en su regazo.",
+        "continuity": [
+          "sin pintura corporal, sin collar, sin plumas y sin tocado",
+          "la tela de corteza es la misma materia que la del hombre: no distingue rango ni edad",
+          "nunca con azada, surco ni sementera: el palo de cavar es de recolección, no de cultivo",
+          "nunca con pilón de mañoco ni utensilio de hierro"
+        ],
+        "documented": [
+          "la tela de corteza es el vestido del pueblo y está entre los ocho objetos de Arcand (dossier §6)",
+          "las mujeres producen vegetales y los frutos los recoge cualquiera de los dos sexos (dossier §6)",
+          "la cesta se llama koté y el palo de cavar es parte de la cultura material (dossier §0.2 y §6)",
+          "la pintura corporal existe y no tiene un solo diseño descrito: la figura va sin pintura (dossier §6 y §11)"
+        ],
+        "editorial": [
+          "la prenda femenina no está documentada aparte —el guayuco de corteza se registra en los hombres—: la tela envuelta hasta la rodilla es decisión editorial reversible sobre la materia documentada",
+          "pelo, rostro, edad y complexión son construcción editorial: ninguna fuente describe un cuerpo kuiva",
+          "la postura sentada en el suelo sale de la fotografía de 1973 de una mujer sentada pilando mañoco, sin el pilón, que se deja fuera por ser de época de contacto"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "inferred",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_mujer_joven": {
+      "name": "Mujer kuiva joven (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base de la mujer joven kuiva: el mismo vestido de corteza que la adulta sobre un cuerpo más ligero, recostada en la hamaca que define la gramática del colectivo. No lleva ningún marcador de la iniciación femenina, que queda fuera de alcance.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_mujer_joven__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-kuibas",
+        "namon-y-la-inundacion"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-kuibas",
+          "field": "mito",
+          "note": "Se pasa gran parte del día en la hamaca, bou, y el refugio se define por lo que cuelga dentro (dossier §5 y §6)"
+        },
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "La iniciación femenina existe, está documentada y queda marcada fuera de alcance sin ficha (dossier §10, salvaguarda 1)"
+        }
+      ],
+      "census_note": "Tipo base de la mujer joven kuiva: el mismo vestido de corteza que la adulta sobre un cuerpo más ligero, recostada en la hamaca que define la gramática del colectivo. No lleva ningún marcador de la iniciación femenina, que queda fuera de alcance.",
+      "design": {
+        "silhouette": "Muchacha delgada recostada en una hamaca de curva larga, con una pierna colgando fuera y la tela de corteza envuelta a la cadera; los brazos sueltos, el pelo negro abierto sobre el borde de la hamaca. La curva de la hamaca y el cuerpo tendido son una sola línea.",
+        "materials": [
+          "cuerpo en papel de piel de un solo tono, piezas planas grandes y más estrechas que las de la adulta",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados como piezas separadas",
+          "papel de corteza apelmazada, crudo a pardo, para la tela a la cadera",
+          "hamaca en papel de fibra en curva larga y limpia, como pieza propia",
+          "pelo en papel negro mate, una sola pieza grande abierta"
+        ],
+        "palette": "Idéntica a la de la mujer adulta: piel de un tono, crudo y pardo de corteza, negro del pelo, sin un solo acento que la distinga.",
+        "scale": "Figura entera en 9:16 con la hamaca atravesando el encuadre; algo más baja y delgada que la mujer adulta.",
+        "continuity": [
+          "ningún marcador de iniciación femenina: ni encierro, ni corte de pelo ritual, ni pintura, ni adorno",
+          "sin pintura corporal, sin collar y sin plumas",
+          "la hamaca es la misma de la gramática del colectivo"
+        ],
+        "documented": [
+          "la tela de corteza es el vestido del pueblo (dossier §6)",
+          "la hamaca, bou, es donde se pasa gran parte del día (dossier §5 y §6)",
+          "la iniciación femenina queda fuera de alcance por salvaguarda (dossier §10)",
+          "sin pintura corporal por ausencia de diseño documentado (dossier §6 y §11)"
+        ],
+        "editorial": [
+          "la prenda femenina y su largo son decisión editorial reversible sobre la materia documentada",
+          "edad, pelo, rostro y complexión son construcción editorial completa"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "inferred",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_nino": {
+      "name": "Niño kuiva (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base de los niños kuiva: da cuerpo a «los niños sentían hambre» del relato de Namon, a escala propia y sin cuerpo de víctima. Es la figura del niño que aprende del padre la canoa y el arco.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_nino__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "namon-y-la-inundacion"
+      ],
+      "evidence": [
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "«Los niños sentían hambre y los sobrevivientes no encontraban tierra donde buscar comida» (canon)"
+        },
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "Nadie se dibuja como último, como víctima ni como miserable; la desnutrición documentada en Caño Mochuelo se queda en el expediente (dossier §10, salvaguarda 5)"
+        }
+      ],
+      "census_note": "Tipo base de los niños kuiva: da cuerpo a «los niños sentían hambre» del relato de Namon, a escala propia y sin cuerpo de víctima. Es la figura del niño que aprende del padre la canoa y el arco.",
+      "design": {
+        "silhouette": "Niño de seis a ocho años de pie sobre los troncos de una balsa, descalzo, con una tira corta de corteza a la cadera, mirando el agua con una mano en el vientre; cuerpo delgado pero entero, sin costillas marcadas.",
+        "materials": [
+          "cuerpo en papel de piel de un solo tono, pocas piezas planas y cortas",
+          "cara aparte: óvalo plano de un solo tono, más redondo, con los rasgos recortados como piezas separadas",
+          "tira de papel de corteza cruda a la cadera, atada con cuerda de fibra",
+          "pelo en papel negro mate, una sola pieza corta"
+        ],
+        "palette": "La misma gama del colectivo: piel de un tono, corteza cruda y pelo negro, sin acento.",
+        "scale": "A la altura de la cadera del hombre adulto, en 9:16 con aire alrededor; la mano en el vientre es el único gesto de hambre.",
+        "continuity": [
+          "nunca emaciado, llorando ni en actitud de súplica",
+          "sin pintura corporal, sin collar y sin adorno",
+          "la tira de corteza es la misma materia que la de los adultos"
+        ],
+        "documented": [
+          "«los niños sentían hambre» en la inundación (canon, campo mito)",
+          "la tela de corteza es el vestido del pueblo, y la canoa y el arco se enseñan de padre a hijo (dossier §1 y §6)",
+          "salvaguarda: nadie se dibuja como víctima ni miserable (dossier §10)"
+        ],
+        "editorial": [
+          "que el niño lleve una tira de corteza y no vaya desnudo es decisión editorial reversible: el vestido infantil no está documentado",
+          "edad, rostro y pelo son construcción editorial completa"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "inferred",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_anciano": {
+      "name": "Anciano kuiva (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base del hombre mayor kuiva: el mismo guayuco de corteza sobre un cuerpo más enjuto, tendido en la hamaca con una flauta de hueso, que es la postura que las fichas de campo de Arcand registran al atardecer.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_anciano__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "namon-y-la-inundacion"
+      ],
+      "evidence": [
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "Las fichas de campo de Arcand describen a un hombre tocando la flauta «acostado en su hamaca» a las seis y media de la tarde; la flauta es de hueso (uku) o de madera (athüübo), no de caña (dossier §6)"
+        },
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "La unidad doméstica son «los que duermen bajo el mismo refugio»: una pareja con sus hijas, los maridos de ellas y los hijos solteros (dossier §5)"
+        }
+      ],
+      "census_note": "Tipo base del hombre mayor kuiva: el mismo guayuco de corteza sobre un cuerpo más enjuto, tendido en la hamaca con una flauta de hueso, que es la postura que las fichas de campo de Arcand registran al atardecer.",
+      "design": {
+        "silhouette": "Hombre mayor tendido de lado en una hamaca bajo el refugio de palma, con el guayuco de corteza, las rodillas algo recogidas y una flauta corta de hueso en los labios; cuerpo enjuto, hombros caídos, pelo corto con dos o tres mechones grises.",
+        "materials": [
+          "cuerpo en papel de piel de un solo tono, piezas planas largas y estrechas, sin arrugas modeladas",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados aparte y dos pliegues recortados en la mejilla",
+          "papel de corteza apelmazada y más oscura para el guayuco",
+          "flauta de hueso uku como pieza corta de papel marfil",
+          "pelo en papel negro mate con dos o tres tiras grises superpuestas",
+          "hamaca en papel de fibra en curva larga"
+        ],
+        "palette": "Piel de un tono, pardo de corteza gastada, negro con gris del pelo y el marfil de la flauta como único punto claro.",
+        "scale": "Figura entera tendida en 9:16, con la hamaca y el borde del refugio arriba; algo más baja y más estrecha que el hombre adulto.",
+        "continuity": [
+          "la flauta es de hueso o de madera, nunca de caña",
+          "no es chamán ni lleva parafernalia del yopo, del capi ni maraca",
+          "sin pintura corporal, sin collar y sin insignia"
+        ],
+        "documented": [
+          "guayuco de corteza en los hombres (dossier §6)",
+          "el hombre tocando la flauta acostado en su hamaca al atardecer, en las fichas de campo de Arcand (dossier §6)",
+          "flautas documentadas: de hueso uku, de madera athüübo, de pan tafeburu (dossier §6)",
+          "el complejo del médico tradicional —yopo, capi, maraca— queda fuera de alcance (dossier §10)"
+        ],
+        "editorial": [
+          "la edad del hombre de la flauta no consta en la ficha de campo: hacerlo anciano es decisión editorial",
+          "las canas y el cuerpo enjuto son construcción editorial reversible"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "inferred",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_anciana": {
+      "name": "Anciana kuiva (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base de la mujer mayor kuiva: sentada en el suelo junto a la hamaca, con la tela de corteza y una cuerda de fibra entre las manos, cantando. Es la madre de la unidad uxorilocal, nunca una figura desvalida.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_anciana__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "namon-y-la-inundacion"
+      ],
+      "evidence": [
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "El naweba es el canto de las mujeres, y el archivo de Arcand registra a una mujer que en un naweba habla de la muerte de sus dos hijos «hace mucho tiempo» (dossier §6)"
+        },
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "Una persona trabaja en su hamaca una cuerda para sostener un koté mientras canta; la cuerda está entre los ocho objetos (dossier §0.2 y §6)"
+        }
+      ],
+      "census_note": "Tipo base de la mujer mayor kuiva: sentada en el suelo junto a la hamaca, con la tela de corteza y una cuerda de fibra entre las manos, cantando. Es la madre de la unidad uxorilocal, nunca una figura desvalida.",
+      "design": {
+        "silhouette": "Mujer mayor sentada en el suelo con la espalda recta, tela de corteza a la cadera, torciendo una cuerda de fibra sobre el muslo con las dos manos y la boca entreabierta de quien canta; pelo corto con mechones grises, cuerpo delgado y firme.",
+        "materials": [
+          "cuerpo en papel de piel de un solo tono, piezas planas, sin arrugas modeladas",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados aparte y dos pliegues recortados en la mejilla",
+          "papel de corteza apelmazada, pardo, para la tela a la cadera",
+          "cuerda en papel torcido de fibra, en espiral sobre el muslo",
+          "pelo en papel negro mate con tiras grises superpuestas"
+        ],
+        "palette": "Piel de un tono, pardo de corteza, negro y gris del pelo y el crudo de la fibra: ningún color que la separe del colectivo.",
+        "scale": "Figura entera sentada en 9:16; la cabeza a la altura de la hamaca colgada detrás.",
+        "continuity": [
+          "nunca en duelo ritual, cremación ni humo funerario: la materia funeraria está fuera de alcance",
+          "sin pintura corporal, sin collar y sin adorno",
+          "la cuerda es la de la cultura material: fibra torcida, sin patrón"
+        ],
+        "documented": [
+          "el naweba es canto de mujeres (dossier §6)",
+          "trabajar la cuerda en la hamaca mientras se canta, en las fichas de campo (dossier §6)",
+          "tela de corteza como vestido y cuerda entre los ocho objetos (dossier §0.2 y §6)",
+          "cremación y materia funeraria fuera de alcance (dossier §10)"
+        ],
+        "editorial": [
+          "la prenda femenina y su largo son decisión editorial sobre la materia documentada",
+          "la edad, las canas y el rostro son construcción editorial; la figura no retrata a ninguna persona del archivo"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "inferred",
+        "editorial_interpretation"
+      ]
+    },
     "herida_del_cielo": {
       "name": "La herida del cielo: relámpago, sangre y costra",
       "kind": "fenomeno",
@@ -2885,6 +3354,558 @@
     }
   },
   "models": {
+    "tipo_hombre_adulto__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_hombre_adulto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-kuibas",
+          "field": "mito",
+          "note": "Coppens registra para el Capanaparo «guayucos de corteza de árboles» en los hombres, y Arcand incluye «bark cloth» entre los ocho objetos de la cultura material; el corte no está documentado (dossier §6)"
+        },
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "«Las mujeres producen vegetales… y los hombres cazan animales»; arco y flecha y canoa monóxila, cuya hechura se enseña de padre a hijo (dossier §1 y §6)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre adulto enjuto y de pie, descalzo, con el torso y las piernas desnudos y una sola banda de tela de corteza ceñida a la cadera que cae en un paño corto por delante; en una mano un arco largo destensado que le llega al hombro, la otra abierta junto al muslo. Nada sobre la cabeza, nada al cuello, nada en los brazos.",
+        "materials": [
+          "cuerpo en papel de piel de un solo tono, en piezas planas grandes para torso, brazos y piernas, sin sombreado de músculo",
+          "cara aparte: óvalo plano de un solo tono con ojos, cejas, nariz y boca recortados como piezas separadas",
+          "papel de corteza apelmazada, crudo a pardo, sin trama de tejido, para el guayuco",
+          "cuerda de fibra en papel torcido para atar el guayuco a la cintura",
+          "pelo en papel negro mate, una sola pieza grande",
+          "arco de madera clara de canto vivo y flechas largas como piezas recortadas aparte"
+        ],
+        "palette_logic": "Piel de un solo tono, crudo y pardo de corteza, negro del pelo y la madera clara del arco; ningún acento de color, porque el único color saturado del corpus es la costra roja del cielo.",
+        "scale": "Figura entera de pie en 9:16, a la misma altura que las mujeres adultas; el arco destensado mide casi lo que él y fija la escala de la hoja de utilería.",
+        "continuity_markers": [
+          "sin pintura corporal de ningún diseño ni color, en ninguna lámina",
+          "sin collar, sin plumas, sin tocado y sin aro de cabeza",
+          "el guayuco es de corteza sin borlas ni flecos: nada del guayuco sikuani",
+          "sin machete, sin hierro, sin anzuelo y sin ropa de tela",
+          "Boupé usa este mismo cuerpo y este mismo guayuco sin distinción alguna"
+        ],
+        "documented_features": [
+          "guayuco de corteza de árboles en los hombres, registrado por Coppens para los cuiva del Capanaparo (dossier §6)",
+          "la tela de corteza está entre los ocho objetos de la cultura material que lista Arcand (dossier §0.2 y §6)",
+          "los hombres cazan con arco y flecha; la canoa monóxila se enseña de padre a hijo (dossier §1 y §6)",
+          "la pintura corporal existe como una de las tres artes cuiva y ninguna fuente describe diseño, color ni pigmento: la figura va sin pintura por ausencia documentada (dossier §6 y §11)"
+        ],
+        "editorial_features": [
+          "el corte del guayuco —banda a la cadera con paño corto por delante— es decisión editorial reversible: el dossier documenta la materia, no la hechura",
+          "el pelo negro en una sola pieza, su largo y su corte no están documentados: construcción editorial retirable",
+          "rostro, complexión y edad concreta son construcción editorial: ninguna fuente describe un cuerpo kuiva",
+          "que no lleve ningún adorno es decisión editorial coherente con el colectivo: el dossier no documenta adornos y no se inventan"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Kuiva (Wamonae) V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Hombre kuiva adulto (tipo). Hombre adulto enjuto y de pie, descalzo, con el torso y las piernas desnudos y una sola banda de tela de corteza ceñida a la cadera que cae en un paño corto por delante; en una mano un arco largo destensado que le llega al hombro, la otra abierta junto al muslo. Nada sobre la cabeza, nada al cuello, nada en los brazos.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera de pie en 9:16, a la misma altura que las mujeres adultas; el arco destensado mide casi lo que él y fija la escala de la hoja de utilería.",
+        "lighting_mood": "Cielo enorme de llano sin relieve que lo corte, con la línea de horizonte muy abajo: el primer relato ocurre entero arriba y el segundo borra el suelo bajo el agua. Luz alta y sin obstáculo sobre la sabana, que aplana el horizonte; en la inundación, cielo y agua devolviéndose la misma luz con el banco seco como única interrupción. De noche, la cúpula completa del llano con la banda de la Vía Láctea, porque es allí donde este pueblo pone a sus muertos.",
+        "materials_textures": "cuerpo en papel de piel de un solo tono, en piezas planas grandes para torso, brazos y piernas, sin sombreado de músculo; cara aparte: óvalo plano de un solo tono con ojos, cejas, nariz y boca recortados como piezas separadas; papel de corteza apelmazada, crudo a pardo, sin trama de tejido, para el guayuco; cuerda de fibra en papel torcido para atar el guayuco a la cintura; pelo en papel negro mate, una sola pieza grande; arco de madera clara de canto vivo y flechas largas como piezas recortadas aparte",
+        "era": "Llano casanareño del tiempo mítico, acotado por la lista de ocho objetos que Arcand documentó: hamaca, canoa, arco y flecha, palo de cavar, cesta, tela de corteza y cuerda. Sin hierro, sin machete, sin escopeta, sin ganado, sin caballo, sin anzuelo, sin ropa de tela, sin casa, sin cerca y sin camino trazado. Refugio de hoja de palma levantado en media hora y abandonado en una semana, en grupos de diez a cuarenta personas.",
+        "constraints": [
+          "documentado: guayuco de corteza de árboles en los hombres, registrado por Coppens para los cuiva del Capanaparo (dossier §6)",
+          "documentado: la tela de corteza está entre los ocho objetos de la cultura material que lista Arcand (dossier §0.2 y §6)",
+          "documentado: los hombres cazan con arco y flecha; la canoa monóxila se enseña de padre a hijo (dossier §1 y §6)",
+          "documentado: la pintura corporal existe como una de las tres artes cuiva y ninguna fuente describe diseño, color ni pigmento: la figura va sin pintura por ausencia documentada (dossier §6 y §11)",
+          "La lámina declara el estado de la sabana y no lo promedia: verde anegada, pajonal rubio o manto negro de ceniza, uno solo por imagen.",
+          "El rojo aparece únicamente en la herida del cielo y es materia, no líquido: fragmentos y costra, nunca chorro ni salpicadura.",
+          "En la inundación, el agua y el cielo comparten valor y la única interrupción es el banco seco: sin horizonte marcado y sin orilla.",
+          "La noche es la cúpula completa del llano con la banda de la Vía Láctea, sin ninguna luz cálida en el suelo.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin casa de armazón de vigas, sin guayuco con borlas, sin aro de cabeza, sin zigzag rojo de chica y sin morichal del Vichada: nada del dossier sikuani entra aquí",
+          "sin churuata, sin maloca, sin palafito, sin cerca, sin corral, sin camino trazado y sin aldea: el único construido es el refugio sin paredes de hoja de palma",
+          "sin sementera, sin surco, sin lindero y sin herramienta agrícola: los cultivos que enseña Boupé están excluidos y con la advertencia declarada",
+          "sin pintura corporal de ningún diseño ni color, y sin insignia de autoridad sobre Boupé",
+          "sin parafernalia del yopo ni del capi: ni polvo, ni tubo, ni mortero, ni maraca, ni gesto de aspirar",
+          "sin cremación, sin humo funerario, sin osamenta y sin iniciación femenina",
+          "sin cueva de montaña ni caverna rocosa: en esta sabana no hay roca aflorante documentada",
+          "sin patrón real ni inventado de cestería, cerámica, chinchorro o plumaje, y sin plumaje ritual de ningún tipo"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el cuerpo se resuelve en cláusula distinta de la cara. El pajonal alto, la hoja de palma del refugio y la bandada de pájaros son pocas piezas planas grandes con el borde recortado en dientes largos y desiguales, superpuestas en dos o tres capas, nunca brizna por brizna ni ave por ave. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_adulta__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_adulta"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-kuibas",
+          "field": "mito",
+          "note": "«Los frutos pueden ser recogidos por cualquiera de los dos sexos»; las mujeres producen vegetales (dossier §6)"
+        },
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "El palo de cavar y la cesta koté están entre los ocho objetos, y el palo de cavar es lo que permite sacar el sime que Namon hace aparecer (dossier §0.2)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer adulta sentada directamente en el suelo, con las piernas dobladas a un lado, torso desnudo y una tela de corteza envuelta a la cadera que le cubre hasta las rodillas; una cesta koté de tiras de palma apoyada contra la cadera y un palo de cavar recto tendido en el suelo a su lado.",
+        "materials": [
+          "cuerpo en papel de piel de un solo tono, en piezas planas grandes, sin volumen modelado",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados como piezas separadas",
+          "papel de corteza apelmazada, crudo a pardo, sin trama, para la tela envuelta a la cadera",
+          "cesta koté en tiras de papel de hoja de palma, sin patrón de tejido reconocible",
+          "palo de cavar como una sola pieza recta de madera clara",
+          "pelo en papel negro mate, una sola pieza grande"
+        ],
+        "palette_logic": "La misma gama que el hombre —piel de un tono, crudo y pardo de corteza, negro del pelo— con el verde pajizo de la koté como único matiz vegetal.",
+        "scale": "Figura entera en 9:16; sentada, la cabeza queda a la altura de la cadera de un hombre de pie; la koté cabe en su regazo.",
+        "continuity_markers": [
+          "sin pintura corporal, sin collar, sin plumas y sin tocado",
+          "la tela de corteza es la misma materia que la del hombre: no distingue rango ni edad",
+          "nunca con azada, surco ni sementera: el palo de cavar es de recolección, no de cultivo",
+          "nunca con pilón de mañoco ni utensilio de hierro"
+        ],
+        "documented_features": [
+          "la tela de corteza es el vestido del pueblo y está entre los ocho objetos de Arcand (dossier §6)",
+          "las mujeres producen vegetales y los frutos los recoge cualquiera de los dos sexos (dossier §6)",
+          "la cesta se llama koté y el palo de cavar es parte de la cultura material (dossier §0.2 y §6)",
+          "la pintura corporal existe y no tiene un solo diseño descrito: la figura va sin pintura (dossier §6 y §11)"
+        ],
+        "editorial_features": [
+          "la prenda femenina no está documentada aparte —el guayuco de corteza se registra en los hombres—: la tela envuelta hasta la rodilla es decisión editorial reversible sobre la materia documentada",
+          "pelo, rostro, edad y complexión son construcción editorial: ninguna fuente describe un cuerpo kuiva",
+          "la postura sentada en el suelo sale de la fotografía de 1973 de una mujer sentada pilando mañoco, sin el pilón, que se deja fuera por ser de época de contacto"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Kuiva (Wamonae) V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Mujer kuiva adulta (tipo). Mujer adulta sentada directamente en el suelo, con las piernas dobladas a un lado, torso desnudo y una tela de corteza envuelta a la cadera que le cubre hasta las rodillas; una cesta koté de tiras de palma apoyada contra la cadera y un palo de cavar recto tendido en el suelo a su lado.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera en 9:16; sentada, la cabeza queda a la altura de la cadera de un hombre de pie; la koté cabe en su regazo.",
+        "lighting_mood": "Cielo enorme de llano sin relieve que lo corte, con la línea de horizonte muy abajo: el primer relato ocurre entero arriba y el segundo borra el suelo bajo el agua. Luz alta y sin obstáculo sobre la sabana, que aplana el horizonte; en la inundación, cielo y agua devolviéndose la misma luz con el banco seco como única interrupción. De noche, la cúpula completa del llano con la banda de la Vía Láctea, porque es allí donde este pueblo pone a sus muertos.",
+        "materials_textures": "cuerpo en papel de piel de un solo tono, en piezas planas grandes, sin volumen modelado; cara aparte: óvalo plano de un solo tono con los rasgos recortados como piezas separadas; papel de corteza apelmazada, crudo a pardo, sin trama, para la tela envuelta a la cadera; cesta koté en tiras de papel de hoja de palma, sin patrón de tejido reconocible; palo de cavar como una sola pieza recta de madera clara; pelo en papel negro mate, una sola pieza grande",
+        "era": "Llano casanareño del tiempo mítico, acotado por la lista de ocho objetos que Arcand documentó: hamaca, canoa, arco y flecha, palo de cavar, cesta, tela de corteza y cuerda. Sin hierro, sin machete, sin escopeta, sin ganado, sin caballo, sin anzuelo, sin ropa de tela, sin casa, sin cerca y sin camino trazado. Refugio de hoja de palma levantado en media hora y abandonado en una semana, en grupos de diez a cuarenta personas.",
+        "constraints": [
+          "documentado: la tela de corteza es el vestido del pueblo y está entre los ocho objetos de Arcand (dossier §6)",
+          "documentado: las mujeres producen vegetales y los frutos los recoge cualquiera de los dos sexos (dossier §6)",
+          "documentado: la cesta se llama koté y el palo de cavar es parte de la cultura material (dossier §0.2 y §6)",
+          "documentado: la pintura corporal existe y no tiene un solo diseño descrito: la figura va sin pintura (dossier §6 y §11)",
+          "La lámina declara el estado de la sabana y no lo promedia: verde anegada, pajonal rubio o manto negro de ceniza, uno solo por imagen.",
+          "El rojo aparece únicamente en la herida del cielo y es materia, no líquido: fragmentos y costra, nunca chorro ni salpicadura.",
+          "En la inundación, el agua y el cielo comparten valor y la única interrupción es el banco seco: sin horizonte marcado y sin orilla.",
+          "La noche es la cúpula completa del llano con la banda de la Vía Láctea, sin ninguna luz cálida en el suelo.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin casa de armazón de vigas, sin guayuco con borlas, sin aro de cabeza, sin zigzag rojo de chica y sin morichal del Vichada: nada del dossier sikuani entra aquí",
+          "sin churuata, sin maloca, sin palafito, sin cerca, sin corral, sin camino trazado y sin aldea: el único construido es el refugio sin paredes de hoja de palma",
+          "sin sementera, sin surco, sin lindero y sin herramienta agrícola: los cultivos que enseña Boupé están excluidos y con la advertencia declarada",
+          "sin pintura corporal de ningún diseño ni color, y sin insignia de autoridad sobre Boupé",
+          "sin parafernalia del yopo ni del capi: ni polvo, ni tubo, ni mortero, ni maraca, ni gesto de aspirar",
+          "sin cremación, sin humo funerario, sin osamenta y sin iniciación femenina",
+          "sin cueva de montaña ni caverna rocosa: en esta sabana no hay roca aflorante documentada",
+          "sin patrón real ni inventado de cestería, cerámica, chinchorro o plumaje, y sin plumaje ritual de ningún tipo"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el cuerpo se resuelve en cláusula distinta de la cara. El pajonal alto, la hoja de palma del refugio y la bandada de pájaros son pocas piezas planas grandes con el borde recortado en dientes largos y desiguales, superpuestas en dos o tres capas, nunca brizna por brizna ni ave por ave. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_joven__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_joven"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-kuibas",
+          "field": "mito",
+          "note": "Se pasa gran parte del día en la hamaca, bou, y el refugio se define por lo que cuelga dentro (dossier §5 y §6)"
+        },
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "La iniciación femenina existe, está documentada y queda marcada fuera de alcance sin ficha (dossier §10, salvaguarda 1)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Muchacha delgada recostada en una hamaca de curva larga, con una pierna colgando fuera y la tela de corteza envuelta a la cadera; los brazos sueltos, el pelo negro abierto sobre el borde de la hamaca. La curva de la hamaca y el cuerpo tendido son una sola línea.",
+        "materials": [
+          "cuerpo en papel de piel de un solo tono, piezas planas grandes y más estrechas que las de la adulta",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados como piezas separadas",
+          "papel de corteza apelmazada, crudo a pardo, para la tela a la cadera",
+          "hamaca en papel de fibra en curva larga y limpia, como pieza propia",
+          "pelo en papel negro mate, una sola pieza grande abierta"
+        ],
+        "palette_logic": "Idéntica a la de la mujer adulta: piel de un tono, crudo y pardo de corteza, negro del pelo, sin un solo acento que la distinga.",
+        "scale": "Figura entera en 9:16 con la hamaca atravesando el encuadre; algo más baja y delgada que la mujer adulta.",
+        "continuity_markers": [
+          "ningún marcador de iniciación femenina: ni encierro, ni corte de pelo ritual, ni pintura, ni adorno",
+          "sin pintura corporal, sin collar y sin plumas",
+          "la hamaca es la misma de la gramática del colectivo"
+        ],
+        "documented_features": [
+          "la tela de corteza es el vestido del pueblo (dossier §6)",
+          "la hamaca, bou, es donde se pasa gran parte del día (dossier §5 y §6)",
+          "la iniciación femenina queda fuera de alcance por salvaguarda (dossier §10)",
+          "sin pintura corporal por ausencia de diseño documentado (dossier §6 y §11)"
+        ],
+        "editorial_features": [
+          "la prenda femenina y su largo son decisión editorial reversible sobre la materia documentada",
+          "edad, pelo, rostro y complexión son construcción editorial completa"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Kuiva (Wamonae) V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Mujer kuiva joven (tipo). Muchacha delgada recostada en una hamaca de curva larga, con una pierna colgando fuera y la tela de corteza envuelta a la cadera; los brazos sueltos, el pelo negro abierto sobre el borde de la hamaca. La curva de la hamaca y el cuerpo tendido son una sola línea.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera en 9:16 con la hamaca atravesando el encuadre; algo más baja y delgada que la mujer adulta.",
+        "lighting_mood": "Cielo enorme de llano sin relieve que lo corte, con la línea de horizonte muy abajo: el primer relato ocurre entero arriba y el segundo borra el suelo bajo el agua. Luz alta y sin obstáculo sobre la sabana, que aplana el horizonte; en la inundación, cielo y agua devolviéndose la misma luz con el banco seco como única interrupción. De noche, la cúpula completa del llano con la banda de la Vía Láctea, porque es allí donde este pueblo pone a sus muertos.",
+        "materials_textures": "cuerpo en papel de piel de un solo tono, piezas planas grandes y más estrechas que las de la adulta; cara aparte: óvalo plano de un solo tono con los rasgos recortados como piezas separadas; papel de corteza apelmazada, crudo a pardo, para la tela a la cadera; hamaca en papel de fibra en curva larga y limpia, como pieza propia; pelo en papel negro mate, una sola pieza grande abierta",
+        "era": "Llano casanareño del tiempo mítico, acotado por la lista de ocho objetos que Arcand documentó: hamaca, canoa, arco y flecha, palo de cavar, cesta, tela de corteza y cuerda. Sin hierro, sin machete, sin escopeta, sin ganado, sin caballo, sin anzuelo, sin ropa de tela, sin casa, sin cerca y sin camino trazado. Refugio de hoja de palma levantado en media hora y abandonado en una semana, en grupos de diez a cuarenta personas.",
+        "constraints": [
+          "documentado: la tela de corteza es el vestido del pueblo (dossier §6)",
+          "documentado: la hamaca, bou, es donde se pasa gran parte del día (dossier §5 y §6)",
+          "documentado: la iniciación femenina queda fuera de alcance por salvaguarda (dossier §10)",
+          "documentado: sin pintura corporal por ausencia de diseño documentado (dossier §6 y §11)",
+          "La lámina declara el estado de la sabana y no lo promedia: verde anegada, pajonal rubio o manto negro de ceniza, uno solo por imagen.",
+          "El rojo aparece únicamente en la herida del cielo y es materia, no líquido: fragmentos y costra, nunca chorro ni salpicadura.",
+          "En la inundación, el agua y el cielo comparten valor y la única interrupción es el banco seco: sin horizonte marcado y sin orilla.",
+          "La noche es la cúpula completa del llano con la banda de la Vía Láctea, sin ninguna luz cálida en el suelo.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin casa de armazón de vigas, sin guayuco con borlas, sin aro de cabeza, sin zigzag rojo de chica y sin morichal del Vichada: nada del dossier sikuani entra aquí",
+          "sin churuata, sin maloca, sin palafito, sin cerca, sin corral, sin camino trazado y sin aldea: el único construido es el refugio sin paredes de hoja de palma",
+          "sin sementera, sin surco, sin lindero y sin herramienta agrícola: los cultivos que enseña Boupé están excluidos y con la advertencia declarada",
+          "sin pintura corporal de ningún diseño ni color, y sin insignia de autoridad sobre Boupé",
+          "sin parafernalia del yopo ni del capi: ni polvo, ni tubo, ni mortero, ni maraca, ni gesto de aspirar",
+          "sin cremación, sin humo funerario, sin osamenta y sin iniciación femenina",
+          "sin cueva de montaña ni caverna rocosa: en esta sabana no hay roca aflorante documentada",
+          "sin patrón real ni inventado de cestería, cerámica, chinchorro o plumaje, y sin plumaje ritual de ningún tipo"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el cuerpo se resuelve en cláusula distinta de la cara. El pajonal alto, la hoja de palma del refugio y la bandada de pájaros son pocas piezas planas grandes con el borde recortado en dientes largos y desiguales, superpuestas en dos o tres capas, nunca brizna por brizna ni ave por ave. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_nino__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_nino"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "«Los niños sentían hambre y los sobrevivientes no encontraban tierra donde buscar comida» (canon)"
+        },
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "Nadie se dibuja como último, como víctima ni como miserable; la desnutrición documentada en Caño Mochuelo se queda en el expediente (dossier §10, salvaguarda 5)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Niño de seis a ocho años de pie sobre los troncos de una balsa, descalzo, con una tira corta de corteza a la cadera, mirando el agua con una mano en el vientre; cuerpo delgado pero entero, sin costillas marcadas.",
+        "materials": [
+          "cuerpo en papel de piel de un solo tono, pocas piezas planas y cortas",
+          "cara aparte: óvalo plano de un solo tono, más redondo, con los rasgos recortados como piezas separadas",
+          "tira de papel de corteza cruda a la cadera, atada con cuerda de fibra",
+          "pelo en papel negro mate, una sola pieza corta"
+        ],
+        "palette_logic": "La misma gama del colectivo: piel de un tono, corteza cruda y pelo negro, sin acento.",
+        "scale": "A la altura de la cadera del hombre adulto, en 9:16 con aire alrededor; la mano en el vientre es el único gesto de hambre.",
+        "continuity_markers": [
+          "nunca emaciado, llorando ni en actitud de súplica",
+          "sin pintura corporal, sin collar y sin adorno",
+          "la tira de corteza es la misma materia que la de los adultos"
+        ],
+        "documented_features": [
+          "«los niños sentían hambre» en la inundación (canon, campo mito)",
+          "la tela de corteza es el vestido del pueblo, y la canoa y el arco se enseñan de padre a hijo (dossier §1 y §6)",
+          "salvaguarda: nadie se dibuja como víctima ni miserable (dossier §10)"
+        ],
+        "editorial_features": [
+          "que el niño lleve una tira de corteza y no vaya desnudo es decisión editorial reversible: el vestido infantil no está documentado",
+          "edad, rostro y pelo son construcción editorial completa"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Kuiva (Wamonae) V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Niño kuiva (tipo). Niño de seis a ocho años de pie sobre los troncos de una balsa, descalzo, con una tira corta de corteza a la cadera, mirando el agua con una mano en el vientre; cuerpo delgado pero entero, sin costillas marcadas.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; A la altura de la cadera del hombre adulto, en 9:16 con aire alrededor; la mano en el vientre es el único gesto de hambre.",
+        "lighting_mood": "Cielo enorme de llano sin relieve que lo corte, con la línea de horizonte muy abajo: el primer relato ocurre entero arriba y el segundo borra el suelo bajo el agua. Luz alta y sin obstáculo sobre la sabana, que aplana el horizonte; en la inundación, cielo y agua devolviéndose la misma luz con el banco seco como única interrupción. De noche, la cúpula completa del llano con la banda de la Vía Láctea, porque es allí donde este pueblo pone a sus muertos.",
+        "materials_textures": "cuerpo en papel de piel de un solo tono, pocas piezas planas y cortas; cara aparte: óvalo plano de un solo tono, más redondo, con los rasgos recortados como piezas separadas; tira de papel de corteza cruda a la cadera, atada con cuerda de fibra; pelo en papel negro mate, una sola pieza corta",
+        "era": "Llano casanareño del tiempo mítico, acotado por la lista de ocho objetos que Arcand documentó: hamaca, canoa, arco y flecha, palo de cavar, cesta, tela de corteza y cuerda. Sin hierro, sin machete, sin escopeta, sin ganado, sin caballo, sin anzuelo, sin ropa de tela, sin casa, sin cerca y sin camino trazado. Refugio de hoja de palma levantado en media hora y abandonado en una semana, en grupos de diez a cuarenta personas.",
+        "constraints": [
+          "documentado: «los niños sentían hambre» en la inundación (canon, campo mito)",
+          "documentado: la tela de corteza es el vestido del pueblo, y la canoa y el arco se enseñan de padre a hijo (dossier §1 y §6)",
+          "documentado: salvaguarda: nadie se dibuja como víctima ni miserable (dossier §10)",
+          "La lámina declara el estado de la sabana y no lo promedia: verde anegada, pajonal rubio o manto negro de ceniza, uno solo por imagen.",
+          "El rojo aparece únicamente en la herida del cielo y es materia, no líquido: fragmentos y costra, nunca chorro ni salpicadura.",
+          "En la inundación, el agua y el cielo comparten valor y la única interrupción es el banco seco: sin horizonte marcado y sin orilla.",
+          "La noche es la cúpula completa del llano con la banda de la Vía Láctea, sin ninguna luz cálida en el suelo.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin casa de armazón de vigas, sin guayuco con borlas, sin aro de cabeza, sin zigzag rojo de chica y sin morichal del Vichada: nada del dossier sikuani entra aquí",
+          "sin churuata, sin maloca, sin palafito, sin cerca, sin corral, sin camino trazado y sin aldea: el único construido es el refugio sin paredes de hoja de palma",
+          "sin sementera, sin surco, sin lindero y sin herramienta agrícola: los cultivos que enseña Boupé están excluidos y con la advertencia declarada",
+          "sin pintura corporal de ningún diseño ni color, y sin insignia de autoridad sobre Boupé",
+          "sin parafernalia del yopo ni del capi: ni polvo, ni tubo, ni mortero, ni maraca, ni gesto de aspirar",
+          "sin cremación, sin humo funerario, sin osamenta y sin iniciación femenina",
+          "sin cueva de montaña ni caverna rocosa: en esta sabana no hay roca aflorante documentada",
+          "sin patrón real ni inventado de cestería, cerámica, chinchorro o plumaje, y sin plumaje ritual de ningún tipo"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el cuerpo se resuelve en cláusula distinta de la cara. El pajonal alto, la hoja de palma del refugio y la bandada de pájaros son pocas piezas planas grandes con el borde recortado en dientes largos y desiguales, superpuestas en dos o tres capas, nunca brizna por brizna ni ave por ave. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_anciano__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_anciano"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "Las fichas de campo de Arcand describen a un hombre tocando la flauta «acostado en su hamaca» a las seis y media de la tarde; la flauta es de hueso (uku) o de madera (athüübo), no de caña (dossier §6)"
+        },
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "La unidad doméstica son «los que duermen bajo el mismo refugio»: una pareja con sus hijas, los maridos de ellas y los hijos solteros (dossier §5)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre mayor tendido de lado en una hamaca bajo el refugio de palma, con el guayuco de corteza, las rodillas algo recogidas y una flauta corta de hueso en los labios; cuerpo enjuto, hombros caídos, pelo corto con dos o tres mechones grises.",
+        "materials": [
+          "cuerpo en papel de piel de un solo tono, piezas planas largas y estrechas, sin arrugas modeladas",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados aparte y dos pliegues recortados en la mejilla",
+          "papel de corteza apelmazada y más oscura para el guayuco",
+          "flauta de hueso uku como pieza corta de papel marfil",
+          "pelo en papel negro mate con dos o tres tiras grises superpuestas",
+          "hamaca en papel de fibra en curva larga"
+        ],
+        "palette_logic": "Piel de un tono, pardo de corteza gastada, negro con gris del pelo y el marfil de la flauta como único punto claro.",
+        "scale": "Figura entera tendida en 9:16, con la hamaca y el borde del refugio arriba; algo más baja y más estrecha que el hombre adulto.",
+        "continuity_markers": [
+          "la flauta es de hueso o de madera, nunca de caña",
+          "no es chamán ni lleva parafernalia del yopo, del capi ni maraca",
+          "sin pintura corporal, sin collar y sin insignia"
+        ],
+        "documented_features": [
+          "guayuco de corteza en los hombres (dossier §6)",
+          "el hombre tocando la flauta acostado en su hamaca al atardecer, en las fichas de campo de Arcand (dossier §6)",
+          "flautas documentadas: de hueso uku, de madera athüübo, de pan tafeburu (dossier §6)",
+          "el complejo del médico tradicional —yopo, capi, maraca— queda fuera de alcance (dossier §10)"
+        ],
+        "editorial_features": [
+          "la edad del hombre de la flauta no consta en la ficha de campo: hacerlo anciano es decisión editorial",
+          "las canas y el cuerpo enjuto son construcción editorial reversible"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Kuiva (Wamonae) V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Anciano kuiva (tipo). Hombre mayor tendido de lado en una hamaca bajo el refugio de palma, con el guayuco de corteza, las rodillas algo recogidas y una flauta corta de hueso en los labios; cuerpo enjuto, hombros caídos, pelo corto con dos o tres mechones grises.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera tendida en 9:16, con la hamaca y el borde del refugio arriba; algo más baja y más estrecha que el hombre adulto.",
+        "lighting_mood": "Cielo enorme de llano sin relieve que lo corte, con la línea de horizonte muy abajo: el primer relato ocurre entero arriba y el segundo borra el suelo bajo el agua. Luz alta y sin obstáculo sobre la sabana, que aplana el horizonte; en la inundación, cielo y agua devolviéndose la misma luz con el banco seco como única interrupción. De noche, la cúpula completa del llano con la banda de la Vía Láctea, porque es allí donde este pueblo pone a sus muertos.",
+        "materials_textures": "cuerpo en papel de piel de un solo tono, piezas planas largas y estrechas, sin arrugas modeladas; cara aparte: óvalo plano de un solo tono con los rasgos recortados aparte y dos pliegues recortados en la mejilla; papel de corteza apelmazada y más oscura para el guayuco; flauta de hueso uku como pieza corta de papel marfil; pelo en papel negro mate con dos o tres tiras grises superpuestas; hamaca en papel de fibra en curva larga",
+        "era": "Llano casanareño del tiempo mítico, acotado por la lista de ocho objetos que Arcand documentó: hamaca, canoa, arco y flecha, palo de cavar, cesta, tela de corteza y cuerda. Sin hierro, sin machete, sin escopeta, sin ganado, sin caballo, sin anzuelo, sin ropa de tela, sin casa, sin cerca y sin camino trazado. Refugio de hoja de palma levantado en media hora y abandonado en una semana, en grupos de diez a cuarenta personas.",
+        "constraints": [
+          "documentado: guayuco de corteza en los hombres (dossier §6)",
+          "documentado: el hombre tocando la flauta acostado en su hamaca al atardecer, en las fichas de campo de Arcand (dossier §6)",
+          "documentado: flautas documentadas: de hueso uku, de madera athüübo, de pan tafeburu (dossier §6)",
+          "documentado: el complejo del médico tradicional —yopo, capi, maraca— queda fuera de alcance (dossier §10)",
+          "La lámina declara el estado de la sabana y no lo promedia: verde anegada, pajonal rubio o manto negro de ceniza, uno solo por imagen.",
+          "El rojo aparece únicamente en la herida del cielo y es materia, no líquido: fragmentos y costra, nunca chorro ni salpicadura.",
+          "En la inundación, el agua y el cielo comparten valor y la única interrupción es el banco seco: sin horizonte marcado y sin orilla.",
+          "La noche es la cúpula completa del llano con la banda de la Vía Láctea, sin ninguna luz cálida en el suelo.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin casa de armazón de vigas, sin guayuco con borlas, sin aro de cabeza, sin zigzag rojo de chica y sin morichal del Vichada: nada del dossier sikuani entra aquí",
+          "sin churuata, sin maloca, sin palafito, sin cerca, sin corral, sin camino trazado y sin aldea: el único construido es el refugio sin paredes de hoja de palma",
+          "sin sementera, sin surco, sin lindero y sin herramienta agrícola: los cultivos que enseña Boupé están excluidos y con la advertencia declarada",
+          "sin pintura corporal de ningún diseño ni color, y sin insignia de autoridad sobre Boupé",
+          "sin parafernalia del yopo ni del capi: ni polvo, ni tubo, ni mortero, ni maraca, ni gesto de aspirar",
+          "sin cremación, sin humo funerario, sin osamenta y sin iniciación femenina",
+          "sin cueva de montaña ni caverna rocosa: en esta sabana no hay roca aflorante documentada",
+          "sin patrón real ni inventado de cestería, cerámica, chinchorro o plumaje, y sin plumaje ritual de ningún tipo"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el cuerpo se resuelve en cláusula distinta de la cara. El pajonal alto, la hoja de palma del refugio y la bandada de pájaros son pocas piezas planas grandes con el borde recortado en dientes largos y desiguales, superpuestas en dos o tres capas, nunca brizna por brizna ni ave por ave. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_anciana__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_anciana"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "El naweba es el canto de las mujeres, y el archivo de Arcand registra a una mujer que en un naweba habla de la muerte de sus dos hijos «hace mucho tiempo» (dossier §6)"
+        },
+        {
+          "myth": "namon-y-la-inundacion",
+          "field": "mito",
+          "note": "Una persona trabaja en su hamaca una cuerda para sostener un koté mientras canta; la cuerda está entre los ocho objetos (dossier §0.2 y §6)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer mayor sentada en el suelo con la espalda recta, tela de corteza a la cadera, torciendo una cuerda de fibra sobre el muslo con las dos manos y la boca entreabierta de quien canta; pelo corto con mechones grises, cuerpo delgado y firme.",
+        "materials": [
+          "cuerpo en papel de piel de un solo tono, piezas planas, sin arrugas modeladas",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados aparte y dos pliegues recortados en la mejilla",
+          "papel de corteza apelmazada, pardo, para la tela a la cadera",
+          "cuerda en papel torcido de fibra, en espiral sobre el muslo",
+          "pelo en papel negro mate con tiras grises superpuestas"
+        ],
+        "palette_logic": "Piel de un tono, pardo de corteza, negro y gris del pelo y el crudo de la fibra: ningún color que la separe del colectivo.",
+        "scale": "Figura entera sentada en 9:16; la cabeza a la altura de la hamaca colgada detrás.",
+        "continuity_markers": [
+          "nunca en duelo ritual, cremación ni humo funerario: la materia funeraria está fuera de alcance",
+          "sin pintura corporal, sin collar y sin adorno",
+          "la cuerda es la de la cultura material: fibra torcida, sin patrón"
+        ],
+        "documented_features": [
+          "el naweba es canto de mujeres (dossier §6)",
+          "trabajar la cuerda en la hamaca mientras se canta, en las fichas de campo (dossier §6)",
+          "tela de corteza como vestido y cuerda entre los ocho objetos (dossier §0.2 y §6)",
+          "cremación y materia funeraria fuera de alcance (dossier §10)"
+        ],
+        "editorial_features": [
+          "la prenda femenina y su largo son decisión editorial sobre la materia documentada",
+          "la edad, las canas y el rostro son construcción editorial; la figura no retrata a ninguna persona del archivo"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Kuiva (Wamonae) V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Anciana kuiva (tipo). Mujer mayor sentada en el suelo con la espalda recta, tela de corteza a la cadera, torciendo una cuerda de fibra sobre el muslo con las dos manos y la boca entreabierta de quien canta; pelo corto con mechones grises, cuerpo delgado y firme.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera sentada en 9:16; la cabeza a la altura de la hamaca colgada detrás.",
+        "lighting_mood": "Cielo enorme de llano sin relieve que lo corte, con la línea de horizonte muy abajo: el primer relato ocurre entero arriba y el segundo borra el suelo bajo el agua. Luz alta y sin obstáculo sobre la sabana, que aplana el horizonte; en la inundación, cielo y agua devolviéndose la misma luz con el banco seco como única interrupción. De noche, la cúpula completa del llano con la banda de la Vía Láctea, porque es allí donde este pueblo pone a sus muertos.",
+        "materials_textures": "cuerpo en papel de piel de un solo tono, piezas planas, sin arrugas modeladas; cara aparte: óvalo plano de un solo tono con los rasgos recortados aparte y dos pliegues recortados en la mejilla; papel de corteza apelmazada, pardo, para la tela a la cadera; cuerda en papel torcido de fibra, en espiral sobre el muslo; pelo en papel negro mate con tiras grises superpuestas",
+        "era": "Llano casanareño del tiempo mítico, acotado por la lista de ocho objetos que Arcand documentó: hamaca, canoa, arco y flecha, palo de cavar, cesta, tela de corteza y cuerda. Sin hierro, sin machete, sin escopeta, sin ganado, sin caballo, sin anzuelo, sin ropa de tela, sin casa, sin cerca y sin camino trazado. Refugio de hoja de palma levantado en media hora y abandonado en una semana, en grupos de diez a cuarenta personas.",
+        "constraints": [
+          "documentado: el naweba es canto de mujeres (dossier §6)",
+          "documentado: trabajar la cuerda en la hamaca mientras se canta, en las fichas de campo (dossier §6)",
+          "documentado: tela de corteza como vestido y cuerda entre los ocho objetos (dossier §0.2 y §6)",
+          "documentado: cremación y materia funeraria fuera de alcance (dossier §10)",
+          "La lámina declara el estado de la sabana y no lo promedia: verde anegada, pajonal rubio o manto negro de ceniza, uno solo por imagen.",
+          "El rojo aparece únicamente en la herida del cielo y es materia, no líquido: fragmentos y costra, nunca chorro ni salpicadura.",
+          "En la inundación, el agua y el cielo comparten valor y la única interrupción es el banco seco: sin horizonte marcado y sin orilla.",
+          "La noche es la cúpula completa del llano con la banda de la Vía Láctea, sin ninguna luz cálida en el suelo.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin casa de armazón de vigas, sin guayuco con borlas, sin aro de cabeza, sin zigzag rojo de chica y sin morichal del Vichada: nada del dossier sikuani entra aquí",
+          "sin churuata, sin maloca, sin palafito, sin cerca, sin corral, sin camino trazado y sin aldea: el único construido es el refugio sin paredes de hoja de palma",
+          "sin sementera, sin surco, sin lindero y sin herramienta agrícola: los cultivos que enseña Boupé están excluidos y con la advertencia declarada",
+          "sin pintura corporal de ningún diseño ni color, y sin insignia de autoridad sobre Boupé",
+          "sin parafernalia del yopo ni del capi: ni polvo, ni tubo, ni mortero, ni maraca, ni gesto de aspirar",
+          "sin cremación, sin humo funerario, sin osamenta y sin iniciación femenina",
+          "sin cueva de montaña ni caverna rocosa: en esta sabana no hay roca aflorante documentada",
+          "sin patrón real ni inventado de cestería, cerámica, chinchorro o plumaje, y sin plumaje ritual de ningún tipo"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el cuerpo se resuelve en cláusula distinta de la cara. El pajonal alto, la hoja de palma del refugio y la bandada de pájaros son pocas piezas planas grandes con el borde recortado en dientes largos y desiguales, superpuestas en dos o tres capas, nunca brizna por brizna ni ave por ave. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
     "herida_del_cielo__phenomenon_rule": {
       "purpose": "phenomenon_rule",
       "entity_refs": [
@@ -3180,7 +4201,7 @@
         "asset_type": "Biblia visual Kuiva (Wamonae) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
         "primary_request": "identidad corporal completa y legible para Boupé, el primer jefe. Hombre solo y de pie entre gente tendida, con los pies juntos y las dos manos por delante sosteniendo un arco a medio hacer y una flecha aún sin emplumar, la cabeza a la altura de la curva alta de una hamaca vacía: lo que lo distingue no es lo que lleva encima —no lleva nada que los demás no lleven— sino que es el único cuerpo vertical de la biblia y el único con un objeto en fabricación en las manos.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Figura entera de pie, ocupando la vertical del encuadre, con dos o tres cuerpos tendidos a sus pies y la hamaca vacía detrás a la altura de su pecho; el arco en construcción mide poco más que su antebrazo y es lo único que sobresale de su silueta.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera de pie, ocupando la vertical del encuadre, con dos o tres cuerpos tendidos a sus pies y la hamaca vacía detrás a la altura de su pecho; el arco en construcción mide poco más que su antebrazo y es lo único que sobresale de su silueta.",
         "lighting_mood": "Cielo enorme de llano sin relieve que lo corte, con la línea de horizonte muy abajo: el primer relato ocurre entero arriba y el segundo borra el suelo bajo el agua. Luz alta y sin obstáculo sobre la sabana, que aplana el horizonte; en la inundación, cielo y agua devolviéndose la misma luz con el banco seco como única interrupción. De noche, la cúpula completa del llano con la banda de la Vía Láctea, porque es allí donde este pueblo pone a sus muertos.",
         "materials_textures": "la misma tela de corteza cruda de todos los demás, sin una franja, sin un nudo y sin un remate que lo separe; arco a medio hacer, de madera clara y canto vivo, todavía sin cuerda tensada; flecha larga sin emplumar, como pieza recortada aparte; papel de piel de un solo tono para el óvalo plano de la cara, con los rasgos recortados como piezas aparte; hamaca vacía de papel en curva larga detrás de él, que fija su altura",
         "era": "Llano casanareño del tiempo mítico, acotado por la lista de ocho objetos que Arcand documentó: hamaca, canoa, arco y flecha, palo de cavar, cesta, tela de corteza y cuerda. Sin hierro, sin machete, sin escopeta, sin ganado, sin caballo, sin anzuelo, sin ropa de tela, sin casa, sin cerca y sin camino trazado. Refugio de hoja de palma levantado en media hora y abandonado en una semana, en grupos de diez a cuarenta personas.",
@@ -3213,7 +4234,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -3290,7 +4311,7 @@
         "asset_type": "Biblia visual Kuiva (Wamonae) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
         "primary_request": "identidad corporal completa y legible para Daimú. Una mano y un antebrazo saliendo del canto superior del encuadre y descendiendo abiertos sobre tres cabezas de perfil con los ojos ya cerrados: no hay cuerpo, no hay cara y no hay pie apoyado en el suelo, y es la única ficha de la biblia que se resuelve con una parte del cuerpo y no con una figura entera.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; La mano abierta ocupa un tercio del ancho del encuadre y es del tamaño de las tres cabezas juntas: esa desproporción es lo único que dice que no es una persona, y sustituye a todos los atributos que la fuente no da.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; La mano abierta ocupa un tercio del ancho del encuadre y es del tamaño de las tres cabezas juntas: esa desproporción es lo único que dice que no es una persona, y sustituye a todos los atributos que la fuente no da.",
         "lighting_mood": "Cielo enorme de llano sin relieve que lo corte, con la línea de horizonte muy abajo: el primer relato ocurre entero arriba y el segundo borra el suelo bajo el agua. Luz alta y sin obstáculo sobre la sabana, que aplana el horizonte; en la inundación, cielo y agua devolviéndose la misma luz con el banco seco como única interrupción. De noche, la cúpula completa del llano con la banda de la Vía Láctea, porque es allí donde este pueblo pone a sus muertos.",
         "materials_textures": "papel de piel de un solo tono, en dos piezas planas —mano y antebrazo— con los dedos recortados como piezas aparte; borde del encuadre como límite de la figura, sin muñón dibujado y sin degradado; tres óvalos planos de cabeza de perfil, con el ojo resuelto como una línea recortada y no como un hueco; papel de noche del llano detrás, plano y sin estrella; ausencia deliberada de manto, de ala, de aureola y de cualquier atributo de divinidad",
         "era": "Llano casanareño del tiempo mítico, acotado por la lista de ocho objetos que Arcand documentó: hamaca, canoa, arco y flecha, palo de cavar, cesta, tela de corteza y cuerda. Sin hierro, sin machete, sin escopeta, sin ganado, sin caballo, sin anzuelo, sin ropa de tela, sin casa, sin cerca y sin camino trazado. Refugio de hoja de palma levantado en media hora y abandonado en una semana, en grupos de diez a cuarenta personas.",
@@ -3322,7 +4343,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -3406,7 +4427,7 @@
         "asset_type": "Biblia visual Kuiva (Wamonae) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
         "primary_request": "identidad corporal completa y legible para Namon. Figura de espaldas al encuadre, de pie sobre el lomo bajo de un banco de greda rodeado de agua, con los dos brazos abiertos a la altura del hombro y las palmas hacia arriba y vacías: es la única figura de la biblia que se dibuja de espaldas y la única que aparece sola sobre tierra firme mientras todo lo demás está bajo el agua.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Figura entera y pequeña, de menos de un sexto del alto del encuadre, sobre un banco que apenas se alza unos palmos sobre el agua: la escala mínima es deliberada, porque su poder no está en el tamaño sino en que es el único punto seco.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera y pequeña, de menos de un sexto del alto del encuadre, sobre un banco que apenas se alza unos palmos sobre el agua: la escala mínima es deliberada, porque su poder no está en el tamaño sino en que es el único punto seco.",
         "lighting_mood": "Cielo enorme de llano sin relieve que lo corte, con la línea de horizonte muy abajo: el primer relato ocurre entero arriba y el segundo borra el suelo bajo el agua. Luz alta y sin obstáculo sobre la sabana, que aplana el horizonte; en la inundación, cielo y agua devolviéndose la misma luz con el banco seco como única interrupción. De noche, la cúpula completa del llano con la banda de la Vía Láctea, porque es allí donde este pueblo pone a sus muertos.",
         "materials_textures": "la misma tela de corteza cruda del colectivo, sin distinción de hechura; papel de greda clara para el lomo del banco bajo sus pies; papel negro mate en una sola pieza grande para el pelo, visto por detrás; papel de agua plana y baja, del mismo valor que el cielo, rodeándolo por los cuatro costados; manos abiertas y vacías recortadas aparte, sin fruto, sin tubérculo y sin objeto",
         "era": "Llano casanareño del tiempo mítico, acotado por la lista de ocho objetos que Arcand documentó: hamaca, canoa, arco y flecha, palo de cavar, cesta, tela de corteza y cuerda. Sin hierro, sin machete, sin escopeta, sin ganado, sin caballo, sin anzuelo, sin ropa de tela, sin casa, sin cerca y sin camino trazado. Refugio de hoja de palma levantado en media hora y abandonado en una semana, en grupos de diez a cuarenta personas.",
@@ -3439,7 +4460,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],

@@ -544,8 +544,8 @@
     "dossier": "docs/investigacion/pirsa.md"
   },
   "inventory": {
-    "status": "reconciling",
-    "frozen": false,
+    "status": "approved_frozen",
+    "frozen": true,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -555,7 +555,7 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19",
+    "approved_at": "2026-09-24",
     "reconciliation": {
       "opened_at": "2026-09-24",
       "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
@@ -563,8 +563,26 @@
         "el-exorcismo-de-tamaracunga"
       ],
       "new_myths": [],
-      "unchanged_myths": []
-    }
+      "unchanged_myths": [],
+      "closed_at": "2026-09-24",
+      "summary": "1 relato releído: 7 añadidas (casa de Tamaracunga en Pirsa requerida; Juan Pacheco, cristianos de la villa, sombrero y saliva embebidos; teniente/Caramanta excluido), 0 excluidas por el canon nuevo, 8 rediseñadas (casa de Pacheco sin vaso, dos cristianos y no tres, Tamaracunga sin «cacique», presencias con los efectos nuevos, figuras con caras fieras, cruces, vaso) y 4 tipos base; anciano y anciana declarados ausentes."
+    },
+    "declared_absences": [
+      {
+        "entity_id": "tipo_anciano",
+        "name": "Tipo base · anciano de Pirsa",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "El canon reescrito no pone a ningún viejo de Pirsa en escena; el señor de Pirsa, hermano mayor, está excluido con razón (Guazzo lo hizo «Inca»). No se inventa."
+      },
+      {
+        "entity_id": "tipo_anciana",
+        "name": "Tipo base · anciana de Pirsa",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Ninguna mujer mayor aparece en el relato: las únicas mujeres son la de Tamaracunga y las de la comitiva. No se inventa."
+      }
+    ]
   },
   "myths": {
     "el-exorcismo-de-tamaracunga": {
@@ -587,9 +605,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura hizo dos cortes y los dos vinieron del texto: el primero separa lo que sólo Tamaracunga ve de lo que ve todo el mundo —la fuente lo repite tres veces—, y de ahí sale el reparto entero del inventario, con el aura adentro porque tiene nombre de especie, las figuras invertidas fuera porque no tienen ni una línea de forma, y los cinco efectos que sí ven los demás reunidos en una sola regla de fenómeno sin agente; el segundo corte no es de personas sino de mundos, y es el que corrige al censo: la casa donde lo alojan resultó ser la de Juan Pacheco, vecino español, de modo que se cayó la única pieza indígena que el censo tenía puesta en la mitad colonial del relato, mientras que la gente de Pirsa, que el censo daba por indescrita, apareció con cuerpo entero treinta páginas antes, en el capítulo XVI del mismo libro del mismo autor.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito mueve la mitad de la noche: las auras, las piedras que silban, el cuerpo por el aire, el vaso de vino, las mantas y el barro ocurren en Pirsa antes de «decidieron llevarlo a la villa», así que el vaso sale de la casa de Juan Pacheco y entra una casa de Tamaracunga en Pirsa; los cristianos del camino son dos y no tres, Tamaracunga ya no es «cacique» sino hermano joven, las figuras que sólo él ve ganan «caras fieras» sin dejar de estar fuera de lámina, y la iglesia suma bofetones y una saliva hedionda que la regla de las presencias cuenta sin dibujar.",
         "previous_note": "La lectura hizo dos cortes y los dos vinieron del texto: el primero separa lo que sólo Tamaracunga ve de lo que ve todo el mundo —la fuente lo repite tres veces—, y de ahí sale el reparto entero del inventario, con el aura adentro porque tiene nombre de especie, las figuras invertidas fuera porque no tienen ni una línea de forma, y los cinco efectos que sí ven los demás reunidos en una sola regla de fenómeno sin agente; el segundo corte no es de personas sino de mundos, y es el que corrige al censo: la casa donde lo alojan resultó ser la de Juan Pacheco, vecino español, de modo que se cayó la única pieza indígena que el censo tenía puesta en la mitad colonial del relato, mientras que la gente de Pirsa, que el censo daba por indescrita, apareció con cuerpo entero treinta páginas antes, en el capítulo XVI del mismo libro del mismo autor."
       },
       "entity_refs": [
@@ -727,6 +745,56 @@
           "entity_id": "hoja_utileria_pirsa",
           "role": "plot_object",
           "note": "Cinco objetos menores en una hoja. Todos son utilería colonial cristiana de 1549: es la prueba más clara de que la cultura material de esta biblia no es Pirsa."
+        },
+        {
+          "entity_id": "casa_de_tamaracunga_en_pirsa",
+          "role": "setting",
+          "note": "Escenario nuevo del canon reescrito: la primera mitad de la noche —auras, piedras, cuerpo en el aire, vaso, mantas y barro— ocurre en Pirsa, antes del viaje; y ahí vuelve contento al final."
+        },
+        {
+          "entity_id": "juan_pacheco",
+          "role": "secondary",
+          "note": "Nombre de la casa y del mando de la villa; no actúa."
+        },
+        {
+          "entity_id": "cristianos_de_la_villa",
+          "role": "secondary",
+          "note": "Los que se juntan en casa de Pacheco y arremeten en la iglesia: mismo vestuario que los dos del camino."
+        },
+        {
+          "entity_id": "teniente_y_caramanta",
+          "role": "setting",
+          "note": "Sólo sitúa: el teniente no está."
+        },
+        {
+          "entity_id": "sombrero_de_tamaracunga",
+          "role": "plot_object",
+          "note": "Su sombrero, que vuela a bofetones: vive en su ficha."
+        },
+        {
+          "entity_id": "saliva_hedionda",
+          "role": "magic_subject",
+          "note": "Nuevo en el canon reescrito; efecto de las presencias, no se dibuja."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los hombres de la comitiva de más de doscientos."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: las mujeres de la comitiva y la mujer de Tamaracunga."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base: la mujer joven de la comarca, que puede ser la de Tamaracunga."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base: el hijo de Tamaracunga."
         }
       ]
     }
@@ -735,7 +803,7 @@
     "tamaracunga": {
       "name": "Tamaracunga",
       "kind": "personaje",
-      "description": "Protagonista y único que ve. Hermano joven del señor de Pirsa y, en la misma página, «el cacique»: la contradicción se declara y no se resuelve. Se tapa el rostro y el cuerpo con su manta larga de principal y lleva un sombrero calado sobre los ojos. Sin hoja de estado por la suspensión ni por la cabeza abajo: son posturas, no transformaciones.",
+      "description": "Protagonista y único que ve. En el canon reescrito es sólo «un hermano joven, bien parecido» del señor de Pirsa; «cacique» ya no aparece en el relato y queda en la fuente (Cieza lo escribe unas ocho veces, dossier §3). Se tapa la cara y el cuerpo entero con unas mantas —su manta larga de principal— y lleva un sombrero sobre los ojos. Sin hoja de estado por la suspensión ni por la cabeza abajo: son posturas, no transformaciones.",
       "aliases": [],
       "states": [
         "canonico"
@@ -783,6 +851,11 @@
           "myth": "el-exorcismo-de-tamaracunga",
           "field": "mito",
           "note": "Sólo Tamaracunga ve; los demás perciben efectos. La fuente lo dice tres veces —«donde el cacique sólo las podía ver», «viéndolos solamente el indio», «sin los ver mas que sólo el indio»—, y de ahí sale la regla central: se muestra el efecto y nunca el agente."
+        },
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "El canon reescrito lo presenta sólo como «hermano joven, bien parecido» del señor de Pirsa, sin la palabra cacique; conserva las mantas sobre cara y cuerpo, el sombrero sobre los ojos, el vaso de vino delante y el grito «válganme, cristianos»."
         }
       ],
       "census_note": "Protagonista y único que ve. Hermano joven del señor de Pirsa, no cacique. No le doy hoja de estado por la suspensión ni por la cabeza abajo: son posturas, no transformaciones, y el módulo prohíbe expresamente la «levitación espectacular».",
@@ -807,8 +880,9 @@
           "dossier §5 (pir-cieza-1553): «le arrojaron lejos de allí un sombrero que tenía puesto en los ojos por no los ver» — el sombrero es la sexta pieza de utilería del relato y es suya, no de la hoja de objetos",
           "dossier §6 (pir-cieza-1553, cap. XVI): los principales y señores de esta comarca «se cubren con una manta larga, y traen por la cintura maures», de modo que la prenda con que se tapa es su prenda de rango",
           "dossier §6 (pir-cieza-1553): «un hermano mancebo de buen parescer» — joven y de buena presencia son los dos únicos rasgos físicos que la fuente le da",
-          "dossier §3 (pir-cieza-1553): la fuente lo llama «cacique» unas ocho veces y a la vez «hermano mancebo del señor natural»; la contradicción se declara en esta ficha y no se resuelve, y su consecuencia de lámina es que le corresponde la manta larga de principal",
-          "dossier §6 (pir-hsai-1948): la deformación craneal no corresponde a los ansermas sino a Pozo y Quimbaya, de modo que su cabeza es de perfil corriente"
+          "dossier §3 (pir-cieza-1553): la fuente lo llama «cacique» unas ocho veces; el canon reescrito sólo lo hace hermano joven del señor, y su historia recuerda que el cacicazgo pasa por la mujer principal o la hermana, lo que pone al hermano menor en posición real: la manta larga de principal se sostiene en el dossier, no en el canon",
+          "dossier §6 (pir-hsai-1948): la deformación craneal no corresponde a los ansermas sino a Pozo y Quimbaya, de modo que su cabeza es de perfil corriente",
+          "En el canon reescrito se tapa «la cara y el cuerpo entero con unas mantas para no ver lo que tenía enfrente», y a bofetones le arrojan lejos «el sombrero que llevaba sobre los ojos para no ver» (canon, campo mito)"
         ],
         "editorial": [
           "va sin una sola pieza de oro encima, aunque como principal podría llevarla: el texto sólo le nombra dos prendas y las dos son gestos, así que el oro se deja en la hoja de grupo. Decisión reversible: si el editor la revoca, entran collar de láminas redondas, zarcillos y pelotita de nariz, que sí están documentados para su rango",
@@ -900,7 +974,7 @@
     "dos_acompanantes_cristianos": {
       "name": "Los dos cristianos que lo acompañan",
       "kind": "colectivo",
-      "description": "Deciden el viaje y se atan con cuerdas en los pasos difíciles. Sistema de vestuario español de 1549, distinto del de la gente de Pirsa: sin esta hoja, el encuentro colonial se ilustra con un solo traje.",
+      "description": "Los dos cristianos del camino —uno que vivía cerca de Pirsa, llamado a toda prisa, y el hermano de Juan Pacheco— y, en la villa, los cristianos del pueblo que se juntan en casa de Pacheco. Sistema de vestuario español de 1549, distinto del de la gente de Pirsa: sin esta hoja, el encuentro colonial se ilustra con un solo traje.",
       "aliases": [],
       "states": [
         "canonico"
@@ -933,11 +1007,16 @@
           "myth": "el-exorcismo-de-tamaracunga",
           "field": "mito",
           "note": "Los cristianos son dos en el camino y tres en la llegada: el primero llamado a toda prisa, luego «un hermano de un Juan Pacheco» y, cerca ya de la villa, el propio Juan Pacheco, que sale a socorrerlos y en cuya casa se alojan."
+        },
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "El canon reescrito reduce la escala a dos —el cristiano que vivía cerca y el hermano de Juan Pacheco— y retira al propio Pacheco saliendo a socorrerlos; en su casa se juntan casi todos los cristianos del pueblo."
         }
       ],
       "census_note": "Deciden el viaje y se atan con cuerdas en los pasos difíciles. Sistema de vestuario español de 1549, distinto del de la gente de Pirsa: sin esta hoja, el encuentro colonial se ilustra con un solo traje.",
       "design": {
-        "silhouette": "La gramática de este grupo es una cuenta: en el camino son dos y en la llegada son tres. Cuerpos enteramente cubiertos y calzados —lo contrario exacto de la multitud descalza que los sigue—, con la cuerda de fibra al cinto como único atributo que comparten los tres, y el tercero entrando siempre de frente y desde la villa, nunca desde el camino.",
+        "silhouette": "La gramática de este grupo es una cuenta: en Pirsa y en el camino son exactamente dos, y en la casa de la villa son muchos. Cuerpos enteramente cubiertos y calzados —lo contrario exacto de la multitud descalza que los sigue—, con la cuerda de fibra al cinto y la cruz de palo en el puño como únicos atributos que comparten en el camino.",
         "materials": [
           "tela de vestir europea de 1549 en planos cerrados que tapan brazo y pierna enteros: el contraste de cobertura con la hoja de gente de Pirsa es lo que define el material, no el corte",
           "cuero de calzado en una sola pieza oscura, el elemento que separa a estos tres cuerpos de todos los demás de la biblia",
@@ -945,24 +1024,24 @@
           "cruz de palo sin labrar sostenida en el puño, una por cada hombre del camino"
         ],
         "palette": "Pardos y grises de tela apagada, sin blanco y sin oro: el blanco es del mercedario y el oro es del cuerpo indígena, de modo que estos tres cuerpos son la zona más neutra y más cerrada de la paleta. Ninguna nota de color identifica a ninguno de los tres.",
-        "scale": "Tres adultos de estatura corriente, ni más altos ni más anchos que los cuerpos que los siguen: el relato los hace atarse para no despeñarse y mandar un indio por delante a pedir socorro, y ninguna de las dos cosas es de una figura que domina.",
+        "scale": "Adultos de estatura corriente, ni más altos ni más anchos que los cuerpos que los siguen: el relato los hace atarse cuerdas a la cintura y rezar para no ser derribados, y nada de eso es de una figura que domina.",
         "continuity": [
-          "dos en el camino y tres en la llegada, siempre: si una lámina de camino trae tres cuerpos españoles, está mal contada",
+          "dos en Pirsa y en el camino, siempre: si una lámina de camino trae tres cuerpos españoles, está mal contada; en la casa de Juan Pacheco son «casi todos los cristianos del pueblo»",
           "la cuerda al cinto aparece únicamente en el tramo de riscos y desaparece dentro de la villa",
           "los tres van calzados en toda lámina, también dentro de la casa y de la iglesia",
           "ninguno lleva arma, arcabuz ni caballo: no es una entrada armada sino un acompañamiento"
         ],
         "documented": [
-          "dossier §6 (pir-cieza-1553): la fuente escalona el grupo —primero uno solo llamado a toda prisa, luego «un hermano de un Juan Pacheco, vecino de la misma villa» y, cerca ya de la villa, el propio Juan Pacheco, que sale a socorrerlos—, de modo que son dos en el camino y tres en la llegada",
+          "canon, campo mito: primero «un cristiano que vivía cerca», llamado a toda prisa, y después «el hermano de Juan Pacheco, que mandaba en la villa mientras el teniente andaba en Caramanta»: «los dos» encuentran a Tamaracunga. El tercero que sale a socorrerlos en Cieza (dossier §6) no está en el canon reescrito y no entra a lámina",
           "dossier §5 (pir-cieza-1553): «atando unas cuerdas a los cintos» para no ser despeñados en los malos pasos, y «caminaron con el indio en medio… llevando tres cruces en las manos»",
-          "dossier §4 (pir-cieza-1553): el tercero es el dueño de la casa donde se alojan, «las casas deste Juan Pacheco», donde se juntan «todos los más de los cristianos que estaban en el pueblo»",
+          "canon, campo mito: en la casa de Juan Pacheco «se juntaron casi todos los cristianos del pueblo» y todos ven caer las piedras y oyen los silbos",
           "dossier §0, capa B: lo que existe en esta capa es la villa de diez años —iglesia de paja, casa de un vecino, hábito mercedario, cruces de palo, cuerdas, vaso, sombrero— y lo que no existe es catedral, retablo, imaginería barroca ni sotana decimonónica",
           "dossier §0, salvaguarda 1: las capas A y B conviven en la misma escena, y ninguna lámina puede resolver el encuentro con un solo sistema de vestuario sin borrar a uno de los dos bandos"
         ],
         "editorial": [
           "el corte concreto de la ropa es reconstrucción de época declarada: la crónica no describe la vestimenta de estos hombres, sólo sus actos. Lo documentado es que están cubiertos y calzados frente a cuerpos desnudos y descalzos; todo lo demás es reversible",
           "se les niega deliberadamente cualquier atributo de conquista —coraza, arcabuz, espada al cinto, caballo—: no hay ninguno en el texto y ponerlos convertiría un acompañamiento en una escolta armada",
-          "los tres se dibujan como sistema de vestuario y no como tres retratos: la fuente nombra a uno solo, Juan Pacheco, y darle cara propia a los otros dos sería inventarlos"
+          "se dibujan como sistema de vestuario y no como retratos: el canon nombra a Juan Pacheco sólo como dueño de la casa y al otro sólo como su hermano, y darles cara propia sería inventarlos"
         ],
         "states_to_model": []
       },
@@ -1223,9 +1302,9 @@
       ]
     },
     "casa_de_alojamiento": {
-      "name": "La casa donde lo alojan en Anserma",
+      "name": "La casa de Juan Pacheco en Anserma",
       "kind": "arquitectura",
-      "description": "Escenario propio de la noche de golpes, silbidos y piedras, anterior a la iglesia y no intercambiable con ella. Es la casa de Juan Pacheco, vecino español de la villa, donde se juntan todos los cristianos del pueblo; las piedras caen de lo alto de su techumbre. No es una casa de paja del repertorio indígena.",
+      "description": "Escenario propio de la noche de piedras, silbos y el «hu, hu, hu», anterior a la iglesia y no intercambiable con ella. Es la casa de Juan Pacheco, que manda en la villa, donde se juntan casi todos los cristianos del pueblo; las piedras caen de lo alto del techo. No es una casa de paja del repertorio indígena, y en el canon reescrito el vaso de vino ya no ocurre aquí sino antes, en Pirsa.",
       "aliases": [],
       "states": [
         "canonico"
@@ -1268,37 +1347,41 @@
           "myth": "el-exorcismo-de-tamaracunga",
           "field": "mito",
           "note": "El relato entero ocurre de noche —«Todo esto pasó de noche»— y el ruido cesa con la primera misa al amanecer: «venido el día… en el punto que se comenzó, en aquel no se oyó cosa ninguna». Esa es la regla de iluminación de toda la biblia, y no hay ningún haz de luz celestial en la fuente."
+        },
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "En el canon reescrito la casa de Juan Pacheco es sólo la noche de las piedras que caen del techo, los silbos y el «hu, hu, hu»; la escena del vaso de vino ocurre antes, en Pirsa."
         }
       ],
       "census_note": "Escenario propio de la noche de golpes, silbidos y piedras, anterior a la iglesia y no intercambiable con ella. Casa de paja del mismo repertorio que las del territorio Pirsa.",
       "design": {
-        "silhouette": "Interior de la casa de un vecino español de la villa, no una casa indígena: una sola pieza alta y llena de hombres de pie, con la mesa y el vaso en el centro del cuadro y la techumbre visible por encima de las cabezas —porque es de lo alto de esa techumbre de donde caen las piedras—. Es el único espacio cerrado de la biblia donde hay mueble y donde el techo participa de la acción.",
+        "silhouette": "Interior de la casa de un vecino español de la villa, no una casa indígena: una sola pieza alta y llena de hombres de pie mirando hacia arriba, con la techumbre visible por encima de las cabezas —porque es de lo alto de ese techo de donde caen las piedras— y Tamaracunga en medio, tapado. Es el único espacio cerrado de la biblia donde el techo participa de la acción.",
         "materials": [
           "techumbre alta a la vista, en tiras y vigas que se leen desde abajo y ocupan el tercio superior del cuadro",
-          "mesa de tabla gruesa, la única pieza de mobiliario propio de la biblia, con el canto del papel deliberadamente grueso",
           "muro de casa de poblador en planos cerrados, más regulares que los de la iglesia y sin la horizontal de la paja",
           "piedras pequeñas de papel gris, recortadas de canto duro, detenidas a media caída entre la techumbre y las cabezas",
-          "vaso sobre la mesa, en barro cocido o vidrio basto, como único objeto de la escena a escala de mano"
+          "banco o poyo corrido de tabla junto al muro, único mueble, para que la pieza se lea habitada y no vacía"
         ],
-        "palette": "Noche cerrada de interior sin ninguna luz de día: penumbra de papel oscuro y una sola fuente de llama baja que deja la mayor parte del encuadre en sombra y hace que cada canto proyecte la suya sobre la capa de atrás. El rojo del vino en el vaso es el único acontecimiento de color de toda la biblia.",
+        "palette": "Noche cerrada de interior sin ninguna luz de día: penumbra de papel oscuro y una sola fuente de llama baja que deja la mayor parte del encuadre en sombra y hace que cada canto proyecte la suya sobre la capa de atrás. Ninguna nota de color: el rojo del vino pertenece a la casa de Pirsa.",
         "scale": "Pieza que contiene de pie a «todos los más de los cristianos que estaban en el pueblo» y con techo bastante alto para que una piedra caiga desde arriba sin que se vea quién la tira: es más alta que ancha en la lectura, al revés que la iglesia.",
         "continuity": [
           "nunca de noche con luz de día ni al amanecer: esta casa es sólo noche, y el amanecer pertenece a la iglesia",
           "la techumbre está siempre en cuadro: si el techo queda fuera, la lámina pierde el origen de las piedras",
           "no hay ni un objeto indígena dentro de esta casa, en ninguna lámina",
-          "la mesa y el vaso están en el centro y no se mueven entre láminas: son el punto fijo del que la cámara se aleja"
+          "los hombres de pie forman un anillo abierto alrededor de Tamaracunga y miran al techo: es el punto fijo del que la cámara se aleja"
         ],
         "documented": [
           "dossier §4 (pir-cieza-1553): «se fueron derechos con el cacique a las casas deste Juan Pacheco», vecino de la villa — es la casa de un poblador español dentro de Anserma, no una casa de paja del repertorio indígena como supuso el censo",
           "dossier §4 (pir-cieza-1553): en ella se juntan «todos los más de los cristianos que estaban en el pueblo»",
           "dossier §1 y §4 (pir-cieza-1553): «todos vían caer piedras pequeñas de lo alto de la casa», de modo que la casa tiene altura interior y techumbre y ambas cosas son necesarias en la lámina",
-          "dossier §5 (pir-cieza-1553): «teniendo delante un vaso para beber… se alzaba el vaso con el vino en el aire» — la mesa y el vaso son de esta casa y no de la iglesia",
+          "canon, campo mito: aquí se oye además ««hu, hu, hu» rápido y recio, el mismo grito con que los indios salen a la guerra»; el vaso de vino ocurre antes, en Pirsa, y no es de esta casa",
           "dossier §1 (pir-cieza-1553): «Todo esto pasó de noche»: esta casa no conoce otra luz que la de una llama"
         ],
         "editorial": [
           "CORRECCIÓN AL CENSO, declarada: el censo la fichó como «casa de paja del mismo repertorio que las del territorio Pirsa» y la fuente dice lo contrario. La descripción de la entidad se corrigió; corregirlo cambia la lámina entera y se deja dicho por escrito",
           "la hechura concreta de una casa de vecino español en una villa de diez años es reconstrucción declarada: la fuente sólo dice de quién es y que tiene alto. No lleva teja, ni cal y canto, ni reja, que serían arquitectura colonial tardía",
-          "la mesa de tabla es inferencia a partir del vaso «que tenía delante»: es reversible, y podría resolverse igual con una repisa o un poyo"
+          "el banco corrido es invención de mobiliario, reversible sin coste: la mesa y el vaso que esta hoja llevaba salen de ella porque el canon reescrito pone la escena del vaso en Pirsa, antes del viaje"
         ],
         "states_to_model": []
       },
@@ -1449,6 +1532,11 @@
           "myth": "el-exorcismo-de-tamaracunga",
           "field": "mito",
           "note": "El Diablo del Carnaval de Riosucio representa vida, alegría, amistad y sátira dentro de una tradición festiva propia y no tiene continuidad documentada con las presencias de 1549: es la contaminación más probable del corpus y queda prohibida por nombre."
+        },
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "El canon reescrito añade efectos que la regla no enumeraba: pasos dentro de la iglesia cerrada, bofetones que arrojan el sombrero y una saliva podrida y hedionda escupida en la cara."
         }
       ],
       "census_note": "Es el motor del relato y la decisión visual más delicada de esta biblia: una regla de fenómeno que permite mostrar los efectos (piedras suspendidas, líneas de silbido, el líquido que desaparece y vuelve) sin dar cuerpo a nada. Sustituye a cualquier ficha de demonio.",
@@ -1464,7 +1552,7 @@
         "scale": "Todo ocurre a escala de cuerpo y de mano —una piedra que cabe en el puño, un vaso de mesa, un hombre alzado poco más arriba de las cabezas—: nada crece, nada se agiganta y nada ocupa el cielo. La desproporción es precisamente lo que convertiría el efecto en aparición.",
         "continuity": [
           "el agente nunca aparece: ni demonio, ni cuerno, ni silueta, ni sombra con forma, en ninguna fase y en ninguna lámina",
-          "los cinco efectos son los del texto y no hay un sexto: piedras que caen y silban, golpes y alaridos, el vaso que se alza y se vacía y vuelve a llenarse, el cuerpo alzado, la boca tapada con barro",
+          "los efectos son los del canon reescrito y no hay otro: piedras que pasan por el aire y silban, el cuerpo llevado por el aire, el vaso que se alza, se vacía y vuelve a llenarse, el barro en la boca, las piedras que caen del techo, el «hu, hu, hu», los pasos dentro de la iglesia cerrada, el cuerpo dejado cabeza abajo, los bofetones que arrojan el sombrero y la saliva hedionda",
           "toda la regla es nocturna: al amanecer cesa, y no hay ninguna lámina de fenómeno con luz de día",
           "las figuras invertidas que sólo él ve no se dibujan en ninguna fase: la fuente no da una sola línea de su forma"
         ],
@@ -1474,13 +1562,15 @@
           "dossier §1 (pir-cieza-1553): «Todo esto pasó de noche» y el ruido cesa en el punto en que comienza la misa",
           "dossier §2 (pir-cieza-1553): el único sonido descrito es «Hu, hu, hu», el grito de guerra indígena puesto en boca del enemigo cristiano: es materia simbólica de primer orden y no se ilustra, se declara",
           "dossier §2 (voz de Gabriel Campeón, vía expediente ansermas): «nuestros ansermas no tuvieron diablo como lo tenían los españoles; éstos llamaron diablos a nuestros dioses porque no fueron capaces de entenderlos» — el diablo de este relato es un objeto español, no un ser del territorio",
-          "dossier §11, salvaguarda 2: lo marcado do_not_visualize no entra a un modelo ni a una escena aunque sea visualmente atractivo"
+          "dossier §11, salvaguarda 2: lo marcado do_not_visualize no entra a un modelo ni a una escena aunque sea visualmente atractivo",
+          "canon, campo mito: en la iglesia se oyen «pasos dentro» antes de abrirla, y adentro «le dieron tantos bofetones que le arrojaron lejos el sombrero» y «le escupieron en la cara una saliva podrida y hedionda»; al empezar la misa «no se volvió a oír nada»"
         ],
         "editorial": [
           "la decisión de suprimir también la sombra del agente, y no sólo su cuerpo, es lectura de la técnica y es reversible: en una ilustración de papel con sombras físicas, dejar una sombra sin pieza que la produzca sería dibujar el demonio por la puerta de atrás",
           "el barro en la boca se resuelve como mancha plana en el borde del cuadro y no en primer plano: la razón es evitar lo grotesco, y es decisión editorial, no de fuente",
           "el orden de las cinco fases en la lámina es el del relato, pero repartirlas en una sola plancha de fases es composición declarada: la fuente las cuenta seguidas, no simultáneas",
-          "queda prohibido por nombre cualquier eco del Diablo del Carnaval de Riosucio, que es figura festiva de vida, alegría, amistad y sátira y no tiene continuidad documentada con estas presencias: es la contaminación más probable del corpus"
+          "queda prohibido por nombre cualquier eco del Diablo del Carnaval de Riosucio, que es figura festiva de vida, alegría, amistad y sátira y no tiene continuidad documentada con estas presencias: es la contaminación más probable del corpus",
+          "La saliva hedionda no se dibuja: es del mismo orden que el barro y queda fuera por lo grotesco; los bofetones se leen sólo por el sombrero que vuela lejos, sin mano que lo golpee."
         ],
         "states_to_model": []
       },
@@ -1523,7 +1613,7 @@
     "copa_de_vino": {
       "name": "La copa de vino que se levanta",
       "kind": "objeto",
-      "description": "Objeto menor pero con un beat propio; su diseño es de mesa colonial de 1549.",
+      "description": "Objeto menor con beat propio: el vaso de vino que tiene delante sentado, antes de salir de Pirsa, que se alza solo, queda vacío y vuelve a llenarse. Diseño de mesa colonial de 1549; en el canon reescrito la escena ocurre en Pirsa, no en la casa de Pacheco.",
       "aliases": [],
       "states": [
         "canonico"
@@ -1547,11 +1637,16 @@
           "myth": "el-exorcismo-de-tamaracunga",
           "field": "mito",
           "note": "La utilería del relato es colonial cristiana y está enumerada objeto por objeto: tres cruces llevadas en las manos, cuerdas atadas a los cintos, un vaso de beber —no una copa de pie ni un cáliz—, una estola y agua bendita. Las cinco piezas caben en una hoja y son la prueba material de que la cultura de esta biblia no es Pirsa."
+        },
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "«Mientras estaba sentado con un vaso de vino delante, vieron cómo el vaso se alzaba solo y quedaba vacío, y al rato el vino caía otra vez dentro»: ocurre antes de decidir llevarlo a la villa."
         }
       ],
       "census_note": "Objeto menor pero con un beat propio; su diseño es de mesa colonial de 1549.",
       "covered_by": "hoja_utileria_pirsa",
-      "coverage_note": "Objeto menor pero con un beat propio; su diseño es de mesa colonial de 1549.",
+      "coverage_note": "Objeto menor con beat propio: el vaso de vino que tiene delante sentado, antes de salir de Pirsa, que se alza solo, queda vacío y vuelve a llenarse. Diseño de mesa colonial de 1549; en el canon reescrito la escena ocurre en Pirsa, no en la casa de Pacheco.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -1559,7 +1654,7 @@
     "tres_cruces_de_viaje": {
       "name": "Las tres cruces sencillas del camino",
       "kind": "objeto",
-      "description": "El relato insiste en «sencillas»: cruces de palo, no crucifijos labrados.",
+      "description": "El canon reescrito dice sólo «tres cruces en las manos»: cruces de palo de doctrina de paja de 1549, no crucifijos labrados. Lo de «sencillas» era del canon anterior.",
       "aliases": [],
       "states": [
         "canonico"
@@ -1587,7 +1682,7 @@
       ],
       "census_note": "El relato insiste en «sencillas»: cruces de palo, no crucifijos labrados.",
       "covered_by": "hoja_utileria_pirsa",
-      "coverage_note": "El relato insiste en «sencillas»: cruces de palo, no crucifijos labrados.",
+      "coverage_note": "El canon reescrito dice sólo «tres cruces en las manos»: cruces de palo de doctrina de paja de 1549, no crucifijos labrados. Lo de «sencillas» era del canon anterior.",
       "evidence_basis_mix": [
         "documented_core",
         "editorial_interpretation"
@@ -1850,7 +1945,7 @@
     "figuras_invertidas": {
       "name": "Las figuras invertidas que ve en la iglesia",
       "kind": "criatura",
-      "description": "Verificado contra el texto: «dijo ver figuras invertidas que los demás no distinguían». No hay nada más.",
+      "description": "Verificado contra el canon reescrito: Tamaracunga «dijo que los veía con caras fieras, las cabezas abajo y los pies arriba». Es todo lo que el relato da de ellas.",
       "aliases": [],
       "states": [
         "canonico"
@@ -1869,10 +1964,15 @@
           "myth": "el-exorcismo-de-tamaracunga",
           "field": "mito",
           "note": "Sólo Tamaracunga ve; los demás perciben efectos. La fuente lo dice tres veces —«donde el cacique sólo las podía ver», «viéndolos solamente el indio», «sin los ver mas que sólo el indio»—, y de ahí sale la regla central: se muestra el efecto y nunca el agente."
+        },
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "«Tamaracunga dijo que los veía con caras fieras, las cabezas abajo y los pies arriba», y a él lo dejan en el aire «puesto igual que ellos, cabeza abajo»."
         }
       ],
       "census_note": "Verificado contra el texto: «dijo ver figuras invertidas que los demás no distinguían». No hay nada más.",
-      "exclusion_reason": "sin evidencia visual: el relato dice que sólo él las distingue y no describe una sola de sus formas; dibujarlas sería inventarlas y convertir la demonología del cronista en cosmología Pirsa",
+      "exclusion_reason": "lo que sólo él ve: el canon reescrito les da «caras fieras» y la postura invertida, y eso es exactamente la demonología del cronista puesta en cuerpo; dibujarlas convertiría esa lectura en cosmología Pirsa y rompería la regla del efecto sin agente (§11). La única inversión que se dibuja es la de Tamaracunga cuando lo dejan en el aire «puesto igual que ellos»",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -2127,7 +2227,7 @@
         ],
         "documented": [
           "dossier §5 (pir-cieza-1553): «teniendo delante un vaso para beber… se alzaba el vaso con el vino en el aire» — Cieza escribe vaso, no copa: es vaso de mesa colonial de 1549, no cáliz y no copa de pie",
-          "dossier §5 (pir-cieza-1553): «caminaron con el indio en medio… llevando tres cruces en las manos» — no son cruces colgadas ni pectorales, y el canon las llama «sencillas», lo que concuerda con una doctrina de paja de 1549",
+          "dossier §5 (pir-cieza-1553): «caminaron con el indio en medio… llevando tres cruces en las manos» — no son cruces colgadas ni pectorales; el canon reescrito dice sólo «tres cruces en las manos», y la doctrina de paja de 1549 las hace de palo",
           "dossier §5 (pir-cieza-1553): «atando unas cuerdas a los cintos» para no ser despeñados: van al cinto, no al cuerpo, y sólo en el tramo de riscos",
           "dossier §5 (pir-cieza-1553): «poniéndole luego una estola, y le echaron agua bendita» — la estola es el único paramento nombrado y se usa sobre el hábito, fuera de misa",
           "dossier §5 (pir-cieza-1553): en esta misma comarca los señores «tenían muchos [vasos] de oro… con que bebían»; el vaso del relato no se dora porque el texto no lo dice, pero el objeto está cargado en los dos mundos",
@@ -2146,6 +2246,434 @@
         "documented_core",
         "editorial_interpretation"
       ]
+    },
+    "casa_de_tamaracunga_en_pirsa": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "casa_de_tamaracunga_en_pirsa__spatial_model"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "name": "La casa de Tamaracunga en Pirsa",
+      "kind": "arquitectura",
+      "evidence_basis": "inferred",
+      "visual_status": "required",
+      "model_requirements": [
+        "spatial_model"
+      ],
+      "description": "Donde empieza la noche y adonde vuelve al final: allí se posan las auras, llega el cristiano que vivía cerca, pasan las piedras silbando, lo llevan por el aire delante de los dos cristianos y, sentado con el vaso de vino delante, se tapa con las mantas y le meten barro en la boca. «Se fue a su casa contento.» Nueva en el canon reescrito como escenario: antes esa escena estaba asignada a la casa de Pacheco.",
+      "evidence": [
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "El canon reescrito ordena la noche en dos lugares: en Pirsa, antes de «decidieron llevarlo a la villa», ocurren las auras, las piedras que silban, el cuerpo llevado por el aire, el vaso de vino y el barro; y el relato termina «Se fue a su casa contento»."
+        },
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "Cieza describe la comarca con «las casas, desviadas alguna distancia unas de otras» y, en un pueblo vecino, «una casa muy grande a la entrada de su pueblo» con una plaza pequeña rodeada de cañas gordas (dossier §4)."
+        }
+      ],
+      "design": {
+        "silhouette": "Casa suelta a media ladera abierta, separada de las vecinas por sembrado, con un interior bajo donde un hombre sentado en el suelo tiene el vaso delante y una manta sobre la cabeza: se reconoce porque es lo contrario de la casa de Pacheco —baja, oscura, de materia vegetal y sin muro de tabla— y porque por su puerta se ve la ladera sin selva.",
+        "materials": [
+          "cubierta de hoja o paja en tiras superpuestas, con el alero bajo que casi toca el suelo",
+          "armazón de palos y cañas gordas atadas, como espiral de quilling sólo en los amarres",
+          "suelo de tierra apisonada como un plano liso de papel pardo",
+          "el vaso de mesa colonial como único objeto ajeno dentro de la casa: es lo que dice que los cristianos ya han entrado"
+        ],
+        "palette": "Noche de interior en pardos de paja y tierra; el único acontecimiento de color es el rojo del vino en el vaso, que se retira y vuelve. Por la puerta, la ladera abierta en azul noche.",
+        "scale": "Casa de una planta, con el alero a la altura del hombro de un hombre de pie; dentro caben el hombre sentado, los dos cristianos de pie y poco más. Plano general 16:9 con la casa y la ladera, y el interior leído por la puerta abierta.",
+        "continuity": [
+          "la casa está sola en la ladera, con las vecinas a distancia: nunca aldea compacta",
+          "el vaso de vino está en esta casa y en ninguna otra",
+          "ninguna cruz, imagen ni objeto cristiano dentro, salvo el vaso",
+          "la ladera de fuera es la del camino: sin selva cerrada"
+        ],
+        "documented": [
+          "El poblamiento de la comarca es disperso, «las casas, desviadas alguna distancia unas de otras» (dossier §4, pir-cieza-1553 cap. XVI)",
+          "«Casi cuatro leguas desta villa está un pueblo llamado Pirsa» (dossier §3); el canon dice «a cuatro leguas de la villa de Anserma había un pueblo llamado Pirsa»",
+          "Aquí, antes del viaje, ocurren las auras, las piedras que silban, el cuerpo llevado por el aire, el vaso de vino y el barro en la boca (canon, campo mito)",
+          "La comarca es de «sierras muy grandes, sin montaña ninguna»: ladera abierta, no selva (dossier §1)"
+        ],
+        "editorial": [
+          "La hechura de la casa no está en ninguna fuente: cubierta vegetal, cañas gordas y suelo de tierra se toman de la única casa que Cieza describe en la comarca y del repertorio de materiales de la región, declarados reconstrucción y reversibles. Nada de tambo sobre pilotes del Chocó ni de bohío muisca.",
+          "Que la escena ocurra en su propia casa es inferencia del canon —llama a un cristiano «que vivía cerca», y al final «se fue a su casa»—; el texto no nombra el lugar de la noche en Pirsa. Reversible si una lectura del cap. CXVIII lo sitúa en otra parte.",
+          "Ningún oro, ídolo ni casa de adoración dentro: Cieza anota que allí no los había (canon, campo historia)."
+        ],
+        "states_to_model": []
+      }
+    },
+    "juan_pacheco": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "name": "Juan Pacheco",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "dos_acompanantes_cristianos",
+      "description": "Manda en la villa mientras el teniente está en Caramanta; es dueño de la casa adonde llevan a Tamaracunga y hermano del segundo cristiano.",
+      "coverage_note": "En el canon reescrito no actúa: es un nombre, una casa y un hermano. Si aparece, es uno de los cristianos del pueblo en su casa, dentro del sistema de vestuario español de 1549 y sin cara propia.",
+      "evidence": [
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "«Llegó también el hermano de Juan Pacheco, que mandaba en la villa mientras el teniente andaba en Caramanta.» «Llegaron a la casa de Juan Pacheco.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "cristianos_de_la_villa": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "name": "Los cristianos del pueblo",
+      "kind": "colectivo",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "dos_acompanantes_cristianos",
+      "description": "«Casi todos los cristianos del pueblo», que se juntan en casa de Juan Pacheco y ven caer las piedras; en la iglesia gritan el nombre de Jesucristo, arremeten y lo agarran.",
+      "coverage_note": "Mismo sistema de vestuario español de 1549 que los dos del camino, multiplicado: la hoja de grupo lo cubre.",
+      "evidence": [
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "«Se juntaron casi todos los cristianos del pueblo y todos vieron caer piedras pequeñas desde lo alto del techo»; en la iglesia «los cristianos gritaron el nombre de Jesucristo, se santiguaron, arremetieron, lo agarraron»."
+        }
+      ],
+      "model_requirements": []
+    },
+    "teniente_y_caramanta": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "name": "El teniente ausente en Caramanta",
+      "kind": "lugar",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "description": "El teniente de la villa «andaba en Caramanta»: sólo explica por qué manda Juan Pacheco.",
+      "exclusion_reason": "nombre de un ausente y de un lugar que sólo sitúa: ninguno está en escena",
+      "evidence": [
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "«el hermano de Juan Pacheco, que mandaba en la villa mientras el teniente andaba en Caramanta»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "sombrero_de_tamaracunga": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "name": "El sombrero sobre los ojos",
+      "kind": "objeto",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "tamaracunga",
+      "description": "El sombrero que lleva sobre los ojos para no ver y que los bofetones le arrojan lejos.",
+      "coverage_note": "Es prenda y gesto de Tamaracunga, no objeto de mesa: su ficha lo lleva puesto antes de la iglesia y sin él después.",
+      "evidence": [
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "«Le dieron tantos bofetones que le arrojaron lejos el sombrero que llevaba sobre los ojos para no ver.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "saliva_hedionda": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "name": "La saliva podrida y hedionda",
+      "kind": "fenomeno",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "presencias_sin_cuerpo",
+      "description": "Le escupen en la cara una saliva podrida y hedionda dentro de la iglesia.",
+      "coverage_note": "Efecto de las presencias, del mismo orden que el barro: la regla lo cuenta pero no lo dibuja, por lo grotesco.",
+      "evidence": [
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "«le escupieron en la cara una saliva podrida y hedionda»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "tipo_hombre_adulto": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_hombre_adulto__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "name": "Tipo base · hombre de Pirsa adulto",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "description": "Tipo base de los hombres de la comarca de Anserma en 1549: fija cara, cuerpo y vestido de los más de doscientos que acompañan a Tamaracunga, y la base corporal del propio Tamaracunga y de los principales.",
+      "evidence": [
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "Más de doscientos indios salen con Tamaracunga hacia la villa, tan asustados que no se atreven a acercársele."
+        }
+      ],
+      "design": {
+        "silhouette": "Hombre adulto de pie, desnudo y descalzo, con el maure como tira corta a la cintura y oro sólo sobre la piel —zarcillos en la oreja—; las manos vacías y el cuerpo un poco vuelto hacia atrás, como quien sigue a distancia y no se atreve a acercarse.",
+        "materials": [
+          "piel en planos grandes de papel pardo mate de un solo tono",
+          "maure a la cintura como tira corta y aparte, del ancho de una mano; en los principales, manta larga de algodón como plano grande sobre los hombros",
+          "zarcillos de oro mate granulado en la oreja, papel dorado sin brillo"
+        ],
+        "palette": "Pardo de piel y crudo de algodón, con el oro como único grano brillante y siempre sobre el cuerpo.",
+        "scale": "Estatura adulta corriente, la misma que los cristianos: la diferencia es de cobertura, no de tamaño. Cuerpo entero 9:16.",
+        "continuity": [
+          "descalzo siempre",
+          "manos vacías: ni dardo, ni lanza, ni macana, aunque estén documentadas para la comarca",
+          "oro sólo sobre la piel, nunca en la mano"
+        ],
+        "documented": [
+          "dossier §6 (pir-cieza-1553, cap. XVI): la gente comarcana de Anserma «anda desnuda y descalza»; es el mismo cronista y la misma fórmula, «comarcano», con que presenta a Tamaracunga",
+          "dossier §6 (pir-hsai-1948): la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya: cabeza de perfil corriente",
+          "dossier §0, capa A: el mundo de Pirsa en 1549 es anterior a toda prenda europea: nada de camisa, sombrero de copa ni tela de Castilla sobre estos cuerpos, salvo el sombrero que el texto da a Tamaracunga",
+          "dossier §6 (pir-cieza-1553, cap. XVI): «los principales y señores se cubren con una manta larga, y traen por la cintura maures»",
+          "dossier §6 (pir-cieza-1553, cap. XVI): las armas de la comarca son «dardos, lanzas, macanas de palma negra», ausentes de este relato",
+          "canon, campo mito: «Salieron con ellos más de doscientos indios, aunque tan asustados que no se atrevían a acercársele»"
+        ],
+        "editorial": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca— y el cuerpo se arma con pocos planos grandes de papel pardo mate, sin músculo modelado: cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "El pelo es una o dos piezas planas grandes de canto limpio; nunca mechón por mechón.",
+          "Ningún tipo se identifica con el resguardo Embera Chamí de Escopetera y Pirza de hoy: entre unos y otros hay cinco siglos de desplazamiento (dossier §3).",
+          "La manta larga es de principal y va sólo en la variante de principal de esta hoja; el hombre común va con maure. El reparto es composición reversible."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_adulta": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_mujer_adulta__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "name": "Tipo base · mujer de Pirsa adulta",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "description": "Tipo base de las mujeres de la comarca en 1549: fija cara, cuerpo y vestido de las mujeres de la comitiva y de la mujer de Tamaracunga en el bautismo.",
+      "evidence": [
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "Tras la misa, la mujer de Tamaracunga pide el agua del bautismo, como él."
+        }
+      ],
+      "design": {
+        "silhouette": "Mujer adulta de pie con la manta pequeña de algodón pintada ceñida al cuerpo, el pelo muy peinado hacia atrás y el oro sobre la piel —collar de láminas redondas, zarcillos y la pelotita en la ventana de la nariz—.",
+        "materials": [
+          "manta pequeña de algodón como plano recortado, con el dibujo pintado resuelto como lenguaje de forma —bandas, campos, trazos— y nunca como un patrón real",
+          "collar de láminas redondas y en estrella, zarcillos y pelotita de nariz en papel dorado mate granulado",
+          "pelo como una sola pieza plana peinada hacia atrás, sin tocado"
+        ],
+        "palette": "Crudo de algodón con las pinturas en dos o tres tierras apagadas, pardo de piel y el oro como grano sin brillo.",
+        "scale": "Algo por debajo de la estatura del hombre. Cuerpo entero 9:16.",
+        "continuity": [
+          "la manta pequeña siempre, nunca desnuda de torso en lámina",
+          "el oro sobre la piel",
+          "pelo muy peinado, sin tocado de plumas"
+        ],
+        "documented": [
+          "dossier §6 (pir-cieza-1553, cap. XVI): la gente comarcana de Anserma «anda desnuda y descalza»; es el mismo cronista y la misma fórmula, «comarcano», con que presenta a Tamaracunga",
+          "dossier §6 (pir-hsai-1948): la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya: cabeza de perfil corriente",
+          "dossier §0, capa A: el mundo de Pirsa en 1549 es anterior a toda prenda europea: nada de camisa, sombrero de copa ni tela de Castilla sobre estos cuerpos, salvo el sombrero que el texto da a Tamaracunga",
+          "dossier §6 (pir-cieza-1553, cap. XVI): «las mujeres traen mantas pequeñas y son de buen parescer»; «mantas de algodón galanas, con muchas pinturas», «los cabellos muy peinados», «collares de piezas ricas de oro», «zarcillos» y «unas como pelotitas de oro fino» en las ventanas de la nariz",
+          "canon, campo mito: al final «lo mismo pidieron su mujer y su hijo»"
+        ],
+        "editorial": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca— y el cuerpo se arma con pocos planos grandes de papel pardo mate, sin músculo modelado: cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "El pelo es una o dos piezas planas grandes de canto limpio; nunca mechón por mechón.",
+          "Ningún tipo se identifica con el resguardo Embera Chamí de Escopetera y Pirza de hoy: entre unos y otros hay cinco siglos de desplazamiento (dossier §3).",
+          "Los dibujos de la manta son lenguaje, no ejemplar: ningún patrón real se copia (regla del ejemplar, §11)."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_joven": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_mujer_joven__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "name": "Tipo base · mujer de Pirsa joven",
+      "kind": "personaje",
+      "evidence_basis": "inferred",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "description": "Tipo base de la mujer joven de la comarca: la mujer de un «hermano joven» se lee joven, y este tipo fija su edad sin darle cara propia.",
+      "evidence": [
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "La mujer de un hermano joven pide el bautismo con él y con su hijo."
+        }
+      ],
+      "design": {
+        "silhouette": "Muchacha de la comarca, delgada y erguida, con la manta pequeña de algodón pintada, el pelo muy peinado y un solo par de zarcillos: menos oro que la mujer adulta y el cuerpo más recto.",
+        "materials": [
+          "manta pequeña de algodón con pintura en lenguaje de forma, más corta que la de la mujer adulta",
+          "zarcillos de oro mate como única pieza dorada",
+          "pelo en una pieza plana peinada hacia atrás"
+        ],
+        "palette": "Crudo de algodón y pardo de piel; un solo punto de oro.",
+        "scale": "Un palmo por debajo de la mujer adulta. Cuerpo entero 9:16.",
+        "continuity": [
+          "manta pequeña siempre",
+          "un solo par de zarcillos, sin collar",
+          "pelo peinado sin tocado"
+        ],
+        "documented": [
+          "dossier §6 (pir-cieza-1553, cap. XVI): la gente comarcana de Anserma «anda desnuda y descalza»; es el mismo cronista y la misma fórmula, «comarcano», con que presenta a Tamaracunga",
+          "dossier §6 (pir-hsai-1948): la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya: cabeza de perfil corriente",
+          "dossier §0, capa A: el mundo de Pirsa en 1549 es anterior a toda prenda europea: nada de camisa, sombrero de copa ni tela de Castilla sobre estos cuerpos, salvo el sombrero que el texto da a Tamaracunga",
+          "dossier §6 (pir-cieza-1553, cap. XVI): las mujeres de la comarca, con mantas pequeñas pintadas, pelo muy peinado y zarcillos"
+        ],
+        "editorial": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca— y el cuerpo se arma con pocos planos grandes de papel pardo mate, sin músculo modelado: cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "El pelo es una o dos piezas planas grandes de canto limpio; nunca mechón por mechón.",
+          "Ningún tipo se identifica con el resguardo Embera Chamí de Escopetera y Pirza de hoy: entre unos y otros hay cinco siglos de desplazamiento (dossier §3).",
+          "Que la mujer de Tamaracunga sea joven es inferencia de que él es «hermano joven»; el texto no le da edad. La reducción del oro por edad es decisión de hoja, reversible."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_nino": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_nino__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "name": "Tipo base · niño de Pirsa",
+      "kind": "personaje",
+      "evidence_basis": "inferred",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "description": "Tipo base del niño de la comarca: fija cara, cuerpo y vestido del hijo de Tamaracunga en el bautismo.",
+      "evidence": [
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "El hijo de Tamaracunga pide el bautismo tras la misa."
+        }
+      ],
+      "design": {
+        "silhouette": "Niño de seis u ocho años desnudo y descalzo, de pie junto a la pierna de su madre, con la cabeza grande respecto al tronco y sin una pieza de oro.",
+        "materials": [
+          "piel en planos grandes de papel pardo mate",
+          "pelo corto como una sola pieza plana"
+        ],
+        "palette": "Pardo de piel, sin oro y sin algodón: el tipo más sobrio de la hoja.",
+        "scale": "A la altura de la cadera de un adulto. Cuerpo entero 9:16, con más aire alrededor.",
+        "continuity": [
+          "desnudo y descalzo",
+          "sin oro",
+          "siempre junto a un adulto"
+        ],
+        "documented": [
+          "dossier §6 (pir-cieza-1553, cap. XVI): la gente comarcana de Anserma «anda desnuda y descalza»; es el mismo cronista y la misma fórmula, «comarcano», con que presenta a Tamaracunga",
+          "dossier §6 (pir-hsai-1948): la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya: cabeza de perfil corriente",
+          "dossier §0, capa A: el mundo de Pirsa en 1549 es anterior a toda prenda europea: nada de camisa, sombrero de copa ni tela de Castilla sobre estos cuerpos, salvo el sombrero que el texto da a Tamaracunga",
+          "dossier §6 (pir-cieza-1553, cap. XVI): la gente de la comarca «anda desnuda y descalza»",
+          "canon, campo mito: «lo mismo pidieron su mujer y su hijo»"
+        ],
+        "editorial": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca— y el cuerpo se arma con pocos planos grandes de papel pardo mate, sin músculo modelado: cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "El pelo es una o dos piezas planas grandes de canto limpio; nunca mechón por mechón.",
+          "Ningún tipo se identifica con el resguardo Embera Chamí de Escopetera y Pirza de hoy: entre unos y otros hay cinco siglos de desplazamiento (dossier §3).",
+          "La edad del hijo no está en el texto: se fija en niño porque es la única figura infantil posible del relato y la lámina la necesita pequeña. Reversible."
+        ],
+        "states_to_model": []
+      }
     }
   },
   "models": {
@@ -2186,6 +2714,11 @@
           "myth": "el-exorcismo-de-tamaracunga",
           "field": "mito",
           "note": "Sólo Tamaracunga ve; los demás perciben efectos. La fuente lo dice tres veces —«donde el cacique sólo las podía ver», «viéndolos solamente el indio», «sin los ver mas que sólo el indio»—, y de ahí sale la regla central: se muestra el efecto y nunca el agente."
+        },
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "El canon reescrito lo presenta sólo como «hermano joven, bien parecido» del señor de Pirsa, sin la palabra cacique; conserva las mantas sobre cara y cuerpo, el sombrero sobre los ojos, el vaso de vino delante y el grito «válganme, cristianos»."
         }
       ],
       "design_contract": {
@@ -2209,8 +2742,9 @@
           "dossier §5 (pir-cieza-1553): «le arrojaron lejos de allí un sombrero que tenía puesto en los ojos por no los ver» — el sombrero es la sexta pieza de utilería del relato y es suya, no de la hoja de objetos",
           "dossier §6 (pir-cieza-1553, cap. XVI): los principales y señores de esta comarca «se cubren con una manta larga, y traen por la cintura maures», de modo que la prenda con que se tapa es su prenda de rango",
           "dossier §6 (pir-cieza-1553): «un hermano mancebo de buen parescer» — joven y de buena presencia son los dos únicos rasgos físicos que la fuente le da",
-          "dossier §3 (pir-cieza-1553): la fuente lo llama «cacique» unas ocho veces y a la vez «hermano mancebo del señor natural»; la contradicción se declara en esta ficha y no se resuelve, y su consecuencia de lámina es que le corresponde la manta larga de principal",
-          "dossier §6 (pir-hsai-1948): la deformación craneal no corresponde a los ansermas sino a Pozo y Quimbaya, de modo que su cabeza es de perfil corriente"
+          "dossier §3 (pir-cieza-1553): la fuente lo llama «cacique» unas ocho veces; el canon reescrito sólo lo hace hermano joven del señor, y su historia recuerda que el cacicazgo pasa por la mujer principal o la hermana, lo que pone al hermano menor en posición real: la manta larga de principal se sostiene en el dossier, no en el canon",
+          "dossier §6 (pir-hsai-1948): la deformación craneal no corresponde a los ansermas sino a Pozo y Quimbaya, de modo que su cabeza es de perfil corriente",
+          "En el canon reescrito se tapa «la cara y el cuerpo entero con unas mantas para no ver lo que tenía enfrente», y a bofetones le arrojan lejos «el sombrero que llevaba sobre los ojos para no ver» (canon, campo mito)"
         ],
         "editorial_features": [
           "va sin una sola pieza de oro encima, aunque como principal podría llevarla: el texto sólo le nombra dos prendas y las dos son gestos, así que el oro se deja en la hoja de grupo. Decisión reversible: si el editor la revoca, entran collar de láminas redondas, zarcillos y pelotita de nariz, que sí están documentados para su rango",
@@ -2224,7 +2758,7 @@
         "asset_type": "Biblia visual Pirsa V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Paja de techo como tiras finas superpuestas; manta pintada como papel con el dibujo recortado y no impreso; hábito mercedario como tres planos blancos de distinto gramaje. Capas escalonadas en profundidad que construyen la loma sembrada y el interior de la iglesia por planos superpuestos, no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Tamaracunga. El único cuerpo de la biblia que se lee sin cara: joven descalzo envuelto de la cabeza a los pies en su propia manta larga de principal, con un sombrero calado hasta debajo de las cejas y las dos manos cerradas por dentro sobre el borde de la tela. No es una figura que huye ni que reza: es la figura que se tapa para no ver, y esa es toda su silueta.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Hombre joven adulto de estatura corriente, sin agrandar: el relato lo hace sentarse a la mesa, ser alzado por el aire y ser sujetado por varios hombres a la vez, y las tres cosas exigen que mida lo que mide un hombre al que se puede agarrar.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Hombre joven adulto de estatura corriente, sin agrandar: el relato lo hace sentarse a la mesa, ser alzado por el aire y ser sujetado por varios hombres a la vez, y las tres cosas exigen que mida lo que mide un hombre al que se puede agarrar.",
         "lighting_mood": "Noche cerrada de interior sin Sacramento: luz baja, de una sola fuente de llama, que deja la mayor parte del encuadre en penumbra de papel oscuro y hace que cada canto proyecte su sombra sobre la capa de atrás. Un único amanecer en toda la biblia —el de la primera misa, que apaga el ruido—: luz rasante y fría por una abertura, sin disco solar, sin rayos volumétricos y sin ningún haz celestial. En exterior, luz alta y difusa de vertiente abierta.",
         "materials_textures": "manta larga de algodón de principal, en un solo plano grande de papel que envuelve cabeza y cuerpo sin dejar ver la cara, con el canto del recorte a la vista donde cruza sobre el hombro; maure de la cintura como pieza corta y aparte, del ancho de una mano, único punto donde el papel se dobla dos veces; sombrero de ala corta resuelto como dos recortes superpuestos —copa y ala—, del mismo pardo que la manta y nunca de un tono más claro; piel y pies desnudos en pardo plano de un solo tono, sin modelado: el rostro, cuando la manta se abre, es óvalo liso y los rasgos van como piezas recortadas aparte",
         "era": "1549, y son tres capas que no se mezclan en un mismo cuerpo. Mundo indígena de la comarca de Anserma: cuerpo desnudo y descalzo, manta larga y maure en los principales, mantas de algodón pintadas, collares de oro, zarcillos, nariguera de pelotita, cabello muy peinado, casas desviadas, dardo, lanza y macana de palma negra; sin hierro, sin cruz, sin caballo, sin deformación craneal. Villa española de diez años: iglesia de paja sin Sacramento, casa de un vecino, hábito mercedario blanco con escudo, estola, agua bendita, cruces de palo en las manos, cuerdas al cinto, vaso de mesa, sombrero; sin catedral, sin retablo, sin imaginería barroca, sin cal y canto. Memoria posterior: no entra a ninguna lámina.",
@@ -2233,8 +2767,9 @@
           "documentado: «le arrojaron lejos de allí un sombrero que tenía puesto en los ojos por no los ver» — el sombrero es la sexta pieza de utilería del relato y es suya, no de la hoja de objetos",
           "documentado: los principales y señores de esta comarca «se cubren con una manta larga, y traen por la cintura maures», de modo que la prenda con que se tapa es su prenda de rango",
           "documentado: «un hermano mancebo de buen parescer» — joven y de buena presencia son los dos únicos rasgos físicos que la fuente le da",
-          "documentado: la fuente lo llama «cacique» unas ocho veces y a la vez «hermano mancebo del señor natural»; la contradicción se declara en esta ficha y no se resuelve, y su consecuencia de lámina es que le corresponde la manta larga de principal",
+          "documentado: la fuente lo llama «cacique» unas ocho veces; el canon reescrito sólo lo hace hermano joven del señor, y su historia recuerda que el cacicazgo pasa por la mujer principal o la hermana, lo que pone al hermano menor en posición real: la manta larga de principal se sostiene en el dossier, no en el canon",
           "documentado: la deformación craneal no corresponde a los ansermas sino a Pozo y Quimbaya, de modo que su cabeza es de perfil corriente",
+          "documentado: En el canon reescrito se tapa «la cara y el cuerpo entero con unas mantas para no ver lo que tenía enfrente», y a bofetones le arrojan lejos «el sombrero que llevaba sobre los ojos para no ver» (canon, campo mito)",
           "El corpus no nombra un solo color: la paleta entera sale del territorio y del material, nunca del gusto. Tierra, paja, lana blanca y noche.",
           "El blanco es de la orden y de nadie más: el hábito mercedario es el único blanco saturado de la biblia, y contra él se lee todo lo demás.",
           "El oro es del cuerpo indígena, es materia y no luz —papel dorado mate, granulado—, y sólo aparece si hay un cuerpo que lo lleve: nunca como montón ni como pieza suelta.",
@@ -2258,7 +2793,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -2324,7 +2859,7 @@
         "asset_type": "Biblia visual Pirsa V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Paja de techo como tiras finas superpuestas; manta pintada como papel con el dibujo recortado y no impreso; hábito mercedario como tres planos blancos de distinto gramaje. Capas escalonadas en profundidad que construyen la loma sembrada y el interior de la iglesia por planos superpuestos, no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Fray Juan de Santa María, mercedario. El único cuerpo enteramente cubierto y enteramente blanco de la biblia: tres planos de lana superpuestos —túnica hasta el pie, escapulario largo por delante y por detrás, capa encima—, la capilla con capucha caída sobre los hombros y el escudo de la orden como única pieza dura del conjunto, a la altura del pecho. De pie y con los pies en el suelo en todas sus láminas.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Adulto de pie, a la misma altura que Tamaracunga y sin ventaja de estatura: el relato lo hace entrar en una casa llena de gente y vestirse para decir misa, nunca dominar la escena desde arriba.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Adulto de pie, a la misma altura que Tamaracunga y sin ventaja de estatura: el relato lo hace entrar en una casa llena de gente y vestirse para decir misa, nunca dominar la escena desde arriba.",
         "lighting_mood": "Noche cerrada de interior sin Sacramento: luz baja, de una sola fuente de llama, que deja la mayor parte del encuadre en penumbra de papel oscuro y hace que cada canto proyecte su sombra sobre la capa de atrás. Un único amanecer en toda la biblia —el de la primera misa, que apaga el ruido—: luz rasante y fría por una abertura, sin disco solar, sin rayos volumétricos y sin ningún haz celestial. En exterior, luz alta y difusa de vertiente abierta.",
         "materials_textures": "lana blanca en tres gramajes distintos de papel, que es lo único que separa túnica, escapulario y capa: sin costura dibujada y sin pliegue pintado; escudo de la orden sobre el escapulario, resuelto como forma recortada plana —no como joya ni como bordado con hilo— y colgado de una cadena corta o cosido, sin brillo metálico; estola sobre los brazos, en una tira de papel de gramaje mayor que la capa para que se lea aparte del blanco del hábito; sandalia o pie descalzo bajo el ruedo, resuelto con una sola pieza y nunca con bota ni zapato de hebilla",
         "era": "1549, y son tres capas que no se mezclan en un mismo cuerpo. Mundo indígena de la comarca de Anserma: cuerpo desnudo y descalzo, manta larga y maure en los principales, mantas de algodón pintadas, collares de oro, zarcillos, nariguera de pelotita, cabello muy peinado, casas desviadas, dardo, lanza y macana de palma negra; sin hierro, sin cruz, sin caballo, sin deformación craneal. Villa española de diez años: iglesia de paja sin Sacramento, casa de un vecino, hábito mercedario blanco con escudo, estola, agua bendita, cruces de palo en las manos, cuerdas al cinto, vaso de mesa, sombrero; sin catedral, sin retablo, sin imaginería barroca, sin cal y canto. Memoria posterior: no entra a ninguna lámina.",
@@ -2357,7 +2892,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -2387,10 +2922,15 @@
           "myth": "el-exorcismo-de-tamaracunga",
           "field": "mito",
           "note": "Los cristianos son dos en el camino y tres en la llegada: el primero llamado a toda prisa, luego «un hermano de un Juan Pacheco» y, cerca ya de la villa, el propio Juan Pacheco, que sale a socorrerlos y en cuya casa se alojan."
+        },
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "El canon reescrito reduce la escala a dos —el cristiano que vivía cerca y el hermano de Juan Pacheco— y retira al propio Pacheco saliendo a socorrerlos; en su casa se juntan casi todos los cristianos del pueblo."
         }
       ],
       "design_contract": {
-        "distinctive_silhouette": "La gramática de este grupo es una cuenta: en el camino son dos y en la llegada son tres. Cuerpos enteramente cubiertos y calzados —lo contrario exacto de la multitud descalza que los sigue—, con la cuerda de fibra al cinto como único atributo que comparten los tres, y el tercero entrando siempre de frente y desde la villa, nunca desde el camino.",
+        "distinctive_silhouette": "La gramática de este grupo es una cuenta: en Pirsa y en el camino son exactamente dos, y en la casa de la villa son muchos. Cuerpos enteramente cubiertos y calzados —lo contrario exacto de la multitud descalza que los sigue—, con la cuerda de fibra al cinto y la cruz de palo en el puño como únicos atributos que comparten en el camino.",
         "materials": [
           "tela de vestir europea de 1549 en planos cerrados que tapan brazo y pierna enteros: el contraste de cobertura con la hoja de gente de Pirsa es lo que define el material, no el corte",
           "cuero de calzado en una sola pieza oscura, el elemento que separa a estos tres cuerpos de todos los demás de la biblia",
@@ -2398,39 +2938,39 @@
           "cruz de palo sin labrar sostenida en el puño, una por cada hombre del camino"
         ],
         "palette_logic": "Pardos y grises de tela apagada, sin blanco y sin oro: el blanco es del mercedario y el oro es del cuerpo indígena, de modo que estos tres cuerpos son la zona más neutra y más cerrada de la paleta. Ninguna nota de color identifica a ninguno de los tres.",
-        "scale": "Tres adultos de estatura corriente, ni más altos ni más anchos que los cuerpos que los siguen: el relato los hace atarse para no despeñarse y mandar un indio por delante a pedir socorro, y ninguna de las dos cosas es de una figura que domina.",
+        "scale": "Adultos de estatura corriente, ni más altos ni más anchos que los cuerpos que los siguen: el relato los hace atarse cuerdas a la cintura y rezar para no ser derribados, y nada de eso es de una figura que domina.",
         "continuity_markers": [
-          "dos en el camino y tres en la llegada, siempre: si una lámina de camino trae tres cuerpos españoles, está mal contada",
+          "dos en Pirsa y en el camino, siempre: si una lámina de camino trae tres cuerpos españoles, está mal contada; en la casa de Juan Pacheco son «casi todos los cristianos del pueblo»",
           "la cuerda al cinto aparece únicamente en el tramo de riscos y desaparece dentro de la villa",
           "los tres van calzados en toda lámina, también dentro de la casa y de la iglesia",
           "ninguno lleva arma, arcabuz ni caballo: no es una entrada armada sino un acompañamiento"
         ],
         "documented_features": [
-          "dossier §6 (pir-cieza-1553): la fuente escalona el grupo —primero uno solo llamado a toda prisa, luego «un hermano de un Juan Pacheco, vecino de la misma villa» y, cerca ya de la villa, el propio Juan Pacheco, que sale a socorrerlos—, de modo que son dos en el camino y tres en la llegada",
+          "canon, campo mito: primero «un cristiano que vivía cerca», llamado a toda prisa, y después «el hermano de Juan Pacheco, que mandaba en la villa mientras el teniente andaba en Caramanta»: «los dos» encuentran a Tamaracunga. El tercero que sale a socorrerlos en Cieza (dossier §6) no está en el canon reescrito y no entra a lámina",
           "dossier §5 (pir-cieza-1553): «atando unas cuerdas a los cintos» para no ser despeñados en los malos pasos, y «caminaron con el indio en medio… llevando tres cruces en las manos»",
-          "dossier §4 (pir-cieza-1553): el tercero es el dueño de la casa donde se alojan, «las casas deste Juan Pacheco», donde se juntan «todos los más de los cristianos que estaban en el pueblo»",
+          "canon, campo mito: en la casa de Juan Pacheco «se juntaron casi todos los cristianos del pueblo» y todos ven caer las piedras y oyen los silbos",
           "dossier §0, capa B: lo que existe en esta capa es la villa de diez años —iglesia de paja, casa de un vecino, hábito mercedario, cruces de palo, cuerdas, vaso, sombrero— y lo que no existe es catedral, retablo, imaginería barroca ni sotana decimonónica",
           "dossier §0, salvaguarda 1: las capas A y B conviven en la misma escena, y ninguna lámina puede resolver el encuentro con un solo sistema de vestuario sin borrar a uno de los dos bandos"
         ],
         "editorial_features": [
           "el corte concreto de la ropa es reconstrucción de época declarada: la crónica no describe la vestimenta de estos hombres, sólo sus actos. Lo documentado es que están cubiertos y calzados frente a cuerpos desnudos y descalzos; todo lo demás es reversible",
           "se les niega deliberadamente cualquier atributo de conquista —coraza, arcabuz, espada al cinto, caballo—: no hay ninguno en el texto y ponerlos convertiría un acompañamiento en una escolta armada",
-          "los tres se dibujan como sistema de vestuario y no como tres retratos: la fuente nombra a uno solo, Juan Pacheco, y darle cara propia a los otros dos sería inventarlos"
+          "se dibujan como sistema de vestuario y no como retratos: el canon nombra a Juan Pacheco sólo como dueño de la casa y al otro sólo como su hermano, y darles cara propia sería inventarlos"
         ]
       },
       "prompt_spec": {
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Pirsa V1 - group_grammar",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Paja de techo como tiras finas superpuestas; manta pintada como papel con el dibujo recortado y no impreso; hábito mercedario como tres planos blancos de distinto gramaje. Capas escalonadas en profundidad que construyen la loma sembrada y el interior de la iglesia por planos superpuestos, no por perspectiva atmosférica pintada.",
-        "primary_request": "gramatica del grupo: cuantos, como se ordenan, que los hace uno para Los dos cristianos que lo acompañan. La gramática de este grupo es una cuenta: en el camino son dos y en la llegada son tres. Cuerpos enteramente cubiertos y calzados —lo contrario exacto de la multitud descalza que los sigue—, con la cuerda de fibra al cinto como único atributo que comparten los tres, y el tercero entrando siempre de frente y desde la villa, nunca desde el camino.",
-        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Tres adultos de estatura corriente, ni más altos ni más anchos que los cuerpos que los siguen: el relato los hace atarse para no despeñarse y mandar un indio por delante a pedir socorro, y ninguna de las dos cosas es de una figura que domina.",
+        "primary_request": "gramatica del grupo: cuantos, como se ordenan, que los hace uno para Los dos cristianos que lo acompañan. La gramática de este grupo es una cuenta: en Pirsa y en el camino son exactamente dos, y en la casa de la villa son muchos. Cuerpos enteramente cubiertos y calzados —lo contrario exacto de la multitud descalza que los sigue—, con la cuerda de fibra al cinto y la cruz de palo en el puño como únicos atributos que comparten en el camino.",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Adultos de estatura corriente, ni más altos ni más anchos que los cuerpos que los siguen: el relato los hace atarse cuerdas a la cintura y rezar para no ser derribados, y nada de eso es de una figura que domina.",
         "lighting_mood": "Noche cerrada de interior sin Sacramento: luz baja, de una sola fuente de llama, que deja la mayor parte del encuadre en penumbra de papel oscuro y hace que cada canto proyecte su sombra sobre la capa de atrás. Un único amanecer en toda la biblia —el de la primera misa, que apaga el ruido—: luz rasante y fría por una abertura, sin disco solar, sin rayos volumétricos y sin ningún haz celestial. En exterior, luz alta y difusa de vertiente abierta.",
         "materials_textures": "tela de vestir europea de 1549 en planos cerrados que tapan brazo y pierna enteros: el contraste de cobertura con la hoja de gente de Pirsa es lo que define el material, no el corte; cuero de calzado en una sola pieza oscura, el elemento que separa a estos tres cuerpos de todos los demás de la biblia; cuerda de fibra vegetal al cinto, enrollada en quilling sólo en el tramo de los riscos y suelta en el resto; cruz de palo sin labrar sostenida en el puño, una por cada hombre del camino",
         "era": "1549, y son tres capas que no se mezclan en un mismo cuerpo. Mundo indígena de la comarca de Anserma: cuerpo desnudo y descalzo, manta larga y maure en los principales, mantas de algodón pintadas, collares de oro, zarcillos, nariguera de pelotita, cabello muy peinado, casas desviadas, dardo, lanza y macana de palma negra; sin hierro, sin cruz, sin caballo, sin deformación craneal. Villa española de diez años: iglesia de paja sin Sacramento, casa de un vecino, hábito mercedario blanco con escudo, estola, agua bendita, cruces de palo en las manos, cuerdas al cinto, vaso de mesa, sombrero; sin catedral, sin retablo, sin imaginería barroca, sin cal y canto. Memoria posterior: no entra a ninguna lámina.",
         "constraints": [
-          "documentado: la fuente escalona el grupo —primero uno solo llamado a toda prisa, luego «un hermano de un Juan Pacheco, vecino de la misma villa» y, cerca ya de la villa, el propio Juan Pacheco, que sale a socorrerlos—, de modo que son dos en el camino y tres en la llegada",
+          "documentado: primero «un cristiano que vivía cerca», llamado a toda prisa, y después «el hermano de Juan Pacheco, que mandaba en la villa mientras el teniente andaba en Caramanta»: «los dos» encuentran a Tamaracunga. El tercero que sale a socorrerlos en Cieza (dossier §6) no está en el canon reescrito y no entra a lámina",
           "documentado: «atando unas cuerdas a los cintos» para no ser despeñados en los malos pasos, y «caminaron con el indio en medio… llevando tres cruces en las manos»",
-          "documentado: el tercero es el dueño de la casa donde se alojan, «las casas deste Juan Pacheco», donde se juntan «todos los más de los cristianos que estaban en el pueblo»",
+          "documentado: en la casa de Juan Pacheco «se juntaron casi todos los cristianos del pueblo» y todos ven caer las piedras y oyen los silbos",
           "documentado: lo que existe en esta capa es la villa de diez años —iglesia de paja, casa de un vecino, hábito mercedario, cruces de palo, cuerdas, vaso, sombrero— y lo que no existe es catedral, retablo, imaginería barroca ni sotana decimonónica",
           "documentado: las capas A y B conviven en la misma escena, y ninguna lámina puede resolver el encuentro con un solo sistema de vestuario sin borrar a uno de los dos bandos",
           "El corpus no nombra un solo color: la paleta entera sale del territorio y del material, nunca del gusto. Tierra, paja, lana blanca y noche.",
@@ -2821,52 +3361,56 @@
           "myth": "el-exorcismo-de-tamaracunga",
           "field": "mito",
           "note": "El relato entero ocurre de noche —«Todo esto pasó de noche»— y el ruido cesa con la primera misa al amanecer: «venido el día… en el punto que se comenzó, en aquel no se oyó cosa ninguna». Esa es la regla de iluminación de toda la biblia, y no hay ningún haz de luz celestial en la fuente."
+        },
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "En el canon reescrito la casa de Juan Pacheco es sólo la noche de las piedras que caen del techo, los silbos y el «hu, hu, hu»; la escena del vaso de vino ocurre antes, en Pirsa."
         }
       ],
       "design_contract": {
-        "distinctive_silhouette": "Interior de la casa de un vecino español de la villa, no una casa indígena: una sola pieza alta y llena de hombres de pie, con la mesa y el vaso en el centro del cuadro y la techumbre visible por encima de las cabezas —porque es de lo alto de esa techumbre de donde caen las piedras—. Es el único espacio cerrado de la biblia donde hay mueble y donde el techo participa de la acción.",
+        "distinctive_silhouette": "Interior de la casa de un vecino español de la villa, no una casa indígena: una sola pieza alta y llena de hombres de pie mirando hacia arriba, con la techumbre visible por encima de las cabezas —porque es de lo alto de ese techo de donde caen las piedras— y Tamaracunga en medio, tapado. Es el único espacio cerrado de la biblia donde el techo participa de la acción.",
         "materials": [
           "techumbre alta a la vista, en tiras y vigas que se leen desde abajo y ocupan el tercio superior del cuadro",
-          "mesa de tabla gruesa, la única pieza de mobiliario propio de la biblia, con el canto del papel deliberadamente grueso",
           "muro de casa de poblador en planos cerrados, más regulares que los de la iglesia y sin la horizontal de la paja",
           "piedras pequeñas de papel gris, recortadas de canto duro, detenidas a media caída entre la techumbre y las cabezas",
-          "vaso sobre la mesa, en barro cocido o vidrio basto, como único objeto de la escena a escala de mano"
+          "banco o poyo corrido de tabla junto al muro, único mueble, para que la pieza se lea habitada y no vacía"
         ],
-        "palette_logic": "Noche cerrada de interior sin ninguna luz de día: penumbra de papel oscuro y una sola fuente de llama baja que deja la mayor parte del encuadre en sombra y hace que cada canto proyecte la suya sobre la capa de atrás. El rojo del vino en el vaso es el único acontecimiento de color de toda la biblia.",
+        "palette_logic": "Noche cerrada de interior sin ninguna luz de día: penumbra de papel oscuro y una sola fuente de llama baja que deja la mayor parte del encuadre en sombra y hace que cada canto proyecte la suya sobre la capa de atrás. Ninguna nota de color: el rojo del vino pertenece a la casa de Pirsa.",
         "scale": "Pieza que contiene de pie a «todos los más de los cristianos que estaban en el pueblo» y con techo bastante alto para que una piedra caiga desde arriba sin que se vea quién la tira: es más alta que ancha en la lectura, al revés que la iglesia.",
         "continuity_markers": [
           "nunca de noche con luz de día ni al amanecer: esta casa es sólo noche, y el amanecer pertenece a la iglesia",
           "la techumbre está siempre en cuadro: si el techo queda fuera, la lámina pierde el origen de las piedras",
           "no hay ni un objeto indígena dentro de esta casa, en ninguna lámina",
-          "la mesa y el vaso están en el centro y no se mueven entre láminas: son el punto fijo del que la cámara se aleja"
+          "los hombres de pie forman un anillo abierto alrededor de Tamaracunga y miran al techo: es el punto fijo del que la cámara se aleja"
         ],
         "documented_features": [
           "dossier §4 (pir-cieza-1553): «se fueron derechos con el cacique a las casas deste Juan Pacheco», vecino de la villa — es la casa de un poblador español dentro de Anserma, no una casa de paja del repertorio indígena como supuso el censo",
           "dossier §4 (pir-cieza-1553): en ella se juntan «todos los más de los cristianos que estaban en el pueblo»",
           "dossier §1 y §4 (pir-cieza-1553): «todos vían caer piedras pequeñas de lo alto de la casa», de modo que la casa tiene altura interior y techumbre y ambas cosas son necesarias en la lámina",
-          "dossier §5 (pir-cieza-1553): «teniendo delante un vaso para beber… se alzaba el vaso con el vino en el aire» — la mesa y el vaso son de esta casa y no de la iglesia",
+          "canon, campo mito: aquí se oye además ««hu, hu, hu» rápido y recio, el mismo grito con que los indios salen a la guerra»; el vaso de vino ocurre antes, en Pirsa, y no es de esta casa",
           "dossier §1 (pir-cieza-1553): «Todo esto pasó de noche»: esta casa no conoce otra luz que la de una llama"
         ],
         "editorial_features": [
           "CORRECCIÓN AL CENSO, declarada: el censo la fichó como «casa de paja del mismo repertorio que las del territorio Pirsa» y la fuente dice lo contrario. La descripción de la entidad se corrigió; corregirlo cambia la lámina entera y se deja dicho por escrito",
           "la hechura concreta de una casa de vecino español en una villa de diez años es reconstrucción declarada: la fuente sólo dice de quién es y que tiene alto. No lleva teja, ni cal y canto, ni reja, que serían arquitectura colonial tardía",
-          "la mesa de tabla es inferencia a partir del vaso «que tenía delante»: es reversible, y podría resolverse igual con una repisa o un poyo"
+          "el banco corrido es invención de mobiliario, reversible sin coste: la mesa y el vaso que esta hoja llevaba salen de ella porque el canon reescrito pone la escena del vaso en Pirsa, antes del viaje"
         ]
       },
       "prompt_spec": {
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Pirsa V1 - spatial_model",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Paja de techo como tiras finas superpuestas; manta pintada como papel con el dibujo recortado y no impreso; hábito mercedario como tres planos blancos de distinto gramaje. Capas escalonadas en profundidad que construyen la loma sembrada y el interior de la iglesia por planos superpuestos, no por perspectiva atmosférica pintada.",
-        "primary_request": "planta, materiales y relacion con el cuerpo que la habita para La casa donde lo alojan en Anserma. Interior de la casa de un vecino español de la villa, no una casa indígena: una sola pieza alta y llena de hombres de pie, con la mesa y el vaso en el centro del cuadro y la techumbre visible por encima de las cabezas —porque es de lo alto de esa techumbre de donde caen las piedras—. Es el único espacio cerrado de la biblia donde hay mueble y donde el techo participa de la acción.",
+        "primary_request": "planta, materiales y relacion con el cuerpo que la habita para La casa de Juan Pacheco en Anserma. Interior de la casa de un vecino español de la villa, no una casa indígena: una sola pieza alta y llena de hombres de pie mirando hacia arriba, con la techumbre visible por encima de las cabezas —porque es de lo alto de ese techo de donde caen las piedras— y Tamaracunga en medio, tapado. Es el único espacio cerrado de la biblia donde el techo participa de la acción.",
         "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Pieza que contiene de pie a «todos los más de los cristianos que estaban en el pueblo» y con techo bastante alto para que una piedra caiga desde arriba sin que se vea quién la tira: es más alta que ancha en la lectura, al revés que la iglesia.",
         "lighting_mood": "Noche cerrada de interior sin Sacramento: luz baja, de una sola fuente de llama, que deja la mayor parte del encuadre en penumbra de papel oscuro y hace que cada canto proyecte su sombra sobre la capa de atrás. Un único amanecer en toda la biblia —el de la primera misa, que apaga el ruido—: luz rasante y fría por una abertura, sin disco solar, sin rayos volumétricos y sin ningún haz celestial. En exterior, luz alta y difusa de vertiente abierta.",
-        "materials_textures": "techumbre alta a la vista, en tiras y vigas que se leen desde abajo y ocupan el tercio superior del cuadro; mesa de tabla gruesa, la única pieza de mobiliario propio de la biblia, con el canto del papel deliberadamente grueso; muro de casa de poblador en planos cerrados, más regulares que los de la iglesia y sin la horizontal de la paja; piedras pequeñas de papel gris, recortadas de canto duro, detenidas a media caída entre la techumbre y las cabezas; vaso sobre la mesa, en barro cocido o vidrio basto, como único objeto de la escena a escala de mano",
+        "materials_textures": "techumbre alta a la vista, en tiras y vigas que se leen desde abajo y ocupan el tercio superior del cuadro; muro de casa de poblador en planos cerrados, más regulares que los de la iglesia y sin la horizontal de la paja; piedras pequeñas de papel gris, recortadas de canto duro, detenidas a media caída entre la techumbre y las cabezas; banco o poyo corrido de tabla junto al muro, único mueble, para que la pieza se lea habitada y no vacía",
         "era": "1549, y son tres capas que no se mezclan en un mismo cuerpo. Mundo indígena de la comarca de Anserma: cuerpo desnudo y descalzo, manta larga y maure en los principales, mantas de algodón pintadas, collares de oro, zarcillos, nariguera de pelotita, cabello muy peinado, casas desviadas, dardo, lanza y macana de palma negra; sin hierro, sin cruz, sin caballo, sin deformación craneal. Villa española de diez años: iglesia de paja sin Sacramento, casa de un vecino, hábito mercedario blanco con escudo, estola, agua bendita, cruces de palo en las manos, cuerdas al cinto, vaso de mesa, sombrero; sin catedral, sin retablo, sin imaginería barroca, sin cal y canto. Memoria posterior: no entra a ninguna lámina.",
         "constraints": [
           "documentado: «se fueron derechos con el cacique a las casas deste Juan Pacheco», vecino de la villa — es la casa de un poblador español dentro de Anserma, no una casa de paja del repertorio indígena como supuso el censo",
           "documentado: en ella se juntan «todos los más de los cristianos que estaban en el pueblo»",
           "documentado: «todos vían caer piedras pequeñas de lo alto de la casa», de modo que la casa tiene altura interior y techumbre y ambas cosas son necesarias en la lámina",
-          "documentado: «teniendo delante un vaso para beber… se alzaba el vaso con el vino en el aire» — la mesa y el vaso son de esta casa y no de la iglesia",
+          "documentado: aquí se oye además ««hu, hu, hu» rápido y recio, el mismo grito con que los indios salen a la guerra»; el vaso de vino ocurre antes, en Pirsa, y no es de esta casa",
           "documentado: «Todo esto pasó de noche»: esta casa no conoce otra luz que la de una llama",
           "El corpus no nombra un solo color: la paleta entera sale del territorio y del material, nunca del gusto. Tierra, paja, lana blanca y noche.",
           "El blanco es de la orden y de nadie más: el hábito mercedario es el único blanco saturado de la biblia, y contra él se lee todo lo demás.",
@@ -3051,6 +3595,11 @@
           "myth": "el-exorcismo-de-tamaracunga",
           "field": "mito",
           "note": "El Diablo del Carnaval de Riosucio representa vida, alegría, amistad y sátira dentro de una tradición festiva propia y no tiene continuidad documentada con las presencias de 1549: es la contaminación más probable del corpus y queda prohibida por nombre."
+        },
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "El canon reescrito añade efectos que la regla no enumeraba: pasos dentro de la iglesia cerrada, bofetones que arrojan el sombrero y una saliva podrida y hedionda escupida en la cara."
         }
       ],
       "design_contract": {
@@ -3065,7 +3614,7 @@
         "scale": "Todo ocurre a escala de cuerpo y de mano —una piedra que cabe en el puño, un vaso de mesa, un hombre alzado poco más arriba de las cabezas—: nada crece, nada se agiganta y nada ocupa el cielo. La desproporción es precisamente lo que convertiría el efecto en aparición.",
         "continuity_markers": [
           "el agente nunca aparece: ni demonio, ni cuerno, ni silueta, ni sombra con forma, en ninguna fase y en ninguna lámina",
-          "los cinco efectos son los del texto y no hay un sexto: piedras que caen y silban, golpes y alaridos, el vaso que se alza y se vacía y vuelve a llenarse, el cuerpo alzado, la boca tapada con barro",
+          "los efectos son los del canon reescrito y no hay otro: piedras que pasan por el aire y silban, el cuerpo llevado por el aire, el vaso que se alza, se vacía y vuelve a llenarse, el barro en la boca, las piedras que caen del techo, el «hu, hu, hu», los pasos dentro de la iglesia cerrada, el cuerpo dejado cabeza abajo, los bofetones que arrojan el sombrero y la saliva hedionda",
           "toda la regla es nocturna: al amanecer cesa, y no hay ninguna lámina de fenómeno con luz de día",
           "las figuras invertidas que sólo él ve no se dibujan en ninguna fase: la fuente no da una sola línea de su forma"
         ],
@@ -3075,13 +3624,15 @@
           "dossier §1 (pir-cieza-1553): «Todo esto pasó de noche» y el ruido cesa en el punto en que comienza la misa",
           "dossier §2 (pir-cieza-1553): el único sonido descrito es «Hu, hu, hu», el grito de guerra indígena puesto en boca del enemigo cristiano: es materia simbólica de primer orden y no se ilustra, se declara",
           "dossier §2 (voz de Gabriel Campeón, vía expediente ansermas): «nuestros ansermas no tuvieron diablo como lo tenían los españoles; éstos llamaron diablos a nuestros dioses porque no fueron capaces de entenderlos» — el diablo de este relato es un objeto español, no un ser del territorio",
-          "dossier §11, salvaguarda 2: lo marcado do_not_visualize no entra a un modelo ni a una escena aunque sea visualmente atractivo"
+          "dossier §11, salvaguarda 2: lo marcado do_not_visualize no entra a un modelo ni a una escena aunque sea visualmente atractivo",
+          "canon, campo mito: en la iglesia se oyen «pasos dentro» antes de abrirla, y adentro «le dieron tantos bofetones que le arrojaron lejos el sombrero» y «le escupieron en la cara una saliva podrida y hedionda»; al empezar la misa «no se volvió a oír nada»"
         ],
         "editorial_features": [
           "la decisión de suprimir también la sombra del agente, y no sólo su cuerpo, es lectura de la técnica y es reversible: en una ilustración de papel con sombras físicas, dejar una sombra sin pieza que la produzca sería dibujar el demonio por la puerta de atrás",
           "el barro en la boca se resuelve como mancha plana en el borde del cuadro y no en primer plano: la razón es evitar lo grotesco, y es decisión editorial, no de fuente",
           "el orden de las cinco fases en la lámina es el del relato, pero repartirlas en una sola plancha de fases es composición declarada: la fuente las cuenta seguidas, no simultáneas",
-          "queda prohibido por nombre cualquier eco del Diablo del Carnaval de Riosucio, que es figura festiva de vida, alegría, amistad y sátira y no tiene continuidad documentada con estas presencias: es la contaminación más probable del corpus"
+          "queda prohibido por nombre cualquier eco del Diablo del Carnaval de Riosucio, que es figura festiva de vida, alegría, amistad y sátira y no tiene continuidad documentada con estas presencias: es la contaminación más probable del corpus",
+          "La saliva hedionda no se dibuja: es del mismo orden que el barro y queda fuera por lo grotesco; los bofetones se leen sólo por el sombrero que vuela lejos, sin mano que lo golpee."
         ]
       },
       "prompt_spec": {
@@ -3100,6 +3651,7 @@
           "documentado: el único sonido descrito es «Hu, hu, hu», el grito de guerra indígena puesto en boca del enemigo cristiano: es materia simbólica de primer orden y no se ilustra, se declara",
           "documentado: dossier §2 (voz de Gabriel Campeón, vía expediente ansermas): «nuestros ansermas no tuvieron diablo como lo tenían los españoles; éstos llamaron diablos a nuestros dioses porque no fueron capaces de entenderlos» — el diablo de este relato es un objeto español, no un ser del territorio",
           "documentado: lo marcado do_not_visualize no entra a un modelo ni a una escena aunque sea visualmente atractivo",
+          "documentado: en la iglesia se oyen «pasos dentro» antes de abrirla, y adentro «le dieron tantos bofetones que le arrojaron lejos el sombrero» y «le escupieron en la cara una saliva podrida y hedionda»; al empezar la misa «no se volvió a oír nada»",
           "El corpus no nombra un solo color: la paleta entera sale del territorio y del material, nunca del gusto. Tierra, paja, lana blanca y noche.",
           "El blanco es de la orden y de nadie más: el hábito mercedario es el único blanco saturado de la biblia, y contra él se lee todo lo demás.",
           "El oro es del cuerpo indígena, es materia y no luz —papel dorado mate, granulado—, y sólo aparece si hay un cuerpo que lo lleve: nunca como montón ni como pieza suelta.",
@@ -3164,7 +3716,7 @@
         ],
         "documented_features": [
           "dossier §5 (pir-cieza-1553): «teniendo delante un vaso para beber… se alzaba el vaso con el vino en el aire» — Cieza escribe vaso, no copa: es vaso de mesa colonial de 1549, no cáliz y no copa de pie",
-          "dossier §5 (pir-cieza-1553): «caminaron con el indio en medio… llevando tres cruces en las manos» — no son cruces colgadas ni pectorales, y el canon las llama «sencillas», lo que concuerda con una doctrina de paja de 1549",
+          "dossier §5 (pir-cieza-1553): «caminaron con el indio en medio… llevando tres cruces en las manos» — no son cruces colgadas ni pectorales; el canon reescrito dice sólo «tres cruces en las manos», y la doctrina de paja de 1549 las hace de palo",
           "dossier §5 (pir-cieza-1553): «atando unas cuerdas a los cintos» para no ser despeñados: van al cinto, no al cuerpo, y sólo en el tramo de riscos",
           "dossier §5 (pir-cieza-1553): «poniéndole luego una estola, y le echaron agua bendita» — la estola es el único paramento nombrado y se usa sobre el hábito, fuera de misa",
           "dossier §5 (pir-cieza-1553): en esta misma comarca los señores «tenían muchos [vasos] de oro… con que bebían»; el vaso del relato no se dora porque el texto no lo dice, pero el objeto está cargado en los dos mundos",
@@ -3188,7 +3740,7 @@
         "era": "1549, y son tres capas que no se mezclan en un mismo cuerpo. Mundo indígena de la comarca de Anserma: cuerpo desnudo y descalzo, manta larga y maure en los principales, mantas de algodón pintadas, collares de oro, zarcillos, nariguera de pelotita, cabello muy peinado, casas desviadas, dardo, lanza y macana de palma negra; sin hierro, sin cruz, sin caballo, sin deformación craneal. Villa española de diez años: iglesia de paja sin Sacramento, casa de un vecino, hábito mercedario blanco con escudo, estola, agua bendita, cruces de palo en las manos, cuerdas al cinto, vaso de mesa, sombrero; sin catedral, sin retablo, sin imaginería barroca, sin cal y canto. Memoria posterior: no entra a ninguna lámina.",
         "constraints": [
           "documentado: «teniendo delante un vaso para beber… se alzaba el vaso con el vino en el aire» — Cieza escribe vaso, no copa: es vaso de mesa colonial de 1549, no cáliz y no copa de pie",
-          "documentado: «caminaron con el indio en medio… llevando tres cruces en las manos» — no son cruces colgadas ni pectorales, y el canon las llama «sencillas», lo que concuerda con una doctrina de paja de 1549",
+          "documentado: «caminaron con el indio en medio… llevando tres cruces en las manos» — no son cruces colgadas ni pectorales; el canon reescrito dice sólo «tres cruces en las manos», y la doctrina de paja de 1549 las hace de palo",
           "documentado: «atando unas cuerdas a los cintos» para no ser despeñados: van al cinto, no al cuerpo, y sólo en el tramo de riscos",
           "documentado: «poniéndole luego una estola, y le echaron agua bendita» — la estola es el único paramento nombrado y se usa sobre el hábito, fuera de misa",
           "documentado: en esta misma comarca los señores «tenían muchos [vasos] de oro… con que bebían»; el vaso del relato no se dora porque el texto no lo dice, pero el objeto está cargado en los dos mundos",
@@ -3217,6 +3769,449 @@
           "view_type": "object_three_quarter",
           "purpose": "hechura, escala y uso del objeto",
           "aspect": "1:1",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "casa_de_tamaracunga_en_pirsa__spatial_model": {
+      "purpose": "spatial_model",
+      "entity_refs": [
+        "casa_de_tamaracunga_en_pirsa"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "El canon reescrito ordena la noche en dos lugares: en Pirsa, antes de «decidieron llevarlo a la villa», ocurren las auras, las piedras que silban, el cuerpo llevado por el aire, el vaso de vino y el barro; y el relato termina «Se fue a su casa contento»."
+        },
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "Cieza describe la comarca con «las casas, desviadas alguna distancia unas de otras» y, en un pueblo vecino, «una casa muy grande a la entrada de su pueblo» con una plaza pequeña rodeada de cañas gordas (dossier §4)."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Casa suelta a media ladera abierta, separada de las vecinas por sembrado, con un interior bajo donde un hombre sentado en el suelo tiene el vaso delante y una manta sobre la cabeza: se reconoce porque es lo contrario de la casa de Pacheco —baja, oscura, de materia vegetal y sin muro de tabla— y porque por su puerta se ve la ladera sin selva.",
+        "materials": [
+          "cubierta de hoja o paja en tiras superpuestas, con el alero bajo que casi toca el suelo",
+          "armazón de palos y cañas gordas atadas, como espiral de quilling sólo en los amarres",
+          "suelo de tierra apisonada como un plano liso de papel pardo",
+          "el vaso de mesa colonial como único objeto ajeno dentro de la casa: es lo que dice que los cristianos ya han entrado"
+        ],
+        "palette_logic": "Noche de interior en pardos de paja y tierra; el único acontecimiento de color es el rojo del vino en el vaso, que se retira y vuelve. Por la puerta, la ladera abierta en azul noche.",
+        "scale": "Casa de una planta, con el alero a la altura del hombro de un hombre de pie; dentro caben el hombre sentado, los dos cristianos de pie y poco más. Plano general 16:9 con la casa y la ladera, y el interior leído por la puerta abierta.",
+        "continuity_markers": [
+          "la casa está sola en la ladera, con las vecinas a distancia: nunca aldea compacta",
+          "el vaso de vino está en esta casa y en ninguna otra",
+          "ninguna cruz, imagen ni objeto cristiano dentro, salvo el vaso",
+          "la ladera de fuera es la del camino: sin selva cerrada"
+        ],
+        "documented_features": [
+          "El poblamiento de la comarca es disperso, «las casas, desviadas alguna distancia unas de otras» (dossier §4, pir-cieza-1553 cap. XVI)",
+          "«Casi cuatro leguas desta villa está un pueblo llamado Pirsa» (dossier §3); el canon dice «a cuatro leguas de la villa de Anserma había un pueblo llamado Pirsa»",
+          "Aquí, antes del viaje, ocurren las auras, las piedras que silban, el cuerpo llevado por el aire, el vaso de vino y el barro en la boca (canon, campo mito)",
+          "La comarca es de «sierras muy grandes, sin montaña ninguna»: ladera abierta, no selva (dossier §1)"
+        ],
+        "editorial_features": [
+          "La hechura de la casa no está en ninguna fuente: cubierta vegetal, cañas gordas y suelo de tierra se toman de la única casa que Cieza describe en la comarca y del repertorio de materiales de la región, declarados reconstrucción y reversibles. Nada de tambo sobre pilotes del Chocó ni de bohío muisca.",
+          "Que la escena ocurra en su propia casa es inferencia del canon —llama a un cristiano «que vivía cerca», y al final «se fue a su casa»—; el texto no nombra el lugar de la noche en Pirsa. Reversible si una lectura del cap. CXVIII lo sitúa en otra parte.",
+          "Ningún oro, ídolo ni casa de adoración dentro: Cieza anota que allí no los había (canon, campo historia)."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Pirsa V1 - spatial_model",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Paja de techo como tiras finas superpuestas; manta pintada como papel con el dibujo recortado y no impreso; hábito mercedario como tres planos blancos de distinto gramaje. Capas escalonadas en profundidad que construyen la loma sembrada y el interior de la iglesia por planos superpuestos, no por perspectiva atmosférica pintada.",
+        "primary_request": "planta, materiales y relacion con el cuerpo que la habita para La casa de Tamaracunga en Pirsa. Casa suelta a media ladera abierta, separada de las vecinas por sembrado, con un interior bajo donde un hombre sentado en el suelo tiene el vaso delante y una manta sobre la cabeza: se reconoce porque es lo contrario de la casa de Pacheco —baja, oscura, de materia vegetal y sin muro de tabla— y porque por su puerta se ve la ladera sin selva.",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Casa de una planta, con el alero a la altura del hombro de un hombre de pie; dentro caben el hombre sentado, los dos cristianos de pie y poco más. Plano general 16:9 con la casa y la ladera, y el interior leído por la puerta abierta.",
+        "lighting_mood": "Noche cerrada de interior sin Sacramento: luz baja, de una sola fuente de llama, que deja la mayor parte del encuadre en penumbra de papel oscuro y hace que cada canto proyecte su sombra sobre la capa de atrás. Un único amanecer en toda la biblia —el de la primera misa, que apaga el ruido—: luz rasante y fría por una abertura, sin disco solar, sin rayos volumétricos y sin ningún haz celestial. En exterior, luz alta y difusa de vertiente abierta.",
+        "materials_textures": "cubierta de hoja o paja en tiras superpuestas, con el alero bajo que casi toca el suelo; armazón de palos y cañas gordas atadas, como espiral de quilling sólo en los amarres; suelo de tierra apisonada como un plano liso de papel pardo; el vaso de mesa colonial como único objeto ajeno dentro de la casa: es lo que dice que los cristianos ya han entrado",
+        "era": "1549, y son tres capas que no se mezclan en un mismo cuerpo. Mundo indígena de la comarca de Anserma: cuerpo desnudo y descalzo, manta larga y maure en los principales, mantas de algodón pintadas, collares de oro, zarcillos, nariguera de pelotita, cabello muy peinado, casas desviadas, dardo, lanza y macana de palma negra; sin hierro, sin cruz, sin caballo, sin deformación craneal. Villa española de diez años: iglesia de paja sin Sacramento, casa de un vecino, hábito mercedario blanco con escudo, estola, agua bendita, cruces de palo en las manos, cuerdas al cinto, vaso de mesa, sombrero; sin catedral, sin retablo, sin imaginería barroca, sin cal y canto. Memoria posterior: no entra a ninguna lámina.",
+        "constraints": [
+          "documentado: El poblamiento de la comarca es disperso, «las casas, desviadas alguna distancia unas de otras» (dossier §4, pir-cieza-1553 cap. XVI)",
+          "documentado: «Casi cuatro leguas desta villa está un pueblo llamado Pirsa» (dossier §3); el canon dice «a cuatro leguas de la villa de Anserma había un pueblo llamado Pirsa»",
+          "documentado: Aquí, antes del viaje, ocurren las auras, las piedras que silban, el cuerpo llevado por el aire, el vaso de vino y el barro en la boca (canon, campo mito)",
+          "documentado: La comarca es de «sierras muy grandes, sin montaña ninguna»: ladera abierta, no selva (dossier §1)",
+          "El corpus no nombra un solo color: la paleta entera sale del territorio y del material, nunca del gusto. Tierra, paja, lana blanca y noche.",
+          "El blanco es de la orden y de nadie más: el hábito mercedario es el único blanco saturado de la biblia, y contra él se lee todo lo demás.",
+          "El oro es del cuerpo indígena, es materia y no luz —papel dorado mate, granulado—, y sólo aparece si hay un cuerpo que lo lleve: nunca como montón ni como pieza suelta.",
+          "El único acontecimiento de color permitido es el vino que desaparece del vaso y vuelve: un rojo oscuro que se vacía, y ningún otro rojo saturado en toda la biblia.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Ningún demonio, cuerno, silueta con cuerpo ni sombra con forma: se dibuja el efecto y nunca el agente.",
+          "Ningún haz de luz celestial, ninguna aureola, ningún resplandor sobre una figura.",
+          "Ningún cuervo, ningún cóndor y ningún gallinazo negro en lugar del aura cabecirroja.",
+          "Ninguna alusión al Diablo del Carnaval de Riosucio ni a su iconografía festiva.",
+          "Ningún exorcismo explícito y ningún fraile levitando: eso es la crónica de 1750, no el relato.",
+          "Ninguna cruz, ningún hierro, ningún caballo y ninguna prenda europea sobre un cuerpo del mundo indígena.",
+          "Ninguna deformación craneal, ningún tocado inventado y ningún patrón textil o pieza de orfebrería copiada de un ejemplar real.",
+          "Ninguna arquitectura colonial tardía: ni cal y canto, ni teja, ni retablo, ni sagrario, ni campana, ni imaginería barroca."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. El cuerpo se arma con pocos planos grandes de papel, no con músculos. El plumaje del aura sigue la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca pluma por pluma. El quilling se reserva para lo que enrolla de verdad: la cuerda al cinto, el humo de una vela, el remolino del vino en el vaso."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "spatial_establishing",
+          "purpose": "planta, materiales y relacion con el cuerpo que la habita",
+          "aspect": "16:9",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_hombre_adulto__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_hombre_adulto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "Más de doscientos indios salen con Tamaracunga hacia la villa, tan asustados que no se atreven a acercársele."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre adulto de pie, desnudo y descalzo, con el maure como tira corta a la cintura y oro sólo sobre la piel —zarcillos en la oreja—; las manos vacías y el cuerpo un poco vuelto hacia atrás, como quien sigue a distancia y no se atreve a acercarse.",
+        "materials": [
+          "piel en planos grandes de papel pardo mate de un solo tono",
+          "maure a la cintura como tira corta y aparte, del ancho de una mano; en los principales, manta larga de algodón como plano grande sobre los hombros",
+          "zarcillos de oro mate granulado en la oreja, papel dorado sin brillo"
+        ],
+        "palette_logic": "Pardo de piel y crudo de algodón, con el oro como único grano brillante y siempre sobre el cuerpo.",
+        "scale": "Estatura adulta corriente, la misma que los cristianos: la diferencia es de cobertura, no de tamaño. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "descalzo siempre",
+          "manos vacías: ni dardo, ni lanza, ni macana, aunque estén documentadas para la comarca",
+          "oro sólo sobre la piel, nunca en la mano"
+        ],
+        "documented_features": [
+          "dossier §6 (pir-cieza-1553, cap. XVI): la gente comarcana de Anserma «anda desnuda y descalza»; es el mismo cronista y la misma fórmula, «comarcano», con que presenta a Tamaracunga",
+          "dossier §6 (pir-hsai-1948): la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya: cabeza de perfil corriente",
+          "dossier §0, capa A: el mundo de Pirsa en 1549 es anterior a toda prenda europea: nada de camisa, sombrero de copa ni tela de Castilla sobre estos cuerpos, salvo el sombrero que el texto da a Tamaracunga",
+          "dossier §6 (pir-cieza-1553, cap. XVI): «los principales y señores se cubren con una manta larga, y traen por la cintura maures»",
+          "dossier §6 (pir-cieza-1553, cap. XVI): las armas de la comarca son «dardos, lanzas, macanas de palma negra», ausentes de este relato",
+          "canon, campo mito: «Salieron con ellos más de doscientos indios, aunque tan asustados que no se atrevían a acercársele»"
+        ],
+        "editorial_features": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca— y el cuerpo se arma con pocos planos grandes de papel pardo mate, sin músculo modelado: cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "El pelo es una o dos piezas planas grandes de canto limpio; nunca mechón por mechón.",
+          "Ningún tipo se identifica con el resguardo Embera Chamí de Escopetera y Pirza de hoy: entre unos y otros hay cinco siglos de desplazamiento (dossier §3).",
+          "La manta larga es de principal y va sólo en la variante de principal de esta hoja; el hombre común va con maure. El reparto es composición reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Pirsa V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Paja de techo como tiras finas superpuestas; manta pintada como papel con el dibujo recortado y no impreso; hábito mercedario como tres planos blancos de distinto gramaje. Capas escalonadas en profundidad que construyen la loma sembrada y el interior de la iglesia por planos superpuestos, no por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · hombre de Pirsa adulto. Hombre adulto de pie, desnudo y descalzo, con el maure como tira corta a la cintura y oro sólo sobre la piel —zarcillos en la oreja—; las manos vacías y el cuerpo un poco vuelto hacia atrás, como quien sigue a distancia y no se atreve a acercarse.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura adulta corriente, la misma que los cristianos: la diferencia es de cobertura, no de tamaño. Cuerpo entero 9:16.",
+        "lighting_mood": "Noche cerrada de interior sin Sacramento: luz baja, de una sola fuente de llama, que deja la mayor parte del encuadre en penumbra de papel oscuro y hace que cada canto proyecte su sombra sobre la capa de atrás. Un único amanecer en toda la biblia —el de la primera misa, que apaga el ruido—: luz rasante y fría por una abertura, sin disco solar, sin rayos volumétricos y sin ningún haz celestial. En exterior, luz alta y difusa de vertiente abierta.",
+        "materials_textures": "piel en planos grandes de papel pardo mate de un solo tono; maure a la cintura como tira corta y aparte, del ancho de una mano; en los principales, manta larga de algodón como plano grande sobre los hombros; zarcillos de oro mate granulado en la oreja, papel dorado sin brillo",
+        "era": "1549, y son tres capas que no se mezclan en un mismo cuerpo. Mundo indígena de la comarca de Anserma: cuerpo desnudo y descalzo, manta larga y maure en los principales, mantas de algodón pintadas, collares de oro, zarcillos, nariguera de pelotita, cabello muy peinado, casas desviadas, dardo, lanza y macana de palma negra; sin hierro, sin cruz, sin caballo, sin deformación craneal. Villa española de diez años: iglesia de paja sin Sacramento, casa de un vecino, hábito mercedario blanco con escudo, estola, agua bendita, cruces de palo en las manos, cuerdas al cinto, vaso de mesa, sombrero; sin catedral, sin retablo, sin imaginería barroca, sin cal y canto. Memoria posterior: no entra a ninguna lámina.",
+        "constraints": [
+          "documentado: la gente comarcana de Anserma «anda desnuda y descalza»; es el mismo cronista y la misma fórmula, «comarcano», con que presenta a Tamaracunga",
+          "documentado: la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya: cabeza de perfil corriente",
+          "documentado: el mundo de Pirsa en 1549 es anterior a toda prenda europea: nada de camisa, sombrero de copa ni tela de Castilla sobre estos cuerpos, salvo el sombrero que el texto da a Tamaracunga",
+          "documentado: «los principales y señores se cubren con una manta larga, y traen por la cintura maures»",
+          "documentado: las armas de la comarca son «dardos, lanzas, macanas de palma negra», ausentes de este relato",
+          "documentado: «Salieron con ellos más de doscientos indios, aunque tan asustados que no se atrevían a acercársele»",
+          "El corpus no nombra un solo color: la paleta entera sale del territorio y del material, nunca del gusto. Tierra, paja, lana blanca y noche.",
+          "El blanco es de la orden y de nadie más: el hábito mercedario es el único blanco saturado de la biblia, y contra él se lee todo lo demás.",
+          "El oro es del cuerpo indígena, es materia y no luz —papel dorado mate, granulado—, y sólo aparece si hay un cuerpo que lo lleve: nunca como montón ni como pieza suelta.",
+          "El único acontecimiento de color permitido es el vino que desaparece del vaso y vuelve: un rojo oscuro que se vacía, y ningún otro rojo saturado en toda la biblia.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Ningún demonio, cuerno, silueta con cuerpo ni sombra con forma: se dibuja el efecto y nunca el agente.",
+          "Ningún haz de luz celestial, ninguna aureola, ningún resplandor sobre una figura.",
+          "Ningún cuervo, ningún cóndor y ningún gallinazo negro en lugar del aura cabecirroja.",
+          "Ninguna alusión al Diablo del Carnaval de Riosucio ni a su iconografía festiva.",
+          "Ningún exorcismo explícito y ningún fraile levitando: eso es la crónica de 1750, no el relato.",
+          "Ninguna cruz, ningún hierro, ningún caballo y ninguna prenda europea sobre un cuerpo del mundo indígena.",
+          "Ninguna deformación craneal, ningún tocado inventado y ningún patrón textil o pieza de orfebrería copiada de un ejemplar real.",
+          "Ninguna arquitectura colonial tardía: ni cal y canto, ni teja, ni retablo, ni sagrario, ni campana, ni imaginería barroca."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. El cuerpo se arma con pocos planos grandes de papel, no con músculos. El plumaje del aura sigue la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca pluma por pluma. El quilling se reserva para lo que enrolla de verdad: la cuerda al cinto, el humo de una vela, el remolino del vino en el vaso."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_adulta__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_adulta"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "Tras la misa, la mujer de Tamaracunga pide el agua del bautismo, como él."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer adulta de pie con la manta pequeña de algodón pintada ceñida al cuerpo, el pelo muy peinado hacia atrás y el oro sobre la piel —collar de láminas redondas, zarcillos y la pelotita en la ventana de la nariz—.",
+        "materials": [
+          "manta pequeña de algodón como plano recortado, con el dibujo pintado resuelto como lenguaje de forma —bandas, campos, trazos— y nunca como un patrón real",
+          "collar de láminas redondas y en estrella, zarcillos y pelotita de nariz en papel dorado mate granulado",
+          "pelo como una sola pieza plana peinada hacia atrás, sin tocado"
+        ],
+        "palette_logic": "Crudo de algodón con las pinturas en dos o tres tierras apagadas, pardo de piel y el oro como grano sin brillo.",
+        "scale": "Algo por debajo de la estatura del hombre. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "la manta pequeña siempre, nunca desnuda de torso en lámina",
+          "el oro sobre la piel",
+          "pelo muy peinado, sin tocado de plumas"
+        ],
+        "documented_features": [
+          "dossier §6 (pir-cieza-1553, cap. XVI): la gente comarcana de Anserma «anda desnuda y descalza»; es el mismo cronista y la misma fórmula, «comarcano», con que presenta a Tamaracunga",
+          "dossier §6 (pir-hsai-1948): la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya: cabeza de perfil corriente",
+          "dossier §0, capa A: el mundo de Pirsa en 1549 es anterior a toda prenda europea: nada de camisa, sombrero de copa ni tela de Castilla sobre estos cuerpos, salvo el sombrero que el texto da a Tamaracunga",
+          "dossier §6 (pir-cieza-1553, cap. XVI): «las mujeres traen mantas pequeñas y son de buen parescer»; «mantas de algodón galanas, con muchas pinturas», «los cabellos muy peinados», «collares de piezas ricas de oro», «zarcillos» y «unas como pelotitas de oro fino» en las ventanas de la nariz",
+          "canon, campo mito: al final «lo mismo pidieron su mujer y su hijo»"
+        ],
+        "editorial_features": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca— y el cuerpo se arma con pocos planos grandes de papel pardo mate, sin músculo modelado: cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "El pelo es una o dos piezas planas grandes de canto limpio; nunca mechón por mechón.",
+          "Ningún tipo se identifica con el resguardo Embera Chamí de Escopetera y Pirza de hoy: entre unos y otros hay cinco siglos de desplazamiento (dossier §3).",
+          "Los dibujos de la manta son lenguaje, no ejemplar: ningún patrón real se copia (regla del ejemplar, §11)."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Pirsa V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Paja de techo como tiras finas superpuestas; manta pintada como papel con el dibujo recortado y no impreso; hábito mercedario como tres planos blancos de distinto gramaje. Capas escalonadas en profundidad que construyen la loma sembrada y el interior de la iglesia por planos superpuestos, no por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer de Pirsa adulta. Mujer adulta de pie con la manta pequeña de algodón pintada ceñida al cuerpo, el pelo muy peinado hacia atrás y el oro sobre la piel —collar de láminas redondas, zarcillos y la pelotita en la ventana de la nariz—.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Algo por debajo de la estatura del hombre. Cuerpo entero 9:16.",
+        "lighting_mood": "Noche cerrada de interior sin Sacramento: luz baja, de una sola fuente de llama, que deja la mayor parte del encuadre en penumbra de papel oscuro y hace que cada canto proyecte su sombra sobre la capa de atrás. Un único amanecer en toda la biblia —el de la primera misa, que apaga el ruido—: luz rasante y fría por una abertura, sin disco solar, sin rayos volumétricos y sin ningún haz celestial. En exterior, luz alta y difusa de vertiente abierta.",
+        "materials_textures": "manta pequeña de algodón como plano recortado, con el dibujo pintado resuelto como lenguaje de forma —bandas, campos, trazos— y nunca como un patrón real; collar de láminas redondas y en estrella, zarcillos y pelotita de nariz en papel dorado mate granulado; pelo como una sola pieza plana peinada hacia atrás, sin tocado",
+        "era": "1549, y son tres capas que no se mezclan en un mismo cuerpo. Mundo indígena de la comarca de Anserma: cuerpo desnudo y descalzo, manta larga y maure en los principales, mantas de algodón pintadas, collares de oro, zarcillos, nariguera de pelotita, cabello muy peinado, casas desviadas, dardo, lanza y macana de palma negra; sin hierro, sin cruz, sin caballo, sin deformación craneal. Villa española de diez años: iglesia de paja sin Sacramento, casa de un vecino, hábito mercedario blanco con escudo, estola, agua bendita, cruces de palo en las manos, cuerdas al cinto, vaso de mesa, sombrero; sin catedral, sin retablo, sin imaginería barroca, sin cal y canto. Memoria posterior: no entra a ninguna lámina.",
+        "constraints": [
+          "documentado: la gente comarcana de Anserma «anda desnuda y descalza»; es el mismo cronista y la misma fórmula, «comarcano», con que presenta a Tamaracunga",
+          "documentado: la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya: cabeza de perfil corriente",
+          "documentado: el mundo de Pirsa en 1549 es anterior a toda prenda europea: nada de camisa, sombrero de copa ni tela de Castilla sobre estos cuerpos, salvo el sombrero que el texto da a Tamaracunga",
+          "documentado: «las mujeres traen mantas pequeñas y son de buen parescer»; «mantas de algodón galanas, con muchas pinturas», «los cabellos muy peinados», «collares de piezas ricas de oro», «zarcillos» y «unas como pelotitas de oro fino» en las ventanas de la nariz",
+          "documentado: al final «lo mismo pidieron su mujer y su hijo»",
+          "El corpus no nombra un solo color: la paleta entera sale del territorio y del material, nunca del gusto. Tierra, paja, lana blanca y noche.",
+          "El blanco es de la orden y de nadie más: el hábito mercedario es el único blanco saturado de la biblia, y contra él se lee todo lo demás.",
+          "El oro es del cuerpo indígena, es materia y no luz —papel dorado mate, granulado—, y sólo aparece si hay un cuerpo que lo lleve: nunca como montón ni como pieza suelta.",
+          "El único acontecimiento de color permitido es el vino que desaparece del vaso y vuelve: un rojo oscuro que se vacía, y ningún otro rojo saturado en toda la biblia.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Ningún demonio, cuerno, silueta con cuerpo ni sombra con forma: se dibuja el efecto y nunca el agente.",
+          "Ningún haz de luz celestial, ninguna aureola, ningún resplandor sobre una figura.",
+          "Ningún cuervo, ningún cóndor y ningún gallinazo negro en lugar del aura cabecirroja.",
+          "Ninguna alusión al Diablo del Carnaval de Riosucio ni a su iconografía festiva.",
+          "Ningún exorcismo explícito y ningún fraile levitando: eso es la crónica de 1750, no el relato.",
+          "Ninguna cruz, ningún hierro, ningún caballo y ninguna prenda europea sobre un cuerpo del mundo indígena.",
+          "Ninguna deformación craneal, ningún tocado inventado y ningún patrón textil o pieza de orfebrería copiada de un ejemplar real.",
+          "Ninguna arquitectura colonial tardía: ni cal y canto, ni teja, ni retablo, ni sagrario, ni campana, ni imaginería barroca."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. El cuerpo se arma con pocos planos grandes de papel, no con músculos. El plumaje del aura sigue la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca pluma por pluma. El quilling se reserva para lo que enrolla de verdad: la cuerda al cinto, el humo de una vela, el remolino del vino en el vaso."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_joven__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_joven"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "La mujer de un hermano joven pide el bautismo con él y con su hijo."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Muchacha de la comarca, delgada y erguida, con la manta pequeña de algodón pintada, el pelo muy peinado y un solo par de zarcillos: menos oro que la mujer adulta y el cuerpo más recto.",
+        "materials": [
+          "manta pequeña de algodón con pintura en lenguaje de forma, más corta que la de la mujer adulta",
+          "zarcillos de oro mate como única pieza dorada",
+          "pelo en una pieza plana peinada hacia atrás"
+        ],
+        "palette_logic": "Crudo de algodón y pardo de piel; un solo punto de oro.",
+        "scale": "Un palmo por debajo de la mujer adulta. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "manta pequeña siempre",
+          "un solo par de zarcillos, sin collar",
+          "pelo peinado sin tocado"
+        ],
+        "documented_features": [
+          "dossier §6 (pir-cieza-1553, cap. XVI): la gente comarcana de Anserma «anda desnuda y descalza»; es el mismo cronista y la misma fórmula, «comarcano», con que presenta a Tamaracunga",
+          "dossier §6 (pir-hsai-1948): la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya: cabeza de perfil corriente",
+          "dossier §0, capa A: el mundo de Pirsa en 1549 es anterior a toda prenda europea: nada de camisa, sombrero de copa ni tela de Castilla sobre estos cuerpos, salvo el sombrero que el texto da a Tamaracunga",
+          "dossier §6 (pir-cieza-1553, cap. XVI): las mujeres de la comarca, con mantas pequeñas pintadas, pelo muy peinado y zarcillos"
+        ],
+        "editorial_features": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca— y el cuerpo se arma con pocos planos grandes de papel pardo mate, sin músculo modelado: cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "El pelo es una o dos piezas planas grandes de canto limpio; nunca mechón por mechón.",
+          "Ningún tipo se identifica con el resguardo Embera Chamí de Escopetera y Pirza de hoy: entre unos y otros hay cinco siglos de desplazamiento (dossier §3).",
+          "Que la mujer de Tamaracunga sea joven es inferencia de que él es «hermano joven»; el texto no le da edad. La reducción del oro por edad es decisión de hoja, reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Pirsa V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Paja de techo como tiras finas superpuestas; manta pintada como papel con el dibujo recortado y no impreso; hábito mercedario como tres planos blancos de distinto gramaje. Capas escalonadas en profundidad que construyen la loma sembrada y el interior de la iglesia por planos superpuestos, no por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer de Pirsa joven. Muchacha de la comarca, delgada y erguida, con la manta pequeña de algodón pintada, el pelo muy peinado y un solo par de zarcillos: menos oro que la mujer adulta y el cuerpo más recto.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Un palmo por debajo de la mujer adulta. Cuerpo entero 9:16.",
+        "lighting_mood": "Noche cerrada de interior sin Sacramento: luz baja, de una sola fuente de llama, que deja la mayor parte del encuadre en penumbra de papel oscuro y hace que cada canto proyecte su sombra sobre la capa de atrás. Un único amanecer en toda la biblia —el de la primera misa, que apaga el ruido—: luz rasante y fría por una abertura, sin disco solar, sin rayos volumétricos y sin ningún haz celestial. En exterior, luz alta y difusa de vertiente abierta.",
+        "materials_textures": "manta pequeña de algodón con pintura en lenguaje de forma, más corta que la de la mujer adulta; zarcillos de oro mate como única pieza dorada; pelo en una pieza plana peinada hacia atrás",
+        "era": "1549, y son tres capas que no se mezclan en un mismo cuerpo. Mundo indígena de la comarca de Anserma: cuerpo desnudo y descalzo, manta larga y maure en los principales, mantas de algodón pintadas, collares de oro, zarcillos, nariguera de pelotita, cabello muy peinado, casas desviadas, dardo, lanza y macana de palma negra; sin hierro, sin cruz, sin caballo, sin deformación craneal. Villa española de diez años: iglesia de paja sin Sacramento, casa de un vecino, hábito mercedario blanco con escudo, estola, agua bendita, cruces de palo en las manos, cuerdas al cinto, vaso de mesa, sombrero; sin catedral, sin retablo, sin imaginería barroca, sin cal y canto. Memoria posterior: no entra a ninguna lámina.",
+        "constraints": [
+          "documentado: la gente comarcana de Anserma «anda desnuda y descalza»; es el mismo cronista y la misma fórmula, «comarcano», con que presenta a Tamaracunga",
+          "documentado: la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya: cabeza de perfil corriente",
+          "documentado: el mundo de Pirsa en 1549 es anterior a toda prenda europea: nada de camisa, sombrero de copa ni tela de Castilla sobre estos cuerpos, salvo el sombrero que el texto da a Tamaracunga",
+          "documentado: las mujeres de la comarca, con mantas pequeñas pintadas, pelo muy peinado y zarcillos",
+          "El corpus no nombra un solo color: la paleta entera sale del territorio y del material, nunca del gusto. Tierra, paja, lana blanca y noche.",
+          "El blanco es de la orden y de nadie más: el hábito mercedario es el único blanco saturado de la biblia, y contra él se lee todo lo demás.",
+          "El oro es del cuerpo indígena, es materia y no luz —papel dorado mate, granulado—, y sólo aparece si hay un cuerpo que lo lleve: nunca como montón ni como pieza suelta.",
+          "El único acontecimiento de color permitido es el vino que desaparece del vaso y vuelve: un rojo oscuro que se vacía, y ningún otro rojo saturado en toda la biblia.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Ningún demonio, cuerno, silueta con cuerpo ni sombra con forma: se dibuja el efecto y nunca el agente.",
+          "Ningún haz de luz celestial, ninguna aureola, ningún resplandor sobre una figura.",
+          "Ningún cuervo, ningún cóndor y ningún gallinazo negro en lugar del aura cabecirroja.",
+          "Ninguna alusión al Diablo del Carnaval de Riosucio ni a su iconografía festiva.",
+          "Ningún exorcismo explícito y ningún fraile levitando: eso es la crónica de 1750, no el relato.",
+          "Ninguna cruz, ningún hierro, ningún caballo y ninguna prenda europea sobre un cuerpo del mundo indígena.",
+          "Ninguna deformación craneal, ningún tocado inventado y ningún patrón textil o pieza de orfebrería copiada de un ejemplar real.",
+          "Ninguna arquitectura colonial tardía: ni cal y canto, ni teja, ni retablo, ni sagrario, ni campana, ni imaginería barroca."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. El cuerpo se arma con pocos planos grandes de papel, no con músculos. El plumaje del aura sigue la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca pluma por pluma. El quilling se reserva para lo que enrolla de verdad: la cuerda al cinto, el humo de una vela, el remolino del vino en el vaso."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_nino__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_nino"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-exorcismo-de-tamaracunga",
+          "field": "mito",
+          "note": "El hijo de Tamaracunga pide el bautismo tras la misa."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Niño de seis u ocho años desnudo y descalzo, de pie junto a la pierna de su madre, con la cabeza grande respecto al tronco y sin una pieza de oro.",
+        "materials": [
+          "piel en planos grandes de papel pardo mate",
+          "pelo corto como una sola pieza plana"
+        ],
+        "palette_logic": "Pardo de piel, sin oro y sin algodón: el tipo más sobrio de la hoja.",
+        "scale": "A la altura de la cadera de un adulto. Cuerpo entero 9:16, con más aire alrededor.",
+        "continuity_markers": [
+          "desnudo y descalzo",
+          "sin oro",
+          "siempre junto a un adulto"
+        ],
+        "documented_features": [
+          "dossier §6 (pir-cieza-1553, cap. XVI): la gente comarcana de Anserma «anda desnuda y descalza»; es el mismo cronista y la misma fórmula, «comarcano», con que presenta a Tamaracunga",
+          "dossier §6 (pir-hsai-1948): la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya: cabeza de perfil corriente",
+          "dossier §0, capa A: el mundo de Pirsa en 1549 es anterior a toda prenda europea: nada de camisa, sombrero de copa ni tela de Castilla sobre estos cuerpos, salvo el sombrero que el texto da a Tamaracunga",
+          "dossier §6 (pir-cieza-1553, cap. XVI): la gente de la comarca «anda desnuda y descalza»",
+          "canon, campo mito: «lo mismo pidieron su mujer y su hijo»"
+        ],
+        "editorial_features": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca— y el cuerpo se arma con pocos planos grandes de papel pardo mate, sin músculo modelado: cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "El pelo es una o dos piezas planas grandes de canto limpio; nunca mechón por mechón.",
+          "Ningún tipo se identifica con el resguardo Embera Chamí de Escopetera y Pirza de hoy: entre unos y otros hay cinco siglos de desplazamiento (dossier §3).",
+          "La edad del hijo no está en el texto: se fija en niño porque es la única figura infantil posible del relato y la lámina la necesita pequeña. Reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Pirsa V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Paja de techo como tiras finas superpuestas; manta pintada como papel con el dibujo recortado y no impreso; hábito mercedario como tres planos blancos de distinto gramaje. Capas escalonadas en profundidad que construyen la loma sembrada y el interior de la iglesia por planos superpuestos, no por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · niño de Pirsa. Niño de seis u ocho años desnudo y descalzo, de pie junto a la pierna de su madre, con la cabeza grande respecto al tronco y sin una pieza de oro.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; A la altura de la cadera de un adulto. Cuerpo entero 9:16, con más aire alrededor.",
+        "lighting_mood": "Noche cerrada de interior sin Sacramento: luz baja, de una sola fuente de llama, que deja la mayor parte del encuadre en penumbra de papel oscuro y hace que cada canto proyecte su sombra sobre la capa de atrás. Un único amanecer en toda la biblia —el de la primera misa, que apaga el ruido—: luz rasante y fría por una abertura, sin disco solar, sin rayos volumétricos y sin ningún haz celestial. En exterior, luz alta y difusa de vertiente abierta.",
+        "materials_textures": "piel en planos grandes de papel pardo mate; pelo corto como una sola pieza plana",
+        "era": "1549, y son tres capas que no se mezclan en un mismo cuerpo. Mundo indígena de la comarca de Anserma: cuerpo desnudo y descalzo, manta larga y maure en los principales, mantas de algodón pintadas, collares de oro, zarcillos, nariguera de pelotita, cabello muy peinado, casas desviadas, dardo, lanza y macana de palma negra; sin hierro, sin cruz, sin caballo, sin deformación craneal. Villa española de diez años: iglesia de paja sin Sacramento, casa de un vecino, hábito mercedario blanco con escudo, estola, agua bendita, cruces de palo en las manos, cuerdas al cinto, vaso de mesa, sombrero; sin catedral, sin retablo, sin imaginería barroca, sin cal y canto. Memoria posterior: no entra a ninguna lámina.",
+        "constraints": [
+          "documentado: la gente comarcana de Anserma «anda desnuda y descalza»; es el mismo cronista y la misma fórmula, «comarcano», con que presenta a Tamaracunga",
+          "documentado: la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya: cabeza de perfil corriente",
+          "documentado: el mundo de Pirsa en 1549 es anterior a toda prenda europea: nada de camisa, sombrero de copa ni tela de Castilla sobre estos cuerpos, salvo el sombrero que el texto da a Tamaracunga",
+          "documentado: la gente de la comarca «anda desnuda y descalza»",
+          "documentado: «lo mismo pidieron su mujer y su hijo»",
+          "El corpus no nombra un solo color: la paleta entera sale del territorio y del material, nunca del gusto. Tierra, paja, lana blanca y noche.",
+          "El blanco es de la orden y de nadie más: el hábito mercedario es el único blanco saturado de la biblia, y contra él se lee todo lo demás.",
+          "El oro es del cuerpo indígena, es materia y no luz —papel dorado mate, granulado—, y sólo aparece si hay un cuerpo que lo lleve: nunca como montón ni como pieza suelta.",
+          "El único acontecimiento de color permitido es el vino que desaparece del vaso y vuelve: un rojo oscuro que se vacía, y ningún otro rojo saturado en toda la biblia.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Ningún demonio, cuerno, silueta con cuerpo ni sombra con forma: se dibuja el efecto y nunca el agente.",
+          "Ningún haz de luz celestial, ninguna aureola, ningún resplandor sobre una figura.",
+          "Ningún cuervo, ningún cóndor y ningún gallinazo negro en lugar del aura cabecirroja.",
+          "Ninguna alusión al Diablo del Carnaval de Riosucio ni a su iconografía festiva.",
+          "Ningún exorcismo explícito y ningún fraile levitando: eso es la crónica de 1750, no el relato.",
+          "Ninguna cruz, ningún hierro, ningún caballo y ninguna prenda europea sobre un cuerpo del mundo indígena.",
+          "Ninguna deformación craneal, ningún tocado inventado y ningún patrón textil o pieza de orfebrería copiada de un ejemplar real.",
+          "Ninguna arquitectura colonial tardía: ni cal y canto, ni teja, ni retablo, ni sagrario, ni campana, ni imaginería barroca."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. El cuerpo se arma con pocos planos grandes de papel, no con músculos. El plumaje del aura sigue la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca pluma por pluma. El quilling se reserva para lo que enrolla de verdad: la cuerda al cinto, el humo de una vela, el remolino del vino en el vaso."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],

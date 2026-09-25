@@ -1097,7 +1097,7 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-24"
   },
   "myths": {
     "el-aguila-canibal-y-la-madre-de-los-andoques": {
@@ -1274,6 +1274,21 @@
           "entity_id": "hoja_utileria_andoque_caza_y_trampa",
           "role": "plot_object",
           "note": "Utilería de caza, pesca y filo: el chinchorro de la trampa del mico, la atarraya que cierra la casa del fuego, el machete que pide el fantasma y el barbasco de la pesca. El arco y las flechas salen aparte porque recurren en tres relatos."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: la gente de la casa de Nenefi que tenía que esconderse en un canasto para ir al puerto y que amarra la pata del águila; fija cuerpo, cara y guayuco del hombre andoque."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: la gente de la casa, con la mujer de Nenefi que hace las dos peloticas de almidón de yuca dulce; fija el cuerpo de la mujer adulta sin darle a ella rasgo propio."
+        },
+        {
+          "entity_id": "tipo_anciana",
+          "role": "secondary",
+          "note": "Tipo base: la anciana entre la gente de la casa que se esconde en el canasto; completa las edades de la maloca de linaje."
         }
       ]
     },
@@ -1366,6 +1381,16 @@
           "entity_id": "hoja_utileria_andoque_oficio",
           "role": "plot_object",
           "note": "Cinco objetos menores de oficio y mecanismo que ningún relato cuenta por sí mismos pero que aparecen en cuadro: la flauta de hueso, el tinte negro de Tortuga-redonda, el paquete de sueño envuelto en hoja, el algodón de hormiga y las hojas medicinales sin especie identificable."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base: la hija que sale a arrancar yuca como cualquier día y vuelve con la carga; el tipo le da cuerpo sin mostrar su muerte."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Tipo base: los hermanos mayores de Canoa-de-Piedra que oyen lo que cuenta y lo dejan pasar."
         }
       ]
     },
@@ -1809,6 +1834,21 @@
           "entity_id": "hoja_utileria_andoque_caza_y_trampa",
           "role": "plot_object",
           "note": "Utilería de caza, pesca y filo: el chinchorro de la trampa del mico, la atarraya que cierra la casa del fuego, el machete que pide el fantasma y el barbasco de la pesca. El arco y las flechas salen aparte porque recurren en tres relatos."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: los padres de la niña, que saben a qué viene el huevo y tapan la puerta con la atarraya."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base: las muchachas en la chagra, capa de la gente común detrás de las hijas del Príncipe, que están embebidas."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base: la niña que recoge el huevo creyendo que es hijo de un pajarito."
         }
       ]
     },
@@ -2063,6 +2103,26 @@
           "entity_id": "hoja_utileria_andoque_oficio",
           "role": "plot_object",
           "note": "Cinco objetos menores de oficio y mecanismo que ningún relato cuenta por sí mismos pero que aparecen en cuadro: la flauta de hueso, el tinte negro de Tortuga-redonda, el paquete de sueño envuelto en hoja, el algodón de hormiga y las hojas medicinales sin especie identificable."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los hombres de la casa que bajan a mirar el palo lleno de gusanos y reciben sus flechas de astilla."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: la mujer que baja al puerto a bañarse; figura adulta de la casa, sin rasgo de la esposa nombrada."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Tipo base: «cuando bajó toda la gente de la casa»: el anciano completa la maloca que baja al palo."
+        },
+        {
+          "entity_id": "tipo_anciana",
+          "role": "secondary",
+          "note": "Tipo base: la anciana entre toda la gente de la casa que baja al río a ver el palo; no es la abuela Doña Sueño, que tiene ficha propia."
         }
       ]
     },
@@ -2140,6 +2200,11 @@
           "entity_id": "humo_y_armas_de_los_perseguidores",
           "role": "plot_object",
           "note": "Recursos del cerco; las armas son las ya fichadas y el humo se resuelve en la misma escena."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: la gente de las comunidades que no alcanza a saber quién llegó; hombres comunes, sin transformación."
         }
       ]
     },
@@ -2222,6 +2287,21 @@
           "entity_id": "cola_de_pez_y_demas_inventos_retirados",
           "role": "secondary",
           "note": "Guardarraíl explícito para que no reentren por la puerta visual: la cola de pez de la sirena europea (los research_notes la prohíben), la revivificación cósmica de Plumón-de-fiebre, el desenlace inventado de los fantasmas y la escatología de «ultratumba». Ninguno pertenece al corpus congelado."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los padres que bajan con arcos y flechas por la orilla; uno levanta el arco y dispara, y la lámina no muestra la herida."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base: los niños de la casa que bailan en la playa de Sitakara y suben a avisar; su taparrabo los separa de la gente del agua, que no lo lleva."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Tipo base: «los grandes les dijeron lo que tenían que hacer»: el mayor que aconseja a los niños antes del segundo baile."
         }
       ]
     },
@@ -2505,6 +2585,446 @@
     }
   },
   "entities": {
+    "tipo_hombre_adulto": {
+      "name": "Hombre andoque adulto (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base del hombre andoque de las capas de origen y tiempo tribal: fija cuerpo, cara, cabello y guayuco de corteza batida para la gente sin nombre de la maloca —los que bajan al palo, los padres con arco en Sitakara—. En la capa cauchera se conserva el cuerpo y la ropa la pone la otra gramática.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "editorial_interpretation",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_hombre_adulto__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "la-guerra-del-palo-hablador",
+        "la-venganza-de-los-brujos",
+        "las-sirenas"
+      ],
+      "evidence": [
+        {
+          "myth": "las-sirenas",
+          "field": "mito",
+          "note": "La gente del agua se describe por la ausencia: «no llevaban taparrabos y tenían el pelo largo hasta la cintura», lo que confirma que el taparrabo es lo normal en la gente de la casa (canon; dossier §6.2)"
+        },
+        {
+          "myth": "la-guerra-del-palo-hablador",
+          "field": "mito",
+          "note": "Los hombres pescan, cazan, mambean y hacen canoas; Von Hassel en 1905: «sus armas son lanzas y hachas de piedra», y el corpus usa arco y flechas (dossier §5 y §6.2)"
+        },
+        {
+          "myth": "el-aguila-canibal-y-la-madre-de-los-andoques",
+          "field": "mito",
+          "note": "Vestido y peinado andoque sin descripción propia; el guayuco de llanchama viene del marco regional de la Gente de Centro y se marca como préstamo declarado (dossier §10 salvaguarda 6, §11 carencia 7)"
+        }
+      ],
+      "census_note": "Tipo base del hombre andoque de las capas de origen y tiempo tribal: fija cuerpo, cara, cabello y guayuco de corteza batida para la gente sin nombre de la maloca —los que bajan al palo, los padres con arco en Sitakara—. En la capa cauchera se conserva el cuerpo y la ropa la pone la otra gramática.",
+      "design": {
+        "silhouette": "Hombre adulto de pie, de tres cuartos, desnudo salvo un guayuco de corteza batida a la cintura, sujeto con una cuerda de fibra y caído en paño por delante; en una mano un arco largo con dos flechas, la otra suelta. Cabello negro liso cortado recto a la altura del hombro. Nada en la cara, nada al cuello, nada en los brazos.",
+        "materials": [
+          "cuerpo en planos superpuestos de papel pardo medio, sin músculo modelado",
+          "cara aparte: óvalo plano de un solo tono con tres piezas de rasgo —ojos, nariz, boca— recortadas por separado",
+          "guayuco de corteza batida en pieza rectangular de papel fibroso claro, con el borde deshilachado a tijera y ninguna marca encima",
+          "cuerda de fibra de cumare en una sola tira torcida a la cintura",
+          "cabello en una pieza plana de papel negro mate, con el canto recortado recto al hombro",
+          "arco y flechas de madera como piezas recortadas aparte, sin metal"
+        ],
+        "palette": "Pardo medio de la piel, crudo claro de la corteza, negro del cabello y madera: ni un solo pigmento sobre la piel.",
+        "scale": "Figura entera en 9:16, de la talla adulta común de la gramática del tiempo de origen; el arco le llega a la cabeza.",
+        "continuity": [
+          "sin pintura facial ni corporal: el barro amarillo doñe y el algodón de hormiga son de ritual y quedan fuera",
+          "sin plumaria, collar, tocado ni adorno ceremonial",
+          "sin metal en capas A a C; en la capa D el hacha puede ser de acero sólo por trueque, nunca en su mano de tiempo de origen",
+          "nunca mambeando ni con totuma de mambe o frasco de ambil",
+          "en la capa cauchera se conserva el cuerpo y la cara y se viste con la gramática cauchera, sin guayuco"
+        ],
+        "documented": [
+          "el guayuco aparece tres veces en el corpus sin descripción, y la gente del agua se define por no llevar taparrabo, lo que lo fija como lo normal (dossier §6.2)",
+          "los hombres pescan, cazan y hacen canoas; armas de lanza y hacha de piedra en 1905, arco y flechas en el corpus (dossier §5 y §6.2)",
+          "la pintura facial documentada es doñe, barro amarillo de los rituales, y el algodón de la hormiga po'i es adorno de baile: ambos consult_required (dossier §6.1)",
+          "coca, mambe y ambil pertenecen al interior ceremonial y no se dibujan (dossier §6.1)"
+        ],
+        "editorial": [
+          "el guayuco de llanchama, corteza batida de Poulsenia armata, es préstamo declarado del marco regional de la Gente de Centro y no de una fuente andoque: reversible (dossier salvaguarda 6)",
+          "el cabello liso cortado al hombro es convención heredada de la gramática del colectivo: ninguna fuente describe el peinado andoque (dossier §11, carencia 7)",
+          "rostro, complexión y edad concreta son construcción editorial completa"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_mujer_adulta": {
+      "name": "Mujer andoque adulta (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base de la mujer andoque adulta de las capas de origen y tiempo tribal: fija cuerpo, cara y cabello de la gente femenina de la maloca, que cuida la chagra, hace cestería de cumare y prepara el casabe antes de que salga el sol.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "editorial_interpretation",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_mujer_adulta__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-guerra-del-palo-hablador"
+      ],
+      "evidence": [
+        {
+          "myth": "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+          "field": "mito",
+          "note": "Las mujeres cuidan la chagra, hacen cestería y preparan el casabe y el pescado antes de que salga el sol (dossier §6.2)"
+        },
+        {
+          "myth": "el-aguila-canibal-y-la-madre-de-los-andoques",
+          "field": "mito",
+          "note": "«La mujer de Nenefi cogió masa de su almidón de yuca dulce e hizo dos peloticas» (canon); los andoque son gente de tabaco, coca y yuca dulce (dossier §6.1)"
+        },
+        {
+          "myth": "la-guerra-del-palo-hablador",
+          "field": "mito",
+          "note": "La fibra de cumare se sigue trabajando: una mujer de Adukoe cosecha «cumaré, de espinas peligrosas» para cestería (dossier §5)"
+        }
+      ],
+      "census_note": "Tipo base de la mujer andoque adulta de las capas de origen y tiempo tribal: fija cuerpo, cara y cabello de la gente femenina de la maloca, que cuida la chagra, hace cestería de cumare y prepara el casabe antes de que salga el sol.",
+      "design": {
+        "silhouette": "Mujer adulta de pie, de perfil, con una pieza de corteza batida ceñida a la cintura que le cae hasta medio muslo; sostiene contra la cadera un canasto de fibra de cumare con tubérculos de yuca, el otro brazo suelto. Cabello negro liso cortado recto al hombro. Torso desnudo, sin adorno.",
+        "materials": [
+          "cuerpo en planos superpuestos de papel pardo medio",
+          "cara aparte: óvalo plano de un solo tono con tres piezas de rasgo recortadas por separado",
+          "corteza batida en pieza de papel fibroso claro, con el borde deshilachado a tijera",
+          "canasto de fibra de cumare en tiras de papel pajizo, sin patrón de tejido identificable",
+          "yuca en tres o cuatro piezas alargadas de papel pardo claro",
+          "cabello en una pieza plana de papel negro mate, recortado recto al hombro"
+        ],
+        "palette": "Los mismos pardos del colectivo, el crudo de la corteza y el pajizo del cumare; ningún pigmento en la piel.",
+        "scale": "Figura entera en 9:16, de la misma talla adulta que el hombre; el canasto es del ancho de su cadera.",
+        "continuity": [
+          "sin pintura facial de barro amarillo y sin algodón de hormiga",
+          "sin collar, sin plumaria y sin tocado",
+          "nunca dentro de la maloca ni en su lado ceremonial: la mujer se dibuja en la chagra, el puerto o el camino",
+          "ningún objeto de metal en capas de origen"
+        ],
+        "documented": [
+          "las mujeres cuidan la chagra, hacen cestería y preparan el casabe y el pescado (dossier §6.2)",
+          "la cestería se hace con fibra de cumare, Astrocaryum chambira, que se sigue cosechando (dossier §5)",
+          "yuca dulce y almidón de yuca en el corpus (canon, el-aguila-canibal)",
+          "la pintura facial y el adorno de baile son de ritual y consult_required (dossier §6.1)"
+        ],
+        "editorial": [
+          "la prenda femenina no está documentada: extender a la mujer la corteza batida del guayuco regional es préstamo declarado y reversible",
+          "el cabello al hombro es convención de la gramática del colectivo, sin fuente andoque",
+          "rostro y complexión son construcción editorial"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_mujer_joven": {
+      "name": "Mujer andoque joven (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base de la muchacha andoque: la hija que sale a arrancar yuca como cualquier día y vuelve con la carga, las muchachas de la chagra. Mismo vestido de corteza que la adulta sobre un cuerpo más ligero, con la carga a la espalda.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "editorial_interpretation",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_mujer_joven__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-mundo-de-ultratumba",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "evidence": [
+        {
+          "myth": "el-mundo-de-ultratumba",
+          "field": "mito",
+          "note": "«La hija salió a arrancar yuca como cualquier día. Volvió con la carga» (canon)"
+        },
+        {
+          "myth": "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+          "field": "mito",
+          "note": "A las hijas del Príncipe «las tomaban en la chagra las culebras»; la chagra es de las mujeres (canon; dossier §6.2)"
+        }
+      ],
+      "census_note": "Tipo base de la muchacha andoque: la hija que sale a arrancar yuca como cualquier día y vuelve con la carga, las muchachas de la chagra. Mismo vestido de corteza que la adulta sobre un cuerpo más ligero, con la carga a la espalda.",
+      "design": {
+        "silhouette": "Muchacha delgada caminando de perfil, inclinada levemente hacia adelante por la carga: un canasto de cumare a la espalda sostenido por una banda de fibra que le pasa por la frente, lleno de yuca; corteza batida a la cintura, cabello negro liso al hombro.",
+        "materials": [
+          "cuerpo en planos de papel pardo medio, más estrechos que los de la adulta",
+          "cara aparte: óvalo plano de un solo tono con tres piezas de rasgo recortadas por separado",
+          "corteza batida en papel fibroso claro con el borde deshilachado",
+          "canasto de carga de cumare en tiras de papel pajizo y banda frontal de fibra torcida",
+          "yuca en piezas alargadas de papel pardo claro",
+          "cabello en una pieza plana de papel negro mate"
+        ],
+        "palette": "Idéntica a la de la mujer adulta: pardos, crudo y pajizo, sin pigmento en la piel.",
+        "scale": "Figura entera en 9:16, algo más baja y delgada que la mujer adulta; el canasto le cubre la espalda de los hombros a la cintura.",
+        "continuity": [
+          "nunca se muestra su muerte ni su cuerpo caído: el tipo es la muchacha viva",
+          "sin pintura facial, sin algodón de hormiga, sin adorno",
+          "sin culebras sobre su cuerpo: la escena de las hijas del Príncipe no pasa por este tipo"
+        ],
+        "documented": [
+          "la hija arranca yuca y vuelve con la carga (canon, el-mundo-de-ultratumba)",
+          "la chagra y la cestería son trabajo de las mujeres (dossier §6.2)",
+          "cumare como fibra de cestería (dossier §5)"
+        ],
+        "editorial": [
+          "la banda frontal de carga no está documentada para los andoque: es decisión editorial reversible",
+          "prenda de corteza batida por préstamo regional declarado",
+          "edad, cabello y rostro son construcción editorial"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_nino": {
+      "name": "Niño andoque (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base de los niños andoque: los que bailan en la playa de Sitakara y suben a avisar a la casa, la niña que recoge el huevo de chupaflor. Su taparrabo pequeño es lo que los distingue a primera vista de la gente del agua, que no lo lleva.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "editorial_interpretation",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_nino__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "las-sirenas"
+      ],
+      "evidence": [
+        {
+          "myth": "las-sirenas",
+          "field": "mito",
+          "note": "Los niños bailan en la playa; los que llegan «no llevaban taparrabos y tenían el pelo largo hasta la cintura», y así se distinguen (canon)"
+        },
+        {
+          "myth": "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+          "field": "mito",
+          "note": "«Una niña lo recogió creyendo que era hijo de un pajarito» (canon)"
+        }
+      ],
+      "census_note": "Tipo base de los niños andoque: los que bailan en la playa de Sitakara y suben a avisar a la casa, la niña que recoge el huevo de chupaflor. Su taparrabo pequeño es lo que los distingue a primera vista de la gente del agua, que no lo lleva.",
+      "design": {
+        "silhouette": "Niño de siete u ocho años en medio de un paso de baile sobre la arena, los brazos abiertos y un pie en el aire, con un taparrabo pequeño de corteza batida y el cabello negro liso cortado al hombro; cuerpo entero, nada en las manos.",
+        "materials": [
+          "cuerpo en pocas piezas cortas de papel pardo medio",
+          "cara aparte: óvalo plano más redondo, de un solo tono, con tres piezas de rasgo recortadas por separado",
+          "taparrabo de corteza batida en una pieza pequeña de papel fibroso claro, sujeto con fibra",
+          "cabello en una pieza plana de papel negro mate, al hombro"
+        ],
+        "palette": "Los pardos del colectivo y el crudo de la corteza, sin pigmento.",
+        "scale": "A la altura de la cadera de un adulto, como fija la gramática del colectivo.",
+        "continuity": [
+          "siempre con taparrabo y con el cabello al hombro, nunca a la cintura: es lo que lo separa de la gente de Sitakara",
+          "el baile se dibuja en la playa, nunca como baile ceremonial de maloca",
+          "sin adorno de baile ni algodón de hormiga pegado a la piel"
+        ],
+        "documented": [
+          "los niños bailan en la playa de Sitakara y suben a avisar a la casa (canon, las-sirenas)",
+          "la gente del agua no lleva taparrabo y tiene el pelo hasta la cintura (canon; dossier §6.2)",
+          "el algodón de hormiga po'i es adorno de baile y consult_required (dossier §6.1)"
+        ],
+        "editorial": [
+          "que el niño lleve taparrabo es inferencia de la oposición que el propio relato hace con la gente del agua; la hechura es préstamo regional declarado",
+          "edad y rostro son construcción editorial"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_anciano": {
+      "name": "Anciano andoque (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base del hombre mayor andoque: el mayor que aconseja a los niños antes del segundo baile, los hermanos que oyen a Canoa-de-Piedra. Guayuco de corteza, cuerpo enjuto, sentado en un banco bajo a la puerta de la maloca y nunca en el mambeadero.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "editorial_interpretation",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_anciano__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-mundo-de-ultratumba",
+        "la-guerra-del-palo-hablador",
+        "las-sirenas"
+      ],
+      "evidence": [
+        {
+          "myth": "las-sirenas",
+          "field": "mito",
+          "note": "«Los grandes les dijeron lo que tenían que hacer» (canon)"
+        },
+        {
+          "myth": "el-mundo-de-ultratumba",
+          "field": "mito",
+          "note": "Canoa-de-Piedra «era de los mayores de su grupo»; el chai o cacique es el anciano de mayor rango e itú, el sabio, «el que hace dar confianza al corazón» (canon; dossier §6.2)"
+        },
+        {
+          "myth": "la-guerra-del-palo-hablador",
+          "field": "mito",
+          "note": "El mambeadero es reunión nocturna de hombres en el centro de la maloca, consult_required: no se dibuja (dossier §6.1)"
+        }
+      ],
+      "census_note": "Tipo base del hombre mayor andoque: el mayor que aconseja a los niños antes del segundo baile, los hermanos que oyen a Canoa-de-Piedra. Guayuco de corteza, cuerpo enjuto, sentado en un banco bajo a la puerta de la maloca y nunca en el mambeadero.",
+      "design": {
+        "silhouette": "Hombre mayor sentado en un banco bajo de madera, afuera, junto a la boca de la maloca, con el guayuco de corteza, los antebrazos sobre las rodillas y una mano abierta hacia adelante, como quien da una indicación; cuerpo enjuto, hombros estrechos, cabello corto con tiras grises.",
+        "materials": [
+          "cuerpo en planos largos y estrechos de papel pardo, sin arrugas modeladas",
+          "cara aparte: óvalo plano de un solo tono con tres piezas de rasgo y dos pliegues recortados en la frente",
+          "guayuco de corteza batida más oscura, en papel fibroso con el borde deshilachado",
+          "banco bajo tallado de una sola pieza de madera, sin figura animal",
+          "cabello en una pieza plana de papel negro con dos tiras grises superpuestas"
+        ],
+        "palette": "Pardo más apagado que el del adulto, corteza oscura, gris en el cabello: la edad se dice por valor, no por color.",
+        "scale": "Media cabeza más bajo que el adulto, como fija la gramática del colectivo; sentado, su cabeza queda a la altura del pecho de un adulto de pie.",
+        "continuity": [
+          "nunca dentro de la maloca, nunca mambeando, sin totuma de mambe ni ambil",
+          "sin insignia de chai ni de capitán: el tipo es el mayor común",
+          "no retrata a Yiñefoque ni a ningún anciano nombrado",
+          "sin pintura, sin collar, sin plumaria"
+        ],
+        "documented": [
+          "los mayores aconsejan y oyen (canon, las-sirenas y el-mundo-de-ultratumba)",
+          "cargos documentados: po'so, chai —el anciano de mayor rango—, el chamán e itú, el sabio (dossier §6.2)",
+          "mambeadero e interior de la maloca son consult_required (dossier §6.1 y salvaguarda 2)",
+          "las personas históricas nombradas no se retratan (dossier §6.2)"
+        ],
+        "editorial": [
+          "el banco bajo y la postura sentada a la puerta son decisión editorial para dar autoridad sin insignia ni interior; retirables",
+          "el cabello corto con canas es construcción editorial, igual que el rostro",
+          "el guayuco es préstamo regional declarado"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_anciana": {
+      "name": "Anciana andoque (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base de la mujer mayor andoque: la anciana de la gente de la casa, sentada en el suelo torciendo fibra de cumare sobre el muslo. No es Doña Cucarrón-de-vida ni la abuela Doña Sueño, que tienen su propia forma.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "editorial_interpretation",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_anciana__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "la-guerra-del-palo-hablador"
+      ],
+      "evidence": [
+        {
+          "myth": "la-guerra-del-palo-hablador",
+          "field": "mito",
+          "note": "«Cuando bajó toda la gente de la casa»: la maloca aloja de 60 a 200 personas por linaje (canon; dossier §4)"
+        },
+        {
+          "myth": "el-aguila-canibal-y-la-madre-de-los-andoques",
+          "field": "mito",
+          "note": "La madre de los andoque es un coleóptero y no una mujer mayor: el dossier corrige que se habría dibujado así (dossier §12)"
+        }
+      ],
+      "census_note": "Tipo base de la mujer mayor andoque: la anciana de la gente de la casa, sentada en el suelo torciendo fibra de cumare sobre el muslo. No es Doña Cucarrón-de-vida ni la abuela Doña Sueño, que tienen su propia forma.",
+      "design": {
+        "silhouette": "Mujer mayor sentada en el suelo con las piernas estiradas, la corteza batida a la cintura, torciendo sobre el muslo una hebra de fibra de cumare con la palma de la mano; a su lado un manojo de fibra cruda. Cuerpo delgado, espalda algo curva, cabello corto con tiras grises.",
+        "materials": [
+          "cuerpo en planos de papel pardo apagado, sin arrugas modeladas",
+          "cara aparte: óvalo plano de un solo tono con tres piezas de rasgo y dos pliegues recortados",
+          "corteza batida oscura en papel fibroso con el borde deshilachado",
+          "fibra de cumare en tiras finas de papel pajizo, torcida en una hebra y suelta en manojo",
+          "cabello en una pieza plana de papel negro con tiras grises"
+        ],
+        "palette": "Pardo apagado, corteza oscura, pajizo de la fibra y gris del cabello; sin pigmento.",
+        "scale": "Media cabeza más baja que la mujer adulta; sentada, ocupa la mitad inferior del encuadre 9:16.",
+        "continuity": [
+          "nunca con rasgos de coleóptero ni de Doña Cucarrón-de-vida",
+          "no es Doña Sueño: sin hoja doblada, sin ambil ni coca",
+          "sin pintura, sin collar, sin adorno"
+        ],
+        "documented": [
+          "la cestería con fibra de cumare es trabajo de mujeres y sigue viva (dossier §5 y §6.2)",
+          "toda la gente de la casa baja al río (canon, la-guerra-del-palo-hablador)",
+          "la madre de los andoque no es una mujer mayor sino un coleóptero (dossier §12)"
+        ],
+        "editorial": [
+          "el gesto de torcer la fibra sobre el muslo es decisión editorial dentro del oficio documentado",
+          "prenda de corteza por préstamo regional declarado; cabello, edad y rostro son construcción editorial"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ]
+    },
     "nenefi": {
       "name": "Nenefi",
       "kind": "personaje",
@@ -9066,6 +9586,571 @@
     }
   },
   "models": {
+    "tipo_hombre_adulto__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_hombre_adulto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "las-sirenas",
+          "field": "mito",
+          "note": "La gente del agua se describe por la ausencia: «no llevaban taparrabos y tenían el pelo largo hasta la cintura», lo que confirma que el taparrabo es lo normal en la gente de la casa (canon; dossier §6.2)"
+        },
+        {
+          "myth": "la-guerra-del-palo-hablador",
+          "field": "mito",
+          "note": "Los hombres pescan, cazan, mambean y hacen canoas; Von Hassel en 1905: «sus armas son lanzas y hachas de piedra», y el corpus usa arco y flechas (dossier §5 y §6.2)"
+        },
+        {
+          "myth": "el-aguila-canibal-y-la-madre-de-los-andoques",
+          "field": "mito",
+          "note": "Vestido y peinado andoque sin descripción propia; el guayuco de llanchama viene del marco regional de la Gente de Centro y se marca como préstamo declarado (dossier §10 salvaguarda 6, §11 carencia 7)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre adulto de pie, de tres cuartos, desnudo salvo un guayuco de corteza batida a la cintura, sujeto con una cuerda de fibra y caído en paño por delante; en una mano un arco largo con dos flechas, la otra suelta. Cabello negro liso cortado recto a la altura del hombro. Nada en la cara, nada al cuello, nada en los brazos.",
+        "materials": [
+          "cuerpo en planos superpuestos de papel pardo medio, sin músculo modelado",
+          "cara aparte: óvalo plano de un solo tono con tres piezas de rasgo —ojos, nariz, boca— recortadas por separado",
+          "guayuco de corteza batida en pieza rectangular de papel fibroso claro, con el borde deshilachado a tijera y ninguna marca encima",
+          "cuerda de fibra de cumare en una sola tira torcida a la cintura",
+          "cabello en una pieza plana de papel negro mate, con el canto recortado recto al hombro",
+          "arco y flechas de madera como piezas recortadas aparte, sin metal"
+        ],
+        "palette_logic": "Pardo medio de la piel, crudo claro de la corteza, negro del cabello y madera: ni un solo pigmento sobre la piel.",
+        "scale": "Figura entera en 9:16, de la talla adulta común de la gramática del tiempo de origen; el arco le llega a la cabeza.",
+        "continuity_markers": [
+          "sin pintura facial ni corporal: el barro amarillo doñe y el algodón de hormiga son de ritual y quedan fuera",
+          "sin plumaria, collar, tocado ni adorno ceremonial",
+          "sin metal en capas A a C; en la capa D el hacha puede ser de acero sólo por trueque, nunca en su mano de tiempo de origen",
+          "nunca mambeando ni con totuma de mambe o frasco de ambil",
+          "en la capa cauchera se conserva el cuerpo y la cara y se viste con la gramática cauchera, sin guayuco"
+        ],
+        "documented_features": [
+          "el guayuco aparece tres veces en el corpus sin descripción, y la gente del agua se define por no llevar taparrabo, lo que lo fija como lo normal (dossier §6.2)",
+          "los hombres pescan, cazan y hacen canoas; armas de lanza y hacha de piedra en 1905, arco y flechas en el corpus (dossier §5 y §6.2)",
+          "la pintura facial documentada es doñe, barro amarillo de los rituales, y el algodón de la hormiga po'i es adorno de baile: ambos consult_required (dossier §6.1)",
+          "coca, mambe y ambil pertenecen al interior ceremonial y no se dibujan (dossier §6.1)"
+        ],
+        "editorial_features": [
+          "el guayuco de llanchama, corteza batida de Poulsenia armata, es préstamo declarado del marco regional de la Gente de Centro y no de una fuente andoque: reversible (dossier salvaguarda 6)",
+          "el cabello liso cortado al hombro es convención heredada de la gramática del colectivo: ninguna fuente describe el peinado andoque (dossier §11, carencia 7)",
+          "rostro, complexión y edad concreta son construcción editorial completa"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
+        "primary_request": "identidad corporal completa y legible para Hombre andoque adulto (tipo). Hombre adulto de pie, de tres cuartos, desnudo salvo un guayuco de corteza batida a la cintura, sujeto con una cuerda de fibra y caído en paño por delante; en una mano un arco largo con dos flechas, la otra suelta. Cabello negro liso cortado recto a la altura del hombro. Nada en la cara, nada al cuello, nada en los brazos.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera en 9:16, de la talla adulta común de la gramática del tiempo de origen; el arco le llega a la cabeza.",
+        "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
+        "materials_textures": "cuerpo en planos superpuestos de papel pardo medio, sin músculo modelado; cara aparte: óvalo plano de un solo tono con tres piezas de rasgo —ojos, nariz, boca— recortadas por separado; guayuco de corteza batida en pieza rectangular de papel fibroso claro, con el borde deshilachado a tijera y ninguna marca encima; cuerda de fibra de cumare en una sola tira torcida a la cintura; cabello en una pieza plana de papel negro mate, con el canto recortado recto al hombro; arco y flechas de madera como piezas recortadas aparte, sin metal",
+        "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
+        "constraints": [
+          "documentado: el guayuco aparece tres veces en el corpus sin descripción, y la gente del agua se define por no llevar taparrabo, lo que lo fija como lo normal (dossier §6.2)",
+          "documentado: los hombres pescan, cazan y hacen canoas; armas de lanza y hacha de piedra en 1905, arco y flechas en el corpus (dossier §5 y §6.2)",
+          "documentado: la pintura facial documentada es doñe, barro amarillo de los rituales, y el algodón de la hormiga po'i es adorno de baile: ambos consult_required (dossier §6.1)",
+          "documentado: coca, mambe y ambil pertenecen al interior ceremonial y no se dibujan (dossier §6.1)",
+          "El mundo es mineral y oscuro: arenisca clara granulada, tierra negra, barro pardo y hoja de palma ahumada, sobre un verde de selva profundo, apagado y de muchos tonos; nunca un verde de tubo ni un follaje uniforme.",
+          "Las dos aguas no comparten color: el río grande va cargado de sedimento, pardo-ocre y opaco, y la quebrada de selva es oscura y translúcida; ningún azul de cielo en ninguna de las dos.",
+          "El color saturado es un acontecimiento y sólo tiene tres apariciones autorizadas: el fuego, la garganta rojo fuego del chupaflor de candela y la sangre que cae y se vuelve piedra. El único pigmento que el corpus nombra es el tinte negro sobre un rostro.",
+          "La capa anterior a Sol y Luna se ilumina con la luz blanca y fría de la mariposa de sol: sin disco solar, sin cielo azul, sin amanecer cálido y sin sombras de sol.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: la selva llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas, no de modelado.",
+          "Sin interior de maloca, mambeadero, manguaré en uso, baile, coca, mambe, tabaco ni ambil.",
+          "Sin pintura facial de barro amarillo, sin algodón de hormiga sobre la piel y sin plumaria ni adorno ceremonial de ningún tipo.",
+          "Sin yuruparí ni ningún instrumento, máscara o iconografía del Vaupés, y sin tocados panindígenas.",
+          "Sin metal en las capas de origen: el hacha de Cortador es de piedra pulida, la espada de Trueno es una macana de madera y no hay filo de acero antes del tiempo tribal.",
+          "Sin violencia explícita: ni descuartizamiento, ni festín, ni calavera trofeo, ni collar de dientes, ni cuerpo en el cepo, ni látigo en el acto.",
+          "Sin reproducir petroglifos reales, sin cola de pez para los seres del agua y sin cuerpo para Sindi, Pepai, Tomirepa ni el Príncipe-de-la-Ilusión."
+        ],
+        "technique_close": "En el plano corto, el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte, apoyadas encima; el cuerpo se construye por planos superpuestos, nunca modelado. Los animales se resuelven con pocas piezas planas grandes y el borde recortado en dientes: la pluma del gavilán, el élitro del cucarrón, el anillado de la boa y la escama del pez son recortes de canto, no texturas individuales. El agua es papel translúcido en láminas superpuestas; el humo del techo ahumado es vitela entre capas."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_adulta__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_adulta"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+          "field": "mito",
+          "note": "Las mujeres cuidan la chagra, hacen cestería y preparan el casabe y el pescado antes de que salga el sol (dossier §6.2)"
+        },
+        {
+          "myth": "el-aguila-canibal-y-la-madre-de-los-andoques",
+          "field": "mito",
+          "note": "«La mujer de Nenefi cogió masa de su almidón de yuca dulce e hizo dos peloticas» (canon); los andoque son gente de tabaco, coca y yuca dulce (dossier §6.1)"
+        },
+        {
+          "myth": "la-guerra-del-palo-hablador",
+          "field": "mito",
+          "note": "La fibra de cumare se sigue trabajando: una mujer de Adukoe cosecha «cumaré, de espinas peligrosas» para cestería (dossier §5)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer adulta de pie, de perfil, con una pieza de corteza batida ceñida a la cintura que le cae hasta medio muslo; sostiene contra la cadera un canasto de fibra de cumare con tubérculos de yuca, el otro brazo suelto. Cabello negro liso cortado recto al hombro. Torso desnudo, sin adorno.",
+        "materials": [
+          "cuerpo en planos superpuestos de papel pardo medio",
+          "cara aparte: óvalo plano de un solo tono con tres piezas de rasgo recortadas por separado",
+          "corteza batida en pieza de papel fibroso claro, con el borde deshilachado a tijera",
+          "canasto de fibra de cumare en tiras de papel pajizo, sin patrón de tejido identificable",
+          "yuca en tres o cuatro piezas alargadas de papel pardo claro",
+          "cabello en una pieza plana de papel negro mate, recortado recto al hombro"
+        ],
+        "palette_logic": "Los mismos pardos del colectivo, el crudo de la corteza y el pajizo del cumare; ningún pigmento en la piel.",
+        "scale": "Figura entera en 9:16, de la misma talla adulta que el hombre; el canasto es del ancho de su cadera.",
+        "continuity_markers": [
+          "sin pintura facial de barro amarillo y sin algodón de hormiga",
+          "sin collar, sin plumaria y sin tocado",
+          "nunca dentro de la maloca ni en su lado ceremonial: la mujer se dibuja en la chagra, el puerto o el camino",
+          "ningún objeto de metal en capas de origen"
+        ],
+        "documented_features": [
+          "las mujeres cuidan la chagra, hacen cestería y preparan el casabe y el pescado (dossier §6.2)",
+          "la cestería se hace con fibra de cumare, Astrocaryum chambira, que se sigue cosechando (dossier §5)",
+          "yuca dulce y almidón de yuca en el corpus (canon, el-aguila-canibal)",
+          "la pintura facial y el adorno de baile son de ritual y consult_required (dossier §6.1)"
+        ],
+        "editorial_features": [
+          "la prenda femenina no está documentada: extender a la mujer la corteza batida del guayuco regional es préstamo declarado y reversible",
+          "el cabello al hombro es convención de la gramática del colectivo, sin fuente andoque",
+          "rostro y complexión son construcción editorial"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
+        "primary_request": "identidad corporal completa y legible para Mujer andoque adulta (tipo). Mujer adulta de pie, de perfil, con una pieza de corteza batida ceñida a la cintura que le cae hasta medio muslo; sostiene contra la cadera un canasto de fibra de cumare con tubérculos de yuca, el otro brazo suelto. Cabello negro liso cortado recto al hombro. Torso desnudo, sin adorno.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera en 9:16, de la misma talla adulta que el hombre; el canasto es del ancho de su cadera.",
+        "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
+        "materials_textures": "cuerpo en planos superpuestos de papel pardo medio; cara aparte: óvalo plano de un solo tono con tres piezas de rasgo recortadas por separado; corteza batida en pieza de papel fibroso claro, con el borde deshilachado a tijera; canasto de fibra de cumare en tiras de papel pajizo, sin patrón de tejido identificable; yuca en tres o cuatro piezas alargadas de papel pardo claro; cabello en una pieza plana de papel negro mate, recortado recto al hombro",
+        "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
+        "constraints": [
+          "documentado: las mujeres cuidan la chagra, hacen cestería y preparan el casabe y el pescado (dossier §6.2)",
+          "documentado: la cestería se hace con fibra de cumare, Astrocaryum chambira, que se sigue cosechando (dossier §5)",
+          "documentado: yuca dulce y almidón de yuca en el corpus (canon, el-aguila-canibal)",
+          "documentado: la pintura facial y el adorno de baile son de ritual y consult_required (dossier §6.1)",
+          "El mundo es mineral y oscuro: arenisca clara granulada, tierra negra, barro pardo y hoja de palma ahumada, sobre un verde de selva profundo, apagado y de muchos tonos; nunca un verde de tubo ni un follaje uniforme.",
+          "Las dos aguas no comparten color: el río grande va cargado de sedimento, pardo-ocre y opaco, y la quebrada de selva es oscura y translúcida; ningún azul de cielo en ninguna de las dos.",
+          "El color saturado es un acontecimiento y sólo tiene tres apariciones autorizadas: el fuego, la garganta rojo fuego del chupaflor de candela y la sangre que cae y se vuelve piedra. El único pigmento que el corpus nombra es el tinte negro sobre un rostro.",
+          "La capa anterior a Sol y Luna se ilumina con la luz blanca y fría de la mariposa de sol: sin disco solar, sin cielo azul, sin amanecer cálido y sin sombras de sol.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: la selva llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas, no de modelado.",
+          "Sin interior de maloca, mambeadero, manguaré en uso, baile, coca, mambe, tabaco ni ambil.",
+          "Sin pintura facial de barro amarillo, sin algodón de hormiga sobre la piel y sin plumaria ni adorno ceremonial de ningún tipo.",
+          "Sin yuruparí ni ningún instrumento, máscara o iconografía del Vaupés, y sin tocados panindígenas.",
+          "Sin metal en las capas de origen: el hacha de Cortador es de piedra pulida, la espada de Trueno es una macana de madera y no hay filo de acero antes del tiempo tribal.",
+          "Sin violencia explícita: ni descuartizamiento, ni festín, ni calavera trofeo, ni collar de dientes, ni cuerpo en el cepo, ni látigo en el acto.",
+          "Sin reproducir petroglifos reales, sin cola de pez para los seres del agua y sin cuerpo para Sindi, Pepai, Tomirepa ni el Príncipe-de-la-Ilusión."
+        ],
+        "technique_close": "En el plano corto, el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte, apoyadas encima; el cuerpo se construye por planos superpuestos, nunca modelado. Los animales se resuelven con pocas piezas planas grandes y el borde recortado en dientes: la pluma del gavilán, el élitro del cucarrón, el anillado de la boa y la escama del pez son recortes de canto, no texturas individuales. El agua es papel translúcido en láminas superpuestas; el humo del techo ahumado es vitela entre capas."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_joven__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_joven"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-mundo-de-ultratumba",
+          "field": "mito",
+          "note": "«La hija salió a arrancar yuca como cualquier día. Volvió con la carga» (canon)"
+        },
+        {
+          "myth": "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+          "field": "mito",
+          "note": "A las hijas del Príncipe «las tomaban en la chagra las culebras»; la chagra es de las mujeres (canon; dossier §6.2)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Muchacha delgada caminando de perfil, inclinada levemente hacia adelante por la carga: un canasto de cumare a la espalda sostenido por una banda de fibra que le pasa por la frente, lleno de yuca; corteza batida a la cintura, cabello negro liso al hombro.",
+        "materials": [
+          "cuerpo en planos de papel pardo medio, más estrechos que los de la adulta",
+          "cara aparte: óvalo plano de un solo tono con tres piezas de rasgo recortadas por separado",
+          "corteza batida en papel fibroso claro con el borde deshilachado",
+          "canasto de carga de cumare en tiras de papel pajizo y banda frontal de fibra torcida",
+          "yuca en piezas alargadas de papel pardo claro",
+          "cabello en una pieza plana de papel negro mate"
+        ],
+        "palette_logic": "Idéntica a la de la mujer adulta: pardos, crudo y pajizo, sin pigmento en la piel.",
+        "scale": "Figura entera en 9:16, algo más baja y delgada que la mujer adulta; el canasto le cubre la espalda de los hombros a la cintura.",
+        "continuity_markers": [
+          "nunca se muestra su muerte ni su cuerpo caído: el tipo es la muchacha viva",
+          "sin pintura facial, sin algodón de hormiga, sin adorno",
+          "sin culebras sobre su cuerpo: la escena de las hijas del Príncipe no pasa por este tipo"
+        ],
+        "documented_features": [
+          "la hija arranca yuca y vuelve con la carga (canon, el-mundo-de-ultratumba)",
+          "la chagra y la cestería son trabajo de las mujeres (dossier §6.2)",
+          "cumare como fibra de cestería (dossier §5)"
+        ],
+        "editorial_features": [
+          "la banda frontal de carga no está documentada para los andoque: es decisión editorial reversible",
+          "prenda de corteza batida por préstamo regional declarado",
+          "edad, cabello y rostro son construcción editorial"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
+        "primary_request": "identidad corporal completa y legible para Mujer andoque joven (tipo). Muchacha delgada caminando de perfil, inclinada levemente hacia adelante por la carga: un canasto de cumare a la espalda sostenido por una banda de fibra que le pasa por la frente, lleno de yuca; corteza batida a la cintura, cabello negro liso al hombro.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera en 9:16, algo más baja y delgada que la mujer adulta; el canasto le cubre la espalda de los hombros a la cintura.",
+        "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
+        "materials_textures": "cuerpo en planos de papel pardo medio, más estrechos que los de la adulta; cara aparte: óvalo plano de un solo tono con tres piezas de rasgo recortadas por separado; corteza batida en papel fibroso claro con el borde deshilachado; canasto de carga de cumare en tiras de papel pajizo y banda frontal de fibra torcida; yuca en piezas alargadas de papel pardo claro; cabello en una pieza plana de papel negro mate",
+        "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
+        "constraints": [
+          "documentado: la hija arranca yuca y vuelve con la carga (canon, el-mundo-de-ultratumba)",
+          "documentado: la chagra y la cestería son trabajo de las mujeres (dossier §6.2)",
+          "documentado: cumare como fibra de cestería (dossier §5)",
+          "El mundo es mineral y oscuro: arenisca clara granulada, tierra negra, barro pardo y hoja de palma ahumada, sobre un verde de selva profundo, apagado y de muchos tonos; nunca un verde de tubo ni un follaje uniforme.",
+          "Las dos aguas no comparten color: el río grande va cargado de sedimento, pardo-ocre y opaco, y la quebrada de selva es oscura y translúcida; ningún azul de cielo en ninguna de las dos.",
+          "El color saturado es un acontecimiento y sólo tiene tres apariciones autorizadas: el fuego, la garganta rojo fuego del chupaflor de candela y la sangre que cae y se vuelve piedra. El único pigmento que el corpus nombra es el tinte negro sobre un rostro.",
+          "La capa anterior a Sol y Luna se ilumina con la luz blanca y fría de la mariposa de sol: sin disco solar, sin cielo azul, sin amanecer cálido y sin sombras de sol.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: la selva llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas, no de modelado.",
+          "Sin interior de maloca, mambeadero, manguaré en uso, baile, coca, mambe, tabaco ni ambil.",
+          "Sin pintura facial de barro amarillo, sin algodón de hormiga sobre la piel y sin plumaria ni adorno ceremonial de ningún tipo.",
+          "Sin yuruparí ni ningún instrumento, máscara o iconografía del Vaupés, y sin tocados panindígenas.",
+          "Sin metal en las capas de origen: el hacha de Cortador es de piedra pulida, la espada de Trueno es una macana de madera y no hay filo de acero antes del tiempo tribal.",
+          "Sin violencia explícita: ni descuartizamiento, ni festín, ni calavera trofeo, ni collar de dientes, ni cuerpo en el cepo, ni látigo en el acto.",
+          "Sin reproducir petroglifos reales, sin cola de pez para los seres del agua y sin cuerpo para Sindi, Pepai, Tomirepa ni el Príncipe-de-la-Ilusión."
+        ],
+        "technique_close": "En el plano corto, el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte, apoyadas encima; el cuerpo se construye por planos superpuestos, nunca modelado. Los animales se resuelven con pocas piezas planas grandes y el borde recortado en dientes: la pluma del gavilán, el élitro del cucarrón, el anillado de la boa y la escama del pez son recortes de canto, no texturas individuales. El agua es papel translúcido en láminas superpuestas; el humo del techo ahumado es vitela entre capas."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_nino__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_nino"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "las-sirenas",
+          "field": "mito",
+          "note": "Los niños bailan en la playa; los que llegan «no llevaban taparrabos y tenían el pelo largo hasta la cintura», y así se distinguen (canon)"
+        },
+        {
+          "myth": "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+          "field": "mito",
+          "note": "«Una niña lo recogió creyendo que era hijo de un pajarito» (canon)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Niño de siete u ocho años en medio de un paso de baile sobre la arena, los brazos abiertos y un pie en el aire, con un taparrabo pequeño de corteza batida y el cabello negro liso cortado al hombro; cuerpo entero, nada en las manos.",
+        "materials": [
+          "cuerpo en pocas piezas cortas de papel pardo medio",
+          "cara aparte: óvalo plano más redondo, de un solo tono, con tres piezas de rasgo recortadas por separado",
+          "taparrabo de corteza batida en una pieza pequeña de papel fibroso claro, sujeto con fibra",
+          "cabello en una pieza plana de papel negro mate, al hombro"
+        ],
+        "palette_logic": "Los pardos del colectivo y el crudo de la corteza, sin pigmento.",
+        "scale": "A la altura de la cadera de un adulto, como fija la gramática del colectivo.",
+        "continuity_markers": [
+          "siempre con taparrabo y con el cabello al hombro, nunca a la cintura: es lo que lo separa de la gente de Sitakara",
+          "el baile se dibuja en la playa, nunca como baile ceremonial de maloca",
+          "sin adorno de baile ni algodón de hormiga pegado a la piel"
+        ],
+        "documented_features": [
+          "los niños bailan en la playa de Sitakara y suben a avisar a la casa (canon, las-sirenas)",
+          "la gente del agua no lleva taparrabo y tiene el pelo hasta la cintura (canon; dossier §6.2)",
+          "el algodón de hormiga po'i es adorno de baile y consult_required (dossier §6.1)"
+        ],
+        "editorial_features": [
+          "que el niño lleve taparrabo es inferencia de la oposición que el propio relato hace con la gente del agua; la hechura es préstamo regional declarado",
+          "edad y rostro son construcción editorial"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
+        "primary_request": "identidad corporal completa y legible para Niño andoque (tipo). Niño de siete u ocho años en medio de un paso de baile sobre la arena, los brazos abiertos y un pie en el aire, con un taparrabo pequeño de corteza batida y el cabello negro liso cortado al hombro; cuerpo entero, nada en las manos.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; A la altura de la cadera de un adulto, como fija la gramática del colectivo.",
+        "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
+        "materials_textures": "cuerpo en pocas piezas cortas de papel pardo medio; cara aparte: óvalo plano más redondo, de un solo tono, con tres piezas de rasgo recortadas por separado; taparrabo de corteza batida en una pieza pequeña de papel fibroso claro, sujeto con fibra; cabello en una pieza plana de papel negro mate, al hombro",
+        "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
+        "constraints": [
+          "documentado: los niños bailan en la playa de Sitakara y suben a avisar a la casa (canon, las-sirenas)",
+          "documentado: la gente del agua no lleva taparrabo y tiene el pelo hasta la cintura (canon; dossier §6.2)",
+          "documentado: el algodón de hormiga po'i es adorno de baile y consult_required (dossier §6.1)",
+          "El mundo es mineral y oscuro: arenisca clara granulada, tierra negra, barro pardo y hoja de palma ahumada, sobre un verde de selva profundo, apagado y de muchos tonos; nunca un verde de tubo ni un follaje uniforme.",
+          "Las dos aguas no comparten color: el río grande va cargado de sedimento, pardo-ocre y opaco, y la quebrada de selva es oscura y translúcida; ningún azul de cielo en ninguna de las dos.",
+          "El color saturado es un acontecimiento y sólo tiene tres apariciones autorizadas: el fuego, la garganta rojo fuego del chupaflor de candela y la sangre que cae y se vuelve piedra. El único pigmento que el corpus nombra es el tinte negro sobre un rostro.",
+          "La capa anterior a Sol y Luna se ilumina con la luz blanca y fría de la mariposa de sol: sin disco solar, sin cielo azul, sin amanecer cálido y sin sombras de sol.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: la selva llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas, no de modelado.",
+          "Sin interior de maloca, mambeadero, manguaré en uso, baile, coca, mambe, tabaco ni ambil.",
+          "Sin pintura facial de barro amarillo, sin algodón de hormiga sobre la piel y sin plumaria ni adorno ceremonial de ningún tipo.",
+          "Sin yuruparí ni ningún instrumento, máscara o iconografía del Vaupés, y sin tocados panindígenas.",
+          "Sin metal en las capas de origen: el hacha de Cortador es de piedra pulida, la espada de Trueno es una macana de madera y no hay filo de acero antes del tiempo tribal.",
+          "Sin violencia explícita: ni descuartizamiento, ni festín, ni calavera trofeo, ni collar de dientes, ni cuerpo en el cepo, ni látigo en el acto.",
+          "Sin reproducir petroglifos reales, sin cola de pez para los seres del agua y sin cuerpo para Sindi, Pepai, Tomirepa ni el Príncipe-de-la-Ilusión."
+        ],
+        "technique_close": "En el plano corto, el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte, apoyadas encima; el cuerpo se construye por planos superpuestos, nunca modelado. Los animales se resuelven con pocas piezas planas grandes y el borde recortado en dientes: la pluma del gavilán, el élitro del cucarrón, el anillado de la boa y la escama del pez son recortes de canto, no texturas individuales. El agua es papel translúcido en láminas superpuestas; el humo del techo ahumado es vitela entre capas."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_anciano__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_anciano"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "las-sirenas",
+          "field": "mito",
+          "note": "«Los grandes les dijeron lo que tenían que hacer» (canon)"
+        },
+        {
+          "myth": "el-mundo-de-ultratumba",
+          "field": "mito",
+          "note": "Canoa-de-Piedra «era de los mayores de su grupo»; el chai o cacique es el anciano de mayor rango e itú, el sabio, «el que hace dar confianza al corazón» (canon; dossier §6.2)"
+        },
+        {
+          "myth": "la-guerra-del-palo-hablador",
+          "field": "mito",
+          "note": "El mambeadero es reunión nocturna de hombres en el centro de la maloca, consult_required: no se dibuja (dossier §6.1)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre mayor sentado en un banco bajo de madera, afuera, junto a la boca de la maloca, con el guayuco de corteza, los antebrazos sobre las rodillas y una mano abierta hacia adelante, como quien da una indicación; cuerpo enjuto, hombros estrechos, cabello corto con tiras grises.",
+        "materials": [
+          "cuerpo en planos largos y estrechos de papel pardo, sin arrugas modeladas",
+          "cara aparte: óvalo plano de un solo tono con tres piezas de rasgo y dos pliegues recortados en la frente",
+          "guayuco de corteza batida más oscura, en papel fibroso con el borde deshilachado",
+          "banco bajo tallado de una sola pieza de madera, sin figura animal",
+          "cabello en una pieza plana de papel negro con dos tiras grises superpuestas"
+        ],
+        "palette_logic": "Pardo más apagado que el del adulto, corteza oscura, gris en el cabello: la edad se dice por valor, no por color.",
+        "scale": "Media cabeza más bajo que el adulto, como fija la gramática del colectivo; sentado, su cabeza queda a la altura del pecho de un adulto de pie.",
+        "continuity_markers": [
+          "nunca dentro de la maloca, nunca mambeando, sin totuma de mambe ni ambil",
+          "sin insignia de chai ni de capitán: el tipo es el mayor común",
+          "no retrata a Yiñefoque ni a ningún anciano nombrado",
+          "sin pintura, sin collar, sin plumaria"
+        ],
+        "documented_features": [
+          "los mayores aconsejan y oyen (canon, las-sirenas y el-mundo-de-ultratumba)",
+          "cargos documentados: po'so, chai —el anciano de mayor rango—, el chamán e itú, el sabio (dossier §6.2)",
+          "mambeadero e interior de la maloca son consult_required (dossier §6.1 y salvaguarda 2)",
+          "las personas históricas nombradas no se retratan (dossier §6.2)"
+        ],
+        "editorial_features": [
+          "el banco bajo y la postura sentada a la puerta son decisión editorial para dar autoridad sin insignia ni interior; retirables",
+          "el cabello corto con canas es construcción editorial, igual que el rostro",
+          "el guayuco es préstamo regional declarado"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
+        "primary_request": "identidad corporal completa y legible para Anciano andoque (tipo). Hombre mayor sentado en un banco bajo de madera, afuera, junto a la boca de la maloca, con el guayuco de corteza, los antebrazos sobre las rodillas y una mano abierta hacia adelante, como quien da una indicación; cuerpo enjuto, hombros estrechos, cabello corto con tiras grises.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Media cabeza más bajo que el adulto, como fija la gramática del colectivo; sentado, su cabeza queda a la altura del pecho de un adulto de pie.",
+        "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
+        "materials_textures": "cuerpo en planos largos y estrechos de papel pardo, sin arrugas modeladas; cara aparte: óvalo plano de un solo tono con tres piezas de rasgo y dos pliegues recortados en la frente; guayuco de corteza batida más oscura, en papel fibroso con el borde deshilachado; banco bajo tallado de una sola pieza de madera, sin figura animal; cabello en una pieza plana de papel negro con dos tiras grises superpuestas",
+        "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
+        "constraints": [
+          "documentado: los mayores aconsejan y oyen (canon, las-sirenas y el-mundo-de-ultratumba)",
+          "documentado: cargos documentados: po'so, chai —el anciano de mayor rango—, el chamán e itú, el sabio (dossier §6.2)",
+          "documentado: mambeadero e interior de la maloca son consult_required (dossier §6.1 y salvaguarda 2)",
+          "documentado: las personas históricas nombradas no se retratan (dossier §6.2)",
+          "El mundo es mineral y oscuro: arenisca clara granulada, tierra negra, barro pardo y hoja de palma ahumada, sobre un verde de selva profundo, apagado y de muchos tonos; nunca un verde de tubo ni un follaje uniforme.",
+          "Las dos aguas no comparten color: el río grande va cargado de sedimento, pardo-ocre y opaco, y la quebrada de selva es oscura y translúcida; ningún azul de cielo en ninguna de las dos.",
+          "El color saturado es un acontecimiento y sólo tiene tres apariciones autorizadas: el fuego, la garganta rojo fuego del chupaflor de candela y la sangre que cae y se vuelve piedra. El único pigmento que el corpus nombra es el tinte negro sobre un rostro.",
+          "La capa anterior a Sol y Luna se ilumina con la luz blanca y fría de la mariposa de sol: sin disco solar, sin cielo azul, sin amanecer cálido y sin sombras de sol.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: la selva llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas, no de modelado.",
+          "Sin interior de maloca, mambeadero, manguaré en uso, baile, coca, mambe, tabaco ni ambil.",
+          "Sin pintura facial de barro amarillo, sin algodón de hormiga sobre la piel y sin plumaria ni adorno ceremonial de ningún tipo.",
+          "Sin yuruparí ni ningún instrumento, máscara o iconografía del Vaupés, y sin tocados panindígenas.",
+          "Sin metal en las capas de origen: el hacha de Cortador es de piedra pulida, la espada de Trueno es una macana de madera y no hay filo de acero antes del tiempo tribal.",
+          "Sin violencia explícita: ni descuartizamiento, ni festín, ni calavera trofeo, ni collar de dientes, ni cuerpo en el cepo, ni látigo en el acto.",
+          "Sin reproducir petroglifos reales, sin cola de pez para los seres del agua y sin cuerpo para Sindi, Pepai, Tomirepa ni el Príncipe-de-la-Ilusión."
+        ],
+        "technique_close": "En el plano corto, el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte, apoyadas encima; el cuerpo se construye por planos superpuestos, nunca modelado. Los animales se resuelven con pocas piezas planas grandes y el borde recortado en dientes: la pluma del gavilán, el élitro del cucarrón, el anillado de la boa y la escama del pez son recortes de canto, no texturas individuales. El agua es papel translúcido en láminas superpuestas; el humo del techo ahumado es vitela entre capas."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_anciana__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_anciana"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-guerra-del-palo-hablador",
+          "field": "mito",
+          "note": "«Cuando bajó toda la gente de la casa»: la maloca aloja de 60 a 200 personas por linaje (canon; dossier §4)"
+        },
+        {
+          "myth": "el-aguila-canibal-y-la-madre-de-los-andoques",
+          "field": "mito",
+          "note": "La madre de los andoque es un coleóptero y no una mujer mayor: el dossier corrige que se habría dibujado así (dossier §12)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer mayor sentada en el suelo con las piernas estiradas, la corteza batida a la cintura, torciendo sobre el muslo una hebra de fibra de cumare con la palma de la mano; a su lado un manojo de fibra cruda. Cuerpo delgado, espalda algo curva, cabello corto con tiras grises.",
+        "materials": [
+          "cuerpo en planos de papel pardo apagado, sin arrugas modeladas",
+          "cara aparte: óvalo plano de un solo tono con tres piezas de rasgo y dos pliegues recortados",
+          "corteza batida oscura en papel fibroso con el borde deshilachado",
+          "fibra de cumare en tiras finas de papel pajizo, torcida en una hebra y suelta en manojo",
+          "cabello en una pieza plana de papel negro con tiras grises"
+        ],
+        "palette_logic": "Pardo apagado, corteza oscura, pajizo de la fibra y gris del cabello; sin pigmento.",
+        "scale": "Media cabeza más baja que la mujer adulta; sentada, ocupa la mitad inferior del encuadre 9:16.",
+        "continuity_markers": [
+          "nunca con rasgos de coleóptero ni de Doña Cucarrón-de-vida",
+          "no es Doña Sueño: sin hoja doblada, sin ambil ni coca",
+          "sin pintura, sin collar, sin adorno"
+        ],
+        "documented_features": [
+          "la cestería con fibra de cumare es trabajo de mujeres y sigue viva (dossier §5 y §6.2)",
+          "toda la gente de la casa baja al río (canon, la-guerra-del-palo-hablador)",
+          "la madre de los andoque no es una mujer mayor sino un coleóptero (dossier §12)"
+        ],
+        "editorial_features": [
+          "el gesto de torcer la fibra sobre el muslo es decisión editorial dentro del oficio documentado",
+          "prenda de corteza por préstamo regional declarado; cabello, edad y rostro son construcción editorial"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
+        "primary_request": "identidad corporal completa y legible para Anciana andoque (tipo). Mujer mayor sentada en el suelo con las piernas estiradas, la corteza batida a la cintura, torciendo sobre el muslo una hebra de fibra de cumare con la palma de la mano; a su lado un manojo de fibra cruda. Cuerpo delgado, espalda algo curva, cabello corto con tiras grises.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Media cabeza más baja que la mujer adulta; sentada, ocupa la mitad inferior del encuadre 9:16.",
+        "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
+        "materials_textures": "cuerpo en planos de papel pardo apagado, sin arrugas modeladas; cara aparte: óvalo plano de un solo tono con tres piezas de rasgo y dos pliegues recortados; corteza batida oscura en papel fibroso con el borde deshilachado; fibra de cumare en tiras finas de papel pajizo, torcida en una hebra y suelta en manojo; cabello en una pieza plana de papel negro con tiras grises",
+        "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
+        "constraints": [
+          "documentado: la cestería con fibra de cumare es trabajo de mujeres y sigue viva (dossier §5 y §6.2)",
+          "documentado: toda la gente de la casa baja al río (canon, la-guerra-del-palo-hablador)",
+          "documentado: la madre de los andoque no es una mujer mayor sino un coleóptero (dossier §12)",
+          "El mundo es mineral y oscuro: arenisca clara granulada, tierra negra, barro pardo y hoja de palma ahumada, sobre un verde de selva profundo, apagado y de muchos tonos; nunca un verde de tubo ni un follaje uniforme.",
+          "Las dos aguas no comparten color: el río grande va cargado de sedimento, pardo-ocre y opaco, y la quebrada de selva es oscura y translúcida; ningún azul de cielo en ninguna de las dos.",
+          "El color saturado es un acontecimiento y sólo tiene tres apariciones autorizadas: el fuego, la garganta rojo fuego del chupaflor de candela y la sangre que cae y se vuelve piedra. El único pigmento que el corpus nombra es el tinte negro sobre un rostro.",
+          "La capa anterior a Sol y Luna se ilumina con la luz blanca y fría de la mariposa de sol: sin disco solar, sin cielo azul, sin amanecer cálido y sin sombras de sol.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: la selva llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas, no de modelado.",
+          "Sin interior de maloca, mambeadero, manguaré en uso, baile, coca, mambe, tabaco ni ambil.",
+          "Sin pintura facial de barro amarillo, sin algodón de hormiga sobre la piel y sin plumaria ni adorno ceremonial de ningún tipo.",
+          "Sin yuruparí ni ningún instrumento, máscara o iconografía del Vaupés, y sin tocados panindígenas.",
+          "Sin metal en las capas de origen: el hacha de Cortador es de piedra pulida, la espada de Trueno es una macana de madera y no hay filo de acero antes del tiempo tribal.",
+          "Sin violencia explícita: ni descuartizamiento, ni festín, ni calavera trofeo, ni collar de dientes, ni cuerpo en el cepo, ni látigo en el acto.",
+          "Sin reproducir petroglifos reales, sin cola de pez para los seres del agua y sin cuerpo para Sindi, Pepai, Tomirepa ni el Príncipe-de-la-Ilusión."
+        ],
+        "technique_close": "En el plano corto, el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte, apoyadas encima; el cuerpo se construye por planos superpuestos, nunca modelado. Los animales se resuelven con pocas piezas planas grandes y el borde recortado en dientes: la pluma del gavilán, el élitro del cucarrón, el anillado de la boa y la escama del pez son recortes de canto, no texturas individuales. El agua es papel translúcido en láminas superpuestas; el humo del techo ahumado es vitela entre capas."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
     "nenefi__identity_sheet": {
       "purpose": "identity_sheet",
       "entity_refs": [
@@ -9113,7 +10198,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para Nenefi. Cuerpo de hombre de pie cuya espalda no es espalda sino un par de élitros cerrados en costura recta desde la nuca hasta la cintura, con el borde del ala asomando un canto bajo el hombro: se lee humano de frente y coleóptero de espaldas, y ésa es la única figura de la biblia que cambia de especie según de qué lado se mire.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura de hombre adulto medida contra la boca de la maloca: el élitro le cubre exactamente el tramo de la espalda entre la nuca y la cintura, ni más ni menos, para que la lectura de insecto no lo convierta en bicho gigante.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura de hombre adulto medida contra la boca de la maloca: el élitro le cubre exactamente el tramo de la espalda entre la nuca y la cintura, ni más ni menos, para que la lectura de insecto no lo convierta en bicho gigante.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "élitro dorsal en dos piezas de papel pardo muy oscuro, lisas y de canto limpio, superpuestas con un milímetro de aire entre ellas; rostro de óvalo plano de un solo tono pardo, con ceja, ojo y boca recortados aparte y apoyados encima; guayuco de corteza batida, pieza rectangular de papel fibroso con el borde deshilachado a tijera; flauta de hueso claro en la mano, cilindro liso con tres perforaciones limpias",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -9146,7 +10231,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -9216,7 +10301,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para Doña Cucarrón-de-vida. Escarabajo entero visto en tres cuartos alto, con los seis tarsos apoyados en tierra negra y el par de élitros abiertos en abanico corto para dejar ver que por dentro lleva carga —tubérculos, frutas, un puñado de tierra—, de modo que el cuerpo del insecto funciona como cesto: no es una matrona con alas, es un coleóptero que transporta el mundo dentro de sí.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Del tamaño de un hombre acostado, medida contra la punta del cerro desde donde levanta la casa: grande para que la carga se lea, nunca tan grande que la casa se vuelva un juguete.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Del tamaño de un hombre acostado, medida contra la punta del cerro desde donde levanta la casa: grande para que la carga se lea, nunca tan grande que la casa se vuelva un juguete.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "élitros en dos grandes piezas planas de papel negro brillante, con el borde interior recortado en dientes cortos y no en plumas sueltas; tierra negra antrópica en grumos de papel mate, apilada bajo el cuerpo y en el hueco de los élitros; tarsos de papel pardo en tiras dobladas una sola vez por articulación: seis tiras, seis dobleces, sin modelado; tubérculos y frutas en piezas ovales de papel pardo claro, del tamaño de una uña del insecto",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -9249,7 +10334,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -9309,7 +10394,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para Canoa-de-Piedra. Hombre de pie en el eje vertical de la lámina y partido por una línea de tierra a la altura de la cintura: el torso arriba, entre raíces y hojarasca, y las piernas abajo en el ámbito subterráneo, con la totuma de caldo de yuca todavía en la mano. Es el único cuerpo de la biblia que ocupa dos mundos en la misma figura, y por eso su ficha no se confunde con ningún otro protagonista.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura de hombre medida contra el espesor del horizonte negro: la capa de tierra que lo parte tiene el grosor de su antebrazo, que es lo que el suelo antrópico de este río mide de verdad.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura de hombre medida contra el espesor del horizonte negro: la capa de tierra que lo parte tiene el grosor de su antebrazo, que es lo que el suelo antrópico de este río mide de verdad.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "totuma de caldo en media esfera de papel pardo claro, con el líquido como disco de papel translúcido apenas hundido; capa de tierra negra que lo cruza a la cintura, con el canto de la hojarasca recortado en dientes irregulares; manojo de hierbas de raíces rojas colgando de la otra mano, en tiras finas de papel con la raíz en un rojo apagado y terroso; cuerpo en planos superpuestos de papel pardo medio y guayuco de corteza batida",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -9342,7 +10427,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -9407,7 +10492,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para Plumón-amarillo. Hombre de pie, de frente, con el óvalo del rostro completamente vacío —sin una sola pieza de ojo, ceja o boca encima—, delante de una maloca cuyo techo está a medio empajar: los haces de hoja de palma nuevos, todavía claros y sin ahumar, atados en el agua de la cubierta. La ficha no es un retrato sino una condición que se levanta, y el rostro vacío lo dice sin disimularlo.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura de hombre medida contra la boca de la maloca, que le dobla la altura: la casa tiene que verse capaz de alojar gente, porque «volver gente» es exactamente eso.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura de hombre medida contra la boca de la maloca, que le dobla la altura: la casa tiene que verse capaz de alojar gente, porque «volver gente» es exactamente eso.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "óvalo facial de un solo tono pardo, liso, sin piezas superpuestas: la ausencia es el material; haces de hoja de palma nueva en papel pardo claro, atados cada dos palmos con fibra fina, contra el pardo casi negro del techo viejo; ropa de tela de trato: pieza rectangular de papel de fibra gruesa, con el canto cortado a tijera recta y no deshilachado como el guayuco; varazón de la cumbrera a medio cubrir, en tiras de papel oscuro cruzadas",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -9440,7 +10525,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -9500,7 +10585,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para Plumón-de-fiebre. Hombre de pie, de espaldas, con el óvalo del rostro igualmente vacío pero girado hacia el interior de una maloca ya terminada y negra de humo, con la comida ritual puesta en el suelo de tierra en cuatro montones alineados. Donde Plumón-amarillo está afuera y de frente ante un techo a medias, éste está adentro y de espaldas ante una casa acabada: la pareja se distingue por la dirección y por el grado de acabado, nunca por la cara.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura de hombre contra la altura interior de la maloca, que aquí se mide por la distancia de la cabeza a la cumbrera: tiene que sobrar techo encima para que la casa se lea grande y habitada.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura de hombre contra la altura interior de la maloca, que aquí se mide por la distancia de la cabeza a la cumbrera: tiene que sobrar techo encima para que la casa se lea grande y habitada.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "interior de techo en papel negro mate ahumado, con el canto de cada palma todavía legible a contraluz; cuatro montones de alimento en piezas ovales de papel blanco hueso y pardo claro, iguales entre sí y alineados en el suelo; suelo de tierra apisonada en papel pardo muy oscuro, sin grano; óvalo facial de un solo tono, visto de canto por el giro de la cabeza, sin piezas de rasgo",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -9533,7 +10618,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -9593,7 +10678,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para Sol. Hombre joven de pie, con el brazo extendido señalando hacia un borde del encuadre y sin ningún disco, corona ni halo en la lámina: la ficha del Sol andoque es deliberadamente la de un cuerpo que todavía no es astro, y la única claridad que la baña es la luz blanca y fría de la mariposa, que entra por un costado y le deja la sombra corta y sin dirección solar.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura de hombre medida contra la cáscara del huevo, que le llega a media pantorrilla: el huevo tiene que leerse grande para que el nacimiento se entienda, y él no tiene que leerse gigante.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura de hombre medida contra la cáscara del huevo, que le llega a media pantorrilla: el huevo tiene que leerse grande para que el nacimiento se entienda, y él no tiene que leerse gigante.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "cáscara de huevo de torcaza partida a sus pies, en dos casquetes de papel blanco hueso con el canto astillado; cuerpo en planos superpuestos de papel pardo medio con guayuco de corteza batida; mariposa blanca grande en el fondo, en dos piezas planas de papel translúcido superpuestas; manojo de barbasco machacado en la otra mano, en tiras de papel fibroso pardo verdoso apagado",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -9626,7 +10711,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -9696,7 +10781,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para Luna. Hombre de pie con el rostro cruzado por una banda de tinte negro que le toma el óvalo entero de sien a sien, y el cuerpo encajado dentro de la silueta hueca de un tronco que lo recorta desde los pies hasta los hombros: la figura se lee siempre dentro de un cerco de madera, incluso cuando ya salió, porque el encierro es lo que lo define frente a su hermano.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura de hombre contra el diámetro del tronco, que tiene que ser apenas mayor que el ancho de sus hombros: el hueco es una prisión justa, no una cueva.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura de hombre contra el diámetro del tronco, que tiene que ser apenas mayor que el ancho de sus hombros: el hueco es una prisión justa, no una cueva.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "banda de tinte negro en una sola pieza mate recortada sobre el óvalo del rostro, con el canto neto y sin degradado; pared interior del tronco en papel pardo muy oscuro con el canto astillado hacia adentro; higuerón naciente sobre el borde superior del hueco, en piezas de hoja pequeñas y apiladas; cuerpo en planos superpuestos de papel pardo medio, con el guayuco de corteza batida",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -9729,7 +10814,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -9794,7 +10879,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para Cortador. Hombre en postura de golpe, con el peso adelantado y el hacha de piedra pulida ya descendida hasta la mitad del tronco, y una lluvia de astillas grandes saliendo del corte hacia el frente: es la única ficha de la biblia andoque cuya silueta está definida por una herramienta en el momento del trabajo y no por el reposo.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; El hacha mide de su codo a su mano: enmangada corta, para trabajo y no para guerra, y el tronco le dobla la anchura de hombros.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; El hacha mide de su codo a su mano: enmangada corta, para trabajo y no para guerra, y el tronco le dobla la anchura de hombros.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "hoja de hacha triangular de punta aguda en piedra pulida, pieza de papel gris verdoso liso y sin veta, enmangada en madera con amarre de fibra; astillas de balso en piezas planas alargadas de papel pálido, todas del mismo grosor y disparadas en abanico; tronco abierto en dos planos de papel pardo oscuro con el canto interior claro y astillado; cuerpo en planos superpuestos de papel pardo medio con guayuco de corteza batida",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -9827,7 +10912,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -9882,7 +10967,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para La mujer de balso. Figura femenina de pie cuya superficie entera está todavía facetada: el cuerpo no tiene un solo borde redondeado, sino una sucesión de planos rectos de desbaste que se encuentran en aristas vivas, como una talla detenida a medio camino. Alrededor de los pies, un cerco de virutas que ya no son virutas —aves, cantos rodados y peces recortados del mismo papel pálido y del mismo grosor que ella—, y ese parentesco de materia entre la figura y lo que salió de ella es el argumento de la lámina.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura de mujer adulta medida contra la altura de Cortador en la misma escena: exactamente igual, porque la fuente no dice que sea mayor ni menor y una diferencia sería inventar jerarquía.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura de mujer adulta medida contra la altura de Cortador en la misma escena: exactamente igual, porque la fuente no dice que sea mayor ni menor y una diferencia sería inventar jerarquía.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "balso pálido en planos rectos de desbaste que se encuentran en aristas vivas, sin un solo canto redondeado en toda la figura; astillas transformadas: piezas planas pequeñas de papel pálido idéntico, unas con perfil de ave, otras de canto rodado, otras de pez, todas del mismo grosor que el cuerpo; rostro de óvalo plano sin terminar, con una sola pieza de rasgo apoyada encima y el resto liso; suelo de tierra negra bajo la viruta",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -9915,7 +11000,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -9970,7 +11055,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para Huevo-de-chupaflor. Cuerpo pequeño y enjuto, de proporción de muchacho contra los adultos del ciclo, con un solo ojo recortado sobre el óvalo del rostro y el otro lado liso, y arrastrando un jirón de red quemada que le cuelga del hombro con los bordes carbonizados: la red rota es tan suya como el ojo único, porque por ahí escapó con el fuego.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Le saca una cabeza menos que cualquier adulto del ciclo: la desproporción es lo que hace legible que interroga a las aves y roba el fuego sin ser un guerrero.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Le saca una cabeza menos que cualquier adulto del ciclo: la desproporción es lo que hace legible que interroga a las aves y roba el fuego sin ser un guerrero.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "jirón de atarraya en malla de fibra recortada a mano, con los cabos del agujero ennegrecidos y rizados por el calor; cáscara de huevo de colibrí minúscula colgada al cuello, casquete de papel blanco hueso del tamaño de una falange; rostro de óvalo plano con una sola pieza de ojo apoyada encima y ninguna en el otro lado; cuerpo en planos superpuestos de papel pardo medio, con guayuco de corteza batida",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -10003,7 +11088,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -10063,7 +11148,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para Trueno-de-piedra. Hombre de pie con los brazos separados y asimétricos: en la derecha, alta, un disco de espejo del tamaño de la palma; en la izquierda, baja y pegada al muslo, la macana de corazón de palo. La ficha se reconoce por ese desnivel de manos —arriba el destello, abajo el golpe— y por el guayuco ajeno que lleva enrollado al antebrazo como trofeo.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; La macana le llega del suelo a la cadera y es gruesa como su muñeca: un mazo, no una espada; el espejo cabe en una mano y no más.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; La macana le llega del suelo a la cadera y es gruesa como su muñeca: un mazo, no una espada; el espejo cabe en una mano y no más.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "disco de espejo en papel plateado mate, sin marco, sin azogue y sin reflejo dibujado: un círculo liso y nada más; macana de corazón de palo, listón grueso de papel pardo casi negro con el canto duro y sin filo; guayuco ajeno de corteza batida enrollado al antebrazo, en papel fibroso claro y con el borde deshilachado; cuerpo en planos superpuestos de papel pardo medio",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -10096,7 +11181,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -10156,7 +11241,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para El especialista huitoto. Hombre de pie con la cadera desnuda y el nudo del guayuco deshecho colgando suelto de un solo lado: es la única figura humana de la biblia a la que le falta la prenda que todas las demás llevan, y ésa —no una máscara ni un atributo de brujo— es su descripción entera.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura de hombre igual a la de Trueno-de-piedra: la fuente los enfrenta de igual a igual y una diferencia de talla inventaría jerarquía.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura de hombre igual a la de Trueno-de-piedra: la fuente los enfrenta de igual a igual y una diferencia de talla inventaría jerarquía.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "cabo suelto del guayuco perdido, tira de corteza batida colgando sin tensión; manojo de hierba en la mano abierta, en dos piezas: la hoja que causa y la que cura, iguales de forma y distintas de tono; cuerpo en planos superpuestos de papel pardo medio, con el plano de la cadera desnudo y sin pieza encima; huellas de zarpa a medio formar en el suelo, en piezas planas que todavía no cierran una pata completa",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -10189,7 +11274,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -10244,7 +11329,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para Garza-de-centro. Hombre sentado en banco bajo, de perfil estricto y mirando hacia el borde izquierdo del encuadre —río arriba, al oeste—, con las dos manos abiertas hacia adelante en gesto de recibir. Su ficha y la de Garza-de-bocana son la misma talla y el mismo cuerpo, y sólo se distinguen por la dirección: éste mira siempre hacia la cabecera.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Sentado, la coronilla le queda a la altura de la cintura de un hombre de pie: el banco es bajo y eso lo diferencia de las figuras erguidas del ciclo.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Sentado, la coronilla le queda a la altura de la cintura de un hombre de pie: el banco es bajo y eso lo diferencia de las figuras erguidas del ciclo.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "banco bajo de una sola pieza de madera, listón de papel pardo oscuro con las patas recortadas del mismo bloque; suelo de tierra apisonada de la maloca en papel pardo muy oscuro; cuerpo en planos superpuestos de papel pardo medio con guayuco de corteza batida; pared de arenisca detrás, en papel claro y granulado, que sitúa la escena en la casa del centro",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -10277,7 +11362,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -10332,7 +11417,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para Garza-de-bocana. Hombre de pie, de perfil estricto y mirando hacia el borde derecho del encuadre —río abajo, al este—, con el cuerpo todavía escurriendo: goterones de papel translúcido cayéndole del pelo, del codo y del borde del guayuco, y un charco recortado a sus pies. Es el único cuerpo mojado de toda la biblia andoque.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura idéntica a la de Garza-de-centro, con la misma anchura de hombros: la pareja se lee como pareja por la igualdad, no por el contraste.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura idéntica a la de Garza-de-centro, con la misma anchura de hombros: la pareja se lee como pareja por la igualdad, no por el contraste.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "goterones y charco en papel translúcido en láminas superpuestas, con el canto visible de cada lámina; cabello aplastado por el agua en una sola pieza plana pegada al cráneo, no en mechones; cuerpo en planos superpuestos de papel pardo medio con guayuco de corteza batida oscurecido por el agua; orilla de arena parda detrás, en papel granulado",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -10365,7 +11450,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -10425,7 +11510,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para Trueno. Hombre mayor sentado de espaldas al espectador, con la nuca descubierta y despejada en el centro exacto del encuadre, y las dos macanas cruzadas delante de él sobre el suelo —una pálida de balso y otra oscura de corazón de palo—, todavía sin repartir. La ficha es una espalda ofrecida y un engaño puesto a la vista.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Sentado ocupa el tercio bajo del encuadre y la hendidura de la pared queda justo a la altura de su nuca: la arquitectura tiene que medir contra el cuerpo para que el mecanismo se entienda.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Sentado ocupa el tercio bajo del encuadre y la hendidura de la pared queda justo a la altura de su nuca: la arquitectura tiene que medir contra el cuerpo para que el mecanismo se entienda.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "dos macanas iguales de forma y distintas de materia: listón pálido de balso y listón pardo casi negro de corazón de palo; nuca y hombros en un solo plano de papel pardo medio, sin ninguna pieza encima que la cubra; pared trasera de la maloca a su espalda, en papel oscuro con una hendidura recta ya abierta; cabello corto en una pieza plana, con el canto recortado en dientes cortos",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -10458,7 +11543,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -10513,7 +11598,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para Doña Sueño. Mujer sentada en cuclillas y muy inclinada hacia adelante, con dos dedos posados sobre su propio párpado derecho y la otra mano sosteniendo abierta una hoja de carrizo larga y tiesa, ya con el pliegue marcado a la mitad: la ficha es un gesto de extracción sobre el propio cuerpo, y eso no lo repite ninguna otra figura de la biblia.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; En cuclillas cabe en la mitad inferior del encuadre y la hoja de carrizo le mide de la muñeca al codo: es un objeto de mano, no un bastón.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; En cuclillas cabe en la mitad inferior del encuadre y la hoja de carrizo le mide de la muñeca al codo: es un objeto de mano, no un bastón.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "hoja de carrizo en una tira larga y rígida de papel pardo verdoso apagado, con una nervadura central marcada por un solo doblez; párpado y rasgos del rostro en piezas mínimas recortadas aparte sobre el óvalo plano; cuerpo plegado en planos superpuestos de papel pardo medio; suelo de tierra negra bajo las rodillas",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -10546,7 +11631,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -10877,7 +11962,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para Flor-de-guacamayo. Hombre de pie con el brazo derecho en alto y la mano abierta hacia atrás —llamando a los que vienen detrás, no a los que están delante—, y a sus pies un solo fardo de mercancía todavía atado. La ficha se reconoce porque el gesto va dirigido fuera del encuadre, al lado contrario de la mercancía: es una autoridad que convoca a los suyos hacia lo que llegó de la bocana.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura de hombre contra el fardo, que le llega a la rodilla: el bulto tiene que leerse manejable, porque la gente lo va a cargar.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura de hombre contra el fardo, que le llega a la rodilla: el bulto tiene que leerse manejable, porque la gente lo va a cargar.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "fardo de mercancía atado con cuerda, bulto rectangular de papel de fibra gruesa con las aristas marcadas por el amarre; ropa de paño grueso, pieza recta de papel denso con el canto cortado a tijera; cuerpo en planos superpuestos de papel pardo medio; suelo de tierra pisada en papel pardo muy oscuro",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -10910,7 +11995,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -10965,7 +12050,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para El visitante que desafió al fantasma. Hombre de pie en plena noche con la cabeza echada atrás y la boca abierta recortada como una pieza aparte y perfectamente negra sobre el óvalo del rostro: es el único rostro de la biblia con la boca abierta, y toda la figura está construida alrededor de ese agujero, porque lo que hace el personaje es gritar el desafío.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura de hombre ocupando el tercio central del encuadre, con tres capas de monte detrás: la profundidad importa más que la talla, porque el desafío se grita hacia adentro del monte.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura de hombre ocupando el tercio central del encuadre, con tres capas de monte detrás: la profundidad importa más que la talla, porque el desafío se grita hacia adentro del monte.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "boca en una pieza de papel negro mate recortada como óvalo vertical, apoyada sobre el óvalo plano del rostro; cuerpo en planos superpuestos de papel pardo medio, casi fundido con el fondo por falta de luz; vegetación nocturna alrededor en tres láminas de papel negro a distintas distancias, con cantos internos visibles; guayuco de corteza batida apenas legible en la penumbra",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -10998,7 +12083,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -11229,7 +12314,7 @@
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
         "primary_request": "identidad corporal completa y legible para Gavilán-de-piriri. Hombre mayor de pie y de tres cuartos, con el brazo extendido en horizontal y el índice señalando puntos sucesivos a lo largo de una línea de agua que cruza el fondo: la figura está compuesta para leerse como quien nombra un territorio, con la mano a la altura del horizonte y el cuerpo quieto. Es la única ficha andoque cuyo gesto es cartográfico y no de acción.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura de hombre contra el ancho del río al fondo, que ocupa todo el encuadre: la desproporción entre el cuerpo y el cauce es lo que hace que el gesto se lea como nombrar un territorio.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura de hombre contra el ancho del río al fondo, que ocupa todo el encuadre: la desproporción entre el cuerpo y el cauce es lo que hace que el gesto se lea como nombrar un territorio.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
         "materials_textures": "línea de río al fondo en dos láminas de papel pardo ocre opaco, sin brillo; ropa de tela de trato y sombrero ausente: torso con pieza recta de paño y el resto en planos superpuestos de papel pardo medio; cabello corto en pieza plana con el canto en dientes cortos; suelo de tierra negra con el canto de la barranca recortado",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
@@ -11262,7 +12347,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],

@@ -1117,41 +1117,71 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "Lo que separó esta lectura no fue una entidad sino una atribución: la araña de Istmina parecía un injerto editorial con nombre africano prestado y resultó ser la expansión casi frase por frase de un relato recogido de boca de don Pío Perea por Friedemann y Vanín, con el sacristanazgo, las hostias, la torre, las campanas, la profecía y el cura confundido ya dentro —sólo el vino del cáliz, la escalera de seda torcida y el desfile de guaguas son de la página—; y como el narrador era él mismo sacristán, quedó fijado el punto de vista de la lámina, desde dentro de la sacristía y a la escala de quien la barre, no desde la nave y a escala de fiel. De ahí salió lo demás: que «Istmina» no existe antes de 1903 y fecha la página entera en el siglo XX, y que su iglesia es parroquia de ciudad con torre y cuerdas, no capilla de caserío de palma.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El relato nuevo quita el vino del cáliz, la escalera de seda torcida, el desfile de fauna y hasta el nombre de Istmina, y deja el episodio de Pío Perea casi desnudo —hostias comidas, condena, torre, campanas, voz delgadita, cura que no la ve y multitud que la salva— más un prólogo con el hilo de su cuerpo, el paso sobre el agua y los niños que se zambullen a pedírselo; por eso la araña se mide ahora contra el bronce de las campanas y no contra el cáliz, la fauna sale del inventario y los niños entran como tipo base.",
         "previous_note": "Lo que separó esta lectura no fue una entidad sino una atribución: la araña de Istmina parecía un injerto editorial con nombre africano prestado y resultó ser la expansión casi frase por frase de un relato recogido de boca de don Pío Perea por Friedemann y Vanín, con el sacristanazgo, las hostias, la torre, las campanas, la profecía y el cura confundido ya dentro —sólo el vino del cáliz, la escalera de seda torcida y el desfile de guaguas son de la página—; y como el narrador era él mismo sacristán, quedó fijado el punto de vista de la lámina, desde dentro de la sacristía y a la escala de quien la barre, no desde la nave y a escala de fiel. De ahí salió lo demás: que «Istmina» no existe antes de 1903 y fecha la página entera en el siglo XX, y que su iglesia es parroquia de ciudad con torre y cuerdas, no capilla de caserío de palma."
       },
       "entity_refs": [
         {
           "entity_id": "anansi_arana_sacristana",
           "role": "primary",
-          "note": "Araña del tamaño de tres dedos de niño que teje en las esquinas de la iglesia, destapa el copón, se emborracha en el cáliz y se salva profetizando desde el campanario. Conduce toda la acción. PANREGIONAL verificado: Nansi/Anansi también aparece en caribe-restante (ciclo isleño de San Andrés y Providencia) y en cordoba-sinu. El de aquí es una araña católica de sacristía en un pueblo del San Juan; el isleño es un embaucador de monte, molino y montura en criollo inglés. Son dos mundos, no dos poses: el editor decide ficha nacional con variantes o una por región."
+          "note": "La sacristana que se come las hostias, sube a la torre más alta, repica entre las campanas y anuncia el fin del mundo con voz delgadita; el cura no la ve y cree que es voz del cielo. Conduce toda la acción. Sigue siendo la primaria del relato nuevo."
         },
         {
           "entity_id": "gente_de_pueblo_chocoano",
           "role": "secondary",
-          "note": "La población que llena las cuatro escenas colectivas: los de Istmina que buscan a Anansi por el pueblo entero, el barrio alborotado entre misa y comparsa, Beté que cuelga banderitas y prende velas en patronales, la plaza donde se burlan del chinango. Una sola hoja porque siempre es la misma gente cambiando de motivo. Absorbe las banderitas de patronales y al cura de Istmina, que actúa pero no recibe más cuerpo que su enojo."
+          "note": "El pueblo que se junta abajo a oír las campanas a deshora y la multitud que pide que no la maten y le pone la condición de dejar las malas mañas."
         },
         {
           "entity_id": "fauna_del_monte_chocoano",
           "role": "secondary",
-          "note": "Grupo nombrado dos veces con inventario propio: guaguas, armadillos, guatines, culebras y osos que 'circulaban junto a las casas' en Anansi; guaguas, venados, tatabro y la pava que Adriano abate en la Tunda. Una hoja con el repertorio, no una ficha por bicho. Absorbe al guaco, que en Chimbilaco solo canta como aviso de muerte."
+          "note": "Excluida: el desfile de guaguas, armadillos y guatines junto a las casas no está en el canon reescrito."
         },
         {
           "entity_id": "iglesia_y_camposanto_chocoano",
           "role": "setting",
-          "note": "Una sola hoja para los dos: torre de tabla con campanario y cuerdas de campana (donde Anansi se esconde y profetiza) y el camposanto contiguo de cruces de madera que echan chispas cuando Adriano lo cruza huyendo. Van juntos porque en estos pueblos están juntos, y porque las dos páginas que los usan son solo-content: no habrá guion ni video, pero sí aportan escenario a la biblia."
+          "note": "La torre más alta de la iglesia, con sus campanas, donde Anansi se esconde y profetiza, y la sacristía donde guarda las hostias. Ya sin camposanto."
         },
         {
           "entity_id": "el_cura_de_istmina",
           "role": "secondary",
-          "note": "Duerme, se enfurece y sube a la torre, pero el relato no le da más cuerpo que la ira en el rostro. Sale de la misma población ya fichada."
+          "note": "Sale a mirar, levanta la cara hacia la torre, no ve a nadie y cree que la voz viene del cielo. Cubierto por la hoja de pueblo."
         },
         {
           "entity_id": "la_tela_y_la_escalera_de_seda",
           "role": "plot_object",
-          "note": "La escalera 'cómicamente torcida' hasta el campanario y la cuerda con que se rescata del vino son cuerpo de Anansi, no utilería aparte."
+          "note": "El hilo que saca de su propio cuerpo para construir su casa: cuerpo de Anansi, no utilería. La escalera de seda ya no está."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Los hombres del pueblo que se junta bajo la torre."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Las mujeres de la multitud que pide la vida de Anansi."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Las muchachas de la multitud bajo la torre."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Los niños que se zambullen al mediodía y a medianoche para pedirle a Anansi el poder de caminar sobre el agua, como Pío Perea en el río San Juan."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Los viejos del pueblo que se junta bajo la torre."
+        },
+        {
+          "entity_id": "tipo_anciana",
+          "role": "secondary",
+          "note": "Las mayores de la multitud bajo la torre."
         }
       ]
     },
@@ -1528,10 +1558,12 @@
   },
   "entities": {
     "anansi_arana_sacristana": {
-      "name": "Anansi, la araña sacristana de Istmina",
+      "name": "Anansi, la araña sacristana",
       "kind": "criatura",
-      "description": "Araña del tamaño de tres dedos de niño que teje en las esquinas de la iglesia, destapa el copón, se emborracha en el cáliz y se salva profetizando desde el campanario. Conduce toda la acción. PANREGIONAL verificado: Nansi/Anansi también aparece en caribe-restante (ciclo isleño de San Andrés y Providencia) y en cordoba-sinu. El de aquí es una araña católica de sacristía en un pueblo del San Juan; el isleño es un embaucador de monte, molino y montura en criollo inglés. Son dos mundos, no dos poses: el editor decide ficha nacional con variantes o una por región.",
-      "aliases": [],
+      "description": "La sacristana de la iglesia: abre, cierra, prepara lo que el cura necesita para la misa y guarda las hostias, se las come, la condenan a muerte, sube a la torre más alta, se mete entre las campanas, las repica y anuncia con voz delgadita que si Anansi muere se acaba el mundo; el cura no la ve por lo chiquita y cree que es voz del cielo. Conduce toda la acción. Es ella, héroe-heroína, y saca de su propio cuerpo el hilo de su casa. PANREGIONAL verificado: Nansi/Anansi también aparece en caribe-restante (ciclo isleño de San Andrés y Providencia) y en cordoba-sinu; el de aquí es una araña católica de sacristía en un pueblo del San Juan, el isleño un embaucador en criollo frente al hermano Tigre. Dos mundos, no dos poses.",
+      "aliases": [
+        "Ananse"
+      ],
       "states": [
         "canonico"
       ],
@@ -1582,36 +1614,38 @@
       ],
       "census_note": "Araña del tamaño de tres dedos de niño que teje en las esquinas de la iglesia, destapa el copón, se emborracha en el cáliz y se salva profetizando desde el campanario. Conduce toda la acción. PANREGIONAL verificado: Nansi/Anansi también aparece en caribe-restante (ciclo isleño de San Andrés y Providencia) y en cordoba-sinu. El de aquí es una araña católica de sacristía en un pueblo del San Juan; el isleño es un embaucador de monte, molino y montura en criollo inglés. Son dos mundos, no dos poses: el editor decide ficha nacional con variantes o una por región.",
       "design": {
-        "silhouette": "Araña del tamaño de tres dedos de niño, con ocho tiras finas de papel por patas y un cuerpo de dos óvalos planos, vista siempre desde el suelo de la sacristía y a la escala de quien la barre: es la única figura de la biblia que se mide contra el pie de un copón y contra el grosor de una cuerda de campana, nunca contra un cuerpo humano entero.",
+        "silhouette": "Araña tan chiquita y tan liviana que se pierde entre el bronce y la madera, con ocho tiras finas de papel por patas y un cuerpo de dos óvalos planos, metida entre las campanas de la torre: es la única figura de la biblia que se mide contra el labio de una campana y el grosor de una cuerda, nunca contra un cuerpo humano entero, y la lámina tiene que dejar ver por qué el cura, mirando desde abajo, no la encuentra.",
         "materials": [
           "ocho tiras finas de papel para las patas, sin articulación modelada y sin vello",
-          "seda de tela de araña como espiral de quilling, única pieza enrollada de su hoja",
-          "metal mate de copón y cáliz, y hostia de papel blanco liso: son su escala y su escenografía entera",
-          "cuerda de campana de fibra trenzada, recortada gruesa, y tabla de sacristía de veta gris parda"
+          "hilo sacado de su propio cuerpo como espiral de quilling, única pieza enrollada de su hoja",
+          "bronce mate de campana y madera gris parda de torre, que son su escala y su escondite",
+          "hostia de papel blanco liso: el único blanco alto de su hoja",
+          "cuerda de campana de fibra trenzada, recortada gruesa"
         ],
-        "palette": "Un solo pardo oscuro mate para el cuerpo, contra la madera de la sacristía y el metal apagado del copón; el único blanco alto de su hoja es la hostia. Ninguna nota saturada, y ningún color puesto para marcar procedencia.",
-        "scale": "Tres dedos de niño: cabe en una palma. Se mide contra un objeto de sacristía —el pie del copón, el borde del cáliz, el grosor de la cuerda— y la lámina se compone desde dentro de la sacristía y a la altura del suelo, no desde la nave y a escala de fiel.",
+        "palette": "Un solo pardo oscuro mate para el cuerpo, casi del tono de la madera de la torre y del bronce apagado, porque su tamaño y su color son lo que la esconde; el único blanco alto es la hostia. Ninguna nota saturada, y ningún color puesto para marcar procedencia.",
+        "scale": "Cabe en una palma y desaparece en el hueco de una campana: se mide contra el labio del bronce, el grosor de la cuerda o una hostia, y la lámina se compone desde dentro de la torre o de la sacristía, a la escala de quien la barre, no desde la nave y a escala de fiel.",
         "continuity": [
           "ocho patas siempre como tiras planas de papel, nunca como patas modeladas ni con vello",
-          "en toda aparición hay un objeto de sacristía que le da la escala",
-          "la tela de araña como quilling en una esquina del encuadre, siempre",
+          "en toda aparición hay un objeto de iglesia —campana, cuerda, hostia— que le da la escala",
+          "su hilo como quilling en una esquina del encuadre, siempre",
           "sin cara de caricatura y sin ojos grandes: los rasgos son piezas recortadas superpuestas, no una expresión",
           "ningún objeto africano en el encuadre, en ninguna lámina"
         ],
         "documented": [
-          "«Del tamaño de tres pequeños dedos de un niño», teje en las esquinas de la iglesia y trabaja al lado del cura manteniendo el orden en las ceremonias (canon, campo content, página `anansi`)",
-          "Destapa el copón, se come las hostias, sube a la torre más alta, repica las campanas y grita que si Anansi muere el mundo se acabará: está en la fuente recogida, no sólo en la página (`arocha1999_ananse`, citando a Friedemann y Vanín 1991: 189-190, de boca de don Pío Perea; §1.1)",
-          "El cura sube a la torre, no la ve por lo chiquita y cree que es voz del cielo: la invisibilidad por tamaño es el mecanismo del relato (`arocha1999_ananse`, §1.1)",
-          "Anansi es la deidad Araña de los pueblos fanti-ashanti del golfo de Benín y su nombre es voz del idioma akán, emparentada con Kwaku Ananse, Anancy y Nansy (`arocha1999_ananse`, §1.2)",
-          "El narrador, don Pío Perea, fue él mismo sacristán —«la araña era sacristán como yo en ese tiempo»—, y por eso el relato conoce el copón, el cáliz, la torre y las cuerdas (`arocha1999_ananse`, §1.1)",
-          "Sigue viva como deidad y no como personaje: en el Chocó se ombliga al recién nacido con polvos de araña, y matar una telaraña en una casa trae años de desgracia (`arocha1999_ananse`, §1.2)"
+          "Era la sacristana: abría, cerraba, preparaba lo que el cura necesitaba para la misa y guardaba las hostias, y se las fue comiendo, no una vez sino varias (canon, campo mito, página `anansi`)",
+          "Condenada a muerte, sube a la torre más alta de la iglesia, se mete entre las campanas, las repica, y una voz delgadita anuncia que si Anansi muere se acaba el mundo, la candela se apaga para siempre y la gente también se acaba (canon, campo mito; `arocha1999_ananse`, citando a Friedemann y Vanín 1991: 189-190, de boca de don Pío Perea, §1.1)",
+          "Era tan liviana y tenía un cuerpo tan chiquito que se perdía entre el bronce y la madera, y el cura, sin encontrar cuerpo para la voz, entendió que venía del cielo: la invisibilidad por tamaño es el mecanismo del relato (canon, campo mito)",
+          "Saca de su propio cuerpo el hilo con que construye la casa donde vive y consigue la comida, camina sobre el agua del río y del mar, y quien la aplasta con el sombrero se echa encima años de mala suerte (canon, campo mito)",
+          "Anansi es la deidad Araña de los pueblos fanti-ashanti del golfo de Benín y su nombre es voz del idioma akán, emparentada con Kwaku Ananse, Anancy y Nansy; en el Chocó se ombliga al recién nacido con polvos de araña (`arocha1999_ananse`, §1.2)",
+          "El narrador, don Pío Perea, fue él mismo acólito y sacristán, y de niño rezaba su oración zambulléndose en el río San Juan (canon, campo historia; `arocha1999_ananse`, §1.1)"
         ],
         "editorial": [
           "El origen akán se dice en el dossier y no se dibuja: ni máscara, ni tambor de procedencia, ni patrón textil, ni cetro fanti-ashanti puestos para marcar de dónde viene, y tampoco la estampa antillana de Anancy ni la araña de libro infantil. No reversible (salvaguarda 4).",
-          "No comparte ficha con la Nansi isleña de San Andrés: no comparten lengua, religión, arquitectura, época ni trama (§1.4). Si el editor decide ficha nacional con variantes, esta hoja sirve tal cual como la variante chocoana, sin cambiar un rasgo.",
+          "No comparte ficha con la Nansi isleña de San Andrés: no comparten lengua, religión, arquitectura, época ni trama (§1.4). Si el editor decide ficha nacional con variantes, esta hoja sirve tal cual como la variante chocoana.",
           "Anatomía de araña genérica y no de una especie del Chocó: el texto no la nombra. Reversible hacia lo más neutro, nunca hacia la migala ni hacia la caricatura.",
-          "El punto de vista desde el suelo de la sacristía es lectura del oficio del narrador y no un dato del texto: se declara como decisión y se puede revisar, aunque es lo que salva la ficha del disparate surrealista.",
-          "El vino del cáliz, la escalera de seda cómicamente torcida y el desfile de fauna son añadidos de la página que la fuente recogida no tiene: entran porque están en el corpus congelado, y se declaran como capa editorial."
+          "El vino del cáliz, la escalera de seda cómicamente torcida y el desfile de fauna ya no están en el canon reescrito del 2026-09-23 y salen de esta hoja; el tamaño se dice ahora por comparación —se pierde entre el bronce y la madera— y no con la medida de «tres dedos de niño».",
+          "El canon reescrito ya no nombra Istmina: el pueblo lo fija el dossier por el río San Juan del narrador y por la parroquia con torre y campanas (§1.1 y §2). Se conserva como decisión reversible.",
+          "El punto de vista desde dentro de la torre o de la sacristía es lectura del oficio del narrador y no un dato del texto: se declara como decisión y se puede revisar."
         ],
         "states_to_model": []
       },
@@ -2367,7 +2401,7 @@
     "gente_de_pueblo_chocoano": {
       "name": "Gente de pueblo chocoano",
       "kind": "colectivo",
-      "description": "La población que llena las cuatro escenas colectivas: los de Istmina que buscan a Anansi por el pueblo entero, el barrio alborotado entre misa y comparsa, Beté que cuelga banderitas y prende velas en patronales, la plaza donde se burlan del chinango. Una sola hoja porque siempre es la misma gente cambiando de motivo. Absorbe las banderitas de patronales y al cura de Istmina, que actúa pero no recibe más cuerpo que su enojo.",
+      "description": "La población que llena las escenas colectivas del canon reescrito: el pueblo que se junta abajo a oír por qué repican las campanas a deshora y la multitud que pide que no maten a Anansi; y en Beté, el pueblo reunido en patronales, con más gente que nunca en la orilla y más ojos mirando la superficie del agua. Una sola hoja porque es la misma gente cambiando de motivo, construida sobre los seis tipos base. Absorbe al cura, que sale a mirar hacia la torre y no recibe más cuerpo que ese gesto.",
       "aliases": [],
       "states": [
         "canonico"
@@ -2422,37 +2456,38 @@
       ],
       "census_note": "La población que llena las cuatro escenas colectivas: los de Istmina que buscan a Anansi por el pueblo entero, el barrio alborotado entre misa y comparsa, Beté que cuelga banderitas y prende velas en patronales, la plaza donde se burlan del chinango. Una sola hoja porque siempre es la misma gente cambiando de motivo. Absorbe las banderitas de patronales y al cura de Istmina, que actúa pero no recibe más cuerpo que su enojo.",
       "design": {
-        "silhouette": "Una calle de pueblo con gente de pie y en movimiento, cada figura con la cara visible y ninguna de espaldas al fondo, todas con el gesto que las cuatro escenas comparten: buscar algo que no está a la altura de los ojos —colgando banderitas, mirando hacia la torre, levantando la vela—. Es el único grupo de la biblia que mira hacia arriba.",
+        "silhouette": "Un grupo de pueblo de pie y reunido, cada figura con la cara visible y ninguna de espaldas al fondo, todas con el gesto que las dos escenas comparten: mirar hacia donde está lo que no se ve —la torre de donde baja la voz, la superficie del río por donde pasa la Sierpe—. Todas las edades de los tipos base en el mismo grupo, y el cura, cuando está, con la cara levantada hacia la torre.",
         "materials": [
-          "dril, franela manguicorta, camisa blanca y toalla al hombro; falda de diablofuerte, chumbe y pañuelo o manta de cabeza",
+          "dril, franela manguicorta, camisa blanca y toalla al hombro; falda de diablofuerte, chumbe y pañuelo o manta de cabeza: la ropa de pueblo de los tipos base",
           "zapato de cuero en el caserío y champios de caucho y lona en la ciudad: la diferencia es de humedad",
-          "banderitas de papel de patronales colgadas en cordel, en tiras planas y de un solo color por tira",
-          "vela de cera chorreada en la mano, con la llama como única fuente de luz del encuadre nocturno",
-          "tabla gris parda de calle, casa e iglesia, y barro de calle encharcada"
+          "sotana del cura como una sola pieza oscura grande, con el doblez marcado",
+          "tabla gris parda de calle, casa e iglesia, y barro de orilla y de calle encharcada",
+          "canoas amarradas en la orilla detrás del grupo en patronales"
         ],
-        "palette": "La ropa del domingo y las banderitas de patronales son dos de las tres saturaciones autorizadas del corpus y ésta es la hoja donde se gastan; todo lo demás va desaturado —tabla gris parda, barro, cielo blanco y cerrado sin sol—. De noche, un solo foco cálido y corto de vela y el resto en negro de sombra.",
-        "scale": "Un pueblo de calle, no un caserío de palma y no una ciudad de damero: en Istmina hay parroquia con torre, y en Beté cien casas de tabla para 540 personas. El grupo se compone de cinco a nueve figuras, todas de cuerpo entero o de medio cuerpo, y la más lejana nunca mide menos de un cuarto de la más cercana.",
+        "palette": "La ropa guardada del domingo es una de las tres saturaciones autorizadas del corpus y ésta es la hoja donde se gasta; todo lo demás va desaturado —tabla gris parda, barro, cielo blanco y cerrado sin sol—. Nada de postal de fiesta.",
+        "scale": "Un pueblo de calle y de orilla, no una ciudad de damero: en el pueblo de Anansi hay parroquia con torre, y en Beté cien casas de tabla para 540 personas. El grupo se compone de cinco a nueve figuras de cuerpo entero o de medio cuerpo, y la más lejana nunca mide menos de un cuarto de la más cercana.",
         "continuity": [
           "todas las caras visibles: ninguna figura de espaldas y ninguna silueta anónima",
           "la persona se lee antes que el fondo en cualquier encuadre donde aparezca",
-          "el gesto compartido es mirar o alcanzar hacia arriba",
+          "el gesto compartido es mirar hacia donde está lo que no se ve",
+          "cada figura respeta cara, cuerpo y vestido de su tipo base",
           "ningún poste, ninguna bombilla y ninguna ventana iluminada por electricidad",
           "ningún rasgo de la hoja organizado por el color de la piel"
         ],
         "documented": [
-          "Istmina no se llama así antes de 1903: se fundó el 8 de marzo de 1834 como San Pablo, fue erigida municipio en 1874 y sólo en 1903 tomó el nombre actual, contracción de istmo y mina, a unos 65 metros sobre el nivel del mar (`wiki_istmina`, §2)",
-          "Entre 1909 y 1934 Istmina era «la segunda ciudad de la Intendencia, capital de la Provincia del San Juan y centro de comercio y de cultura no despreciables», con parroquia y cura residente, Casa-Misión, escuelas urbanas, colegio privado y Hermanas de la Presentación desde abril de 1916: un pueblo con clero y con calle (`bodas1934_claretianos`, §2)",
+          "El pueblo se juntó abajo a oír por qué repicaban las campanas a deshora, el cura salió a mirar, levantó la cara hacia la torre y no vio a nadie, y la multitud pidió que no la mataran (canon, campo mito, página `anansi`)",
+          "Cuando llegan las patronales el pueblo se junta, hay canoas amarradas y canoas andando, y son los días en que más gente hay en la orilla y más ojos mirando la superficie (canon, campo mito, página `la-sierpe-de-bete`)",
+          "Entre 1909 y 1934 Istmina, en la cuenca del San Juan, era «la segunda ciudad de la Intendencia», con parroquia y cura residente, Casa-Misión, escuelas y Hermanas de la Presentación desde 1916: un pueblo con clero y con calle (`bodas1934_claretianos`, §2)",
           "La ropa de pueblo y de domingo está documentada pieza por pieza, y la diferencia entre zapato de cuero y champios de caucho «es cuestión de humedad» (`velasquez1961_atrato`, §7.1)",
-          "Beté, escenario de la Sierpe, tiene unas 540 personas en alrededor de cien casas de madera, a 45 metros sobre el nivel del mar y a 97 kilómetros de Quibdó por río: ahí no cabe una plaza de damero ni una iglesia de piedra (`wiki_medio_atrato`, §6)",
-          "La junta mortuoria regula en un cuaderno el aporte en dinero o especie de cada asistente a la última noche, con el nombre de cada aportante (`museo_velorios_17_55`, §7.2)",
-          "En patronales «la gente alista la canoa, cuelga banderitas, prende velas en el altar», y en Anansi «el pueblo entero bullía en un frenesí de búsqueda» (canon, páginas `la-sierpe-de-bete` y `anansi`)"
+          "Beté tiene unas 540 personas en alrededor de cien casas de madera, a 45 metros sobre el nivel del mar y a 97 kilómetros de Quibdó por río: ahí no cabe una plaza de damero ni una iglesia de piedra (`wiki_medio_atrato`, §6)",
+          "En el Chocó las patronales organizan el calendario y sostienen la vida colectiva, y se han seguido celebrando incluso bajo el conflicto armado (canon, campo historia, página `la-sierpe-de-bete`)"
         ],
         "editorial": [
           "Ninguna figura de esta hoja existe para poblar un paisaje ni para dar escala al monte o al río: cada una va en primer plano o plano medio, con acción propia, y la persona se lee antes que el fondo. Es la salvaguarda principal del corpus y no es reversible.",
-          "El cura de Istmina entra aquí y no en ficha propia: duerme, se enfurece y sube a la torre, pero el relato no le da más cuerpo que la ira en el rostro. Reversible si el guion lo necesita con hoja propia.",
-          "Ningún elemento emberá ni wounaan en esta hoja —ni paruma, ni pintura facial, ni pieza tallada, ni cesto— y ninguna figura indígena en escena, aunque la convivencia esté documentada dentro de la misma escena que esta biblia hereda: los cholos y cholas llegan a las casas de sus compadres negros y extienden parumas en el suelo. Por eso el préstamo aquí sería error de verosimilitud y no de ignorancia, y la prohibición es total y no graduada (§7.3). No reversible.",
-          "Cuántas figuras y cómo se reparten: el texto dice «el pueblo entero» y «el barrio alborotado» y no da número. Reversible.",
-          "Ninguna banda de chirimía, aunque sea el conjunto más reconocible del Chocó y el objeto que un ilustrador añadiría para marcar la región: en las seis páginas aparece una sola vez y como símil —la lluvia que suena como chirimía en techo de zinc—, y lo que hay que dibujar es el techo de zinc bajo el aguacero (§9). No reversible."
+          "El cura entra aquí y no en ficha propia: sale, levanta la cara y no ve a nadie, y el relato no le da más cuerpo que ese gesto. La sotana no está descrita en el texto y se dibuja como la del clero parroquial documentado. Reversible si el guion lo necesita con hoja propia.",
+          "Las banderitas de patronales y el barrio alborotado de la versión anterior ya no están en el canon reescrito: la fiesta de Beté se dice con gente reunida en la orilla y música en tierra, sin nombrar adorno.",
+          "Ningún elemento emberá ni wounaan en esta hoja —ni paruma, ni pintura facial, ni pieza tallada, ni cesto— y ninguna figura indígena en escena, aunque la convivencia esté documentada dentro de la misma casa (§7.3). No reversible.",
+          "Ninguna banda de chirimía, aunque sea el conjunto más reconocible del Chocó: la música de patronales de Beté suena en tierra y el relato no dice cuál (§9). No reversible."
         ],
         "states_to_model": []
       },
@@ -2473,7 +2508,7 @@
       ],
       "evidence_basis": "documented",
       "sensitivity": "public",
-      "visual_status": "required",
+      "visual_status": "excluded",
       "model_requirements": [
         "group_grammar"
       ],
@@ -2537,7 +2572,8 @@
       "states_declared": [],
       "evidence_basis_mix": [
         "documented_core"
-      ]
+      ],
+      "exclusion_reason": "no aparece en el canon reescrito del 2026-09-23: Anansi ya no tiene desfile de guaguas, armadillos ni guatines; la Tunda ya no tiene cacería, pava ni venados; el Chimbilaco pasó al Amazonas y sus bufeos, caimanes y pirarucús son disfraces de cortacabezas; y la Sierpe nombra caimanes y culebras sólo como lo que el pescador ya ha visto, no como escena."
     },
     "bosque_humedo_chocoano": {
       "name": "Bosque húmedo: trocha, pantano y raíz",
@@ -2832,9 +2868,9 @@
       ]
     },
     "iglesia_y_camposanto_chocoano": {
-      "name": "Iglesia y camposanto de pueblo chocoano",
+      "name": "Iglesia de pueblo con torre y campanas",
       "kind": "arquitectura",
-      "description": "Una sola hoja para los dos: torre de tabla con campanario y cuerdas de campana (donde Anansi se esconde y profetiza) y el camposanto contiguo de cruces de madera que echan chispas cuando Adriano lo cruza huyendo. Van juntos porque en estos pueblos están juntos, y porque las dos páginas que los usan son solo-content: no habrá guion ni video, pero sí aportan escenario a la biblia.",
+      "description": "La iglesia de la sacristana: la torre más alta con sus campanas, donde Anansi se esconde y repica, y la sacristía donde se guardan las hostias. El camposanto que la acompañaba en la hoja salió con la historia de Adriano Lemos, que ya no está en el canon reescrito, y queda anotado aparte como excluido.",
       "aliases": [],
       "states": [
         "canonico"
@@ -2887,36 +2923,35 @@
       ],
       "census_note": "Una sola hoja para los dos: torre de tabla con campanario y cuerdas de campana (donde Anansi se esconde y profetiza) y el camposanto contiguo de cruces de madera que echan chispas cuando Adriano lo cruza huyendo. Van juntos porque en estos pueblos están juntos, y porque las dos páginas que los usan son solo-content: no habrá guion ni video, pero sí aportan escenario a la biblia.",
       "design": {
-        "silhouette": "Los dos en una sola hoja y pegados, como están en el pueblo: torre de tabla con el campanario abierto y las cuerdas colgando hasta el alcance de la mano, y al lado, sin muro que los separe, un camposanto de cruces de madera de alturas desiguales con ofrendas florales al pie. Es la única arquitectura de la biblia con altura y la única con interior —la sacristía, vista desde el suelo.",
+        "silhouette": "Torre de tabla con el campanario abierto, varias campanas de bronce colgadas entre vigas de madera y las cuerdas bajando hasta el alcance de la mano, vista desde abajo como la ve el cura que levanta la cara y no encuentra a nadie; al pie, la puerta de la nave. Es la única arquitectura de la biblia con altura y la única con interior —la sacristía, vista desde el suelo.",
         "materials": [
-          "tabla gris parda de veta abierta en torre, nave y cruces: la misma madera del pueblo que los rodea",
+          "tabla gris parda de veta abierta en torre y nave: la misma madera del pueblo que la rodea",
           "cuerda de campana de fibra trenzada, colgando hasta el alcance de la mano",
           "bronce mate de campana, sin brillo y sin inscripción legible",
-          "copón, cáliz y hostia en el interior de la sacristía, vistos desde el suelo",
-          "flores de patio al pie de las cruces, que son el único atrezo documentado del camposanto"
+          "hostias y copón en el interior de la sacristía, vistos desde el suelo",
+          "vigas del campanario como tiras gruesas de papel con el canto astillado"
         ],
-        "palette": "Tabla gris parda de arriba abajo, bronce mate y cielo blanco y cerrado: la iglesia no tiene un solo color propio. Las únicas notas son las flores de las ofrendas al pie de las cruces y, dentro, la llama corta de la vela de sacristía.",
-        "scale": "Torre de pueblo: dos cuerpos y el campanario, alta lo justo para que la cuerda llegue al suelo y una persona la alcance sin escalera, que es lo que el clímax de Anansi exige. Las cruces del camposanto van de la cintura al hombro de un adulto y ninguna está alineada con otra.",
+        "palette": "Tabla gris parda de arriba abajo, bronce mate y cielo blanco y cerrado: la iglesia no tiene un solo color propio. Dentro, la llama corta de la vela de sacristía y el blanco de la hostia son las únicas notas.",
+        "scale": "Torre de pueblo: dos cuerpos y el campanario, alta lo justo para que la cuerda llegue al suelo y para que una araña entre el bronce y la madera sea invisible desde abajo. La campana más grande mide como el torso de un hombre.",
         "continuity": [
-          "iglesia y camposanto en el mismo encuadre y sin muro entre ellos",
+          "varias campanas en el campanario: la torre es «la más alta» de la iglesia",
           "cuerdas de campana siempre colgando hasta el alcance de la mano",
-          "cruces de madera de alturas desiguales y sin alineación",
+          "vista desde abajo o desde dentro, nunca desde el aire",
           "ni piedra, ni vitral, ni nave de tres cuerpos, en ninguna versión",
-          "ningún ataúd, ningún cuerpo presente y ninguna tumba abierta"
+          "ningún ataúd, ningún cuerpo presente y ningún camposanto en esta hoja"
         ],
         "documented": [
-          "En Istmina hay parroquia de ciudad con cura residente y Casa-Misión antes de 1934: la iglesia con torre, campanas y cuerdas al alcance de la mano que el relato de Anansi necesita existe allí y está fechada (`bodas1934_claretianos`, §6)",
-          "En Beté la materia es la del pueblo que la rodea: madera, en un caserío de cien casas de tabla y 540 personas (`wiki_medio_atrato`, §6)",
-          "El camposanto es de cruces de madera, que es lo que el propio texto pone, y las cruces echan chispas cuando Adriano lo cruza huyendo (canon, campo content, página `tulavieja-tunda`)",
-          "El atrezo documentado del camposanto son las ofrendas florales de los devotos de las ánimas del purgatorio (`museo_velorios_105_160`, §6)",
-          "La sacristía tiene copón, cáliz, hostias y cuerdas de campana, y el relato las conoce porque el narrador fue sacristán (`arocha1999_ananse`, §1.1)"
+          "Anansi sube a la torre más alta de la iglesia, se mete entre las campanas y las repica; el cura levanta la cara hacia la torre y no ve a nadie, porque ella se pierde entre el bronce y la madera (canon, campo mito, página `anansi`)",
+          "La sacristana abría, cerraba, preparaba lo que el cura necesitaba para la misa y guardaba las hostias (canon, campo mito, página `anansi`)",
+          "En Istmina hay parroquia de ciudad con cura residente y Casa-Misión antes de 1934: la iglesia con torre, campanas y cuerdas al alcance de la mano existe allí y está fechada (`bodas1934_claretianos`, §6)",
+          "El relato conoce el copón, el cáliz, la torre y las cuerdas porque el narrador fue sacristán (`arocha1999_ananse`, §1.1)"
         ],
         "editorial": [
-          "Ni piedra, ni vitral, ni nave de tres cuerpos: la iglesia es de madera y de pueblo, y darle fábrica de catedral la sacaría de las dos cuencas y del siglo (§6). No reversible.",
-          "No hay una sola imagen de época de la iglesia de Istmina, que es el escenario del clímax de Anansi, ni del camposanto: toda la reconstrucción de la torre, las campanas y la disposición del campanario es textual, y para una biblia eso es grave (§12.4). Reversible en bloque si aparece una fotografía fechada.",
-          "El altar de escalones con sábana blanca, moño negro, velas, flores y vaso de agua —la tumba de siete pies— no va en esta hoja: se arma en la casa, que es donde lo pone la fuente, y vive en la hoja de cantadoras. Es una decisión de reparto y es reversible.",
-          "Ningún velorio, ningún ataúd, ningún cuerpo presente y ningún novenario: el corpus no narra ningún velorio y ninguna lámina muestra un muerto. No reversible.",
-          "Las dos páginas que usan esta hoja son de sólo contenido y no tendrán guion ni video: la lámina existe para dar escenario a la biblia y no para una escena concreta, y su encuadre se elige por eso."
+          "Ni piedra, ni vitral, ni nave de tres cuerpos: la iglesia es de madera y de pueblo, y darle fábrica de catedral la sacaría del siglo y del territorio (§6). No reversible.",
+          "No hay una sola imagen de época de la iglesia de Istmina: toda la reconstrucción de la torre, las campanas y el campanario es textual (§12.4). Reversible en bloque si aparece una fotografía fechada.",
+          "El camposanto de cruces de madera salió de esta hoja: su única escena era la huida de Adriano Lemos, que el canon reescrito eliminó. Queda como entidad excluida y no se dibuja aquí.",
+          "Varias campanas y no una sola: el texto dice «entre las campanas». Cuántas, no lo dice. Reversible.",
+          "Ningún velorio, ningún ataúd, ningún cuerpo presente y ningún novenario: el corpus no narra ningún velorio. No reversible."
         ],
         "states_to_model": []
       },
@@ -2927,7 +2962,7 @@
       ]
     },
     "el_cura_de_istmina": {
-      "name": "El cura de Istmina",
+      "name": "El cura de la parroquia",
       "kind": "personaje",
       "description": "Duerme, se enfurece y sube a la torre, pero el relato no le da más cuerpo que la ira en el rostro. Sale de la misma población ya fichada.",
       "aliases": [],
@@ -2972,7 +3007,7 @@
       ],
       "census_note": "Duerme, se enfurece y sube a la torre, pero el relato no le da más cuerpo que la ira en el rostro. Sale de la misma población ya fichada.",
       "covered_by": "gente_de_pueblo_chocoano",
-      "coverage_note": "Duerme, se enfurece y sube a la torre, pero el relato no le da más cuerpo que la ira en el rostro. Sale de la misma población ya fichada.",
+      "coverage_note": "Sale a mirar quién toca, levanta la cara hacia la torre y no ve a nadie; al no encontrar cuerpo para la voz entiende que viene del cielo. El relato no le da más cuerpo que ese gesto hacia arriba, y el canon reescrito ya no nombra Istmina. Sale de la población ya fichada.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -3097,7 +3132,7 @@
       ]
     },
     "la_tela_y_la_escalera_de_seda": {
-      "name": "Tela de araña y escalera de seda",
+      "name": "El hilo de Anansi",
       "kind": "objeto",
       "description": "La escalera 'cómicamente torcida' hasta el campanario y la cuerda con que se rescata del vino son cuerpo de Anansi, no utilería aparte.",
       "aliases": [],
@@ -3132,7 +3167,7 @@
       ],
       "census_note": "La escalera 'cómicamente torcida' hasta el campanario y la cuerda con que se rescata del vino son cuerpo de Anansi, no utilería aparte.",
       "covered_by": "anansi_arana_sacristana",
-      "coverage_note": "La escalera 'cómicamente torcida' hasta el campanario y la cuerda con que se rescata del vino son cuerpo de Anansi, no utilería aparte.",
+      "coverage_note": "Saca de su propio cuerpo el hilo con que construye la casa donde vive y donde consigue la comida. La escalera de seda torcida y la cuerda con que se rescataba del vino ya no están en el canon reescrito. El hilo es cuerpo de Anansi y se dibuja en su ficha, como quilling.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -3534,6 +3569,412 @@
       "evidence_basis_mix": [
         "documented_core"
       ]
+    },
+    "tipo_hombre_adulto": {
+      "name": "Hombre adulto afrochocoano (tipo base)",
+      "kind": "personaje",
+      "description": "Tipo base de la gente del corpus: el hombre afrochocoano adulto del medio Atrato y del San Juan en el siglo XX sin red eléctrica. Fija la cara, el cuerpo y el vestido que respetan los pescadores de Beté, los hombres del pueblo que se junta bajo la torre de Anansi y los familiares de Kijimba. Absorbe al antiguo «hombre del río y del monte», cuyo cazador y cuyo joven burlón ya no están en el canon reescrito.",
+      "aliases": [],
+      "states": [
+        "canonico",
+        "de pueblo y de domingo: pantalón y saco de dril, camisa blanca y zapato de cuero"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "anansi",
+        "kijimba-de-las-animas",
+        "la-sierpe-de-bete"
+      ],
+      "evidence": [
+        {
+          "myth": "la-sierpe-de-bete",
+          "field": "mito",
+          "note": "Los únicos hombres con oficio que el canon reescrito deja en escena son los pescadores de Beté: conocen el río como se conoce una casa —dónde se hondea, dónde arrastra la corriente, a qué hora conviene salir— y son los que le tienen miedo a la Sierpe."
+        },
+        {
+          "myth": "anansi",
+          "field": "mito",
+          "note": "El pueblo se junta abajo a oír por qué repican las campanas a deshora y la multitud pide que no maten a Anansi: gente de pueblo con clero y con calle, que el dossier viste con la ropa de pueblo y de domingo del medio Atrato (§7.1)."
+        },
+        {
+          "myth": "kijimba-de-las-animas",
+          "field": "mito",
+          "note": "Los familiares de Kijimba le advierten que no se levante, que ya es muy tarde: la casa de ella tiene gente viva que no recibe más cuerpo que la advertencia, y sale de los tipos base."
+        }
+      ],
+      "design": {
+        "silhouette": "Un hombre adulto de pie, de cuerpo entero y de frente, con las manos ocupadas por su aparejo —la atarraya recogida sobre el antebrazo y el canalete— y la mirada puesta dentro del cuadro. Cuerpo y cara se piensan por separado: el cuerpo en pocos planos grandes de papel —cotona corta que no pasa del ombligo, pampanilla o pantalón de dril, chanclos de palo—; el rostro, un óvalo plano de un solo tono, sin modelado, con los rasgos recortados aparte y superpuestos. El yesquero cruzado al hombro es la pieza por la que se le reconoce.",
+        "materials": [
+          "cotona de tela basta de mangas cortas o sin ellas, cuyo largo no pasa del ombligo, en una sola pieza grande con el doblez marcado",
+          "pampanilla o guayuco con franela vieja, o pantalón de dril, cada prenda una pieza",
+          "chanclos de palo: dos tablillas y una tira, recortadas aparte",
+          "yesquero cruzado al hombro, con la yesca, el eslabón, la pipa, el tabaco y la piedra dentro",
+          "sombrero de paja del interior o trapo de color indefinible amarrado a la cabeza",
+          "atarraya con plomos y canalete de madera como aparejo"
+        ],
+        "palette": "Tela basta desaturada, paja y madera de chanclo contra el barro del río; el trapo de cabeza de color indefinible es la única nota propia. En el estado de pueblo y de domingo, el blanco de la camisa es ropa guardada, una de las tres saturaciones que el corpus autoriza.",
+        "scale": "Adulto de pie entre los veinticinco y los cincuenta años, medido contra la borda de la canoa —le llega a media pantorrilla cuando está dentro— y contra el canalete, que le llega al hombro. En cualquier encuadre ocupa al menos un tercio de la altura: nunca es escala del paisaje.",
+        "continuity": [
+          "yesquero cruzado al hombro con la ropa de trabajo; se retira sólo en la lámina de La Yesca",
+          "cuerpo y cara por separado: rostro de óvalo plano de un solo tono y rasgos recortados aparte, nunca modelado",
+          "chanclos de palo en monte, descalzo en canoa, zapato de cuero sólo en pueblo y domingo",
+          "de frente o de tres cuartos y en primer plano o plano medio, nunca de espaldas ni como silueta que puebla un paisaje",
+          "ningún rasgo organizado por el color de la piel",
+          "ningún elemento emberá ni wounaan: ni paruma, ni pintura facial, ni collar, ni bastón, ni cesto"
+        ],
+        "documented": [
+          "En el monte: pampanilla o guayuco con franela vieja, o taparrabo y cotona de mangas cortas o sin ellas «cuyo largo no pasa del ombligo»; chanclos de palo cuando se trabaja en roza o cogiendo chontaduro, para evitar las espinas; sombrero de paja traído del interior de la República o un trapo de color indefinible (`velasquez1961_atrato`, §7.1)",
+          "El yesquero cruzado al hombro es la mochila que reemplaza al carriel antioqueño, y lleva dentro la yesca, el eslabón, la pipa, el tabaco y la piedra (`velasquez1961_atrato`, §7.1 y §8)",
+          "En el pueblo y el domingo: pantalón y saco de dril, franela manguicorta, toalla al hombro, camisa blanca, zapato de cuero en el caserío y champios de caucho y lona en Quibdó, «es cuestión de humedad la diferencia» (`velasquez1961_atrato`, §7.1)",
+          "Quien pesca en el Atrato conoce el río como se conoce una casa: sabe dónde se hondea, dónde arrastra la corriente, en qué orilla se para el agua y a qué hora conviene salir (canon, campo mito, página `la-sierpe-de-bete`)",
+          "Toda figura va en primer plano o plano medio, mirando, con oficio en las manos y acción propia, y ningún rasgo de ficha se organiza por el color de la piel (§7.2)"
+        ],
+        "editorial": [
+          "El dossier no documenta el pelo ni el adorno masculino: se resuelve con el sombrero o el trapo de cabeza, que sí están documentados, y el pelo corto como una sola pieza plana debajo. Reversible.",
+          "La atarraya y el canalete como aparejo de la hoja canónica salen de los pescadores de la Sierpe, que son los únicos hombres con oficio que el canon reescrito deja en escena. Reversible si el guion pide otro oficio.",
+          "La edad de veinticinco a cincuenta y la cara sin individualizar son economía de tipo: cualquier hombre con nombre que llegue se construye sobre esta hoja.",
+          "Ningún elemento emberá ni wounaan, aunque la convivencia esté documentada dentro de las mismas casas: aquí sería error de verosimilitud y no de ignorancia, y la prohibición es total (§7.3). No reversible."
+        ],
+        "states_to_model": [
+          "de pueblo y de domingo: pantalón y saco de dril, camisa blanca y zapato de cuero"
+        ]
+      }
+    },
+    "tipo_mujer_adulta": {
+      "name": "Mujer adulta afrochocoana (tipo base)",
+      "kind": "personaje",
+      "description": "Tipo base de la mujer adulta del corpus, con la ropa de trabajo y la ropa guardada que el dossier documenta casa por casa en el medio Atrato. Fija el cuerpo, la cara y el vestido de las mujeres del pueblo que se junta bajo la torre de Anansi y en la orilla de Beté, de las familiares de Kijimba y de la madre de Nelsi, cuyo rostro es el que toma la Tunda.",
+      "aliases": [],
+      "states": [
+        "canonico",
+        "con la ropa guardada: vestido de velar, manto o pañolón de cabeza y zarcillos de oro"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "anansi",
+        "kijimba-de-las-animas",
+        "la-sierpe-de-bete",
+        "tulavieja-tunda"
+      ],
+      "evidence": [
+        {
+          "myth": "tulavieja-tunda",
+          "field": "mito",
+          "note": "La madre de Nelsi estaba trabajando esa tarde; está en la casa cuando las compañeras pasan, sale de inmediato y recorre el camino preguntando y llamando. Es la cara que la Tunda se pone, así que esta hoja y el estado de la Tunda tienen que ser la misma mujer."
+        },
+        {
+          "myth": "la-sierpe-de-bete",
+          "field": "mito",
+          "note": "En patronales el pueblo se junta y hay más gente que nunca en la orilla mirando la superficie del agua: las mujeres del pueblo están ahí, y el dossier las viste con falda de diablofuerte, cotona, chumbe y pañuelo de cabeza (§7.1)."
+        },
+        {
+          "myth": "anansi",
+          "field": "mito",
+          "note": "La multitud que se junta bajo la torre y pide que no maten a Anansi: pueblo entero, con sus mujeres."
+        },
+        {
+          "myth": "kijimba-de-las-animas",
+          "field": "mito",
+          "note": "Los familiares que le advierten a Kijimba que no se levante, que ya está descansando: gente de casa sin más cuerpo que la advertencia."
+        }
+      ],
+      "design": {
+        "silhouette": "Una mujer adulta de pie, de cuerpo entero, descalza, con falda de diablofuerte, cotona de tela basta y chumbe amarrado a la cintura, la cabeza amarrada con un pañuelo grande o una manta, y las manos en oficio —el canalete, o el hijo que lacta en la cadera—. Cuerpo y cara por separado: el cuerpo en pocos planos grandes de papel; el rostro, un óvalo plano de un solo tono, sin modelado, con los rasgos recortados aparte y superpuestos.",
+        "materials": [
+          "falda de diablofuerte como una sola pieza grande de papel con el doblez marcado",
+          "cotona de tela basta, una pieza",
+          "chumbe improvisado a la cintura, de tela o de cuerda vegetal",
+          "pañuelo grande o manta amarrados a la cabeza",
+          "pies descalzos",
+          "para la ropa guardada: vestido de velar, manto, chal o pañolón de cabeza y zarcillos de oro mate"
+        ],
+        "palette": "Diablofuerte y tela basta desaturadas, pañuelo de cabeza de un color apagado, contra tabla gris parda y barro. En el estado de ropa guardada el color sube —es una de las tres saturaciones del corpus— y el oro de los zarcillos va mate, sin un solo brillo.",
+        "scale": "Adulta de pie entre los veinticinco y los cincuenta, a la misma escala que el hombre adulto, medida contra la canoa, donde va en la popa o en la proa. Nunca menos de un tercio del alto del encuadre.",
+        "continuity": [
+          "descalza en trabajo y en canoa",
+          "la cabeza siempre amarrada con pañuelo o manta",
+          "cuerpo y cara por separado: óvalo plano de un solo tono y rasgos recortados aparte",
+          "nunca traje de tarima ni vestido de postal folclórica",
+          "ningún elemento emberá ni wounaan: ni paruma, ni pintura facial, ni collar de chaquira"
+        ],
+        "documented": [
+          "La mujer: falda de diablofuerte, cotona de tela basta, chumbe improvisado a la cintura de tela o cuerda vegetal, cabeza amarrada con un pañuelo grande o una manta, descalza, y en la embarcación en la popa o la proa cargando al hijo que lacta (`velasquez1961_atrato`, §7.1)",
+          "Aparte, guardados, «vestidos suficientes para velar y enterrar a sus muertos», más mantos, chales o pañolones para la cabeza y zarcillos de oro (`velasquez1961_atrato`, §7.1)",
+          "La mujer que va frente al altar lleva esa ropa guardada, no la de trabajo y mucho menos traje de tarima (§7.1)",
+          "La madre de Nelsi estaba trabajando esa tarde, está en la casa cuando llegan las compañeras y sale a recorrer el camino preguntando y llamando (canon, campo mito, página `tulavieja-tunda`)"
+        ],
+        "editorial": [
+          "La madre de Nelsi vive en Tumaco y en una fecha que el relato no fija; el dossier no documenta el vestido urbano de Tumaco, así que se dibuja con este tipo y la diferencia de lugar se declara en vez de inventarse. Reversible si la investigación del Pacífico sur aporta prenda propia.",
+          "El pelo va recogido bajo el pañuelo como una sola pieza plana: el dossier no documenta peinado. Reversible.",
+          "Ningún elemento emberá ni wounaan, aunque las parumas estén documentadas en el suelo de las mismas casas: la prohibición es total (§7.3). No reversible."
+        ],
+        "states_to_model": [
+          "con la ropa guardada: vestido de velar, manto o pañolón de cabeza y zarcillos de oro"
+        ]
+      }
+    },
+    "tipo_mujer_joven": {
+      "name": "Mujer joven afrodescendiente del Pacífico (tipo base)",
+      "kind": "personaje",
+      "description": "Tipo base de la muchacha del corpus. Cubre a Nelsi y a sus compañeras, que salen juntas del colegio en Tumaco, y a las muchachas de la multitud bajo la torre de Anansi. Su vestido se deriva del de la mujer adulta, porque el dossier no documenta prenda propia de la joven.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "anansi",
+        "tulavieja-tunda"
+      ],
+      "evidence": [
+        {
+          "myth": "tulavieja-tunda",
+          "field": "mito",
+          "note": "Nelsi sale del colegio a las seis con sus compañeras, caminan juntas el tramo que comparten, ella se aparta para alcanzar a la mujer que cree su madre y la encuentran asustada y aturdida: es la protagonista humana de la página y no tiene prenda descrita."
+        },
+        {
+          "myth": "anansi",
+          "field": "mito",
+          "note": "La multitud que se junta bajo la torre y pide que no la maten: pueblo entero, con sus muchachas."
+        }
+      ],
+      "design": {
+        "silhouette": "Una muchacha de quince a dieciocho años, de pie y en marcha, de cuerpo entero, con la misma hechura de vestido que la mujer adulta —falda de una sola pieza, cotona, chumbe— pero sin carga en los brazos y con el pelo recogido sin manta. Cuerpo y cara por separado: el cuerpo en pocos planos grandes de papel; el rostro, un óvalo plano de un solo tono, sin modelado, con los rasgos recortados aparte.",
+        "materials": [
+          "falda de una sola pieza de tela desaturada con el doblez marcado",
+          "cotona de tela basta, una pieza",
+          "chumbe de tela a la cintura",
+          "pelo recogido como una sola pieza plana, sin pañuelo o con pañuelo pequeño",
+          "pies descalzos o chancla de tira, según el suelo"
+        ],
+        "palette": "Los mismos tonos desaturados de la mujer adulta, un punto más claros en la cotona; ninguna nota saturada propia. Al atardecer de su página, la luz ya no alcanza sino para reconocer una cara al otro lado de la calle.",
+        "scale": "Un poco más baja que la mujer adulta —la frente a la altura de la boca de la madre— y medida contra ella y contra sus compañeras; en marcha, siempre de cuerpo entero o de medio cuerpo, nunca menos de un tercio del alto del encuadre.",
+        "continuity": [
+          "la misma hechura de vestido que la mujer adulta, sin la manta de cabeza",
+          "cuerpo y cara por separado: óvalo plano de un solo tono y rasgos recortados aparte",
+          "de frente o de tres cuartos, con la mirada dentro del cuadro",
+          "sin uniforme escolar inventado",
+          "ningún elemento emberá ni wounaan"
+        ],
+        "documented": [
+          "El vestido de mujer documentado para el medio Atrato —falda de diablofuerte, cotona de tela basta, chumbe, pañuelo o manta de cabeza, descalza— no distingue edades (`velasquez1961_atrato`, §7.1)",
+          "Nelsi sale del colegio a las seis, cuando en Tumaco la luz alcanza apenas para reconocer una cara al otro lado de la calle, y camina con sus compañeras el tramo que comparten antes de repartirse hacia sus casas (canon, campo mito, página `tulavieja-tunda`)"
+        ],
+        "editorial": [
+          "El dossier no documenta vestido propio de la muchacha: se deriva del de la mujer adulta y la diferencia es de edad, carga y porte, no de prenda. Inferencia declarada y reversible.",
+          "No se le pone uniforme escolar: el relato no lo describe y el dossier no documenta el Tumaco escolar; la palabra «colegio» fecha la página más tarde que el resto del corpus, y esa fecha no se dibuja con una prenda inventada. Reversible si la investigación aporta el uniforme.",
+          "Ningún elemento emberá ni wounaan (§7.3). No reversible."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_nino": {
+      "name": "Niño afrochocoano (tipo base)",
+      "kind": "personaje",
+      "description": "Tipo base del niño del corpus. Lo pone en escena la página de Anansi: los niños que quieren caminar sobre el agua como ella se zambullen al mediodía y a medianoche y le piden prestado ese poder, como lo hacía de niño en el río San Juan el propio narrador, Pío Perea. También es el niño del pueblo que se junta.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "anansi",
+        "la-sierpe-de-bete"
+      ],
+      "evidence": [
+        {
+          "myth": "anansi",
+          "field": "mito",
+          "note": "«Los niños que quieren hacer lo mismo se zambullen al mediodía y a medianoche y le piden prestado ese poder»: la única escena del canon reescrito con niños en acción propia."
+        },
+        {
+          "myth": "anansi",
+          "field": "historia",
+          "note": "Pío Perea, de niño, conseguía con sus amigos la oración de Anansi, se iban al río San Juan al mediodía y a las doce de la noche, se zambullían y rezaban tres veces sin respirar pidiendo andar sobre el agua; en Semana Santa las oraciones eran más efectivas."
+        },
+        {
+          "myth": "la-sierpe-de-bete",
+          "field": "mito",
+          "note": "En patronales el pueblo entero se junta en la orilla: los niños están entre los muchos ojos que miran la superficie del agua."
+        }
+      ],
+      "design": {
+        "silhouette": "Un niño de ocho a doce años, de cuerpo entero, de pie en la orilla del río con el agua a las rodillas, a punto de zambullirse, las manos juntas delante del pecho para rezar sin respirar y la mirada puesta en el agua. Cuerpo y cara por separado: el cuerpo en pocos planos grandes de papel; el rostro, un óvalo plano de un solo tono, sin modelado, con los rasgos recortados aparte.",
+        "materials": [
+          "pampanilla o calzón corto de tela basta, una sola pieza",
+          "cotona corta de tela basta cuando está fuera del agua",
+          "pies descalzos",
+          "agua de río en tiras de papel mate y rizo de quilling alrededor de las piernas"
+        ],
+        "palette": "Tela basta desaturada contra el agua: de mediodía, cielo blanco y cerrado sin disco solar; a medianoche, agua negra de espejo y nada más, porque no hay luz eléctrica ni linterna en su escena.",
+        "scale": "A la altura del pecho de un adulto; medido contra el agua, que le llega a las rodillas en la orilla, y contra los otros niños, que van con él. Nunca menos de un tercio del alto del encuadre.",
+        "continuity": [
+          "descalzo siempre",
+          "cuerpo y cara por separado: óvalo plano de un solo tono y rasgos recortados aparte",
+          "va con otros niños: la zambullida es cosa de amigos",
+          "de frente o de tres cuartos, nunca de espaldas",
+          "ningún elemento emberá ni wounaan"
+        ],
+        "documented": [
+          "Los niños que quieren caminar sobre el agua como Anansi se zambullen al mediodía y a medianoche y le piden prestado ese poder (canon, campo mito, página `anansi`)",
+          "Pío Perea, de niño, se iba con sus amigos al río San Juan, se zambullían y rezaban tres veces sin respirar pidiéndole a Anansi el poder de andar sobre el agua, y en Semana Santa las oraciones eran más efectivas (canon, campo historia, página `anansi`; `arocha1999_ananse`, §1.1)",
+          "En la canoa, la mujer va en la popa o la proa cargando al hijo que lacta, y los hijos mayores van en la mitad de la piragua (`velasquez1961_atrato`, §7.1)"
+        ],
+        "editorial": [
+          "El dossier no documenta el vestido del niño: la pampanilla o el calzón corto y la cotona corta son la ropa de trabajo del hombre reducida a su talla. Se buscó antes de inventar; es inferencia declarada y reversible.",
+          "Las manos juntas para rezar sin respirar son lectura de la oración que el relato nombra y no un dato de gesto. Reversible.",
+          "Ningún elemento emberá ni wounaan, aunque la ombligada con araña esté documentada a la vez entre afrochocoanos y emberá (§7.3). No reversible."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_anciano": {
+      "name": "Anciano afrochocoano (tipo base)",
+      "kind": "personaje",
+      "description": "Tipo base del hombre viejo. Ningún relato del canon reescrito pone a un anciano con nombre en escena: entra como parte del pueblo que se junta bajo la torre de Anansi y en la orilla de Beté en patronales, y esta hoja existe para que ese pueblo tenga todas sus edades.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "anansi",
+        "la-sierpe-de-bete"
+      ],
+      "evidence": [
+        {
+          "myth": "anansi",
+          "field": "mito",
+          "note": "El pueblo se junta abajo a oír las campanas a deshora y la multitud pide la vida de Anansi: el pueblo entero, sin edades dichas; el anciano entra por ahí."
+        },
+        {
+          "myth": "la-sierpe-de-bete",
+          "field": "mito",
+          "note": "Las patronales de Beté quedan con dos memorias encima, la de la fiesta y la de la Sierpe: la memoria del pueblo que se junta cada año incluye a sus viejos."
+        }
+      ],
+      "design": {
+        "silhouette": "Un hombre viejo de pie, algo vencido de hombros, de cuerpo entero, con la misma ropa de trabajo del hombre adulto —cotona corta, pampanilla o dril, sombrero de paja— y la pipa en la mano, sacada del yesquero que lleva cruzado al hombro. Cuerpo y cara por separado: el cuerpo en pocos planos grandes de papel; el rostro, un óvalo plano de un solo tono, sin modelado ni arrugas talladas, con los rasgos recortados aparte y las canas como una sola pieza plana clara.",
+        "materials": [
+          "cotona de tela basta y pampanilla o pantalón de dril gastado, cada prenda una pieza",
+          "sombrero de paja del interior",
+          "yesquero cruzado al hombro, con la pipa fuera, en la mano",
+          "canas como una sola pieza plana de papel claro bajo el sombrero",
+          "pies descalzos o chanclos de palo"
+        ],
+        "palette": "La tela basta más gastada y más pálida que la del hombre adulto, y la paja del sombrero apagada; el humo de la pipa, si lo hay, en una sola espiral fina de quilling. Ninguna nota saturada.",
+        "scale": "Algo más bajo que el hombre adulto por la curva de los hombros; medido contra él y contra el marco de la puerta de la casa sobre horcones. Nunca menos de un tercio del alto del encuadre.",
+        "continuity": [
+          "la pipa en la mano y el yesquero al hombro",
+          "cuerpo y cara por separado: óvalo plano de un solo tono y rasgos recortados aparte, sin arrugas modeladas",
+          "de frente o de tres cuartos, con la mirada dentro del cuadro",
+          "nunca de narrador de postal ni de sabio folclórico",
+          "ningún elemento emberá ni wounaan"
+        ],
+        "documented": [
+          "El yesquero cruzado al hombro lleva la yesca, el eslabón, la pipa, el tabaco y la piedra (`velasquez1961_atrato`, §8)",
+          "El vestido masculino de trabajo y de domingo está levantado casa por casa en el medio Atrato y no distingue edades: cotona que no pasa del ombligo, pampanilla o dril, sombrero de paja o trapo de cabeza (`velasquez1961_atrato`, §7.1)",
+          "El pueblo entero se junta bajo la torre para oír las campanas a deshora, y en la orilla de Beté en patronales (canon, campo mito, páginas `anansi` y `la-sierpe-de-bete`)"
+        ],
+        "editorial": [
+          "Ningún relato del canon reescrito pone a un anciano con nombre en escena: entra como parte del pueblo que se junta, y la hoja existe para que ese pueblo tenga todas sus edades. Inferencia declarada.",
+          "La pipa fuera del yesquero como gesto de la edad es decisión de esta hoja: el objeto está documentado, el gesto no. Reversible.",
+          "Ningún elemento emberá ni wounaan (§7.3). No reversible."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_anciana": {
+      "name": "Anciana afrochocoana (tipo base)",
+      "kind": "personaje",
+      "description": "Tipo base de la mujer mayor. Las cantadoras dejaron de tener escena en el canon reescrito, pero su hechura documentada —mujeres mayores con obra, con la ropa guardada— es la de la anciana del pueblo que se junta bajo la torre de Anansi y en Beté, y la de las mayores de la casa de Kijimba. La historia de Kijimba pone además a sus narradoras y a la alabaora Petrona, mujeres mayores que tratan con las ánimas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "anansi",
+        "kijimba-de-las-animas",
+        "la-sierpe-de-bete"
+      ],
+      "evidence": [
+        {
+          "myth": "kijimba-de-las-animas",
+          "field": "historia",
+          "note": "La narración es de la señora Rosalba Cossio García; La viudita la narra María de Jesús Ampudia Perea, nacida en Tadó en 1924, y la alabaora mayor Petrona atribuye a las ánimas tres de sus alabaos: las mujeres mayores son las que cuentan y cantan a los muertos en esta página."
+        },
+        {
+          "myth": "anansi",
+          "field": "mito",
+          "note": "La multitud que se junta bajo la torre y pide que no la maten: el pueblo entero, con sus mayores."
+        },
+        {
+          "myth": "la-sierpe-de-bete",
+          "field": "mito",
+          "note": "El pueblo que se junta en patronales en la orilla de Beté, con sus mayores."
+        }
+      ],
+      "design": {
+        "silhouette": "Una mujer mayor de pie, de cuerpo entero, con la ropa guardada —vestido oscuro de velar, pañolón o manto de cabeza, zarcillos de oro— y la boca abierta en el esfuerzo real de la palabra o del canto, nunca en sonrisa de postal. Cuerpo y cara por separado: el cuerpo en pocos planos grandes de papel; el rostro, un óvalo plano de un solo tono, sin modelado ni arrugas talladas, con los rasgos recortados aparte.",
+        "materials": [
+          "vestido guardado de velar y enterrar, en una sola pieza grande de papel oscuro con el doblez marcado",
+          "manto, chal o pañolón de cabeza, una pieza",
+          "zarcillos de oro mate, dos piezas pequeñas recortadas aparte",
+          "canas recogidas bajo el pañolón como una sola pieza plana clara",
+          "pies descalzos o zapato de cuero de domingo"
+        ],
+        "palette": "Ropa guardada oscura con el pañolón como única pieza de color, y el oro de los zarcillos mate y sin brillo: la ropa guardada es una de las tres saturaciones autorizadas del corpus y aquí se gasta con medida.",
+        "scale": "Algo más baja que la mujer adulta, medida contra ella y contra el marco de la puerta de la casa sobre horcones. Nunca menos de un tercio del alto del encuadre.",
+        "continuity": [
+          "pañolón o manto de cabeza siempre",
+          "zarcillos de oro mate",
+          "cuerpo y cara por separado: óvalo plano de un solo tono y rasgos recortados aparte, sin arrugas modeladas",
+          "la boca en esfuerzo de palabra o canto, nunca en sonrisa de postal",
+          "ningún elemento emberá ni wounaan"
+        ],
+        "documented": [
+          "Las cantadoras del medio Atrato son mujeres mayores con obra: componen, dirigen y llevan sus alabaos, y su canto se estudia como acción política y conocimiento encarnado, «a varias voces con la mayor energía posible» (`riano_chaparro_2020_cantadoras`, §7.2)",
+          "La mujer guarda vestidos suficientes para velar y enterrar a sus muertos, mantos, chales o pañolones de cabeza y zarcillos de oro, y frente al altar va con esa ropa guardada (`velasquez1961_atrato`, §7.1)",
+          "La alabaora mayor Petrona, del Medio Atrato, atribuye a las ánimas tres de sus alabaos, enseñados en sueños; las dos narradoras de las páginas vecinas son mujeres mayores (canon, campo historia, página `kijimba-de-las-animas`)"
+        ],
+        "editorial": [
+          "La hoja de cantadoras salió del inventario porque ningún relato del canon reescrito las pone en escena; su hechura documentada vive aquí, en la mujer mayor del pueblo. Reversible si un relato las devuelve.",
+          "Las canas recogidas bajo el pañolón como una sola pieza plana: el peinado no está documentado. Reversible.",
+          "Ningún elemento emberá ni wounaan (§7.3). No reversible."
+        ],
+        "states_to_model": []
+      }
     }
   },
   "models": {

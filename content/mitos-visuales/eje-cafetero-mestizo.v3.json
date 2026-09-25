@@ -1111,21 +1111,21 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura de esta página empieza corrigiendo el mapa: el módulo la reubica en Rionegro y Girón, Santander, y Girón es otra biblioteca visual —blanco encalado, empedrado, portón oscuro y teja de arcilla—, de modo que sus cinco entidades se financian en este cubo con paleta gironesa declarada aparte y su territorio queda escrito en la ficha; y la pasada de nombres propios devolvió dos protagonistas que el módulo insiste en no fundir, porque uno castiga la embriaguez en el camino y la otra el trabajo en día de guarda junto a la ventana, así que la primaria se duplicó en vez de elegirse, y la totuma y las tijeras quedaron como los dos objetos que no se prestan entre episodios.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El relato nuevo pone a Ulogia a coser «dale que dale a la máquina» y no en una mesa, arma a las ánimas con rosario en una mano y cirio en la otra saliendo de un cacaotal, convierte el hueso en «canilla de muerto», da especie al árbol —un gualanday— y hace a Laurián volver con el hatillo a cuestas tras beber con amigotes al son de tiples y maracas; se rediseñan Laurián, Ulogia, Jovita y la procesión, se embeben el hatillo, el alto de Miradores, el urimaco, el cacaotal, el ánima que olfatea, los rosarios, los amigotes y la cocinera, y se excluyen Mariejesús Cañas, el Ánima Sola y la Pata-Sola del prólogo y la copla del tigre.",
         "previous_note": "La lectura de esta página empieza corrigiendo el mapa: el módulo la reubica en Rionegro y Girón, Santander, y Girón es otra biblioteca visual —blanco encalado, empedrado, portón oscuro y teja de arcilla—, de modo que sus cinco entidades se financian en este cubo con paleta gironesa declarada aparte y su territorio queda escrito en la ficha; y la pasada de nombres propios devolvió dos protagonistas que el módulo insiste en no fundir, porque uno castiga la embriaguez en el camino y la otra el trabajo en día de guarda junto a la ventana, así que la primaria se duplicó en vez de elegirse, y la totuma y las tijeras quedaron como los dos objetos que no se prestan entre episodios."
       },
       "entity_refs": [
         {
           "entity_id": "laurian",
           "role": "primary",
-          "note": "PRIMARIA CONFIRMADA, con una segunda al lado. Campesino cantor que baja al mercado los lunes, vuelve bebido de guarapo, se topa con la procesión y amanece en la copa de un árbol: conduce el primer episodio entero. Su territorio es Rionegro, Santander, y su lámina lleva paleta gironesa declarada."
+          "note": "PRIMARIA CONFIRMADA en el relato nuevo: baja a la feria de Rionegro, bebe guarapo con sus amigotes, vuelve cantando con el hatillo a cuestas, lo pelotean las ánimas y amanece en la copa de un gualanday."
         },
         {
           "entity_id": "nua_ulogia",
           "role": "primary",
-          "note": "SEGUNDA PRIMARIA. El módulo insiste en que los dos episodios no se funden, y ella conduce el suyo con acción propia: trabaja de noche en domingo, ve la procesión por la ventana, corta el ruedo de la mortaja y recibe el golpe. Dejarla como secundaria haría exactamente la fusión que la página prohíbe."
+          "note": "SEGUNDA PRIMARIA, confirmada en el relato nuevo: la comadre Ulogia cose a máquina un domingo a las diez de la noche, ve la fila por la ventana, sale con las tijeras a cortar el ruedo y recibe el canillazo en la frente."
         },
         {
           "entity_id": "jovita_la_difunta",
@@ -1165,7 +1165,7 @@
         {
           "entity_id": "arbol_de_laurian",
           "role": "plot_object",
-          "note": "Arbol sin especie ni descripción: vegetación del camino ya fichado."
+          "note": "Ya tiene especie: un gualanday."
         },
         {
           "entity_id": "familia_que_busca_a_laurian",
@@ -1180,7 +1180,7 @@
         {
           "entity_id": "mesa_de_costura_y_ventana",
           "role": "plot_object",
-          "note": "Mobiliario del interior ya fichado; la ventana es el marco desde donde ve la procesión."
+          "note": "Ahora es la máquina de coser: la usa Ulogia y la ventanilla es por donde ve la fila."
         },
         {
           "entity_id": "el_narrador_visitante",
@@ -1221,6 +1221,71 @@
           "entity_id": "hoja_utileria_animas_y_conquista",
           "role": "plot_object",
           "note": "Cinco piezas sueltas de los relatos que no comparten mundo material: costura, procesión, tienda de camino, nevado y defensa de 1592."
+        },
+        {
+          "entity_id": "hatillo_del_mercado",
+          "role": "plot_object",
+          "note": "Lo que Laurián carga a la espalda al volver de la feria."
+        },
+        {
+          "entity_id": "alto_de_miradores",
+          "role": "setting",
+          "note": "Donde Laurián ve la procesión, de noche y con buena luna."
+        },
+        {
+          "entity_id": "matorral_de_urimaco",
+          "role": "plot_object",
+          "note": "El escondite de Laurián, que no le sirve."
+        },
+        {
+          "entity_id": "cacaotal_de_rionegro",
+          "role": "setting",
+          "note": "De donde salen las ánimas en el episodio de Ulogia."
+        },
+        {
+          "entity_id": "anima_que_olfatea",
+          "role": "secondary",
+          "note": "La que descubre a Laurián por el olfato: «¡Fo, fo! ¡Hiede a carne humana!»."
+        },
+        {
+          "entity_id": "rosarios_de_las_animas",
+          "role": "plot_object",
+          "note": "Rosario en una mano, cirio en la otra."
+        },
+        {
+          "entity_id": "amigotes_de_la_tienda",
+          "role": "secondary",
+          "note": "Los compañeros de guarapo de Laurián."
+        },
+        {
+          "entity_id": "cocinera_que_cuenta",
+          "role": "secondary",
+          "note": "Narradora del segundo episodio."
+        },
+        {
+          "entity_id": "mariejesus_canas",
+          "role": "secondary",
+          "note": "Nombrada en el prólogo caldense."
+        },
+        {
+          "entity_id": "anima_sola_y_pata_sola",
+          "role": "magic_subject",
+          "note": "Espantos de Caldas nombrados sólo por contraste."
+        },
+        {
+          "entity_id": "copla_del_tigre_del_chicamocha",
+          "role": "magic_subject",
+          "note": "La copla que Laurián canta borracho."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Laurián, sus amigotes y los hombres de la familia se resuelven sobre este tipo; en este relato la arquitectura lleva la paleta gironesa."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Ulogia, la cocinera y las mujeres de la familia se resuelven sobre este tipo."
         }
       ]
     },
@@ -1246,21 +1311,21 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La pasada de estados encontró aquí el único cambio de masa arquitectónico del cubo —la casona en pie y su ruina en Playa Rica, que es además el marco desde el que se cuenta todo—, y la de objetos dio el detalle que fecha la escena: el arma de 1592 es el arcabuz y no el mosquete, lo que significa pocos disparos, mucha espera y una brasa visible en la mano de cada defensor antes de que amanezca; la primaria se corrigió del padre al hijo porque el título es literalmente la postura de Rodrigo, y los atacantes quedaron fuera de cuadro tal como la propia portada los deja, porque «pijao» es una categoría colonial aplicada a más de setenta grupos y el cuento no los describe.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El relato nuevo deja de ser una escena de tres figuras y se llena de nombres y de gente: el juicio sobre Rodrigo pasa de don Fernán a su padre, don Diego de Aguilar, señor de Consota, que sube a ficha con lanza y adarga de cuero de danta y los brazos cruzados; don Fernán cambia el arcabuz por el sayo de armas y las espuelas y acaba en andas; entran el alazán nervioso de Rodrigo y, como hoja propia y sensible, los labradores indios con flechas y macanas, los negros mineros y el desayuno quimbaya del tambo, mientras García de Cáceres, Estopiñán, los vaqueros, el muchacho del aviso, el tambo, las andas y los topónimos se embeben y los fotutos y el romance del valle de Cartago quedan fuera.",
         "previous_note": "La pasada de estados encontró aquí el único cambio de masa arquitectónico del cubo —la casona en pie y su ruina en Playa Rica, que es además el marco desde el que se cuenta todo—, y la de objetos dio el detalle que fecha la escena: el arma de 1592 es el arcabuz y no el mosquete, lo que significa pocos disparos, mucha espera y una brasa visible en la mano de cada defensor antes de que amanezca; la primaria se corrigió del padre al hijo porque el título es literalmente la postura de Rodrigo, y los atacantes quedaron fuera de cuadro tal como la propia portada los deja, porque «pijao» es una categoría colonial aplicada a más de setenta grupos y el cuento no los describe."
       },
       "entity_refs": [
         {
           "entity_id": "don_fernan_lopez_de_sandoval",
           "role": "secondary",
-          "note": "Viejo encomendero que recorre el corredor armado mientras los vigías anuncian movimiento al otro lado del río, y que formula al final el juicio que da título al cuento. Abre y cierra el relato, pero el acto que lo nombra no es suyo. Es además la única figura del cubo que lleva arma de fuego."
+          "note": "Viejo encomendero con el sayo de armas y las espuelas sonando en el corredor; cae herido en una pierna y vuelve en andas. Ya no da el juicio final."
         },
         {
           "entity_id": "rodrigo",
           "role": "primary",
-          "note": "PRIMARIA CORREGIDA. El script propuso a Don Fernán, que abre y cierra el relato, pero el título es literalmente la postura de Rodrigo —«ha muerto de frente, con el rostro hacia el sol»— y la escena vertical de la página es suya entera: «permanece de frente bajo la luz del amanecer mientras los demás se retiran». Su ficha es la orientación del cuerpo."
+          "note": "PRIMARIA CONFIRMADA en el relato nuevo: primogénito de veinte años que retrocede de frente, palmo a palmo, hasta que un dardo le parte el corazón; el título sale de la frase del padre sobre las águilas que miran de frente al sol."
         },
         {
           "entity_id": "colectivo_espanoles_de_la_conquista",
@@ -1285,12 +1350,12 @@
         {
           "entity_id": "don_diego_de_frente_al_sol",
           "role": "secondary",
-          "note": "Acompañante sin rasgos. NO es el mismo Don Diego de In illo tempore: dos cuentos del mismo autor con un nombre repetido, y fundirlos sería un error de censo."
+          "note": "AHORA CON FICHA: don Diego de Aguilar, señor de Consota, entra con lanza y adarga de cuero de danta y cierra el relato cruzando los brazos ante el hijo muerto. Sigue sin ser el Don Diego de In illo tempore."
         },
         {
           "entity_id": "rio_de_chinchina",
           "role": "setting",
-          "note": "Sólo funciona como la otra orilla desde donde se acercan los atacantes."
+          "note": "Lo vadean para pelear y baja rojo: el rojo no se dibuja."
         },
         {
           "entity_id": "ruina_de_playa_rica",
@@ -1300,7 +1365,7 @@
         {
           "entity_id": "armas_de_los_defensores",
           "role": "plot_object",
-          "note": "«Los defensores disparan y resisten»: armas de 1592 sin modelo especificado."
+          "note": "Arcabuces, lanzas, adarga, flechas y macanas: repartidas entre las fichas que las llevan."
         },
         {
           "entity_id": "atacantes_presentados_como_pijaos",
@@ -1311,6 +1376,66 @@
           "entity_id": "hoja_utileria_animas_y_conquista",
           "role": "plot_object",
           "note": "Cinco piezas sueltas de los relatos que no comparten mundo material: costura, procesión, tienda de camino, nevado y defensa de 1592."
+        },
+        {
+          "entity_id": "colectivo_indios_y_negros_de_la_encomienda",
+          "role": "secondary",
+          "note": "Labradores indios, negros mineros y quimbayas del tambo: pelean, se desbandan y comen en el centro del relato."
+        },
+        {
+          "entity_id": "alazan_de_rodrigo",
+          "role": "secondary",
+          "note": "El alazán nervioso en que entra Rodrigo y los caballos de sus vaqueros."
+        },
+        {
+          "entity_id": "garcia_de_caceres",
+          "role": "secondary",
+          "note": "Muere de un tajo de macana."
+        },
+        {
+          "entity_id": "leandro_estopinan",
+          "role": "secondary",
+          "note": "El mosquetero herido bajo el brazal."
+        },
+        {
+          "entity_id": "vaqueros_con_lanzas",
+          "role": "secondary",
+          "note": "El escuadrón de Rodrigo."
+        },
+        {
+          "entity_id": "muchacho_indigena_del_aviso",
+          "role": "secondary",
+          "note": "Trae el aviso de la escucha del río."
+        },
+        {
+          "entity_id": "tambo_de_la_encomienda",
+          "role": "setting",
+          "note": "Tambo, oratorio y sala de la casona."
+        },
+        {
+          "entity_id": "desayuno_del_tambo",
+          "role": "plot_object",
+          "note": "La comida del tambo que la historia del relato lee como vida diaria."
+        },
+        {
+          "entity_id": "andas_del_herido",
+          "role": "plot_object",
+          "note": "En ellas vuelve don Fernán."
+        },
+        {
+          "entity_id": "lomas_de_corozal_y_consota",
+          "role": "setting",
+          "note": "Topónimos que sitúan."
+        },
+        {
+          "entity_id": "fotutos_y_caracoles",
+          "role": "magic_subject",
+          "note": "La alarma del ataque, oída y no vista."
+        },
+        {
+          "entity_id": "romance_del_valle_de_cartago",
+          "role": "magic_subject",
+          "note": "El romance del cierre."
         }
       ]
     },
@@ -1336,21 +1461,21 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "El mejor mecanismo narrativo del cubo y el que más barato sale: la pasada de estados encontró un cuerpo que se va quedando sin piezas —sombrero, machete, carriel y ruana, en ese orden— y decidió no cobrar lámina, porque el despojo se dibuja por ausencia de utilería ya fichada y no por herida; en cambio la pasada de criaturas tuvo que resolver una duda que el propio testimonio conserva, porque un sacerdote de Caramanta objetó que un espíritu no debía causar heridas físicas y propuso que «quizá había sido una fiera», y la ficha del Uñón se construyó sin rostro definido para que quepan las dos lecturas.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El relato nuevo cambia la mecánica del despojo —Rafael ya no suelta las cosas para correr mejor: «se le fueron quedando» mientras aquello lo araña y le agarra la ropa, y el farolito se le zafa en el brinco—, añade el hermano don Manuel, los arrieros de la posada de mulas, el aserradero, los canalones y cuatro topónimos más, y deja la duda más explícita en boca del sacerdote, que «no deja marcas»; se rediseñan Rafael Toro (ropa en jirones en el estado de fuga, farol con cabo de vela) y el Uñón (ahora también «aquel animal»), y se embeben los nuevos sin cobrar lámina.",
         "previous_note": "El mejor mecanismo narrativo del cubo y el que más barato sale: la pasada de estados encontró un cuerpo que se va quedando sin piezas —sombrero, machete, carriel y ruana, en ese orden— y decidió no cobrar lámina, porque el despojo se dibuja por ausencia de utilería ya fichada y no por herida; en cambio la pasada de criaturas tuvo que resolver una duda que el propio testimonio conserva, porque un sacerdote de Caramanta objetó que un espíritu no debía causar heridas físicas y propuso que «quizá había sido una fiera», y la ficha del Uñón se construyó sin rostro definido para que quepan las dos lecturas."
       },
       "entity_refs": [
         {
           "entity_id": "rafael_toro",
           "role": "primary",
-          "note": "Protagonista de las dos escenas. El estado de fuga cambia la silueta de verdad: va soltando las cuatro prendas una por una, y ese despojo es la medida del miedo. No cobro hoja extra porque es el mismo cuerpo perdiendo utilería ya fichada."
+          "note": "PRIMARIA CONFIRMADA en el relato nuevo: alza el farolito, se le zafa en el brinco y huye a oscuras mientras aquello lo araña; las cuatro piezas «se le fueron quedando» en el mismo orden."
         },
         {
           "entity_id": "el_unon",
           "role": "secondary",
-          "note": "Figura más grande que un hombre, cubierta de pelo, con barba abundante y uñas desmesuradas. El relato conserva la duda («quizá una fiera») y la ficha debe permitirla: nada de rostro definido. No lo marco panregional —es figura del occidente caldense—, aunque su rasgo de uñas lo emparente con la Mano Peluda."
+          "note": "«un hombre más grande que él, todo peludo, barbado, con unas manos de uñas muy grandes»; el testigo lo llama luego «aquel animal». La duda sigue abierta y la ficha la conserva."
         },
         {
           "entity_id": "colectivo_campesinos_y_arrieros",
@@ -1385,7 +1510,7 @@
         {
           "entity_id": "toponimos_de_la_huida",
           "role": "setting",
-          "note": "Cinco topónimos que ordenan la huida y son el mismo camino de ladera."
+          "note": "Ahora nueve nombres de lugar, todos del mismo camino."
         },
         {
           "entity_id": "sombrero_de_ala",
@@ -1436,6 +1561,46 @@
           "entity_id": "hoja_utileria_arriero_caldense",
           "role": "plot_object",
           "note": "Los cinco objetos que Rafael Toro va soltando en la huida son, además, el kit del caminante de monte de todo el bucket: una lámina y se reutiliza."
+        },
+        {
+          "entity_id": "don_manuel_toro",
+          "role": "secondary",
+          "note": "El hermano, nombrado."
+        },
+        {
+          "entity_id": "arrieros_de_la_posada",
+          "role": "secondary",
+          "note": "Los que oyen el cuento y le dan posada."
+        },
+        {
+          "entity_id": "aserradero_de_arcon_grande",
+          "role": "setting",
+          "note": "El lugar de trabajo."
+        },
+        {
+          "entity_id": "canalones_del_terreno_disparejo",
+          "role": "setting",
+          "note": "Por donde corre a oscuras."
+        },
+        {
+          "entity_id": "comparaciones_externas_caldas",
+          "role": "magic_subject",
+          "note": "El Patón de 2004 y la Chichita de Riosucio, sólo en historia y versiones."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Rafael, su compañero, su hermano y los arrieros de la posada se resuelven sobre este tipo con el kit del caminante."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Doña Carmela Piedrahita, dueña de la posada, sin rasgo propio."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "El narrador de ochenta y seis años que cuenta el suceso; no entra a lámina, pero fija la voz del relato."
         }
       ]
     },
@@ -1461,16 +1626,16 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura entera de esta página consistió en no inventar: la filiación páez es conjetura declarada del propio autor, la vertiente occidental del Ruiz era quimbaya y no hay un pueblo «del Ruiz», así que la figura se dibuja sin un solo símbolo étnico y sin tomar nada de la biblia nasa; la pasada de personajes excluyó además a la esposa y al recién nacido, que mueren dentro del relato y son la razón del viaje pero no reciben un solo rasgo, y la de paisajes aportó el dato que cambia la lámina, porque el glaciar de mediados del XIX medía 47,5 km² frente a los 7,17 de 2024 y su lengua bajaba mucho más.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El relato nuevo cambia la imagen de Cumanday de un hombre detenido junto a la grieta a un aparecido fantasmal y solo en la cumbre que ofrece, suplicante, un manojo de yerbas y ruega que lo lleven a su tribu, y le añade huellas en la nieve, una esposa «hermosa», una boda de tambores y un brujo «arrugado como las montañas»; se rediseñan Cumanday y el nevado, el atado pasa a manojo, se excluyen la boda y los malos espíritus porque no traen un solo cuerpo que no haya que inventar, y se embeben las lagunas y la mirada desde Manizales.",
         "previous_note": "La lectura entera de esta página consistió en no inventar: la filiación páez es conjetura declarada del propio autor, la vertiente occidental del Ruiz era quimbaya y no hay un pueblo «del Ruiz», así que la figura se dibuja sin un solo símbolo étnico y sin tomar nada de la biblia nasa; la pasada de personajes excluyó además a la esposa y al recién nacido, que mueren dentro del relato y son la razón del viaje pero no reciben un solo rasgo, y la de paisajes aportó el dato que cambia la lámina, porque el glaciar de mediados del XIX medía 47,5 km² frente a los 7,17 de 2024 y su lengua bajaba mucho más."
       },
       "entity_refs": [
         {
           "entity_id": "cumanday",
           "role": "primary",
-          "note": "Cacique joven que sube por las hierbas y queda detenido en el tiempo junto a la grieta. SENSIBILIDAD: la escena exige «sin símbolos étnicos inventados» y la página declara la filiación páez como conjetura del autor; la ficha no puede tomar nada de la biblia nasa."
+          "note": "PRIMARIA CONFIRMADA en el relato nuevo, con otra imagen: ya no queda detenido junto a la grieta sino que aparece fantasmal y solo en la cumbre, ofreciendo suplicante un manojo de yerbas al visitante."
         },
         {
           "entity_id": "colectivo_campesinos_y_arrieros",
@@ -1495,7 +1660,7 @@
         {
           "entity_id": "atado_de_hierbas",
           "role": "plot_object",
-          "note": "Cumanday lo carga en las dos escenas, pero la página declara que no se identifica la planta: va como atado genérico, sin especie inventada."
+          "note": "Ahora «un manojo de yerbas», ofrecido con las dos manos."
         },
         {
           "entity_id": "esposa_de_cumanday",
@@ -1510,7 +1675,7 @@
         {
           "entity_id": "brujo_de_las_hierbas",
           "role": "secondary",
-          "note": "Da la instrucción y desaparece."
+          "note": "Da la instrucción; su único rasgo es un símil."
         },
         {
           "entity_id": "comparaciones_externas_caldas",
@@ -1521,6 +1686,26 @@
           "entity_id": "hoja_utileria_animas_y_conquista",
           "role": "plot_object",
           "note": "Cinco piezas sueltas de los relatos que no comparten mundo material: costura, procesión, tienda de camino, nevado y defensa de 1592."
+        },
+        {
+          "entity_id": "boda_de_cumanday",
+          "role": "magic_subject",
+          "note": "La boda, contada por sus sonidos."
+        },
+        {
+          "entity_id": "malos_espiritus_de_la_cordillera",
+          "role": "magic_subject",
+          "note": "La desgracia sin cuerpo."
+        },
+        {
+          "entity_id": "lagunas_heladas",
+          "role": "setting",
+          "note": "El paisaje del amor, dentro del nevado."
+        },
+        {
+          "entity_id": "manizales_desde_donde_se_mira",
+          "role": "setting",
+          "note": "El punto de vista del autor."
         }
       ]
     },
@@ -1546,21 +1731,21 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "Aquí la exclusión produjo dos fichas en vez de un vacío: el Coco queda fuera porque la fuente le niega rostro —«presencia incorpórea», «no necesita un rostro fijo»— y dibujarlo sería inventarle exactamente lo que el relato le quita, y en su lugar se producen los dos calabazos de Riosucio, que son cuerpos fabricados y documentados y que no son intercambiables entre sí; la pasada de estados cobró el único estado del cubo, porque el efecto de Tatínez y su desmontaje no comparten una sola pieza de papel —una cabeza luminosa flotando contra un calabazo, una vela y un portador separados—, y ése es el contenido exacto de las dos escenas de la página.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El relato nuevo saca al calabazo de Tatínez a los extramuros y lo hace «gigante», y cambia el fantasma de Rubén Bayer —ahora pintado de blanco, con una persona adentro que empuja el palo y lo alarga—, por lo que ese fantasma cobra un estado alargado y los pies de quien va dentro reemplazan a la mano; el Chucho gana guaridas domésticas y la figura de «cualquier alimaña», que confirman su exclusión, y la madre de las enaguas, los trasnochadores, don Rubén y los rincones de la casa se embeben.",
         "previous_note": "Aquí la exclusión produjo dos fichas en vez de un vacío: el Coco queda fuera porque la fuente le niega rostro —«presencia incorpórea», «no necesita un rostro fijo»— y dibujarlo sería inventarle exactamente lo que el relato le quita, y en su lugar se producen los dos calabazos de Riosucio, que son cuerpos fabricados y documentados y que no son intercambiables entre sí; la pasada de estados cobró el único estado del cubo, porque el efecto de Tatínez y su desmontaje no comparten una sola pieza de papel —una cabeza luminosa flotando contra un calabazo, una vela y un portador separados—, y ése es el contenido exacto de las dos escenas de la página."
       },
       "entity_refs": [
         {
           "entity_id": "calabazo_iluminado_de_tatinez",
           "role": "primary",
-          "note": "Escenificación fabricada, no ser sobrenatural: calabazo grande con ojos y boca recortados, vela dentro y un portador que lo carga sobre la cabeza. Las dos escenas de la página son justamente el efecto y su desmontaje."
+          "note": "PRIMARIA CONFIRMADA en el relato nuevo: ahora «gigante», por los extramuros, cargado sobre la cabeza para asustar a los trasnochadores ingenuos, hasta que lo descubrieron."
         },
         {
           "entity_id": "fantasma_de_ruben_bayer",
           "role": "secondary",
-          "note": "Segunda construcción de Riosucio y silueta distinta: calabazo pequeño con aspecto de calavera sobre un palo, cubierto con tela blanca. La página insiste en que no son intercambiables con la de Tatínez."
+          "note": "Cambia de forma: calabazo pintado de blanco en un palo forrado de tela con una persona adentro que lo empuja y lo alarga. Se cobra ese estado."
         },
         {
           "entity_id": "colectivo_campesinos_y_arrieros",
@@ -1595,7 +1780,7 @@
         {
           "entity_id": "chucho",
           "role": "secondary",
-          "note": "«También puede llamarse Chucho»."
+          "note": "Ahora con casa y con la figura de cualquier alimaña: sigue sin forma propia."
         },
         {
           "entity_id": "origen_africano_del_coco",
@@ -1606,6 +1791,41 @@
           "entity_id": "comparaciones_externas_caldas",
           "role": "magic_subject",
           "note": "Criterio uniforme del censo, igual que en Bogotá: la comparación no entra al inventario."
+        },
+        {
+          "entity_id": "ruben_bayer",
+          "role": "secondary",
+          "note": "El autor del fantasma, adentro."
+        },
+        {
+          "entity_id": "trasnochadores_ingenuos",
+          "role": "secondary",
+          "note": "Los que se asustan con el calabazo."
+        },
+        {
+          "entity_id": "escondites_del_chucho",
+          "role": "setting",
+          "note": "La casa como guarida del Chucho."
+        },
+        {
+          "entity_id": "madre_con_enaguas",
+          "role": "secondary",
+          "note": "La madre del niño amenazado."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "El niño que no obedece y el que se pega de las enaguas: la amenaza del Coco es de crianza."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "La mamá de las enaguas."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Don Rubén Bayer, zapatero y concejal, y los trasnochadores del pueblo."
         }
       ]
     },
@@ -2004,7 +2224,7 @@
     "laurian": {
       "name": "Laurián",
       "kind": "personaje",
-      "description": "Campesino cantor que baja al mercado y vuelve bebido: conduce el primer episodio y termina en la copa de un árbol. Ojo: territorio de Rionegro, Santander, no Caldas.",
+      "description": "Campesino buen trabajador y «un poco trovero» que cada lunes baja a la feria de Rionegro, bebe totumas de guarapo en las tiendas del camino y vuelve de noche con el hatillo del mercado a cuestas cantando coplas; las ánimas lo pelotean y amanece enredado en la copa de un gualanday. Ojo: territorio de Rionegro, Santander, no Caldas.",
       "aliases": [],
       "states": [
         "canonico"
@@ -2051,33 +2271,35 @@
       ],
       "census_note": "Campesino cantor que baja al mercado y vuelve bebido: conduce el primer episodio y termina en la copa de un árbol. Ojo: territorio de Rionegro, Santander, no Caldas.",
       "design": {
-        "silhouette": "Campesino caminando de noche con el torso echado hacia atrás y la boca abierta cantando, una totuma en la mano y el bulto de las provisiones del mercado colgando de la otra, con los pies fuera de la línea del camino: es la única figura de esta biblia dibujada cantando, y la única cuyo desequilibrio es parte del contorno.",
+        "silhouette": "Campesino caminando de noche con el torso echado hacia atrás y la boca abierta cantando, el hatillo del mercado a cuestas sobre la espalda y los pies fuera de la línea del camino: es la única figura de esta biblia dibujada cantando, y la única cuyo desequilibrio es parte del contorno.",
         "materials": [
           "camisa de lienzo y pantalón de manta, dos planos grandes sin pliegue",
           "ruaneja pequeña y burda en trapecio corto de borde dentado",
           "sombrero de paja de iraca, dos elipses, sin cinta negra",
-          "totuma de guarapo, un casquete bruñido de calabazo",
-          "bulto de provisiones atado con cabuya, un rectángulo con el nudo a la vista"
+          "hatillo del mercado a cuestas: un fardo de tela atado, un solo plano con el nudo a la vista",
+          "machete a la cintura, una tira gris con cacha parda"
         ],
         "palette": "PALETA GIRONESA DECLARADA: este relato no es caldense y su territorio es Rionegro y Girón, en Santander, así que su lámina se compone con muro blanco encalado, empedrado gris, portón marrón muy oscuro y teja de arcilla, y no comparte ni un tono con el resto del cubo. La única luz es el cirio de la procesión, a media altura y sin halo.",
-        "scale": "Figura entera de tres cuartos en el camino, a la altura del caminante, con la fila de cirios de la procesión pequeña y a media distancia detrás: la escala tiene que decir que él es lo grande y ellos lo que se acerca.",
+        "scale": "Figura entera de tres cuartos en el camino, a la altura del caminante, con la fila de ánimas pequeña y a media distancia detrás, bajo la luna: la escala tiene que decir que él es lo grande y ellas lo que se acerca.",
         "continuity": [
           "sombrero de paja de iraca sin cinta negra: el aguadeño nace hacia 1860 y su cinta negra invariable lo haría reconocible, y este relato no lo autoriza",
-          "no se funde con Ñuá Ulogia: son dos episodios y dos siluetas, y la totuma es suya como las tijeras son de ella",
-          "su territorio es santandereano y su calle y su casa llevan la paleta gironesa declarada",
-          "no hay golpes en cuadro: la escena es el encuentro y no la paliza"
+          "no se funde con Ñuá Ulogia: son dos episodios y dos siluetas, y el hatillo y la totuma son suyos como las tijeras son de ella",
+          "su territorio es santandereano y su camino y su casa llevan la paleta gironesa declarada",
+          "no hay golpes en cuadro: el peloteo se cuenta y la lámina se queda en el encuentro"
         ],
         "documented": [
-          "«campesino trabajador y buen cantor que cada lunes bajaba al mercado», que se detenía en las tiendas del camino y gastaba parte del dinero bebiendo guarapo (relato cuento-de-animas)",
-          "una noche de noviembre volvía alegre y entonaba coplas; al día siguiente lo encontraron en la copa de un árbol (relato cuento-de-animas)",
+          "«buen trabajador», pero «cada lunes bajaba a la feria de Rionegro y, hecho el mercado, se gastaba lo que le sobraba en las tiendas del camino», tomando «totumas de guarapo con tres o cuatro amigotes, al son de los tiples y las maracas» (relato cuento-de-animas)",
+          "«Una noche de noviembre volvía a su cabaña con el hatillo del mercado a cuestas y una borrachera de tamaño heroico»; «era un poco trovero» y cantaba una copla del Chicamocha (relato cuento-de-animas)",
+          "al ver la procesión «se escondió detrás de un matorral de urimaco»; las ánimas «lo pelotearon por los aires como una perinola» y al día siguiente la familia «lo encontró enredado en la copa de un gualanday» (relato cuento-de-animas)",
           "el módulo reubica esta URL en Rionegro y Girón, Santander, y Girón es otra biblioteca visual: casco virreinal de 1631 con «calles empedradas, casas con paredes blancas, grandes puertas de color marrón oscuro o negro, y techos con teja de arcilla» (wikipedia_giron)",
           "el kit del caminante de monte es sombrero de paja de iraca, «amplia camisa a manera de chambra», «ruaneja pequeña y burda», machete a la cintura y cotizas (valencia_llano_arrieria)",
           "el sombrero aguadeño nace hacia 1860, con «horma o cuerpo esencialmente blanca» y «en la base exterior de la copa lleva invariablemente una cinta negra»: no entra a ninguna lámina del cubo (dossier, dimensión de época)"
         ],
         "editorial": [
           "rostro, edad y complexión son construcción editorial y son retirables",
-          "el relato no se leyó en su impreso: Montañas de Santander está digitalizada íntegra en El Libro Total y no se abrió, así que toda su descripción física se apoya en la paráfrasis editorial (otero1932_montanas)",
-          "el bulto de provisiones es atrezo editorial tomado de «compraba las provisiones de su casa»",
+          "el relato no se leyó en su impreso: Montañas de Santander está digitalizada íntegra en El Libro Total y no se abrió (otero1932_montanas)",
+          "el hatillo como fardo de tela atado es hechura editorial: el relato dice «hatillo» y no lo describe",
+          "el machete a la cintura sale del kit documentado del caminante y no del relato, donde el machete sólo está en la copla; retirable",
           "el torso echado hacia atrás y la boca abierta son composición editorial para que el canto y la embriaguez se lean sin caricatura; reversibles"
         ],
         "states_to_model": []
@@ -2091,8 +2313,11 @@
     "nua_ulogia": {
       "name": "Ñuá Ulogia, la costurera",
       "kind": "personaje",
-      "description": "Segunda protagonista del mismo slug, con acción propia: corta el ruedo de la mortaja y recibe el golpe. No se funde con Laurián; el módulo insiste en que son dos episodios.",
-      "aliases": [],
+      "description": "La comadre Ulogia, que rezaba en la iglesia y cosía para la gente del campo junto a un cacaotal en las afueras de Rionegro: un domingo a las diez de la noche sigue en la máquina, ve la fila de ánimas por la ventana, sale con las tijeras a recortar la mortaja de Jovita y recibe el canillazo en la frente. No se funde con Laurián.",
+      "aliases": [
+        "comadre Ulogia",
+        "ñuá Ulogia"
+      ],
       "states": [
         "canonico"
       ],
@@ -2138,33 +2363,35 @@
       ],
       "census_note": "Segunda protagonista del mismo slug, con acción propia: corta el ruedo de la mortaja y recibe el golpe. No se funde con Laurián; el módulo insiste en que son dos episodios.",
       "design": {
-        "silhouette": "Costurera sentada de perfil junto a una mesa baja, con el torso girado hacia una ventana abierta a su espalda y unas tijeras abiertas en la mano derecha detenidas a media altura: es la única figura de esta biblia sentada a trabajar, y la única que sostiene una herramienta de corte.",
+        "silhouette": "Costurera sentada de perfil ante una máquina de coser, con el torso girado hacia una ventanilla abierta a su espalda y unas tijeras abiertas en la mano detenidas a media altura: es la única figura de esta biblia sentada a trabajar, y la única que sostiene una herramienta de corte.",
         "materials": [
           "falda larga y blusa cerrada de lienzo, dos planos grandes",
           "pañolón sobre los hombros, un triángulo",
           "tijeras de acero abiertas, dos tiras cruzadas de papel gris metálico",
-          "mesa de costura en tablas de papel pardo, con la tela extendida encima",
-          "marco de ventana recortado como hueco real en la capa del fondo"
+          "máquina de coser de pedal o de mano en una sola silueta negra con la rueda recortada aparte, con la tela extendida encima",
+          "ventanilla recortada como hueco real en la capa del fondo"
         ],
         "palette": "PALETA GIRONESA DECLARADA: muro blanco encalado detrás, portón marrón muy oscuro y teja de arcilla; el interior va en blancos y pardos, y el único punto frío es el acero de las tijeras. La luz entra por la ventana desde la fila de cirios de afuera, en puntos cálidos y sin resplandor general.",
         "scale": "Medio cuerpo sentado con la mesa cortando por delante y la ventana detrás a la altura del hombro: la escala es de interior pequeño, para que el afuera quepa en el vano y no domine.",
         "continuity": [
-          "sentada y con las tijeras: ésos son sus dos rasgos y ninguno pertenece a Laurián",
+          "sentada ante la máquina y con las tijeras: ésos son sus rasgos y ninguno pertenece a Laurián",
           "no se funde con Laurián: el módulo insiste en que son dos episodios que no se juntan",
           "su territorio es santandereano y su interior lleva la paleta gironesa declarada",
-          "no hay golpe en cuadro: la cicatriz que el narrador dice haber visto no se dibuja"
+          "no hay golpe en cuadro: la cicatriz del canillazo que el narrador dice haber visto no se dibuja"
         ],
         "documented": [
-          "«costurera que atendía a la gente del mercado los lunes»; una noche de domingo siguió trabajando hasta escuchar voces que rezaban el rosario y por la ventana vio la procesión (relato cuento-de-animas)",
-          "tomó las tijeras y cortó el ruedo de la mortaja, pero lo dejó tan corto que las piernas de la difunta quedaron descubiertas (relato cuento-de-animas)",
+          "«la comadre Ulogia, que rezaba en la iglesia y cosía para la gente del campo», vivía «en las afueras de Rionegro, saliendo hacia Bucaramanga, junto a un cacaotal» (relato cuento-de-animas)",
+          "«Un domingo, a las diez de la noche, seguía dale que dale a la máquina, porque al día siguiente había mercado», oyó rezar el rosario y por la ventana vio la fila de ánimas; «se arrodilló aterrada» (relato cuento-de-animas)",
+          "«salió con las tijeras y le cortó el ruedo»; Jovita le dio con la canilla en la frente, y quien lo contó aseguraba que ella misma le mostró «en la frente la cicatriz del canillazo» (relato cuento-de-animas)",
           "el segundo episodio castiga el trabajo en día de guarda, no la embriaguez: los dos no se funden (relato cuento-de-animas)",
           "el territorio es Rionegro y Girón, y la paleta es la gironesa: blanco encalado, empedrado gris, portón oscuro y teja de arcilla (wikipedia_giron)"
         ],
         "editorial": [
           "rostro, edad y complexión son construcción editorial y son retirables",
-          "la mesa de costura y el pañolón son inferencia de oficio y de tipo: la fuente dice «costurera» y no describe su casa ni su ropa",
+          "el pañolón y la ropa son inferencia de tipo: el relato no describe su ropa",
+          "la hechura de la máquina —pedal o manivela— es decisión editorial: el relato dice «la máquina» y no la describe",
           "detener las tijeras a media altura es decisión de composición para que el corte esté por hacerse y no hecho",
-          "el impreso de Otero no se leyó y toda la ficha descansa en la paráfrasis editorial (otero1932_montanas)"
+          "el impreso de Otero no se leyó y la ficha descansa en el texto del canon (otero1932_montanas)"
         ],
         "states_to_model": []
       },
@@ -2177,10 +2404,11 @@
     "don_fernan_lopez_de_sandoval": {
       "name": "Don Fernán López de Sandoval",
       "kind": "personaje",
-      "description": "Viejo encomendero armado que recorre el corredor y cierra el relato con el juicio sobre su hijo; está en la portada.",
+      "description": "Viejo encomendero de Chinchiná que espera el ataque paseando el corredor con el sayo de armas puesto y las espuelas sonando; cae herido en una pierna y vuelve a la casona en andas. El juicio final sobre Rodrigo ya no es suyo: es del padre, don Diego de Aguilar.",
       "aliases": [],
       "states": [
-        "canonico"
+        "canonico",
+        "herido en una pierna, llevado en andas"
       ],
       "evidence_basis": "documented",
       "sensitivity": "public",
@@ -2229,34 +2457,34 @@
       ],
       "census_note": "Viejo encomendero armado que recorre el corredor y cierra el relato con el juicio sobre su hijo; está en la portada.",
       "design": {
-        "silhouette": "Encomendero viejo recorriendo un corredor de madera con el arcabuz apoyado en el antebrazo y la mecha encendida humeando junto a la mano, la espalda algo encorvada y la cabeza vuelta hacia el río: es la única figura de esta biblia que lleva arma de fuego, y la única cuyo atributo produce humo.",
+        "silhouette": "Encomendero viejo recorriendo a zancadas un corredor de madera con el sayo de armas puesto —un cuerpo acolchado que le ensancha el torso— y espuelas en los talones, la espalda algo encorvada y la cabeza vuelta hacia el río: es la única figura de esta biblia que se lee por el ruido de sus pasos, y su contorno es un torso ancho sobre piernas flacas.",
         "materials": [
-          "jubón oscuro y calzas, planos grandes de paño",
-          "botas de caña de cuero, dos recortes altos",
-          "arcabuz de cañón de hierro de aproximadamente un metro, con llave de mecha y serpentina, en tiras de papel gris metálico y madera parda",
-          "mecha lenta encendida: un hilo de papel con una brasa mínima y una espiral corta de quilling de humo",
+          "sayo de armas: un solo plano acolchado de paño pardo con pespunte marcado por incisión, que ensancha el torso",
+          "calzas y botas de caña de cuero, recortes altos",
+          "espuelas: dos estrellas mínimas de papel gris metálico en los talones",
           "barandal y pies derechos del corredor en madera rolliza"
         ],
-        "palette": "Paño oscuro y madera parda contra el verde húmedo desaturado de la ladera y el río al fondo; la brasa de la mecha es el único punto cálido de la lámina y es lo que fecha la escena antes del amanecer. Ningún fogonazo y ninguna llamarada.",
+        "palette": "Paño pardo y madera contra el verde húmedo desaturado de la ladera y el río al fondo, en la penumbra de una madrugada; el único punto cálido de la escena es la brasa de las mechas de los defensores, no la suya. Ningún fogonazo y ninguna llamarada.",
         "scale": "Figura entera de perfil dentro del corredor, con los pies derechos cortando el encuadre a intervalos: la escala se mide contra el barandal, que le llega a la cintura.",
         "continuity": [
-          "el arma es arcabuz y no mosquete, y su elemento visual es el hilo de humo de la mecha, nunca el disparo",
-          "el corredor es de casona de encomienda, con su defensa improvisada, y no una empalizada prehispánica trasladada",
-          "los atacantes no entran en su encuadre: son ruido al otro lado del río y quedan fuera de cuadro, como la propia portada los deja",
-          "en 1592 el paisaje detrás está demográficamente vaciado: sin poblados densos y con rastros de destrucción anterior"
+          "no carga el arcabuz en su ficha: el relato le da sayo de armas y espuelas, y el arma de fuego es de los defensores",
+          "el corredor es de casona de encomienda y no una empalizada prehispánica trasladada",
+          "los atacantes no entran en su encuadre: son ruido al otro lado del río",
+          "en 1592 el paisaje detrás está demográficamente vaciado: sin poblados densos y con rastros de destrucción anterior",
+          "el juicio sobre Rodrigo lo da don Diego de Aguilar, no él: no se le compone como padre del muchacho"
         ],
         "documented": [
-          "«viejo encomendero, recorre el corredor armado mientras vigías anuncian movimiento al otro lado del río» y cierra el relato con el juicio sobre su hijo (relato de-frente-al-sol)",
-          "el arma de fuego de 1592 es el arcabuz y no el mosquete: cañón de hierro de aproximadamente un metro, calibre de 15 a 20 mm, de 4 a 5 kilos, con llave de mecha, serpentina y mecha lenta encendida, y recarga de treinta a sesenta segundos (dossier, dimensión de conquista)",
-          "eso significa pocos disparos, mucha espera y «una brasa visible en la mano de cada defensor antes de que amanezca» (dossier, dimensión de conquista)",
+          "«El viejo encomendero iba y venía por el corredor con el sayo de armas puesto, y las espuelas le sonaban a cada paso»; «Afuera acechaban los vigías; del oratorio salían rezos lentos» (relato de-frente-al-sol)",
+          "espera «una madrugada de agosto de 1592» en el caserón de la encomienda de Chinchiná, cuyos restos «todavía asoman, en un recodo de Playa Rica» (relato de-frente-al-sol)",
+          "«Don Fernán cayó herido en una pierna» y don Diego «improvisó unas andas para el herido» (relato de-frente-al-sol)",
           "las palizadas de guadua y las atalayas son indígenas y no españolas: ponerlas alrededor de una casa fuerte española es invención (rodriguez_cuenca2005_cauca)",
           "los atacantes «presentados como pijaos» no se dibujan: «pijao» es una categoría colonial aplicada a más de setenta grupos y el cuento no los describe (velasquez2021_pijao)"
         ],
         "editorial": [
           "rostro, edad y complexión son construcción editorial: el relato dice «viejo encomendero» y nada más; retirables",
-          "el jubón y las calzas son inferencia de tipo del XVI y son revisables",
+          "la hechura del sayo de armas como cuerpo acolchado es inferencia de tipo del XVI y es revisable",
           "el gesto de mirar hacia el río es decisión de composición para que la amenaza exista fuera de cuadro",
-          "el impreso de Otero no se leyó: la ficha descansa en la paráfrasis editorial (otero1932_montanas)"
+          "el estado herido y en andas se declara y no se produce: la ficha es la del corredor"
         ],
         "states_to_model": []
       },
@@ -2266,12 +2494,16 @@
       ]
     },
     "rodrigo": {
-      "name": "Rodrigo",
+      "name": "Don Rodrigo de Aguilar",
       "kind": "personaje",
-      "description": "El joven que no da la espalda: su postura es el título y la escena vertical entera («permanece de frente bajo la luz del amanecer»).",
-      "aliases": [],
+      "description": "Primogénito de don Diego de Aguilar, de apenas veinte años, que entra a caballo al frente de ocho vaqueros con lanzas y, en la retirada, se niega a dar la espalda: retrocede de frente palmo a palmo hasta que un dardo le parte el corazón. Su postura es el título.",
+      "aliases": [
+        "Rodrigo",
+        "el muchacho"
+      ],
       "states": [
-        "canonico"
+        "canonico",
+        "tendido en mitad de la sala con el dardo clavado"
       ],
       "evidence_basis": "documented",
       "sensitivity": "public",
@@ -2320,32 +2552,34 @@
       ],
       "census_note": "El joven que no da la espalda: su postura es el título y la escena vertical entera («permanece de frente bajo la luz del amanecer»).",
       "design": {
-        "silhouette": "Joven de pie y completamente de frente, con los hombros cuadrados y los brazos caídos a los costados, recortado contra la luz baja del este mientras las demás figuras del encuadre se alejan de espaldas: es la única figura de esta biblia que mira al espectador, y su ficha entera es la orientación del cuerpo.",
+        "silhouette": "Joven de pie y completamente de frente, con los hombros cuadrados, retrocediendo con un pie atrás y el cuerpo sin girar mientras las demás figuras del encuadre se alejan de espaldas hacia los techos de la casona: es la única figura de esta biblia que mira al espectador mientras camina hacia atrás, y su ficha entera es la orientación del cuerpo.",
         "materials": [
           "jubón corto y calzas de paño, planos grandes sin pliegue",
           "camisa de lienzo asomando en cuello y bocamangas, dos recortes claros",
-          "botas de caña baja, dos recortes",
-          "luz del este resuelta como un plano de papel cálido detrás de la figura, sin disco solar"
+          "botas de caña baja con espuela, dos recortes",
+          "lanza de jinete: una sola tira larga de madera parda con la punta gris",
+          "luz de madrugada resuelta como un plano de papel cálido detrás de la figura, sin disco solar"
         ],
-        "palette": "Paño oscuro y lienzo claro contra un cielo de amanecer resuelto en dos capas cálidas y planas: es la única lámina del cubo con luz de este, y no lleva ni una gota de rojo. Sin heridas visibles y sin sangre.",
+        "palette": "Paño oscuro y lienzo claro contra un cielo de madrugada resuelto en dos capas cálidas y planas: es la única lámina del cubo con luz de este, y no lleva ni una gota de rojo. Sin sangre: el río que el relato tiñe no se tiñe en la lámina.",
         "scale": "Figura entera y frontal en el centro del encuadre, con las siluetas de los que se retiran más pequeñas y en el borde: la escala dice quién se queda.",
         "continuity": [
           "siempre frontal: la ficha se resuelve con la orientación del cuerpo y con la luz, no con sangre",
-          "sin heridas visibles en ninguna lámina",
+          "el dardo en el pecho se declara como estado y no se produce: ninguna lámina de ficha lleva herida",
           "no comparte encuadre con los atacantes, que quedan fuera de cuadro",
-          "su luz es la del amanecer y sólo la suya: ninguna otra ficha del cubo la usa"
+          "la frase que da el título es del padre —«Era un Aguilar, como las águilas que miran de frente al sol»—, y la luz del este es la traducción visual de esa frase"
         ],
         "documented": [
-          "«Cuando podría girar para escapar, se niega a mostrar la espalda. Sigue mirando al enemigo y recibe en el pecho el golpe que lo derriba» (relato de-frente-al-sol)",
-          "su padre «formula el juicio que da sentido al título: Rodrigo ha muerto de frente, con el rostro hacia el sol y hacia quienes combatía» (relato de-frente-al-sol)",
-          "la escena vertical de la página es suya entera: «permanece de frente bajo la luz del amanecer mientras los demás se retiran hacia el caserón, instante simbólico sin heridas visibles» (relato de-frente-al-sol)",
-          "la lámina del joven se resuelve con la orientación del cuerpo y con la luz del este, no con sangre (dossier, matriz de evidencia)"
+          "«don Rodrigo de Aguilar, primogénito de don Diego, que apenas cumplía veinte años», cierra la marcha «en un alazán nervioso» «al frente de ocho vaqueros con lanzas» (relato de-frente-al-sol)",
+          "en la retirada contesta que «el amo se salvaría, pero la honra no»; «Retrocedió de frente, palmo a palmo, cuando ya se veían los techos de la casa. Un dardo le entró en el pecho y le partió el corazón» (relato de-frente-al-sol)",
+          "«El muchacho quedó tendido en mitad de la sala, con el dardo clavado todavía»; su padre llama a todos a mirar la herida: «Era un Aguilar, como las águilas que miran de frente al sol» (relato de-frente-al-sol)",
+          "el romance de las gentes del valle de Cartago: quien quiera verle las heridas «tendrá que voltearlo y buscarlas en el pecho» (relato de-frente-al-sol)"
         ],
         "editorial": [
-          "rostro, edad y complexión son construcción editorial y son retirables",
-          "el jubón corto y las calzas son inferencia de tipo del XVI",
-          "resolver la muerte por orientación y luz, y no por herida, es decisión editorial tomada de la propia escena de la página",
-          "el impreso de Otero no se leyó (otero1932_montanas)"
+          "rostro y complexión son construcción editorial y son retirables",
+          "el jubón corto y las calzas son inferencia de tipo del XVI: el relato no describe su ropa",
+          "la lanza sale de sus vaqueros «con lanzas» y es inferencia editorial para su propia mano; retirable",
+          "resolver la muerte por orientación y luz, y no por herida, es decisión editorial reversible",
+          "la luz de este es lectura editorial del título y de la «madrugada» del relato, no una frase del texto"
         ],
         "states_to_model": []
       },
@@ -2357,12 +2591,12 @@
     "rafael_toro": {
       "name": "Rafael Toro, el aserrador",
       "kind": "personaje",
-      "description": "Protagonista de las dos escenas. El estado de fuga cambia la silueta de verdad: va soltando las cuatro prendas una por una, y ese despojo es la medida del miedo. No cobro hoja extra porque es el mismo cuerpo perdiendo utilería ya fichada.",
+      "description": "Don Rafael Toro, aserrador de La Miel, de una familia de Toros con su hermano don Manuel: vuelve solo de Arcón Grande con un cabo de vela en el farol, alza el farolito ante el tropel, se le zafa del brinco y huye a oscuras por canalones mientras aquello lo araña y le agarra la ropa; las cosas «se le fueron quedando». Llega a la posada de doña Carmela y pasa ocho días enfermo.",
       "aliases": [],
       "states": [
         "canonico",
         "con farol, ruana, machete y carriel",
-        "en fuga, sin sombrero, machete, carriel ni ruana y con la ropa rasgada"
+        "en fuga, sin sombrero, machete, carriel ni ruana y con la ropa hecha una porquería"
       ],
       "evidence_basis": "uncertain",
       "sensitivity": "public",
@@ -2411,34 +2645,37 @@
       ],
       "census_note": "Protagonista de las dos escenas. El estado de fuga cambia la silueta de verdad: va soltando las cuatro prendas una por una, y ese despojo es la medida del miedo. No cobro hoja extra porque es el mismo cuerpo perdiendo utilería ya fichada.",
       "design": {
-        "silhouette": "Aserrador de pie en el camino con el brazo derecho levantado por encima de la cabeza sosteniendo un farol de hojalata, la ruana echada atrás por el gesto, el machete a la cintura y el carriel colgando del hombro izquierdo: es la única figura de esta biblia que levanta una luz, y su segundo momento es este mismo cuerpo sin ninguna de esas cuatro piezas.",
+        "silhouette": "Aserrador de pie en el camino con el brazo derecho levantado por encima de la cabeza sosteniendo un farolito con un cabo de vela, la ruana echada atrás por el gesto, el machete a la cintura y el carriel colgando del hombro izquierdo: es la única figura de esta biblia que levanta una luz, y su segundo momento es este mismo cuerpo a oscuras sin ninguna de esas cuatro piezas y con la ropa hecha jirones.",
         "materials": [
           "sombrero de paja de iraca sin cinta negra, dos elipses",
           "ruaneja pequeña y burda en trapecio corto de borde dentado",
           "machete a la cintura sobre cinturón de correa ancha",
           "carriel de cuero con solapa, colgado del hombro izquierdo por la reata",
-          "farol de hojalata con un trozo de vela dentro, y la llama en quilling naranja"
+          "farolito de vidrio y metal con un cabo de vela dentro, y la llama en quilling naranja"
         ],
         "palette": "Lana burda, lienzo y cuero contra el verde húmedo desaturado de la ladera y el negro de sombra entre capas de la noche; la llama del farol es la única luz y su alcance es cortísimo, de modo que el cuerpo queda medio dentro y medio fuera del cono.",
         "scale": "Figura entera de tres cuartos en el camino, con el brazo alzado sacando el farol fuera del contorno del cuerpo y el barranco del camino en el borde: la escala se mide contra el ancho del sendero, que no da para dos.",
         "continuity": [
           "el carriel va al hombro izquierdo y nunca al derecho",
           "el sombrero es de paja de iraca y va sin cinta negra: el aguadeño no entra a ninguna lámina del cubo",
-          "el despojo sucesivo se dibuja por ausencia de piezas y nunca por herida: sin sangre, sin arañazo dibujado y sin camisa ensangrentada",
-          "el orden del abandono es fijo y es el del relato: primero el sombrero, luego el machete, luego el carriel y por último la ruana"
+          "el despojo se dibuja por ausencia de piezas y por la ropa rota en jirones de papel, nunca por herida: sin sangre, sin arañazo dibujado en la piel y sin la espalda morada que el relato cuenta después",
+          "el orden en que se le quedan las cosas es fijo y es el del relato: el sombrero, el machete, el carriel y la ruana"
         ],
         "documented": [
-          "«Salió cerca de las seis, con un trozo de vela dentro de un farol. Alrededor de las ocho llegó a la entrada de La Toma… Rafael levantó el farol para ver» (relato el-aserrador)",
-          "«Para correr con mayor libertad, Rafael fue abandonando lo que llevaba: primero el sombrero, luego el machete, el carriel y la ruana. No se detuvo a recoger nada» (relato el-aserrador)",
+          "«Metía un cabo de vela en un farol, de los que se usaban en ese tiempo, porque linterna no había, y arrancaba»; a las ocho de la noche, en la entrada de La Toma, «Volteó a mirar y alzó el farolito» (relato el-aserrador)",
+          "«pegó el brinco, y en el brinco se le zafó el farol y quedó a oscuras»; corrió «por unos canalones, en un terreno muy disparejo, invocando a la Virgen del Carmen» (relato el-aserrador)",
+          "aquello lo seguía «arañándolo por encima y agarrándole la ropa. Le dejó la ropa hecha una porquería. Se le fueron quedando las cosas: el sombrero, el machete, el carriel, la ruana» (relato el-aserrador)",
+          "«Estuvo como ocho días enfermo, con la camisa destrozada y las espaldas moradas y aruñadas» (relato el-aserrador)",
           "el kit del caminante es sombrero de paja de iraca, «ruaneja pequeña y burda», machete a la cintura y el guarniel «pendiente del hombro izquierdo por la reata, bordada en alto relieve» (valencia_llano_arrieria)",
           "el estado de fuga no cuesta hoja extra: es el mismo cuerpo perdiendo utilería ya fichada, y el despojo sucesivo se dibuja por ausencia de piezas, no por herida (dossier, dimensión de personajes)",
           "el sombrero aguadeño nace hacia 1860 con cinta negra invariable y no entra a ninguna lámina del cubo (dossier, dimensión de época)"
         ],
         "editorial": [
           "rostro, edad y complexión son construcción editorial y son retirables",
-          "el farol de vela de mano no tiene ni una fuente en el kit caldense: entra como inferencia declarada —farol de hojalata con un trozo de vela, que es lo que el propio relato dice— y es, incómodamente, la única luz de la mitad nocturna del cubo",
+          "el farol de vela de mano no tiene ni una fuente en el kit caldense: entra porque el relato lo dice —«un cabo de vela en un farol… porque linterna no había»— y su hechura de vidrio y metal es inferencia; es la única luz de la mitad nocturna del cubo",
           "RESPETO el censo y no cobro estado: `states_declared` describe el equipado y el desnudo, y el dossier dice expresamente que la fuga «no cuesta hoja extra» porque es el mismo cuerpo perdiendo piezas ya fichadas en la hoja de utilería",
-          "las alpargatas de fique pertenecen a la versión panregional del kit y no a la fuente histórica caldense: entran como variante y no como dato"
+          "las alpargatas de fique pertenecen a la versión panregional del kit y no a la fuente histórica caldense: entran como variante y no como dato",
+          "el relato nuevo ya no dice que suelte las cosas para correr mejor sino que «se le fueron quedando» mientras lo arañaban: la ropa rota entra en el estado de fuga, declarado y no producido"
         ],
         "states_to_model": []
       },
@@ -2454,10 +2691,13 @@
     "cumanday": {
       "name": "Cumanday",
       "kind": "personaje",
-      "description": "Cacique joven que sube por las hierbas y queda detenido en el tiempo junto a la grieta. SENSIBILIDAD: la escena exige «sin símbolos étnicos inventados» y la página declara la filiación páez como conjetura del autor; la ficha no puede tomar nada de la biblia nasa.",
-      "aliases": [],
+      "description": "«el cacique del albo reino, el reino blanco de la cumbre»: caminó por la nieve del Ruiz y sus huellas la marcaron; parte melancólico por unas yerbas que salvarían a su mujer, una grieta se lo traga, y desde entonces aparece fantasmal en la cumbre ofreciendo, suplicante, un manojo de yerbas al visitante y rogándole que lo lleve a su tribu. SENSIBILIDAD: la filiación paez es conjetura del autor; la ficha no puede tomar nada de la biblia nasa.",
+      "aliases": [
+        "cacique del albo reino"
+      ],
       "states": [
-        "canonico"
+        "canonico",
+        "caminando por la nieve, dejando huellas"
       ],
       "evidence_basis": "documented",
       "sensitivity": "sensitive",
@@ -2501,34 +2741,36 @@
       ],
       "census_note": "Cacique joven que sube por las hierbas y queda detenido en el tiempo junto a la grieta. SENSIBILIDAD: la escena exige «sin símbolos étnicos inventados» y la página declara la filiación páez como conjetura del autor; la ficha no puede tomar nada de la biblia nasa.",
       "design": {
-        "silhouette": "Hombre joven detenido de pie junto al labio de una grieta, con un atado pequeño de hierbas sostenido con las dos manos contra el pecho y el cuerpo entero inclinado hacia adelante como si la zancada se hubiera interrumpido: es la única figura de esta biblia dibujada a media acción y sin completar el paso, y la única sin un solo atributo que la adscriba a un pueblo.",
+        "silhouette": "Hombre joven de pie y solo en la cumbre, con los dos brazos extendidos hacia adelante ofreciendo un manojo de yerbas y el torso inclinado en súplica, la ropa y el pelo quietos en un viento que se oye y no mueve nada: es la única figura de esta biblia que ofrece algo con las dos manos, y la única sin un solo atributo que la adscriba a un pueblo.",
         "materials": [
-          "camisa larga de lienzo crudo y pantalón corto de manta, dos planos grandes lisos",
-          "atado de hierbas envuelto en un lienzo y atado con fibra, una sola pieza pequeña",
-          "pies descalzos o con cotiza simple, dos recortes bajos",
-          "hielo del nevado detrás en planos blancos de canto vivo",
+          "camisa larga de lienzo crudo y pantalón corto de manta, dos planos grandes lisos, en un papel un grado más pálido que el de los vivos",
+          "manojo de yerbas sin especie: un haz de tiras verdes grisáceas atado por el tallo, una sola pieza",
+          "pies descalzos o con cotiza simple, dos recortes bajos sobre la nieve",
+          "rostro de óvalo plano de un solo tono, sin modelado, con los rasgos recortados aparte",
           "ningún adorno, ninguna pintura corporal y ninguna pieza de tocado: la ausencia es material de la ficha"
         ],
-        "palette": "Lienzo crudo y manta apagada contra el blanco frío del hielo, que es el único blanco frío del corpus; la luz es la reflejada del glaciar, alta y plana, que aplana el relieve y no deja sombra propia. Ningún color saturado y ningún símbolo de color.",
-        "scale": "Figura entera de pie a media distancia, con el labio de la grieta cortando el encuadre a sus pies y la masa de hielo subiendo detrás: la escala tiene que decir que un hombre cabe por esa grieta.",
+        "palette": "Lienzo crudo empalidecido contra el blanco frío del hielo, que es el único blanco frío del corpus; la luz es la reflejada del glaciar, alta y plana. Lo fantasmal se dice con el papel más pálido y con la soledad del encuadre, nunca con halo, brillo ni transparencia de efecto.",
+        "scale": "Figura entera a media distancia en lo alto de la cumbre, con el espacio vacío del hielo alrededor y el visitante, si entra, pequeño y de espaldas en el borde: la escala tiene que decir soledad.",
         "continuity": [
-          "sin símbolos étnicos inventados y sin nada tomado de la biblia nasa: la filiación páez es conjetura declarada del autor",
-          "el atado de hierbas va siempre en las dos manos y contra el pecho: es lo que conserva y lo que pide entregar",
-          "la esposa y el recién nacido no aparecen en ninguna lámina: mueren dentro del relato y no reciben un solo rasgo",
-          "su nevado es el del siglo XIX o anterior, con seis veces y media más hielo que el de hoy"
+          "sin símbolos étnicos inventados y sin nada tomado de la biblia nasa: la filiación paez es conjetura declarada del autor",
+          "el manojo de yerbas va siempre en las dos manos y tendido hacia el visitante: es lo que conserva y lo que pide entregar",
+          "la esposa, el recién nacido y el brujo no aparecen en ninguna lámina",
+          "su nevado es el del siglo XIX o anterior, con seis veces y media más hielo que el de hoy",
+          "«cacique» no autoriza corona, tocado, bastón de mando ni joya: el relato no le da ninguno"
         ],
         "documented": [
-          "«un hombre joven que sube con un pequeño atado a recoger hierbas, y el mismo hombre detenido en el tiempo junto a una grieta, sosteniéndolas» (dossier, dimensión de personajes)",
-          "la escena de la página exige «sin símbolos étnicos inventados» y la propia obra formula la filiación páez como inferencia y no como dato transmitido por una autoridad indígena identificada (relato el-cacique-cumanday)",
-          "Cumanday no significa «Padre Mayor» sino «Cerro Blanco»; «Padre Mayor» es Tama, y la atribución popular está desmentida por la entidad que monitorea el volcán (sgc2024_ruiz)",
-          "la esposa y el recién nacido mueren dentro del relato y no reciben un solo rasgo: quedan excluidos, y dibujarlos obligaría a inventar exactamente lo vetado (dossier, dimensión de personajes)",
-          "la vertiente occidental del Ruiz era quimbaya, los pijaos quedaban al oriente y «al oriente la parte alta de la Cordillera Central» era «tierra despoblada»: no hay un pueblo «del Ruiz» (rodriguez_cuenca2005_cauca)"
+          "«Se llamaba Cumanday y era el cacique del albo reino, el reino blanco de la cumbre»; «Sus huellas la marcaron, el calor de su cuerpo derritió algunos copos» (relato el-cacique-cumanday)",
+          "el brujo dijo que «sólo unas yerbas podían salvarla» y que «se encontraban al otro lado del Ruiz»; «Cumanday partió melancólico, pero con ahínco» y «Una grieta traicionera y voraz se tragó sin piedad al esposo amoroso» (relato el-cacique-cumanday)",
+          "«Cumanday aparece fantasmal, rodeado de soledad, en una cumbre donde sólo se oye el silbido del viento. Tiene en las manos un manojo de yerbas y se lo ofrece, suplicante, al visitante asombrado» y «Le ruega que lo lleve a su hogar, a su tribu» (relato el-cacique-cumanday)",
+          "la filiación paez es conjetura del propio autor —«Todos los indicios nos llevan a pensar que Cumanday fue un Paece»—, «indigenismo romántico de la prensa caldense, no la palabra de una comunidad» (historia del relato)",
+          "Cumanday no significa «Padre Mayor» sino «Cerro Blanco»; «Padre Mayor» es Tama (sgc2024_ruiz)",
+          "la vertiente occidental del Ruiz era quimbaya y no hay un pueblo «del Ruiz» (rodriguez_cuenca2005_cauca)"
         ],
         "editorial": [
-          "toda su ropa es construcción editorial declarada: la fuente no la describe y cualquier prenda con carga étnica está prohibida, de modo que se resuelve con lienzo y manta lisos y sin un solo motivo",
-          "rostro, edad y complexión son construcción editorial y son retirables",
-          "dibujarlo con la zancada interrumpida es decisión editorial para que «detenido en el tiempo» tenga pieza; reversible a figura quieta",
-          "de Fabio Vélez Correa no se localizó ninguna edición digital: esta ficha descansa enteramente en la paráfrasis editorial (dossier, carencias)"
+          "toda su ropa es construcción editorial declarada: la fuente no la describe y cualquier prenda con carga étnica está prohibida, así que se resuelve con lienzo y manta lisos y sin un solo motivo",
+          "rostro, edad y complexión son construcción editorial y son retirables: el relato no dice que sea joven, y la juventud sale de que espera su primer hijo",
+          "resolver lo fantasmal con un papel más pálido y no con efecto de luz es decisión editorial reversible",
+          "el autor probable es John Marulanda (1997), transcrito por Vélez Correa; ninguna edición del texto se abrió en su impreso (dossier, carencias)"
         ],
         "states_to_model": []
       },
@@ -2846,7 +3088,8 @@
         "silhouette": "Ánima de pie y quieta envuelta en una mortaja de una sola pieza que le sobra por abajo y se arruga contra el suelo, ocultando los pies y alargando el contorno más allá del cuerpo, con un objeto largo y pálido sostenido en alto en una mano: es la única figura de esta biblia cuya silueta es más larga que su cuerpo.",
         "materials": [
           "mortaja en una sola pieza de papel blanco roto y quebradizo, larga y con el sobrante arrugado en el suelo",
-          "cirio-hueso: una sola tira pálida en la mano, ambigua a propósito, con el canto irregular",
+          "canilla-cirio: una sola tira pálida en la mano, ambigua a propósito, con el canto irregular",
+          "rosario en la otra mano, una tira de cuentas diminutas de quilling oscuro",
           "manos y cara en papel de fibra cruda, de un solo tono plano, sin modelado",
           "pelo en una sola pieza plana con el borde en dientes"
         ],
@@ -2854,13 +3097,15 @@
         "scale": "Figura entera de pie a media distancia dentro de la fila de la procesión, con el sobrante de la mortaja tocando el suelo por delante: la escala tiene que decir que el estorbo está abajo y que por eso se retrasa.",
         "continuity": [
           "sin descomposición, sin rostro cadavérico y sin herida: la mortaja es el personaje",
-          "el hueso se sugiere como objeto en la mano y nunca como despojo: no se le dibuja articulación ni resto reconocible",
+          "la canilla se sugiere como objeto en la mano y nunca como despojo: una sola tira pálida que se lee cirio, sin articulación ni resto reconocible",
           "es la única ánima con cuerpo, nombre y acción del cubo: las demás van en la hoja de procesión y no tienen rasgo individual",
           "en el segundo momento la misma pieza de papel está cortada en recto y deja las pantorrillas a la vista: es un corte sobre la misma mortaja y no otra prenda"
         ],
         "documented": [
-          "«Entre ellas reconoció a la difunta Jovita, retrasada porque la mortaja le quedaba demasiado larga»; pidió ayuda, la costurera cortó el ruedo y lo dejó tan corto que las piernas quedaron descubiertas (relato cuento-de-animas)",
-          "«levantó lo que parecía un cirio y resultó ser un hueso. Con él golpeó a la costurera por trabajar en día de guarda» (relato cuento-de-animas)",
+          "«La última era la difunta Jovita, conocida suya, que se acercó a la ventanilla»: «¡recórtame la mortaja, que me queda tan larga que no me deja caminar!» (relato cuento-de-animas)",
+          "Ulogia le cortó el ruedo y «Jovita se miró las canillas al aire y se enojó» (relato cuento-de-animas)",
+          "«Alzó lo que parecía un cirio, que era una canilla de muerto, y le dio con ella en la frente» (relato cuento-de-animas)",
+          "las ánimas de su fila salen del cacaotal «con mortajas blancas, el rosario en una mano y un cirio en la otra» (relato cuento-de-animas)",
           "es la única ánima con cuerpo, nombre y acción, y su ficha entera está en una prenda; se dibuja sin descomposición, sin rostro cadavérico y sin herida (dossier, dimensión de criaturas)",
           "la técnica lo especifica: «la mortaja de Jovita una sola pieza larga que sobra por abajo y que en el segundo estado está cortada en recto» (sistema visual, técnica de cierre)"
         ],
@@ -2884,8 +3129,10 @@
     "el_unon": {
       "name": "El Uñón",
       "kind": "criatura",
-      "description": "Figura más grande que un hombre, cubierta de pelo, con barba abundante y uñas desmesuradas. El relato conserva la duda («quizá una fiera») y la ficha debe permitirla: nada de rostro definido. No lo marco panregional —es figura del occidente caldense—, aunque su rasgo de uñas lo emparente con la Mano Peluda.",
-      "aliases": [],
+      "description": "«un hombre más grande que él, todo peludo, barbado, con unas manos de uñas muy grandes, que le iba a echar mano»; en la huida el narrador ya lo llama «aquel animal» que lo araña y le agarra la ropa. El nombre de Uñón no sale del testigo: lo pone Vélez al titular el capítulo. El relato conserva la duda —espíritu o «algo como una fiera»— y la ficha debe permitirla.",
+      "aliases": [
+        "aquel animal"
+      ],
       "states": [
         "canonico"
       ],
@@ -2943,14 +3190,16 @@
           "no hay heridas ni sangre en su lámina: los arañazos pertenecen al relato y no al cuadro"
         ],
         "documented": [
-          "«La luz reveló una figura más grande que él, cubierta de pelo, con barba abundante y uñas desmesuradas. El desconocido extendió los brazos para sujetarlo» (relato el-aserrador)",
-          "un sacerdote de Caramanta objetó que un espíritu no debía causar heridas físicas y propuso que «quizá había sido una fiera», y la revisión no cierra la identidad (relato el-aserrador)",
+          "«ahí estaba: un hombre más grande que él, todo peludo, barbado, con unas manos de uñas muy grandes, que le iba a echar mano» (relato el-aserrador)",
+          "«aquel animal detrás, arañándolo por encima y agarrándole la ropa» (relato el-aserrador)",
+          "el sacerdote de Caramanta le dijo al narrador que no podía ser un espíritu, porque el espíritu «no deja marcas», y «entonces aquello tuvo que ser algo como una fiera»; «Nadie ha podido saber qué fue lo que lo atacó» (relato el-aserrador)",
+          "el nombre del Uñón no aparece en boca del narrador: lo pone Vélez al titular el capítulo, y en su párrafo de entrada es una figura masculina cuyo rasgo son unas uñas usadas como garras de fiera (historia del relato)",
           "la lámina tiene que permitir las dos lecturas: nada de rostro definido, silueta a media distancia, y la duda resuelta con la luz corta del farol y no con un retrato (dossier, dimensión de criaturas)",
           "el pelaje sigue la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, y el Uñón son tres planos de papel oscuro con el canto en dientes y unas uñas recortadas aparte (sistema visual, técnica de cierre)"
         ],
         "editorial": [
           "la altura —media cabeza más que un hombre— es una calibración editorial tomada de «más grande que él»",
-          "los brazos extendidos son el único gesto y vienen de la fuente; la postura del resto del cuerpo es composición editorial",
+          "las manos extendidas «que le iba a echar mano» son el único gesto y vienen de la fuente; la postura del resto del cuerpo es composición editorial",
           "no dibujarle cara es decisión editorial de fidelidad a la duda, y es lo contrario de un ahorro: obliga a resolver la figura entera por silueta y por luz"
         ],
         "states_to_model": []
@@ -3051,11 +3300,11 @@
     "calabazo_iluminado_de_tatinez": {
       "name": "El calabazo iluminado de Tatínez",
       "kind": "criatura",
-      "description": "Escenificación fabricada, no ser sobrenatural: calabazo grande con ojos y boca recortados, vela dentro y un portador que lo carga sobre la cabeza. Las dos escenas de la página son justamente el efecto y su desmontaje.",
+      "description": "Escenificación fabricada, no ser sobrenatural: «un calabazo gigante con ojos y boca y una vela encendida por dentro, que alguien llevaba sobre la cabeza para asustar a los trasnochadores ingenuos» por los extramuros de Riosucio, a altas horas, hasta que lo descubrieron. Versión de Tatínez.",
       "aliases": [],
       "states": [
         "canonico",
-        "cabeza luminosa que avanza sola",
+        "cabeza luminosa que avanza sola por los extramuros",
         "calabazo, vela y portador revelados"
       ],
       "evidence_basis": "documented",
@@ -3102,31 +3351,32 @@
       ],
       "census_note": "Escenificación fabricada, no ser sobrenatural: calabazo grande con ojos y boca recortados, vela dentro y un portador que lo carga sobre la cabeza. Las dos escenas de la página son justamente el efecto y su desmontaje.",
       "design": {
-        "silhouette": "Cabeza luminosa del tamaño de un torso avanzando sola a la altura de una persona, con dos ojos y una boca recortados de los que sale la luz y nada debajo: el portador queda en negro absoluto y el objeto flota sin cuerpo. Es la única ficha de esta biblia que se dibuja incompleta a propósito, y la única cuyo segundo momento consiste en mostrar lo que faltaba.",
+        "silhouette": "Cabeza luminosa gigante, más ancha que unos hombros, avanzando a la altura de una persona por el borde oscuro del pueblo, con dos ojos y una boca recortados de los que sale la luz y nada debajo: el portador queda en negro absoluto y el objeto flota sin cuerpo. Es la única ficha de esta biblia que se dibuja incompleta a propósito, y la única cuyo segundo momento consiste en mostrar lo que faltaba.",
         "materials": [
           "calabazo seco vaciado, un cuerpo redondo de papel pardo claro con los huecos recortados como agujeros reales",
           "vela dentro y papel naranja translúcido detrás de los huecos, de modo que la luz salga por ellos y no los rodee",
           "para el momento del desmontaje: el mismo calabazo apagado, la vela suelta y la figura del portador recortada aparte, los tres separados en el encuadre",
-          "calle de Riosucio en capas planas detrás, con los balcones habitables al frente"
+          "extramuros de Riosucio en capas planas detrás: las últimas casas del pueblo y el camino que sale de él, en negro de sombra entre capas"
         ],
         "palette": "Naranja cálido saliendo por tres huecos sobre negro de sombra entre capas: el resto de la lámina no tiene color, y ése es el efecto entero del relato. Cuando el artificio se revela, la misma escena se resuelve en pardos apagados y la luz baja a vela desnuda.",
-        "scale": "Objeto a la altura de la cabeza de un adulto y del tamaño de un torso, sin nada debajo: la escala tiene que ser inverosímil para una cabeza humana y verosímil para un calabazo cargado.",
+        "scale": "Objeto a la altura de la cabeza de un adulto y más ancho que sus hombros —«gigante»—, sin nada debajo: la escala tiene que ser inverosímil para una cabeza humana y verosímil para un calabazo cargado.",
         "continuity": [
           "el portador queda invisible en el estado nocturno: el negro no es sombra pintada sino ausencia de pieza iluminada",
           "la luz viene de dentro del fruto y no de fuera: su alcance termina donde termina el calabazo",
           "no es el Coco: el Coco queda excluido porque la fuente le niega rostro, y este calabazo ocupa su lugar sin sustituirlo",
-          "no es intercambiable con el fantasma de Rubén Bayer, que es otra silueta y otra técnica"
+          "no es intercambiable con el fantasma de Rubén Bayer, que es otra silueta y otra técnica",
+          "aparece en los extramuros y no en la calle entre las dos plazas: el borde del pueblo, a altas horas"
         ],
         "documented": [
-          "«un calabazo grande al que se abrían ojos y boca. Dentro se colocaba una vela. Una persona cargaba la pieza sobre la cabeza y salía en la noche» (relato el-coco)",
-          "«Desde lejos, la luz convertía los huecos del calabazo en facciones. El cuerpo del portador quedaba oculto por la oscuridad y la cabeza luminosa parecía avanzar sola» (relato el-coco)",
-          "«El miedo terminaba cuando alguien descubría a la persona que lo llevaba. Una vez visible el artificio, el monstruo regresaba a ser calabazo, llama y cuerpo humano» (relato el-coco)",
-          "el Coco queda excluido porque la fuente le niega rostro —«presencia incorpórea», «no necesita un rostro fijo»— y los dos calabazos ocupan su lugar sin sustituirlo (dossier, dimensión simbólica)",
-          "la calle riosuceña sí tiene balcones habitables al frente: en la llegada del Diablo «las calles se estrechan, los balcones se atiborran de gente» (mincultura_pes_riosucio)"
+          "«En Riosucio el Coco llegó a tener cuerpo. Por los extramuros del pueblo, a altas horas de la noche, se aparecía un calabazo gigante con ojos y boca y una vela encendida por dentro, que alguien llevaba sobre la cabeza para asustar a los trasnochadores ingenuos» (relato el-coco)",
+          "«Nadie supo con qué fin, hasta que lo descubrieron» (relato el-coco)",
+          "la «Versión de Tatínez» viene de Carlos Martínez Marín, cronista de Riosucio, «que recuerda el calabazo con vela que aparecía de noche por los extramuros del pueblo» (historia del relato)",
+          "el Coco queda excluido porque la fuente le niega cuerpo —«No tenía cuerpo ni forma fija»— y los dos calabazos ocupan su lugar sin sustituirlo (dossier, dimensión simbólica)",
+          "la luz que los hace es de vela y viene de dentro del fruto (dossier, dimensión de criaturas)"
         ],
         "editorial": [
           "COBRO estado: el efecto y su desmontaje no comparten ni una pieza de papel —en uno hay un objeto flotando y en otro hay tres piezas separadas y un cuerpo humano—, y las dos escenas de la página son exactamente ésas",
-          "el tamaño del calabazo —el de un torso— es una calibración editorial",
+          "el tamaño —más ancho que unos hombros— es una calibración editorial de «gigante»",
           "el corte exacto de los ojos y la boca es construcción editorial: la fuente dice que se abrían y no cómo",
           "la pieza de carnaval de «armazón de cañabrava y papel con cara y cuernos de res» que el plan de salvaguardia describe es materia local disponible y no linaje: no se traslada a esta ficha"
         ],
@@ -3146,10 +3396,11 @@
     "fantasma_de_ruben_bayer": {
       "name": "El fantasma de Rubén Bayer",
       "kind": "criatura",
-      "description": "Segunda construcción de Riosucio y silueta distinta: calabazo pequeño con aspecto de calavera sobre un palo, cubierto con tela blanca. La página insiste en que no son intercambiables con la de Tatínez.",
+      "description": "Segunda construcción de Riosucio y silueta distinta: «un calabazo pequeño en forma de calavera, pintado de blanco, clavado en la punta de un palo forrado en tela blanca»; la persona que iba adentro lo empujaba hacia arriba «y parecía que el fantasma se alargaba». Su autor era don Rubén Bayer, zapatero y concejal del pueblo.",
       "aliases": [],
       "states": [
-        "canonico"
+        "canonico",
+        "alargado: el palo empujado hacia arriba desde dentro"
       ],
       "evidence_basis": "documented",
       "sensitivity": "contextual",
@@ -3188,33 +3439,37 @@
       ],
       "census_note": "Segunda construcción de Riosucio y silueta distinta: calabazo pequeño con aspecto de calavera sobre un palo, cubierto con tela blanca. La página insiste en que no son intercambiables con la de Tatínez.",
       "design": {
-        "silhouette": "Silueta erguida y rígida hecha de un palo vertical rematado por un calabazo pequeño con aspecto de calavera, todo cubierto por una tela blanca que cae recta desde lo alto y no toca el suelo: no tiene brazos, no tiene hombros y su contorno es un cono estrecho. Es la única figura de esta biblia sin cuerpo debajo de la tela.",
+        "silhouette": "Silueta erguida hecha de un palo forrado en tela blanca que cae recta, con una persona dentro que no se ve, rematada por un calabazo pequeño pintado de blanco en forma de calavera: no tiene brazos ni hombros y su contorno es un cono estrecho. Es la única figura de esta biblia que cambia de altura sin cambiar de forma.",
         "materials": [
-          "palo recto de madera rolliza, oculto bajo la tela y visible sólo por el canto que la tensa",
-          "calabazo pequeño de perfil acalaverado, papel pardo claro con dos huecos",
+          "palo recto de madera rolliza forrado en tela blanca, oculto y visible sólo por el canto que la tensa",
+          "calabazo pequeño en forma de calavera, pintado de blanco: papel blanco roto con dos huecos y el perfil acalaverado",
           "tela blanca en un solo plano largo de papel quebradizo, con el borde recto y sin pliegues modelados",
-          "la mano que sostiene el palo, recortada aparte y asomando por abajo cuando el artificio se muestra"
+          "los pies de la persona de adentro, recortados aparte y asomando bajo la tela cuando el artificio se muestra"
         ],
         "palette": "Blanco roto de la tela como único valor alto sobre el negro de sombra entre capas de la calle: no lleva luz propia, y en eso se distingue del calabazo de Tatínez, que se ilumina desde dentro.",
         "scale": "Figura entera a la altura de una persona de pie, pero más estrecha: el cono de la tela no llega al ancho de unos hombros y ésa es la desproporción que la delata.",
         "continuity": [
           "sin luz propia: es el fantasma teatral y no la cabeza luminosa",
-          "sin brazos, sin hombros y sin pies: la tela cae recta y no toca el suelo",
-          "no es intercambiable con el calabazo de Tatínez: la página insiste en que son dos construcciones distintas",
-          "el artificio se deja ver: el palo y la mano asoman por abajo"
+          "sin brazos y sin hombros: la tela cae recta; lo que está debajo es una persona y no un vacío",
+          "al alargarse cambia la altura y no la forma: el mismo cono, estirado, con el calabazo más alto",
+          "no es intercambiable con el calabazo de Tatínez: son dos construcciones distintas",
+          "el artificio se deja ver: los pies de quien va adentro asoman por abajo"
         ],
         "documented": [
-          "«Otra memoria de Riosucio describe un fantasma improvisado por Rubén Bayer. Usaba un calabazo pequeño con aspecto de calavera, colocado sobre un palo y cubierto con tela blanca» (relato el-coco)",
-          "«La construcción producía una silueta diferente, más cercana al fantasma teatral que a la cabeza luminosa de Tatínez» (relato el-coco)",
+          "«Otro espanto de Riosucio era un calabazo pequeño en forma de calavera, pintado de blanco, clavado en la punta de un palo forrado en tela blanca» (relato el-coco)",
+          "«La persona que iba adentro lo empujaba hacia arriba y parecía que el fantasma se alargaba. Asustó a más de uno, hasta que lo descubrieron también: su autor era don Rubén Bayer, zapatero y concejal del pueblo» (relato el-coco)",
           "los dos calabazos son escenificaciones fabricadas y no seres, y su lámina tiene que dejar ver el artificio (dossier, dimensión de criaturas)",
-          "no son intercambiables y son dos siluetas distintas (dossier, matriz de evidencia)"
+          "la figura de Goya de 1799, «una sábana con alguien dentro», se parece al fantasma de palo y tela de Riosucio (similitudes del relato)"
         ],
         "editorial": [
-          "la altura del palo y el ancho del cono son calibración editorial",
-          "dejar la mano asomando por abajo es decisión editorial para cumplir la regla de la página —que el artificio se vea— sin necesitar una segunda lámina",
-          "el perfil acalaverado del calabazo es construcción editorial: la fuente dice «con aspecto de calavera» y no lo describe"
+          "la altura del palo, la del estado alargado y el ancho del cono son calibración editorial",
+          "dejar los pies asomando por abajo es decisión editorial para que el artificio se vea sin segunda escena",
+          "el perfil acalaverado del calabazo es construcción editorial: la fuente dice «en forma de calavera» y no lo describe",
+          "COBRO estado: el relato nuevo le da un efecto —se alarga— que cambia la altura de la silueta, y es el efecto entero del espanto"
         ],
-        "states_to_model": []
+        "states_to_model": [
+          "alargado: el palo empujado hacia arriba desde dentro, el mismo cono estirado y el calabazo mucho más alto que una persona"
+        ]
       },
       "states_declared": [],
       "evidence_basis_mix": [
@@ -3272,25 +3527,30 @@
       ],
       "census_note": "PANREGIONAL: las ánimas del purgatorio recorren varios corpus del censo. Lo propio de esta versión no es cafetero sino santandereano y literario: van con cirios por un camino rural de Rionegro, reprenden por embriaguez y por trabajar en día de guarda, y reclutan a una difunta con la mortaja mal cosida. Disciplinan conducta doméstica, no castigan monte.",
       "design": {
-        "silhouette": "Fila de figuras envueltas en mortajas idénticas, todas de perfil y avanzando en el mismo sentido por un camino rural, cada una con un cirio sostenido a la altura del pecho, sin rostro y sin diferencia de talla entre ellas; la fila entra por un borde del encuadre y sale por el otro. Es la única entidad de esta biblia dibujada como una sola línea de cuerpos iguales, y la única que se lee por repetición.",
+        "silhouette": "Fila de figuras envueltas en mortajas blancas idénticas, todas de perfil y avanzando despacio en el mismo sentido por un camino bajo la luna, cada una con un rosario en una mano y un cirio en la otra, sin rostro; una sola, más larga y flaca que las demás, levanta la cabeza a olfatear. La fila entra por un borde del encuadre y sale por el otro. Es la única entidad de esta biblia dibujada como una línea de cuerpos iguales, y se lee por repetición.",
         "materials": [
           "mortajas en una sola plantilla de papel blanco roto repetida, con el borde recto",
           "cirios en tiras finas de papel de cera, con la llama en punto de quilling cálido",
+          "rosarios en tiras de cuentas diminutas de quilling oscuro colgando de la otra mano",
           "ninguna pieza de cara: las cabezas van cubiertas y no hay ojo, boca ni nariz recortados",
+          "la figura larga y flaca es la misma plantilla estirada, no otra pieza",
           "camino rural en papel de grano abierto, sin empedrado"
         ],
         "palette": "PALETA GIRONESA DECLARADA: blanco encalado, empedrado gris y portón oscuro en lo construido, y blanco roto de mortaja en la fila. La luz es una hilera de puntos cálidos a media altura, sin halo y sin resplandor general: los cirios iluminan la mortaja de quien los lleva y nada más.",
         "scale": "Fila entera cruzando el encuadre a media distancia y con las figuras disminuyendo hacia el fondo, todas a la misma altura de cabeza: la repetición y no el tamaño es lo que da la escala.",
         "continuity": [
-          "una sola plantilla repetida: ninguna figura de la fila tiene rasgo individual, porque la única ánima con cuerpo y nombre es Jovita y tiene ficha propia",
+          "una sola plantilla repetida: ninguna figura de la fila tiene rasgo individual salvo el largo de la que olfatea, porque la única ánima con cuerpo y nombre es Jovita y tiene ficha propia",
           "sin descomposición, sin rostro cadavérico y sin herida en ninguna figura",
           "no es el Ánima Sola y no hereda su iconografía: nada de mujer entre llamas y nada de estampa católica",
           "su territorio es santandereano y su camino es rural, de Rionegro, no caldense",
-          "reprenden por embriaguez y por trabajar en día de guarda: disciplinan conducta doméstica y no castigan monte"
+          "reprenden por embriaguez y por trabajar en día de guarda: disciplinan conducta doméstica y no castigan monte",
+          "son bromistas y correctoras, «como madres cuidadosas»: el peloteo es castigo cómico y no condena, y la lámina no lo vuelve terror"
         ],
         "documented": [
-          "«una procesión fúnebre avanzó por el camino… Lo rodearon, lo golpearon y lo lanzaron por el aire mientras lo reprendían por su embriaguez»; en el segundo episodio la procesión reza el rosario y arrastra a Jovita (relato cuento-de-animas)",
-          "la cofradía de las ánimas de Girón está documentada desde 1636, cuando se crea la parroquia de San Juan Bautista, y el Señor de los Milagros hace procesión «con cirios»: el cirio no es adorno, es la pieza documentada de esa devoción y es el objeto que el relato convierte en hueso (arquidiocesis_giron)",
+          "«por el camino avanzaba, despacio, bajo la luna, una larga procesión de ánimas»; «pasaban rezando con mucha pausa» (relato cuento-de-animas)",
+          "«una de ellas, más larga y flaca que las demás, olfateó el aire y dijo: —¡Fo, fo! ¡Hiede a carne humana!»; lo sacaron al camino y «lo pelotearon por los aires como una perinola» cantando en coro (relato cuento-de-animas)",
+          "en el segundo episodio, «una fila de ánimas que salían del cacaotal con mortajas blancas, el rosario en una mano y un cirio en la otra» (relato cuento-de-animas)",
+          "la cofradía de las ánimas de Girón está documentada desde 1636, cuando se crea la parroquia de San Juan Bautista, y el Señor de los Milagros hace procesión «con cirios»: el cirio no es adorno, es la pieza documentada de esa devoción (arquidiocesis_giron)",
           "el dossier nacional dice expresamente que «La procesión de ánimas» del Eje Cafetero no es el Ánima Sola: la única figura panregional del cubo no hereda nada y se produce entera aquí (dossier, lo panregional)",
           "Girón es otra biblioteca visual: casco virreinal de 1631, «calles empedradas, casas con paredes blancas, grandes puertas de color marrón oscuro o negro, y techos con teja de arcilla» (wikipedia_giron)"
         ],
@@ -3474,8 +3734,8 @@
         "palette": "Paño oscuro, lienzo y cuero: la hoja no tiene un solo color saturado, y su único punto cálido es la brasa de la mecha. En 1546 y 1592 no existe nada del cuadro caldense posterior, así que su fondo es selva primaria o corredor de casona y nunca bahareque republicano.",
         "scale": "Cuatro figuras enteras a la misma altura de ojo sobre una línea de suelo y separadas: la hoja es catálogo y no escena, y el barandal da la única referencia construida.",
         "continuity": [
-          "cubre a Antón Dávalos, a los dos Don Diego —que son personajes distintos con el mismo nombre en dos cuentos y no comparten cara—, a Isabel, a los vigías y a la expedición de Robledo",
-          "el arma es arcabuz y no mosquete, y su rasgo visible es el hilo de humo de la mecha",
+          "cubre a Antón Dávalos, a García de Cáceres, al mosquetero Leandro Estopiñán, a los ocho vaqueros con lanzas, a la escolta de la casona, a los vigías y la escucha, al Don Diego de In illo tempore, a Isabel y a la expedición de Robledo; don Diego de Aguilar tiene ahora ficha propia",
+          "el arma de fuego es arcabuz: el relato llama «mosquetero» a Estopiñán y habla de arcabuces, y la hoja sigue al dossier —el arma de 1592 es el arcabuz y no el mosquete—; su rasgo visible es el hilo de humo de la mecha",
           "ningún miembro de la hoja lleva ni una pieza indígena, y los atacantes de 1592 quedan fuera de cuadro",
           "en su época no existe bahareque republicano, ni balcón de colores, ni teja de barro de pueblo, ni guadual de finca, ni cafetal, ni sombrero aguadeño"
         ],
@@ -3484,7 +3744,8 @@
           "el arma de fuego de 1592 es el arcabuz con llave de mecha y mecha lenta encendida, con recarga de treinta a sesenta segundos (dossier, dimensión de conquista)",
           "los atacantes «presentados como pijaos» no se dibujan: «pijao» es una categoría colonial aplicada a más de setenta grupos, deformación de «pinao», y los grupos así llamados quedaban al oriente de Caldas (velasquez2021_pijao)",
           "en 1592 el alto Cauca está demográficamente vaciado: la población pasa de 550.000-900.000 habitantes a 35.000 en 1582, Anserma baja a 800 y Arma a 900, tras la «guerra de tierra arrasada» que Andagoya describe en 1540 (rodriguez_cuenca2005_cauca)",
-          "el Don Diego de In illo tempore NO es el Don Diego de De frente al sol (dossier, dimensión de personajes)"
+          "el Don Diego de In illo tempore NO es el Don Diego de De frente al sol (dossier, dimensión de personajes)",
+          "«Al principio ningún arcabuz fallaba»; «el mosquetero Leandro Estopiñán, capataz de veinte negros mineros»; «ocho vaqueros con lanzas» (relato de-frente-al-sol)"
         ],
         "editorial": [
           "rostros, edades y estaturas son construcción editorial y son retirables",
@@ -4050,11 +4311,12 @@
         "continuity": [
           "el glaciar baja mucho más que el actual: 47,5 km² a mediados del siglo XIX frente a 7,17 km² en 2024",
           "ninguna lava, ningún volcán en erupción de fuego: las tres erupciones mortíferas mataron por lahar, es decir por lodo",
-          "la grieta va siempre en primer plano y siempre abierta: es el sepulcro del relato y no un accidente decorativo",
+          "la grieta es «traicionera y voraz» y la montaña lo devora «entre sus pliegues blandos»: la grieta se dibuja abierta y los pliegues del hielo como planos redondeados, no como cuchillas",
           "sin símbolos étnicos en ninguna parte del encuadre y sin nada tomado de la biblia nasa",
           "el páramo ocupa la parte baja de la lámina con frailejón, pajonal y turbera"
         ],
         "documented": [
+          "«vista desde Manizales, la mole del nevado del Ruiz parece un titán»; «Brilla bajo el sol cuando el cielo está azul, y cuando se pone sombrío se envuelve en un manto de neblina»; la cordillera de «abismos sin vegetación y lagunas heladas», y en la cumbre «sólo se oye el silbido del viento» (relato el-cacique-cumanday)",
           "el glaciar tenía 47,5 km² a mediados del siglo XIX, 21,0 en los años cincuenta, 10,3 en 2010 y 7,17 km² en 2024: un Ruiz de 1845 o de 1849 tiene seis veces y media más nieve que el de hoy y su lengua baja mucho más (ideam_glaciar_ruiz)",
           "ficha del volcán real: 5.321 m, estratovolcán de unos 66.000 años, cráter Arenas, y los satélites La Olleta, La Piraña y Nereidas; el páramo ocupa el 84 % del área del parque, con Espeletia hartwegiana, pajonales, turberas, arbustales, pantanos y lagunas (sgc2024_ruiz)",
           "las tres erupciones mortíferas —12 de marzo de 1595, 19 de febrero de 1845 y 13 de noviembre de 1985— mataron por lahar y no por lava ni por ceniza: nada de río de fuego (sgc2024_ruiz)",
@@ -4109,7 +4371,9 @@
       "name": "El hueso que parecía un cirio",
       "kind": "objeto",
       "description": "Lo levanta ella y la ambigüedad cirio/hueso es un rasgo de su ficha, no una pieza aparte.",
-      "aliases": [],
+      "aliases": [
+        "canilla de muerto"
+      ],
       "states": [
         "canonico"
       ],
@@ -4131,7 +4395,7 @@
       ],
       "census_note": "Lo levanta ella y la ambigüedad cirio/hueso es un rasgo de su ficha, no una pieza aparte.",
       "covered_by": "jovita_la_difunta",
-      "coverage_note": "Lo levanta ella y la ambigüedad cirio/hueso es un rasgo de su ficha, no una pieza aparte.",
+      "coverage_note": "Ahora es «una canilla de muerto» que parecía cirio: la lleva Jovita y la ambigüedad cirio/canilla es un rasgo de su ficha, no una pieza aparte.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -4139,8 +4403,10 @@
     "arbol_de_laurian": {
       "name": "El árbol en cuya copa aparece Laurián",
       "kind": "planta",
-      "description": "Arbol sin especie ni descripción: vegetación del camino ya fichado.",
-      "aliases": [],
+      "description": "Ahora con especie: un gualanday, en cuya copa la familia encuentra a Laurián enredado. Sin más descripción: vegetación del camino ya fichado.",
+      "aliases": [
+        "gualanday"
+      ],
       "states": [
         "canonico"
       ],
@@ -4167,7 +4433,7 @@
       ],
       "census_note": "Arbol sin especie ni descripción: vegetación del camino ya fichado.",
       "covered_by": "camino_de_montana_caldense",
-      "coverage_note": "Arbol sin especie ni descripción: vegetación del camino ya fichado.",
+      "coverage_note": "El relato nombra la especie —«la copa de un gualanday»— y no la describe: el árbol va dentro de la ladera del camino ya fichado.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -4203,7 +4469,7 @@
       ],
       "census_note": "Miembros genéricos del colectivo campesino.",
       "covered_by": "colectivo_campesinos_y_arrieros",
-      "coverage_note": "Miembros genéricos del colectivo campesino.",
+      "coverage_note": "La familia sale a buscarlo y lo encuentra en la copa del gualanday: miembros sin rasgo, que se resuelven con los tipos base del corpus y el colectivo campesino.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -4251,10 +4517,13 @@
       ]
     },
     "mesa_de_costura_y_ventana": {
-      "name": "La mesa de costura y la ventana",
+      "name": "La máquina de coser y la ventanilla",
       "kind": "objeto",
-      "description": "Mobiliario del interior ya fichado; la ventana es el marco desde donde ve la procesión.",
-      "aliases": [],
+      "description": "Ulogia sigue «dale que dale a la máquina» un domingo a las diez de la noche y ve la fila por la ventana; Jovita se acerca «a la ventanilla». La mesa de costura del censo es ahora una máquina.",
+      "aliases": [
+        "la máquina",
+        "la ventanilla"
+      ],
       "states": [
         "canonico"
       ],
@@ -4285,8 +4554,8 @@
         }
       ],
       "census_note": "Mobiliario del interior ya fichado; la ventana es el marco desde donde ve la procesión.",
-      "covered_by": "casa_de_bahareque",
-      "coverage_note": "Mobiliario del interior ya fichado; la ventana es el marco desde donde ve la procesión.",
+      "covered_by": "nua_ulogia",
+      "coverage_note": "La máquina de coser va en la ficha de Ulogia, que la usa; la ventanilla es el marco del interior ya fichado.",
       "evidence_basis_mix": [
         "documented_core",
         "academic_hypothesis"
@@ -4295,7 +4564,7 @@
     "anton_davalos": {
       "name": "Antón Dávalos",
       "kind": "personaje",
-      "description": "Administrador que confirma la defensa; habla una vez y no recibe descripción.",
+      "description": "El administrador jura que están listos, ruega a Rodrigo que huya y luego que dé la cara: habla y actúa, pero sin un solo rasgo físico. Va en la hoja española.",
       "aliases": [],
       "states": [
         "canonico"
@@ -4323,23 +4592,29 @@
       ],
       "census_note": "Administrador que confirma la defensa; habla una vez y no recibe descripción.",
       "covered_by": "colectivo_espanoles_de_la_conquista",
-      "coverage_note": "Administrador que confirma la defensa; habla una vez y no recibe descripción.",
+      "coverage_note": "El administrador jura que están listos, ruega a Rodrigo que huya y luego que dé la cara: habla y actúa, pero sin un solo rasgo físico. Va en la hoja española.",
       "evidence_basis_mix": [
         "documented_core"
       ]
     },
     "don_diego_de_frente_al_sol": {
-      "name": "Don Diego (De frente al sol)",
+      "name": "Don Diego de Aguilar, señor de Consota",
       "kind": "personaje",
-      "description": "Acompañante sin rasgos. NO es el mismo Don Diego de In illo tempore: dos cuentos del mismo autor con un nombre repetido, y fundirlos sería un error de censo.",
-      "aliases": [],
+      "description": "Señor de Consota que llega con el socorro a la encomienda, entra primero con lanza y adarga de cuero de danta, improvisa las andas de don Fernán y, ante el hijo muerto, no llora: cruza los brazos y llama a todos a ver que la herida está en el pecho. Ya no es un acompañante sin rasgos. NO es el Don Diego de In illo tempore.",
+      "aliases": [
+        "don Diego (De frente al sol)",
+        "señor de Consota"
+      ],
       "states": [
-        "canonico"
+        "canonico",
+        "de brazos cruzados ante el hijo muerto"
       ],
       "evidence_basis": "documented",
       "sensitivity": "public",
-      "visual_status": "embedded",
-      "model_requirements": [],
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
       "model_refs": [],
       "legacy_model_refs": [],
       "myth_refs": [
@@ -4353,11 +4628,40 @@
         }
       ],
       "census_note": "Acompañante sin rasgos. NO es el mismo Don Diego de In illo tempore: dos cuentos del mismo autor con un nombre repetido, y fundirlos sería un error de censo.",
-      "covered_by": "colectivo_espanoles_de_la_conquista",
-      "coverage_note": "Acompañante sin rasgos. NO es el mismo Don Diego de In illo tempore: dos cuentos del mismo autor con un nombre repetido, y fundirlos sería un error de censo.",
       "evidence_basis_mix": [
         "documented_core"
-      ]
+      ],
+      "design": {
+        "silhouette": "Hidalgo maduro de pie con los brazos cruzados sobre el pecho y la adarga colgada a la espalda como un gran corazón de cuero, inmóvil mientras los demás se agachan: es la única figura de esta biblia que lleva escudo, y la única cuyo gesto es no moverse.",
+        "materials": [
+          "adarga de cuero de danta: un solo plano en forma de corazón, pardo oscuro, con el canto grueso y la costura central marcada por incisión",
+          "lanza larga, una tira de madera parda con la punta gris",
+          "jubón, calzas y capa corta de paño, planos grandes",
+          "botas de caña de cuero, recortes altos"
+        ],
+        "palette": "Cuero de danta pardo oscuro, paño y madera: ni un color saturado y ni una gota de rojo. En la sala, luz baja de madrugada entrando por un vano; afuera, la ladera vaciada en verde húmedo desaturado.",
+        "scale": "Figura entera de pie, un poco más alta que las que la rodean en la sala, con la adarga dándole ancho: la escala es la del que manda en el cuadro.",
+        "continuity": [
+          "NO es el Don Diego de In illo tempore: mismo autor, mismo nombre de pila, dos personajes y dos caras",
+          "la adarga de cuero de danta y los brazos cruzados son sus dos rasgos",
+          "no llora: el gesto es la contención, y la lámina no le pone lágrima ni mueca",
+          "el hijo muerto a sus pies no se dibuja con sangre ni con el dardo en primer plano"
+        ],
+        "documented": [
+          "«Era el socorro de don Diego de Aguilar, señor de Consota», que responde a la escucha «¡Consota y al Rey!» (relato de-frente-al-sol)",
+          "«Primero don Diego, con lanza y adarga de cuero de danta» (relato de-frente-al-sol)",
+          "«Don Diego improvisó unas andas para el herido» (relato de-frente-al-sol)",
+          "ante el hijo muerto «Su padre no lloró. Cruzó los brazos y llamó a don Fernán, a Dávalos, a todos: que vinieran a mirar la herida» (relato de-frente-al-sol)",
+          "el Don Diego de In illo tempore NO es el Don Diego de De frente al sol (dossier, dimensión de personajes)"
+        ],
+        "editorial": [
+          "rostro, edad y complexión son construcción editorial y son retirables: el relato sólo dice que tiene un hijo de veinte años",
+          "la forma de corazón de la adarga es inferencia de tipo de la adarga de cuero, no descripción del relato",
+          "jubón, calzas y capa son inferencia de tipo del XVI",
+          "el impreso de Otero no se leyó (otero1932_montanas)"
+        ],
+        "states_to_model": []
+      }
     },
     "don_diego_padre_de_isabel": {
       "name": "Don Diego, el anciano padre de Isabel (In illo tempore)",
@@ -4455,7 +4759,7 @@
     "rio_de_chinchina": {
       "name": "El río de la encomienda de Chinchiná",
       "kind": "paisaje",
-      "description": "Sólo funciona como la otra orilla desde donde se acercan los atacantes.",
+      "description": "Ya no es sólo la otra orilla: los defensores lo vadean para trabarse con el enemigo y «el agua del Chinchiná bajó roja».",
       "aliases": [],
       "states": [
         "canonico"
@@ -4488,7 +4792,7 @@
       ],
       "census_note": "Sólo funciona como la otra orilla desde donde se acercan los atacantes.",
       "covered_by": "camino_de_montana_caldense",
-      "coverage_note": "Sólo funciona como la otra orilla desde donde se acercan los atacantes.",
+      "coverage_note": "Río de montaña dentro del paisaje ya fichado; el agua roja se declara y no se dibuja, igual que ninguna lámina del cubo lleva sangre.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -4524,7 +4828,7 @@
       ],
       "census_note": "Marco del recuerdo, declarado como estado de la misma casa; ninguna de las dos escenas de la página lo monta.",
       "covered_by": "casa_colonial_de_encomienda",
-      "coverage_note": "Marco del recuerdo, declarado como estado de la misma casa; ninguna de las dos escenas de la página lo monta.",
+      "coverage_note": "«Todavía asoman, en un recodo de Playa Rica, los restos del caserón»: marco del recuerdo, declarado como estado de la misma casa.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -4560,7 +4864,7 @@
       ],
       "census_note": "Atiende la posada y cierra la persecución dando refugio; nombrada pero sin un rasgo.",
       "covered_by": "colectivo_campesinos_y_arrieros",
-      "coverage_note": "Atiende la posada y cierra la persecución dando refugio; nombrada pero sin un rasgo.",
+      "coverage_note": "La posada de mulas está «en la casa de doña Carmela Piedrahita»: nombrada, sin un rasgo; se resuelve con el tipo base de mujer adulta y el colectivo.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -4569,7 +4873,9 @@
       "name": "La posada de arrieros de Los Zorros",
       "kind": "arquitectura",
       "description": "Única arriería visible del bucket y aun así es un interior de casa rural con viajeros.",
-      "aliases": [],
+      "aliases": [
+        "posada de mulas"
+      ],
       "states": [
         "canonico"
       ],
@@ -4606,7 +4912,7 @@
       ],
       "census_note": "Única arriería visible del bucket y aun así es un interior de casa rural con viajeros.",
       "covered_by": "casa_de_bahareque",
-      "coverage_note": "Única arriería visible del bucket y aun así es un interior de casa rural con viajeros.",
+      "coverage_note": "«Ahí había una posada de mulas, en la casa de doña Carmela Piedrahita»; «Aquello estaba lleno de arrieros»: interior de casa rural con viajeros, dentro de la casa ya fichada.",
       "evidence_basis_mix": [
         "documented_core",
         "academic_hypothesis"
@@ -4649,9 +4955,9 @@
       ]
     },
     "toponimos_de_la_huida": {
-      "name": "La Miel, La Toma, Hojas Anchas, Los Zorros y Caramanta",
+      "name": "La Bocatoma, La Miel, Arcón Grande, Oro Fino, Veneros, La Toma, Hojas Anchas, Los Zorros y Caramanta",
       "kind": "lugar",
-      "description": "Cinco topónimos que ordenan la huida y son el mismo camino de ladera.",
+      "description": "Los topónimos que ordenan la jornada y la huida —se trabaja en Arcón Grande, en Oro Fino; el compañero duerme en Veneros; el ataque es en la entrada de La Toma, más arriba de Hojas Anchas; la posada está en Los Zorros, en el camino que baja de Oro Fino a Caramanta— y son el mismo camino de ladera.",
       "aliases": [],
       "states": [
         "canonico"
@@ -4684,7 +4990,7 @@
       ],
       "census_note": "Cinco topónimos que ordenan la huida y son el mismo camino de ladera.",
       "covered_by": "camino_de_montana_caldense",
-      "coverage_note": "Cinco topónimos que ordenan la huida y son el mismo camino de ladera.",
+      "coverage_note": "Nombres de lugar que sólo sitúan: van embebidos en el camino de ladera ya fichado, sin cartel ni rótulo.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -4730,7 +5036,7 @@
       ],
       "census_note": "Recibe el encargo y está en la escena vertical, pero la propia página dice que el relato no lo identifica.",
       "covered_by": "colectivo_campesinos_y_arrieros",
-      "coverage_note": "Recibe el encargo y está en la escena vertical, pero la propia página dice que el relato no lo identifica.",
+      "coverage_note": "«el caminante osado que logre llegar a lo más alto del nevado», «el visitante asombrado»: sin rasgo ni época; se resuelve con el tipo de hombre adulto del colectivo, pequeño y de espaldas.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -4771,7 +5077,7 @@
       ],
       "census_note": "Accidente del mismo paisaje; es donde desaparece y donde lo encuentran.",
       "covered_by": "nevado_del_ruiz_cumanday",
-      "coverage_note": "Accidente del mismo paisaje; es donde desaparece y donde lo encuentran.",
+      "coverage_note": "«Una grieta traicionera y voraz se tragó sin piedad al esposo amoroso»: accidente del mismo paisaje, dentro de la ficha del nevado.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -4807,7 +5113,7 @@
       ],
       "census_note": "El cuerpo queda oculto por la oscuridad y sólo se revela al final: es parte de la ficha del aparato, no un personaje aparte.",
       "covered_by": "calabazo_iluminado_de_tatinez",
-      "coverage_note": "El cuerpo queda oculto por la oscuridad y sólo se revela al final: es parte de la ficha del aparato, no un personaje aparte.",
+      "coverage_note": "«alguien llevaba sobre la cabeza» el calabazo: nadie supo quién, hasta que lo descubrieron; es parte de la ficha del aparato, en su estado revelado.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -4843,7 +5149,7 @@
       ],
       "census_note": "Son la estructura de ese fantasma; sin ellos no hay silueta.",
       "covered_by": "fantasma_de_ruben_bayer",
-      "coverage_note": "Son la estructura de ese fantasma; sin ellos no hay silueta.",
+      "coverage_note": "«un palo forrado en tela blanca» con una persona adentro que lo empuja: son la estructura de ese fantasma, y sin ellos no hay silueta.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -4885,7 +5191,7 @@
       ],
       "census_note": "Destinatarios de la amenaza en dos relatos; las escenas piden expresamente no mostrarlos aterrorizados.",
       "covered_by": "colectivo_campesinos_y_arrieros",
-      "coverage_note": "Destinatarios de la amenaza en dos relatos; las escenas piden expresamente no mostrarlos aterrorizados.",
+      "coverage_note": "«Al niño que no obedecía le bastaba oír que se lo iba a llevar el Coco», y el que empezaba «a andar pegado de las enaguas de la mamá»: se resuelven con el tipo base de niño, nunca aterrorizados.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -5343,7 +5649,7 @@
       ],
       "census_note": "Voz en primera persona en dos relatos; en ninguno se describe a sí mismo.",
       "covered_by": "colectivo_campesinos_y_arrieros",
-      "coverage_note": "Voz en primera persona en dos relatos; en ninguno se describe a sí mismo.",
+      "coverage_note": "Voz en primera persona en dos relatos; en éste es quien «de niño conoció a ñuá Ulogia» y vio la cicatriz: no se describe a sí mismo.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -5559,7 +5865,7 @@
     "farol_de_vela": {
       "name": "El farol con un trozo de vela",
       "kind": "objeto",
-      "description": "Es la luz que revela al Uñón y lo primero que cae; objeto menor pero decisivo.",
+      "description": "«Metía un cabo de vela en un farol, de los que se usaban en ese tiempo, porque linterna no había»: la luz que revela al Uñón y lo primero que se le zafa.",
       "aliases": [],
       "states": [
         "canonico"
@@ -5587,7 +5893,7 @@
       ],
       "census_note": "Es la luz que revela al Uñón y lo primero que cae; objeto menor pero decisivo.",
       "covered_by": "hoja_utileria_arriero_caldense",
-      "coverage_note": "Es la luz que revela al Uñón y lo primero que cae; objeto menor pero decisivo.",
+      "coverage_note": "«Metía un cabo de vela en un farol, de los que se usaban en ese tiempo, porque linterna no había»: la luz que revela al Uñón y lo primero que se le zafa. Va en la hoja de utilería.",
       "evidence_basis_mix": [
         "documented_core",
         "uncertain"
@@ -5871,10 +6177,13 @@
       ]
     },
     "atado_de_hierbas": {
-      "name": "El atado de hierbas del nevado",
+      "name": "El manojo de yerbas",
       "kind": "planta",
-      "description": "Cumanday lo carga en las dos escenas, pero la página declara que no se identifica la planta: va como atado genérico, sin especie inventada.",
-      "aliases": [],
+      "description": "Las «yerbas» que sólo crecen «al otro lado del Ruiz» y el «manojo de yerbas» que el aparecido ofrece: el relato no da especie y no se inventa.",
+      "aliases": [
+        "atado de hierbas",
+        "las yerbas"
+      ],
       "states": [
         "canonico"
       ],
@@ -5901,21 +6210,21 @@
       ],
       "census_note": "Cumanday lo carga en las dos escenas, pero la página declara que no se identifica la planta: va como atado genérico, sin especie inventada.",
       "covered_by": "hoja_utileria_animas_y_conquista",
-      "coverage_note": "Cumanday lo carga en las dos escenas, pero la página declara que no se identifica la planta: va como atado genérico, sin especie inventada.",
+      "coverage_note": "Cumanday lo tiene en las manos en la aparición: va en su ficha y en la hoja de utilería como haz genérico, sin especie.",
       "evidence_basis_mix": [
         "documented_core",
         "editorial_interpretation"
       ]
     },
     "armas_de_los_defensores": {
-      "name": "Las armas de fuego de los defensores",
+      "name": "Las armas del combate de 1592",
       "kind": "objeto",
-      "description": "«Los defensores disparan y resisten»: armas de 1592 sin modelo especificado.",
+      "description": "Ahora el relato las nombra: arcabuces que «al principio» no fallaban, lanzas de los vaqueros, lanza y adarga de don Diego, flechas y macanas de los labradores indios, el dardo que mata a Rodrigo.",
       "aliases": [],
       "states": [
         "canonico"
       ],
-      "evidence_basis": "editorial_interpretation",
+      "evidence_basis": "documented",
       "sensitivity": "public",
       "visual_status": "embedded",
       "model_requirements": [],
@@ -5943,7 +6252,7 @@
       ],
       "census_note": "«Los defensores disparan y resisten»: armas de 1592 sin modelo especificado.",
       "covered_by": "hoja_utileria_animas_y_conquista",
-      "coverage_note": "«Los defensores disparan y resisten»: armas de 1592 sin modelo especificado.",
+      "coverage_note": "El arcabuz va en la hoja de utilería; la lanza y la adarga en don Diego de Aguilar; flechas y macanas en la hoja de los indios y negros de la encomienda; el dardo como estado de Rodrigo.",
       "evidence_basis_mix": [
         "documented_core",
         "editorial_interpretation"
@@ -5974,7 +6283,7 @@
         }
       ],
       "census_note": "PANREGIONAL y sin ficha: el Coco recorre varios corpus y todo el mundo hispánico, pero aquí su fuerza es la advertencia, no la apariencia. Si el editor produce una ficha nacional del Coco, la versión caldense aporta exactamente esto: la negativa a tener rostro, y dos calabazos que ocupan su lugar.",
-      "exclusion_reason": "La fuente le niega cuerpo: «no necesita un rostro fijo», «presencia incorpórea que los adultos nombran». Dibujarlo sería inventarle la forma que el relato le quita a propósito.",
+      "exclusion_reason": "La fuente le niega cuerpo: «Nadie sabía cómo era. No tenía cuerpo ni forma fija: era un espíritu maligno que cada cual se imaginaba a su manera». Dibujarlo sería inventarle la forma que el relato le quita a propósito.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -5982,7 +6291,7 @@
     "chucho": {
       "name": "Chucho",
       "kind": "criatura",
-      "description": "«También puede llamarse Chucho».",
+      "description": "«En Caldas también lo llamaban el Chucho»: vive en la pieza del rebujo, en el subterráneo, detrás de las puertas, debajo de las camas, en el zarzo, en las casas deshabitadas, en los desvanes y entre los cielos rasos; es «diminuto e invisible» y puede tomar «la figura de cualquier alimaña repugnante».",
       "aliases": [],
       "states": [
         "canonico"
@@ -6004,7 +6313,7 @@
         }
       ],
       "census_note": "«También puede llamarse Chucho».",
-      "exclusion_reason": "Otro nombre de la misma presencia sin cuerpo; hereda la misma falta de evidencia visual.",
+      "exclusion_reason": "Es «diminuto e invisible» y su única forma posible es «cualquier alimaña»: no tiene figura propia que dibujar, y darle una sería elegir la alimaña que el relato deja abierta. Sus escondites son la casa ya fichada.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -6064,7 +6373,7 @@
         }
       ],
       "census_note": "DECISIÓN QUE MÁS COSTÓ. La portada de la página los deja fuera de cuadro a propósito («antes del combate»). Si el editor quiere representarlos, no sale de este relato: exige investigación material propia y es otro encargo, no este censo.",
-      "exclusion_reason": "El cuento no los describe: sólo son ruido que crece al otro lado del río y amenaza oída desde la casa, filtrada por una voz colonial que los vuelve masa anónima. Dibujarlos desde esa voz sería inventarlos.",
+      "exclusion_reason": "El relato nuevo los nombra «pijaos», los anuncia con «fotutos, caracoles, alaridos» y los hace matar con macana y dardo, pero sigue sin describir un solo cuerpo, prenda o arma propia; la historia recuerda que el texto los llama horda y «valientes guerreros cauchumas del Quindío» en la misma frase. Dibujarlos desde esa voz sería inventarlos.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -6254,7 +6563,7 @@
         }
       ],
       "census_note": "Su objeción es lo que mantiene abierta la duda del relato, pero es habla, no cuerpo.",
-      "exclusion_reason": "Interviene sólo en la cadena de transmisión —objeta que un espíritu cause heridas físicas—, no en ninguna escena del episodio.",
+      "exclusion_reason": "Interviene sólo en la cadena de transmisión —«muy virtuoso y muy inteligente», le dice al narrador que un espíritu no deja marcas—, no en ninguna escena del episodio.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -6284,7 +6593,7 @@
         }
       ],
       "census_note": "Su duda («nadie supo qué persiguió a Rafael») sí condiciona la ficha del Uñón.",
-      "exclusion_reason": "Voz de transmisión sin cuerpo descrito: lo oyó de estudiante décadas antes.",
+      "exclusion_reason": "Voz de transmisión sin cuerpo descrito: un narrador sin nombre que dice haber estado en la escuela hace ochenta años y tener ochenta y seis, y que no se describe.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -6383,7 +6692,9 @@
       "name": "El mercado de los lunes",
       "kind": "lugar",
       "description": "Si el editor lo quiere, hay que investigarlo, no leerlo.",
-      "aliases": [],
+      "aliases": [
+        "feria de Rionegro"
+      ],
       "states": [
         "canonico"
       ],
@@ -6404,7 +6715,7 @@
         }
       ],
       "census_note": "Si el editor lo quiere, hay que investigarlo, no leerlo.",
-      "exclusion_reason": "Rutina nombrada dos veces («bajaba al mercado», «atendía a la gente del mercado») sin una sola descripción de plaza, puesto o mercancía.",
+      "exclusion_reason": "Rutina nombrada —«cada lunes bajaba a la feria de Rionegro», «al día siguiente había mercado»— sin una sola descripción de plaza, puesto o mercancía.",
       "evidence_basis_mix": [
         "editorial_interpretation"
       ]
@@ -6434,7 +6745,7 @@
         }
       ],
       "census_note": "SEGUNDA DECISIÓN DIFÍCIL: es la razón del viaje y aun así dibujarla obligaría a inventar exactamente lo que la página veta.",
-      "exclusion_reason": "Enferma y muere dentro del relato pero no recibe un solo rasgo, ninguna escena la muestra y la propia ficha prohíbe inventar vestuario o símbolos étnicos.",
+      "exclusion_reason": "«una india hermosa, hija de un cacique de una tribu lejana»: enferma al llegar el primer hijo y muere dentro del relato; «hermosa» no es un rasgo dibujable y cualquier vestido o adorno sería inventar lo que la ficha veta.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -6464,7 +6775,7 @@
         }
       ],
       "census_note": "La espera termina fuera de cuadro.",
-      "exclusion_reason": "Igual que la madre: muere antes de recibir la medicina, sin descripción ni escena.",
+      "exclusion_reason": "«También murieron su mujer y su hijo»: el hijo no llega a nacer en escena y no tiene descripción.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -6494,7 +6805,7 @@
         }
       ],
       "census_note": "Da la instrucción y desaparece.",
-      "exclusion_reason": "La página declara expresamente que el relato no identifica al brujo, la planta ni el visitante.",
+      "exclusion_reason": "Su único rasgo es un símil —«arrugado como las montañas que lo rodeaban»— y dibujarlo obligaría a inventarle vestido y atributos de chamán, justo lo vetado; da la instrucción y sale del relato.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -6621,7 +6932,7 @@
       ]
     },
     "comparaciones_externas_caldas": {
-      "name": "Menciones comparativas (Cuco, Hombre del Saco, Bogeyman, Bicho-papão, Cadejo, Ánima Sola, Orfeo, Izanagi, Mano Peluda mexicana)",
+      "name": "Menciones comparativas (Cuco, Hombre del Saco, Bogeyman, Bicho-papão, Cadejo, Ánima Sola, Orfeo, Izanagi, Mano Peluda mexicana, El Patón, la Chichita, Ipiaré Ebachí, la princesa Napicura, la Gaitana, Iztaccíhuatl y Popocatépetl, Gilgamesh, «Que viene el Coco» de Goya, el Coco Pelao, la vieja Inés)",
       "kind": "fenomeno",
       "description": "Criterio uniforme del censo, igual que en Bogotá: la comparación no entra al inventario.",
       "aliases": [],
@@ -6639,7 +6950,8 @@
         "el-viejo-del-costal",
         "el-cole-cabuya",
         "el-cacique-cumanday",
-        "cuento-de-animas"
+        "cuento-de-animas",
+        "el-aserrador"
       ],
       "evidence": [
         {
@@ -6649,7 +6961,7 @@
         }
       ],
       "census_note": "Criterio uniforme del censo, igual que en Bogotá: la comparación no entra al inventario.",
-      "exclusion_reason": "Aparecen sólo en la sección «Similitudes» como comparación explícita, nunca como escena.",
+      "exclusion_reason": "Aparecen sólo en «Similitudes», «Versiones» o «Historia» como comparación o vecindad explícita —en El aserrador, El Patón inventado en 2004 y la Chichita de Riosucio—, nunca como escena.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -6890,6 +7202,1199 @@
         "documented_core",
         "editorial_interpretation"
       ]
+    },
+    "tipo_hombre_adulto": {
+      "name": "Tipo base · hombre adulto campesino y arriero",
+      "kind": "personaje",
+      "description": "Tipo base del corpus.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "cuento-de-animas",
+        "el-aserrador",
+        "el-coco"
+      ],
+      "evidence": [
+        {
+          "myth": "cuento-de-animas",
+          "field": "mito",
+          "note": "Laurián, «buen trabajador» que baja cada lunes a la feria de Rionegro, y sus «tres o cuatro amigotes» de las tiendas del camino."
+        },
+        {
+          "myth": "el-aserrador",
+          "field": "mito",
+          "note": "«Un aserrador de La Miel trabajaba con un compañero en Arcón Grande»; la posada «estaba lleno de arrieros»."
+        },
+        {
+          "myth": "el-coco",
+          "field": "mito",
+          "note": "«don Rubén Bayer, zapatero y concejal del pueblo»."
+        }
+      ],
+      "design": {}
+    },
+    "tipo_mujer_adulta": {
+      "name": "Tipo base · mujer adulta campesina",
+      "kind": "personaje",
+      "description": "Tipo base del corpus.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "cuento-de-animas",
+        "el-aserrador",
+        "el-coco"
+      ],
+      "evidence": [
+        {
+          "myth": "cuento-de-animas",
+          "field": "mito",
+          "note": "La comadre Ulogia, que «cosía para la gente del campo», y la cocinera que cuenta el segundo episodio."
+        },
+        {
+          "myth": "el-aserrador",
+          "field": "mito",
+          "note": "«una posada de mulas, en la casa de doña Carmela Piedrahita»."
+        },
+        {
+          "myth": "el-coco",
+          "field": "mito",
+          "note": "«pegado de las enaguas de la mamá»: la única prenda femenina que el corpus nombra."
+        }
+      ],
+      "design": {}
+    },
+    "tipo_mujer_joven": {
+      "name": "Tipo base · mujer joven campesina",
+      "kind": "personaje",
+      "description": "Tipo base del corpus.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [],
+      "evidence": [],
+      "design": {}
+    },
+    "tipo_nino": {
+      "name": "Tipo base · niño campesino",
+      "kind": "personaje",
+      "description": "Tipo base del corpus.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-coco"
+      ],
+      "evidence": [
+        {
+          "myth": "el-coco",
+          "field": "mito",
+          "note": "«Al niño que no obedecía le bastaba oír que se lo iba a llevar el Coco»; «El niño empezaba a andar pegado de las enaguas de la mamá»."
+        }
+      ],
+      "design": {}
+    },
+    "tipo_anciano": {
+      "name": "Tipo base · anciano campesino",
+      "kind": "personaje",
+      "description": "Tipo base del corpus.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-aserrador"
+      ],
+      "evidence": [
+        {
+          "myth": "el-aserrador",
+          "field": "mito",
+          "note": "«Yo estaba en la escuela hace ochenta años; ahora entré a los ochenta y seis»."
+        }
+      ],
+      "design": {}
+    },
+    "tipo_anciana": {
+      "name": "Tipo base · anciana campesina",
+      "kind": "personaje",
+      "description": "Tipo base del corpus.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [],
+      "evidence": [],
+      "design": {}
+    },
+    "hatillo_del_mercado": {
+      "name": "El hatillo del mercado",
+      "kind": "objeto",
+      "description": "Laurián vuelve «con el hatillo del mercado a cuestas»: va en su ficha, a la espalda.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "cuento-de-animas"
+      ],
+      "evidence": [
+        {
+          "myth": "cuento-de-animas",
+          "field": "mito",
+          "note": "Laurián vuelve «con el hatillo del mercado a cuestas»: va en su ficha, a la espalda."
+        }
+      ],
+      "covered_by": "laurian",
+      "coverage_note": "Laurián vuelve «con el hatillo del mercado a cuestas»: va en su ficha, a la espalda."
+    },
+    "alto_de_miradores": {
+      "name": "El alto de Miradores",
+      "kind": "lugar",
+      "description": "Topónimo que sólo sitúa el encuentro —«al asomar al alto de Miradores»—, de noche, con buena luna y ranas cantando en los pantanos: se embebe en el camino ya fichado, con la paleta gironesa declarada.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "cuento-de-animas"
+      ],
+      "evidence": [
+        {
+          "myth": "cuento-de-animas",
+          "field": "mito",
+          "note": "Topónimo que sólo sitúa el encuentro —«al asomar al alto de Miradores»—, de noche, con buena luna y ranas cantando en los pantanos: se embebe en el camino ya fichado, con la paleta gironesa declarada."
+        }
+      ],
+      "covered_by": "camino_de_montana_caldense",
+      "coverage_note": "Topónimo que sólo sitúa el encuentro —«al asomar al alto de Miradores»—, de noche, con buena luna y ranas cantando en los pantanos: se embebe en el camino ya fichado, con la paleta gironesa declarada."
+    },
+    "matorral_de_urimaco": {
+      "name": "El matorral de urimaco",
+      "kind": "planta",
+      "description": "Laurián «se escondió detrás de un matorral de urimaco»: vegetación de borde de camino sin descripción, dentro de la ladera ya fichada.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "cuento-de-animas"
+      ],
+      "evidence": [
+        {
+          "myth": "cuento-de-animas",
+          "field": "mito",
+          "note": "Laurián «se escondió detrás de un matorral de urimaco»: vegetación de borde de camino sin descripción, dentro de la ladera ya fichada."
+        }
+      ],
+      "covered_by": "camino_de_montana_caldense",
+      "coverage_note": "Laurián «se escondió detrás de un matorral de urimaco»: vegetación de borde de camino sin descripción, dentro de la ladera ya fichada."
+    },
+    "cacaotal_de_rionegro": {
+      "name": "El cacaotal de las afueras de Rionegro",
+      "kind": "planta",
+      "description": "Ulogia vive «junto a un cacaotal» y de él «salían» las ánimas: es el fondo del que emerge la fila, y va en la lámina de la procesión como masa oscura de follaje, sin especie dibujada al detalle.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "cuento-de-animas"
+      ],
+      "evidence": [
+        {
+          "myth": "cuento-de-animas",
+          "field": "mito",
+          "note": "Ulogia vive «junto a un cacaotal» y de él «salían» las ánimas: es el fondo del que emerge la fila, y va en la lámina de la procesión como masa oscura de follaje, sin especie dibujada al detalle."
+        }
+      ],
+      "covered_by": "procesion_de_animas",
+      "coverage_note": "Ulogia vive «junto a un cacaotal» y de él «salían» las ánimas: es el fondo del que emerge la fila, y va en la lámina de la procesión como masa oscura de follaje, sin especie dibujada al detalle."
+    },
+    "anima_que_olfatea": {
+      "name": "El ánima larga y flaca que olfatea",
+      "kind": "criatura",
+      "description": "«una de ellas, más larga y flaca que las demás, olfateó el aire»: es la misma plantilla de la procesión estirada, sin rostro; va en su ficha.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "embedded",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "cuento-de-animas"
+      ],
+      "evidence": [
+        {
+          "myth": "cuento-de-animas",
+          "field": "mito",
+          "note": "«una de ellas, más larga y flaca que las demás, olfateó el aire»: es la misma plantilla de la procesión estirada, sin rostro; va en su ficha."
+        }
+      ],
+      "covered_by": "procesion_de_animas",
+      "coverage_note": "«una de ellas, más larga y flaca que las demás, olfateó el aire»: es la misma plantilla de la procesión estirada, sin rostro; va en su ficha."
+    },
+    "rosarios_de_las_animas": {
+      "name": "Los rosarios de las ánimas",
+      "kind": "objeto",
+      "description": "Las ánimas llevan «el rosario en una mano y un cirio en la otra»: va en la hoja de la procesión.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "cuento-de-animas"
+      ],
+      "evidence": [
+        {
+          "myth": "cuento-de-animas",
+          "field": "mito",
+          "note": "Las ánimas llevan «el rosario en una mano y un cirio en la otra»: va en la hoja de la procesión."
+        }
+      ],
+      "covered_by": "procesion_de_animas",
+      "coverage_note": "Las ánimas llevan «el rosario en una mano y un cirio en la otra»: va en la hoja de la procesión."
+    },
+    "amigotes_de_la_tienda": {
+      "name": "Los amigotes de la tienda con tiples y maracas",
+      "kind": "colectivo",
+      "description": "Laurián bebe «con tres o cuatro amigotes, al son de los tiples y las maracas»: hombres sin rasgo que se resuelven con el tipo base y el colectivo; los tiples y las maracas sólo entran si la escena de la tienda se dibuja.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "cuento-de-animas"
+      ],
+      "evidence": [
+        {
+          "myth": "cuento-de-animas",
+          "field": "mito",
+          "note": "Laurián bebe «con tres o cuatro amigotes, al son de los tiples y las maracas»: hombres sin rasgo que se resuelven con el tipo base y el colectivo; los tiples y las maracas sólo entran si la escena de la tienda se dibuja."
+        }
+      ],
+      "covered_by": "colectivo_campesinos_y_arrieros",
+      "coverage_note": "Laurián bebe «con tres o cuatro amigotes, al son de los tiples y las maracas»: hombres sin rasgo que se resuelven con el tipo base y el colectivo; los tiples y las maracas sólo entran si la escena de la tienda se dibuja."
+    },
+    "cocinera_que_cuenta": {
+      "name": "La cocinera que cuenta el segundo episodio",
+      "kind": "personaje",
+      "description": "«La cocinera contaba otra»: narradora sin descripción, resuelta con el tipo base de mujer adulta y el colectivo.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "cuento-de-animas"
+      ],
+      "evidence": [
+        {
+          "myth": "cuento-de-animas",
+          "field": "mito",
+          "note": "«La cocinera contaba otra»: narradora sin descripción, resuelta con el tipo base de mujer adulta y el colectivo."
+        }
+      ],
+      "covered_by": "colectivo_campesinos_y_arrieros",
+      "coverage_note": "«La cocinera contaba otra»: narradora sin descripción, resuelta con el tipo base de mujer adulta y el colectivo."
+    },
+    "mariejesus_canas": {
+      "name": "Mariejesús Cañas",
+      "kind": "personaje",
+      "description": "Mención del prólogo de contraste: en Caldas unas ánimas la «despertaron a medianoche» para que rezara; no tiene escena en el relato ni un solo rasgo.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "excluded",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "cuento-de-animas"
+      ],
+      "evidence": [
+        {
+          "myth": "cuento-de-animas",
+          "field": "mito",
+          "note": "Mención del prólogo de contraste: en Caldas unas ánimas la «despertaron a medianoche» para que rezara; no tiene escena en el relato ni un solo rasgo."
+        }
+      ],
+      "exclusion_reason": "Mención del prólogo de contraste: en Caldas unas ánimas la «despertaron a medianoche» para que rezara; no tiene escena en el relato ni un solo rasgo."
+    },
+    "anima_sola_y_pata_sola": {
+      "name": "El Ánima Sola y la Pata-Sola",
+      "kind": "criatura",
+      "description": "Nombrados sólo como los espantos de Caldas con que el prólogo contrasta a las ánimas santandereanas; ninguna escena, y el dossier nacional dice que esta procesión no es el Ánima Sola.",
+      "aliases": [
+        "Ánima Sola",
+        "Pata-Sola"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "excluded",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "cuento-de-animas"
+      ],
+      "evidence": [
+        {
+          "myth": "cuento-de-animas",
+          "field": "mito",
+          "note": "Nombrados sólo como los espantos de Caldas con que el prólogo contrasta a las ánimas santandereanas; ninguna escena, y el dossier nacional dice que esta procesión no es el Ánima Sola."
+        }
+      ],
+      "exclusion_reason": "Nombrados sólo como los espantos de Caldas con que el prólogo contrasta a las ánimas santandereanas; ninguna escena, y el dossier nacional dice que esta procesión no es el Ánima Sola."
+    },
+    "copla_del_tigre_del_chicamocha": {
+      "name": "La copla del tigre en el puente del Chicamocha",
+      "kind": "fenomeno",
+      "description": "Imagen de la copla que Laurián canta —el tigre acechando en el puente del Chicamocha y el machete pelado—: es canción dentro del relato, no escena.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "excluded",
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "cuento-de-animas"
+      ],
+      "evidence": [
+        {
+          "myth": "cuento-de-animas",
+          "field": "mito",
+          "note": "Imagen de la copla que Laurián canta —el tigre acechando en el puente del Chicamocha y el machete pelado—: es canción dentro del relato, no escena."
+        }
+      ],
+      "exclusion_reason": "Imagen de la copla que Laurián canta —el tigre acechando en el puente del Chicamocha y el machete pelado—: es canción dentro del relato, no escena."
+    },
+    "colectivo_indios_y_negros_de_la_encomienda": {
+      "name": "Los indios quimbayas y los negros mineros de las encomiendas",
+      "kind": "colectivo",
+      "description": "Lo que el relato nuevo pone en el centro: veinticinco labradores indios armados de flechas y macanas bajo García de Cáceres, veinte negros mineros bajo Estopiñán, los quimbayas de ambas encomiendas que se juntan con los negros en el tambo a aderezar una novilla, dorar arepas en las callanas y hacer chingua, y el muchacho indígena que trae el aviso. Pelean, se desbandan y comen: no son fondo.",
+      "aliases": [
+        "labradores indios",
+        "negros mineros",
+        "quimbayas"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "uncertain",
+      "sensitivity": "sensitive",
+      "myth_refs": [
+        "de-frente-al-sol"
+      ],
+      "model_requirements": [
+        "group_grammar"
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "required",
+      "evidence": [
+        {
+          "myth": "de-frente-al-sol",
+          "field": "mito",
+          "note": "«García de Cáceres, con veinticinco labradores indios armados de flechas y macanas»; «el mosquetero Leandro Estopiñán, capataz de veinte negros mineros»"
+        },
+        {
+          "myth": "de-frente-al-sol",
+          "field": "mito",
+          "note": "«Los indios de ambas encomiendas, quimbayas todos, se juntaron con los negros en el tambo, donde se aderezaba una novilla y se doraban arepas en las callanas, junto a una olla de chingua»"
+        },
+        {
+          "myth": "de-frente-al-sol",
+          "field": "historia",
+          "note": "La historia del relato recoge que Preciado Camargo lee el desayuno del tambo como historiografía de la vida diaria, con indios y africanos «como sujetos con costumbres propias y no como fondo de la hazaña»."
+        }
+      ],
+      "design": {
+        "silhouette": "Hoja de un grupo mixto en torno a un fogón bajo techo de tambo: labradores indios de pelo largo con arco y macana apoyados, hombres negros mineros sentados junto a la olla, y un muchacho que llega corriendo por un borde. Se distingue de la hoja española porque aquí nadie lleva bota, jubón ni arma de fuego, y de la campesina porque nadie lleva sombrero ni ruana.",
+        "materials": [
+          "arcos y haces de flechas en tiras finas de caña",
+          "macanas: una sola pieza plana de madera oscura, ancha en la punta",
+          "callanas: discos planos de barro con arepas en círculos de papel dorado",
+          "olla de barro de boca ancha con la chingua en quilling pardo",
+          "ropa de lienzo o manta en planos grandes sin estampado",
+          "techo del tambo en papel de paja con el borde en dientes"
+        ],
+        "palette": "Barro, madera oscura, lienzo crudo y el dorado de las arepas en la callana; el fogón es el único punto cálido. Ningún color de pintura corporal ni de adorno: no están documentados y no se inventan.",
+        "scale": "Grupo de cinco o seis figuras enteras bajo el techo del tambo, con la olla y la callana en primer plano: la escala es la de una cocina de faena, no la de una tropa formada.",
+        "continuity": [
+          "sensibilidad alta: gente quimbaya reducida a encomienda y gente africana esclavizada en minería, en 1592; la lámina los muestra con oficio y costumbre, sin exotismo ni sumisión escenificada",
+          "ningún adorno, pintura, tocado ni joya: el dossier no los documenta para 1592 y no se inventan",
+          "no se funden con los atacantes, que siguen fuera de cuadro",
+          "el muchacho indígena del aviso es miembro de esta hoja y no ficha propia"
+        ],
+        "documented": [
+          "«veinticinco labradores indios armados de flechas y macanas» con García de Cáceres; «veinte negros mineros» bajo Estopiñán; «Los indios de ambas encomiendas, quimbayas todos, se juntaron con los negros en el tambo» (relato de-frente-al-sol)",
+          "en el tambo «se aderezaba una novilla y se doraban arepas en las callanas, junto a una olla de chingua» (relato de-frente-al-sol)",
+          "«Un muchacho indígena llegó corriendo: la escucha del río oía ruido de gente que se acercaba»; en la retirada «Los negros se desbandaron» (relato de-frente-al-sol)",
+          "la vertiente occidental del Ruiz —Villamaría, Manizales, Chinchiná— era quimbaya (dossier, el nevado)",
+          "en 1592 el alto Cauca está demográficamente vaciado: de 550.000-900.000 habitantes a 35.000 en 1582, tras la «guerra de tierra arrasada» (rodriguez_cuenca2005_cauca)",
+          "en Anserma la crónica da a los caciques «cabello largo» (dossier, dimensión de conquista)"
+        ],
+        "editorial": [
+          "ESTA HOJA ES LA MÁS FRÁGIL DEL CUBO: el dossier no documenta el vestido quimbaya de 1592 ni el de los mineros africanos, y toda la ropa es inferencia de mínimos —lienzo o manta sin adorno— declarada y retirable",
+          "el pelo largo de los labradores se extiende desde el dato de los caciques de Anserma y es inferencia",
+          "el techo de paja del tambo es inferencia de la vivienda indígena «hecha en cañas» que la crónica describe",
+          "hace falta revisión histórica antes de producir esta lámina: el editor debe autorizarla o retirarla"
+        ],
+        "states_to_model": []
+      }
+    },
+    "alazan_de_rodrigo": {
+      "name": "El alazán de don Rodrigo y los caballos del escuadrón",
+      "kind": "animal",
+      "description": "Don Rodrigo cierra la marcha «en un alazán nervioso» al frente de ocho vaqueros con lanzas, que son jinetes: «Del escuadrón de don Rodrigo quedaban tres jinetes». Es el único caballo del cubo.",
+      "aliases": [
+        "alazán nervioso"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "de-frente-al-sol"
+      ],
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "required",
+      "evidence": [
+        {
+          "myth": "de-frente-al-sol",
+          "field": "mito",
+          "note": "«cerrando la marcha, en un alazán nervioso, don Rodrigo de Aguilar»; «Del escuadrón de don Rodrigo quedaban tres jinetes»"
+        }
+      ],
+      "design": {
+        "silhouette": "Caballo alazán de pie con las patas delanteras recogidas y la cabeza alta y girada, las orejas adelante y la cola levantada: un animal que no se está quieto. Es el único caballo de esta biblia y el único cuerpo del cubo cuyo contorno dice nervio y no carga.",
+        "materials": [
+          "cuerpo en pocos planos grandes de papel alazán, castaño rojizo mate, sin modelado",
+          "crin y cola en dos o tres piezas planas con el borde en dientes, un tono más oscuro",
+          "silla de montar y cabezada en cuero pardo, tiras simples",
+          "cascos en cuatro recortes oscuros"
+        ],
+        "palette": "Castaño rojizo apagado —el alazán— contra el verde húmedo desaturado de la vega del Chinchiná; ni brillo de pelaje ni reflejo. Es la única mancha cálida de la hoja de conquista fuera de la brasa de las mechas.",
+        "scale": "Animal entero de perfil a tres cuartos, a la altura del ojo de un hombre de pie: la cruz a la altura del hombro de las figuras de la hoja española.",
+        "continuity": [
+          "alazán y nervioso: el color y el gesto son los dos datos del relato y los dos rasgos de la ficha",
+          "los caballos de los vaqueros son el mismo cuerpo en otros tonos apagados, no fichas aparte",
+          "ningún caballo herido ni caído en lámina"
+        ],
+        "documented": [
+          "«en un alazán nervioso, don Rodrigo de Aguilar» (relato de-frente-al-sol)",
+          "los ocho vaqueros son jinetes: «Del escuadrón de don Rodrigo quedaban tres jinetes» (relato de-frente-al-sol)"
+        ],
+        "editorial": [
+          "raza, alzada y arreos son construcción editorial y son retirables",
+          "el nervio se resuelve con la postura y no con la expresión de la cara, decisión de contención",
+          "el pelaje sigue la regla de la técnica: pocas piezas planas grandes con el borde en dientes"
+        ],
+        "states_to_model": []
+      }
+    },
+    "garcia_de_caceres": {
+      "name": "García de Cáceres",
+      "kind": "personaje",
+      "description": "Entra con veinticinco labradores indios armados y muere «de un tajo de macana»: nombre y acción sin un solo rasgo físico; va en la hoja española.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "de-frente-al-sol"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "de-frente-al-sol",
+          "field": "mito",
+          "note": "Entra con veinticinco labradores indios armados y muere «de un tajo de macana»: nombre y acción sin un solo rasgo físico; va en la hoja española."
+        }
+      ],
+      "covered_by": "colectivo_espanoles_de_la_conquista",
+      "coverage_note": "Entra con veinticinco labradores indios armados y muere «de un tajo de macana»: nombre y acción sin un solo rasgo físico; va en la hoja española."
+    },
+    "leandro_estopinan": {
+      "name": "El mosquetero Leandro Estopiñán",
+      "kind": "personaje",
+      "description": "«capataz de veinte negros mineros», sale de combate por «un lanzazo bajo el brazal»: el brazal es la única pieza que el relato le da, y va en la hoja española con arcabuz y no mosquete.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "de-frente-al-sol"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "de-frente-al-sol",
+          "field": "mito",
+          "note": "«capataz de veinte negros mineros», sale de combate por «un lanzazo bajo el brazal»: el brazal es la única pieza que el relato le da, y va en la hoja española con arcabuz y no mosquete."
+        }
+      ],
+      "covered_by": "colectivo_espanoles_de_la_conquista",
+      "coverage_note": "«capataz de veinte negros mineros», sale de combate por «un lanzazo bajo el brazal»: el brazal es la única pieza que el relato le da, y va en la hoja española con arcabuz y no mosquete."
+    },
+    "vaqueros_con_lanzas": {
+      "name": "Los ocho vaqueros con lanzas",
+      "kind": "colectivo",
+      "description": "Jinetes del escuadrón de don Rodrigo, de los que quedan tres: van en la hoja española, montados en el cuerpo de caballo del alazán.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "de-frente-al-sol"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "de-frente-al-sol",
+          "field": "mito",
+          "note": "Jinetes del escuadrón de don Rodrigo, de los que quedan tres: van en la hoja española, montados en el cuerpo de caballo del alazán."
+        }
+      ],
+      "covered_by": "colectivo_espanoles_de_la_conquista",
+      "coverage_note": "Jinetes del escuadrón de don Rodrigo, de los que quedan tres: van en la hoja española, montados en el cuerpo de caballo del alazán."
+    },
+    "muchacho_indigena_del_aviso": {
+      "name": "El muchacho indígena que trae el aviso",
+      "kind": "personaje",
+      "description": "«Un muchacho indígena llegó corriendo»: miembro sin rasgo de la hoja de indios y negros.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "myth_refs": [
+        "de-frente-al-sol"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "de-frente-al-sol",
+          "field": "mito",
+          "note": "«Un muchacho indígena llegó corriendo»: miembro sin rasgo de la hoja de indios y negros."
+        }
+      ],
+      "covered_by": "colectivo_indios_y_negros_de_la_encomienda",
+      "coverage_note": "«Un muchacho indígena llegó corriendo»: miembro sin rasgo de la hoja de indios y negros."
+    },
+    "tambo_de_la_encomienda": {
+      "name": "El tambo y el oratorio de la casona",
+      "kind": "arquitectura",
+      "description": "El tambo donde indios y negros cocinan, el oratorio de donde salen «rezos lentos» y la sala donde queda Rodrigo son partes de la casona ya fichada.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "de-frente-al-sol"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "de-frente-al-sol",
+          "field": "mito",
+          "note": "El tambo donde indios y negros cocinan, el oratorio de donde salen «rezos lentos» y la sala donde queda Rodrigo son partes de la casona ya fichada."
+        }
+      ],
+      "covered_by": "casa_colonial_de_encomienda",
+      "coverage_note": "El tambo donde indios y negros cocinan, el oratorio de donde salen «rezos lentos» y la sala donde queda Rodrigo son partes de la casona ya fichada."
+    },
+    "desayuno_del_tambo": {
+      "name": "La novilla, las arepas en las callanas y la olla de chingua",
+      "kind": "objeto",
+      "description": "«se aderezaba una novilla y se doraban arepas en las callanas, junto a una olla de chingua»: utensilios y comida de la hoja del tambo.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "de-frente-al-sol"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "de-frente-al-sol",
+          "field": "mito",
+          "note": "«se aderezaba una novilla y se doraban arepas en las callanas, junto a una olla de chingua»: utensilios y comida de la hoja del tambo."
+        }
+      ],
+      "covered_by": "colectivo_indios_y_negros_de_la_encomienda",
+      "coverage_note": "«se aderezaba una novilla y se doraban arepas en las callanas, junto a una olla de chingua»: utensilios y comida de la hoja del tambo."
+    },
+    "andas_del_herido": {
+      "name": "Las andas improvisadas",
+      "kind": "objeto",
+      "description": "«Don Diego improvisó unas andas para el herido»: van con el estado herido de don Fernán, declarado y no producido.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "de-frente-al-sol"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "de-frente-al-sol",
+          "field": "mito",
+          "note": "«Don Diego improvisó unas andas para el herido»: van con el estado herido de don Fernán, declarado y no producido."
+        }
+      ],
+      "covered_by": "don_fernan_lopez_de_sandoval",
+      "coverage_note": "«Don Diego improvisó unas andas para el herido»: van con el estado herido de don Fernán, declarado y no producido."
+    },
+    "lomas_de_corozal_y_consota": {
+      "name": "Las lomas de Corozal y el señorío de Consota",
+      "kind": "lugar",
+      "description": "Topónimos que sólo sitúan —los espías vieron a los pijaos «trasponiendo las lomas de Corozal»; don Diego es «señor de Consota»—: van en la ladera ya fichada.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "de-frente-al-sol"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "de-frente-al-sol",
+          "field": "mito",
+          "note": "Topónimos que sólo sitúan —los espías vieron a los pijaos «trasponiendo las lomas de Corozal»; don Diego es «señor de Consota»—: van en la ladera ya fichada."
+        }
+      ],
+      "covered_by": "camino_de_montana_caldense",
+      "coverage_note": "Topónimos que sólo sitúan —los espías vieron a los pijaos «trasponiendo las lomas de Corozal»; don Diego es «señor de Consota»—: van en la ladera ya fichada."
+    },
+    "fotutos_y_caracoles": {
+      "name": "Los fotutos, los caracoles y los alaridos",
+      "kind": "fenomeno",
+      "description": "La alarma del ataque es sonido —«Fotutos, caracoles, alaridos»— de atacantes que la biblia deja fuera de cuadro; no hay quien los sople en ninguna lámina.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "myth_refs": [
+        "de-frente-al-sol"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "excluded",
+      "evidence": [
+        {
+          "myth": "de-frente-al-sol",
+          "field": "mito",
+          "note": "La alarma del ataque es sonido —«Fotutos, caracoles, alaridos»— de atacantes que la biblia deja fuera de cuadro; no hay quien los sople en ninguna lámina."
+        }
+      ],
+      "exclusion_reason": "La alarma del ataque es sonido —«Fotutos, caracoles, alaridos»— de atacantes que la biblia deja fuera de cuadro; no hay quien los sople en ninguna lámina."
+    },
+    "romance_del_valle_de_cartago": {
+      "name": "El romance viejo del valle de Cartago",
+      "kind": "fenomeno",
+      "description": "Las gentes del valle de Cartago cantan después un romance: es canto, no escena, y repite con palabras el gesto del padre.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "de-frente-al-sol"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "excluded",
+      "evidence": [
+        {
+          "myth": "de-frente-al-sol",
+          "field": "mito",
+          "note": "Las gentes del valle de Cartago cantan después un romance: es canto, no escena, y repite con palabras el gesto del padre."
+        }
+      ],
+      "exclusion_reason": "Las gentes del valle de Cartago cantan después un romance: es canto, no escena, y repite con palabras el gesto del padre."
+    },
+    "don_manuel_toro": {
+      "name": "Don Manuel Toro",
+      "kind": "personaje",
+      "description": "Hermano de don Rafael, nombrado sólo para situar a la familia de Toros de La Miel: sin escena ni rasgo.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "el-aserrador"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "el-aserrador",
+          "field": "mito",
+          "note": "Hermano de don Rafael, nombrado sólo para situar a la familia de Toros de La Miel: sin escena ni rasgo."
+        }
+      ],
+      "covered_by": "colectivo_campesinos_y_arrieros",
+      "coverage_note": "Hermano de don Rafael, nombrado sólo para situar a la familia de Toros de La Miel: sin escena ni rasgo."
+    },
+    "arrieros_de_la_posada": {
+      "name": "Los arrieros de la posada",
+      "kind": "colectivo",
+      "description": "«Aquello estaba lleno de arrieros»: le preguntan qué le pasó y le dan posada. Van en la hoja campesina y arriera.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "el-aserrador"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "el-aserrador",
+          "field": "mito",
+          "note": "«Aquello estaba lleno de arrieros»: le preguntan qué le pasó y le dan posada. Van en la hoja campesina y arriera."
+        }
+      ],
+      "covered_by": "colectivo_campesinos_y_arrieros",
+      "coverage_note": "«Aquello estaba lleno de arrieros»: le preguntan qué le pasó y le dan posada. Van en la hoja campesina y arriera."
+    },
+    "aserradero_de_arcon_grande": {
+      "name": "El aserradero de Arcón Grande",
+      "kind": "lugar",
+      "description": "Donde Rafael trabaja hasta las seis —«volvía del aserradero de día»—: sólo se nombra; es un claro de la ladera ya fichada.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "el-aserrador"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "el-aserrador",
+          "field": "mito",
+          "note": "Donde Rafael trabaja hasta las seis —«volvía del aserradero de día»—: sólo se nombra; es un claro de la ladera ya fichada."
+        }
+      ],
+      "covered_by": "camino_de_montana_caldense",
+      "coverage_note": "Donde Rafael trabaja hasta las seis —«volvía del aserradero de día»—: sólo se nombra; es un claro de la ladera ya fichada."
+    },
+    "canalones_del_terreno_disparejo": {
+      "name": "Los canalones del terreno disparejo",
+      "kind": "paisaje",
+      "description": "Rafael huye «por unos canalones, en un terreno muy disparejo»: es la noche del camino ya fichado —zanja, desnivel y piedra suelta—.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "el-aserrador"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "el-aserrador",
+          "field": "mito",
+          "note": "Rafael huye «por unos canalones, en un terreno muy disparejo»: es la noche del camino ya fichado —zanja, desnivel y piedra suelta—."
+        }
+      ],
+      "covered_by": "camino_de_montana_caldense",
+      "coverage_note": "Rafael huye «por unos canalones, en un terreno muy disparejo»: es la noche del camino ya fichado —zanja, desnivel y piedra suelta—."
+    },
+    "boda_de_cumanday": {
+      "name": "La boda en la cordillera",
+      "kind": "fenomeno",
+      "description": "Los picachos «se vistieron de gala», subieron cantos, «sonaron los tambores» y el cacique se casaba con la exclamación sin traducir «¡Uri, yani hiri hauna!»: no hay un solo cuerpo descrito y dibujarla obligaría a inventar vestido, instrumentos y rito étnicos.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "myth_refs": [
+        "el-cacique-cumanday"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "excluded",
+      "evidence": [
+        {
+          "myth": "el-cacique-cumanday",
+          "field": "mito",
+          "note": "Los picachos «se vistieron de gala», subieron cantos, «sonaron los tambores» y el cacique se casaba con la exclamación sin traducir «¡Uri, yani hiri hauna!»: no hay un solo cuerpo descrito y dibujarla obligaría a inventar vestido, instrumentos y rito étnicos."
+        }
+      ],
+      "exclusion_reason": "Los picachos «se vistieron de gala», subieron cantos, «sonaron los tambores» y el cacique se casaba con la exclamación sin traducir «¡Uri, yani hiri hauna!»: no hay un solo cuerpo descrito y dibujarla obligaría a inventar vestido, instrumentos y rito étnicos."
+    },
+    "malos_espiritus_de_la_cordillera": {
+      "name": "Los malos espíritus",
+      "kind": "deidad_fuerza",
+      "description": "«Los malos espíritus se ensañaron con esos dos»: fuerza sin cuerpo ni forma; la niebla que vuelve a reinar ya está en el nevado.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "myth_refs": [
+        "el-cacique-cumanday"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "excluded",
+      "evidence": [
+        {
+          "myth": "el-cacique-cumanday",
+          "field": "mito",
+          "note": "«Los malos espíritus se ensañaron con esos dos»: fuerza sin cuerpo ni forma; la niebla que vuelve a reinar ya está en el nevado."
+        }
+      ],
+      "exclusion_reason": "«Los malos espíritus se ensañaron con esos dos»: fuerza sin cuerpo ni forma; la niebla que vuelve a reinar ya está en el nevado."
+    },
+    "lagunas_heladas": {
+      "name": "Las lagunas heladas y los picachos",
+      "kind": "paisaje",
+      "description": "«entre abismos sin vegetación y lagunas heladas»; «los picachos»: van en la ficha del nevado con el páramo y sus lagunas documentadas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "el-cacique-cumanday"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "el-cacique-cumanday",
+          "field": "mito",
+          "note": "«entre abismos sin vegetación y lagunas heladas»; «los picachos»: van en la ficha del nevado con el páramo y sus lagunas documentadas."
+        }
+      ],
+      "covered_by": "nevado_del_ruiz_cumanday",
+      "coverage_note": "«entre abismos sin vegetación y lagunas heladas»; «los picachos»: van en la ficha del nevado con el páramo y sus lagunas documentadas."
+    },
+    "manizales_desde_donde_se_mira": {
+      "name": "Manizales, desde donde se mira el nevado",
+      "kind": "lugar",
+      "description": "«vista desde Manizales»: sólo sitúa al que mira; no se dibuja la ciudad.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "el-cacique-cumanday"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "el-cacique-cumanday",
+          "field": "mito",
+          "note": "«vista desde Manizales»: sólo sitúa al que mira; no se dibuja la ciudad."
+        }
+      ],
+      "covered_by": "nevado_del_ruiz_cumanday",
+      "coverage_note": "«vista desde Manizales»: sólo sitúa al que mira; no se dibuja la ciudad."
+    },
+    "ruben_bayer": {
+      "name": "Don Rubén Bayer, zapatero y concejal",
+      "kind": "personaje",
+      "description": "El autor del fantasma es «la persona que iba adentro»: sin rasgo, sólo oficio y cargo; aparece como los pies que asoman bajo la tela.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "el-coco"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "el-coco",
+          "field": "mito",
+          "note": "El autor del fantasma es «la persona que iba adentro»: sin rasgo, sólo oficio y cargo; aparece como los pies que asoman bajo la tela."
+        }
+      ],
+      "covered_by": "fantasma_de_ruben_bayer",
+      "coverage_note": "El autor del fantasma es «la persona que iba adentro»: sin rasgo, sólo oficio y cargo; aparece como los pies que asoman bajo la tela."
+    },
+    "trasnochadores_ingenuos": {
+      "name": "Los trasnochadores ingenuos",
+      "kind": "colectivo",
+      "description": "Los asustados por el calabazo a altas horas: hombres de pueblo sin rasgo, resueltos con el tipo base.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "el-coco"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "el-coco",
+          "field": "mito",
+          "note": "Los asustados por el calabazo a altas horas: hombres de pueblo sin rasgo, resueltos con el tipo base."
+        }
+      ],
+      "covered_by": "colectivo_campesinos_y_arrieros",
+      "coverage_note": "Los asustados por el calabazo a altas horas: hombres de pueblo sin rasgo, resueltos con el tipo base."
+    },
+    "escondites_del_chucho": {
+      "name": "La pieza del rebujo, el zarzo, los desvanes y los cielos rasos",
+      "kind": "arquitectura",
+      "description": "Donde vive el Chucho: rincones de la casa ya fichada —el zarzo, el subterráneo, detrás de las puertas y debajo de las camas—, que no se dibujan habitados.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "el-coco"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "el-coco",
+          "field": "mito",
+          "note": "Donde vive el Chucho: rincones de la casa ya fichada —el zarzo, el subterráneo, detrás de las puertas y debajo de las camas—, que no se dibujan habitados."
+        }
+      ],
+      "covered_by": "casa_de_bahareque",
+      "coverage_note": "Donde vive el Chucho: rincones de la casa ya fichada —el zarzo, el subterráneo, detrás de las puertas y debajo de las camas—, que no se dibujan habitados."
+    },
+    "madre_con_enaguas": {
+      "name": "La mamá de cuyas enaguas se pega el niño",
+      "kind": "personaje",
+      "description": "«El niño empezaba a andar pegado de las enaguas de la mamá»: la madre sin nombre va en el tipo base de mujer adulta, que toma de aquí las enaguas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "myth_refs": [
+        "el-coco"
+      ],
+      "model_requirements": [],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "visual_status": "embedded",
+      "evidence": [
+        {
+          "myth": "el-coco",
+          "field": "mito",
+          "note": "«El niño empezaba a andar pegado de las enaguas de la mamá»: la madre sin nombre va en el tipo base de mujer adulta, que toma de aquí las enaguas."
+        }
+      ],
+      "covered_by": "tipo_mujer_adulta",
+      "coverage_note": "«El niño empezaba a andar pegado de las enaguas de la mamá»: la madre sin nombre va en el tipo base de mujer adulta, que toma de aquí las enaguas."
     }
   },
   "models": {

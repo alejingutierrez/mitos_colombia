@@ -541,8 +541,8 @@
     "dossier": "docs/investigacion/embera.md"
   },
   "inventory": {
-    "status": "reconciling",
-    "frozen": false,
+    "status": "approved_frozen",
+    "frozen": true,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -552,7 +552,7 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19",
+    "approved_at": "2026-09-24",
     "reconciliation": {
       "opened_at": "2026-09-24",
       "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
@@ -560,8 +560,19 @@
         "los-burumias-y-carautas"
       ],
       "new_myths": [],
-      "unchanged_myths": []
-    }
+      "unchanged_myths": [],
+      "closed_at": "2026-09-24",
+      "summary": "1 relato releído: 7 añadidas (jefe, hamaca y mata de primitivo embebidas; chiquero, guerra contra los Cuna y buchelé excluidos; ríos de la convocatoria embebidos), 0 excluidas por el canon nuevo, 8 rediseñadas (hermanos en vez de pareja, cabeza pelada «como peña», emboscada de cien, poblado con hamaca y primitivo) y 5 tipos base; anciano declarado ausente."
+    },
+    "declared_absences": [
+      {
+        "entity_id": "tipo_anciano",
+        "name": "Tipo base · anciano emberá",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "El canon reescrito no pone a ningún hombre viejo emberá en escena: los hombres del relato son los de la guerra y la emboscada, y el único mayor es una mujer, la vieja cautiva. No se inventa un tipo que ningún relato sostiene."
+      }
+    ]
   },
   "myths": {
     "los-burumias-y-carautas": {
@@ -584,9 +595,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura separó dos capas que la página vieja había cosido —Carautas, Karaví, el incendio, el oro, las Antomia y el incesto quedaron fuera porque no están en la narración de Odilia Dogiramá— y dentro de lo que quedó separó tres cosas que el censo daba por inexistentes: la única línea de cuerpo de todo el corpus, los Burumia de «cabeza pelada, así como longo, como peña», que es un rasgo de diferencia y no de monstruosidad; el conteo de casas «dos para cada casa», que no es ambiente sino la mecánica exacta del desenlace y obliga a que el poblado sea contable desde el aire; y el hierro de las hachas y los machetes abandonados bajo el alto, que fecha la escena después del contacto y deja fuera toda geometría de fundación, que es con la que se habría dibujado al anexarla al expediente katío.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito convierte a los dos jóvenes en un niño y su hermana, cambia la «cabeza pelada, así como longo» por «como diablos, de cabeza pelada, así como peña», y trae lo que la nota anterior no conocía: el chiquero y la mata de primitivo cuyo fruto rajado marca la hora de matar al cautivo (fuera de imagen, la mata embebida verde en el poblado), la guerra equivocada contra los Cuna con la gente de Atrato, Lloró, Dubasa, Pató y Munguidó, la emboscada de «como cien, como doscientos» y el jefe flechado desde su hamaca en la casa grande.",
         "previous_note": "La lectura separó dos capas que la página vieja había cosido —Carautas, Karaví, el incendio, el oro, las Antomia y el incesto quedaron fuera porque no están en la narración de Odilia Dogiramá— y dentro de lo que quedó separó tres cosas que el censo daba por inexistentes: la única línea de cuerpo de todo el corpus, los Burumia de «cabeza pelada, así como longo, como peña», que es un rasgo de diferencia y no de monstruosidad; el conteo de casas «dos para cada casa», que no es ambiente sino la mecánica exacta del desenlace y obliga a que el poblado sea contable desde el aire; y el hierro de las hachas y los machetes abandonados bajo el alto, que fecha la escena después del contacto y deja fuera toda geometría de fundación, que es con la que se habría dibujado al anexarla al expediente katío."
       },
       "entity_refs": [
@@ -724,6 +735,66 @@
           "entity_id": "hoja_utileria_embera",
           "role": "plot_object",
           "note": "Cinco objetos menores en una hoja: es la cultura material completa del relato, herramientas de río y de monte. Nada ceremonial, nada de oro."
+        },
+        {
+          "entity_id": "jefe_burumia",
+          "role": "secondary",
+          "note": "El jefe de la casa grande, en hamaca; su muerte abre el ataque. Embebido en el vecindario Burumiá."
+        },
+        {
+          "entity_id": "chiquero_de_los_cautivos",
+          "role": "secondary",
+          "note": "Nuevo en el canon reescrito: el encierro de los cautivos. Fuera de imagen."
+        },
+        {
+          "entity_id": "mata_de_primitivo",
+          "role": "magic_subject",
+          "note": "Nuevo en el canon reescrito: la planta cuyo fruto rajado marca la hora de matar al cautivo. Embebida en el poblado, sin ese estado."
+        },
+        {
+          "entity_id": "hamaca_del_jefe",
+          "role": "plot_object",
+          "note": "Por la hamaca saben quién es el jefe. Embebida en la casa grande."
+        },
+        {
+          "entity_id": "guerra_contra_los_cuna",
+          "role": "secondary",
+          "note": "Nuevo en el canon reescrito: la guerra equivocada contra los Cuna y el permiso negado de Panamá. Fuera de escena."
+        },
+        {
+          "entity_id": "rios_de_la_convocatoria",
+          "role": "setting",
+          "note": "Los ríos de donde viene la gente a la guerra: sólo sitúan."
+        },
+        {
+          "entity_id": "pajaro_buchele",
+          "role": "secondary",
+          "note": "Se oye, no se ve."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los hombres de la emboscada y del ataque, y la forma humana del explorador murciélago."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: las mujeres de las canoas de familias."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base: la hermana crecida y toda muchacha emberá."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base: los niños de las canoas y el niño cautivo."
+        },
+        {
+          "entity_id": "tipo_anciana",
+          "role": "secondary",
+          "note": "Tipo base: la vieja cautiva y toda mujer mayor emberá."
         }
       ]
     }
@@ -775,6 +846,11 @@
           "myth": "los-burumias-y-carautas",
           "field": "mito",
           "note": "El cautiverio y la antropofagia se conservan como motores de la narración y se dejan fuera de la imagen: la tensión se compone con distancia, vigilancia y niebla, nunca con la escena."
+        },
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "El canon reescrito retira «longo» y añade el símil de los hermanos: «como diablos, de cabeza pelada, así como peña». El jefe es «el que dormía en hamaca en la casa grande», y lo flechan cuando se para a orinar."
         }
       ],
       "census_note": "Conducen toda la acción: vigilan la ruta, capturan, retienen y son atacados. Su lámina debe declarar la ambigüedad que el canon se niega a resolver («no decide si Burumia nombra seres, un pueblo recordado, adversarios históricos o varias capas»): se dibujan como un poblado humano vecino, jamás como criaturas ni monstruos.",
@@ -794,17 +870,18 @@
           "ninguna de sus manos toca a otra figura: el peligro se compone con distancia"
         ],
         "documented": [
-          "«La cabeza pelada, así como longo, como peña»: único rasgo de cuerpo de todo el corpus y rasgo de diferencia frente a la gente Emberá que los busca (emb-dogirama-1984, dossier §0)",
-          "Viven en un alto y desde sus casas ven a quienes remontan el agua rumbo al Bojayá: la vigilancia es su atributo, no un adorno (emb-dogirama-1984, §4)",
-          "Tienen jefe —la casa grande— y disidencia de hecho —la casa retirada, cuyos habitantes son los únicos que escapan— (emb-dogirama-1984, §6)",
-          "Permiten a los cautivos jóvenes recorrer el monte «siempre hacia las cabeceras, nunca río abajo» (emb-dogirama-1984, canon, campo mito)",
+          "«Como diablos, de cabeza pelada, así como peña», dicen los hermanos (canon, campo mito); el texto de 1984 añade «así como longo» (emb-dogirama-1984, §0). Único rasgo de cuerpo de todo el corpus, y es de diferencia, no de monstruosidad",
+          "Viven «en un alto, como en un salto», y desde allí ven a cualquiera que venga subiendo por el río: la vigilancia es su atributo, no un adorno (canon, campo mito; §4)",
+          "Tienen jefe —el que duerme en hamaca en la casa grande— y una casa retirada, cuyos habitantes son los únicos que escapan (canon, campo mito; §6)",
+          "Dejan montiar al niño cautivo sólo hacia arriba: «Eche para arriba, vaya a montiar para arriba» (canon, campo mito)",
           "El canon se niega a decidir si «Burumia» nombra seres, un pueblo recordado, adversarios históricos o varias capas: la lámina tampoco lo decide (canon, campo versiones; §2)"
         ],
         "editorial": [
           "Cuántos son y cómo se reparten en el encuadre: el relato no da cifra. Reversible sin coste; si una autoridad dóbida pide menos presencia, se recompone la hoja sin tocar el rasgo.",
           "Proporción adulta corriente y estatura media, elegidas expresamente contra el empuje hacia lo monstruoso que el canon señala. Reversible sólo hacia lo más neutro, nunca hacia lo gigante ni lo deforme.",
           "Ausencia total de ropa, pintura, adorno y arma identificable: vestirlos resolvería por el atrezo la ambigüedad que la fuente guarda. Reversible únicamente por lectura comunitaria, y nunca importando nada katío, chamí ni cuna.",
-          "No se les dibuja capturando ni reteniendo: decisión de encuadre que el dossier pide (§1) y que se puede revisar, pero no mientras el módulo prohíba la escena de cautiverio."
+          "No se les dibuja capturando ni reteniendo: decisión de encuadre que el dossier pide (§1) y que se puede revisar, pero no mientras el módulo prohíba la escena de cautiverio.",
+          "«Como diablos» es el símil de dos muchachos que no los contaron, no una descripción: la lámina lo cobra sólo como distancia y altura, nunca con cuerno, garra, ojo ni tamaño. No reversible mientras el canon siga negándose a decidir qué son."
         ],
         "states_to_model": []
       },
@@ -866,6 +943,11 @@
           "myth": "los-burumias-y-carautas",
           "field": "mito",
           "note": "«Dóbida» traduce «habitantes de río» y «eyábida», que es el nombre del pueblo Katío, significa «gente de la montaña»: son los dos extremos de un mismo eje, y este relato entero ocurre sobre el agua."
+        },
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "El canon reescrito añade la guerra contra los Cuna —gente reunida del Atrato, Lloró, Dubasa, Pató y Munguidó— y da la cifra de la emboscada: salen del rastrojo «como cien, como doscientos»."
         }
       ],
       "census_note": "Las familias que suben en canoa, el grupo escondido en el rastrojo que dispara y los que organizan el ataque: una sola gramática de grupo para todos. El canon avisa que la edición de 1984 decía «cholos» y que aquí se lee «gente Emberá».",
@@ -878,7 +960,7 @@
           "arco de madera curvada y flecha larga, recortados en una sola pieza cada uno"
         ],
         "palette": "La piel en los medios tonos cálidos del papel de fibra y la mancha de jagua como el único negro azulado del corpus: es un tono, no un motivo. Contra el rastrojo van a contraluz, de modo que en la emboscada el grupo es casi silueta.",
-        "scale": "Estatura humana adulta idéntica a la de los Burumia, deliberadamente: ninguna diferencia de tamaño entre los dos pueblos. Se dan siempre en conjunto de tres a seis figuras —nunca uno solo, que es asunto de las fichas nombradas— y siempre a la altura del agua.",
+        "scale": "Estatura humana adulta idéntica a la de los Burumiá, deliberadamente: ninguna diferencia de tamaño entre los dos pueblos. La gramática tiene dos escalas: en canoa, tres a seis figuras a la altura del agua; en la emboscada, tres a seis en primer plano y detrás el rastrojo lleno de cuerpos hasta el fondo, porque salen «como cien, como doscientos».",
         "continuity": [
           "pelo largo presente en todas las figuras, siempre: es el marcador que evita confundir un cuerpo con un Burumia",
           "el canalete vertical en la canoa y el arco horizontal en el rastrojo, una postura por situación y ninguna tercera",
@@ -888,9 +970,10 @@
         "documented": [
           "Dóbida traduce «habitantes de río» y eyábida —el nombre del pueblo Katío— «gente de la montaña»: son los dos extremos de un eje y este relato entero ocurre sobre el agua (emb-mincultura-dobida, §3)",
           "Las viviendas y los cultivos están a orillas del río y la pesca es la actividad permanente (emb-gobiernomayor-dobida, §3)",
-          "Los emboscados del rastrojo «silbaban como pájaro buchelé»: es lo único que el relato dice de cómo se comunican, y el ave no se ve (emb-dogirama-1984, §0.3)",
+          "Los emboscados del rastrojo «silbaban como el pájaro buchelé para avisarse»: es lo único que el relato dice de cómo se comunican, y el ave no se ve (canon, campo mito; §7)",
           "El curso alto y medio del Bojayá es dóbida y el bajo y la desembocadura son de comunidades negras: la Usagará cae aguas arriba (emb-cnmh-bojaya, §3)",
-          "La pintura facial y corporal con jagua, fruto de Genipa americana, está documentada como práctica cotidiana y de reconocimiento del pueblo Dóbida (emb-mincultura-dobida, §6), marcada `variant` por ser contemporánea"
+          "La pintura facial y corporal con jagua, fruto de Genipa americana, está documentada como práctica cotidiana y de reconocimiento del pueblo Dóbida (emb-mincultura-dobida, §6), marcada `variant` por ser contemporánea",
+          "Se reúnen del Atrato, de Lloró, de Dubasa, de Pató y de Munguidó para la guerra, y en la emboscada salen del rastrojo «como cien, como doscientos» (canon, campo mito)"
         ],
         "editorial": [
           "Ficha declarada como la más frágil del lote: el relato no describe a nadie, ni cuerpo, ni ropa, ni pintura, ni adorno (§12.1), y toda su apariencia descansa en fuentes pan-emberá contemporáneas marcadas `variant`. Una lectura comunitaria la reescribe entera y no habría nada que defender.",
@@ -908,10 +991,13 @@
       ]
     },
     "dos_jovenes_fugados": {
-      "name": "El muchacho y la joven que escapan",
+      "name": "El niño y su hermana",
       "kind": "personaje",
-      "description": "Protagonistas: crecen cautivos, aprenden el monte, bajan el río y revelan quién estaba detrás de las desapariciones. Una sola hoja para la pareja; él con arco y bodoquera, ella conocedora de los senderos. El relato los muestra creciendo, pero su forma actuante es la de jóvenes.",
-      "aliases": [],
+      "description": "Protagonistas: un niño y su hermana dejados vivos en el asalto a las canoas para criarlos entre los Burumiá; crecen cautivos, él hace bodoquera y arco y sale a montiar siempre río arriba, y juntos rompen las canoas, bajan el río y dicen quién se estaba comiendo a la gente. Son hermanos, no pareja: una sola hoja para los dos.",
+      "aliases": [
+        "los dos jóvenes fugados",
+        "los muchachos"
+      ],
       "states": [
         "canonico"
       ],
@@ -953,36 +1039,45 @@
           "myth": "los-burumias-y-carautas",
           "field": "mito",
           "note": "La pintura facial y corporal con jagua, fruto de Genipa americana, está documentada para el pueblo Dóbida como forma de reconocimiento y expresión de estados y ciclos vitales, usada también en la cotidianidad; pero es descripción contemporánea y pan-emberá, no del relato ni de su época, y ningún diseño concreto puede copiarse ni inventarse."
+        },
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "El canon reescrito los hace hermanos —«Así creció, y su hermana con él»— y los deja vivos de niños junto con una vieja; él hace bodoquera y arco y sólo puede montiar río arriba («Eche para arriba»)."
         }
       ],
       "census_note": "Protagonistas: crecen cautivos, aprenden el monte, bajan el río y revelan quién estaba detrás de las desapariciones. Una sola hoja para la pareja; él con arco y bodoquera, ella conocedora de los senderos. El relato los muestra creciendo, pero su forma actuante es la de jóvenes.",
       "design": {
-        "silhouette": "Una pareja de la misma estatura que se lee como una sola pieza hombro con hombro, porque el relato no los separa nunca: él con el arco y la bodoquera cruzados a la espalda, ella con las manos vacías y la cabeza girada hacia el sendero, y los dos con el canalete alzado en diagonal delante del pecho, que es el gesto por el que sobreviven.",
+        "silhouette": "Dos hermanos de la misma estatura que se leen como una sola pieza hombro con hombro, porque el relato no los separa nunca: él con el arco y la bodoquera cruzados a la espalda, ella con las manos libres salvo el canalete, y los dos con el canalete alzado en diagonal delante del pecho, que es el gesto por el que sobreviven. Nada en la postura los lee como pareja: van lado a lado, sin tocarse, mirando los dos río abajo.",
         "materials": [
           "canalete de madera mojada, con la pala vuelta hacia fuera como un escudo y la veta recortada a lo largo",
           "arco de una sola pieza curvada y bodoquera como tubo largo y recto, dos siluetas que no se parecen entre sí",
           "mínima pieza de fibra en la cintura, sin tejido legible: el relato no describe ropa"
         ],
         "palette": "Los tonos más claros de piel de toda la biblia, por estar siempre sobre el agua, que es el plano claro del corpus; la madera del canalete en su tono medio y ninguna nota saturada: son las dos únicas figuras que nunca aparecen a contraluz.",
-        "scale": "Jóvenes de la veintena corta, misma altura los dos, medidos contra la borda de la canoa grande: de pie ocupan de la borda hacia arriba algo menos de dos veces el alto del casco. Encuadre de cuerpo entero y de tres cuartos, nunca en primer plano de rostro.",
+        "scale": "Adolescentes tardíos, casi de estatura adulta, misma altura los dos, medidos contra la borda de la canoa grande: de pie ocupan de la borda hacia arriba algo menos de dos veces el alto del casco. Encuadre de cuerpo entero y de tres cuartos, nunca en primer plano de rostro.",
         "continuity": [
           "van siempre juntos y a la misma altura: no hay lámina de uno solo",
-          "él lleva arco y bodoquera; ella no lleva nada en las manos salvo el canalete, y la diferencia es de oficio, no de jerarquía",
+          "él lleva arco y bodoquera; ella no lleva nada en las manos salvo el canalete: la única diferencia que el texto da es el oficio de él",
           "el canalete alzado en diagonal delante del pecho es su gesto de identidad y se repite en toda aparición",
-          "siempre dentro de la canoa o con un pie en ella: son las figuras del agua"
+          "siempre dentro de la canoa o con un pie en ella: son las figuras del agua",
+          "hermanos y no pareja: nunca se tocan en la hoja ni se miran entre sí, los dos miran al río"
         ],
         "documented": [
-          "Entran niños —«un niño y una niña»— y salen jóvenes; su forma actuante es la de jóvenes (emb-dogirama-1984, §6)",
-          "Él aprende a fabricar arco y bodoquera y sale a buscar alimento; ella «también conocía ya los senderos»: es la única diferencia que el texto les da, y es de oficio (emb-dogirama-1984, §6)",
-          "Levantan el canalete para protegerse de las flechas y así consiguen hacerse oír: el remo como escudo es el objeto moral del relato, lo que impide que el error termine en muerte (canon, campo mito; §2)",
-          "Bajan el río en la canoa más grande, con un perro, después de romper las pequeñas (canon, campo mito)",
+          "Los Burumiá dejan vivos, de todas las familias de las canoas, «a una vieja y a dos niños, un niño y una niña», para criarlos entre ellos (canon, campo mito)",
+          "Son hermanos: «Así creció, y su hermana con él» (canon, campo mito)",
+          "Él hace bodoquera y arco y sale a montiar, pero sólo hacia arriba: «Eche para arriba, vaya a montiar para arriba» (canon, campo mito)",
+          "Rompen con un hacha todas las canoas abandonadas menos la más grande y se van agua abajo «con un perro grande» (canon, campo mito)",
+          "Paran con el canalete las flechas de los emboscados y gritan que no disparen: el remo como escudo es el objeto moral del relato (canon, campo mito; §2)",
+          "No contaron a los Burumiá; sólo dijeron que eran «como diablos, de cabeza pelada, así como peña» (canon, campo mito)",
           "El relato no describe ropa, pintura ni adorno de nadie, tampoco de ellos (emb-dogirama-1984, §6 y §12.1)"
         ],
         "editorial": [
           "El vestuario se resuelve con la mínima pieza de fibra que la técnica necesita para que el cuerpo se lea: no hay una sola línea de ropa en la fuente. Declarado editorial y revocable en bloque.",
-          "La edad se fija en la veintena corta aunque el relato los muestre creciendo: el crecimiento no se cobra como estado porque ninguna escena hace actuar su forma infantil. Si el guion pide la captura, esta decisión se revisa y cuesta una lámina.",
+          "La edad se fija en la adolescencia tardía, que es cuando el relato los hace actuar, aunque entren niños: el crecimiento no se cobra como estado porque ninguna escena hace actuar su forma infantil. Si el guion pide la captura, esta decisión se revisa y cuesta una lámina.",
           "El arco y la bodoquera van portados al cuerpo por la frase de oficio, no porque el texto los muestre encima: si el guion los prefiere sueltos en la canoa, la hoja de utilería ya los tiene y esta hoja no cambia.",
-          "Ninguna pintura de jagua sobre ellos, pese a estar documentada para el pueblo: son cautivos criados fuera de su gente y ponérsela sería añadir una biografía que la fuente no da. Reversible por lectura comunitaria."
+          "Ninguna pintura de jagua sobre ellos, pese a estar documentada para el pueblo: son cautivos criados fuera de su gente y ponérsela sería añadir una biografía que la fuente no da. Reversible por lectura comunitaria.",
+          "Que ella «conocía ya los senderos» sale del texto de 1984 que el dossier cita (§6), no del canon reescrito, que sólo dice «y su hermana con él»: la hoja no le da oficio propio y la deja con el canalete. Reversible si el guion vuelve al texto de 1984."
         ],
         "states_to_model": []
       },
@@ -996,7 +1091,9 @@
       "name": "La mujer mayor cautiva",
       "kind": "personaje",
       "description": "Conduce la acción decisiva: observa en silencio durante años, sabe de las canoas abandonadas y de las hachas, prepara la comida y explica cómo rodear el asentamiento. Se queda; son los jóvenes quienes parten.",
-      "aliases": [],
+      "aliases": [
+        "la vieja"
+      ],
       "states": [
         "canonico"
       ],
@@ -1033,6 +1130,11 @@
           "myth": "los-burumias-y-carautas",
           "field": "mito",
           "note": "El jaibanismo no aparece en el relato y no entra a ninguna lámina: ni bastón, ni banco, ni totuma ritual, ni pintura de ceremonia. Es un rasgo compartido por todos los pueblos emberá y por eso es la puerta más fácil para meter iconografía que este corpus no tiene."
+        },
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "En el canon reescrito es «una vieja» que los Burumiá dejan viva con los dos niños; sabe de las canoas, hachas y machetes de los muertos, les dice «vayan rodeando, rodeando, buscando camino» y les hace «un buen fiambre»."
         }
       ],
       "census_note": "Conduce la acción decisiva: observa en silencio durante años, sabe de las canoas abandonadas y de las hachas, prepara la comida y explica cómo rodear el asentamiento. Se queda; son los jóvenes quienes parten.",
@@ -1040,7 +1142,7 @@
         "silhouette": "Una figura mayor siempre quieta y siempre de perfil, con el peso cargado en un pie y la cabeza girada hacia donde nadie la mira: es la única de la biblia que actúa sin mover el cuerpo, y en la hoja se la reconoce porque tiene las manos ocupadas en algo doméstico mientras los ojos están en otra parte.",
         "materials": [
           "pelo largo recogido hacia atrás en una sola pieza, para diferenciarla en silueta de la joven que escapa",
-          "hoja grande de platanillo o de palma como envoltorio de la comida del viaje: el único objeto que le toca las manos",
+          "hoja grande de platanillo o de palma como envoltorio del fiambre: el único objeto que le toca las manos",
           "mínima pieza de fibra en la cintura, del mismo repertorio que el resto de las figuras humanas"
         ],
         "palette": "Piel en tono medio y siempre un punto más apagada que la de los jóvenes, porque su lámina está en el alto y no sobre el agua: recibe la luz difusa del bosque, no el rebote del río. Sin una sola nota clara en el cuerpo.",
@@ -1052,16 +1154,16 @@
           "aparece siempre en el alto o en su borde, nunca dentro de una canoa: no huye"
         ],
         "documented": [
-          "Observa en silencio durante años y sabe que bajo el alto permanecen canoas abandonadas junto con hachas, machetes y canaletes (canon, campo mito; §6)",
-          "Prepara la comida del viaje y explica a los dos jóvenes cómo rodear el asentamiento sin tomar el camino vigilado (canon, campo mito; §6)",
-          "No huye: se queda, y son los jóvenes quienes parten. Es la única figura del corpus definida enteramente por el conocimiento (emb-dogirama-1984, §6)",
-          "Fue capturada con un niño y una niña cuando los Burumia atacaron las canoas de familias (canon, campo mito)"
+          "Los Burumiá la dejan viva, «una vieja», con los dos niños, cuando se llevan a todos los de las canoas (canon, campo mito)",
+          "Sabe que «allá abajo en el río hay bastantes canoas y hachas y machetes de la gente que han matado» (canon, campo mito; §6)",
+          "Les dice «vayan rodeando, rodeando, buscando camino», que cojan la canoa más grande y avisen que son los Burumiá, y un día «les hizo un buen fiambre» (canon, campo mito; §6)",
+          "No huye: se queda, y son los jóvenes quienes parten. Es la única figura del corpus definida enteramente por el conocimiento (emb-dogirama-1984, §6)"
         ],
         "editorial": [
           "Se compone como alguien que mira y calcula y no como víctima: es una decisión de postura tomada expresamente contra la lectura fácil del cautiverio, y el dossier la pide (§6). Revisable sólo hacia más reserva, nunca hacia el pathos.",
           "Ninguna marca de cautiverio: ni atadura, ni herida, ni prenda rota. La prohibición de escena de cautiverio se extiende al cuerpo. No reversible mientras el módulo la mantenga.",
           "La edad se resuelve por proporción, por postura y por el recogido del pelo, no por arrugas: la técnica no modela rostro y cualquier intento de envejecer la cara rompe el óvalo plano.",
-          "El envoltorio de hoja para la comida del viaje es invención de atrezo: el texto dice sólo «preparó comida». Reversible sin coste; si el guion prefiere las manos vacías, la postura basta."
+          "El envoltorio de hoja para el fiambre es invención de atrezo: el texto dice sólo «les hizo un buen fiambre». Reversible sin coste; si el guion prefiere las manos vacías, la postura basta."
         ],
         "states_to_model": []
       },
@@ -1131,8 +1233,8 @@
           "por debajo de él siempre hay techos contables: es un contador, no un depredador"
         ],
         "documented": [
-          "«Uno de ellos tomó forma de murciélago y voló sobre el asentamiento»: es la única transformación del relato (canon, campo mito; §2)",
-          "Cuenta las viviendas desde el aire y no ve una casa apartada de las demás: el error es la bisagra del final (canon, campo mito; §2)",
+          "«Uno que se volvía murciélago voló y contó las casas»: es la única transformación del relato (canon, campo mito; §2)",
+          "Cuenta las casas desde el aire, «pero le faltó una que estaba retirada»: el error es la bisagra del final (canon, campo mito; §2)",
           "No hay luz, ni aura, ni metamorfosis en dos tiempos: es un instrumento de reconocimiento, no un prodigio (§2)",
           "La especie no está nombrada en ninguna fuente y en el Chocó podría ser cualquiera de decenas: elegir una sería inventar (§7 y §12.7)"
         ],
@@ -1218,9 +1320,9 @@
           "ninguna decoración, ninguna pintura, ninguna marca de propiedad: no hay nada ceremonial en este corpus"
         ],
         "documented": [
-          "La fuga escoge la más grande de entre las canoas abandonadas bajo el alto y rompe las pequeñas para impedir la persecución inmediata (canon, campo mito)",
-          "Los habitantes de la casa apartada derriban un árbol en el río Valle y «trabajaron con rapidez hasta convertirlo en canoa» (canon, campo mito)",
-          "Bajo el alto quedan canoas abandonadas junto con hachas, machetes y canaletes: la canoa y su herramienta van siempre juntas en el texto (canon, campo mito)",
+          "«Con un hacha fueron rompiendo todas, dejaron la más grande y se fueron agua abajo» (canon, campo mito)",
+          "Los de la casa apartada salen al río Valle, «tumbaron un palo y empezaron a hacer una canoa», y la terminan antes de que lleguen los perseguidores (canon, campo mito)",
+          "En el río «estaban las canoas, con hachas, machetes y canaletes»: la canoa y su herramienta van siempre juntas en el texto (canon, campo mito)",
           "La canoa labrada de un solo árbol y el canalete son cultura material compartida por todo el bosque húmedo del Atrato, y la madera para canoas está documentada para el pueblo Dóbida (emb-mincultura-dobida, §9)"
         ],
         "editorial": [
@@ -1354,6 +1456,11 @@
           "myth": "los-burumias-y-carautas",
           "field": "mito",
           "note": "Consecuencia de época en las dos direcciones: no se puede dibujar este mundo con geometría de fundación —nada de hacha de piedra— y tampoco entra nada colonial visible: ni iglesia, ni cruz, ni tela industrial, ni un solo europeo en escena."
+        },
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "El canon reescrito añade dentro del poblado un chiquero para los cautivos, una mata de primitivo sembrada junto a la casa cuyo fruto al rajarse marca la hora de matar al cautivo, y la hamaca del jefe en la casa grande."
         }
       ],
       "census_note": "Escenario propio y no intercambiable: desde sus casas se ve quién remonta el agua, hay un camino vigilado que hay que rodear, y contar las viviendas es un beat de la trama. El modelo espacial tiene que permitir contarlas desde el aire.",
@@ -1375,17 +1482,20 @@
         ],
         "documented": [
           "«Los Burumiá vivían en un alto, así como en salto»: la altura se compara con un salto de agua, no con una loma (emb-dogirama-1984, §4 y §13.7)",
-          "Desde sus casas «podían ver a quienes remontaban el agua rumbo al río Bojayá» (canon, campo mito; §4)",
-          "Hay un camino de entrada vigilado, y la mujer mayor enseña a los jóvenes a rodearlo (canon, campo mito; §4)",
-          "Hay una casa grande, la del jefe, y una casa retirada del resto, cuyos habitantes son los únicos que escapan (canon, campo mito; §4)",
+          "Desde el alto «veían a cualquiera que viniera subiendo por el río» (canon, campo mito; §4)",
+          "La ruta del río está vigilada —quien se interna por ella a montiar no vuelve— y la vieja manda a los muchachos «rodeando, rodeando, buscando camino» (canon, campo mito; §4)",
+          "Hay una casa grande donde el jefe duerme en hamaca, y una casa retirada del resto, cuyos habitantes son los únicos que escapan (canon, campo mito; §4)",
           "El ataque se reparte «dos para cada casa»: las viviendas son contables y contadas, y el conteo es la mecánica del desenlace (emb-dogirama-1984, §0.2)",
-          "En este relato la casa se llama «casa»: el texto no dice tambo y no dice bohío (emb-dogirama-1984, §0.1)"
+          "En este relato la casa se llama «casa»: el texto no dice tambo y no dice bohío (emb-dogirama-1984, §0.1)",
+          "Junto a la casa hay sembrada «una mata de primitivo» (canon, campo mito)"
         ],
         "editorial": [
           "Material, planta, altura y techo no existen en la fuente (§12.2): se construyen con madera y hoja de palma del bosque húmedo del alto Bojayá, y expresamente sin adoptar la planta circular sobre pilotes del tambo emberá ni el bohío katío, porque vestir el poblado Burumia con la casa emberá resolvería por la arquitectura la ambigüedad que el relato guarda (§4). Reversible sólo hacia formas aún más genéricas.",
           "El número de casas se fija en siete más la apartada para que el conteo sea legible y el error del explorador se entienda: el texto no da cifra y cualquier otra sirve igual.",
           "Se cobra un estado contra el `states_declared: []` del censo, y lo digo: la entidad embebida `casa_apartada` declara que su rasgo es espacial —estar fuera del conteo— y va «como variante del mismo modelo». El establecimiento desde el agua y el conteo nocturno desde el aire no caben en la misma vista, y el conteo es la bisagra del final.",
-          "Ninguna versión del modelo da ruta, confluencia legible, perfil de ribera reconocible ni sendero de acceso practicable: la quebrada Usagará está en territorio indígena vivo, con autoridades nombradas y confinamientos recientes (§11, salvaguarda 4). Esta no es reversible."
+          "Ninguna versión del modelo da ruta, confluencia legible, perfil de ribera reconocible ni sendero de acceso practicable: la quebrada Usagará está en territorio indígena vivo, con autoridades nombradas y confinamientos recientes (§11, salvaguarda 4). Esta no es reversible.",
+          "La mata de primitivo entra como planta junto a una casa, verde y sin racimo maduro ni fruta rajada: su maduración es en el canon el reloj de la antropofagia, y ese estado queda fuera de imagen con el resto del cautiverio. Primitivo se lee como el banano pequeño que así se llama en el Pacífico: identificación inferida, reversible. No se dibuja chiquero.",
+          "La hamaca del jefe va dentro de la casa grande, sin figura en ella: el flechazo al jefe cuando se para a orinar es violencia que el módulo deja fuera."
         ],
         "states_to_model": [
           "conteo_nocturno_desde_el_aire_con_la_casa_apartada_fuera"
@@ -1960,7 +2070,7 @@
     "los_cuna": {
       "name": "Los Cuna",
       "kind": "colectivo",
-      "description": "Verificado contra el texto: «Durante mucho tiempo había creído que los Cuna eran responsables… no eran los Cuna, sino los Burumia».",
+      "description": "Verificado contra el canon reescrito: la gente emberá cree que los Cuna matan a los suyos, se reúne y «fueron y echaron a los Cuna»; después los muchachos cuentan «que no eran los Cuna, que eran los Burumiá». La guerra ocurre fuera de escena.",
       "aliases": [],
       "states": [
         "canonico"
@@ -1979,10 +2089,15 @@
           "myth": "los-burumias-y-carautas",
           "field": "mito",
           "note": "Los Cuna son acusados durante mucho tiempo y exonerados por los dos jóvenes, y no aparecen nunca en escena. El relato es sobre un error de atribución: dibujarlos sería cometer exactamente el error que el relato corrige, y nada de lo documentado sobre ellos en el Darién puede vestir a ninguna figura."
+        },
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "El canon reescrito añade la guerra: la gente emberá, reunida de todos los ríos, echa a los Cuna antes de saber que eran los Burumiá, «por eso los Cuna casi no nos saludan»."
         }
       ],
       "census_note": "Verificado contra el texto: «Durante mucho tiempo había creído que los Cuna eran responsables… no eran los Cuna, sino los Burumia».",
-      "exclusion_reason": "se mencionan pero nunca se ven: existen sólo como la acusación equivocada que los jóvenes desmienten; dibujarlos metería a un pueblo entero en una escena en la que el relato dice que no estuvo",
+      "exclusion_reason": "se mencionan pero nunca se ven: son la acusación equivocada y una guerra contada de oídas en una frase; dibujarlos metería a un pueblo entero en una escena en la que el relato dice que no estuvo (regla del enemigo ausente, §11)",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -2160,9 +2275,9 @@
           "la pala del canalete vuelta hacia el espectador, que es como aparece cuando sirve de escudo"
         ],
         "documented": [
-          "Bajo el alto quedan canoas abandonadas junto con hachas, machetes y canaletes: los tres se nombran en la misma frase (canon, campo mito)",
-          "El muchacho aprende a fabricar arco y bodoquera y sale a buscar alimento (canon, campo mito; §6)",
-          "El grupo escondido en el rastrojo lanza flechas contra la canoa (canon, campo mito)",
+          "En el río «estaban las canoas, con hachas, machetes y canaletes» de la gente que los Burumiá han matado: los tres se nombran en la misma frase (canon, campo mito)",
+          "El niño «hizo bodoquera y arco y salía a montiar» (canon, campo mito; §6)",
+          "Los escondidos en el rastrojo disparan flechas contra la canoa y los muchachos las paran con el canalete (canon, campo mito)",
           "Los jóvenes levantan el canalete para protegerse: el remo como escudo es el objeto moral del relato (canon, campo mito; §2)",
           "Hachas y machetes son herramienta de hierro forjado de intercambio y sitúan el relato después del contacto y antes del arma de fuego (§1, hipótesis académica declarada)",
           "No hay nada ceremonial, no hay oro y no hay ningún objeto de mercado en todo el corpus (§1)"
@@ -2180,6 +2295,482 @@
         "documented_core",
         "academic_hypothesis"
       ]
+    },
+    "jefe_burumia": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-burumias-y-carautas"
+      ],
+      "name": "El jefe de la casa grande",
+      "kind": "personaje",
+      "description": "El Burumiá que dormía en hamaca en la casa grande; lo flechan cuando se para a orinar y con eso empieza el ataque.",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "burumia",
+      "coverage_note": "Sin un rasgo propio más allá de la casa y la hamaca: es una figura del vecindario Burumiá, que su hoja ya asocia a la casa grande por posición y no por insignia. Su muerte queda fuera de imagen.",
+      "evidence": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "«Ya sabían que el que dormía en hamaca en la casa grande era el jefe, y cuando se paró a orinar lo flecharon.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "chiquero_de_los_cautivos": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "sensitive",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-burumias-y-carautas"
+      ],
+      "name": "El chiquero de los cautivos",
+      "kind": "arquitectura",
+      "description": "Donde los Burumiá encierran a los que capturan montiando.",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "exclusion_reason": "do_not_visualize: es el encierro de la antropofagia, y el dossier (§1, §11) no autoriza escena de cautiverio; queda con cautiverio_y_antropofagia como motor fuera de imagen",
+      "evidence": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "«A los que capturaban montiando los encerraban en un chiquero»."
+        }
+      ],
+      "model_requirements": []
+    },
+    "mata_de_primitivo": {
+      "aliases": [],
+      "states": [
+        "canonico",
+        "racimo_maduro_rajado"
+      ],
+      "sensitivity": "sensitive",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-burumias-y-carautas"
+      ],
+      "name": "La mata de primitivo",
+      "kind": "planta",
+      "description": "Sembrada junto a la casa al encerrar a un cautivo: cuando carga y las frutas maduras se rajan, también se raja de grasa la piel del cautivo y es la hora de matarlo.",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "poblado_burumia_en_el_alto",
+      "coverage_note": "Entra en la hoja del poblado como planta verde junto a una casa, sin racimo maduro: el estado del fruto rajado es el reloj de la antropofagia y no se dibuja. No merece hoja botánica porque su único estado con sentido está fuera de imagen.",
+      "evidence": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "«Sembraban junto a la casa una mata de primitivo: cuando el primitivo cargaba y las frutas maduras se rajaban, también se rajaba de grasa la piel del cautivo»."
+        }
+      ],
+      "model_requirements": []
+    },
+    "hamaca_del_jefe": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-burumias-y-carautas"
+      ],
+      "name": "La hamaca de la casa grande",
+      "kind": "objeto",
+      "description": "Donde duerme el jefe Burumiá; es lo que permite a los atacantes saber quién es.",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "poblado_burumia_en_el_alto",
+      "coverage_note": "Objeto de interior de la casa grande, sin descripción: va colgada dentro de ella en la hoja del poblado, vacía.",
+      "evidence": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "El jefe es «el que dormía en hamaca en la casa grande»."
+        }
+      ],
+      "model_requirements": []
+    },
+    "guerra_contra_los_cuna": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-burumias-y-carautas"
+      ],
+      "name": "La guerra contra los Cuna y el permiso de Panamá",
+      "kind": "fenomeno",
+      "description": "La gente emberá, reunida de todos los ríos, echa a los Cuna creyéndolos culpables; los Cuna piden permiso al gobierno de Panamá para volver a pelear y no se lo dan.",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "exclusion_reason": "guerra contada en dos frases y de oídas, contra un pueblo que la regla del enemigo ausente (§11) prohíbe dibujar; el gobierno de Panamá es una institución sin figura. No tiene escena en el relato",
+      "evidence": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "«Fueron y echaron a los Cuna. Por eso los Cuna casi no nos saludan. Pidieron permiso al gobierno de Panamá para venir a pelear y no se lo dieron.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "rios_de_la_convocatoria": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-burumias-y-carautas"
+      ],
+      "name": "Atrato, Lloró, Dubasa, Pató y Munguidó",
+      "kind": "lugar",
+      "description": "Los ríos de donde se reúne la gente emberá para la guerra.",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "usagara_y_bojaya",
+      "coverage_note": "Nombres que sólo sitúan de dónde viene la gente: son el mismo mundo fluvial del Bojayá y no piden paisaje propio; ninguno se hace legible en lámina (salvaguarda 4, §11).",
+      "evidence": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "«Se reunieron del Atrato, de Lloró, de Dubasa, de Pató, de Munguidó, de todas partes»."
+        }
+      ],
+      "model_requirements": []
+    },
+    "pajaro_buchele": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-burumias-y-carautas"
+      ],
+      "name": "El pájaro buchelé",
+      "kind": "animal",
+      "description": "Los emboscados silban como él para avisarse.",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "exclusion_reason": "no aparece: es una señal sonora que imita su canto, y el dossier (§7) pide expresamente no inventar un ave en el rastrojo; la especie no está identificada (§12.7)",
+      "evidence": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "«Escondidos en el rastrojo, los emberá silbaban como el pájaro buchelé para avisarse.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "tipo_hombre_adulto": {
+      "name": "Tipo base · hombre emberá adulto",
+      "kind": "personaje",
+      "description": "Tipo base de la gente emberá del Bojayá: fija cara, cuerpo y vestido de los hombres de las canoas, de la emboscada y del ataque, y la forma humana del que se vuelve murciélago.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_hombre_adulto__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-burumias-y-carautas"
+      ],
+      "evidence": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "Los hombres emberá se reúnen del Atrato y de todos los ríos, se esconden en el rastrojo silbando como el buchelé, disparan flechas y suben de noche «todos armados»."
+        }
+      ],
+      "design": {
+        "silhouette": "Hombre emberá de estatura corriente, de pie en la canoa con el canalete vertical o en cuclillas con el arco tendido a la altura del pecho, el pelo largo suelto a la espalda y la mancha de jagua como campo liso en la cara y el antebrazo: el cuerpo entero orientado al agua.",
+        "materials": [
+          "cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca—; el cuerpo, en pocos planos grandes de papel de fibra mate, sin músculo modelado",
+          "pieza mínima de fibra vegetal lisa en la cintura, de un solo tono",
+          "mancha de jagua como campo plano negro azulado en cara y antebrazo, sin línea ni punto interior",
+          "arco de madera curvada de una sola pieza y flecha larga"
+        ],
+        "palette": "Piel en los medios tonos cálidos del papel de fibra, pelo en el negro más profundo de la hoja y la jagua como el único negro azulado: tres tonos y ninguno saturado.",
+        "scale": "Estatura adulta idéntica a la de los Burumiá, medida contra el canalete de pie, que le llega al hombro. Cuerpo entero 9:16.",
+        "continuity": [
+          "pelo largo suelto siempre",
+          "jagua como campo liso, nunca motivo",
+          "arco o canalete en la mano, uno por situación"
+        ],
+        "documented": [
+          "El relato no describe cuerpo, ropa, pintura ni adorno de nadie (emb-dogirama-1984, §6 y §12.1): todo lo que viste a este tipo se declara abajo como editorial",
+          "Dóbida traduce «habitantes de río»: el cuerpo se compone desde el agua, con canoa o canalete presente o implícito (emb-mincultura-dobida, §3; salvaguarda 1, §11)",
+          "Época: hay hacha y machete de hierro y no hay tela industrial, objeto de mercado, oro ni adorno ceremonial (§1)",
+          "La pintura facial y corporal con jagua (Genipa americana) está documentada para el pueblo Dóbida como práctica cotidiana, contemporánea y pan-emberá, marcada variant y consult_required; jamás un diseño concreto (emb-mincultura-dobida, §6; salvaguarda 2)",
+          "Son los hombres de la guerra: se reúnen de todos los ríos, se esconden en el rastrojo, disparan flechas y suben de noche «todos armados» (canon, campo mito)"
+        ],
+        "editorial": [
+          "La prenda es la mínima pieza de fibra vegetal lisa en la cintura, sin tejido legible, franja ni color: no hay una sola línea de ropa en la fuente y la técnica necesita un borde para que el cuerpo se lea. Revocable en bloque por lectura comunitaria.",
+          "El pelo largo suelto, de una sola pieza de canto liso, es lectura del contraste que el relato establece con la cabeza pelada de los Burumiá, no peinado documentado. Reversible, pero si se retira hay que dar a la gente emberá otro marcador que la separe del vecindario del alto.",
+          "Ningún objeto ni insignia de jaibaná: el jaibanismo no aparece en el relato (§6). No reversible.",
+          "La jagua en cara y antebrazo es la aplicación mínima de una práctica documentada sólo en su existencia; si una autoridad dóbida objeta, se retira y quedan cuerpos sin pintar."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_adulta": {
+      "name": "Tipo base · mujer emberá adulta",
+      "kind": "personaje",
+      "description": "Tipo base de las mujeres emberá de las canoas de familias: fija cara, cuerpo y vestido de toda mujer adulta del corpus.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_mujer_adulta__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-burumias-y-carautas"
+      ],
+      "evidence": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "Las canoas que suben por el río llevan «familias enteras, con mujeres y con niños», y los Burumiá se las llevan a todas."
+        }
+      ],
+      "design": {
+        "silhouette": "Mujer emberá adulta sentada en el centro de la canoa, entre la carga y los niños, con el pelo largo suelto y la mancha de jagua como campo liso en la cara: el cuerpo recogido, las manos en la borda.",
+        "materials": [
+          "cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca—; el cuerpo, en pocos planos grandes de papel de fibra mate, sin músculo modelado",
+          "pieza mínima de fibra vegetal lisa en la cintura, sin tejido ni franja",
+          "mancha de jagua como campo plano en cara y brazo, sin dibujo interior"
+        ],
+        "palette": "Piel en medio tono cálido, un punto más clara que la del hombre por el rebote del agua; pelo negro profundo; la jagua como único negro azulado.",
+        "scale": "Algo por debajo de la estatura del hombre adulto; medida sentada contra la borda de la canoa, que le llega a la cintura. Cuerpo entero 9:16, de pie en la hoja.",
+        "continuity": [
+          "pelo largo suelto",
+          "jagua como campo liso",
+          "siempre asociada a la canoa de familia"
+        ],
+        "documented": [
+          "El relato no describe cuerpo, ropa, pintura ni adorno de nadie (emb-dogirama-1984, §6 y §12.1): todo lo que viste a este tipo se declara abajo como editorial",
+          "Dóbida traduce «habitantes de río»: el cuerpo se compone desde el agua, con canoa o canalete presente o implícito (emb-mincultura-dobida, §3; salvaguarda 1, §11)",
+          "Época: hay hacha y machete de hierro y no hay tela industrial, objeto de mercado, oro ni adorno ceremonial (§1)",
+          "La pintura facial y corporal con jagua (Genipa americana) está documentada para el pueblo Dóbida como práctica cotidiana, contemporánea y pan-emberá, marcada variant y consult_required; jamás un diseño concreto (emb-mincultura-dobida, §6; salvaguarda 2)",
+          "«Un día subieron varias canoas con familias enteras, con mujeres y con niños» (canon, campo mito)"
+        ],
+        "editorial": [
+          "La prenda es la mínima pieza de fibra vegetal lisa en la cintura, sin tejido legible, franja ni color: no hay una sola línea de ropa en la fuente y la técnica necesita un borde para que el cuerpo se lea. Revocable en bloque por lectura comunitaria.",
+          "El pelo largo suelto, de una sola pieza de canto liso, es lectura del contraste que el relato establece con la cabeza pelada de los Burumiá, no peinado documentado. Reversible, pero si se retira hay que dar a la gente emberá otro marcador que la separe del vecindario del alto.",
+          "Ningún objeto ni insignia de jaibaná: el jaibanismo no aparece en el relato (§6). No reversible.",
+          "La postura sentada en la canoa es decisión de composición, porque el único lugar donde el relato pone mujeres adultas emberá es la canoa de familias. Reversible."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_joven": {
+      "name": "Tipo base · mujer emberá joven",
+      "kind": "personaje",
+      "description": "Tipo base de la mujer emberá joven: fija cara, cuerpo y vestido de la hermana que crece cautiva y de toda muchacha del corpus.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_mujer_joven__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-burumias-y-carautas"
+      ],
+      "evidence": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "La niña dejada viva crece con su hermano entre los Burumiá y baja el río con él en la canoa grande."
+        }
+      ],
+      "design": {
+        "silhouette": "Muchacha emberá casi de estatura adulta, delgada y erguida, de pie en la canoa con el canalete alzado en diagonal delante del pecho y el pelo largo suelto: la silueta es la de la hermana que baja el río.",
+        "materials": [
+          "cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca—; el cuerpo, en pocos planos grandes de papel de fibra mate, sin músculo modelado",
+          "pieza mínima de fibra vegetal lisa en la cintura",
+          "canalete de madera con la pala vuelta hacia fuera"
+        ],
+        "palette": "Los tonos de piel más claros de la hoja, por el agua, y el pelo negro; sin jagua: la única joven del relato es cautiva criada fuera de su gente.",
+        "scale": "Un palmo por debajo del hombre adulto, medida contra el canalete. Cuerpo entero 9:16.",
+        "continuity": [
+          "pelo largo suelto, nunca recogido: la separa en silueta de la vieja",
+          "sin jagua",
+          "el canalete como su único objeto"
+        ],
+        "documented": [
+          "El relato no describe cuerpo, ropa, pintura ni adorno de nadie (emb-dogirama-1984, §6 y §12.1): todo lo que viste a este tipo se declara abajo como editorial",
+          "Dóbida traduce «habitantes de río»: el cuerpo se compone desde el agua, con canoa o canalete presente o implícito (emb-mincultura-dobida, §3; salvaguarda 1, §11)",
+          "Época: hay hacha y machete de hierro y no hay tela industrial, objeto de mercado, oro ni adorno ceremonial (§1)",
+          "«Así creció, y su hermana con él»: la única mujer joven del relato es la niña cautiva que crece con su hermano (canon, campo mito)"
+        ],
+        "editorial": [
+          "La prenda es la mínima pieza de fibra vegetal lisa en la cintura, sin tejido legible, franja ni color: no hay una sola línea de ropa en la fuente y la técnica necesita un borde para que el cuerpo se lea. Revocable en bloque por lectura comunitaria.",
+          "El pelo largo suelto, de una sola pieza de canto liso, es lectura del contraste que el relato establece con la cabeza pelada de los Burumiá, no peinado documentado. Reversible, pero si se retira hay que dar a la gente emberá otro marcador que la separe del vecindario del alto.",
+          "Ningún objeto ni insignia de jaibaná: el jaibanismo no aparece en el relato (§6). No reversible.",
+          "Sin jagua, por la misma razón que la ficha de los hermanos: ponérsela añadiría una biografía que la fuente no da. Reversible."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_nino": {
+      "name": "Tipo base · niño emberá",
+      "kind": "personaje",
+      "description": "Tipo base del niño emberá: fija cara, cuerpo y vestido de los niños de las canoas y del niño cautivo antes de crecer.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_nino__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-burumias-y-carautas"
+      ],
+      "evidence": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "Las canoas llevan niños, y de todos los Burumiá dejan vivos a un niño y una niña para criarlos."
+        }
+      ],
+      "design": {
+        "silhouette": "Niño emberá de siete u ocho años, de pie en la canoa junto a la borda, el pelo largo suelto hasta los hombros y una bodoquera corta de juguete en la mano: el cuerpo pequeño y recto, la cabeza grande respecto al tronco.",
+        "materials": [
+          "cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca—; el cuerpo, en pocos planos grandes de papel de fibra mate, sin músculo modelado",
+          "pieza mínima de fibra vegetal lisa en la cintura",
+          "bodoquera corta como tubo recto de un solo tono"
+        ],
+        "palette": "Piel en medio tono cálido y pelo negro; sin jagua ni ninguna otra pieza de color.",
+        "scale": "Medido contra la borda de la canoa, que le llega al pecho. Cuerpo entero 9:16, con más aire alrededor que los adultos.",
+        "continuity": [
+          "pelo largo suelto",
+          "sin jagua",
+          "tubo recto de bodoquera como su objeto"
+        ],
+        "documented": [
+          "El relato no describe cuerpo, ropa, pintura ni adorno de nadie (emb-dogirama-1984, §6 y §12.1): todo lo que viste a este tipo se declara abajo como editorial",
+          "Dóbida traduce «habitantes de río»: el cuerpo se compone desde el agua, con canoa o canalete presente o implícito (emb-mincultura-dobida, §3; salvaguarda 1, §11)",
+          "Época: hay hacha y machete de hierro y no hay tela industrial, objeto de mercado, oro ni adorno ceremonial (§1)",
+          "Los Burumiá dejan vivos «a dos niños, un niño y una niña»; el niño crece y «hizo bodoquera y arco» (canon, campo mito)"
+        ],
+        "editorial": [
+          "La prenda es la mínima pieza de fibra vegetal lisa en la cintura, sin tejido legible, franja ni color: no hay una sola línea de ropa en la fuente y la técnica necesita un borde para que el cuerpo se lea. Revocable en bloque por lectura comunitaria.",
+          "El pelo largo suelto, de una sola pieza de canto liso, es lectura del contraste que el relato establece con la cabeza pelada de los Burumiá, no peinado documentado. Reversible, pero si se retira hay que dar a la gente emberá otro marcador que la separe del vecindario del alto.",
+          "Ningún objeto ni insignia de jaibaná: el jaibanismo no aparece en el relato (§6). No reversible.",
+          "La bodoquera corta en la mano del niño anticipa el oficio que el relato le da de mayor: es decisión de hoja, reversible sin coste."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_anciana": {
+      "name": "Tipo base · anciana emberá",
+      "kind": "personaje",
+      "description": "Tipo base de la anciana emberá: fija cara, cuerpo y vestido de la vieja cautiva y de toda mujer mayor del corpus.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_anciana__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-burumias-y-carautas"
+      ],
+      "evidence": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "De las familias de las canoas los Burumiá dejan viva sólo a «una vieja», además de los dos niños."
+        }
+      ],
+      "design": {
+        "silhouette": "Anciana emberá de pie, quieta y un poco inclinada hacia delante, el pelo largo recogido hacia atrás en una sola pieza y las manos ocupadas delante del cuerpo: la edad se lee por la postura, la proporción y el recogido, no por arrugas.",
+        "materials": [
+          "cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca—; el cuerpo, en pocos planos grandes de papel de fibra mate, sin músculo modelado",
+          "pieza mínima de fibra vegetal lisa en la cintura",
+          "pelo largo recogido en una sola pieza de canto liso, con un tono de gris en la masa"
+        ],
+        "palette": "Piel en medio tono apagado, pelo negro con una sola pieza superpuesta de gris; sin jagua ni nota clara.",
+        "scale": "Estatura adulta algo reducida por la inclinación. Cuerpo entero 9:16.",
+        "continuity": [
+          "pelo recogido, nunca suelto",
+          "sin arrugas dibujadas: el óvalo sigue siendo plano",
+          "manos ocupadas delante del cuerpo"
+        ],
+        "documented": [
+          "El relato no describe cuerpo, ropa, pintura ni adorno de nadie (emb-dogirama-1984, §6 y §12.1): todo lo que viste a este tipo se declara abajo como editorial",
+          "Dóbida traduce «habitantes de río»: el cuerpo se compone desde el agua, con canoa o canalete presente o implícito (emb-mincultura-dobida, §3; salvaguarda 1, §11)",
+          "Época: hay hacha y machete de hierro y no hay tela industrial, objeto de mercado, oro ni adorno ceremonial (§1)",
+          "«Una vieja» es, con los dos niños, la única que los Burumiá dejan viva de las canoas (canon, campo mito)",
+          "La edad no se describe: la técnica no modela rostro y envejecer la cara rompe el óvalo plano (technique_close del corpus)"
+        ],
+        "editorial": [
+          "La prenda es la mínima pieza de fibra vegetal lisa en la cintura, sin tejido legible, franja ni color: no hay una sola línea de ropa en la fuente y la técnica necesita un borde para que el cuerpo se lea. Revocable en bloque por lectura comunitaria.",
+          "El pelo largo suelto, de una sola pieza de canto liso, es lectura del contraste que el relato establece con la cabeza pelada de los Burumiá, no peinado documentado. Reversible, pero si se retira hay que dar a la gente emberá otro marcador que la separe del vecindario del alto.",
+          "Ningún objeto ni insignia de jaibaná: el jaibanismo no aparece en el relato (§6). No reversible.",
+          "El gris en el pelo es la única marca de edad que se añade, y es editorial. Reversible."
+        ],
+        "states_to_model": []
+      }
     }
   },
   "models": {
@@ -2215,6 +2806,11 @@
           "myth": "los-burumias-y-carautas",
           "field": "mito",
           "note": "El cautiverio y la antropofagia se conservan como motores de la narración y se dejan fuera de la imagen: la tensión se compone con distancia, vigilancia y niebla, nunca con la escena."
+        },
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "El canon reescrito retira «longo» y añade el símil de los hermanos: «como diablos, de cabeza pelada, así como peña». El jefe es «el que dormía en hamaca en la casa grande», y lo flechan cuando se para a orinar."
         }
       ],
       "design_contract": {
@@ -2233,17 +2829,18 @@
           "ninguna de sus manos toca a otra figura: el peligro se compone con distancia"
         ],
         "documented_features": [
-          "«La cabeza pelada, así como longo, como peña»: único rasgo de cuerpo de todo el corpus y rasgo de diferencia frente a la gente Emberá que los busca (emb-dogirama-1984, dossier §0)",
-          "Viven en un alto y desde sus casas ven a quienes remontan el agua rumbo al Bojayá: la vigilancia es su atributo, no un adorno (emb-dogirama-1984, §4)",
-          "Tienen jefe —la casa grande— y disidencia de hecho —la casa retirada, cuyos habitantes son los únicos que escapan— (emb-dogirama-1984, §6)",
-          "Permiten a los cautivos jóvenes recorrer el monte «siempre hacia las cabeceras, nunca río abajo» (emb-dogirama-1984, canon, campo mito)",
+          "«Como diablos, de cabeza pelada, así como peña», dicen los hermanos (canon, campo mito); el texto de 1984 añade «así como longo» (emb-dogirama-1984, §0). Único rasgo de cuerpo de todo el corpus, y es de diferencia, no de monstruosidad",
+          "Viven «en un alto, como en un salto», y desde allí ven a cualquiera que venga subiendo por el río: la vigilancia es su atributo, no un adorno (canon, campo mito; §4)",
+          "Tienen jefe —el que duerme en hamaca en la casa grande— y una casa retirada, cuyos habitantes son los únicos que escapan (canon, campo mito; §6)",
+          "Dejan montiar al niño cautivo sólo hacia arriba: «Eche para arriba, vaya a montiar para arriba» (canon, campo mito)",
           "El canon se niega a decidir si «Burumia» nombra seres, un pueblo recordado, adversarios históricos o varias capas: la lámina tampoco lo decide (canon, campo versiones; §2)"
         ],
         "editorial_features": [
           "Cuántos son y cómo se reparten en el encuadre: el relato no da cifra. Reversible sin coste; si una autoridad dóbida pide menos presencia, se recompone la hoja sin tocar el rasgo.",
           "Proporción adulta corriente y estatura media, elegidas expresamente contra el empuje hacia lo monstruoso que el canon señala. Reversible sólo hacia lo más neutro, nunca hacia lo gigante ni lo deforme.",
           "Ausencia total de ropa, pintura, adorno y arma identificable: vestirlos resolvería por el atrezo la ambigüedad que la fuente guarda. Reversible únicamente por lectura comunitaria, y nunca importando nada katío, chamí ni cuna.",
-          "No se les dibuja capturando ni reteniendo: decisión de encuadre que el dossier pide (§1) y que se puede revisar, pero no mientras el módulo prohíba la escena de cautiverio."
+          "No se les dibuja capturando ni reteniendo: decisión de encuadre que el dossier pide (§1) y que se puede revisar, pero no mientras el módulo prohíba la escena de cautiverio.",
+          "«Como diablos» es el símil de dos muchachos que no los contaron, no una descripción: la lámina lo cobra sólo como distancia y altura, nunca con cuerno, garra, ojo ni tamaño. No reversible mientras el canon siga negándose a decidir qué son."
         ]
       },
       "prompt_spec": {
@@ -2256,10 +2853,10 @@
         "materials_textures": "un único plano de papel curvo, sin grano ni textura, para la cabeza pelada: es el rasgo y no admite adorno encima; cuerpos de pocos planos grandes de fibra mate, sin pieza de ropa que pueda leerse como vestuario de un pueblo concreto; el follaje del alto y la niebla del río como material de interposición: entre ellos y la cámara siempre hay una capa",
         "era": "Chocó fluvial posterior al contacto y anterior al arma de fuego: hay hacha y machete de hierro, y no hay escopeta, ni caballo, ni tela industrial, ni objeto de mercado, ni un solo europeo en escena. Canoa labrada de un árbol, canalete, arco y flechas, bodoquera, casas contables sobre un alto con camino vigilado, rastrojo de ribera. Sin geometría de fundación —nada de hacha de piedra—, sin oro, sin adorno ceremonial y sin jaibaná.",
         "constraints": [
-          "documentado: «La cabeza pelada, así como longo, como peña»: único rasgo de cuerpo de todo el corpus y rasgo de diferencia frente a la gente Emberá que los busca (emb-dogirama-1984, dossier §0)",
-          "documentado: Viven en un alto y desde sus casas ven a quienes remontan el agua rumbo al Bojayá: la vigilancia es su atributo, no un adorno (emb-dogirama-1984, §4)",
-          "documentado: Tienen jefe —la casa grande— y disidencia de hecho —la casa retirada, cuyos habitantes son los únicos que escapan— (emb-dogirama-1984, §6)",
-          "documentado: Permiten a los cautivos jóvenes recorrer el monte «siempre hacia las cabeceras, nunca río abajo» (emb-dogirama-1984, canon, campo mito)",
+          "documentado: «Como diablos, de cabeza pelada, así como peña», dicen los hermanos (canon, campo mito); el texto de 1984 añade «así como longo» (emb-dogirama-1984, §0). Único rasgo de cuerpo de todo el corpus, y es de diferencia, no de monstruosidad",
+          "documentado: Viven «en un alto, como en un salto», y desde allí ven a cualquiera que venga subiendo por el río: la vigilancia es su atributo, no un adorno (canon, campo mito; §4)",
+          "documentado: Tienen jefe —el que duerme en hamaca en la casa grande— y una casa retirada, cuyos habitantes son los únicos que escapan (canon, campo mito; §6)",
+          "documentado: Dejan montiar al niño cautivo sólo hacia arriba: «Eche para arriba, vaya a montiar para arriba» (canon, campo mito)",
           "documentado: El canon se niega a decidir si «Burumia» nombra seres, un pueblo recordado, adversarios históricos o varias capas: la lámina tampoco lo decide (canon, campo versiones; §2)",
           "El corpus no nombra un solo color: la paleta entera sale del agua, el rastrojo y la madera mojada, nunca del gusto.",
           "El verde nunca es saturado: el bosque húmedo se construye con dosel oscuro contra luz difusa y hoja mojada, y el contraste lo da la profundidad, no el tono.",
@@ -2329,6 +2926,11 @@
           "myth": "los-burumias-y-carautas",
           "field": "mito",
           "note": "«Dóbida» traduce «habitantes de río» y «eyábida», que es el nombre del pueblo Katío, significa «gente de la montaña»: son los dos extremos de un mismo eje, y este relato entero ocurre sobre el agua."
+        },
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "El canon reescrito añade la guerra contra los Cuna —gente reunida del Atrato, Lloró, Dubasa, Pató y Munguidó— y da la cifra de la emboscada: salen del rastrojo «como cien, como doscientos»."
         }
       ],
       "design_contract": {
@@ -2340,7 +2942,7 @@
           "arco de madera curvada y flecha larga, recortados en una sola pieza cada uno"
         ],
         "palette_logic": "La piel en los medios tonos cálidos del papel de fibra y la mancha de jagua como el único negro azulado del corpus: es un tono, no un motivo. Contra el rastrojo van a contraluz, de modo que en la emboscada el grupo es casi silueta.",
-        "scale": "Estatura humana adulta idéntica a la de los Burumia, deliberadamente: ninguna diferencia de tamaño entre los dos pueblos. Se dan siempre en conjunto de tres a seis figuras —nunca uno solo, que es asunto de las fichas nombradas— y siempre a la altura del agua.",
+        "scale": "Estatura humana adulta idéntica a la de los Burumiá, deliberadamente: ninguna diferencia de tamaño entre los dos pueblos. La gramática tiene dos escalas: en canoa, tres a seis figuras a la altura del agua; en la emboscada, tres a seis en primer plano y detrás el rastrojo lleno de cuerpos hasta el fondo, porque salen «como cien, como doscientos».",
         "continuity_markers": [
           "pelo largo presente en todas las figuras, siempre: es el marcador que evita confundir un cuerpo con un Burumia",
           "el canalete vertical en la canoa y el arco horizontal en el rastrojo, una postura por situación y ninguna tercera",
@@ -2350,9 +2952,10 @@
         "documented_features": [
           "Dóbida traduce «habitantes de río» y eyábida —el nombre del pueblo Katío— «gente de la montaña»: son los dos extremos de un eje y este relato entero ocurre sobre el agua (emb-mincultura-dobida, §3)",
           "Las viviendas y los cultivos están a orillas del río y la pesca es la actividad permanente (emb-gobiernomayor-dobida, §3)",
-          "Los emboscados del rastrojo «silbaban como pájaro buchelé»: es lo único que el relato dice de cómo se comunican, y el ave no se ve (emb-dogirama-1984, §0.3)",
+          "Los emboscados del rastrojo «silbaban como el pájaro buchelé para avisarse»: es lo único que el relato dice de cómo se comunican, y el ave no se ve (canon, campo mito; §7)",
           "El curso alto y medio del Bojayá es dóbida y el bajo y la desembocadura son de comunidades negras: la Usagará cae aguas arriba (emb-cnmh-bojaya, §3)",
-          "La pintura facial y corporal con jagua, fruto de Genipa americana, está documentada como práctica cotidiana y de reconocimiento del pueblo Dóbida (emb-mincultura-dobida, §6), marcada `variant` por ser contemporánea"
+          "La pintura facial y corporal con jagua, fruto de Genipa americana, está documentada como práctica cotidiana y de reconocimiento del pueblo Dóbida (emb-mincultura-dobida, §6), marcada `variant` por ser contemporánea",
+          "Se reúnen del Atrato, de Lloró, de Dubasa, de Pató y de Munguidó para la guerra, y en la emboscada salen del rastrojo «como cien, como doscientos» (canon, campo mito)"
         ],
         "editorial_features": [
           "Ficha declarada como la más frágil del lote: el relato no describe a nadie, ni cuerpo, ni ropa, ni pintura, ni adorno (§12.1), y toda su apariencia descansa en fuentes pan-emberá contemporáneas marcadas `variant`. Una lectura comunitaria la reescribe entera y no habría nada que defender.",
@@ -2366,16 +2969,17 @@
         "asset_type": "Biblia visual Embera V1 - group_grammar",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena, a la altura del agua. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Madera mojada de canoa como veta recortada, no dibujada; hoja de palma en tiras superpuestas; rastrojo de ribera como decenas de recortes finos encajados. El bosque húmedo se construye por planos escalonados en profundidad y por niebla de papel translúcido entre ellos, nunca por perspectiva atmosférica pintada.",
         "primary_request": "gramatica del grupo: cuantos, como se ordenan, que los hace uno para Gente Emberá del Bojayá. Grupo de río con el cuerpo siempre orientado al agua y el pelo largo suelto —que es exactamente lo que los separa de la cabeza pelada Burumia—: de pie en la canoa con el canalete vertical, o en cuclillas dentro del rastrojo con el arco tendido a la altura del pecho y la mitad del cuerpo comida por la hoja.",
-        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Estatura humana adulta idéntica a la de los Burumia, deliberadamente: ninguna diferencia de tamaño entre los dos pueblos. Se dan siempre en conjunto de tres a seis figuras —nunca uno solo, que es asunto de las fichas nombradas— y siempre a la altura del agua.",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Estatura humana adulta idéntica a la de los Burumiá, deliberadamente: ninguna diferencia de tamaño entre los dos pueblos. La gramática tiene dos escalas: en canoa, tres a seis figuras a la altura del agua; en la emboscada, tres a seis en primer plano y detrás el rastrojo lleno de cuerpos hasta el fondo, porque salen «como cien, como doscientos».",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos noches y sólo dos en toda la biblia —la del vuelo del explorador y la del ataque—, resueltas con papel oscuro y contraluz de cielo, nunca con antorcha, fogata ni resplandor. No hay fuego en este corpus.",
         "materials_textures": "pelo largo como pieza de papel de un solo tono, larga y de canto liso: el contraste sistemático contra el casquete Burumia; mancha de jagua como campo plano de tono, sin dibujo interior de ninguna clase, en piel de cara y antebrazo; mínima pieza de fibra vegetal en la cintura, sin tejido legible ni franja de color; arco de madera curvada y flecha larga, recortados en una sola pieza cada uno",
         "era": "Chocó fluvial posterior al contacto y anterior al arma de fuego: hay hacha y machete de hierro, y no hay escopeta, ni caballo, ni tela industrial, ni objeto de mercado, ni un solo europeo en escena. Canoa labrada de un árbol, canalete, arco y flechas, bodoquera, casas contables sobre un alto con camino vigilado, rastrojo de ribera. Sin geometría de fundación —nada de hacha de piedra—, sin oro, sin adorno ceremonial y sin jaibaná.",
         "constraints": [
           "documentado: Dóbida traduce «habitantes de río» y eyábida —el nombre del pueblo Katío— «gente de la montaña»: son los dos extremos de un eje y este relato entero ocurre sobre el agua (emb-mincultura-dobida, §3)",
           "documentado: Las viviendas y los cultivos están a orillas del río y la pesca es la actividad permanente (emb-gobiernomayor-dobida, §3)",
-          "documentado: Los emboscados del rastrojo «silbaban como pájaro buchelé»: es lo único que el relato dice de cómo se comunican, y el ave no se ve (emb-dogirama-1984, §0.3)",
+          "documentado: Los emboscados del rastrojo «silbaban como el pájaro buchelé para avisarse»: es lo único que el relato dice de cómo se comunican, y el ave no se ve (canon, campo mito; §7)",
           "documentado: El curso alto y medio del Bojayá es dóbida y el bajo y la desembocadura son de comunidades negras: la Usagará cae aguas arriba (emb-cnmh-bojaya, §3)",
           "documentado: La pintura facial y corporal con jagua, fruto de Genipa americana, está documentada como práctica cotidiana y de reconocimiento del pueblo Dóbida (emb-mincultura-dobida, §6), marcada `variant` por ser contemporánea",
+          "documentado: Se reúnen del Atrato, de Lloró, de Dubasa, de Pató y de Munguidó para la guerra, y en la emboscada salen del rastrojo «como cien, como doscientos» (canon, campo mito)",
           "El corpus no nombra un solo color: la paleta entera sale del agua, el rastrojo y la madera mojada, nunca del gusto.",
           "El verde nunca es saturado: el bosque húmedo se construye con dosel oscuro contra luz difusa y hoja mojada, y el contraste lo da la profundidad, no el tono.",
           "No hay fuego, no hay oro y no hay ningún rojo de sangre: las dos noches se resuelven con papel oscuro y contraluz de cielo.",
@@ -2439,51 +3043,62 @@
           "myth": "los-burumias-y-carautas",
           "field": "mito",
           "note": "La pintura facial y corporal con jagua, fruto de Genipa americana, está documentada para el pueblo Dóbida como forma de reconocimiento y expresión de estados y ciclos vitales, usada también en la cotidianidad; pero es descripción contemporánea y pan-emberá, no del relato ni de su época, y ningún diseño concreto puede copiarse ni inventarse."
+        },
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "El canon reescrito los hace hermanos —«Así creció, y su hermana con él»— y los deja vivos de niños junto con una vieja; él hace bodoquera y arco y sólo puede montiar río arriba («Eche para arriba»)."
         }
       ],
       "design_contract": {
-        "distinctive_silhouette": "Una pareja de la misma estatura que se lee como una sola pieza hombro con hombro, porque el relato no los separa nunca: él con el arco y la bodoquera cruzados a la espalda, ella con las manos vacías y la cabeza girada hacia el sendero, y los dos con el canalete alzado en diagonal delante del pecho, que es el gesto por el que sobreviven.",
+        "distinctive_silhouette": "Dos hermanos de la misma estatura que se leen como una sola pieza hombro con hombro, porque el relato no los separa nunca: él con el arco y la bodoquera cruzados a la espalda, ella con las manos libres salvo el canalete, y los dos con el canalete alzado en diagonal delante del pecho, que es el gesto por el que sobreviven. Nada en la postura los lee como pareja: van lado a lado, sin tocarse, mirando los dos río abajo.",
         "materials": [
           "canalete de madera mojada, con la pala vuelta hacia fuera como un escudo y la veta recortada a lo largo",
           "arco de una sola pieza curvada y bodoquera como tubo largo y recto, dos siluetas que no se parecen entre sí",
           "mínima pieza de fibra en la cintura, sin tejido legible: el relato no describe ropa"
         ],
         "palette_logic": "Los tonos más claros de piel de toda la biblia, por estar siempre sobre el agua, que es el plano claro del corpus; la madera del canalete en su tono medio y ninguna nota saturada: son las dos únicas figuras que nunca aparecen a contraluz.",
-        "scale": "Jóvenes de la veintena corta, misma altura los dos, medidos contra la borda de la canoa grande: de pie ocupan de la borda hacia arriba algo menos de dos veces el alto del casco. Encuadre de cuerpo entero y de tres cuartos, nunca en primer plano de rostro.",
+        "scale": "Adolescentes tardíos, casi de estatura adulta, misma altura los dos, medidos contra la borda de la canoa grande: de pie ocupan de la borda hacia arriba algo menos de dos veces el alto del casco. Encuadre de cuerpo entero y de tres cuartos, nunca en primer plano de rostro.",
         "continuity_markers": [
           "van siempre juntos y a la misma altura: no hay lámina de uno solo",
-          "él lleva arco y bodoquera; ella no lleva nada en las manos salvo el canalete, y la diferencia es de oficio, no de jerarquía",
+          "él lleva arco y bodoquera; ella no lleva nada en las manos salvo el canalete: la única diferencia que el texto da es el oficio de él",
           "el canalete alzado en diagonal delante del pecho es su gesto de identidad y se repite en toda aparición",
-          "siempre dentro de la canoa o con un pie en ella: son las figuras del agua"
+          "siempre dentro de la canoa o con un pie en ella: son las figuras del agua",
+          "hermanos y no pareja: nunca se tocan en la hoja ni se miran entre sí, los dos miran al río"
         ],
         "documented_features": [
-          "Entran niños —«un niño y una niña»— y salen jóvenes; su forma actuante es la de jóvenes (emb-dogirama-1984, §6)",
-          "Él aprende a fabricar arco y bodoquera y sale a buscar alimento; ella «también conocía ya los senderos»: es la única diferencia que el texto les da, y es de oficio (emb-dogirama-1984, §6)",
-          "Levantan el canalete para protegerse de las flechas y así consiguen hacerse oír: el remo como escudo es el objeto moral del relato, lo que impide que el error termine en muerte (canon, campo mito; §2)",
-          "Bajan el río en la canoa más grande, con un perro, después de romper las pequeñas (canon, campo mito)",
+          "Los Burumiá dejan vivos, de todas las familias de las canoas, «a una vieja y a dos niños, un niño y una niña», para criarlos entre ellos (canon, campo mito)",
+          "Son hermanos: «Así creció, y su hermana con él» (canon, campo mito)",
+          "Él hace bodoquera y arco y sale a montiar, pero sólo hacia arriba: «Eche para arriba, vaya a montiar para arriba» (canon, campo mito)",
+          "Rompen con un hacha todas las canoas abandonadas menos la más grande y se van agua abajo «con un perro grande» (canon, campo mito)",
+          "Paran con el canalete las flechas de los emboscados y gritan que no disparen: el remo como escudo es el objeto moral del relato (canon, campo mito; §2)",
+          "No contaron a los Burumiá; sólo dijeron que eran «como diablos, de cabeza pelada, así como peña» (canon, campo mito)",
           "El relato no describe ropa, pintura ni adorno de nadie, tampoco de ellos (emb-dogirama-1984, §6 y §12.1)"
         ],
         "editorial_features": [
           "El vestuario se resuelve con la mínima pieza de fibra que la técnica necesita para que el cuerpo se lea: no hay una sola línea de ropa en la fuente. Declarado editorial y revocable en bloque.",
-          "La edad se fija en la veintena corta aunque el relato los muestre creciendo: el crecimiento no se cobra como estado porque ninguna escena hace actuar su forma infantil. Si el guion pide la captura, esta decisión se revisa y cuesta una lámina.",
+          "La edad se fija en la adolescencia tardía, que es cuando el relato los hace actuar, aunque entren niños: el crecimiento no se cobra como estado porque ninguna escena hace actuar su forma infantil. Si el guion pide la captura, esta decisión se revisa y cuesta una lámina.",
           "El arco y la bodoquera van portados al cuerpo por la frase de oficio, no porque el texto los muestre encima: si el guion los prefiere sueltos en la canoa, la hoja de utilería ya los tiene y esta hoja no cambia.",
-          "Ninguna pintura de jagua sobre ellos, pese a estar documentada para el pueblo: son cautivos criados fuera de su gente y ponérsela sería añadir una biografía que la fuente no da. Reversible por lectura comunitaria."
+          "Ninguna pintura de jagua sobre ellos, pese a estar documentada para el pueblo: son cautivos criados fuera de su gente y ponérsela sería añadir una biografía que la fuente no da. Reversible por lectura comunitaria.",
+          "Que ella «conocía ya los senderos» sale del texto de 1984 que el dossier cita (§6), no del canon reescrito, que sólo dice «y su hermana con él»: la hoja no le da oficio propio y la deja con el canalete. Reversible si el guion vuelve al texto de 1984."
         ]
       },
       "prompt_spec": {
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Embera V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena, a la altura del agua. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Madera mojada de canoa como veta recortada, no dibujada; hoja de palma en tiras superpuestas; rastrojo de ribera como decenas de recortes finos encajados. El bosque húmedo se construye por planos escalonados en profundidad y por niebla de papel translúcido entre ellos, nunca por perspectiva atmosférica pintada.",
-        "primary_request": "identidad corporal completa y legible para El muchacho y la joven que escapan. Una pareja de la misma estatura que se lee como una sola pieza hombro con hombro, porque el relato no los separa nunca: él con el arco y la bodoquera cruzados a la espalda, ella con las manos vacías y la cabeza girada hacia el sendero, y los dos con el canalete alzado en diagonal delante del pecho, que es el gesto por el que sobreviven.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Jóvenes de la veintena corta, misma altura los dos, medidos contra la borda de la canoa grande: de pie ocupan de la borda hacia arriba algo menos de dos veces el alto del casco. Encuadre de cuerpo entero y de tres cuartos, nunca en primer plano de rostro.",
+        "primary_request": "identidad corporal completa y legible para El niño y su hermana. Dos hermanos de la misma estatura que se leen como una sola pieza hombro con hombro, porque el relato no los separa nunca: él con el arco y la bodoquera cruzados a la espalda, ella con las manos libres salvo el canalete, y los dos con el canalete alzado en diagonal delante del pecho, que es el gesto por el que sobreviven. Nada en la postura los lee como pareja: van lado a lado, sin tocarse, mirando los dos río abajo.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Adolescentes tardíos, casi de estatura adulta, misma altura los dos, medidos contra la borda de la canoa grande: de pie ocupan de la borda hacia arriba algo menos de dos veces el alto del casco. Encuadre de cuerpo entero y de tres cuartos, nunca en primer plano de rostro.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos noches y sólo dos en toda la biblia —la del vuelo del explorador y la del ataque—, resueltas con papel oscuro y contraluz de cielo, nunca con antorcha, fogata ni resplandor. No hay fuego en este corpus.",
         "materials_textures": "canalete de madera mojada, con la pala vuelta hacia fuera como un escudo y la veta recortada a lo largo; arco de una sola pieza curvada y bodoquera como tubo largo y recto, dos siluetas que no se parecen entre sí; mínima pieza de fibra en la cintura, sin tejido legible: el relato no describe ropa",
         "era": "Chocó fluvial posterior al contacto y anterior al arma de fuego: hay hacha y machete de hierro, y no hay escopeta, ni caballo, ni tela industrial, ni objeto de mercado, ni un solo europeo en escena. Canoa labrada de un árbol, canalete, arco y flechas, bodoquera, casas contables sobre un alto con camino vigilado, rastrojo de ribera. Sin geometría de fundación —nada de hacha de piedra—, sin oro, sin adorno ceremonial y sin jaibaná.",
         "constraints": [
-          "documentado: Entran niños —«un niño y una niña»— y salen jóvenes; su forma actuante es la de jóvenes (emb-dogirama-1984, §6)",
-          "documentado: Él aprende a fabricar arco y bodoquera y sale a buscar alimento; ella «también conocía ya los senderos»: es la única diferencia que el texto les da, y es de oficio (emb-dogirama-1984, §6)",
-          "documentado: Levantan el canalete para protegerse de las flechas y así consiguen hacerse oír: el remo como escudo es el objeto moral del relato, lo que impide que el error termine en muerte (canon, campo mito; §2)",
-          "documentado: Bajan el río en la canoa más grande, con un perro, después de romper las pequeñas (canon, campo mito)",
+          "documentado: Los Burumiá dejan vivos, de todas las familias de las canoas, «a una vieja y a dos niños, un niño y una niña», para criarlos entre ellos (canon, campo mito)",
+          "documentado: Son hermanos: «Así creció, y su hermana con él» (canon, campo mito)",
+          "documentado: Él hace bodoquera y arco y sale a montiar, pero sólo hacia arriba: «Eche para arriba, vaya a montiar para arriba» (canon, campo mito)",
+          "documentado: Rompen con un hacha todas las canoas abandonadas menos la más grande y se van agua abajo «con un perro grande» (canon, campo mito)",
+          "documentado: Paran con el canalete las flechas de los emboscados y gritan que no disparen: el remo como escudo es el objeto moral del relato (canon, campo mito; §2)",
+          "documentado: No contaron a los Burumiá; sólo dijeron que eran «como diablos, de cabeza pelada, así como peña» (canon, campo mito)",
           "documentado: El relato no describe ropa, pintura ni adorno de nadie, tampoco de ellos (emb-dogirama-1984, §6 y §12.1)",
           "El corpus no nombra un solo color: la paleta entera sale del agua, el rastrojo y la madera mojada, nunca del gusto.",
           "El verde nunca es saturado: el bosque húmedo se construye con dosel oscuro contra luz difusa y hoja mojada, y el contraste lo da la profundidad, no el tono.",
@@ -2508,7 +3123,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -2543,13 +3158,18 @@
           "myth": "los-burumias-y-carautas",
           "field": "mito",
           "note": "El jaibanismo no aparece en el relato y no entra a ninguna lámina: ni bastón, ni banco, ni totuma ritual, ni pintura de ceremonia. Es un rasgo compartido por todos los pueblos emberá y por eso es la puerta más fácil para meter iconografía que este corpus no tiene."
+        },
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "En el canon reescrito es «una vieja» que los Burumiá dejan viva con los dos niños; sabe de las canoas, hachas y machetes de los muertos, les dice «vayan rodeando, rodeando, buscando camino» y les hace «un buen fiambre»."
         }
       ],
       "design_contract": {
         "distinctive_silhouette": "Una figura mayor siempre quieta y siempre de perfil, con el peso cargado en un pie y la cabeza girada hacia donde nadie la mira: es la única de la biblia que actúa sin mover el cuerpo, y en la hoja se la reconoce porque tiene las manos ocupadas en algo doméstico mientras los ojos están en otra parte.",
         "materials": [
           "pelo largo recogido hacia atrás en una sola pieza, para diferenciarla en silueta de la joven que escapa",
-          "hoja grande de platanillo o de palma como envoltorio de la comida del viaje: el único objeto que le toca las manos",
+          "hoja grande de platanillo o de palma como envoltorio del fiambre: el único objeto que le toca las manos",
           "mínima pieza de fibra en la cintura, del mismo repertorio que el resto de las figuras humanas"
         ],
         "palette_logic": "Piel en tono medio y siempre un punto más apagada que la de los jóvenes, porque su lámina está en el alto y no sobre el agua: recibe la luz difusa del bosque, no el rebote del río. Sin una sola nota clara en el cuerpo.",
@@ -2561,16 +3181,16 @@
           "aparece siempre en el alto o en su borde, nunca dentro de una canoa: no huye"
         ],
         "documented_features": [
-          "Observa en silencio durante años y sabe que bajo el alto permanecen canoas abandonadas junto con hachas, machetes y canaletes (canon, campo mito; §6)",
-          "Prepara la comida del viaje y explica a los dos jóvenes cómo rodear el asentamiento sin tomar el camino vigilado (canon, campo mito; §6)",
-          "No huye: se queda, y son los jóvenes quienes parten. Es la única figura del corpus definida enteramente por el conocimiento (emb-dogirama-1984, §6)",
-          "Fue capturada con un niño y una niña cuando los Burumia atacaron las canoas de familias (canon, campo mito)"
+          "Los Burumiá la dejan viva, «una vieja», con los dos niños, cuando se llevan a todos los de las canoas (canon, campo mito)",
+          "Sabe que «allá abajo en el río hay bastantes canoas y hachas y machetes de la gente que han matado» (canon, campo mito; §6)",
+          "Les dice «vayan rodeando, rodeando, buscando camino», que cojan la canoa más grande y avisen que son los Burumiá, y un día «les hizo un buen fiambre» (canon, campo mito; §6)",
+          "No huye: se queda, y son los jóvenes quienes parten. Es la única figura del corpus definida enteramente por el conocimiento (emb-dogirama-1984, §6)"
         ],
         "editorial_features": [
           "Se compone como alguien que mira y calcula y no como víctima: es una decisión de postura tomada expresamente contra la lectura fácil del cautiverio, y el dossier la pide (§6). Revisable sólo hacia más reserva, nunca hacia el pathos.",
           "Ninguna marca de cautiverio: ni atadura, ni herida, ni prenda rota. La prohibición de escena de cautiverio se extiende al cuerpo. No reversible mientras el módulo la mantenga.",
           "La edad se resuelve por proporción, por postura y por el recogido del pelo, no por arrugas: la técnica no modela rostro y cualquier intento de envejecer la cara rompe el óvalo plano.",
-          "El envoltorio de hoja para la comida del viaje es invención de atrezo: el texto dice sólo «preparó comida». Reversible sin coste; si el guion prefiere las manos vacías, la postura basta."
+          "El envoltorio de hoja para el fiambre es invención de atrezo: el texto dice sólo «les hizo un buen fiambre». Reversible sin coste; si el guion prefiere las manos vacías, la postura basta."
         ]
       },
       "prompt_spec": {
@@ -2578,15 +3198,15 @@
         "asset_type": "Biblia visual Embera V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena, a la altura del agua. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Madera mojada de canoa como veta recortada, no dibujada; hoja de palma en tiras superpuestas; rastrojo de ribera como decenas de recortes finos encajados. El bosque húmedo se construye por planos escalonados en profundidad y por niebla de papel translúcido entre ellos, nunca por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para La mujer mayor cautiva. Una figura mayor siempre quieta y siempre de perfil, con el peso cargado en un pie y la cabeza girada hacia donde nadie la mira: es la única de la biblia que actúa sin mover el cuerpo, y en la hoja se la reconoce porque tiene las manos ocupadas en algo doméstico mientras los ojos están en otra parte.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura adulta, algo por debajo de la de los jóvenes, medida contra el envoltorio de hoja que sostiene. Plano medio, de la rodilla hacia arriba: es la única ficha humana del corpus que no necesita cuerpo entero, porque su acción es de mirada.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura adulta, algo por debajo de la de los jóvenes, medida contra el envoltorio de hoja que sostiene. Plano medio, de la rodilla hacia arriba: es la única ficha humana del corpus que no necesita cuerpo entero, porque su acción es de mirada.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos noches y sólo dos en toda la biblia —la del vuelo del explorador y la del ataque—, resueltas con papel oscuro y contraluz de cielo, nunca con antorcha, fogata ni resplandor. No hay fuego en este corpus.",
-        "materials_textures": "pelo largo recogido hacia atrás en una sola pieza, para diferenciarla en silueta de la joven que escapa; hoja grande de platanillo o de palma como envoltorio de la comida del viaje: el único objeto que le toca las manos; mínima pieza de fibra en la cintura, del mismo repertorio que el resto de las figuras humanas",
+        "materials_textures": "pelo largo recogido hacia atrás en una sola pieza, para diferenciarla en silueta de la joven que escapa; hoja grande de platanillo o de palma como envoltorio del fiambre: el único objeto que le toca las manos; mínima pieza de fibra en la cintura, del mismo repertorio que el resto de las figuras humanas",
         "era": "Chocó fluvial posterior al contacto y anterior al arma de fuego: hay hacha y machete de hierro, y no hay escopeta, ni caballo, ni tela industrial, ni objeto de mercado, ni un solo europeo en escena. Canoa labrada de un árbol, canalete, arco y flechas, bodoquera, casas contables sobre un alto con camino vigilado, rastrojo de ribera. Sin geometría de fundación —nada de hacha de piedra—, sin oro, sin adorno ceremonial y sin jaibaná.",
         "constraints": [
-          "documentado: Observa en silencio durante años y sabe que bajo el alto permanecen canoas abandonadas junto con hachas, machetes y canaletes (canon, campo mito; §6)",
-          "documentado: Prepara la comida del viaje y explica a los dos jóvenes cómo rodear el asentamiento sin tomar el camino vigilado (canon, campo mito; §6)",
+          "documentado: Los Burumiá la dejan viva, «una vieja», con los dos niños, cuando se llevan a todos los de las canoas (canon, campo mito)",
+          "documentado: Sabe que «allá abajo en el río hay bastantes canoas y hachas y machetes de la gente que han matado» (canon, campo mito; §6)",
+          "documentado: Les dice «vayan rodeando, rodeando, buscando camino», que cojan la canoa más grande y avisen que son los Burumiá, y un día «les hizo un buen fiambre» (canon, campo mito; §6)",
           "documentado: No huye: se queda, y son los jóvenes quienes parten. Es la única figura del corpus definida enteramente por el conocimiento (emb-dogirama-1984, §6)",
-          "documentado: Fue capturada con un niño y una niña cuando los Burumia atacaron las canoas de familias (canon, campo mito)",
           "El corpus no nombra un solo color: la paleta entera sale del agua, el rastrojo y la madera mojada, nunca del gusto.",
           "El verde nunca es saturado: el bosque húmedo se construye con dosel oscuro contra luz difusa y hoja mojada, y el contraste lo da la profundidad, no el tono.",
           "No hay fuego, no hay oro y no hay ningún rojo de sangre: las dos noches se resuelven con papel oscuro y contraluz de cielo.",
@@ -2610,7 +3230,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -2663,8 +3283,8 @@
           "por debajo de él siempre hay techos contables: es un contador, no un depredador"
         ],
         "documented_features": [
-          "«Uno de ellos tomó forma de murciélago y voló sobre el asentamiento»: es la única transformación del relato (canon, campo mito; §2)",
-          "Cuenta las viviendas desde el aire y no ve una casa apartada de las demás: el error es la bisagra del final (canon, campo mito; §2)",
+          "«Uno que se volvía murciélago voló y contó las casas»: es la única transformación del relato (canon, campo mito; §2)",
+          "Cuenta las casas desde el aire, «pero le faltó una que estaba retirada»: el error es la bisagra del final (canon, campo mito; §2)",
           "No hay luz, ni aura, ni metamorfosis en dos tiempos: es un instrumento de reconocimiento, no un prodigio (§2)",
           "La especie no está nombrada en ninguna fuente y en el Chocó podría ser cualquiera de decenas: elegir una sería inventar (§7 y §12.7)"
         ],
@@ -2685,8 +3305,8 @@
         "materials_textures": "membrana alar como dos piezas planas grandes de papel oscuro con el borde recortado en dientes, nunca pelo a pelo ni pliegue a pliegue; cuerpo como una sola gota de papel, sin patas visibles y sin garra; cielo nocturno como papel oscuro a contraluz, que es lo que recorta la silueta",
         "era": "Chocó fluvial posterior al contacto y anterior al arma de fuego: hay hacha y machete de hierro, y no hay escopeta, ni caballo, ni tela industrial, ni objeto de mercado, ni un solo europeo en escena. Canoa labrada de un árbol, canalete, arco y flechas, bodoquera, casas contables sobre un alto con camino vigilado, rastrojo de ribera. Sin geometría de fundación —nada de hacha de piedra—, sin oro, sin adorno ceremonial y sin jaibaná.",
         "constraints": [
-          "documentado: «Uno de ellos tomó forma de murciélago y voló sobre el asentamiento»: es la única transformación del relato (canon, campo mito; §2)",
-          "documentado: Cuenta las viviendas desde el aire y no ve una casa apartada de las demás: el error es la bisagra del final (canon, campo mito; §2)",
+          "documentado: «Uno que se volvía murciélago voló y contó las casas»: es la única transformación del relato (canon, campo mito; §2)",
+          "documentado: Cuenta las casas desde el aire, «pero le faltó una que estaba retirada»: el error es la bisagra del final (canon, campo mito; §2)",
           "documentado: No hay luz, ni aura, ni metamorfosis en dos tiempos: es un instrumento de reconocimiento, no un prodigio (§2)",
           "documentado: La especie no está nombrada en ninguna fuente y en el Chocó podría ser cualquiera de decenas: elegir una sería inventar (§7 y §12.7)",
           "El corpus no nombra un solo color: la paleta entera sale del agua, el rastrojo y la madera mojada, nunca del gusto.",
@@ -2770,9 +3390,9 @@
           "ninguna decoración, ninguna pintura, ninguna marca de propiedad: no hay nada ceremonial en este corpus"
         ],
         "documented_features": [
-          "La fuga escoge la más grande de entre las canoas abandonadas bajo el alto y rompe las pequeñas para impedir la persecución inmediata (canon, campo mito)",
-          "Los habitantes de la casa apartada derriban un árbol en el río Valle y «trabajaron con rapidez hasta convertirlo en canoa» (canon, campo mito)",
-          "Bajo el alto quedan canoas abandonadas junto con hachas, machetes y canaletes: la canoa y su herramienta van siempre juntas en el texto (canon, campo mito)",
+          "«Con un hacha fueron rompiendo todas, dejaron la más grande y se fueron agua abajo» (canon, campo mito)",
+          "Los de la casa apartada salen al río Valle, «tumbaron un palo y empezaron a hacer una canoa», y la terminan antes de que lleguen los perseguidores (canon, campo mito)",
+          "En el río «estaban las canoas, con hachas, machetes y canaletes»: la canoa y su herramienta van siempre juntas en el texto (canon, campo mito)",
           "La canoa labrada de un solo árbol y el canalete son cultura material compartida por todo el bosque húmedo del Atrato, y la madera para canoas está documentada para el pueblo Dóbida (emb-mincultura-dobida, §9)"
         ],
         "editorial_features": [
@@ -2792,9 +3412,9 @@
         "materials_textures": "madera mojada de un solo árbol, con la veta como recorte a lo largo y nunca como dibujo; interior del casco en un tono más oscuro que el exterior, para que el hueco se lea sin sombreado; marca de herramienta —hacha y machete— como muescas de canto en el labrado reciente, ausentes en el casco viejo",
         "era": "Chocó fluvial posterior al contacto y anterior al arma de fuego: hay hacha y machete de hierro, y no hay escopeta, ni caballo, ni tela industrial, ni objeto de mercado, ni un solo europeo en escena. Canoa labrada de un árbol, canalete, arco y flechas, bodoquera, casas contables sobre un alto con camino vigilado, rastrojo de ribera. Sin geometría de fundación —nada de hacha de piedra—, sin oro, sin adorno ceremonial y sin jaibaná.",
         "constraints": [
-          "documentado: La fuga escoge la más grande de entre las canoas abandonadas bajo el alto y rompe las pequeñas para impedir la persecución inmediata (canon, campo mito)",
-          "documentado: Los habitantes de la casa apartada derriban un árbol en el río Valle y «trabajaron con rapidez hasta convertirlo en canoa» (canon, campo mito)",
-          "documentado: Bajo el alto quedan canoas abandonadas junto con hachas, machetes y canaletes: la canoa y su herramienta van siempre juntas en el texto (canon, campo mito)",
+          "documentado: «Con un hacha fueron rompiendo todas, dejaron la más grande y se fueron agua abajo» (canon, campo mito)",
+          "documentado: Los de la casa apartada salen al río Valle, «tumbaron un palo y empezaron a hacer una canoa», y la terminan antes de que lleguen los perseguidores (canon, campo mito)",
+          "documentado: En el río «estaban las canoas, con hachas, machetes y canaletes»: la canoa y su herramienta van siempre juntas en el texto (canon, campo mito)",
           "documentado: La canoa labrada de un solo árbol y el canalete son cultura material compartida por todo el bosque húmedo del Atrato, y la madera para canoas está documentada para el pueblo Dóbida (emb-mincultura-dobida, §9)",
           "El corpus no nombra un solo color: la paleta entera sale del agua, el rastrojo y la madera mojada, nunca del gusto.",
           "El verde nunca es saturado: el bosque húmedo se construye con dosel oscuro contra luz difusa y hoja mojada, y el contraste lo da la profundidad, no el tono.",
@@ -2877,9 +3497,9 @@
           "ninguna decoración, ninguna pintura, ninguna marca de propiedad: no hay nada ceremonial en este corpus"
         ],
         "documented_features": [
-          "La fuga escoge la más grande de entre las canoas abandonadas bajo el alto y rompe las pequeñas para impedir la persecución inmediata (canon, campo mito)",
-          "Los habitantes de la casa apartada derriban un árbol en el río Valle y «trabajaron con rapidez hasta convertirlo en canoa» (canon, campo mito)",
-          "Bajo el alto quedan canoas abandonadas junto con hachas, machetes y canaletes: la canoa y su herramienta van siempre juntas en el texto (canon, campo mito)",
+          "«Con un hacha fueron rompiendo todas, dejaron la más grande y se fueron agua abajo» (canon, campo mito)",
+          "Los de la casa apartada salen al río Valle, «tumbaron un palo y empezaron a hacer una canoa», y la terminan antes de que lleguen los perseguidores (canon, campo mito)",
+          "En el río «estaban las canoas, con hachas, machetes y canaletes»: la canoa y su herramienta van siempre juntas en el texto (canon, campo mito)",
           "La canoa labrada de un solo árbol y el canalete son cultura material compartida por todo el bosque húmedo del Atrato, y la madera para canoas está documentada para el pueblo Dóbida (emb-mincultura-dobida, §9)"
         ],
         "editorial_features": [
@@ -2899,9 +3519,9 @@
         "materials_textures": "madera mojada de un solo árbol, con la veta como recorte a lo largo y nunca como dibujo; interior del casco en un tono más oscuro que el exterior, para que el hueco se lea sin sombreado; marca de herramienta —hacha y machete— como muescas de canto en el labrado reciente, ausentes en el casco viejo",
         "era": "Chocó fluvial posterior al contacto y anterior al arma de fuego: hay hacha y machete de hierro, y no hay escopeta, ni caballo, ni tela industrial, ni objeto de mercado, ni un solo europeo en escena. Canoa labrada de un árbol, canalete, arco y flechas, bodoquera, casas contables sobre un alto con camino vigilado, rastrojo de ribera. Sin geometría de fundación —nada de hacha de piedra—, sin oro, sin adorno ceremonial y sin jaibaná.",
         "constraints": [
-          "documentado: La fuga escoge la más grande de entre las canoas abandonadas bajo el alto y rompe las pequeñas para impedir la persecución inmediata (canon, campo mito)",
-          "documentado: Los habitantes de la casa apartada derriban un árbol en el río Valle y «trabajaron con rapidez hasta convertirlo en canoa» (canon, campo mito)",
-          "documentado: Bajo el alto quedan canoas abandonadas junto con hachas, machetes y canaletes: la canoa y su herramienta van siempre juntas en el texto (canon, campo mito)",
+          "documentado: «Con un hacha fueron rompiendo todas, dejaron la más grande y se fueron agua abajo» (canon, campo mito)",
+          "documentado: Los de la casa apartada salen al río Valle, «tumbaron un palo y empezaron a hacer una canoa», y la terminan antes de que lleguen los perseguidores (canon, campo mito)",
+          "documentado: En el río «estaban las canoas, con hachas, machetes y canaletes»: la canoa y su herramienta van siempre juntas en el texto (canon, campo mito)",
           "documentado: La canoa labrada de un solo árbol y el canalete son cultura material compartida por todo el bosque húmedo del Atrato, y la madera para canoas está documentada para el pueblo Dóbida (emb-mincultura-dobida, §9)",
           "El corpus no nombra un solo color: la paleta entera sale del agua, el rastrojo y la madera mojada, nunca del gusto.",
           "El verde nunca es saturado: el bosque húmedo se construye con dosel oscuro contra luz difusa y hoja mojada, y el contraste lo da la profundidad, no el tono.",
@@ -3066,6 +3686,11 @@
           "myth": "los-burumias-y-carautas",
           "field": "mito",
           "note": "Consecuencia de época en las dos direcciones: no se puede dibujar este mundo con geometría de fundación —nada de hacha de piedra— y tampoco entra nada colonial visible: ni iglesia, ni cruz, ni tela industrial, ni un solo europeo en escena."
+        },
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "El canon reescrito añade dentro del poblado un chiquero para los cautivos, una mata de primitivo sembrada junto a la casa cuyo fruto al rajarse marca la hora de matar al cautivo, y la hamaca del jefe en la casa grande."
         }
       ],
       "design_contract": {
@@ -3086,17 +3711,20 @@
         ],
         "documented_features": [
           "«Los Burumiá vivían en un alto, así como en salto»: la altura se compara con un salto de agua, no con una loma (emb-dogirama-1984, §4 y §13.7)",
-          "Desde sus casas «podían ver a quienes remontaban el agua rumbo al río Bojayá» (canon, campo mito; §4)",
-          "Hay un camino de entrada vigilado, y la mujer mayor enseña a los jóvenes a rodearlo (canon, campo mito; §4)",
-          "Hay una casa grande, la del jefe, y una casa retirada del resto, cuyos habitantes son los únicos que escapan (canon, campo mito; §4)",
+          "Desde el alto «veían a cualquiera que viniera subiendo por el río» (canon, campo mito; §4)",
+          "La ruta del río está vigilada —quien se interna por ella a montiar no vuelve— y la vieja manda a los muchachos «rodeando, rodeando, buscando camino» (canon, campo mito; §4)",
+          "Hay una casa grande donde el jefe duerme en hamaca, y una casa retirada del resto, cuyos habitantes son los únicos que escapan (canon, campo mito; §4)",
           "El ataque se reparte «dos para cada casa»: las viviendas son contables y contadas, y el conteo es la mecánica del desenlace (emb-dogirama-1984, §0.2)",
-          "En este relato la casa se llama «casa»: el texto no dice tambo y no dice bohío (emb-dogirama-1984, §0.1)"
+          "En este relato la casa se llama «casa»: el texto no dice tambo y no dice bohío (emb-dogirama-1984, §0.1)",
+          "Junto a la casa hay sembrada «una mata de primitivo» (canon, campo mito)"
         ],
         "editorial_features": [
           "Material, planta, altura y techo no existen en la fuente (§12.2): se construyen con madera y hoja de palma del bosque húmedo del alto Bojayá, y expresamente sin adoptar la planta circular sobre pilotes del tambo emberá ni el bohío katío, porque vestir el poblado Burumia con la casa emberá resolvería por la arquitectura la ambigüedad que el relato guarda (§4). Reversible sólo hacia formas aún más genéricas.",
           "El número de casas se fija en siete más la apartada para que el conteo sea legible y el error del explorador se entienda: el texto no da cifra y cualquier otra sirve igual.",
           "Se cobra un estado contra el `states_declared: []` del censo, y lo digo: la entidad embebida `casa_apartada` declara que su rasgo es espacial —estar fuera del conteo— y va «como variante del mismo modelo». El establecimiento desde el agua y el conteo nocturno desde el aire no caben en la misma vista, y el conteo es la bisagra del final.",
-          "Ninguna versión del modelo da ruta, confluencia legible, perfil de ribera reconocible ni sendero de acceso practicable: la quebrada Usagará está en territorio indígena vivo, con autoridades nombradas y confinamientos recientes (§11, salvaguarda 4). Esta no es reversible."
+          "Ninguna versión del modelo da ruta, confluencia legible, perfil de ribera reconocible ni sendero de acceso practicable: la quebrada Usagará está en territorio indígena vivo, con autoridades nombradas y confinamientos recientes (§11, salvaguarda 4). Esta no es reversible.",
+          "La mata de primitivo entra como planta junto a una casa, verde y sin racimo maduro ni fruta rajada: su maduración es en el canon el reloj de la antropofagia, y ese estado queda fuera de imagen con el resto del cautiverio. Primitivo se lee como el banano pequeño que así se llama en el Pacífico: identificación inferida, reversible. No se dibuja chiquero.",
+          "La hamaca del jefe va dentro de la casa grande, sin figura en ella: el flechazo al jefe cuando se para a orinar es violencia que el módulo deja fuera."
         ]
       },
       "prompt_spec": {
@@ -3110,11 +3738,12 @@
         "era": "Chocó fluvial posterior al contacto y anterior al arma de fuego: hay hacha y machete de hierro, y no hay escopeta, ni caballo, ni tela industrial, ni objeto de mercado, ni un solo europeo en escena. Canoa labrada de un árbol, canalete, arco y flechas, bodoquera, casas contables sobre un alto con camino vigilado, rastrojo de ribera. Sin geometría de fundación —nada de hacha de piedra—, sin oro, sin adorno ceremonial y sin jaibaná.",
         "constraints": [
           "documentado: «Los Burumiá vivían en un alto, así como en salto»: la altura se compara con un salto de agua, no con una loma (emb-dogirama-1984, §4 y §13.7)",
-          "documentado: Desde sus casas «podían ver a quienes remontaban el agua rumbo al río Bojayá» (canon, campo mito; §4)",
-          "documentado: Hay un camino de entrada vigilado, y la mujer mayor enseña a los jóvenes a rodearlo (canon, campo mito; §4)",
-          "documentado: Hay una casa grande, la del jefe, y una casa retirada del resto, cuyos habitantes son los únicos que escapan (canon, campo mito; §4)",
+          "documentado: Desde el alto «veían a cualquiera que viniera subiendo por el río» (canon, campo mito; §4)",
+          "documentado: La ruta del río está vigilada —quien se interna por ella a montiar no vuelve— y la vieja manda a los muchachos «rodeando, rodeando, buscando camino» (canon, campo mito; §4)",
+          "documentado: Hay una casa grande donde el jefe duerme en hamaca, y una casa retirada del resto, cuyos habitantes son los únicos que escapan (canon, campo mito; §4)",
           "documentado: El ataque se reparte «dos para cada casa»: las viviendas son contables y contadas, y el conteo es la mecánica del desenlace (emb-dogirama-1984, §0.2)",
           "documentado: En este relato la casa se llama «casa»: el texto no dice tambo y no dice bohío (emb-dogirama-1984, §0.1)",
+          "documentado: Junto a la casa hay sembrada «una mata de primitivo» (canon, campo mito)",
           "El corpus no nombra un solo color: la paleta entera sale del agua, el rastrojo y la madera mojada, nunca del gusto.",
           "El verde nunca es saturado: el bosque húmedo se construye con dosel oscuro contra luz difusa y hoja mojada, y el contraste lo da la profundidad, no el tono.",
           "No hay fuego, no hay oro y no hay ningún rojo de sangre: las dos noches se resuelven con papel oscuro y contraluz de cielo.",
@@ -3183,6 +3812,11 @@
           "myth": "los-burumias-y-carautas",
           "field": "mito",
           "note": "Consecuencia de época en las dos direcciones: no se puede dibujar este mundo con geometría de fundación —nada de hacha de piedra— y tampoco entra nada colonial visible: ni iglesia, ni cruz, ni tela industrial, ni un solo europeo en escena."
+        },
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "El canon reescrito añade dentro del poblado un chiquero para los cautivos, una mata de primitivo sembrada junto a la casa cuyo fruto al rajarse marca la hora de matar al cautivo, y la hamaca del jefe en la casa grande."
         }
       ],
       "design_contract": {
@@ -3203,17 +3837,20 @@
         ],
         "documented_features": [
           "«Los Burumiá vivían en un alto, así como en salto»: la altura se compara con un salto de agua, no con una loma (emb-dogirama-1984, §4 y §13.7)",
-          "Desde sus casas «podían ver a quienes remontaban el agua rumbo al río Bojayá» (canon, campo mito; §4)",
-          "Hay un camino de entrada vigilado, y la mujer mayor enseña a los jóvenes a rodearlo (canon, campo mito; §4)",
-          "Hay una casa grande, la del jefe, y una casa retirada del resto, cuyos habitantes son los únicos que escapan (canon, campo mito; §4)",
+          "Desde el alto «veían a cualquiera que viniera subiendo por el río» (canon, campo mito; §4)",
+          "La ruta del río está vigilada —quien se interna por ella a montiar no vuelve— y la vieja manda a los muchachos «rodeando, rodeando, buscando camino» (canon, campo mito; §4)",
+          "Hay una casa grande donde el jefe duerme en hamaca, y una casa retirada del resto, cuyos habitantes son los únicos que escapan (canon, campo mito; §4)",
           "El ataque se reparte «dos para cada casa»: las viviendas son contables y contadas, y el conteo es la mecánica del desenlace (emb-dogirama-1984, §0.2)",
-          "En este relato la casa se llama «casa»: el texto no dice tambo y no dice bohío (emb-dogirama-1984, §0.1)"
+          "En este relato la casa se llama «casa»: el texto no dice tambo y no dice bohío (emb-dogirama-1984, §0.1)",
+          "Junto a la casa hay sembrada «una mata de primitivo» (canon, campo mito)"
         ],
         "editorial_features": [
           "Material, planta, altura y techo no existen en la fuente (§12.2): se construyen con madera y hoja de palma del bosque húmedo del alto Bojayá, y expresamente sin adoptar la planta circular sobre pilotes del tambo emberá ni el bohío katío, porque vestir el poblado Burumia con la casa emberá resolvería por la arquitectura la ambigüedad que el relato guarda (§4). Reversible sólo hacia formas aún más genéricas.",
           "El número de casas se fija en siete más la apartada para que el conteo sea legible y el error del explorador se entienda: el texto no da cifra y cualquier otra sirve igual.",
           "Se cobra un estado contra el `states_declared: []` del censo, y lo digo: la entidad embebida `casa_apartada` declara que su rasgo es espacial —estar fuera del conteo— y va «como variante del mismo modelo». El establecimiento desde el agua y el conteo nocturno desde el aire no caben en la misma vista, y el conteo es la bisagra del final.",
-          "Ninguna versión del modelo da ruta, confluencia legible, perfil de ribera reconocible ni sendero de acceso practicable: la quebrada Usagará está en territorio indígena vivo, con autoridades nombradas y confinamientos recientes (§11, salvaguarda 4). Esta no es reversible."
+          "Ninguna versión del modelo da ruta, confluencia legible, perfil de ribera reconocible ni sendero de acceso practicable: la quebrada Usagará está en territorio indígena vivo, con autoridades nombradas y confinamientos recientes (§11, salvaguarda 4). Esta no es reversible.",
+          "La mata de primitivo entra como planta junto a una casa, verde y sin racimo maduro ni fruta rajada: su maduración es en el canon el reloj de la antropofagia, y ese estado queda fuera de imagen con el resto del cautiverio. Primitivo se lee como el banano pequeño que así se llama en el Pacífico: identificación inferida, reversible. No se dibuja chiquero.",
+          "La hamaca del jefe va dentro de la casa grande, sin figura en ella: el flechazo al jefe cuando se para a orinar es violencia que el módulo deja fuera."
         ]
       },
       "prompt_spec": {
@@ -3227,11 +3864,12 @@
         "era": "Chocó fluvial posterior al contacto y anterior al arma de fuego: hay hacha y machete de hierro, y no hay escopeta, ni caballo, ni tela industrial, ni objeto de mercado, ni un solo europeo en escena. Canoa labrada de un árbol, canalete, arco y flechas, bodoquera, casas contables sobre un alto con camino vigilado, rastrojo de ribera. Sin geometría de fundación —nada de hacha de piedra—, sin oro, sin adorno ceremonial y sin jaibaná.",
         "constraints": [
           "documentado: «Los Burumiá vivían en un alto, así como en salto»: la altura se compara con un salto de agua, no con una loma (emb-dogirama-1984, §4 y §13.7)",
-          "documentado: Desde sus casas «podían ver a quienes remontaban el agua rumbo al río Bojayá» (canon, campo mito; §4)",
-          "documentado: Hay un camino de entrada vigilado, y la mujer mayor enseña a los jóvenes a rodearlo (canon, campo mito; §4)",
-          "documentado: Hay una casa grande, la del jefe, y una casa retirada del resto, cuyos habitantes son los únicos que escapan (canon, campo mito; §4)",
+          "documentado: Desde el alto «veían a cualquiera que viniera subiendo por el río» (canon, campo mito; §4)",
+          "documentado: La ruta del río está vigilada —quien se interna por ella a montiar no vuelve— y la vieja manda a los muchachos «rodeando, rodeando, buscando camino» (canon, campo mito; §4)",
+          "documentado: Hay una casa grande donde el jefe duerme en hamaca, y una casa retirada del resto, cuyos habitantes son los únicos que escapan (canon, campo mito; §4)",
           "documentado: El ataque se reparte «dos para cada casa»: las viviendas son contables y contadas, y el conteo es la mecánica del desenlace (emb-dogirama-1984, §0.2)",
           "documentado: En este relato la casa se llama «casa»: el texto no dice tambo y no dice bohío (emb-dogirama-1984, §0.1)",
+          "documentado: Junto a la casa hay sembrada «una mata de primitivo» (canon, campo mito)",
           "El corpus no nombra un solo color: la paleta entera sale del agua, el rastrojo y la madera mojada, nunca del gusto.",
           "El verde nunca es saturado: el bosque húmedo se construye con dosel oscuro contra luz difusa y hoja mojada, y el contraste lo da la profundidad, no el tono.",
           "No hay fuego, no hay oro y no hay ningún rojo de sangre: las dos noches se resuelven con papel oscuro y contraluz de cielo.",
@@ -3528,9 +4166,9 @@
           "la pala del canalete vuelta hacia el espectador, que es como aparece cuando sirve de escudo"
         ],
         "documented_features": [
-          "Bajo el alto quedan canoas abandonadas junto con hachas, machetes y canaletes: los tres se nombran en la misma frase (canon, campo mito)",
-          "El muchacho aprende a fabricar arco y bodoquera y sale a buscar alimento (canon, campo mito; §6)",
-          "El grupo escondido en el rastrojo lanza flechas contra la canoa (canon, campo mito)",
+          "En el río «estaban las canoas, con hachas, machetes y canaletes» de la gente que los Burumiá han matado: los tres se nombran en la misma frase (canon, campo mito)",
+          "El niño «hizo bodoquera y arco y salía a montiar» (canon, campo mito; §6)",
+          "Los escondidos en el rastrojo disparan flechas contra la canoa y los muchachos las paran con el canalete (canon, campo mito)",
           "Los jóvenes levantan el canalete para protegerse: el remo como escudo es el objeto moral del relato (canon, campo mito; §2)",
           "Hachas y machetes son herramienta de hierro forjado de intercambio y sitúan el relato después del contacto y antes del arma de fuego (§1, hipótesis académica declarada)",
           "No hay nada ceremonial, no hay oro y no hay ningún objeto de mercado en todo el corpus (§1)"
@@ -3552,9 +4190,9 @@
         "materials_textures": "madera labrada para el canalete, el arco, el astil de las flechas y los mangos, con la veta recortada a lo largo; tubo de la bodoquera como pieza recta y larga de una sola sección, sin boquilla ni adorno; hierro forjado mate y sin brillo en hoja de hacha y de machete: es lo que fecha la escena; fibra vegetal de cuerda de arco y de amarre del hierro al mango",
         "era": "Chocó fluvial posterior al contacto y anterior al arma de fuego: hay hacha y machete de hierro, y no hay escopeta, ni caballo, ni tela industrial, ni objeto de mercado, ni un solo europeo en escena. Canoa labrada de un árbol, canalete, arco y flechas, bodoquera, casas contables sobre un alto con camino vigilado, rastrojo de ribera. Sin geometría de fundación —nada de hacha de piedra—, sin oro, sin adorno ceremonial y sin jaibaná.",
         "constraints": [
-          "documentado: Bajo el alto quedan canoas abandonadas junto con hachas, machetes y canaletes: los tres se nombran en la misma frase (canon, campo mito)",
-          "documentado: El muchacho aprende a fabricar arco y bodoquera y sale a buscar alimento (canon, campo mito; §6)",
-          "documentado: El grupo escondido en el rastrojo lanza flechas contra la canoa (canon, campo mito)",
+          "documentado: En el río «estaban las canoas, con hachas, machetes y canaletes» de la gente que los Burumiá han matado: los tres se nombran en la misma frase (canon, campo mito)",
+          "documentado: El niño «hizo bodoquera y arco y salía a montiar» (canon, campo mito; §6)",
+          "documentado: Los escondidos en el rastrojo disparan flechas contra la canoa y los muchachos las paran con el canalete (canon, campo mito)",
           "documentado: Los jóvenes levantan el canalete para protegerse: el remo como escudo es el objeto moral del relato (canon, campo mito; §2)",
           "documentado: Hachas y machetes son herramienta de hierro forjado de intercambio y sitúan el relato después del contacto y antes del arma de fuego (§1, hipótesis académica declarada)",
           "documentado: No hay nada ceremonial, no hay oro y no hay ningún objeto de mercado en todo el corpus (§1)",
@@ -3582,6 +4220,443 @@
           "view_type": "object_three_quarter",
           "purpose": "hechura, escala y uso del objeto",
           "aspect": "1:1",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_hombre_adulto__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_hombre_adulto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "Los hombres emberá se reúnen del Atrato y de todos los ríos, se esconden en el rastrojo silbando como el buchelé, disparan flechas y suben de noche «todos armados»."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre emberá de estatura corriente, de pie en la canoa con el canalete vertical o en cuclillas con el arco tendido a la altura del pecho, el pelo largo suelto a la espalda y la mancha de jagua como campo liso en la cara y el antebrazo: el cuerpo entero orientado al agua.",
+        "materials": [
+          "cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca—; el cuerpo, en pocos planos grandes de papel de fibra mate, sin músculo modelado",
+          "pieza mínima de fibra vegetal lisa en la cintura, de un solo tono",
+          "mancha de jagua como campo plano negro azulado en cara y antebrazo, sin línea ni punto interior",
+          "arco de madera curvada de una sola pieza y flecha larga"
+        ],
+        "palette_logic": "Piel en los medios tonos cálidos del papel de fibra, pelo en el negro más profundo de la hoja y la jagua como el único negro azulado: tres tonos y ninguno saturado.",
+        "scale": "Estatura adulta idéntica a la de los Burumiá, medida contra el canalete de pie, que le llega al hombro. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "pelo largo suelto siempre",
+          "jagua como campo liso, nunca motivo",
+          "arco o canalete en la mano, uno por situación"
+        ],
+        "documented_features": [
+          "El relato no describe cuerpo, ropa, pintura ni adorno de nadie (emb-dogirama-1984, §6 y §12.1): todo lo que viste a este tipo se declara abajo como editorial",
+          "Dóbida traduce «habitantes de río»: el cuerpo se compone desde el agua, con canoa o canalete presente o implícito (emb-mincultura-dobida, §3; salvaguarda 1, §11)",
+          "Época: hay hacha y machete de hierro y no hay tela industrial, objeto de mercado, oro ni adorno ceremonial (§1)",
+          "La pintura facial y corporal con jagua (Genipa americana) está documentada para el pueblo Dóbida como práctica cotidiana, contemporánea y pan-emberá, marcada variant y consult_required; jamás un diseño concreto (emb-mincultura-dobida, §6; salvaguarda 2)",
+          "Son los hombres de la guerra: se reúnen de todos los ríos, se esconden en el rastrojo, disparan flechas y suben de noche «todos armados» (canon, campo mito)"
+        ],
+        "editorial_features": [
+          "La prenda es la mínima pieza de fibra vegetal lisa en la cintura, sin tejido legible, franja ni color: no hay una sola línea de ropa en la fuente y la técnica necesita un borde para que el cuerpo se lea. Revocable en bloque por lectura comunitaria.",
+          "El pelo largo suelto, de una sola pieza de canto liso, es lectura del contraste que el relato establece con la cabeza pelada de los Burumiá, no peinado documentado. Reversible, pero si se retira hay que dar a la gente emberá otro marcador que la separe del vecindario del alto.",
+          "Ningún objeto ni insignia de jaibaná: el jaibanismo no aparece en el relato (§6). No reversible.",
+          "La jagua en cara y antebrazo es la aplicación mínima de una práctica documentada sólo en su existencia; si una autoridad dóbida objeta, se retira y quedan cuerpos sin pintar."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Embera V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena, a la altura del agua. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Madera mojada de canoa como veta recortada, no dibujada; hoja de palma en tiras superpuestas; rastrojo de ribera como decenas de recortes finos encajados. El bosque húmedo se construye por planos escalonados en profundidad y por niebla de papel translúcido entre ellos, nunca por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · hombre emberá adulto. Hombre emberá de estatura corriente, de pie en la canoa con el canalete vertical o en cuclillas con el arco tendido a la altura del pecho, el pelo largo suelto a la espalda y la mancha de jagua como campo liso en la cara y el antebrazo: el cuerpo entero orientado al agua.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura adulta idéntica a la de los Burumiá, medida contra el canalete de pie, que le llega al hombro. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos noches y sólo dos en toda la biblia —la del vuelo del explorador y la del ataque—, resueltas con papel oscuro y contraluz de cielo, nunca con antorcha, fogata ni resplandor. No hay fuego en este corpus.",
+        "materials_textures": "cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca—; el cuerpo, en pocos planos grandes de papel de fibra mate, sin músculo modelado; pieza mínima de fibra vegetal lisa en la cintura, de un solo tono; mancha de jagua como campo plano negro azulado en cara y antebrazo, sin línea ni punto interior; arco de madera curvada de una sola pieza y flecha larga",
+        "era": "Chocó fluvial posterior al contacto y anterior al arma de fuego: hay hacha y machete de hierro, y no hay escopeta, ni caballo, ni tela industrial, ni objeto de mercado, ni un solo europeo en escena. Canoa labrada de un árbol, canalete, arco y flechas, bodoquera, casas contables sobre un alto con camino vigilado, rastrojo de ribera. Sin geometría de fundación —nada de hacha de piedra—, sin oro, sin adorno ceremonial y sin jaibaná.",
+        "constraints": [
+          "documentado: El relato no describe cuerpo, ropa, pintura ni adorno de nadie (emb-dogirama-1984, §6 y §12.1): todo lo que viste a este tipo se declara abajo como editorial",
+          "documentado: Dóbida traduce «habitantes de río»: el cuerpo se compone desde el agua, con canoa o canalete presente o implícito (emb-mincultura-dobida, §3; salvaguarda 1, §11)",
+          "documentado: Época: hay hacha y machete de hierro y no hay tela industrial, objeto de mercado, oro ni adorno ceremonial (§1)",
+          "documentado: La pintura facial y corporal con jagua (Genipa americana) está documentada para el pueblo Dóbida como práctica cotidiana, contemporánea y pan-emberá, marcada variant y consult_required; jamás un diseño concreto (emb-mincultura-dobida, §6; salvaguarda 2)",
+          "documentado: Son los hombres de la guerra: se reúnen de todos los ríos, se esconden en el rastrojo, disparan flechas y suben de noche «todos armados» (canon, campo mito)",
+          "El corpus no nombra un solo color: la paleta entera sale del agua, el rastrojo y la madera mojada, nunca del gusto.",
+          "El verde nunca es saturado: el bosque húmedo se construye con dosel oscuro contra luz difusa y hoja mojada, y el contraste lo da la profundidad, no el tono.",
+          "No hay fuego, no hay oro y no hay ningún rojo de sangre: las dos noches se resuelven con papel oscuro y contraluz de cielo.",
+          "El único claro del encuadre es el agua: la superficie del río es siempre el plano más claro de la lámina, porque el relato se cuenta desde ella.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Ninguna figura cuna, ni silueta, ni adorno, ni alusión: el relato es sobre una acusación equivocada.",
+          "Ningún diseño de pintura corporal emberá, ni copiado ni inventado, y ninguna marca clanil.",
+          "Ningún objeto ni insignia de jaibaná: bastón, banco, totuma ritual o pintura de ceremonia.",
+          "Ningún fuego, incendio, antorcha, deidad ni figura gigantesca: fue lo que hizo rechazar la pareja de imágenes anterior.",
+          "Ningún oro, ninguna pieza de orfebrería y ningún objeto ceremonial de ninguna clase.",
+          "Ninguna escena de cautiverio ni de antropofagia: la tensión se compone con distancia, vigilancia y niebla.",
+          "Ningún arma de fuego, ningún europeo, ninguna tela industrial y ningún objeto de mercado.",
+          "Ninguna ruta, confluencia legible, perfil de ribera reconocible ni sendero de acceso al alto."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza pelada de los Burumia es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. El pelaje del perro y la membrana del murciélago siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón. El quilling se reserva para lo que enrolla de verdad: el remolino del agua tras el canalete, la niebla que sube del río, la espiral del bejuco en el rastrojo."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_adulta__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_adulta"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "Las canoas que suben por el río llevan «familias enteras, con mujeres y con niños», y los Burumiá se las llevan a todas."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer emberá adulta sentada en el centro de la canoa, entre la carga y los niños, con el pelo largo suelto y la mancha de jagua como campo liso en la cara: el cuerpo recogido, las manos en la borda.",
+        "materials": [
+          "cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca—; el cuerpo, en pocos planos grandes de papel de fibra mate, sin músculo modelado",
+          "pieza mínima de fibra vegetal lisa en la cintura, sin tejido ni franja",
+          "mancha de jagua como campo plano en cara y brazo, sin dibujo interior"
+        ],
+        "palette_logic": "Piel en medio tono cálido, un punto más clara que la del hombre por el rebote del agua; pelo negro profundo; la jagua como único negro azulado.",
+        "scale": "Algo por debajo de la estatura del hombre adulto; medida sentada contra la borda de la canoa, que le llega a la cintura. Cuerpo entero 9:16, de pie en la hoja.",
+        "continuity_markers": [
+          "pelo largo suelto",
+          "jagua como campo liso",
+          "siempre asociada a la canoa de familia"
+        ],
+        "documented_features": [
+          "El relato no describe cuerpo, ropa, pintura ni adorno de nadie (emb-dogirama-1984, §6 y §12.1): todo lo que viste a este tipo se declara abajo como editorial",
+          "Dóbida traduce «habitantes de río»: el cuerpo se compone desde el agua, con canoa o canalete presente o implícito (emb-mincultura-dobida, §3; salvaguarda 1, §11)",
+          "Época: hay hacha y machete de hierro y no hay tela industrial, objeto de mercado, oro ni adorno ceremonial (§1)",
+          "La pintura facial y corporal con jagua (Genipa americana) está documentada para el pueblo Dóbida como práctica cotidiana, contemporánea y pan-emberá, marcada variant y consult_required; jamás un diseño concreto (emb-mincultura-dobida, §6; salvaguarda 2)",
+          "«Un día subieron varias canoas con familias enteras, con mujeres y con niños» (canon, campo mito)"
+        ],
+        "editorial_features": [
+          "La prenda es la mínima pieza de fibra vegetal lisa en la cintura, sin tejido legible, franja ni color: no hay una sola línea de ropa en la fuente y la técnica necesita un borde para que el cuerpo se lea. Revocable en bloque por lectura comunitaria.",
+          "El pelo largo suelto, de una sola pieza de canto liso, es lectura del contraste que el relato establece con la cabeza pelada de los Burumiá, no peinado documentado. Reversible, pero si se retira hay que dar a la gente emberá otro marcador que la separe del vecindario del alto.",
+          "Ningún objeto ni insignia de jaibaná: el jaibanismo no aparece en el relato (§6). No reversible.",
+          "La postura sentada en la canoa es decisión de composición, porque el único lugar donde el relato pone mujeres adultas emberá es la canoa de familias. Reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Embera V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena, a la altura del agua. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Madera mojada de canoa como veta recortada, no dibujada; hoja de palma en tiras superpuestas; rastrojo de ribera como decenas de recortes finos encajados. El bosque húmedo se construye por planos escalonados en profundidad y por niebla de papel translúcido entre ellos, nunca por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer emberá adulta. Mujer emberá adulta sentada en el centro de la canoa, entre la carga y los niños, con el pelo largo suelto y la mancha de jagua como campo liso en la cara: el cuerpo recogido, las manos en la borda.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Algo por debajo de la estatura del hombre adulto; medida sentada contra la borda de la canoa, que le llega a la cintura. Cuerpo entero 9:16, de pie en la hoja.",
+        "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos noches y sólo dos en toda la biblia —la del vuelo del explorador y la del ataque—, resueltas con papel oscuro y contraluz de cielo, nunca con antorcha, fogata ni resplandor. No hay fuego en este corpus.",
+        "materials_textures": "cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca—; el cuerpo, en pocos planos grandes de papel de fibra mate, sin músculo modelado; pieza mínima de fibra vegetal lisa en la cintura, sin tejido ni franja; mancha de jagua como campo plano en cara y brazo, sin dibujo interior",
+        "era": "Chocó fluvial posterior al contacto y anterior al arma de fuego: hay hacha y machete de hierro, y no hay escopeta, ni caballo, ni tela industrial, ni objeto de mercado, ni un solo europeo en escena. Canoa labrada de un árbol, canalete, arco y flechas, bodoquera, casas contables sobre un alto con camino vigilado, rastrojo de ribera. Sin geometría de fundación —nada de hacha de piedra—, sin oro, sin adorno ceremonial y sin jaibaná.",
+        "constraints": [
+          "documentado: El relato no describe cuerpo, ropa, pintura ni adorno de nadie (emb-dogirama-1984, §6 y §12.1): todo lo que viste a este tipo se declara abajo como editorial",
+          "documentado: Dóbida traduce «habitantes de río»: el cuerpo se compone desde el agua, con canoa o canalete presente o implícito (emb-mincultura-dobida, §3; salvaguarda 1, §11)",
+          "documentado: Época: hay hacha y machete de hierro y no hay tela industrial, objeto de mercado, oro ni adorno ceremonial (§1)",
+          "documentado: La pintura facial y corporal con jagua (Genipa americana) está documentada para el pueblo Dóbida como práctica cotidiana, contemporánea y pan-emberá, marcada variant y consult_required; jamás un diseño concreto (emb-mincultura-dobida, §6; salvaguarda 2)",
+          "documentado: «Un día subieron varias canoas con familias enteras, con mujeres y con niños» (canon, campo mito)",
+          "El corpus no nombra un solo color: la paleta entera sale del agua, el rastrojo y la madera mojada, nunca del gusto.",
+          "El verde nunca es saturado: el bosque húmedo se construye con dosel oscuro contra luz difusa y hoja mojada, y el contraste lo da la profundidad, no el tono.",
+          "No hay fuego, no hay oro y no hay ningún rojo de sangre: las dos noches se resuelven con papel oscuro y contraluz de cielo.",
+          "El único claro del encuadre es el agua: la superficie del río es siempre el plano más claro de la lámina, porque el relato se cuenta desde ella.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Ninguna figura cuna, ni silueta, ni adorno, ni alusión: el relato es sobre una acusación equivocada.",
+          "Ningún diseño de pintura corporal emberá, ni copiado ni inventado, y ninguna marca clanil.",
+          "Ningún objeto ni insignia de jaibaná: bastón, banco, totuma ritual o pintura de ceremonia.",
+          "Ningún fuego, incendio, antorcha, deidad ni figura gigantesca: fue lo que hizo rechazar la pareja de imágenes anterior.",
+          "Ningún oro, ninguna pieza de orfebrería y ningún objeto ceremonial de ninguna clase.",
+          "Ninguna escena de cautiverio ni de antropofagia: la tensión se compone con distancia, vigilancia y niebla.",
+          "Ningún arma de fuego, ningún europeo, ninguna tela industrial y ningún objeto de mercado.",
+          "Ninguna ruta, confluencia legible, perfil de ribera reconocible ni sendero de acceso al alto."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza pelada de los Burumia es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. El pelaje del perro y la membrana del murciélago siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón. El quilling se reserva para lo que enrolla de verdad: el remolino del agua tras el canalete, la niebla que sube del río, la espiral del bejuco en el rastrojo."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_joven__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_joven"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "La niña dejada viva crece con su hermano entre los Burumiá y baja el río con él en la canoa grande."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Muchacha emberá casi de estatura adulta, delgada y erguida, de pie en la canoa con el canalete alzado en diagonal delante del pecho y el pelo largo suelto: la silueta es la de la hermana que baja el río.",
+        "materials": [
+          "cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca—; el cuerpo, en pocos planos grandes de papel de fibra mate, sin músculo modelado",
+          "pieza mínima de fibra vegetal lisa en la cintura",
+          "canalete de madera con la pala vuelta hacia fuera"
+        ],
+        "palette_logic": "Los tonos de piel más claros de la hoja, por el agua, y el pelo negro; sin jagua: la única joven del relato es cautiva criada fuera de su gente.",
+        "scale": "Un palmo por debajo del hombre adulto, medida contra el canalete. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "pelo largo suelto, nunca recogido: la separa en silueta de la vieja",
+          "sin jagua",
+          "el canalete como su único objeto"
+        ],
+        "documented_features": [
+          "El relato no describe cuerpo, ropa, pintura ni adorno de nadie (emb-dogirama-1984, §6 y §12.1): todo lo que viste a este tipo se declara abajo como editorial",
+          "Dóbida traduce «habitantes de río»: el cuerpo se compone desde el agua, con canoa o canalete presente o implícito (emb-mincultura-dobida, §3; salvaguarda 1, §11)",
+          "Época: hay hacha y machete de hierro y no hay tela industrial, objeto de mercado, oro ni adorno ceremonial (§1)",
+          "«Así creció, y su hermana con él»: la única mujer joven del relato es la niña cautiva que crece con su hermano (canon, campo mito)"
+        ],
+        "editorial_features": [
+          "La prenda es la mínima pieza de fibra vegetal lisa en la cintura, sin tejido legible, franja ni color: no hay una sola línea de ropa en la fuente y la técnica necesita un borde para que el cuerpo se lea. Revocable en bloque por lectura comunitaria.",
+          "El pelo largo suelto, de una sola pieza de canto liso, es lectura del contraste que el relato establece con la cabeza pelada de los Burumiá, no peinado documentado. Reversible, pero si se retira hay que dar a la gente emberá otro marcador que la separe del vecindario del alto.",
+          "Ningún objeto ni insignia de jaibaná: el jaibanismo no aparece en el relato (§6). No reversible.",
+          "Sin jagua, por la misma razón que la ficha de los hermanos: ponérsela añadiría una biografía que la fuente no da. Reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Embera V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena, a la altura del agua. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Madera mojada de canoa como veta recortada, no dibujada; hoja de palma en tiras superpuestas; rastrojo de ribera como decenas de recortes finos encajados. El bosque húmedo se construye por planos escalonados en profundidad y por niebla de papel translúcido entre ellos, nunca por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer emberá joven. Muchacha emberá casi de estatura adulta, delgada y erguida, de pie en la canoa con el canalete alzado en diagonal delante del pecho y el pelo largo suelto: la silueta es la de la hermana que baja el río.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Un palmo por debajo del hombre adulto, medida contra el canalete. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos noches y sólo dos en toda la biblia —la del vuelo del explorador y la del ataque—, resueltas con papel oscuro y contraluz de cielo, nunca con antorcha, fogata ni resplandor. No hay fuego en este corpus.",
+        "materials_textures": "cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca—; el cuerpo, en pocos planos grandes de papel de fibra mate, sin músculo modelado; pieza mínima de fibra vegetal lisa en la cintura; canalete de madera con la pala vuelta hacia fuera",
+        "era": "Chocó fluvial posterior al contacto y anterior al arma de fuego: hay hacha y machete de hierro, y no hay escopeta, ni caballo, ni tela industrial, ni objeto de mercado, ni un solo europeo en escena. Canoa labrada de un árbol, canalete, arco y flechas, bodoquera, casas contables sobre un alto con camino vigilado, rastrojo de ribera. Sin geometría de fundación —nada de hacha de piedra—, sin oro, sin adorno ceremonial y sin jaibaná.",
+        "constraints": [
+          "documentado: El relato no describe cuerpo, ropa, pintura ni adorno de nadie (emb-dogirama-1984, §6 y §12.1): todo lo que viste a este tipo se declara abajo como editorial",
+          "documentado: Dóbida traduce «habitantes de río»: el cuerpo se compone desde el agua, con canoa o canalete presente o implícito (emb-mincultura-dobida, §3; salvaguarda 1, §11)",
+          "documentado: Época: hay hacha y machete de hierro y no hay tela industrial, objeto de mercado, oro ni adorno ceremonial (§1)",
+          "documentado: «Así creció, y su hermana con él»: la única mujer joven del relato es la niña cautiva que crece con su hermano (canon, campo mito)",
+          "El corpus no nombra un solo color: la paleta entera sale del agua, el rastrojo y la madera mojada, nunca del gusto.",
+          "El verde nunca es saturado: el bosque húmedo se construye con dosel oscuro contra luz difusa y hoja mojada, y el contraste lo da la profundidad, no el tono.",
+          "No hay fuego, no hay oro y no hay ningún rojo de sangre: las dos noches se resuelven con papel oscuro y contraluz de cielo.",
+          "El único claro del encuadre es el agua: la superficie del río es siempre el plano más claro de la lámina, porque el relato se cuenta desde ella.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Ninguna figura cuna, ni silueta, ni adorno, ni alusión: el relato es sobre una acusación equivocada.",
+          "Ningún diseño de pintura corporal emberá, ni copiado ni inventado, y ninguna marca clanil.",
+          "Ningún objeto ni insignia de jaibaná: bastón, banco, totuma ritual o pintura de ceremonia.",
+          "Ningún fuego, incendio, antorcha, deidad ni figura gigantesca: fue lo que hizo rechazar la pareja de imágenes anterior.",
+          "Ningún oro, ninguna pieza de orfebrería y ningún objeto ceremonial de ninguna clase.",
+          "Ninguna escena de cautiverio ni de antropofagia: la tensión se compone con distancia, vigilancia y niebla.",
+          "Ningún arma de fuego, ningún europeo, ninguna tela industrial y ningún objeto de mercado.",
+          "Ninguna ruta, confluencia legible, perfil de ribera reconocible ni sendero de acceso al alto."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza pelada de los Burumia es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. El pelaje del perro y la membrana del murciélago siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón. El quilling se reserva para lo que enrolla de verdad: el remolino del agua tras el canalete, la niebla que sube del río, la espiral del bejuco en el rastrojo."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_nino__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_nino"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "Las canoas llevan niños, y de todos los Burumiá dejan vivos a un niño y una niña para criarlos."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Niño emberá de siete u ocho años, de pie en la canoa junto a la borda, el pelo largo suelto hasta los hombros y una bodoquera corta de juguete en la mano: el cuerpo pequeño y recto, la cabeza grande respecto al tronco.",
+        "materials": [
+          "cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca—; el cuerpo, en pocos planos grandes de papel de fibra mate, sin músculo modelado",
+          "pieza mínima de fibra vegetal lisa en la cintura",
+          "bodoquera corta como tubo recto de un solo tono"
+        ],
+        "palette_logic": "Piel en medio tono cálido y pelo negro; sin jagua ni ninguna otra pieza de color.",
+        "scale": "Medido contra la borda de la canoa, que le llega al pecho. Cuerpo entero 9:16, con más aire alrededor que los adultos.",
+        "continuity_markers": [
+          "pelo largo suelto",
+          "sin jagua",
+          "tubo recto de bodoquera como su objeto"
+        ],
+        "documented_features": [
+          "El relato no describe cuerpo, ropa, pintura ni adorno de nadie (emb-dogirama-1984, §6 y §12.1): todo lo que viste a este tipo se declara abajo como editorial",
+          "Dóbida traduce «habitantes de río»: el cuerpo se compone desde el agua, con canoa o canalete presente o implícito (emb-mincultura-dobida, §3; salvaguarda 1, §11)",
+          "Época: hay hacha y machete de hierro y no hay tela industrial, objeto de mercado, oro ni adorno ceremonial (§1)",
+          "Los Burumiá dejan vivos «a dos niños, un niño y una niña»; el niño crece y «hizo bodoquera y arco» (canon, campo mito)"
+        ],
+        "editorial_features": [
+          "La prenda es la mínima pieza de fibra vegetal lisa en la cintura, sin tejido legible, franja ni color: no hay una sola línea de ropa en la fuente y la técnica necesita un borde para que el cuerpo se lea. Revocable en bloque por lectura comunitaria.",
+          "El pelo largo suelto, de una sola pieza de canto liso, es lectura del contraste que el relato establece con la cabeza pelada de los Burumiá, no peinado documentado. Reversible, pero si se retira hay que dar a la gente emberá otro marcador que la separe del vecindario del alto.",
+          "Ningún objeto ni insignia de jaibaná: el jaibanismo no aparece en el relato (§6). No reversible.",
+          "La bodoquera corta en la mano del niño anticipa el oficio que el relato le da de mayor: es decisión de hoja, reversible sin coste."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Embera V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena, a la altura del agua. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Madera mojada de canoa como veta recortada, no dibujada; hoja de palma en tiras superpuestas; rastrojo de ribera como decenas de recortes finos encajados. El bosque húmedo se construye por planos escalonados en profundidad y por niebla de papel translúcido entre ellos, nunca por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · niño emberá. Niño emberá de siete u ocho años, de pie en la canoa junto a la borda, el pelo largo suelto hasta los hombros y una bodoquera corta de juguete en la mano: el cuerpo pequeño y recto, la cabeza grande respecto al tronco.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Medido contra la borda de la canoa, que le llega al pecho. Cuerpo entero 9:16, con más aire alrededor que los adultos.",
+        "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos noches y sólo dos en toda la biblia —la del vuelo del explorador y la del ataque—, resueltas con papel oscuro y contraluz de cielo, nunca con antorcha, fogata ni resplandor. No hay fuego en este corpus.",
+        "materials_textures": "cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca—; el cuerpo, en pocos planos grandes de papel de fibra mate, sin músculo modelado; pieza mínima de fibra vegetal lisa en la cintura; bodoquera corta como tubo recto de un solo tono",
+        "era": "Chocó fluvial posterior al contacto y anterior al arma de fuego: hay hacha y machete de hierro, y no hay escopeta, ni caballo, ni tela industrial, ni objeto de mercado, ni un solo europeo en escena. Canoa labrada de un árbol, canalete, arco y flechas, bodoquera, casas contables sobre un alto con camino vigilado, rastrojo de ribera. Sin geometría de fundación —nada de hacha de piedra—, sin oro, sin adorno ceremonial y sin jaibaná.",
+        "constraints": [
+          "documentado: El relato no describe cuerpo, ropa, pintura ni adorno de nadie (emb-dogirama-1984, §6 y §12.1): todo lo que viste a este tipo se declara abajo como editorial",
+          "documentado: Dóbida traduce «habitantes de río»: el cuerpo se compone desde el agua, con canoa o canalete presente o implícito (emb-mincultura-dobida, §3; salvaguarda 1, §11)",
+          "documentado: Época: hay hacha y machete de hierro y no hay tela industrial, objeto de mercado, oro ni adorno ceremonial (§1)",
+          "documentado: Los Burumiá dejan vivos «a dos niños, un niño y una niña»; el niño crece y «hizo bodoquera y arco» (canon, campo mito)",
+          "El corpus no nombra un solo color: la paleta entera sale del agua, el rastrojo y la madera mojada, nunca del gusto.",
+          "El verde nunca es saturado: el bosque húmedo se construye con dosel oscuro contra luz difusa y hoja mojada, y el contraste lo da la profundidad, no el tono.",
+          "No hay fuego, no hay oro y no hay ningún rojo de sangre: las dos noches se resuelven con papel oscuro y contraluz de cielo.",
+          "El único claro del encuadre es el agua: la superficie del río es siempre el plano más claro de la lámina, porque el relato se cuenta desde ella.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Ninguna figura cuna, ni silueta, ni adorno, ni alusión: el relato es sobre una acusación equivocada.",
+          "Ningún diseño de pintura corporal emberá, ni copiado ni inventado, y ninguna marca clanil.",
+          "Ningún objeto ni insignia de jaibaná: bastón, banco, totuma ritual o pintura de ceremonia.",
+          "Ningún fuego, incendio, antorcha, deidad ni figura gigantesca: fue lo que hizo rechazar la pareja de imágenes anterior.",
+          "Ningún oro, ninguna pieza de orfebrería y ningún objeto ceremonial de ninguna clase.",
+          "Ninguna escena de cautiverio ni de antropofagia: la tensión se compone con distancia, vigilancia y niebla.",
+          "Ningún arma de fuego, ningún europeo, ninguna tela industrial y ningún objeto de mercado.",
+          "Ninguna ruta, confluencia legible, perfil de ribera reconocible ni sendero de acceso al alto."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza pelada de los Burumia es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. El pelaje del perro y la membrana del murciélago siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón. El quilling se reserva para lo que enrolla de verdad: el remolino del agua tras el canalete, la niebla que sube del río, la espiral del bejuco en el rastrojo."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_anciana__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_anciana"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-burumias-y-carautas",
+          "field": "mito",
+          "note": "De las familias de las canoas los Burumiá dejan viva sólo a «una vieja», además de los dos niños."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Anciana emberá de pie, quieta y un poco inclinada hacia delante, el pelo largo recogido hacia atrás en una sola pieza y las manos ocupadas delante del cuerpo: la edad se lee por la postura, la proporción y el recogido, no por arrugas.",
+        "materials": [
+          "cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca—; el cuerpo, en pocos planos grandes de papel de fibra mate, sin músculo modelado",
+          "pieza mínima de fibra vegetal lisa en la cintura",
+          "pelo largo recogido en una sola pieza de canto liso, con un tono de gris en la masa"
+        ],
+        "palette_logic": "Piel en medio tono apagado, pelo negro con una sola pieza superpuesta de gris; sin jagua ni nota clara.",
+        "scale": "Estatura adulta algo reducida por la inclinación. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "pelo recogido, nunca suelto",
+          "sin arrugas dibujadas: el óvalo sigue siendo plano",
+          "manos ocupadas delante del cuerpo"
+        ],
+        "documented_features": [
+          "El relato no describe cuerpo, ropa, pintura ni adorno de nadie (emb-dogirama-1984, §6 y §12.1): todo lo que viste a este tipo se declara abajo como editorial",
+          "Dóbida traduce «habitantes de río»: el cuerpo se compone desde el agua, con canoa o canalete presente o implícito (emb-mincultura-dobida, §3; salvaguarda 1, §11)",
+          "Época: hay hacha y machete de hierro y no hay tela industrial, objeto de mercado, oro ni adorno ceremonial (§1)",
+          "«Una vieja» es, con los dos niños, la única que los Burumiá dejan viva de las canoas (canon, campo mito)",
+          "La edad no se describe: la técnica no modela rostro y envejecer la cara rompe el óvalo plano (technique_close del corpus)"
+        ],
+        "editorial_features": [
+          "La prenda es la mínima pieza de fibra vegetal lisa en la cintura, sin tejido legible, franja ni color: no hay una sola línea de ropa en la fuente y la técnica necesita un borde para que el cuerpo se lea. Revocable en bloque por lectura comunitaria.",
+          "El pelo largo suelto, de una sola pieza de canto liso, es lectura del contraste que el relato establece con la cabeza pelada de los Burumiá, no peinado documentado. Reversible, pero si se retira hay que dar a la gente emberá otro marcador que la separe del vecindario del alto.",
+          "Ningún objeto ni insignia de jaibaná: el jaibanismo no aparece en el relato (§6). No reversible.",
+          "El gris en el pelo es la única marca de edad que se añade, y es editorial. Reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Embera V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena, a la altura del agua. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Madera mojada de canoa como veta recortada, no dibujada; hoja de palma en tiras superpuestas; rastrojo de ribera como decenas de recortes finos encajados. El bosque húmedo se construye por planos escalonados en profundidad y por niebla de papel translúcido entre ellos, nunca por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · anciana emberá. Anciana emberá de pie, quieta y un poco inclinada hacia delante, el pelo largo recogido hacia atrás en una sola pieza y las manos ocupadas delante del cuerpo: la edad se lee por la postura, la proporción y el recogido, no por arrugas.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura adulta algo reducida por la inclinación. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos noches y sólo dos en toda la biblia —la del vuelo del explorador y la del ataque—, resueltas con papel oscuro y contraluz de cielo, nunca con antorcha, fogata ni resplandor. No hay fuego en este corpus.",
+        "materials_textures": "cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —tira de ceja, lágrima de ojo, franja de boca—; el cuerpo, en pocos planos grandes de papel de fibra mate, sin músculo modelado; pieza mínima de fibra vegetal lisa en la cintura; pelo largo recogido en una sola pieza de canto liso, con un tono de gris en la masa",
+        "era": "Chocó fluvial posterior al contacto y anterior al arma de fuego: hay hacha y machete de hierro, y no hay escopeta, ni caballo, ni tela industrial, ni objeto de mercado, ni un solo europeo en escena. Canoa labrada de un árbol, canalete, arco y flechas, bodoquera, casas contables sobre un alto con camino vigilado, rastrojo de ribera. Sin geometría de fundación —nada de hacha de piedra—, sin oro, sin adorno ceremonial y sin jaibaná.",
+        "constraints": [
+          "documentado: El relato no describe cuerpo, ropa, pintura ni adorno de nadie (emb-dogirama-1984, §6 y §12.1): todo lo que viste a este tipo se declara abajo como editorial",
+          "documentado: Dóbida traduce «habitantes de río»: el cuerpo se compone desde el agua, con canoa o canalete presente o implícito (emb-mincultura-dobida, §3; salvaguarda 1, §11)",
+          "documentado: Época: hay hacha y machete de hierro y no hay tela industrial, objeto de mercado, oro ni adorno ceremonial (§1)",
+          "documentado: «Una vieja» es, con los dos niños, la única que los Burumiá dejan viva de las canoas (canon, campo mito)",
+          "documentado: La edad no se describe: la técnica no modela rostro y envejecer la cara rompe el óvalo plano (technique_close del corpus)",
+          "El corpus no nombra un solo color: la paleta entera sale del agua, el rastrojo y la madera mojada, nunca del gusto.",
+          "El verde nunca es saturado: el bosque húmedo se construye con dosel oscuro contra luz difusa y hoja mojada, y el contraste lo da la profundidad, no el tono.",
+          "No hay fuego, no hay oro y no hay ningún rojo de sangre: las dos noches se resuelven con papel oscuro y contraluz de cielo.",
+          "El único claro del encuadre es el agua: la superficie del río es siempre el plano más claro de la lámina, porque el relato se cuenta desde ella.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Ninguna figura cuna, ni silueta, ni adorno, ni alusión: el relato es sobre una acusación equivocada.",
+          "Ningún diseño de pintura corporal emberá, ni copiado ni inventado, y ninguna marca clanil.",
+          "Ningún objeto ni insignia de jaibaná: bastón, banco, totuma ritual o pintura de ceremonia.",
+          "Ningún fuego, incendio, antorcha, deidad ni figura gigantesca: fue lo que hizo rechazar la pareja de imágenes anterior.",
+          "Ningún oro, ninguna pieza de orfebrería y ningún objeto ceremonial de ninguna clase.",
+          "Ninguna escena de cautiverio ni de antropofagia: la tensión se compone con distancia, vigilancia y niebla.",
+          "Ningún arma de fuego, ningún europeo, ninguna tela industrial y ningún objeto de mercado.",
+          "Ninguna ruta, confluencia legible, perfil de ribera reconocible ni sendero de acceso al alto."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza pelada de los Burumia es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. El pelaje del perro y la membrana del murciélago siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón. El quilling se reserva para lo que enrolla de verdad: el remolino del agua tras el canalete, la niebla que sube del río, la espiral del bejuco en el rastrojo."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
