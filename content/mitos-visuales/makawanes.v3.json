@@ -851,8 +851,8 @@
     "dossier": "docs/investigacion/makawanes.md"
   },
   "inventory": {
-    "status": "reconciling",
-    "frozen": false,
+    "status": "approved_frozen",
+    "frozen": true,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -862,7 +862,7 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19",
+    "approved_at": "2026-09-24",
     "reconciliation": {
       "opened_at": "2026-09-24",
       "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
@@ -872,8 +872,19 @@
         "la-gran-inundacion"
       ],
       "new_myths": [],
-      "unchanged_myths": []
-    }
+      "unchanged_myths": [],
+      "closed_at": "2026-09-24",
+      "summary": "3 relatos releídos: 11 añadidas (linterna, archivadores y cancha embebidos; presas de la capuza, monos del glosario, Nakanü y Marat hitnü, rezos de los antiguos, persecución de los colonos y diluvio cristiano excluidos), 0 excluidas por el canon nuevo, 9 rediseñadas (kiwi y primos en los primeros Makaguanes, capuza con sus presas, Wuachirajua negro y peludo en el relato con las dos iconografías en versiones, profesor con linterna y archivador, Arístides abuelo, guerrero y compañera, ardita) y 5 tipos base con estado contemporáneo en hombre, mujer joven y niño; anciana declarada ausente."
+    },
+    "declared_absences": [
+      {
+        "entity_id": "tipo_anciana",
+        "name": "Tipo base · anciana makaguán",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "El canon reescrito no pone a ninguna mujer vieja makaguana en escena: «cuentan los abuelos» es voz narradora y el único mayor que actúa es Arístides Tocaria. No se inventa."
+      }
+    ]
   },
   "myths": {
     "creacion-makawanes": {
@@ -896,9 +907,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La pasada de estados y transformaciones fue la que decidió esta lectura, y por lo que no encontró: el relato tiene dos pruebas idénticas y ninguna cambia el cuerpo de quien las pasa, así que ni el venado ni el araguato cuestan hoja de estado y todo el peso cayó en una sola vista con la boca abierta; en cambio la pasada de roles sin nombre devolvió el hallazgo que reorganiza la ficha, porque quien saca los dientes no tiene manos —«con su fuerza, que no se mira», empezando por la carraca de abajo— y eso obligó a resolver al creador como disco sin cuerpo, dejando que la única diferencia entre los dos animales rojizos del mismo relato la lleven la altura y el color.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "La página reescrita conserva las dos pruebas, la fuerza que no se mira y los ocho que salen del grito, pero nombra en lengua makaguana lo que antes era genérico —las presas de la capuza (samulia, maja, matiwi, mesa) y el kiwi que se recolecta en montes y esteros—, cuenta que los hijos se juntaron entre primos, y trae a versiones dos piezas que no estaban: los monos sambo, chuco y choroy del glosario como animal de origen y el relato vecino hitnü de Nakanü y Marat, ambos excluidos por ser contradicción de la fuente y otro pueblo.",
         "previous_note": "La pasada de estados y transformaciones fue la que decidió esta lectura, y por lo que no encontró: el relato tiene dos pruebas idénticas y ninguna cambia el cuerpo de quien las pasa, así que ni el venado ni el araguato cuestan hoja de estado y todo el peso cayó en una sola vista con la boca abierta; en cambio la pasada de roles sin nombre devolvió el hallazgo que reorganiza la ficha, porque quien saca los dientes no tiene manos —«con su fuerza, que no se mira», empezando por la carraca de abajo— y eso obligó a resolver al creador como disco sin cuerpo, dejando que la única diferencia entre los dos animales rojizos del mismo relato la lleven la altura y el color."
       },
       "entity_refs": [
@@ -915,7 +926,7 @@
         {
           "entity_id": "venado_grande",
           "role": "primary",
-          "note": "Es el relato entero: acepta la prueba, resiste mientras Tacu le saca cada pieza, grita en la última muela y de su boca salen cuatro mujeres y cuatro hombres. El propio corpus concluye que es el abuelo del pueblo y el título restituido lo nombra. Ficha base con boca abierta como vista adicional dentro de la misma hoja, no como estado."
+          "note": "Primaria confirmada en la página reescrita: sale del bosque, acepta el trato, suda mientras le sacan dientes y muelas de la carraca de abajo, grita en la última y de su boca salen cuatro mujeres y cuatro hombres. Es el abuelo que da nombre a los hijos del venado."
         },
         {
           "entity_id": "araguato_grande",
@@ -925,7 +936,7 @@
         {
           "entity_id": "primeros_makaguanes",
           "role": "secondary",
-          "note": "Cuatro mujeres y cuatro hombres que buscan carne, pepas y raíces, recogen plátano de monte y caracoles, fabrican capuzas de macana, caminan montes y esteros y se multiplican. Es la gramática de cuerpos del tiempo mítico y presta figuras a la familia de Wiri, a quienes derriban la palma y a la pareja que sobrevive."
+          "note": "Cuatro mujeres y cuatro hombres que cogen carne, pepas, raíces y plátano de monte, recolectan kiwi, hacen capuzas para matar samulia, maja, matiwi y mesa y para pescar, viven caminando y se multiplican entre primos."
         },
         {
           "entity_id": "bosque_de_galeria_y_esteros",
@@ -965,7 +976,7 @@
         {
           "entity_id": "capuzas_de_macana",
           "role": "plot_object",
-          "note": "Las fabrican los primeros Makaguanes para cazar y pescar. Herramienta de mano nombrada sin detalle: utilería."
+          "note": "Arpones de macana para matar samulia, maja, matiwi y mesa, y para pescar."
         },
         {
           "entity_id": "platano_de_monte_y_caracoles",
@@ -986,6 +997,36 @@
           "entity_id": "hoja_utileria_makaguan",
           "role": "plot_object",
           "note": "Una sola hoja con dos bloques declarados: el del tiempo mítico (trompeta, capuzas de macana, recolección, vino de palma) y el contemporáneo de la leyenda (vela de cera de abeja, agua, machete). Se mantienen separados dentro de la hoja para que ningún objeto del resguardo de hoy se cuele en la escena del venado ni al revés."
+        },
+        {
+          "entity_id": "presas_de_la_capuza",
+          "role": "plot_object",
+          "note": "Las cuatro presas nombradas en lengua makaguana; no hay escena de caza."
+        },
+        {
+          "entity_id": "monos_sambo_chuco_choroy",
+          "role": "variant",
+          "note": "Versiones: el glosario hace de los monos el animal de origen; contradicción de la fuente."
+        },
+        {
+          "entity_id": "nakanu_y_marat_hitnu",
+          "role": "variant",
+          "note": "Versiones: el relato vecino hitnü, citado como variación y nunca como Tacu."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los cuatro hombres que salen de la boca del venado."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base: las cuatro mujeres, adultas jóvenes y en marcha."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base: los hijos que se juntaron entre primos."
         }
       ]
     },
@@ -1009,9 +1050,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "Es la única ficha del corpus que no es mito sino leyenda fechada, y la extracción tuvo que separar dos cosas que la ortografía junta: los Wachirajua-espíritus del relato de fundación y Wuachirajua, la presencia de 1948 en adelante, que comparten nombre y ninguna otra cosa; y la pasada de lugares y arquitectura, que en los otros dos relatos devolvió monte y claro, aquí devolvió un internado concreto con piezas, archivadores, cancha y una maloca que resultó ser obra pública de 2004-2007, de modo que el peligro de esta lámina no es inventar un monstruo sino dibujar como ancestral una escuela de hace veinte años.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "La página reescrita pone la leyenda del lado del ser negro y peludo —grande como un oso con uñas afiladas en los recuerdos viejos, del tamaño de un niño de diez años ahora, y así se le aparece a Arístides con su pareja— y manda a versiones las dos iconografías aprobadas con otro reparto de rasgos; añade al profesor la linterna, el puño contra el archivador y la sombra que atraviesa la pared, la ronda de relatos en la cancha, los rezos de los antiguos que no se dibujan y, en historia, la persecución de los colonos, excluida.",
         "previous_note": "Es la única ficha del corpus que no es mito sino leyenda fechada, y la extracción tuvo que separar dos cosas que la ortografía junta: los Wachirajua-espíritus del relato de fundación y Wuachirajua, la presencia de 1948 en adelante, que comparten nombre y ninguna otra cosa; y la pasada de lugares y arquitectura, que en los otros dos relatos devolvió monte y claro, aquí devolvió un internado concreto con piezas, archivadores, cancha y una maloca que resultó ser obra pública de 2004-2007, de modo que el peligro de esta lámina no es inventar un monstruo sino dibujar como ancestral una escuela de hace veinte años."
       },
       "entity_refs": [
@@ -1023,7 +1064,7 @@
         {
           "entity_id": "wuachirajua",
           "role": "primary",
-          "note": "Conduce la leyenda entera. El estado extra sí lo exige el relato y sí cambia la silueta: en los recuerdos más antiguos es grande, negro y peludo, de estatura de oso y uñas largas; en versiones posteriores tiene el tamaño de un niño de diez años y cruza como sombra pequeña por la escuela. Dos fichas, no tres: las formas de ave u otros animales quedan embebidas como variante."
+          "note": "Primaria confirmada: conduce la leyenda. La página lo describe negro y peludo, grande como un oso en los recuerdos antiguos y del tamaño de un niño de diez años ahora; en versiones quedan las dos iconografías aprobadas (traje largo con pico y un ojo; pelo, garras y vuelo)."
         },
         {
           "entity_id": "gente_del_resguardo_hoy",
@@ -1058,7 +1099,7 @@
         {
           "entity_id": "aristides_tocaria",
           "role": "secondary",
-          "note": "Protagoniza el encuentro de caza: dialoga con la presencia sobre poderes y rezos antiguos, se enfrenta a ella y logra ocultarse en una casa. Conduce esa escena, pero es una persona real reciente sin descripción física en la fuente; se produce desde el colectivo para no inventarle un retrato."
+          "note": "«El abuelo Arístides»: en un día de cacería el ser se le aparece como un niño negro y peludo con su pareja; dialogan sobre los rezos, luchan y él se oculta en la casa."
         },
         {
           "entity_id": "hombre_del_machete",
@@ -1068,7 +1109,7 @@
         {
           "entity_id": "profesor_de_la_escuela",
           "role": "secondary",
-          "note": "Después de la muerte de un compañero y durante una falla eléctrica vio una sombra pequeña atravesar las habitaciones. Testigo sin descripción: figura del colectivo."
+          "note": "Sin luz, con una linterna de buena luz, ve la sombra de un niño corriendo, siente que lo tocan, da un puño contra un archivador y la ve atravesar una pared."
         },
         {
           "entity_id": "falla_electrica_de_la_escuela",
@@ -1099,6 +1140,51 @@
           "entity_id": "hoja_utileria_makaguan",
           "role": "plot_object",
           "note": "Una sola hoja con dos bloques declarados: el del tiempo mítico (trompeta, capuzas de macana, recolección, vino de palma) y el contemporáneo de la leyenda (vela de cera de abeja, agua, machete). Se mantienen separados dentro de la hoja para que ningún objeto del resguardo de hoy se cuele en la escena del venado ni al revés."
+        },
+        {
+          "entity_id": "linterna_del_profesor",
+          "role": "plot_object",
+          "note": "La única luz de la escena de la escuela."
+        },
+        {
+          "entity_id": "archivadores_de_la_escuela",
+          "role": "plot_object",
+          "note": "Contra uno de ellos va el puño del profesor."
+        },
+        {
+          "entity_id": "cancha_de_futbol",
+          "role": "setting",
+          "note": "Donde se cuentan los encuentros al día siguiente; sólo sitúa."
+        },
+        {
+          "entity_id": "rezos_de_los_antiguos",
+          "role": "magic_subject",
+          "note": "Los poderes que el sabio y el alma dicen manejar; no se dibujan."
+        },
+        {
+          "entity_id": "persecucion_de_los_colonos",
+          "role": "variant",
+          "note": "Historia y versiones: la violencia de los colonos y la hipótesis del investigador; no se ilustra."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base, en su estado contemporáneo: el hombre del machete y el profesor."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base, en su estado contemporáneo: las jóvenes que el alma persigue."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base, en su estado contemporáneo: los niños que el alma persigue y el pequeño Manuel Sánchez."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Tipo base: los abuelos que cuentan y el abuelo Arístides."
         }
       ]
     },
@@ -1122,9 +1208,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "Lo que separó esta lectura fue la pasada de variantes, porque aquí el propio corpus conserva dos registros enfrentados y fechados —la paloma de la transcripción del 15 de agosto de 2010 y el samuro de la corrección de Manuel Sánchez en 2023— y la decisión fue producir el ave corregida y guardar la anterior dentro de su misma hoja, con su fecha, en vez de suprimirla; y la pasada de objetos y plantas mostró que el giro entero del relato es una faena doméstica y no un acto —tumbar la palma y esperar la fermentación es el primer paso del vinete—, lo que obligó a que la ficha de la palma sirviera en pie y caída sin que la escena se lea nunca como sacrificio.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "La página reescrita conserva la secuencia —wiri con collar de oro, la comida rechazada, la palma del vinete que lo mata, la ardita que tumba el mundo, la lluvia, el samuro y el cangrejo con tambor— pero precisa que los que se salvan son «un guerrero de la tribu» y su compañera, que la gente quiso detener la lluvia y no pudo, que el samuro viene a limpiar la tierra por la cantidad de muertos, y aparta como lectura del investigador la comparación con el diluvio cristiano, que queda excluida.",
         "previous_note": "Lo que separó esta lectura fue la pasada de variantes, porque aquí el propio corpus conserva dos registros enfrentados y fechados —la paloma de la transcripción del 15 de agosto de 2010 y el samuro de la corrección de Manuel Sánchez en 2023— y la decisión fue producir el ave corregida y guardar la anterior dentro de su misma hoja, con su fecha, en vez de suprimirla; y la pasada de objetos y plantas mostró que el giro entero del relato es una faena doméstica y no un acto —tumbar la palma y esperar la fermentación es el primer paso del vinete—, lo que obligó a que la ficha de la palma sirviera en pie y caída sin que la escena se lea nunca como sacrificio."
       },
       "entity_refs": [
@@ -1141,12 +1227,12 @@
         {
           "entity_id": "wiri",
           "role": "primary",
-          "note": "Es el ser por el que se cuenta el relato: Tacu lo envía con un collar de oro a observar cómo vive la gente, no recibe la comida, muere bajo la palma y su muerte desata la inundación y la obligación final de recordarlo. La escena horizontal ya lo sugiere sólo por el collar, de modo que la ficha debe resolver cuerpo y collar por separado."
+          "note": "Primaria confirmada: Tacu lo manda con un collar de oro a mirar cómo vive la gente; no recibe bocado en la choza, lo llevan al conuco y la palma del vinete le cae encima. Su muerte desata el mundo tumbado, la lluvia y la promesa de la ceremonia."
         },
         {
           "entity_id": "ardilla_enviada",
           "role": "secondary",
-          "note": "Enviada por Tacu al ver la muerte de Wiri: «en instantes derribó árboles grandes y montañas». Un animal pequeño con una escala de destrucción desproporcionada; esa relación de tamaño es justamente lo que la ficha tiene que fijar."
+          "note": "La ardita que en instantes derriba los árboles grandes y las montañas: «quedó el mundo tumbado»."
         },
         {
           "entity_id": "samuro",
@@ -1191,7 +1277,7 @@
         {
           "entity_id": "pareja_sobreviviente",
           "role": "secondary",
-          "note": "Los únicos que alcanzan el monte que la ardilla no derribó y los que responden a Tacu al final. Son dos figuras de generaciones posteriores, pero con la misma gramática de cuerpos; se producen desde esa hoja."
+          "note": "«un guerrero de la tribu, junto con su compañera», los únicos que suben al monte que no se derribó y los que responden arrepentidos a Tacu."
         },
         {
           "entity_id": "collar_de_oro_de_wiri",
@@ -1237,11 +1323,383 @@
           "entity_id": "hoja_utileria_makaguan",
           "role": "plot_object",
           "note": "Una sola hoja con dos bloques declarados: el del tiempo mítico (trompeta, capuzas de macana, recolección, vino de palma) y el contemporáneo de la leyenda (vela de cera de abeja, agua, machete). Se mantienen separados dentro de la hoja para que ningún objeto del resguardo de hoy se cuele en la escena del venado ni al revés."
+        },
+        {
+          "entity_id": "comparacion_con_el_diluvio_cristiano",
+          "role": "variant",
+          "note": "Versiones: lectura del investigador, no de los sabedores."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: el guerrero que sobrevive y los hombres del conuco."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: la compañera del guerrero y la madre de la familia que recibe a Wiri."
         }
       ]
     }
   },
   "entities": {
+    "tipo_hombre_adulto": {
+      "name": "Tipo base · hombre adulto makaguán",
+      "kind": "personaje",
+      "description": "Plantilla de cara, cuerpo y vestido del hombre makaguán —Pébi, «el que ama a su tierra y defiende su familia»—: en el tiempo del venado sostiene a los cuatro hombres que salen de su boca y al guerrero que sobrevive a la lluvia; en su estado contemporáneo, al hombre del machete y al profesor de la escuela.",
+      "aliases": [
+        "Pébi"
+      ],
+      "states": [
+        "canonico",
+        "estrato contemporáneo de El Vigía, con ropa de hoy"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_refs": [
+        "tipo_hombre_adulto__identity_sheet",
+        "tipo_hombre_adulto__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-makawanes",
+        "la-gran-inundacion",
+        "el-alma"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-makawanes",
+          "field": "mito",
+          "note": "«de la boca del venado salieron cuatro mujeres y cuatro hombres»; cogían carne, pepas, raíces y plátano de monte y hacían capuzas de macana."
+        },
+        {
+          "myth": "la-gran-inundacion",
+          "field": "mito",
+          "note": "«Sólo un guerrero de la tribu, junto con su compañera, alcanzó a subir a un monte»."
+        },
+        {
+          "myth": "el-alma",
+          "field": "mito",
+          "note": "Un makaguán que se le enfrentó a machete en el bosque de El Vigía y un profesor indígena recién llegado a la escuela."
+        }
+      ],
+      "design": {
+        "silhouette": "Un hombre adulto makaguán de pie, en paso de marcha, con un canasto amarrado a la espalda y un arpón de macana en la mano: cuerpo entero de pocos planos grandes y cara aparte, con una prenda de corteza de matapalo ceñida a la cintura y ninguna cabeza cubierta. En su estado contemporáneo, el mismo cuerpo y la misma cara con camiseta, pantalón y sandalia, sin canasto ni arpón.",
+        "materials": [
+          "cuerpo de pocos planos grandes de papel color piel: torso, brazos, piernas y manos como piezas separadas, sin musculatura modelada",
+          "rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos",
+          "chivechi: corteza de matapalo sin tejer, apelmazada y mate, de crudo a pardo claro, ceñida a la cintura en una sola pieza",
+          "canasto de espalda de fibra amarrado con cuerda y arpón de macana: vara oscura con punta recortada aparte",
+          "pelo negro en un solo recorte plano grande",
+          "en el estado contemporáneo: camiseta, pantalón y sandalia en papel de tela lisa y corriente, sin estampado"
+        ],
+        "palette": "Piel en un tono medio cálido de una sola pieza, pelo negro mate, corteza de crudo a pardo claro y madera de macana oscura. Ningún oro: el oro del corpus está sólo en los dientes del araguato y el collar de Wiri. En el estado contemporáneo, tonos lisos y corrientes de ropa de hoy.",
+        "scale": "Cuerpo entero a escala de referencia del corpus: los primeros Makaguanes, la pareja sobreviviente y los testigos de la leyenda se miden contra esta lámina, y el venado colorado le llega a la cintura.",
+        "continuity": [
+          "cuerpo y cara se nombran por separado en todo prompt que herede este tipo: cuerpo de planos grandes, cara de óvalo plano con rasgos recortados aparte",
+          "la cara nunca se modela ni se esculpe, y es la misma en los dos estratos",
+          "sin pintura corporal, sin tocado y sin penacho en ningún estrato: ninguna fuente los documenta",
+          "nunca el guayuco hitnü ni el de tres borlas del boceto sikuani de 1880",
+          "en el tiempo del venado no hay chaquira, machete, vela ni linterna; en el estrato contemporáneo no hay chivechi, arpón ni canasto de espalda"
+        ],
+        "documented": [
+          "El glosario de la tesis registra «Chivechi; Tela de vestir del pueblo Makaguan hecho del matapalo», un Ficus: la prenda del estrato de fundación es tela de corteza, sin tejer, apelmazada, mate, de crudo a pardo claro.",
+          "La iconografía comunitaria de la inundación, aprobada por los sabedores, pone «la lanza, las flechas, el canasto en la espalda»; la capuza de macana es un arpón según el glosario.",
+          "Del pelo, la pintura corporal y el tocado «no hay una sola palabra» en ninguna fuente consultada; los clanes Mamaluas («los calvos») y Canaguateros («cabello grueso») son etnónimos, no peinados.",
+          "El estrato contemporáneo «se viste como cualquiera en Arauca»: comunidad de 500 personas en 72 familias, con bicicleta, canoa y cancha de fútbol.",
+          "Pébi, hombre, «el que ama a su tierra y defiende su familia», en el glosario."
+        ],
+        "editorial": [
+          "El corte de la prenda de corteza —ceñida a la cintura— no está documentado: el dossier autoriza la materia y el tono, no la hechura; decisión reversible.",
+          "El pelo negro en una sola pieza, sin largo marcado, es decisión editorial reversible.",
+          "Lenguaje sí, ejemplar no: ninguna pieza copia un objeto, un tejido ni un adorno reales."
+        ],
+        "states_to_model": [
+          "estrato contemporáneo de El Vigía, con ropa de hoy"
+        ]
+      },
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ]
+    },
+    "tipo_mujer_adulta": {
+      "name": "Tipo base · mujer adulta makaguán",
+      "kind": "personaje",
+      "description": "Plantilla de cara, cuerpo y vestido de la mujer makaguán adulta —Mira, compañera—: la madre de la familia que recibe a Wiri en su choza y la compañera del guerrero que sobrevive a la lluvia.",
+      "aliases": [
+        "Mira"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_refs": [
+        "tipo_mujer_adulta__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-gran-inundacion"
+      ],
+      "evidence": [
+        {
+          "myth": "la-gran-inundacion",
+          "field": "mito",
+          "note": "«Una familia makaguán lo encontró y se lo llevó a su choza»; «un guerrero de la tribu, junto con su compañera»."
+        }
+      ],
+      "design": {
+        "silhouette": "Una mujer adulta makaguán de pie, con un canasto amarrado a la espalda y las manos libres: cuerpo entero de pocos planos grandes y cara aparte, con una prenda de corteza de matapalo ceñida de la cintura a la rodilla y la cabeza descubierta.",
+        "materials": [
+          "cuerpo de pocos planos grandes de papel color piel: torso, brazos, piernas y manos como piezas separadas, sin volumen modelado",
+          "rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos",
+          "chivechi: corteza de matapalo sin tejer, apelmazada y mate, de crudo a pardo claro, de la cintura a la rodilla en una sola pieza",
+          "canasto de espalda de fibra amarrado con cuerda a la altura de los omóplatos",
+          "pelo negro largo en un solo recorte plano"
+        ],
+        "palette": "Piel en el tono medio cálido del tipo hombre, pelo negro mate, corteza de crudo a pardo claro. Ningún oro, ninguna chaquira.",
+        "scale": "Cuerpo entero a la escala de tipo_hombre_adulto, algo más baja, para que la pareja sobreviviente se superponga con las dos láminas.",
+        "continuity": [
+          "cuerpo y cara se nombran por separado en todo prompt que herede este tipo: cuerpo de planos grandes, cara de óvalo plano con rasgos recortados aparte",
+          "la cara nunca se modela ni se esculpe",
+          "sin pintura corporal, sin tocado y sin chaquira: la cuenta de vidrio es posterior al contacto",
+          "nunca los pechos descubiertos ni el guayuco que recuerda el cacique hitnü: son de otro pueblo",
+          "ningún objeto del internado: ni vela, ni machete, ni linterna"
+        ],
+        "documented": [
+          "La prenda del estrato de fundación es el chivechi, «tela de vestir del pueblo Makaguan hecho del matapalo», sin tejer, apelmazada, mate, de crudo a pardo claro.",
+          "La iconografía comunitaria aprobada pone «el canasto en la espalda» a la gente del tiempo de la inundación.",
+          "Del pelo, la pintura corporal y el tocado no hay una sola palabra en ninguna fuente consultada.",
+          "El vestido hitnü documentado en primera persona —guayucos y mujeres «con los pechos descubiertos»— es de otro pueblo y el dossier prohíbe trasladarlo.",
+          "Mira, compañera, en el glosario."
+        ],
+        "editorial": [
+          "El corte de la prenda de corteza —de la cintura a la rodilla— no está documentado: decisión reversible.",
+          "El pelo largo es decisión editorial reversible.",
+          "Lenguaje sí, ejemplar no: ninguna pieza copia un objeto, un tejido ni un adorno reales."
+        ],
+        "states_to_model": []
+      },
+      "model_requirements": [
+        "identity_sheet"
+      ]
+    },
+    "tipo_mujer_joven": {
+      "name": "Tipo base · mujer joven makaguán",
+      "kind": "personaje",
+      "description": "Plantilla de la mujer joven makaguán: las cuatro mujeres que salen de la boca del venado, adultas jóvenes y en marcha, y en su estado contemporáneo las jóvenes del resguardo que el alma persigue, que llevan a los niños pequeños con un trapo largo del cuello a la cintura.",
+      "aliases": [],
+      "states": [
+        "canonico",
+        "estrato contemporáneo de El Vigía, con ropa de hoy"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_refs": [
+        "tipo_mujer_joven__identity_sheet",
+        "tipo_mujer_joven__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-makawanes",
+        "el-alma"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-makawanes",
+          "field": "mito",
+          "note": "«salieron cuatro mujeres y cuatro hombres. Ésos fueron los primeros makaguanes antiguos»."
+        },
+        {
+          "myth": "el-alma",
+          "field": "mito",
+          "note": "«Anda por los montes persiguiendo y asustando a niños, jóvenes y adultos»."
+        }
+      ],
+      "design": {
+        "silhouette": "Una mujer joven makaguán de pie, en paso de marcha, con un canasto a la espalda: cuerpo entero de pocos planos grandes y cara aparte, corteza de matapalo de la cintura a la rodilla y la cabeza descubierta. En su estado contemporáneo, el mismo cuerpo y la misma cara con blusa y falda lisas, collar y manilla de cuentas y un niño pequeño sujeto con un trapo largo cruzado del cuello a la cintura.",
+        "materials": [
+          "cuerpo de pocos planos grandes de papel color piel, más esbelto que el del tipo adulto, sin volumen modelado",
+          "rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos",
+          "chivechi: corteza de matapalo sin tejer, apelmazada y mate, de crudo a pardo claro, de la cintura a la rodilla",
+          "canasto de espalda de fibra amarrado con cuerda",
+          "pelo negro largo en un solo recorte plano",
+          "en el estado contemporáneo: blusa y falda de tela lisa corriente, collar y manilla de chaquira como sartas de piezas menudas sin patrón, bolso tejido de fique de trama gruesa sin diseño, y trapo largo del cuello a la cintura sosteniendo a un niño"
+        ],
+        "palette": "Piel en el tono medio cálido del corpus, pelo negro mate, corteza de crudo a pardo claro. En el estado contemporáneo, ropa lisa corriente y la chaquira en pocos colores sin patrón fijado.",
+        "scale": "Cuerpo entero algo más bajo que tipo_hombre_adulto y más esbelto que tipo_mujer_adulta: las tres láminas se superponen para comprobar la proporción.",
+        "continuity": [
+          "cuerpo y cara se nombran por separado en todo prompt que herede este tipo: cuerpo de planos grandes, cara de óvalo plano con rasgos recortados aparte",
+          "la cara nunca se modela ni se esculpe, y es la misma en los dos estratos",
+          "la chaquira, el fique y el trapo largo sólo existen en el estrato contemporáneo: en el tiempo del venado no hay cuenta de vidrio",
+          "sin pintura corporal ni tocado en ningún estrato",
+          "ningún patrón real de collar, manilla ni bolso"
+        ],
+        "documented": [
+          "El dossier lee a los primeros Makaguanes como «adultos jóvenes, en movimiento, cargando», con el chivechi de corteza de matapalo como prenda.",
+          "Las mujeres de El Vigía «lideran actividades sobre la fabricación de manillas y collares con base en chaquiras» y «tejido de bolsos con materiales del medio (fique)»: estrato contemporáneo, sin copiar un patrón real.",
+          "«Los niños pequeños los llevan a todos lados con una prenda o trapo largo que va del cuello a la cintura»: gesto de cuerpo documentado, de hoy.",
+          "Del pelo, la pintura corporal y el tocado no hay una sola palabra en ninguna fuente consultada."
+        ],
+        "editorial": [
+          "El corte de la prenda de corteza no está documentado: decisión reversible.",
+          "Blusa y falda del estado contemporáneo son la ropa corriente de Arauca que el dossier autoriza en general, no una prenda documentada de estas mujeres.",
+          "Lenguaje sí, ejemplar no: ninguna pieza copia un objeto, un tejido ni un adorno reales."
+        ],
+        "states_to_model": [
+          "estrato contemporáneo de El Vigía, con ropa de hoy"
+        ]
+      },
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ]
+    },
+    "tipo_nino": {
+      "name": "Tipo base · niño makaguán",
+      "kind": "personaje",
+      "description": "Plantilla del niño makaguán —Chui, «persona pequeña en aprendizaje de la cultura»—: los hijos de los primeros Makaguanes que se juntaron entre primos, y en su estado contemporáneo los niños del resguardo que el alma persigue, entre ellos Manuel Sánchez, que siendo muy pequeño presenció la lucha de Arístides.",
+      "aliases": [
+        "Chui"
+      ],
+      "states": [
+        "canonico",
+        "estrato contemporáneo de El Vigía, con ropa de hoy"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_refs": [
+        "tipo_nino__identity_sheet",
+        "tipo_nino__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-makawanes",
+        "el-alma"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-makawanes",
+          "field": "mito",
+          "note": "«Así salieron los hijos, que se juntaron entre primos, y poco a poco se fueron multiplicando»."
+        },
+        {
+          "myth": "el-alma",
+          "field": "mito",
+          "note": "«Anda por los montes persiguiendo y asustando a niños, jóvenes y adultos»."
+        },
+        {
+          "myth": "el-alma",
+          "field": "historia",
+          "note": "«Manuel Sánchez contó que él estuvo presente, siendo muy pequeño, en la lucha entre el sabedor Arístides Tocaria y este ser»."
+        }
+      ],
+      "design": {
+        "silhouette": "Un niño makaguán de unos siete años de pie, mirando atento algo que un mayor le muestra: cuerpo entero de pocos planos grandes y cara aparte, con una pequeña prenda de corteza de matapalo en la cintura. En su estado contemporáneo, el mismo cuerpo y la misma cara con camiseta y pantalón corto, y un trompo en la mano.",
+        "materials": [
+          "cuerpo de pocos planos grandes de papel color piel, con la cabeza proporcionalmente mayor, sin volumen modelado",
+          "rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos",
+          "chivechi: corteza de matapalo sin tejer, apelmazada y mate, en una pieza pequeña ceñida a la cintura",
+          "pelo negro corto en un solo recorte plano",
+          "en el estado contemporáneo: camiseta y pantalón corto de tela lisa corriente, y trompo o bolinchas en la mano"
+        ],
+        "palette": "Piel en el tono medio cálido del corpus, pelo negro mate, corteza de crudo a pardo claro; en el estado contemporáneo, ropa lisa corriente.",
+        "scale": "Cuerpo entero a la altura de la cintura de tipo_hombre_adulto: es también la talla con que el relato de ahora mide al alma, «como de la estatura de un niño de diez años», y no deben confundirse, así que el niño nunca es negro, peludo ni sombra.",
+        "continuity": [
+          "cuerpo y cara se nombran por separado en todo prompt que herede este tipo: cuerpo de planos grandes, cara de óvalo plano con rasgos recortados aparte",
+          "la cara nunca se modela ni se esculpe, y es la misma en los dos estratos",
+          "siempre en actitud de aprender —mirando, escuchando, siguiendo—, porque así lo define su palabra",
+          "nunca se confunde con Wuachirajua en su talla de niño: el niño tiene piel, cara y ropa; el alma es negra, peluda o sombra",
+          "sin pintura corporal ni tocado en ningún estrato"
+        ],
+        "documented": [
+          "Chui, niño, «persona pequeña en aprendizaje de la cultura», en el glosario: el dossier dice que eso decide qué está haciendo en la lámina.",
+          "La prenda del estrato de fundación es el chivechi, tela de corteza de matapalo.",
+          "El estrato contemporáneo tiene estudiantes que van en bicicleta o cruzan el río en canoa, con cancha de fútbol, trompo y bolinchas.",
+          "Del pelo, la pintura corporal y el tocado no hay una sola palabra en ninguna fuente consultada."
+        ],
+        "editorial": [
+          "La pequeña prenda de corteza del niño en el tiempo del venado es inferencia desde el chivechi: la fuente no dice cómo vestían los niños; decisión reversible.",
+          "La edad de siete años es decisión editorial para separarlo de la talla de diez años del alma.",
+          "Lenguaje sí, ejemplar no."
+        ],
+        "states_to_model": [
+          "estrato contemporáneo de El Vigía, con ropa de hoy"
+        ]
+      },
+      "model_requirements": [
+        "identity_sheet",
+        "state_sheet"
+      ]
+    },
+    "tipo_anciano": {
+      "name": "Tipo base · anciano makaguán (sabedor)",
+      "kind": "personaje",
+      "description": "Plantilla del hombre viejo makaguán en el estrato contemporáneo de la leyenda: los abuelos que cuentan y el sabedor que se enfrenta al alma en la cacería, «el abuelo Arístides», que se produce desde este tipo para no inventarle un retrato.",
+      "aliases": [
+        "sabedor",
+        "abuelo"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "contextual",
+      "visual_status": "required",
+      "model_refs": [
+        "tipo_anciano__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "el-alma"
+      ],
+      "evidence": [
+        {
+          "myth": "el-alma",
+          "field": "mito",
+          "note": "«Cuentan los abuelos que desde hace tiempo»; «También lo encontró el sabedor Arístides Tocaria, un día de cacería»; «el abuelo Arístides logró ocultarse en la casa»."
+        }
+      ],
+      "design": {
+        "silhouette": "Un anciano makaguán de pie, delgado y erguido, con ropa de hoy —camisa de manga larga, pantalón, sandalia— y un bolso tejido cruzado al hombro: cuerpo entero de pocos planos grandes con la espalda apenas curvada, y la cara aparte. Es un hombre que todavía corre: no es un viejo inmóvil.",
+        "materials": [
+          "cuerpo de pocos planos grandes de papel color piel, delgado, con la espalda apenas curvada, sin arrugas modeladas",
+          "rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y dos o tres pliegues como tiras de papel superpuestas",
+          "camisa de manga larga, pantalón y sandalia en papel de tela lisa y corriente",
+          "bolso tejido de fique de trama gruesa, sin diseño concreto",
+          "pelo gris y negro corto en un solo recorte plano"
+        ],
+        "palette": "Piel en el tono medio cálido del corpus, un grado más apagado; pelo gris con mechas negras; ropa lisa corriente en tonos apagados y el fique en crudo.",
+        "scale": "Cuerpo entero apenas más bajo que tipo_hombre_adulto: la edad se lee en la cara y el pelo, no en la estatura, porque el relato lo hace correr.",
+        "continuity": [
+          "cuerpo y cara se nombran por separado en todo prompt que herede este tipo: cuerpo de planos grandes, cara de óvalo plano con rasgos recortados aparte",
+          "la edad se hace con el pelo y los pliegues recortados, nunca con arrugas esculpidas",
+          "pertenece al estrato contemporáneo: ni chivechi, ni arpón, ni canasto de espalda",
+          "sin pintura corporal, sin tocado y sin ningún objeto ritual: los rezos de los antiguos no se dibujan",
+          "Arístides Tocaria es persona real sin descripción física: se produce desde este tipo, nunca como retrato"
+        ],
+        "documented": [
+          "El estrato contemporáneo «se viste como cualquiera en Arauca».",
+          "Las mujeres de El Vigía tejen «bolsos con materiales del medio (fique)».",
+          "Arístides Tocaria está entre los fundadores del resguardo, «entre los niños y adolescentes que llegaron caminando con sus padres»; el relato lo llama sabedor y abuelo y dice que se salvó «por la habilidad que tenía para correr».",
+          "Del pelo, la pintura corporal y el tocado no hay una sola palabra en ninguna fuente consultada."
+        ],
+        "editorial": [
+          "Camisa de manga larga y bolso de fique son ropa corriente de Arauca, no una prenda documentada de este hombre: decisión reversible.",
+          "El pelo gris corto es decisión editorial reversible.",
+          "Lenguaje sí, ejemplar no."
+        ],
+        "states_to_model": []
+      },
+      "model_requirements": [
+        "identity_sheet"
+      ]
+    },
     "tacu": {
       "name": "Tacu (Padre Sol)",
       "kind": "deidad_fuerza",
@@ -1572,7 +2030,7 @@
     "primeros_makaguanes": {
       "name": "Los primeros Makaguanes antiguos",
       "kind": "colectivo",
-      "description": "Cuatro mujeres y cuatro hombres que buscan carne, pepas y raíces, recogen plátano de monte y caracoles, fabrican capuzas de macana, caminan montes y esteros y se multiplican. Es la gramática de cuerpos del tiempo mítico y presta figuras a la familia de Wiri, a quienes derriban la palma y a la pareja que sobrevive.",
+      "description": "Cuatro mujeres y cuatro hombres que cogen carne, pepas de monte, raíces y plátano de monte, recolectan kiwi en montes y esteros, hacen capuzas de macana para cazar y pescar, viven caminando y, juntándose entre primos, se multiplican. Es la gramática de cuerpos del tiempo mítico y presta figuras a la familia de Wiri, a quienes derriban la palma y a la pareja que sobrevive.",
       "aliases": [],
       "states": [
         "canonico"
@@ -1621,6 +2079,11 @@
           "myth": "creacion-makawanes",
           "field": "mito",
           "note": "Un gesto de cuerpo sí está documentado y es de hoy: «Los niños pequeños los llevan a todos lados con una prenda o trapo largo que va del cuello a la cintura»"
+        },
+        {
+          "myth": "creacion-makawanes",
+          "field": "mito",
+          "note": "La página reescrita: «recolectaban kiwi en los montes y esteros»; «Así salieron los hijos, que se juntaron entre primos, y poco a poco se fueron multiplicando»."
         }
       ],
       "census_note": "Cuatro mujeres y cuatro hombres que buscan carne, pepas y raíces, recogen plátano de monte y caracoles, fabrican capuzas de macana, caminan montes y esteros y se multiplican. Es la gramática de cuerpos del tiempo mítico y presta figuras a la familia de Wiri, a quienes derriban la palma y a la pareja que sobrevive.",
@@ -1650,7 +2113,8 @@
           "la prenda documentada es el chivechi, tela de vestir del pueblo Makaguan hecha de la corteza del matapalo, un Ficus: superficie sin tejer, apelmazada, mate, de crudo a pardo claro (dossier §0.2 y §6)",
           "la capuza de macana es un arpón, definido en el glosario como «instrumento alargado con punta que se utiliza para cazar un animal», de madera de macana y usado «para matar samulia, maja, matiwi, mesa, pescado» —chácharo, guacamaya, danta y pescado— en tierra y en agua (dossier §0.1)",
           "tres palabras del glosario definen a las personas mejor que cualquier prenda: Pébi, hombre, «el que ama a su tierra y defiende su familia»; Mira, compañera; y Chui, niño, «persona pequeña en aprendizaje de la cultura» (dossier §6)",
-          "el pueblo se autodenomina peregrino y lo funda en el venado: «los makaguanes provienen del venado y por esta razón son peregrinos» (dossier §4)"
+          "el pueblo se autodenomina peregrino y lo funda en el venado: «los makaguanes provienen del venado y por esta razón son peregrinos» (dossier §4)",
+          "La página reescrita añade la recolección de kiwi —caracol en el glosario— «en los montes y esteros» y que los hijos «se juntaron entre primos» para multiplicarse."
         ],
         "editorial": [
           "el corte y la hechura de la prenda de corteza no están documentados, y ésa es la carencia más grave del dossier: se autoriza la materia y el tono, y la hechura es decisión editorial reversible (dossier §0.2, §6 y §11)",
@@ -1753,7 +2217,9 @@
       "name": "La ardita o ardilla",
       "kind": "animal",
       "description": "Enviada por Tacu al ver la muerte de Wiri: «en instantes derribó árboles grandes y montañas». Un animal pequeño con una escala de destrucción desproporcionada; esa relación de tamaño es justamente lo que la ficha tiene que fijar.",
-      "aliases": [],
+      "aliases": [
+        "la ardita"
+      ],
       "states": [
         "canonico"
       ],
@@ -1864,7 +2330,8 @@
           "es la corrección comunitaria de Manuel Sánchez en 2023: «según la versión de los abuelos no era una paloma, sino un samuro enviado para limpiar la tierra y comer la materia que había quedado después de la inundación», y el canon la adopta en la narración principal (canon, campo mito y campo versiones)",
           "la paloma pertenece a la transcripción de David González del 15 de agosto de 2010 y se conserva en versiones para mostrar cómo cambió el registro (canon, campo versiones)",
           "samuro es el nombre llanero y venezolano del gallinazo negro, Coragyps atratus: negro mate, cabeza pelada y gris, envergadura ancha y vuelo planeado bajo (dossier §7)",
-          "los huesos de los muertos que recoge el cangrejo quedan fuera de toda lámina: restos humanos de la inundación (dossier §4)"
+          "los huesos de los muertos que recoge el cangrejo quedan fuera de toda lámina: restos humanos de la inundación (dossier §4)",
+          "Historia de la página reescrita: Manuel Sánchez pidió corregir la paloma y el motivo que faltaba, «que por la cantidad de muertos Tacu buscaba limpiar la tierra»."
         ],
         "editorial": [
           "del gallinazo sólo se obtuvo el nombre científico en una lista de avifauna, sin morfología ni comportamiento en fuente araucana: la figura se resuelve con morfología de especie común y la determinación se declara (dossier §11)",
@@ -2083,7 +2550,8 @@
           "«el cielo se oscureció y comenzó una lluvia que no se detuvo durante varios días. La gente intentó contenerla, pero no pudo. Solo un guerrero y su compañera alcanzaron un monte que la ardilla no había derribado» (canon, campo mito)",
           "después el agua retrocede y quedan los árboles y las hojas podridos, que es lo que el samuro viene a limpiar (canon, campo mito)",
           "la inundación es el cobro de la deuda con Wiri, que muere por no ser cuidado, y no un castigo abstracto ni un desastre natural (dossier §4)",
-          "el estero del Lipa cambia de superficie con el régimen bimodal, y en aguas altas la densidad de plantas acuáticas es alta: nunca el promedio verde (dossier §3)"
+          "el estero del Lipa cambia de superficie con el régimen bimodal, y en aguas altas la densidad de plantas acuáticas es alta: nunca el promedio verde (dossier §3)",
+          "La página reescrita: la ardita deja «el mundo tumbado»; «Después oscureció todo y de repente empezó a caer una lluvia que no paraba»; «La gente quiso detener la lluvia y no pudo»; el samuro va «a comerse la podredumbre que había quedado y a mirar si la tierra ya se había secado»."
         ],
         "editorial": [
           "el orden de las tres bandas y su reparto en el encuadre son composición editorial: la fuente da la secuencia y no la simultaneidad",
@@ -2334,6 +2802,11 @@
           "myth": "el-alma",
           "field": "mito",
           "note": "Wuachirajua cambia de forma en ave u otro animal, pero el relato no describe ninguna de esas formas: es una capacidad declarada, no una silueta, y se resuelve como regla dentro de su hoja y no como lámina aparte. Su pareja aparece sin un solo rasgo propio"
+        },
+        {
+          "myth": "el-alma",
+          "field": "versiones",
+          "note": "«Los estudiantes de séptimo la dibujaron con cabello largo, traje largo negro, rostro muy particular, garras y la facultad de volar. En el dibujo de David González tiene un solo ojo y un pico largo. Los sabedores aprobaron la congruencia de ambas con lo narrado, sin unificarlas»."
         }
       ],
       "census_note": "Conduce la leyenda entera. El estado extra sí lo exige el relato y sí cambia la silueta: en los recuerdos más antiguos es grande, negro y peludo, de estatura de oso y uñas largas; en versiones posteriores tiene el tamaño de un niño de diez años y cruza como sombra pequeña por la escuela. Dos fichas, no tres: las formas de ave u otros animales quedan embebidas como variante.",
@@ -2355,7 +2828,9 @@
           "no se confunde nunca con los Wachirajua-espíritus del relato de fundación: comparten el nombre y nada más, y están separados por siglos y por capa documental",
           "las formas de ave y de otros animales que el relato le atribuye no se dibujan, porque el texto enuncia la capacidad y no describe ninguna forma",
           "su pareja, que Manuel Sánchez añadió en 2023, no recibe cuerpo propio y no se dibuja: se resuelve, cuando haga falta, como una segunda columna idéntica",
-          "pertenece sólo al estrato contemporáneo: nunca aparece en una lámina del tiempo del venado"
+          "pertenece sólo al estrato contemporáneo: nunca aparece en una lámina del tiempo del venado",
+          "en la hoja de pelo la talla es la que dice el relato de ahora —un niño de diez años, negro y peludo— y el tamaño de oso del recuerdo antiguo se declara como variación de escala dentro de la misma hoja",
+          "en la escuela sólo es la sombra de un niño que corre y atraviesa una pared: nunca un cuerpo iluminado de frente por la linterna"
         ],
         "documented": [
           "los estudiantes de séptimo lo dibujaron y «los sabedores compartieron la lectura y la imagen, aprobando la congruencia de la imagen con la historia narrada»: «un ser con un solo ojo, un pico largo, traje largo, pelo largo, piel negra y con la facultad de volar» (David E. González, 2013; dossier §0.4)",
@@ -2363,14 +2838,17 @@
           "en los recuerdos más antiguos era «un ser grande, negro y peludo, de estatura comparable con un oso y con uñas largas»; en versiones posteriores tenía el tamaño de un niño de unos diez años pero conservaba una fuerza extraordinaria (canon, campo mito)",
           "el glosario de la tesis lo define como «personaje que interactúa con los miembros de la cultura Makaguan; representa un ser sobrenatural»; persigue «a las personas de mala voluntad» y atraviesa una pared (dossier §7)",
           "la presencia se relaciona con la pérdida de la costumbre de acompañar a los muertos con una vela de cera de abeja y cerca de dos litros de agua, y empezó a verse aproximadamente desde 1948 en la laguna del Lipa (canon, campo mito)",
-          "es la única figura del corpus con diseño aprobado por sabedores, y ese aval es de 2013 y fue sobre un dibujo escolar, no sobre estas láminas (dossier §10, salvaguarda 5)"
+          "es la única figura del corpus con diseño aprobado por sabedores, y ese aval es de 2013 y fue sobre un dibujo escolar, no sobre estas láminas (dossier §10, salvaguarda 5)",
+          "La página reescrita reparte los rasgos de otra manera que el dossier: el dibujo de los estudiantes lleva «cabello largo, traje largo negro, rostro muy particular, garras y la facultad de volar», y el de David González «un solo ojo y un pico largo»; los sabedores aprobaron las dos «sin unificarlas».",
+          "La página reescrita lo describe en el relato como negro y peludo en los dos recuerdos —grande como un oso, con uñas largas y afiladas; y ahora de la estatura de un niño de diez años con la fuerza de muchos hombres—, y a Arístides Tocaria se le aparece «como un niño negro y peludo», acompañado de su pareja."
         ],
         "editorial": [
           "contradigo el campo states_declared, que pedía «forma pequeña o sombra», y cobro otro estado: los dos estados documentados no son «grande y peludo / sombra pequeña» sino las dos iconografías comunitarias —la de 2013, con un ojo, pico y traje largo, que es la que los sabedores aprobaron y por eso se toma como canónica, y la de 2022, cubierta de pelo y con garras—; la forma pequeña de los testimonios posteriores es un cambio de talla y no de silueta, y se resuelve dentro de la hoja canónica (dossier §0.4)",
           "la comparación con «un gran oso» del recuerdo antiguo se lee como oso palmero u hormiguero y no como oso andino, porque en la sabana de Arauca no hay oso andino: es lectura editorial y así se declara (dossier §0.4)",
           "los «ojos brillantes» de la iconografía de 2022 se resuelven como discos claros planos: el sistema prohíbe el brillo, el aura y la luz propia, y esta traducción es una decisión editorial declarada y reversible",
           "el rostro, la proporción del traje y la longitud del pico son construcción editorial sobre una lista de rasgos, no sobre un dibujo que este dossier haya podido ver",
-          "el machete del hombre que se le enfrenta, la linterna del profesor y la falla eléctrica pertenecen al estrato contemporáneo y a la hoja de utilería, y ninguno entra en esta ficha"
+          "el machete del hombre que se le enfrenta, la linterna del profesor y la falla eléctrica pertenecen al estrato contemporáneo y a la hoja de utilería, y ninguno entra en esta ficha",
+          "La página reescrita pone el relato del lado del ser peludo y deja las dos iconografías en versiones: se mantiene la de traje largo, un ojo y pico como canónica porque es la imagen aprobada por los sabedores, y la hoja de pelo pasa a ser la que el relato describe; si la comunidad prefiere la del relato como canónica, se invierten sin rehacer ninguna."
         ],
         "states_to_model": [
           "iconografia_2022_cubierto_de_pelo"
@@ -2456,7 +2934,8 @@
           "la bicicleta, la cancha y la ropa de hoy no se borran nunca: borrarlas fabricaría una antigüedad que este pueblo no tiene",
           "no hay luz eléctrica en ninguna lámina de este estrato, porque el resguardo no tiene red: la falla de la leyenda es lo normal y no una avería",
           "nadie lleva pintura corporal, tocado ni penacho, igual que en el otro colectivo",
-          "las personas reales nombradas por el corpus —Gregorio Flórez, David González, José Darío Cuenza, Arístides Tocaria y Manuel Sánchez— no reciben retrato: se resuelven desde este colectivo y se acreditan por nombre en el pie"
+          "las personas reales nombradas por el corpus —Gregorio Flórez, David González, José Darío Cuenza, Arístides Tocaria y Manuel Sánchez— no reciben retrato: se resuelven desde este colectivo y se acreditan por nombre en el pie",
+          "sus figuras heredan cara y cuerpo de los tipos base en su estado contemporáneo: el colectivo añade la ropa de hoy, no otra gente"
         ],
         "documented": [
           "el resguardo de El Vigía es una comunidad de unas 500 personas en 72 familias sobre 410 hectáreas, con estudiantes que van y vienen en bicicleta o cruzan el río en canoa, con cancha de fútbol y con trompo y bolinchas (dossier §6 y §2)",
@@ -2464,7 +2943,8 @@
           "las mujeres de El Vigía «lideran actividades sobre la fabricación de manillas y collares con base en chaquiras» y «tejido de bolsos con materiales del medio (fique)»; la chaquira es cuenta de vidrio y por tanto posterior al contacto (dossier §6)",
           "el resguardo «no tiene agua potable, ni luz eléctrica», de modo que la falla eléctrica de la leyenda es la condición normal y no un accidente (dossier §1 y §5)",
           "el estrato está fechado por la propia fuente: la presencia se ve «aproximadamente desde 1948», el encuentro del corozo hacia 1991 y el episodio de la escuela es posterior a la creación del internado (dossier §1)",
-          "el inventario material del estrato es el de un resguardo araucano de la segunda mitad del siglo XX: vela de cera de abeja, dos litros de agua, machete, linterna, archivadores, chinchorro, camas hechizas, fogón de leña, cancha de fútbol, bicicleta, moto y canoa (dossier §1)"
+          "el inventario material del estrato es el de un resguardo araucano de la segunda mitad del siglo XX: vela de cera de abeja, dos litros de agua, machete, linterna, archivadores, chinchorro, camas hechizas, fogón de leña, cancha de fútbol, bicicleta, moto y canoa (dossier §1)",
+          "La página reescrita: el profesor cuenta su encuentro «en la cancha de fútbol, donde se jugaba todas las tardes, y los compañeros empezaron a contar los suyos: cómo habían escapado del alma en el monte y en los caminos, desde que se creó el internado»."
         ],
         "editorial": [
           "los rostros, las edades y la composición del grupo son construcción editorial: no hay una sola descripción del cuerpo makaguán en ninguna fuente, ni antigua ni contemporánea (dossier §11)",
@@ -2804,10 +3284,12 @@
       ]
     },
     "pareja_sobreviviente": {
-      "name": "El guerrero y su compañera",
+      "name": "El guerrero y su compañera, los que sobreviven",
       "kind": "colectivo",
-      "description": "Los únicos que alcanzan el monte que la ardilla no derribó y los que responden a Tacu al final. Son dos figuras de generaciones posteriores, pero con la misma gramática de cuerpos; se producen desde esa hoja.",
-      "aliases": [],
+      "description": "«Sólo un guerrero de la tribu, junto con su compañera, alcanzó a subir a un monte que la ardita y el padre Tacu no habían hecho derribar». Son los que responden a Tacu, arrepentidos, al final. La imagen escogida por el grupo en 2013 muestra a esta pareja para decir que el pueblo permanece.",
+      "aliases": [
+        "la pareja sobreviviente"
+      ],
       "states": [
         "canonico"
       ],
@@ -2839,7 +3321,7 @@
       ],
       "census_note": "Los únicos que alcanzan el monte que la ardilla no derribó y los que responden a Tacu al final. Son dos figuras de generaciones posteriores, pero con la misma gramática de cuerpos; se producen desde esa hoja.",
       "covered_by": "primeros_makaguanes",
-      "coverage_note": "Los únicos que alcanzan el monte que la ardilla no derribó y los que responden a Tacu al final. Son dos figuras de generaciones posteriores, pero con la misma gramática de cuerpos; se producen desde esa hoja.",
+      "coverage_note": "Dos figuras de generaciones posteriores con la misma gramática de cuerpos: se producen desde la hoja de los primeros Makaguanes sobre tipo_hombre_adulto y tipo_mujer_adulta. La página reescrita precisa que él es «un guerrero de la tribu» y ella «su compañera».",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -3216,7 +3698,7 @@
       ],
       "census_note": "Protagoniza el encuentro de caza: dialoga con la presencia sobre poderes y rezos antiguos, se enfrenta a ella y logra ocultarse en una casa. Conduce esa escena, pero es una persona real reciente sin descripción física en la fuente; se produce desde el colectivo para no inventarle un retrato.",
       "covered_by": "gente_del_resguardo_hoy",
-      "coverage_note": "Protagoniza el encuentro de caza: dialoga con la presencia sobre poderes y rezos antiguos, se enfrenta a ella y logra ocultarse en una casa. Conduce esa escena, pero es una persona real reciente sin descripción física en la fuente; se produce desde el colectivo para no inventarle un retrato.",
+      "coverage_note": "Persona real reciente sin descripción física: se produce desde el colectivo sobre tipo_anciano para no inventarle un retrato. La página lo llama «el sabio» y «el abuelo Arístides»: el ser aparece «como un niño negro y peludo» con su pareja, dialogan sobre los rezos de los antiguos, luchan cuerpo a cuerpo y él se oculta en la casa por su habilidad para correr.",
       "evidence_basis_mix": [
         "documented_core",
         "editorial_interpretation"
@@ -3253,7 +3735,7 @@
       ],
       "census_note": "Cuenta que lo vio comiendo corozo y lo enfrentó con un machete. Testigo sin nombre ni rasgos: figura del colectivo.",
       "covered_by": "gente_del_resguardo_hoy",
-      "coverage_note": "Cuenta que lo vio comiendo corozo y lo enfrentó con un machete. Testigo sin nombre ni rasgos: figura del colectivo.",
+      "coverage_note": "Testigo sin nombre ni rasgos: «lo encontró comiendo corozo en el bosque de El Vigía, hará unos veinte años, y se le enfrentó a machete; desde entonces dejó de perseguirlo». Se produce desde gente_del_resguardo_hoy sobre tipo_hombre_adulto en su estado contemporáneo.",
       "evidence_basis_mix": [
         "documented_core",
         "editorial_interpretation"
@@ -3262,7 +3744,7 @@
     "profesor_de_la_escuela": {
       "name": "El profesor de la escuela",
       "kind": "personaje",
-      "description": "Después de la muerte de un compañero y durante una falla eléctrica vio una sombra pequeña atravesar las habitaciones. Testigo sin descripción: figura del colectivo.",
+      "description": "Profesor indígena recién llegado, en los días de la muerte de un compañero y sin luz por problemas eléctricos: con una linterna de buena luz ve pasar la sombra de un niño corriendo, siente que lo miran por la espalda y lo tocan, lanza un puño que da contra un archivador y lo ve atravesar una pared. Testigo sin descripción: figura del colectivo.",
       "aliases": [],
       "states": [
         "canonico"
@@ -3295,7 +3777,7 @@
       ],
       "census_note": "Después de la muerte de un compañero y durante una falla eléctrica vio una sombra pequeña atravesar las habitaciones. Testigo sin descripción: figura del colectivo.",
       "covered_by": "gente_del_resguardo_hoy",
-      "coverage_note": "Después de la muerte de un compañero y durante una falla eléctrica vio una sombra pequeña atravesar las habitaciones. Testigo sin descripción: figura del colectivo.",
+      "coverage_note": "Testigo sin nombre ni rasgos: se produce desde gente_del_resguardo_hoy sobre tipo_hombre_adulto en su estado contemporáneo, con la linterna como su única pieza propia. La página reescrita añade la linterna, el puño contra el archivador y la sombra que atraviesa la pared.",
       "evidence_basis_mix": [
         "documented_core",
         "editorial_interpretation"
@@ -3371,7 +3853,7 @@
     "capuzas_de_macana": {
       "name": "Capuzas de macana",
       "kind": "objeto",
-      "description": "Las fabrican los primeros Makaguanes para cazar y pescar. Herramienta de mano nombrada sin detalle: utilería.",
+      "description": "Las fabrican los primeros Makaguanes: «les servían para matar samulia, maja, matiwi y mesa, y para pescar». El glosario las define como arpón de madera de macana.",
       "aliases": [],
       "states": [
         "canonico"
@@ -3404,7 +3886,7 @@
       ],
       "census_note": "Las fabrican los primeros Makaguanes para cazar y pescar. Herramienta de mano nombrada sin detalle: utilería.",
       "covered_by": "hoja_utileria_makaguan",
-      "coverage_note": "Las fabrican los primeros Makaguanes para cazar y pescar. Herramienta de mano nombrada sin detalle: utilería.",
+      "coverage_note": "Arpón de madera de macana con punta, definido en el glosario; va en la hoja de utilería y en la mano de los primeros Makaguanes. Las presas que el relato nombra quedan registradas aparte y no se dibujan.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -3435,7 +3917,7 @@
       ],
       "census_note": "Lo que recogen los primeros Makaguanes. Conjunto de alimentos recolectados, sin planta protagonista: entra como bloque en la hoja de utilería.",
       "covered_by": "hoja_utileria_makaguan",
-      "coverage_note": "Lo que recogen los primeros Makaguanes. Conjunto de alimentos recolectados, sin planta protagonista: entra como bloque en la hoja de utilería.",
+      "coverage_note": "Lo que recogen los primeros Makaguanes: carne, pepas de monte, raíces, plátano de monte y kiwi, que el glosario traduce caracol y que la página reescrita recolecta «en los montes y esteros». Entra como bloque en la hoja de utilería.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -3826,9 +4308,1042 @@
         "documented_core",
         "contemporary_memory"
       ]
+    },
+    "presas_de_la_capuza": {
+      "name": "Samulia, maja, matiwi y mesa, las presas de la capuza",
+      "kind": "animal",
+      "description": "Lo que matan los primeros Makaguanes con las capuzas: «samulia, maja, matiwi y mesa», restos de la lengua dentro del relato. El dossier las glosa como chácharo, guacamaya, una sin glosa y danta.",
+      "aliases": [
+        "chácharo",
+        "guacamaya",
+        "danta"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "excluded",
+      "exclusion_reason": "sólo se nombran como fin del arpón y ninguna escena de caza ocurre en el relato; una de las cuatro palabras, matiwi, no tiene glosa, y dibujar las otras tres completaría una fauna que la página no pone en escena",
+      "myth_refs": [
+        "creacion-makawanes"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-makawanes",
+          "field": "mito",
+          "note": "«hicieron capuzas de macana, que les servían para matar samulia, maja, matiwi y mesa, y para pescar»."
+        }
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "model_requirements": []
+    },
+    "monos_sambo_chuco_choroy": {
+      "name": "Los monos sambo, chuco y choroy del glosario",
+      "kind": "animal",
+      "description": "El glosario de la misma investigación define a los monos —sambo, chuco, choroy— como el animal sagrado que da origen al pueblo makaguán, mientras la narración se lo atribuye al venado.",
+      "aliases": [
+        "sambo",
+        "chuco",
+        "choroy"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "variant",
+      "sensitivity": "contextual",
+      "visual_status": "excluded",
+      "exclusion_reason": "contradicción interna de la fuente que versiones deja a la vista: el dossier la marca uncertain y no alimenta ninguna ficha; el origen dibujado es el venado",
+      "myth_refs": [
+        "creacion-makawanes"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-makawanes",
+          "field": "versiones",
+          "note": "«la entrada de los monos —sambo, chuco, choroy— los define como el animal sagrado que da origen al pueblo makaguán, mientras la narración se lo atribuye al venado»."
+        }
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "model_requirements": []
+    },
+    "nakanu_y_marat_hitnu": {
+      "name": "Nakanü y Marat, creadores del relato hitnü",
+      "kind": "deidad_fuerza",
+      "description": "Variación vecina: el pueblo hitnü cuenta varias tierras superpuestas, a Nakanü, dueño de la primera, que hizo animales y humanos y los dejó junto a los ríos Ele y Lipa, y a Marat, que hizo la tierra.",
+      "aliases": [
+        "Nakanü",
+        "Marat"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "variant",
+      "sensitivity": "contextual",
+      "visual_status": "excluded",
+      "exclusion_reason": "es un relato hitnü, no makaguán: la página lo cita «nunca como otra manera de decir Tacu», y el dossier prohíbe trasladar nada hitnü a estas láminas",
+      "myth_refs": [
+        "creacion-makawanes"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-makawanes",
+          "field": "versiones",
+          "note": "«Nakanü, dueño de la primera, hizo a los animales y a los humanos y luego los dejó al lado de los ríos Ele y Lipa; quien hizo la tierra fue Marat». «Es un relato hitnü, no makaguán»."
+        }
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "model_requirements": []
+    },
+    "linterna_del_profesor": {
+      "name": "La linterna del profesor",
+      "kind": "objeto",
+      "description": "«iba hacia el baño con una linterna de buena luz cuando vio pasar la sombra de un niño corriendo». Es la única luz de la escena, porque no hay luz eléctrica.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "covered_by": "hoja_utileria_makaguan",
+      "coverage_note": "Ya está en el bloque contemporáneo de la hoja de utilería («cuerpo de linterna»); el dossier la da como la única fuente de luz nocturna documentada del resguardo.",
+      "myth_refs": [
+        "el-alma"
+      ],
+      "evidence": [
+        {
+          "myth": "el-alma",
+          "field": "mito",
+          "note": "«No había luz, por problemas eléctricos, y el profesor iba hacia el baño con una linterna de buena luz»."
+        }
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "model_requirements": []
+    },
+    "archivadores_de_la_escuela": {
+      "name": "Los archivadores de la escuela",
+      "kind": "objeto",
+      "description": "El profesor «lanzó un puño que fue a dar contra uno de los archivadores».",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "covered_by": "resguardo_el_vigia",
+      "coverage_note": "Ya está en el modelo espacial del resguardo: un archivador rectangular arrimado en la crujía del internado.",
+      "myth_refs": [
+        "el-alma"
+      ],
+      "evidence": [
+        {
+          "myth": "el-alma",
+          "field": "mito",
+          "note": "«Reaccionó asustado y lanzó un puño que fue a dar contra uno de los archivadores»."
+        }
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "model_requirements": []
+    },
+    "cancha_de_futbol": {
+      "name": "La cancha de fútbol donde se cuentan los encuentros",
+      "kind": "lugar",
+      "description": "«Al día siguiente lo contó en la cancha de fútbol, donde se jugaba todas las tardes, y los compañeros empezaron a contar los suyos».",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "public",
+      "visual_status": "embedded",
+      "covered_by": "resguardo_el_vigia",
+      "coverage_note": "Ya está en el modelo espacial del resguardo como franja rasa de cancha, sin línea pintada ni arco reglamentario; sólo sitúa la ronda de relatos.",
+      "myth_refs": [
+        "el-alma"
+      ],
+      "evidence": [
+        {
+          "myth": "el-alma",
+          "field": "mito",
+          "note": "«lo contó en la cancha de fútbol, donde se jugaba todas las tardes»."
+        }
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "model_requirements": []
+    },
+    "rezos_de_los_antiguos": {
+      "name": "Los poderes de los rezos de los antiguos",
+      "kind": "fenomeno",
+      "description": "En el encuentro de caza, «el sabio y el alma empezaron un diálogo, y ambos manifestaron manejar los poderes de los rezos de los antiguos».",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "excluded",
+      "exclusion_reason": "do_not_visualize: la página nombra los rezos y no dice cómo son; ilustrarlos sería inventar un saber ritual de una comunidad viva, y el diálogo se dibuja sólo como dos figuras frente a frente",
+      "myth_refs": [
+        "el-alma"
+      ],
+      "evidence": [
+        {
+          "myth": "el-alma",
+          "field": "mito",
+          "note": "«ambos manifestaron manejar los poderes de los rezos de los antiguos; de ahí pasaron a una lucha cuerpo a cuerpo»."
+        }
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "model_requirements": []
+    },
+    "persecucion_de_los_colonos": {
+      "name": "La persecución de los colonos y el desplazamiento",
+      "kind": "fenomeno",
+      "description": "Historia y versiones sitúan la presencia en los años de la violencia: las familias iban a la laguna del Lipa «a esconderse de los colonos que los perseguían», y el investigador sugiere leer el alma en el contexto de la persecución, el desplazamiento y las matanzas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "documented",
+      "sensitivity": "sensitive",
+      "visual_status": "excluded",
+      "exclusion_reason": "do_not_visualize: el dossier prohíbe ilustrar el testimonio de la violencia, y la lectura del alma como persecución es hipótesis del investigador, no de los sabedores, que la explican por haber dejado de acompañar a los muertos",
+      "myth_refs": [
+        "el-alma"
+      ],
+      "evidence": [
+        {
+          "myth": "el-alma",
+          "field": "historia",
+          "note": "«adonde iban a cazar lo justo y a esconderse de los colonos que los perseguían»."
+        },
+        {
+          "myth": "el-alma",
+          "field": "versiones",
+          "note": "«el investigador sugiere que el alma podría interpretarse en el contexto de la persecución, el desplazamiento y las matanzas»; «Es una hipótesis suya»."
+        }
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "model_requirements": []
+    },
+    "comparacion_con_el_diluvio_cristiano": {
+      "name": "La comparación con el diluvio cristiano",
+      "kind": "fenomeno",
+      "description": "Versiones advierte que la comparación con el diluvio cristiano aparece en las conclusiones del trabajo y es una lectura del investigador, no algo que dijeran los sabedores.",
+      "aliases": [
+        "diluvio"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "variant",
+      "sensitivity": "contextual",
+      "visual_status": "excluded",
+      "exclusion_reason": "lectura del investigador y no de los narradores: ninguna lámina toma arca, paloma bíblica ni iconografía del diluvio; la paloma de 2010 queda sólo como variante del samuro",
+      "myth_refs": [
+        "la-gran-inundacion"
+      ],
+      "evidence": [
+        {
+          "myth": "la-gran-inundacion",
+          "field": "versiones",
+          "note": "«la comparación con el diluvio cristiano, que aparece en las conclusiones del trabajo, es una lectura del investigador sobre el relato, no algo que dijeran los sabedores al narrarlo»."
+        }
+      ],
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "model_requirements": []
     }
   },
   "models": {
+    "tipo_hombre_adulto__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_hombre_adulto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-makawanes",
+          "field": "mito",
+          "note": "«de la boca del venado salieron cuatro mujeres y cuatro hombres»; cogían carne, pepas, raíces y plátano de monte y hacían capuzas de macana."
+        },
+        {
+          "myth": "la-gran-inundacion",
+          "field": "mito",
+          "note": "«Sólo un guerrero de la tribu, junto con su compañera, alcanzó a subir a un monte»."
+        },
+        {
+          "myth": "el-alma",
+          "field": "mito",
+          "note": "Un makaguán que se le enfrentó a machete en el bosque de El Vigía y un profesor indígena recién llegado a la escuela."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Un hombre adulto makaguán de pie, en paso de marcha, con un canasto amarrado a la espalda y un arpón de macana en la mano: cuerpo entero de pocos planos grandes y cara aparte, con una prenda de corteza de matapalo ceñida a la cintura y ninguna cabeza cubierta. En su estado contemporáneo, el mismo cuerpo y la misma cara con camiseta, pantalón y sandalia, sin canasto ni arpón.",
+        "materials": [
+          "cuerpo de pocos planos grandes de papel color piel: torso, brazos, piernas y manos como piezas separadas, sin musculatura modelada",
+          "rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos",
+          "chivechi: corteza de matapalo sin tejer, apelmazada y mate, de crudo a pardo claro, ceñida a la cintura en una sola pieza",
+          "canasto de espalda de fibra amarrado con cuerda y arpón de macana: vara oscura con punta recortada aparte",
+          "pelo negro en un solo recorte plano grande",
+          "en el estado contemporáneo: camiseta, pantalón y sandalia en papel de tela lisa y corriente, sin estampado"
+        ],
+        "palette_logic": "Piel en un tono medio cálido de una sola pieza, pelo negro mate, corteza de crudo a pardo claro y madera de macana oscura. Ningún oro: el oro del corpus está sólo en los dientes del araguato y el collar de Wiri. En el estado contemporáneo, tonos lisos y corrientes de ropa de hoy.",
+        "scale": "Cuerpo entero a escala de referencia del corpus: los primeros Makaguanes, la pareja sobreviviente y los testigos de la leyenda se miden contra esta lámina, y el venado colorado le llega a la cintura.",
+        "continuity_markers": [
+          "cuerpo y cara se nombran por separado en todo prompt que herede este tipo: cuerpo de planos grandes, cara de óvalo plano con rasgos recortados aparte",
+          "la cara nunca se modela ni se esculpe, y es la misma en los dos estratos",
+          "sin pintura corporal, sin tocado y sin penacho en ningún estrato: ninguna fuente los documenta",
+          "nunca el guayuco hitnü ni el de tres borlas del boceto sikuani de 1880",
+          "en el tiempo del venado no hay chaquira, machete, vela ni linterna; en el estrato contemporáneo no hay chivechi, arpón ni canasto de espalda"
+        ],
+        "documented_features": [
+          "El glosario de la tesis registra «Chivechi; Tela de vestir del pueblo Makaguan hecho del matapalo», un Ficus: la prenda del estrato de fundación es tela de corteza, sin tejer, apelmazada, mate, de crudo a pardo claro.",
+          "La iconografía comunitaria de la inundación, aprobada por los sabedores, pone «la lanza, las flechas, el canasto en la espalda»; la capuza de macana es un arpón según el glosario.",
+          "Del pelo, la pintura corporal y el tocado «no hay una sola palabra» en ninguna fuente consultada; los clanes Mamaluas («los calvos») y Canaguateros («cabello grueso») son etnónimos, no peinados.",
+          "El estrato contemporáneo «se viste como cualquiera en Arauca»: comunidad de 500 personas en 72 familias, con bicicleta, canoa y cancha de fútbol.",
+          "Pébi, hombre, «el que ama a su tierra y defiende su familia», en el glosario."
+        ],
+        "editorial_features": [
+          "El corte de la prenda de corteza —ceñida a la cintura— no está documentado: el dossier autoriza la materia y el tono, no la hechura; decisión reversible.",
+          "El pelo negro en una sola pieza, sin largo marcado, es decisión editorial reversible.",
+          "Lenguaje sí, ejemplar no: ninguna pieza copia un objeto, un tejido ni un adorno reales."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Makaguán V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · hombre adulto makaguán. Un hombre adulto makaguán de pie, en paso de marcha, con un canasto amarrado a la espalda y un arpón de macana en la mano: cuerpo entero de pocos planos grandes y cara aparte, con una prenda de corteza de matapalo ceñida a la cintura y ninguna cabeza cubierta. En su estado contemporáneo, el mismo cuerpo y la misma cara con camiseta, pantalón y sandalia, sin canasto ni arpón.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Cuerpo entero a escala de referencia del corpus: los primeros Makaguanes, la pareja sobreviviente y los testigos de la leyenda se miden contra esta lámina, y el venado colorado le llega a la cintura.",
+        "lighting_mood": "Llano abierto de cielo enorme, pero cortado siempre por la franja continua y alta del bosque de galería a lo largo del cauce: la vertical la pone el bosque, nunca una palma suelta. Dentro del bosque, luz filtrada y baja. En el estrato contemporáneo hay una sola fuente de luz nocturna y es la linterna, porque el resguardo no tiene red eléctrica.",
+        "materials_textures": "cuerpo de pocos planos grandes de papel color piel: torso, brazos, piernas y manos como piezas separadas, sin musculatura modelada; rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos; chivechi: corteza de matapalo sin tejer, apelmazada y mate, de crudo a pardo claro, ceñida a la cintura en una sola pieza; canasto de espalda de fibra amarrado con cuerda y arpón de macana: vara oscura con punta recortada aparte; pelo negro en un solo recorte plano grande; en el estado contemporáneo: camiseta, pantalón y sandalia en papel de tela lisa y corriente, sin estampado",
+        "era": "Dos estratos que nunca se mezclan. El del venado: sin hierro, sin rueda, sin vela, sin machete y sin escuela, con arpón de macana, gran trompeta, vino de palma, collar de oro, choza de piso de tierra y conuco abierto en el monte. El del internado, de 1948 en adelante: vela de cera de abeja, dos litros de agua, machete, linterna, archivadores, chinchorro, camas hechizas, fogón de leña, cancha de fútbol, bicicleta, moto y canoa, con ropa de hoy. Macana es tiempo mítico; machete es tiempo colonial.",
+        "constraints": [
+          "documentado: El glosario de la tesis registra «Chivechi; Tela de vestir del pueblo Makaguan hecho del matapalo», un Ficus: la prenda del estrato de fundación es tela de corteza, sin tejer, apelmazada, mate, de crudo a pardo claro.",
+          "documentado: La iconografía comunitaria de la inundación, aprobada por los sabedores, pone «la lanza, las flechas, el canasto en la espalda»; la capuza de macana es un arpón según el glosario.",
+          "documentado: Del pelo, la pintura corporal y el tocado «no hay una sola palabra» en ninguna fuente consultada; los clanes Mamaluas («los calvos») y Canaguateros («cabello grueso») son etnónimos, no peinados.",
+          "documentado: El estrato contemporáneo «se viste como cualquiera en Arauca»: comunidad de 500 personas en 72 familias, con bicicleta, canoa y cancha de fútbol.",
+          "documentado: Pébi, hombre, «el que ama a su tierra y defiende su familia», en el glosario.",
+          "La lámina declara la estación y el suelo, y no los promedia: sabana verde anegada de aguas altas, o barro duro y cuarteado de verano; banco, bajo, estero o mata de monte, uno solo por lámina.",
+          "El oro aparece exactamente en dos sitios del corpus —los dientes del araguato y el collar de Wiri— y en ninguno más; repartido, se vuelve decoración de folleto.",
+          "El estrato contemporáneo se ilumina con una sola luz cálida y pequeña, la de la linterna o la de la vela de cera de abeja, sobre un fondo sin ninguna luz eléctrica.",
+          "El negro de Wuachirajua es mate y de una sola pieza, sin reflejo, sin aura y sin ojos luminosos: lo que lo distingue es la silueta —traje largo, pico, un ojo— y no el brillo.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin morichal del Vichada, sin guayuco con borlas, sin aro de cabeza, sin zigzag rojo de chica y sin casa de armazón de vigas: nada del dossier sikuani entra aquí",
+          "sin pintura corporal, sin tocado y sin penacho: ninguna fuente los documenta para este pueblo",
+          "sin patrón real ni inventado de chaquira, de tejido de fique ni de cestería, y sin ninguna marca que pueda leerse como emblema de clan",
+          "sin parafernalia del yopo: ni pate, ni mortero, ni tubo, ni polvo, ni gesto de aspirar",
+          "sin osamentas, sin cuerpo difunto y sin ceremonia funeraria: la vela y los dos litros de agua bastan",
+          "sin churuata circular, sin maloca de planta redonda como vivienda y sin palafito: la casa makaguana está en el suelo y su piso es de tierra",
+          "sin dentadura de oro en el venado, sin las dos bocas de las que salen dos clases de gente y sin las danzas cachipichipi ni Jalekume",
+          "sin escena de desplazamiento, mina, torre petrolera ni cuerpo sufriente, y sin borrar la bicicleta, la cancha y la ropa de hoy del estrato contemporáneo"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el pelaje del araguato, la pluma del samuro, el pelo de Wuachirajua y la hoja de palma del techo son pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón ni pluma por pluma; ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_hombre_adulto__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "tipo_hombre_adulto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-makawanes",
+          "field": "mito",
+          "note": "«de la boca del venado salieron cuatro mujeres y cuatro hombres»; cogían carne, pepas, raíces y plátano de monte y hacían capuzas de macana."
+        },
+        {
+          "myth": "la-gran-inundacion",
+          "field": "mito",
+          "note": "«Sólo un guerrero de la tribu, junto con su compañera, alcanzó a subir a un monte»."
+        },
+        {
+          "myth": "el-alma",
+          "field": "mito",
+          "note": "Un makaguán que se le enfrentó a machete en el bosque de El Vigía y un profesor indígena recién llegado a la escuela."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Un hombre adulto makaguán de pie, en paso de marcha, con un canasto amarrado a la espalda y un arpón de macana en la mano: cuerpo entero de pocos planos grandes y cara aparte, con una prenda de corteza de matapalo ceñida a la cintura y ninguna cabeza cubierta. En su estado contemporáneo, el mismo cuerpo y la misma cara con camiseta, pantalón y sandalia, sin canasto ni arpón.",
+        "materials": [
+          "cuerpo de pocos planos grandes de papel color piel: torso, brazos, piernas y manos como piezas separadas, sin musculatura modelada",
+          "rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos",
+          "chivechi: corteza de matapalo sin tejer, apelmazada y mate, de crudo a pardo claro, ceñida a la cintura en una sola pieza",
+          "canasto de espalda de fibra amarrado con cuerda y arpón de macana: vara oscura con punta recortada aparte",
+          "pelo negro en un solo recorte plano grande",
+          "en el estado contemporáneo: camiseta, pantalón y sandalia en papel de tela lisa y corriente, sin estampado"
+        ],
+        "palette_logic": "Piel en un tono medio cálido de una sola pieza, pelo negro mate, corteza de crudo a pardo claro y madera de macana oscura. Ningún oro: el oro del corpus está sólo en los dientes del araguato y el collar de Wiri. En el estado contemporáneo, tonos lisos y corrientes de ropa de hoy.",
+        "scale": "Cuerpo entero a escala de referencia del corpus: los primeros Makaguanes, la pareja sobreviviente y los testigos de la leyenda se miden contra esta lámina, y el venado colorado le llega a la cintura.",
+        "continuity_markers": [
+          "cuerpo y cara se nombran por separado en todo prompt que herede este tipo: cuerpo de planos grandes, cara de óvalo plano con rasgos recortados aparte",
+          "la cara nunca se modela ni se esculpe, y es la misma en los dos estratos",
+          "sin pintura corporal, sin tocado y sin penacho en ningún estrato: ninguna fuente los documenta",
+          "nunca el guayuco hitnü ni el de tres borlas del boceto sikuani de 1880",
+          "en el tiempo del venado no hay chaquira, machete, vela ni linterna; en el estrato contemporáneo no hay chivechi, arpón ni canasto de espalda"
+        ],
+        "documented_features": [
+          "El glosario de la tesis registra «Chivechi; Tela de vestir del pueblo Makaguan hecho del matapalo», un Ficus: la prenda del estrato de fundación es tela de corteza, sin tejer, apelmazada, mate, de crudo a pardo claro.",
+          "La iconografía comunitaria de la inundación, aprobada por los sabedores, pone «la lanza, las flechas, el canasto en la espalda»; la capuza de macana es un arpón según el glosario.",
+          "Del pelo, la pintura corporal y el tocado «no hay una sola palabra» en ninguna fuente consultada; los clanes Mamaluas («los calvos») y Canaguateros («cabello grueso») son etnónimos, no peinados.",
+          "El estrato contemporáneo «se viste como cualquiera en Arauca»: comunidad de 500 personas en 72 familias, con bicicleta, canoa y cancha de fútbol.",
+          "Pébi, hombre, «el que ama a su tierra y defiende su familia», en el glosario."
+        ],
+        "editorial_features": [
+          "El corte de la prenda de corteza —ceñida a la cintura— no está documentado: el dossier autoriza la materia y el tono, no la hechura; decisión reversible.",
+          "El pelo negro en una sola pieza, sin largo marcado, es decisión editorial reversible.",
+          "Lenguaje sí, ejemplar no: ninguna pieza copia un objeto, un tejido ni un adorno reales."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Makaguán V1 - state_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "el cambio de estado sin perder la identidad para Tipo base · hombre adulto makaguán. Un hombre adulto makaguán de pie, en paso de marcha, con un canasto amarrado a la espalda y un arpón de macana en la mano: cuerpo entero de pocos planos grandes y cara aparte, con una prenda de corteza de matapalo ceñida a la cintura y ninguna cabeza cubierta. En su estado contemporáneo, el mismo cuerpo y la misma cara con camiseta, pantalón y sandalia, sin canasto ni arpón.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Cuerpo entero a escala de referencia del corpus: los primeros Makaguanes, la pareja sobreviviente y los testigos de la leyenda se miden contra esta lámina, y el venado colorado le llega a la cintura.",
+        "lighting_mood": "Llano abierto de cielo enorme, pero cortado siempre por la franja continua y alta del bosque de galería a lo largo del cauce: la vertical la pone el bosque, nunca una palma suelta. Dentro del bosque, luz filtrada y baja. En el estrato contemporáneo hay una sola fuente de luz nocturna y es la linterna, porque el resguardo no tiene red eléctrica.",
+        "materials_textures": "cuerpo de pocos planos grandes de papel color piel: torso, brazos, piernas y manos como piezas separadas, sin musculatura modelada; rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos; chivechi: corteza de matapalo sin tejer, apelmazada y mate, de crudo a pardo claro, ceñida a la cintura en una sola pieza; canasto de espalda de fibra amarrado con cuerda y arpón de macana: vara oscura con punta recortada aparte; pelo negro en un solo recorte plano grande; en el estado contemporáneo: camiseta, pantalón y sandalia en papel de tela lisa y corriente, sin estampado",
+        "era": "Dos estratos que nunca se mezclan. El del venado: sin hierro, sin rueda, sin vela, sin machete y sin escuela, con arpón de macana, gran trompeta, vino de palma, collar de oro, choza de piso de tierra y conuco abierto en el monte. El del internado, de 1948 en adelante: vela de cera de abeja, dos litros de agua, machete, linterna, archivadores, chinchorro, camas hechizas, fogón de leña, cancha de fútbol, bicicleta, moto y canoa, con ropa de hoy. Macana es tiempo mítico; machete es tiempo colonial.",
+        "constraints": [
+          "documentado: El glosario de la tesis registra «Chivechi; Tela de vestir del pueblo Makaguan hecho del matapalo», un Ficus: la prenda del estrato de fundación es tela de corteza, sin tejer, apelmazada, mate, de crudo a pardo claro.",
+          "documentado: La iconografía comunitaria de la inundación, aprobada por los sabedores, pone «la lanza, las flechas, el canasto en la espalda»; la capuza de macana es un arpón según el glosario.",
+          "documentado: Del pelo, la pintura corporal y el tocado «no hay una sola palabra» en ninguna fuente consultada; los clanes Mamaluas («los calvos») y Canaguateros («cabello grueso») son etnónimos, no peinados.",
+          "documentado: El estrato contemporáneo «se viste como cualquiera en Arauca»: comunidad de 500 personas en 72 familias, con bicicleta, canoa y cancha de fútbol.",
+          "documentado: Pébi, hombre, «el que ama a su tierra y defiende su familia», en el glosario.",
+          "La lámina declara la estación y el suelo, y no los promedia: sabana verde anegada de aguas altas, o barro duro y cuarteado de verano; banco, bajo, estero o mata de monte, uno solo por lámina.",
+          "El oro aparece exactamente en dos sitios del corpus —los dientes del araguato y el collar de Wiri— y en ninguno más; repartido, se vuelve decoración de folleto.",
+          "El estrato contemporáneo se ilumina con una sola luz cálida y pequeña, la de la linterna o la de la vela de cera de abeja, sobre un fondo sin ninguna luz eléctrica.",
+          "El negro de Wuachirajua es mate y de una sola pieza, sin reflejo, sin aura y sin ojos luminosos: lo que lo distingue es la silueta —traje largo, pico, un ojo— y no el brillo.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin morichal del Vichada, sin guayuco con borlas, sin aro de cabeza, sin zigzag rojo de chica y sin casa de armazón de vigas: nada del dossier sikuani entra aquí",
+          "sin pintura corporal, sin tocado y sin penacho: ninguna fuente los documenta para este pueblo",
+          "sin patrón real ni inventado de chaquira, de tejido de fique ni de cestería, y sin ninguna marca que pueda leerse como emblema de clan",
+          "sin parafernalia del yopo: ni pate, ni mortero, ni tubo, ni polvo, ni gesto de aspirar",
+          "sin osamentas, sin cuerpo difunto y sin ceremonia funeraria: la vela y los dos litros de agua bastan",
+          "sin churuata circular, sin maloca de planta redonda como vivienda y sin palafito: la casa makaguana está en el suelo y su piso es de tierra",
+          "sin dentadura de oro en el venado, sin las dos bocas de las que salen dos clases de gente y sin las danzas cachipichipi ni Jalekume",
+          "sin escena de desplazamiento, mina, torre petrolera ni cuerpo sufriente, y sin borrar la bicicleta, la cancha y la ropa de hoy del estrato contemporáneo"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el pelaje del araguato, la pluma del samuro, el pelo de Wuachirajua y la hoja de palma del techo son pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón ni pluma por pluma; ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "estado_estrato contemporáneo de El Vigía, con ropa de hoy",
+          "view_type": "state_variation",
+          "purpose": "el cambio de estado sin perder la identidad: estrato contemporáneo de El Vigía, con ropa de hoy",
+          "aspect": "9:16",
+          "states": [
+            "estrato contemporáneo de El Vigía, con ropa de hoy"
+          ],
+          "reference_views": [
+            "canon"
+          ]
+        }
+      ]
+    },
+    "tipo_mujer_adulta__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_adulta"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-gran-inundacion",
+          "field": "mito",
+          "note": "«Una familia makaguán lo encontró y se lo llevó a su choza»; «un guerrero de la tribu, junto con su compañera»."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Una mujer adulta makaguán de pie, con un canasto amarrado a la espalda y las manos libres: cuerpo entero de pocos planos grandes y cara aparte, con una prenda de corteza de matapalo ceñida de la cintura a la rodilla y la cabeza descubierta.",
+        "materials": [
+          "cuerpo de pocos planos grandes de papel color piel: torso, brazos, piernas y manos como piezas separadas, sin volumen modelado",
+          "rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos",
+          "chivechi: corteza de matapalo sin tejer, apelmazada y mate, de crudo a pardo claro, de la cintura a la rodilla en una sola pieza",
+          "canasto de espalda de fibra amarrado con cuerda a la altura de los omóplatos",
+          "pelo negro largo en un solo recorte plano"
+        ],
+        "palette_logic": "Piel en el tono medio cálido del tipo hombre, pelo negro mate, corteza de crudo a pardo claro. Ningún oro, ninguna chaquira.",
+        "scale": "Cuerpo entero a la escala de tipo_hombre_adulto, algo más baja, para que la pareja sobreviviente se superponga con las dos láminas.",
+        "continuity_markers": [
+          "cuerpo y cara se nombran por separado en todo prompt que herede este tipo: cuerpo de planos grandes, cara de óvalo plano con rasgos recortados aparte",
+          "la cara nunca se modela ni se esculpe",
+          "sin pintura corporal, sin tocado y sin chaquira: la cuenta de vidrio es posterior al contacto",
+          "nunca los pechos descubiertos ni el guayuco que recuerda el cacique hitnü: son de otro pueblo",
+          "ningún objeto del internado: ni vela, ni machete, ni linterna"
+        ],
+        "documented_features": [
+          "La prenda del estrato de fundación es el chivechi, «tela de vestir del pueblo Makaguan hecho del matapalo», sin tejer, apelmazada, mate, de crudo a pardo claro.",
+          "La iconografía comunitaria aprobada pone «el canasto en la espalda» a la gente del tiempo de la inundación.",
+          "Del pelo, la pintura corporal y el tocado no hay una sola palabra en ninguna fuente consultada.",
+          "El vestido hitnü documentado en primera persona —guayucos y mujeres «con los pechos descubiertos»— es de otro pueblo y el dossier prohíbe trasladarlo.",
+          "Mira, compañera, en el glosario."
+        ],
+        "editorial_features": [
+          "El corte de la prenda de corteza —de la cintura a la rodilla— no está documentado: decisión reversible.",
+          "El pelo largo es decisión editorial reversible.",
+          "Lenguaje sí, ejemplar no: ninguna pieza copia un objeto, un tejido ni un adorno reales."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Makaguán V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer adulta makaguán. Una mujer adulta makaguán de pie, con un canasto amarrado a la espalda y las manos libres: cuerpo entero de pocos planos grandes y cara aparte, con una prenda de corteza de matapalo ceñida de la cintura a la rodilla y la cabeza descubierta.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Cuerpo entero a la escala de tipo_hombre_adulto, algo más baja, para que la pareja sobreviviente se superponga con las dos láminas.",
+        "lighting_mood": "Llano abierto de cielo enorme, pero cortado siempre por la franja continua y alta del bosque de galería a lo largo del cauce: la vertical la pone el bosque, nunca una palma suelta. Dentro del bosque, luz filtrada y baja. En el estrato contemporáneo hay una sola fuente de luz nocturna y es la linterna, porque el resguardo no tiene red eléctrica.",
+        "materials_textures": "cuerpo de pocos planos grandes de papel color piel: torso, brazos, piernas y manos como piezas separadas, sin volumen modelado; rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos; chivechi: corteza de matapalo sin tejer, apelmazada y mate, de crudo a pardo claro, de la cintura a la rodilla en una sola pieza; canasto de espalda de fibra amarrado con cuerda a la altura de los omóplatos; pelo negro largo en un solo recorte plano",
+        "era": "Dos estratos que nunca se mezclan. El del venado: sin hierro, sin rueda, sin vela, sin machete y sin escuela, con arpón de macana, gran trompeta, vino de palma, collar de oro, choza de piso de tierra y conuco abierto en el monte. El del internado, de 1948 en adelante: vela de cera de abeja, dos litros de agua, machete, linterna, archivadores, chinchorro, camas hechizas, fogón de leña, cancha de fútbol, bicicleta, moto y canoa, con ropa de hoy. Macana es tiempo mítico; machete es tiempo colonial.",
+        "constraints": [
+          "documentado: La prenda del estrato de fundación es el chivechi, «tela de vestir del pueblo Makaguan hecho del matapalo», sin tejer, apelmazada, mate, de crudo a pardo claro.",
+          "documentado: La iconografía comunitaria aprobada pone «el canasto en la espalda» a la gente del tiempo de la inundación.",
+          "documentado: Del pelo, la pintura corporal y el tocado no hay una sola palabra en ninguna fuente consultada.",
+          "documentado: El vestido hitnü documentado en primera persona —guayucos y mujeres «con los pechos descubiertos»— es de otro pueblo y el dossier prohíbe trasladarlo.",
+          "documentado: Mira, compañera, en el glosario.",
+          "La lámina declara la estación y el suelo, y no los promedia: sabana verde anegada de aguas altas, o barro duro y cuarteado de verano; banco, bajo, estero o mata de monte, uno solo por lámina.",
+          "El oro aparece exactamente en dos sitios del corpus —los dientes del araguato y el collar de Wiri— y en ninguno más; repartido, se vuelve decoración de folleto.",
+          "El estrato contemporáneo se ilumina con una sola luz cálida y pequeña, la de la linterna o la de la vela de cera de abeja, sobre un fondo sin ninguna luz eléctrica.",
+          "El negro de Wuachirajua es mate y de una sola pieza, sin reflejo, sin aura y sin ojos luminosos: lo que lo distingue es la silueta —traje largo, pico, un ojo— y no el brillo.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin morichal del Vichada, sin guayuco con borlas, sin aro de cabeza, sin zigzag rojo de chica y sin casa de armazón de vigas: nada del dossier sikuani entra aquí",
+          "sin pintura corporal, sin tocado y sin penacho: ninguna fuente los documenta para este pueblo",
+          "sin patrón real ni inventado de chaquira, de tejido de fique ni de cestería, y sin ninguna marca que pueda leerse como emblema de clan",
+          "sin parafernalia del yopo: ni pate, ni mortero, ni tubo, ni polvo, ni gesto de aspirar",
+          "sin osamentas, sin cuerpo difunto y sin ceremonia funeraria: la vela y los dos litros de agua bastan",
+          "sin churuata circular, sin maloca de planta redonda como vivienda y sin palafito: la casa makaguana está en el suelo y su piso es de tierra",
+          "sin dentadura de oro en el venado, sin las dos bocas de las que salen dos clases de gente y sin las danzas cachipichipi ni Jalekume",
+          "sin escena de desplazamiento, mina, torre petrolera ni cuerpo sufriente, y sin borrar la bicicleta, la cancha y la ropa de hoy del estrato contemporáneo"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el pelaje del araguato, la pluma del samuro, el pelo de Wuachirajua y la hoja de palma del techo son pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón ni pluma por pluma; ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_joven__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_joven"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-makawanes",
+          "field": "mito",
+          "note": "«salieron cuatro mujeres y cuatro hombres. Ésos fueron los primeros makaguanes antiguos»."
+        },
+        {
+          "myth": "el-alma",
+          "field": "mito",
+          "note": "«Anda por los montes persiguiendo y asustando a niños, jóvenes y adultos»."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Una mujer joven makaguán de pie, en paso de marcha, con un canasto a la espalda: cuerpo entero de pocos planos grandes y cara aparte, corteza de matapalo de la cintura a la rodilla y la cabeza descubierta. En su estado contemporáneo, el mismo cuerpo y la misma cara con blusa y falda lisas, collar y manilla de cuentas y un niño pequeño sujeto con un trapo largo cruzado del cuello a la cintura.",
+        "materials": [
+          "cuerpo de pocos planos grandes de papel color piel, más esbelto que el del tipo adulto, sin volumen modelado",
+          "rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos",
+          "chivechi: corteza de matapalo sin tejer, apelmazada y mate, de crudo a pardo claro, de la cintura a la rodilla",
+          "canasto de espalda de fibra amarrado con cuerda",
+          "pelo negro largo en un solo recorte plano",
+          "en el estado contemporáneo: blusa y falda de tela lisa corriente, collar y manilla de chaquira como sartas de piezas menudas sin patrón, bolso tejido de fique de trama gruesa sin diseño, y trapo largo del cuello a la cintura sosteniendo a un niño"
+        ],
+        "palette_logic": "Piel en el tono medio cálido del corpus, pelo negro mate, corteza de crudo a pardo claro. En el estado contemporáneo, ropa lisa corriente y la chaquira en pocos colores sin patrón fijado.",
+        "scale": "Cuerpo entero algo más bajo que tipo_hombre_adulto y más esbelto que tipo_mujer_adulta: las tres láminas se superponen para comprobar la proporción.",
+        "continuity_markers": [
+          "cuerpo y cara se nombran por separado en todo prompt que herede este tipo: cuerpo de planos grandes, cara de óvalo plano con rasgos recortados aparte",
+          "la cara nunca se modela ni se esculpe, y es la misma en los dos estratos",
+          "la chaquira, el fique y el trapo largo sólo existen en el estrato contemporáneo: en el tiempo del venado no hay cuenta de vidrio",
+          "sin pintura corporal ni tocado en ningún estrato",
+          "ningún patrón real de collar, manilla ni bolso"
+        ],
+        "documented_features": [
+          "El dossier lee a los primeros Makaguanes como «adultos jóvenes, en movimiento, cargando», con el chivechi de corteza de matapalo como prenda.",
+          "Las mujeres de El Vigía «lideran actividades sobre la fabricación de manillas y collares con base en chaquiras» y «tejido de bolsos con materiales del medio (fique)»: estrato contemporáneo, sin copiar un patrón real.",
+          "«Los niños pequeños los llevan a todos lados con una prenda o trapo largo que va del cuello a la cintura»: gesto de cuerpo documentado, de hoy.",
+          "Del pelo, la pintura corporal y el tocado no hay una sola palabra en ninguna fuente consultada."
+        ],
+        "editorial_features": [
+          "El corte de la prenda de corteza no está documentado: decisión reversible.",
+          "Blusa y falda del estado contemporáneo son la ropa corriente de Arauca que el dossier autoriza en general, no una prenda documentada de estas mujeres.",
+          "Lenguaje sí, ejemplar no: ninguna pieza copia un objeto, un tejido ni un adorno reales."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Makaguán V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer joven makaguán. Una mujer joven makaguán de pie, en paso de marcha, con un canasto a la espalda: cuerpo entero de pocos planos grandes y cara aparte, corteza de matapalo de la cintura a la rodilla y la cabeza descubierta. En su estado contemporáneo, el mismo cuerpo y la misma cara con blusa y falda lisas, collar y manilla de cuentas y un niño pequeño sujeto con un trapo largo cruzado del cuello a la cintura.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Cuerpo entero algo más bajo que tipo_hombre_adulto y más esbelto que tipo_mujer_adulta: las tres láminas se superponen para comprobar la proporción.",
+        "lighting_mood": "Llano abierto de cielo enorme, pero cortado siempre por la franja continua y alta del bosque de galería a lo largo del cauce: la vertical la pone el bosque, nunca una palma suelta. Dentro del bosque, luz filtrada y baja. En el estrato contemporáneo hay una sola fuente de luz nocturna y es la linterna, porque el resguardo no tiene red eléctrica.",
+        "materials_textures": "cuerpo de pocos planos grandes de papel color piel, más esbelto que el del tipo adulto, sin volumen modelado; rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos; chivechi: corteza de matapalo sin tejer, apelmazada y mate, de crudo a pardo claro, de la cintura a la rodilla; canasto de espalda de fibra amarrado con cuerda; pelo negro largo en un solo recorte plano; en el estado contemporáneo: blusa y falda de tela lisa corriente, collar y manilla de chaquira como sartas de piezas menudas sin patrón, bolso tejido de fique de trama gruesa sin diseño, y trapo largo del cuello a la cintura sosteniendo a un niño",
+        "era": "Dos estratos que nunca se mezclan. El del venado: sin hierro, sin rueda, sin vela, sin machete y sin escuela, con arpón de macana, gran trompeta, vino de palma, collar de oro, choza de piso de tierra y conuco abierto en el monte. El del internado, de 1948 en adelante: vela de cera de abeja, dos litros de agua, machete, linterna, archivadores, chinchorro, camas hechizas, fogón de leña, cancha de fútbol, bicicleta, moto y canoa, con ropa de hoy. Macana es tiempo mítico; machete es tiempo colonial.",
+        "constraints": [
+          "documentado: El dossier lee a los primeros Makaguanes como «adultos jóvenes, en movimiento, cargando», con el chivechi de corteza de matapalo como prenda.",
+          "documentado: Las mujeres de El Vigía «lideran actividades sobre la fabricación de manillas y collares con base en chaquiras» y «tejido de bolsos con materiales del medio (fique)»: estrato contemporáneo, sin copiar un patrón real.",
+          "documentado: «Los niños pequeños los llevan a todos lados con una prenda o trapo largo que va del cuello a la cintura»: gesto de cuerpo documentado, de hoy.",
+          "documentado: Del pelo, la pintura corporal y el tocado no hay una sola palabra en ninguna fuente consultada.",
+          "La lámina declara la estación y el suelo, y no los promedia: sabana verde anegada de aguas altas, o barro duro y cuarteado de verano; banco, bajo, estero o mata de monte, uno solo por lámina.",
+          "El oro aparece exactamente en dos sitios del corpus —los dientes del araguato y el collar de Wiri— y en ninguno más; repartido, se vuelve decoración de folleto.",
+          "El estrato contemporáneo se ilumina con una sola luz cálida y pequeña, la de la linterna o la de la vela de cera de abeja, sobre un fondo sin ninguna luz eléctrica.",
+          "El negro de Wuachirajua es mate y de una sola pieza, sin reflejo, sin aura y sin ojos luminosos: lo que lo distingue es la silueta —traje largo, pico, un ojo— y no el brillo.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin morichal del Vichada, sin guayuco con borlas, sin aro de cabeza, sin zigzag rojo de chica y sin casa de armazón de vigas: nada del dossier sikuani entra aquí",
+          "sin pintura corporal, sin tocado y sin penacho: ninguna fuente los documenta para este pueblo",
+          "sin patrón real ni inventado de chaquira, de tejido de fique ni de cestería, y sin ninguna marca que pueda leerse como emblema de clan",
+          "sin parafernalia del yopo: ni pate, ni mortero, ni tubo, ni polvo, ni gesto de aspirar",
+          "sin osamentas, sin cuerpo difunto y sin ceremonia funeraria: la vela y los dos litros de agua bastan",
+          "sin churuata circular, sin maloca de planta redonda como vivienda y sin palafito: la casa makaguana está en el suelo y su piso es de tierra",
+          "sin dentadura de oro en el venado, sin las dos bocas de las que salen dos clases de gente y sin las danzas cachipichipi ni Jalekume",
+          "sin escena de desplazamiento, mina, torre petrolera ni cuerpo sufriente, y sin borrar la bicicleta, la cancha y la ropa de hoy del estrato contemporáneo"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el pelaje del araguato, la pluma del samuro, el pelo de Wuachirajua y la hoja de palma del techo son pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón ni pluma por pluma; ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_joven__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "tipo_mujer_joven"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-makawanes",
+          "field": "mito",
+          "note": "«salieron cuatro mujeres y cuatro hombres. Ésos fueron los primeros makaguanes antiguos»."
+        },
+        {
+          "myth": "el-alma",
+          "field": "mito",
+          "note": "«Anda por los montes persiguiendo y asustando a niños, jóvenes y adultos»."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Una mujer joven makaguán de pie, en paso de marcha, con un canasto a la espalda: cuerpo entero de pocos planos grandes y cara aparte, corteza de matapalo de la cintura a la rodilla y la cabeza descubierta. En su estado contemporáneo, el mismo cuerpo y la misma cara con blusa y falda lisas, collar y manilla de cuentas y un niño pequeño sujeto con un trapo largo cruzado del cuello a la cintura.",
+        "materials": [
+          "cuerpo de pocos planos grandes de papel color piel, más esbelto que el del tipo adulto, sin volumen modelado",
+          "rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos",
+          "chivechi: corteza de matapalo sin tejer, apelmazada y mate, de crudo a pardo claro, de la cintura a la rodilla",
+          "canasto de espalda de fibra amarrado con cuerda",
+          "pelo negro largo en un solo recorte plano",
+          "en el estado contemporáneo: blusa y falda de tela lisa corriente, collar y manilla de chaquira como sartas de piezas menudas sin patrón, bolso tejido de fique de trama gruesa sin diseño, y trapo largo del cuello a la cintura sosteniendo a un niño"
+        ],
+        "palette_logic": "Piel en el tono medio cálido del corpus, pelo negro mate, corteza de crudo a pardo claro. En el estado contemporáneo, ropa lisa corriente y la chaquira en pocos colores sin patrón fijado.",
+        "scale": "Cuerpo entero algo más bajo que tipo_hombre_adulto y más esbelto que tipo_mujer_adulta: las tres láminas se superponen para comprobar la proporción.",
+        "continuity_markers": [
+          "cuerpo y cara se nombran por separado en todo prompt que herede este tipo: cuerpo de planos grandes, cara de óvalo plano con rasgos recortados aparte",
+          "la cara nunca se modela ni se esculpe, y es la misma en los dos estratos",
+          "la chaquira, el fique y el trapo largo sólo existen en el estrato contemporáneo: en el tiempo del venado no hay cuenta de vidrio",
+          "sin pintura corporal ni tocado en ningún estrato",
+          "ningún patrón real de collar, manilla ni bolso"
+        ],
+        "documented_features": [
+          "El dossier lee a los primeros Makaguanes como «adultos jóvenes, en movimiento, cargando», con el chivechi de corteza de matapalo como prenda.",
+          "Las mujeres de El Vigía «lideran actividades sobre la fabricación de manillas y collares con base en chaquiras» y «tejido de bolsos con materiales del medio (fique)»: estrato contemporáneo, sin copiar un patrón real.",
+          "«Los niños pequeños los llevan a todos lados con una prenda o trapo largo que va del cuello a la cintura»: gesto de cuerpo documentado, de hoy.",
+          "Del pelo, la pintura corporal y el tocado no hay una sola palabra en ninguna fuente consultada."
+        ],
+        "editorial_features": [
+          "El corte de la prenda de corteza no está documentado: decisión reversible.",
+          "Blusa y falda del estado contemporáneo son la ropa corriente de Arauca que el dossier autoriza en general, no una prenda documentada de estas mujeres.",
+          "Lenguaje sí, ejemplar no: ninguna pieza copia un objeto, un tejido ni un adorno reales."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Makaguán V1 - state_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "el cambio de estado sin perder la identidad para Tipo base · mujer joven makaguán. Una mujer joven makaguán de pie, en paso de marcha, con un canasto a la espalda: cuerpo entero de pocos planos grandes y cara aparte, corteza de matapalo de la cintura a la rodilla y la cabeza descubierta. En su estado contemporáneo, el mismo cuerpo y la misma cara con blusa y falda lisas, collar y manilla de cuentas y un niño pequeño sujeto con un trapo largo cruzado del cuello a la cintura.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Cuerpo entero algo más bajo que tipo_hombre_adulto y más esbelto que tipo_mujer_adulta: las tres láminas se superponen para comprobar la proporción.",
+        "lighting_mood": "Llano abierto de cielo enorme, pero cortado siempre por la franja continua y alta del bosque de galería a lo largo del cauce: la vertical la pone el bosque, nunca una palma suelta. Dentro del bosque, luz filtrada y baja. En el estrato contemporáneo hay una sola fuente de luz nocturna y es la linterna, porque el resguardo no tiene red eléctrica.",
+        "materials_textures": "cuerpo de pocos planos grandes de papel color piel, más esbelto que el del tipo adulto, sin volumen modelado; rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos; chivechi: corteza de matapalo sin tejer, apelmazada y mate, de crudo a pardo claro, de la cintura a la rodilla; canasto de espalda de fibra amarrado con cuerda; pelo negro largo en un solo recorte plano; en el estado contemporáneo: blusa y falda de tela lisa corriente, collar y manilla de chaquira como sartas de piezas menudas sin patrón, bolso tejido de fique de trama gruesa sin diseño, y trapo largo del cuello a la cintura sosteniendo a un niño",
+        "era": "Dos estratos que nunca se mezclan. El del venado: sin hierro, sin rueda, sin vela, sin machete y sin escuela, con arpón de macana, gran trompeta, vino de palma, collar de oro, choza de piso de tierra y conuco abierto en el monte. El del internado, de 1948 en adelante: vela de cera de abeja, dos litros de agua, machete, linterna, archivadores, chinchorro, camas hechizas, fogón de leña, cancha de fútbol, bicicleta, moto y canoa, con ropa de hoy. Macana es tiempo mítico; machete es tiempo colonial.",
+        "constraints": [
+          "documentado: El dossier lee a los primeros Makaguanes como «adultos jóvenes, en movimiento, cargando», con el chivechi de corteza de matapalo como prenda.",
+          "documentado: Las mujeres de El Vigía «lideran actividades sobre la fabricación de manillas y collares con base en chaquiras» y «tejido de bolsos con materiales del medio (fique)»: estrato contemporáneo, sin copiar un patrón real.",
+          "documentado: «Los niños pequeños los llevan a todos lados con una prenda o trapo largo que va del cuello a la cintura»: gesto de cuerpo documentado, de hoy.",
+          "documentado: Del pelo, la pintura corporal y el tocado no hay una sola palabra en ninguna fuente consultada.",
+          "La lámina declara la estación y el suelo, y no los promedia: sabana verde anegada de aguas altas, o barro duro y cuarteado de verano; banco, bajo, estero o mata de monte, uno solo por lámina.",
+          "El oro aparece exactamente en dos sitios del corpus —los dientes del araguato y el collar de Wiri— y en ninguno más; repartido, se vuelve decoración de folleto.",
+          "El estrato contemporáneo se ilumina con una sola luz cálida y pequeña, la de la linterna o la de la vela de cera de abeja, sobre un fondo sin ninguna luz eléctrica.",
+          "El negro de Wuachirajua es mate y de una sola pieza, sin reflejo, sin aura y sin ojos luminosos: lo que lo distingue es la silueta —traje largo, pico, un ojo— y no el brillo.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin morichal del Vichada, sin guayuco con borlas, sin aro de cabeza, sin zigzag rojo de chica y sin casa de armazón de vigas: nada del dossier sikuani entra aquí",
+          "sin pintura corporal, sin tocado y sin penacho: ninguna fuente los documenta para este pueblo",
+          "sin patrón real ni inventado de chaquira, de tejido de fique ni de cestería, y sin ninguna marca que pueda leerse como emblema de clan",
+          "sin parafernalia del yopo: ni pate, ni mortero, ni tubo, ni polvo, ni gesto de aspirar",
+          "sin osamentas, sin cuerpo difunto y sin ceremonia funeraria: la vela y los dos litros de agua bastan",
+          "sin churuata circular, sin maloca de planta redonda como vivienda y sin palafito: la casa makaguana está en el suelo y su piso es de tierra",
+          "sin dentadura de oro en el venado, sin las dos bocas de las que salen dos clases de gente y sin las danzas cachipichipi ni Jalekume",
+          "sin escena de desplazamiento, mina, torre petrolera ni cuerpo sufriente, y sin borrar la bicicleta, la cancha y la ropa de hoy del estrato contemporáneo"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el pelaje del araguato, la pluma del samuro, el pelo de Wuachirajua y la hoja de palma del techo son pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón ni pluma por pluma; ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "estado_estrato contemporáneo de El Vigía, con ropa de hoy",
+          "view_type": "state_variation",
+          "purpose": "el cambio de estado sin perder la identidad: estrato contemporáneo de El Vigía, con ropa de hoy",
+          "aspect": "9:16",
+          "states": [
+            "estrato contemporáneo de El Vigía, con ropa de hoy"
+          ],
+          "reference_views": [
+            "canon"
+          ]
+        }
+      ]
+    },
+    "tipo_nino__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_nino"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-makawanes",
+          "field": "mito",
+          "note": "«Así salieron los hijos, que se juntaron entre primos, y poco a poco se fueron multiplicando»."
+        },
+        {
+          "myth": "el-alma",
+          "field": "mito",
+          "note": "«Anda por los montes persiguiendo y asustando a niños, jóvenes y adultos»."
+        },
+        {
+          "myth": "el-alma",
+          "field": "historia",
+          "note": "«Manuel Sánchez contó que él estuvo presente, siendo muy pequeño, en la lucha entre el sabedor Arístides Tocaria y este ser»."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Un niño makaguán de unos siete años de pie, mirando atento algo que un mayor le muestra: cuerpo entero de pocos planos grandes y cara aparte, con una pequeña prenda de corteza de matapalo en la cintura. En su estado contemporáneo, el mismo cuerpo y la misma cara con camiseta y pantalón corto, y un trompo en la mano.",
+        "materials": [
+          "cuerpo de pocos planos grandes de papel color piel, con la cabeza proporcionalmente mayor, sin volumen modelado",
+          "rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos",
+          "chivechi: corteza de matapalo sin tejer, apelmazada y mate, en una pieza pequeña ceñida a la cintura",
+          "pelo negro corto en un solo recorte plano",
+          "en el estado contemporáneo: camiseta y pantalón corto de tela lisa corriente, y trompo o bolinchas en la mano"
+        ],
+        "palette_logic": "Piel en el tono medio cálido del corpus, pelo negro mate, corteza de crudo a pardo claro; en el estado contemporáneo, ropa lisa corriente.",
+        "scale": "Cuerpo entero a la altura de la cintura de tipo_hombre_adulto: es también la talla con que el relato de ahora mide al alma, «como de la estatura de un niño de diez años», y no deben confundirse, así que el niño nunca es negro, peludo ni sombra.",
+        "continuity_markers": [
+          "cuerpo y cara se nombran por separado en todo prompt que herede este tipo: cuerpo de planos grandes, cara de óvalo plano con rasgos recortados aparte",
+          "la cara nunca se modela ni se esculpe, y es la misma en los dos estratos",
+          "siempre en actitud de aprender —mirando, escuchando, siguiendo—, porque así lo define su palabra",
+          "nunca se confunde con Wuachirajua en su talla de niño: el niño tiene piel, cara y ropa; el alma es negra, peluda o sombra",
+          "sin pintura corporal ni tocado en ningún estrato"
+        ],
+        "documented_features": [
+          "Chui, niño, «persona pequeña en aprendizaje de la cultura», en el glosario: el dossier dice que eso decide qué está haciendo en la lámina.",
+          "La prenda del estrato de fundación es el chivechi, tela de corteza de matapalo.",
+          "El estrato contemporáneo tiene estudiantes que van en bicicleta o cruzan el río en canoa, con cancha de fútbol, trompo y bolinchas.",
+          "Del pelo, la pintura corporal y el tocado no hay una sola palabra en ninguna fuente consultada."
+        ],
+        "editorial_features": [
+          "La pequeña prenda de corteza del niño en el tiempo del venado es inferencia desde el chivechi: la fuente no dice cómo vestían los niños; decisión reversible.",
+          "La edad de siete años es decisión editorial para separarlo de la talla de diez años del alma.",
+          "Lenguaje sí, ejemplar no."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Makaguán V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · niño makaguán. Un niño makaguán de unos siete años de pie, mirando atento algo que un mayor le muestra: cuerpo entero de pocos planos grandes y cara aparte, con una pequeña prenda de corteza de matapalo en la cintura. En su estado contemporáneo, el mismo cuerpo y la misma cara con camiseta y pantalón corto, y un trompo en la mano.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Cuerpo entero a la altura de la cintura de tipo_hombre_adulto: es también la talla con que el relato de ahora mide al alma, «como de la estatura de un niño de diez años», y no deben confundirse, así que el niño nunca es negro, peludo ni sombra.",
+        "lighting_mood": "Llano abierto de cielo enorme, pero cortado siempre por la franja continua y alta del bosque de galería a lo largo del cauce: la vertical la pone el bosque, nunca una palma suelta. Dentro del bosque, luz filtrada y baja. En el estrato contemporáneo hay una sola fuente de luz nocturna y es la linterna, porque el resguardo no tiene red eléctrica.",
+        "materials_textures": "cuerpo de pocos planos grandes de papel color piel, con la cabeza proporcionalmente mayor, sin volumen modelado; rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos; chivechi: corteza de matapalo sin tejer, apelmazada y mate, en una pieza pequeña ceñida a la cintura; pelo negro corto en un solo recorte plano; en el estado contemporáneo: camiseta y pantalón corto de tela lisa corriente, y trompo o bolinchas en la mano",
+        "era": "Dos estratos que nunca se mezclan. El del venado: sin hierro, sin rueda, sin vela, sin machete y sin escuela, con arpón de macana, gran trompeta, vino de palma, collar de oro, choza de piso de tierra y conuco abierto en el monte. El del internado, de 1948 en adelante: vela de cera de abeja, dos litros de agua, machete, linterna, archivadores, chinchorro, camas hechizas, fogón de leña, cancha de fútbol, bicicleta, moto y canoa, con ropa de hoy. Macana es tiempo mítico; machete es tiempo colonial.",
+        "constraints": [
+          "documentado: Chui, niño, «persona pequeña en aprendizaje de la cultura», en el glosario: el dossier dice que eso decide qué está haciendo en la lámina.",
+          "documentado: La prenda del estrato de fundación es el chivechi, tela de corteza de matapalo.",
+          "documentado: El estrato contemporáneo tiene estudiantes que van en bicicleta o cruzan el río en canoa, con cancha de fútbol, trompo y bolinchas.",
+          "documentado: Del pelo, la pintura corporal y el tocado no hay una sola palabra en ninguna fuente consultada.",
+          "La lámina declara la estación y el suelo, y no los promedia: sabana verde anegada de aguas altas, o barro duro y cuarteado de verano; banco, bajo, estero o mata de monte, uno solo por lámina.",
+          "El oro aparece exactamente en dos sitios del corpus —los dientes del araguato y el collar de Wiri— y en ninguno más; repartido, se vuelve decoración de folleto.",
+          "El estrato contemporáneo se ilumina con una sola luz cálida y pequeña, la de la linterna o la de la vela de cera de abeja, sobre un fondo sin ninguna luz eléctrica.",
+          "El negro de Wuachirajua es mate y de una sola pieza, sin reflejo, sin aura y sin ojos luminosos: lo que lo distingue es la silueta —traje largo, pico, un ojo— y no el brillo.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin morichal del Vichada, sin guayuco con borlas, sin aro de cabeza, sin zigzag rojo de chica y sin casa de armazón de vigas: nada del dossier sikuani entra aquí",
+          "sin pintura corporal, sin tocado y sin penacho: ninguna fuente los documenta para este pueblo",
+          "sin patrón real ni inventado de chaquira, de tejido de fique ni de cestería, y sin ninguna marca que pueda leerse como emblema de clan",
+          "sin parafernalia del yopo: ni pate, ni mortero, ni tubo, ni polvo, ni gesto de aspirar",
+          "sin osamentas, sin cuerpo difunto y sin ceremonia funeraria: la vela y los dos litros de agua bastan",
+          "sin churuata circular, sin maloca de planta redonda como vivienda y sin palafito: la casa makaguana está en el suelo y su piso es de tierra",
+          "sin dentadura de oro en el venado, sin las dos bocas de las que salen dos clases de gente y sin las danzas cachipichipi ni Jalekume",
+          "sin escena de desplazamiento, mina, torre petrolera ni cuerpo sufriente, y sin borrar la bicicleta, la cancha y la ropa de hoy del estrato contemporáneo"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el pelaje del araguato, la pluma del samuro, el pelo de Wuachirajua y la hoja de palma del techo son pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón ni pluma por pluma; ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_nino__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "tipo_nino"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-makawanes",
+          "field": "mito",
+          "note": "«Así salieron los hijos, que se juntaron entre primos, y poco a poco se fueron multiplicando»."
+        },
+        {
+          "myth": "el-alma",
+          "field": "mito",
+          "note": "«Anda por los montes persiguiendo y asustando a niños, jóvenes y adultos»."
+        },
+        {
+          "myth": "el-alma",
+          "field": "historia",
+          "note": "«Manuel Sánchez contó que él estuvo presente, siendo muy pequeño, en la lucha entre el sabedor Arístides Tocaria y este ser»."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Un niño makaguán de unos siete años de pie, mirando atento algo que un mayor le muestra: cuerpo entero de pocos planos grandes y cara aparte, con una pequeña prenda de corteza de matapalo en la cintura. En su estado contemporáneo, el mismo cuerpo y la misma cara con camiseta y pantalón corto, y un trompo en la mano.",
+        "materials": [
+          "cuerpo de pocos planos grandes de papel color piel, con la cabeza proporcionalmente mayor, sin volumen modelado",
+          "rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos",
+          "chivechi: corteza de matapalo sin tejer, apelmazada y mate, en una pieza pequeña ceñida a la cintura",
+          "pelo negro corto en un solo recorte plano",
+          "en el estado contemporáneo: camiseta y pantalón corto de tela lisa corriente, y trompo o bolinchas en la mano"
+        ],
+        "palette_logic": "Piel en el tono medio cálido del corpus, pelo negro mate, corteza de crudo a pardo claro; en el estado contemporáneo, ropa lisa corriente.",
+        "scale": "Cuerpo entero a la altura de la cintura de tipo_hombre_adulto: es también la talla con que el relato de ahora mide al alma, «como de la estatura de un niño de diez años», y no deben confundirse, así que el niño nunca es negro, peludo ni sombra.",
+        "continuity_markers": [
+          "cuerpo y cara se nombran por separado en todo prompt que herede este tipo: cuerpo de planos grandes, cara de óvalo plano con rasgos recortados aparte",
+          "la cara nunca se modela ni se esculpe, y es la misma en los dos estratos",
+          "siempre en actitud de aprender —mirando, escuchando, siguiendo—, porque así lo define su palabra",
+          "nunca se confunde con Wuachirajua en su talla de niño: el niño tiene piel, cara y ropa; el alma es negra, peluda o sombra",
+          "sin pintura corporal ni tocado en ningún estrato"
+        ],
+        "documented_features": [
+          "Chui, niño, «persona pequeña en aprendizaje de la cultura», en el glosario: el dossier dice que eso decide qué está haciendo en la lámina.",
+          "La prenda del estrato de fundación es el chivechi, tela de corteza de matapalo.",
+          "El estrato contemporáneo tiene estudiantes que van en bicicleta o cruzan el río en canoa, con cancha de fútbol, trompo y bolinchas.",
+          "Del pelo, la pintura corporal y el tocado no hay una sola palabra en ninguna fuente consultada."
+        ],
+        "editorial_features": [
+          "La pequeña prenda de corteza del niño en el tiempo del venado es inferencia desde el chivechi: la fuente no dice cómo vestían los niños; decisión reversible.",
+          "La edad de siete años es decisión editorial para separarlo de la talla de diez años del alma.",
+          "Lenguaje sí, ejemplar no."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Makaguán V1 - state_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "el cambio de estado sin perder la identidad para Tipo base · niño makaguán. Un niño makaguán de unos siete años de pie, mirando atento algo que un mayor le muestra: cuerpo entero de pocos planos grandes y cara aparte, con una pequeña prenda de corteza de matapalo en la cintura. En su estado contemporáneo, el mismo cuerpo y la misma cara con camiseta y pantalón corto, y un trompo en la mano.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Cuerpo entero a la altura de la cintura de tipo_hombre_adulto: es también la talla con que el relato de ahora mide al alma, «como de la estatura de un niño de diez años», y no deben confundirse, así que el niño nunca es negro, peludo ni sombra.",
+        "lighting_mood": "Llano abierto de cielo enorme, pero cortado siempre por la franja continua y alta del bosque de galería a lo largo del cauce: la vertical la pone el bosque, nunca una palma suelta. Dentro del bosque, luz filtrada y baja. En el estrato contemporáneo hay una sola fuente de luz nocturna y es la linterna, porque el resguardo no tiene red eléctrica.",
+        "materials_textures": "cuerpo de pocos planos grandes de papel color piel, con la cabeza proporcionalmente mayor, sin volumen modelado; rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos; chivechi: corteza de matapalo sin tejer, apelmazada y mate, en una pieza pequeña ceñida a la cintura; pelo negro corto en un solo recorte plano; en el estado contemporáneo: camiseta y pantalón corto de tela lisa corriente, y trompo o bolinchas en la mano",
+        "era": "Dos estratos que nunca se mezclan. El del venado: sin hierro, sin rueda, sin vela, sin machete y sin escuela, con arpón de macana, gran trompeta, vino de palma, collar de oro, choza de piso de tierra y conuco abierto en el monte. El del internado, de 1948 en adelante: vela de cera de abeja, dos litros de agua, machete, linterna, archivadores, chinchorro, camas hechizas, fogón de leña, cancha de fútbol, bicicleta, moto y canoa, con ropa de hoy. Macana es tiempo mítico; machete es tiempo colonial.",
+        "constraints": [
+          "documentado: Chui, niño, «persona pequeña en aprendizaje de la cultura», en el glosario: el dossier dice que eso decide qué está haciendo en la lámina.",
+          "documentado: La prenda del estrato de fundación es el chivechi, tela de corteza de matapalo.",
+          "documentado: El estrato contemporáneo tiene estudiantes que van en bicicleta o cruzan el río en canoa, con cancha de fútbol, trompo y bolinchas.",
+          "documentado: Del pelo, la pintura corporal y el tocado no hay una sola palabra en ninguna fuente consultada.",
+          "La lámina declara la estación y el suelo, y no los promedia: sabana verde anegada de aguas altas, o barro duro y cuarteado de verano; banco, bajo, estero o mata de monte, uno solo por lámina.",
+          "El oro aparece exactamente en dos sitios del corpus —los dientes del araguato y el collar de Wiri— y en ninguno más; repartido, se vuelve decoración de folleto.",
+          "El estrato contemporáneo se ilumina con una sola luz cálida y pequeña, la de la linterna o la de la vela de cera de abeja, sobre un fondo sin ninguna luz eléctrica.",
+          "El negro de Wuachirajua es mate y de una sola pieza, sin reflejo, sin aura y sin ojos luminosos: lo que lo distingue es la silueta —traje largo, pico, un ojo— y no el brillo.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin morichal del Vichada, sin guayuco con borlas, sin aro de cabeza, sin zigzag rojo de chica y sin casa de armazón de vigas: nada del dossier sikuani entra aquí",
+          "sin pintura corporal, sin tocado y sin penacho: ninguna fuente los documenta para este pueblo",
+          "sin patrón real ni inventado de chaquira, de tejido de fique ni de cestería, y sin ninguna marca que pueda leerse como emblema de clan",
+          "sin parafernalia del yopo: ni pate, ni mortero, ni tubo, ni polvo, ni gesto de aspirar",
+          "sin osamentas, sin cuerpo difunto y sin ceremonia funeraria: la vela y los dos litros de agua bastan",
+          "sin churuata circular, sin maloca de planta redonda como vivienda y sin palafito: la casa makaguana está en el suelo y su piso es de tierra",
+          "sin dentadura de oro en el venado, sin las dos bocas de las que salen dos clases de gente y sin las danzas cachipichipi ni Jalekume",
+          "sin escena de desplazamiento, mina, torre petrolera ni cuerpo sufriente, y sin borrar la bicicleta, la cancha y la ropa de hoy del estrato contemporáneo"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el pelaje del araguato, la pluma del samuro, el pelo de Wuachirajua y la hoja de palma del techo son pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón ni pluma por pluma; ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "estado_estrato contemporáneo de El Vigía, con ropa de hoy",
+          "view_type": "state_variation",
+          "purpose": "el cambio de estado sin perder la identidad: estrato contemporáneo de El Vigía, con ropa de hoy",
+          "aspect": "9:16",
+          "states": [
+            "estrato contemporáneo de El Vigía, con ropa de hoy"
+          ],
+          "reference_views": [
+            "canon"
+          ]
+        }
+      ]
+    },
+    "tipo_anciano__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_anciano"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-alma",
+          "field": "mito",
+          "note": "«Cuentan los abuelos que desde hace tiempo»; «También lo encontró el sabedor Arístides Tocaria, un día de cacería»; «el abuelo Arístides logró ocultarse en la casa»."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Un anciano makaguán de pie, delgado y erguido, con ropa de hoy —camisa de manga larga, pantalón, sandalia— y un bolso tejido cruzado al hombro: cuerpo entero de pocos planos grandes con la espalda apenas curvada, y la cara aparte. Es un hombre que todavía corre: no es un viejo inmóvil.",
+        "materials": [
+          "cuerpo de pocos planos grandes de papel color piel, delgado, con la espalda apenas curvada, sin arrugas modeladas",
+          "rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y dos o tres pliegues como tiras de papel superpuestas",
+          "camisa de manga larga, pantalón y sandalia en papel de tela lisa y corriente",
+          "bolso tejido de fique de trama gruesa, sin diseño concreto",
+          "pelo gris y negro corto en un solo recorte plano"
+        ],
+        "palette_logic": "Piel en el tono medio cálido del corpus, un grado más apagado; pelo gris con mechas negras; ropa lisa corriente en tonos apagados y el fique en crudo.",
+        "scale": "Cuerpo entero apenas más bajo que tipo_hombre_adulto: la edad se lee en la cara y el pelo, no en la estatura, porque el relato lo hace correr.",
+        "continuity_markers": [
+          "cuerpo y cara se nombran por separado en todo prompt que herede este tipo: cuerpo de planos grandes, cara de óvalo plano con rasgos recortados aparte",
+          "la edad se hace con el pelo y los pliegues recortados, nunca con arrugas esculpidas",
+          "pertenece al estrato contemporáneo: ni chivechi, ni arpón, ni canasto de espalda",
+          "sin pintura corporal, sin tocado y sin ningún objeto ritual: los rezos de los antiguos no se dibujan",
+          "Arístides Tocaria es persona real sin descripción física: se produce desde este tipo, nunca como retrato"
+        ],
+        "documented_features": [
+          "El estrato contemporáneo «se viste como cualquiera en Arauca».",
+          "Las mujeres de El Vigía tejen «bolsos con materiales del medio (fique)».",
+          "Arístides Tocaria está entre los fundadores del resguardo, «entre los niños y adolescentes que llegaron caminando con sus padres»; el relato lo llama sabedor y abuelo y dice que se salvó «por la habilidad que tenía para correr».",
+          "Del pelo, la pintura corporal y el tocado no hay una sola palabra en ninguna fuente consultada."
+        ],
+        "editorial_features": [
+          "Camisa de manga larga y bolso de fique son ropa corriente de Arauca, no una prenda documentada de este hombre: decisión reversible.",
+          "El pelo gris corto es decisión editorial reversible.",
+          "Lenguaje sí, ejemplar no."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Makaguán V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · anciano makaguán (sabedor). Un anciano makaguán de pie, delgado y erguido, con ropa de hoy —camisa de manga larga, pantalón, sandalia— y un bolso tejido cruzado al hombro: cuerpo entero de pocos planos grandes con la espalda apenas curvada, y la cara aparte. Es un hombre que todavía corre: no es un viejo inmóvil.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Cuerpo entero apenas más bajo que tipo_hombre_adulto: la edad se lee en la cara y el pelo, no en la estatura, porque el relato lo hace correr.",
+        "lighting_mood": "Llano abierto de cielo enorme, pero cortado siempre por la franja continua y alta del bosque de galería a lo largo del cauce: la vertical la pone el bosque, nunca una palma suelta. Dentro del bosque, luz filtrada y baja. En el estrato contemporáneo hay una sola fuente de luz nocturna y es la linterna, porque el resguardo no tiene red eléctrica.",
+        "materials_textures": "cuerpo de pocos planos grandes de papel color piel, delgado, con la espalda apenas curvada, sin arrugas modeladas; rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y dos o tres pliegues como tiras de papel superpuestas; camisa de manga larga, pantalón y sandalia en papel de tela lisa y corriente; bolso tejido de fique de trama gruesa, sin diseño concreto; pelo gris y negro corto en un solo recorte plano",
+        "era": "Dos estratos que nunca se mezclan. El del venado: sin hierro, sin rueda, sin vela, sin machete y sin escuela, con arpón de macana, gran trompeta, vino de palma, collar de oro, choza de piso de tierra y conuco abierto en el monte. El del internado, de 1948 en adelante: vela de cera de abeja, dos litros de agua, machete, linterna, archivadores, chinchorro, camas hechizas, fogón de leña, cancha de fútbol, bicicleta, moto y canoa, con ropa de hoy. Macana es tiempo mítico; machete es tiempo colonial.",
+        "constraints": [
+          "documentado: El estrato contemporáneo «se viste como cualquiera en Arauca».",
+          "documentado: Las mujeres de El Vigía tejen «bolsos con materiales del medio (fique)».",
+          "documentado: Arístides Tocaria está entre los fundadores del resguardo, «entre los niños y adolescentes que llegaron caminando con sus padres»; el relato lo llama sabedor y abuelo y dice que se salvó «por la habilidad que tenía para correr».",
+          "documentado: Del pelo, la pintura corporal y el tocado no hay una sola palabra en ninguna fuente consultada.",
+          "La lámina declara la estación y el suelo, y no los promedia: sabana verde anegada de aguas altas, o barro duro y cuarteado de verano; banco, bajo, estero o mata de monte, uno solo por lámina.",
+          "El oro aparece exactamente en dos sitios del corpus —los dientes del araguato y el collar de Wiri— y en ninguno más; repartido, se vuelve decoración de folleto.",
+          "El estrato contemporáneo se ilumina con una sola luz cálida y pequeña, la de la linterna o la de la vela de cera de abeja, sobre un fondo sin ninguna luz eléctrica.",
+          "El negro de Wuachirajua es mate y de una sola pieza, sin reflejo, sin aura y sin ojos luminosos: lo que lo distingue es la silueta —traje largo, pico, un ojo— y no el brillo.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin morichal del Vichada, sin guayuco con borlas, sin aro de cabeza, sin zigzag rojo de chica y sin casa de armazón de vigas: nada del dossier sikuani entra aquí",
+          "sin pintura corporal, sin tocado y sin penacho: ninguna fuente los documenta para este pueblo",
+          "sin patrón real ni inventado de chaquira, de tejido de fique ni de cestería, y sin ninguna marca que pueda leerse como emblema de clan",
+          "sin parafernalia del yopo: ni pate, ni mortero, ni tubo, ni polvo, ni gesto de aspirar",
+          "sin osamentas, sin cuerpo difunto y sin ceremonia funeraria: la vela y los dos litros de agua bastan",
+          "sin churuata circular, sin maloca de planta redonda como vivienda y sin palafito: la casa makaguana está en el suelo y su piso es de tierra",
+          "sin dentadura de oro en el venado, sin las dos bocas de las que salen dos clases de gente y sin las danzas cachipichipi ni Jalekume",
+          "sin escena de desplazamiento, mina, torre petrolera ni cuerpo sufriente, y sin borrar la bicicleta, la cancha y la ropa de hoy del estrato contemporáneo"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el pelaje del araguato, la pluma del samuro, el pelo de Wuachirajua y la hoja de palma del techo son pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón ni pluma por pluma; ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
     "tacu__identity_sheet": {
       "purpose": "identity_sheet",
       "entity_refs": [
@@ -3893,7 +5408,7 @@
         "asset_type": "Biblia visual Makaguán V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
         "primary_request": "identidad corporal completa y legible para Tacu (Padre Sol). Disco solar liso y mate, sin rostro, sin rayos y sin una sola extremidad, colgado muy arriba y siempre del mismo tamaño, con una única franja de sombra proyectada que baja recta desde él hasta el borde inferior del encuadre y toca lo que él hace: el creador de esta biblia es un disco que no tiene manos, y la franja es lo único suyo que llega al suelo.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; El disco ocupa una sexta parte del alto del encuadre y va siempre en el tercio superior; la franja de sombra mide todo lo que queda hasta el borde inferior, de modo que lo que se agranda de lámina en lámina es la franja y nunca el disco.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; El disco ocupa una sexta parte del alto del encuadre y va siempre en el tercio superior; la franja de sombra mide todo lo que queda hasta el borde inferior, de modo que lo que se agranda de lámina en lámina es la franja y nunca el disco.",
         "lighting_mood": "Llano abierto de cielo enorme, pero cortado siempre por la franja continua y alta del bosque de galería a lo largo del cauce: la vertical la pone el bosque, nunca una palma suelta. Dentro del bosque, luz filtrada y baja. En el estrato contemporáneo hay una sola fuente de luz nocturna y es la linterna, porque el resguardo no tiene red eléctrica.",
         "materials_textures": "un solo disco de papel de fibra en tono cálido apagado, mate y sin brillo, de canto limpio y sin dentado; franja recta de papel de sombra, plana y de un solo valor, recortada como pieza aparte y no como degradado; cielo del llano detrás, plano y continuo, sin nube con forma; ausencia deliberada de papel de rostro, de mano, de corona, de aura y de rayo",
         "era": "Dos estratos que nunca se mezclan. El del venado: sin hierro, sin rueda, sin vela, sin machete y sin escuela, con arpón de macana, gran trompeta, vino de palma, collar de oro, choza de piso de tierra y conuco abierto en el monte. El del internado, de 1948 en adelante: vela de cera de abeja, dos litros de agua, machete, linterna, archivadores, chinchorro, camas hechizas, fogón de leña, cancha de fútbol, bicicleta, moto y canoa, con ropa de hoy. Macana es tiempo mítico; machete es tiempo colonial.",
@@ -3925,7 +5440,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -4288,6 +5803,11 @@
           "myth": "creacion-makawanes",
           "field": "mito",
           "note": "Un gesto de cuerpo sí está documentado y es de hoy: «Los niños pequeños los llevan a todos lados con una prenda o trapo largo que va del cuello a la cintura»"
+        },
+        {
+          "myth": "creacion-makawanes",
+          "field": "mito",
+          "note": "La página reescrita: «recolectaban kiwi en los montes y esteros»; «Así salieron los hijos, que se juntaron entre primos, y poco a poco se fueron multiplicando»."
         }
       ],
       "design_contract": {
@@ -4316,7 +5836,8 @@
           "la prenda documentada es el chivechi, tela de vestir del pueblo Makaguan hecha de la corteza del matapalo, un Ficus: superficie sin tejer, apelmazada, mate, de crudo a pardo claro (dossier §0.2 y §6)",
           "la capuza de macana es un arpón, definido en el glosario como «instrumento alargado con punta que se utiliza para cazar un animal», de madera de macana y usado «para matar samulia, maja, matiwi, mesa, pescado» —chácharo, guacamaya, danta y pescado— en tierra y en agua (dossier §0.1)",
           "tres palabras del glosario definen a las personas mejor que cualquier prenda: Pébi, hombre, «el que ama a su tierra y defiende su familia»; Mira, compañera; y Chui, niño, «persona pequeña en aprendizaje de la cultura» (dossier §6)",
-          "el pueblo se autodenomina peregrino y lo funda en el venado: «los makaguanes provienen del venado y por esta razón son peregrinos» (dossier §4)"
+          "el pueblo se autodenomina peregrino y lo funda en el venado: «los makaguanes provienen del venado y por esta razón son peregrinos» (dossier §4)",
+          "La página reescrita añade la recolección de kiwi —caracol en el glosario— «en los montes y esteros» y que los hijos «se juntaron entre primos» para multiplicarse."
         ],
         "editorial_features": [
           "el corte y la hechura de la prenda de corteza no están documentados, y ésa es la carencia más grave del dossier: se autoriza la materia y el tono, y la hechura es decisión editorial reversible (dossier §0.2, §6 y §11)",
@@ -4342,6 +5863,7 @@
           "documentado: la capuza de macana es un arpón, definido en el glosario como «instrumento alargado con punta que se utiliza para cazar un animal», de madera de macana y usado «para matar samulia, maja, matiwi, mesa, pescado» —chácharo, guacamaya, danta y pescado— en tierra y en agua (dossier §0.1)",
           "documentado: tres palabras del glosario definen a las personas mejor que cualquier prenda: Pébi, hombre, «el que ama a su tierra y defiende su familia»; Mira, compañera; y Chui, niño, «persona pequeña en aprendizaje de la cultura» (dossier §6)",
           "documentado: el pueblo se autodenomina peregrino y lo funda en el venado: «los makaguanes provienen del venado y por esta razón son peregrinos» (dossier §4)",
+          "documentado: La página reescrita añade la recolección de kiwi —caracol en el glosario— «en los montes y esteros» y que los hijos «se juntaron entre primos» para multiplicarse.",
           "La lámina declara la estación y el suelo, y no los promedia: sabana verde anegada de aguas altas, o barro duro y cuarteado de verano; banco, bajo, estero o mata de monte, uno solo por lámina.",
           "El oro aparece exactamente en dos sitios del corpus —los dientes del araguato y el collar de Wiri— y en ninguno más; repartido, se vuelve decoración de folleto.",
           "El estrato contemporáneo se ilumina con una sola luz cálida y pequeña, la de la linterna o la de la vela de cera de abeja, sobre un fondo sin ninguna luz eléctrica.",
@@ -4603,7 +6125,8 @@
           "es la corrección comunitaria de Manuel Sánchez en 2023: «según la versión de los abuelos no era una paloma, sino un samuro enviado para limpiar la tierra y comer la materia que había quedado después de la inundación», y el canon la adopta en la narración principal (canon, campo mito y campo versiones)",
           "la paloma pertenece a la transcripción de David González del 15 de agosto de 2010 y se conserva en versiones para mostrar cómo cambió el registro (canon, campo versiones)",
           "samuro es el nombre llanero y venezolano del gallinazo negro, Coragyps atratus: negro mate, cabeza pelada y gris, envergadura ancha y vuelo planeado bajo (dossier §7)",
-          "los huesos de los muertos que recoge el cangrejo quedan fuera de toda lámina: restos humanos de la inundación (dossier §4)"
+          "los huesos de los muertos que recoge el cangrejo quedan fuera de toda lámina: restos humanos de la inundación (dossier §4)",
+          "Historia de la página reescrita: Manuel Sánchez pidió corregir la paloma y el motivo que faltaba, «que por la cantidad de muertos Tacu buscaba limpiar la tierra»."
         ],
         "editorial_features": [
           "del gallinazo sólo se obtuvo el nombre científico en una lista de avifauna, sin morfología ni comportamiento en fuente araucana: la figura se resuelve con morfología de especie común y la determinación se declara (dossier §11)",
@@ -4625,6 +6148,7 @@
           "documentado: la paloma pertenece a la transcripción de David González del 15 de agosto de 2010 y se conserva en versiones para mostrar cómo cambió el registro (canon, campo versiones)",
           "documentado: samuro es el nombre llanero y venezolano del gallinazo negro, Coragyps atratus: negro mate, cabeza pelada y gris, envergadura ancha y vuelo planeado bajo (dossier §7)",
           "documentado: los huesos de los muertos que recoge el cangrejo quedan fuera de toda lámina: restos humanos de la inundación (dossier §4)",
+          "documentado: Historia de la página reescrita: Manuel Sánchez pidió corregir la paloma y el motivo que faltaba, «que por la cantidad de muertos Tacu buscaba limpiar la tierra».",
           "La lámina declara la estación y el suelo, y no los promedia: sabana verde anegada de aguas altas, o barro duro y cuarteado de verano; banco, bajo, estero o mata de monte, uno solo por lámina.",
           "El oro aparece exactamente en dos sitios del corpus —los dientes del araguato y el collar de Wiri— y en ninguno más; repartido, se vuelve decoración de folleto.",
           "El estrato contemporáneo se ilumina con una sola luz cálida y pequeña, la de la linterna o la de la vela de cera de abeja, sobre un fondo sin ninguna luz eléctrica.",
@@ -4894,7 +6418,8 @@
           "«el cielo se oscureció y comenzó una lluvia que no se detuvo durante varios días. La gente intentó contenerla, pero no pudo. Solo un guerrero y su compañera alcanzaron un monte que la ardilla no había derribado» (canon, campo mito)",
           "después el agua retrocede y quedan los árboles y las hojas podridos, que es lo que el samuro viene a limpiar (canon, campo mito)",
           "la inundación es el cobro de la deuda con Wiri, que muere por no ser cuidado, y no un castigo abstracto ni un desastre natural (dossier §4)",
-          "el estero del Lipa cambia de superficie con el régimen bimodal, y en aguas altas la densidad de plantas acuáticas es alta: nunca el promedio verde (dossier §3)"
+          "el estero del Lipa cambia de superficie con el régimen bimodal, y en aguas altas la densidad de plantas acuáticas es alta: nunca el promedio verde (dossier §3)",
+          "La página reescrita: la ardita deja «el mundo tumbado»; «Después oscureció todo y de repente empezó a caer una lluvia que no paraba»; «La gente quiso detener la lluvia y no pudo»; el samuro va «a comerse la podredumbre que había quedado y a mirar si la tierra ya se había secado»."
         ],
         "editorial_features": [
           "el orden de las tres bandas y su reparto en el encuadre son composición editorial: la fuente da la secuencia y no la simultaneidad",
@@ -4917,6 +6442,7 @@
           "documentado: después el agua retrocede y quedan los árboles y las hojas podridos, que es lo que el samuro viene a limpiar (canon, campo mito)",
           "documentado: la inundación es el cobro de la deuda con Wiri, que muere por no ser cuidado, y no un castigo abstracto ni un desastre natural (dossier §4)",
           "documentado: el estero del Lipa cambia de superficie con el régimen bimodal, y en aguas altas la densidad de plantas acuáticas es alta: nunca el promedio verde (dossier §3)",
+          "documentado: La página reescrita: la ardita deja «el mundo tumbado»; «Después oscureció todo y de repente empezó a caer una lluvia que no paraba»; «La gente quiso detener la lluvia y no pudo»; el samuro va «a comerse la podredumbre que había quedado y a mirar si la tierra ya se había secado».",
           "La lámina declara la estación y el suelo, y no los promedia: sabana verde anegada de aguas altas, o barro duro y cuarteado de verano; banco, bajo, estero o mata de monte, uno solo por lámina.",
           "El oro aparece exactamente en dos sitios del corpus —los dientes del araguato y el collar de Wiri— y en ninguno más; repartido, se vuelve decoración de folleto.",
           "El estrato contemporáneo se ilumina con una sola luz cálida y pequeña, la de la linterna o la de la vela de cera de abeja, sobre un fondo sin ninguna luz eléctrica.",
@@ -5215,6 +6741,11 @@
           "myth": "el-alma",
           "field": "mito",
           "note": "Wuachirajua cambia de forma en ave u otro animal, pero el relato no describe ninguna de esas formas: es una capacidad declarada, no una silueta, y se resuelve como regla dentro de su hoja y no como lámina aparte. Su pareja aparece sin un solo rasgo propio"
+        },
+        {
+          "myth": "el-alma",
+          "field": "versiones",
+          "note": "«Los estudiantes de séptimo la dibujaron con cabello largo, traje largo negro, rostro muy particular, garras y la facultad de volar. En el dibujo de David González tiene un solo ojo y un pico largo. Los sabedores aprobaron la congruencia de ambas con lo narrado, sin unificarlas»."
         }
       ],
       "design_contract": {
@@ -5235,7 +6766,9 @@
           "no se confunde nunca con los Wachirajua-espíritus del relato de fundación: comparten el nombre y nada más, y están separados por siglos y por capa documental",
           "las formas de ave y de otros animales que el relato le atribuye no se dibujan, porque el texto enuncia la capacidad y no describe ninguna forma",
           "su pareja, que Manuel Sánchez añadió en 2023, no recibe cuerpo propio y no se dibuja: se resuelve, cuando haga falta, como una segunda columna idéntica",
-          "pertenece sólo al estrato contemporáneo: nunca aparece en una lámina del tiempo del venado"
+          "pertenece sólo al estrato contemporáneo: nunca aparece en una lámina del tiempo del venado",
+          "en la hoja de pelo la talla es la que dice el relato de ahora —un niño de diez años, negro y peludo— y el tamaño de oso del recuerdo antiguo se declara como variación de escala dentro de la misma hoja",
+          "en la escuela sólo es la sombra de un niño que corre y atraviesa una pared: nunca un cuerpo iluminado de frente por la linterna"
         ],
         "documented_features": [
           "los estudiantes de séptimo lo dibujaron y «los sabedores compartieron la lectura y la imagen, aprobando la congruencia de la imagen con la historia narrada»: «un ser con un solo ojo, un pico largo, traje largo, pelo largo, piel negra y con la facultad de volar» (David E. González, 2013; dossier §0.4)",
@@ -5243,14 +6776,17 @@
           "en los recuerdos más antiguos era «un ser grande, negro y peludo, de estatura comparable con un oso y con uñas largas»; en versiones posteriores tenía el tamaño de un niño de unos diez años pero conservaba una fuerza extraordinaria (canon, campo mito)",
           "el glosario de la tesis lo define como «personaje que interactúa con los miembros de la cultura Makaguan; representa un ser sobrenatural»; persigue «a las personas de mala voluntad» y atraviesa una pared (dossier §7)",
           "la presencia se relaciona con la pérdida de la costumbre de acompañar a los muertos con una vela de cera de abeja y cerca de dos litros de agua, y empezó a verse aproximadamente desde 1948 en la laguna del Lipa (canon, campo mito)",
-          "es la única figura del corpus con diseño aprobado por sabedores, y ese aval es de 2013 y fue sobre un dibujo escolar, no sobre estas láminas (dossier §10, salvaguarda 5)"
+          "es la única figura del corpus con diseño aprobado por sabedores, y ese aval es de 2013 y fue sobre un dibujo escolar, no sobre estas láminas (dossier §10, salvaguarda 5)",
+          "La página reescrita reparte los rasgos de otra manera que el dossier: el dibujo de los estudiantes lleva «cabello largo, traje largo negro, rostro muy particular, garras y la facultad de volar», y el de David González «un solo ojo y un pico largo»; los sabedores aprobaron las dos «sin unificarlas».",
+          "La página reescrita lo describe en el relato como negro y peludo en los dos recuerdos —grande como un oso, con uñas largas y afiladas; y ahora de la estatura de un niño de diez años con la fuerza de muchos hombres—, y a Arístides Tocaria se le aparece «como un niño negro y peludo», acompañado de su pareja."
         ],
         "editorial_features": [
           "contradigo el campo states_declared, que pedía «forma pequeña o sombra», y cobro otro estado: los dos estados documentados no son «grande y peludo / sombra pequeña» sino las dos iconografías comunitarias —la de 2013, con un ojo, pico y traje largo, que es la que los sabedores aprobaron y por eso se toma como canónica, y la de 2022, cubierta de pelo y con garras—; la forma pequeña de los testimonios posteriores es un cambio de talla y no de silueta, y se resuelve dentro de la hoja canónica (dossier §0.4)",
           "la comparación con «un gran oso» del recuerdo antiguo se lee como oso palmero u hormiguero y no como oso andino, porque en la sabana de Arauca no hay oso andino: es lectura editorial y así se declara (dossier §0.4)",
           "los «ojos brillantes» de la iconografía de 2022 se resuelven como discos claros planos: el sistema prohíbe el brillo, el aura y la luz propia, y esta traducción es una decisión editorial declarada y reversible",
           "el rostro, la proporción del traje y la longitud del pico son construcción editorial sobre una lista de rasgos, no sobre un dibujo que este dossier haya podido ver",
-          "el machete del hombre que se le enfrenta, la linterna del profesor y la falla eléctrica pertenecen al estrato contemporáneo y a la hoja de utilería, y ninguno entra en esta ficha"
+          "el machete del hombre que se le enfrenta, la linterna del profesor y la falla eléctrica pertenecen al estrato contemporáneo y a la hoja de utilería, y ninguno entra en esta ficha",
+          "La página reescrita pone el relato del lado del ser peludo y deja las dos iconografías en versiones: se mantiene la de traje largo, un ojo y pico como canónica porque es la imagen aprobada por los sabedores, y la hoja de pelo pasa a ser la que el relato describe; si la comunidad prefiere la del relato como canónica, se invierten sin rehacer ninguna."
         ]
       },
       "prompt_spec": {
@@ -5269,6 +6805,8 @@
           "documentado: el glosario de la tesis lo define como «personaje que interactúa con los miembros de la cultura Makaguan; representa un ser sobrenatural»; persigue «a las personas de mala voluntad» y atraviesa una pared (dossier §7)",
           "documentado: la presencia se relaciona con la pérdida de la costumbre de acompañar a los muertos con una vela de cera de abeja y cerca de dos litros de agua, y empezó a verse aproximadamente desde 1948 en la laguna del Lipa (canon, campo mito)",
           "documentado: es la única figura del corpus con diseño aprobado por sabedores, y ese aval es de 2013 y fue sobre un dibujo escolar, no sobre estas láminas (dossier §10, salvaguarda 5)",
+          "documentado: La página reescrita reparte los rasgos de otra manera que el dossier: el dibujo de los estudiantes lleva «cabello largo, traje largo negro, rostro muy particular, garras y la facultad de volar», y el de David González «un solo ojo y un pico largo»; los sabedores aprobaron las dos «sin unificarlas».",
+          "documentado: La página reescrita lo describe en el relato como negro y peludo en los dos recuerdos —grande como un oso, con uñas largas y afiladas; y ahora de la estatura de un niño de diez años con la fuerza de muchos hombres—, y a Arístides Tocaria se le aparece «como un niño negro y peludo», acompañado de su pareja.",
           "La lámina declara la estación y el suelo, y no los promedia: sabana verde anegada de aguas altas, o barro duro y cuarteado de verano; banco, bajo, estero o mata de monte, uno solo por lámina.",
           "El oro aparece exactamente en dos sitios del corpus —los dientes del araguato y el collar de Wiri— y en ninguno más; repartido, se vuelve decoración de folleto.",
           "El estrato contemporáneo se ilumina con una sola luz cálida y pequeña, la de la linterna o la de la vela de cera de abeja, sobre un fondo sin ninguna luz eléctrica.",
@@ -5337,6 +6875,11 @@
           "myth": "el-alma",
           "field": "mito",
           "note": "Wuachirajua cambia de forma en ave u otro animal, pero el relato no describe ninguna de esas formas: es una capacidad declarada, no una silueta, y se resuelve como regla dentro de su hoja y no como lámina aparte. Su pareja aparece sin un solo rasgo propio"
+        },
+        {
+          "myth": "el-alma",
+          "field": "versiones",
+          "note": "«Los estudiantes de séptimo la dibujaron con cabello largo, traje largo negro, rostro muy particular, garras y la facultad de volar. En el dibujo de David González tiene un solo ojo y un pico largo. Los sabedores aprobaron la congruencia de ambas con lo narrado, sin unificarlas»."
         }
       ],
       "design_contract": {
@@ -5357,7 +6900,9 @@
           "no se confunde nunca con los Wachirajua-espíritus del relato de fundación: comparten el nombre y nada más, y están separados por siglos y por capa documental",
           "las formas de ave y de otros animales que el relato le atribuye no se dibujan, porque el texto enuncia la capacidad y no describe ninguna forma",
           "su pareja, que Manuel Sánchez añadió en 2023, no recibe cuerpo propio y no se dibuja: se resuelve, cuando haga falta, como una segunda columna idéntica",
-          "pertenece sólo al estrato contemporáneo: nunca aparece en una lámina del tiempo del venado"
+          "pertenece sólo al estrato contemporáneo: nunca aparece en una lámina del tiempo del venado",
+          "en la hoja de pelo la talla es la que dice el relato de ahora —un niño de diez años, negro y peludo— y el tamaño de oso del recuerdo antiguo se declara como variación de escala dentro de la misma hoja",
+          "en la escuela sólo es la sombra de un niño que corre y atraviesa una pared: nunca un cuerpo iluminado de frente por la linterna"
         ],
         "documented_features": [
           "los estudiantes de séptimo lo dibujaron y «los sabedores compartieron la lectura y la imagen, aprobando la congruencia de la imagen con la historia narrada»: «un ser con un solo ojo, un pico largo, traje largo, pelo largo, piel negra y con la facultad de volar» (David E. González, 2013; dossier §0.4)",
@@ -5365,14 +6910,17 @@
           "en los recuerdos más antiguos era «un ser grande, negro y peludo, de estatura comparable con un oso y con uñas largas»; en versiones posteriores tenía el tamaño de un niño de unos diez años pero conservaba una fuerza extraordinaria (canon, campo mito)",
           "el glosario de la tesis lo define como «personaje que interactúa con los miembros de la cultura Makaguan; representa un ser sobrenatural»; persigue «a las personas de mala voluntad» y atraviesa una pared (dossier §7)",
           "la presencia se relaciona con la pérdida de la costumbre de acompañar a los muertos con una vela de cera de abeja y cerca de dos litros de agua, y empezó a verse aproximadamente desde 1948 en la laguna del Lipa (canon, campo mito)",
-          "es la única figura del corpus con diseño aprobado por sabedores, y ese aval es de 2013 y fue sobre un dibujo escolar, no sobre estas láminas (dossier §10, salvaguarda 5)"
+          "es la única figura del corpus con diseño aprobado por sabedores, y ese aval es de 2013 y fue sobre un dibujo escolar, no sobre estas láminas (dossier §10, salvaguarda 5)",
+          "La página reescrita reparte los rasgos de otra manera que el dossier: el dibujo de los estudiantes lleva «cabello largo, traje largo negro, rostro muy particular, garras y la facultad de volar», y el de David González «un solo ojo y un pico largo»; los sabedores aprobaron las dos «sin unificarlas».",
+          "La página reescrita lo describe en el relato como negro y peludo en los dos recuerdos —grande como un oso, con uñas largas y afiladas; y ahora de la estatura de un niño de diez años con la fuerza de muchos hombres—, y a Arístides Tocaria se le aparece «como un niño negro y peludo», acompañado de su pareja."
         ],
         "editorial_features": [
           "contradigo el campo states_declared, que pedía «forma pequeña o sombra», y cobro otro estado: los dos estados documentados no son «grande y peludo / sombra pequeña» sino las dos iconografías comunitarias —la de 2013, con un ojo, pico y traje largo, que es la que los sabedores aprobaron y por eso se toma como canónica, y la de 2022, cubierta de pelo y con garras—; la forma pequeña de los testimonios posteriores es un cambio de talla y no de silueta, y se resuelve dentro de la hoja canónica (dossier §0.4)",
           "la comparación con «un gran oso» del recuerdo antiguo se lee como oso palmero u hormiguero y no como oso andino, porque en la sabana de Arauca no hay oso andino: es lectura editorial y así se declara (dossier §0.4)",
           "los «ojos brillantes» de la iconografía de 2022 se resuelven como discos claros planos: el sistema prohíbe el brillo, el aura y la luz propia, y esta traducción es una decisión editorial declarada y reversible",
           "el rostro, la proporción del traje y la longitud del pico son construcción editorial sobre una lista de rasgos, no sobre un dibujo que este dossier haya podido ver",
-          "el machete del hombre que se le enfrenta, la linterna del profesor y la falla eléctrica pertenecen al estrato contemporáneo y a la hoja de utilería, y ninguno entra en esta ficha"
+          "el machete del hombre que se le enfrenta, la linterna del profesor y la falla eléctrica pertenecen al estrato contemporáneo y a la hoja de utilería, y ninguno entra en esta ficha",
+          "La página reescrita pone el relato del lado del ser peludo y deja las dos iconografías en versiones: se mantiene la de traje largo, un ojo y pico como canónica porque es la imagen aprobada por los sabedores, y la hoja de pelo pasa a ser la que el relato describe; si la comunidad prefiere la del relato como canónica, se invierten sin rehacer ninguna."
         ]
       },
       "prompt_spec": {
@@ -5391,6 +6939,8 @@
           "documentado: el glosario de la tesis lo define como «personaje que interactúa con los miembros de la cultura Makaguan; representa un ser sobrenatural»; persigue «a las personas de mala voluntad» y atraviesa una pared (dossier §7)",
           "documentado: la presencia se relaciona con la pérdida de la costumbre de acompañar a los muertos con una vela de cera de abeja y cerca de dos litros de agua, y empezó a verse aproximadamente desde 1948 en la laguna del Lipa (canon, campo mito)",
           "documentado: es la única figura del corpus con diseño aprobado por sabedores, y ese aval es de 2013 y fue sobre un dibujo escolar, no sobre estas láminas (dossier §10, salvaguarda 5)",
+          "documentado: La página reescrita reparte los rasgos de otra manera que el dossier: el dibujo de los estudiantes lleva «cabello largo, traje largo negro, rostro muy particular, garras y la facultad de volar», y el de David González «un solo ojo y un pico largo»; los sabedores aprobaron las dos «sin unificarlas».",
+          "documentado: La página reescrita lo describe en el relato como negro y peludo en los dos recuerdos —grande como un oso, con uñas largas y afiladas; y ahora de la estatura de un niño de diez años con la fuerza de muchos hombres—, y a Arístides Tocaria se le aparece «como un niño negro y peludo», acompañado de su pareja.",
           "La lámina declara la estación y el suelo, y no los promedia: sabana verde anegada de aguas altas, o barro duro y cuarteado de verano; banco, bajo, estero o mata de monte, uno solo por lámina.",
           "El oro aparece exactamente en dos sitios del corpus —los dientes del araguato y el collar de Wiri— y en ninguno más; repartido, se vuelve decoración de folleto.",
           "El estrato contemporáneo se ilumina con una sola luz cálida y pequeña, la de la linterna o la de la vela de cera de abeja, sobre un fondo sin ninguna luz eléctrica.",
@@ -5481,7 +7031,8 @@
           "la bicicleta, la cancha y la ropa de hoy no se borran nunca: borrarlas fabricaría una antigüedad que este pueblo no tiene",
           "no hay luz eléctrica en ninguna lámina de este estrato, porque el resguardo no tiene red: la falla de la leyenda es lo normal y no una avería",
           "nadie lleva pintura corporal, tocado ni penacho, igual que en el otro colectivo",
-          "las personas reales nombradas por el corpus —Gregorio Flórez, David González, José Darío Cuenza, Arístides Tocaria y Manuel Sánchez— no reciben retrato: se resuelven desde este colectivo y se acreditan por nombre en el pie"
+          "las personas reales nombradas por el corpus —Gregorio Flórez, David González, José Darío Cuenza, Arístides Tocaria y Manuel Sánchez— no reciben retrato: se resuelven desde este colectivo y se acreditan por nombre en el pie",
+          "sus figuras heredan cara y cuerpo de los tipos base en su estado contemporáneo: el colectivo añade la ropa de hoy, no otra gente"
         ],
         "documented_features": [
           "el resguardo de El Vigía es una comunidad de unas 500 personas en 72 familias sobre 410 hectáreas, con estudiantes que van y vienen en bicicleta o cruzan el río en canoa, con cancha de fútbol y con trompo y bolinchas (dossier §6 y §2)",
@@ -5489,7 +7040,8 @@
           "las mujeres de El Vigía «lideran actividades sobre la fabricación de manillas y collares con base en chaquiras» y «tejido de bolsos con materiales del medio (fique)»; la chaquira es cuenta de vidrio y por tanto posterior al contacto (dossier §6)",
           "el resguardo «no tiene agua potable, ni luz eléctrica», de modo que la falla eléctrica de la leyenda es la condición normal y no un accidente (dossier §1 y §5)",
           "el estrato está fechado por la propia fuente: la presencia se ve «aproximadamente desde 1948», el encuentro del corozo hacia 1991 y el episodio de la escuela es posterior a la creación del internado (dossier §1)",
-          "el inventario material del estrato es el de un resguardo araucano de la segunda mitad del siglo XX: vela de cera de abeja, dos litros de agua, machete, linterna, archivadores, chinchorro, camas hechizas, fogón de leña, cancha de fútbol, bicicleta, moto y canoa (dossier §1)"
+          "el inventario material del estrato es el de un resguardo araucano de la segunda mitad del siglo XX: vela de cera de abeja, dos litros de agua, machete, linterna, archivadores, chinchorro, camas hechizas, fogón de leña, cancha de fútbol, bicicleta, moto y canoa (dossier §1)",
+          "La página reescrita: el profesor cuenta su encuentro «en la cancha de fútbol, donde se jugaba todas las tardes, y los compañeros empezaron a contar los suyos: cómo habían escapado del alma en el monte y en los caminos, desde que se creó el internado»."
         ],
         "editorial_features": [
           "los rostros, las edades y la composición del grupo son construcción editorial: no hay una sola descripción del cuerpo makaguán en ninguna fuente, ni antigua ni contemporánea (dossier §11)",
@@ -5514,6 +7066,7 @@
           "documentado: el resguardo «no tiene agua potable, ni luz eléctrica», de modo que la falla eléctrica de la leyenda es la condición normal y no un accidente (dossier §1 y §5)",
           "documentado: el estrato está fechado por la propia fuente: la presencia se ve «aproximadamente desde 1948», el encuentro del corozo hacia 1991 y el episodio de la escuela es posterior a la creación del internado (dossier §1)",
           "documentado: el inventario material del estrato es el de un resguardo araucano de la segunda mitad del siglo XX: vela de cera de abeja, dos litros de agua, machete, linterna, archivadores, chinchorro, camas hechizas, fogón de leña, cancha de fútbol, bicicleta, moto y canoa (dossier §1)",
+          "documentado: La página reescrita: el profesor cuenta su encuentro «en la cancha de fútbol, donde se jugaba todas las tardes, y los compañeros empezaron a contar los suyos: cómo habían escapado del alma en el monte y en los caminos, desde que se creó el internado».",
           "La lámina declara la estación y el suelo, y no los promedia: sabana verde anegada de aguas altas, o barro duro y cuarteado de verano; banco, bajo, estero o mata de monte, uno solo por lámina.",
           "El oro aparece exactamente en dos sitios del corpus —los dientes del araguato y el collar de Wiri— y en ninguno más; repartido, se vuelve decoración de folleto.",
           "El estrato contemporáneo se ilumina con una sola luz cálida y pequeña, la de la linterna o la de la vela de cera de abeja, sobre un fondo sin ninguna luz eléctrica.",
