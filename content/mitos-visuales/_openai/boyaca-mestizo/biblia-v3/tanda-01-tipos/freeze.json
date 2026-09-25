@@ -1,0 +1,94 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "boyaca-mestizo",
+  "comunidad": "Boyaca mestizo",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/boyaca-mestizo.v3.json",
+    "sha256": "3166bcd0ed7f7dd478e80ba72c6ffd3dc0f474b64bfe8b43ce46856a59289916"
+  },
+  "canon": {
+    "sha256": "4734a8c80e7f44d4d1a061f43160737e9a8e7ce1e2db619bd38883a4fc672eed",
+    "verificado_en": "2026-09-25T14:15:22.686Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre adulto campesino de Tunja y el Valle de Tenza",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-cucacuy",
+        "el-tesoro-de-buzaga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8284,
+      "prompt_sha256": "d2542cd698179a19e1a7c30faf8aba3698e6a7e7ac8f41805cab463b54d6322e"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base · anciana india de pueblo de doctrina",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-tesoro-de-buzaga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7851,
+      "prompt_sha256": "ae14f09f250fc68f0a21d7282759c758068c5868dd23560ca8945f522ab4a925"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer adulta campesina de Tunja y el Valle de Tenza",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-tesoro-de-buzaga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7979,
+      "prompt_sha256": "731475589815627a5e57a7b9cb41db945c55c0dae28778293ef37e1f437751ad"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño campesino de Tunja y el Valle de Tenza",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-tesoro-de-buzaga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7652,
+      "prompt_sha256": "3d65d52ef8f83dc2d8e48fd8af6cca776e520aecb37ebb6023cdb3d334b65f6c"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "orinoquia-llanera-mestizo",
+  "comunidad": "Orinoquia llanera",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/orinoquia-llanera-mestizo.v3.json",
+    "sha256": "28805f39d97994f3fc485a24935047744d36a4e9b7a187f2e935ea708b97df4f"
+  },
+  "canon": {
+    "sha256": "3ccbd7d1dc15e78468cdc4a4a8d493f21cee98326daf946d28c8d999be60fa3e",
+    "verificado_en": "2026-09-25T14:15:30.792Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre adulto llanero de hato",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-llano-ayer-hoy",
+        "el-toro-negro-patorreal",
+        "las-chanzas-de-don-felipe",
+        "el-llano-cobra-sus-deudas",
+        "los-tres-luceros"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8335,
+      "prompt_sha256": "54cdf71eea1852dee6ba7df05abc01f5f15a9ebe51b328bf0552fca038f594b1"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base · anciano llanero de hato",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-llano-ayer-hoy",
+        "el-toro-negro-patorreal",
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7788,
+      "prompt_sha256": "a6ee9c25d23899eece32a4e89130067bf8d8f2514294d7421d38dc4d201202e5"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer adulta llanera de hato",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-toro-negro-patorreal",
+        "las-chanzas-de-don-felipe",
+        "la-tertulia-de-la-italiana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7619,
+      "prompt_sha256": "e5400532cc3b1d9c2abbecd738aa3d9247c7c3b2869ff931ec6f9e1b9aae49fe"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer joven llanera de hato",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-toro-negro-patorreal",
+        "los-tres-luceros"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7485,
+      "prompt_sha256": "1943b52a442bab85c3c53a7ae651e92f22b22b75e57093e54ebb5fe79fced3ce"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño llanero de hato",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-culebra-cascabel",
+        "los-tres-luceros"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7405,
+      "prompt_sha256": "df900e24d946af5518b071a01606089b60b807cd5d667e4a03f03390c0ce08b4"
+    }
+  ]
+}

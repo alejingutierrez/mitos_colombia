@@ -1,0 +1,141 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "antioquia-occidente-mixto",
+  "comunidad": "Occidente antioqueño mixto",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/antioquia-occidente-mixto.v3.json",
+    "sha256": "8d8a5a346e01cff7875868e704ff5b73e3d707dc48295a4aae381e72f89ec626"
+  },
+  "canon": {
+    "sha256": "49563b7fbab3cd617190cedd3a3694581a547d150705ffb9d03a938003bb7d76",
+    "verificado_en": "2026-09-25T14:15:18.690Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre adulto de la colonización antioqueña",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-patetarro",
+        "el-paton",
+        "el-perro-negro",
+        "la-cabellona",
+        "la-dama-verde",
+        "la-rodillona",
+        "las-ilusiones",
+        "los-rescoldos",
+        "maria-la-larga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9572,
+      "prompt_sha256": "d6005823edd527a93212d4b7cc67f6439f7859d14717f55e505560d1f17ff948"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño de la colonización antioqueña",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-mareco",
+        "el-perro-negro",
+        "la-rodillona"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8865,
+      "prompt_sha256": "b21edc977f36f91925d2787d1e69f06357149e7887b073420c74e5704b316c52"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base · anciana de la colonización antioqueña",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-rodillona",
+        "maria-centeno"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9026,
+      "prompt_sha256": "cbc67edab405e2a71c559bbe8ae1d855455a9d510ad3a3878885a4edef52d2fe"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base · anciano de la colonización antioqueña",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-rodillona",
+        "maria-centeno"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8976,
+      "prompt_sha256": "7b37174ae316b756bfda0b5196bd1a4d25d011083dde14bf537f35d57d0e34e6"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer adulta de la colonización antioqueña",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-dama-verde",
+        "la-rodillona"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9058,
+      "prompt_sha256": "efbe152fdcc7d319a84c2dd3677d193ce78e6a7578ce30fae85c308b3da19c69"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer joven de la colonización antioqueña",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-perro-negro",
+        "la-dama-verde"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8856,
+      "prompt_sha256": "3f5e331dfc687d1b91b22cb243d2eff933c7ef294d81694b9aca02f24d5a6ef7"
+    }
+  ]
+}

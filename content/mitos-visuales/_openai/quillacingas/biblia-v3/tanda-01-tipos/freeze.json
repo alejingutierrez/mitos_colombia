@@ -1,0 +1,137 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "quillacingas",
+  "comunidad": "Quillacingas",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/quillacingas.v3.json",
+    "sha256": "b4558e7afb4a5016ce4b48e90ef7e5235697f9b9afbab82637da199cb259c7c4"
+  },
+  "canon": {
+    "sha256": "22e4e45588698691b545d9a3c7e306acd5795b81849509c6c8121ada8f1b03d4",
+    "verificado_en": "2026-09-25T14:15:32.718Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Hombre adulto quillasinga (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-de-los-colibries",
+        "cualanquizan",
+        "el-llamado-de-inti",
+        "origen-de-la-isla-la-corota",
+        "sirena-de-la-laguna-de-la-cocha"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8157,
+      "prompt_sha256": "043eaedd41b69086743c833c6ffe31a44f86ceec5e7c8da5347226d84c1b25a7"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Mujer joven quillasinga (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-de-los-colibries",
+        "cualanquizan",
+        "el-rabo-de-casapamba",
+        "origen-de-la-isla-la-corota"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7818,
+      "prompt_sha256": "3be29d30f57cb1d03dfe89d80bff9430e8244d300a05a29c0b0f725dfd6f1571"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Mujer adulta quillasinga (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "cualanquizan",
+        "el-llamado-de-inti",
+        "sirena-de-la-laguna-de-la-cocha"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8046,
+      "prompt_sha256": "a42eb17c6a31bf5bfe7a15b955a876b8d7fe7c54f293ea2368496a81ab6283ca"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Niño quillasinga (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "cualanquizan",
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7900,
+      "prompt_sha256": "222278713d8b7f3a00635a481cc2e19a005ee40b13eade6258de59be33642153"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Anciana quillasinga (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7373,
+      "prompt_sha256": "76b539574d6e45e3b27b099b1e8a1a5bc1529a937c3a17afedd6a7db649f7ae8"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Anciano quillasinga (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7740,
+      "prompt_sha256": "3a2de88ac1d5f26f8ac712d587717854d33da0627997c3433f8bdde341781e69"
+    }
+  ]
+}

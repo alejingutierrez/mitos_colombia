@@ -1,0 +1,176 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "choco-afro",
+  "comunidad": "Chocó afrodescendiente",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/choco-afro.v3.json",
+    "sha256": "3e7546f1453ee814e77fa533176d63ed7502cb41bc2e9f1d224f4dd8c8425a0b"
+  },
+  "canon": {
+    "sha256": "0188296e71d30b1ac2f9e6a28efd8ede61858969899d9c739dda74cec673e3d2",
+    "verificado_en": "2026-09-25T14:15:24.065Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Mujer adulta afrochocoana (tipo base)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "anansi",
+        "kijimba-de-las-animas",
+        "la-sierpe-de-bete",
+        "tulavieja-tunda"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9686,
+      "prompt_sha256": "570bb115f6b454b8a201883ee286735469033f13ad9d26fafe919fa4262b7ae9"
+    },
+    {
+      "job": "tipo_mujer_adulta__state_sheet--estado_con la ropa guardada: vestido de velar, manto o pañolón de cabeza y zarcillos de oro",
+      "modelo": "tipo_mujer_adulta__state_sheet",
+      "entidad": "Mujer adulta afrochocoana (tipo base)",
+      "categoria": "personaje",
+      "vista": "estado_con la ropa guardada: vestido de velar, manto o pañolón de cabeza y zarcillos de oro",
+      "estados": [
+        "con la ropa guardada: vestido de velar, manto o pañolón de cabeza y zarcillos de oro"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "anansi",
+        "kijimba-de-las-animas",
+        "la-sierpe-de-bete",
+        "tulavieja-tunda"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9924,
+      "prompt_sha256": "2743dadadd8763b9f1cf318cea711f768099a6477f21e6244a2faa40a96229ac"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Anciana afrochocoana (tipo base)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "anansi",
+        "kijimba-de-las-animas",
+        "la-sierpe-de-bete"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9524,
+      "prompt_sha256": "91d118038cff7b497a94915293e9bb68fb71586212222bde9994f8057ce27c40"
+    },
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Hombre adulto afrochocoano (tipo base)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "anansi",
+        "kijimba-de-las-animas",
+        "la-sierpe-de-bete"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 10460,
+      "prompt_sha256": "971bd0c9af7bf88233841cb89c5a0e7972c3948a0d6465d5f25cc993a0d17a28"
+    },
+    {
+      "job": "tipo_hombre_adulto__state_sheet--estado_de pueblo y de domingo: pantalón y saco de dril, camisa blanca y zapato de cuero",
+      "modelo": "tipo_hombre_adulto__state_sheet",
+      "entidad": "Hombre adulto afrochocoano (tipo base)",
+      "categoria": "personaje",
+      "vista": "estado_de pueblo y de domingo: pantalón y saco de dril, camisa blanca y zapato de cuero",
+      "estados": [
+        "de pueblo y de domingo: pantalón y saco de dril, camisa blanca y zapato de cuero"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "anansi",
+        "kijimba-de-las-animas",
+        "la-sierpe-de-bete"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 10694,
+      "prompt_sha256": "10d62e0d8a5c31202761df62b9e3c8a538751397e1c33175b978ba2d1db36d5a"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Anciano afrochocoano (tipo base)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "anansi",
+        "la-sierpe-de-bete"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9393,
+      "prompt_sha256": "51e28df946bf675047eb6c253a77745f69e924246c835f3d352def3d99bbccb3"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Mujer joven afrodescendiente del Pacífico (tipo base)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "anansi",
+        "tulavieja-tunda"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9289,
+      "prompt_sha256": "5dc8554c6de7c40903553e8b9cf987f00b6130a0de11ab40f12c12961632c713"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Niño afrochocoano (tipo base)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "anansi",
+        "la-sierpe-de-bete"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9319,
+      "prompt_sha256": "e19f94259a92a8e246e446a9d6762f937aed4e11434f87433a8951820fce4ed4"
+    }
+  ]
+}

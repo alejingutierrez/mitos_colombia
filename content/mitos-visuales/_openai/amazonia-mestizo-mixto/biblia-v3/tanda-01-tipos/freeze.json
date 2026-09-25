@@ -1,0 +1,138 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "amazonia-mestizo-mixto",
+  "comunidad": "Amazonía ribereña mestiza",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/amazonia-mestizo-mixto.v3.json",
+    "sha256": "fc6babd3bdae940b3c8f6bb376fb1a779e021717ef6de1376b8537622a32922c"
+  },
+  "canon": {
+    "sha256": "2f6f707553d5db5bf527413fc9dccfe903963879388b8ebee73d2d100adcfe9a",
+    "verificado_en": "2026-09-25T14:15:16.861Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre adulto ribereño",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-bufeo",
+        "el-chuy-achaque",
+        "el-cotomachaco",
+        "la-cobra-grande",
+        "la-curupira",
+        "yacuruna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8027,
+      "prompt_sha256": "2c73b189b034872f94f21c5602c5189ab2e8b717d0573236dc29b167287820a3"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer adulta ribereña",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-bufeo",
+        "el-chuy-achaque",
+        "la-cobra-grande"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7749,
+      "prompt_sha256": "deda51b55896595715b347d1d577ef74748444527d6d2728ec330ada727fd5ef"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer joven ribereña",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-bufeo",
+        "yacuruna",
+        "madre-de-playa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7676,
+      "prompt_sha256": "1de2d5119f4e5c52c3341acaed5a0e86d2f2a68fbfccc2e5ada2df10544e7a5c"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño y niña de orilla",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-bufeo",
+        "el-chuy-achaque",
+        "yacuruna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7630,
+      "prompt_sha256": "586f8c18de8724213889670d95ae4969fc943316f23108d11149a186d73a7e1b"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base · anciana de orilla",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "madre-de-playa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7564,
+      "prompt_sha256": "222980607083f8ea022aa77b985edf5a8b7dad4b510e821e983f90a82db665c8"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base · anciano de orilla",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "madre-de-playa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7559,
+      "prompt_sha256": "76e2fbb1c57e52d71f4d43b16de138114fff3a6f464cfc8dca659cb17fd8853c"
+    }
+  ]
+}

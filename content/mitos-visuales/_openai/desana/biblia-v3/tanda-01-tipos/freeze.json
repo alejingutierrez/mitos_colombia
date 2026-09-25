@@ -1,0 +1,126 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "desana",
+  "comunidad": "Desana",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/desana.v3.json",
+    "sha256": "7ffefd60e2c320763886df2bef887429ca7b29950c5e8d3fa951df5567d78c24"
+  },
+  "canon": {
+    "sha256": "8b8f46b02293c31171ca7a65e5be964d782b26572a712b75a0811e6db9d2dc34",
+    "verificado_en": "2026-09-25T14:15:25.962Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base: hombre adulto desana",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-desana",
+        "el-origen-de-la-noche-desana",
+        "el-origen-de-la-mandioca-desana",
+        "guelamun-ye-el-nieto-del-trueno",
+        "nuguye-y-sepiro-fuego-y-creciente",
+        "yurupari"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5765,
+      "prompt_sha256": "b62a39e659612d08b0ecdce22a6c2fc7f0c67d4cde455f4802817e9011571b73"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base: anciana desana",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "agamahsapu-y-el-tiempo-del-umari",
+        "creacion-desana",
+        "el-origen-de-la-mandioca-desana",
+        "el-origen-de-la-noche-desana"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5746,
+      "prompt_sha256": "110054377625a669daabfd239610a28bdd1764c6d24a1650810934defe5f76d2"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base: anciano desana",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "agamahsapu-y-el-tiempo-del-umari",
+        "el-origen-de-la-mandioca-desana",
+        "gainpaya-y-el-origen-del-chontaduro",
+        "el-origen-de-la-noche-desana"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5742,
+      "prompt_sha256": "7a3d52fbd8fbb9c9ee0694a8fda356716520a95040de6ad7085ccc9dc3682e22"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base: mujer adulta desana",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-desana",
+        "el-origen-de-la-mandioca-desana",
+        "guelamun-ye-el-nieto-del-trueno",
+        "nuguye-y-sepiro-fuego-y-creciente"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5750,
+      "prompt_sha256": "9c05584efb10c500580be0189fadd26b3878834c129ced5df919d997925957c2"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base: mujer joven desana",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "agamahsapu-y-el-tiempo-del-umari",
+        "gainpaya-y-el-origen-del-chontaduro",
+        "yurupari"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5717,
+      "prompt_sha256": "05ebf69af4cb36c932d1747c5e7fb4af1508e91a2cf1f935646e4a8b13ec0a66"
+    }
+  ]
+}

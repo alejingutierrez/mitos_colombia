@@ -1,0 +1,112 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "awa",
+  "comunidad": "Awa",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/awa.v3.json",
+    "sha256": "5859aa7cfaf891a8cc9471a703b356d05eecc4b1361134b87642d2234d5703a8"
+  },
+  "canon": {
+    "sha256": "bae6e57ea34347d2f9cba2e03f031d8cf73be66457da7c33aebc986fe695bd02",
+    "verificado_en": "2026-09-25T14:15:19.523Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre awá adulto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "barbachas-del-arbol-grande",
+        "guagaja"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5697,
+      "prompt_sha256": "f1f295108576a392667b0a9fd18864bce96eaa0f4f915b143569edf72a2270b7"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer awá adulta",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "barbachas-del-arbol-grande",
+        "guagaja"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5780,
+      "prompt_sha256": "bd6ea16a8d7d5cd34bb7b58404f162a1d8f51ac745d6e3af1ce7ef3430d2ebef"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base · anciano awá",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "barbachas-del-arbol-grande"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5711,
+      "prompt_sha256": "04bd1ae0588b92a6d6ca63b6bbee37bd98f59ef14c47b5e5e66f07c7e8e396f4"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer awá joven",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "barbachas-del-arbol-grande"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5630,
+      "prompt_sha256": "7225301b3d72944c630dff358bc838b7d8d2a05b9ee92ce9066f825c55ac2585"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño awá",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "barbachas-del-arbol-grande"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5669,
+      "prompt_sha256": "fb23e35679efe55ba80a4d7bd0d477184a5dc397d36effe1c79b339ae674f9d6"
+    }
+  ]
+}
