@@ -1,0 +1,83 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "katios",
+  "comunidad": "Katíos",
+  "tanda": "tanda-02-tipos-rehechas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/katios.v3.json",
+    "sha256": "33472b7e38a9a67eac95bdccc963cb6492054856a8bfa78c2ae80901ad424ee7"
+  },
+  "canon": {
+    "sha256": "de27d790f202032beb5e5da24c37ad0457de3c5ea66f10b4fdd7c7f234b286ef",
+    "verificado_en": "2026-09-25T13:50:46.861Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 6,
+  "fichas": [
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Mujer emberá katío adulta (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "ancastor",
+        "antomia",
+        "baha",
+        "creacion-katios",
+        "herupotoarra",
+        "la-escalera-del-cielo",
+        "los-bibidigomias"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6748,
+      "prompt_sha256": "6f2aa7b154b7bcaf118cccc46fc576a1725ec5969251e9ba5d36ca64ec744de3"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Mujer emberá katío joven (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "herupotoarra",
+        "la-escalera-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6406,
+      "prompt_sha256": "f11c360ae71240b698d25f3584ac09680991afe6dacc0b9c8a73c8ce97748f6d"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Anciana emberá katío (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "baha"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6196,
+      "prompt_sha256": "6a654faecde0083c756b4953cbea1f68b774f4b17742defdf627c481b60f68e7"
+    }
+  ]
+}
