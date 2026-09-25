@@ -1,0 +1,151 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "koguis",
+  "comunidad": "Kogui (Kággaba)",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/koguis.v3.json",
+    "sha256": "a603f6c5e746c369d9560a3f4637713cf96b631bccb71ec2f4dc34137094dac8"
+  },
+  "canon": {
+    "sha256": "edca8fad668f5e006d7587f11184f1111e3139a171111e1e903647bc29cfc6f3",
+    "verificado_en": "2026-09-25T13:47:38.782Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Hombre kogui adulto (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "canibalismo",
+        "creacion-koguis",
+        "el-algodon-koguis",
+        "el-primer-hombre-y-la-primera-mujer",
+        "incesto-de-padre-hija",
+        "kashindukwe",
+        "madre-wastora",
+        "naowa-entrega-el-gobierno-a-su-hijo",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7862,
+      "prompt_sha256": "76be419d4f245b86883660e10b1fa3298145ac5b6ac4e3df48bfceaf9570aa83"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Mujer kogui adulta (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "canibalismo",
+        "creacion-koguis",
+        "el-algodon-koguis",
+        "el-primer-hombre-y-la-primera-mujer",
+        "incesto-de-padre-hija",
+        "kashindukwe",
+        "madre-wastora",
+        "naowa-entrega-el-gobierno-a-su-hijo",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7201,
+      "prompt_sha256": "c0c1f056cabb8d0a554ef77dc931c86ac50935940eed6cc3e77b9ec87b11073b"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Muchacha kogui (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "canibalismo",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6507,
+      "prompt_sha256": "59673973ef1d250281d7ea76dea95bea6ea34b7c9d426e0c53b2ca9f20659975"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Anciana kogui (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "canibalismo",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6534,
+      "prompt_sha256": "473b644276e72f18a6c7c2f2dd7cb513dd45fffb976041c9d523ab9259689d0a"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Anciano kogui (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "canibalismo",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6875,
+      "prompt_sha256": "110a4dcb7dc1669da044e9352abf305390ff4adb1aa3ba9f1dd13ab9eb89a7df"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Niño kogui (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "canibalismo",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6360,
+      "prompt_sha256": "f36d63849c3a6d12e1af9199f09c5cdf41645d1bac5ea00345aa9d0ec455aa4f"
+    }
+  ]
+}

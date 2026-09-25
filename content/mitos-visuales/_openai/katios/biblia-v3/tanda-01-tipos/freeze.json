@@ -1,0 +1,152 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "katios",
+  "comunidad": "Katíos",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/katios.v3.json",
+    "sha256": "166300e920307e743de5ffd0b33f45c84c517452cdca366155354dd9402a187d"
+  },
+  "canon": {
+    "sha256": "de27d790f202032beb5e5da24c37ad0457de3c5ea66f10b4fdd7c7f234b286ef",
+    "verificado_en": "2026-09-25T13:47:40.294Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Hombre emberá katío adulto (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "a-transformacion-del-hombre-que-no-podia-cazar",
+        "antomia",
+        "aribamias",
+        "baha",
+        "coste",
+        "creacion-katios",
+        "dabeiba",
+        "el-origen-del-sol-y-la-luna",
+        "fragmentos-de-otras-tradiciones",
+        "la-escalera-del-cielo",
+        "los-bibidigomias",
+        "los-domicoes",
+        "sever",
+        "tradicion-del-cerro",
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7087,
+      "prompt_sha256": "e74fb030883523e920cb0a3a6218d4f9e76192c0cd8778001e34fe216b40d5de"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Mujer emberá katío adulta (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "ancastor",
+        "antomia",
+        "baha",
+        "creacion-katios",
+        "herupotoarra",
+        "la-escalera-del-cielo",
+        "los-bibidigomias"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6773,
+      "prompt_sha256": "1976514c3fa5e26c6a4a05cf22110baffe117297c7ac3d615d6269c6f94523d7"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Niño emberá katío (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "baha",
+        "icades-name",
+        "la-escalera-del-cielo",
+        "los-bibidigomias",
+        "tradicion-del-cerro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6051,
+      "prompt_sha256": "0e37c0e2bafec40a0d033e26a33bd273c430fb4bfc17c50e29ea195b9d2cee01"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Mujer emberá katío joven (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "herupotoarra",
+        "la-escalera-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6425,
+      "prompt_sha256": "c31cad2b124f9000e3797cb51a1f98b58195e71cc89e49abf6e9e6c337e58439"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Anciana emberá katío (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "baha"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6105,
+      "prompt_sha256": "4dcfd0b00101194fe23d43e2f512ce3642750a10f459988f0d281c8f456653d5"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Anciano emberá katío (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "baha"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6191,
+      "prompt_sha256": "e1381287704a70c1e561cc1bd509a5c6d5a4e03bb1ff6f2a3614cf22efd83805"
+    }
+  ]
+}

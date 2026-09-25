@@ -111,7 +111,9 @@ async function descongelar(client, id, args) {
     .join(RECORD_SEPARATOR);
   const nuevaHuella = sha(canonical);
   if (nuevaHuella === plan.source_snapshot.sha256 && !args.force) {
-    volcarCanon(args, id, rows, fields, [], []);
+    // Ya descongelado: el volcado conserva la marca de lo que hay que releer.
+    const rec = plan.inventory?.reconciliation || {};
+    volcarCanon(args, id, rows, fields, rec.rewritten_myths || [], rec.new_myths || []);
     return { id, estado: "intacto", cambiados: [], nuevos: [] };
   }
 
