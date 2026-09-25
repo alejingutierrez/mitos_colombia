@@ -18,6 +18,7 @@
  *
  *   node scripts/mitos/prepare-biblia-tanda-v3.mjs --corpus koguis,katios --capa tipos
  *   node scripts/mitos/prepare-biblia-tanda-v3.mjs --corpus koguis --capa mortales --maximo 14
+ *   node scripts/mitos/prepare-biblia-tanda-v3.mjs --corpus pirsa --capa tipos --modelos tipo_nino__identity_sheet
  *   node scripts/mitos/prepare-biblia-tanda-v3.mjs --aprobar koguis --capa tipos --tanda tanda-01-tipos
  *
  * Una capa grande se parte con --maximo: cada llamada toma las fichas de la
@@ -223,13 +224,18 @@ async function main() {
       .filter(([, m]) => m.prompt_spec)
       .filter(([, m]) => capa.toma(plan.entities[m.entity_refs[0]] || {}, m.entity_refs[0]))
       .sort(([ia, a], [ib, b]) => peso(plan, b) - peso(plan, a) || ia.localeCompare(ib));
-    const elegidos = modelos.filter(([id]) => !hechos.has(id)).slice(0, maximo);
+    // --modelos rehace fichas concretas (un rechazo de moderacion, una
+    // correccion del editor) aunque otra tanda ya las preparara.
+    const pedidos = args.modelos ? String(args.modelos).split(",").map((s) => s.trim()) : null;
+    const elegidos = pedidos
+      ? modelos.filter(([id]) => pedidos.includes(id))
+      : modelos.filter(([id]) => !hechos.has(id)).slice(0, maximo);
     if (!elegidos.length) {
       resumen.push({ corpus, laminas: 0, nota: modelos.length ? `capa ${capa.id} ya preparada entera` : `sin fichas de la capa ${capa.id}` });
       continue;
     }
 
-    const tanda = String(args.tanda || `tanda-${String(siguienteNumero(corpus)).padStart(2, "0")}-${capa.id}`);
+    const tanda = String(args.tanda || `tanda-${String(siguienteNumero(corpus)).padStart(2, "0")}-${capa.id}${pedidos ? "-rehechas" : ""}`);
     const dir = join(baseDir(corpus), tanda);
     if (existsSync(dir)) throw new Error(`ya existe ${dir}: cada preparacion va a una carpeta nueva`);
     const salida = resolve("output/imagegen", corpus, "biblia-v3", tanda);

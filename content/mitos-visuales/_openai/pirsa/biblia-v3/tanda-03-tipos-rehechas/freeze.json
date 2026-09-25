@@ -1,0 +1,42 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "pirsa",
+  "comunidad": "Pirsa",
+  "tanda": "tanda-03-tipos-rehechas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/pirsa.v3.json",
+    "sha256": "7a0bc234e59ad96d06d5b872e9b504b9a986f1fb995da44e6d2e29bb062d9be7"
+  },
+  "canon": {
+    "sha256": "e592ee7612a8063860ff3bdcd32c65cad12593fde05f0903e23abafe87f94019",
+    "verificado_en": "2026-09-25T13:45:16.177Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 4,
+  "fichas": [
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño de Pirsa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6269,
+      "prompt_sha256": "2b1bddd6f605a6d1b8e16aa05a13da9163a65969a51c86f1c4f7e659fa497d15"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "embera",
+  "comunidad": "Embera",
+  "tanda": "tanda-03-tipos-rehechas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/embera.v3.json",
+    "sha256": "699729677a7a0722af9ccc8596b02146a4ee2aa693ff49f955e0b9753f121290"
+  },
+  "canon": {
+    "sha256": "c63a3ed13c323e894a92ebe4c994be06637f9a34d1e703031bad914c4b1edebd",
+    "verificado_en": "2026-09-25T13:45:15.368Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 5,
+  "fichas": [
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base · anciana emberá",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6461,
+      "prompt_sha256": "833e8e0bae39f17c9f7fd74d114ecbda891b10e0398655c329c568793b836afe"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer emberá adulta",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6693,
+      "prompt_sha256": "091ff646caa263833f5fa6069722d6d39042dd1d70ebc044b47bf79cce0905a3"
+    }
+  ]
+}

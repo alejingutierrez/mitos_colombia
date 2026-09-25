@@ -1098,7 +1098,7 @@
         }
       ],
       "design": {
-        "silhouette": "Una mujer adulta tanimuka de pie, de frente y en reposo, con un recipiente ancho y bajo apoyado en la cadera: cuerpo entero de pocos planos grandes y cara aparte, y una falda corta y lisa de corteza batida como única prenda.",
+        "silhouette": "Una mujer adulta tanimuka de pie, de tres cuartos y en reposo, con un recipiente ancho y bajo sostenido con los dos brazos delante del pecho y el pelo suelto sobre los hombros: cuerpo entero de pocos planos grandes y cara aparte, y una falda corta y lisa de corteza batida como única prenda.",
         "materials": [
           "cuerpo de pocos planos grandes de papel color piel: torso, brazos, piernas y manos como piezas separadas, sin volumen modelado",
           "rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos",
@@ -1125,9 +1125,11 @@
         "editorial": [
           "La falda de corteza es inferencia desde la única tela documentada del ciclo, no un dato de vestido tanimuka: decisión reversible.",
           "El pelo suelto a los hombros es decisión editorial reversible: la fuente no describe peinado.",
-          "Lenguaje sí, ejemplar no: ninguna pieza reproduce un objeto, una pintura ni un adorno reales."
+          "Lenguaje sí, ejemplar no: ninguna pieza reproduce un objeto, una pintura ni un adorno reales.",
+          "Composición ajustada el 2026-09-25 porque el filtro de OpenAI bloqueó la lámina: se quitó todo adjetivo sobre el cuerpo y el objeto o el pelo van delante del pecho. El vestido documentado no cambia y no se añade ninguna prenda que el dossier no dé."
         ],
-        "states_to_model": []
+        "states_to_model": [],
+        "silhouette_previa": "Una mujer adulta tanimuka de pie, de frente y en reposo, con un recipiente ancho y bajo apoyado en la cadera: cuerpo entero de pocos planos grandes y cara aparte, y una falda corta y lisa de corteza batida como única prenda."
       },
       "model_requirements": [
         "identity_sheet"
@@ -3582,7 +3584,7 @@
         }
       ],
       "design_contract": {
-        "distinctive_silhouette": "Una mujer adulta tanimuka de pie, de frente y en reposo, con un recipiente ancho y bajo apoyado en la cadera: cuerpo entero de pocos planos grandes y cara aparte, y una falda corta y lisa de corteza batida como única prenda.",
+        "distinctive_silhouette": "Una mujer adulta tanimuka de pie, de tres cuartos y en reposo, con un recipiente ancho y bajo sostenido con los dos brazos delante del pecho y el pelo suelto sobre los hombros: cuerpo entero de pocos planos grandes y cara aparte, y una falda corta y lisa de corteza batida como única prenda.",
         "materials": [
           "cuerpo de pocos planos grandes de papel color piel: torso, brazos, piernas y manos como piezas separadas, sin volumen modelado",
           "rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos",
@@ -3609,14 +3611,15 @@
         "editorial_features": [
           "La falda de corteza es inferencia desde la única tela documentada del ciclo, no un dato de vestido tanimuka: decisión reversible.",
           "El pelo suelto a los hombros es decisión editorial reversible: la fuente no describe peinado.",
-          "Lenguaje sí, ejemplar no: ninguna pieza reproduce un objeto, una pintura ni un adorno reales."
+          "Lenguaje sí, ejemplar no: ninguna pieza reproduce un objeto, una pintura ni un adorno reales.",
+          "Composición ajustada el 2026-09-25 porque el filtro de OpenAI bloqueó la lámina: se quitó todo adjetivo sobre el cuerpo y el objeto o el pelo van delante del pecho. El vestido documentado no cambia y no se añade ninguna prenda que el dossier no dé."
         ]
       },
       "prompt_spec": {
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Tanimuka (Ufaina) V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. La cubierta de la maloca en dos texturas opuestas en el mismo techo: hoja soltada desde arriba, suelta y de canto irregular, y hoja tejida, trenzada y más envejecida. Estantillos como cilindros de papel enrollado; agua como planos translúcidos superpuestos; semilla y astilla como piezas pequeñas y plenas. La selva del bajo Apaporis se construye por planos escalonados en profundidad, nunca por perspectiva atmosférica pintada.",
-        "primary_request": "identidad corporal completa y legible para Tipo base · mujer adulta tanimuka (ufaina). Una mujer adulta tanimuka de pie, de frente y en reposo, con un recipiente ancho y bajo apoyado en la cadera: cuerpo entero de pocos planos grandes y cara aparte, y una falda corta y lisa de corteza batida como única prenda.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer adulta tanimuka (ufaina). Una mujer adulta tanimuka de pie, de tres cuartos y en reposo, con un recipiente ancho y bajo sostenido con los dos brazos delante del pecho y el pelo suelto sobre los hombros: cuerpo entero de pocos planos grandes y cara aparte, y una falda corta y lisa de corteza batida como única prenda.",
         "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Cuerpo entero a la escala de tipo_hombre_adulto, una cabeza más baja que el mayor de los cuatro hermanos: las dos láminas se superponen para comprobar la proporción.",
         "lighting_mood": "Tres estados y sólo tres. Día perpetuo: luz plana y alta, sin sombra dirigida y sin disco solar, para todo el primer episodio. La maloca del abuelo: el único interior oscuro de un mundo de día, con un fogón bajo la hamaca como única fuente. Y la noche con su amanecer, que dura exactamente una hoguera: luz de leña que va bajando hasta el tizón, y al clarear la oscuridad se recoge en los huecos y bajo las ollas. Ningún rayo volumétrico, ningún resplandor sobre una figura.",
         "materials_textures": "cuerpo de pocos planos grandes de papel color piel: torso, brazos, piernas y manos como piezas separadas, sin volumen modelado; rostro de óvalo plano de un solo tono, con cejas, ojos, nariz y boca recortados aparte y superpuestos; falda corta envolvente de corteza batida (marimá) en una sola pieza lisa, sin borde, franja ni motivo; pelo negro liso en un solo recorte plano, suelto hasta los hombros; platón de barro ancho y bajo, el recipiente del oficio de pesca que la fuente asigna a las mujeres",
