@@ -1,0 +1,62 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "makawanes",
+  "comunidad": "Makaguán",
+  "tanda": "tanda-04-tipos-rehechas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/makawanes.v3.json",
+    "sha256": "a8df517623f8b4c7bb6facb374b032403cf631fa7eb7361b76594bb9bc7646b0"
+  },
+  "canon": {
+    "sha256": "4b909272d7fc7ea60af087d7555d666ff1de6e8bc91a706f308ff8f08a1f8b6d",
+    "verificado_en": "2026-09-25T14:03:57.016Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 8,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre adulto makaguán",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-makawanes",
+        "la-gran-inundacion",
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6759,
+      "prompt_sha256": "eb60244fba034bd428863c15fa359ab25b7206503e599d251fb8da7bcb4f5622"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer joven makaguán",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-makawanes",
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6466,
+      "prompt_sha256": "86895259762bb6d675fbd26fa97d7287a625826a3d5704ad2a1ebe1fa50643cc"
+    }
+  ]
+}

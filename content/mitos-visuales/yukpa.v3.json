@@ -797,8 +797,8 @@
     "dossier": "docs/investigacion/yukpa.md"
   },
   "inventory": {
-    "status": "reconciling",
-    "frozen": false,
+    "status": "approved_frozen",
+    "frozen": true,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -808,7 +808,7 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19",
+    "approved_at": "2026-09-24",
     "reconciliation": {
       "opened_at": "2026-09-24",
       "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
@@ -817,8 +817,40 @@
         "los-dos-caminos-del-cielo"
       ],
       "new_myths": [],
-      "unchanged_myths": []
-    }
+      "unchanged_myths": [],
+      "closed_at": "2026-09-24",
+      "summary": "2 relatos releídos: 10 añadidas (Amoricha requerido; flechas de cera y Sol que come gente embebidos; eclipse en la casa de la Luna, ruido del eclipse, versiones sokorpa/iroka, panteón institucional, muros de los animales y causa del diluvio excluidos), 4 excluidas por el canon nuevo (Kopeco, su rana, el pozo de brasas y el agua donde cae), 7 rediseñadas (los dos soles, luna, nacimiento de la noche, cumbres que hablan, quien advierte, armadillos yukpapi, gente) y 2 tipos base; mujer joven, niño, anciano y anciana declarados ausentes."
+    },
+    "declared_absences": [
+      {
+        "entity_id": "tipo_mujer_joven",
+        "name": "Tipo base · mujer joven yukpa",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Las únicas muchachas del corpus son las hijas de la Luna en su primera sangre, que el dossier prohíbe mostrar (§4). No se inventa."
+      },
+      {
+        "entity_id": "tipo_nino",
+        "name": "Tipo base · niño yukpa",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Ningún relato pone niños en escena. No se inventa."
+      },
+      {
+        "entity_id": "tipo_anciano",
+        "name": "Tipo base · anciano yukpa",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "El tomaira narrador estaba en el texto inventado y quedó excluido; ningún viejo actúa. No se inventa."
+      },
+      {
+        "entity_id": "tipo_anciana",
+        "name": "Tipo base · anciana yukpa",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Ninguna mujer mayor actúa. No se inventa."
+      }
+    ]
   },
   "myths": {
     "la-piedra-que-flota": {
@@ -841,9 +873,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura tuvo que hacerse contra el texto y no con él: las research_notes del propio canon declaran que el relato es «un mito nuevo», y la pasada de objetos y la de roles sin nombre devolvieron piedra flotante, venado guía, pareja encerrada, animales que empujan y abuelo narrador, cinco entidades que ninguna fuente yukpa sostiene y que se fueron enteras a excluded —siete de trece refs—; lo que quedó en pie sólo lo sostiene la corrección editorial, y ahí la pasada de lugares dio el hallazgo que decide la biblia: Shkhimo y Tʉtarhi no son un par de picos gemelos sino una jerarquía cuya cumbre más alta depende de desde dónde se mire, de modo que el modelo de entorno pasó a componerse por bandas de cota y no por profundidad.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito narra el diluvio de semanas y meses con su larga noche, pone la advertencia en las propias montañas Shkhimo y Tʉtarhi, que «eran personas, y hablaron», ahoga a los que escogieron el cerro más cercano y no el más alto, lleva al relato que los armadillos cavaban siendo todavía yukpapi y sólo después animales, y añade el hambre y, en algunas narraciones, el incendio y la sequía que dejan la tierra en roca pelada; el reparto moral y los animales de los muros quedan en versiones.",
         "previous_note": "La lectura tuvo que hacerse contra el texto y no con él: las research_notes del propio canon declaran que el relato es «un mito nuevo», y la pasada de objetos y la de roles sin nombre devolvieron piedra flotante, venado guía, pareja encerrada, animales que empujan y abuelo narrador, cinco entidades que ninguna fuente yukpa sostiene y que se fueron enteras a excluded —siete de trece refs—; lo que quedó en pie sólo lo sostiene la corrección editorial, y ahí la pasada de lugares dio el hallazgo que decide la biblia: Shkhimo y Tʉtarhi no son un par de picos gemelos sino una jerarquía cuya cumbre más alta depende de desde dónde se mire, de modo que el modelo de entorno pasó a componerse por bandas de cota y no por profundidad."
       },
       "entity_refs": [
@@ -921,6 +953,26 @@
           "entity_id": "senales_y_utileria_heredadas",
           "role": "plot_object",
           "note": "Agrupados en una sola entrada porque son la utilería completa del relato inventado. Con ellos fuera, el corpus Yukpa corregido se queda sin objetos y por eso no lleva hoja de utilería."
+        },
+        {
+          "entity_id": "muros_de_los_animales_de_mincultura",
+          "role": "variant",
+          "note": "Versión institucional; no se funde."
+        },
+        {
+          "entity_id": "causa_del_diluvio",
+          "role": "variant",
+          "note": "Causas de versiones; fuera de lámina."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los hombres yukpa."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: las mujeres yukpa."
         }
       ]
     },
@@ -944,9 +996,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La pasada de estados y la de nombres propios se contradijeron entre sí y ésa es toda la historia de esta ficha: el estado que el texto muestra es un brillo que se vuelve pálido como ceniza, pero la versión etnográfica del mismo episodio da un rasgo mucho más duro y mucho más dibujable —una flecha de punta ciega de cera de abeja negra en el ojo de uno de los soles, «que se volvió negro»—, de modo que la hoja de estado se escribió sobre el ojo apagado y no sobre la palidez; y la pasada de nombres propios encontró que quien dispara no es Kopeco ni está en el inventario, porque en las fuentes colombianas el episodio lo conduce Amoricha, dejando a la única personaje nombrada del relato y al lugar donde ocurre sostenidos por una sola transmisión irapa venezolana.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito cambia el relato entero: sale Kopeco con su rana, sale el pozo de brasas, y entra la versión etnográfica del Perijá —dos soles bajo un cielo que hace hervir el agua, Amoricha disparando flechas romas de cera negra que suben el cielo y el tiro al ojo que vuelve luna a un sol—, más un episodio nuevo de eclipse en la casa de la Luna, con el cazador escondido en las vasijas de las muchachas en su primera sangre, que queda fuera de lámina por la regla de la reclusión.",
         "previous_note": "La pasada de estados y la de nombres propios se contradijeron entre sí y ésa es toda la historia de esta ficha: el estado que el texto muestra es un brillo que se vuelve pálido como ceniza, pero la versión etnográfica del mismo episodio da un rasgo mucho más duro y mucho más dibujable —una flecha de punta ciega de cera de abeja negra en el ojo de uno de los soles, «que se volvió negro»—, de modo que la hoja de estado se escribió sobre el ojo apagado y no sobre la palidez; y la pasada de nombres propios encontró que quien dispara no es Kopeco ni está en el inventario, porque en las fuentes colombianas el episodio lo conduce Amoricha, dejando a la única personaje nombrada del relato y al lugar donde ocurre sostenidos por una sola transmisión irapa venezolana."
       },
       "entity_refs": [
@@ -999,15 +1051,60 @@
           "entity_id": "tomaira_abuelo_narrador",
           "role": "secondary",
           "note": "El tomaira existe en la etnografía Yukpa, pero no en la secuencia documentada de estos dos relatos; fichar su cuerpo sería inventar un especialista ritual para ilustrar una escena retirada."
+        },
+        {
+          "entity_id": "amoricha",
+          "role": "primary",
+          "note": "Nuevo en el canon reescrito y primaria del relato: dispara las flechas de cera que suben el cielo y hacen la noche."
+        },
+        {
+          "entity_id": "flechas_de_cera_negra",
+          "role": "plot_object",
+          "note": "Las flechas que empujan el cielo; en la hoja de Amoricha."
+        },
+        {
+          "entity_id": "eclipse_en_la_casa_de_la_luna",
+          "role": "magic_subject",
+          "note": "Nuevo en el canon reescrito; do_not_visualize por la regla de la reclusión."
+        },
+        {
+          "entity_id": "sol_cazador_de_gente",
+          "role": "secondary",
+          "note": "El carácter del Sol; embebido en la ficha de los soles."
+        },
+        {
+          "entity_id": "ruido_contra_el_eclipse",
+          "role": "magic_subject",
+          "note": "Práctica del eclipse; fuera de lámina."
+        },
+        {
+          "entity_id": "versiones_sokorpa_e_iroka",
+          "role": "variant",
+          "note": "Variantes del mecanismo; no se funden."
+        },
+        {
+          "entity_id": "panteon_de_mincultura",
+          "role": "variant",
+          "note": "Cuadro institucional; no se mezcla."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los hombres yukpa."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: las mujeres yukpa."
         }
       ]
     }
   },
   "entities": {
     "soles_hermanos": {
-      "name": "Los dos Soles hermanos (uno se vuelve Luna)",
+      "name": "Los dos soles (uno se vuelve Luna)",
       "kind": "deidad_fuerza",
-      "description": "Conducen la acción y son el sujeto del relato. Dos hermanos idénticos resueltos en una identidad; el paso a Luna está mostrado («salió de las brasas», «ascendió convertido en Luna») y cambia silueta y temperatura de luz, así que cuesta una hoja de estado.",
+      "description": "Dos soles en un cielo tan bajo que el agua hervía y nunca oscurecía. Amoricha dispara flechas romas de cera negra, el cielo sube, y al darle en el ojo a uno de los soles éste se oscurece, se queda arriba con una luz fría y es la luna. Después el Sol es bravo y come gente, y la Luna es mansa.",
       "aliases": [],
       "states": [
         "canonico",
@@ -1058,11 +1155,16 @@
           "myth": "los-dos-caminos-del-cielo",
           "field": "mito",
           "note": "La separación entre Sol y Luna introduce la alternancia de día y noche, un clima templado y una serie de distinciones asociadas —caliente frente a frío, seco frente a húmedo— y contrastes estacionales: es diferenciación del mundo y no un eclipse ni una explicación astronómica"
+        },
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "mito",
+          "note": "El canon reescrito retira las brasas y a Kopeco: Amoricha dispara flechas romas de cera negra, el cielo sube y el sol herido en el ojo se vuelve la luna."
         }
       ],
       "census_note": "Conducen la acción y son el sujeto del relato. Dos hermanos idénticos resueltos en una identidad; el paso a Luna está mostrado («salió de las brasas», «ascendió convertido en Luna») y cambia silueta y temperatura de luz, así que cuesta una hoja de estado.",
       "design": {
-        "silhouette": "Dos discos hermanos del mismo diámetro, pegados uno al otro y colgados tan bajo que el borde superior del encuadre los corta y la cresta del Perijá les queda a la altura del canto: cada disco lleva un único ojo recortado en el centro y nada más —sin boca, sin rayos, sin corona, sin cuerpo—, y ésa es la única ficha de esta biblia donde dos piezas idénticas comparten encuadre sin que una sea el reflejo de la otra.",
+        "silhouette": "Dos discos iguales del mismo diámetro, pegados uno al otro y colgados tan bajo que el borde superior del encuadre los corta y la cresta del Perijá les queda a la altura del canto: cada disco lleva un único ojo recortado en el centro y nada más —sin boca, sin rayos, sin corona, sin cuerpo—, y ésa es la única ficha de esta biblia donde dos piezas idénticas comparten encuadre sin que una sea el reflejo de la otra.",
         "materials": [
           "dos discos de papel amarillo-naranja saturado y plano, sin degradado y sin halo recortado alrededor",
           "papel de cielo blanqueado por el calor, más pálido que el azul saturado del estado ordinario",
@@ -1074,11 +1176,12 @@
         "scale": "Los dos discos juntos ocupan la banda superior del encuadre y su diámetro se mide contra la cresta de la serranía en el borde inferior: están bajos porque el firmamento todavía no ha subido, y esa cercanía es la escala del relato, no un encuadre de astro lejano.",
         "continuity": [
           "el diámetro del disco no cambia entre el estado canónico y el de luna: lo que cambia es el ojo y la temperatura del papel, nunca el tamaño",
-          "los dos hermanos son la misma pieza recortada dos veces y no se distinguen entre sí antes del disparo",
+          "los dos soles son la misma pieza recortada dos veces y no se distinguen entre sí antes del disparo",
           "el ojo es siempre un círculo recortado en el centro del disco, en la misma posición en las dos hojas",
-          "ninguna de las dos hojas lleva flecha clavada, arco ni tirador: la ficha es de los soles, y quien dispara no está en el inventario"
+          "ninguna de las dos hojas lleva flecha clavada, arco ni tirador: la ficha es de los soles, y quien dispara, Amoricha, tiene su propia hoja"
         ],
         "documented": [
+          "canon, campo mito: «Había dos soles en el cielo y el cielo estaba bajo… el agua de los ríos y de las lagunas hervía… nunca oscurecía»; Amoricha «apuntó a uno de los dos soles y le dio en el ojo. El sol herido se oscureció. No se apagó del todo ni cayó: se quedó arriba, con una luz distinta, fría, y desde entonces es la luna»",
           "el estado inicial es de luz perpetua y calor abrasador, con los soles demasiado cerca de la Tierra y «el agua en los ríos y lagos hirviendo» (dossier §1 y §7, halbmayer-2016)",
           "la transformación es por una flecha de punta ciega de cera de abeja negra disparada al ojo de uno de los soles, que «se volvió negro y se convirtió en la luna», mientras el firmamento empieza a subir (dossier §0.3 y §7)",
           "disparar aquí «no tiene la intención de matar, no es una actividad predatoria»: crea la distancia que hace posible la vida, y la lámina no puede leerse como agresión ni como duelo (dossier §0.3)",
@@ -1088,7 +1191,7 @@
         ],
         "editorial": [
           "resolverlos como dos discos con un ojo recortado, y no como cuerpos, es decisión editorial: ninguna fuente describe el cuerpo de los soles, y el único rasgo anatómico que la fuente nombra es el ojo; reversible sin tocar el resto de la ficha",
-          "el canon publicado y el módulo hacen salir al hermano «de las brasas»; la versión etnográfica no tiene brasas sino flechas (dossier §0.3). Esta ficha se dibuja sobre la etnográfica y la variante de las brasas se declara en la hoja del pozo, no aquí",
+          "el canon reescrito sigue ya la versión etnográfica: no hay brasas, sino una flecha en el ojo; el pozo de brasas queda excluido. Los soles ya no se llaman hermanos en el relato, y la ficha no los hace parientes",
           "la temperatura del papel de la luna —el mismo amarillo enfriado hacia el gris de ceniza— es interpretación editorial: la fuente sólo dice que el ojo se volvió negro",
           "el agua hirviendo del estado inicial se resuelve con lengüetas planas de papel y no con vapor, para no romper la regla de superficie plana"
         ],
@@ -1115,15 +1218,9 @@
       ],
       "evidence_basis": "uncertain",
       "sensitivity": "public",
-      "visual_status": "required",
-      "model_requirements": [
-        "identity_sheet",
-        "state_sheet"
-      ],
-      "model_refs": [
-        "kopeco__identity_sheet",
-        "kopeco__state_sheet"
-      ],
+      "visual_status": "excluded",
+      "model_requirements": [],
+      "model_refs": [],
       "legacy_model_refs": [],
       "myth_refs": [
         "los-dos-caminos-del-cielo"
@@ -1156,6 +1253,15 @@
         }
       ],
       "census_note": "Prepara el engaño y desencadena todo. La transformación en rana está mostrada («la arroja al agua… allí queda convertida en rana») y cambia la silueta por completo.",
+      "states_declared": [
+        "rana"
+      ],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation",
+        "uncertain"
+      ],
+      "exclusion_reason": "no aparece en el canon reescrito del 2026-09-23: el relato de los dos soles pasa a la versión etnográfica del Perijá, donde quien actúa es Amoricha, y Kopeco —transmisión irapa venezolana única (dossier §0.3)— sale del texto y de sus versiones",
       "design": {
         "silhouette": "Mujer sola de pie en el giro de una vuelta, con el vestido de una pieza hasta los tobillos abierto en el aire y los dos pies a distinta altura, mirando por encima del hombro hacia atrás y nunca de frente: es la única figura humana de esta biblia que aparece sin compañía, en movimiento y con la cara vuelta hacia fuera del encuadre.",
         "materials": [
@@ -1189,15 +1295,7 @@
         "states_to_model": [
           "rana"
         ]
-      },
-      "states_declared": [
-        "rana"
-      ],
-      "evidence_basis_mix": [
-        "documented_core",
-        "editorial_interpretation",
-        "uncertain"
-      ]
+      }
     },
     "pozo_de_brasas": {
       "name": "El lugar de brasas",
@@ -1209,13 +1307,9 @@
       ],
       "evidence_basis": "editorial_interpretation",
       "sensitivity": "public",
-      "visual_status": "required",
-      "model_requirements": [
-        "spatial_model"
-      ],
-      "model_refs": [
-        "pozo_de_brasas__spatial_model"
-      ],
+      "visual_status": "excluded",
+      "model_requirements": [],
+      "model_refs": [],
       "legacy_model_refs": [],
       "myth_refs": [
         "los-dos-caminos-del-cielo"
@@ -1233,6 +1327,12 @@
         }
       ],
       "census_note": "Escenario del acto decisivo: el Sol cae ahí y sale cambiado. No es intercambiable con el paisaje del Perijá ni con una fogata genérica.",
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "editorial_interpretation"
+      ],
+      "exclusion_reason": "no aparece en el canon reescrito del 2026-09-23: el sol no cae en brasas sino que recibe una flecha en el ojo, que es la versión etnográfica que el dossier ya prefería (§7)",
       "design": {
         "silhouette": "Un círculo cerrado de brasas estilizadas visto desde arriba en picado cenital, sin fogón, sin leña, sin llama y sin nadie alrededor: un anillo de piezas rojas planas sobre suelo oscuro, y es la única ficha de esta biblia que se compone desde arriba y la única sin línea de horizonte.",
         "materials": [
@@ -1260,12 +1360,7 @@
           "si la consulta comunitaria confirma la versión etnográfica, esta ficha se retira entera y su lugar lo ocupa el firmamento que sube: está construida para poder desaparecer sin arrastrar a ninguna otra"
         ],
         "states_to_model": []
-      },
-      "states_declared": [],
-      "evidence_basis_mix": [
-        "documented_core",
-        "editorial_interpretation"
-      ]
+      }
     },
     "serrania_del_perija": {
       "name": "Serranía del Perijá (nacederos, quebradas, monte del Cesar)",
@@ -1322,6 +1417,11 @@
           "myth": "los-dos-caminos-del-cielo",
           "field": "mito",
           "note": "El diluvio no se lee como castigo divino: «la causa de las lluvias y de la inundación en muchas versiones no es mencionada» y la inundación yukpa «a diferencia del diluvio bíblico, no se considera como un castigo divino». Los yukpa de hoy atribuyen las inundaciones actuales a las transgresiones de los watiya: deforestación, quemas, minería, desvío de ríos y agricultura industrial"
+        },
+        {
+          "myth": "la-piedra-que-flota",
+          "field": "mito",
+          "note": "Tras el agua, «en algunos relatos… vino un incendio y una sequía que… dejaron la tierra en pura roca, pelada, sin monte y sin dónde hacer conuco»: es el estado de quema y sequía, marcado como de sólo algunas narraciones."
         }
       ],
       "census_note": "Modelo de entorno único de los dos relatos: las montañas recalentadas del primero y los valles anegados del segundo son el mismo mundo.",
@@ -1420,6 +1520,11 @@
           "myth": "la-piedra-que-flota",
           "field": "mito",
           "note": "El mundo fue tejido por una araña al principio y ese tejido debe repararse; el héroe cultural es una araña, un aspecto del sol, que «estaba tejiendo las montañas, los árboles y las hojas de modo a proveer sombra». La montaña del Perijá, en este corpus, está tejida"
+        },
+        {
+          "myth": "la-piedra-que-flota",
+          "field": "mito",
+          "note": "El canon reescrito pone la advertencia en boca de las montañas: Shkhimo y Tʉtarhi «eran personas, y hablaron»; quien escogió el cerro más cercano, que no era el más alto, se ahogó."
         }
       ],
       "census_note": "Refugio nombrado del diluvio y escenario del acto de sobrevivir. El modelo de entorno del Perijá no entrega dos cumbres verdes emergiendo sobre un mar de agua.",
@@ -1442,7 +1547,7 @@
         "documented": [
           "Shkhimo y Tʉtarhi son «las montañas más altas de la Sierra de Perijá» y en Sokorpa están personificadas y pensadas como actores míticos (dossier §7, halbmayer-goletz-2025)",
           "su jerarquía no es fija: «dependiendo de la ubicación del territorio Yukpa correspondiente, aparece Shkhimo o Tʉtarhi como la montaña más alta» (dossier §0.4)",
-          "la altura es moral: los buenos suben a la más alta y quienes pelean o roban «son enviados a la montaña más baja, donde se ahogan» (dossier §0.4)",
+          "canon, campo mito: las dos montañas «no eran sólo piedra y niebla. Eran personas, y hablaron. Avisaron que subieran, y dijeron a cuál de las dos había que subir»; los que no creyeron o escogieron «el cerro que les quedaba más cerca y que no era el más alto» se ahogaron allí. El reparto moral —buenos arriba, los que pelean o roban abajo— es la versión cristianizada (canon, campo versiones)",
           "el estado de luz es el del diluvio: oscuridad y una larga noche sostenidas durante semanas y meses, sin dramatismo de tormenta (dossier §7)",
           "no hay altitud publicada para ninguna de las dos, y la única identificación castellana hallada —Shikimu, el Cerro de las Tres Tetas de 1960, en cabeceras del Tucuco— está del lado venezolano y tiene un homónimo a veinticinco kilómetros que no se pudo descartar (dossier §7 y §11)"
         ],
@@ -1450,7 +1555,8 @@
           "dibujar la diferencia de cota como un tercio del encuadre es cuantificación editorial de una jerarquía que la fuente da como relativa y sin medida; reversible",
           "la decisión de no rotular cuál cumbre es cuál es editorial y deliberada: rotularlas fijaría un punto de vista territorial concreto, y la fuente dice que el punto de vista es precisamente lo que cambia",
           "la forma de las dos masas —lomas redondeadas y no picos— se toma de las láminas comunitarias del Perijá y no de estas montañas en particular, que nadie describe",
-          "poner figuras sobre la cumbre alta es decisión editorial para dar escala; puede retirarse y la ficha sigue leyéndose como jerarquía"
+          "poner figuras sobre la cumbre alta es decisión editorial para dar escala; puede retirarse y la ficha sigue leyéndose como jerarquía",
+          "Que las montañas sean personas y hablen se dibuja como montaña y sólo como montaña: sin rostro, sin boca y sin figura sobre la cumbre que las represente. La advertencia se lee por la gente que sube hacia la que habló."
         ],
         "states_to_model": []
       },
@@ -1512,6 +1618,11 @@
           "myth": "los-dos-caminos-del-cielo",
           "field": "mito",
           "note": "Hay una noción activa de lo que no debe ser mirado: en el eclipse ciertas personas «deben esconderse y permanecer en sus chozas sin hablar ni hacer ruido» y «no deben ser vistas ni por el Sol ni por la Luna» —las de matrimonio considerado incorrecto y las que están tamipi, sobre todo las muchachas en su primera menstruación—. No hay lámina de eclipse, de reclusión ni de samayapa"
+        },
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "mito",
+          "note": "El canon reescrito lleva al relato el cielo que sube con cada flecha roma y el tiro al ojo que hace la noche."
         }
       ],
       "census_note": "Es aquello por lo que se cuenta el relato. La regla fija cómo lee el cielo antes (claridad continua, sin sombra) y después (dos astros separados, pausa), y evita que el ilustrador dibuje una noche cualquiera.",
@@ -1533,6 +1644,7 @@
           "no hay estrella, ni nube, ni Vía Láctea en la tercera franja: la noche que nace es plana y vacía"
         ],
         "documented": [
+          "canon, campo mito: Amoricha dispara hacia arriba con «puntas romas, hechas con cera de abeja negra, hechas para tocar y no para herir… y el cielo empezó a subir»; con el tiro al ojo «quedaron hechas de golpe todas las diferencias que faltaban: el día y la noche, el calor y el frío, lo seco y lo húmedo»",
           "el estado inicial es de luz perpetua sin oscurecer nunca, con los soles demasiado cerca y el agua de ríos y lagos hirviendo (dossier §7)",
           "el firmamento empieza a subir durante el episodio, y ése es el cambio que hace posible la distancia (dossier §0.3)",
           "el disparo da en el ojo de uno de los soles, «que se volvió negro y se convirtió en la luna» (dossier §0.3)",
@@ -1603,6 +1715,11 @@
           "myth": "la-piedra-que-flota",
           "field": "mito",
           "note": "Owaya significa mundo, tierra o territorio y es uno de los conceptos más importantes para el yukpa; sus dos estados, owaya tamorhiya (el mundo en construcción) y owaya akayi (el mundo que se daña), separan los dos relatos del corpus: los dos Soles pertenecen al primero y el diluvio es el ejemplo mayor del segundo"
+        },
+        {
+          "myth": "la-piedra-que-flota",
+          "field": "mito",
+          "note": "«cayó durante semanas y después durante meses, y con ella vino una oscuridad larga, una noche que no cedía»; «Murieron muchas personas. Murieron también los árboles y los animales»."
         }
       ],
       "census_note": "Objeto del relato. La regla debe fijar semanas o meses de lluvia con oscuridad, no una tormenta; el texto insiste en que es una de-creación parcial, no un borrón total.",
@@ -1685,6 +1802,11 @@
           "myth": "la-piedra-que-flota",
           "field": "mito",
           "note": "Existe un dibujo yukpa de la narración del diluvio, hecho por los estudiantes de la escuela bilingüe Santa Teresita en Sokorhpa en un taller dirigido por Gilberto Rodríguez López en 2015. Es la referencia visual comunitaria directa del relato que se va a ilustrar, y este dossier sólo pudo constatar que existe"
+        },
+        {
+          "myth": "la-piedra-que-flota",
+          "field": "mito",
+          "note": "El canon reescrito los hace yukpapi mientras cavan y sólo después animales: «Cavaron. Abrieron por debajo el camino del agua y la hicieron hundirse. Donde pasó la garra apareció otra vez el suelo»."
         }
       ],
       "census_note": "Conducen la acción del desenlace: cavan, beben o conducen el exceso hacia abajo hasta que reaparece la tierra habitable. Una identidad de especie repetida basta; no necesita gramática de grupo.",
@@ -1706,6 +1828,7 @@
           "no hay hierro en ninguna lámina donde aparezcan: ni machete, ni olla, ni herramienta"
         ],
         "documented": [
+          "canon, campo mito: «En aquel tiempo los armadillos todavía no eran del todo animales: eran yukpapi, gente como la gente… Cavaron. Abrieron por debajo el camino del agua y la hicieron hundirse»; sólo después «tomaron la forma de animales que hoy tienen»",
           "«las narrativas describen cómo los armadillos hacen que el agua se hunda, creando así una nueva división o separación de la tierra y el agua y, en consecuencia, entre zonas hidrológicas, bosques, áreas residenciales y de cultivo»: re-diferencian el mundo, no cavan drenajes (dossier §0.5)",
           "en irapa se dice «se salvó la tierra y quien lo arregló era el armadillo» (dossier §0.5)",
           "tienen nombre: kamasĉhu, y Kamashrhush en Sokorpa, donde transmite su canto en sueños a una mujer de conocimiento (dossier §0.5 y §7)",
@@ -1716,7 +1839,8 @@
           "la morfología entera es interpretación editorial reversible: se resuelve con armadillo común porque no hay especie, ni talla, ni conteo de bandas en ninguna fuente, y así se declara (dossier §11)",
           "repetirlo tres veces en hilera, en vez de dibujar un grupo, es decisión editorial tomada del censo —basta una identidad de especie repetida— y es reversible a un solo animal",
           "que su condición de yukpapi no se dibuje —ni rasgo humano, ni postura erguida, ni ropa— es decisión editorial: la fuente dice que eran como humanos antes, y dibujarlo así confundiría la ficha con la de gente",
-          "el canto que Kamashrhush transmite en sueños no se dibuja: es materia de conocimiento y no hay fuente que lo describa"
+          "el canto que Kamashrhush transmite en sueños no se dibuja: es materia de conocimiento y no hay fuente que lo describa",
+          "La condición yukpapi que el canon reescrito lleva al relato se declara y no se dibuja como híbrido: la hoja los da en la forma de armadillo por la que se les recuerda, porque un cuerpo medio humano inventaría lo que el relato llama «no del todo»; el tiempo indiferenciado se lee en el agua sin orilla, no en el animal. Reversible si una lectura yukpa pide otra cosa."
         ],
         "states_to_model": []
       },
@@ -1793,7 +1917,7 @@
           "arco largo de madera clara o rojiza con la empuñadura envuelta en hilo, y flechas más largas que el arco",
           "papel de piel de un solo tono para el óvalo plano de la cara, con los rasgos recortados como piezas aparte"
         ],
-        "palette": "Azul claro y blanco con franjas rojas verticales en los hombres, y un tono liso saturado distinto por mujer, contra el verde intenso de la ladera y el naranja-rojizo del suelo; ninguna prenda repite exactamente el color del vestido de Kopeco, para que ella se lea como figura suelta y no como una más del grupo.",
+        "palette": "Azul claro y blanco con franjas rojas verticales en los hombres, y un tono liso saturado distinto por mujer, contra el verde intenso de la ladera y el naranja-rojizo del suelo; ninguna prenda del grupo repite el claro con franjas de Amoricha en la misma lámina, para que él se lea como figura suelta.",
         "scale": "Figuras enteras de pie, de estatura corta declarada, todas a la misma cota del suelo y sin que ninguna sobresalga del resto; el grupo entero ocupa la banda inferior del encuadre y el paisaje se lleva las dos terceras partes, porque la cota importa más que la talla.",
         "continuity": [
           "nadie lleva corona, diadema ni pluma en ninguna lámina del corpus, y nadie lleva pintura facial",
@@ -1929,7 +2053,7 @@
     "luna": {
       "name": "Luna",
       "kind": "deidad_fuerza",
-      "description": "No es otro ser: es el estado del hermano solar que pasó por las brasas. Se resuelve en la hoja de estado de esa ficha.",
+      "description": "El estado del sol herido en el ojo: «se quedó arriba, con una luz distinta, fría, y desde entonces es la luna». Mansa, da de comer y esconde; su papel en el episodio del eclipse queda fuera de lámina.",
       "aliases": [],
       "states": [
         "canonico"
@@ -1968,11 +2092,16 @@
           "myth": "los-dos-caminos-del-cielo",
           "field": "mito",
           "note": "Hay una noción activa de lo que no debe ser mirado: en el eclipse ciertas personas «deben esconderse y permanecer en sus chozas sin hablar ni hacer ruido» y «no deben ser vistas ni por el Sol ni por la Luna» —las de matrimonio considerado incorrecto y las que están tamipi, sobre todo las muchachas en su primera menstruación—. No hay lámina de eclipse, de reclusión ni de samayapa"
+        },
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "mito",
+          "note": "«La Luna es mansa, da de comer y esconde.»"
         }
       ],
       "census_note": "No es otro ser: es el estado del hermano solar que pasó por las brasas. Se resuelve en la hoja de estado de esa ficha.",
       "covered_by": "soles_hermanos",
-      "coverage_note": "No es otro ser: es el estado del hermano solar que pasó por las brasas. Se resuelve en la hoja de estado de esa ficha.",
+      "coverage_note": "El astro se resuelve en la hoja de estado de los dos soles; la Luna que acoge al cazador y recibe las mantas en la cara pertenece al eclipse, que no se dibuja.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -1987,7 +2116,7 @@
       ],
       "evidence_basis": "uncertain",
       "sensitivity": "public",
-      "visual_status": "embedded",
+      "visual_status": "excluded",
       "model_requirements": [],
       "model_refs": [],
       "legacy_model_refs": [],
@@ -2002,11 +2131,10 @@
         }
       ],
       "census_note": "Es la forma final de Kopeco, no una especie aparte del relato.",
-      "covered_by": "kopeco",
-      "coverage_note": "Es la forma final de Kopeco, no una especie aparte del relato.",
       "evidence_basis_mix": [
         "uncertain"
-      ]
+      ],
+      "exclusion_reason": "no aparece en el canon reescrito del 2026-09-23: sin Kopeco no hay rana; el relato ya no tiene transformación en animal"
     },
     "agua_donde_cae_kopeco": {
       "name": "Agua donde cae Kopeco (laguna o río de montaña)",
@@ -2018,7 +2146,7 @@
       ],
       "evidence_basis": "uncertain",
       "sensitivity": "public",
-      "visual_status": "embedded",
+      "visual_status": "excluded",
       "model_requirements": [],
       "model_refs": [],
       "legacy_model_refs": [],
@@ -2033,11 +2161,10 @@
         }
       ],
       "census_note": "El texto corregido sólo dice «la arroja al agua»; la escena aprobada la sitúa en una laguna. Es una variante del mismo modelo de entorno.",
-      "covered_by": "serrania_del_perija",
-      "coverage_note": "El texto corregido sólo dice «la arroja al agua»; la escena aprobada la sitúa en una laguna. Es una variante del mismo modelo de entorno.",
       "evidence_basis_mix": [
         "uncertain"
-      ]
+      ],
+      "exclusion_reason": "no aparece en el canon reescrito del 2026-09-23: sin Kopeco no hay agua donde arrojarla"
     },
     "canales_excavados": {
       "name": "Canales por donde desciende el agua",
@@ -2155,10 +2282,15 @@
           "myth": "la-piedra-que-flota",
           "field": "mito",
           "note": "Tomaira, tuano y tuwancha son tres figuras distintas y no un solo especialista: el tomaira organiza las ceremonias y conoce los cantos, el tuano tiene los poderes y maneja las plantas curativas, y tuwancha, «el que sabe», es el término vivo en Sokorpa. El canon congelado usaba «tomaira» para un personaje inventado; ninguno de los tres entra en lámina"
+        },
+        {
+          "myth": "la-piedra-que-flota",
+          "field": "versiones",
+          "note": "«En algunas regiones… son las propias montañas Shkhimo y Tʉtarhi, pensadas como personas, las que instruyen. En otras avisa un tuwancha… En otras es el creador deificado. La página narra la primera y no las funde.»"
         }
       ],
       "census_note": "Detectada en la séptima pasada. Si el guion necesita la advertencia, debe resolverse sin cuerpo (señal, sueño, montaña sin rostro).",
-      "exclusion_reason": "variante no resuelta y sin descripción visual: el texto ofrece tres posibilidades excluyentes y no describe ninguna; elegir una fijaría una variante como doctrina e inventaría su cuerpo",
+      "exclusion_reason": "el canon reescrito narra la versión de Sokorhpa, en la que advierten las propias montañas, y esa advertencia vive en la ficha de las cumbres, sin rostro; el tuwancha y el creador deificado quedan como versiones que la página «no funde», y ninguna de las dos tiene descripción",
       "evidence_basis_mix": [
         "documented_core",
         "variant"
@@ -2354,6 +2486,410 @@
       "evidence_basis_mix": [
         "documented_core"
       ]
+    },
+    "muros_de_los_animales_de_mincultura": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-piedra-que-flota"
+      ],
+      "name": "El carpintero, el tapir, el caimán, el cangrejo y la tortuga que levantan muros",
+      "kind": "colectivo",
+      "evidence_basis": "variant",
+      "visual_status": "excluded",
+      "description": "En la síntesis de Jaramillo que recoge el Ministerio de Cultura no resuelven los armadillos sino el pájaro carpintero, el tapir, el caimán, el cangrejo y la tortuga, que levantan muros contra las inundaciones.",
+      "exclusion_reason": "otra versión, de fuente institucional de segunda mano; el canon la registra y narra la de los armadillos",
+      "evidence": [
+        {
+          "myth": "la-piedra-que-flota",
+          "field": "versiones",
+          "note": "«no son los armadillos quienes resuelven, sino el pájaro carpintero, el tapir, el caimán, el cangrejo y la tortuga, que levantan muros»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "causa_del_diluvio": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "sensitive",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "la-piedra-que-flota"
+      ],
+      "name": "La causa del diluvio: incesto o castigo",
+      "kind": "fenomeno",
+      "evidence_basis": "variant",
+      "visual_status": "excluded",
+      "description": "La mayoría de versiones no da causa; algunas la atribuyen al quebrantamiento del incesto, que enlaza el diluvio con el eclipse, y las cristianizadas hacen el reparto moral de las dos montañas.",
+      "exclusion_reason": "el canon narra un diluvio sin causa, y Acuña Delgado subraya que no es castigo divino; el incesto y la violencia sexual de algunas versiones no entran a lámina (dossier §4)",
+      "evidence": [
+        {
+          "myth": "la-piedra-que-flota",
+          "field": "versiones",
+          "note": "«En muchas versiones sencillamente no se menciona ninguna… Las pocas versiones que sí dan una causa la atribuyen al quebrantamiento de la prohibición del incesto»."
+        }
+      ],
+      "model_requirements": []
+    },
+    "amoricha": {
+      "aliases": [
+        "Tamorayo",
+        "el primer yukpa"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "amoricha__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Amoricha",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "los-dos-caminos-del-cielo"
+      ],
+      "description": "El que arregla el mundo entre los irapa: toma el arco y dispara hacia arriba flechas de punta roma de cera de abeja negra, que empujan el cielo; después le da en el ojo a uno de los soles y hace la noche.",
+      "evidence": [
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "mito",
+          "note": "«El que vino a arreglarlo se llama Amoricha entre los irapa. Tomó el arco y se puso a disparar hacia arriba. No eran flechas de matar: las puntas eran romas, hechas con cera de abeja negra»."
+        }
+      ],
+      "design": {
+        "silhouette": "Hombre yukpa de estatura pequeña y hombros anchos, de pie con los dos pies firmes y el arco tendido vertical hacia el cenit, la flecha más larga que el arco apuntando recto al cielo: la única figura de la biblia que mira hacia arriba, y su gesto es de empujar, no de cazar.",
+        "materials": [
+          "cara como óvalo plano de un solo tono con los rasgos recortados aparte; cuerpo en pocos planos grandes de papel pardo mate, sin músculo modelado",
+          "manta larga o túnica hasta la rodilla en un solo plano claro, con franjas verticales rojas anchas",
+          "corte de tazón con flequillo recto como una sola pieza negra mate",
+          "arco largo de madera clara con la empuñadura envuelta en hilo, y flechas más largas que el arco con la punta resuelta como un botón romo negro de cera"
+        ],
+        "palette": "Pardo de piel, claro de manta con franjas rojas, y el negro puro de la cera en la punta de la flecha, que es el mismo negro del ojo apagado del sol.",
+        "scale": "Estatura pequeña yukpa, medida contra el arco, que le llega a la frente, y contra la flecha, que la supera. Cuerpo entero 9:16 con el cielo encima.",
+        "continuity": [
+          "la punta de la flecha siempre roma y negra, nunca de piedra ni de hierro",
+          "apunta hacia arriba, nunca a una persona ni a un animal",
+          "sin corona ni diadema de plumas, sin pintura facial",
+          "sin mochila ni objeto de hierro: es el mundo en construcción"
+        ],
+        "documented": [
+          "canon, campo mito: dispara con arco hacia arriba flechas de puntas «romas, hechas con cera de abeja negra, hechas para tocar y no para herir», y «cada flecha lo empujaba un poco más»",
+          "dossier §0.3 y §7 (halbmayer-2016): quien transforma un sol en luna es Amoricha o Tamorayo, el primer yukpa; su nombre deriva de -amó-, «construir una casa» o «hacer un envoltorio», y tirar con arco aquí «no tiene la intención de matar»",
+          "dossier §6: arco wakaĉha largo de madera clara o rojiza con la empuñadura envuelta en hilo amarillo o rojo, y flechas más largas que el arco; estatura pequeña y cabello motilado, corte de tazón en las láminas comunitarias; manta larga documentada por Reichel-Dolmatoff",
+          "dossier §6: a los yuko les faltan los adornos de cabeza; ninguna figura del corpus lleva pintura facial"
+        ],
+        "editorial": [
+          "La prenda es la manta larga documentada, resuelta con las franjas rojas de las túnicas de las láminas comunitarias: combinar las dos es decisión de hoja, reversible.",
+          "Que el relato no le dé edad ni cuerpo se resuelve con el tipo base del hombre yukpa; ningún rasgo heroico —ni tamaño mayor, ni musculatura, ni luz propia—.",
+          "Las versiones sokorpa (el dios-sol se dispara él mismo con punta de mapicha) e iroka (el héroe teje montañas y hojas) no se dibujan en esta hoja: son otras maneras de hacer que el canon deja como están."
+        ],
+        "states_to_model": []
+      }
+    },
+    "flechas_de_cera_negra": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "Las flechas de punta roma de cera negra",
+      "kind": "objeto",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "amoricha",
+      "myth_refs": [
+        "los-dos-caminos-del-cielo"
+      ],
+      "description": "Flechas «para tocar y no para herir», con la punta de cera de abeja negra.",
+      "coverage_note": "Van en la mano y el arco de Amoricha, en su hoja.",
+      "evidence": [
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "mito",
+          "note": "«las puntas eran romas, hechas con cera de abeja negra, hechas para tocar y no para herir»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "eclipse_en_la_casa_de_la_luna": {
+      "aliases": [
+        "el cazador perdido",
+        "las hijas de la Luna",
+        "las vasijas de barro"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "sensitive",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "El eclipse en la casa de la Luna",
+      "kind": "fenomeno",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "los-dos-caminos-del-cielo"
+      ],
+      "description": "Un cazador perdido llega a la casa de la Luna, que lo esconde en una de las vasijas de barro donde sus hijas se recogen en su primera sangre; el Sol, que come gente, las destapa una por una olfateando; las muchachas le echan las mantas a la cara de la Luna y aparece el primer eclipse.",
+      "exclusion_reason": "do_not_visualize: el dossier (§4, matriz 28) registra que en el eclipse hay personas que no deben ser vistas —sobre todo las muchachas en su primera menstruación, que deben esconderse— y declara que «no hay lámina de eclipse, ni de reclusión, ni de samayapa»; el canon reescrito narra justamente esa escena, y se respeta la regla",
+      "evidence": [
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "mito",
+          "note": "«lo escondió en una de las vasijas de barro donde sus hijas se recogen cuando les llega la primera sangre… Entonces ellas le echaron las mantas encima a la cara de la Luna. Y así apareció el primer eclipse»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "sol_cazador_de_gente": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "contextual",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "El Sol que come gente",
+      "kind": "deidad_fuerza",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "soles_hermanos",
+      "myth_refs": [
+        "los-dos-caminos-del-cielo"
+      ],
+      "description": "«El Sol es bravo y come gente; anda de cacería y lo que persigue son personas.»",
+      "coverage_note": "El carácter del Sol, isope, agresivo, se lee en el disco encendido de la ficha de los soles; su cacería y su búsqueda olfateando pertenecen al eclipse, que no se dibuja. Nunca un cuerpo de sol cazador.",
+      "evidence": [
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "mito",
+          "note": "«El Sol es bravo y come gente; anda de cacería y lo que persigue son personas.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "ruido_contra_el_eclipse": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "Los gritos, los machetes y las ollas contra el eclipse",
+      "kind": "fenomeno",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "los-dos-caminos-del-cielo"
+      ],
+      "description": "Cuando hay eclipse la gente grita, golpea los machetes y las ollas y dispara hacia arriba, repitiendo el tiro que hizo la noche.",
+      "exclusion_reason": "práctica viva del eclipse, que el dossier deja sin lámina (§4), y con hierro fechado posterior al mundo del relato (§1: los machetes y ollas los traen misioneros y etnólogos del siglo XX)",
+      "evidence": [
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "mito",
+          "note": "«abajo la gente grita, golpea los machetes y las ollas y dispara hacia arriba»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "versiones_sokorpa_e_iroka": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "El sol que se dispara y el héroe que teje",
+      "kind": "fenomeno",
+      "evidence_basis": "variant",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "los-dos-caminos-del-cielo"
+      ],
+      "description": "En la versión sokorpa el dios-sol, cansado de que le disparen, se dispara él mismo en el ojo con una flecha de punta de mapicha; en las iroka no hay flecha y el héroe teje montañas, árboles y hojas para dar sombra.",
+      "exclusion_reason": "variantes que el canon deja «como están» sin fundirlas con la irapa que narra",
+      "evidence": [
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "versiones",
+          "note": "«Disparar y tejer no son la misma manera de hacer que algo ocurra, y las tres se dejan como están.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "panteon_de_mincultura": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "Paphs, sópasha, Tumanke, Yuwanano y la gente jaguar",
+      "kind": "deidad_fuerza",
+      "evidence_basis": "variant",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "los-dos-caminos-del-cielo"
+      ],
+      "description": "El cuadro del cielo de la caracterización del Ministerio de Cultura: dos soles que ascienden, Paphs creador, sópasha guardián, Tumanke y Yuwanano, el Sol con la gente jaguar y la Luna que siembra batata y yuca y juzga las almas.",
+      "exclusion_reason": "compilación institucional de segunda mano cuyos nombres no aparecen en las versiones de campo; el canon dice que «no se mezclan con ellas»",
+      "evidence": [
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "versiones",
+          "note": "«Ninguno de esos nombres aparece en las versiones irapa, iroka o sokorpa recogidas en campo, y no se mezclan con ellas.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "tipo_hombre_adulto": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_hombre_adulto__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · hombre yukpa adulto",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "la-piedra-que-flota",
+        "los-dos-caminos-del-cielo"
+      ],
+      "description": "Tipo base del hombre yukpa del Perijá: fija cara, cuerpo y vestido de los que suben a la montaña, de los que rehacen la siembra y la base de Amoricha.",
+      "evidence": [
+        {
+          "myth": "la-piedra-que-flota",
+          "field": "mito",
+          "note": "Los que suben a la montaña que habló, esperan y rehacen la siembra."
+        },
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "mito",
+          "note": "Los que suben a la montaña que habló, esperan y rehacen la siembra."
+        }
+      ],
+      "design": {
+        "silhouette": "Hombre de estatura pequeña y hombros anchos, de pie, con la túnica hasta la rodilla de franjas verticales rojas, el corte de tazón de flequillo recto, la mochila de franjas colgada al costado y el arco largo en la mano.",
+        "materials": [
+          "túnica o manta larga hasta la rodilla, clara con franjas verticales rojas",
+          "corte de tazón negro mate en una pieza",
+          "mochila de franjas blanco y rojo marrón, sin patrón concreto",
+          "arco largo con empuñadura envuelta en hilo y flechas más largas que él"
+        ],
+        "palette": "Pardo de piel, claro de túnica con rojo, y el blanco y rojo marrón de la mochila.",
+        "scale": "Estatura pequeña yukpa, de hombros anchos. Cuerpo entero 9:16.",
+        "continuity": [
+          "corte de tazón",
+          "sin tocado ni pintura",
+          "mochila sólo en los hombres",
+          "nada de hierro"
+        ],
+        "documented": [
+          "dossier §6 (reichel-1960): los yuko son de estatura pequeña, llevan el cabello «motilado» —recortado— y visten mantas largas; no hay guayuco yukpa documentado: el delantal de la fuente temprana es barí",
+          "dossier §6 (me-ynetachako): en las láminas comunitarias, túnicas largas hasta la rodilla azul claro y blanca con franjas verticales rojas; corte de tazón con flequillo recto en los hombres, pelo negro largo en las mujeres",
+          "dossier §6: a los yuko les faltan los adornos de cabeza; ninguna figura del corpus lleva pintura facial",
+          "dossier §1: el mundo de los relatos es owaya tamorhiya, sin hierro; machetes, ollas y ropa occidental son del siglo XX",
+          "canon, campo mito: «Algunos oyeron y treparon hasta donde les dijeron»; después «hubo que volver a empezar la siembra»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "Se toma el estrato de la manta larga y la túnica, no el del sombrero campesino ni el vestido de tela saturada de hoy, porque los relatos son del mundo en construcción. Decisión reversible.",
+          "Collares moke por su cantidad y su secuencia de color, jamás una pinta concreta; mochila por su forma y su bicromía, jamás un patrón (regla del ejemplar)."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_adulta": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_mujer_adulta__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · mujer yukpa adulta",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "la-piedra-que-flota",
+        "los-dos-caminos-del-cielo"
+      ],
+      "description": "Tipo base de la mujer yukpa del Perijá: fija cara, cuerpo y vestido de las que suben a la montaña y cargan la siembra que vuelve.",
+      "evidence": [
+        {
+          "myth": "la-piedra-que-flota",
+          "field": "mito",
+          "note": "Las que suben, esperan y vuelven a sembrar."
+        },
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "mito",
+          "note": "Las que suben, esperan y vuelven a sembrar."
+        }
+      ],
+      "design": {
+        "silhouette": "Mujer de estatura pequeña, de pie, con la manta larga hasta los tobillos, el pelo negro largo suelto, sartas de collares hasta la cintura y un canasto a la espalda sostenido con banda de frente.",
+        "materials": [
+          "manta larga hasta los tobillos en un plano liso",
+          "pelo negro largo en una pieza",
+          "sartas de pepas hasta la cintura, una rojo coral con negro y otra verde oscura",
+          "canasto con banda de frente"
+        ],
+        "palette": "Pardo de piel, un tono liso de manta, rojo coral y verde oscuro de los collares.",
+        "scale": "Estatura pequeña yukpa, de hombros anchos. Cuerpo entero 9:16.",
+        "continuity": [
+          "pelo largo",
+          "collares en cantidad",
+          "canasto: las mujeres cargan la cosecha"
+        ],
+        "documented": [
+          "dossier §6 (reichel-1960): los yuko son de estatura pequeña, llevan el cabello «motilado» —recortado— y visten mantas largas; no hay guayuco yukpa documentado: el delantal de la fuente temprana es barí",
+          "dossier §6 (me-ynetachako): en las láminas comunitarias, túnicas largas hasta la rodilla azul claro y blanca con franjas verticales rojas; corte de tazón con flequillo recto en los hombres, pelo negro largo en las mujeres",
+          "dossier §6: a los yuko les faltan los adornos de cabeza; ninguna figura del corpus lleva pintura facial",
+          "dossier §1: el mundo de los relatos es owaya tamorhiya, sin hierro; machetes, ollas y ropa occidental son del siglo XX",
+          "dossier §6: las mujeres llevan la cosecha en canastos y los collares moke en gran cantidad; los hombres, mochila, arco y flecha"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "Se toma el estrato de la manta larga y la túnica, no el del sombrero campesino ni el vestido de tela saturada de hoy, porque los relatos son del mundo en construcción. Decisión reversible.",
+          "Collares moke por su cantidad y su secuencia de color, jamás una pinta concreta; mochila por su forma y su bicromía, jamás un patrón (regla del ejemplar)."
+        ],
+        "states_to_model": []
+      }
     }
   },
   "models": {
@@ -2394,10 +2930,15 @@
           "myth": "los-dos-caminos-del-cielo",
           "field": "mito",
           "note": "La separación entre Sol y Luna introduce la alternancia de día y noche, un clima templado y una serie de distinciones asociadas —caliente frente a frío, seco frente a húmedo— y contrastes estacionales: es diferenciación del mundo y no un eclipse ni una explicación astronómica"
+        },
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "mito",
+          "note": "El canon reescrito retira las brasas y a Kopeco: Amoricha dispara flechas romas de cera negra, el cielo sube y el sol herido en el ojo se vuelve la luna."
         }
       ],
       "design_contract": {
-        "distinctive_silhouette": "Dos discos hermanos del mismo diámetro, pegados uno al otro y colgados tan bajo que el borde superior del encuadre los corta y la cresta del Perijá les queda a la altura del canto: cada disco lleva un único ojo recortado en el centro y nada más —sin boca, sin rayos, sin corona, sin cuerpo—, y ésa es la única ficha de esta biblia donde dos piezas idénticas comparten encuadre sin que una sea el reflejo de la otra.",
+        "distinctive_silhouette": "Dos discos iguales del mismo diámetro, pegados uno al otro y colgados tan bajo que el borde superior del encuadre los corta y la cresta del Perijá les queda a la altura del canto: cada disco lleva un único ojo recortado en el centro y nada más —sin boca, sin rayos, sin corona, sin cuerpo—, y ésa es la única ficha de esta biblia donde dos piezas idénticas comparten encuadre sin que una sea el reflejo de la otra.",
         "materials": [
           "dos discos de papel amarillo-naranja saturado y plano, sin degradado y sin halo recortado alrededor",
           "papel de cielo blanqueado por el calor, más pálido que el azul saturado del estado ordinario",
@@ -2409,11 +2950,12 @@
         "scale": "Los dos discos juntos ocupan la banda superior del encuadre y su diámetro se mide contra la cresta de la serranía en el borde inferior: están bajos porque el firmamento todavía no ha subido, y esa cercanía es la escala del relato, no un encuadre de astro lejano.",
         "continuity_markers": [
           "el diámetro del disco no cambia entre el estado canónico y el de luna: lo que cambia es el ojo y la temperatura del papel, nunca el tamaño",
-          "los dos hermanos son la misma pieza recortada dos veces y no se distinguen entre sí antes del disparo",
+          "los dos soles son la misma pieza recortada dos veces y no se distinguen entre sí antes del disparo",
           "el ojo es siempre un círculo recortado en el centro del disco, en la misma posición en las dos hojas",
-          "ninguna de las dos hojas lleva flecha clavada, arco ni tirador: la ficha es de los soles, y quien dispara no está en el inventario"
+          "ninguna de las dos hojas lleva flecha clavada, arco ni tirador: la ficha es de los soles, y quien dispara, Amoricha, tiene su propia hoja"
         ],
         "documented_features": [
+          "canon, campo mito: «Había dos soles en el cielo y el cielo estaba bajo… el agua de los ríos y de las lagunas hervía… nunca oscurecía»; Amoricha «apuntó a uno de los dos soles y le dio en el ojo. El sol herido se oscureció. No se apagó del todo ni cayó: se quedó arriba, con una luz distinta, fría, y desde entonces es la luna»",
           "el estado inicial es de luz perpetua y calor abrasador, con los soles demasiado cerca de la Tierra y «el agua en los ríos y lagos hirviendo» (dossier §1 y §7, halbmayer-2016)",
           "la transformación es por una flecha de punta ciega de cera de abeja negra disparada al ojo de uno de los soles, que «se volvió negro y se convirtió en la luna», mientras el firmamento empieza a subir (dossier §0.3 y §7)",
           "disparar aquí «no tiene la intención de matar, no es una actividad predatoria»: crea la distancia que hace posible la vida, y la lámina no puede leerse como agresión ni como duelo (dossier §0.3)",
@@ -2423,7 +2965,7 @@
         ],
         "editorial_features": [
           "resolverlos como dos discos con un ojo recortado, y no como cuerpos, es decisión editorial: ninguna fuente describe el cuerpo de los soles, y el único rasgo anatómico que la fuente nombra es el ojo; reversible sin tocar el resto de la ficha",
-          "el canon publicado y el módulo hacen salir al hermano «de las brasas»; la versión etnográfica no tiene brasas sino flechas (dossier §0.3). Esta ficha se dibuja sobre la etnográfica y la variante de las brasas se declara en la hoja del pozo, no aquí",
+          "el canon reescrito sigue ya la versión etnográfica: no hay brasas, sino una flecha en el ojo; el pozo de brasas queda excluido. Los soles ya no se llaman hermanos en el relato, y la ficha no los hace parientes",
           "la temperatura del papel de la luna —el mismo amarillo enfriado hacia el gris de ceniza— es interpretación editorial: la fuente sólo dice que el ojo se volvió negro",
           "el agua hirviendo del estado inicial se resuelve con lengüetas planas de papel y no con vapor, para no romper la regla de superficie plana"
         ]
@@ -2432,12 +2974,13 @@
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Yukpa V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
-        "primary_request": "identidad corporal completa y legible para Los dos Soles hermanos (uno se vuelve Luna). Dos discos hermanos del mismo diámetro, pegados uno al otro y colgados tan bajo que el borde superior del encuadre los corta y la cresta del Perijá les queda a la altura del canto: cada disco lleva un único ojo recortado en el centro y nada más —sin boca, sin rayos, sin corona, sin cuerpo—, y ésa es la única ficha de esta biblia donde dos piezas idénticas comparten encuadre sin que una sea el reflejo de la otra.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Los dos discos juntos ocupan la banda superior del encuadre y su diámetro se mide contra la cresta de la serranía en el borde inferior: están bajos porque el firmamento todavía no ha subido, y esa cercanía es la escala del relato, no un encuadre de astro lejano.",
+        "primary_request": "identidad corporal completa y legible para Los dos soles (uno se vuelve Luna). Dos discos iguales del mismo diámetro, pegados uno al otro y colgados tan bajo que el borde superior del encuadre los corta y la cresta del Perijá les queda a la altura del canto: cada disco lleva un único ojo recortado en el centro y nada más —sin boca, sin rayos, sin corona, sin cuerpo—, y ésa es la única ficha de esta biblia donde dos piezas idénticas comparten encuadre sin que una sea el reflejo de la otra.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Los dos discos juntos ocupan la banda superior del encuadre y su diámetro se mide contra la cresta de la serranía en el borde inferior: están bajos porque el firmamento todavía no ha subido, y esa cercanía es la escala del relato, no un encuadre de astro lejano.",
         "lighting_mood": "Luz de montaña con cielo azul saturado y aire limpio en el estado ordinario; y su contrario en el diluvio, que es «oscuridad y una larga noche» sostenida durante semanas y meses, no una tormenta: cielo cerrado y plano, sin relámpago y sin dramatismo de tormenta. En el episodio celeste, el estado inicial es de luz perpetua y calor abrasador con el firmamento bajo, y el acto lo resuelve un solo punto negro: el ojo apagado del sol que se vuelve luna.",
         "materials_textures": "dos discos de papel amarillo-naranja saturado y plano, sin degradado y sin halo recortado alrededor; papel de cielo blanqueado por el calor, más pálido que el azul saturado del estado ordinario; papel negro puro, mate y sin brillo, reservado en todo el corpus al ojo apagado; papel de agua hirviendo resuelto en lengüetas planas de papel claro sobre el cauce, nunca en vapor pintado; papel de cresta de montaña recortada en el borde inferior, para que los discos se midan contra ella",
         "era": "Owaya tamorhiya, el mundo en construcción, para el relato de los Soles, donde no hay más objeto que el arco con flechas de punta ciega de cera de abeja negra; y owaya akayi, el mundo que se daña, para el diluvio, donde sí hay cultivos, viviendas y caminos porque son las separaciones que el agua borra. Sin hierro en ninguna de las dos: ni machete, ni olla de metal, ni hacha de acero. Sin maíz en el relato de los Soles, porque el maíz llega después y con Mé.",
         "constraints": [
+          "documentado: «Había dos soles en el cielo y el cielo estaba bajo… el agua de los ríos y de las lagunas hervía… nunca oscurecía»; Amoricha «apuntó a uno de los dos soles y le dio en el ojo. El sol herido se oscureció. No se apagó del todo ni cayó: se quedó arriba, con una luz distinta, fría, y desde entonces es la luna»",
           "documentado: el estado inicial es de luz perpetua y calor abrasador, con los soles demasiado cerca de la Tierra y «el agua en los ríos y lagos hirviendo» (dossier §1 y §7, halbmayer-2016)",
           "documentado: la transformación es por una flecha de punta ciega de cera de abeja negra disparada al ojo de uno de los soles, que «se volvió negro y se convirtió en la luna», mientras el firmamento empieza a subir (dossier §0.3 y §7)",
           "documentado: disparar aquí «no tiene la intención de matar, no es una actividad predatoria»: crea la distancia que hace posible la vida, y la lámina no puede leerse como agresión ni como duelo (dossier §0.3)",
@@ -2467,7 +3010,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -2512,10 +3055,15 @@
           "myth": "los-dos-caminos-del-cielo",
           "field": "mito",
           "note": "La separación entre Sol y Luna introduce la alternancia de día y noche, un clima templado y una serie de distinciones asociadas —caliente frente a frío, seco frente a húmedo— y contrastes estacionales: es diferenciación del mundo y no un eclipse ni una explicación astronómica"
+        },
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "mito",
+          "note": "El canon reescrito retira las brasas y a Kopeco: Amoricha dispara flechas romas de cera negra, el cielo sube y el sol herido en el ojo se vuelve la luna."
         }
       ],
       "design_contract": {
-        "distinctive_silhouette": "Dos discos hermanos del mismo diámetro, pegados uno al otro y colgados tan bajo que el borde superior del encuadre los corta y la cresta del Perijá les queda a la altura del canto: cada disco lleva un único ojo recortado en el centro y nada más —sin boca, sin rayos, sin corona, sin cuerpo—, y ésa es la única ficha de esta biblia donde dos piezas idénticas comparten encuadre sin que una sea el reflejo de la otra.",
+        "distinctive_silhouette": "Dos discos iguales del mismo diámetro, pegados uno al otro y colgados tan bajo que el borde superior del encuadre los corta y la cresta del Perijá les queda a la altura del canto: cada disco lleva un único ojo recortado en el centro y nada más —sin boca, sin rayos, sin corona, sin cuerpo—, y ésa es la única ficha de esta biblia donde dos piezas idénticas comparten encuadre sin que una sea el reflejo de la otra.",
         "materials": [
           "dos discos de papel amarillo-naranja saturado y plano, sin degradado y sin halo recortado alrededor",
           "papel de cielo blanqueado por el calor, más pálido que el azul saturado del estado ordinario",
@@ -2527,11 +3075,12 @@
         "scale": "Los dos discos juntos ocupan la banda superior del encuadre y su diámetro se mide contra la cresta de la serranía en el borde inferior: están bajos porque el firmamento todavía no ha subido, y esa cercanía es la escala del relato, no un encuadre de astro lejano.",
         "continuity_markers": [
           "el diámetro del disco no cambia entre el estado canónico y el de luna: lo que cambia es el ojo y la temperatura del papel, nunca el tamaño",
-          "los dos hermanos son la misma pieza recortada dos veces y no se distinguen entre sí antes del disparo",
+          "los dos soles son la misma pieza recortada dos veces y no se distinguen entre sí antes del disparo",
           "el ojo es siempre un círculo recortado en el centro del disco, en la misma posición en las dos hojas",
-          "ninguna de las dos hojas lleva flecha clavada, arco ni tirador: la ficha es de los soles, y quien dispara no está en el inventario"
+          "ninguna de las dos hojas lleva flecha clavada, arco ni tirador: la ficha es de los soles, y quien dispara, Amoricha, tiene su propia hoja"
         ],
         "documented_features": [
+          "canon, campo mito: «Había dos soles en el cielo y el cielo estaba bajo… el agua de los ríos y de las lagunas hervía… nunca oscurecía»; Amoricha «apuntó a uno de los dos soles y le dio en el ojo. El sol herido se oscureció. No se apagó del todo ni cayó: se quedó arriba, con una luz distinta, fría, y desde entonces es la luna»",
           "el estado inicial es de luz perpetua y calor abrasador, con los soles demasiado cerca de la Tierra y «el agua en los ríos y lagos hirviendo» (dossier §1 y §7, halbmayer-2016)",
           "la transformación es por una flecha de punta ciega de cera de abeja negra disparada al ojo de uno de los soles, que «se volvió negro y se convirtió en la luna», mientras el firmamento empieza a subir (dossier §0.3 y §7)",
           "disparar aquí «no tiene la intención de matar, no es una actividad predatoria»: crea la distancia que hace posible la vida, y la lámina no puede leerse como agresión ni como duelo (dossier §0.3)",
@@ -2541,7 +3090,7 @@
         ],
         "editorial_features": [
           "resolverlos como dos discos con un ojo recortado, y no como cuerpos, es decisión editorial: ninguna fuente describe el cuerpo de los soles, y el único rasgo anatómico que la fuente nombra es el ojo; reversible sin tocar el resto de la ficha",
-          "el canon publicado y el módulo hacen salir al hermano «de las brasas»; la versión etnográfica no tiene brasas sino flechas (dossier §0.3). Esta ficha se dibuja sobre la etnográfica y la variante de las brasas se declara en la hoja del pozo, no aquí",
+          "el canon reescrito sigue ya la versión etnográfica: no hay brasas, sino una flecha en el ojo; el pozo de brasas queda excluido. Los soles ya no se llaman hermanos en el relato, y la ficha no los hace parientes",
           "la temperatura del papel de la luna —el mismo amarillo enfriado hacia el gris de ceniza— es interpretación editorial: la fuente sólo dice que el ojo se volvió negro",
           "el agua hirviendo del estado inicial se resuelve con lengüetas planas de papel y no con vapor, para no romper la regla de superficie plana"
         ]
@@ -2550,12 +3099,13 @@
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Yukpa V1 - state_sheet",
         "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
-        "primary_request": "el cambio de estado sin perder la identidad para Los dos Soles hermanos (uno se vuelve Luna). Dos discos hermanos del mismo diámetro, pegados uno al otro y colgados tan bajo que el borde superior del encuadre los corta y la cresta del Perijá les queda a la altura del canto: cada disco lleva un único ojo recortado en el centro y nada más —sin boca, sin rayos, sin corona, sin cuerpo—, y ésa es la única ficha de esta biblia donde dos piezas idénticas comparten encuadre sin que una sea el reflejo de la otra.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Los dos discos juntos ocupan la banda superior del encuadre y su diámetro se mide contra la cresta de la serranía en el borde inferior: están bajos porque el firmamento todavía no ha subido, y esa cercanía es la escala del relato, no un encuadre de astro lejano.",
+        "primary_request": "el cambio de estado sin perder la identidad para Los dos soles (uno se vuelve Luna). Dos discos iguales del mismo diámetro, pegados uno al otro y colgados tan bajo que el borde superior del encuadre los corta y la cresta del Perijá les queda a la altura del canto: cada disco lleva un único ojo recortado en el centro y nada más —sin boca, sin rayos, sin corona, sin cuerpo—, y ésa es la única ficha de esta biblia donde dos piezas idénticas comparten encuadre sin que una sea el reflejo de la otra.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Los dos discos juntos ocupan la banda superior del encuadre y su diámetro se mide contra la cresta de la serranía en el borde inferior: están bajos porque el firmamento todavía no ha subido, y esa cercanía es la escala del relato, no un encuadre de astro lejano.",
         "lighting_mood": "Luz de montaña con cielo azul saturado y aire limpio en el estado ordinario; y su contrario en el diluvio, que es «oscuridad y una larga noche» sostenida durante semanas y meses, no una tormenta: cielo cerrado y plano, sin relámpago y sin dramatismo de tormenta. En el episodio celeste, el estado inicial es de luz perpetua y calor abrasador con el firmamento bajo, y el acto lo resuelve un solo punto negro: el ojo apagado del sol que se vuelve luna.",
         "materials_textures": "dos discos de papel amarillo-naranja saturado y plano, sin degradado y sin halo recortado alrededor; papel de cielo blanqueado por el calor, más pálido que el azul saturado del estado ordinario; papel negro puro, mate y sin brillo, reservado en todo el corpus al ojo apagado; papel de agua hirviendo resuelto en lengüetas planas de papel claro sobre el cauce, nunca en vapor pintado; papel de cresta de montaña recortada en el borde inferior, para que los discos se midan contra ella",
         "era": "Owaya tamorhiya, el mundo en construcción, para el relato de los Soles, donde no hay más objeto que el arco con flechas de punta ciega de cera de abeja negra; y owaya akayi, el mundo que se daña, para el diluvio, donde sí hay cultivos, viviendas y caminos porque son las separaciones que el agua borra. Sin hierro en ninguna de las dos: ni machete, ni olla de metal, ni hacha de acero. Sin maíz en el relato de los Soles, porque el maíz llega después y con Mé.",
         "constraints": [
+          "documentado: «Había dos soles en el cielo y el cielo estaba bajo… el agua de los ríos y de las lagunas hervía… nunca oscurecía»; Amoricha «apuntó a uno de los dos soles y le dio en el ojo. El sol herido se oscureció. No se apagó del todo ni cayó: se quedó arriba, con una luz distinta, fría, y desde entonces es la luna»",
           "documentado: el estado inicial es de luz perpetua y calor abrasador, con los soles demasiado cerca de la Tierra y «el agua en los ríos y lagos hirviendo» (dossier §1 y §7, halbmayer-2016)",
           "documentado: la transformación es por una flecha de punta ciega de cera de abeja negra disparada al ojo de uno de los soles, que «se volvió negro y se convirtió en la luna», mientras el firmamento empieza a subir (dossier §0.3 y §7)",
           "documentado: disparar aquí «no tiene la intención de matar, no es una actividad predatoria»: crea la distancia que hace posible la vida, y la lámina no puede leerse como agresión ni como duelo (dossier §0.3)",
@@ -2585,324 +3135,13 @@
           "id": "estado_luna",
           "view_type": "state_variation",
           "purpose": "el cambio de estado sin perder la identidad: luna",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "luna"
           ],
           "reference_views": [
             "canon"
           ]
-        }
-      ]
-    },
-    "kopeco__identity_sheet": {
-      "purpose": "identity_sheet",
-      "entity_refs": [
-        "kopeco"
-      ],
-      "placeholder": false,
-      "design_status": "ready_for_pilot_review",
-      "evidence_refs": [
-        {
-          "myth": "los-dos-caminos-del-cielo",
-          "field": "mito",
-          "note": "A los yuko les faltan los adornos de cabeza que usan sus vecinos macoa de Venezuela: no hay corona ni diadema de plumas documentada, y ninguna figura la lleva"
-        },
-        {
-          "myth": "los-dos-caminos-del-cielo",
-          "field": "mito",
-          "note": "Kopeco procede de una sola transmisión irapa venezolana y no aparece en ninguna fuente comunitaria yukpa colombiana consultada. La rana documentada en Colombia es kopirchu, y es otro personaje: guardiana del camino al mundo de los muertos, que examina si el difunto sabe tejer canastos, abanicos, aljabas y esteras. La ficha viaja con esa advertencia"
-        },
-        {
-          "myth": "los-dos-caminos-del-cielo",
-          "field": "mito",
-          "note": "El lugar de brasas no tiene más base que la frase «un lugar lleno de brasas» del módulo y el «círculo de brasas estilizadas» de la escena aprobada, y no existe en la versión etnográfica del episodio. Es la ficha más frágil del corpus y se declara como interpretación editorial sobre una variante de transmisión única"
-        },
-        {
-          "myth": "los-dos-caminos-del-cielo",
-          "field": "mito",
-          "note": "El etnónimo se define desde dentro así: «yukpa es la imagen pequeña que uno ve reflejada en la pupila del otro». Es la mejor guía que este dossier encontró para decidir cómo se miran dos figuras en una lámina"
-        },
-        {
-          "myth": "los-dos-caminos-del-cielo",
-          "field": "mito",
-          "note": "Algunas versiones del diluvio y de los ciclos asociados incluyen incesto y violencia, y la propia fuente académica declara la cautela de conservar su función narrativa «sin convertir detalles sensibles en espectáculo». Ninguna lámina los representa"
-        }
-      ],
-      "design_contract": {
-        "distinctive_silhouette": "Mujer sola de pie en el giro de una vuelta, con el vestido de una pieza hasta los tobillos abierto en el aire y los dos pies a distinta altura, mirando por encima del hombro hacia atrás y nunca de frente: es la única figura humana de esta biblia que aparece sin compañía, en movimiento y con la cara vuelta hacia fuera del encuadre.",
-        "materials": [
-          "papel de tela lisa y saturada de un solo tono para el vestido de una pieza hasta los tobillos",
-          "papel negro mate en una sola pieza grande, con el borde recortado en dientes largos, para el pelo largo y suelto",
-          "sartas de pepas de papel en secuencia de color, largas hasta la cintura, en cantidad y sin patrón fijado",
-          "papel de piel de un solo tono para el óvalo plano de la cara, con los rasgos recortados como piezas aparte",
-          "papel verde oliva y pardo de rana para la hoja de estado, en pocas piezas planas grandes"
-        ],
-        "palette_logic": "Un único tono saturado y liso para el vestido, tomado de la gama de los vestidos femeninos del Perijá y nunca repetido en otra ficha del corpus; los collares aportan los únicos acentos, en secuencia de pepas y no en dibujo; en la hoja de estado desaparece el saturado y queda sólo el verde oliva húmedo, que es el único verde no vegetal de la biblia.",
-        "scale": "Figura entera de pie, ocupando la vertical completa del encuadre, con el suelo justo bajo los pies y sin ningún otro cuerpo con que compararla; en la hoja de rana, el animal ocupa el mismo alto que ocupaba la cabeza de la mujer, para que el salto de escala se lea sin transición dibujada.",
-        "continuity_markers": [
-          "el vestido, el pelo y el collar son los mismos de la gramática de gente yukpa: lo que la distingue no es el traje sino que está sola y en movimiento",
-          "la rana conserva el mismo tono saturado del vestido en una sola pieza del lomo, para que el lector reconozca de quién es la forma",
-          "no lleva jamás corona, diadema, plumas ni pintura facial en ninguna de sus dos hojas",
-          "la transformación no se dibuja nunca: hay la mujer y hay la rana, y entre ellas no hay hoja intermedia"
-        ],
-        "documented_features": [
-          "el vestido femenino yukpa es de una pieza hasta los tobillos, en tela de color liso y saturado, cosido en estilo característico por las mujeres de Iroka (dossier §6, tumeno-2018)",
-          "las mujeres llevan el pelo negro largo, suelto o recogido, y collares moke en gran cantidad, cuya «pinta» es una secuencia de colores en las pepas y no un diseño cruzado (dossier §6)",
-          "a los yuko les faltan los adornos de cabeza de sus vecinos macoa: no hay corona ni diadema de plumas documentada (dossier §6, reichel-1960)",
-          "ninguna figura del corpus lleva pintura facial: está documentada sólo en el baile del niño, que no está en el corpus, y ninguna fuente describe un solo diseño (dossier §6)"
-        ],
-        "editorial_features": [
-          "la ficha entera descansa en una advertencia y hay que leerla antes que el diseño: Kopeco procede de una sola transmisión irapa venezolana —Wilbert, 1974— y no aparece en ninguna fuente comunitaria yukpa colombiana consultada (dossier §0.3 y §7)",
-          "su estado de rana no se puede apoyar en la rana kopirchu del Perijá colombiano, que es otro personaje con otra función: guardiana del camino al mundo de los muertos que examina si el difunto sabe tejer (dossier §0.3). La morfología de rana es genérica y declarada",
-          "el cuerpo, la edad, el rostro y el gesto del giro son construcción editorial completa: la transmisión que la sostiene no describe nada de eso; retirables sin tocar el resto de la ficha",
-          "vestirla con el vestido documentado yukpa es una decisión editorial discutible, porque el personaje no es yukpa colombiano; se toma para no fabricarle un traje irapa que tampoco se conoce, y es reversible",
-          "la mirada por encima del hombro, en vez de la mirada de frente, se toma de la definición emic del etnónimo —«yukpa es la imagen pequeña que uno ve reflejada en la pupila del otro»— y es lectura editorial, no dato"
-        ]
-      },
-      "prompt_spec": {
-        "use_case": "stylized-concept",
-        "asset_type": "Biblia visual Yukpa V1 - identity_sheet",
-        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
-        "primary_request": "identidad corporal completa y legible para Kopeco. Mujer sola de pie en el giro de una vuelta, con el vestido de una pieza hasta los tobillos abierto en el aire y los dos pies a distinta altura, mirando por encima del hombro hacia atrás y nunca de frente: es la única figura humana de esta biblia que aparece sin compañía, en movimiento y con la cara vuelta hacia fuera del encuadre.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Figura entera de pie, ocupando la vertical completa del encuadre, con el suelo justo bajo los pies y sin ningún otro cuerpo con que compararla; en la hoja de rana, el animal ocupa el mismo alto que ocupaba la cabeza de la mujer, para que el salto de escala se lea sin transición dibujada.",
-        "lighting_mood": "Luz de montaña con cielo azul saturado y aire limpio en el estado ordinario; y su contrario en el diluvio, que es «oscuridad y una larga noche» sostenida durante semanas y meses, no una tormenta: cielo cerrado y plano, sin relámpago y sin dramatismo de tormenta. En el episodio celeste, el estado inicial es de luz perpetua y calor abrasador con el firmamento bajo, y el acto lo resuelve un solo punto negro: el ojo apagado del sol que se vuelve luna.",
-        "materials_textures": "papel de tela lisa y saturada de un solo tono para el vestido de una pieza hasta los tobillos; papel negro mate en una sola pieza grande, con el borde recortado en dientes largos, para el pelo largo y suelto; sartas de pepas de papel en secuencia de color, largas hasta la cintura, en cantidad y sin patrón fijado; papel de piel de un solo tono para el óvalo plano de la cara, con los rasgos recortados como piezas aparte; papel verde oliva y pardo de rana para la hoja de estado, en pocas piezas planas grandes",
-        "era": "Owaya tamorhiya, el mundo en construcción, para el relato de los Soles, donde no hay más objeto que el arco con flechas de punta ciega de cera de abeja negra; y owaya akayi, el mundo que se daña, para el diluvio, donde sí hay cultivos, viviendas y caminos porque son las separaciones que el agua borra. Sin hierro en ninguna de las dos: ni machete, ni olla de metal, ni hacha de acero. Sin maíz en el relato de los Soles, porque el maíz llega después y con Mé.",
-        "constraints": [
-          "documentado: el vestido femenino yukpa es de una pieza hasta los tobillos, en tela de color liso y saturado, cosido en estilo característico por las mujeres de Iroka (dossier §6, tumeno-2018)",
-          "documentado: las mujeres llevan el pelo negro largo, suelto o recogido, y collares moke en gran cantidad, cuya «pinta» es una secuencia de colores en las pepas y no un diseño cruzado (dossier §6)",
-          "documentado: a los yuko les faltan los adornos de cabeza de sus vecinos macoa: no hay corona ni diadema de plumas documentada (dossier §6, reichel-1960)",
-          "documentado: ninguna figura del corpus lleva pintura facial: está documentada sólo en el baile del niño, que no está en el corpus, y ninguna fuente describe un solo diseño (dossier §6)",
-          "La paleta se toma de las láminas que la propia comunidad hizo de sí misma: verde intenso de pasto, azul saturado de cielo y naranja-rojizo de tierra desnuda, y ese naranja del suelo no falta en ninguna lámina del estado ordinario.",
-          "Toda lámina declara una cota y dos niveles: la posición vertical es moral, porque quien sube a la cumbre correcta vive y quien sube a la más baja se ahoga, y cuál es la más alta depende del punto de vista.",
-          "El diluvio no tiene color de tormenta: es cielo cerrado y plano de semanas y meses, sin relámpago y sin espuma; y su estado posterior puede ser roca pelada gris, no pradera.",
-          "El único negro puro del corpus es el ojo apagado del sol que se vuelve luna; no hay otro negro saturado en ninguna lámina.",
-          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
-        ],
-        "avoid": [
-          "sin casa comunal ovalada, sin maloca de varios pisos, sin plataformas para dormir, sin guayuco ni delantal: todo eso es barí del Catatumbo y no yukpa",
-          "sin corona ni diadema de plumas: la fuente temprana señala expresamente que a los yuko les faltan los adornos de cabeza de sus vecinos",
-          "sin patrón concreto de mochila, collar, canasto ni aljaba: no hay dos mochilas con el mismo diseño y cada patrón pertenece a alguien",
-          "sin piedra flotante, sin venado que golpea con la pezuña, sin pareja encerrada, sin animales empujando y sin abuelo narrador junto al fogón: es la ficción editorial ya retirada",
-          "sin tomaira, sin tuano y sin tuwancha; y sin eclipse, sin reclusión y sin ninguna persona en estado tamipi",
-          "sin cadáver, sin cueva funeraria y sin toromo; y sin ningún objeto identificable como de un difunto",
-          "sin hierro en ninguna de las dos láminas: ni machete, ni olla de metal, ni hacha de acero",
-          "sin escena de despojo, mina, palma africana, hambre ni enfermedad, y sin una composición dominada por ancianos"
-        ],
-        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte, y el corte de pelo —tazón con flequillo recto en los hombres— es una pieza propia; el cuerpo se resuelve en cláusula distinta. La cubierta de palma del techo son pocas piezas planas grandes en dos tonos, amarilla y verde oliva, con el borde recortado en dientes y las varas del caballete sobresaliendo cruzadas en los extremos, nunca hoja por hoja. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
-      },
-      "views": [
-        {
-          "id": "canon",
-          "view_type": "canonical_full_body",
-          "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
-          "states": [
-            "canonico"
-          ],
-          "reference_views": []
-        }
-      ]
-    },
-    "kopeco__state_sheet": {
-      "purpose": "state_sheet",
-      "entity_refs": [
-        "kopeco"
-      ],
-      "placeholder": false,
-      "design_status": "ready_for_pilot_review",
-      "evidence_refs": [
-        {
-          "myth": "los-dos-caminos-del-cielo",
-          "field": "mito",
-          "note": "A los yuko les faltan los adornos de cabeza que usan sus vecinos macoa de Venezuela: no hay corona ni diadema de plumas documentada, y ninguna figura la lleva"
-        },
-        {
-          "myth": "los-dos-caminos-del-cielo",
-          "field": "mito",
-          "note": "Kopeco procede de una sola transmisión irapa venezolana y no aparece en ninguna fuente comunitaria yukpa colombiana consultada. La rana documentada en Colombia es kopirchu, y es otro personaje: guardiana del camino al mundo de los muertos, que examina si el difunto sabe tejer canastos, abanicos, aljabas y esteras. La ficha viaja con esa advertencia"
-        },
-        {
-          "myth": "los-dos-caminos-del-cielo",
-          "field": "mito",
-          "note": "El lugar de brasas no tiene más base que la frase «un lugar lleno de brasas» del módulo y el «círculo de brasas estilizadas» de la escena aprobada, y no existe en la versión etnográfica del episodio. Es la ficha más frágil del corpus y se declara como interpretación editorial sobre una variante de transmisión única"
-        },
-        {
-          "myth": "los-dos-caminos-del-cielo",
-          "field": "mito",
-          "note": "El etnónimo se define desde dentro así: «yukpa es la imagen pequeña que uno ve reflejada en la pupila del otro». Es la mejor guía que este dossier encontró para decidir cómo se miran dos figuras en una lámina"
-        },
-        {
-          "myth": "los-dos-caminos-del-cielo",
-          "field": "mito",
-          "note": "Algunas versiones del diluvio y de los ciclos asociados incluyen incesto y violencia, y la propia fuente académica declara la cautela de conservar su función narrativa «sin convertir detalles sensibles en espectáculo». Ninguna lámina los representa"
-        }
-      ],
-      "design_contract": {
-        "distinctive_silhouette": "Mujer sola de pie en el giro de una vuelta, con el vestido de una pieza hasta los tobillos abierto en el aire y los dos pies a distinta altura, mirando por encima del hombro hacia atrás y nunca de frente: es la única figura humana de esta biblia que aparece sin compañía, en movimiento y con la cara vuelta hacia fuera del encuadre.",
-        "materials": [
-          "papel de tela lisa y saturada de un solo tono para el vestido de una pieza hasta los tobillos",
-          "papel negro mate en una sola pieza grande, con el borde recortado en dientes largos, para el pelo largo y suelto",
-          "sartas de pepas de papel en secuencia de color, largas hasta la cintura, en cantidad y sin patrón fijado",
-          "papel de piel de un solo tono para el óvalo plano de la cara, con los rasgos recortados como piezas aparte",
-          "papel verde oliva y pardo de rana para la hoja de estado, en pocas piezas planas grandes"
-        ],
-        "palette_logic": "Un único tono saturado y liso para el vestido, tomado de la gama de los vestidos femeninos del Perijá y nunca repetido en otra ficha del corpus; los collares aportan los únicos acentos, en secuencia de pepas y no en dibujo; en la hoja de estado desaparece el saturado y queda sólo el verde oliva húmedo, que es el único verde no vegetal de la biblia.",
-        "scale": "Figura entera de pie, ocupando la vertical completa del encuadre, con el suelo justo bajo los pies y sin ningún otro cuerpo con que compararla; en la hoja de rana, el animal ocupa el mismo alto que ocupaba la cabeza de la mujer, para que el salto de escala se lea sin transición dibujada.",
-        "continuity_markers": [
-          "el vestido, el pelo y el collar son los mismos de la gramática de gente yukpa: lo que la distingue no es el traje sino que está sola y en movimiento",
-          "la rana conserva el mismo tono saturado del vestido en una sola pieza del lomo, para que el lector reconozca de quién es la forma",
-          "no lleva jamás corona, diadema, plumas ni pintura facial en ninguna de sus dos hojas",
-          "la transformación no se dibuja nunca: hay la mujer y hay la rana, y entre ellas no hay hoja intermedia"
-        ],
-        "documented_features": [
-          "el vestido femenino yukpa es de una pieza hasta los tobillos, en tela de color liso y saturado, cosido en estilo característico por las mujeres de Iroka (dossier §6, tumeno-2018)",
-          "las mujeres llevan el pelo negro largo, suelto o recogido, y collares moke en gran cantidad, cuya «pinta» es una secuencia de colores en las pepas y no un diseño cruzado (dossier §6)",
-          "a los yuko les faltan los adornos de cabeza de sus vecinos macoa: no hay corona ni diadema de plumas documentada (dossier §6, reichel-1960)",
-          "ninguna figura del corpus lleva pintura facial: está documentada sólo en el baile del niño, que no está en el corpus, y ninguna fuente describe un solo diseño (dossier §6)"
-        ],
-        "editorial_features": [
-          "la ficha entera descansa en una advertencia y hay que leerla antes que el diseño: Kopeco procede de una sola transmisión irapa venezolana —Wilbert, 1974— y no aparece en ninguna fuente comunitaria yukpa colombiana consultada (dossier §0.3 y §7)",
-          "su estado de rana no se puede apoyar en la rana kopirchu del Perijá colombiano, que es otro personaje con otra función: guardiana del camino al mundo de los muertos que examina si el difunto sabe tejer (dossier §0.3). La morfología de rana es genérica y declarada",
-          "el cuerpo, la edad, el rostro y el gesto del giro son construcción editorial completa: la transmisión que la sostiene no describe nada de eso; retirables sin tocar el resto de la ficha",
-          "vestirla con el vestido documentado yukpa es una decisión editorial discutible, porque el personaje no es yukpa colombiano; se toma para no fabricarle un traje irapa que tampoco se conoce, y es reversible",
-          "la mirada por encima del hombro, en vez de la mirada de frente, se toma de la definición emic del etnónimo —«yukpa es la imagen pequeña que uno ve reflejada en la pupila del otro»— y es lectura editorial, no dato"
-        ]
-      },
-      "prompt_spec": {
-        "use_case": "stylized-concept",
-        "asset_type": "Biblia visual Yukpa V1 - state_sheet",
-        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
-        "primary_request": "el cambio de estado sin perder la identidad para Kopeco. Mujer sola de pie en el giro de una vuelta, con el vestido de una pieza hasta los tobillos abierto en el aire y los dos pies a distinta altura, mirando por encima del hombro hacia atrás y nunca de frente: es la única figura humana de esta biblia que aparece sin compañía, en movimiento y con la cara vuelta hacia fuera del encuadre.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Figura entera de pie, ocupando la vertical completa del encuadre, con el suelo justo bajo los pies y sin ningún otro cuerpo con que compararla; en la hoja de rana, el animal ocupa el mismo alto que ocupaba la cabeza de la mujer, para que el salto de escala se lea sin transición dibujada.",
-        "lighting_mood": "Luz de montaña con cielo azul saturado y aire limpio en el estado ordinario; y su contrario en el diluvio, que es «oscuridad y una larga noche» sostenida durante semanas y meses, no una tormenta: cielo cerrado y plano, sin relámpago y sin dramatismo de tormenta. En el episodio celeste, el estado inicial es de luz perpetua y calor abrasador con el firmamento bajo, y el acto lo resuelve un solo punto negro: el ojo apagado del sol que se vuelve luna.",
-        "materials_textures": "papel de tela lisa y saturada de un solo tono para el vestido de una pieza hasta los tobillos; papel negro mate en una sola pieza grande, con el borde recortado en dientes largos, para el pelo largo y suelto; sartas de pepas de papel en secuencia de color, largas hasta la cintura, en cantidad y sin patrón fijado; papel de piel de un solo tono para el óvalo plano de la cara, con los rasgos recortados como piezas aparte; papel verde oliva y pardo de rana para la hoja de estado, en pocas piezas planas grandes",
-        "era": "Owaya tamorhiya, el mundo en construcción, para el relato de los Soles, donde no hay más objeto que el arco con flechas de punta ciega de cera de abeja negra; y owaya akayi, el mundo que se daña, para el diluvio, donde sí hay cultivos, viviendas y caminos porque son las separaciones que el agua borra. Sin hierro en ninguna de las dos: ni machete, ni olla de metal, ni hacha de acero. Sin maíz en el relato de los Soles, porque el maíz llega después y con Mé.",
-        "constraints": [
-          "documentado: el vestido femenino yukpa es de una pieza hasta los tobillos, en tela de color liso y saturado, cosido en estilo característico por las mujeres de Iroka (dossier §6, tumeno-2018)",
-          "documentado: las mujeres llevan el pelo negro largo, suelto o recogido, y collares moke en gran cantidad, cuya «pinta» es una secuencia de colores en las pepas y no un diseño cruzado (dossier §6)",
-          "documentado: a los yuko les faltan los adornos de cabeza de sus vecinos macoa: no hay corona ni diadema de plumas documentada (dossier §6, reichel-1960)",
-          "documentado: ninguna figura del corpus lleva pintura facial: está documentada sólo en el baile del niño, que no está en el corpus, y ninguna fuente describe un solo diseño (dossier §6)",
-          "La paleta se toma de las láminas que la propia comunidad hizo de sí misma: verde intenso de pasto, azul saturado de cielo y naranja-rojizo de tierra desnuda, y ese naranja del suelo no falta en ninguna lámina del estado ordinario.",
-          "Toda lámina declara una cota y dos niveles: la posición vertical es moral, porque quien sube a la cumbre correcta vive y quien sube a la más baja se ahoga, y cuál es la más alta depende del punto de vista.",
-          "El diluvio no tiene color de tormenta: es cielo cerrado y plano de semanas y meses, sin relámpago y sin espuma; y su estado posterior puede ser roca pelada gris, no pradera.",
-          "El único negro puro del corpus es el ojo apagado del sol que se vuelve luna; no hay otro negro saturado en ninguna lámina.",
-          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
-        ],
-        "avoid": [
-          "sin casa comunal ovalada, sin maloca de varios pisos, sin plataformas para dormir, sin guayuco ni delantal: todo eso es barí del Catatumbo y no yukpa",
-          "sin corona ni diadema de plumas: la fuente temprana señala expresamente que a los yuko les faltan los adornos de cabeza de sus vecinos",
-          "sin patrón concreto de mochila, collar, canasto ni aljaba: no hay dos mochilas con el mismo diseño y cada patrón pertenece a alguien",
-          "sin piedra flotante, sin venado que golpea con la pezuña, sin pareja encerrada, sin animales empujando y sin abuelo narrador junto al fogón: es la ficción editorial ya retirada",
-          "sin tomaira, sin tuano y sin tuwancha; y sin eclipse, sin reclusión y sin ninguna persona en estado tamipi",
-          "sin cadáver, sin cueva funeraria y sin toromo; y sin ningún objeto identificable como de un difunto",
-          "sin hierro en ninguna de las dos láminas: ni machete, ni olla de metal, ni hacha de acero",
-          "sin escena de despojo, mina, palma africana, hambre ni enfermedad, y sin una composición dominada por ancianos"
-        ],
-        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte, y el corte de pelo —tazón con flequillo recto en los hombres— es una pieza propia; el cuerpo se resuelve en cláusula distinta. La cubierta de palma del techo son pocas piezas planas grandes en dos tonos, amarilla y verde oliva, con el borde recortado en dientes y las varas del caballete sobresaliendo cruzadas en los extremos, nunca hoja por hoja. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
-      },
-      "views": [
-        {
-          "id": "estado_rana",
-          "view_type": "state_variation",
-          "purpose": "el cambio de estado sin perder la identidad: rana",
-          "aspect": "1:1",
-          "states": [
-            "rana"
-          ],
-          "reference_views": [
-            "canon"
-          ]
-        }
-      ]
-    },
-    "pozo_de_brasas__spatial_model": {
-      "purpose": "spatial_model",
-      "entity_refs": [
-        "pozo_de_brasas"
-      ],
-      "placeholder": false,
-      "design_status": "ready_for_pilot_review",
-      "evidence_refs": [
-        {
-          "myth": "los-dos-caminos-del-cielo",
-          "field": "mito",
-          "note": "En la versión etnográfica del episodio no hay brasas sino flechas: había dos soles, nunca oscurecía, «estaba haciendo tanto calor en la tierra que el agua en los ríos y lagos estaba hirviendo», y el primer yukpa disparó flechas de punta ciega hechas de cera de abeja negra hacia el sol; el firmamento empezó a subir y él «disparó al ojo de uno de los soles, que se volvió negro y se convirtió en la luna»"
-        },
-        {
-          "myth": "los-dos-caminos-del-cielo",
-          "field": "mito",
-          "note": "El lugar de brasas no tiene más base que la frase «un lugar lleno de brasas» del módulo y el «círculo de brasas estilizadas» de la escena aprobada, y no existe en la versión etnográfica del episodio. Es la ficha más frágil del corpus y se declara como interpretación editorial sobre una variante de transmisión única"
-        }
-      ],
-      "design_contract": {
-        "distinctive_silhouette": "Un círculo cerrado de brasas estilizadas visto desde arriba en picado cenital, sin fogón, sin leña, sin llama y sin nadie alrededor: un anillo de piezas rojas planas sobre suelo oscuro, y es la única ficha de esta biblia que se compone desde arriba y la única sin línea de horizonte.",
-        "materials": [
-          "piezas planas de papel rojo mate, de canto vivo y tamaño desigual, dispuestas en anillo cerrado",
-          "papel de suelo oscuro, sin hierba y sin piedra, alrededor y dentro del anillo",
-          "papel naranja-rojizo de tierra desnuda en el borde exterior, que lo ata al suelo del Perijá y no a un paisaje abstracto",
-          "ausencia deliberada de papel de llama, de humo y de ceniza"
-        ],
-        "palette_logic": "Rojo mate de brasa contra suelo oscuro, sin amarillo de llama y sin naranja incandescente: el pozo no arde, brasea, y ése es el único rojo saturado del corpus fuera de la lámina del sol.",
-        "scale": "El anillo ocupa la mitad del ancho del encuadre y no tiene figura que lo mida: el picado cenital y la falta de referencia corporal son deliberados, porque la fuente no dice si es un hoyo de un paso o de veinte.",
-        "continuity_markers": [
-          "el anillo es siempre cerrado y siempre completo: no hay versión abierta, ni con un hueco por donde se entre o se salga",
-          "nunca aparece un cuerpo cayendo, trepando ni saliendo del pozo: el relato lo cuenta, la biblia no lo dibuja",
-          "ninguna otra lámina del corpus repite el picado cenital: es la marca de esta ficha",
-          "no comparte ni un material con la ficha de los soles, para que el lector no lea el pozo como un segundo disco solar en el suelo"
-        ],
-        "documented_features": [
-          "el módulo lo reduce a «un lugar lleno de brasas» y la escena aprobada a «un círculo de brasas estilizadas»: eso es todo lo que hay, y es lo único que la ficha puede afirmar (dossier §7)",
-          "el episodio pertenece a owaya tamorhiya, sin hierro y sin objeto alguno fuera del arco con flechas de cera: no hay olla, ni machete, ni piedra trabajada en el borde (dossier §1)"
-        ],
-        "editorial_features": [
-          "es la ficha más frágil del corpus y se declara entera como interpretación editorial sobre una variante de transmisión única: en la versión etnográfica del episodio no hay brasas en absoluto, hay flechas de punta ciega de cera de abeja negra (dossier §0.3 y §11)",
-          "el anillo cerrado, el picado cenital y el suelo oscuro son invención editorial reversible: la fuente no da forma, ni profundidad, ni entorno",
-          "se elige no dibujar llama porque «brasas» es la palabra de la fuente y «fogata» no lo es; la distinción es editorial y se puede revertir",
-          "si la consulta comunitaria confirma la versión etnográfica, esta ficha se retira entera y su lugar lo ocupa el firmamento que sube: está construida para poder desaparecer sin arrastrar a ninguna otra"
-        ]
-      },
-      "prompt_spec": {
-        "use_case": "stylized-concept",
-        "asset_type": "Biblia visual Yukpa V1 - spatial_model",
-        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
-        "primary_request": "planta, materiales y relacion con el cuerpo que la habita para El lugar de brasas. Un círculo cerrado de brasas estilizadas visto desde arriba en picado cenital, sin fogón, sin leña, sin llama y sin nadie alrededor: un anillo de piezas rojas planas sobre suelo oscuro, y es la única ficha de esta biblia que se compone desde arriba y la única sin línea de horizonte.",
-        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; El anillo ocupa la mitad del ancho del encuadre y no tiene figura que lo mida: el picado cenital y la falta de referencia corporal son deliberados, porque la fuente no dice si es un hoyo de un paso o de veinte.",
-        "lighting_mood": "Luz de montaña con cielo azul saturado y aire limpio en el estado ordinario; y su contrario en el diluvio, que es «oscuridad y una larga noche» sostenida durante semanas y meses, no una tormenta: cielo cerrado y plano, sin relámpago y sin dramatismo de tormenta. En el episodio celeste, el estado inicial es de luz perpetua y calor abrasador con el firmamento bajo, y el acto lo resuelve un solo punto negro: el ojo apagado del sol que se vuelve luna.",
-        "materials_textures": "piezas planas de papel rojo mate, de canto vivo y tamaño desigual, dispuestas en anillo cerrado; papel de suelo oscuro, sin hierba y sin piedra, alrededor y dentro del anillo; papel naranja-rojizo de tierra desnuda en el borde exterior, que lo ata al suelo del Perijá y no a un paisaje abstracto; ausencia deliberada de papel de llama, de humo y de ceniza",
-        "era": "Owaya tamorhiya, el mundo en construcción, para el relato de los Soles, donde no hay más objeto que el arco con flechas de punta ciega de cera de abeja negra; y owaya akayi, el mundo que se daña, para el diluvio, donde sí hay cultivos, viviendas y caminos porque son las separaciones que el agua borra. Sin hierro en ninguna de las dos: ni machete, ni olla de metal, ni hacha de acero. Sin maíz en el relato de los Soles, porque el maíz llega después y con Mé.",
-        "constraints": [
-          "documentado: el módulo lo reduce a «un lugar lleno de brasas» y la escena aprobada a «un círculo de brasas estilizadas»: eso es todo lo que hay, y es lo único que la ficha puede afirmar (dossier §7)",
-          "documentado: el episodio pertenece a owaya tamorhiya, sin hierro y sin objeto alguno fuera del arco con flechas de cera: no hay olla, ni machete, ni piedra trabajada en el borde (dossier §1)",
-          "La paleta se toma de las láminas que la propia comunidad hizo de sí misma: verde intenso de pasto, azul saturado de cielo y naranja-rojizo de tierra desnuda, y ese naranja del suelo no falta en ninguna lámina del estado ordinario.",
-          "Toda lámina declara una cota y dos niveles: la posición vertical es moral, porque quien sube a la cumbre correcta vive y quien sube a la más baja se ahoga, y cuál es la más alta depende del punto de vista.",
-          "El diluvio no tiene color de tormenta: es cielo cerrado y plano de semanas y meses, sin relámpago y sin espuma; y su estado posterior puede ser roca pelada gris, no pradera.",
-          "El único negro puro del corpus es el ojo apagado del sol que se vuelve luna; no hay otro negro saturado en ninguna lámina.",
-          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
-        ],
-        "avoid": [
-          "sin casa comunal ovalada, sin maloca de varios pisos, sin plataformas para dormir, sin guayuco ni delantal: todo eso es barí del Catatumbo y no yukpa",
-          "sin corona ni diadema de plumas: la fuente temprana señala expresamente que a los yuko les faltan los adornos de cabeza de sus vecinos",
-          "sin patrón concreto de mochila, collar, canasto ni aljaba: no hay dos mochilas con el mismo diseño y cada patrón pertenece a alguien",
-          "sin piedra flotante, sin venado que golpea con la pezuña, sin pareja encerrada, sin animales empujando y sin abuelo narrador junto al fogón: es la ficción editorial ya retirada",
-          "sin tomaira, sin tuano y sin tuwancha; y sin eclipse, sin reclusión y sin ninguna persona en estado tamipi",
-          "sin cadáver, sin cueva funeraria y sin toromo; y sin ningún objeto identificable como de un difunto",
-          "sin hierro en ninguna de las dos láminas: ni machete, ni olla de metal, ni hacha de acero",
-          "sin escena de despojo, mina, palma africana, hambre ni enfermedad, y sin una composición dominada por ancianos"
-        ],
-        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte, y el corte de pelo —tazón con flequillo recto en los hombres— es una pieza propia; el cuerpo se resuelve en cláusula distinta. La cubierta de palma del techo son pocas piezas planas grandes en dos tonos, amarilla y verde oliva, con el borde recortado en dientes y las varas del caballete sobresaliendo cruzadas en los extremos, nunca hoja por hoja. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
-      },
-      "views": [
-        {
-          "id": "canon",
-          "view_type": "spatial_establishing",
-          "purpose": "planta, materiales y relacion con el cuerpo que la habita",
-          "aspect": "16:9",
-          "states": [
-            "canonico"
-          ],
-          "reference_views": []
         }
       ]
     },
@@ -2943,6 +3182,11 @@
           "myth": "los-dos-caminos-del-cielo",
           "field": "mito",
           "note": "El diluvio no se lee como castigo divino: «la causa de las lluvias y de la inundación en muchas versiones no es mencionada» y la inundación yukpa «a diferencia del diluvio bíblico, no se considera como un castigo divino». Los yukpa de hoy atribuyen las inundaciones actuales a las transgresiones de los watiya: deforestación, quemas, minería, desvío de ríos y agricultura industrial"
+        },
+        {
+          "myth": "la-piedra-que-flota",
+          "field": "mito",
+          "note": "Tras el agua, «en algunos relatos… vino un incendio y una sequía que… dejaron la tierra en pura roca, pelada, sin monte y sin dónde hacer conuco»: es el estado de quema y sequía, marcado como de sólo algunas narraciones."
         }
       ],
       "design_contract": {
@@ -3063,6 +3307,11 @@
           "myth": "los-dos-caminos-del-cielo",
           "field": "mito",
           "note": "El diluvio no se lee como castigo divino: «la causa de las lluvias y de la inundación en muchas versiones no es mencionada» y la inundación yukpa «a diferencia del diluvio bíblico, no se considera como un castigo divino». Los yukpa de hoy atribuyen las inundaciones actuales a las transgresiones de los watiya: deforestación, quemas, minería, desvío de ríos y agricultura industrial"
+        },
+        {
+          "myth": "la-piedra-que-flota",
+          "field": "mito",
+          "note": "Tras el agua, «en algunos relatos… vino un incendio y una sequía que… dejaron la tierra en pura roca, pelada, sin monte y sin dónde hacer conuco»: es el estado de quema y sequía, marcado como de sólo algunas narraciones."
         }
       ],
       "design_contract": {
@@ -3185,6 +3434,11 @@
           "myth": "la-piedra-que-flota",
           "field": "mito",
           "note": "El mundo fue tejido por una araña al principio y ese tejido debe repararse; el héroe cultural es una araña, un aspecto del sol, que «estaba tejiendo las montañas, los árboles y las hojas de modo a proveer sombra». La montaña del Perijá, en este corpus, está tejida"
+        },
+        {
+          "myth": "la-piedra-que-flota",
+          "field": "mito",
+          "note": "El canon reescrito pone la advertencia en boca de las montañas: Shkhimo y Tʉtarhi «eran personas, y hablaron»; quien escogió el cerro más cercano, que no era el más alto, se ahogó."
         }
       ],
       "design_contract": {
@@ -3206,7 +3460,7 @@
         "documented_features": [
           "Shkhimo y Tʉtarhi son «las montañas más altas de la Sierra de Perijá» y en Sokorpa están personificadas y pensadas como actores míticos (dossier §7, halbmayer-goletz-2025)",
           "su jerarquía no es fija: «dependiendo de la ubicación del territorio Yukpa correspondiente, aparece Shkhimo o Tʉtarhi como la montaña más alta» (dossier §0.4)",
-          "la altura es moral: los buenos suben a la más alta y quienes pelean o roban «son enviados a la montaña más baja, donde se ahogan» (dossier §0.4)",
+          "canon, campo mito: las dos montañas «no eran sólo piedra y niebla. Eran personas, y hablaron. Avisaron que subieran, y dijeron a cuál de las dos había que subir»; los que no creyeron o escogieron «el cerro que les quedaba más cerca y que no era el más alto» se ahogaron allí. El reparto moral —buenos arriba, los que pelean o roban abajo— es la versión cristianizada (canon, campo versiones)",
           "el estado de luz es el del diluvio: oscuridad y una larga noche sostenidas durante semanas y meses, sin dramatismo de tormenta (dossier §7)",
           "no hay altitud publicada para ninguna de las dos, y la única identificación castellana hallada —Shikimu, el Cerro de las Tres Tetas de 1960, en cabeceras del Tucuco— está del lado venezolano y tiene un homónimo a veinticinco kilómetros que no se pudo descartar (dossier §7 y §11)"
         ],
@@ -3214,7 +3468,8 @@
           "dibujar la diferencia de cota como un tercio del encuadre es cuantificación editorial de una jerarquía que la fuente da como relativa y sin medida; reversible",
           "la decisión de no rotular cuál cumbre es cuál es editorial y deliberada: rotularlas fijaría un punto de vista territorial concreto, y la fuente dice que el punto de vista es precisamente lo que cambia",
           "la forma de las dos masas —lomas redondeadas y no picos— se toma de las láminas comunitarias del Perijá y no de estas montañas en particular, que nadie describe",
-          "poner figuras sobre la cumbre alta es decisión editorial para dar escala; puede retirarse y la ficha sigue leyéndose como jerarquía"
+          "poner figuras sobre la cumbre alta es decisión editorial para dar escala; puede retirarse y la ficha sigue leyéndose como jerarquía",
+          "Que las montañas sean personas y hablen se dibuja como montaña y sólo como montaña: sin rostro, sin boca y sin figura sobre la cumbre que las represente. La advertencia se lee por la gente que sube hacia la que habló."
         ]
       },
       "prompt_spec": {
@@ -3229,7 +3484,7 @@
         "constraints": [
           "documentado: Shkhimo y Tʉtarhi son «las montañas más altas de la Sierra de Perijá» y en Sokorpa están personificadas y pensadas como actores míticos (dossier §7, halbmayer-goletz-2025)",
           "documentado: su jerarquía no es fija: «dependiendo de la ubicación del territorio Yukpa correspondiente, aparece Shkhimo o Tʉtarhi como la montaña más alta» (dossier §0.4)",
-          "documentado: la altura es moral: los buenos suben a la más alta y quienes pelean o roban «son enviados a la montaña más baja, donde se ahogan» (dossier §0.4)",
+          "documentado: las dos montañas «no eran sólo piedra y niebla. Eran personas, y hablaron. Avisaron que subieran, y dijeron a cuál de las dos había que subir»; los que no creyeron o escogieron «el cerro que les quedaba más cerca y que no era el más alto» se ahogaron allí. El reparto moral —buenos arriba, los que pelean o roban abajo— es la versión cristianizada (canon, campo versiones)",
           "documentado: el estado de luz es el del diluvio: oscuridad y una larga noche sostenidas durante semanas y meses, sin dramatismo de tormenta (dossier §7)",
           "documentado: no hay altitud publicada para ninguna de las dos, y la única identificación castellana hallada —Shikimu, el Cerro de las Tres Tetas de 1960, en cabeceras del Tucuco— está del lado venezolano y tiene un homónimo a veinticinco kilómetros que no se pudo descartar (dossier §7 y §11)",
           "La paleta se toma de las láminas que la propia comunidad hizo de sí misma: verde intenso de pasto, azul saturado de cielo y naranja-rojizo de tierra desnuda, y ese naranja del suelo no falta en ninguna lámina del estado ordinario.",
@@ -3300,6 +3555,11 @@
           "myth": "los-dos-caminos-del-cielo",
           "field": "mito",
           "note": "Hay una noción activa de lo que no debe ser mirado: en el eclipse ciertas personas «deben esconderse y permanecer en sus chozas sin hablar ni hacer ruido» y «no deben ser vistas ni por el Sol ni por la Luna» —las de matrimonio considerado incorrecto y las que están tamipi, sobre todo las muchachas en su primera menstruación—. No hay lámina de eclipse, de reclusión ni de samayapa"
+        },
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "mito",
+          "note": "El canon reescrito lleva al relato el cielo que sube con cada flecha roma y el tiro al ojo que hace la noche."
         }
       ],
       "design_contract": {
@@ -3320,6 +3580,7 @@
           "no hay estrella, ni nube, ni Vía Láctea en la tercera franja: la noche que nace es plana y vacía"
         ],
         "documented_features": [
+          "canon, campo mito: Amoricha dispara hacia arriba con «puntas romas, hechas con cera de abeja negra, hechas para tocar y no para herir… y el cielo empezó a subir»; con el tiro al ojo «quedaron hechas de golpe todas las diferencias que faltaban: el día y la noche, el calor y el frío, lo seco y lo húmedo»",
           "el estado inicial es de luz perpetua sin oscurecer nunca, con los soles demasiado cerca y el agua de ríos y lagos hirviendo (dossier §7)",
           "el firmamento empieza a subir durante el episodio, y ése es el cambio que hace posible la distancia (dossier §0.3)",
           "el disparo da en el ojo de uno de los soles, «que se volvió negro y se convirtió en la luna» (dossier §0.3)",
@@ -3343,6 +3604,7 @@
         "materials_textures": "papel de cielo blanqueado por el exceso de luz para la primera franja; papel azul saturado intermedio para la segunda, con los discos reducidos de tamaño; papel de noche plana y sin estrella para la tercera; papel negro puro exclusivamente para el ojo apagado del disco que se vuelve luna; canto vivo de papel entre franja y franja, sin línea dibujada de separación",
         "era": "Owaya tamorhiya, el mundo en construcción, para el relato de los Soles, donde no hay más objeto que el arco con flechas de punta ciega de cera de abeja negra; y owaya akayi, el mundo que se daña, para el diluvio, donde sí hay cultivos, viviendas y caminos porque son las separaciones que el agua borra. Sin hierro en ninguna de las dos: ni machete, ni olla de metal, ni hacha de acero. Sin maíz en el relato de los Soles, porque el maíz llega después y con Mé.",
         "constraints": [
+          "documentado: Amoricha dispara hacia arriba con «puntas romas, hechas con cera de abeja negra, hechas para tocar y no para herir… y el cielo empezó a subir»; con el tiro al ojo «quedaron hechas de golpe todas las diferencias que faltaban: el día y la noche, el calor y el frío, lo seco y lo húmedo»",
           "documentado: el estado inicial es de luz perpetua sin oscurecer nunca, con los soles demasiado cerca y el agua de ríos y lagos hirviendo (dossier §7)",
           "documentado: el firmamento empieza a subir durante el episodio, y ése es el cambio que hace posible la distancia (dossier §0.3)",
           "documentado: el disparo da en el ojo de uno de los soles, «que se volvió negro y se convirtió en la luna» (dossier §0.3)",
@@ -3416,6 +3678,11 @@
           "myth": "la-piedra-que-flota",
           "field": "mito",
           "note": "Owaya significa mundo, tierra o territorio y es uno de los conceptos más importantes para el yukpa; sus dos estados, owaya tamorhiya (el mundo en construcción) y owaya akayi (el mundo que se daña), separan los dos relatos del corpus: los dos Soles pertenecen al primero y el diluvio es el ejemplo mayor del segundo"
+        },
+        {
+          "myth": "la-piedra-que-flota",
+          "field": "mito",
+          "note": "«cayó durante semanas y después durante meses, y con ella vino una oscuridad larga, una noche que no cedía»; «Murieron muchas personas. Murieron también los árboles y los animales»."
         }
       ],
       "design_contract": {
@@ -3522,6 +3789,11 @@
           "myth": "la-piedra-que-flota",
           "field": "mito",
           "note": "Existe un dibujo yukpa de la narración del diluvio, hecho por los estudiantes de la escuela bilingüe Santa Teresita en Sokorhpa en un taller dirigido por Gilberto Rodríguez López en 2015. Es la referencia visual comunitaria directa del relato que se va a ilustrar, y este dossier sólo pudo constatar que existe"
+        },
+        {
+          "myth": "la-piedra-que-flota",
+          "field": "mito",
+          "note": "El canon reescrito los hace yukpapi mientras cavan y sólo después animales: «Cavaron. Abrieron por debajo el camino del agua y la hicieron hundirse. Donde pasó la garra apareció otra vez el suelo»."
         }
       ],
       "design_contract": {
@@ -3542,6 +3814,7 @@
           "no hay hierro en ninguna lámina donde aparezcan: ni machete, ni olla, ni herramienta"
         ],
         "documented_features": [
+          "canon, campo mito: «En aquel tiempo los armadillos todavía no eran del todo animales: eran yukpapi, gente como la gente… Cavaron. Abrieron por debajo el camino del agua y la hicieron hundirse»; sólo después «tomaron la forma de animales que hoy tienen»",
           "«las narrativas describen cómo los armadillos hacen que el agua se hunda, creando así una nueva división o separación de la tierra y el agua y, en consecuencia, entre zonas hidrológicas, bosques, áreas residenciales y de cultivo»: re-diferencian el mundo, no cavan drenajes (dossier §0.5)",
           "en irapa se dice «se salvó la tierra y quien lo arregló era el armadillo» (dossier §0.5)",
           "tienen nombre: kamasĉhu, y Kamashrhush en Sokorpa, donde transmite su canto en sueños a una mujer de conocimiento (dossier §0.5 y §7)",
@@ -3552,7 +3825,8 @@
           "la morfología entera es interpretación editorial reversible: se resuelve con armadillo común porque no hay especie, ni talla, ni conteo de bandas en ninguna fuente, y así se declara (dossier §11)",
           "repetirlo tres veces en hilera, en vez de dibujar un grupo, es decisión editorial tomada del censo —basta una identidad de especie repetida— y es reversible a un solo animal",
           "que su condición de yukpapi no se dibuje —ni rasgo humano, ni postura erguida, ni ropa— es decisión editorial: la fuente dice que eran como humanos antes, y dibujarlo así confundiría la ficha con la de gente",
-          "el canto que Kamashrhush transmite en sueños no se dibuja: es materia de conocimiento y no hay fuente que lo describa"
+          "el canto que Kamashrhush transmite en sueños no se dibuja: es materia de conocimiento y no hay fuente que lo describa",
+          "La condición yukpapi que el canon reescrito lleva al relato se declara y no se dibuja como híbrido: la hoja los da en la forma de armadillo por la que se les recuerda, porque un cuerpo medio humano inventaría lo que el relato llama «no del todo»; el tiempo indiferenciado se lee en el agua sin orilla, no en el animal. Reversible si una lectura yukpa pide otra cosa."
         ]
       },
       "prompt_spec": {
@@ -3565,6 +3839,7 @@
         "materials_textures": "caparazón de papel en pocas piezas planas grandes, en bandas anchas de canto recortado, nunca escama por escama; papel pardo grisáceo mate para el cuerpo, sin brillo y sin volumen; papel de agua opaca retirándose por delante de la hilera; papel naranja-rojizo de tierra desnuda apareciendo detrás de cada animal; papel de linde recortado en canto limpio entre el agua y la tierra, que es lo que el animal produce",
         "era": "Owaya tamorhiya, el mundo en construcción, para el relato de los Soles, donde no hay más objeto que el arco con flechas de punta ciega de cera de abeja negra; y owaya akayi, el mundo que se daña, para el diluvio, donde sí hay cultivos, viviendas y caminos porque son las separaciones que el agua borra. Sin hierro en ninguna de las dos: ni machete, ni olla de metal, ni hacha de acero. Sin maíz en el relato de los Soles, porque el maíz llega después y con Mé.",
         "constraints": [
+          "documentado: «En aquel tiempo los armadillos todavía no eran del todo animales: eran yukpapi, gente como la gente… Cavaron. Abrieron por debajo el camino del agua y la hicieron hundirse»; sólo después «tomaron la forma de animales que hoy tienen»",
           "documentado: «las narrativas describen cómo los armadillos hacen que el agua se hunda, creando así una nueva división o separación de la tierra y el agua y, en consecuencia, entre zonas hidrológicas, bosques, áreas residenciales y de cultivo»: re-diferencian el mundo, no cavan drenajes (dossier §0.5)",
           "documentado: en irapa se dice «se salvó la tierra y quien lo arregló era el armadillo» (dossier §0.5)",
           "documentado: tienen nombre: kamasĉhu, y Kamashrhush en Sokorpa, donde transmite su canto en sueños a una mujer de conocimiento (dossier §0.5 y §7)",
@@ -3652,7 +3927,7 @@
           "arco largo de madera clara o rojiza con la empuñadura envuelta en hilo, y flechas más largas que el arco",
           "papel de piel de un solo tono para el óvalo plano de la cara, con los rasgos recortados como piezas aparte"
         ],
-        "palette_logic": "Azul claro y blanco con franjas rojas verticales en los hombres, y un tono liso saturado distinto por mujer, contra el verde intenso de la ladera y el naranja-rojizo del suelo; ninguna prenda repite exactamente el color del vestido de Kopeco, para que ella se lea como figura suelta y no como una más del grupo.",
+        "palette_logic": "Azul claro y blanco con franjas rojas verticales en los hombres, y un tono liso saturado distinto por mujer, contra el verde intenso de la ladera y el naranja-rojizo del suelo; ninguna prenda del grupo repite el claro con franjas de Amoricha en la misma lámina, para que él se lea como figura suelta.",
         "scale": "Figuras enteras de pie, de estatura corta declarada, todas a la misma cota del suelo y sin que ninguna sobresalga del resto; el grupo entero ocupa la banda inferior del encuadre y el paisaje se lleva las dos terceras partes, porque la cota importa más que la talla.",
         "continuity_markers": [
           "nadie lleva corona, diadema ni pluma en ninguna lámina del corpus, y nadie lleva pintura facial",
@@ -3846,6 +4121,280 @@
           "view_type": "spatial_establishing",
           "purpose": "planta, materiales y relacion con el cuerpo que la habita",
           "aspect": "16:9",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "amoricha__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "amoricha"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "mito",
+          "note": "«El que vino a arreglarlo se llama Amoricha entre los irapa. Tomó el arco y se puso a disparar hacia arriba. No eran flechas de matar: las puntas eran romas, hechas con cera de abeja negra»."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre yukpa de estatura pequeña y hombros anchos, de pie con los dos pies firmes y el arco tendido vertical hacia el cenit, la flecha más larga que el arco apuntando recto al cielo: la única figura de la biblia que mira hacia arriba, y su gesto es de empujar, no de cazar.",
+        "materials": [
+          "cara como óvalo plano de un solo tono con los rasgos recortados aparte; cuerpo en pocos planos grandes de papel pardo mate, sin músculo modelado",
+          "manta larga o túnica hasta la rodilla en un solo plano claro, con franjas verticales rojas anchas",
+          "corte de tazón con flequillo recto como una sola pieza negra mate",
+          "arco largo de madera clara con la empuñadura envuelta en hilo, y flechas más largas que el arco con la punta resuelta como un botón romo negro de cera"
+        ],
+        "palette_logic": "Pardo de piel, claro de manta con franjas rojas, y el negro puro de la cera en la punta de la flecha, que es el mismo negro del ojo apagado del sol.",
+        "scale": "Estatura pequeña yukpa, medida contra el arco, que le llega a la frente, y contra la flecha, que la supera. Cuerpo entero 9:16 con el cielo encima.",
+        "continuity_markers": [
+          "la punta de la flecha siempre roma y negra, nunca de piedra ni de hierro",
+          "apunta hacia arriba, nunca a una persona ni a un animal",
+          "sin corona ni diadema de plumas, sin pintura facial",
+          "sin mochila ni objeto de hierro: es el mundo en construcción"
+        ],
+        "documented_features": [
+          "canon, campo mito: dispara con arco hacia arriba flechas de puntas «romas, hechas con cera de abeja negra, hechas para tocar y no para herir», y «cada flecha lo empujaba un poco más»",
+          "dossier §0.3 y §7 (halbmayer-2016): quien transforma un sol en luna es Amoricha o Tamorayo, el primer yukpa; su nombre deriva de -amó-, «construir una casa» o «hacer un envoltorio», y tirar con arco aquí «no tiene la intención de matar»",
+          "dossier §6: arco wakaĉha largo de madera clara o rojiza con la empuñadura envuelta en hilo amarillo o rojo, y flechas más largas que el arco; estatura pequeña y cabello motilado, corte de tazón en las láminas comunitarias; manta larga documentada por Reichel-Dolmatoff",
+          "dossier §6: a los yuko les faltan los adornos de cabeza; ninguna figura del corpus lleva pintura facial"
+        ],
+        "editorial_features": [
+          "La prenda es la manta larga documentada, resuelta con las franjas rojas de las túnicas de las láminas comunitarias: combinar las dos es decisión de hoja, reversible.",
+          "Que el relato no le dé edad ni cuerpo se resuelve con el tipo base del hombre yukpa; ningún rasgo heroico —ni tamaño mayor, ni musculatura, ni luz propia—.",
+          "Las versiones sokorpa (el dios-sol se dispara él mismo con punta de mapicha) e iroka (el héroe teje montañas y hojas) no se dibujan en esta hoja: son otras maneras de hacer que el canon deja como están."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Yukpa V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Amoricha. Hombre yukpa de estatura pequeña y hombros anchos, de pie con los dos pies firmes y el arco tendido vertical hacia el cenit, la flecha más larga que el arco apuntando recto al cielo: la única figura de la biblia que mira hacia arriba, y su gesto es de empujar, no de cazar.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura pequeña yukpa, medida contra el arco, que le llega a la frente, y contra la flecha, que la supera. Cuerpo entero 9:16 con el cielo encima.",
+        "lighting_mood": "Luz de montaña con cielo azul saturado y aire limpio en el estado ordinario; y su contrario en el diluvio, que es «oscuridad y una larga noche» sostenida durante semanas y meses, no una tormenta: cielo cerrado y plano, sin relámpago y sin dramatismo de tormenta. En el episodio celeste, el estado inicial es de luz perpetua y calor abrasador con el firmamento bajo, y el acto lo resuelve un solo punto negro: el ojo apagado del sol que se vuelve luna.",
+        "materials_textures": "cara como óvalo plano de un solo tono con los rasgos recortados aparte; cuerpo en pocos planos grandes de papel pardo mate, sin músculo modelado; manta larga o túnica hasta la rodilla en un solo plano claro, con franjas verticales rojas anchas; corte de tazón con flequillo recto como una sola pieza negra mate; arco largo de madera clara con la empuñadura envuelta en hilo, y flechas más largas que el arco con la punta resuelta como un botón romo negro de cera",
+        "era": "Owaya tamorhiya, el mundo en construcción, para el relato de los Soles, donde no hay más objeto que el arco con flechas de punta ciega de cera de abeja negra; y owaya akayi, el mundo que se daña, para el diluvio, donde sí hay cultivos, viviendas y caminos porque son las separaciones que el agua borra. Sin hierro en ninguna de las dos: ni machete, ni olla de metal, ni hacha de acero. Sin maíz en el relato de los Soles, porque el maíz llega después y con Mé.",
+        "constraints": [
+          "documentado: dispara con arco hacia arriba flechas de puntas «romas, hechas con cera de abeja negra, hechas para tocar y no para herir», y «cada flecha lo empujaba un poco más»",
+          "documentado: quien transforma un sol en luna es Amoricha o Tamorayo, el primer yukpa; su nombre deriva de -amó-, «construir una casa» o «hacer un envoltorio», y tirar con arco aquí «no tiene la intención de matar»",
+          "documentado: arco wakaĉha largo de madera clara o rojiza con la empuñadura envuelta en hilo amarillo o rojo, y flechas más largas que el arco; estatura pequeña y cabello motilado, corte de tazón en las láminas comunitarias; manta larga documentada por Reichel-Dolmatoff",
+          "documentado: a los yuko les faltan los adornos de cabeza; ninguna figura del corpus lleva pintura facial",
+          "La paleta se toma de las láminas que la propia comunidad hizo de sí misma: verde intenso de pasto, azul saturado de cielo y naranja-rojizo de tierra desnuda, y ese naranja del suelo no falta en ninguna lámina del estado ordinario.",
+          "Toda lámina declara una cota y dos niveles: la posición vertical es moral, porque quien sube a la cumbre correcta vive y quien sube a la más baja se ahoga, y cuál es la más alta depende del punto de vista.",
+          "El diluvio no tiene color de tormenta: es cielo cerrado y plano de semanas y meses, sin relámpago y sin espuma; y su estado posterior puede ser roca pelada gris, no pradera.",
+          "El único negro puro del corpus es el ojo apagado del sol que se vuelve luna; no hay otro negro saturado en ninguna lámina.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin casa comunal ovalada, sin maloca de varios pisos, sin plataformas para dormir, sin guayuco ni delantal: todo eso es barí del Catatumbo y no yukpa",
+          "sin corona ni diadema de plumas: la fuente temprana señala expresamente que a los yuko les faltan los adornos de cabeza de sus vecinos",
+          "sin patrón concreto de mochila, collar, canasto ni aljaba: no hay dos mochilas con el mismo diseño y cada patrón pertenece a alguien",
+          "sin piedra flotante, sin venado que golpea con la pezuña, sin pareja encerrada, sin animales empujando y sin abuelo narrador junto al fogón: es la ficción editorial ya retirada",
+          "sin tomaira, sin tuano y sin tuwancha; y sin eclipse, sin reclusión y sin ninguna persona en estado tamipi",
+          "sin cadáver, sin cueva funeraria y sin toromo; y sin ningún objeto identificable como de un difunto",
+          "sin hierro en ninguna de las dos láminas: ni machete, ni olla de metal, ni hacha de acero",
+          "sin escena de despojo, mina, palma africana, hambre ni enfermedad, y sin una composición dominada por ancianos"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte, y el corte de pelo —tazón con flequillo recto en los hombres— es una pieza propia; el cuerpo se resuelve en cláusula distinta. La cubierta de palma del techo son pocas piezas planas grandes en dos tonos, amarilla y verde oliva, con el borde recortado en dientes y las varas del caballete sobresaliendo cruzadas en los extremos, nunca hoja por hoja. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_hombre_adulto__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_hombre_adulto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-piedra-que-flota",
+          "field": "mito",
+          "note": "Los que suben a la montaña que habló, esperan y rehacen la siembra."
+        },
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "mito",
+          "note": "Los que suben a la montaña que habló, esperan y rehacen la siembra."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre de estatura pequeña y hombros anchos, de pie, con la túnica hasta la rodilla de franjas verticales rojas, el corte de tazón de flequillo recto, la mochila de franjas colgada al costado y el arco largo en la mano.",
+        "materials": [
+          "túnica o manta larga hasta la rodilla, clara con franjas verticales rojas",
+          "corte de tazón negro mate en una pieza",
+          "mochila de franjas blanco y rojo marrón, sin patrón concreto",
+          "arco largo con empuñadura envuelta en hilo y flechas más largas que él"
+        ],
+        "palette_logic": "Pardo de piel, claro de túnica con rojo, y el blanco y rojo marrón de la mochila.",
+        "scale": "Estatura pequeña yukpa, de hombros anchos. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "corte de tazón",
+          "sin tocado ni pintura",
+          "mochila sólo en los hombres",
+          "nada de hierro"
+        ],
+        "documented_features": [
+          "dossier §6 (reichel-1960): los yuko son de estatura pequeña, llevan el cabello «motilado» —recortado— y visten mantas largas; no hay guayuco yukpa documentado: el delantal de la fuente temprana es barí",
+          "dossier §6 (me-ynetachako): en las láminas comunitarias, túnicas largas hasta la rodilla azul claro y blanca con franjas verticales rojas; corte de tazón con flequillo recto en los hombres, pelo negro largo en las mujeres",
+          "dossier §6: a los yuko les faltan los adornos de cabeza; ninguna figura del corpus lleva pintura facial",
+          "dossier §1: el mundo de los relatos es owaya tamorhiya, sin hierro; machetes, ollas y ropa occidental son del siglo XX",
+          "canon, campo mito: «Algunos oyeron y treparon hasta donde les dijeron»; después «hubo que volver a empezar la siembra»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "Se toma el estrato de la manta larga y la túnica, no el del sombrero campesino ni el vestido de tela saturada de hoy, porque los relatos son del mundo en construcción. Decisión reversible.",
+          "Collares moke por su cantidad y su secuencia de color, jamás una pinta concreta; mochila por su forma y su bicromía, jamás un patrón (regla del ejemplar)."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Yukpa V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · hombre yukpa adulto. Hombre de estatura pequeña y hombros anchos, de pie, con la túnica hasta la rodilla de franjas verticales rojas, el corte de tazón de flequillo recto, la mochila de franjas colgada al costado y el arco largo en la mano.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura pequeña yukpa, de hombros anchos. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de montaña con cielo azul saturado y aire limpio en el estado ordinario; y su contrario en el diluvio, que es «oscuridad y una larga noche» sostenida durante semanas y meses, no una tormenta: cielo cerrado y plano, sin relámpago y sin dramatismo de tormenta. En el episodio celeste, el estado inicial es de luz perpetua y calor abrasador con el firmamento bajo, y el acto lo resuelve un solo punto negro: el ojo apagado del sol que se vuelve luna.",
+        "materials_textures": "túnica o manta larga hasta la rodilla, clara con franjas verticales rojas; corte de tazón negro mate en una pieza; mochila de franjas blanco y rojo marrón, sin patrón concreto; arco largo con empuñadura envuelta en hilo y flechas más largas que él",
+        "era": "Owaya tamorhiya, el mundo en construcción, para el relato de los Soles, donde no hay más objeto que el arco con flechas de punta ciega de cera de abeja negra; y owaya akayi, el mundo que se daña, para el diluvio, donde sí hay cultivos, viviendas y caminos porque son las separaciones que el agua borra. Sin hierro en ninguna de las dos: ni machete, ni olla de metal, ni hacha de acero. Sin maíz en el relato de los Soles, porque el maíz llega después y con Mé.",
+        "constraints": [
+          "documentado: los yuko son de estatura pequeña, llevan el cabello «motilado» —recortado— y visten mantas largas; no hay guayuco yukpa documentado: el delantal de la fuente temprana es barí",
+          "documentado: en las láminas comunitarias, túnicas largas hasta la rodilla azul claro y blanca con franjas verticales rojas; corte de tazón con flequillo recto en los hombres, pelo negro largo en las mujeres",
+          "documentado: a los yuko les faltan los adornos de cabeza; ninguna figura del corpus lleva pintura facial",
+          "documentado: el mundo de los relatos es owaya tamorhiya, sin hierro; machetes, ollas y ropa occidental son del siglo XX",
+          "documentado: «Algunos oyeron y treparon hasta donde les dijeron»; después «hubo que volver a empezar la siembra»",
+          "La paleta se toma de las láminas que la propia comunidad hizo de sí misma: verde intenso de pasto, azul saturado de cielo y naranja-rojizo de tierra desnuda, y ese naranja del suelo no falta en ninguna lámina del estado ordinario.",
+          "Toda lámina declara una cota y dos niveles: la posición vertical es moral, porque quien sube a la cumbre correcta vive y quien sube a la más baja se ahoga, y cuál es la más alta depende del punto de vista.",
+          "El diluvio no tiene color de tormenta: es cielo cerrado y plano de semanas y meses, sin relámpago y sin espuma; y su estado posterior puede ser roca pelada gris, no pradera.",
+          "El único negro puro del corpus es el ojo apagado del sol que se vuelve luna; no hay otro negro saturado en ninguna lámina.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin casa comunal ovalada, sin maloca de varios pisos, sin plataformas para dormir, sin guayuco ni delantal: todo eso es barí del Catatumbo y no yukpa",
+          "sin corona ni diadema de plumas: la fuente temprana señala expresamente que a los yuko les faltan los adornos de cabeza de sus vecinos",
+          "sin patrón concreto de mochila, collar, canasto ni aljaba: no hay dos mochilas con el mismo diseño y cada patrón pertenece a alguien",
+          "sin piedra flotante, sin venado que golpea con la pezuña, sin pareja encerrada, sin animales empujando y sin abuelo narrador junto al fogón: es la ficción editorial ya retirada",
+          "sin tomaira, sin tuano y sin tuwancha; y sin eclipse, sin reclusión y sin ninguna persona en estado tamipi",
+          "sin cadáver, sin cueva funeraria y sin toromo; y sin ningún objeto identificable como de un difunto",
+          "sin hierro en ninguna de las dos láminas: ni machete, ni olla de metal, ni hacha de acero",
+          "sin escena de despojo, mina, palma africana, hambre ni enfermedad, y sin una composición dominada por ancianos"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte, y el corte de pelo —tazón con flequillo recto en los hombres— es una pieza propia; el cuerpo se resuelve en cláusula distinta. La cubierta de palma del techo son pocas piezas planas grandes en dos tonos, amarilla y verde oliva, con el borde recortado en dientes y las varas del caballete sobresaliendo cruzadas en los extremos, nunca hoja por hoja. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_adulta__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_adulta"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-piedra-que-flota",
+          "field": "mito",
+          "note": "Las que suben, esperan y vuelven a sembrar."
+        },
+        {
+          "myth": "los-dos-caminos-del-cielo",
+          "field": "mito",
+          "note": "Las que suben, esperan y vuelven a sembrar."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer de estatura pequeña, de pie, con la manta larga hasta los tobillos, el pelo negro largo suelto, sartas de collares hasta la cintura y un canasto a la espalda sostenido con banda de frente.",
+        "materials": [
+          "manta larga hasta los tobillos en un plano liso",
+          "pelo negro largo en una pieza",
+          "sartas de pepas hasta la cintura, una rojo coral con negro y otra verde oscura",
+          "canasto con banda de frente"
+        ],
+        "palette_logic": "Pardo de piel, un tono liso de manta, rojo coral y verde oscuro de los collares.",
+        "scale": "Estatura pequeña yukpa, de hombros anchos. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "pelo largo",
+          "collares en cantidad",
+          "canasto: las mujeres cargan la cosecha"
+        ],
+        "documented_features": [
+          "dossier §6 (reichel-1960): los yuko son de estatura pequeña, llevan el cabello «motilado» —recortado— y visten mantas largas; no hay guayuco yukpa documentado: el delantal de la fuente temprana es barí",
+          "dossier §6 (me-ynetachako): en las láminas comunitarias, túnicas largas hasta la rodilla azul claro y blanca con franjas verticales rojas; corte de tazón con flequillo recto en los hombres, pelo negro largo en las mujeres",
+          "dossier §6: a los yuko les faltan los adornos de cabeza; ninguna figura del corpus lleva pintura facial",
+          "dossier §1: el mundo de los relatos es owaya tamorhiya, sin hierro; machetes, ollas y ropa occidental son del siglo XX",
+          "dossier §6: las mujeres llevan la cosecha en canastos y los collares moke en gran cantidad; los hombres, mochila, arco y flecha"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "Se toma el estrato de la manta larga y la túnica, no el del sombrero campesino ni el vestido de tela saturada de hoy, porque los relatos son del mundo en construcción. Decisión reversible.",
+          "Collares moke por su cantidad y su secuencia de color, jamás una pinta concreta; mochila por su forma y su bicromía, jamás un patrón (regla del ejemplar)."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Yukpa V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer yukpa adulta. Mujer de estatura pequeña, de pie, con la manta larga hasta los tobillos, el pelo negro largo suelto, sartas de collares hasta la cintura y un canasto a la espalda sostenido con banda de frente.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura pequeña yukpa, de hombros anchos. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de montaña con cielo azul saturado y aire limpio en el estado ordinario; y su contrario en el diluvio, que es «oscuridad y una larga noche» sostenida durante semanas y meses, no una tormenta: cielo cerrado y plano, sin relámpago y sin dramatismo de tormenta. En el episodio celeste, el estado inicial es de luz perpetua y calor abrasador con el firmamento bajo, y el acto lo resuelve un solo punto negro: el ojo apagado del sol que se vuelve luna.",
+        "materials_textures": "manta larga hasta los tobillos en un plano liso; pelo negro largo en una pieza; sartas de pepas hasta la cintura, una rojo coral con negro y otra verde oscura; canasto con banda de frente",
+        "era": "Owaya tamorhiya, el mundo en construcción, para el relato de los Soles, donde no hay más objeto que el arco con flechas de punta ciega de cera de abeja negra; y owaya akayi, el mundo que se daña, para el diluvio, donde sí hay cultivos, viviendas y caminos porque son las separaciones que el agua borra. Sin hierro en ninguna de las dos: ni machete, ni olla de metal, ni hacha de acero. Sin maíz en el relato de los Soles, porque el maíz llega después y con Mé.",
+        "constraints": [
+          "documentado: los yuko son de estatura pequeña, llevan el cabello «motilado» —recortado— y visten mantas largas; no hay guayuco yukpa documentado: el delantal de la fuente temprana es barí",
+          "documentado: en las láminas comunitarias, túnicas largas hasta la rodilla azul claro y blanca con franjas verticales rojas; corte de tazón con flequillo recto en los hombres, pelo negro largo en las mujeres",
+          "documentado: a los yuko les faltan los adornos de cabeza; ninguna figura del corpus lleva pintura facial",
+          "documentado: el mundo de los relatos es owaya tamorhiya, sin hierro; machetes, ollas y ropa occidental son del siglo XX",
+          "documentado: las mujeres llevan la cosecha en canastos y los collares moke en gran cantidad; los hombres, mochila, arco y flecha",
+          "La paleta se toma de las láminas que la propia comunidad hizo de sí misma: verde intenso de pasto, azul saturado de cielo y naranja-rojizo de tierra desnuda, y ese naranja del suelo no falta en ninguna lámina del estado ordinario.",
+          "Toda lámina declara una cota y dos niveles: la posición vertical es moral, porque quien sube a la cumbre correcta vive y quien sube a la más baja se ahoga, y cuál es la más alta depende del punto de vista.",
+          "El diluvio no tiene color de tormenta: es cielo cerrado y plano de semanas y meses, sin relámpago y sin espuma; y su estado posterior puede ser roca pelada gris, no pradera.",
+          "El único negro puro del corpus es el ojo apagado del sol que se vuelve luna; no hay otro negro saturado en ninguna lámina.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin casa comunal ovalada, sin maloca de varios pisos, sin plataformas para dormir, sin guayuco ni delantal: todo eso es barí del Catatumbo y no yukpa",
+          "sin corona ni diadema de plumas: la fuente temprana señala expresamente que a los yuko les faltan los adornos de cabeza de sus vecinos",
+          "sin patrón concreto de mochila, collar, canasto ni aljaba: no hay dos mochilas con el mismo diseño y cada patrón pertenece a alguien",
+          "sin piedra flotante, sin venado que golpea con la pezuña, sin pareja encerrada, sin animales empujando y sin abuelo narrador junto al fogón: es la ficción editorial ya retirada",
+          "sin tomaira, sin tuano y sin tuwancha; y sin eclipse, sin reclusión y sin ninguna persona en estado tamipi",
+          "sin cadáver, sin cueva funeraria y sin toromo; y sin ningún objeto identificable como de un difunto",
+          "sin hierro en ninguna de las dos láminas: ni machete, ni olla de metal, ni hacha de acero",
+          "sin escena de despojo, mina, palma africana, hambre ni enfermedad, y sin una composición dominada por ancianos"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte, y el corte de pelo —tazón con flequillo recto en los hombres— es una pieza propia; el cuerpo se resuelve en cláusula distinta. La cubierta de palma del techo son pocas piezas planas grandes en dos tonos, amarilla y verde oliva, con el borde recortado en dientes y las varas del caballete sobresaliendo cruzadas en los extremos, nunca hoja por hoja. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],

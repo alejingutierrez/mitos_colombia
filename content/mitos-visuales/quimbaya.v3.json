@@ -932,8 +932,8 @@
     "dossier": "docs/investigacion/quimbaya.md"
   },
   "inventory": {
-    "status": "reconciling",
-    "frozen": false,
+    "status": "approved_frozen",
+    "frozen": true,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -943,7 +943,7 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19",
+    "approved_at": "2026-09-24",
     "reconciliation": {
       "opened_at": "2026-09-24",
       "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
@@ -953,8 +953,19 @@
         "nabsacadas-la-estrella-caida"
       ],
       "new_myths": [],
-      "unchanged_myths": []
-    }
+      "unchanged_myths": [],
+      "closed_at": "2026-09-24",
+      "summary": "3 relatos releídos: 10 añadidas (provincia de cañaverales y ahuyama embebidas; rodelas de cabello, palanquín y cornetas, ritual de muerte, putimaes y pijaos, azotes, versiones de la horca excluidos), 0 excluidas por el canon nuevo, 11 rediseñadas (vasija del vino, grupos del juego, Tacurumbi, plaza, comitiva, Cumanday, Nabsacadas cargado y la sillita vacía, la joven con la señal, utilería con ahuyama, Pachague) y 5 tipos base en dos capas —hombre, mujer y muchacho de 1553; mujer joven y anciano de 1603—; anciana declarada ausente."
+    },
+    "declared_absences": [
+      {
+        "entity_id": "tipo_anciana",
+        "name": "Tipo base · anciana quimbaya",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Ninguno de los tres relatos pone a una mujer vieja en escena: Inés no tiene edad, las mujeres de la fiesta son un escuadrón y la comitiva de 1932 está fuera de época. No se inventa."
+      }
+    ]
   },
   "myths": {
     "batatabati": {
@@ -977,9 +988,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura separó la fiesta de la princesa que nunca existió, y la separación deja el relato en manos de un colectivo: no hay una Batatabatí hija de Tacurumbí, ni un secuestro, ni unos ojos arrancados, ni un río nacido de lágrimas — la palabra es un estribillo que el cronista traduce como «ea, juguemos» y el sujeto del relato son los tres bloques de mujeres, hombres y muchachos que avanzan al oír el son; y hubo una segunda separación, la de las dos escenas seguidas que la crónica pone y que nadie lee juntas, porque tras el choque vienen los dos tambores, la rueda, la vasija en la mano y unos cantares que «recitan a su uso los trabajos presentes y recuentan los sucesos pasados de sus mayores», de modo que la plaza no es un campo de juego sino un archivo cantado, y ésa es la escena que el inventario tuvo que producir.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito abre con la provincia de Cieza —cañaverales intransitables, casas pequeñas de hoja de caña, ríos sin cuenta, puentes de caña, fuentes salobres en mitad de la corriente y un volcán humeante que no es el Cumanday—, pone la riqueza de los señores y el vaso de dos azumbres de Tacurumbi, las rodelas de cabello, y ordena la fiesta en beber, escuadrones de mujeres, hombres y muchachos, juego y plaza; corrige además «bebida de maíz» por «la vasija del vino».",
         "previous_note": "La lectura separó la fiesta de la princesa que nunca existió, y la separación deja el relato en manos de un colectivo: no hay una Batatabatí hija de Tacurumbí, ni un secuestro, ni unos ojos arrancados, ni un río nacido de lágrimas — la palabra es un estribillo que el cronista traduce como «ea, juguemos» y el sujeto del relato son los tres bloques de mujeres, hombres y muchachos que avanzan al oír el son; y hubo una segunda separación, la de las dos escenas seguidas que la crónica pone y que nadie lee juntas, porque tras el choque vienen los dos tambores, la rueda, la vasija en la mano y unos cantares que «recitan a su uso los trabajos presentes y recuentan los sucesos pasados de sus mayores», de modo que la plaza no es un campo de juego sino un archivo cantado, y ésa es la escena que el inventario tuvo que producir."
       },
       "entity_refs": [
@@ -1067,6 +1078,31 @@
           "entity_id": "hoja_utileria_quimbaya",
           "role": "plot_object",
           "note": "Una sola hoja con los seis objetos menores del corpus, agrupados por mundo material del Cauca medio de los siglos XVI y XVII. La hoja declara de qué relato viene cada pieza para no mezclar la fiesta descrita por Cieza con las ofrendas del bohío de 1603. Ninguna pieza se diseña citando un objeto arqueológico real."
+        },
+        {
+          "entity_id": "provincia_de_canaverales_y_rios",
+          "role": "setting",
+          "note": "Nuevo en el canon reescrito: el paisaje de la provincia; fondo de la plaza."
+        },
+        {
+          "entity_id": "rodelas_de_cabello_y_armas_de_guerra",
+          "role": "plot_object",
+          "note": "Nuevo en el canon reescrito; armas de guerra sin escena."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base de 1553: los hombres de la fiesta."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base de 1553: las mujeres de la fiesta."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base de 1553: los muchachos del juego."
         }
       ]
     },
@@ -1090,9 +1126,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura separó la trama de su procedencia y la procedencia no resistió: la página de El Liberal del 5 de abril de 1932 que el canon señala como origen contiene cinco piezas de Gonzalo Uribe Mejía sobre los embera chamí y el Mojana —ni Ipiaré, ni Ebachí, ni quimbayas, ni Cumanday, ni sandalia—, y fuera de una crónica de 2023 que cita el texto sin nombrar periódico ni fecha, la expresión sólo aparece indexada en el propio sitio que publica esta biblia, de modo que la referencia es circular y el relato pasa a ser texto de 1932 de localización pendiente transmitido en tercera mano; lo que sobrevive intacto de esa lectura es el objeto, porque la sandalia se ciñe «con cadenas y sortijas» y no con una correa, y porque no hay ninguna base arqueológica para calzado prehispánico en esta región, así que la única pieza dorada del corpus es también la única declaradamente inventada.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito cita el texto de 1932 con más cuerpo: la profecía de la nieve como algodón y los barbudos en pájaros marítimos, la princesa hija del último rey en un palanquín de oro, la comitiva de mujeres desnudas, esclavos, sacerdotes y orfebres, las cornetas de oro y el ritual de muerte con flecha o cráter; todo eso es la corte que el dossier prohíbe por época y queda fuera de lámina, mientras la sandalia, el volcán humeante y el ánima de Ipiaré conservan su ficha.",
         "previous_note": "La lectura separó la trama de su procedencia y la procedencia no resistió: la página de El Liberal del 5 de abril de 1932 que el canon señala como origen contiene cinco piezas de Gonzalo Uribe Mejía sobre los embera chamí y el Mojana —ni Ipiaré, ni Ebachí, ni quimbayas, ni Cumanday, ni sandalia—, y fuera de una crónica de 2023 que cita el texto sin nombrar periódico ni fecha, la expresión sólo aparece indexada en el propio sitio que publica esta biblia, de modo que la referencia es circular y el relato pasa a ser texto de 1932 de localización pendiente transmitido en tercera mano; lo que sobrevive intacto de esa lectura es el objeto, porque la sandalia se ciñe «con cadenas y sortijas» y no con una correa, y porque no hay ninguna base arqueológica para calzado prehispánico en esta región, así que la única pieza dorada del corpus es también la única declaradamente inventada."
       },
       "entity_refs": [
@@ -1135,6 +1171,16 @@
           "entity_id": "piezas_de_orfebreria_quimbaya",
           "role": "plot_object",
           "note": "La única pieza dorada que se produce es la sandalia ficticia de 1932, con diseño propio y sin citar ningún objeto de colección. Los prompts ya prohíben «exceso de oro»."
+        },
+        {
+          "entity_id": "palanquin_y_cornetas_de_oro",
+          "role": "plot_object",
+          "note": "Nuevos en el canon reescrito; regalia de 1932 fuera de lámina."
+        },
+        {
+          "entity_id": "ritual_de_muerte_del_rey",
+          "role": "magic_subject",
+          "note": "Nuevo; anunciado y no narrado."
         }
       ]
     },
@@ -1158,9 +1204,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura separó al hombre del dios y del demonio, que son las dos etiquetas que el archivo le puso: el cronista franciscano lo llama demonio pero escribe que se apareció «en figura humana», y el manual de 1948 lo comprimió en «dios quimbaya», que borra la trama entera; leído el expediente, lo que hay es una figura que vuelve del páramo de Tataquí y de ese regreso saca su autoridad, de modo que el páramo dejó de ser fondo y pasó a ser una ficha —el origen del derecho a hablar—, y la estrella caída dejó de ser un prodigio celeste para ser lo que es, la traducción de un nombre; y la segunda separación fue de mundos materiales, porque la gente que llega de noche al bohío con masato y bollos no puede llevar los cuerpos de la fiesta de 1553: reusar esa gramática mentiría sobre el siglo.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito sigue a Simón con más detalle que antes: la joven que carga a Nabsacadas a cuestas tres meses y termina con una señal de pata de gallo en la pierna, la predicación contra la confesión y el bautismo, el prodigio de maíz y ahuyamas que se secan y pudren al cuarto día, los putimaes y pijaos, los azotes al cacique, y un cierre sin captura —la sillita pintada está vacía—; la ahuyama entra a la hoja de utilería y la violencia de la doctrina queda fuera de lámina.",
         "previous_note": "La lectura separó al hombre del dios y del demonio, que son las dos etiquetas que el archivo le puso: el cronista franciscano lo llama demonio pero escribe que se apareció «en figura humana», y el manual de 1948 lo comprimió en «dios quimbaya», que borra la trama entera; leído el expediente, lo que hay es una figura que vuelve del páramo de Tataquí y de ese regreso saca su autoridad, de modo que el páramo dejó de ser fondo y pasó a ser una ficha —el origen del derecho a hablar—, y la estrella caída dejó de ser un prodigio celeste para ser lo que es, la traducción de un nombre; y la segunda separación fue de mundos materiales, porque la gente que llega de noche al bohío con masato y bollos no puede llevar los cuerpos de la fiesta de 1553: reusar esa gramática mentiría sobre el siglo."
       },
       "entity_refs": [
@@ -1248,6 +1294,36 @@
           "entity_id": "hoja_utileria_quimbaya",
           "role": "plot_object",
           "note": "Una sola hoja con los seis objetos menores del corpus, agrupados por mundo material del Cauca medio de los siglos XVI y XVII. La hoja declara de qué relato viene cada pieza para no mezclar la fiesta descrita por Cieza con las ofrendas del bohío de 1603. Ninguna pieza se diseña citando un objeto arqueológico real."
+        },
+        {
+          "entity_id": "ahuyama",
+          "role": "plot_object",
+          "note": "Nueva en el canon reescrito: la ahuyama del prodigio que se pudre; en la hoja de utilería."
+        },
+        {
+          "entity_id": "putimaes_y_pijaos",
+          "role": "secondary",
+          "note": "Amenaza nombrada, fuera de escena."
+        },
+        {
+          "entity_id": "azotes_y_castigo",
+          "role": "secondary",
+          "note": "Violencia narrada; fuera de lámina."
+        },
+        {
+          "entity_id": "horca_y_conspiracion_de_las_versiones",
+          "role": "variant",
+          "note": "Versiones que no se funden."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base de 1603: la muchacha de Vía."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Tipo base de 1603: el viejo, base de Nabsacadas y de los caciques."
         }
       ]
     }
@@ -1304,6 +1380,11 @@
           "myth": "nabsacadas-la-estrella-caida",
           "field": "mito",
           "note": "Circulan tres versiones incompatibles del final de Nabsacadas y sólo una es fuente: la crónica de 1626, que registra coerción y no ejecución. La versión regional que lo hace líder quindo capturado, juzgado y ahorcado no cita documento alguno, y una tercera atribuye a un historiador las palabras del cronista. El relato no tiene desenlace dibujable"
+        },
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "mito",
+          "note": "El canon reescrito añade que la joven lo carga a cuestas más de tres meses, que predica contra la confesión y el bautismo del doctrinero, y que la sillita está vacía cuando entra el fraile."
         }
       ],
       "census_note": "Conduce todo el relato: se presenta ante Inés, recorre los pueblos, se declara bisacuelo regresado del páramo, es reconocido como «cacique viejo» y organiza el plan del silbo. Figura humana sobria en los tres actos; el canon prohíbe expresamente demonio, cuernos, alas, halo y dios monumental, así que la ficha fija un cuerpo de hombre mayor, no una deidad.",
@@ -1325,6 +1406,7 @@
           "no lleva ni una pieza de oro: el oro de esta biblia está en la otra época y en un solo objeto ficticio"
         ],
         "documented": [
+          "canon, campo mito: la joven «lo cargó a cuestas de pueblo en pueblo durante más de tres meses»; en el bohío se sentaba en «una sillita, a su modo muy pintada, sobre una estera también pintada»; cuando entra el doctrinero, «la sillita estaba vacía», y «de Nabsacadas no se dice que lo prendieran, ni que lo mataran, ni adónde fue»",
           "dossier §3 y §2 (qby-simon-1626): se presenta primero ante Inés como figura humana —el cronista insiste, «se le apareció el Demonio en figura humana»—, recorre los pueblos durante meses y ante el cacique don Pedro se declara su bisabuelo, muerto tiempo atrás y regresado del páramo de Tataquí; quienes lo reciben lo reconocen como «cacique viejo»",
           "dossier §2 (qby-arango-2022): el páramo «parece ser un lugar de paso después de la muerte o incluso donde iniciaba una nueva vida… este regreso desde el páramo le daba a Nabsacadas un conocimiento sagrado», dentro de un marco en el que los avisos de catástrofe venían de «hombres que venían desde la montaña». El regreso es el origen del derecho a hablar",
           "dossier §2 (qby-simon-1626): la estrella caída es la traducción de un nombre y nadie ve caer una estrella en el relato: entra como metáfora discreta de papel descendente y nunca como halo ni prodigio celeste",
@@ -1336,7 +1418,8 @@
           "la edad avanzada es lectura del apelativo «cacique viejo» que le dan quienes lo reciben, y es reversible: la fuente no da edad",
           "EL PRODIGIO QUE EL CENSO NO REGISTRÓ y que da el verbo del relato: Nabsacadas reparte maíz y pepitas de ahuyama, al tercer día las matas están crecidas y el maíz granado, y al cuarto día por la mañana el maíz está seco y las ahuyamas podridas. Crecimiento y podredumbre en cuatro días sobre la misma mata. No se cobra lámina propia porque el inventario está congelado: se declara aquí y se resuelve como los dos estados del maíz dentro de la hoja de utilería",
           "no se le da estatuto de dios: el manual de 1948 comprimió el expediente en la etiqueta «dios quimbaya» y esa fórmula elimina la trama histórica. Tampoco se le da estatuto de demonio, que es la etiqueta del cronista. La ficha es de una figura humana y esa elección es editorial y declarada",
-          "CONFLICTO DE TÉCNICA DECLARADO: los tres mitos congelados prohíben expresamente «maqueta, diorama, CGI ni render 3D» y piden acabado gráfico plano 2D, mientras el kit vigente pide papel y quilling fotografiados como maqueta inmersiva. Esta hoja sigue el kit —como los cuarenta y dos planes— y muerde aquí, porque el interior nocturno con aire visible es exactamente un recurso de maqueta. Es decisión de canon del propietario editorial"
+          "CONFLICTO DE TÉCNICA DECLARADO: los tres mitos congelados prohíben expresamente «maqueta, diorama, CGI ni render 3D» y piden acabado gráfico plano 2D, mientras el kit vigente pide papel y quilling fotografiados como maqueta inmersiva. Esta hoja sigue el kit —como los cuarenta y dos planes— y muerde aquí, porque el interior nocturno con aire visible es exactamente un recurso de maqueta. Es decisión de canon del propietario editorial",
+          "El canon reescrito le da una segunda postura, que la hoja registra sin cobrarla como estado: cargado a cuestas por la joven de pueblo en pueblo. Si un keyframe la pide, se resuelve de espaldas y a distancia, con el mismo cuerpo. Y la sillita vacía es el cierre del relato: en esa lámina él no está."
         ],
         "states_to_model": []
       },
@@ -1401,6 +1484,11 @@
           "myth": "ipiare-ebachi",
           "field": "mito",
           "note": "La sandalia está descrita con más precisión de la que el censo recogió: «una sandalia con incrustaciones de oro, que era larga y flexible, para ceñir al tobillo con cadenas y sortijas». Cadenas y sortijas, no una simple correa. Y es invención literaria del mismo registro que el palanquín de oro y las cornetas de oro del mismo texto"
+        },
+        {
+          "myth": "ipiare-ebachi",
+          "field": "mito",
+          "note": "En el canon reescrito es hija, no nieta, del último rey; su ánima busca muchas noches la sandalia «por las laderas del Cumanday»."
         }
       ],
       "census_note": "Protagonista de la leyenda de 1932: sube al Cumanday con su padre, pierde la sandalia y pide que la busquen. El segundo estado cuesta ficha porque el relato sí lo muestra —«algunas personas dijeron ver su ánima recorriendo de noche las laderas»— y cambia la silueta a figura translúcida, que es justo lo que pide el prompt vertical. Vestuario deliberadamente sobrio: la monarquía quimbaya es invención literaria.",
@@ -1579,6 +1667,11 @@
           "myth": "nabsacadas-la-estrella-caida",
           "field": "mito",
           "note": "Circulan tres versiones incompatibles del final de Nabsacadas y sólo una es fuente: la crónica de 1626, que registra coerción y no ejecución. La versión regional que lo hace líder quindo capturado, juzgado y ahorcado no cita documento alguno, y una tercera atribuye a un historiador las palabras del cronista. El relato no tiene desenlace dibujable"
+        },
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "mito",
+          "note": "En el canon reescrito va de noche «sin camino, entre guaduas de espinas crueles», guiado por el cacique, que antes de entrar finge caerse y grita."
         }
       ],
       "census_note": "Conduce el tercer acto: obtiene información mediante azotes al cacique y llega al bohío con acompañantes. Silueta de doctrinero franciscano, inconfundible y de época verificada (1603); es el contrapeso visual de Nabsacadas y no puede salir del colectivo de aldeanos.",
@@ -1672,6 +1765,11 @@
           "myth": "batatabati",
           "field": "mito",
           "note": "El detalle más específico y menos imaginable del corpus está en la crónica y nadie lo ha usado: «De sus cabellos hacen grandes rodelas, que llevan cuando van a la guerra a pelear». Escudos hechos con el propio pelo. No pertenece a la escena del juego y no se dibuja allí, pero es el rasgo que impide resolver a esta gente con un repertorio panindígena"
+        },
+        {
+          "myth": "batatabati",
+          "field": "mito",
+          "note": "El canon reescrito da la fiesta en su orden —beber, escuadrones de mujeres, de hombres y de muchachos, el juego con tiraderas y varas, la plaza con dos tambores y uno que toma la delantera— y dice que los cantos recitan «los trabajos presentes» y «los sucesos pasados de sus mayores»."
         }
       ],
       "census_note": "Es el sujeto del relato entero: se reúnen por grupos, avanzan unos contra otros al oír el son y después forman la rueda de danza. Una sola gramática de grupo diferenciada por sexo y edad resuelve las dos escenas de la fiesta y presta cuerpos al resto del siglo XVI quimbaya.",
@@ -1693,6 +1791,7 @@
           "sin sangre, sin herida y sin cuerpo caído, aunque la crónica registre que el juego podía dejar muertos: el juego se lee como movimiento seguro"
         ],
         "documented": [
+          "canon, campo mito: «primero bebían. Después se formaba un escuadrón de mujeres a una parte y otro a otra, y lo mismo los hombres; y los muchachos no se quedaban quietos, que también hacían el suyo. Entonces arremetían unos contra otros diciendo con un sonete: batatabati, batatabati»; después, en la plaza, «dos de ellos con dos tambores hacían el son. Otro tomaba la delantera»",
           "dossier §2 (qby-cieza-1553): tras el juego «juntábanse todos indios, y dos dellos, con dos atambores, hacían son… y llevando cada uno la vasija del vino en la mano; porque beber, bailar, cantar, todo lo hacen en un tiempo», y «sus cantares son recitar a su uso los trabajos presentes y recontar los sucesos pasados de sus mayores»: la plaza es un archivo cantado y no sólo una competencia",
           "dossier §6.2 (qby-figurinas-2020): la estadística de 87 figurinas del Cauca Medio del período Tardío — sedentes el 72,4 %, cabeza cuadrada el 50,6 %, ojos como incisión lineal horizontal el 77 %, perforación nasal el 83,9 % y lobular el 32,2 %, pintura facial sólo el 28,7 %, ligaduras o compresión en brazos el 55,2 % y en piernas el 50,6 %",
           "dossier §6.2 (qby-uribe-2005): el canon del período Temprano es de figuras desnudas, de formas redondeadas y postura hierática, con rostros triangulares de ojos semicerrados y pintura facial de líneas que atraviesan longitudinalmente el rostro; los adornos documentados son cuatro: casco, nariguera, orejeras y collar de varias vueltas",
@@ -1856,6 +1955,11 @@
           "myth": "ipiare-ebachi",
           "field": "mito",
           "note": "No hay base arqueológica para calzado prehispánico en el Cauca medio: la fórmula del cronista para toda la región es «andan desnudos y descalzos», los términos de calzado aparecen sólo en los capítulos andinos, y las figurinas no muestran ningún elemento de pie. La sandalia se diseña declarada como pieza ficticia de 1932"
+        },
+        {
+          "myth": "ipiare-ebachi",
+          "field": "mito",
+          "note": "«Era larga y flexible, con incrustaciones de oro, de las que se ciñen al tobillo con cadenas y sortijas. Nadie la vio caer.» Antes de morir la princesa pide que la busquen «y no fue hallada»."
         }
       ],
       "census_note": "Es el objeto por el que se cuenta el relato: larga y flexible, adornada con oro y sujeta al tobillo, se desprende en el camino, nadie la encuentra y el ánima sigue buscándola. Aparece en las dos escenas planeadas. Es invención literaria de 1932, así que se diseña como pieza ficticia y nunca copiando un ejemplar real de orfebrería.",
@@ -1968,6 +2072,7 @@
           "ningún pasto y ningún bejuco en el suelo bajo el guadual: donde los hay, el dosel está roto"
         ],
         "documented": [
+          "canon, campo mito: «La provincia estaba llena de cañaverales tan espesos que no se podía andar por ellos… y por eso las casas eran pequeñas y se cubrían con hojas de caña»",
           "dossier §4.1 y §12.2 (qby-cieza-1553): «quiso Dios nuestro señor que sobrasen aquí las cañas porque los moradores no tuviesen mucho trabajo en hacer sus casas» y «las casas que tienen son pequeñas, la cobertura de hoja de cañas» — las casas grandes y redondas son de Arma y de Paucura, provincias distintas",
           "dossier §4.1 (qby-cieza-1553): delante de la casa del cacique hay «plazas pequeñas todas cercadas de las cañas gordas… y por lo bajo de las cañas hacen unos agujeros, por donde el aire puede respirar» — las guaduas silban, y ésa es la segunda mitad dibujable de la frase",
           "dossier §4.2 (qby-unicentro-utp-2016): la única evidencia arqueológica directa es un conjunto de vacíos cilíndricos de unos treinta centímetros dispuestos en trayectoria circular a treinta centímetros bajo la superficie, donde estuvieron enterradas guaduas a manera de columnas: una construcción circular de unos tres metros de diámetro, de entre ochocientos y mil doscientos años atrás",
@@ -2039,6 +2144,11 @@
           "myth": "nabsacadas-la-estrella-caida",
           "field": "mito",
           "note": "La niebla del Cauca medio es nocturna y de madrugada, no un efecto de mediodía: el setenta por ciento de la lluvia cae de noche, la humedad relativa satura invariablemente por encima del noventa y cinco por ciento antes del amanecer, y la insolación anual está por debajo de la mitad del máximo posible, lo que indica alta nubosidad"
+        },
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "mito",
+          "note": "«Dentro había una sillita, a su modo muy pintada, sobre una estera también pintada… trece o catorce mantas buenas y algún masato. La sillita estaba vacía.»"
         }
       ],
       "census_note": "Escenario del acto central del relato: lo levantan retirado entre guaduales, allí lo reconocen como «cacique viejo», allí llegan de noche con ofrendas y allí irrumpe el doctrinero. Es un interior nocturno, no el paisaje abierto del páramo ni la plaza abierta del otro mito.",
@@ -2131,6 +2241,11 @@
           "myth": "ipiare-ebachi",
           "field": "mito",
           "note": "La erupción que la crónica de 1626 fecha «á doce de Marzo, domingo de Lázaro» de 1595 es la misma que el catálogo eruptivo registra el 12 de marzo de 1595, con lahares por los valles del Gualí y el Lagunilla. La crónica y la vulcanología coinciden en el día, y la descripción de época —piedra pómez «tan menuda como arena», ríos que «más parecía mazamorra de cernada que agua», montes y árboles de ceniza— es el mejor material de dirección de arte del expediente"
+        },
+        {
+          "myth": "ipiare-ebachi",
+          "field": "mito",
+          "note": "El canon reescrito da el volcán del ascenso: humo como de madera verde, nieve como manto de armiño, agua con hielo y lavas medio encendidas, un temblor leve."
         }
       ],
       "census_note": "Escenario del acto y personaje ambiental del relato: humo semejante al de la madera verde, nieve sobre el relieve, suelo que tiembla, piedra, hielo y corrientes con señales de fuego. Nada del corpus se le parece; sostiene el tríptico completo de ipiare-ebachi.",
@@ -2153,6 +2268,7 @@
           "ninguna lámina funciona como mapa ni da ruta de ascenso"
         ],
         "documented": [
+          "canon, campo mito: arriba «de las fauces del volcán salía un humo como de madera verde. El manto de armiño lucía ya a grandes trechos su blancura imperial. El agua bajaba cargada de hielo y de lavas medio encendidas entre los peñascos. Un ligero temblor hacía pensar que la montaña dormía»",
           "dossier §1.5 y §12 (qby-sgc-ruiz): el volcán tiene «una forma alargada en dirección NE-SW, algo achatada», quince kilómetros de diámetro en la base y más de doscientos kilómetros cuadrados de superficie, laderas de veinte a treinta grados en la cumbre y unos diez más abajo, dos conos parásitos —La Olleta al oeste y La Piraña al este—, roca de andesitas de dos piroxenos y un cráter de 870 por 830 metros y 247 de profundidad; sus nombres precolombinos registrados son Cumanday (cerro blanco), Tabuchía (candela o fuego) y Tama",
           "dossier §1.5 (qby-sgc-ruiz): la pluma mide normalmente entre doscientos y quinientos metros sobre la cumbre, con máximos de mil quinientos en episodios fuertes: el «grande cantidad de humo cuando hace claro» de 1553 y el «humo semejante al de la madera verde» de 1932 caben ambos ahí",
           "dossier §1.6 (qby-simon-1626, qby-sgc-ruiz): la crónica fecha la erupción «el año de mil y quinientos y noventa y cinco, á doce de Marzo, domingo de Lázaro» y el catálogo eruptivo institucional registra el 12 de marzo de 1595, con lahares por los valles del Gualí y el Lagunilla: la crónica y la vulcanología coinciden en el día y en los ríos",
@@ -2260,7 +2376,7 @@
     "comitiva_del_ultimo_rey": {
       "name": "La comitiva que sube al volcán",
       "kind": "colectivo",
-      "description": "Acompaña el ascenso y continúa hacia el volcán, pero la fuente no le da número, oficio ni vestuario, y el canon prohíbe palanquín y regalia inventada. Se resuelve con la misma gramática sobria de cuerpos quimbayas del siglo XVI; abrirle ficha propia sería inventar una corte que no existió.",
+      "description": "El canon reescrito la describe: «mujeres desnudas, esclavos, sacerdotes y orfebres», detrás del palanquín de oro de la princesa. Es la corte de 1932, que el dossier (§6.4) da por ficción sin respaldo.",
       "aliases": [],
       "states": [
         "canonico"
@@ -2289,11 +2405,16 @@
           "myth": "ipiare-ebachi",
           "field": "mito",
           "note": "Los tres relatos no comparten iconografía y sólo comparten el paisaje: una fiesta de plaza del siglo XVI, un expediente colonial de 1603 con doctrinero y pueblo de indios, y una ficción indigenista de 1932 con monarquía imaginada. Reusar la gramática de cuerpos de la fiesta para el bohío de 1603 mentiría sobre el siglo, y reusarla para 1932 mentiría sobre el género"
+        },
+        {
+          "myth": "ipiare-ebachi",
+          "field": "mito",
+          "note": "«detrás marchaba la comitiva: mujeres desnudas, esclavos, sacerdotes y orfebres»"
         }
       ],
       "census_note": "Acompaña el ascenso y continúa hacia el volcán, pero la fuente no le da número, oficio ni vestuario, y el canon prohíbe palanquín y regalia inventada. Se resuelve con la misma gramática sobria de cuerpos quimbayas del siglo XVI; abrirle ficha propia sería inventar una corte que no existió.",
       "covered_by": "grupos_del_juego",
-      "coverage_note": "Acompaña el ascenso y continúa hacia el volcán, pero la fuente no le da número, oficio ni vestuario, y el canon prohíbe palanquín y regalia inventada. Se resuelve con la misma gramática sobria de cuerpos quimbayas del siglo XVI; abrirle ficha propia sería inventar una corte que no existió.",
+      "coverage_note": "Se resuelve con la gramática sobria de cuerpos del siglo XVI, sin corte, corona ni regalia (dossier §0 y §6.4): los oficios que el canon enumera no se marcan con insignia, y las «mujeres desnudas» se componen con la dignidad del resto, a distancia y en fila.",
       "evidence_basis_mix": [
         "documented_core",
         "contemporary_memory"
@@ -2331,10 +2452,12 @@
       ]
     },
     "pedro_pachuegue": {
-      "name": "Pedro Pachuegue",
+      "name": "Pedro Pachague",
       "kind": "personaje",
       "description": "Sólo transmite la noticia de su esposa al cacique. No se le describe ni vuelve a aparecer: miembro genérico del colectivo.",
-      "aliases": [],
+      "aliases": [
+        "Pedro Pachuegue"
+      ],
       "states": [
         "canonico"
       ],
@@ -2352,6 +2475,11 @@
           "myth": "nabsacadas-la-estrella-caida",
           "field": "mito",
           "note": "Nabsacadas se presenta como figura humana ante una mujer llamada Inés, recorre los pueblos durante meses llevado a cuestas por una joven de quince o dieciséis años, y se declara bisabuelo muerto de un cacique, regresado del páramo de Tataquí. El relato no le da cuerpo, ni edad, ni ropa: le da una procedencia y una autoridad"
+        },
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "mito",
+          "note": "El canon reescrito escribe «Pedro Pachague», como el dossier (qby-simon-1626), y añade que él, Inés y el cacique «hablaban castellano y sabían moverse entre los dos mundos»."
         }
       ],
       "census_note": "Sólo transmite la noticia de su esposa al cacique. No se le describe ni vuelve a aparecer: miembro genérico del colectivo.",
@@ -2426,7 +2554,7 @@
     "joven_que_acompana_a_nabsacadas": {
       "name": "La joven que acompaña el viaje",
       "kind": "personaje",
-      "description": "Hija del cacique pedida por Nabsacadas; participa en el viaje y el prompt horizontal la coloca «a distancia». Es una silueta joven sin rasgos documentados: sale de la gramática del colectivo sin ficha propia.",
+      "description": "Hija de quince o dieciséis años del cacique Diego Orobajo, pedida por Nabsacadas para que fuera su mujer; lo carga a cuestas de pueblo en pueblo más de tres meses, y al final le hallan en una pierna «una señal como de pata de gallo, como hecha con fuego».",
       "aliases": [],
       "states": [
         "canonico"
@@ -2445,11 +2573,16 @@
           "myth": "nabsacadas-la-estrella-caida",
           "field": "mito",
           "note": "Nabsacadas se presenta como figura humana ante una mujer llamada Inés, recorre los pueblos durante meses llevado a cuestas por una joven de quince o dieciséis años, y se declara bisabuelo muerto de un cacique, regresado del páramo de Tataquí. El relato no le da cuerpo, ni edad, ni ropa: le da una procedencia y una autoridad"
+        },
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "mito",
+          "note": "«A la joven que lo cargaba le hallaron en una pierna una señal como de pata de gallo, como hecha con fuego.»"
         }
       ],
       "census_note": "Hija del cacique pedida por Nabsacadas; participa en el viaje y el prompt horizontal la coloca «a distancia». Es una silueta joven sin rasgos documentados: sale de la gramática del colectivo sin ficha propia.",
       "covered_by": "gente_de_los_pueblos_de_via",
-      "coverage_note": "Hija del cacique pedida por Nabsacadas; participa en el viaje y el prompt horizontal la coloca «a distancia». Es una silueta joven sin rasgos documentados: sale de la gramática del colectivo sin ficha propia.",
+      "coverage_note": "Sale de la gramática del colectivo de 1603 y del tipo base de la mujer joven, sin ficha propia. La señal de la pierna no se dibuja de cerca: si la lámina del final la necesita, es una marca pequeña y oscura, sin herida.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -2579,10 +2712,12 @@
       ]
     },
     "vasijas_de_bebida_de_maiz": {
-      "name": "Vasijas de bebida de maíz",
+      "name": "La vasija del vino",
       "kind": "objeto",
-      "description": "Las sostienen los danzantes mientras siguen el recorrido. Objeto de mano repetido: utilería.",
-      "aliases": [],
+      "description": "Cada danzante lleva «la vasija del vino en la mano». El canon reescrito conserva la palabra de Cieza —vino— y deja como inferencia razonable, no como dato, que fuera chicha de maíz.",
+      "aliases": [
+        "vasijas de bebida de maíz (nombre anterior)"
+      ],
       "states": [
         "canonico"
       ],
@@ -2610,11 +2745,16 @@
           "myth": "batatabati",
           "field": "mito",
           "note": "La jerarquía de recipientes está fijada por la crónica de 1626 y no se puede invertir: múcura de barro para contener y servir la chicha, totuma de calabazo para beberla, «que es el vaso más á propósito que se ha hallado para este brebaje». La vasija que llevan los danzantes en la mano es una totuma, no una taza de barro"
+        },
+        {
+          "myth": "batatabati",
+          "field": "mito",
+          "note": "«todos lo seguían llevando cada uno la vasija del vino en la mano»; y en versiones: «Cieza escribe “la vasija del vino”… Que ese vino fuera chicha de maíz es inferencia razonable… pero no es lo que dice el texto»."
         }
       ],
       "census_note": "Las sostienen los danzantes mientras siguen el recorrido. Objeto de mano repetido: utilería.",
       "covered_by": "hoja_utileria_quimbaya",
-      "coverage_note": "Las sostienen los danzantes mientras siguen el recorrido. Objeto de mano repetido: utilería.",
+      "coverage_note": "Objeto de mano repetido en la rueda: va en la hoja de utilería como la totuma de calabazo que el dossier fija para beber, sin rotular su contenido.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -3022,6 +3162,11 @@
           "myth": "ipiare-ebachi",
           "field": "mito",
           "note": "La página de El Liberal del 5 de abril de 1932 no contiene la leyenda de Ipiaré Ebachí: son cinco piezas —«El Indio», «La India», «Erotismo», «El Mojana» y «Ofrenda»— sobre los embera chamí y el Mojana, coherentes con la biografía del autor, que fue intendente en San Antonio del Chamí. El artículo de 1932 que sí contiene la leyenda no está localizado"
+        },
+        {
+          "myth": "ipiare-ebachi",
+          "field": "mito",
+          "note": "«vendría una raza extranjera, de hombres barbudos, armados de rayos y montados en grandes pájaros marítimos»; y que la nieve cubriría la montaña «hasta convertirla en un blanco parecido a los montones de algodón de los telares»."
         }
       ],
       "census_note": "Leído en el primer párrafo del mito; el rey decide no esperar su llegada, de modo que el episodio se cierra sin ellos.",
@@ -3063,6 +3208,11 @@
           "myth": "ipiare-ebachi",
           "field": "mito",
           "note": "La princesa de ojos azules, el guerrero de Calarcá, los ojos arrancados y el río Quindío nacido de lágrimas no tienen cadena documental y el canon los retiró: ficharlos repondría exactamente lo que la revisión eliminó. Tacurumbí es en la crónica un cacique y un río, y el vaso de oro que dio a Robledo cabía dos azumbres de agua, unos cuatro litros"
+        },
+        {
+          "myth": "batatabati",
+          "field": "mito",
+          "note": "El canon reescrito abre con la riqueza de los señores: «Tenían hechas de oro las cosas que veían con los ojos, y vasos grandes para beber su vino»."
         }
       ],
       "census_note": "La única pieza dorada que se produce es la sandalia ficticia de 1932, con diseño propio y sin citar ningún objeto de colección. Los prompts ya prohíben «exceso de oro».",
@@ -3074,7 +3224,7 @@
     "tacurumbi": {
       "name": "Tacurumbí",
       "kind": "personaje",
-      "description": "Su versión como maestro orfebre padre de una diosa pertenece a la trama fabricada que el canon retira.",
+      "description": "En el canon reescrito tiene un acto: «el cacique Tacurumbi dio un vaso en que cabían dos azumbres de agua, y otro mayor todavía». Su versión como orfebre padre de una diosa pertenece a la trama fabricada que el canon retira.",
       "aliases": [],
       "states": [
         "canonico"
@@ -3093,10 +3243,15 @@
           "myth": "batatabati",
           "field": "mito",
           "note": "La princesa de ojos azules, el guerrero de Calarcá, los ojos arrancados y el río Quindío nacido de lágrimas no tienen cadena documental y el canon los retiró: ficharlos repondría exactamente lo que la revisión eliminó. Tacurumbí es en la crónica un cacique y un río, y el vaso de oro que dio a Robledo cabía dos azumbres de agua, unos cuatro litros"
+        },
+        {
+          "myth": "batatabati",
+          "field": "mito",
+          "note": "«Uno de ellos, el cacique Tacurumbi, dio un vaso en que cabían dos azumbres de agua, y otro mayor todavía.»"
         }
       ],
       "census_note": "Su versión como maestro orfebre padre de una diosa pertenece a la trama fabricada que el canon retira.",
-      "exclusion_reason": "Se menciona pero nunca se ve: en Cieza es el nombre de un cacique y de un río, sin escena, sin cuerpo y sin acción. universe.mjs lo manda a community-history, no a ficha.",
+      "exclusion_reason": "se nombra por un vaso que dio y nunca se ve: sin cuerpo, sin escena, y el vaso de oro es orfebrería real del Cauca medio que la biblia no reproduce (piezas_de_orfebreria_quimbaya)",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -3211,7 +3366,8 @@
           "cuero y madera de los dos tambores, sin forma comprometida porque la fuente no la da",
           "calabazo de la totuma, liso y curvo, y barro sin vidriar de la múcura, opaco y de cuerpo bulboso",
           "masato en dos piezas distintas: pasta densa y pálida dentro de la vasija, y líquido turbio con sólidos en suspensión al servirse",
-          "maíz en dos estados, el de la mata crecida y granada al tercer día y el de la mata seca al cuarto, y hoja de envoltura del bollo declarada como inferencia"
+          "maíz en dos estados, el de la mata crecida y granada al tercer día y el de la mata seca al cuarto, y hoja de envoltura del bollo declarada como inferencia",
+          "ahuyama en dos estados, junto al maíz: grande y entera al tercer día, hundida y podrida al cuarto, en pocas piezas planas anaranjadas"
         ],
         "palette": "Pardos de barro, calabazo y madera sobre fondo neutro de fibra, sin oro y sin ninguna pieza brillante: el color del masato no lo dice ninguna fuente y se deja apagado a propósito. La cerámica es Marrón Inciso —pasta oscura, superficie suave y brillante, incisión fina—, nunca alcarraza y nunca decoración negativa, que son de Calima y de Nariño.",
         "scale": "Todos los objetos comparados entre sí a escala de mano y con la jerarquía visible: la múcura es mayor que la totuma porque una contiene y la otra bebe, y el bollo es del tamaño de lo que una persona come en un día. El vaso de oro que el cacique Tacurumbi dio a Robledo cabía dos azumbres —unos cuatro litros— y da la escala de lo que en esta región se consideraba grande.",
@@ -3223,6 +3379,7 @@
           "ninguna alcarraza y ninguna decoración negativa en ninguna pieza de barro"
         ],
         "documented": [
+          "canon, campo mito: Nabsacadas les da «maíz y pepitas de ahuyama. Los sembraron, y al tercer día las ahuyamas estaban muy grandes y el maíz granado. Al cuarto día por la mañana el maíz estaba seco y las ahuyamas podridas»",
           "dossier §5 (qby-cieza-1553): las tiraderas son proyectiles de estólica —«unas estolicas que arrojan de rodeo con ellas unas tiraderas»—, no lanzas de mano; los dos tambores son el gozne de la segunda escena y no tienen descripción de forma",
           "dossier §5 y §12.7 (qby-simon-1626): la jerarquía la fija la crónica y no se puede invertir — múcura de barro para contener y servir, totuma de calabazo para beber, «que es el vaso más á propósito que se ha hallado para este brebaje», y descarta expresamente el barro sin vidriar para esa bebida",
           "dossier §5 y §12.8 (qby-simon-1626): el masato tiene dos estados, pasta y líquido, porque no se guarda líquido sino como masa que se deslíe con agua al beber; y el bollo es de maíz tierno y jugoso, equivale a la ración diaria de una persona y se enmohece",
@@ -3243,6 +3400,510 @@
         "documented_core",
         "uncertain"
       ]
+    },
+    "provincia_de_canaverales_y_rios": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "batatabati"
+      ],
+      "name": "La provincia de cañaverales, ríos y fuentes salobres",
+      "kind": "paisaje",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "plaza_del_caserio_quimbaya",
+      "description": "Cañaverales tan espesos que no se podían andar, ríos sin cuenta bajando de la sierra nevada, puentes de cañas atadas con bejucos de un árbol a otro, fuentes de agua salobre que brotan en mitad de la corriente y, arriba, un volcán que humea los días claros.",
+      "coverage_note": "Es el fondo de la plaza: el cañaveral y el guadual cierran el caserío y el volcán humea lejos. El puente de caña y la fuente salobre en mitad del río no tienen escena en el relato y no se diseñan aparte. El volcán de Cieza lo identifican sus editores con el Tolima, no con el Cumanday de Ipiaré: no son la misma montaña en lámina.",
+      "evidence": [
+        {
+          "myth": "batatabati",
+          "field": "mito",
+          "note": "«De la sierra nevada bajaban tantos ríos que no alcanzaban a contarse, y en invierno se cruzaban por puentes de cañas atadas con bejucos… salían fuentes de agua salobre… Arriba… un volcán echaba mucho humo los días claros.»"
+        },
+        {
+          "myth": "batatabati",
+          "field": "versiones",
+          "note": "«El volcán humeante que se ve desde la provincia de Quimbaya en la crónica de 1553 fue identificado por sus editores modernos con el Tolima, no con el Ruiz.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "rodelas_de_cabello_y_armas_de_guerra": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "batatabati"
+      ],
+      "name": "Las rodelas de cabello, las lanzas y los dardos",
+      "kind": "objeto",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "description": "Las armas de guerra: lanzas, dardos y estólicas con tiraderas, y «de sus propios cabellos hacían grandes rodelas para llevar a la guerra».",
+      "exclusion_reason": "armas de guerra, no del juego: el relato las enumera y no tienen escena; el dossier (§6.2) dice de las rodelas de cabello que «no pertenecen a la escena del juego y no se dibujan allí». Las tiraderas del juego sí tienen hoja",
+      "evidence": [
+        {
+          "myth": "batatabati",
+          "field": "mito",
+          "note": "«Las armas eran lanzas, dardos y estólicas, con las que arrojaban de rodeo unas tiraderas. De sus propios cabellos hacían grandes rodelas para llevar a la guerra.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "palanquin_y_cornetas_de_oro": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "ipiare-ebachi"
+      ],
+      "name": "El palanquín y las cornetas de oro",
+      "kind": "objeto",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "description": "La princesa sube «en un lujoso palanquín de oro», y arriba «sonaron las cornetas de oro» anunciando la decisión del rey.",
+      "exclusion_reason": "regalia de la corte de 1932 que el dossier prohíbe por época (§0: «qué no puede aparecer: corte, palanquín, corona»; §6.4) y que el propio relato da por desaparecida: «lo único que quedó suelto en el mundo fue una sandalia». La sandalia es el único oro con ficha en este relato",
+      "evidence": [
+        {
+          "myth": "ipiare-ebachi",
+          "field": "mito",
+          "note": "«Ella iba en un lujoso palanquín de oro»; «Entonces sonaron las cornetas de oro»; «De todo lo que subió aquel día… lo único que quedó suelto en el mundo fue una sandalia perdida»."
+        }
+      ],
+      "model_requirements": []
+    },
+    "ritual_de_muerte_del_rey": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "sensitive",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "ipiare-ebachi"
+      ],
+      "name": "El ritual de la muerte del último rey",
+      "kind": "fenomeno",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "description": "Artistas y sacerdotes preparan la muerte del rey «con el filo de una flecha o con las llamas fluctuantes del cráter», porque no quiere esperar a los extranjeros.",
+      "exclusion_reason": "muerte ritual que el relato anuncia y no narra; el dossier (§6.4) pide no completar ese vacío con una escena heroica inventada",
+      "evidence": [
+        {
+          "myth": "ipiare-ebachi",
+          "field": "mito",
+          "note": "«los artistas y los sacerdotes empezaron a preparar el ritual de su muerte, con el filo de una flecha o con las llamas fluctuantes del cráter»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "ahuyama": {
+      "aliases": [],
+      "states": [
+        "canonico",
+        "grande_al_tercer_dia",
+        "podrida_al_cuarto_dia"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "La ahuyama del prodigio",
+      "kind": "planta",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "hoja_utileria_quimbaya",
+      "myth_refs": [
+        "nabsacadas-la-estrella-caida"
+      ],
+      "description": "Las pepitas que reparte Nabsacadas: al tercer día las ahuyamas están muy grandes y al cuarto, podridas.",
+      "coverage_note": "Va en la hoja de utilería junto al maíz de dos estados, que ya tenía el prodigio: la ahuyama se añade con los mismos dos estados.",
+      "evidence": [
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "mito",
+          "note": "«al tercer día las ahuyamas estaban muy grandes… Al cuarto día por la mañana… las ahuyamas podridas»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "putimaes_y_pijaos": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "contextual",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "Los putimaes y los pijaos",
+      "kind": "colectivo",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "nabsacadas-la-estrella-caida"
+      ],
+      "description": "Los pueblos cuya guerra «ardía por esos años» y de cuya furia Nabsacadas promete librarlos.",
+      "exclusion_reason": "pueblos nombrados como amenaza que nunca aparece; dibujarlos sería dar cuerpo de enemigo a pueblos vivos o históricos que el relato no pone en escena",
+      "evidence": [
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "mito",
+          "note": "«venía a librarlos de la furia de los putimaes y los pijaos, cuya guerra ardía por esos años»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "azotes_y_castigo": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "sensitive",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "Los azotes al cacique y el castigo de los culpados",
+      "kind": "fenomeno",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "nabsacadas-la-estrella-caida"
+      ],
+      "description": "Fray Baltasar le saca la verdad al cacique «a azotes»; después castiga a los más culpados, y el cacique don Pedro muere poco después.",
+      "exclusion_reason": "violencia de la doctrina que se narra y no se dibuja; el fraile se compone por su llegada nocturna al bohío, no por el castigo",
+      "evidence": [
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "mito",
+          "note": "«Le sacó la verdad al cacique a azotes, porque de otra manera no pudo»; «castigaron a los más culpados»."
+        }
+      ],
+      "model_requirements": []
+    },
+    "horca_y_conspiracion_de_las_versiones": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "La conspiración del Quindío y la horca",
+      "kind": "fenomeno",
+      "evidence_basis": "variant",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "nabsacadas-la-estrella-caida"
+      ],
+      "description": "En Duque Gómez es una conspiración en los arcabucos del Quindío sin aparición; en Zuluaga hay captura por un esclavizado del encomendero, juicio y horca, y Nabsacadas es quindo.",
+      "exclusion_reason": "versiones que el canon dice que «no deben fundirse» con la de Simón, que narra",
+      "evidence": [
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "versiones",
+          "note": "«En Zuluaga hay captura por un esclavizado del encomendero, juicio y horca, y Nabsacadas no es quimbaya sino quindo.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "tipo_hombre_adulto": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_hombre_adulto__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · hombre quimbaya adulto (capa de 1553)",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "batatabati"
+      ],
+      "description": "Tipo base del hombre quimbaya de la fiesta de Batatabatí: fija cara, cuerpo y adorno de los escuadrones de hombres y de la rueda.",
+      "evidence": [
+        {
+          "myth": "batatabati",
+          "field": "mito",
+          "note": "El escuadrón de los hombres en el juego y la rueda de la plaza."
+        }
+      ],
+      "design": {
+        "silhouette": "Hombre bien dispuesto, de pie y de postura sobria, sin prenda, con la nariguera pequeña de oro rojizo, ligaduras estrechas bajo la rodilla y en el brazo, y una estólica con su tiradera en la mano.",
+        "materials": [
+          "cuerpo en planos grandes de papel pardo mate de volúmenes redondeados",
+          "nariguera pequeña de oro rojizo mate como pieza aparte",
+          "ligaduras de fibra como bandas estrechas repetidas en brazo y pierna",
+          "estólica y tiradera de madera"
+        ],
+        "palette": "Pardo de piel, ocre de tierra, y el oro rojizo como único punto cálido.",
+        "scale": "Estatura corriente. Cuerpo entero 9:16.",
+        "continuity": [
+          "sin prenda",
+          "ligaduras siempre",
+          "nariguera pequeña, nunca oro grande sobre el cuerpo"
+        ],
+        "documented": [
+          "dossier §6.1 (qby-cieza-1553): de esta provincia el cronista dice sólo «los hombres son bien dispuestos, de buenos rostros; las mujeres, lo mismo»; la fórmula «desnudos y descalzos» es de las provincias vecinas",
+          "dossier §6.2 (qby-figurinas-2020): en las figuras del Cauca Medio «no se observaron elementos que pudieran ser asociados con prendas de vestir»; perforación nasal 83,9 %, lobular 32,2 %, ligaduras en brazos y piernas, pintura facial sólo en el 28,7 %",
+          "dossier §6.2: la deformación craneal está documentada para este pueblo (consult_required): perfil de cabeza, jamás rasgo exagerado",
+          "dossier §0: nada de hierro, cruz, caballo ni teja en la capa de 1553",
+          "canon, campo mito: los hombres forman su escuadrón y arremeten «diciendo con un sonete: batatabati»; el juego es «con tiraderas y con varas»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —la incisión horizontal del ojo como tira—; el cuerpo, en pocos planos grandes de papel pardo mate de volúmenes redondeados, sin músculo modelado.",
+          "El pelo, una pieza plana negra; nunca mechón por mechón.",
+          "La pintura facial longitudinal va sólo en una minoría de las figuras de grupo, no en la hoja de tipo."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_adulta": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_mujer_adulta__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · mujer quimbaya adulta (capa de 1553)",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "batatabati"
+      ],
+      "description": "Tipo base de la mujer quimbaya de la fiesta: el escuadrón de mujeres y la rueda con la vasija del vino.",
+      "evidence": [
+        {
+          "myth": "batatabati",
+          "field": "mito",
+          "note": "El escuadrón de mujeres y la rueda de la plaza."
+        }
+      ],
+      "design": {
+        "silhouette": "Mujer de buenos rostros, de pie, sin prenda, con orejeras pequeñas de oro rojizo, collar de varias vueltas y ligaduras bajo la rodilla, llevando la totuma del vino en la mano.",
+        "materials": [
+          "cuerpo en planos grandes de papel pardo mate",
+          "orejeras y collar de varias vueltas en papel de oro rojizo mate",
+          "ligaduras de fibra en la pierna",
+          "totuma de calabazo en la mano"
+        ],
+        "palette": "Pardo de piel, oro rojizo mate y el claro del calabazo.",
+        "scale": "Algo por debajo del hombre. Cuerpo entero 9:16.",
+        "continuity": [
+          "sin prenda",
+          "collar de varias vueltas",
+          "la vasija del vino en la mano en la rueda"
+        ],
+        "documented": [
+          "dossier §6.1 (qby-cieza-1553): de esta provincia el cronista dice sólo «los hombres son bien dispuestos, de buenos rostros; las mujeres, lo mismo»; la fórmula «desnudos y descalzos» es de las provincias vecinas",
+          "dossier §6.2 (qby-figurinas-2020): en las figuras del Cauca Medio «no se observaron elementos que pudieran ser asociados con prendas de vestir»; perforación nasal 83,9 %, lobular 32,2 %, ligaduras en brazos y piernas, pintura facial sólo en el 28,7 %",
+          "dossier §6.2: la deformación craneal está documentada para este pueblo (consult_required): perfil de cabeza, jamás rasgo exagerado",
+          "dossier §0: nada de hierro, cruz, caballo ni teja en la capa de 1553",
+          "canon, campo mito: «se formaba un escuadrón de mujeres a una parte y otro a otra»; en la plaza todos siguen al que danza «llevando cada uno la vasija del vino en la mano»",
+          "dossier §6.2 (qby-uribe-2005): los adornos documentados son casco, nariguera, orejeras y collar de varias vueltas"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —la incisión horizontal del ojo como tira—; el cuerpo, en pocos planos grandes de papel pardo mate de volúmenes redondeados, sin músculo modelado.",
+          "El pelo, una pieza plana negra; nunca mechón por mechón.",
+          "Reparto del collar a la mujer y de la nariguera al hombre: decisión de hoja, reversible."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_nino": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_nino__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · muchacho quimbaya (capa de 1553)",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "batatabati"
+      ],
+      "description": "Tipo base del muchacho quimbaya: los muchachos que «también hacían el suyo» en el juego.",
+      "evidence": [
+        {
+          "myth": "batatabati",
+          "field": "mito",
+          "note": "Los muchachos que forman su propio escuadrón."
+        }
+      ],
+      "design": {
+        "silhouette": "Muchacho de diez u once años, de pie y en carrera corta, sin prenda y sin oro, con una vara ligera en la mano y la cabeza grande respecto al cuerpo.",
+        "materials": [
+          "cuerpo en planos grandes de papel pardo mate",
+          "vara ligera de madera",
+          "ligadura única bajo la rodilla"
+        ],
+        "palette": "Pardo de piel y ocre de la plaza; sin oro.",
+        "scale": "A la altura del pecho de un adulto. Cuerpo entero 9:16.",
+        "continuity": [
+          "sin prenda ni oro",
+          "vara, nunca tiradera",
+          "ninguna herida: el juego se lee como movimiento seguro"
+        ],
+        "documented": [
+          "dossier §6.1 (qby-cieza-1553): de esta provincia el cronista dice sólo «los hombres son bien dispuestos, de buenos rostros; las mujeres, lo mismo»; la fórmula «desnudos y descalzos» es de las provincias vecinas",
+          "dossier §6.2 (qby-figurinas-2020): en las figuras del Cauca Medio «no se observaron elementos que pudieran ser asociados con prendas de vestir»; perforación nasal 83,9 %, lobular 32,2 %, ligaduras en brazos y piernas, pintura facial sólo en el 28,7 %",
+          "dossier §6.2: la deformación craneal está documentada para este pueblo (consult_required): perfil de cabeza, jamás rasgo exagerado",
+          "dossier §0: nada de hierro, cruz, caballo ni teja en la capa de 1553",
+          "canon, campo mito: «los muchachos no se quedaban quietos, que también hacían el suyo»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —la incisión horizontal del ojo como tira—; el cuerpo, en pocos planos grandes de papel pardo mate de volúmenes redondeados, sin músculo modelado.",
+          "El pelo, una pieza plana negra; nunca mechón por mechón.",
+          "Que el muchacho juegue con vara y no con tiradera es decisión de hoja para que el juego no se lea como violencia contra niños."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_joven": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_mujer_joven__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · mujer joven de Vía (capa de 1603)",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "nabsacadas-la-estrella-caida"
+      ],
+      "description": "Tipo base de la muchacha del pueblo de doctrina de Vía en 1603: fija el cuerpo de la joven de quince o dieciséis años que carga a Nabsacadas.",
+      "evidence": [
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "mito",
+          "note": "La hija de Diego Orobajo, de quince o dieciséis años, que carga a Nabsacadas."
+        }
+      ],
+      "design": {
+        "silhouette": "Muchacha delgada de pie, con una manta de algodón lisa ceñida a la cintura, sin pintura, con una ligadura bajo la rodilla y la espalda algo inclinada, como quien carga.",
+        "materials": [
+          "cuerpo en planos grandes de papel pardo mate",
+          "manta de algodón lisa a la cintura, de las mantas buenas que la gente lleva al bohío",
+          "ligadura de fibra bajo la rodilla"
+        ],
+        "palette": "Pardo oscuro y crudo de algodón bajo luz de fuego: la clave nocturna de 1603.",
+        "scale": "Casi de estatura adulta. Cuerpo entero 9:16.",
+        "continuity": [
+          "sin pintura facial",
+          "manta lisa, sin geometría precolombina",
+          "sin oro"
+        ],
+        "documented": [
+          "dossier §0 y §4.3 (qby-simon-1626): 1603 es otra capa —pueblo de doctrina, sillita pintada, mantas, bollos y masato—, sin geometría precolombina en cuerpos ni objetos",
+          "dossier §6.2: el cuerpo es el mismo del siglo XVI —perforación nasal, ligaduras— y la gente de Vía se dibuja sin pintura facial por decisión de separación de épocas (ficha de la gente de Vía)",
+          "dossier §3: la gente de Vía pertenecía a la nación Quimbaya, a legua y media de la Cartago de entonces",
+          "canon, campo mito: «una hija suya, de quince o dieciséis años», que «lo cargó a cuestas de pueblo en pueblo durante más de tres meses»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —la incisión horizontal del ojo como tira—; el cuerpo, en pocos planos grandes de papel pardo mate de volúmenes redondeados, sin músculo modelado.",
+          "El pelo, una pieza plana negra; nunca mechón por mechón.",
+          "La manta a la cintura es inferencia de las «trece o catorce mantas buenas» del bohío y del pueblo de doctrina: decisión reversible."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_anciano": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_anciano__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · anciano de Vía (capa de 1603)",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "nabsacadas-la-estrella-caida"
+      ],
+      "description": "Tipo base del viejo del pueblo de Vía en 1603: fija el cuerpo de los caciques don Pedro y Diego Orobajo y la base de Nabsacadas, «el cacique viejo».",
+      "evidence": [
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "mito",
+          "note": "El cacique viejo que Nabsacadas dice ser, y los caciques de Vía."
+        }
+      ],
+      "design": {
+        "silhouette": "Hombre viejo de pie y algo encorvado, con una manta de algodón lisa sobre los hombros, sin pintura, con la nariguera pequeña y el pelo corto gris: el cuerpo de un cacique ladino de pueblo de doctrina.",
+        "materials": [
+          "cuerpo en papel pardo mate",
+          "manta de algodón lisa sobre los hombros",
+          "pelo corto en una pieza gris",
+          "nariguera pequeña sin brillo"
+        ],
+        "palette": "Pardo oscuro, crudo de manta y gris de pelo, bajo luz de fuego.",
+        "scale": "Estatura corriente reducida por la curva. Cuerpo entero 9:16.",
+        "continuity": [
+          "pelo gris",
+          "manta sobre los hombros",
+          "sin pintura facial"
+        ],
+        "documented": [
+          "dossier §0 y §4.3 (qby-simon-1626): 1603 es otra capa —pueblo de doctrina, sillita pintada, mantas, bollos y masato—, sin geometría precolombina en cuerpos ni objetos",
+          "dossier §6.2: el cuerpo es el mismo del siglo XVI —perforación nasal, ligaduras— y la gente de Vía se dibuja sin pintura facial por decisión de separación de épocas (ficha de la gente de Vía)",
+          "dossier §3: la gente de Vía pertenecía a la nación Quimbaya, a legua y media de la Cartago de entonces",
+          "canon, campo mito: Nabsacadas «decía que era el cacique viejo de ellos, muerto años atrás», y al cacique don Pedro le dice que es su bisabuelo; Inés, su marido y el cacique «hablaban castellano y sabían moverse entre los dos mundos»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —la incisión horizontal del ojo como tira—; el cuerpo, en pocos planos grandes de papel pardo mate de volúmenes redondeados, sin músculo modelado.",
+          "El pelo, una pieza plana negra; nunca mechón por mechón.",
+          "La nariguera en 1603 es continuidad del cuerpo del siglo XVI y no está atestiguada para Vía: reversible."
+        ],
+        "states_to_model": []
+      }
     }
   },
   "models": {
@@ -3283,6 +3944,11 @@
           "myth": "nabsacadas-la-estrella-caida",
           "field": "mito",
           "note": "Circulan tres versiones incompatibles del final de Nabsacadas y sólo una es fuente: la crónica de 1626, que registra coerción y no ejecución. La versión regional que lo hace líder quindo capturado, juzgado y ahorcado no cita documento alguno, y una tercera atribuye a un historiador las palabras del cronista. El relato no tiene desenlace dibujable"
+        },
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "mito",
+          "note": "El canon reescrito añade que la joven lo carga a cuestas más de tres meses, que predica contra la confesión y el bautismo del doctrinero, y que la sillita está vacía cuando entra el fraile."
         }
       ],
       "design_contract": {
@@ -3303,6 +3969,7 @@
           "no lleva ni una pieza de oro: el oro de esta biblia está en la otra época y en un solo objeto ficticio"
         ],
         "documented_features": [
+          "canon, campo mito: la joven «lo cargó a cuestas de pueblo en pueblo durante más de tres meses»; en el bohío se sentaba en «una sillita, a su modo muy pintada, sobre una estera también pintada»; cuando entra el doctrinero, «la sillita estaba vacía», y «de Nabsacadas no se dice que lo prendieran, ni que lo mataran, ni adónde fue»",
           "dossier §3 y §2 (qby-simon-1626): se presenta primero ante Inés como figura humana —el cronista insiste, «se le apareció el Demonio en figura humana»—, recorre los pueblos durante meses y ante el cacique don Pedro se declara su bisabuelo, muerto tiempo atrás y regresado del páramo de Tataquí; quienes lo reciben lo reconocen como «cacique viejo»",
           "dossier §2 (qby-arango-2022): el páramo «parece ser un lugar de paso después de la muerte o incluso donde iniciaba una nueva vida… este regreso desde el páramo le daba a Nabsacadas un conocimiento sagrado», dentro de un marco en el que los avisos de catástrofe venían de «hombres que venían desde la montaña». El regreso es el origen del derecho a hablar",
           "dossier §2 (qby-simon-1626): la estrella caída es la traducción de un nombre y nadie ve caer una estrella en el relato: entra como metáfora discreta de papel descendente y nunca como halo ni prodigio celeste",
@@ -3314,7 +3981,8 @@
           "la edad avanzada es lectura del apelativo «cacique viejo» que le dan quienes lo reciben, y es reversible: la fuente no da edad",
           "EL PRODIGIO QUE EL CENSO NO REGISTRÓ y que da el verbo del relato: Nabsacadas reparte maíz y pepitas de ahuyama, al tercer día las matas están crecidas y el maíz granado, y al cuarto día por la mañana el maíz está seco y las ahuyamas podridas. Crecimiento y podredumbre en cuatro días sobre la misma mata. No se cobra lámina propia porque el inventario está congelado: se declara aquí y se resuelve como los dos estados del maíz dentro de la hoja de utilería",
           "no se le da estatuto de dios: el manual de 1948 comprimió el expediente en la etiqueta «dios quimbaya» y esa fórmula elimina la trama histórica. Tampoco se le da estatuto de demonio, que es la etiqueta del cronista. La ficha es de una figura humana y esa elección es editorial y declarada",
-          "CONFLICTO DE TÉCNICA DECLARADO: los tres mitos congelados prohíben expresamente «maqueta, diorama, CGI ni render 3D» y piden acabado gráfico plano 2D, mientras el kit vigente pide papel y quilling fotografiados como maqueta inmersiva. Esta hoja sigue el kit —como los cuarenta y dos planes— y muerde aquí, porque el interior nocturno con aire visible es exactamente un recurso de maqueta. Es decisión de canon del propietario editorial"
+          "CONFLICTO DE TÉCNICA DECLARADO: los tres mitos congelados prohíben expresamente «maqueta, diorama, CGI ni render 3D» y piden acabado gráfico plano 2D, mientras el kit vigente pide papel y quilling fotografiados como maqueta inmersiva. Esta hoja sigue el kit —como los cuarenta y dos planes— y muerde aquí, porque el interior nocturno con aire visible es exactamente un recurso de maqueta. Es decisión de canon del propietario editorial",
+          "El canon reescrito le da una segunda postura, que la hoja registra sin cobrarla como estado: cargado a cuestas por la joven de pueblo en pueblo. Si un keyframe la pide, se resuelve de espaldas y a distancia, con el mismo cuerpo. Y la sillita vacía es el cierre del relato: en esa lámina él no está."
         ]
       },
       "prompt_spec": {
@@ -3322,11 +3990,12 @@
         "asset_type": "Biblia visual Quimbaya V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla o asciende: el humo del volcán, el vapor de la niebla nocturna que sube del guadual, la rueda de la danza y las cintas de canto que conectan a los danzantes con la memoria de los mayores. La guadua se resuelve por repetición vertical y no por trama de relleno.",
         "primary_request": "identidad corporal completa y legible para Nabsacadas, la estrella caída. Es el único cuerpo sentado de la biblia y el único al que nunca se ve de pie: hombre mayor sobre una sillita pintada puesta encima de una estera pintada, que lo levanta un palmo del suelo de tierra y lo convierte en el punto más alto del interior aunque todos los demás estén parados. Ni halo, ni cuerno, ni ala, ni resplandor: lo único que desciende sobre él es una tira clara de papel, metáfora discreta de su nombre, y nunca toca su cuerpo.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Hombre mayor de estatura corriente, sentado y por tanto más bajo que todos los que lo rodean: su altura en el cuadro la da la sillita y no su cuerpo. Nunca monumental, nunca de escala divina, y nunca en un pedestal.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Hombre mayor de estatura corriente, sentado y por tanto más bajo que todos los que lo rodean: su altura en el cuadro la da la sillita y no su cuerpo. Nunca monumental, nunca de escala divina, y nunca en un pedestal.",
         "lighting_mood": "Tres luces, una por relato, y no se mezclan. La fiesta de la plaza va en luz de día alto bajo cielo nublado: contraste medio, sombras cortas, tierra ocre. El bohío de 1603 va en luz interior nocturna, de fuego bajo, con el guadual cerrando fuera y una humedad que a esa hora satura: el aire es visible. La montaña de la ficción de 1932 va en luz de alta montaña sobre glaciar, contraste duro y cielo abierto, que es exactamente lo contrario de las otras dos y por eso funciona. Nada emite luz propia: ni la estrella caída, que es metáfora de papel descendente, ni el ánima, que es translucidez y no resplandor.",
         "materials_textures": "sillita baja de madera pintada, la única pieza de mobiliario propio de esta biblia, con el dibujo recortado en el papel y nunca copiado de una pieza catalogada; estera pintada bajo la sillita, en tira tejida resuelta como campos planos y no como trama dibujada; cuerpo en papel pardo mate de un solo tono, con perforación nasal y lobular resueltas como pequeñas piezas aparte y ligaduras en brazos y piernas como bandas estrechas; tira clara de papel descendente, la estrella caída, colocada siempre detrás de su capa y a distancia de su cabeza; manta doblada sobre el hombro o sobre el regazo, del montón que le ofrecen, como única prenda y como objeto recibido y no como traje propio",
         "era": "Tres capas que no se mezclan nunca. A, siglo XVI: caserío de casas pequeñas con cubierta de hoja de caña sobre terrazas dispersas en ladera, cuerpos con perforación nasal y lobular, ligaduras en brazos y piernas, casco, nariguera, orejeras y collar, tiraderas de estólica, dos tambores, totumas de calabazo; sin ropa inventada, sin hierro, sin cruz. B, 1603: pueblo de doctrina con calles de seis varas e iglesia que es una ramada de bahareque encalado y paja, bohío retirado entre guaduales con una sillita pintada sobre estera pintada, mantas ofrecidas, bollos y masato, caballos con freno fuera de cuadro, y un fraile de paño ceniciento con sandalias. C, 1932: ficción indigenista, que se dibuja declarándose como tal, con comitiva sobria y sin palanquín, sin corte y sin regalia, y una única pieza dorada de diseño propio.",
         "constraints": [
+          "documentado: la joven «lo cargó a cuestas de pueblo en pueblo durante más de tres meses»; en el bohío se sentaba en «una sillita, a su modo muy pintada, sobre una estera también pintada»; cuando entra el doctrinero, «la sillita estaba vacía», y «de Nabsacadas no se dice que lo prendieran, ni que lo mataran, ni adónde fue»",
           "documentado: se presenta primero ante Inés como figura humana —el cronista insiste, «se le apareció el Demonio en figura humana»—, recorre los pueblos durante meses y ante el cacique don Pedro se declara su bisabuelo, muerto tiempo atrás y regresado del páramo de Tataquí; quienes lo reciben lo reconocen como «cacique viejo»",
           "documentado: el páramo «parece ser un lugar de paso después de la muerte o incluso donde iniciaba una nueva vida… este regreso desde el páramo le daba a Nabsacadas un conocimiento sagrado», dentro de un marco en el que los avisos de catástrofe venían de «hombres que venían desde la montaña». El regreso es el origen del derecho a hablar",
           "documentado: la estrella caída es la traducción de un nombre y nadie ve caer una estrella en el relato: entra como metáfora discreta de papel descendente y nunca como halo ni prodigio celeste",
@@ -3356,7 +4025,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -3401,6 +4070,11 @@
           "myth": "ipiare-ebachi",
           "field": "mito",
           "note": "La sandalia está descrita con más precisión de la que el censo recogió: «una sandalia con incrustaciones de oro, que era larga y flexible, para ceñir al tobillo con cadenas y sortijas». Cadenas y sortijas, no una simple correa. Y es invención literaria del mismo registro que el palanquín de oro y las cornetas de oro del mismo texto"
+        },
+        {
+          "myth": "ipiare-ebachi",
+          "field": "mito",
+          "note": "En el canon reescrito es hija, no nieta, del último rey; su ánima busca muchas noches la sandalia «por las laderas del Cumanday»."
         }
       ],
       "design_contract": {
@@ -3439,7 +4113,7 @@
         "asset_type": "Biblia visual Quimbaya V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla o asciende: el humo del volcán, el vapor de la niebla nocturna que sube del guadual, la rueda de la danza y las cintas de canto que conectan a los danzantes con la memoria de los mayores. La guadua se resuelve por repetición vertical y no por trama de relleno.",
         "primary_request": "identidad corporal completa y legible para Ipiaré Ebachí. Es la única figura de la biblia que se lee por los pies: va calzada de un solo pie y descalza del otro, y toda su silueta se organiza sobre esa asimetría —el peso cargado en el pie calzado, la cabeza vuelta hacia atrás, hacia el camino por donde la sandalia se quedó—. Sube siempre en segundo lugar, detrás de su padre y delante de la comitiva. En la hoja de estado es el mismo cuerpo en papel translúcido, sin rostro sufriente, recorriendo la ladera de noche y mirando el suelo.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Mujer joven de estatura corriente, pequeña contra un macizo de quince kilómetros de base: la lámina la reduce a propósito, porque el volcán es el personaje ambiental del corpus y ella es la única que puede darle escala humana.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Mujer joven de estatura corriente, pequeña contra un macizo de quince kilómetros de base: la lámina la reduce a propósito, porque el volcán es el personaje ambiental del corpus y ella es la única que puede darle escala humana.",
         "lighting_mood": "Tres luces, una por relato, y no se mezclan. La fiesta de la plaza va en luz de día alto bajo cielo nublado: contraste medio, sombras cortas, tierra ocre. El bohío de 1603 va en luz interior nocturna, de fuego bajo, con el guadual cerrando fuera y una humedad que a esa hora satura: el aire es visible. La montaña de la ficción de 1932 va en luz de alta montaña sobre glaciar, contraste duro y cielo abierto, que es exactamente lo contrario de las otras dos y por eso funciona. Nada emite luz propia: ni la estrella caída, que es metáfora de papel descendente, ni el ánima, que es translucidez y no resplandor.",
         "materials_textures": "cuerpo en papel pardo mate de un solo tono, con la misma gramática sobria del siglo XVI y sin ninguna prenda de corte real; una sola sandalia puesta: suela larga y flexible con incrustaciones de oro rojizo mate y cadenas y sortijas ciñendo el tobillo; pie descalzo del otro lado, dejado deliberadamente sin nada: es el rasgo que la identifica a distancia; en la hoja de estado, el mismo recorte en papel vegetal translúcido de un gramaje inferior, que deja ver la ladera detrás sin emitir un solo punto de luz",
         "era": "Tres capas que no se mezclan nunca. A, siglo XVI: caserío de casas pequeñas con cubierta de hoja de caña sobre terrazas dispersas en ladera, cuerpos con perforación nasal y lobular, ligaduras en brazos y piernas, casco, nariguera, orejeras y collar, tiraderas de estólica, dos tambores, totumas de calabazo; sin ropa inventada, sin hierro, sin cruz. B, 1603: pueblo de doctrina con calles de seis varas e iglesia que es una ramada de bahareque encalado y paja, bohío retirado entre guaduales con una sillita pintada sobre estera pintada, mantas ofrecidas, bollos y masato, caballos con freno fuera de cuadro, y un fraile de paño ceniciento con sandalias. C, 1932: ficción indigenista, que se dibuja declarándose como tal, con comitiva sobria y sin palanquín, sin corte y sin regalia, y una única pieza dorada de diseño propio.",
@@ -3473,7 +4147,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -3518,6 +4192,11 @@
           "myth": "ipiare-ebachi",
           "field": "mito",
           "note": "La sandalia está descrita con más precisión de la que el censo recogió: «una sandalia con incrustaciones de oro, que era larga y flexible, para ceñir al tobillo con cadenas y sortijas». Cadenas y sortijas, no una simple correa. Y es invención literaria del mismo registro que el palanquín de oro y las cornetas de oro del mismo texto"
+        },
+        {
+          "myth": "ipiare-ebachi",
+          "field": "mito",
+          "note": "En el canon reescrito es hija, no nieta, del último rey; su ánima busca muchas noches la sandalia «por las laderas del Cumanday»."
         }
       ],
       "design_contract": {
@@ -3556,7 +4235,7 @@
         "asset_type": "Biblia visual Quimbaya V1 - state_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla o asciende: el humo del volcán, el vapor de la niebla nocturna que sube del guadual, la rueda de la danza y las cintas de canto que conectan a los danzantes con la memoria de los mayores. La guadua se resuelve por repetición vertical y no por trama de relleno.",
         "primary_request": "el cambio de estado sin perder la identidad para Ipiaré Ebachí. Es la única figura de la biblia que se lee por los pies: va calzada de un solo pie y descalza del otro, y toda su silueta se organiza sobre esa asimetría —el peso cargado en el pie calzado, la cabeza vuelta hacia atrás, hacia el camino por donde la sandalia se quedó—. Sube siempre en segundo lugar, detrás de su padre y delante de la comitiva. En la hoja de estado es el mismo cuerpo en papel translúcido, sin rostro sufriente, recorriendo la ladera de noche y mirando el suelo.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Mujer joven de estatura corriente, pequeña contra un macizo de quince kilómetros de base: la lámina la reduce a propósito, porque el volcán es el personaje ambiental del corpus y ella es la única que puede darle escala humana.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Mujer joven de estatura corriente, pequeña contra un macizo de quince kilómetros de base: la lámina la reduce a propósito, porque el volcán es el personaje ambiental del corpus y ella es la única que puede darle escala humana.",
         "lighting_mood": "Tres luces, una por relato, y no se mezclan. La fiesta de la plaza va en luz de día alto bajo cielo nublado: contraste medio, sombras cortas, tierra ocre. El bohío de 1603 va en luz interior nocturna, de fuego bajo, con el guadual cerrando fuera y una humedad que a esa hora satura: el aire es visible. La montaña de la ficción de 1932 va en luz de alta montaña sobre glaciar, contraste duro y cielo abierto, que es exactamente lo contrario de las otras dos y por eso funciona. Nada emite luz propia: ni la estrella caída, que es metáfora de papel descendente, ni el ánima, que es translucidez y no resplandor.",
         "materials_textures": "cuerpo en papel pardo mate de un solo tono, con la misma gramática sobria del siglo XVI y sin ninguna prenda de corte real; una sola sandalia puesta: suela larga y flexible con incrustaciones de oro rojizo mate y cadenas y sortijas ciñendo el tobillo; pie descalzo del otro lado, dejado deliberadamente sin nada: es el rasgo que la identifica a distancia; en la hoja de estado, el mismo recorte en papel vegetal translúcido de un gramaje inferior, que deja ver la ladera detrás sin emitir un solo punto de luz",
         "era": "Tres capas que no se mezclan nunca. A, siglo XVI: caserío de casas pequeñas con cubierta de hoja de caña sobre terrazas dispersas en ladera, cuerpos con perforación nasal y lobular, ligaduras en brazos y piernas, casco, nariguera, orejeras y collar, tiraderas de estólica, dos tambores, totumas de calabazo; sin ropa inventada, sin hierro, sin cruz. B, 1603: pueblo de doctrina con calles de seis varas e iglesia que es una ramada de bahareque encalado y paja, bohío retirado entre guaduales con una sillita pintada sobre estera pintada, mantas ofrecidas, bollos y masato, caballos con freno fuera de cuadro, y un fraile de paño ceniciento con sandalias. C, 1932: ficción indigenista, que se dibuja declarándose como tal, con comitiva sobria y sin palanquín, sin corte y sin regalia, y una única pieza dorada de diseño propio.",
@@ -3590,7 +4269,7 @@
           "id": "estado_anima_nocturna",
           "view_type": "state_variation",
           "purpose": "el cambio de estado sin perder la identidad: anima_nocturna",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "anima_nocturna"
           ],
@@ -3673,7 +4352,7 @@
         "asset_type": "Biblia visual Quimbaya V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla o asciende: el humo del volcán, el vapor de la niebla nocturna que sube del guadual, la rueda de la danza y las cintas de canto que conectan a los danzantes con la memoria de los mayores. La guadua se resuelve por repetición vertical y no por trama de relleno.",
         "primary_request": "identidad corporal completa y legible para El último rey (padre de Ipiaré). Se distingue por la decisión y no por lo que lleva: es el único cuerpo de la biblia que va delante de todos y cuesta arriba, siempre un paso por encima de la línea de la comitiva y siempre mirando la cumbre y no el camino. Sin corona, sin palanquín, sin trono, sin porta-insignia y sin una sola pieza de oro encima —la única pieza dorada del corpus es la sandalia de su hija—: la ficción de 1932 le dio una corte y la lámina se la quita entera.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Hombre adulto de estatura corriente y deliberadamente igualado con el resto de la comitiva: nada en su tamaño lo separa. Lo único que lo separa es que está más arriba en la pendiente, y esa diferencia es de posición y no de escala.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Hombre adulto de estatura corriente y deliberadamente igualado con el resto de la comitiva: nada en su tamaño lo separa. Lo único que lo separa es que está más arriba en la pendiente, y esa diferencia es de posición y no de escala.",
         "lighting_mood": "Tres luces, una por relato, y no se mezclan. La fiesta de la plaza va en luz de día alto bajo cielo nublado: contraste medio, sombras cortas, tierra ocre. El bohío de 1603 va en luz interior nocturna, de fuego bajo, con el guadual cerrando fuera y una humedad que a esa hora satura: el aire es visible. La montaña de la ficción de 1932 va en luz de alta montaña sobre glaciar, contraste duro y cielo abierto, que es exactamente lo contrario de las otras dos y por eso funciona. Nada emite luz propia: ni la estrella caída, que es metáfora de papel descendente, ni el ánima, que es translucidez y no resplandor.",
         "materials_textures": "cuerpo en el mismo papel pardo mate y con la misma gramática sobria que cualquier otro cuerpo del siglo XVI: perforación nasal, ligaduras en brazos y piernas, y nada más; pies descalzos sobre piedra y hielo, que es la coherencia dura de la ficha: si su hija lleva la única sandalia del corpus, él no lleva ninguna; roca andesítica oscura y parches de hielo bajo sus pies, en planos grandes que ganan pendiente hacia el borde superior del cuadro; aire frío entre capas, resuelto por separación de planos y no por bruma pintada: la montaña de este relato tiene cielo abierto",
         "era": "Tres capas que no se mezclan nunca. A, siglo XVI: caserío de casas pequeñas con cubierta de hoja de caña sobre terrazas dispersas en ladera, cuerpos con perforación nasal y lobular, ligaduras en brazos y piernas, casco, nariguera, orejeras y collar, tiraderas de estólica, dos tambores, totumas de calabazo; sin ropa inventada, sin hierro, sin cruz. B, 1603: pueblo de doctrina con calles de seis varas e iglesia que es una ramada de bahareque encalado y paja, bohío retirado entre guaduales con una sillita pintada sobre estera pintada, mantas ofrecidas, bollos y masato, caballos con freno fuera de cuadro, y un fraile de paño ceniciento con sandalias. C, 1932: ficción indigenista, que se dibuja declarándose como tal, con comitiva sobria y sin palanquín, sin corte y sin regalia, y una única pieza dorada de diseño propio.",
@@ -3706,7 +4385,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -3741,6 +4420,11 @@
           "myth": "nabsacadas-la-estrella-caida",
           "field": "mito",
           "note": "Circulan tres versiones incompatibles del final de Nabsacadas y sólo una es fuente: la crónica de 1626, que registra coerción y no ejecución. La versión regional que lo hace líder quindo capturado, juzgado y ahorcado no cita documento alguno, y una tercera atribuye a un historiador las palabras del cronista. El relato no tiene desenlace dibujable"
+        },
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "mito",
+          "note": "En el canon reescrito va de noche «sin camino, entre guaduas de espinas crueles», guiado por el cacique, que antes de entrar finge caerse y grita."
         }
       ],
       "design_contract": {
@@ -3778,7 +4462,7 @@
         "asset_type": "Biblia visual Quimbaya V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla o asciende: el humo del volcán, el vapor de la niebla nocturna que sube del guadual, la rueda de la danza y las cintas de canto que conectan a los danzantes con la memoria de los mayores. La guadua se resuelve por repetición vertical y no por trama de relleno.",
         "primary_request": "identidad corporal completa y legible para Fray Baltasar de Zamora. El único cuerpo cubierto de pies a cabeza del corpus, y lo que lo identifica es la tela y no la cara: paño ceniciento jaspeado —lana blanca y negra entremezcladas sin teñir— y remendado, con el capucho cayendo suelto sobre los hombros como una esclavina corta por delante y a los lados y alargada por detrás hasta la cintura, nunca como capirote puntiagudo. Llega siempre desde fuera del cuadro y de noche, con el guadual espinoso cerrado a su espalda.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Adulto de pie, y por tanto más alto que la figura sentada a la que interrumpe: esa diferencia de altura es lo único que la lámina necesita decir sobre la relación entre los dos, y no hace falta añadir violencia para decirlo.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Adulto de pie, y por tanto más alto que la figura sentada a la que interrumpe: esa diferencia de altura es lo único que la lámina necesita decir sobre la relación entre los dos, y no hace falta añadir violencia para decirlo.",
         "lighting_mood": "Tres luces, una por relato, y no se mezclan. La fiesta de la plaza va en luz de día alto bajo cielo nublado: contraste medio, sombras cortas, tierra ocre. El bohío de 1603 va en luz interior nocturna, de fuego bajo, con el guadual cerrando fuera y una humedad que a esa hora satura: el aire es visible. La montaña de la ficción de 1932 va en luz de alta montaña sobre glaciar, contraste duro y cielo abierto, que es exactamente lo contrario de las otras dos y por eso funciona. Nada emite luz propia: ni la estrella caída, que es metáfora de papel descendente, ni el ánima, que es translucidez y no resplandor.",
         "materials_textures": "paño ceniciento jaspeado: gris cálido de claro a medio, resuelto como papel de fibra con grano visible de dos tonos entremezclados y nunca como plano liso de un solo gris; remiendos como piezas superpuestas de gramaje distinto, cosidos a la vista: es hábito de trabajo y de camino, no de retrato; cordón de lana blanca con el cabo cayendo al costado, anudado sin comprometer un número de nudos; sandalias de una pieza bajo el ruedo, y nunca pie descalzo ni zapato de hebilla",
         "era": "Tres capas que no se mezclan nunca. A, siglo XVI: caserío de casas pequeñas con cubierta de hoja de caña sobre terrazas dispersas en ladera, cuerpos con perforación nasal y lobular, ligaduras en brazos y piernas, casco, nariguera, orejeras y collar, tiraderas de estólica, dos tambores, totumas de calabazo; sin ropa inventada, sin hierro, sin cruz. B, 1603: pueblo de doctrina con calles de seis varas e iglesia que es una ramada de bahareque encalado y paja, bohío retirado entre guaduales con una sillita pintada sobre estera pintada, mantas ofrecidas, bollos y masato, caballos con freno fuera de cuadro, y un fraile de paño ceniciento con sandalias. C, 1932: ficción indigenista, que se dibuja declarándose como tal, con comitiva sobria y sin palanquín, sin corte y sin regalia, y una única pieza dorada de diseño propio.",
@@ -3812,7 +4496,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -3857,6 +4541,11 @@
           "myth": "batatabati",
           "field": "mito",
           "note": "El detalle más específico y menos imaginable del corpus está en la crónica y nadie lo ha usado: «De sus cabellos hacen grandes rodelas, que llevan cuando van a la guerra a pelear». Escudos hechos con el propio pelo. No pertenece a la escena del juego y no se dibuja allí, pero es el rasgo que impide resolver a esta gente con un repertorio panindígena"
+        },
+        {
+          "myth": "batatabati",
+          "field": "mito",
+          "note": "El canon reescrito da la fiesta en su orden —beber, escuadrones de mujeres, de hombres y de muchachos, el juego con tiraderas y varas, la plaza con dos tambores y uno que toma la delantera— y dice que los cantos recitan «los trabajos presentes» y «los sucesos pasados de sus mayores»."
         }
       ],
       "design_contract": {
@@ -3877,6 +4566,7 @@
           "sin sangre, sin herida y sin cuerpo caído, aunque la crónica registre que el juego podía dejar muertos: el juego se lee como movimiento seguro"
         ],
         "documented_features": [
+          "canon, campo mito: «primero bebían. Después se formaba un escuadrón de mujeres a una parte y otro a otra, y lo mismo los hombres; y los muchachos no se quedaban quietos, que también hacían el suyo. Entonces arremetían unos contra otros diciendo con un sonete: batatabati, batatabati»; después, en la plaza, «dos de ellos con dos tambores hacían el son. Otro tomaba la delantera»",
           "dossier §2 (qby-cieza-1553): tras el juego «juntábanse todos indios, y dos dellos, con dos atambores, hacían son… y llevando cada uno la vasija del vino en la mano; porque beber, bailar, cantar, todo lo hacen en un tiempo», y «sus cantares son recitar a su uso los trabajos presentes y recontar los sucesos pasados de sus mayores»: la plaza es un archivo cantado y no sólo una competencia",
           "dossier §6.2 (qby-figurinas-2020): la estadística de 87 figurinas del Cauca Medio del período Tardío — sedentes el 72,4 %, cabeza cuadrada el 50,6 %, ojos como incisión lineal horizontal el 77 %, perforación nasal el 83,9 % y lobular el 32,2 %, pintura facial sólo el 28,7 %, ligaduras o compresión en brazos el 55,2 % y en piernas el 50,6 %",
           "dossier §6.2 (qby-uribe-2005): el canon del período Temprano es de figuras desnudas, de formas redondeadas y postura hierática, con rostros triangulares de ojos semicerrados y pintura facial de líneas que atraviesan longitudinalmente el rostro; los adornos documentados son cuatro: casco, nariguera, orejeras y collar de varias vueltas",
@@ -3900,6 +4590,7 @@
         "materials_textures": "cuerpo en planos grandes de papel pardo mate de un solo tono, con volúmenes redondeados y postura sobria: el canon de las figuras, no el de un retrato; perforación nasal y lobular resueltas como piezas pequeñas de oro rojizo mate apoyadas aparte, y sólo en la proporción que las figuras documentan; ligaduras de textil o cestería en brazos y piernas, como bandas estrechas repetidas que aprietan el contorno del miembro; pintura facial en líneas que atraviesan el rostro longitudinalmente, en una minoría de los cuerpos y nunca en todos; tierra ocre amarillenta de la plaza como quinto material del grupo: la franja vacía entre bloques es tan parte de la hoja como los cuerpos",
         "era": "Tres capas que no se mezclan nunca. A, siglo XVI: caserío de casas pequeñas con cubierta de hoja de caña sobre terrazas dispersas en ladera, cuerpos con perforación nasal y lobular, ligaduras en brazos y piernas, casco, nariguera, orejeras y collar, tiraderas de estólica, dos tambores, totumas de calabazo; sin ropa inventada, sin hierro, sin cruz. B, 1603: pueblo de doctrina con calles de seis varas e iglesia que es una ramada de bahareque encalado y paja, bohío retirado entre guaduales con una sillita pintada sobre estera pintada, mantas ofrecidas, bollos y masato, caballos con freno fuera de cuadro, y un fraile de paño ceniciento con sandalias. C, 1932: ficción indigenista, que se dibuja declarándose como tal, con comitiva sobria y sin palanquín, sin corte y sin regalia, y una única pieza dorada de diseño propio.",
         "constraints": [
+          "documentado: «primero bebían. Después se formaba un escuadrón de mujeres a una parte y otro a otra, y lo mismo los hombres; y los muchachos no se quedaban quietos, que también hacían el suyo. Entonces arremetían unos contra otros diciendo con un sonete: batatabati, batatabati»; después, en la plaza, «dos de ellos con dos tambores hacían el son. Otro tomaba la delantera»",
           "documentado: tras el juego «juntábanse todos indios, y dos dellos, con dos atambores, hacían son… y llevando cada uno la vasija del vino en la mano; porque beber, bailar, cantar, todo lo hacen en un tiempo», y «sus cantares son recitar a su uso los trabajos presentes y recontar los sucesos pasados de sus mayores»: la plaza es un archivo cantado y no sólo una competencia",
           "documentado: la estadística de 87 figurinas del Cauca Medio del período Tardío — sedentes el 72,4 %, cabeza cuadrada el 50,6 %, ojos como incisión lineal horizontal el 77 %, perforación nasal el 83,9 % y lobular el 32,2 %, pintura facial sólo el 28,7 %, ligaduras o compresión en brazos el 55,2 % y en piernas el 50,6 %",
           "documentado: el canon del período Temprano es de figuras desnudas, de formas redondeadas y postura hierática, con rostros triangulares de ojos semicerrados y pintura facial de líneas que atraviesan longitudinalmente el rostro; los adornos documentados son cuatro: casco, nariguera, orejeras y collar de varias vueltas",
@@ -4091,6 +4782,11 @@
           "myth": "ipiare-ebachi",
           "field": "mito",
           "note": "No hay base arqueológica para calzado prehispánico en el Cauca medio: la fórmula del cronista para toda la región es «andan desnudos y descalzos», los términos de calzado aparecen sólo en los capítulos andinos, y las figurinas no muestran ningún elemento de pie. La sandalia se diseña declarada como pieza ficticia de 1932"
+        },
+        {
+          "myth": "ipiare-ebachi",
+          "field": "mito",
+          "note": "«Era larga y flexible, con incrustaciones de oro, de las que se ciñen al tobillo con cadenas y sortijas. Nadie la vio caer.» Antes de morir la princesa pide que la busquen «y no fue hallada»."
         }
       ],
       "design_contract": {
@@ -4226,6 +4922,7 @@
           "ningún pasto y ningún bejuco en el suelo bajo el guadual: donde los hay, el dosel está roto"
         ],
         "documented_features": [
+          "canon, campo mito: «La provincia estaba llena de cañaverales tan espesos que no se podía andar por ellos… y por eso las casas eran pequeñas y se cubrían con hojas de caña»",
           "dossier §4.1 y §12.2 (qby-cieza-1553): «quiso Dios nuestro señor que sobrasen aquí las cañas porque los moradores no tuviesen mucho trabajo en hacer sus casas» y «las casas que tienen son pequeñas, la cobertura de hoja de cañas» — las casas grandes y redondas son de Arma y de Paucura, provincias distintas",
           "dossier §4.1 (qby-cieza-1553): delante de la casa del cacique hay «plazas pequeñas todas cercadas de las cañas gordas… y por lo bajo de las cañas hacen unos agujeros, por donde el aire puede respirar» — las guaduas silban, y ésa es la segunda mitad dibujable de la frase",
           "dossier §4.2 (qby-unicentro-utp-2016): la única evidencia arqueológica directa es un conjunto de vacíos cilíndricos de unos treinta centímetros dispuestos en trayectoria circular a treinta centímetros bajo la superficie, donde estuvieron enterradas guaduas a manera de columnas: una construcción circular de unos tres metros de diámetro, de entre ochocientos y mil doscientos años atrás",
@@ -4249,6 +4946,7 @@
         "materials_textures": "hoja de caña en la cubierta de cada casa, en tiras superpuestas cortas: es la única descripción constructiva que la fuente da y define todo el caserío; guadua en los postes, hincada en el suelo en trayectoria circular de unos tres metros de diámetro, que es la única evidencia arqueológica directa que existe; tierra ocre amarillenta apisonada de la plaza, con el subsuelo asomando en el corte del talud con vetas de óxido de hierro; cañas gordas del cerco, con los agujeros abiertos por lo bajo recortados a la vista; guadual de fondo: culmos de quince a veinticinco metros que se arquean y cierran el dosel, con banda de pelo blanco en cada nudo y espinas en los entrenudos basales",
         "era": "Tres capas que no se mezclan nunca. A, siglo XVI: caserío de casas pequeñas con cubierta de hoja de caña sobre terrazas dispersas en ladera, cuerpos con perforación nasal y lobular, ligaduras en brazos y piernas, casco, nariguera, orejeras y collar, tiraderas de estólica, dos tambores, totumas de calabazo; sin ropa inventada, sin hierro, sin cruz. B, 1603: pueblo de doctrina con calles de seis varas e iglesia que es una ramada de bahareque encalado y paja, bohío retirado entre guaduales con una sillita pintada sobre estera pintada, mantas ofrecidas, bollos y masato, caballos con freno fuera de cuadro, y un fraile de paño ceniciento con sandalias. C, 1932: ficción indigenista, que se dibuja declarándose como tal, con comitiva sobria y sin palanquín, sin corte y sin regalia, y una única pieza dorada de diseño propio.",
         "constraints": [
+          "documentado: «La provincia estaba llena de cañaverales tan espesos que no se podía andar por ellos… y por eso las casas eran pequeñas y se cubrían con hojas de caña»",
           "documentado: «quiso Dios nuestro señor que sobrasen aquí las cañas porque los moradores no tuviesen mucho trabajo en hacer sus casas» y «las casas que tienen son pequeñas, la cobertura de hoja de cañas» — las casas grandes y redondas son de Arma y de Paucura, provincias distintas",
           "documentado: delante de la casa del cacique hay «plazas pequeñas todas cercadas de las cañas gordas… y por lo bajo de las cañas hacen unos agujeros, por donde el aire puede respirar» — las guaduas silban, y ésa es la segunda mitad dibujable de la frase",
           "documentado: la única evidencia arqueológica directa es un conjunto de vacíos cilíndricos de unos treinta centímetros dispuestos en trayectoria circular a treinta centímetros bajo la superficie, donde estuvieron enterradas guaduas a manera de columnas: una construcción circular de unos tres metros de diámetro, de entre ochocientos y mil doscientos años atrás",
@@ -4323,6 +5021,11 @@
           "myth": "nabsacadas-la-estrella-caida",
           "field": "mito",
           "note": "La niebla del Cauca medio es nocturna y de madrugada, no un efecto de mediodía: el setenta por ciento de la lluvia cae de noche, la humedad relativa satura invariablemente por encima del noventa y cinco por ciento antes del amanecer, y la insolación anual está por debajo de la mitad del máximo posible, lo que indica alta nubosidad"
+        },
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "mito",
+          "note": "«Dentro había una sillita, a su modo muy pintada, sobre una estera también pintada… trece o catorce mantas buenas y algún masato. La sillita estaba vacía.»"
         }
       ],
       "design_contract": {
@@ -4439,6 +5142,11 @@
           "myth": "ipiare-ebachi",
           "field": "mito",
           "note": "La erupción que la crónica de 1626 fecha «á doce de Marzo, domingo de Lázaro» de 1595 es la misma que el catálogo eruptivo registra el 12 de marzo de 1595, con lahares por los valles del Gualí y el Lagunilla. La crónica y la vulcanología coinciden en el día, y la descripción de época —piedra pómez «tan menuda como arena», ríos que «más parecía mazamorra de cernada que agua», montes y árboles de ceniza— es el mejor material de dirección de arte del expediente"
+        },
+        {
+          "myth": "ipiare-ebachi",
+          "field": "mito",
+          "note": "El canon reescrito da el volcán del ascenso: humo como de madera verde, nieve como manto de armiño, agua con hielo y lavas medio encendidas, un temblor leve."
         }
       ],
       "design_contract": {
@@ -4460,6 +5168,7 @@
           "ninguna lámina funciona como mapa ni da ruta de ascenso"
         ],
         "documented_features": [
+          "canon, campo mito: arriba «de las fauces del volcán salía un humo como de madera verde. El manto de armiño lucía ya a grandes trechos su blancura imperial. El agua bajaba cargada de hielo y de lavas medio encendidas entre los peñascos. Un ligero temblor hacía pensar que la montaña dormía»",
           "dossier §1.5 y §12 (qby-sgc-ruiz): el volcán tiene «una forma alargada en dirección NE-SW, algo achatada», quince kilómetros de diámetro en la base y más de doscientos kilómetros cuadrados de superficie, laderas de veinte a treinta grados en la cumbre y unos diez más abajo, dos conos parásitos —La Olleta al oeste y La Piraña al este—, roca de andesitas de dos piroxenos y un cráter de 870 por 830 metros y 247 de profundidad; sus nombres precolombinos registrados son Cumanday (cerro blanco), Tabuchía (candela o fuego) y Tama",
           "dossier §1.5 (qby-sgc-ruiz): la pluma mide normalmente entre doscientos y quinientos metros sobre la cumbre, con máximos de mil quinientos en episodios fuertes: el «grande cantidad de humo cuando hace claro» de 1553 y el «humo semejante al de la madera verde» de 1932 caben ambos ahí",
           "dossier §1.6 (qby-simon-1626, qby-sgc-ruiz): la crónica fecha la erupción «el año de mil y quinientos y noventa y cinco, á doce de Marzo, domingo de Lázaro» y el catálogo eruptivo institucional registra el 12 de marzo de 1595, con lahares por los valles del Gualí y el Lagunilla: la crónica y la vulcanología coinciden en el día y en los ríos",
@@ -4483,6 +5192,7 @@
         "materials_textures": "roca andesítica oscura de dos piroxenos en planos grandes y mates, que es el material que domina el cuadro; hielo en parches y no en manto: el glaciar se dibuja fragmentado, con roca expuesta entre los fragmentos; pluma de humo en papel translúcido de borde recortado, de doscientos a quinientos metros sobre la cumbre y sólo excepcionalmente mayor; ceniza según las tres imágenes de 1626: pómez «tan menuda como arena» y luego «como menudo granizo», ceniza que baja «pegajosa con la humedad» y se pega a donde cae, y agua que «más parecía mazamorra de cernada que agua»; corrientes con señales de fuego bajando por los valles, en tiras de quilling oscuro y espeso y no como río limpio",
         "era": "Tres capas que no se mezclan nunca. A, siglo XVI: caserío de casas pequeñas con cubierta de hoja de caña sobre terrazas dispersas en ladera, cuerpos con perforación nasal y lobular, ligaduras en brazos y piernas, casco, nariguera, orejeras y collar, tiraderas de estólica, dos tambores, totumas de calabazo; sin ropa inventada, sin hierro, sin cruz. B, 1603: pueblo de doctrina con calles de seis varas e iglesia que es una ramada de bahareque encalado y paja, bohío retirado entre guaduales con una sillita pintada sobre estera pintada, mantas ofrecidas, bollos y masato, caballos con freno fuera de cuadro, y un fraile de paño ceniciento con sandalias. C, 1932: ficción indigenista, que se dibuja declarándose como tal, con comitiva sobria y sin palanquín, sin corte y sin regalia, y una única pieza dorada de diseño propio.",
         "constraints": [
+          "documentado: arriba «de las fauces del volcán salía un humo como de madera verde. El manto de armiño lucía ya a grandes trechos su blancura imperial. El agua bajaba cargada de hielo y de lavas medio encendidas entre los peñascos. Un ligero temblor hacía pensar que la montaña dormía»",
           "documentado: el volcán tiene «una forma alargada en dirección NE-SW, algo achatada», quince kilómetros de diámetro en la base y más de doscientos kilómetros cuadrados de superficie, laderas de veinte a treinta grados en la cumbre y unos diez más abajo, dos conos parásitos —La Olleta al oeste y La Piraña al este—, roca de andesitas de dos piroxenos y un cráter de 870 por 830 metros y 247 de profundidad; sus nombres precolombinos registrados son Cumanday (cerro blanco), Tabuchía (candela o fuego) y Tama",
           "documentado: la pluma mide normalmente entre doscientos y quinientos metros sobre la cumbre, con máximos de mil quinientos en episodios fuertes: el «grande cantidad de humo cuando hace claro» de 1553 y el «humo semejante al de la madera verde» de 1932 caben ambos ahí",
           "documentado: la crónica fecha la erupción «el año de mil y quinientos y noventa y cinco, á doce de Marzo, domingo de Lázaro» y el catálogo eruptivo institucional registra el 12 de marzo de 1595, con lahares por los valles del Gualí y el Lagunilla: la crónica y la vulcanología coinciden en el día y en los ríos",
@@ -4653,7 +5363,8 @@
           "cuero y madera de los dos tambores, sin forma comprometida porque la fuente no la da",
           "calabazo de la totuma, liso y curvo, y barro sin vidriar de la múcura, opaco y de cuerpo bulboso",
           "masato en dos piezas distintas: pasta densa y pálida dentro de la vasija, y líquido turbio con sólidos en suspensión al servirse",
-          "maíz en dos estados, el de la mata crecida y granada al tercer día y el de la mata seca al cuarto, y hoja de envoltura del bollo declarada como inferencia"
+          "maíz en dos estados, el de la mata crecida y granada al tercer día y el de la mata seca al cuarto, y hoja de envoltura del bollo declarada como inferencia",
+          "ahuyama en dos estados, junto al maíz: grande y entera al tercer día, hundida y podrida al cuarto, en pocas piezas planas anaranjadas"
         ],
         "palette_logic": "Pardos de barro, calabazo y madera sobre fondo neutro de fibra, sin oro y sin ninguna pieza brillante: el color del masato no lo dice ninguna fuente y se deja apagado a propósito. La cerámica es Marrón Inciso —pasta oscura, superficie suave y brillante, incisión fina—, nunca alcarraza y nunca decoración negativa, que son de Calima y de Nariño.",
         "scale": "Todos los objetos comparados entre sí a escala de mano y con la jerarquía visible: la múcura es mayor que la totuma porque una contiene y la otra bebe, y el bollo es del tamaño de lo que una persona come en un día. El vaso de oro que el cacique Tacurumbi dio a Robledo cabía dos azumbres —unos cuatro litros— y da la escala de lo que en esta región se consideraba grande.",
@@ -4665,6 +5376,7 @@
           "ninguna alcarraza y ninguna decoración negativa en ninguna pieza de barro"
         ],
         "documented_features": [
+          "canon, campo mito: Nabsacadas les da «maíz y pepitas de ahuyama. Los sembraron, y al tercer día las ahuyamas estaban muy grandes y el maíz granado. Al cuarto día por la mañana el maíz estaba seco y las ahuyamas podridas»",
           "dossier §5 (qby-cieza-1553): las tiraderas son proyectiles de estólica —«unas estolicas que arrojan de rodeo con ellas unas tiraderas»—, no lanzas de mano; los dos tambores son el gozne de la segunda escena y no tienen descripción de forma",
           "dossier §5 y §12.7 (qby-simon-1626): la jerarquía la fija la crónica y no se puede invertir — múcura de barro para contener y servir, totuma de calabazo para beber, «que es el vaso más á propósito que se ha hallado para este brebaje», y descarta expresamente el barro sin vidriar para esa bebida",
           "dossier §5 y §12.8 (qby-simon-1626): el masato tiene dos estados, pasta y líquido, porque no se guarda líquido sino como masa que se deslíe con agua al beber; y el bollo es de maíz tierno y jugoso, equivale a la ración diaria de una persona y se enmohece",
@@ -4686,9 +5398,10 @@
         "primary_request": "hechura, escala y uso del objeto para hoja utileria quimbaya. Seis objetos en una sola plancha y cada uno con su relato escrito al lado, que es exactamente lo que impide mezclar la fiesta de 1553 con las ofrendas de 1603: las tiraderas de estólica —proyectiles que se arrojan de rodeo, no lanzas de mano— y las varas; los dos tambores; la totuma de calabazo para beber frente a la múcura de barro para contener; el masato en sus dos estados, pasta densa y líquido turbio; y el bollo del tamaño de la ración diaria de una persona. Ninguna pieza cita un objeto arqueológico real.",
         "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Todos los objetos comparados entre sí a escala de mano y con la jerarquía visible: la múcura es mayor que la totuma porque una contiene y la otra bebe, y el bollo es del tamaño de lo que una persona come en un día. El vaso de oro que el cacique Tacurumbi dio a Robledo cabía dos azumbres —unos cuatro litros— y da la escala de lo que en esta región se consideraba grande.",
         "lighting_mood": "Tres luces, una por relato, y no se mezclan. La fiesta de la plaza va en luz de día alto bajo cielo nublado: contraste medio, sombras cortas, tierra ocre. El bohío de 1603 va en luz interior nocturna, de fuego bajo, con el guadual cerrando fuera y una humedad que a esa hora satura: el aire es visible. La montaña de la ficción de 1932 va en luz de alta montaña sobre glaciar, contraste duro y cielo abierto, que es exactamente lo contrario de las otras dos y por eso funciona. Nada emite luz propia: ni la estrella caída, que es metáfora de papel descendente, ni el ánima, que es translucidez y no resplandor.",
-        "materials_textures": "madera y punta de las tiraderas, y la estólica como pieza aparte que explica cómo se arrojan; cuero y madera de los dos tambores, sin forma comprometida porque la fuente no la da; calabazo de la totuma, liso y curvo, y barro sin vidriar de la múcura, opaco y de cuerpo bulboso; masato en dos piezas distintas: pasta densa y pálida dentro de la vasija, y líquido turbio con sólidos en suspensión al servirse; maíz en dos estados, el de la mata crecida y granada al tercer día y el de la mata seca al cuarto, y hoja de envoltura del bollo declarada como inferencia",
+        "materials_textures": "madera y punta de las tiraderas, y la estólica como pieza aparte que explica cómo se arrojan; cuero y madera de los dos tambores, sin forma comprometida porque la fuente no la da; calabazo de la totuma, liso y curvo, y barro sin vidriar de la múcura, opaco y de cuerpo bulboso; masato en dos piezas distintas: pasta densa y pálida dentro de la vasija, y líquido turbio con sólidos en suspensión al servirse; maíz en dos estados, el de la mata crecida y granada al tercer día y el de la mata seca al cuarto, y hoja de envoltura del bollo declarada como inferencia; ahuyama en dos estados, junto al maíz: grande y entera al tercer día, hundida y podrida al cuarto, en pocas piezas planas anaranjadas",
         "era": "Tres capas que no se mezclan nunca. A, siglo XVI: caserío de casas pequeñas con cubierta de hoja de caña sobre terrazas dispersas en ladera, cuerpos con perforación nasal y lobular, ligaduras en brazos y piernas, casco, nariguera, orejeras y collar, tiraderas de estólica, dos tambores, totumas de calabazo; sin ropa inventada, sin hierro, sin cruz. B, 1603: pueblo de doctrina con calles de seis varas e iglesia que es una ramada de bahareque encalado y paja, bohío retirado entre guaduales con una sillita pintada sobre estera pintada, mantas ofrecidas, bollos y masato, caballos con freno fuera de cuadro, y un fraile de paño ceniciento con sandalias. C, 1932: ficción indigenista, que se dibuja declarándose como tal, con comitiva sobria y sin palanquín, sin corte y sin regalia, y una única pieza dorada de diseño propio.",
         "constraints": [
+          "documentado: Nabsacadas les da «maíz y pepitas de ahuyama. Los sembraron, y al tercer día las ahuyamas estaban muy grandes y el maíz granado. Al cuarto día por la mañana el maíz estaba seco y las ahuyamas podridas»",
           "documentado: las tiraderas son proyectiles de estólica —«unas estolicas que arrojan de rodeo con ellas unas tiraderas»—, no lanzas de mano; los dos tambores son el gozne de la segunda escena y no tienen descripción de forma",
           "documentado: la jerarquía la fija la crónica y no se puede invertir — múcura de barro para contener y servir, totuma de calabazo para beber, «que es el vaso más á propósito que se ha hallado para este brebaje», y descarta expresamente el barro sin vidriar para esa bebida",
           "documentado: el masato tiene dos estados, pasta y líquido, porque no se guarda líquido sino como masa que se deslíe con agua al beber; y el bollo es de maíz tierno y jugoso, equivale a la ración diaria de una persona y se enmohece",
@@ -4719,6 +5432,442 @@
           "view_type": "object_three_quarter",
           "purpose": "hechura, escala y uso del objeto",
           "aspect": "1:1",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_hombre_adulto__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_hombre_adulto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "batatabati",
+          "field": "mito",
+          "note": "El escuadrón de los hombres en el juego y la rueda de la plaza."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre bien dispuesto, de pie y de postura sobria, sin prenda, con la nariguera pequeña de oro rojizo, ligaduras estrechas bajo la rodilla y en el brazo, y una estólica con su tiradera en la mano.",
+        "materials": [
+          "cuerpo en planos grandes de papel pardo mate de volúmenes redondeados",
+          "nariguera pequeña de oro rojizo mate como pieza aparte",
+          "ligaduras de fibra como bandas estrechas repetidas en brazo y pierna",
+          "estólica y tiradera de madera"
+        ],
+        "palette_logic": "Pardo de piel, ocre de tierra, y el oro rojizo como único punto cálido.",
+        "scale": "Estatura corriente. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "sin prenda",
+          "ligaduras siempre",
+          "nariguera pequeña, nunca oro grande sobre el cuerpo"
+        ],
+        "documented_features": [
+          "dossier §6.1 (qby-cieza-1553): de esta provincia el cronista dice sólo «los hombres son bien dispuestos, de buenos rostros; las mujeres, lo mismo»; la fórmula «desnudos y descalzos» es de las provincias vecinas",
+          "dossier §6.2 (qby-figurinas-2020): en las figuras del Cauca Medio «no se observaron elementos que pudieran ser asociados con prendas de vestir»; perforación nasal 83,9 %, lobular 32,2 %, ligaduras en brazos y piernas, pintura facial sólo en el 28,7 %",
+          "dossier §6.2: la deformación craneal está documentada para este pueblo (consult_required): perfil de cabeza, jamás rasgo exagerado",
+          "dossier §0: nada de hierro, cruz, caballo ni teja en la capa de 1553",
+          "canon, campo mito: los hombres forman su escuadrón y arremeten «diciendo con un sonete: batatabati»; el juego es «con tiraderas y con varas»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —la incisión horizontal del ojo como tira—; el cuerpo, en pocos planos grandes de papel pardo mate de volúmenes redondeados, sin músculo modelado.",
+          "El pelo, una pieza plana negra; nunca mechón por mechón.",
+          "La pintura facial longitudinal va sólo en una minoría de las figuras de grupo, no en la hoja de tipo."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Quimbaya V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla o asciende: el humo del volcán, el vapor de la niebla nocturna que sube del guadual, la rueda de la danza y las cintas de canto que conectan a los danzantes con la memoria de los mayores. La guadua se resuelve por repetición vertical y no por trama de relleno.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · hombre quimbaya adulto (capa de 1553). Hombre bien dispuesto, de pie y de postura sobria, sin prenda, con la nariguera pequeña de oro rojizo, ligaduras estrechas bajo la rodilla y en el brazo, y una estólica con su tiradera en la mano.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura corriente. Cuerpo entero 9:16.",
+        "lighting_mood": "Tres luces, una por relato, y no se mezclan. La fiesta de la plaza va en luz de día alto bajo cielo nublado: contraste medio, sombras cortas, tierra ocre. El bohío de 1603 va en luz interior nocturna, de fuego bajo, con el guadual cerrando fuera y una humedad que a esa hora satura: el aire es visible. La montaña de la ficción de 1932 va en luz de alta montaña sobre glaciar, contraste duro y cielo abierto, que es exactamente lo contrario de las otras dos y por eso funciona. Nada emite luz propia: ni la estrella caída, que es metáfora de papel descendente, ni el ánima, que es translucidez y no resplandor.",
+        "materials_textures": "cuerpo en planos grandes de papel pardo mate de volúmenes redondeados; nariguera pequeña de oro rojizo mate como pieza aparte; ligaduras de fibra como bandas estrechas repetidas en brazo y pierna; estólica y tiradera de madera",
+        "era": "Tres capas que no se mezclan nunca. A, siglo XVI: caserío de casas pequeñas con cubierta de hoja de caña sobre terrazas dispersas en ladera, cuerpos con perforación nasal y lobular, ligaduras en brazos y piernas, casco, nariguera, orejeras y collar, tiraderas de estólica, dos tambores, totumas de calabazo; sin ropa inventada, sin hierro, sin cruz. B, 1603: pueblo de doctrina con calles de seis varas e iglesia que es una ramada de bahareque encalado y paja, bohío retirado entre guaduales con una sillita pintada sobre estera pintada, mantas ofrecidas, bollos y masato, caballos con freno fuera de cuadro, y un fraile de paño ceniciento con sandalias. C, 1932: ficción indigenista, que se dibuja declarándose como tal, con comitiva sobria y sin palanquín, sin corte y sin regalia, y una única pieza dorada de diseño propio.",
+        "constraints": [
+          "documentado: de esta provincia el cronista dice sólo «los hombres son bien dispuestos, de buenos rostros; las mujeres, lo mismo»; la fórmula «desnudos y descalzos» es de las provincias vecinas",
+          "documentado: en las figuras del Cauca Medio «no se observaron elementos que pudieran ser asociados con prendas de vestir»; perforación nasal 83,9 %, lobular 32,2 %, ligaduras en brazos y piernas, pintura facial sólo en el 28,7 %",
+          "documentado: la deformación craneal está documentada para este pueblo (consult_required): perfil de cabeza, jamás rasgo exagerado",
+          "documentado: nada de hierro, cruz, caballo ni teja en la capa de 1553",
+          "documentado: los hombres forman su escuadrón y arremeten «diciendo con un sonete: batatabati»; el juego es «con tiraderas y con varas»",
+          "La base es tierra ocre amarillenta y verde denso de guadual bajo cielo nublado; el corpus nombra un solo color, «verde», y se lo aplica al humo, de modo que todo lo demás viene del territorio.",
+          "El oro es rojizo y mate-pulido, nunca amarillo de joyería, y aparece en piezas pequeñas sobre un cuerpo: nunca en montón, nunca como tesoro, nunca como pieza aislada en primer plano.",
+          "Cada relato tiene su clave y no la presta: ocre y verde caliente para la plaza del siglo XVI, pardo oscuro y luz de fuego para el bohío nocturno, y grises de roca con blanco de hielo para la montaña.",
+          "La ceniza del volcán se resuelve con las tres imágenes de época —agua como lejía gris sucia, pómez encendida como hierro de fragua, montes de ceniza— y no con un gris plano inventado.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas y no de modelado.",
+          "Sin reproducir ninguna pieza catalogada: ni el Tesoro de los Quimbayas, ni el Poporo Quimbaya, ni el conjunto de Puerto Nare, ni las figuras del Otún que la seudoarqueología difundió como aviones.",
+          "Sin regalia inventada: ni corona, ni palanquín, ni corte, ni trono, ni tocado panindígena, ni símbolo azteca, maya o muisca; la monarquía quimbaya es ficción de 1932.",
+          "Sin hábito franciscano marrón ni capirote puntiagudo: el paño es ceniciento jaspeado y el capucho cae suelto en esclavina.",
+          "Sin sangre, heridas, combate épico, sacrificio, ejecución ni conquistadores heroizados; el juego se lee como movimiento seguro y la represión no entra en cuadro.",
+          "Sin mezclar épocas en una lámina: nada de hierro, cruz, caballo o teja en la escena del siglo XVI, y nada de geometría precolombina en el bohío de 1603.",
+          "Sin que la imagen funcione como mapa de un sitio ni como catálogo: ni perfil localizable, ni ruta, ni pieza identificable, en un territorio cuyo saqueo está documentado."
+        ],
+        "technique_close": "En el plano corto el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte: el ojo es una sola incisión horizontal, como en las figurinas, y no una esfera. El cuerpo se construye por planos superpuestos y nunca modelado; las ligaduras de brazos y piernas son tiras estrechas de papel apoyadas encima. El culmo de guadua es un cilindro de papel enrollado con el nudo marcado por una banda de fibra blanca, repetida muchas veces a lo largo de la caña. La nieve del volcán es papel opaco recortado en parches separados sobre roca oscura, no una capa continua."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_adulta__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_adulta"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "batatabati",
+          "field": "mito",
+          "note": "El escuadrón de mujeres y la rueda de la plaza."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer de buenos rostros, de pie, sin prenda, con orejeras pequeñas de oro rojizo, collar de varias vueltas y ligaduras bajo la rodilla, llevando la totuma del vino en la mano.",
+        "materials": [
+          "cuerpo en planos grandes de papel pardo mate",
+          "orejeras y collar de varias vueltas en papel de oro rojizo mate",
+          "ligaduras de fibra en la pierna",
+          "totuma de calabazo en la mano"
+        ],
+        "palette_logic": "Pardo de piel, oro rojizo mate y el claro del calabazo.",
+        "scale": "Algo por debajo del hombre. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "sin prenda",
+          "collar de varias vueltas",
+          "la vasija del vino en la mano en la rueda"
+        ],
+        "documented_features": [
+          "dossier §6.1 (qby-cieza-1553): de esta provincia el cronista dice sólo «los hombres son bien dispuestos, de buenos rostros; las mujeres, lo mismo»; la fórmula «desnudos y descalzos» es de las provincias vecinas",
+          "dossier §6.2 (qby-figurinas-2020): en las figuras del Cauca Medio «no se observaron elementos que pudieran ser asociados con prendas de vestir»; perforación nasal 83,9 %, lobular 32,2 %, ligaduras en brazos y piernas, pintura facial sólo en el 28,7 %",
+          "dossier §6.2: la deformación craneal está documentada para este pueblo (consult_required): perfil de cabeza, jamás rasgo exagerado",
+          "dossier §0: nada de hierro, cruz, caballo ni teja en la capa de 1553",
+          "canon, campo mito: «se formaba un escuadrón de mujeres a una parte y otro a otra»; en la plaza todos siguen al que danza «llevando cada uno la vasija del vino en la mano»",
+          "dossier §6.2 (qby-uribe-2005): los adornos documentados son casco, nariguera, orejeras y collar de varias vueltas"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —la incisión horizontal del ojo como tira—; el cuerpo, en pocos planos grandes de papel pardo mate de volúmenes redondeados, sin músculo modelado.",
+          "El pelo, una pieza plana negra; nunca mechón por mechón.",
+          "Reparto del collar a la mujer y de la nariguera al hombre: decisión de hoja, reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Quimbaya V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla o asciende: el humo del volcán, el vapor de la niebla nocturna que sube del guadual, la rueda de la danza y las cintas de canto que conectan a los danzantes con la memoria de los mayores. La guadua se resuelve por repetición vertical y no por trama de relleno.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer quimbaya adulta (capa de 1553). Mujer de buenos rostros, de pie, sin prenda, con orejeras pequeñas de oro rojizo, collar de varias vueltas y ligaduras bajo la rodilla, llevando la totuma del vino en la mano.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Algo por debajo del hombre. Cuerpo entero 9:16.",
+        "lighting_mood": "Tres luces, una por relato, y no se mezclan. La fiesta de la plaza va en luz de día alto bajo cielo nublado: contraste medio, sombras cortas, tierra ocre. El bohío de 1603 va en luz interior nocturna, de fuego bajo, con el guadual cerrando fuera y una humedad que a esa hora satura: el aire es visible. La montaña de la ficción de 1932 va en luz de alta montaña sobre glaciar, contraste duro y cielo abierto, que es exactamente lo contrario de las otras dos y por eso funciona. Nada emite luz propia: ni la estrella caída, que es metáfora de papel descendente, ni el ánima, que es translucidez y no resplandor.",
+        "materials_textures": "cuerpo en planos grandes de papel pardo mate; orejeras y collar de varias vueltas en papel de oro rojizo mate; ligaduras de fibra en la pierna; totuma de calabazo en la mano",
+        "era": "Tres capas que no se mezclan nunca. A, siglo XVI: caserío de casas pequeñas con cubierta de hoja de caña sobre terrazas dispersas en ladera, cuerpos con perforación nasal y lobular, ligaduras en brazos y piernas, casco, nariguera, orejeras y collar, tiraderas de estólica, dos tambores, totumas de calabazo; sin ropa inventada, sin hierro, sin cruz. B, 1603: pueblo de doctrina con calles de seis varas e iglesia que es una ramada de bahareque encalado y paja, bohío retirado entre guaduales con una sillita pintada sobre estera pintada, mantas ofrecidas, bollos y masato, caballos con freno fuera de cuadro, y un fraile de paño ceniciento con sandalias. C, 1932: ficción indigenista, que se dibuja declarándose como tal, con comitiva sobria y sin palanquín, sin corte y sin regalia, y una única pieza dorada de diseño propio.",
+        "constraints": [
+          "documentado: de esta provincia el cronista dice sólo «los hombres son bien dispuestos, de buenos rostros; las mujeres, lo mismo»; la fórmula «desnudos y descalzos» es de las provincias vecinas",
+          "documentado: en las figuras del Cauca Medio «no se observaron elementos que pudieran ser asociados con prendas de vestir»; perforación nasal 83,9 %, lobular 32,2 %, ligaduras en brazos y piernas, pintura facial sólo en el 28,7 %",
+          "documentado: la deformación craneal está documentada para este pueblo (consult_required): perfil de cabeza, jamás rasgo exagerado",
+          "documentado: nada de hierro, cruz, caballo ni teja en la capa de 1553",
+          "documentado: «se formaba un escuadrón de mujeres a una parte y otro a otra»; en la plaza todos siguen al que danza «llevando cada uno la vasija del vino en la mano»",
+          "documentado: los adornos documentados son casco, nariguera, orejeras y collar de varias vueltas",
+          "La base es tierra ocre amarillenta y verde denso de guadual bajo cielo nublado; el corpus nombra un solo color, «verde», y se lo aplica al humo, de modo que todo lo demás viene del territorio.",
+          "El oro es rojizo y mate-pulido, nunca amarillo de joyería, y aparece en piezas pequeñas sobre un cuerpo: nunca en montón, nunca como tesoro, nunca como pieza aislada en primer plano.",
+          "Cada relato tiene su clave y no la presta: ocre y verde caliente para la plaza del siglo XVI, pardo oscuro y luz de fuego para el bohío nocturno, y grises de roca con blanco de hielo para la montaña.",
+          "La ceniza del volcán se resuelve con las tres imágenes de época —agua como lejía gris sucia, pómez encendida como hierro de fragua, montes de ceniza— y no con un gris plano inventado.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas y no de modelado.",
+          "Sin reproducir ninguna pieza catalogada: ni el Tesoro de los Quimbayas, ni el Poporo Quimbaya, ni el conjunto de Puerto Nare, ni las figuras del Otún que la seudoarqueología difundió como aviones.",
+          "Sin regalia inventada: ni corona, ni palanquín, ni corte, ni trono, ni tocado panindígena, ni símbolo azteca, maya o muisca; la monarquía quimbaya es ficción de 1932.",
+          "Sin hábito franciscano marrón ni capirote puntiagudo: el paño es ceniciento jaspeado y el capucho cae suelto en esclavina.",
+          "Sin sangre, heridas, combate épico, sacrificio, ejecución ni conquistadores heroizados; el juego se lee como movimiento seguro y la represión no entra en cuadro.",
+          "Sin mezclar épocas en una lámina: nada de hierro, cruz, caballo o teja en la escena del siglo XVI, y nada de geometría precolombina en el bohío de 1603.",
+          "Sin que la imagen funcione como mapa de un sitio ni como catálogo: ni perfil localizable, ni ruta, ni pieza identificable, en un territorio cuyo saqueo está documentado."
+        ],
+        "technique_close": "En el plano corto el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte: el ojo es una sola incisión horizontal, como en las figurinas, y no una esfera. El cuerpo se construye por planos superpuestos y nunca modelado; las ligaduras de brazos y piernas son tiras estrechas de papel apoyadas encima. El culmo de guadua es un cilindro de papel enrollado con el nudo marcado por una banda de fibra blanca, repetida muchas veces a lo largo de la caña. La nieve del volcán es papel opaco recortado en parches separados sobre roca oscura, no una capa continua."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_nino__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_nino"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "batatabati",
+          "field": "mito",
+          "note": "Los muchachos que forman su propio escuadrón."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Muchacho de diez u once años, de pie y en carrera corta, sin prenda y sin oro, con una vara ligera en la mano y la cabeza grande respecto al cuerpo.",
+        "materials": [
+          "cuerpo en planos grandes de papel pardo mate",
+          "vara ligera de madera",
+          "ligadura única bajo la rodilla"
+        ],
+        "palette_logic": "Pardo de piel y ocre de la plaza; sin oro.",
+        "scale": "A la altura del pecho de un adulto. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "sin prenda ni oro",
+          "vara, nunca tiradera",
+          "ninguna herida: el juego se lee como movimiento seguro"
+        ],
+        "documented_features": [
+          "dossier §6.1 (qby-cieza-1553): de esta provincia el cronista dice sólo «los hombres son bien dispuestos, de buenos rostros; las mujeres, lo mismo»; la fórmula «desnudos y descalzos» es de las provincias vecinas",
+          "dossier §6.2 (qby-figurinas-2020): en las figuras del Cauca Medio «no se observaron elementos que pudieran ser asociados con prendas de vestir»; perforación nasal 83,9 %, lobular 32,2 %, ligaduras en brazos y piernas, pintura facial sólo en el 28,7 %",
+          "dossier §6.2: la deformación craneal está documentada para este pueblo (consult_required): perfil de cabeza, jamás rasgo exagerado",
+          "dossier §0: nada de hierro, cruz, caballo ni teja en la capa de 1553",
+          "canon, campo mito: «los muchachos no se quedaban quietos, que también hacían el suyo»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —la incisión horizontal del ojo como tira—; el cuerpo, en pocos planos grandes de papel pardo mate de volúmenes redondeados, sin músculo modelado.",
+          "El pelo, una pieza plana negra; nunca mechón por mechón.",
+          "Que el muchacho juegue con vara y no con tiradera es decisión de hoja para que el juego no se lea como violencia contra niños."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Quimbaya V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla o asciende: el humo del volcán, el vapor de la niebla nocturna que sube del guadual, la rueda de la danza y las cintas de canto que conectan a los danzantes con la memoria de los mayores. La guadua se resuelve por repetición vertical y no por trama de relleno.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · muchacho quimbaya (capa de 1553). Muchacho de diez u once años, de pie y en carrera corta, sin prenda y sin oro, con una vara ligera en la mano y la cabeza grande respecto al cuerpo.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; A la altura del pecho de un adulto. Cuerpo entero 9:16.",
+        "lighting_mood": "Tres luces, una por relato, y no se mezclan. La fiesta de la plaza va en luz de día alto bajo cielo nublado: contraste medio, sombras cortas, tierra ocre. El bohío de 1603 va en luz interior nocturna, de fuego bajo, con el guadual cerrando fuera y una humedad que a esa hora satura: el aire es visible. La montaña de la ficción de 1932 va en luz de alta montaña sobre glaciar, contraste duro y cielo abierto, que es exactamente lo contrario de las otras dos y por eso funciona. Nada emite luz propia: ni la estrella caída, que es metáfora de papel descendente, ni el ánima, que es translucidez y no resplandor.",
+        "materials_textures": "cuerpo en planos grandes de papel pardo mate; vara ligera de madera; ligadura única bajo la rodilla",
+        "era": "Tres capas que no se mezclan nunca. A, siglo XVI: caserío de casas pequeñas con cubierta de hoja de caña sobre terrazas dispersas en ladera, cuerpos con perforación nasal y lobular, ligaduras en brazos y piernas, casco, nariguera, orejeras y collar, tiraderas de estólica, dos tambores, totumas de calabazo; sin ropa inventada, sin hierro, sin cruz. B, 1603: pueblo de doctrina con calles de seis varas e iglesia que es una ramada de bahareque encalado y paja, bohío retirado entre guaduales con una sillita pintada sobre estera pintada, mantas ofrecidas, bollos y masato, caballos con freno fuera de cuadro, y un fraile de paño ceniciento con sandalias. C, 1932: ficción indigenista, que se dibuja declarándose como tal, con comitiva sobria y sin palanquín, sin corte y sin regalia, y una única pieza dorada de diseño propio.",
+        "constraints": [
+          "documentado: de esta provincia el cronista dice sólo «los hombres son bien dispuestos, de buenos rostros; las mujeres, lo mismo»; la fórmula «desnudos y descalzos» es de las provincias vecinas",
+          "documentado: en las figuras del Cauca Medio «no se observaron elementos que pudieran ser asociados con prendas de vestir»; perforación nasal 83,9 %, lobular 32,2 %, ligaduras en brazos y piernas, pintura facial sólo en el 28,7 %",
+          "documentado: la deformación craneal está documentada para este pueblo (consult_required): perfil de cabeza, jamás rasgo exagerado",
+          "documentado: nada de hierro, cruz, caballo ni teja en la capa de 1553",
+          "documentado: «los muchachos no se quedaban quietos, que también hacían el suyo»",
+          "La base es tierra ocre amarillenta y verde denso de guadual bajo cielo nublado; el corpus nombra un solo color, «verde», y se lo aplica al humo, de modo que todo lo demás viene del territorio.",
+          "El oro es rojizo y mate-pulido, nunca amarillo de joyería, y aparece en piezas pequeñas sobre un cuerpo: nunca en montón, nunca como tesoro, nunca como pieza aislada en primer plano.",
+          "Cada relato tiene su clave y no la presta: ocre y verde caliente para la plaza del siglo XVI, pardo oscuro y luz de fuego para el bohío nocturno, y grises de roca con blanco de hielo para la montaña.",
+          "La ceniza del volcán se resuelve con las tres imágenes de época —agua como lejía gris sucia, pómez encendida como hierro de fragua, montes de ceniza— y no con un gris plano inventado.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas y no de modelado.",
+          "Sin reproducir ninguna pieza catalogada: ni el Tesoro de los Quimbayas, ni el Poporo Quimbaya, ni el conjunto de Puerto Nare, ni las figuras del Otún que la seudoarqueología difundió como aviones.",
+          "Sin regalia inventada: ni corona, ni palanquín, ni corte, ni trono, ni tocado panindígena, ni símbolo azteca, maya o muisca; la monarquía quimbaya es ficción de 1932.",
+          "Sin hábito franciscano marrón ni capirote puntiagudo: el paño es ceniciento jaspeado y el capucho cae suelto en esclavina.",
+          "Sin sangre, heridas, combate épico, sacrificio, ejecución ni conquistadores heroizados; el juego se lee como movimiento seguro y la represión no entra en cuadro.",
+          "Sin mezclar épocas en una lámina: nada de hierro, cruz, caballo o teja en la escena del siglo XVI, y nada de geometría precolombina en el bohío de 1603.",
+          "Sin que la imagen funcione como mapa de un sitio ni como catálogo: ni perfil localizable, ni ruta, ni pieza identificable, en un territorio cuyo saqueo está documentado."
+        ],
+        "technique_close": "En el plano corto el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte: el ojo es una sola incisión horizontal, como en las figurinas, y no una esfera. El cuerpo se construye por planos superpuestos y nunca modelado; las ligaduras de brazos y piernas son tiras estrechas de papel apoyadas encima. El culmo de guadua es un cilindro de papel enrollado con el nudo marcado por una banda de fibra blanca, repetida muchas veces a lo largo de la caña. La nieve del volcán es papel opaco recortado en parches separados sobre roca oscura, no una capa continua."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_joven__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_joven"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "mito",
+          "note": "La hija de Diego Orobajo, de quince o dieciséis años, que carga a Nabsacadas."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Muchacha delgada de pie, con una manta de algodón lisa ceñida a la cintura, sin pintura, con una ligadura bajo la rodilla y la espalda algo inclinada, como quien carga.",
+        "materials": [
+          "cuerpo en planos grandes de papel pardo mate",
+          "manta de algodón lisa a la cintura, de las mantas buenas que la gente lleva al bohío",
+          "ligadura de fibra bajo la rodilla"
+        ],
+        "palette_logic": "Pardo oscuro y crudo de algodón bajo luz de fuego: la clave nocturna de 1603.",
+        "scale": "Casi de estatura adulta. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "sin pintura facial",
+          "manta lisa, sin geometría precolombina",
+          "sin oro"
+        ],
+        "documented_features": [
+          "dossier §0 y §4.3 (qby-simon-1626): 1603 es otra capa —pueblo de doctrina, sillita pintada, mantas, bollos y masato—, sin geometría precolombina en cuerpos ni objetos",
+          "dossier §6.2: el cuerpo es el mismo del siglo XVI —perforación nasal, ligaduras— y la gente de Vía se dibuja sin pintura facial por decisión de separación de épocas (ficha de la gente de Vía)",
+          "dossier §3: la gente de Vía pertenecía a la nación Quimbaya, a legua y media de la Cartago de entonces",
+          "canon, campo mito: «una hija suya, de quince o dieciséis años», que «lo cargó a cuestas de pueblo en pueblo durante más de tres meses»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —la incisión horizontal del ojo como tira—; el cuerpo, en pocos planos grandes de papel pardo mate de volúmenes redondeados, sin músculo modelado.",
+          "El pelo, una pieza plana negra; nunca mechón por mechón.",
+          "La manta a la cintura es inferencia de las «trece o catorce mantas buenas» del bohío y del pueblo de doctrina: decisión reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Quimbaya V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla o asciende: el humo del volcán, el vapor de la niebla nocturna que sube del guadual, la rueda de la danza y las cintas de canto que conectan a los danzantes con la memoria de los mayores. La guadua se resuelve por repetición vertical y no por trama de relleno.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer joven de Vía (capa de 1603). Muchacha delgada de pie, con una manta de algodón lisa ceñida a la cintura, sin pintura, con una ligadura bajo la rodilla y la espalda algo inclinada, como quien carga.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Casi de estatura adulta. Cuerpo entero 9:16.",
+        "lighting_mood": "Tres luces, una por relato, y no se mezclan. La fiesta de la plaza va en luz de día alto bajo cielo nublado: contraste medio, sombras cortas, tierra ocre. El bohío de 1603 va en luz interior nocturna, de fuego bajo, con el guadual cerrando fuera y una humedad que a esa hora satura: el aire es visible. La montaña de la ficción de 1932 va en luz de alta montaña sobre glaciar, contraste duro y cielo abierto, que es exactamente lo contrario de las otras dos y por eso funciona. Nada emite luz propia: ni la estrella caída, que es metáfora de papel descendente, ni el ánima, que es translucidez y no resplandor.",
+        "materials_textures": "cuerpo en planos grandes de papel pardo mate; manta de algodón lisa a la cintura, de las mantas buenas que la gente lleva al bohío; ligadura de fibra bajo la rodilla",
+        "era": "Tres capas que no se mezclan nunca. A, siglo XVI: caserío de casas pequeñas con cubierta de hoja de caña sobre terrazas dispersas en ladera, cuerpos con perforación nasal y lobular, ligaduras en brazos y piernas, casco, nariguera, orejeras y collar, tiraderas de estólica, dos tambores, totumas de calabazo; sin ropa inventada, sin hierro, sin cruz. B, 1603: pueblo de doctrina con calles de seis varas e iglesia que es una ramada de bahareque encalado y paja, bohío retirado entre guaduales con una sillita pintada sobre estera pintada, mantas ofrecidas, bollos y masato, caballos con freno fuera de cuadro, y un fraile de paño ceniciento con sandalias. C, 1932: ficción indigenista, que se dibuja declarándose como tal, con comitiva sobria y sin palanquín, sin corte y sin regalia, y una única pieza dorada de diseño propio.",
+        "constraints": [
+          "documentado: 1603 es otra capa —pueblo de doctrina, sillita pintada, mantas, bollos y masato—, sin geometría precolombina en cuerpos ni objetos",
+          "documentado: el cuerpo es el mismo del siglo XVI —perforación nasal, ligaduras— y la gente de Vía se dibuja sin pintura facial por decisión de separación de épocas (ficha de la gente de Vía)",
+          "documentado: la gente de Vía pertenecía a la nación Quimbaya, a legua y media de la Cartago de entonces",
+          "documentado: «una hija suya, de quince o dieciséis años», que «lo cargó a cuestas de pueblo en pueblo durante más de tres meses»",
+          "La base es tierra ocre amarillenta y verde denso de guadual bajo cielo nublado; el corpus nombra un solo color, «verde», y se lo aplica al humo, de modo que todo lo demás viene del territorio.",
+          "El oro es rojizo y mate-pulido, nunca amarillo de joyería, y aparece en piezas pequeñas sobre un cuerpo: nunca en montón, nunca como tesoro, nunca como pieza aislada en primer plano.",
+          "Cada relato tiene su clave y no la presta: ocre y verde caliente para la plaza del siglo XVI, pardo oscuro y luz de fuego para el bohío nocturno, y grises de roca con blanco de hielo para la montaña.",
+          "La ceniza del volcán se resuelve con las tres imágenes de época —agua como lejía gris sucia, pómez encendida como hierro de fragua, montes de ceniza— y no con un gris plano inventado.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas y no de modelado.",
+          "Sin reproducir ninguna pieza catalogada: ni el Tesoro de los Quimbayas, ni el Poporo Quimbaya, ni el conjunto de Puerto Nare, ni las figuras del Otún que la seudoarqueología difundió como aviones.",
+          "Sin regalia inventada: ni corona, ni palanquín, ni corte, ni trono, ni tocado panindígena, ni símbolo azteca, maya o muisca; la monarquía quimbaya es ficción de 1932.",
+          "Sin hábito franciscano marrón ni capirote puntiagudo: el paño es ceniciento jaspeado y el capucho cae suelto en esclavina.",
+          "Sin sangre, heridas, combate épico, sacrificio, ejecución ni conquistadores heroizados; el juego se lee como movimiento seguro y la represión no entra en cuadro.",
+          "Sin mezclar épocas en una lámina: nada de hierro, cruz, caballo o teja en la escena del siglo XVI, y nada de geometría precolombina en el bohío de 1603.",
+          "Sin que la imagen funcione como mapa de un sitio ni como catálogo: ni perfil localizable, ni ruta, ni pieza identificable, en un territorio cuyo saqueo está documentado."
+        ],
+        "technique_close": "En el plano corto el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte: el ojo es una sola incisión horizontal, como en las figurinas, y no una esfera. El cuerpo se construye por planos superpuestos y nunca modelado; las ligaduras de brazos y piernas son tiras estrechas de papel apoyadas encima. El culmo de guadua es un cilindro de papel enrollado con el nudo marcado por una banda de fibra blanca, repetida muchas veces a lo largo de la caña. La nieve del volcán es papel opaco recortado en parches separados sobre roca oscura, no una capa continua."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_anciano__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_anciano"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "nabsacadas-la-estrella-caida",
+          "field": "mito",
+          "note": "El cacique viejo que Nabsacadas dice ser, y los caciques de Vía."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre viejo de pie y algo encorvado, con una manta de algodón lisa sobre los hombros, sin pintura, con la nariguera pequeña y el pelo corto gris: el cuerpo de un cacique ladino de pueblo de doctrina.",
+        "materials": [
+          "cuerpo en papel pardo mate",
+          "manta de algodón lisa sobre los hombros",
+          "pelo corto en una pieza gris",
+          "nariguera pequeña sin brillo"
+        ],
+        "palette_logic": "Pardo oscuro, crudo de manta y gris de pelo, bajo luz de fuego.",
+        "scale": "Estatura corriente reducida por la curva. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "pelo gris",
+          "manta sobre los hombros",
+          "sin pintura facial"
+        ],
+        "documented_features": [
+          "dossier §0 y §4.3 (qby-simon-1626): 1603 es otra capa —pueblo de doctrina, sillita pintada, mantas, bollos y masato—, sin geometría precolombina en cuerpos ni objetos",
+          "dossier §6.2: el cuerpo es el mismo del siglo XVI —perforación nasal, ligaduras— y la gente de Vía se dibuja sin pintura facial por decisión de separación de épocas (ficha de la gente de Vía)",
+          "dossier §3: la gente de Vía pertenecía a la nación Quimbaya, a legua y media de la Cartago de entonces",
+          "canon, campo mito: Nabsacadas «decía que era el cacique viejo de ellos, muerto años atrás», y al cacique don Pedro le dice que es su bisabuelo; Inés, su marido y el cacique «hablaban castellano y sabían moverse entre los dos mundos»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte —la incisión horizontal del ojo como tira—; el cuerpo, en pocos planos grandes de papel pardo mate de volúmenes redondeados, sin músculo modelado.",
+          "El pelo, una pieza plana negra; nunca mechón por mechón.",
+          "La nariguera en 1603 es continuidad del cuerpo del siglo XVI y no está atestiguada para Vía: reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Quimbaya V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla o asciende: el humo del volcán, el vapor de la niebla nocturna que sube del guadual, la rueda de la danza y las cintas de canto que conectan a los danzantes con la memoria de los mayores. La guadua se resuelve por repetición vertical y no por trama de relleno.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · anciano de Vía (capa de 1603). Hombre viejo de pie y algo encorvado, con una manta de algodón lisa sobre los hombros, sin pintura, con la nariguera pequeña y el pelo corto gris: el cuerpo de un cacique ladino de pueblo de doctrina.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura corriente reducida por la curva. Cuerpo entero 9:16.",
+        "lighting_mood": "Tres luces, una por relato, y no se mezclan. La fiesta de la plaza va en luz de día alto bajo cielo nublado: contraste medio, sombras cortas, tierra ocre. El bohío de 1603 va en luz interior nocturna, de fuego bajo, con el guadual cerrando fuera y una humedad que a esa hora satura: el aire es visible. La montaña de la ficción de 1932 va en luz de alta montaña sobre glaciar, contraste duro y cielo abierto, que es exactamente lo contrario de las otras dos y por eso funciona. Nada emite luz propia: ni la estrella caída, que es metáfora de papel descendente, ni el ánima, que es translucidez y no resplandor.",
+        "materials_textures": "cuerpo en papel pardo mate; manta de algodón lisa sobre los hombros; pelo corto en una pieza gris; nariguera pequeña sin brillo",
+        "era": "Tres capas que no se mezclan nunca. A, siglo XVI: caserío de casas pequeñas con cubierta de hoja de caña sobre terrazas dispersas en ladera, cuerpos con perforación nasal y lobular, ligaduras en brazos y piernas, casco, nariguera, orejeras y collar, tiraderas de estólica, dos tambores, totumas de calabazo; sin ropa inventada, sin hierro, sin cruz. B, 1603: pueblo de doctrina con calles de seis varas e iglesia que es una ramada de bahareque encalado y paja, bohío retirado entre guaduales con una sillita pintada sobre estera pintada, mantas ofrecidas, bollos y masato, caballos con freno fuera de cuadro, y un fraile de paño ceniciento con sandalias. C, 1932: ficción indigenista, que se dibuja declarándose como tal, con comitiva sobria y sin palanquín, sin corte y sin regalia, y una única pieza dorada de diseño propio.",
+        "constraints": [
+          "documentado: 1603 es otra capa —pueblo de doctrina, sillita pintada, mantas, bollos y masato—, sin geometría precolombina en cuerpos ni objetos",
+          "documentado: el cuerpo es el mismo del siglo XVI —perforación nasal, ligaduras— y la gente de Vía se dibuja sin pintura facial por decisión de separación de épocas (ficha de la gente de Vía)",
+          "documentado: la gente de Vía pertenecía a la nación Quimbaya, a legua y media de la Cartago de entonces",
+          "documentado: Nabsacadas «decía que era el cacique viejo de ellos, muerto años atrás», y al cacique don Pedro le dice que es su bisabuelo; Inés, su marido y el cacique «hablaban castellano y sabían moverse entre los dos mundos»",
+          "La base es tierra ocre amarillenta y verde denso de guadual bajo cielo nublado; el corpus nombra un solo color, «verde», y se lo aplica al humo, de modo que todo lo demás viene del territorio.",
+          "El oro es rojizo y mate-pulido, nunca amarillo de joyería, y aparece en piezas pequeñas sobre un cuerpo: nunca en montón, nunca como tesoro, nunca como pieza aislada en primer plano.",
+          "Cada relato tiene su clave y no la presta: ocre y verde caliente para la plaza del siglo XVI, pardo oscuro y luz de fuego para el bohío nocturno, y grises de roca con blanco de hielo para la montaña.",
+          "La ceniza del volcán se resuelve con las tres imágenes de época —agua como lejía gris sucia, pómez encendida como hierro de fragua, montes de ceniza— y no con un gris plano inventado.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas y no de modelado.",
+          "Sin reproducir ninguna pieza catalogada: ni el Tesoro de los Quimbayas, ni el Poporo Quimbaya, ni el conjunto de Puerto Nare, ni las figuras del Otún que la seudoarqueología difundió como aviones.",
+          "Sin regalia inventada: ni corona, ni palanquín, ni corte, ni trono, ni tocado panindígena, ni símbolo azteca, maya o muisca; la monarquía quimbaya es ficción de 1932.",
+          "Sin hábito franciscano marrón ni capirote puntiagudo: el paño es ceniciento jaspeado y el capucho cae suelto en esclavina.",
+          "Sin sangre, heridas, combate épico, sacrificio, ejecución ni conquistadores heroizados; el juego se lee como movimiento seguro y la represión no entra en cuadro.",
+          "Sin mezclar épocas en una lámina: nada de hierro, cruz, caballo o teja en la escena del siglo XVI, y nada de geometría precolombina en el bohío de 1603.",
+          "Sin que la imagen funcione como mapa de un sitio ni como catálogo: ni perfil localizable, ni ruta, ni pieza identificable, en un territorio cuyo saqueo está documentado."
+        ],
+        "technique_close": "En el plano corto el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte: el ojo es una sola incisión horizontal, como en las figurinas, y no una esfera. El cuerpo se construye por planos superpuestos y nunca modelado; las ligaduras de brazos y piernas son tiras estrechas de papel apoyadas encima. El culmo de guadua es un cilindro de papel enrollado con el nudo marcado por una banda de fibra blanca, repetida muchas veces a lo largo de la caña. La nieve del volcán es papel opaco recortado en parches separados sobre roca oscura, no una capa continua."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],

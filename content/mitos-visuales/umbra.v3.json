@@ -791,8 +791,8 @@
     "dossier": "docs/investigacion/umbra.md"
   },
   "inventory": {
-    "status": "reconciling",
-    "frozen": false,
+    "status": "approved_frozen",
+    "frozen": true,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -802,7 +802,7 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19",
+    "approved_at": "2026-09-24",
     "reconciliation": {
       "opened_at": "2026-09-24",
       "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
@@ -811,8 +811,33 @@
         "tasime-el-incesto"
       ],
       "new_myths": [],
-      "unchanged_myths": []
-    }
+      "unchanged_myths": [],
+      "closed_at": "2026-09-24",
+      "summary": "2 relatos releídos: 2 añadidas (lengua guardada en casa embebida; formación posterior del umbra excluida), 1 excluida por el canon nuevo (pezuña de Sausagua, ya excluida, con razón nueva), 6 rediseñadas (hueste sin nombre en vez de Belalcázar, valle, Taramakunga, el hermano con cánido genérico sin especie, tigre, lobo) y 3 tipos base; niño, anciano y anciana declarados ausentes."
+    },
+    "declared_absences": [
+      {
+        "entity_id": "tipo_nino",
+        "name": "Tipo base · niño umbra",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Ninguno de los dos relatos pone en escena a alguien de esa edad: los jeques no tienen edad en ninguna fuente —sólo «grandes sabios»— y las generaciones se nombran en abstracto. No se inventa."
+      },
+      {
+        "entity_id": "tipo_anciano",
+        "name": "Tipo base · anciano umbra",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Ninguno de los dos relatos pone en escena a alguien de esa edad: los jeques no tienen edad en ninguna fuente —sólo «grandes sabios»— y las generaciones se nombran en abstracto. No se inventa."
+      },
+      {
+        "entity_id": "tipo_anciana",
+        "name": "Tipo base · anciana umbra",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Ninguno de los dos relatos pone en escena a alguien de esa edad: los jeques no tienen edad en ninguna fuente —sólo «grandes sabios»— y las generaciones se nombran en abstracto. No se inventa."
+      }
+    ]
   },
   "myths": {
     "los-jeques-que-desaparecieron-en-batero": {
@@ -835,9 +860,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura separó el rumor del prodigio, que es lo único que este relato pide y lo que todo ilustrador le quita: no hay portal, ni desvanecimiento, ni luz, porque la fuente dice que los jeques difundieron una versión destinada a ser vista desde afuera mientras bajaban por otro lado, de modo que el inventario tuvo que producir dos recorridos simultáneos y una regla negativa —la niebla tapa y jamás revela— en lugar de una entidad sobrenatural; y separó también dos geografías que el censo tenía pegadas, porque el «valle de Umbra» por donde se acerca Belalcázar es, en palabras del propio testimonio, «hoy Belén de Umbría» y no Quinchía, lo que cambia la composición entera de la lámina del cerro: la amenaza entra por el horizonte y no por el pie.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito quita el nombre a la amenaza —ya no Belalcázar sino «una hueste desde el sur»—, explica lo que los jeques temían perder (nombres, cuentas, instrucciones, la manera de decir) y alarga el desenlace: tras la Vega de Supía y Taramakunga, la lengua se esconde «adentro de las casas, entre parientes, en voz baja», lo que entra embebido en la gente umbra; la pezuña de Sausagua sale del canon y la formación posterior del umbra queda como discrepancia en versiones.",
         "previous_note": "La lectura separó el rumor del prodigio, que es lo único que este relato pide y lo que todo ilustrador le quita: no hay portal, ni desvanecimiento, ni luz, porque la fuente dice que los jeques difundieron una versión destinada a ser vista desde afuera mientras bajaban por otro lado, de modo que el inventario tuvo que producir dos recorridos simultáneos y una regla negativa —la niebla tapa y jamás revela— en lugar de una entidad sobrenatural; y separó también dos geografías que el censo tenía pegadas, porque el «valle de Umbra» por donde se acerca Belalcázar es, en palabras del propio testimonio, «hoy Belén de Umbría» y no Quinchía, lo que cambia la composición entera de la lámina del cerro: la amenaza entra por el horizonte y no por el pie."
       },
       "entity_refs": [
@@ -915,6 +940,26 @@
           "entity_id": "vega_de_supia",
           "role": "setting",
           "note": "Verificado en el cuarto párrafo del mito. El desplazamiento se cuenta con la gente, no con el lugar."
+        },
+        {
+          "entity_id": "lengua_guardada_en_casa",
+          "role": "magic_subject",
+          "note": "Nuevo en el canon reescrito: la lengua que sigue en voz baja entre parientes."
+        },
+        {
+          "entity_id": "lengua_umbra_como_formacion_posterior",
+          "role": "variant",
+          "note": "Discrepancia de versiones; sin escena."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los hombres de Guakurama."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: las mujeres de Guakurama."
         }
       ]
     },
@@ -938,9 +983,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura separó lo que la pintura hace de aquello en lo que la tradición la ha convertido: el beé resultó ser dos gestos y no uno —las manos primero, la espalda después, y la mancha descubierta «por la mañana cuando todos salían para el trabajo»—, y sobre esa distinción se repartió el inventario, con el objeto en su propia hoja, la marca como superficie dentro de la hoja del hermano y el disco lunar como tercer soporte de la misma pintura; el segundo corte fue de especies y lo hizo el texto y no el editor, porque la traducción del propio narrador dice «pintado a rayas como Tassime, un tigre» y rayas descarta la roseta del jaguar desde la fuente primaria, mientras que el cierre —«se transformó en lobo»— apunta al único cánido silvestre con registro publicado en Risaralda y no al lobo gris del hemisferio norte, que aquí no existe.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito conserva la pintura que hace tres cosas —manos, espalda, luna— pero añade que el hermano, al verse rayado, corrió detrás de su hermana, y abre en versiones las dos especies: «tigre» puede ser jaguar y «lobo» zorro o perro de monte, y la ficha no elige; por eso la hoja de estado del hermano deja el Cerdocyon del dossier y pasa a un cánido pequeño genérico, y el Samogá queda como historia de recepción.",
         "previous_note": "La lectura separó lo que la pintura hace de aquello en lo que la tradición la ha convertido: el beé resultó ser dos gestos y no uno —las manos primero, la espalda después, y la mancha descubierta «por la mañana cuando todos salían para el trabajo»—, y sobre esa distinción se repartió el inventario, con el objeto en su propia hoja, la marca como superficie dentro de la hoja del hermano y el disco lunar como tercer soporte de la misma pintura; el segundo corte fue de especies y lo hizo el texto y no el editor, porque la traducción del propio narrador dice «pintado a rayas como Tassime, un tigre» y rayas descarta la roseta del jaguar desde la fuente primaria, mientras que el cierre —«se transformó en lobo»— apunta al único cánido silvestre con registro publicado en Risaralda y no al lobo gris del hemisferio norte, que aquí no existe."
       },
       "entity_refs": [
@@ -1038,6 +1083,21 @@
           "entity_id": "petroglifo_de_samoga",
           "role": "plot_object",
           "note": "Verificado en historia y versiones, y en la nota SAMOGÁ de research_notes. Además es un sitio rupestre real: no se dibuja."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los hombres de Guakurama."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: las mujeres de Guakurama."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base: la joven y sus amigas."
         }
       ]
     }
@@ -1094,6 +1154,11 @@
           "myth": "tasime-el-incesto",
           "field": "mito",
           "note": "Las dos fuentes narrativas del corpus salen de la misma casa —Yoani y Merardo Largo son hermanos— y del mismo tronco de documentación levantado hacia 1995, del que no se conservaron grabaciones: son dos registros de una transmisión, no dos corroboraciones"
+        },
+        {
+          "myth": "tasime-el-incesto",
+          "field": "mito",
+          "note": "En el canon reescrito no detiene al visitante ni le ve la cara: le pone las manos teñidas en la espalda, al amanecer busca «una espalda marcada», y al hallar a su hermano corre hasta el Cauca y se lanza al agua."
         }
       ],
       "census_note": "Conduce el relato entero: sueña con el visitante durante las noches de luna, habla con sus amigas, se unta las manos de beé, marca la espalda, busca entre los jóvenes al amanecer, reconoce a su hermano y corre al Cauca. Es la única persona con arco completo del corpus.",
@@ -1188,6 +1253,11 @@
           "myth": "tasime-el-incesto",
           "field": "mito",
           "note": "El relato dice que el visitante la besaba, la tocaba y la acariciaba; la dirección editorial excluye escena sexual y desnudez, de modo que la tensión se sostiene en la marca y en el reconocimiento, no en el acto"
+        },
+        {
+          "myth": "tasime-el-incesto",
+          "field": "mito",
+          "note": "El canon reescrito añade que el hermano, al verse rayado, «corrió detrás de su hermana», y deja abierta la especie del lobo: «la ficha no elige especie»."
         }
       ],
       "census_note": "Base: joven del pueblo, visitante sin rostro identificable en la primera escena y con las franjas oscuras del beé en la segunda —la marca es superficie, no silueta, así que va en la misma hoja. El estado extra sí cuesta ficha porque el relato lo muestra y cambia el cuerpo entero: «cuando la luna desapareció, el hermano se transformó en lobo». Lobo, no jaguar: el canon retira esa lectura.",
@@ -1197,7 +1267,7 @@
           "espalda en un solo plano grande de papel pardo mate, la superficie más amplia y más limpia de todo el corpus, sin modelado y sin músculo",
           "franjas del beé como dos recortes negros mates apoyados encima: superficie y no relieve, con la forma de dedos abiertos y nunca como pintura degradada ni como tatuaje",
           "pelo negro en pocas piezas planas grandes con el borde dentado, cayendo sobre la nuca y dejando el dorso libre",
-          "en la hoja de estado, pelaje de cánido en pocas piezas planas grandes con el borde recortado en dientes —el pelaje es canto, no fibra—, con cara, orejas y patas en un recorte rojizo aparte, garganta y vientre en blanco, y las puntas de orejas y cola en negro"
+          "en la hoja de estado, un cánido pequeño de monte, bajo y de patas cortas, en pocas piezas planas grandes pardas con el borde recortado en dientes —el pelaje es canto, no fibra—, sin rasgos que decidan entre zorro y perro de monte: sin máscara facial, sin puntas negras marcadas, sin cola característica"
         ],
         "palette": "Pardo de piel con dos franjas negras y nada más: es la ficha más contrastada del corpus y la única donde el negro toca un cuerpo. En la hoja de estado, pardo grisáceo de dorso con el rojizo de cara y patas y el blanco de garganta y vientre: tres campos planos, ningún degradado.",
         "scale": "Joven adulto en la hoja base. En la hoja de estado, un cánido pequeño y bajo: 643 mm de cabeza y cuerpo, 285 mm de cola, entre cinco y ocho kilos, con patas cortas y robustas — es del tamaño de un perro mediano y esa pequeñez es deliberada, porque impide que la transformación se lea como monstruo.",
@@ -1208,18 +1278,19 @@
           "en la hoja de estado no hay figura intermedia, ni humanoide con hocico, ni garras, ni colmillos, ni postura bípeda: el cambio se muestra cumplido, no en curso"
         ],
         "documented": [
-          "dossier §7 y §12.4 (umb-albicentenario-tasime): la traducción del propio narrador dice «pintado a rayas como Tassime, un tigre» — rayas, no manchas, lo que descarta el jaguar desde la fuente primaria y no por prudencia editorial",
+          "canon, campo mito: «Vio las franjas oscuras que le habían quedado en el lomo y se vio pintado a rayas como Tassime, un tigre. Comprendió que lo habían reconocido, y corrió detrás de su hermana»; y «cuando la luna desapareció, el hermano se transformó en lobo»",
           "dossier §7 (umb-gonzalez-2025): tassime en el corpus A y táimé en el corpus B significan «tigre»: es un nombre de animal usado como símil y no el nombre propio del hermano",
-          "dossier §7 (umb-cerdocyon-risaralda-2025, umb-adw-cerdocyon): el lobo del desenlace es Cerdocyon thous, el zorro cangrejero, único cánido silvestre con registro publicado en Risaralda y llamado localmente «zorro lobo»: 643 mm de cuerpo, 285 de cola, 5-8 kg, patas cortas y robustas, dorso pardo grisáceo, cara, orejas y patas rojizas, garganta y vientre blancos, puntas negras en orejas, cola y patas",
+          "canon, campo versiones: «la traducción dice “tigre”; en Colombia esa palabra ha designado históricamente al jaguar. Y el final dice “lobo”, que en el habla regional puede nombrar a un zorro o a un perro de monte. Las dos identificaciones quedan abiertas y la ficha no elige especie»; el dossier (§7) registra que el único cánido silvestre publicado en Risaralda es Cerdocyon thous, llamado localmente «zorro lobo»",
           "dossier §7: Canis lupus no existe en Suramérica y Lycalopex culpaeus tiene todas sus localidades confirmadas en el Nudo de los Pastos, en Nariño: ninguno de los dos entra a lámina",
           "dossier §5 y §12.3 (umb-albicentenario-tasime): la marca llega a su espalda desde unas manos untadas y se descubre al amanecer, cuando la gente sale al trabajo",
           "dossier §2 (umb-albicentenario-tasime): «cuando la luna desapareció, el hermano se transformó en lobo» — la luna no acompaña, dispara el final",
           "dossier §6 y carencia 1: ninguna fuente —ni el manuscrito bilingüe, ni el reportaje, ni la crónica universitaria, ni el artículo lingüístico, ni la revisión historiográfica— aporta una sola prenda, peinado, adorno o pintura corporal umbra fuera del beé. Esta hoja se construye sin vestuario documentado y lo declara por escrito"
         ],
         "editorial": [
-          "la identificación del cánido es hipótesis reversible y así lo anota la salvaguarda 3 del dossier: la fuente dice «lobo» y no nombra especie; lo que no es reversible es que no sea un lobo gris del hemisferio norte ni un jaguar",
+          "El canon reescrito deja abierta la especie del «lobo» —zorro o perro de monte— y pide que la ficha no elija: la hoja de estado se rehace como cánido pequeño genérico y deja el Cerdocyon thous del dossier como dato de territorio, no de lámina. Lo que no es reversible es que no sea un lobo gris del hemisferio norte ni un jaguar.",
           "la silueta baja y de patas cortas se elige además por una razón de composición declarada: no se confunde con un félido rayado, de modo que el acto de la espalda con franjas y el acto del cánido no se leen como la misma cosa",
-          "el visitante de la primera escena se resuelve sin rostro identificable y sin contacto en cuadro: es decisión de dirección editorial y no una lectura del texto, que sí describe el contacto"
+          "el visitante de la primera escena se resuelve sin rostro identificable y sin contacto en cuadro: es decisión de dirección editorial y no una lectura del texto, que sí describe el contacto",
+          "Correr detrás de la hermana es acción nueva del canon reescrito: su hoja no la cobra como estado, y la persecución se compone, si acaso, de espaldas y hacia el río, sin encuentro en cuadro."
         ],
         "states_to_model": [
           "lobo"
@@ -1379,6 +1450,11 @@
           "myth": "los-jeques-que-desaparecieron-en-batero",
           "field": "mito",
           "note": "Ninguna fuente aporta vestuario, adorno, peinado ni pintura corporal umbra fuera del beé, y los cuatro imagePrompt del módulo prohíben regalia inventada y tocados panindígenas: la figura humana se resuelve por silueta, postura y oficio, y la carencia se declara en la hoja"
+        },
+        {
+          "myth": "los-jeques-que-desaparecieron-en-batero",
+          "field": "mito",
+          "note": "El canon reescrito dice qué temían perder: «los nombres, las cuentas, las instrucciones, la manera de decir las cosas», y cómo respondieron después: guardando la lengua."
         }
       ],
       "census_note": "Conducen el relato completo: saben lo que ocurre más al sur, comprenden la amenaza, difunden la versión de la desaparición, suben al cerro ante la mirada ajena, salen en secreto hacia La Güaira y después guardan la lengua. Colectivo con autoridad y conocimiento, distinto de la población general; la ficha debe resolverlo sin coronas ni insignias inventadas.",
@@ -1997,7 +2073,7 @@
     "lobo": {
       "name": "El lobo",
       "kind": "animal",
-      "description": "Forma final del hermano y cierre del relato según la traducción conservada. No es un animal del mundo con vida propia: se produce como el estado de su ficha, y el prompt pide que emerja como silueta discreta, sin lobo monstruoso ni garras.",
+      "description": "Forma final del hermano: «cuando la luna desapareció, el hermano se transformó en lobo». El canon reescrito deja abierta la especie —zorro o perro de monte— y pide no elegir. Se produce como estado de su ficha, silueta discreta, sin lobo monstruoso ni garras.",
       "aliases": [],
       "states": [
         "canonico"
@@ -2025,7 +2101,7 @@
       ],
       "census_note": "Forma final del hermano y cierre del relato según la traducción conservada. No es un animal del mundo con vida propia: se produce como el estado de su ficha, y el prompt pide que emerja como silueta discreta, sin lobo monstruoso ni garras.",
       "covered_by": "el_hermano",
-      "coverage_note": "Forma final del hermano y cierre del relato según la traducción conservada. No es un animal del mundo con vida propia: se produce como el estado de su ficha, y el prompt pide que emerja como silueta discreta, sin lobo monstruoso ni garras.",
+      "coverage_note": "Forma final del hermano: «cuando la luna desapareció, el hermano se transformó en lobo». El canon reescrito deja abierta la especie —zorro o perro de monte— y pide no elegir. Se produce como estado de su ficha, silueta discreta, sin lobo monstruoso ni garras.",
       "evidence_basis_mix": [
         "documented_core",
         "academic_hypothesis"
@@ -2198,6 +2274,16 @@
           "myth": "los-jeques-que-desaparecieron-en-batero",
           "field": "mito",
           "note": "Ninguna fuente aporta vestuario, adorno, peinado ni pintura corporal umbra fuera del beé, y los cuatro imagePrompt del módulo prohíben regalia inventada y tocados panindígenas: la figura humana se resuelve por silueta, postura y oficio, y la carencia se declara en la hoja"
+        },
+        {
+          "myth": "los-jeques-que-desaparecieron-en-batero",
+          "field": "mito",
+          "note": "«Taramakunga la siguió hablando y la siguió enseñando. Las autoridades entendieron esa terquedad como posesión del demonio y usaron el miedo contra la palabra.»"
+        },
+        {
+          "myth": "los-jeques-que-desaparecieron-en-batero",
+          "field": "versiones",
+          "note": "En la crónica de 1553 el nombre se escribe Tamaracunga y designa al hermano joven del señor de Pirsa: «No se afirma que sean la misma persona»."
         }
       ],
       "census_note": "Se negó a abandonar la lengua y promovió su continuidad; las autoridades coloniales leyeron esa resistencia como posesión demoníaca. Actúa, pero el canon advierte que no se afirme que fuera uno de los jeques y universe.mjs lo declara contexto histórico, no ficha propia; además las escenas planeadas resuelven la lengua protegida sin ningún retrato. Se produce desde la gramática de la gente Umbra. Si el guion le da un acto en cuadro, sube a required.",
@@ -2325,7 +2411,7 @@
     "valle_de_umbra": {
       "name": "El valle de Umbra",
       "kind": "paisaje",
-      "description": "Por él se acercaba Belalcázar y desde él observa a distancia un pequeño grupo. Es el entorno que se ve desde el cerro y se resuelve en su modelo de ambiente.",
+      "description": "Por él sube la hueste desde el sur, sin nombre en el canon reescrito; es el entorno que se ve desde el cerro y se resuelve en su modelo de ambiente.",
       "aliases": [],
       "states": [
         "canonico"
@@ -2368,7 +2454,7 @@
       ],
       "census_note": "Por él se acercaba Belalcázar y desde él observa a distancia un pequeño grupo. Es el entorno que se ve desde el cerro y se resuelve en su modelo de ambiente.",
       "covered_by": "cerro_batero",
-      "coverage_note": "Por él se acercaba Belalcázar y desde él observa a distancia un pequeño grupo. Es el entorno que se ve desde el cerro y se resuelve en su modelo de ambiente.",
+      "coverage_note": "Por él sube la hueste desde el sur, sin nombre en el canon reescrito; es el entorno que se ve desde el cerro y se resuelve en su modelo de ambiente.",
       "evidence_basis_mix": [
         "documented_core",
         "contemporary_memory",
@@ -2447,7 +2533,7 @@
         }
       ],
       "census_note": "Verificado en el cuarto párrafo del mito y en las notas de investigación. Es la corrección editorial más importante del corpus y la que da título a la página; ficharlo reinstalaría el error.",
-      "exclusion_reason": "Se menciona pero nunca se ve: tassime es la palabra asociada al felino y entra al relato sólo como comparación de las rayas —«estaba rayado como Tassime, un tigre»—, no como animal presente. El canon corrige además que no es el nombre propio del hermano, y los prompts prohíben el jaguar humanoide.",
+      "exclusion_reason": "Se menciona pero nunca se ve: el canon reescrito lo deja como comparación —«se vio pintado a rayas como Tassime, un tigre»— y abre que «tigre» ha designado al jaguar sin decidirlo; no es el nombre propio del hermano y ningún felino entra a lámina",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -2548,10 +2634,12 @@
       ]
     },
     "sebastian_de_belalcazar": {
-      "name": "Sebastián de Belalcázar",
+      "name": "La hueste que sube desde el sur",
       "kind": "personaje",
-      "description": "Verificado en el primer párrafo del mito. La amenaza se representa por su efecto —el rumor y la salida—, no por su figura.",
-      "aliases": [],
+      "description": "En el canon reescrito la amenaza no tiene nombre: «por el valle subía una hueste desde el sur», y los jeques saben qué le había ocurrido a la gente por donde ya había pasado. Belalcázar ya no se nombra.",
+      "aliases": [
+        "Sebastián de Belalcázar (canon anterior)"
+      ],
       "states": [
         "canonico"
       ],
@@ -2569,10 +2657,15 @@
           "myth": "los-jeques-que-desaparecieron-en-batero",
           "field": "mito",
           "note": "El testimonio sitúa el «valle de Umbra» en Belén de Umbría y no en Quinchía: la amenaza se acerca por otro valle y Belalcázar nunca entra en escena, de modo que se representa por su efecto y no por su figura"
+        },
+        {
+          "myth": "los-jeques-que-desaparecieron-en-batero",
+          "field": "mito",
+          "note": "«supieron, antes de que llegara a los cerros, que por el valle subía una hueste desde el sur, y supieron también qué le había ocurrido a la gente por donde esa hueste ya había pasado»"
         }
       ],
       "census_note": "Verificado en el primer párrafo del mito. La amenaza se representa por su efecto —el rumor y la salida—, no por su figura.",
-      "exclusion_reason": "Se menciona pero nunca se ve: «cuando Sebastián de Belalcázar se acercaba por el valle de Umbra» los jeques comprenden la amenaza, pero él no entra en ninguna escena y el prompt prohíbe conquistador heroico y conquistadores en primer plano.",
+      "exclusion_reason": "se sabe de ella pero nunca se ve: el canon reescrito la deja sin nombre y sin figura, y el relato se cuenta desde quien la espera; la amenaza se representa como distancia —el rumor y la salida—, nunca con conquistadores en cuadro",
       "evidence_basis_mix": [
         "contemporary_memory"
       ]
@@ -2734,7 +2827,7 @@
         }
       ],
       "census_note": "Verificado en umbraContextOnlyNarratives y en la fuente de UNISARC citada por el canon. El relato de Batero no la necesita.",
-      "exclusion_reason": "Sin evidencia: universe.mjs la declara contexto porque «el testimonio disponible dice que la historia se perdió, está siendo reconstruida y todavía no se conoce su origen». Ficharla completaría vacíos que el propio testimonio deja abiertos.",
+      "exclusion_reason": "no aparece en el canon reescrito del 2026-09-23: ni el relato ni sus campos la nombran; queda como narrativa de contexto que el testimonio disponible declara perdida y en reconstrucción",
       "evidence_basis_mix": [
         "contemporary_memory"
       ]
@@ -2768,6 +2861,241 @@
       "evidence_basis_mix": [
         "documented_core"
       ]
+    },
+    "lengua_guardada_en_casa": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-jeques-que-desaparecieron-en-batero"
+      ],
+      "name": "La lengua guardada adentro de las casas",
+      "kind": "fenomeno",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "gente_umbra",
+      "description": "Tras el traslado a la Vega de Supía, la lengua deja de hablarse donde hay ojos y sigue «adentro de las casas, entre parientes, en voz baja», pasando los nombres de una generación a otra.",
+      "coverage_note": "No tiene forma: si una lámina la pide, es un grupo de parientes de la gramática umbra, sentado muy junto dentro de una casa en penumbra, de espaldas a la puerta. Ningún gesto de canto ni objeto ritual.",
+      "evidence": [
+        {
+          "myth": "los-jeques-que-desaparecieron-en-batero",
+          "field": "mito",
+          "note": "«La lengua dejó de hablarse donde había ojos y siguió hablándose donde no los había: adentro de las casas, entre parientes, en voz baja.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "lengua_umbra_como_formacion_posterior": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "los-jeques-que-desaparecieron-en-batero"
+      ],
+      "name": "La lengua umbra como formación posterior",
+      "kind": "fenomeno",
+      "evidence_basis": "variant",
+      "visual_status": "excluded",
+      "description": "«Entre cerros y montañas» sostiene que tras la conquista llegaron familias de diverso origen que fueron formando la lengua umbra: historia de formación posterior, no de continuidad prehispánica.",
+      "exclusion_reason": "discrepancia de fondo que el canon registra en versiones y que no es la que el relato presupone; no tiene escena",
+      "evidence": [
+        {
+          "myth": "los-jeques-que-desaparecieron-en-batero",
+          "field": "versiones",
+          "note": "«al territorio llegaron familias de diverso origen que fueron elaborando, a partir de su intercambio lingüístico, la lengua conocida como umbra»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "tipo_hombre_adulto": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_hombre_adulto__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · hombre umbra adulto",
+      "kind": "personaje",
+      "evidence_basis": "inferred",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "tasime-el-incesto",
+        "los-jeques-que-desaparecieron-en-batero"
+      ],
+      "description": "Tipo base del hombre de Guakurama: fija cara, cuerpo y vestido de los jóvenes del pueblo, de la población trasladada y de la base del hermano.",
+      "evidence": [
+        {
+          "myth": "tasime-el-incesto",
+          "field": "mito",
+          "note": "Los hombres del pueblo del oro y la sal, entre los que la joven busca la espalda marcada."
+        },
+        {
+          "myth": "los-jeques-que-desaparecieron-en-batero",
+          "field": "mito",
+          "note": "Los hombres del pueblo del oro y la sal, entre los que la joven busca la espalda marcada."
+        }
+      ],
+      "design": {
+        "silhouette": "Hombre adulto de pie y de frente, con la faja mínima de fibra cruda a la cintura y las manos con arena de aluvión: la silueta es la del trabajo del oro en la vega, espalda ancha y lisa.",
+        "materials": [
+          "piel en papel pardo mate",
+          "faja mínima de fibra cruda sin teñir",
+          "arena y grava del aluvión pegadas a manos y pies como recortes grises"
+        ],
+        "palette": "Pardo de piel, crudo de fibra, gris de arena.",
+        "scale": "Estatura adulta corriente. Cuerpo entero 9:16.",
+        "continuity": [
+          "fibra cruda sin teñir",
+          "sin joya ni tocado",
+          "espalda lisa y ancha: la superficie que el relato marca"
+        ],
+        "documented": [
+          "El relato y las cinco fuentes del dossier no describen un cuerpo, una prenda, un peinado ni un adorno umbra (dossier §6 y carencia 1)",
+          "canon, campo mito: en Guakurama «se trabajaba el oro y se trabajaba la sal, y las mujeres dormían aparte de los hombres»",
+          "Ninguna joya ni pieza de orfebrería en cuadro, aunque el oro se nombre; ningún tocado, corona, insignia ni patrón textil (ficha de la gente umbra)",
+          "canon, campo mito: la joven busca al amanecer «entre los jóvenes del pueblo» una espalda marcada"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "La prenda mínima de fibra cruda sin teñir es decisión editorial reversible, declarada: la alternativa honesta sería no vestirlos, y la deshonesta —la camisa cruda genérica que ya se pagó en chamí— produce figuras que no representan a nadie.",
+          "El pelo negro, en pocas piezas planas grandes; sin trenzado fijado ni corte de identidad."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_adulta": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_mujer_adulta__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · mujer umbra adulta",
+      "kind": "personaje",
+      "evidence_basis": "inferred",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "tasime-el-incesto",
+        "los-jeques-que-desaparecieron-en-batero"
+      ],
+      "description": "Tipo base de la mujer de Guakurama: las mujeres que duermen aparte de los hombres y las que guardan la lengua entre parientes.",
+      "evidence": [
+        {
+          "myth": "tasime-el-incesto",
+          "field": "mito",
+          "note": "Las mujeres duermen aparte; la lengua se guarda entre parientes."
+        },
+        {
+          "myth": "los-jeques-que-desaparecieron-en-batero",
+          "field": "mito",
+          "note": "Las mujeres duermen aparte; la lengua se guarda entre parientes."
+        }
+      ],
+      "design": {
+        "silhouette": "Mujer adulta de pie con la prenda mínima de fibra cruda a la cintura y una costra clara de sal en los antebrazos: la silueta del oficio de la sal, erguida y quieta.",
+        "materials": [
+          "piel en papel pardo mate",
+          "prenda mínima de fibra cruda sin teñir",
+          "costra de sal como recortes blancos pequeños en antebrazos y manos"
+        ],
+        "palette": "Pardo de piel, crudo y el blanco de la sal.",
+        "scale": "Algo por debajo del hombre. Cuerpo entero 9:16.",
+        "continuity": [
+          "fibra cruda",
+          "sin joya ni tocado",
+          "siempre en grupo de mujeres dentro del pueblo"
+        ],
+        "documented": [
+          "El relato y las cinco fuentes del dossier no describen un cuerpo, una prenda, un peinado ni un adorno umbra (dossier §6 y carencia 1)",
+          "canon, campo mito: en Guakurama «se trabajaba el oro y se trabajaba la sal, y las mujeres dormían aparte de los hombres»",
+          "Ninguna joya ni pieza de orfebrería en cuadro, aunque el oro se nombre; ningún tocado, corona, insignia ni patrón textil (ficha de la gente umbra)",
+          "canon, campo mito: la lengua sigue «adentro de las casas, entre parientes, en voz baja»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "La prenda mínima de fibra cruda sin teñir es decisión editorial reversible, declarada: la alternativa honesta sería no vestirlos, y la deshonesta —la camisa cruda genérica que ya se pagó en chamí— produce figuras que no representan a nadie.",
+          "El pelo negro, en pocas piezas planas grandes; sin trenzado fijado ni corte de identidad.",
+          "La sal en los brazos traduce el oficio que nombra el relato; es decisión de hoja."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_joven": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_mujer_joven__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · mujer umbra joven",
+      "kind": "personaje",
+      "evidence_basis": "inferred",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "tasime-el-incesto"
+      ],
+      "description": "Tipo base de la muchacha de Guakurama: fija cara y cuerpo de la joven del relato y de sus amigas.",
+      "evidence": [
+        {
+          "myth": "tasime-el-incesto",
+          "field": "mito",
+          "note": "La joven y sus amigas, que duermen aparte y le enseñan a untarse el bee."
+        }
+      ],
+      "design": {
+        "silhouette": "Muchacha delgada de pie, con la prenda mínima de fibra cruda, el pelo largo suelto y las manos abiertas a los lados, limpias: el tipo de la que todavía no se ha untado el bee.",
+        "materials": [
+          "piel en papel pardo mate claro",
+          "prenda mínima de fibra cruda",
+          "pelo largo suelto en una pieza negra"
+        ],
+        "palette": "Pardo claro, crudo y negro del pelo; ninguna otra nota.",
+        "scale": "Un palmo por debajo del hombre. Cuerpo entero 9:16.",
+        "continuity": [
+          "pelo suelto",
+          "manos limpias en la hoja de tipo: el bee es de su ficha",
+          "sin joya"
+        ],
+        "documented": [
+          "El relato y las cinco fuentes del dossier no describen un cuerpo, una prenda, un peinado ni un adorno umbra (dossier §6 y carencia 1)",
+          "canon, campo mito: en Guakurama «se trabajaba el oro y se trabajaba la sal, y las mujeres dormían aparte de los hombres»",
+          "Ninguna joya ni pieza de orfebrería en cuadro, aunque el oro se nombre; ningún tocado, corona, insignia ni patrón textil (ficha de la gente umbra)",
+          "canon, campo mito: «Entre ellas vivía una joven a la que todos reconocían por su belleza», y sus amigas le dicen cómo untarse el bee"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "La prenda mínima de fibra cruda sin teñir es decisión editorial reversible, declarada: la alternativa honesta sería no vestirlos, y la deshonesta —la camisa cruda genérica que ya se pagó en chamí— produce figuras que no representan a nadie.",
+          "El pelo negro, en pocas piezas planas grandes; sin trenzado fijado ni corte de identidad.",
+          "«Belleza» no se traduce a rasgo: la cara es de la misma gramática."
+        ],
+        "states_to_model": []
+      }
     }
   },
   "models": {
@@ -2808,6 +3136,11 @@
           "myth": "tasime-el-incesto",
           "field": "mito",
           "note": "Las dos fuentes narrativas del corpus salen de la misma casa —Yoani y Merardo Largo son hermanos— y del mismo tronco de documentación levantado hacia 1995, del que no se conservaron grabaciones: son dos registros de una transmisión, no dos corroboraciones"
+        },
+        {
+          "myth": "tasime-el-incesto",
+          "field": "mito",
+          "note": "En el canon reescrito no detiene al visitante ni le ve la cara: le pone las manos teñidas en la espalda, al amanecer busca «una espalda marcada», y al hallar a su hermano corre hasta el Cauca y se lanza al agua."
         }
       ],
       "design_contract": {
@@ -2844,7 +3177,7 @@
         "asset_type": "Biblia visual Umbra V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo único que en este territorio se enrolla: las bandas de niebla que giran alrededor del picacho, la corriente del Cauca en las vegas y el canto enrollado del disco lunar. Nada de trama decorativa de relleno y ninguna espiral libre, porque la espiral es motivo rupestre en este mismo municipio.",
         "primary_request": "identidad corporal completa y legible para La joven de Guakurama. Se reconoce por las manos y por nada más: van siempre por delante del cuerpo, abiertas y con los dedos separados, y son la única parte de la figura que cambia de una lámina a otra —mojadas y casi incoloras de noche, negras al amanecer—. El resto del cuerpo queda deliberadamente sin un rasgo que la distinga, porque el relato la hace reconocer a otro y no ser reconocida ella.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Mujer joven de estatura corriente, siempre entera en cuadro y nunca en primer plano de rostro: el relato la hace cruzar una distancia entre dos grupos de casas y después bajar mil metros hasta el río, y las dos cosas exigen un cuerpo que se lea caminando.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Mujer joven de estatura corriente, siempre entera en cuadro y nunca en primer plano de rostro: el relato la hace cruzar una distancia entre dos grupos de casas y después bajar mil metros hasta el río, y las dos cosas exigen un cuerpo que se lea caminando.",
         "lighting_mood": "Dos luces y sólo dos, y cada una es un relato. La noche de Tasime va en luz de luna: contraste bajo, plata sobre verdes muy oscuros, sombras largas y blandas, y un solo amanecer de luz rasante lateral cuando la gente sale al trabajo y la marca se ve. La jornada de Batero va en día cubierto de vertiente: luz difusa, contraluz que atraviesa las capas de niebla y deja el filo del pórfido recortado y oscuro contra el gris. La luna es el único cuerpo luminoso del sistema; nada más emite luz propia, y no hay resplandor, halo ni portal por ninguna parte.",
         "materials_textures": "cuerpo en planos grandes de papel pardo mate de un solo tono, con el rostro como óvalo liso y los rasgos recortados aparte; beé fresco en las palmas: papel de un pardo apenas más oscuro que la piel, casi invisible, que es el estado documentado del tinte antes de oxidar; beé oxidado en la lámina del amanecer: negro mate opaco, la única pieza negra de su hoja; pelo negro en dos o tres piezas planas grandes con el borde recortado en dientes, sin trenza fijada y sin adorno",
         "era": "Una sola capa y su borde. El mundo de las dos páginas es el del último momento antes y durante la entrada española por el alto Cauca, entre 1536 y 1540: oro y sal como oficios, agricultura de vertiente, guadua, barro, fibra y piedra. No hay caballo, hierro, rueda, teja, cruz ni arma de fuego en cuadro, y los españoles existen como amenaza que se acerca y nunca como figura. El testimonio que transmite los dos relatos es de 2013 y 2021, y eso se declara en el expediente; no se dibuja ni se moderniza la escena por ello.",
@@ -2877,7 +3210,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -2922,6 +3255,11 @@
           "myth": "tasime-el-incesto",
           "field": "mito",
           "note": "El relato dice que el visitante la besaba, la tocaba y la acariciaba; la dirección editorial excluye escena sexual y desnudez, de modo que la tensión se sostiene en la marca y en el reconocimiento, no en el acto"
+        },
+        {
+          "myth": "tasime-el-incesto",
+          "field": "mito",
+          "note": "El canon reescrito añade que el hermano, al verse rayado, «corrió detrás de su hermana», y deja abierta la especie del lobo: «la ficha no elige especie»."
         }
       ],
       "design_contract": {
@@ -2930,7 +3268,7 @@
           "espalda en un solo plano grande de papel pardo mate, la superficie más amplia y más limpia de todo el corpus, sin modelado y sin músculo",
           "franjas del beé como dos recortes negros mates apoyados encima: superficie y no relieve, con la forma de dedos abiertos y nunca como pintura degradada ni como tatuaje",
           "pelo negro en pocas piezas planas grandes con el borde dentado, cayendo sobre la nuca y dejando el dorso libre",
-          "en la hoja de estado, pelaje de cánido en pocas piezas planas grandes con el borde recortado en dientes —el pelaje es canto, no fibra—, con cara, orejas y patas en un recorte rojizo aparte, garganta y vientre en blanco, y las puntas de orejas y cola en negro"
+          "en la hoja de estado, un cánido pequeño de monte, bajo y de patas cortas, en pocas piezas planas grandes pardas con el borde recortado en dientes —el pelaje es canto, no fibra—, sin rasgos que decidan entre zorro y perro de monte: sin máscara facial, sin puntas negras marcadas, sin cola característica"
         ],
         "palette_logic": "Pardo de piel con dos franjas negras y nada más: es la ficha más contrastada del corpus y la única donde el negro toca un cuerpo. En la hoja de estado, pardo grisáceo de dorso con el rojizo de cara y patas y el blanco de garganta y vientre: tres campos planos, ningún degradado.",
         "scale": "Joven adulto en la hoja base. En la hoja de estado, un cánido pequeño y bajo: 643 mm de cabeza y cuerpo, 285 mm de cola, entre cinco y ocho kilos, con patas cortas y robustas — es del tamaño de un perro mediano y esa pequeñez es deliberada, porque impide que la transformación se lea como monstruo.",
@@ -2941,18 +3279,19 @@
           "en la hoja de estado no hay figura intermedia, ni humanoide con hocico, ni garras, ni colmillos, ni postura bípeda: el cambio se muestra cumplido, no en curso"
         ],
         "documented_features": [
-          "dossier §7 y §12.4 (umb-albicentenario-tasime): la traducción del propio narrador dice «pintado a rayas como Tassime, un tigre» — rayas, no manchas, lo que descarta el jaguar desde la fuente primaria y no por prudencia editorial",
+          "canon, campo mito: «Vio las franjas oscuras que le habían quedado en el lomo y se vio pintado a rayas como Tassime, un tigre. Comprendió que lo habían reconocido, y corrió detrás de su hermana»; y «cuando la luna desapareció, el hermano se transformó en lobo»",
           "dossier §7 (umb-gonzalez-2025): tassime en el corpus A y táimé en el corpus B significan «tigre»: es un nombre de animal usado como símil y no el nombre propio del hermano",
-          "dossier §7 (umb-cerdocyon-risaralda-2025, umb-adw-cerdocyon): el lobo del desenlace es Cerdocyon thous, el zorro cangrejero, único cánido silvestre con registro publicado en Risaralda y llamado localmente «zorro lobo»: 643 mm de cuerpo, 285 de cola, 5-8 kg, patas cortas y robustas, dorso pardo grisáceo, cara, orejas y patas rojizas, garganta y vientre blancos, puntas negras en orejas, cola y patas",
+          "canon, campo versiones: «la traducción dice “tigre”; en Colombia esa palabra ha designado históricamente al jaguar. Y el final dice “lobo”, que en el habla regional puede nombrar a un zorro o a un perro de monte. Las dos identificaciones quedan abiertas y la ficha no elige especie»; el dossier (§7) registra que el único cánido silvestre publicado en Risaralda es Cerdocyon thous, llamado localmente «zorro lobo»",
           "dossier §7: Canis lupus no existe en Suramérica y Lycalopex culpaeus tiene todas sus localidades confirmadas en el Nudo de los Pastos, en Nariño: ninguno de los dos entra a lámina",
           "dossier §5 y §12.3 (umb-albicentenario-tasime): la marca llega a su espalda desde unas manos untadas y se descubre al amanecer, cuando la gente sale al trabajo",
           "dossier §2 (umb-albicentenario-tasime): «cuando la luna desapareció, el hermano se transformó en lobo» — la luna no acompaña, dispara el final",
           "dossier §6 y carencia 1: ninguna fuente —ni el manuscrito bilingüe, ni el reportaje, ni la crónica universitaria, ni el artículo lingüístico, ni la revisión historiográfica— aporta una sola prenda, peinado, adorno o pintura corporal umbra fuera del beé. Esta hoja se construye sin vestuario documentado y lo declara por escrito"
         ],
         "editorial_features": [
-          "la identificación del cánido es hipótesis reversible y así lo anota la salvaguarda 3 del dossier: la fuente dice «lobo» y no nombra especie; lo que no es reversible es que no sea un lobo gris del hemisferio norte ni un jaguar",
+          "El canon reescrito deja abierta la especie del «lobo» —zorro o perro de monte— y pide que la ficha no elija: la hoja de estado se rehace como cánido pequeño genérico y deja el Cerdocyon thous del dossier como dato de territorio, no de lámina. Lo que no es reversible es que no sea un lobo gris del hemisferio norte ni un jaguar.",
           "la silueta baja y de patas cortas se elige además por una razón de composición declarada: no se confunde con un félido rayado, de modo que el acto de la espalda con franjas y el acto del cánido no se leen como la misma cosa",
-          "el visitante de la primera escena se resuelve sin rostro identificable y sin contacto en cuadro: es decisión de dirección editorial y no una lectura del texto, que sí describe el contacto"
+          "el visitante de la primera escena se resuelve sin rostro identificable y sin contacto en cuadro: es decisión de dirección editorial y no una lectura del texto, que sí describe el contacto",
+          "Correr detrás de la hermana es acción nueva del canon reescrito: su hoja no la cobra como estado, y la persecución se compone, si acaso, de espaldas y hacia el río, sin encuentro en cuadro."
         ]
       },
       "prompt_spec": {
@@ -2960,14 +3299,14 @@
         "asset_type": "Biblia visual Umbra V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo único que en este territorio se enrolla: las bandas de niebla que giran alrededor del picacho, la corriente del Cauca en las vegas y el canto enrollado del disco lunar. Nada de trama decorativa de relleno y ninguna espiral libre, porque la espiral es motivo rupestre en este mismo municipio.",
         "primary_request": "identidad corporal completa y legible para El hermano, el visitante nocturno. Es la única espalda de la biblia: la hoja base lo organiza de espaldas y el cuadro se construye sobre la superficie de su dorso, donde los dedos abiertos de dos manos quedan impresos en franjas negras mates. De frente no tiene ni un rasgo que lo separe de cualquier joven del pueblo, y ése es exactamente el dato del relato: hasta que aparece la marca, nadie podía reconocerlo.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Joven adulto en la hoja base. En la hoja de estado, un cánido pequeño y bajo: 643 mm de cabeza y cuerpo, 285 mm de cola, entre cinco y ocho kilos, con patas cortas y robustas — es del tamaño de un perro mediano y esa pequeñez es deliberada, porque impide que la transformación se lea como monstruo.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Joven adulto en la hoja base. En la hoja de estado, un cánido pequeño y bajo: 643 mm de cabeza y cuerpo, 285 mm de cola, entre cinco y ocho kilos, con patas cortas y robustas — es del tamaño de un perro mediano y esa pequeñez es deliberada, porque impide que la transformación se lea como monstruo.",
         "lighting_mood": "Dos luces y sólo dos, y cada una es un relato. La noche de Tasime va en luz de luna: contraste bajo, plata sobre verdes muy oscuros, sombras largas y blandas, y un solo amanecer de luz rasante lateral cuando la gente sale al trabajo y la marca se ve. La jornada de Batero va en día cubierto de vertiente: luz difusa, contraluz que atraviesa las capas de niebla y deja el filo del pórfido recortado y oscuro contra el gris. La luna es el único cuerpo luminoso del sistema; nada más emite luz propia, y no hay resplandor, halo ni portal por ninguna parte.",
-        "materials_textures": "espalda en un solo plano grande de papel pardo mate, la superficie más amplia y más limpia de todo el corpus, sin modelado y sin músculo; franjas del beé como dos recortes negros mates apoyados encima: superficie y no relieve, con la forma de dedos abiertos y nunca como pintura degradada ni como tatuaje; pelo negro en pocas piezas planas grandes con el borde dentado, cayendo sobre la nuca y dejando el dorso libre; en la hoja de estado, pelaje de cánido en pocas piezas planas grandes con el borde recortado en dientes —el pelaje es canto, no fibra—, con cara, orejas y patas en un recorte rojizo aparte, garganta y vientre en blanco, y las puntas de orejas y cola en negro",
+        "materials_textures": "espalda en un solo plano grande de papel pardo mate, la superficie más amplia y más limpia de todo el corpus, sin modelado y sin músculo; franjas del beé como dos recortes negros mates apoyados encima: superficie y no relieve, con la forma de dedos abiertos y nunca como pintura degradada ni como tatuaje; pelo negro en pocas piezas planas grandes con el borde dentado, cayendo sobre la nuca y dejando el dorso libre; en la hoja de estado, un cánido pequeño de monte, bajo y de patas cortas, en pocas piezas planas grandes pardas con el borde recortado en dientes —el pelaje es canto, no fibra—, sin rasgos que decidan entre zorro y perro de monte: sin máscara facial, sin puntas negras marcadas, sin cola característica",
         "era": "Una sola capa y su borde. El mundo de las dos páginas es el del último momento antes y durante la entrada española por el alto Cauca, entre 1536 y 1540: oro y sal como oficios, agricultura de vertiente, guadua, barro, fibra y piedra. No hay caballo, hierro, rueda, teja, cruz ni arma de fuego en cuadro, y los españoles existen como amenaza que se acerca y nunca como figura. El testimonio que transmite los dos relatos es de 2013 y 2021, y eso se declara en el expediente; no se dibuja ni se moderniza la escena por ello.",
         "constraints": [
-          "documentado: la traducción del propio narrador dice «pintado a rayas como Tassime, un tigre» — rayas, no manchas, lo que descarta el jaguar desde la fuente primaria y no por prudencia editorial",
+          "documentado: «Vio las franjas oscuras que le habían quedado en el lomo y se vio pintado a rayas como Tassime, un tigre. Comprendió que lo habían reconocido, y corrió detrás de su hermana»; y «cuando la luna desapareció, el hermano se transformó en lobo»",
           "documentado: tassime en el corpus A y táimé en el corpus B significan «tigre»: es un nombre de animal usado como símil y no el nombre propio del hermano",
-          "documentado: el lobo del desenlace es Cerdocyon thous, el zorro cangrejero, único cánido silvestre con registro publicado en Risaralda y llamado localmente «zorro lobo»: 643 mm de cuerpo, 285 de cola, 5-8 kg, patas cortas y robustas, dorso pardo grisáceo, cara, orejas y patas rojizas, garganta y vientre blancos, puntas negras en orejas, cola y patas",
+          "documentado: «la traducción dice “tigre”; en Colombia esa palabra ha designado históricamente al jaguar. Y el final dice “lobo”, que en el habla regional puede nombrar a un zorro o a un perro de monte. Las dos identificaciones quedan abiertas y la ficha no elige especie»; el dossier (§7) registra que el único cánido silvestre publicado en Risaralda es Cerdocyon thous, llamado localmente «zorro lobo»",
           "documentado: Canis lupus no existe en Suramérica y Lycalopex culpaeus tiene todas sus localidades confirmadas en el Nudo de los Pastos, en Nariño: ninguno de los dos entra a lámina",
           "documentado: la marca llega a su espalda desde unas manos untadas y se descubre al amanecer, cuando la gente sale al trabajo",
           "documentado: «cuando la luna desapareció, el hermano se transformó en lobo» — la luna no acompaña, dispara el final",
@@ -2995,7 +3334,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -3040,6 +3379,11 @@
           "myth": "tasime-el-incesto",
           "field": "mito",
           "note": "El relato dice que el visitante la besaba, la tocaba y la acariciaba; la dirección editorial excluye escena sexual y desnudez, de modo que la tensión se sostiene en la marca y en el reconocimiento, no en el acto"
+        },
+        {
+          "myth": "tasime-el-incesto",
+          "field": "mito",
+          "note": "El canon reescrito añade que el hermano, al verse rayado, «corrió detrás de su hermana», y deja abierta la especie del lobo: «la ficha no elige especie»."
         }
       ],
       "design_contract": {
@@ -3048,7 +3392,7 @@
           "espalda en un solo plano grande de papel pardo mate, la superficie más amplia y más limpia de todo el corpus, sin modelado y sin músculo",
           "franjas del beé como dos recortes negros mates apoyados encima: superficie y no relieve, con la forma de dedos abiertos y nunca como pintura degradada ni como tatuaje",
           "pelo negro en pocas piezas planas grandes con el borde dentado, cayendo sobre la nuca y dejando el dorso libre",
-          "en la hoja de estado, pelaje de cánido en pocas piezas planas grandes con el borde recortado en dientes —el pelaje es canto, no fibra—, con cara, orejas y patas en un recorte rojizo aparte, garganta y vientre en blanco, y las puntas de orejas y cola en negro"
+          "en la hoja de estado, un cánido pequeño de monte, bajo y de patas cortas, en pocas piezas planas grandes pardas con el borde recortado en dientes —el pelaje es canto, no fibra—, sin rasgos que decidan entre zorro y perro de monte: sin máscara facial, sin puntas negras marcadas, sin cola característica"
         ],
         "palette_logic": "Pardo de piel con dos franjas negras y nada más: es la ficha más contrastada del corpus y la única donde el negro toca un cuerpo. En la hoja de estado, pardo grisáceo de dorso con el rojizo de cara y patas y el blanco de garganta y vientre: tres campos planos, ningún degradado.",
         "scale": "Joven adulto en la hoja base. En la hoja de estado, un cánido pequeño y bajo: 643 mm de cabeza y cuerpo, 285 mm de cola, entre cinco y ocho kilos, con patas cortas y robustas — es del tamaño de un perro mediano y esa pequeñez es deliberada, porque impide que la transformación se lea como monstruo.",
@@ -3059,18 +3403,19 @@
           "en la hoja de estado no hay figura intermedia, ni humanoide con hocico, ni garras, ni colmillos, ni postura bípeda: el cambio se muestra cumplido, no en curso"
         ],
         "documented_features": [
-          "dossier §7 y §12.4 (umb-albicentenario-tasime): la traducción del propio narrador dice «pintado a rayas como Tassime, un tigre» — rayas, no manchas, lo que descarta el jaguar desde la fuente primaria y no por prudencia editorial",
+          "canon, campo mito: «Vio las franjas oscuras que le habían quedado en el lomo y se vio pintado a rayas como Tassime, un tigre. Comprendió que lo habían reconocido, y corrió detrás de su hermana»; y «cuando la luna desapareció, el hermano se transformó en lobo»",
           "dossier §7 (umb-gonzalez-2025): tassime en el corpus A y táimé en el corpus B significan «tigre»: es un nombre de animal usado como símil y no el nombre propio del hermano",
-          "dossier §7 (umb-cerdocyon-risaralda-2025, umb-adw-cerdocyon): el lobo del desenlace es Cerdocyon thous, el zorro cangrejero, único cánido silvestre con registro publicado en Risaralda y llamado localmente «zorro lobo»: 643 mm de cuerpo, 285 de cola, 5-8 kg, patas cortas y robustas, dorso pardo grisáceo, cara, orejas y patas rojizas, garganta y vientre blancos, puntas negras en orejas, cola y patas",
+          "canon, campo versiones: «la traducción dice “tigre”; en Colombia esa palabra ha designado históricamente al jaguar. Y el final dice “lobo”, que en el habla regional puede nombrar a un zorro o a un perro de monte. Las dos identificaciones quedan abiertas y la ficha no elige especie»; el dossier (§7) registra que el único cánido silvestre publicado en Risaralda es Cerdocyon thous, llamado localmente «zorro lobo»",
           "dossier §7: Canis lupus no existe en Suramérica y Lycalopex culpaeus tiene todas sus localidades confirmadas en el Nudo de los Pastos, en Nariño: ninguno de los dos entra a lámina",
           "dossier §5 y §12.3 (umb-albicentenario-tasime): la marca llega a su espalda desde unas manos untadas y se descubre al amanecer, cuando la gente sale al trabajo",
           "dossier §2 (umb-albicentenario-tasime): «cuando la luna desapareció, el hermano se transformó en lobo» — la luna no acompaña, dispara el final",
           "dossier §6 y carencia 1: ninguna fuente —ni el manuscrito bilingüe, ni el reportaje, ni la crónica universitaria, ni el artículo lingüístico, ni la revisión historiográfica— aporta una sola prenda, peinado, adorno o pintura corporal umbra fuera del beé. Esta hoja se construye sin vestuario documentado y lo declara por escrito"
         ],
         "editorial_features": [
-          "la identificación del cánido es hipótesis reversible y así lo anota la salvaguarda 3 del dossier: la fuente dice «lobo» y no nombra especie; lo que no es reversible es que no sea un lobo gris del hemisferio norte ni un jaguar",
+          "El canon reescrito deja abierta la especie del «lobo» —zorro o perro de monte— y pide que la ficha no elija: la hoja de estado se rehace como cánido pequeño genérico y deja el Cerdocyon thous del dossier como dato de territorio, no de lámina. Lo que no es reversible es que no sea un lobo gris del hemisferio norte ni un jaguar.",
           "la silueta baja y de patas cortas se elige además por una razón de composición declarada: no se confunde con un félido rayado, de modo que el acto de la espalda con franjas y el acto del cánido no se leen como la misma cosa",
-          "el visitante de la primera escena se resuelve sin rostro identificable y sin contacto en cuadro: es decisión de dirección editorial y no una lectura del texto, que sí describe el contacto"
+          "el visitante de la primera escena se resuelve sin rostro identificable y sin contacto en cuadro: es decisión de dirección editorial y no una lectura del texto, que sí describe el contacto",
+          "Correr detrás de la hermana es acción nueva del canon reescrito: su hoja no la cobra como estado, y la persecución se compone, si acaso, de espaldas y hacia el río, sin encuentro en cuadro."
         ]
       },
       "prompt_spec": {
@@ -3078,14 +3423,14 @@
         "asset_type": "Biblia visual Umbra V1 - state_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo único que en este territorio se enrolla: las bandas de niebla que giran alrededor del picacho, la corriente del Cauca en las vegas y el canto enrollado del disco lunar. Nada de trama decorativa de relleno y ninguna espiral libre, porque la espiral es motivo rupestre en este mismo municipio.",
         "primary_request": "el cambio de estado sin perder la identidad para El hermano, el visitante nocturno. Es la única espalda de la biblia: la hoja base lo organiza de espaldas y el cuadro se construye sobre la superficie de su dorso, donde los dedos abiertos de dos manos quedan impresos en franjas negras mates. De frente no tiene ni un rasgo que lo separe de cualquier joven del pueblo, y ése es exactamente el dato del relato: hasta que aparece la marca, nadie podía reconocerlo.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Joven adulto en la hoja base. En la hoja de estado, un cánido pequeño y bajo: 643 mm de cabeza y cuerpo, 285 mm de cola, entre cinco y ocho kilos, con patas cortas y robustas — es del tamaño de un perro mediano y esa pequeñez es deliberada, porque impide que la transformación se lea como monstruo.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Joven adulto en la hoja base. En la hoja de estado, un cánido pequeño y bajo: 643 mm de cabeza y cuerpo, 285 mm de cola, entre cinco y ocho kilos, con patas cortas y robustas — es del tamaño de un perro mediano y esa pequeñez es deliberada, porque impide que la transformación se lea como monstruo.",
         "lighting_mood": "Dos luces y sólo dos, y cada una es un relato. La noche de Tasime va en luz de luna: contraste bajo, plata sobre verdes muy oscuros, sombras largas y blandas, y un solo amanecer de luz rasante lateral cuando la gente sale al trabajo y la marca se ve. La jornada de Batero va en día cubierto de vertiente: luz difusa, contraluz que atraviesa las capas de niebla y deja el filo del pórfido recortado y oscuro contra el gris. La luna es el único cuerpo luminoso del sistema; nada más emite luz propia, y no hay resplandor, halo ni portal por ninguna parte.",
-        "materials_textures": "espalda en un solo plano grande de papel pardo mate, la superficie más amplia y más limpia de todo el corpus, sin modelado y sin músculo; franjas del beé como dos recortes negros mates apoyados encima: superficie y no relieve, con la forma de dedos abiertos y nunca como pintura degradada ni como tatuaje; pelo negro en pocas piezas planas grandes con el borde dentado, cayendo sobre la nuca y dejando el dorso libre; en la hoja de estado, pelaje de cánido en pocas piezas planas grandes con el borde recortado en dientes —el pelaje es canto, no fibra—, con cara, orejas y patas en un recorte rojizo aparte, garganta y vientre en blanco, y las puntas de orejas y cola en negro",
+        "materials_textures": "espalda en un solo plano grande de papel pardo mate, la superficie más amplia y más limpia de todo el corpus, sin modelado y sin músculo; franjas del beé como dos recortes negros mates apoyados encima: superficie y no relieve, con la forma de dedos abiertos y nunca como pintura degradada ni como tatuaje; pelo negro en pocas piezas planas grandes con el borde dentado, cayendo sobre la nuca y dejando el dorso libre; en la hoja de estado, un cánido pequeño de monte, bajo y de patas cortas, en pocas piezas planas grandes pardas con el borde recortado en dientes —el pelaje es canto, no fibra—, sin rasgos que decidan entre zorro y perro de monte: sin máscara facial, sin puntas negras marcadas, sin cola característica",
         "era": "Una sola capa y su borde. El mundo de las dos páginas es el del último momento antes y durante la entrada española por el alto Cauca, entre 1536 y 1540: oro y sal como oficios, agricultura de vertiente, guadua, barro, fibra y piedra. No hay caballo, hierro, rueda, teja, cruz ni arma de fuego en cuadro, y los españoles existen como amenaza que se acerca y nunca como figura. El testimonio que transmite los dos relatos es de 2013 y 2021, y eso se declara en el expediente; no se dibuja ni se moderniza la escena por ello.",
         "constraints": [
-          "documentado: la traducción del propio narrador dice «pintado a rayas como Tassime, un tigre» — rayas, no manchas, lo que descarta el jaguar desde la fuente primaria y no por prudencia editorial",
+          "documentado: «Vio las franjas oscuras que le habían quedado en el lomo y se vio pintado a rayas como Tassime, un tigre. Comprendió que lo habían reconocido, y corrió detrás de su hermana»; y «cuando la luna desapareció, el hermano se transformó en lobo»",
           "documentado: tassime en el corpus A y táimé en el corpus B significan «tigre»: es un nombre de animal usado como símil y no el nombre propio del hermano",
-          "documentado: el lobo del desenlace es Cerdocyon thous, el zorro cangrejero, único cánido silvestre con registro publicado en Risaralda y llamado localmente «zorro lobo»: 643 mm de cuerpo, 285 de cola, 5-8 kg, patas cortas y robustas, dorso pardo grisáceo, cara, orejas y patas rojizas, garganta y vientre blancos, puntas negras en orejas, cola y patas",
+          "documentado: «la traducción dice “tigre”; en Colombia esa palabra ha designado históricamente al jaguar. Y el final dice “lobo”, que en el habla regional puede nombrar a un zorro o a un perro de monte. Las dos identificaciones quedan abiertas y la ficha no elige especie»; el dossier (§7) registra que el único cánido silvestre publicado en Risaralda es Cerdocyon thous, llamado localmente «zorro lobo»",
           "documentado: Canis lupus no existe en Suramérica y Lycalopex culpaeus tiene todas sus localidades confirmadas en el Nudo de los Pastos, en Nariño: ninguno de los dos entra a lámina",
           "documentado: la marca llega a su espalda desde unas manos untadas y se descubre al amanecer, cuando la gente sale al trabajo",
           "documentado: «cuando la luna desapareció, el hermano se transformó en lobo» — la luna no acompaña, dispara el final",
@@ -3113,7 +3458,7 @@
           "id": "estado_lobo",
           "view_type": "state_variation",
           "purpose": "el cambio de estado sin perder la identidad: lobo",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "lobo"
           ],
@@ -3274,6 +3619,11 @@
           "myth": "los-jeques-que-desaparecieron-en-batero",
           "field": "mito",
           "note": "Ninguna fuente aporta vestuario, adorno, peinado ni pintura corporal umbra fuera del beé, y los cuatro imagePrompt del módulo prohíben regalia inventada y tocados panindígenas: la figura humana se resuelve por silueta, postura y oficio, y la carencia se declara en la hoja"
+        },
+        {
+          "myth": "los-jeques-que-desaparecieron-en-batero",
+          "field": "mito",
+          "note": "El canon reescrito dice qué temían perder: «los nombres, las cuentas, las instrucciones, la manera de decir las cosas», y cómo respondieron después: guardando la lengua."
         }
       ],
       "design_contract": {
@@ -4078,6 +4428,273 @@
           "view_type": "spatial_establishing",
           "purpose": "planta, materiales y relacion con el cuerpo que la habita",
           "aspect": "16:9",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_hombre_adulto__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_hombre_adulto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "tasime-el-incesto",
+          "field": "mito",
+          "note": "Los hombres del pueblo del oro y la sal, entre los que la joven busca la espalda marcada."
+        },
+        {
+          "myth": "los-jeques-que-desaparecieron-en-batero",
+          "field": "mito",
+          "note": "Los hombres del pueblo del oro y la sal, entre los que la joven busca la espalda marcada."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre adulto de pie y de frente, con la faja mínima de fibra cruda a la cintura y las manos con arena de aluvión: la silueta es la del trabajo del oro en la vega, espalda ancha y lisa.",
+        "materials": [
+          "piel en papel pardo mate",
+          "faja mínima de fibra cruda sin teñir",
+          "arena y grava del aluvión pegadas a manos y pies como recortes grises"
+        ],
+        "palette_logic": "Pardo de piel, crudo de fibra, gris de arena.",
+        "scale": "Estatura adulta corriente. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "fibra cruda sin teñir",
+          "sin joya ni tocado",
+          "espalda lisa y ancha: la superficie que el relato marca"
+        ],
+        "documented_features": [
+          "El relato y las cinco fuentes del dossier no describen un cuerpo, una prenda, un peinado ni un adorno umbra (dossier §6 y carencia 1)",
+          "canon, campo mito: en Guakurama «se trabajaba el oro y se trabajaba la sal, y las mujeres dormían aparte de los hombres»",
+          "Ninguna joya ni pieza de orfebrería en cuadro, aunque el oro se nombre; ningún tocado, corona, insignia ni patrón textil (ficha de la gente umbra)",
+          "canon, campo mito: la joven busca al amanecer «entre los jóvenes del pueblo» una espalda marcada"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "La prenda mínima de fibra cruda sin teñir es decisión editorial reversible, declarada: la alternativa honesta sería no vestirlos, y la deshonesta —la camisa cruda genérica que ya se pagó en chamí— produce figuras que no representan a nadie.",
+          "El pelo negro, en pocas piezas planas grandes; sin trenzado fijado ni corte de identidad."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Umbra V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo único que en este territorio se enrolla: las bandas de niebla que giran alrededor del picacho, la corriente del Cauca en las vegas y el canto enrollado del disco lunar. Nada de trama decorativa de relleno y ninguna espiral libre, porque la espiral es motivo rupestre en este mismo municipio.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · hombre umbra adulto. Hombre adulto de pie y de frente, con la faja mínima de fibra cruda a la cintura y las manos con arena de aluvión: la silueta es la del trabajo del oro en la vega, espalda ancha y lisa.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura adulta corriente. Cuerpo entero 9:16.",
+        "lighting_mood": "Dos luces y sólo dos, y cada una es un relato. La noche de Tasime va en luz de luna: contraste bajo, plata sobre verdes muy oscuros, sombras largas y blandas, y un solo amanecer de luz rasante lateral cuando la gente sale al trabajo y la marca se ve. La jornada de Batero va en día cubierto de vertiente: luz difusa, contraluz que atraviesa las capas de niebla y deja el filo del pórfido recortado y oscuro contra el gris. La luna es el único cuerpo luminoso del sistema; nada más emite luz propia, y no hay resplandor, halo ni portal por ninguna parte.",
+        "materials_textures": "piel en papel pardo mate; faja mínima de fibra cruda sin teñir; arena y grava del aluvión pegadas a manos y pies como recortes grises",
+        "era": "Una sola capa y su borde. El mundo de las dos páginas es el del último momento antes y durante la entrada española por el alto Cauca, entre 1536 y 1540: oro y sal como oficios, agricultura de vertiente, guadua, barro, fibra y piedra. No hay caballo, hierro, rueda, teja, cruz ni arma de fuego en cuadro, y los españoles existen como amenaza que se acerca y nunca como figura. El testimonio que transmite los dos relatos es de 2013 y 2021, y eso se declara en el expediente; no se dibuja ni se moderniza la escena por ello.",
+        "constraints": [
+          "documentado: El relato y las cinco fuentes del dossier no describen un cuerpo, una prenda, un peinado ni un adorno umbra (dossier §6 y carencia 1)",
+          "documentado: en Guakurama «se trabajaba el oro y se trabajaba la sal, y las mujeres dormían aparte de los hombres»",
+          "documentado: Ninguna joya ni pieza de orfebrería en cuadro, aunque el oro se nombre; ningún tocado, corona, insignia ni patrón textil (ficha de la gente umbra)",
+          "documentado: la joven busca al amanecer «entre los jóvenes del pueblo» una espalda marcada",
+          "El corpus umbra nombra un solo color y es el negro del beé: la lámina se construye en la gama del territorio —pardo de tierra caliente, verde muy oscuro de vertiente, gris claro del pórfido— y reserva el negro para la pintura y sus dos consecuencias, la espalda rayada y las manchas de la luna.",
+          "La luna es el único cuerpo luminoso y va en gris muy claro con manchas gris oscuro: sin amarillo, sin blanco puro, sin halo y sin aura.",
+          "Nada de oro ni de metal brillante: el oficio del oro se nombra en la primera frase del relato y no aparece ni una pieza en ninguna lámina.",
+          "El color se separa por relato y no se mezcla: Tasime en plata sobre verde nocturno, Batero en grises de niebla sobre pardo de vertiente.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas y no de modelado.",
+          "Sin jaguar y sin rosetas: la fuente dice «pintado a rayas», y la forma final es un cánido; nada de jaguar humanoide, garras, colmillos ni lobo gris del hemisferio norte, que no existe en Colombia.",
+          "Sin reproducir un bien patrimonial identificable: ni los petroglifos de Samogá, Bonafont, Sardinero o Mápura, ni el panel del felino, ni la espiral dibujada en el manuscrito.",
+          "Sin escena sexual, desnudez, salto al agua, cuerpo cayendo, muerte ni sangre; la transgresión se lee en la marca y en el reconocimiento.",
+          "Sin conquistador en cuadro, batalla, cadenas, armas dominantes, portales ni desvanecimiento sobrenatural: la desaparición es un rumor y se ve como niebla.",
+          "Sin regalia inventada, tocados panindígenas, coronas, insignias de jeque ni símbolos aztecas, mayas o muiscas; ninguna fuente documenta vestuario umbra y este sistema no lo suple.",
+          "Sin rasgos que permitan ubicar o seguir un sitio: ni ruta de acceso al sendero de La Güaira, ni confluencia legible como mapa, ni perfil que sirva de guía."
+        ],
+        "technique_close": "En el plano corto el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte, apoyadas encima; el cuerpo se construye por planos superpuestos y nunca modelado. Las dos marcas del beé son dos recortes negros mates apoyados sobre la espalda vestida: superficie, no relieve, y nunca pintura degradada. El cánido final se resuelve con pocas piezas planas grandes y el borde recortado en dientes —el pelaje es canto, no fibra—, con la cara y las patas en un recorte rojizo aparte y las puntas de orejas y cola en negro. La niebla es papel de seda o vitela entre capas, nunca aerógrafo."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_adulta__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_adulta"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "tasime-el-incesto",
+          "field": "mito",
+          "note": "Las mujeres duermen aparte; la lengua se guarda entre parientes."
+        },
+        {
+          "myth": "los-jeques-que-desaparecieron-en-batero",
+          "field": "mito",
+          "note": "Las mujeres duermen aparte; la lengua se guarda entre parientes."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer adulta de pie con la prenda mínima de fibra cruda a la cintura y una costra clara de sal en los antebrazos: la silueta del oficio de la sal, erguida y quieta.",
+        "materials": [
+          "piel en papel pardo mate",
+          "prenda mínima de fibra cruda sin teñir",
+          "costra de sal como recortes blancos pequeños en antebrazos y manos"
+        ],
+        "palette_logic": "Pardo de piel, crudo y el blanco de la sal.",
+        "scale": "Algo por debajo del hombre. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "fibra cruda",
+          "sin joya ni tocado",
+          "siempre en grupo de mujeres dentro del pueblo"
+        ],
+        "documented_features": [
+          "El relato y las cinco fuentes del dossier no describen un cuerpo, una prenda, un peinado ni un adorno umbra (dossier §6 y carencia 1)",
+          "canon, campo mito: en Guakurama «se trabajaba el oro y se trabajaba la sal, y las mujeres dormían aparte de los hombres»",
+          "Ninguna joya ni pieza de orfebrería en cuadro, aunque el oro se nombre; ningún tocado, corona, insignia ni patrón textil (ficha de la gente umbra)",
+          "canon, campo mito: la lengua sigue «adentro de las casas, entre parientes, en voz baja»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "La prenda mínima de fibra cruda sin teñir es decisión editorial reversible, declarada: la alternativa honesta sería no vestirlos, y la deshonesta —la camisa cruda genérica que ya se pagó en chamí— produce figuras que no representan a nadie.",
+          "El pelo negro, en pocas piezas planas grandes; sin trenzado fijado ni corte de identidad.",
+          "La sal en los brazos traduce el oficio que nombra el relato; es decisión de hoja."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Umbra V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo único que en este territorio se enrolla: las bandas de niebla que giran alrededor del picacho, la corriente del Cauca en las vegas y el canto enrollado del disco lunar. Nada de trama decorativa de relleno y ninguna espiral libre, porque la espiral es motivo rupestre en este mismo municipio.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer umbra adulta. Mujer adulta de pie con la prenda mínima de fibra cruda a la cintura y una costra clara de sal en los antebrazos: la silueta del oficio de la sal, erguida y quieta.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Algo por debajo del hombre. Cuerpo entero 9:16.",
+        "lighting_mood": "Dos luces y sólo dos, y cada una es un relato. La noche de Tasime va en luz de luna: contraste bajo, plata sobre verdes muy oscuros, sombras largas y blandas, y un solo amanecer de luz rasante lateral cuando la gente sale al trabajo y la marca se ve. La jornada de Batero va en día cubierto de vertiente: luz difusa, contraluz que atraviesa las capas de niebla y deja el filo del pórfido recortado y oscuro contra el gris. La luna es el único cuerpo luminoso del sistema; nada más emite luz propia, y no hay resplandor, halo ni portal por ninguna parte.",
+        "materials_textures": "piel en papel pardo mate; prenda mínima de fibra cruda sin teñir; costra de sal como recortes blancos pequeños en antebrazos y manos",
+        "era": "Una sola capa y su borde. El mundo de las dos páginas es el del último momento antes y durante la entrada española por el alto Cauca, entre 1536 y 1540: oro y sal como oficios, agricultura de vertiente, guadua, barro, fibra y piedra. No hay caballo, hierro, rueda, teja, cruz ni arma de fuego en cuadro, y los españoles existen como amenaza que se acerca y nunca como figura. El testimonio que transmite los dos relatos es de 2013 y 2021, y eso se declara en el expediente; no se dibuja ni se moderniza la escena por ello.",
+        "constraints": [
+          "documentado: El relato y las cinco fuentes del dossier no describen un cuerpo, una prenda, un peinado ni un adorno umbra (dossier §6 y carencia 1)",
+          "documentado: en Guakurama «se trabajaba el oro y se trabajaba la sal, y las mujeres dormían aparte de los hombres»",
+          "documentado: Ninguna joya ni pieza de orfebrería en cuadro, aunque el oro se nombre; ningún tocado, corona, insignia ni patrón textil (ficha de la gente umbra)",
+          "documentado: la lengua sigue «adentro de las casas, entre parientes, en voz baja»",
+          "El corpus umbra nombra un solo color y es el negro del beé: la lámina se construye en la gama del territorio —pardo de tierra caliente, verde muy oscuro de vertiente, gris claro del pórfido— y reserva el negro para la pintura y sus dos consecuencias, la espalda rayada y las manchas de la luna.",
+          "La luna es el único cuerpo luminoso y va en gris muy claro con manchas gris oscuro: sin amarillo, sin blanco puro, sin halo y sin aura.",
+          "Nada de oro ni de metal brillante: el oficio del oro se nombra en la primera frase del relato y no aparece ni una pieza en ninguna lámina.",
+          "El color se separa por relato y no se mezcla: Tasime en plata sobre verde nocturno, Batero en grises de niebla sobre pardo de vertiente.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas y no de modelado.",
+          "Sin jaguar y sin rosetas: la fuente dice «pintado a rayas», y la forma final es un cánido; nada de jaguar humanoide, garras, colmillos ni lobo gris del hemisferio norte, que no existe en Colombia.",
+          "Sin reproducir un bien patrimonial identificable: ni los petroglifos de Samogá, Bonafont, Sardinero o Mápura, ni el panel del felino, ni la espiral dibujada en el manuscrito.",
+          "Sin escena sexual, desnudez, salto al agua, cuerpo cayendo, muerte ni sangre; la transgresión se lee en la marca y en el reconocimiento.",
+          "Sin conquistador en cuadro, batalla, cadenas, armas dominantes, portales ni desvanecimiento sobrenatural: la desaparición es un rumor y se ve como niebla.",
+          "Sin regalia inventada, tocados panindígenas, coronas, insignias de jeque ni símbolos aztecas, mayas o muiscas; ninguna fuente documenta vestuario umbra y este sistema no lo suple.",
+          "Sin rasgos que permitan ubicar o seguir un sitio: ni ruta de acceso al sendero de La Güaira, ni confluencia legible como mapa, ni perfil que sirva de guía."
+        ],
+        "technique_close": "En el plano corto el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte, apoyadas encima; el cuerpo se construye por planos superpuestos y nunca modelado. Las dos marcas del beé son dos recortes negros mates apoyados sobre la espalda vestida: superficie, no relieve, y nunca pintura degradada. El cánido final se resuelve con pocas piezas planas grandes y el borde recortado en dientes —el pelaje es canto, no fibra—, con la cara y las patas en un recorte rojizo aparte y las puntas de orejas y cola en negro. La niebla es papel de seda o vitela entre capas, nunca aerógrafo."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_joven__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_joven"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "tasime-el-incesto",
+          "field": "mito",
+          "note": "La joven y sus amigas, que duermen aparte y le enseñan a untarse el bee."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Muchacha delgada de pie, con la prenda mínima de fibra cruda, el pelo largo suelto y las manos abiertas a los lados, limpias: el tipo de la que todavía no se ha untado el bee.",
+        "materials": [
+          "piel en papel pardo mate claro",
+          "prenda mínima de fibra cruda",
+          "pelo largo suelto en una pieza negra"
+        ],
+        "palette_logic": "Pardo claro, crudo y negro del pelo; ninguna otra nota.",
+        "scale": "Un palmo por debajo del hombre. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "pelo suelto",
+          "manos limpias en la hoja de tipo: el bee es de su ficha",
+          "sin joya"
+        ],
+        "documented_features": [
+          "El relato y las cinco fuentes del dossier no describen un cuerpo, una prenda, un peinado ni un adorno umbra (dossier §6 y carencia 1)",
+          "canon, campo mito: en Guakurama «se trabajaba el oro y se trabajaba la sal, y las mujeres dormían aparte de los hombres»",
+          "Ninguna joya ni pieza de orfebrería en cuadro, aunque el oro se nombre; ningún tocado, corona, insignia ni patrón textil (ficha de la gente umbra)",
+          "canon, campo mito: «Entre ellas vivía una joven a la que todos reconocían por su belleza», y sus amigas le dicen cómo untarse el bee"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "La prenda mínima de fibra cruda sin teñir es decisión editorial reversible, declarada: la alternativa honesta sería no vestirlos, y la deshonesta —la camisa cruda genérica que ya se pagó en chamí— produce figuras que no representan a nadie.",
+          "El pelo negro, en pocas piezas planas grandes; sin trenzado fijado ni corte de identidad.",
+          "«Belleza» no se traduce a rasgo: la cara es de la misma gramática."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Umbra V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo único que en este territorio se enrolla: las bandas de niebla que giran alrededor del picacho, la corriente del Cauca en las vegas y el canto enrollado del disco lunar. Nada de trama decorativa de relleno y ninguna espiral libre, porque la espiral es motivo rupestre en este mismo municipio.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer umbra joven. Muchacha delgada de pie, con la prenda mínima de fibra cruda, el pelo largo suelto y las manos abiertas a los lados, limpias: el tipo de la que todavía no se ha untado el bee.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Un palmo por debajo del hombre. Cuerpo entero 9:16.",
+        "lighting_mood": "Dos luces y sólo dos, y cada una es un relato. La noche de Tasime va en luz de luna: contraste bajo, plata sobre verdes muy oscuros, sombras largas y blandas, y un solo amanecer de luz rasante lateral cuando la gente sale al trabajo y la marca se ve. La jornada de Batero va en día cubierto de vertiente: luz difusa, contraluz que atraviesa las capas de niebla y deja el filo del pórfido recortado y oscuro contra el gris. La luna es el único cuerpo luminoso del sistema; nada más emite luz propia, y no hay resplandor, halo ni portal por ninguna parte.",
+        "materials_textures": "piel en papel pardo mate claro; prenda mínima de fibra cruda; pelo largo suelto en una pieza negra",
+        "era": "Una sola capa y su borde. El mundo de las dos páginas es el del último momento antes y durante la entrada española por el alto Cauca, entre 1536 y 1540: oro y sal como oficios, agricultura de vertiente, guadua, barro, fibra y piedra. No hay caballo, hierro, rueda, teja, cruz ni arma de fuego en cuadro, y los españoles existen como amenaza que se acerca y nunca como figura. El testimonio que transmite los dos relatos es de 2013 y 2021, y eso se declara en el expediente; no se dibuja ni se moderniza la escena por ello.",
+        "constraints": [
+          "documentado: El relato y las cinco fuentes del dossier no describen un cuerpo, una prenda, un peinado ni un adorno umbra (dossier §6 y carencia 1)",
+          "documentado: en Guakurama «se trabajaba el oro y se trabajaba la sal, y las mujeres dormían aparte de los hombres»",
+          "documentado: Ninguna joya ni pieza de orfebrería en cuadro, aunque el oro se nombre; ningún tocado, corona, insignia ni patrón textil (ficha de la gente umbra)",
+          "documentado: «Entre ellas vivía una joven a la que todos reconocían por su belleza», y sus amigas le dicen cómo untarse el bee",
+          "El corpus umbra nombra un solo color y es el negro del beé: la lámina se construye en la gama del territorio —pardo de tierra caliente, verde muy oscuro de vertiente, gris claro del pórfido— y reserva el negro para la pintura y sus dos consecuencias, la espalda rayada y las manchas de la luna.",
+          "La luna es el único cuerpo luminoso y va en gris muy claro con manchas gris oscuro: sin amarillo, sin blanco puro, sin halo y sin aura.",
+          "Nada de oro ni de metal brillante: el oficio del oro se nombra en la primera frase del relato y no aparece ni una pieza en ninguna lámina.",
+          "El color se separa por relato y no se mezcla: Tasime en plata sobre verde nocturno, Batero en grises de niebla sobre pardo de vertiente.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas y no de modelado.",
+          "Sin jaguar y sin rosetas: la fuente dice «pintado a rayas», y la forma final es un cánido; nada de jaguar humanoide, garras, colmillos ni lobo gris del hemisferio norte, que no existe en Colombia.",
+          "Sin reproducir un bien patrimonial identificable: ni los petroglifos de Samogá, Bonafont, Sardinero o Mápura, ni el panel del felino, ni la espiral dibujada en el manuscrito.",
+          "Sin escena sexual, desnudez, salto al agua, cuerpo cayendo, muerte ni sangre; la transgresión se lee en la marca y en el reconocimiento.",
+          "Sin conquistador en cuadro, batalla, cadenas, armas dominantes, portales ni desvanecimiento sobrenatural: la desaparición es un rumor y se ve como niebla.",
+          "Sin regalia inventada, tocados panindígenas, coronas, insignias de jeque ni símbolos aztecas, mayas o muiscas; ninguna fuente documenta vestuario umbra y este sistema no lo suple.",
+          "Sin rasgos que permitan ubicar o seguir un sitio: ni ruta de acceso al sendero de La Güaira, ni confluencia legible como mapa, ni perfil que sirva de guía."
+        ],
+        "technique_close": "En el plano corto el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte, apoyadas encima; el cuerpo se construye por planos superpuestos y nunca modelado. Las dos marcas del beé son dos recortes negros mates apoyados sobre la espalda vestida: superficie, no relieve, y nunca pintura degradada. El cánido final se resuelve con pocas piezas planas grandes y el borde recortado en dientes —el pelaje es canto, no fibra—, con la cara y las patas en un recorte rojizo aparte y las puntas de orejas y cola en negro. La niebla es papel de seda o vitela entre capas, nunca aerógrafo."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],

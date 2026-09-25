@@ -892,8 +892,8 @@
     "dossier": "docs/investigacion/awa.md"
   },
   "inventory": {
-    "status": "reconciling",
-    "frozen": false,
+    "status": "approved_frozen",
+    "frozen": true,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -903,7 +903,7 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19",
+    "approved_at": "2026-09-24",
     "reconciliation": {
       "opened_at": "2026-09-24",
       "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
@@ -912,8 +912,19 @@
         "guagaja"
       ],
       "new_myths": [],
-      "unchanged_myths": []
-    }
+      "unchanged_myths": [],
+      "closed_at": "2026-09-24",
+      "summary": "2 relatos releídos: 10 añadidas (primer canasto, oficios de los árboles y Pulgande embebidos; árboles que sangran, hombre de cangrejo, hombre chiquito, mujer del hermano mayor, pitchichu/cucarachas y minga de Botero excluidos), 0 excluidas por el canon nuevo, 9 rediseñadas (la corteza como vestido en Attɨm, familia, hermanos e Ishkum; kippu, primera mujer, muerte del menor, árboles que hablan) y 5 tipos base; anciana declarada ausente."
+    },
+    "declared_absences": [
+      {
+        "entity_id": "tipo_anciana",
+        "name": "Tipo base · anciana awá",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Ninguno de los dos relatos pone a una mujer vieja en escena: la primera mujer entra joven y no envejece en el texto, y las mujeres de abajo son hormigas. No se inventa."
+      }
+    ]
   },
   "myths": {
     "barbachas-del-arbol-grande": {
@@ -936,9 +947,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura separó la materia de las dos personas que salen de ella y encontró que la barbacha no es utilería sino el sujeto que actúa: crece hacia abajo por su cuenta, toca el suelo y toma forma —la negra primero, y la clara sólo cuando el hombre ya ha encanecido—, y después todavía es lo que la mujer bebe cuando tiene sed, de modo que la misma fibra es cuerpo, madre y agua; lo único que la lectura no pudo cerrar es el cangrejo, porque las dos variantes del canon, la lluvia y la quebrada seca, no son dos relatos distintos sino las dos caras de una sola regla: el agua estaba guardada en su cueva.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito fija la versión de Arcos —la mujer come al kippu y la quebrada se seca— y añade un párrafo que ninguna nota anterior tenía: los árboles enseñan al primer hombre a cazar, pescar, curarse, levantar la casa, tejer el primer canasto de bejuco que carga leña, comida e hijos, y a «cubrirse del frío con cáscara de árbol», que da por fin un vestido documentado al corpus, además de la coda de los árboles que sangran bajo el machete y el hombre de cangrejo como variante.",
         "previous_note": "La lectura separó la materia de las dos personas que salen de ella y encontró que la barbacha no es utilería sino el sujeto que actúa: crece hacia abajo por su cuenta, toca el suelo y toma forma —la negra primero, y la clara sólo cuando el hombre ya ha encanecido—, y después todavía es lo que la mujer bebe cuando tiene sed, de modo que la misma fibra es cuerpo, madre y agua; lo único que la lectura no pudo cerrar es el cangrejo, porque las dos variantes del canon, la lluvia y la quebrada seca, no son dos relatos distintos sino las dos caras de una sola regla: el agua estaba guardada en su cueva."
       },
       "entity_refs": [
@@ -1041,6 +1052,51 @@
           "entity_id": "dios_o_el_creador",
           "role": "variant",
           "note": "Corregido de magic_subject a variant: no actúa en esta página; es una capa de redacción cristianizada que algunas versiones traen y que el canon conserva como diferencia sin adoptarla."
+        },
+        {
+          "entity_id": "primer_canasto",
+          "role": "plot_object",
+          "note": "Nuevo en el canon reescrito: el primer canasto, de bejucos de los árboles; en la hoja de la familia."
+        },
+        {
+          "entity_id": "oficios_que_ensenan_los_arboles",
+          "role": "magic_subject",
+          "note": "Nuevo en el canon reescrito: la enseñanza de los árboles; se lee en la corteza y el canasto."
+        },
+        {
+          "entity_id": "arboles_que_sangran",
+          "role": "magic_subject",
+          "note": "Coda en presente del canon reescrito; fuera de la época y de la lámina."
+        },
+        {
+          "entity_id": "hombre_de_cangrejo",
+          "role": "variant",
+          "note": "Versión de Cánticus; no se funde."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los cazadores y los hijos crecidos."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: las madres awá."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base: la muchacha awá, base de la primera mujer."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base: los hijos pequeños."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Tipo base: el viejo awá, base de Attɨm anciano."
         }
       ]
     },
@@ -1064,9 +1120,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura separó el tamaño de la especie: todo lo que los hermanos encuentran abajo —casas, chiro, maíz, un puente que de cerca es una raíz de rascadera— es la misma montaña con los mismos ríos a otra escala, así que el inventario cobró una regla de escala entera en vez de fichas sueltas de arquitectura y de cultivo, y lo que la lectura tuvo que corregir es la primaria que proponía el script, porque la mujer con la que el hermano menor quiere vivir ocupa un párrafo mientras los dos hermanos y el armadillo mueven el relato de la primera línea a la última.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito conserva la caída tras el armadillo y la gente que come vapor, pero lleva al texto que no tienen ano con la muerte de un hombre chiquito que se hincha, añade el pedazo de tierra prestado, la rascadera Pulgande que los hermanos tumban sin esfuerzo y el cuerpo del menor sacado hecho carbón y arrastrado por las hormigas, y abre en versiones el pitchichu, las mujeres-cucaracha y la minga de Botero, todo fuera de lámina.",
         "previous_note": "La lectura separó el tamaño de la especie: todo lo que los hermanos encuentran abajo —casas, chiro, maíz, un puente que de cerca es una raíz de rascadera— es la misma montaña con los mismos ríos a otra escala, así que el inventario cobró una regla de escala entera en vez de fichas sueltas de arquitectura y de cultivo, y lo que la lectura tuvo que corregir es la primaria que proponía el script, porque la mujer con la que el hermano menor quiere vivir ocupa un párrafo mientras los dos hermanos y el armadillo mueven el relato de la primera línea a la última."
       },
       "entity_refs": [
@@ -1199,6 +1255,41 @@
           "entity_id": "hoja_utileria_awa",
           "role": "plot_object",
           "note": "Cuatro piezas menores, todas del segundo relato: el alimento pequeño, el puente que es una raíz, la hoja del regreso y el grano del pago. El primer relato no aporta ningún objeto de mano, así que no hay más que agrupar. La hoja depende de la regla de escala de Maza Su y debe mostrar cada pieza en los dos tamaños."
+        },
+        {
+          "entity_id": "hombre_chiquito_que_revienta",
+          "role": "secondary",
+          "note": "Nuevo en el canon reescrito; muerte que no se dibuja."
+        },
+        {
+          "entity_id": "pulgande",
+          "role": "plot_object",
+          "note": "Nuevo en el canon reescrito: la rascadera entera que tumban sin esfuerzo."
+        },
+        {
+          "entity_id": "mujer_del_hermano_mayor",
+          "role": "secondary",
+          "note": "Noticia, no escena."
+        },
+        {
+          "entity_id": "variantes_pitchichu_y_cucarachas",
+          "role": "variant",
+          "note": "Variante de Sinsajoa."
+        },
+        {
+          "entity_id": "perro_y_minga_de_botero",
+          "role": "variant",
+          "note": "Variante de Botero."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los cazadores y los hijos crecidos."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: las madres awá."
         }
       ]
     }
@@ -1390,7 +1481,9 @@
       "name": "Attɨm Awá, el primer hombre",
       "kind": "personaje",
       "description": "Hombre grande y de piel oscura que camina solo por la selva, come los frutos del akal kih y cuida la montaña y sus animales. El estado extra lo exige el relato y cambia el cuerpo: «Pasaron muchos años. El primer hombre envejeció, encaneció y siguió viviendo sin compañía», y es ya viejo cuando aparece la mujer. El tríptico necesita las dos edades.",
-      "aliases": [],
+      "aliases": [
+        "el hombre antiguo sin bautizar"
+      ],
       "states": [
         "canonico",
         "anciano_encanecido"
@@ -1440,6 +1533,11 @@
           "myth": "barbachas-del-arbol-grande",
           "field": "mito",
           "note": "La figura de Dios o del creador aparece en algunas versiones como redacción cristianizada que el canon conserva como diferencia sin adoptarla: en la narración adoptada nadie crea a la pareja, la barbacha desciende y toma forma"
+        },
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "El canon reescrito le da «piel oscura y nariz grande», el nombre de «hombre antiguo sin bautizar», y un aprendizaje nuevo: los árboles le enseñan a cazar, pescar, curarse, levantar la casa, tejer el canasto y «cubrirse del frío con cáscara de árbol»."
         }
       ],
       "census_note": "Hombre grande y de piel oscura que camina solo por la selva, come los frutos del akal kih y cuida la montaña y sus animales. El estado extra lo exige el relato y cambia el cuerpo: «Pasaron muchos años. El primer hombre envejeció, encaneció y siguió viviendo sin compañía», y es ya viejo cuando aparece la mujer. El tríptico necesita las dos edades.",
@@ -1449,7 +1547,7 @@
           "cuerpo en papel canela oscuro, el tono más oscuro de los cuerpos de esta biblia, mate y en una sola pieza por miembro",
           "cara en óvalo plano alargado de un tono, con la nariz recortada larga y saliente como pieza aparte y los pómulos resueltos por dos recortes, sin línea dibujada",
           "pelo en una pieza plana grande de papel negro mate, sustituida en el estado de anciano por la misma pieza en papel blanco grisáceo",
-          "una sola pieza lisa a la cintura, sin estampado, sin fleco y sin adorno: el vestido awá no está descrito en ninguna fuente colombiana y se resuelve por lo mínimo",
+          "una sola pieza de corteza de árbol batida a la cintura, en papel pardo fibroso de canto irregular, sin estampado ni adorno: el canon reescrito dice que los árboles le enseñaron a «cubrirse del frío con cáscara de árbol»; antes de aprenderlo, en la primera soledad, puede ir sin ella",
           "frutos del akal kih en la mano o en el suelo, en papel de un solo tono y sin identificación botánica"
         ],
         "palette": "Canela oscuro sobre verde profundo mojado, sin un solo color añadido: no lleva tela de color, no lleva adorno y no lleva pintura. En el estado de anciano el único cambio de paleta es el pelo, que pasa a ser el valor más alto de su figura, y la piel baja un punto más, porque la fuente dice que envejeciendo queda más oscuro.",
@@ -1461,17 +1559,19 @@
           "no lleva arma, ni canasto, ni herramienta: come frutos del akal kih y cuida la montaña, y no hay un solo objeto de mano en su relato"
         ],
         "documented": [
-          "corpus: «Era un hombre grande y de piel oscura, que caminaba solo por la selva, comía los frutos del árbol akal kih y cuidaba la montaña y sus animales»",
-          "corpus: «Pasaron muchos años. El primer hombre envejeció, encaneció y siguió viviendo sin compañía»",
+          "canon, campo mito: «Fue el primer awá: un hombre grande, de piel oscura y nariz grande. Se llamó Attɨm Awá. Andaba solo por la selva… y comía los frutos del árbol akal kih»; «también se lo conoció como el hombre antiguo sin bautizar»",
+          "canon, campo mito: «El hombre envejeció, encaneció y seguía sin compañía»",
+          "canon, campo mito: los árboles le enseñaron al primer hombre «a cubrirse del frío con cáscara de árbol»: la prenda de esta gente es corteza, y es el único vestido que el corpus nombra",
           "dossier §6: «El primer hombre fue de nariz larga y hombre grande»; al envejecer queda «canoso, arrugado… sólo era casi más oscuro que mestizo, del color del Awá del monte»",
           "dossier §6 sobre reglamento-espingo: la gramática de rostro awá descrita por la propia comunidad —«rostros un poco alargados, frente pequeña, nariz curvada, pómulos muy notorios, piel canela oscuro»",
           "dossier §10, salvaguarda 3: ninguna figura awá lleva pintura facial ni tocado, y eso es una decisión documentada y no un olvido"
         ],
         "editorial": [
-          "el vestido entero es interpretación editorial reversible: no hay una sola descripción de vestido awá en fuente colombiana, y lo que circula es ecuatoriano y sin bibliografía",
+          "la prenda de corteza está nombrada en el canon reescrito; su corte —una pieza a la cintura— es la decisión editorial, reversible, y no hay otra prenda que añadir",
           "los nombres Attɨm Awá y China Attim son la misma figura en dos versiones: la ficha no elige entre ellos y no los dibuja distinto",
           "el fruto del akal kih se dibuja sin identificación botánica: el relato lo nombra y ninguna fuente lo determina",
-          "que el encuadre esté vacío de gente en sus dos edades es una decisión de composición para que la soledad —que el relato repite dos veces— sea un hecho visible y no un dato del texto"
+          "que el encuadre esté vacío de gente en sus dos edades es una decisión de composición para que la soledad —que el relato repite dos veces— sea un hecho visible y no un dato del texto",
+          "Los oficios que los árboles le enseñan —cazar, pescar, curarse con plantas, levantar la casa, tejer el canasto— no se cobran como estados: la hoja los resume en la corteza puesta y, si un guion lo pide, en un canasto en la mano."
         ],
         "states_to_model": [
           "anciano_encanecido"
@@ -1538,6 +1638,11 @@
           "myth": "barbachas-del-arbol-grande",
           "field": "mito",
           "note": "Ninguna figura awá lleva pintura facial: lo único documentado es un tatuaje atribuido a los antepasados sindaguas dentro de una hipótesis que el propio documento presenta como tal, y no hay registro de pintura facial awá contemporánea"
+        },
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "En el canon reescrito la mujer persigue al kippu hasta sacarlo del hueco y se lo come, y la quebrada queda seca: ya no hay orden al hombre ni lluvia en el relato principal."
         }
       ],
       "census_note": "Mujer joven formada por la barbacha clara al tocar el suelo. Conduce el segundo movimiento: acepta acompañarse, tiene sed, toma la humedad de la barbacha y encuentra al cangrejo. La formación gradual que registra Sinsajoa —primero la cabeza, luego el cuerpo— se declara como variante dentro de su hoja.",
@@ -1559,8 +1664,8 @@
           "es siempre joven: el relato no la hace envejecer y no tiene estado de anciana, al contrario que él"
         ],
         "documented": [
-          "corpus: «del mismo árbol comenzó a bajar una barbacha más clara. También creció hasta el suelo y, al tocarlo, se transformó en una mujer joven»",
-          "corpus: «La mujer tenía sed. Primero tomó la humedad de la barbacha. Después encontró al cangrejo, kippu»",
+          "canon, campo mito: «del mismo árbol del que había nacido, empezó a bajar una barbacha más clara… y al tocarlo se convirtió en una mujer joven»",
+          "canon, campo mito: «La mujer tenía sed. Primero cogió barbacha y bebió la humedad… Después bajó a las quebradas y allí halló un cangrejo, kippu… lo persiguió hasta sacarlo del hueco… y se lo comió. La quebrada quedó seca»",
           "canon, campo versiones: Sinsajoa documenta la aparición gradual desde la barbacha blanca, «primero se forma la cabeza y luego el cuerpo»",
           "dossier §6: la primera mujer es ashampa, «muy bonita y joven», y la gramática de rostro awá viene del reglamento de El Espingo"
         ],
@@ -1568,7 +1673,8 @@
           "el vestido es el mismo hueco documental declarado para todas las figuras y se resuelve por lo mínimo",
           "hacerla más baja que Attɨm Awá es una lectura de la palabra «grande» aplicada a él, no un dato sobre ella",
           "dibujarla a medio desprender de la maraña es una solución para incorporar la variante de formación gradual sin cobrarle lámina: es reversible, y si el editor prefiere separar las dos versiones, esta ficha se parte",
-          "«muy bonita» no se traduce a ningún rasgo: la ficha lo deja como juicio de la fuente y dibuja una cara de la misma gramática que las demás"
+          "«muy bonita» no se traduce a ningún rasgo: la ficha lo deja como juicio de la fuente y dibuja una cara de la misma gramática que las demás",
+          "En su lámina de origen va sin prenda, porque acaba de salir de la barbacha; la corteza que el canon reescrito nombra es enseñanza posterior de los árboles y entra en la hoja de la familia."
         ],
         "states_to_model": []
       },
@@ -1616,6 +1722,11 @@
           "myth": "barbachas-del-arbol-grande",
           "field": "mito",
           "note": "El término «kippu» para el cangrejo y «kuguin» para la hormiga no se confirmaron en ninguna de las fuentes en awapit consultadas ni en sus glosarios; el cangrejo tampoco tiene especie determinada. Se conservan porque el canon los sostiene"
+        },
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "El canon reescrito fija la versión de Arcos: la mujer come al kippu y la quebrada se seca; el río Chatanalpí y el hombre de cangrejo quedan en versiones."
         }
       ],
       "census_note": "Único animal con acción del primer relato y la bisagra del agua: está asociado con el agua guardada bajo la tierra y con el río Chatanalpí. Las versiones difieren —ofrece agua y hace llegar la lluvia, o la mujer lo saca de su cueva y la quebrada queda seca—, así que la ficha fija el cuerpo y deja las dos salidas abiertas.",
@@ -1636,7 +1747,7 @@
           "no se le da nombre en pantalla: «kippu» no se confirmó fuera del canon y la ficha no lo convierte en término establecido"
         ],
         "documented": [
-          "corpus: «encontró al cangrejo, kippu, asociado en las narraciones con el agua guardada bajo la tierra y con el río Chatanalpí», y las dos variantes —ofrece agua y hace llegar la lluvia, o la mujer lo saca de su cueva y la quebrada queda seca",
+          "canon, campo mito: un cangrejo «de esos que vomitan agua y hacen crecer los ríos, de esos que guardan el agua dentro de sus cuevas»; la mujer lo saca del hueco y se lo come, y la quebrada queda seca. La lluvia y el «hombre de cangrejo, dueño del agua» son de la versión de Cánticus (canon, campo versiones)",
           "dossier §7 sobre guzman-2011: «Cuando el cangrejo vomita, hace crecer el río, esto porque el cangrejo tiene sus cuevas y allí conserva el agua para los demás seres. La quebrada se secó» — el cangrejo no ofrece agua, la guarda",
           "dossier §4 sobre reglamento-espingo: las cuevas, las quebradas y los nacederos están en la lista comunitaria de lugares sagrados, y por eso se dibujan como accidentes del terreno sin señal ni ofrenda",
           "dossier §11: es una de las cuatro fichas required que el dossier declara sin base visual suficiente —sin especie, sin nombre confirmado y sólo con una regla"
@@ -1659,7 +1770,9 @@
       "name": "Los hijos y la continuidad de la gente Awá",
       "kind": "colectivo",
       "description": "Cierra el primer relato: los hijos crecen, comparten los trabajos y dan continuidad a la gente Awá en la montaña. Es la gramática de cuerpos Awá corrientes y presta figuras a la familia de la que las hormigas traen noticias en el segundo relato.",
-      "aliases": [],
+      "aliases": [
+        "painkul y Pachu (Olmedo Cánticus)"
+      ],
       "states": [
         "canonico"
       ],
@@ -1707,6 +1820,11 @@
           "myth": "barbachas-del-arbol-grande",
           "field": "mito",
           "note": "La fuente comunitaria declara un límite explícito sobre la cultura espiritual: «los docentes deben ser conscientes de las limitaciones en este campo y solo es permitido el avance hasta cierto alcance». No hay lámina de curandero, de baile waltpura o tuinti, de pihtɨ o pilde ni de sitio sagrado identificable"
+        },
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "El canon reescrito nombra el primer canasto, tejido de bejucos que dieron los árboles, que «carga la leña, la comida y a los hijos», y la corteza como abrigo."
         }
       ],
       "census_note": "Cierra el primer relato: los hijos crecen, comparten los trabajos y dan continuidad a la gente Awá en la montaña. Es la gramática de cuerpos Awá corrientes y presta figuras a la familia de la que las hormigas traen noticias en el segundo relato.",
@@ -1716,7 +1834,7 @@
           "cuerpos en tres tonos cercanos de papel canela oscuro, repartidos sin patrón para que el grupo no se lea como serie",
           "caras en óvalos planos alargados de un tono, con la nariz curvada y los pómulos como piezas recortadas aparte",
           "canasto tɨm en papel de fibra de textura visible pero sin dibujo de tejido: silueta cónica ancha de boca y el cargador cruzado en la frente o en el pecho",
-          "una sola pieza lisa a la cintura por persona, sin estampado y sin fleco",
+          "una sola pieza de corteza de árbol batida a la cintura por persona, en papel pardo fibroso de canto irregular, sin estampado ni fleco",
           "pelo en una pieza plana grande por cabeza, negro mate, con peinados distintos entre sí"
         ],
         "palette": "Canela oscuro y pardo de fibra sobre verde profundo mojado: el grupo no aporta un solo color nuevo a la lámina, y ésa es la decisión. Ningún tono de tela, ningún adorno de color y ningún rojo, porque el único rojo de esta biblia es la savia del árbol en el corte.",
@@ -1728,14 +1846,16 @@
           "sin claro quemado ni tronco carbonizado detrás de ellos en ninguna lámina de trabajo: este pueblo socola y deja pudrir, no quema"
         ],
         "documented": [
-          "corpus: «El hombre y la mujer tuvieron hijos. Los hijos crecieron, compartieron los trabajos y dieron continuidad a la gente Awá en la montaña»",
+          "canon, campo mito: «la mujer fue pariendo hijos. Los hijos crecieron, acompañaron a sus padres y ayudaron en todos los oficios, y así la montaña se llenó de gente awá»",
+          "canon, campo mito: de los bejucos salió «el primer canasto, el que desde entonces carga la leña, la comida y a los hijos»",
+          "canon, campo mito: los árboles le enseñaron al primer hombre «a cubrirse del frío con cáscara de árbol»: la prenda de esta gente es corteza, y es el único vestido que el corpus nombra",
           "dossier §6 sobre reglamento-espingo: «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — única descripción física awá hecha desde dentro",
           "dossier §6 sobre arcos-2018: el canasto tɨm «llega a considerarse como una extensión del útero de la madre o útero de los árboles», y «los niños pequeños viajan con los padres en el canasto»",
           "dossier §0.4 sobre reglamento-espingo y guzman-2011: la técnica es socolar, sembrar al boleo y dejar que se pudra la materia orgánica, y «el pueblo Ɨnkal Awa no quema»",
           "dossier §10, salvaguarda 2: se autoriza la forma y la función del canasto y jamás un patrón concreto de tejido"
         ],
         "editorial": [
-          "el vestido del grupo entero es interpretación editorial reversible: es la carencia más grave del dossier y toca a las cinco fichas de persona y colectivo",
+          "la corteza como vestido sale ahora del canon reescrito; su corte y su extensión —una pieza a la cintura— siguen siendo editoriales y reversibles",
           "el reparto de tonos y peinados para evitar la serie es composición, no dato etnográfico",
           "la silueta cónica del canasto es una resolución de forma dentro de lo que la fuente autoriza —forma y función—, no la copia de ninguna pieza concreta",
           "que siempre haya un canasto cargado en la lámina es una decisión de continuidad para que el objeto mayor del pueblo no desaparezca, no una regla de uso documentada"
@@ -1823,7 +1943,7 @@
           "la quebrada seca es esta misma lámina sin la pieza de agua, no otro paisaje ni otro color de lecho"
         ],
         "documented": [
-          "corpus: «En la montaña vivían animales y aves entre árboles viejos cubiertos de barbacha», y en el segundo relato «también allí había montaña y ríos»",
+          "canon, campo mito: «En el mundo sólo había árboles viejos cubiertos de barbacha, y entre las ramas vivían los animales y las aves», y en el segundo relato el mundo de abajo «era igual al de arriba: harta montaña y ríos»",
           "dossier §3 sobre guzman-2011 y mongabay-planada: precipitaciones de 4.000 a 7.000 mm anuales, humedad relativa del 100 %, temperatura media de 18 ºC, y la lluvia que empieza «a partir del medio día», tan rutinaria «cual sería extraño el no llover»; «La Planada huele a neblina»",
           "dossier §3: el río del relato existe en la fuente —las dos barbachas estaban «en un árbol ubicado en la cabecera y a la orilla del río chatanalpí»— y la quebrada y la cueva del cangrejo pertenecen a ese mismo cauce",
           "dossier §0.2: los árboles son personas y «sangran como el tangare, el sangrario, el chino»",
@@ -1896,6 +2016,11 @@
           "myth": "guagaja",
           "field": "mito",
           "note": "La muerte del hermano menor ocurre dentro de la peña, donde el relato no entra: no hay una sola línea sobre el interior ni sobre el cuerpo, y la consecuencia visible es el hermano que queda solo"
+        },
+        {
+          "myth": "guagaja",
+          "field": "mito",
+          "note": "El canon reescrito añade que siembran un pedacito de tierra prestado, que derriban sin esfuerzo la mata de rascadera que allá llaman Pulgande, y que el mayor tiene arriba casa y mujer."
         }
       ],
       "census_note": "Conducen el segundo relato entero: siguen al armadillo, uno entra a la cueva mientras el otro lo sostiene por los pies, caen juntos, trabajan en el mundo de abajo, y después uno muere en la peña y el otro regresa. La fuente no los describe por separado, así que una sola hoja fija dos figuras distinguibles —mayor y menor— en vez de dos fichas de identidad inventadas.",
@@ -1904,7 +2029,7 @@
         "materials": [
           "cuerpos en papel canela oscuro con la misma gramática de cara que el resto de la gente: óvalo alargado, frente pequeña, nariz curvada, pómulos marcados",
           "el mayor con el pelo recogido en una pieza y el menor suelto en dos, que es toda la diferencia de identidad que la fuente autoriza",
-          "una sola pieza lisa a la cintura cada uno, sin estampado y sin adorno",
+          "una sola pieza de corteza batida a la cintura cada uno, en papel pardo fibroso, sin estampado y sin adorno",
           "barro de la cueva pegado a manos, antebrazos y rodillas en recortes de papel pardo oscuro, que es lo que los distingue de la gente del mundo de arriba"
         ],
         "palette": "Canela oscuro y pardo de barro, sin un solo color propio: cuando bajan a Maza Su son lo más oscuro y lo más grande del encuadre, y ése es el contraste que hace legible la regla de escala sin explicarla.",
@@ -1916,8 +2041,9 @@
           "sin pintura facial, sin tocado, sin arma de metal y sin perro: el corpus no les da ningún objeto de caza"
         ],
         "documented": [
-          "corpus: «Uno de los hermanos entró detrás de él mientras el otro lo sostenía por los pies. El cazador alcanzó una pata del armadillo, pero el animal lo arrastró hacia el fondo. La tierra cedió»",
-          "corpus: «el hermano menor quiso vivir con una mujer del mundo de abajo… entró en la peña. Allí no pudo respirar y murió. El otro hermano quedó solo»",
+          "canon, campo mito: «Uno de los hermanos entró por el hueco mientras el otro lo sostenía de los pies. El cazador logró cogerlo de una pata y sintió que lo arrastraba más adentro… hasta que la tierra se desfondó»",
+          "canon, campo mito: al hermano menor «le gustó una mujer chiquita… entró de noche con ella a la cueva de la peña. Adentro no pudo respirar y se murió»; el mayor tiene arriba «su casa y su mujer»",
+          "canon, campo mito: los árboles le enseñaron al primer hombre «a cubrirse del frío con cáscara de árbol»: la prenda de esta gente es corteza, y es el único vestido que el corpus nombra (barbachas-del-arbol-grande)",
           "dossier §6: la fuente no los describe por separado y lo único que los distingue es la función y la edad relativa; el censo acertó al hacer una sola hoja con dos figuras distinguibles en vez de dos identidades inventadas",
           "dossier §6 sobre reglamento-espingo: la gramática de rostro awá con la que se dibujan los dos"
         ],
@@ -2063,6 +2189,11 @@
           "myth": "guagaja",
           "field": "mito",
           "note": "Los Ishkum Awá son personas diminutas de nariz grande que hablan awapit, acercan la nariz y aspiran el vapor de la comida, y el PEC añade el rasgo que el relato no da: «no tienen ano». La nariz grande y el gesto de aspirar son su firma"
+        },
+        {
+          "myth": "guagaja",
+          "field": "mito",
+          "note": "El canon reescrito lleva al texto el rasgo que sólo daba el PEC: un hombre chiquito come por la boca y se hincha hasta morir «porque no tenían ano»; y ellos son «gente vuelta hormiga»."
         }
       ],
       "census_note": "Habitantes de Maza Su: personas diminutas, de nariz grande, que hablan awapit y que no comen como los hermanos —acercan la nariz, aspiran el vapor y quedan satisfechas. Esa forma de alimentarse es su rasgo y va en su hoja. Su segunda forma no se resuelve aquí sino en la ficha de las hormigas, y el par de hojas es lo que sostiene la revelación.",
@@ -2072,7 +2203,7 @@
           "cuerpos en papel canela oscuro, los mismos tonos que la gente de arriba, porque son Awá y hablan awapit",
           "nariz recortada grande y saliente como pieza aparte, la más marcada de esta biblia, y el resto de la cara en la misma gramática de óvalo alargado",
           "vapor como pocas piezas planas de papel gris perla translúcido subiendo del plato, con el canto visto: lo que comen es esa forma",
-          "una sola pieza lisa a la cintura, sin estampado, exactamente igual que la gente del mundo de arriba"
+          "una sola pieza de corteza a la cintura, exactamente igual que la gente del mundo de arriba, porque su mundo «era igual al de arriba»"
         ],
         "palette": "Idéntica a la de la gente del mundo de arriba, y eso es lo que la ficha tiene que demostrar: en Maza Su no cambia el color, cambia el tamaño. Lo único que se añade es el gris perla translúcido del vapor, que es el único material del que se alimentan.",
         "scale": "Un tercio de la estatura de los hermanos y proporciones de adulto, nunca de niño: la lámina obliga a que en el mismo encuadre haya una figura de arriba y una de abajo, porque sin la comparación la regla de escala de este corpus no existe y el relato se desarma.",
@@ -2083,8 +2214,8 @@
           "su segunda condición no se resuelve en esta hoja: la revelación de que también son hormigas vive en la ficha de las hormigas, y las dos comparten proporciones para que el par funcione"
         ],
         "documented": [
-          "corpus: «Quienes salieron a recibirlos eran personas diminutas, de nariz grande, que hablaban awapit», y «acercaban la nariz, aspiraban el vapor y con eso quedaban satisfechos»",
-          "corpus: «Comprendieron que aquellas personas también eran hormigas»",
+          "canon, campo mito: «De la primera salió una gente muy chiquita, de nariz grande, que hablaba awapit», que «pasaban la nariz por encima de la comida, aspiraban el vapor y con eso quedaban llenos, bien llenos, y soltaban un eructo»",
+          "canon, campo mito: «entendieron que no eran gente sino gente vuelta hormiga»; un hombre chiquito que come por la boca se hincha hasta morir «porque no tenían ano»",
           "dossier §6 sobre pec-unipa-2019: los habitantes del mundo de abajo «cultivan maíz, comen humo y no tienen ano», rasgo que el relato no da y que es coherente con alimentarse de vapor",
           "dossier §0.3 sobre pec-unipa-2019: el armadillo y la hormiga de Maza Su «son Awá», de modo que las dos fichas de fauna del segundo relato son fichas de doble condición"
         ],
@@ -3162,7 +3293,7 @@
     "arboles_que_hablan_awapit": {
       "name": "Los árboles que hablan awapit",
       "kind": "fenomeno",
-      "description": "Verificado en el quinto párrafo del mito. Es una exclusión incómoda porque el contenido es central: por eso la regla de no antropomorfizar queda declarada dentro de las fichas del árbol grande y del paisaje, y la escucha se resolverá por composición.",
+      "description": "El canon reescrito amplía su papel: hablan en awapit («¡Ya lo miré!»), miran a la primera pareja, enseñan al primer hombre los oficios, dan los bejucos del primer canasto y «sangran cuando se los machetea, como sangra la gente».",
       "aliases": [],
       "states": [
         "canonico"
@@ -3181,10 +3312,15 @@
           "myth": "barbachas-del-arbol-grande",
           "field": "mito",
           "note": "Los árboles son personas y el signo documentado de que lo son no es un rostro sino la savia: «no se pueden machetear porque son “personas” y sangran como el tangare, el sangrario, el chino», y después Dios dispuso que otros quedaran sin sangre. Dibujarles boca o cara los convertiría en caricatura"
+        },
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "«Los árboles le enseñaron al primer hombre lo que hacía falta para vivir… Los árboles siguen hablando. Sangran cuando se los machetea, como sangra la gente.»"
         }
       ],
       "census_note": "Verificado en el quinto párrafo del mito. Es una exclusión incómoda porque el contenido es central: por eso la regla de no antropomorfizar queda declarada dentro de las fichas del árbol grande y del paisaje, y la escucha se resolverá por composición.",
-      "exclusion_reason": "Sin evidencia visual: el relato dice que los árboles hablaban en awapit, veían lo que hacía la primera familia y se comunicaban entre sí, y que todavía hablan aunque la gente no siempre pueda escucharlos, pero no describe boca, rostro ni gesto. Dibujarles cara sería inventarlos y convertiría la selva en caricatura.",
+      "exclusion_reason": "Sin evidencia visual de su habla: el relato dice que hablan, miran, enseñan y sangran, pero no describe boca, rostro ni gesto. Dibujarles cara los convertiría en caricatura; la escucha y la enseñanza se resuelven por composición en las fichas del árbol grande y del paisaje, y la sangre bajo el machete es coda de hoy, fuera de la época del corpus",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -3395,7 +3531,7 @@
     "muerte_del_hermano_menor": {
       "name": "La muerte del hermano menor dentro de la peña",
       "kind": "fenomeno",
-      "description": "Verificado en el sexto párrafo del mito. La consecuencia visible es el hermano que queda solo, y eso sí se produce desde la ficha de los dos hermanos.",
+      "description": "En el canon reescrito muere dentro de la peña; la mujer, «bravísima», lo saca «hecho carbón» y lo barre, y un mes después las hormigas lo sacan arrastrando «como a un insecto». La consecuencia visible es el hermano que queda solo.",
       "aliases": [],
       "states": [
         "canonico"
@@ -3419,10 +3555,15 @@
           "myth": "guagaja",
           "field": "mito",
           "note": "La muerte del hermano menor ocurre dentro de la peña, donde el relato no entra: no hay una sola línea sobre el interior ni sobre el cuerpo, y la consecuencia visible es el hermano que queda solo"
+        },
+        {
+          "myth": "guagaja",
+          "field": "mito",
+          "note": "«Al otro día la mujer, bravísima, lo sacó hecho carbón y lo barrió… las hormigas lo sacaron arrastrando como a un insecto y lo botaron.»"
         }
       ],
       "census_note": "Verificado en el sexto párrafo del mito. La consecuencia visible es el hermano que queda solo, y eso sí se produce desde la ficha de los dos hermanos.",
-      "exclusion_reason": "Se narra pero nunca se ve: ocurre dentro de la peña, donde el relato no entra —«El hombre insistió y entró en la peña. Allí no pudo respirar y murió»—. No hay una sola línea de descripción del interior ni del cuerpo.",
+      "exclusion_reason": "Se narra pero nunca se ve: ocurre dentro de la peña, y lo que el canon reescrito añade —el cuerpo hecho carbón, barrido y arrastrado por las hormigas— es un cadáver que la biblia no dibuja; la ficha de los dos hermanos produce sólo al que queda solo",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -3499,6 +3640,548 @@
         "editorial_interpretation",
         "uncertain"
       ]
+    },
+    "primer_canasto": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "El primer canasto",
+      "kind": "objeto",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "familia_inkal_awa",
+      "myth_refs": [
+        "barbachas-del-arbol-grande"
+      ],
+      "description": "Armado con los bejucos que dieron los árboles; desde entonces carga la leña, la comida y a los hijos.",
+      "coverage_note": "Es el canasto tɨm que la hoja de la familia ya carga a la espalda con un niño dentro: forma y función, jamás un tejido real (salvaguarda 2).",
+      "evidence": [
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "«De ellos salieron también los bejucos con que se armó el primer canasto, el que desde entonces carga la leña, la comida y a los hijos.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "oficios_que_ensenan_los_arboles": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "Los oficios que enseñan los árboles",
+      "kind": "fenomeno",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "attim_awa",
+      "myth_refs": [
+        "barbachas-del-arbol-grande"
+      ],
+      "description": "Cazar, pescar, curarse con plantas, levantar la casa, tejer el canasto y cubrirse del frío con cáscara de árbol: los árboles se los enseñan al primer hombre y él se los conversa a los suyos.",
+      "coverage_note": "Sin escena propia en el relato: se leen en la corteza que Attɨm lleva puesta y en el canasto de la familia. La casa, la caza y la pesca no tienen descripción que dibujar.",
+      "evidence": [
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "«Los árboles le enseñaron… a cazar, a pescar, a curarse con plantas, a levantar la casa, a tejer el canasto, a cubrirse del frío con cáscara de árbol.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "arboles_que_sangran": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "contextual",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "Los árboles que sangran bajo el machete",
+      "kind": "fenomeno",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "barbachas-del-arbol-grande"
+      ],
+      "description": "Coda del relato en presente: los árboles sangran cuando se los machetea, como la gente, y los awá ya no siempre alcanzan a oírlos.",
+      "exclusion_reason": "coda de hoy, no escena: el machete es de hierro y el dossier (§1) lo deja fuera de la época del corpus; se declara en la ficha del árbol grande como razón para no dibujarle herida",
+      "evidence": [
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "«Sangran cuando se los machetea, como sangra la gente. Lo que cambió es que los awá ya no siempre alcanzan a oírlos.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "hombre_de_cangrejo": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "El hombre de cangrejo, dueño del agua",
+      "kind": "personaje",
+      "evidence_basis": "variant",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "barbachas-del-arbol-grande"
+      ],
+      "description": "En la versión de Eduardo Cánticus aparece un hombre alto que dice «yo soy el hombre de cangrejo, soy el dueño del agua», anuncia agua para el día siguiente y se va quebrada arriba.",
+      "exclusion_reason": "variante de Cánticus que el canon declara no fundir: en ella el agua llega y en el relato principal se pierde",
+      "evidence": [
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "versiones",
+          "note": "«yo soy el hombre de cangrejo, soy el dueño del agua»: en la tercera versión el agua llega; en las otras dos se pierde. «No se funden aquí.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "hombre_chiquito_que_revienta": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "contextual",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "El hombre chiquito que come por la boca",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "guagaja"
+      ],
+      "description": "Imita a los hermanos, come chiro y carne, se hincha y muere porque la gente de abajo no tiene ano.",
+      "exclusion_reason": "muerte grotesca de un cuerpo que se hincha: se narra y no se dibuja, igual que la del hermano menor; su dato —no tienen ano— ya viaja en la ficha de los Ishkum Awá",
+      "evidence": [
+        {
+          "myth": "guagaja",
+          "field": "mito",
+          "note": "«Un hombre chiquito quiso hacer lo mismo… se fue hinchando y se hinchó hasta morirse, porque no tenían ano.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "pulgande": {
+      "aliases": [
+        "Pulgande"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "Pulgande, la mata de rascadera",
+      "kind": "planta",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "raiz_de_rascadera",
+      "myth_refs": [
+        "guagaja"
+      ],
+      "description": "Una mata de rascadera que allá llaman Pulgande: a los hermanos no les cuesta nada derribarla y a los de abajo les toma muchísimo.",
+      "coverage_note": "Es la misma rascadera de la raíz-puente vista entera: el chiste de escala es el mismo y cabe en su casilla.",
+      "evidence": [
+        {
+          "myth": "guagaja",
+          "field": "mito",
+          "note": "«una mata de rascadera que allá llamaban Pulgande a ellos no les costó nada derribar, mientras los de abajo se demoraban muchísimo»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "mujer_del_hermano_mayor": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "La mujer del hermano mayor, arriba",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "guagaja"
+      ],
+      "description": "Las hormigas de arriba le dan razón de su casa y de su mujer: están bien.",
+      "exclusion_reason": "sólo se da noticia de ella; nunca aparece en escena",
+      "evidence": [
+        {
+          "myth": "guagaja",
+          "field": "mito",
+          "note": "«le dieron razón de su casa y de su mujer: estaban bien»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "variantes_pitchichu_y_cucarachas": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "El pitchichu y las mujeres que se vuelven cucarachas",
+      "kind": "criatura",
+      "evidence_basis": "variant",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "guagaja"
+      ],
+      "description": "En «Pas aimpish kuinta» un pitchichu desvía a los hermanos a la casa de la perdiz, que los cuida de unas mujeres hermosas que de noche se vuelven cucarachas.",
+      "exclusion_reason": "variante de Sinsajoa que el canon registra y no funde con el relato de Arcos",
+      "evidence": [
+        {
+          "myth": "guagaja",
+          "field": "versiones",
+          "note": "«Un pitchichu los desvía a otra casa donde la perdiz… los cuida de unas mujeres hermosas que de noche se vuelven cucarachas.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "perro_y_minga_de_botero": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "El perro, la minga y el sueño de un año",
+      "kind": "fenomeno",
+      "evidence_basis": "variant",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "guagaja"
+      ],
+      "description": "En Botero los cazadores son huéspedes, van a una minga a socalar maíz, duermen un año y el hombre regresa con su perro.",
+      "exclusion_reason": "variante de Botero con otro régimen —huéspedes y no cautivos—; el canon la declara y no la funde",
+      "evidence": [
+        {
+          "myth": "guagaja",
+          "field": "versiones",
+          "note": "Botero: «se hacen amigos de la gente de abajo… los invitan a una minga a socalar maíz y todos se acuestan a dormir un año… el hombre regresa con su perro»."
+        }
+      ],
+      "model_requirements": []
+    },
+    "tipo_hombre_adulto": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_hombre_adulto__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · hombre awá adulto",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "barbachas-del-arbol-grande",
+        "guagaja"
+      ],
+      "description": "Tipo base del hombre awá del monte: fija cara, cuerpo y vestido de los cazadores, de los hijos crecidos y la base de Attɨm Awá joven.",
+      "evidence": [
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "Los hombres awá cazan, cargan y trabajan la tierra; dos hermanos salen de cacería."
+        },
+        {
+          "myth": "guagaja",
+          "field": "mito",
+          "note": "Los hombres awá cazan, cargan y trabajan la tierra; dos hermanos salen de cacería."
+        }
+      ],
+      "design": {
+        "silhouette": "Hombre adulto de pie, de rostro alargado, nariz curvada y pómulos marcados, con la corteza a la cintura y un canasto tɨm a la espalda con el cargador cruzado en la frente: caminante del monte, con las manos libres.",
+        "materials": [
+          "piel en papel canela oscuro mate",
+          "corteza batida a la cintura en papel pardo fibroso",
+          "canasto tɨm de silueta cónica y boca ancha, con cargador de frente, sin dibujo de tejido"
+        ],
+        "palette": "Canela oscuro de piel, pardo de corteza y fibra del canasto; ninguna nota de color.",
+        "scale": "Estatura adulta corriente. Cuerpo entero 9:16.",
+        "continuity": [
+          "corteza a la cintura siempre",
+          "sin pintura ni tocado",
+          "canasto o manos libres, nunca machete ni escopeta"
+        ],
+        "documented": [
+          "dossier §6 (reglamento-espingo): «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — la única descripción física awá hecha desde dentro",
+          "canon, campo mito: los árboles enseñaron a la gente «a cubrirse del frío con cáscara de árbol»: la prenda es corteza",
+          "dossier §6 y salvaguarda 3: ninguna figura awá lleva pintura facial ni tocado; es decisión documentada",
+          "dossier §1: nada de hierro, machete, escopeta, tela industrial, plástico ni animal doméstico europeo",
+          "canon, campo mito: «Dos hermanos salieron de cacería»; y los hijos «ayudaron en todos los oficios»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano alargado de un solo tono con la nariz curvada y los pómulos recortados aparte y la ceja como tira; el cuerpo, en pocos planos grandes de papel canela oscuro mate, sin músculo modelado.",
+          "La corteza va como una sola pieza a la cintura, en papel pardo fibroso de canto irregular: el canon nombra el material, no el corte, que es decisión reversible. Nada de camisa, pantalón, bota de caucho ni vestido largo, que son de la cadena ecuatoriana sin bibliografía (dossier §6).",
+          "El pelo es una pieza plana grande negra mate; nunca mechón por mechón."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_adulta": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_mujer_adulta__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · mujer awá adulta",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "barbachas-del-arbol-grande",
+        "guagaja"
+      ],
+      "description": "Tipo base de la mujer awá: fija cara, cuerpo y vestido de la madre que pare a la gente awá y de las mujeres que quedan arriba.",
+      "evidence": [
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "La mujer pare los hijos y el canasto los carga; arriba quedan casa y mujer del hermano mayor."
+        },
+        {
+          "myth": "guagaja",
+          "field": "mito",
+          "note": "La mujer pare los hijos y el canasto los carga; arriba quedan casa y mujer del hermano mayor."
+        }
+      ],
+      "design": {
+        "silhouette": "Mujer adulta de pie con el canasto tɨm a la espalda y un niño asomando por la boca, la corteza a la cintura, el pelo largo suelto y el rostro alargado de pómulos marcados.",
+        "materials": [
+          "piel en papel canela oscuro mate",
+          "corteza batida a la cintura",
+          "canasto tɨm con un niño dentro, cargador cruzado en la frente"
+        ],
+        "palette": "Canela oscuro, pardo de corteza, fibra del canasto.",
+        "scale": "Algo por debajo de la estatura del hombre. Cuerpo entero 9:16.",
+        "continuity": [
+          "canasto con niño como su marca",
+          "corteza a la cintura",
+          "sin pintura ni tocado"
+        ],
+        "documented": [
+          "dossier §6 (reglamento-espingo): «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — la única descripción física awá hecha desde dentro",
+          "canon, campo mito: los árboles enseñaron a la gente «a cubrirse del frío con cáscara de árbol»: la prenda es corteza",
+          "dossier §6 y salvaguarda 3: ninguna figura awá lleva pintura facial ni tocado; es decisión documentada",
+          "dossier §1: nada de hierro, machete, escopeta, tela industrial, plástico ni animal doméstico europeo",
+          "dossier §6 (arcos-2018): el canasto tɨm es «extensión del útero de la madre o útero de los árboles», y «los niños pequeños viajan con los padres en el canasto»",
+          "canon, campo mito: «la mujer fue pariendo hijos»; el primer canasto «carga la leña, la comida y a los hijos»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano alargado de un solo tono con la nariz curvada y los pómulos recortados aparte y la ceja como tira; el cuerpo, en pocos planos grandes de papel canela oscuro mate, sin músculo modelado.",
+          "La corteza va como una sola pieza a la cintura, en papel pardo fibroso de canto irregular: el canon nombra el material, no el corte, que es decisión reversible. Nada de camisa, pantalón, bota de caucho ni vestido largo, que son de la cadena ecuatoriana sin bibliografía (dossier §6).",
+          "El pelo es una pieza plana grande negra mate; nunca mechón por mechón."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_joven": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_mujer_joven__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · mujer awá joven",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "barbachas-del-arbol-grande"
+      ],
+      "description": "Tipo base de la muchacha awá: fija cara y cuerpo de la joven que sale de la barbacha clara, ya entre su gente.",
+      "evidence": [
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "La barbacha clara se vuelve una mujer joven."
+        }
+      ],
+      "design": {
+        "silhouette": "Mujer joven, delgada y erguida, de rostro alargado y pómulos marcados, el pelo largo suelto, la corteza a la cintura y las manos alzadas hacia una fibra que cuelga, como quien bebe de ella.",
+        "materials": [
+          "piel en papel canela oscuro mate",
+          "corteza batida a la cintura",
+          "pelo largo suelto en una pieza negra mate"
+        ],
+        "palette": "Canela oscuro y pardo de corteza; sin canasto.",
+        "scale": "Un palmo por debajo del hombre adulto. Cuerpo entero 9:16.",
+        "continuity": [
+          "pelo suelto",
+          "corteza a la cintura",
+          "sin canasto: es su diferencia con la madre"
+        ],
+        "documented": [
+          "dossier §6 (reglamento-espingo): «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — la única descripción física awá hecha desde dentro",
+          "canon, campo mito: los árboles enseñaron a la gente «a cubrirse del frío con cáscara de árbol»: la prenda es corteza",
+          "dossier §6 y salvaguarda 3: ninguna figura awá lleva pintura facial ni tocado; es decisión documentada",
+          "dossier §1: nada de hierro, machete, escopeta, tela industrial, plástico ni animal doméstico europeo",
+          "canon, campo mito: la barbacha clara «se convirtió en una mujer joven»; dossier §6: es ashampa, «muy bonita y joven»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano alargado de un solo tono con la nariz curvada y los pómulos recortados aparte y la ceja como tira; el cuerpo, en pocos planos grandes de papel canela oscuro mate, sin músculo modelado.",
+          "La corteza va como una sola pieza a la cintura, en papel pardo fibroso de canto irregular: el canon nombra el material, no el corte, que es decisión reversible. Nada de camisa, pantalón, bota de caucho ni vestido largo, que son de la cadena ecuatoriana sin bibliografía (dossier §6).",
+          "El pelo es una pieza plana grande negra mate; nunca mechón por mechón.",
+          "«Muy bonita» no se traduce a rasgo: la cara es la misma gramática que las demás."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_nino": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_nino__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · niño awá",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "barbachas-del-arbol-grande"
+      ],
+      "description": "Tipo base del niño awá: los hijos que la primera pareja pare y que el canasto carga.",
+      "evidence": [
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "Los hijos crecen y el canasto los carga."
+        }
+      ],
+      "design": {
+        "silhouette": "Niño pequeño sentado dentro del canasto tɨm, con la cabeza y los hombros fuera de la boca y las manos en el borde: la silueta del niño awá es la del canasto que lo lleva.",
+        "materials": [
+          "piel en papel canela oscuro mate",
+          "canasto tɨm como marco de la figura",
+          "pelo corto en una pieza"
+        ],
+        "palette": "Canela oscuro y fibra del canasto.",
+        "scale": "Cabe entero en el canasto; de pie, a la cintura de un adulto. Cuerpo entero 9:16, con una vista de pie junto al canasto.",
+        "continuity": [
+          "dentro del canasto o junto a él",
+          "sin prenda: es niño pequeño",
+          "rostro de la misma gramática, más redondo"
+        ],
+        "documented": [
+          "dossier §6 (reglamento-espingo): «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — la única descripción física awá hecha desde dentro",
+          "canon, campo mito: los árboles enseñaron a la gente «a cubrirse del frío con cáscara de árbol»: la prenda es corteza",
+          "dossier §6 y salvaguarda 3: ninguna figura awá lleva pintura facial ni tocado; es decisión documentada",
+          "dossier §1: nada de hierro, machete, escopeta, tela industrial, plástico ni animal doméstico europeo",
+          "dossier §6 (arcos-2018): «los niños pequeños viajan con los padres en el canasto»",
+          "canon, campo mito: el primer canasto carga «a los hijos»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano alargado de un solo tono con la nariz curvada y los pómulos recortados aparte y la ceja como tira; el cuerpo, en pocos planos grandes de papel canela oscuro mate, sin músculo modelado.",
+          "La corteza va como una sola pieza a la cintura, en papel pardo fibroso de canto irregular: el canon nombra el material, no el corte, que es decisión reversible. Nada de camisa, pantalón, bota de caucho ni vestido largo, que son de la cadena ecuatoriana sin bibliografía (dossier §6).",
+          "El pelo es una pieza plana grande negra mate; nunca mechón por mechón.",
+          "Sin corteza por edad: decisión de hoja, reversible."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_anciano": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_anciano__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · anciano awá",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "barbachas-del-arbol-grande"
+      ],
+      "description": "Tipo base del viejo awá: fija cara, cuerpo y vestido del hombre encanecido y la base de Attɨm Awá anciano.",
+      "evidence": [
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "El primer hombre envejece y encanece antes de tener compañía."
+        }
+      ],
+      "design": {
+        "silhouette": "Hombre viejo de pie, algo encorvado, con el pelo blanco grisáceo en una sola pieza, la corteza a la cintura y la piel un punto más oscura que la de los jóvenes: la edad se lee por el pelo, la curva y el tono, no por arrugas dibujadas.",
+        "materials": [
+          "piel en el canela más oscuro de la hoja",
+          "pelo en una pieza plana blanco grisáceo",
+          "corteza batida a la cintura"
+        ],
+        "palette": "Canela oscuro profundo, pelo blanco grisáceo, pardo de corteza.",
+        "scale": "Estatura adulta reducida por la curva. Cuerpo entero 9:16.",
+        "continuity": [
+          "pelo cano siempre",
+          "piel más oscura que la de los jóvenes",
+          "corteza a la cintura"
+        ],
+        "documented": [
+          "dossier §6 (reglamento-espingo): «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — la única descripción física awá hecha desde dentro",
+          "canon, campo mito: los árboles enseñaron a la gente «a cubrirse del frío con cáscara de árbol»: la prenda es corteza",
+          "dossier §6 y salvaguarda 3: ninguna figura awá lleva pintura facial ni tocado; es decisión documentada",
+          "dossier §1: nada de hierro, machete, escopeta, tela industrial, plástico ni animal doméstico europeo",
+          "dossier §6: al envejecer el primer hombre queda «canoso, arrugado… del color del Awá del monte»",
+          "canon, campo mito: «El hombre envejeció, encaneció»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano alargado de un solo tono con la nariz curvada y los pómulos recortados aparte y la ceja como tira; el cuerpo, en pocos planos grandes de papel canela oscuro mate, sin músculo modelado.",
+          "La corteza va como una sola pieza a la cintura, en papel pardo fibroso de canto irregular: el canon nombra el material, no el corte, que es decisión reversible. Nada de camisa, pantalón, bota de caucho ni vestido largo, que son de la cadena ecuatoriana sin bibliografía (dossier §6).",
+          "El pelo es una pieza plana grande negra mate; nunca mechón por mechón.",
+          "Las arrugas de la fuente no se dibujan: la técnica no modela rostro. Se resuelven en el pelo y en el tono."
+        ],
+        "states_to_model": []
+      }
     }
   },
   "models": {
@@ -3770,6 +4453,11 @@
           "myth": "barbachas-del-arbol-grande",
           "field": "mito",
           "note": "La figura de Dios o del creador aparece en algunas versiones como redacción cristianizada que el canon conserva como diferencia sin adoptarla: en la narración adoptada nadie crea a la pareja, la barbacha desciende y toma forma"
+        },
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "El canon reescrito le da «piel oscura y nariz grande», el nombre de «hombre antiguo sin bautizar», y un aprendizaje nuevo: los árboles le enseñan a cazar, pescar, curarse, levantar la casa, tejer el canasto y «cubrirse del frío con cáscara de árbol»."
         }
       ],
       "design_contract": {
@@ -3778,7 +4466,7 @@
           "cuerpo en papel canela oscuro, el tono más oscuro de los cuerpos de esta biblia, mate y en una sola pieza por miembro",
           "cara en óvalo plano alargado de un tono, con la nariz recortada larga y saliente como pieza aparte y los pómulos resueltos por dos recortes, sin línea dibujada",
           "pelo en una pieza plana grande de papel negro mate, sustituida en el estado de anciano por la misma pieza en papel blanco grisáceo",
-          "una sola pieza lisa a la cintura, sin estampado, sin fleco y sin adorno: el vestido awá no está descrito en ninguna fuente colombiana y se resuelve por lo mínimo",
+          "una sola pieza de corteza de árbol batida a la cintura, en papel pardo fibroso de canto irregular, sin estampado ni adorno: el canon reescrito dice que los árboles le enseñaron a «cubrirse del frío con cáscara de árbol»; antes de aprenderlo, en la primera soledad, puede ir sin ella",
           "frutos del akal kih en la mano o en el suelo, en papel de un solo tono y sin identificación botánica"
         ],
         "palette_logic": "Canela oscuro sobre verde profundo mojado, sin un solo color añadido: no lleva tela de color, no lleva adorno y no lleva pintura. En el estado de anciano el único cambio de paleta es el pelo, que pasa a ser el valor más alto de su figura, y la piel baja un punto más, porque la fuente dice que envejeciendo queda más oscuro.",
@@ -3790,17 +4478,19 @@
           "no lleva arma, ni canasto, ni herramienta: come frutos del akal kih y cuida la montaña, y no hay un solo objeto de mano en su relato"
         ],
         "documented_features": [
-          "corpus: «Era un hombre grande y de piel oscura, que caminaba solo por la selva, comía los frutos del árbol akal kih y cuidaba la montaña y sus animales»",
-          "corpus: «Pasaron muchos años. El primer hombre envejeció, encaneció y siguió viviendo sin compañía»",
+          "canon, campo mito: «Fue el primer awá: un hombre grande, de piel oscura y nariz grande. Se llamó Attɨm Awá. Andaba solo por la selva… y comía los frutos del árbol akal kih»; «también se lo conoció como el hombre antiguo sin bautizar»",
+          "canon, campo mito: «El hombre envejeció, encaneció y seguía sin compañía»",
+          "canon, campo mito: los árboles le enseñaron al primer hombre «a cubrirse del frío con cáscara de árbol»: la prenda de esta gente es corteza, y es el único vestido que el corpus nombra",
           "dossier §6: «El primer hombre fue de nariz larga y hombre grande»; al envejecer queda «canoso, arrugado… sólo era casi más oscuro que mestizo, del color del Awá del monte»",
           "dossier §6 sobre reglamento-espingo: la gramática de rostro awá descrita por la propia comunidad —«rostros un poco alargados, frente pequeña, nariz curvada, pómulos muy notorios, piel canela oscuro»",
           "dossier §10, salvaguarda 3: ninguna figura awá lleva pintura facial ni tocado, y eso es una decisión documentada y no un olvido"
         ],
         "editorial_features": [
-          "el vestido entero es interpretación editorial reversible: no hay una sola descripción de vestido awá en fuente colombiana, y lo que circula es ecuatoriano y sin bibliografía",
+          "la prenda de corteza está nombrada en el canon reescrito; su corte —una pieza a la cintura— es la decisión editorial, reversible, y no hay otra prenda que añadir",
           "los nombres Attɨm Awá y China Attim son la misma figura en dos versiones: la ficha no elige entre ellos y no los dibuja distinto",
           "el fruto del akal kih se dibuja sin identificación botánica: el relato lo nombra y ninguna fuente lo determina",
-          "que el encuadre esté vacío de gente en sus dos edades es una decisión de composición para que la soledad —que el relato repite dos veces— sea un hecho visible y no un dato del texto"
+          "que el encuadre esté vacío de gente en sus dos edades es una decisión de composición para que la soledad —que el relato repite dos veces— sea un hecho visible y no un dato del texto",
+          "Los oficios que los árboles le enseñan —cazar, pescar, curarse con plantas, levantar la casa, tejer el canasto— no se cobran como estados: la hoja los resume en la corteza puesta y, si un guion lo pide, en un canasto en la mano."
         ]
       },
       "prompt_spec": {
@@ -3808,13 +4498,14 @@
         "asset_type": "Biblia visual Awa V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
         "primary_request": "identidad corporal completa y legible para Attɨm Awá, el primer hombre. Hombre grande de nariz larga y frente pequeña, caminando solo y con las manos vacías, dibujado siempre en un encuadre donde no hay nadie más: es la única figura de la biblia que se representa dos veces con el mismo cuerpo y distinto pelo, porque el relato lo deja envejecer entero antes de que exista la segunda persona del mundo.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Grande: el relato lo dice con esas palabras y ésa es toda su medida. Se dibuja media cabeza por encima de cualquier figura de la gramática de la gente, y contra el árbol grande no llega ni a la primera rama, que es lo que sostiene la escala del origen.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Grande: el relato lo dice con esas palabras y ésa es toda su medida. Se dibuja media cabeza por encima de cualquier figura de la gramática de la gente, y contra el árbol grande no llega ni a la primera rama, que es lo que sostiene la escala del origen.",
         "lighting_mood": "Luz de bosque de niebla: difusa, sin sombra dura, filtrada por dosel y por neblina, con humedad relativa del cien por cien. El momento alto del día no es el sol sino la lluvia, que empieza al mediodía y es tan rutinaria «cual sería extraño el no llover». En el interior de la casa y en Maza Su, la única luz cálida es la del fogón siempre encendido, que se lee por fuera como oleada de humo grande o pequeña.",
-        "materials_textures": "cuerpo en papel canela oscuro, el tono más oscuro de los cuerpos de esta biblia, mate y en una sola pieza por miembro; cara en óvalo plano alargado de un tono, con la nariz recortada larga y saliente como pieza aparte y los pómulos resueltos por dos recortes, sin línea dibujada; pelo en una pieza plana grande de papel negro mate, sustituida en el estado de anciano por la misma pieza en papel blanco grisáceo; una sola pieza lisa a la cintura, sin estampado, sin fleco y sin adorno: el vestido awá no está descrito en ninguna fuente colombiana y se resuelve por lo mínimo; frutos del akal kih en la mano o en el suelo, en papel de un solo tono y sin identificación botánica",
+        "materials_textures": "cuerpo en papel canela oscuro, el tono más oscuro de los cuerpos de esta biblia, mate y en una sola pieza por miembro; cara en óvalo plano alargado de un tono, con la nariz recortada larga y saliente como pieza aparte y los pómulos resueltos por dos recortes, sin línea dibujada; pelo en una pieza plana grande de papel negro mate, sustituida en el estado de anciano por la misma pieza en papel blanco grisáceo; una sola pieza de corteza de árbol batida a la cintura, en papel pardo fibroso de canto irregular, sin estampado ni adorno: el canon reescrito dice que los árboles le enseñaron a «cubrirse del frío con cáscara de árbol»; antes de aprenderlo, en la primera soledad, puede ir sin ella; frutos del akal kih en la mano o en el suelo, en papel de un solo tono y sin identificación botánica",
         "era": "Piedemonte awá anterior al contacto material: sin hierro, sin machete, sin escopeta, sin tabla aserrada, sin clavo, sin zinc, sin plástico, sin rueda, sin carretera, sin escuela y sin animal doméstico europeo. Lo que sí hay está nombrado en los relatos: casa de pilotes con piso y techo de gualte, fogón, canasto tɨm, hoja de bijao, maíz chocosito de tuza menuda, chiro, raíz de rascadera, cueva y peña. La agricultura es de socola y tumba que se pudre: nunca se quema.",
         "constraints": [
-          "documentado: «Era un hombre grande y de piel oscura, que caminaba solo por la selva, comía los frutos del árbol akal kih y cuidaba la montaña y sus animales»",
-          "documentado: «Pasaron muchos años. El primer hombre envejeció, encaneció y siguió viviendo sin compañía»",
+          "documentado: «Fue el primer awá: un hombre grande, de piel oscura y nariz grande. Se llamó Attɨm Awá. Andaba solo por la selva… y comía los frutos del árbol akal kih»; «también se lo conoció como el hombre antiguo sin bautizar»",
+          "documentado: «El hombre envejeció, encaneció y seguía sin compañía»",
+          "documentado: los árboles le enseñaron al primer hombre «a cubrirse del frío con cáscara de árbol»: la prenda de esta gente es corteza, y es el único vestido que el corpus nombra",
           "documentado: «El primer hombre fue de nariz larga y hombre grande»; al envejecer queda «canoso, arrugado… sólo era casi más oscuro que mestizo, del color del Awá del monte»",
           "documentado: la gramática de rostro awá descrita por la propia comunidad —«rostros un poco alargados, frente pequeña, nariz curvada, pómulos muy notorios, piel canela oscuro»",
           "documentado: ninguna figura awá lleva pintura facial ni tocado, y eso es una decisión documentada y no un olvido",
@@ -3841,7 +4532,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -3886,6 +4577,11 @@
           "myth": "barbachas-del-arbol-grande",
           "field": "mito",
           "note": "La figura de Dios o del creador aparece en algunas versiones como redacción cristianizada que el canon conserva como diferencia sin adoptarla: en la narración adoptada nadie crea a la pareja, la barbacha desciende y toma forma"
+        },
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "El canon reescrito le da «piel oscura y nariz grande», el nombre de «hombre antiguo sin bautizar», y un aprendizaje nuevo: los árboles le enseñan a cazar, pescar, curarse, levantar la casa, tejer el canasto y «cubrirse del frío con cáscara de árbol»."
         }
       ],
       "design_contract": {
@@ -3894,7 +4590,7 @@
           "cuerpo en papel canela oscuro, el tono más oscuro de los cuerpos de esta biblia, mate y en una sola pieza por miembro",
           "cara en óvalo plano alargado de un tono, con la nariz recortada larga y saliente como pieza aparte y los pómulos resueltos por dos recortes, sin línea dibujada",
           "pelo en una pieza plana grande de papel negro mate, sustituida en el estado de anciano por la misma pieza en papel blanco grisáceo",
-          "una sola pieza lisa a la cintura, sin estampado, sin fleco y sin adorno: el vestido awá no está descrito en ninguna fuente colombiana y se resuelve por lo mínimo",
+          "una sola pieza de corteza de árbol batida a la cintura, en papel pardo fibroso de canto irregular, sin estampado ni adorno: el canon reescrito dice que los árboles le enseñaron a «cubrirse del frío con cáscara de árbol»; antes de aprenderlo, en la primera soledad, puede ir sin ella",
           "frutos del akal kih en la mano o en el suelo, en papel de un solo tono y sin identificación botánica"
         ],
         "palette_logic": "Canela oscuro sobre verde profundo mojado, sin un solo color añadido: no lleva tela de color, no lleva adorno y no lleva pintura. En el estado de anciano el único cambio de paleta es el pelo, que pasa a ser el valor más alto de su figura, y la piel baja un punto más, porque la fuente dice que envejeciendo queda más oscuro.",
@@ -3906,17 +4602,19 @@
           "no lleva arma, ni canasto, ni herramienta: come frutos del akal kih y cuida la montaña, y no hay un solo objeto de mano en su relato"
         ],
         "documented_features": [
-          "corpus: «Era un hombre grande y de piel oscura, que caminaba solo por la selva, comía los frutos del árbol akal kih y cuidaba la montaña y sus animales»",
-          "corpus: «Pasaron muchos años. El primer hombre envejeció, encaneció y siguió viviendo sin compañía»",
+          "canon, campo mito: «Fue el primer awá: un hombre grande, de piel oscura y nariz grande. Se llamó Attɨm Awá. Andaba solo por la selva… y comía los frutos del árbol akal kih»; «también se lo conoció como el hombre antiguo sin bautizar»",
+          "canon, campo mito: «El hombre envejeció, encaneció y seguía sin compañía»",
+          "canon, campo mito: los árboles le enseñaron al primer hombre «a cubrirse del frío con cáscara de árbol»: la prenda de esta gente es corteza, y es el único vestido que el corpus nombra",
           "dossier §6: «El primer hombre fue de nariz larga y hombre grande»; al envejecer queda «canoso, arrugado… sólo era casi más oscuro que mestizo, del color del Awá del monte»",
           "dossier §6 sobre reglamento-espingo: la gramática de rostro awá descrita por la propia comunidad —«rostros un poco alargados, frente pequeña, nariz curvada, pómulos muy notorios, piel canela oscuro»",
           "dossier §10, salvaguarda 3: ninguna figura awá lleva pintura facial ni tocado, y eso es una decisión documentada y no un olvido"
         ],
         "editorial_features": [
-          "el vestido entero es interpretación editorial reversible: no hay una sola descripción de vestido awá en fuente colombiana, y lo que circula es ecuatoriano y sin bibliografía",
+          "la prenda de corteza está nombrada en el canon reescrito; su corte —una pieza a la cintura— es la decisión editorial, reversible, y no hay otra prenda que añadir",
           "los nombres Attɨm Awá y China Attim son la misma figura en dos versiones: la ficha no elige entre ellos y no los dibuja distinto",
           "el fruto del akal kih se dibuja sin identificación botánica: el relato lo nombra y ninguna fuente lo determina",
-          "que el encuadre esté vacío de gente en sus dos edades es una decisión de composición para que la soledad —que el relato repite dos veces— sea un hecho visible y no un dato del texto"
+          "que el encuadre esté vacío de gente en sus dos edades es una decisión de composición para que la soledad —que el relato repite dos veces— sea un hecho visible y no un dato del texto",
+          "Los oficios que los árboles le enseñan —cazar, pescar, curarse con plantas, levantar la casa, tejer el canasto— no se cobran como estados: la hoja los resume en la corteza puesta y, si un guion lo pide, en un canasto en la mano."
         ]
       },
       "prompt_spec": {
@@ -3924,13 +4622,14 @@
         "asset_type": "Biblia visual Awa V1 - state_sheet",
         "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
         "primary_request": "el cambio de estado sin perder la identidad para Attɨm Awá, el primer hombre. Hombre grande de nariz larga y frente pequeña, caminando solo y con las manos vacías, dibujado siempre en un encuadre donde no hay nadie más: es la única figura de la biblia que se representa dos veces con el mismo cuerpo y distinto pelo, porque el relato lo deja envejecer entero antes de que exista la segunda persona del mundo.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Grande: el relato lo dice con esas palabras y ésa es toda su medida. Se dibuja media cabeza por encima de cualquier figura de la gramática de la gente, y contra el árbol grande no llega ni a la primera rama, que es lo que sostiene la escala del origen.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Grande: el relato lo dice con esas palabras y ésa es toda su medida. Se dibuja media cabeza por encima de cualquier figura de la gramática de la gente, y contra el árbol grande no llega ni a la primera rama, que es lo que sostiene la escala del origen.",
         "lighting_mood": "Luz de bosque de niebla: difusa, sin sombra dura, filtrada por dosel y por neblina, con humedad relativa del cien por cien. El momento alto del día no es el sol sino la lluvia, que empieza al mediodía y es tan rutinaria «cual sería extraño el no llover». En el interior de la casa y en Maza Su, la única luz cálida es la del fogón siempre encendido, que se lee por fuera como oleada de humo grande o pequeña.",
-        "materials_textures": "cuerpo en papel canela oscuro, el tono más oscuro de los cuerpos de esta biblia, mate y en una sola pieza por miembro; cara en óvalo plano alargado de un tono, con la nariz recortada larga y saliente como pieza aparte y los pómulos resueltos por dos recortes, sin línea dibujada; pelo en una pieza plana grande de papel negro mate, sustituida en el estado de anciano por la misma pieza en papel blanco grisáceo; una sola pieza lisa a la cintura, sin estampado, sin fleco y sin adorno: el vestido awá no está descrito en ninguna fuente colombiana y se resuelve por lo mínimo; frutos del akal kih en la mano o en el suelo, en papel de un solo tono y sin identificación botánica",
+        "materials_textures": "cuerpo en papel canela oscuro, el tono más oscuro de los cuerpos de esta biblia, mate y en una sola pieza por miembro; cara en óvalo plano alargado de un tono, con la nariz recortada larga y saliente como pieza aparte y los pómulos resueltos por dos recortes, sin línea dibujada; pelo en una pieza plana grande de papel negro mate, sustituida en el estado de anciano por la misma pieza en papel blanco grisáceo; una sola pieza de corteza de árbol batida a la cintura, en papel pardo fibroso de canto irregular, sin estampado ni adorno: el canon reescrito dice que los árboles le enseñaron a «cubrirse del frío con cáscara de árbol»; antes de aprenderlo, en la primera soledad, puede ir sin ella; frutos del akal kih en la mano o en el suelo, en papel de un solo tono y sin identificación botánica",
         "era": "Piedemonte awá anterior al contacto material: sin hierro, sin machete, sin escopeta, sin tabla aserrada, sin clavo, sin zinc, sin plástico, sin rueda, sin carretera, sin escuela y sin animal doméstico europeo. Lo que sí hay está nombrado en los relatos: casa de pilotes con piso y techo de gualte, fogón, canasto tɨm, hoja de bijao, maíz chocosito de tuza menuda, chiro, raíz de rascadera, cueva y peña. La agricultura es de socola y tumba que se pudre: nunca se quema.",
         "constraints": [
-          "documentado: «Era un hombre grande y de piel oscura, que caminaba solo por la selva, comía los frutos del árbol akal kih y cuidaba la montaña y sus animales»",
-          "documentado: «Pasaron muchos años. El primer hombre envejeció, encaneció y siguió viviendo sin compañía»",
+          "documentado: «Fue el primer awá: un hombre grande, de piel oscura y nariz grande. Se llamó Attɨm Awá. Andaba solo por la selva… y comía los frutos del árbol akal kih»; «también se lo conoció como el hombre antiguo sin bautizar»",
+          "documentado: «El hombre envejeció, encaneció y seguía sin compañía»",
+          "documentado: los árboles le enseñaron al primer hombre «a cubrirse del frío con cáscara de árbol»: la prenda de esta gente es corteza, y es el único vestido que el corpus nombra",
           "documentado: «El primer hombre fue de nariz larga y hombre grande»; al envejecer queda «canoso, arrugado… sólo era casi más oscuro que mestizo, del color del Awá del monte»",
           "documentado: la gramática de rostro awá descrita por la propia comunidad —«rostros un poco alargados, frente pequeña, nariz curvada, pómulos muy notorios, piel canela oscuro»",
           "documentado: ninguna figura awá lleva pintura facial ni tocado, y eso es una decisión documentada y no un olvido",
@@ -3957,7 +4656,7 @@
           "id": "estado_anciano_encanecido",
           "view_type": "state_variation",
           "purpose": "el cambio de estado sin perder la identidad: anciano_encanecido",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "anciano_encanecido"
           ],
@@ -4004,6 +4703,11 @@
           "myth": "barbachas-del-arbol-grande",
           "field": "mito",
           "note": "Ninguna figura awá lleva pintura facial: lo único documentado es un tatuaje atribuido a los antepasados sindaguas dentro de una hipótesis que el propio documento presenta como tal, y no hay registro de pintura facial awá contemporánea"
+        },
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "En el canon reescrito la mujer persigue al kippu hasta sacarlo del hueco y se lo come, y la quebrada queda seca: ya no hay orden al hombre ni lluvia en el relato principal."
         }
       ],
       "design_contract": {
@@ -4024,8 +4728,8 @@
           "es siempre joven: el relato no la hace envejecer y no tiene estado de anciana, al contrario que él"
         ],
         "documented_features": [
-          "corpus: «del mismo árbol comenzó a bajar una barbacha más clara. También creció hasta el suelo y, al tocarlo, se transformó en una mujer joven»",
-          "corpus: «La mujer tenía sed. Primero tomó la humedad de la barbacha. Después encontró al cangrejo, kippu»",
+          "canon, campo mito: «del mismo árbol del que había nacido, empezó a bajar una barbacha más clara… y al tocarlo se convirtió en una mujer joven»",
+          "canon, campo mito: «La mujer tenía sed. Primero cogió barbacha y bebió la humedad… Después bajó a las quebradas y allí halló un cangrejo, kippu… lo persiguió hasta sacarlo del hueco… y se lo comió. La quebrada quedó seca»",
           "canon, campo versiones: Sinsajoa documenta la aparición gradual desde la barbacha blanca, «primero se forma la cabeza y luego el cuerpo»",
           "dossier §6: la primera mujer es ashampa, «muy bonita y joven», y la gramática de rostro awá viene del reglamento de El Espingo"
         ],
@@ -4033,7 +4737,8 @@
           "el vestido es el mismo hueco documental declarado para todas las figuras y se resuelve por lo mínimo",
           "hacerla más baja que Attɨm Awá es una lectura de la palabra «grande» aplicada a él, no un dato sobre ella",
           "dibujarla a medio desprender de la maraña es una solución para incorporar la variante de formación gradual sin cobrarle lámina: es reversible, y si el editor prefiere separar las dos versiones, esta ficha se parte",
-          "«muy bonita» no se traduce a ningún rasgo: la ficha lo deja como juicio de la fuente y dibuja una cara de la misma gramática que las demás"
+          "«muy bonita» no se traduce a ningún rasgo: la ficha lo deja como juicio de la fuente y dibuja una cara de la misma gramática que las demás",
+          "En su lámina de origen va sin prenda, porque acaba de salir de la barbacha; la corteza que el canon reescrito nombra es enseñanza posterior de los árboles y entra en la hoja de la familia."
         ]
       },
       "prompt_spec": {
@@ -4041,13 +4746,13 @@
         "asset_type": "Biblia visual Awa V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
         "primary_request": "identidad corporal completa y legible para La primera mujer. Mujer joven de pie junto al bulto de barbacha clara del que acaba de salir, con la cabeza ya formada y hombros y brazos todavía a medio desprender de la maraña: es la única figura de la biblia que comparte contorno con la materia que la origina, y la única que se dibuja en gesto de beber, con las dos manos alzadas hacia la fibra que cuelga.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura adulta común, deliberadamente menor que la de Attɨm Awá, que el relato llama grande: la pareja se dibuja con esa diferencia para que la palabra del texto se vea. Contra la barbacha de la que sale, su cabeza ocupa el grosor entero de la maraña.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura adulta común, deliberadamente menor que la de Attɨm Awá, que el relato llama grande: la pareja se dibuja con esa diferencia para que la palabra del texto se vea. Contra la barbacha de la que sale, su cabeza ocupa el grosor entero de la maraña.",
         "lighting_mood": "Luz de bosque de niebla: difusa, sin sombra dura, filtrada por dosel y por neblina, con humedad relativa del cien por cien. El momento alto del día no es el sol sino la lluvia, que empieza al mediodía y es tan rutinaria «cual sería extraño el no llover». En el interior de la casa y en Maza Su, la única luz cálida es la del fogón siempre encendido, que se lee por fuera como oleada de humo grande o pequeña.",
         "materials_textures": "cuerpo en papel canela oscuro, el mismo tono que el resto de la gente, en una sola pieza por miembro; cara en óvalo plano alargado con frente pequeña, pómulos marcados y nariz curvada, de un solo tono y con los rasgos en piezas recortadas aparte; la barbacha clara de la que sale, en las mismas pocas piezas grandes y dentadas de papel crudo pálido de su ficha, sin cambio de material al llegar al cuerpo; pelo en una pieza plana grande de papel negro mate, largo y sin peinado marcado; una sola pieza lisa a la cintura, sin estampado y sin adorno, como todas las figuras del corpus",
         "era": "Piedemonte awá anterior al contacto material: sin hierro, sin machete, sin escopeta, sin tabla aserrada, sin clavo, sin zinc, sin plástico, sin rueda, sin carretera, sin escuela y sin animal doméstico europeo. Lo que sí hay está nombrado en los relatos: casa de pilotes con piso y techo de gualte, fogón, canasto tɨm, hoja de bijao, maíz chocosito de tuza menuda, chiro, raíz de rascadera, cueva y peña. La agricultura es de socola y tumba que se pudre: nunca se quema.",
         "constraints": [
-          "documentado: «del mismo árbol comenzó a bajar una barbacha más clara. También creció hasta el suelo y, al tocarlo, se transformó en una mujer joven»",
-          "documentado: «La mujer tenía sed. Primero tomó la humedad de la barbacha. Después encontró al cangrejo, kippu»",
+          "documentado: «del mismo árbol del que había nacido, empezó a bajar una barbacha más clara… y al tocarlo se convirtió en una mujer joven»",
+          "documentado: «La mujer tenía sed. Primero cogió barbacha y bebió la humedad… Después bajó a las quebradas y allí halló un cangrejo, kippu… lo persiguió hasta sacarlo del hueco… y se lo comió. La quebrada quedó seca»",
           "documentado: Sinsajoa documenta la aparición gradual desde la barbacha blanca, «primero se forma la cabeza y luego el cuerpo»",
           "documentado: la primera mujer es ashampa, «muy bonita y joven», y la gramática de rostro awá viene del reglamento de El Espingo",
           "Todo está mojado y nada tiene brillo: el verde es profundo y mate, y la neblina se pone como capa de papel translúcido entre planos, no como aerógrafo.",
@@ -4073,7 +4778,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -4103,6 +4808,11 @@
           "myth": "barbachas-del-arbol-grande",
           "field": "mito",
           "note": "El término «kippu» para el cangrejo y «kuguin» para la hormiga no se confirmaron en ninguna de las fuentes en awapit consultadas ni en sus glosarios; el cangrejo tampoco tiene especie determinada. Se conservan porque el canon los sostiene"
+        },
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "El canon reescrito fija la versión de Arcos: la mujer come al kippu y la quebrada se seca; el río Chatanalpí y el hombre de cangrejo quedan en versiones."
         }
       ],
       "design_contract": {
@@ -4122,7 +4832,7 @@
           "no se le da nombre en pantalla: «kippu» no se confirmó fuera del canon y la ficha no lo convierte en término establecido"
         ],
         "documented_features": [
-          "corpus: «encontró al cangrejo, kippu, asociado en las narraciones con el agua guardada bajo la tierra y con el río Chatanalpí», y las dos variantes —ofrece agua y hace llegar la lluvia, o la mujer lo saca de su cueva y la quebrada queda seca",
+          "canon, campo mito: un cangrejo «de esos que vomitan agua y hacen crecer los ríos, de esos que guardan el agua dentro de sus cuevas»; la mujer lo saca del hueco y se lo come, y la quebrada queda seca. La lluvia y el «hombre de cangrejo, dueño del agua» son de la versión de Cánticus (canon, campo versiones)",
           "dossier §7 sobre guzman-2011: «Cuando el cangrejo vomita, hace crecer el río, esto porque el cangrejo tiene sus cuevas y allí conserva el agua para los demás seres. La quebrada se secó» — el cangrejo no ofrece agua, la guarda",
           "dossier §4 sobre reglamento-espingo: las cuevas, las quebradas y los nacederos están en la lista comunitaria de lugares sagrados, y por eso se dibujan como accidentes del terreno sin señal ni ofrenda",
           "dossier §11: es una de las cuatro fichas required que el dossier declara sin base visual suficiente —sin especie, sin nombre confirmado y sólo con una regla"
@@ -4144,7 +4854,7 @@
         "materials_textures": "caparazón en una sola pieza plana de papel pardo rojizo mate, con el borde dentado recortado y sin dibujo encima; patas y pinzas en piezas estrechas aparte, articuladas por superposición y sombra corta, no por línea; la boca de la cueva como recorte negro mate en el barro de la orilla, sin interior dibujado y sin señal ni marca alrededor; agua en papel pardo agua, en una lámina plana que entra o no entra en el encuadre según la variante",
         "era": "Piedemonte awá anterior al contacto material: sin hierro, sin machete, sin escopeta, sin tabla aserrada, sin clavo, sin zinc, sin plástico, sin rueda, sin carretera, sin escuela y sin animal doméstico europeo. Lo que sí hay está nombrado en los relatos: casa de pilotes con piso y techo de gualte, fogón, canasto tɨm, hoja de bijao, maíz chocosito de tuza menuda, chiro, raíz de rascadera, cueva y peña. La agricultura es de socola y tumba que se pudre: nunca se quema.",
         "constraints": [
-          "documentado: «encontró al cangrejo, kippu, asociado en las narraciones con el agua guardada bajo la tierra y con el río Chatanalpí», y las dos variantes —ofrece agua y hace llegar la lluvia, o la mujer lo saca de su cueva y la quebrada queda seca",
+          "documentado: un cangrejo «de esos que vomitan agua y hacen crecer los ríos, de esos que guardan el agua dentro de sus cuevas»; la mujer lo saca del hueco y se lo come, y la quebrada queda seca. La lluvia y el «hombre de cangrejo, dueño del agua» son de la versión de Cánticus (canon, campo versiones)",
           "documentado: «Cuando el cangrejo vomita, hace crecer el río, esto porque el cangrejo tiene sus cuevas y allí conserva el agua para los demás seres. La quebrada se secó» — el cangrejo no ofrece agua, la guarda",
           "documentado: las cuevas, las quebradas y los nacederos están en la lista comunitaria de lugares sagrados, y por eso se dibujan como accidentes del terreno sin señal ni ofrenda",
           "documentado: es una de las cuatro fichas required que el dossier declara sin base visual suficiente —sin especie, sin nombre confirmado y sólo con una regla",
@@ -4216,6 +4926,11 @@
           "myth": "barbachas-del-arbol-grande",
           "field": "mito",
           "note": "La fuente comunitaria declara un límite explícito sobre la cultura espiritual: «los docentes deben ser conscientes de las limitaciones en este campo y solo es permitido el avance hasta cierto alcance». No hay lámina de curandero, de baile waltpura o tuinti, de pihtɨ o pilde ni de sitio sagrado identificable"
+        },
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "El canon reescrito nombra el primer canasto, tejido de bejucos que dieron los árboles, que «carga la leña, la comida y a los hijos», y la corteza como abrigo."
         }
       ],
       "design_contract": {
@@ -4224,7 +4939,7 @@
           "cuerpos en tres tonos cercanos de papel canela oscuro, repartidos sin patrón para que el grupo no se lea como serie",
           "caras en óvalos planos alargados de un tono, con la nariz curvada y los pómulos como piezas recortadas aparte",
           "canasto tɨm en papel de fibra de textura visible pero sin dibujo de tejido: silueta cónica ancha de boca y el cargador cruzado en la frente o en el pecho",
-          "una sola pieza lisa a la cintura por persona, sin estampado y sin fleco",
+          "una sola pieza de corteza de árbol batida a la cintura por persona, en papel pardo fibroso de canto irregular, sin estampado ni fleco",
           "pelo en una pieza plana grande por cabeza, negro mate, con peinados distintos entre sí"
         ],
         "palette_logic": "Canela oscuro y pardo de fibra sobre verde profundo mojado: el grupo no aporta un solo color nuevo a la lámina, y ésa es la decisión. Ningún tono de tela, ningún adorno de color y ningún rojo, porque el único rojo de esta biblia es la savia del árbol en el corte.",
@@ -4236,14 +4951,16 @@
           "sin claro quemado ni tronco carbonizado detrás de ellos en ninguna lámina de trabajo: este pueblo socola y deja pudrir, no quema"
         ],
         "documented_features": [
-          "corpus: «El hombre y la mujer tuvieron hijos. Los hijos crecieron, compartieron los trabajos y dieron continuidad a la gente Awá en la montaña»",
+          "canon, campo mito: «la mujer fue pariendo hijos. Los hijos crecieron, acompañaron a sus padres y ayudaron en todos los oficios, y así la montaña se llenó de gente awá»",
+          "canon, campo mito: de los bejucos salió «el primer canasto, el que desde entonces carga la leña, la comida y a los hijos»",
+          "canon, campo mito: los árboles le enseñaron al primer hombre «a cubrirse del frío con cáscara de árbol»: la prenda de esta gente es corteza, y es el único vestido que el corpus nombra",
           "dossier §6 sobre reglamento-espingo: «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — única descripción física awá hecha desde dentro",
           "dossier §6 sobre arcos-2018: el canasto tɨm «llega a considerarse como una extensión del útero de la madre o útero de los árboles», y «los niños pequeños viajan con los padres en el canasto»",
           "dossier §0.4 sobre reglamento-espingo y guzman-2011: la técnica es socolar, sembrar al boleo y dejar que se pudra la materia orgánica, y «el pueblo Ɨnkal Awa no quema»",
           "dossier §10, salvaguarda 2: se autoriza la forma y la función del canasto y jamás un patrón concreto de tejido"
         ],
         "editorial_features": [
-          "el vestido del grupo entero es interpretación editorial reversible: es la carencia más grave del dossier y toca a las cinco fichas de persona y colectivo",
+          "la corteza como vestido sale ahora del canon reescrito; su corte y su extensión —una pieza a la cintura— siguen siendo editoriales y reversibles",
           "el reparto de tonos y peinados para evitar la serie es composición, no dato etnográfico",
           "la silueta cónica del canasto es una resolución de forma dentro de lo que la fuente autoriza —forma y función—, no la copia de ninguna pieza concreta",
           "que siempre haya un canasto cargado en la lámina es una decisión de continuidad para que el objeto mayor del pueblo no desaparezca, no una regla de uso documentada"
@@ -4256,10 +4973,12 @@
         "primary_request": "gramatica del grupo: cuantos, como se ordenan, que los hace uno para Los hijos y la continuidad de la gente Awá. Gente de rostro alargado, frente pequeña, nariz curvada y pómulos muy marcados, dibujada siempre en trabajo repartido y con al menos un canasto cargado a la espalda del que asoma la cabeza de un niño: es la única gramática de grupo de la biblia en la que el objeto que los une —el canasto— va sobre el cuerpo y no en las manos.",
         "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Estatura adulta común y niños de verdad, no adultos pequeños: el canasto se dibuja de un tamaño que un niño quepa dentro, que es lo que la fuente describe, y eso fija de una vez la escala del objeto y la del cuerpo.",
         "lighting_mood": "Luz de bosque de niebla: difusa, sin sombra dura, filtrada por dosel y por neblina, con humedad relativa del cien por cien. El momento alto del día no es el sol sino la lluvia, que empieza al mediodía y es tan rutinaria «cual sería extraño el no llover». En el interior de la casa y en Maza Su, la única luz cálida es la del fogón siempre encendido, que se lee por fuera como oleada de humo grande o pequeña.",
-        "materials_textures": "cuerpos en tres tonos cercanos de papel canela oscuro, repartidos sin patrón para que el grupo no se lea como serie; caras en óvalos planos alargados de un tono, con la nariz curvada y los pómulos como piezas recortadas aparte; canasto tɨm en papel de fibra de textura visible pero sin dibujo de tejido: silueta cónica ancha de boca y el cargador cruzado en la frente o en el pecho; una sola pieza lisa a la cintura por persona, sin estampado y sin fleco; pelo en una pieza plana grande por cabeza, negro mate, con peinados distintos entre sí",
+        "materials_textures": "cuerpos en tres tonos cercanos de papel canela oscuro, repartidos sin patrón para que el grupo no se lea como serie; caras en óvalos planos alargados de un tono, con la nariz curvada y los pómulos como piezas recortadas aparte; canasto tɨm en papel de fibra de textura visible pero sin dibujo de tejido: silueta cónica ancha de boca y el cargador cruzado en la frente o en el pecho; una sola pieza de corteza de árbol batida a la cintura por persona, en papel pardo fibroso de canto irregular, sin estampado ni fleco; pelo en una pieza plana grande por cabeza, negro mate, con peinados distintos entre sí",
         "era": "Piedemonte awá anterior al contacto material: sin hierro, sin machete, sin escopeta, sin tabla aserrada, sin clavo, sin zinc, sin plástico, sin rueda, sin carretera, sin escuela y sin animal doméstico europeo. Lo que sí hay está nombrado en los relatos: casa de pilotes con piso y techo de gualte, fogón, canasto tɨm, hoja de bijao, maíz chocosito de tuza menuda, chiro, raíz de rascadera, cueva y peña. La agricultura es de socola y tumba que se pudre: nunca se quema.",
         "constraints": [
-          "documentado: «El hombre y la mujer tuvieron hijos. Los hijos crecieron, compartieron los trabajos y dieron continuidad a la gente Awá en la montaña»",
+          "documentado: «la mujer fue pariendo hijos. Los hijos crecieron, acompañaron a sus padres y ayudaron en todos los oficios, y así la montaña se llenó de gente awá»",
+          "documentado: de los bejucos salió «el primer canasto, el que desde entonces carga la leña, la comida y a los hijos»",
+          "documentado: los árboles le enseñaron al primer hombre «a cubrirse del frío con cáscara de árbol»: la prenda de esta gente es corteza, y es el único vestido que el corpus nombra",
           "documentado: «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — única descripción física awá hecha desde dentro",
           "documentado: el canasto tɨm «llega a considerarse como una extensión del útero de la madre o útero de los árboles», y «los niños pequeños viajan con los padres en el canasto»",
           "documentado: la técnica es socolar, sembrar al boleo y dejar que se pudra la materia orgánica, y «el pueblo Ɨnkal Awa no quema»",
@@ -4353,7 +5072,7 @@
           "la quebrada seca es esta misma lámina sin la pieza de agua, no otro paisaje ni otro color de lecho"
         ],
         "documented_features": [
-          "corpus: «En la montaña vivían animales y aves entre árboles viejos cubiertos de barbacha», y en el segundo relato «también allí había montaña y ríos»",
+          "canon, campo mito: «En el mundo sólo había árboles viejos cubiertos de barbacha, y entre las ramas vivían los animales y las aves», y en el segundo relato el mundo de abajo «era igual al de arriba: harta montaña y ríos»",
           "dossier §3 sobre guzman-2011 y mongabay-planada: precipitaciones de 4.000 a 7.000 mm anuales, humedad relativa del 100 %, temperatura media de 18 ºC, y la lluvia que empieza «a partir del medio día», tan rutinaria «cual sería extraño el no llover»; «La Planada huele a neblina»",
           "dossier §3: el río del relato existe en la fuente —las dos barbachas estaban «en un árbol ubicado en la cabecera y a la orilla del río chatanalpí»— y la quebrada y la cueva del cangrejo pertenecen a ese mismo cauce",
           "dossier §0.2: los árboles son personas y «sangran como el tangare, el sangrario, el chino»",
@@ -4377,7 +5096,7 @@
         "materials_textures": "papel verde profundo y mate, siempre húmedo y de canto ablandado, en capas grandes para el dosel y el follaje; papel gris perla translúcido intercalado entre planos para la neblina, nunca aerógrafo y nunca degradado; troncos emergentes en papel de corteza pardo oscuro, con una veta roja únicamente donde hay corte; papel pardo agua para el río Chatanalpí y para la quebrada, con la variante seca resuelta por retirada de la lámina de agua y no por cambio de color del lecho; maraña de barbacha y de epífitas como capas colgantes aparte, por delante del follaje",
         "era": "Piedemonte awá anterior al contacto material: sin hierro, sin machete, sin escopeta, sin tabla aserrada, sin clavo, sin zinc, sin plástico, sin rueda, sin carretera, sin escuela y sin animal doméstico europeo. Lo que sí hay está nombrado en los relatos: casa de pilotes con piso y techo de gualte, fogón, canasto tɨm, hoja de bijao, maíz chocosito de tuza menuda, chiro, raíz de rascadera, cueva y peña. La agricultura es de socola y tumba que se pudre: nunca se quema.",
         "constraints": [
-          "documentado: «En la montaña vivían animales y aves entre árboles viejos cubiertos de barbacha», y en el segundo relato «también allí había montaña y ríos»",
+          "documentado: «En el mundo sólo había árboles viejos cubiertos de barbacha, y entre las ramas vivían los animales y las aves», y en el segundo relato el mundo de abajo «era igual al de arriba: harta montaña y ríos»",
           "documentado: precipitaciones de 4.000 a 7.000 mm anuales, humedad relativa del 100 %, temperatura media de 18 ºC, y la lluvia que empieza «a partir del medio día», tan rutinaria «cual sería extraño el no llover»; «La Planada huele a neblina»",
           "documentado: el río del relato existe en la fuente —las dos barbachas estaban «en un árbol ubicado en la cabecera y a la orilla del río chatanalpí»— y la quebrada y la cueva del cangrejo pertenecen a ese mismo cauce",
           "documentado: los árboles son personas y «sangran como el tangare, el sangrario, el chino»",
@@ -4451,6 +5170,11 @@
           "myth": "guagaja",
           "field": "mito",
           "note": "La muerte del hermano menor ocurre dentro de la peña, donde el relato no entra: no hay una sola línea sobre el interior ni sobre el cuerpo, y la consecuencia visible es el hermano que queda solo"
+        },
+        {
+          "myth": "guagaja",
+          "field": "mito",
+          "note": "El canon reescrito añade que siembran un pedacito de tierra prestado, que derriban sin esfuerzo la mata de rascadera que allá llaman Pulgande, y que el mayor tiene arriba casa y mujer."
         }
       ],
       "design_contract": {
@@ -4458,7 +5182,7 @@
         "materials": [
           "cuerpos en papel canela oscuro con la misma gramática de cara que el resto de la gente: óvalo alargado, frente pequeña, nariz curvada, pómulos marcados",
           "el mayor con el pelo recogido en una pieza y el menor suelto en dos, que es toda la diferencia de identidad que la fuente autoriza",
-          "una sola pieza lisa a la cintura cada uno, sin estampado y sin adorno",
+          "una sola pieza de corteza batida a la cintura cada uno, en papel pardo fibroso, sin estampado y sin adorno",
           "barro de la cueva pegado a manos, antebrazos y rodillas en recortes de papel pardo oscuro, que es lo que los distingue de la gente del mundo de arriba"
         ],
         "palette_logic": "Canela oscuro y pardo de barro, sin un solo color propio: cuando bajan a Maza Su son lo más oscuro y lo más grande del encuadre, y ése es el contraste que hace legible la regla de escala sin explicarla.",
@@ -4470,8 +5194,9 @@
           "sin pintura facial, sin tocado, sin arma de metal y sin perro: el corpus no les da ningún objeto de caza"
         ],
         "documented_features": [
-          "corpus: «Uno de los hermanos entró detrás de él mientras el otro lo sostenía por los pies. El cazador alcanzó una pata del armadillo, pero el animal lo arrastró hacia el fondo. La tierra cedió»",
-          "corpus: «el hermano menor quiso vivir con una mujer del mundo de abajo… entró en la peña. Allí no pudo respirar y murió. El otro hermano quedó solo»",
+          "canon, campo mito: «Uno de los hermanos entró por el hueco mientras el otro lo sostenía de los pies. El cazador logró cogerlo de una pata y sintió que lo arrastraba más adentro… hasta que la tierra se desfondó»",
+          "canon, campo mito: al hermano menor «le gustó una mujer chiquita… entró de noche con ella a la cueva de la peña. Adentro no pudo respirar y se murió»; el mayor tiene arriba «su casa y su mujer»",
+          "canon, campo mito: los árboles le enseñaron al primer hombre «a cubrirse del frío con cáscara de árbol»: la prenda de esta gente es corteza, y es el único vestido que el corpus nombra (barbachas-del-arbol-grande)",
           "dossier §6: la fuente no los describe por separado y lo único que los distingue es la función y la edad relativa; el censo acertó al hacer una sola hoja con dos figuras distinguibles en vez de dos identidades inventadas",
           "dossier §6 sobre reglamento-espingo: la gramática de rostro awá con la que se dibujan los dos"
         ],
@@ -4489,11 +5214,12 @@
         "primary_request": "gramatica del grupo: cuantos, como se ordenan, que los hace uno para Los dos hermanos cazadores. Dos cazadores del mismo cuerpo y distinta edad, dibujados siempre unidos por el mismo gesto invertido: uno con medio cuerpo metido en el hueco y las piernas fuera, el otro agarrándolo por los tobillos y echado hacia atrás con los talones clavados. Son las dos únicas figuras de la biblia que aparecen siempre en contacto físico.",
         "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Estatura adulta común arriba y desmesurada abajo: en Maza Su su cabeza roza el techo de una casa entera y una mazorca del mundo de abajo les cabe en la palma. Toda la lámina del mundo inferior se mide contra su cuerpo, que es la única vara que el relato ofrece.",
         "lighting_mood": "Luz de bosque de niebla: difusa, sin sombra dura, filtrada por dosel y por neblina, con humedad relativa del cien por cien. El momento alto del día no es el sol sino la lluvia, que empieza al mediodía y es tan rutinaria «cual sería extraño el no llover». En el interior de la casa y en Maza Su, la única luz cálida es la del fogón siempre encendido, que se lee por fuera como oleada de humo grande o pequeña.",
-        "materials_textures": "cuerpos en papel canela oscuro con la misma gramática de cara que el resto de la gente: óvalo alargado, frente pequeña, nariz curvada, pómulos marcados; el mayor con el pelo recogido en una pieza y el menor suelto en dos, que es toda la diferencia de identidad que la fuente autoriza; una sola pieza lisa a la cintura cada uno, sin estampado y sin adorno; barro de la cueva pegado a manos, antebrazos y rodillas en recortes de papel pardo oscuro, que es lo que los distingue de la gente del mundo de arriba",
+        "materials_textures": "cuerpos en papel canela oscuro con la misma gramática de cara que el resto de la gente: óvalo alargado, frente pequeña, nariz curvada, pómulos marcados; el mayor con el pelo recogido en una pieza y el menor suelto en dos, que es toda la diferencia de identidad que la fuente autoriza; una sola pieza de corteza batida a la cintura cada uno, en papel pardo fibroso, sin estampado y sin adorno; barro de la cueva pegado a manos, antebrazos y rodillas en recortes de papel pardo oscuro, que es lo que los distingue de la gente del mundo de arriba",
         "era": "Piedemonte awá anterior al contacto material: sin hierro, sin machete, sin escopeta, sin tabla aserrada, sin clavo, sin zinc, sin plástico, sin rueda, sin carretera, sin escuela y sin animal doméstico europeo. Lo que sí hay está nombrado en los relatos: casa de pilotes con piso y techo de gualte, fogón, canasto tɨm, hoja de bijao, maíz chocosito de tuza menuda, chiro, raíz de rascadera, cueva y peña. La agricultura es de socola y tumba que se pudre: nunca se quema.",
         "constraints": [
-          "documentado: «Uno de los hermanos entró detrás de él mientras el otro lo sostenía por los pies. El cazador alcanzó una pata del armadillo, pero el animal lo arrastró hacia el fondo. La tierra cedió»",
-          "documentado: «el hermano menor quiso vivir con una mujer del mundo de abajo… entró en la peña. Allí no pudo respirar y murió. El otro hermano quedó solo»",
+          "documentado: «Uno de los hermanos entró por el hueco mientras el otro lo sostenía de los pies. El cazador logró cogerlo de una pata y sintió que lo arrastraba más adentro… hasta que la tierra se desfondó»",
+          "documentado: al hermano menor «le gustó una mujer chiquita… entró de noche con ella a la cueva de la peña. Adentro no pudo respirar y se murió»; el mayor tiene arriba «su casa y su mujer»",
+          "documentado: los árboles le enseñaron al primer hombre «a cubrirse del frío con cáscara de árbol»: la prenda de esta gente es corteza, y es el único vestido que el corpus nombra (barbachas-del-arbol-grande)",
           "documentado: la fuente no los describe por separado y lo único que los distingue es la función y la edad relativa; el censo acertó al hacer una sola hoja con dos figuras distinguibles en vez de dos identidades inventadas",
           "documentado: la gramática de rostro awá con la que se dibujan los dos",
           "Todo está mojado y nada tiene brillo: el verde es profundo y mate, y la neblina se pone como capa de papel translúcido entre planos, no como aerógrafo.",
@@ -4662,6 +5388,11 @@
           "myth": "guagaja",
           "field": "mito",
           "note": "Los Ishkum Awá son personas diminutas de nariz grande que hablan awapit, acercan la nariz y aspiran el vapor de la comida, y el PEC añade el rasgo que el relato no da: «no tienen ano». La nariz grande y el gesto de aspirar son su firma"
+        },
+        {
+          "myth": "guagaja",
+          "field": "mito",
+          "note": "El canon reescrito lleva al texto el rasgo que sólo daba el PEC: un hombre chiquito come por la boca y se hincha hasta morir «porque no tenían ano»; y ellos son «gente vuelta hormiga»."
         }
       ],
       "design_contract": {
@@ -4670,7 +5401,7 @@
           "cuerpos en papel canela oscuro, los mismos tonos que la gente de arriba, porque son Awá y hablan awapit",
           "nariz recortada grande y saliente como pieza aparte, la más marcada de esta biblia, y el resto de la cara en la misma gramática de óvalo alargado",
           "vapor como pocas piezas planas de papel gris perla translúcido subiendo del plato, con el canto visto: lo que comen es esa forma",
-          "una sola pieza lisa a la cintura, sin estampado, exactamente igual que la gente del mundo de arriba"
+          "una sola pieza de corteza a la cintura, exactamente igual que la gente del mundo de arriba, porque su mundo «era igual al de arriba»"
         ],
         "palette_logic": "Idéntica a la de la gente del mundo de arriba, y eso es lo que la ficha tiene que demostrar: en Maza Su no cambia el color, cambia el tamaño. Lo único que se añade es el gris perla translúcido del vapor, que es el único material del que se alimentan.",
         "scale": "Un tercio de la estatura de los hermanos y proporciones de adulto, nunca de niño: la lámina obliga a que en el mismo encuadre haya una figura de arriba y una de abajo, porque sin la comparación la regla de escala de este corpus no existe y el relato se desarma.",
@@ -4681,8 +5412,8 @@
           "su segunda condición no se resuelve en esta hoja: la revelación de que también son hormigas vive en la ficha de las hormigas, y las dos comparten proporciones para que el par funcione"
         ],
         "documented_features": [
-          "corpus: «Quienes salieron a recibirlos eran personas diminutas, de nariz grande, que hablaban awapit», y «acercaban la nariz, aspiraban el vapor y con eso quedaban satisfechos»",
-          "corpus: «Comprendieron que aquellas personas también eran hormigas»",
+          "canon, campo mito: «De la primera salió una gente muy chiquita, de nariz grande, que hablaba awapit», que «pasaban la nariz por encima de la comida, aspiraban el vapor y con eso quedaban llenos, bien llenos, y soltaban un eructo»",
+          "canon, campo mito: «entendieron que no eran gente sino gente vuelta hormiga»; un hombre chiquito que come por la boca se hincha hasta morir «porque no tenían ano»",
           "dossier §6 sobre pec-unipa-2019: los habitantes del mundo de abajo «cultivan maíz, comen humo y no tienen ano», rasgo que el relato no da y que es coherente con alimentarse de vapor",
           "dossier §0.3 sobre pec-unipa-2019: el armadillo y la hormiga de Maza Su «son Awá», de modo que las dos fichas de fauna del segundo relato son fichas de doble condición"
         ],
@@ -4700,11 +5431,11 @@
         "primary_request": "gramatica del grupo: cuantos, como se ordenan, que los hace uno para Los Ishkum Awá, la gente que come humo. Personas de cuerpo entero y proporción adulta completa —no niños y no enanos— reducidas a un tercio de la estatura de los hermanos, con la nariz grande y adelantada como la pieza más saliente de la cara y la cabeza echada sobre el plato: su gesto propio es aspirar, con la nariz casi tocando el vapor y la boca cerrada.",
         "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Un tercio de la estatura de los hermanos y proporciones de adulto, nunca de niño: la lámina obliga a que en el mismo encuadre haya una figura de arriba y una de abajo, porque sin la comparación la regla de escala de este corpus no existe y el relato se desarma.",
         "lighting_mood": "Luz de bosque de niebla: difusa, sin sombra dura, filtrada por dosel y por neblina, con humedad relativa del cien por cien. El momento alto del día no es el sol sino la lluvia, que empieza al mediodía y es tan rutinaria «cual sería extraño el no llover». En el interior de la casa y en Maza Su, la única luz cálida es la del fogón siempre encendido, que se lee por fuera como oleada de humo grande o pequeña.",
-        "materials_textures": "cuerpos en papel canela oscuro, los mismos tonos que la gente de arriba, porque son Awá y hablan awapit; nariz recortada grande y saliente como pieza aparte, la más marcada de esta biblia, y el resto de la cara en la misma gramática de óvalo alargado; vapor como pocas piezas planas de papel gris perla translúcido subiendo del plato, con el canto visto: lo que comen es esa forma; una sola pieza lisa a la cintura, sin estampado, exactamente igual que la gente del mundo de arriba",
+        "materials_textures": "cuerpos en papel canela oscuro, los mismos tonos que la gente de arriba, porque son Awá y hablan awapit; nariz recortada grande y saliente como pieza aparte, la más marcada de esta biblia, y el resto de la cara en la misma gramática de óvalo alargado; vapor como pocas piezas planas de papel gris perla translúcido subiendo del plato, con el canto visto: lo que comen es esa forma; una sola pieza de corteza a la cintura, exactamente igual que la gente del mundo de arriba, porque su mundo «era igual al de arriba»",
         "era": "Piedemonte awá anterior al contacto material: sin hierro, sin machete, sin escopeta, sin tabla aserrada, sin clavo, sin zinc, sin plástico, sin rueda, sin carretera, sin escuela y sin animal doméstico europeo. Lo que sí hay está nombrado en los relatos: casa de pilotes con piso y techo de gualte, fogón, canasto tɨm, hoja de bijao, maíz chocosito de tuza menuda, chiro, raíz de rascadera, cueva y peña. La agricultura es de socola y tumba que se pudre: nunca se quema.",
         "constraints": [
-          "documentado: «Quienes salieron a recibirlos eran personas diminutas, de nariz grande, que hablaban awapit», y «acercaban la nariz, aspiraban el vapor y con eso quedaban satisfechos»",
-          "documentado: «Comprendieron que aquellas personas también eran hormigas»",
+          "documentado: «De la primera salió una gente muy chiquita, de nariz grande, que hablaba awapit», que «pasaban la nariz por encima de la comida, aspiraban el vapor y con eso quedaban llenos, bien llenos, y soltaban un eructo»",
+          "documentado: «entendieron que no eran gente sino gente vuelta hormiga»; un hombre chiquito que come por la boca se hincha hasta morir «porque no tenían ano»",
           "documentado: los habitantes del mundo de abajo «cultivan maíz, comen humo y no tienen ano», rasgo que el relato no da y que es coherente con alimentarse de vapor",
           "documentado: el armadillo y la hormiga de Maza Su «son Awá», de modo que las dos fichas de fauna del segundo relato son fichas de doble condición",
           "Todo está mojado y nada tiene brillo: el verde es profundo y mate, y la neblina se pone como capa de papel translúcido entre planos, no como aerógrafo.",
@@ -5039,6 +5770,460 @@
           "view_type": "object_three_quarter",
           "purpose": "hechura, escala y uso del objeto",
           "aspect": "1:1",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_hombre_adulto__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_hombre_adulto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "Los hombres awá cazan, cargan y trabajan la tierra; dos hermanos salen de cacería."
+        },
+        {
+          "myth": "guagaja",
+          "field": "mito",
+          "note": "Los hombres awá cazan, cargan y trabajan la tierra; dos hermanos salen de cacería."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre adulto de pie, de rostro alargado, nariz curvada y pómulos marcados, con la corteza a la cintura y un canasto tɨm a la espalda con el cargador cruzado en la frente: caminante del monte, con las manos libres.",
+        "materials": [
+          "piel en papel canela oscuro mate",
+          "corteza batida a la cintura en papel pardo fibroso",
+          "canasto tɨm de silueta cónica y boca ancha, con cargador de frente, sin dibujo de tejido"
+        ],
+        "palette_logic": "Canela oscuro de piel, pardo de corteza y fibra del canasto; ninguna nota de color.",
+        "scale": "Estatura adulta corriente. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "corteza a la cintura siempre",
+          "sin pintura ni tocado",
+          "canasto o manos libres, nunca machete ni escopeta"
+        ],
+        "documented_features": [
+          "dossier §6 (reglamento-espingo): «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — la única descripción física awá hecha desde dentro",
+          "canon, campo mito: los árboles enseñaron a la gente «a cubrirse del frío con cáscara de árbol»: la prenda es corteza",
+          "dossier §6 y salvaguarda 3: ninguna figura awá lleva pintura facial ni tocado; es decisión documentada",
+          "dossier §1: nada de hierro, machete, escopeta, tela industrial, plástico ni animal doméstico europeo",
+          "canon, campo mito: «Dos hermanos salieron de cacería»; y los hijos «ayudaron en todos los oficios»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano alargado de un solo tono con la nariz curvada y los pómulos recortados aparte y la ceja como tira; el cuerpo, en pocos planos grandes de papel canela oscuro mate, sin músculo modelado.",
+          "La corteza va como una sola pieza a la cintura, en papel pardo fibroso de canto irregular: el canon nombra el material, no el corte, que es decisión reversible. Nada de camisa, pantalón, bota de caucho ni vestido largo, que son de la cadena ecuatoriana sin bibliografía (dossier §6).",
+          "El pelo es una pieza plana grande negra mate; nunca mechón por mechón."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Awa V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · hombre awá adulto. Hombre adulto de pie, de rostro alargado, nariz curvada y pómulos marcados, con la corteza a la cintura y un canasto tɨm a la espalda con el cargador cruzado en la frente: caminante del monte, con las manos libres.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura adulta corriente. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de bosque de niebla: difusa, sin sombra dura, filtrada por dosel y por neblina, con humedad relativa del cien por cien. El momento alto del día no es el sol sino la lluvia, que empieza al mediodía y es tan rutinaria «cual sería extraño el no llover». En el interior de la casa y en Maza Su, la única luz cálida es la del fogón siempre encendido, que se lee por fuera como oleada de humo grande o pequeña.",
+        "materials_textures": "piel en papel canela oscuro mate; corteza batida a la cintura en papel pardo fibroso; canasto tɨm de silueta cónica y boca ancha, con cargador de frente, sin dibujo de tejido",
+        "era": "Piedemonte awá anterior al contacto material: sin hierro, sin machete, sin escopeta, sin tabla aserrada, sin clavo, sin zinc, sin plástico, sin rueda, sin carretera, sin escuela y sin animal doméstico europeo. Lo que sí hay está nombrado en los relatos: casa de pilotes con piso y techo de gualte, fogón, canasto tɨm, hoja de bijao, maíz chocosito de tuza menuda, chiro, raíz de rascadera, cueva y peña. La agricultura es de socola y tumba que se pudre: nunca se quema.",
+        "constraints": [
+          "documentado: «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — la única descripción física awá hecha desde dentro",
+          "documentado: los árboles enseñaron a la gente «a cubrirse del frío con cáscara de árbol»: la prenda es corteza",
+          "documentado: ninguna figura awá lleva pintura facial ni tocado; es decisión documentada",
+          "documentado: nada de hierro, machete, escopeta, tela industrial, plástico ni animal doméstico europeo",
+          "documentado: «Dos hermanos salieron de cacería»; y los hijos «ayudaron en todos los oficios»",
+          "Todo está mojado y nada tiene brillo: el verde es profundo y mate, y la neblina se pone como capa de papel translúcido entre planos, no como aerógrafo.",
+          "Las dos barbachas son la única oposición de valor fuerte del corpus —gris verdoso oscuro contra crudo pálido— y esa pareja no se usa en ningún otro sitio de la lámina.",
+          "El rojo aparece exactamente en un lugar: la savia en el corte del árbol que es persona. No hay otro rojo.",
+          "La única luz cálida es el fogón, y su intensidad es narrativa: humo grande es buena comida, humo pequeño es enfermedad.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin hebras finas, grises y peinadas de musgo español: la barbacha es maraña densa de briófitas, en pocas piezas grandes y dentadas",
+          "sin cara, boca ni ojos en los árboles: el signo de que son personas es la savia roja del corte",
+          "sin claro quemado, sin tronco carbonizado y sin humo de roza: este pueblo no quema, socola y deja pudrir",
+          "sin mazorca grande y amarilla: el maíz es chocosito, de tuza menuda y granos pequeños",
+          "sin pintura facial, sin tatuaje, sin tocado y sin plumas: nada de eso está documentado para este pueblo",
+          "sin jaibaná, sin bastón de mando ceremonial, sin baile de curación y sin planta ritual: la fuente comunitaria fija el límite",
+          "sin señal, ofrenda ni marca sobre cuevas, peñas, quebradas ni nacederos, que están en la lista comunitaria de lugares sagrados",
+          "sin serpiente gigante, sin ofrendas y sin las cuatro líneas en barro: es la fabricación editorial ya retirada"
+        ],
+        "technique_close": "Todo lo anterior es papel, y aquí el papel se lee mojado: canto ablandado, sin esquina seca y sin brillo. La cara es un óvalo plano de un solo tono —rostro alargado, frente pequeña, pómulos marcados— con los rasgos recortados como piezas aparte. La barbacha, la hoja de palma y el techo son pocas piezas planas grandes con el borde recortado en dientes irregulares y superpuestas en capas, nunca fibra por fibra ni hoja por hoja. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_adulta__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_adulta"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "La mujer pare los hijos y el canasto los carga; arriba quedan casa y mujer del hermano mayor."
+        },
+        {
+          "myth": "guagaja",
+          "field": "mito",
+          "note": "La mujer pare los hijos y el canasto los carga; arriba quedan casa y mujer del hermano mayor."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer adulta de pie con el canasto tɨm a la espalda y un niño asomando por la boca, la corteza a la cintura, el pelo largo suelto y el rostro alargado de pómulos marcados.",
+        "materials": [
+          "piel en papel canela oscuro mate",
+          "corteza batida a la cintura",
+          "canasto tɨm con un niño dentro, cargador cruzado en la frente"
+        ],
+        "palette_logic": "Canela oscuro, pardo de corteza, fibra del canasto.",
+        "scale": "Algo por debajo de la estatura del hombre. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "canasto con niño como su marca",
+          "corteza a la cintura",
+          "sin pintura ni tocado"
+        ],
+        "documented_features": [
+          "dossier §6 (reglamento-espingo): «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — la única descripción física awá hecha desde dentro",
+          "canon, campo mito: los árboles enseñaron a la gente «a cubrirse del frío con cáscara de árbol»: la prenda es corteza",
+          "dossier §6 y salvaguarda 3: ninguna figura awá lleva pintura facial ni tocado; es decisión documentada",
+          "dossier §1: nada de hierro, machete, escopeta, tela industrial, plástico ni animal doméstico europeo",
+          "dossier §6 (arcos-2018): el canasto tɨm es «extensión del útero de la madre o útero de los árboles», y «los niños pequeños viajan con los padres en el canasto»",
+          "canon, campo mito: «la mujer fue pariendo hijos»; el primer canasto «carga la leña, la comida y a los hijos»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano alargado de un solo tono con la nariz curvada y los pómulos recortados aparte y la ceja como tira; el cuerpo, en pocos planos grandes de papel canela oscuro mate, sin músculo modelado.",
+          "La corteza va como una sola pieza a la cintura, en papel pardo fibroso de canto irregular: el canon nombra el material, no el corte, que es decisión reversible. Nada de camisa, pantalón, bota de caucho ni vestido largo, que son de la cadena ecuatoriana sin bibliografía (dossier §6).",
+          "El pelo es una pieza plana grande negra mate; nunca mechón por mechón."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Awa V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer awá adulta. Mujer adulta de pie con el canasto tɨm a la espalda y un niño asomando por la boca, la corteza a la cintura, el pelo largo suelto y el rostro alargado de pómulos marcados.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Algo por debajo de la estatura del hombre. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de bosque de niebla: difusa, sin sombra dura, filtrada por dosel y por neblina, con humedad relativa del cien por cien. El momento alto del día no es el sol sino la lluvia, que empieza al mediodía y es tan rutinaria «cual sería extraño el no llover». En el interior de la casa y en Maza Su, la única luz cálida es la del fogón siempre encendido, que se lee por fuera como oleada de humo grande o pequeña.",
+        "materials_textures": "piel en papel canela oscuro mate; corteza batida a la cintura; canasto tɨm con un niño dentro, cargador cruzado en la frente",
+        "era": "Piedemonte awá anterior al contacto material: sin hierro, sin machete, sin escopeta, sin tabla aserrada, sin clavo, sin zinc, sin plástico, sin rueda, sin carretera, sin escuela y sin animal doméstico europeo. Lo que sí hay está nombrado en los relatos: casa de pilotes con piso y techo de gualte, fogón, canasto tɨm, hoja de bijao, maíz chocosito de tuza menuda, chiro, raíz de rascadera, cueva y peña. La agricultura es de socola y tumba que se pudre: nunca se quema.",
+        "constraints": [
+          "documentado: «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — la única descripción física awá hecha desde dentro",
+          "documentado: los árboles enseñaron a la gente «a cubrirse del frío con cáscara de árbol»: la prenda es corteza",
+          "documentado: ninguna figura awá lleva pintura facial ni tocado; es decisión documentada",
+          "documentado: nada de hierro, machete, escopeta, tela industrial, plástico ni animal doméstico europeo",
+          "documentado: el canasto tɨm es «extensión del útero de la madre o útero de los árboles», y «los niños pequeños viajan con los padres en el canasto»",
+          "documentado: «la mujer fue pariendo hijos»; el primer canasto «carga la leña, la comida y a los hijos»",
+          "Todo está mojado y nada tiene brillo: el verde es profundo y mate, y la neblina se pone como capa de papel translúcido entre planos, no como aerógrafo.",
+          "Las dos barbachas son la única oposición de valor fuerte del corpus —gris verdoso oscuro contra crudo pálido— y esa pareja no se usa en ningún otro sitio de la lámina.",
+          "El rojo aparece exactamente en un lugar: la savia en el corte del árbol que es persona. No hay otro rojo.",
+          "La única luz cálida es el fogón, y su intensidad es narrativa: humo grande es buena comida, humo pequeño es enfermedad.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin hebras finas, grises y peinadas de musgo español: la barbacha es maraña densa de briófitas, en pocas piezas grandes y dentadas",
+          "sin cara, boca ni ojos en los árboles: el signo de que son personas es la savia roja del corte",
+          "sin claro quemado, sin tronco carbonizado y sin humo de roza: este pueblo no quema, socola y deja pudrir",
+          "sin mazorca grande y amarilla: el maíz es chocosito, de tuza menuda y granos pequeños",
+          "sin pintura facial, sin tatuaje, sin tocado y sin plumas: nada de eso está documentado para este pueblo",
+          "sin jaibaná, sin bastón de mando ceremonial, sin baile de curación y sin planta ritual: la fuente comunitaria fija el límite",
+          "sin señal, ofrenda ni marca sobre cuevas, peñas, quebradas ni nacederos, que están en la lista comunitaria de lugares sagrados",
+          "sin serpiente gigante, sin ofrendas y sin las cuatro líneas en barro: es la fabricación editorial ya retirada"
+        ],
+        "technique_close": "Todo lo anterior es papel, y aquí el papel se lee mojado: canto ablandado, sin esquina seca y sin brillo. La cara es un óvalo plano de un solo tono —rostro alargado, frente pequeña, pómulos marcados— con los rasgos recortados como piezas aparte. La barbacha, la hoja de palma y el techo son pocas piezas planas grandes con el borde recortado en dientes irregulares y superpuestas en capas, nunca fibra por fibra ni hoja por hoja. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_joven__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_joven"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "La barbacha clara se vuelve una mujer joven."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer joven, delgada y erguida, de rostro alargado y pómulos marcados, el pelo largo suelto, la corteza a la cintura y las manos alzadas hacia una fibra que cuelga, como quien bebe de ella.",
+        "materials": [
+          "piel en papel canela oscuro mate",
+          "corteza batida a la cintura",
+          "pelo largo suelto en una pieza negra mate"
+        ],
+        "palette_logic": "Canela oscuro y pardo de corteza; sin canasto.",
+        "scale": "Un palmo por debajo del hombre adulto. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "pelo suelto",
+          "corteza a la cintura",
+          "sin canasto: es su diferencia con la madre"
+        ],
+        "documented_features": [
+          "dossier §6 (reglamento-espingo): «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — la única descripción física awá hecha desde dentro",
+          "canon, campo mito: los árboles enseñaron a la gente «a cubrirse del frío con cáscara de árbol»: la prenda es corteza",
+          "dossier §6 y salvaguarda 3: ninguna figura awá lleva pintura facial ni tocado; es decisión documentada",
+          "dossier §1: nada de hierro, machete, escopeta, tela industrial, plástico ni animal doméstico europeo",
+          "canon, campo mito: la barbacha clara «se convirtió en una mujer joven»; dossier §6: es ashampa, «muy bonita y joven»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano alargado de un solo tono con la nariz curvada y los pómulos recortados aparte y la ceja como tira; el cuerpo, en pocos planos grandes de papel canela oscuro mate, sin músculo modelado.",
+          "La corteza va como una sola pieza a la cintura, en papel pardo fibroso de canto irregular: el canon nombra el material, no el corte, que es decisión reversible. Nada de camisa, pantalón, bota de caucho ni vestido largo, que son de la cadena ecuatoriana sin bibliografía (dossier §6).",
+          "El pelo es una pieza plana grande negra mate; nunca mechón por mechón.",
+          "«Muy bonita» no se traduce a rasgo: la cara es la misma gramática que las demás."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Awa V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer awá joven. Mujer joven, delgada y erguida, de rostro alargado y pómulos marcados, el pelo largo suelto, la corteza a la cintura y las manos alzadas hacia una fibra que cuelga, como quien bebe de ella.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Un palmo por debajo del hombre adulto. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de bosque de niebla: difusa, sin sombra dura, filtrada por dosel y por neblina, con humedad relativa del cien por cien. El momento alto del día no es el sol sino la lluvia, que empieza al mediodía y es tan rutinaria «cual sería extraño el no llover». En el interior de la casa y en Maza Su, la única luz cálida es la del fogón siempre encendido, que se lee por fuera como oleada de humo grande o pequeña.",
+        "materials_textures": "piel en papel canela oscuro mate; corteza batida a la cintura; pelo largo suelto en una pieza negra mate",
+        "era": "Piedemonte awá anterior al contacto material: sin hierro, sin machete, sin escopeta, sin tabla aserrada, sin clavo, sin zinc, sin plástico, sin rueda, sin carretera, sin escuela y sin animal doméstico europeo. Lo que sí hay está nombrado en los relatos: casa de pilotes con piso y techo de gualte, fogón, canasto tɨm, hoja de bijao, maíz chocosito de tuza menuda, chiro, raíz de rascadera, cueva y peña. La agricultura es de socola y tumba que se pudre: nunca se quema.",
+        "constraints": [
+          "documentado: «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — la única descripción física awá hecha desde dentro",
+          "documentado: los árboles enseñaron a la gente «a cubrirse del frío con cáscara de árbol»: la prenda es corteza",
+          "documentado: ninguna figura awá lleva pintura facial ni tocado; es decisión documentada",
+          "documentado: nada de hierro, machete, escopeta, tela industrial, plástico ni animal doméstico europeo",
+          "documentado: la barbacha clara «se convirtió en una mujer joven»; dossier §6: es ashampa, «muy bonita y joven»",
+          "Todo está mojado y nada tiene brillo: el verde es profundo y mate, y la neblina se pone como capa de papel translúcido entre planos, no como aerógrafo.",
+          "Las dos barbachas son la única oposición de valor fuerte del corpus —gris verdoso oscuro contra crudo pálido— y esa pareja no se usa en ningún otro sitio de la lámina.",
+          "El rojo aparece exactamente en un lugar: la savia en el corte del árbol que es persona. No hay otro rojo.",
+          "La única luz cálida es el fogón, y su intensidad es narrativa: humo grande es buena comida, humo pequeño es enfermedad.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin hebras finas, grises y peinadas de musgo español: la barbacha es maraña densa de briófitas, en pocas piezas grandes y dentadas",
+          "sin cara, boca ni ojos en los árboles: el signo de que son personas es la savia roja del corte",
+          "sin claro quemado, sin tronco carbonizado y sin humo de roza: este pueblo no quema, socola y deja pudrir",
+          "sin mazorca grande y amarilla: el maíz es chocosito, de tuza menuda y granos pequeños",
+          "sin pintura facial, sin tatuaje, sin tocado y sin plumas: nada de eso está documentado para este pueblo",
+          "sin jaibaná, sin bastón de mando ceremonial, sin baile de curación y sin planta ritual: la fuente comunitaria fija el límite",
+          "sin señal, ofrenda ni marca sobre cuevas, peñas, quebradas ni nacederos, que están en la lista comunitaria de lugares sagrados",
+          "sin serpiente gigante, sin ofrendas y sin las cuatro líneas en barro: es la fabricación editorial ya retirada"
+        ],
+        "technique_close": "Todo lo anterior es papel, y aquí el papel se lee mojado: canto ablandado, sin esquina seca y sin brillo. La cara es un óvalo plano de un solo tono —rostro alargado, frente pequeña, pómulos marcados— con los rasgos recortados como piezas aparte. La barbacha, la hoja de palma y el techo son pocas piezas planas grandes con el borde recortado en dientes irregulares y superpuestas en capas, nunca fibra por fibra ni hoja por hoja. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_nino__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_nino"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "Los hijos crecen y el canasto los carga."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Niño pequeño sentado dentro del canasto tɨm, con la cabeza y los hombros fuera de la boca y las manos en el borde: la silueta del niño awá es la del canasto que lo lleva.",
+        "materials": [
+          "piel en papel canela oscuro mate",
+          "canasto tɨm como marco de la figura",
+          "pelo corto en una pieza"
+        ],
+        "palette_logic": "Canela oscuro y fibra del canasto.",
+        "scale": "Cabe entero en el canasto; de pie, a la cintura de un adulto. Cuerpo entero 9:16, con una vista de pie junto al canasto.",
+        "continuity_markers": [
+          "dentro del canasto o junto a él",
+          "sin prenda: es niño pequeño",
+          "rostro de la misma gramática, más redondo"
+        ],
+        "documented_features": [
+          "dossier §6 (reglamento-espingo): «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — la única descripción física awá hecha desde dentro",
+          "canon, campo mito: los árboles enseñaron a la gente «a cubrirse del frío con cáscara de árbol»: la prenda es corteza",
+          "dossier §6 y salvaguarda 3: ninguna figura awá lleva pintura facial ni tocado; es decisión documentada",
+          "dossier §1: nada de hierro, machete, escopeta, tela industrial, plástico ni animal doméstico europeo",
+          "dossier §6 (arcos-2018): «los niños pequeños viajan con los padres en el canasto»",
+          "canon, campo mito: el primer canasto carga «a los hijos»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano alargado de un solo tono con la nariz curvada y los pómulos recortados aparte y la ceja como tira; el cuerpo, en pocos planos grandes de papel canela oscuro mate, sin músculo modelado.",
+          "La corteza va como una sola pieza a la cintura, en papel pardo fibroso de canto irregular: el canon nombra el material, no el corte, que es decisión reversible. Nada de camisa, pantalón, bota de caucho ni vestido largo, que son de la cadena ecuatoriana sin bibliografía (dossier §6).",
+          "El pelo es una pieza plana grande negra mate; nunca mechón por mechón.",
+          "Sin corteza por edad: decisión de hoja, reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Awa V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · niño awá. Niño pequeño sentado dentro del canasto tɨm, con la cabeza y los hombros fuera de la boca y las manos en el borde: la silueta del niño awá es la del canasto que lo lleva.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Cabe entero en el canasto; de pie, a la cintura de un adulto. Cuerpo entero 9:16, con una vista de pie junto al canasto.",
+        "lighting_mood": "Luz de bosque de niebla: difusa, sin sombra dura, filtrada por dosel y por neblina, con humedad relativa del cien por cien. El momento alto del día no es el sol sino la lluvia, que empieza al mediodía y es tan rutinaria «cual sería extraño el no llover». En el interior de la casa y en Maza Su, la única luz cálida es la del fogón siempre encendido, que se lee por fuera como oleada de humo grande o pequeña.",
+        "materials_textures": "piel en papel canela oscuro mate; canasto tɨm como marco de la figura; pelo corto en una pieza",
+        "era": "Piedemonte awá anterior al contacto material: sin hierro, sin machete, sin escopeta, sin tabla aserrada, sin clavo, sin zinc, sin plástico, sin rueda, sin carretera, sin escuela y sin animal doméstico europeo. Lo que sí hay está nombrado en los relatos: casa de pilotes con piso y techo de gualte, fogón, canasto tɨm, hoja de bijao, maíz chocosito de tuza menuda, chiro, raíz de rascadera, cueva y peña. La agricultura es de socola y tumba que se pudre: nunca se quema.",
+        "constraints": [
+          "documentado: «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — la única descripción física awá hecha desde dentro",
+          "documentado: los árboles enseñaron a la gente «a cubrirse del frío con cáscara de árbol»: la prenda es corteza",
+          "documentado: ninguna figura awá lleva pintura facial ni tocado; es decisión documentada",
+          "documentado: nada de hierro, machete, escopeta, tela industrial, plástico ni animal doméstico europeo",
+          "documentado: «los niños pequeños viajan con los padres en el canasto»",
+          "documentado: el primer canasto carga «a los hijos»",
+          "Todo está mojado y nada tiene brillo: el verde es profundo y mate, y la neblina se pone como capa de papel translúcido entre planos, no como aerógrafo.",
+          "Las dos barbachas son la única oposición de valor fuerte del corpus —gris verdoso oscuro contra crudo pálido— y esa pareja no se usa en ningún otro sitio de la lámina.",
+          "El rojo aparece exactamente en un lugar: la savia en el corte del árbol que es persona. No hay otro rojo.",
+          "La única luz cálida es el fogón, y su intensidad es narrativa: humo grande es buena comida, humo pequeño es enfermedad.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin hebras finas, grises y peinadas de musgo español: la barbacha es maraña densa de briófitas, en pocas piezas grandes y dentadas",
+          "sin cara, boca ni ojos en los árboles: el signo de que son personas es la savia roja del corte",
+          "sin claro quemado, sin tronco carbonizado y sin humo de roza: este pueblo no quema, socola y deja pudrir",
+          "sin mazorca grande y amarilla: el maíz es chocosito, de tuza menuda y granos pequeños",
+          "sin pintura facial, sin tatuaje, sin tocado y sin plumas: nada de eso está documentado para este pueblo",
+          "sin jaibaná, sin bastón de mando ceremonial, sin baile de curación y sin planta ritual: la fuente comunitaria fija el límite",
+          "sin señal, ofrenda ni marca sobre cuevas, peñas, quebradas ni nacederos, que están en la lista comunitaria de lugares sagrados",
+          "sin serpiente gigante, sin ofrendas y sin las cuatro líneas en barro: es la fabricación editorial ya retirada"
+        ],
+        "technique_close": "Todo lo anterior es papel, y aquí el papel se lee mojado: canto ablandado, sin esquina seca y sin brillo. La cara es un óvalo plano de un solo tono —rostro alargado, frente pequeña, pómulos marcados— con los rasgos recortados como piezas aparte. La barbacha, la hoja de palma y el techo son pocas piezas planas grandes con el borde recortado en dientes irregulares y superpuestas en capas, nunca fibra por fibra ni hoja por hoja. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_anciano__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_anciano"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "barbachas-del-arbol-grande",
+          "field": "mito",
+          "note": "El primer hombre envejece y encanece antes de tener compañía."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre viejo de pie, algo encorvado, con el pelo blanco grisáceo en una sola pieza, la corteza a la cintura y la piel un punto más oscura que la de los jóvenes: la edad se lee por el pelo, la curva y el tono, no por arrugas dibujadas.",
+        "materials": [
+          "piel en el canela más oscuro de la hoja",
+          "pelo en una pieza plana blanco grisáceo",
+          "corteza batida a la cintura"
+        ],
+        "palette_logic": "Canela oscuro profundo, pelo blanco grisáceo, pardo de corteza.",
+        "scale": "Estatura adulta reducida por la curva. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "pelo cano siempre",
+          "piel más oscura que la de los jóvenes",
+          "corteza a la cintura"
+        ],
+        "documented_features": [
+          "dossier §6 (reglamento-espingo): «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — la única descripción física awá hecha desde dentro",
+          "canon, campo mito: los árboles enseñaron a la gente «a cubrirse del frío con cáscara de árbol»: la prenda es corteza",
+          "dossier §6 y salvaguarda 3: ninguna figura awá lleva pintura facial ni tocado; es decisión documentada",
+          "dossier §1: nada de hierro, machete, escopeta, tela industrial, plástico ni animal doméstico europeo",
+          "dossier §6: al envejecer el primer hombre queda «canoso, arrugado… del color del Awá del monte»",
+          "canon, campo mito: «El hombre envejeció, encaneció»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano alargado de un solo tono con la nariz curvada y los pómulos recortados aparte y la ceja como tira; el cuerpo, en pocos planos grandes de papel canela oscuro mate, sin músculo modelado.",
+          "La corteza va como una sola pieza a la cintura, en papel pardo fibroso de canto irregular: el canon nombra el material, no el corte, que es decisión reversible. Nada de camisa, pantalón, bota de caucho ni vestido largo, que son de la cadena ecuatoriana sin bibliografía (dossier §6).",
+          "El pelo es una pieza plana grande negra mate; nunca mechón por mechón.",
+          "Las arrugas de la fuente no se dibujan: la técnica no modela rostro. Se resuelven en el pelo y en el tono."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Awa V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · anciano awá. Hombre viejo de pie, algo encorvado, con el pelo blanco grisáceo en una sola pieza, la corteza a la cintura y la piel un punto más oscura que la de los jóvenes: la edad se lee por el pelo, la curva y el tono, no por arrugas dibujadas.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura adulta reducida por la curva. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de bosque de niebla: difusa, sin sombra dura, filtrada por dosel y por neblina, con humedad relativa del cien por cien. El momento alto del día no es el sol sino la lluvia, que empieza al mediodía y es tan rutinaria «cual sería extraño el no llover». En el interior de la casa y en Maza Su, la única luz cálida es la del fogón siempre encendido, que se lee por fuera como oleada de humo grande o pequeña.",
+        "materials_textures": "piel en el canela más oscuro de la hoja; pelo en una pieza plana blanco grisáceo; corteza batida a la cintura",
+        "era": "Piedemonte awá anterior al contacto material: sin hierro, sin machete, sin escopeta, sin tabla aserrada, sin clavo, sin zinc, sin plástico, sin rueda, sin carretera, sin escuela y sin animal doméstico europeo. Lo que sí hay está nombrado en los relatos: casa de pilotes con piso y techo de gualte, fogón, canasto tɨm, hoja de bijao, maíz chocosito de tuza menuda, chiro, raíz de rascadera, cueva y peña. La agricultura es de socola y tumba que se pudre: nunca se quema.",
+        "constraints": [
+          "documentado: «Sus rostros son un poco alargados, su frente pequeña, su nariz curvada, sus pómulos muy notorios y el color de su piel canela oscuro» — la única descripción física awá hecha desde dentro",
+          "documentado: los árboles enseñaron a la gente «a cubrirse del frío con cáscara de árbol»: la prenda es corteza",
+          "documentado: ninguna figura awá lleva pintura facial ni tocado; es decisión documentada",
+          "documentado: nada de hierro, machete, escopeta, tela industrial, plástico ni animal doméstico europeo",
+          "documentado: al envejecer el primer hombre queda «canoso, arrugado… del color del Awá del monte»",
+          "documentado: «El hombre envejeció, encaneció»",
+          "Todo está mojado y nada tiene brillo: el verde es profundo y mate, y la neblina se pone como capa de papel translúcido entre planos, no como aerógrafo.",
+          "Las dos barbachas son la única oposición de valor fuerte del corpus —gris verdoso oscuro contra crudo pálido— y esa pareja no se usa en ningún otro sitio de la lámina.",
+          "El rojo aparece exactamente en un lugar: la savia en el corte del árbol que es persona. No hay otro rojo.",
+          "La única luz cálida es el fogón, y su intensidad es narrativa: humo grande es buena comida, humo pequeño es enfermedad.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin hebras finas, grises y peinadas de musgo español: la barbacha es maraña densa de briófitas, en pocas piezas grandes y dentadas",
+          "sin cara, boca ni ojos en los árboles: el signo de que son personas es la savia roja del corte",
+          "sin claro quemado, sin tronco carbonizado y sin humo de roza: este pueblo no quema, socola y deja pudrir",
+          "sin mazorca grande y amarilla: el maíz es chocosito, de tuza menuda y granos pequeños",
+          "sin pintura facial, sin tatuaje, sin tocado y sin plumas: nada de eso está documentado para este pueblo",
+          "sin jaibaná, sin bastón de mando ceremonial, sin baile de curación y sin planta ritual: la fuente comunitaria fija el límite",
+          "sin señal, ofrenda ni marca sobre cuevas, peñas, quebradas ni nacederos, que están en la lista comunitaria de lugares sagrados",
+          "sin serpiente gigante, sin ofrendas y sin las cuatro líneas en barro: es la fabricación editorial ya retirada"
+        ],
+        "technique_close": "Todo lo anterior es papel, y aquí el papel se lee mojado: canto ablandado, sin esquina seca y sin brillo. La cara es un óvalo plano de un solo tono —rostro alargado, frente pequeña, pómulos marcados— con los rasgos recortados como piezas aparte. La barbacha, la hoja de palma y el techo son pocas piezas planas grandes con el borde recortado en dientes irregulares y superpuestas en capas, nunca fibra por fibra ni hoja por hoja. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],

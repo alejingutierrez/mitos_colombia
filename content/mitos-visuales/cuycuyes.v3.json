@@ -993,8 +993,8 @@
     "dossier": "docs/investigacion/cuycuyes.md"
   },
   "inventory": {
-    "status": "reconciling",
-    "frozen": false,
+    "status": "approved_frozen",
+    "frozen": true,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -1004,7 +1004,7 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19",
+    "approved_at": "2026-09-24",
     "reconciliation": {
       "opened_at": "2026-09-24",
       "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
@@ -1013,8 +1013,33 @@
         "el-tesoro-del-pipinta"
       ],
       "new_myths": [],
-      "unchanged_myths": []
-    }
+      "unchanged_myths": [],
+      "closed_at": "2026-09-24",
+      "summary": "2 relatos releídos: 11 añadidas (ídolo de Paucura requerido; Pimana, Yayo y Paco, loma de los Armados y laguna del Rayo embebidos; ídolos del retrete, consulta a oscuras, jefes mutilados, capitán extranjero y Cirigua excluidos), 1 excluida por el canon nuevo (escalas labradas y segunda piedra), 10 rediseñadas (humo, especialistas, comunidad, alero del tesoro, acceso, mica, adornos, Pipintá pasa a embebido en el anciano, Maitamá) y 3 tipos base de la capa de contacto; mujer joven, niño y anciana declarados ausentes."
+    },
+    "declared_absences": [
+      {
+        "entity_id": "tipo_mujer_joven",
+        "name": "Tipo base · mujer joven de Arma",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Ninguno de los dos relatos pone en escena a nadie de esa edad en la capa de contacto; y los tipos base no se hacen de la capa de arriería, que tiene su propia gramática en los arrieros y no se mezcla con ésta. No se inventa."
+      },
+      {
+        "entity_id": "tipo_nino",
+        "name": "Tipo base · niño de Arma",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Ninguno de los dos relatos pone en escena a nadie de esa edad en la capa de contacto; y los tipos base no se hacen de la capa de arriería, que tiene su propia gramática en los arrieros y no se mezcla con ésta. No se inventa."
+      },
+      {
+        "entity_id": "tipo_anciana",
+        "name": "Tipo base · anciana de Arma",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Ninguno de los dos relatos pone en escena a nadie de esa edad en la capa de contacto; y los tipos base no se hacen de la capa de arriería, que tiene su propia gramática en los arrieros y no se mezcla con ésta. No se inventa."
+      }
+    ]
   },
   "myths": {
     "el-diablo": {
@@ -1037,9 +1062,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura separó lo que el cronista vio de lo que la divulgación le añadió, y de ese corte salieron cinco correcciones seguidas dentro de un solo párrafo: no son vasijas sino encensarios de barro, en plural y como tipo que existe en el registro excavado; no son flores cortadas sino hierbas rastreras que «casi no salían de la tierra», cada una con una sola flor, una blanca y otra tan oscura que sólo puede ser púrpura casi negro porque no hay pigmentos negros verdaderos en flores; el humo en capas no está en la fuente y pasa a ser decisión editorial declarada en vez de dato; la figura no es genérica sino «en figura de indio» y responde a los sacerdotes y no a cualquiera; y el recinto tiene tres capas —aposento, espacio esterado, y en lo secreto un retrete— y el oratorio que el cronista dice haber visto estaba en Paucora y no en Arma. Toda la escena existe en un solo párrafo de toda la obra, y por eso la ambigüedad se decide una vez y no se aclara después.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito lleva al texto lo que la nota anterior había marcado como divulgación —el humo que sube despacio, borra las esteras, cambia la luz y deja el cuarto sin fondo—, retira las preguntas por las sementeras, pone la tierra del señor Yayo como origen de las hierbas y añade entero su contrario: el ídolo de madera de tamaño humano con los brazos abiertos a la puerta de Pimana en Paucura, afuera y mudo, que gana ficha; los ídolos del retrete se nombran sin forma y Cirigua sale del canon.",
         "previous_note": "La lectura separó lo que el cronista vio de lo que la divulgación le añadió, y de ese corte salieron cinco correcciones seguidas dentro de un solo párrafo: no son vasijas sino encensarios de barro, en plural y como tipo que existe en el registro excavado; no son flores cortadas sino hierbas rastreras que «casi no salían de la tierra», cada una con una sola flor, una blanca y otra tan oscura que sólo puede ser púrpura casi negro porque no hay pigmentos negros verdaderos en flores; el humo en capas no está en la fuente y pasa a ser decisión editorial declarada en vez de dato; la figura no es genérica sino «en figura de indio» y responde a los sacerdotes y no a cualquiera; y el recinto tiene tres capas —aposento, espacio esterado, y en lo secreto un retrete— y el oratorio que el cronista dice haber visto estaba en Paucora y no en Arma. Toda la escena existe en un solo párrafo de toda la obra, y por eso la ambigüedad se decide una vez y no se aclara después."
       },
       "entity_refs": [
@@ -1147,6 +1172,46 @@
           "entity_id": "hoja_utileria_cuycuyes",
           "role": "plot_object",
           "note": "Los tres objetos menores del corpus: las resinas del sahumerio del siglo XVI y las mantas y sombreros de caña que quedaron dentro de la cámara. Son pocos, pero la hoja es necesaria porque en los tres la fuente omite la forma y el error posible es de época, no de dibujo: cada pieza debe declarar a qué siglo pertenece lo que se representa."
+        },
+        {
+          "entity_id": "idolo-de-paucura",
+          "role": "secondary",
+          "note": "Nuevo en el canon reescrito: la figura de madera afuera, contraria al ser del retrete."
+        },
+        {
+          "entity_id": "pimana-y-paucura",
+          "role": "setting",
+          "note": "Sitúa el ídolo; embebido en su hoja."
+        },
+        {
+          "entity_id": "idolos-del-retrete",
+          "role": "secondary",
+          "note": "Nombrados sin forma; fuera de lámina."
+        },
+        {
+          "entity_id": "yayo-y-paco",
+          "role": "secondary",
+          "note": "Yayo, el señor de la tierra de las hierbas."
+        },
+        {
+          "entity_id": "consulta-a-oscuras-de-anserma",
+          "role": "variant",
+          "note": "Tercer modo de consulta; no se funde."
+        },
+        {
+          "entity_id": "cirigua",
+          "role": "secondary",
+          "note": "Ya no está en el canon; excluido con su retrato preservado en la gramática de cuerpo."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base de la capa de contacto: los hombres de Arma."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base de la capa de contacto: las mujeres de Arma."
         }
       ]
     },
@@ -1170,9 +1235,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura separó la cámara de la geología que se le supone, y la separación se hizo contando: sobre las ciento setenta y cuatro páginas de la memoria oficial de las planchas que cubren estos tres municipios hay cero ocurrencias de «cueva», cero de «caverna» y cero de «dolomía», y lo que hay es un manto de roca podrida de decenas de metros sobre esquistos y serpentinitas cuya forma característica no es la dolina sino el deslizamiento — de modo que la cámara no es kárstica pero sí tiene correlato, y es arqueológico: un abrigo con escalas labradas por mano humana y una piedra grabada al frente, que dos municipios se disputan, razón por la cual la prohibición de localización va reforzada y no relajada; la segunda separación fue de siglos y la hacen dos objetos, porque unas mantas plegadas de seis hilos por cuarto de pulgada y unos sombreros de cañabrava fechan el interior de la cueva en el siglo XIX, y un escondite prehispánico no tendría ni lo uno ni lo otro.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito abre con el oro de guerra entero —cascos, coronas, narigueras, pectorales, petos, puñetes y ajorcas como una coraza— en la loma de los Armados, trae a Maitamá resistiendo y a los jefes devueltos mutilados, da a Pipintá su única línea de cuerpo (viejo y riquísimo, con un joven ante el capitán), cambia el acceso a escalas de piedra natural y un alero —se caen la roca-tapón, la segunda piedra y las escalas labradas—, fija la mica en manos de la guardiana y añade la laguna del Rayo con su cobre.",
         "previous_note": "La lectura separó la cámara de la geología que se le supone, y la separación se hizo contando: sobre las ciento setenta y cuatro páginas de la memoria oficial de las planchas que cubren estos tres municipios hay cero ocurrencias de «cueva», cero de «caverna» y cero de «dolomía», y lo que hay es un manto de roca podrida de decenas de metros sobre esquistos y serpentinitas cuya forma característica no es la dolina sino el deslizamiento — de modo que la cámara no es kárstica pero sí tiene correlato, y es arqueológico: un abrigo con escalas labradas por mano humana y una piedra grabada al frente, que dos municipios se disputan, razón por la cual la prohibición de localización va reforzada y no relajada; la segunda separación fue de siglos y la hacen dos objetos, porque unas mantas plegadas de seis hilos por cuarto de pulgada y unos sombreros de cañabrava fechan el interior de la cueva en el siglo XIX, y un escondite prehispánico no tendría ni lo uno ni lo otro."
       },
       "entity_refs": [
@@ -1315,6 +1380,51 @@
           "entity_id": "hoja_utileria_cuycuyes",
           "role": "plot_object",
           "note": "Los tres objetos menores del corpus: las resinas del sahumerio del siglo XVI y las mantas y sombreros de caña que quedaron dentro de la cámara. Son pocos, pero la hoja es necesaria porque en los tres la fuente omite la forma y el error posible es de época, no de dibujo: cada pieza debe declarar a qué siglo pertenece lo que se representa."
+        },
+        {
+          "entity_id": "yayo-y-paco",
+          "role": "variant",
+          "note": "Paco y Yayo, jefes de los armados en la monografía de Aguadas."
+        },
+        {
+          "entity_id": "cirigua",
+          "role": "secondary",
+          "note": "Ya no está en el canon; excluido."
+        },
+        {
+          "entity_id": "loma-de-los-armados",
+          "role": "setting",
+          "note": "Nueva: sitúa a los armados de oro."
+        },
+        {
+          "entity_id": "jefes-devueltos-mutilados",
+          "role": "secondary",
+          "note": "Nueva; violencia que no se dibuja."
+        },
+        {
+          "entity_id": "capitan-extranjero",
+          "role": "secondary",
+          "note": "Nombrado sin escena."
+        },
+        {
+          "entity_id": "laguna-del-rayo",
+          "role": "setting",
+          "note": "Nueva: el lugar donde los buscadores hallan cobre."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base de la capa de contacto: los hombres de Arma."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base de la capa de contacto: las mujeres de Arma."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Tipo base de la capa de contacto: el viejo, que cubre a Pipintá."
         }
       ]
     }
@@ -1371,6 +1481,11 @@
           "myth": "el-diablo",
           "field": "mito",
           "note": "El cronista no es un observador neutral y conviene declararlo: «el repartimiento de indios que por mis servicios se me dio fue en los términos desta villa». Era vecino y encomendero del territorio que describe, lo que agrava su elogio del oro tanto como su lectura demonológica"
+        },
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "«La respuesta llegaba en figura de indio y con los ojos muy resplandecientes… No dejaba nombre, ni rostro que pudiera dibujarse, ni palabra que los demás hubieran oído.»"
         }
       ],
       "census_note": "Es el objeto por el que se cuenta el relato y conduce la única acción sobrenatural: aparece dentro del humo y responde a los ministros del rito. La hoja existe sobre todo para fijar lo que NO puede hacerse, que los dos prompts ya escriben: silueta humana ambigua sugerida por el humo, dos puntos de luz sobrios en los ojos, sin rostro monstruoso, sin figura literal, sin cuernos, sin ídolo monumental y sin identificarla como Calgari. La crónica no le da nombre ni palabras y la ficha tampoco.",
@@ -1516,7 +1631,7 @@
     "especialistas-del-rito": {
       "name": "Especialistas que conducen la ceremonia",
       "kind": "colectivo",
-      "description": "Conducen toda la acción del relato: preparan las vasijas, ponen las resinas y las flores, llenan el cuarto de humo y formulan las preguntas por las cosechas y el bienestar de la provincia. El prompt horizontal pide tres. Gramática de grupo del siglo XVI: sin tocados panindígenas y sin símbolos aztecas, mayas ni muiscas, que es la advertencia literal del prompt de comunidad.",
+      "description": "Conducen toda la acción del relato: preparan las vasijas, ponen las resinas y las flores, llenan el cuarto de humo y formulan las preguntas —«lo que querían saber y todavía no podían», sin decir qué: el canon reescrito retira las preguntas por las sementeras. El prompt horizontal pide tres. Gramática de grupo del siglo XVI: sin tocados panindígenas y sin símbolos aztecas, mayas ni muiscas, que es la advertencia literal del prompt de comunidad.",
       "aliases": [],
       "states": [
         "canonico"
@@ -1554,6 +1669,11 @@
           "myth": "el-diablo",
           "field": "mito",
           "note": "La resina une los dos actos del primer relato con un solo material: la misma familia de resina olorosa que se quema en el retrete del oratorio es la que un cacique lleva untada por todo el cuerpo bajo el polvo rojo. Lo que en la escena ritual es humo, en el cuerpo es capa, y eso da a la biblia una coherencia material que no hay que inventar"
+        },
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "El canon reescrito los llama «los ministros»: preguntan «lo que querían saber y todavía no podían», y al salir repiten lo que oyeron; las preguntas por las sementeras se retiran (canon, campo historia)."
         }
       ],
       "census_note": "Conducen toda la acción del relato: preparan las vasijas, ponen las resinas y las flores, llenan el cuarto de humo y formulan las preguntas por las cosechas y el bienestar de la provincia. El prompt horizontal pide tres. Gramática de grupo del siglo XVI: sin tocados panindígenas y sin símbolos aztecas, mayas ni muiscas, que es la advertencia literal del prompt de comunidad.",
@@ -1900,7 +2020,8 @@
           "dossier §2 y §12.3 (cuy-cieza-1553): «quemaban ciertas hierbas menudas… tan menudas que casi no salían de la tierra; unas tenían una flor muy negra y otras la tenían blanca; en el olor parescían a verbena» — son hierbas rastreras con una flor cada una, dos plantas y no un ramillete",
           "dossier §1.1: «blancas» y «negras» aparecen dos veces cada una en los cuatro campos de los dos mitos y siempre en la misma expresión: son el único vocabulario cromático del corpus y hay que reservarlo para donde está",
           "dossier §5: la verbena del cronista es una comparación de olor y no una determinación botánica; no hay identificación de especie y no hay arqueobotánica de contenidos de incensarios en esta región",
-          "dossier §5: una flor «muy negra» es botánicamente casi imposible porque no existen pigmentos negros verdaderos en flores; lo real sería púrpura muy oscuro, casi negro a contraluz, y así debe pintarse"
+          "dossier §5: una flor «muy negra» es botánicamente casi imposible porque no existen pigmentos negros verdaderos en flores; lo real sería púrpura muy oscuro, casi negro a contraluz, y así debe pintarse",
+          "canon, campo mito: las hierbas «crecían en la tierra del señor Yayo, y de allí se traían»"
         ],
         "editorial": [
           "la forma de la hoja, el número de pétalos y el porte exacto son invención declarada: no hay identificación botánica y la plancha se mantiene deliberadamente genérica para no fijar una especie que la fuente no nombra",
@@ -2009,6 +2130,11 @@
           "myth": "el-diablo",
           "field": "mito",
           "note": "La resina une los dos actos del primer relato con un solo material: la misma familia de resina olorosa que se quema en el retrete del oratorio es la que un cacique lleva untada por todo el cuerpo bajo el polvo rojo. Lo que en la escena ritual es humo, en el cuerpo es capa, y eso da a la biblia una coherencia material que no hay que inventar"
+        },
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "El canon reescrito describe el humo que el cronista no describía: sube despacio, llena el retrete, borra los bordes de las esteras, cambia el color de la luz y deja el cuarto sin fondo."
         }
       ],
       "census_note": "Regla de atmósfera, distinta de la ficha del ser: el humo llena el cuarto en capas lentas, oculta los bordes de las esteras y cambia la luz, y es lo que en los dos prompts sugiere la silueta. Sin una regla escrita, cada escena resolverá la niebla de manera distinta y la ambigüedad —que es el argumento— se perderá.",
@@ -2029,12 +2155,13 @@
           "pertenece sólo al oratorio y no entra en ninguna lámina del camino: la bruma exterior es otra ficha y otra luz"
         ],
         "documented": [
+          "canon, campo mito: «El humo subía despacio y llenaba el retrete. Los bordes de las esteras se perdían, la luz cambiaba de color, el cuarto se quedaba sin fondo»",
           "dossier §2 (cuy-cieza-1553): lo que la fuente sí dice es que quemaban hierbas y resinas delante de sus ídolos dentro del retrete, y que después venía la figura de ojos resplandecientes: el humo existe por el acto, no por descripción",
           "dossier §1.3 (cuy-briofitos-2026): la iluminancia mediana de la franja alta de esta cordillera es de 544 lux frente a 1.077,5 abajo, con humedad de 89,6 %, y esa penumbra medida es el proxy del que sale la luz general del corpus",
           "dossier §5: el protocolo de brasa no tiene dato colombiano revisado — ni color de humo, ni fusión previa—, y todo lo que circula sobre «humo blanco azulado» es divulgación sin respaldo"
         ],
         "editorial": [
-          "EL HUMO EN CAPAS NO ESTÁ EN LA FUENTE y ésta es la declaración central de la ficha: el cronista no describe el humo, y «el humo llena el cuarto en capas lentas» es añadido de la divulgación. La regla de atmósfera se asume aquí como decisión editorial declarada y no como dato, y se sostiene porque protege la ambigüedad, que es el argumento del relato",
+          "El humo que sube despacio, borra los bordes de las esteras, cambia la luz y deja el cuarto sin fondo está ahora en el canon reescrito, pero no en Cieza (dossier §12.9): el canon lo tomó de la divulgación que el dossier señalaba. La regla se dibuja porque el canon la da; que sean «capas horizontales» sigue siendo decisión editorial, reversible.",
           "sin una regla escrita cada escena resolvería la niebla de manera distinta y la ambigüedad se perdería: por eso la ficha existe, y por eso es reversible en su forma pero no en su función",
           "la elección de capas horizontales frente a masa difusa es de técnica y es revocable"
         ],
@@ -2141,7 +2268,7 @@
     "comunidad-cuy-cuy-arma": {
       "name": "Gente de la provincia Cuy-Cuy o Arma, siglo XVI",
       "kind": "colectivo",
-      "description": "Aparece en los dos relatos: es la población por cuyas cosechas y bienestar se pregunta en el oratorio, y son los pobladores que al llegar la conquista esconden parte de los adornos de oro. Gramática de grupo de época de contacto, deliberadamente separada de la de los arrieros: el canon advierte que la provincia era multilingüe y de cacicazgos y que no puede convertirse en una comunidad contemporánea homogénea.",
+      "description": "Aparece en los dos relatos: es la gente de las casas redondas de «muchos moradores», a la que los ministros repiten lo oído al salir del retrete, y son los pobladores que al llegar la conquista esconden parte de los adornos de oro. Gramática de grupo de época de contacto, deliberadamente separada de la de los arrieros: el canon advierte que la provincia era multilingüe y de cacicazgos y que no puede convertirse en una comunidad contemporánea homogénea.",
       "aliases": [],
       "states": [
         "canonico"
@@ -2190,6 +2317,11 @@
           "myth": "el-diablo",
           "field": "mito",
           "note": "Arma no era una aldea: un solo individuo era reconocido como cacique principal de toda la región, su asentamiento tenía cerca de tres mil casas y la provincia veinte mil guerreros, hasta el punto de que la literatura discute si se trata de un protoestado. La gramática de grupo tiene que poder mostrar escala y jerarquía, no un puñado de figuras"
+        },
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "En el canon reescrito la casa redonda tiene «muchos moradores, repartidos en apartados que se separaban colgando esteras»; la consulta ya no es por las cosechas."
         }
       ],
       "census_note": "Aparece en los dos relatos: es la población por cuyas cosechas y bienestar se pregunta en el oratorio, y son los pobladores que al llegar la conquista esconden parte de los adornos de oro. Gramática de grupo de época de contacto, deliberadamente separada de la de los arrieros: el canon advierte que la provincia era multilingüe y de cacicazgos y que no puede convertirse en una comunidad contemporánea homogénea.",
@@ -2307,6 +2439,11 @@
           "myth": "el-tesoro-del-pipinta",
           "field": "mito",
           "note": "La leyenda del tesoro sí tiene una semilla documental de 1540, y no hay que inventarla: un señor viejo de Arma «trujo una olla atestada de oro, que tenia soterrada». El motivo del oro enterrado en este territorio nace en la propia relación de la conquista"
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "«La gente lo bajó de sus cuerpos y lo escondió, y para la siguiente pelea salió desnuda.»"
         }
       ],
       "census_note": "Actúan en el arranque de la leyenda, cuando la conquista llega al territorio de Arma. Son la misma población de contacto ya fichada y no los arrieros que siglos después buscan la cueva.",
@@ -2368,6 +2505,11 @@
           "myth": "el-tesoro-del-pipinta",
           "field": "mito",
           "note": "La hoja de orfebrería legendaria no puede parecerse a una vitrina: los ejemplares más fotografiados del país —las ciento veintidós piezas del tesoro salido en 1892, con sus seis cascos, seis collares y seis poporos, y el poporo icónico que además procede de otro departamento— quedan prohibidos por nombre. Lo que se usa es el lenguaje: cera perdida, fundición con núcleo, martillado y repujado, y superficie pulida a espejo"
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "El canon reescrito enumera el oro de guerra —cascos, coronas, diademas, narigueras, collares, pectorales, petos, puñetes, cintos y ajorcas— formando «una coraza que relucía y les cubría la carne»."
         }
       ],
       "census_note": "Ficha de época de contacto: son los ornamentos personales a partir de los cuales los españoles impusieron el rótulo Arma o Armados, según recuerda Valencia Llano, y lo que los pobladores esconden al llegar la conquista. Va separada de las figuras del tesoro precisamente para que no se confundan un adorno llevado en el cuerpo en el siglo XVI y un inventario de guaca escrito en 1983.",
@@ -2388,6 +2530,7 @@
           "ninguna pieza cita un ejemplar catalogado de orfebrería del Cauca medio"
         ],
         "documented": [
+          "canon, campo mito: salieron «vestidos de oro de los pies a la cabeza»: «cascos, coronas, diademas, narigueras, collares, pectorales, petos, puñetes, cintos y ajorcas, todo encima del cuerpo y todo junto, de manera que el metal formaba una coraza que relucía y les cubría la carne»",
           "dossier §3 y §5 (cuy-cdi-1540): el oro es equipo de cuerpo y de guerra — coronas, patenas en los pechos, brazales, plumas y banderas en lanzas largas—, y «el de menos ley tiene diez y nueve quilates»",
           "dossier §5 (cuy-cdi-1540): la imagen que nadie ha dibujado — el cacique Cirigua hacía llevar delante de él «una vara larga gruesa, puesta en los hombros» de dos hombres, «toda llena de chagualas de oro, como platos medianos, y coronas y otras joyas metidos en la vara»",
           "dossier §3 (cuy-cdi-1540): «cuatro ó cinco mill indios, todos con armaduras de oro» salieron a recibir a los españoles, y de esa escena sale el nombre de la provincia",
@@ -2398,7 +2541,8 @@
         "editorial": [
           "la forma concreta de cada pieza es genérica y declarada: se usa el lenguaje formal documentado y jamás un ejemplar, porque la colección de referencia salió del país en 1892 y es producto de guaquería sin contexto",
           "la vara de las chagualas se reconstruye a partir de una sola frase y es reversible en su hechura, no en su mecánica: lo que no se puede cambiar es que la carguen dos hombres",
-          "dossier §0 y §3 (cuy-guaqueria-1989): el norte de Caldas y el Quindío fueron barridos por la guaquería entre 1885 y 1914 —cerca de dos mil personas hacia 1889, más de quinientos guaqueros antes de la fundación de Filandia, y «la inmensa mayoría de los guaqueros despreciaron y destruyeron las ofrendas funerarias que no fueran de oro o de tumbaga»—, y la ley de patrimonio arqueológico llega en 1959, medio siglo después del auge. Una imagen que sirva de guía a un sitio repite, en este territorio, el gesto que lo vació: eso pesa más que cualquier consideración de estilo"
+          "dossier §0 y §3 (cuy-guaqueria-1989): el norte de Caldas y el Quindío fueron barridos por la guaquería entre 1885 y 1914 —cerca de dos mil personas hacia 1889, más de quinientos guaqueros antes de la fundación de Filandia, y «la inmensa mayoría de los guaqueros despreciaron y destruyeron las ofrendas funerarias que no fueran de oro o de tumbaga»—, y la ley de patrimonio arqueológico llega en 1959, medio siglo después del auge. Una imagen que sirva de guía a un sitio repite, en este territorio, el gesto que lo vació: eso pesa más que cualquier consideración de estilo",
+          "El canon reescrito da el inventario completo del oro de guerra puesto a la vez; la hoja lo lleva sobre un cuerpo como coraza continua, y la vara de chagualas de Cirigua se conserva como pieza del dossier aunque Cirigua haya salido del canon."
         ],
         "states_to_model": []
       },
@@ -2410,14 +2554,14 @@
     "pipinta": {
       "name": "Pipintá",
       "kind": "personaje",
-      "description": "Verificado: da nombre al tesoro y es «recordado como cacique de resistencia», pero no aparece en ninguna escena, no actúa, no tiene una línea de descripción y no está en ninguno de los dos prompts del mito. Retratarlo fabricaría la efigie de un cacique prehispánico a partir de una leyenda regional del siglo XX: exactamente el error de época que este corpus obliga a evitar.",
+      "description": "En el canon reescrito tiene una línea: «un hombre viejo y riquísimo que se había presentado ante el capitán extranjero acompañado de un joven». Sigue sin escena: da nombre al tesoro, y la monografía que lo cuenta lo desmiente como «un sueño, una fábula».",
       "aliases": [],
       "states": [
         "canonico"
       ],
       "evidence_basis": "documented",
       "sensitivity": "public",
-      "visual_status": "excluded",
+      "visual_status": "embedded",
       "model_requirements": [],
       "model_refs": [],
       "legacy_model_refs": [],
@@ -2429,13 +2573,19 @@
           "myth": "el-tesoro-del-pipinta",
           "field": "mito",
           "note": "**Pipintá no tiene base documental del siglo XVI**: no aparece ni una vez en las relaciones de 1540, ni en la revista arqueológica de referencia, ni en el estudio académico sobre los Armas. El cacique documentado de Arma es Maitamá. Pipintá es nombre de leyenda regional y de paisaje —hay una piedra, una cueva y un cañón con su nombre—, y la exclusión del censo se confirma con prueba negativa"
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "«Pipintá, un hombre viejo y riquísimo que se había presentado ante el capitán extranjero acompañado de un joven.»"
         }
       ],
       "census_note": "Verificado: da nombre al tesoro y es «recordado como cacique de resistencia», pero no aparece en ninguna escena, no actúa, no tiene una línea de descripción y no está en ninguno de los dos prompts del mito. Retratarlo fabricaría la efigie de un cacique prehispánico a partir de una leyenda regional del siglo XX: exactamente el error de época que este corpus obliga a evitar.",
-      "exclusion_reason": "sin evidencia visual",
       "evidence_basis_mix": [
         "documented_core"
-      ]
+      ],
+      "covered_by": "tipo_anciano",
+      "coverage_note": "Un hombre viejo de Arma sin rasgo propio: si un guion lo pide, es el tipo base del anciano de la capa de contacto, con oro de principal, y el joven que lo acompaña es el tipo del hombre adulto. Nunca efigie de cacique ni retrato."
     },
     "arrieros-y-campesinos-de-la-montana": {
       "name": "Arrieros, campesinos y curas de la montaña",
@@ -2757,10 +2907,12 @@
       ]
     },
     "mono-de-oro": {
-      "name": "Mono de oro que sostiene la guardiana",
+      "name": "La mica de oro que sostiene la guardiana",
       "kind": "objeto",
-      "description": "Parte del mismo inventario de la cueva y del mismo problema de época; se produce dentro de la hoja de orfebrería legendaria, bajo su misma prohibición.",
-      "aliases": [],
+      "description": "El canon reescrito dice «mica», no mono: «ella sostenía una mica, también de oro macizo». En Antioquia «mica» puede ser la mona y también la bacinilla; el dossier (§12.11) deja la lectura abierta hasta ver el impreso de 1983.",
+      "aliases": [
+        "mica de oro"
+      ],
       "states": [
         "canonico"
       ],
@@ -2783,11 +2935,16 @@
           "myth": "el-tesoro-del-pipinta",
           "field": "mito",
           "note": "La hoja de orfebrería legendaria no puede parecerse a una vitrina: los ejemplares más fotografiados del país —las ciento veintidós piezas del tesoro salido en 1892, con sus seis cascos, seis collares y seis poporos, y el poporo icónico que además procede de otro departamento— quedan prohibidos por nombre. Lo que se usa es el lenguaje: cera perdida, fundición con núcleo, martillado y repujado, y superficie pulida a espejo"
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "«dos guardianes, hombre y mujer; ella sostenía una mica, también de oro macizo»"
         }
       ],
       "census_note": "Parte del mismo inventario de la cueva y del mismo problema de época; se produce dentro de la hoja de orfebrería legendaria, bajo su misma prohibición.",
       "covered_by": "figuras-de-caciques-de-oro",
-      "coverage_note": "Parte del mismo inventario de la cueva y del mismo problema de época; se produce dentro de la hoja de orfebrería legendaria, bajo su misma prohibición.",
+      "coverage_note": "Dentro de la hoja de las figuras de oro y en las manos de la guardiana, como pieza pequeña de oro mate de forma no resuelta —ni animal ni vasija legibles— mientras la lectura siga abierta.",
       "evidence_basis_mix": [
         "documented_core",
         "variant"
@@ -2824,6 +2981,11 @@
           "myth": "el-tesoro-del-pipinta",
           "field": "mito",
           "note": "La pareja guardiana se queda sin naturaleza resuelta y eso es deliberado: la fuente los llama caciques guardianes, macho y hembra, en la puerta, y no dice si son personas, imágenes o presencias. La hoja fija una ambigüedad sostenida —escala, posición flanqueando el acceso, quietud— y declara que no se identifican con ninguna deidad ni con ninguna figura de orfebrería catalogada"
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "El canon reescrito fija la mica: «ella sostenía una mica, también de oro macizo»."
         }
       ],
       "census_note": "Conducen la custodia dentro del inventario transmitido por Blandón y el prompt horizontal los pide al fondo, no monstruosos. Necesitan hoja propia justamente porque el canon deja su naturaleza abierta: pueden ser personas, imágenes o presencias según la interpretación, y no se identifican con ninguna deidad Cuy-Cuy. Esa ambigüedad hay que resolverla una vez y sostenerla.",
@@ -2863,9 +3025,9 @@
       ]
     },
     "cueva-del-tesoro": {
-      "name": "Cámara de piedra donde está el depósito",
+      "name": "El alero del tesoro",
       "kind": "lugar",
-      "description": "Escenario del acto y sujeto del prompt horizontal. El modelo espacial recoge toda la secuencia de acceso que la ruta enumera: escalones naturales junto a la cascada, cornisa, roca que funciona como tapón, salón, segunda piedra y escalas labradas que bajan al corazón del escondite.",
+      "description": "Al final de la ruta: una cuchilla que desciende en vertical hasta una cañada, al fondo un salto de agua, junto al salto unas escalas de piedra natural y arriba «una especie de alero». Dentro, las mantas indígenas y los sombreros de caña; más adentro, la corte de dieciséis caciques de oro macizo y los dos guardianes.",
       "aliases": [],
       "states": [
         "canonico"
@@ -2913,28 +3075,34 @@
           "myth": "el-tesoro-del-pipinta",
           "field": "mito",
           "note": "Las cascadas están contadas y medidas, y sólo en un municipio: Aguadas tiene dos, la de Pore de unos ochenta metros —cuyo antiguo himno dice «En Pore la cascada… levanta su neblina»— y la de La Chorrera de unos cincuenta, en la vertiente del río Arma; Salamina tiene la de Nudillales, con petroglifos; y Pácora no registra ninguna. El salto del itinerario es más coherente con La Chorrera que con Pore"
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "El canon reescrito resuelve el escondite como un alero sobre una cañada, con salto de agua y escalas de piedra natural: sin roca-tapón, sin segunda piedra, sin escalas labradas."
         }
       ],
       "census_note": "Escenario del acto y sujeto del prompt horizontal. El modelo espacial recoge toda la secuencia de acceso que la ruta enumera: escalones naturales junto a la cascada, cornisa, roca que funciona como tapón, salón, segunda piedra y escalas labradas que bajan al corazón del escondite.",
       "design": {
-        "silhouette": "No es una cueva kárstica —no existe ninguna en este territorio y la prueba es exhaustiva— sino un abrigo entre bloques de roca meteorizada, y su ficha es una secuencia de umbrales: escalones naturales junto a la caída de agua, una cornisa, una roca que funciona como tapón, un salón detrás, una segunda piedra y unas escalas labradas por mano humana que bajan. Ni estalactita, ni columna, ni galería calcárea, y ni un solo rasgo que permita reconocer el sitio en el terreno.",
+        "silhouette": "No es una cueva kárstica —no existe ninguna en este territorio— sino un alero de roca meteorizada sobre una cañada, y su ficha es una secuencia corta: la cuchilla vertical, el salto de agua al fondo, las escalas de piedra natural junto al salto y, arriba, el alero que cubre un espacio hondo. Ni estalactita, ni columna, ni galería calcárea, y ni un solo rasgo que permita reconocer el sitio en el terreno.",
         "materials": [
           "esquisto y serpentinita meteorizados, con la roca sana visible sólo donde el agua la lava, que es junto a la caída",
           "saprolita arcillosa en el manto de encima, de decenas de metros de espesor, y cicatrices de deslizamiento en la ladera de alrededor",
-          "escalas labradas por mano humana en la roca, que es lo que distingue este acceso de una formación natural y lo que lo convierte en arqueología y no en espeleología",
-          "roca-tapón como un solo bloque grande y desplazable, sin junta tallada y sin puerta",
-          "agua de la caída al costado, en quilling corto, como umbral y no como decorado"
+          "agua de la caída al costado, en quilling corto, como umbral y no como decorado",
+          "escalas de piedra natural: bloques de esquisto escalonados por la erosión junto al salto, sin marca de talla",
+          "el alero como un solo plano de roca en voladizo, con la penumbra debajo"
         ],
         "palette": "Grises verdosos de esquisto y pardos de saprolita bajo la luz plana y sin dirección de la bruma alta, con el interior en penumbra casi total: el oro del salón es el único punto cálido y sólo aparece cuando ya se ha pasado el segundo umbral.",
         "scale": "Umbrales sucesivos a escala de cuerpo —se pasa agachado, se baja de espaldas— y un salón que apenas contiene lo que guarda: la hoja niega deliberadamente la vista general, porque una vista general de la boca sería un mapa.",
         "continuity": [
           "sin estalactitas, sin columnas y sin galerías calcáreas en ninguna lámina: no hay karst en este territorio",
           "sin perfil de cuchilla reconocible, sin boca localizable y sin confluencia legible en ninguna lámina",
-          "la secuencia de umbrales va siempre en el mismo orden: escalones, cornisa, roca-tapón, salón, segunda piedra, escalas labradas",
-          "las escalas son labradas y se ve que lo son: es el rasgo que impide que el abrigo se lea como cueva natural",
-          "ninguna lámina reproduce la piedra grabada de El Dorado ni los petroglifos de la cascada de Nudillales, que son bienes reales y localizables"
+          "ninguna lámina reproduce la piedra grabada de El Dorado ni los petroglifos de la cascada de Nudillales, que son bienes reales y localizables",
+          "la secuencia es siempre la misma: cuchilla, cañada, salto, escalas de piedra natural, alero",
+          "las escalas son naturales, sin talla: el canon reescrito dice «escalas de piedra natural», y la roca-tapón, la segunda piedra y las escalas labradas del inventario anterior ya no están en el relato"
         ],
         "documented": [
+          "canon, campo mito: «se llega a una cuchilla que desciende en vertical hasta una cañada. Al fondo hay un salto de agua, y junto al salto unas escalas de piedra natural. Arriba, una especie de alero»; dentro «las mantas indígenas y los sombreros de caña» y, más adentro, «una corte de dieciséis caciques de oro macizo, y dos guardianes»",
           "dossier §1.4 y §12.8 (cuy-ingeominas-1980): sobre las ciento setenta y cuatro páginas de la memoria oficial de las planchas que cubren el territorio hay cero ocurrencias de «cueva», cero de «caverna» y cero de «dolomía»; los únicos cuerpos carbonatados del área son lentes de mármol de menos de un kilómetro cuadrado, todos en el departamento vecino. Lo que hay son esquistos verdes, un gabro, serpentinitas, una granodiorita y pizarras, con «intensa meteorización» y roca fresca «sólo en los lechos de las quebradas y ríos», y «la región entre Pácora y Salamina está caracterizada por deslizamientos»",
           "dossier §1.5 y §12.8 (cuy-caldas-aguadas): sí hay correlato, y es arqueológico — «PIEDRA DE EL DORADO. En la finca el Dorado existe una piedra grabada que contiene jeroglíficos: figuras de ranas, lagartijas, cuadrados, espirales, círculos, etc. Al frente de ella hay una cueva con escalas labradas en la roca, en donde también se cree que se encuentra el tesoro del gran Pipintá»",
           "dossier §1.5 (cuy-caldas-pacora): y otra en el municipio vecino, la Piedra de Pipintá «ubicada en el Alto de Poso a una altura de 1500 m.s.n.m… una enorme roca que disimula la entrada a la cueva», con «un estrecho salón que a la vez se comunica con otros de menos amplitud». Dos cuevas, dos municipios, un solo nombre en disputa",
@@ -2944,7 +3112,8 @@
         "editorial": [
           "la prohibición de localización va REFORZADA precisamente porque hay correlato: hay petroglifos reales y localizables en la boca misma del relato, y dos municipios se disputan el sitio. Ninguna lámina da perfil, ruta ni punto de referencia",
           "la forma concreta del salón y el número de umbrales entre la roca-tapón y las escalas son composición declarada: la ruta enumera, no describe",
-          "que la cascada del itinerario sea La Chorrera es inferencia geográfica del dossier y no un dato del relato: reversible, y en todo caso ninguna lámina la identifica"
+          "que la cascada del itinerario sea La Chorrera es inferencia geográfica del dossier y no un dato del relato: reversible, y en todo caso ninguna lámina la identifica",
+          "El canon reescrito cambia la secuencia de acceso: ya no hay cornisa, roca-tapón, segunda piedra ni escalas labradas, sino escalas de piedra natural y un alero. La Piedra de El Dorado, con escalas labradas, sigue en el dossier como correlato real y no se dibuja."
         ],
         "states_to_model": []
       },
@@ -2958,9 +3127,9 @@
       ]
     },
     "escalones-cornisa-y-roca-tapon": {
-      "name": "Escalones de piedra, cornisa y roca que tapona",
+      "name": "Las escalas de piedra natural y el alero",
       "kind": "arquitectura",
-      "description": "Elementos sucesivos del mismo acceso; se producen dentro del modelo espacial de la cámara y no como fichas de piedra sueltas.",
+      "description": "Junto al salto, «unas escalas de piedra natural»; arriba, «una especie de alero». La cornisa y la roca-tapón del inventario anterior ya no están en el relato.",
       "aliases": [],
       "states": [
         "canonico"
@@ -2994,11 +3163,16 @@
           "myth": "el-tesoro-del-pipinta",
           "field": "mito",
           "note": "El itinerario de Blandón no tiene una sola distancia: es una cadena de miradas encadenadas —plaza, camino antiguo, quebrada, playón, loma, punto desde donde se divisa el río, giro a mano derecha siempre mirando el Cauca, cuchilla, confluencia, cañadita de la izquierda, salto, escalas, alero, tapón, salón, segunda piedra, escalas labradas—. Lo que la leyenda pide dibujar es una secuencia de puntos de vista, no un mapa"
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "«junto al salto unas escalas de piedra natural. Arriba, una especie de alero.»"
         }
       ],
       "census_note": "Elementos sucesivos del mismo acceso; se producen dentro del modelo espacial de la cámara y no como fichas de piedra sueltas.",
       "covered_by": "cueva-del-tesoro",
-      "coverage_note": "Elementos sucesivos del mismo acceso; se producen dentro del modelo espacial de la cámara y no como fichas de piedra sueltas.",
+      "coverage_note": "Elementos sucesivos del mismo acceso, dentro de la hoja del alero del tesoro.",
       "evidence_basis_mix": [
         "documented_core",
         "contemporary_memory"
@@ -3014,7 +3188,7 @@
       ],
       "evidence_basis": "documented",
       "sensitivity": "public",
-      "visual_status": "embedded",
+      "visual_status": "excluded",
       "model_requirements": [],
       "model_refs": [],
       "legacy_model_refs": [],
@@ -3044,12 +3218,11 @@
         }
       ],
       "census_note": "Cierran y abren la cámara más profunda. Parte del mismo modelo espacial.",
-      "covered_by": "cueva-del-tesoro",
-      "coverage_note": "Cierran y abren la cámara más profunda. Parte del mismo modelo espacial.",
       "evidence_basis_mix": [
         "documented_core",
         "contemporary_memory"
-      ]
+      ],
+      "exclusion_reason": "no aparece en el canon reescrito del 2026-09-23: ahora el relato dice «escalas de piedra natural» y un alero, sin segunda piedra ni escalas labradas"
     },
     "cascada": {
       "name": "Caída de agua al final de la quebrada",
@@ -3241,7 +3414,9 @@
       "name": "Quebrada de Pácora y Tolda del Guayabo",
       "kind": "lugar",
       "description": "Hitos intermedios de la ruta, sin descripción propia. El valor narrativo está en la enumeración, no en cada lugar.",
-      "aliases": [],
+      "aliases": [
+        "isla o playón"
+      ],
       "states": [
         "canonico"
       ],
@@ -3564,10 +3739,12 @@
       "exclusion_reason": "retirado por la edición: invención no acreditada"
     },
     "maitama-y-cirigua": {
-      "name": "Maitamá y Cirigua",
+      "name": "Maitamá",
       "kind": "personaje",
-      "description": "Verificado en universe.mjs: son personajes históricos de la resistencia a la conquista que las fuentes conservan como acontecimiento, sin narración mítica autónoma que justifique página. Ni cuerpo, ni escena, ni relato: no hay nada que fichar sin inventarlo.",
-      "aliases": [],
+      "description": "El cacique documentado de los Cuy-Cuy (Duque Gómez 1962): en el canon reescrito «Maitamá los mandaba, y resistió». Cirigua, que antes compartía esta entrada, ya no está en el canon y pasa a entidad propia excluida.",
+      "aliases": [
+        "Maitamá"
+      ],
       "states": [
         "canonico"
       ],
@@ -3586,6 +3763,11 @@
           "myth": "el-diablo",
           "field": "mito",
           "note": "**El censo excluyó a Maitamá y Cirigua por falta de evidencia visual y esa exclusión hay que corregirla**: la relación de 1540 describe a Cirigua con detalle —cara pintada de amarillo o azul y negro, cuerpo entero untado de resina de árboles olorosa y encima polvo rojo de bija «para defensa del sol», caminando «con mucha gravedad»— y hace cargar delante de él una vara larga y gruesa sobre los hombros de dos hombres, llena de chagualas de oro «como platos medianos», coronas y otras joyas. Es el único retrato de un cuerpo de este territorio que existe"
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "«Maitamá los mandaba, y resistió.»"
         }
       ],
       "census_note": "Verificado en universe.mjs: son personajes históricos de la resistencia a la conquista que las fuentes conservan como acontecimiento, sin narración mítica autónoma que justifique página. Ni cuerpo, ni escena, ni relato: no hay nada que fichar sin inventarlo.",
@@ -3593,7 +3775,7 @@
         "documented_core"
       ],
       "covered_by": "comunidad-cuy-cuy-arma",
-      "coverage_note": "CORRECCIÓN DEL CENSO, que los excluía por «sin evidencia visual». Es al revés: son la mejor evidencia visual del corpus. Maitamá es el señor de la tierra en la relación de 1540 y el cacique documentado de Arma, y de Cirigua hay un retrato completo —«mancebo, gentil hombre, venia muy pintada la cara de amarillo ó azul é negro, é todo el cuerpo untado con una resina de árboles que huele, é por encima dado con un polvo que se llama vixa… é venia con mucha gravedad»—, precedido por la vara de oro que cargan dos hombres. Aportan el cuerpo documentado a la gramática de contacto y no reciben ficha ni retrato individual, porque siguen sin tener escena propia; si el guion les da un acto, suben a required."
+      "coverage_note": "Maitamá tiene ahora un acto —manda a los armados y resiste— pero ninguna línea de cuerpo: va dentro de la gramática de la gente de Arma, con el oro de los armados. Si el guion le da una lámina propia, sube a required."
     },
     "ubicacion-verificable-de-la-cueva": {
       "name": "Ubicación identificable de la cueva y la ruta",
@@ -3714,6 +3896,512 @@
         "editorial_interpretation",
         "uncertain"
       ]
+    },
+    "idolo-de-paucura": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "idolo-de-paucura__object_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "El ídolo de madera a la puerta de Pimana",
+      "kind": "objeto",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet"
+      ],
+      "myth_refs": [
+        "el-diablo"
+      ],
+      "description": "En Paucura, junto a la puerta del señor Pimana, un ídolo de madera del tamaño de un hombre, de buen cuerpo, con los brazos abiertos y el rostro vuelto hacia donde nace el sol: afuera, visible para cualquiera, y no habla. Es el contrario exacto del ser del retrete.",
+      "evidence": [
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "«Junto a la puerta del señor Pimana se alzaba un ídolo de madera del tamaño de un hombre, de buen cuerpo, con los brazos abiertos y el rostro vuelto hacia donde nace el sol. Ese estaba afuera, lo veía cualquiera que llegara, y no hablaba.»"
+        },
+        {
+          "myth": "el-diablo",
+          "field": "versiones",
+          "note": "Cieza dice haber visto él mismo, en Paucora, «un ídolo de madera de tamaño humano con los brazos abiertos» a la puerta de Pimana; y en Paucura las mantas pequeñas sí existen (dossier §6.1)."
+        }
+      ],
+      "design": {
+        "silhouette": "Figura de madera de pie, de tamaño humano y buen cuerpo, con los dos brazos abiertos en horizontal y la cara vuelta hacia el sol naciente, plantada junto a una puerta de casa y a plena luz: la única figura del corpus que está afuera, quieta y a la vista, y la única sin humo alrededor.",
+        "materials": [
+          "madera tallada resuelta en pocos planos grandes de papel pardo con la veta recortada a lo largo, sin pintura ni oro encima",
+          "cara como óvalo plano de madera con los rasgos recortados aparte, sin expresión",
+          "la jamba de la puerta de la casa de Pimana como un solo plano a su lado, para dar la escala"
+        ],
+        "palette": "Pardo claro de madera a pleno día, contra el verde de la montaña: es la lámina más clara del primer relato, opuesta a la penumbra del retrete.",
+        "scale": "Del alto de un hombre, medido contra la puerta de la casa. 1:1 con la puerta y un tramo de camino.",
+        "continuity": [
+          "brazos abiertos siempre",
+          "la cara hacia el oriente, con la luz de frente",
+          "afuera y a pleno día: nunca humo, nunca ojos encendidos"
+        ],
+        "documented": [
+          "«Un ídolo de madera del tamaño de un hombre, de buen cuerpo, con los brazos abiertos y el rostro vuelto hacia donde nace el sol», junto a la puerta del señor Pimana, en Paucura (canon, campo mito; Cieza cap. XX, canon campo historia)",
+          "«Ese estaba afuera, lo veía cualquiera que llegara, y no hablaba» (canon, campo mito)",
+          "El oratorio que Cieza dice haber visto con sus ojos estaba en Paucora, no en Arma (dossier §12.5)"
+        ],
+        "editorial": [
+          "La talla no está descrita más allá de tamaño, cuerpo, brazos y orientación: se resuelve lisa y genérica, sin copiar ninguna pieza de madera conservada. Reversible.",
+          "Ningún rasgo demoníaco: Cieza lo mete en su capítulo sobre el demonio, pero el relato sólo dice que estaba afuera y no hablaba (regla de la traducción colonial, dossier §2).",
+          "La casa de Pimana no se diseña aparte: su puerta es el único plano de arquitectura de la hoja, y lleva cubierta de hoja de caña, que es la de Paucura según el dossier, no la paja de Arma."
+        ],
+        "states_to_model": []
+      }
+    },
+    "pimana-y-paucura": {
+      "aliases": [
+        "Pimana",
+        "Paucora"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "El señor Pimana y la provincia de Paucura",
+      "kind": "lugar",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "idolo-de-paucura",
+      "myth_refs": [
+        "el-diablo"
+      ],
+      "description": "La provincia vecina de Arma, donde lo sagrado está afuera, y su señor, a cuya puerta está el ídolo.",
+      "coverage_note": "Pimana no actúa: es el dueño de la puerta junto a la cual está el ídolo, y la provincia sólo sitúa. La hoja del ídolo lleva la puerta.",
+      "evidence": [
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "«En Paucura, la provincia vecina, lo sagrado se mostraba al revés. Junto a la puerta del señor Pimana…»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "idolos-del-retrete": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "contextual",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "Los ídolos del retrete",
+      "kind": "objeto",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "el-diablo"
+      ],
+      "description": "Las hierbas y resinas se echan sobre las brasas «delante de los ídolos».",
+      "exclusion_reason": "el relato los nombra en una preposición y no da una sola línea de su forma; dibujarlos inventaría la imagen de culto que el propio relato dice que no estaba «a la vista»",
+      "evidence": [
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "«Se echaban sobre las brasas junto con otras resinas, delante de los ídolos.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "yayo-y-paco": {
+      "aliases": [
+        "Yayo",
+        "Paco"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "Yayo y Paco, señores de Arma",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "comunidad-cuy-cuy-arma",
+      "myth_refs": [
+        "el-diablo",
+        "el-tesoro-del-pipinta"
+      ],
+      "description": "Yayo es el señor en cuya tierra crecen las hierbas del retrete; en la monografía de Aguadas, Paco y Yayo figuran como jefes de los armados junto a Pipintá.",
+      "coverage_note": "Nombrados sin descripción ni escena: si aparecen, son principales de la gramática de la gente de Arma.",
+      "evidence": [
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "Las hierbas «crecían en la tierra del señor Yayo, y de allí se traían»."
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "versiones",
+          "note": "«Paco y Yayo figuran a su lado como jefes de los armados» en la monografía de Aguadas."
+        }
+      ],
+      "model_requirements": []
+    },
+    "consulta-a-oscuras-de-anserma": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "La consulta a oscuras de Anserma",
+      "kind": "fenomeno",
+      "evidence_basis": "variant",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "el-diablo"
+      ],
+      "description": "En Anserma, dice Cieza, hablan con el ser «a escuras, sin lumbre», y un señalado habla por todos: sin humo, sin luz y con un solo portavoz.",
+      "exclusion_reason": "es el tercer modo de consulta que el canon registra para no fundirlo con el de Arma; pertenece a otra provincia y a otro corpus",
+      "evidence": [
+        {
+          "myth": "el-diablo",
+          "field": "versiones",
+          "note": "«cuando hablan con el demonio dicen que es a escuras, sin lumbre, y que uno que para ello está señalado habla por todos»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "cirigua": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "Cirigua",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "el-diablo",
+        "el-tesoro-del-pipinta"
+      ],
+      "description": "El cacique mancebo del retrato de 1540, con la cara pintada de amarillo o azul y negro, el cuerpo untado de resina y bija, y la vara de chagualas delante.",
+      "exclusion_reason": "no aparece en el canon reescrito del 2026-09-23: ninguno de los dos relatos ni sus campos lo nombran ya. Su retrato (dossier §6.2, cuy-cdi-1540) sigue sosteniendo la gramática de cuerpo de la gente de Arma y la vara de chagualas de los adornos, pero sin figura propia",
+      "evidence": [
+        {
+          "myth": "el-diablo",
+          "field": "historia",
+          "note": "El canon reescrito del retrete no lo nombra; su retrato de 1540 queda sólo en el dossier."
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "historia",
+          "note": "El canon reescrito del tesoro nombra a Maitamá y a Pipintá, no a Cirigua."
+        }
+      ],
+      "model_requirements": []
+    },
+    "loma-de-los-armados": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "La loma de los Armados",
+      "kind": "lugar",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "montanas-y-canon-del-cauca",
+      "myth_refs": [
+        "el-tesoro-del-pipinta"
+      ],
+      "description": "La loma donde se vio a los de Arma vestidos de oro, y que por eso se quedó llamándose de los Armados.",
+      "coverage_note": "Nombre que sólo sitúa la escena del oro de guerra: una ladera del mismo modelo de montaña, sin perfil reconocible.",
+      "evidence": [
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "«La loma donde se les vio así se quedó llamándose de los Armados.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "jefes-devueltos-mutilados": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "sensitive",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "Los jefes devueltos mutilados",
+      "kind": "fenomeno",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "el-tesoro-del-pipinta"
+      ],
+      "description": "Los invasores llaman a los jefes con buenas palabras y los devuelven mutilados y sangrando a sus pueblos.",
+      "exclusion_reason": "violencia explícita de la conquista (Duque Gómez 1962): se narra y no se dibuja",
+      "evidence": [
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "«los reunieron y los devolvieron mutilados a sus pueblos, sangrando, para que los suyos aprendieran»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "capitan-extranjero": {
+      "aliases": [
+        "Jorge Robledo"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "El capitán extranjero",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "myth_refs": [
+        "el-tesoro-del-pipinta"
+      ],
+      "description": "Ante él se presenta Pipintá; las versiones lo identifican con Robledo, en cuya hueste entró Cieza.",
+      "exclusion_reason": "se nombra en una subordinada y no tiene escena; la invasión se compone por sus efectos —el oro escondido, la gente desnuda— y no por la figura del conquistador",
+      "evidence": [
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "«se había presentado ante el capitán extranjero acompañado de un joven»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "laguna-del-rayo": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "La laguna del Rayo y lo que sacaron de ella",
+      "kind": "lugar",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "montanas-y-canon-del-cauca",
+      "myth_refs": [
+        "el-tesoro-del-pipinta"
+      ],
+      "description": "A un kilómetro de la plaza de Arma; los que cavaron allí sacaron piezas de cobre, corazas, lanzas, petos y narigueras, y nada más.",
+      "coverage_note": "Un hito más del paisaje de los buscadores, sin perfil reconocible; las piezas de cobre no se diseñan aparte: son el mismo repertorio de los armados en cobre y sin brillo, y la lámina las pone, si acaso, en manos de buscadores del estrato de arriería.",
+      "evidence": [
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "«Los que cavaron en la laguna del Rayo, a un kilómetro de la plaza de Arma, sacaron piezas de cobre, corazas, lanzas, petos y narigueras, y nada más.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "tipo_hombre_adulto": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_hombre_adulto__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · hombre de Arma adulto (capa de contacto)",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "el-diablo",
+        "el-tesoro-del-pipinta"
+      ],
+      "description": "Tipo base del hombre cuy-cuy de Arma en el siglo XVI: fija cara, cuerpo y adorno de los ministros del retrete, de los armados y de la gente que sale desnuda a la siguiente pelea. Cubre también al joven que acompaña a Pipintá.",
+      "evidence": [
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "Los de Arma salen a pelear, esconden el oro y vuelven a pelear desnudos; los ministros conducen el rito."
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "Los de Arma salen a pelear, esconden el oro y vuelven a pelear desnudos; los ministros conducen el rito."
+        }
+      ],
+      "design": {
+        "silhouette": "Hombre de cuerpo mediano y moreno, de pie, desnudo con el maure de un palmo, el pelo trasquilado, la cara pintada en campos de amarillo y la piel entera cubierta de bija roja mate: sin oro, que es su estado cuando la gente lo ha bajado del cuerpo.",
+        "materials": [
+          "piel en papel pardo mate cubierta por una capa mate de polvo rojo de bija",
+          "maure de unos veinte por treinta centímetros",
+          "pintura de cara en campos planos de amarillo, o de azul y negro",
+          "pelo trasquilado en una sola pieza corta"
+        ],
+        "palette": "Rojo mate de bija sobre pardo, y amarillo o azul-negro sólo en la cara.",
+        "scale": "Cuerpo mediano, medido contra la puerta de la casa redonda. Cuerpo entero 9:16.",
+        "continuity": [
+          "maure como única prenda",
+          "bija roja sobre toda la piel",
+          "pelo trasquilado",
+          "sin oro en la hoja de tipo: el oro va en su ficha y sobre el cuerpo que lo lleva"
+        ],
+        "documented": [
+          "dossier §6.1 (cuy-cieza-1553): «son de medianos cuerpos, todos morenos… andan ellas y ellos desnudos, salvo que para cubrir sus vergüenzas se ponen delante dellas unos maures tan anchos como un palmo y tan largos como palmo y medio», y «algunas de las mujeres andan tresquiladas, y lo mismo sus maridos»",
+          "dossier §6.2 (cuy-cdi-1540): cara pintada de amarillo o azul y negro, cuerpo untado de resina olorosa y encima polvo rojo de bija «para defensa del sol»",
+          "dossier §6.1: en Arma no hay mantas de algodón —son de Paucura— ni melenas largas",
+          "REGLA DE CAPA (dossier §6 y salvaguarda): este tipo es de la capa de contacto del siglo XVI y sólo de ella; nada de la capa de arriería —sombrero de caña, carriel, pañuelo, dril, mula— en su hoja ni en su plano",
+          "canon, campo mito: después de esconder el oro, «para la siguiente pelea salió desnuda»; y los ministros que conducen el rito"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte y la pintura en campos planos encima; el cuerpo, en pocos planos grandes de papel pardo mate cubiertos por una capa mate de bija, sin músculo modelado.",
+          "El pelo trasquilado es una sola pieza corta ajustada al cráneo; nunca mechón por mechón.",
+          "La hoja de tipo va sin oro a propósito: el oro de guerra tiene ficha propia y se pone encima."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_adulta": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_mujer_adulta__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · mujer de Arma adulta (capa de contacto)",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "el-diablo",
+        "el-tesoro-del-pipinta"
+      ],
+      "description": "Tipo base de la mujer cuy-cuy de Arma en el siglo XVI: la gente de las casas redondas, «ellas y ellos» trasquilados y desnudos con el maure.",
+      "evidence": [
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "La gente de muchos moradores de la casa redonda, que baja el oro del cuerpo y lo esconde."
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "La gente de muchos moradores de la casa redonda, que baja el oro del cuerpo y lo esconde."
+        }
+      ],
+      "design": {
+        "silhouette": "Mujer de cuerpo mediano y morena, de pie, desnuda con el maure de un palmo, el pelo trasquilado igual que el de los hombres y la piel entera cubierta de bija roja mate; ninguna manta de algodón.",
+        "materials": [
+          "piel en papel pardo mate cubierta de bija roja mate",
+          "maure de un palmo",
+          "pintura de cara en campos planos azul y negro",
+          "pelo trasquilado en una pieza corta"
+        ],
+        "palette": "Rojo mate de bija sobre pardo, azul-negro en la cara.",
+        "scale": "Algo por debajo del hombre. Cuerpo entero 9:16.",
+        "continuity": [
+          "sin manta de algodón: es de Paucura",
+          "pelo trasquilado igual que el del hombre",
+          "bija sobre toda la piel"
+        ],
+        "documented": [
+          "dossier §6.1 (cuy-cieza-1553): «son de medianos cuerpos, todos morenos… andan ellas y ellos desnudos, salvo que para cubrir sus vergüenzas se ponen delante dellas unos maures tan anchos como un palmo y tan largos como palmo y medio», y «algunas de las mujeres andan tresquiladas, y lo mismo sus maridos»",
+          "dossier §6.2 (cuy-cdi-1540): cara pintada de amarillo o azul y negro, cuerpo untado de resina olorosa y encima polvo rojo de bija «para defensa del sol»",
+          "dossier §6.1: en Arma no hay mantas de algodón —son de Paucura— ni melenas largas",
+          "REGLA DE CAPA (dossier §6 y salvaguarda): este tipo es de la capa de contacto del siglo XVI y sólo de ella; nada de la capa de arriería —sombrero de caña, carriel, pañuelo, dril, mula— en su hoja ni en su plano",
+          "canon, campo mito: la casa redonda tiene «muchos moradores, repartidos en apartados que se separaban colgando esteras»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte y la pintura en campos planos encima; el cuerpo, en pocos planos grandes de papel pardo mate cubiertos por una capa mate de bija, sin músculo modelado.",
+          "El pelo trasquilado es una sola pieza corta ajustada al cráneo; nunca mechón por mechón.",
+          "El reparto de colores de cara entre hombre y mujer es decisión de hoja: la fuente dice «amarillo ó azul é negro» sin repartir por sexo."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_anciano": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_anciano__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · anciano de Arma (capa de contacto)",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "el-tesoro-del-pipinta"
+      ],
+      "description": "Tipo base del viejo cuy-cuy del siglo XVI: fija el cuerpo de Pipintá, «hombre viejo y riquísimo», y del señor viejo de barbas canas de la relación de 1540.",
+      "evidence": [
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "Pipintá, hombre viejo y riquísimo, se presenta ante el capitán extranjero."
+        }
+      ],
+      "design": {
+        "silhouette": "Hombre viejo de pie, algo encorvado, desnudo con el maure, la bija roja sobre la piel, el pelo trasquilado gris y una barba cana corta en una sola pieza: rico por el oro que lleva puesto —una patena al pecho— y viejo por la barba y la curva.",
+        "materials": [
+          "piel en papel pardo mate con bija roja",
+          "barba cana corta en una sola pieza plana",
+          "patena de oro al pecho en papel dorado mate",
+          "maure de un palmo"
+        ],
+        "palette": "Rojo de bija, gris de la barba y un solo punto de oro rojizo.",
+        "scale": "Estatura mediana reducida por la curva. Cuerpo entero 9:16.",
+        "continuity": [
+          "barba cana siempre",
+          "una sola pieza de oro sobre el pecho",
+          "maure como única prenda"
+        ],
+        "documented": [
+          "dossier §6.1 (cuy-cieza-1553): «son de medianos cuerpos, todos morenos… andan ellas y ellos desnudos, salvo que para cubrir sus vergüenzas se ponen delante dellas unos maures tan anchos como un palmo y tan largos como palmo y medio», y «algunas de las mujeres andan tresquiladas, y lo mismo sus maridos»",
+          "dossier §6.2 (cuy-cdi-1540): cara pintada de amarillo o azul y negro, cuerpo untado de resina olorosa y encima polvo rojo de bija «para defensa del sol»",
+          "dossier §6.1: en Arma no hay mantas de algodón —son de Paucura— ni melenas largas",
+          "REGLA DE CAPA (dossier §6 y salvaguarda): este tipo es de la capa de contacto del siglo XVI y sólo de ella; nada de la capa de arriería —sombrero de caña, carriel, pañuelo, dril, mula— en su hoja ni en su plano",
+          "dossier §6.2 (cuy-cdi-1540): el otro señor era «viejo, unas barbas canas que otro nunca se vió en aquellas provincias»",
+          "canon, campo mito: Pipintá es «un hombre viejo y riquísimo»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte y la pintura en campos planos encima; el cuerpo, en pocos planos grandes de papel pardo mate cubiertos por una capa mate de bija, sin músculo modelado.",
+          "El pelo trasquilado es una sola pieza corta ajustada al cráneo; nunca mechón por mechón.",
+          "La patena al pecho traduce «riquísimo» con la pieza más sobria del repertorio documentado; reversible."
+        ],
+        "states_to_model": []
+      }
     }
   },
   "models": {
@@ -3754,6 +4442,11 @@
           "myth": "el-diablo",
           "field": "mito",
           "note": "El cronista no es un observador neutral y conviene declararlo: «el repartimiento de indios que por mis servicios se me dio fue en los términos desta villa». Era vecino y encomendero del territorio que describe, lo que agrava su elogio del oro tanto como su lectura demonológica"
+        },
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "«La respuesta llegaba en figura de indio y con los ojos muy resplandecientes… No dejaba nombre, ni rostro que pudiera dibujarse, ni palabra que los demás hubieran oído.»"
         }
       ],
       "design_contract": {
@@ -3863,6 +4556,11 @@
           "myth": "el-diablo",
           "field": "mito",
           "note": "La resina une los dos actos del primer relato con un solo material: la misma familia de resina olorosa que se quema en el retrete del oratorio es la que un cacique lleva untada por todo el cuerpo bajo el polvo rojo. Lo que en la escena ritual es humo, en el cuerpo es capa, y eso da a la biblia una coherencia material que no hay que inventar"
+        },
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "El canon reescrito los llama «los ministros»: preguntan «lo que querían saber y todavía no podían», y al salir repiten lo que oyeron; las preguntas por las sementeras se retiran (canon, campo historia)."
         }
       ],
       "design_contract": {
@@ -4203,7 +4901,8 @@
           "dossier §2 y §12.3 (cuy-cieza-1553): «quemaban ciertas hierbas menudas… tan menudas que casi no salían de la tierra; unas tenían una flor muy negra y otras la tenían blanca; en el olor parescían a verbena» — son hierbas rastreras con una flor cada una, dos plantas y no un ramillete",
           "dossier §1.1: «blancas» y «negras» aparecen dos veces cada una en los cuatro campos de los dos mitos y siempre en la misma expresión: son el único vocabulario cromático del corpus y hay que reservarlo para donde está",
           "dossier §5: la verbena del cronista es una comparación de olor y no una determinación botánica; no hay identificación de especie y no hay arqueobotánica de contenidos de incensarios en esta región",
-          "dossier §5: una flor «muy negra» es botánicamente casi imposible porque no existen pigmentos negros verdaderos en flores; lo real sería púrpura muy oscuro, casi negro a contraluz, y así debe pintarse"
+          "dossier §5: una flor «muy negra» es botánicamente casi imposible porque no existen pigmentos negros verdaderos en flores; lo real sería púrpura muy oscuro, casi negro a contraluz, y así debe pintarse",
+          "canon, campo mito: las hierbas «crecían en la tierra del señor Yayo, y de allí se traían»"
         ],
         "editorial_features": [
           "la forma de la hoja, el número de pétalos y el porte exacto son invención declarada: no hay identificación botánica y la plancha se mantiene deliberadamente genérica para no fijar una especie que la fuente no nombra",
@@ -4225,6 +4924,7 @@
           "documentado: «blancas» y «negras» aparecen dos veces cada una en los cuatro campos de los dos mitos y siempre en la misma expresión: son el único vocabulario cromático del corpus y hay que reservarlo para donde está",
           "documentado: la verbena del cronista es una comparación de olor y no una determinación botánica; no hay identificación de especie y no hay arqueobotánica de contenidos de incensarios en esta región",
           "documentado: una flor «muy negra» es botánicamente casi imposible porque no existen pigmentos negros verdaderos en flores; lo real sería púrpura muy oscuro, casi negro a contraluz, y así debe pintarse",
+          "documentado: las hierbas «crecían en la tierra del señor Yayo, y de allí se traían»",
           "El corpus autoriza exactamente dos colores, blanco y negro, en las flores del sahumerio: son el único par cromático del texto y hay que reservarlos para ahí, sobre una lámina que por lo demás vive en pardos y grises.",
           "El oro es rojizo y pulido, y aparece dos veces con sentido opuesto: sobre un cuerpo en la capa de contacto, y como resplandor lejano que se deshace en la capa tardía. Nunca como montón, nunca como pieza de vitrina.",
           "El interior del oratorio se construye en valores y no en tonos: negro profundo, un plano iluminado desde abajo por brasa y dos puntos claros. La saturación entra sólo con el rojo de la bija y el de la resina.",
@@ -4283,6 +4983,11 @@
           "myth": "el-diablo",
           "field": "mito",
           "note": "La resina une los dos actos del primer relato con un solo material: la misma familia de resina olorosa que se quema en el retrete del oratorio es la que un cacique lleva untada por todo el cuerpo bajo el polvo rojo. Lo que en la escena ritual es humo, en el cuerpo es capa, y eso da a la biblia una coherencia material que no hay que inventar"
+        },
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "El canon reescrito describe el humo que el cronista no describía: sube despacio, llena el retrete, borra los bordes de las esteras, cambia el color de la luz y deja el cuarto sin fondo."
         }
       ],
       "design_contract": {
@@ -4302,12 +5007,13 @@
           "pertenece sólo al oratorio y no entra en ninguna lámina del camino: la bruma exterior es otra ficha y otra luz"
         ],
         "documented_features": [
+          "canon, campo mito: «El humo subía despacio y llenaba el retrete. Los bordes de las esteras se perdían, la luz cambiaba de color, el cuarto se quedaba sin fondo»",
           "dossier §2 (cuy-cieza-1553): lo que la fuente sí dice es que quemaban hierbas y resinas delante de sus ídolos dentro del retrete, y que después venía la figura de ojos resplandecientes: el humo existe por el acto, no por descripción",
           "dossier §1.3 (cuy-briofitos-2026): la iluminancia mediana de la franja alta de esta cordillera es de 544 lux frente a 1.077,5 abajo, con humedad de 89,6 %, y esa penumbra medida es el proxy del que sale la luz general del corpus",
           "dossier §5: el protocolo de brasa no tiene dato colombiano revisado — ni color de humo, ni fusión previa—, y todo lo que circula sobre «humo blanco azulado» es divulgación sin respaldo"
         ],
         "editorial_features": [
-          "EL HUMO EN CAPAS NO ESTÁ EN LA FUENTE y ésta es la declaración central de la ficha: el cronista no describe el humo, y «el humo llena el cuarto en capas lentas» es añadido de la divulgación. La regla de atmósfera se asume aquí como decisión editorial declarada y no como dato, y se sostiene porque protege la ambigüedad, que es el argumento del relato",
+          "El humo que sube despacio, borra los bordes de las esteras, cambia la luz y deja el cuarto sin fondo está ahora en el canon reescrito, pero no en Cieza (dossier §12.9): el canon lo tomó de la divulgación que el dossier señalaba. La regla se dibuja porque el canon la da; que sean «capas horizontales» sigue siendo decisión editorial, reversible.",
           "sin una regla escrita cada escena resolvería la niebla de manera distinta y la ambigüedad se perdería: por eso la ficha existe, y por eso es reversible en su forma pero no en su función",
           "la elección de capas horizontales frente a masa difusa es de técnica y es revocable"
         ]
@@ -4322,6 +5028,7 @@
         "materials_textures": "papel de seda o vitela en capas horizontales de distinto gramaje entre los planos, más denso cuanto más lejos; el borde de la estera como prueba: donde el humo pasa, el canto del papel de la estera deja de verse, y ésa es toda la mecánica de la ficha; columna de la brasa subiendo recta desde cada incensario, en tiras verticales finas y cortas que se doblan al llegar a la primera capa; quilling reservado exclusivamente a esa doblez, y nunca usado para dibujar un remolino",
         "era": "Dos capas que no se tocan. A, época de contacto, primera mitad del siglo XVI: casa grande y redonda de varas y vigas cerrando arriba en arco, cubierta de paja, apartados entoldados con esteras; cuerpos desnudos con maure de un palmo de ancho, pelo trasquilado, cara pintada en amarillo o azul y negro, cuerpo untado de resina y cubierto de polvo rojo; oro de cuerpo y de guerra —corona, patena al pecho, brazal, chagualas ensartadas en una vara que cargan dos hombres—; encensarios de barro, resinas y hierbas rastreras. B, mundo regional tardío, siglos XIX y XX: arriero con sombrero de cañabrava de ala grande, pañuelo rabo e gallo, franela cruda, delantal a rayas, pantalón de dril recogido, quimbas, carriel y peinilla; mula con mulera, enjalma, retranca, pretal, lía, sobrecarga, cinchón y garabato; mantas de tela local de trama gruesa en azul turquí. Ni un adorno de contacto sobre un cuerpo de la capa B, ni una pieza de la capa B dentro del oratorio.",
         "constraints": [
+          "documentado: «El humo subía despacio y llenaba el retrete. Los bordes de las esteras se perdían, la luz cambiaba de color, el cuarto se quedaba sin fondo»",
           "documentado: lo que la fuente sí dice es que quemaban hierbas y resinas delante de sus ídolos dentro del retrete, y que después venía la figura de ojos resplandecientes: el humo existe por el acto, no por descripción",
           "documentado: la iluminancia mediana de la franja alta de esta cordillera es de 544 lux frente a 1.077,5 abajo, con humedad de 89,6 %, y esa penumbra medida es el proxy del que sale la luz general del corpus",
           "documentado: el protocolo de brasa no tiene dato colombiano revisado — ni color de humo, ni fusión previa—, y todo lo que circula sobre «humo blanco azulado» es divulgación sin respaldo",
@@ -4393,6 +5100,11 @@
           "myth": "el-diablo",
           "field": "mito",
           "note": "Arma no era una aldea: un solo individuo era reconocido como cacique principal de toda la región, su asentamiento tenía cerca de tres mil casas y la provincia veinte mil guerreros, hasta el punto de que la literatura discute si se trata de un protoestado. La gramática de grupo tiene que poder mostrar escala y jerarquía, no un puñado de figuras"
+        },
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "En el canon reescrito la casa redonda tiene «muchos moradores, repartidos en apartados que se separaban colgando esteras»; la consulta ya no es por las cosechas."
         }
       ],
       "design_contract": {
@@ -4513,6 +5225,11 @@
           "myth": "el-tesoro-del-pipinta",
           "field": "mito",
           "note": "La hoja de orfebrería legendaria no puede parecerse a una vitrina: los ejemplares más fotografiados del país —las ciento veintidós piezas del tesoro salido en 1892, con sus seis cascos, seis collares y seis poporos, y el poporo icónico que además procede de otro departamento— quedan prohibidos por nombre. Lo que se usa es el lenguaje: cera perdida, fundición con núcleo, martillado y repujado, y superficie pulida a espejo"
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "El canon reescrito enumera el oro de guerra —cascos, coronas, diademas, narigueras, collares, pectorales, petos, puñetes, cintos y ajorcas— formando «una coraza que relucía y les cubría la carne»."
         }
       ],
       "design_contract": {
@@ -4532,6 +5249,7 @@
           "ninguna pieza cita un ejemplar catalogado de orfebrería del Cauca medio"
         ],
         "documented_features": [
+          "canon, campo mito: salieron «vestidos de oro de los pies a la cabeza»: «cascos, coronas, diademas, narigueras, collares, pectorales, petos, puñetes, cintos y ajorcas, todo encima del cuerpo y todo junto, de manera que el metal formaba una coraza que relucía y les cubría la carne»",
           "dossier §3 y §5 (cuy-cdi-1540): el oro es equipo de cuerpo y de guerra — coronas, patenas en los pechos, brazales, plumas y banderas en lanzas largas—, y «el de menos ley tiene diez y nueve quilates»",
           "dossier §5 (cuy-cdi-1540): la imagen que nadie ha dibujado — el cacique Cirigua hacía llevar delante de él «una vara larga gruesa, puesta en los hombros» de dos hombres, «toda llena de chagualas de oro, como platos medianos, y coronas y otras joyas metidos en la vara»",
           "dossier §3 (cuy-cdi-1540): «cuatro ó cinco mill indios, todos con armaduras de oro» salieron a recibir a los españoles, y de esa escena sale el nombre de la provincia",
@@ -4542,7 +5260,8 @@
         "editorial_features": [
           "la forma concreta de cada pieza es genérica y declarada: se usa el lenguaje formal documentado y jamás un ejemplar, porque la colección de referencia salió del país en 1892 y es producto de guaquería sin contexto",
           "la vara de las chagualas se reconstruye a partir de una sola frase y es reversible en su hechura, no en su mecánica: lo que no se puede cambiar es que la carguen dos hombres",
-          "dossier §0 y §3 (cuy-guaqueria-1989): el norte de Caldas y el Quindío fueron barridos por la guaquería entre 1885 y 1914 —cerca de dos mil personas hacia 1889, más de quinientos guaqueros antes de la fundación de Filandia, y «la inmensa mayoría de los guaqueros despreciaron y destruyeron las ofrendas funerarias que no fueran de oro o de tumbaga»—, y la ley de patrimonio arqueológico llega en 1959, medio siglo después del auge. Una imagen que sirva de guía a un sitio repite, en este territorio, el gesto que lo vació: eso pesa más que cualquier consideración de estilo"
+          "dossier §0 y §3 (cuy-guaqueria-1989): el norte de Caldas y el Quindío fueron barridos por la guaquería entre 1885 y 1914 —cerca de dos mil personas hacia 1889, más de quinientos guaqueros antes de la fundación de Filandia, y «la inmensa mayoría de los guaqueros despreciaron y destruyeron las ofrendas funerarias que no fueran de oro o de tumbaga»—, y la ley de patrimonio arqueológico llega en 1959, medio siglo después del auge. Una imagen que sirva de guía a un sitio repite, en este territorio, el gesto que lo vació: eso pesa más que cualquier consideración de estilo",
+          "El canon reescrito da el inventario completo del oro de guerra puesto a la vez; la hoja lo lleva sobre un cuerpo como coraza continua, y la vara de chagualas de Cirigua se conserva como pieza del dossier aunque Cirigua haya salido del canon."
         ]
       },
       "prompt_spec": {
@@ -4555,6 +5274,7 @@
         "materials_textures": "oro rojizo pulido a espejo en lámina delgada: corona, patena redonda de pecho, brazal, y chagualas del tamaño de platos medianos; vara larga y gruesa de madera, apoyada en los hombros de dos hombres, con las piezas metidas en ella y no colgadas; plumas como pocas piezas planas grandes con el borde recortado en dientes, nunca pluma por pluma; lanzas largas con banderas, que es el otro sitio donde el oro de guerra aparece",
         "era": "Dos capas que no se tocan. A, época de contacto, primera mitad del siglo XVI: casa grande y redonda de varas y vigas cerrando arriba en arco, cubierta de paja, apartados entoldados con esteras; cuerpos desnudos con maure de un palmo de ancho, pelo trasquilado, cara pintada en amarillo o azul y negro, cuerpo untado de resina y cubierto de polvo rojo; oro de cuerpo y de guerra —corona, patena al pecho, brazal, chagualas ensartadas en una vara que cargan dos hombres—; encensarios de barro, resinas y hierbas rastreras. B, mundo regional tardío, siglos XIX y XX: arriero con sombrero de cañabrava de ala grande, pañuelo rabo e gallo, franela cruda, delantal a rayas, pantalón de dril recogido, quimbas, carriel y peinilla; mula con mulera, enjalma, retranca, pretal, lía, sobrecarga, cinchón y garabato; mantas de tela local de trama gruesa en azul turquí. Ni un adorno de contacto sobre un cuerpo de la capa B, ni una pieza de la capa B dentro del oratorio.",
         "constraints": [
+          "documentado: salieron «vestidos de oro de los pies a la cabeza»: «cascos, coronas, diademas, narigueras, collares, pectorales, petos, puñetes, cintos y ajorcas, todo encima del cuerpo y todo junto, de manera que el metal formaba una coraza que relucía y les cubría la carne»",
           "documentado: el oro es equipo de cuerpo y de guerra — coronas, patenas en los pechos, brazales, plumas y banderas en lanzas largas—, y «el de menos ley tiene diez y nueve quilates»",
           "documentado: la imagen que nadie ha dibujado — el cacique Cirigua hacía llevar delante de él «una vara larga gruesa, puesta en los hombros» de dos hombres, «toda llena de chagualas de oro, como platos medianos, y coronas y otras joyas metidos en la vara»",
           "documentado: «cuatro ó cinco mill indios, todos con armaduras de oro» salieron a recibir a los españoles, y de esa escena sale el nombre de la provincia",
@@ -4841,6 +5561,11 @@
           "myth": "el-tesoro-del-pipinta",
           "field": "mito",
           "note": "La pareja guardiana se queda sin naturaleza resuelta y eso es deliberado: la fuente los llama caciques guardianes, macho y hembra, en la puerta, y no dice si son personas, imágenes o presencias. La hoja fija una ambigüedad sostenida —escala, posición flanqueando el acceso, quietud— y declara que no se identifican con ninguna deidad ni con ninguna figura de orfebrería catalogada"
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "El canon reescrito fija la mica: «ella sostenía una mica, también de oro macizo»."
         }
       ],
       "design_contract": {
@@ -4876,7 +5601,7 @@
         "asset_type": "Biblia visual Cuycuyes V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que aquí sube y se enrolla: el humo del sahumerio en capas lentas dentro del retrete, la neblina que levanta la cascada, y el resplandor que se deshace en cintas sobre el cañón. La estera se resuelve por trenzado de tiras planas, que es su construcción real, y no por textura impresa.",
         "primary_request": "identidad corporal completa y legible para Guardián y guardiana del escondite. Dos figuras iguales flanqueando el acceso, de pie, quietas y deliberadamente sin resolver: la escala y la posición dicen que custodian, y nada más dice si son personas, imágenes o presencias. Ella sostiene una mica —no un mono—, y esa discrepancia queda declarada en la hoja. Son las dos únicas figuras del corpus que no se mueven en ninguna lámina y las únicas que están siempre simétricas.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Escala humana y las dos exactamente iguales, sin diferencia de altura: si una fuera mayor se leerían como jerarquía, y si fueran pequeñas se leerían como estatuillas de orfebrería. La altura de persona es lo que mantiene abierta la pregunta.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Escala humana y las dos exactamente iguales, sin diferencia de altura: si una fuera mayor se leerían como jerarquía, y si fueran pequeñas se leerían como estatuillas de orfebrería. La altura de persona es lo que mantiene abierta la pregunta.",
         "lighting_mood": "Dos luces opuestas, una por relato, y ésa es la separación del corpus. El oratorio es interior cerrado sin ventana, iluminado sólo por las brasas de los incensarios desde abajo: negros profundos, un solo plano iluminado, los bordes de las esteras perdiéndose, y dos puntos de luz en alto que son lo único que el ojo encuentra. El camino es exterior de montaña bajo bruma medida —544 lux en la franja alta, humedad cercana al noventa por ciento—: luz plana, blanca y sin dirección, con el cañón abriéndose mil quinientos metros más abajo y el resplandor apareciendo como un punto contra esa masa gris. Nada emite luz propia salvo los ojos y el espejismo, y ninguno de los dos ilumina lo que tiene alrededor.",
         "materials_textures": "un solo plano oscuro por figura, sin división de prendas, sin rasgos de cara y sin textura: la ambigüedad se construye con la falta de material, no con niebla encima; mica de oro en las manos de la figura de la derecha, pequeña y compacta, en el mismo oro rojizo del inventario; piedra del umbral entre las dos, que es lo que las convierte en pareja y no en dos figuras sueltas; penumbra de la cámara detrás, que impide decidir si están delante del hueco o dentro de él",
         "era": "Dos capas que no se tocan. A, época de contacto, primera mitad del siglo XVI: casa grande y redonda de varas y vigas cerrando arriba en arco, cubierta de paja, apartados entoldados con esteras; cuerpos desnudos con maure de un palmo de ancho, pelo trasquilado, cara pintada en amarillo o azul y negro, cuerpo untado de resina y cubierto de polvo rojo; oro de cuerpo y de guerra —corona, patena al pecho, brazal, chagualas ensartadas en una vara que cargan dos hombres—; encensarios de barro, resinas y hierbas rastreras. B, mundo regional tardío, siglos XIX y XX: arriero con sombrero de cañabrava de ala grande, pañuelo rabo e gallo, franela cruda, delantal a rayas, pantalón de dril recogido, quimbas, carriel y peinilla; mula con mulera, enjalma, retranca, pretal, lía, sobrecarga, cinchón y garabato; mantas de tela local de trama gruesa en azul turquí. Ni un adorno de contacto sobre un cuerpo de la capa B, ni una pieza de la capa B dentro del oratorio.",
@@ -4908,7 +5633,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -4953,27 +5678,33 @@
           "myth": "el-tesoro-del-pipinta",
           "field": "mito",
           "note": "Las cascadas están contadas y medidas, y sólo en un municipio: Aguadas tiene dos, la de Pore de unos ochenta metros —cuyo antiguo himno dice «En Pore la cascada… levanta su neblina»— y la de La Chorrera de unos cincuenta, en la vertiente del río Arma; Salamina tiene la de Nudillales, con petroglifos; y Pácora no registra ninguna. El salto del itinerario es más coherente con La Chorrera que con Pore"
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "El canon reescrito resuelve el escondite como un alero sobre una cañada, con salto de agua y escalas de piedra natural: sin roca-tapón, sin segunda piedra, sin escalas labradas."
         }
       ],
       "design_contract": {
-        "distinctive_silhouette": "No es una cueva kárstica —no existe ninguna en este territorio y la prueba es exhaustiva— sino un abrigo entre bloques de roca meteorizada, y su ficha es una secuencia de umbrales: escalones naturales junto a la caída de agua, una cornisa, una roca que funciona como tapón, un salón detrás, una segunda piedra y unas escalas labradas por mano humana que bajan. Ni estalactita, ni columna, ni galería calcárea, y ni un solo rasgo que permita reconocer el sitio en el terreno.",
+        "distinctive_silhouette": "No es una cueva kárstica —no existe ninguna en este territorio— sino un alero de roca meteorizada sobre una cañada, y su ficha es una secuencia corta: la cuchilla vertical, el salto de agua al fondo, las escalas de piedra natural junto al salto y, arriba, el alero que cubre un espacio hondo. Ni estalactita, ni columna, ni galería calcárea, y ni un solo rasgo que permita reconocer el sitio en el terreno.",
         "materials": [
           "esquisto y serpentinita meteorizados, con la roca sana visible sólo donde el agua la lava, que es junto a la caída",
           "saprolita arcillosa en el manto de encima, de decenas de metros de espesor, y cicatrices de deslizamiento en la ladera de alrededor",
-          "escalas labradas por mano humana en la roca, que es lo que distingue este acceso de una formación natural y lo que lo convierte en arqueología y no en espeleología",
-          "roca-tapón como un solo bloque grande y desplazable, sin junta tallada y sin puerta",
-          "agua de la caída al costado, en quilling corto, como umbral y no como decorado"
+          "agua de la caída al costado, en quilling corto, como umbral y no como decorado",
+          "escalas de piedra natural: bloques de esquisto escalonados por la erosión junto al salto, sin marca de talla",
+          "el alero como un solo plano de roca en voladizo, con la penumbra debajo"
         ],
         "palette_logic": "Grises verdosos de esquisto y pardos de saprolita bajo la luz plana y sin dirección de la bruma alta, con el interior en penumbra casi total: el oro del salón es el único punto cálido y sólo aparece cuando ya se ha pasado el segundo umbral.",
         "scale": "Umbrales sucesivos a escala de cuerpo —se pasa agachado, se baja de espaldas— y un salón que apenas contiene lo que guarda: la hoja niega deliberadamente la vista general, porque una vista general de la boca sería un mapa.",
         "continuity_markers": [
           "sin estalactitas, sin columnas y sin galerías calcáreas en ninguna lámina: no hay karst en este territorio",
           "sin perfil de cuchilla reconocible, sin boca localizable y sin confluencia legible en ninguna lámina",
-          "la secuencia de umbrales va siempre en el mismo orden: escalones, cornisa, roca-tapón, salón, segunda piedra, escalas labradas",
-          "las escalas son labradas y se ve que lo son: es el rasgo que impide que el abrigo se lea como cueva natural",
-          "ninguna lámina reproduce la piedra grabada de El Dorado ni los petroglifos de la cascada de Nudillales, que son bienes reales y localizables"
+          "ninguna lámina reproduce la piedra grabada de El Dorado ni los petroglifos de la cascada de Nudillales, que son bienes reales y localizables",
+          "la secuencia es siempre la misma: cuchilla, cañada, salto, escalas de piedra natural, alero",
+          "las escalas son naturales, sin talla: el canon reescrito dice «escalas de piedra natural», y la roca-tapón, la segunda piedra y las escalas labradas del inventario anterior ya no están en el relato"
         ],
         "documented_features": [
+          "canon, campo mito: «se llega a una cuchilla que desciende en vertical hasta una cañada. Al fondo hay un salto de agua, y junto al salto unas escalas de piedra natural. Arriba, una especie de alero»; dentro «las mantas indígenas y los sombreros de caña» y, más adentro, «una corte de dieciséis caciques de oro macizo, y dos guardianes»",
           "dossier §1.4 y §12.8 (cuy-ingeominas-1980): sobre las ciento setenta y cuatro páginas de la memoria oficial de las planchas que cubren el territorio hay cero ocurrencias de «cueva», cero de «caverna» y cero de «dolomía»; los únicos cuerpos carbonatados del área son lentes de mármol de menos de un kilómetro cuadrado, todos en el departamento vecino. Lo que hay son esquistos verdes, un gabro, serpentinitas, una granodiorita y pizarras, con «intensa meteorización» y roca fresca «sólo en los lechos de las quebradas y ríos», y «la región entre Pácora y Salamina está caracterizada por deslizamientos»",
           "dossier §1.5 y §12.8 (cuy-caldas-aguadas): sí hay correlato, y es arqueológico — «PIEDRA DE EL DORADO. En la finca el Dorado existe una piedra grabada que contiene jeroglíficos: figuras de ranas, lagartijas, cuadrados, espirales, círculos, etc. Al frente de ella hay una cueva con escalas labradas en la roca, en donde también se cree que se encuentra el tesoro del gran Pipintá»",
           "dossier §1.5 (cuy-caldas-pacora): y otra en el municipio vecino, la Piedra de Pipintá «ubicada en el Alto de Poso a una altura de 1500 m.s.n.m… una enorme roca que disimula la entrada a la cueva», con «un estrecho salón que a la vez se comunica con otros de menos amplitud». Dos cuevas, dos municipios, un solo nombre en disputa",
@@ -4983,19 +5714,21 @@
         "editorial_features": [
           "la prohibición de localización va REFORZADA precisamente porque hay correlato: hay petroglifos reales y localizables en la boca misma del relato, y dos municipios se disputan el sitio. Ninguna lámina da perfil, ruta ni punto de referencia",
           "la forma concreta del salón y el número de umbrales entre la roca-tapón y las escalas son composición declarada: la ruta enumera, no describe",
-          "que la cascada del itinerario sea La Chorrera es inferencia geográfica del dossier y no un dato del relato: reversible, y en todo caso ninguna lámina la identifica"
+          "que la cascada del itinerario sea La Chorrera es inferencia geográfica del dossier y no un dato del relato: reversible, y en todo caso ninguna lámina la identifica",
+          "El canon reescrito cambia la secuencia de acceso: ya no hay cornisa, roca-tapón, segunda piedra ni escalas labradas, sino escalas de piedra natural y un alero. La Piedra de El Dorado, con escalas labradas, sigue en el dossier como correlato real y no se dibuja."
         ]
       },
       "prompt_spec": {
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Cuycuyes V1 - spatial_model",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que aquí sube y se enrolla: el humo del sahumerio en capas lentas dentro del retrete, la neblina que levanta la cascada, y el resplandor que se deshace en cintas sobre el cañón. La estera se resuelve por trenzado de tiras planas, que es su construcción real, y no por textura impresa.",
-        "primary_request": "planta, materiales y relacion con el cuerpo que la habita para Cámara de piedra donde está el depósito. No es una cueva kárstica —no existe ninguna en este territorio y la prueba es exhaustiva— sino un abrigo entre bloques de roca meteorizada, y su ficha es una secuencia de umbrales: escalones naturales junto a la caída de agua, una cornisa, una roca que funciona como tapón, un salón detrás, una segunda piedra y unas escalas labradas por mano humana que bajan. Ni estalactita, ni columna, ni galería calcárea, y ni un solo rasgo que permita reconocer el sitio en el terreno.",
+        "primary_request": "planta, materiales y relacion con el cuerpo que la habita para El alero del tesoro. No es una cueva kárstica —no existe ninguna en este territorio— sino un alero de roca meteorizada sobre una cañada, y su ficha es una secuencia corta: la cuchilla vertical, el salto de agua al fondo, las escalas de piedra natural junto al salto y, arriba, el alero que cubre un espacio hondo. Ni estalactita, ni columna, ni galería calcárea, y ni un solo rasgo que permita reconocer el sitio en el terreno.",
         "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Umbrales sucesivos a escala de cuerpo —se pasa agachado, se baja de espaldas— y un salón que apenas contiene lo que guarda: la hoja niega deliberadamente la vista general, porque una vista general de la boca sería un mapa.",
         "lighting_mood": "Dos luces opuestas, una por relato, y ésa es la separación del corpus. El oratorio es interior cerrado sin ventana, iluminado sólo por las brasas de los incensarios desde abajo: negros profundos, un solo plano iluminado, los bordes de las esteras perdiéndose, y dos puntos de luz en alto que son lo único que el ojo encuentra. El camino es exterior de montaña bajo bruma medida —544 lux en la franja alta, humedad cercana al noventa por ciento—: luz plana, blanca y sin dirección, con el cañón abriéndose mil quinientos metros más abajo y el resplandor apareciendo como un punto contra esa masa gris. Nada emite luz propia salvo los ojos y el espejismo, y ninguno de los dos ilumina lo que tiene alrededor.",
-        "materials_textures": "esquisto y serpentinita meteorizados, con la roca sana visible sólo donde el agua la lava, que es junto a la caída; saprolita arcillosa en el manto de encima, de decenas de metros de espesor, y cicatrices de deslizamiento en la ladera de alrededor; escalas labradas por mano humana en la roca, que es lo que distingue este acceso de una formación natural y lo que lo convierte en arqueología y no en espeleología; roca-tapón como un solo bloque grande y desplazable, sin junta tallada y sin puerta; agua de la caída al costado, en quilling corto, como umbral y no como decorado",
+        "materials_textures": "esquisto y serpentinita meteorizados, con la roca sana visible sólo donde el agua la lava, que es junto a la caída; saprolita arcillosa en el manto de encima, de decenas de metros de espesor, y cicatrices de deslizamiento en la ladera de alrededor; agua de la caída al costado, en quilling corto, como umbral y no como decorado; escalas de piedra natural: bloques de esquisto escalonados por la erosión junto al salto, sin marca de talla; el alero como un solo plano de roca en voladizo, con la penumbra debajo",
         "era": "Dos capas que no se tocan. A, época de contacto, primera mitad del siglo XVI: casa grande y redonda de varas y vigas cerrando arriba en arco, cubierta de paja, apartados entoldados con esteras; cuerpos desnudos con maure de un palmo de ancho, pelo trasquilado, cara pintada en amarillo o azul y negro, cuerpo untado de resina y cubierto de polvo rojo; oro de cuerpo y de guerra —corona, patena al pecho, brazal, chagualas ensartadas en una vara que cargan dos hombres—; encensarios de barro, resinas y hierbas rastreras. B, mundo regional tardío, siglos XIX y XX: arriero con sombrero de cañabrava de ala grande, pañuelo rabo e gallo, franela cruda, delantal a rayas, pantalón de dril recogido, quimbas, carriel y peinilla; mula con mulera, enjalma, retranca, pretal, lía, sobrecarga, cinchón y garabato; mantas de tela local de trama gruesa en azul turquí. Ni un adorno de contacto sobre un cuerpo de la capa B, ni una pieza de la capa B dentro del oratorio.",
         "constraints": [
+          "documentado: «se llega a una cuchilla que desciende en vertical hasta una cañada. Al fondo hay un salto de agua, y junto al salto unas escalas de piedra natural. Arriba, una especie de alero»; dentro «las mantas indígenas y los sombreros de caña» y, más adentro, «una corte de dieciséis caciques de oro macizo, y dos guardianes»",
           "documentado: sobre las ciento setenta y cuatro páginas de la memoria oficial de las planchas que cubren el territorio hay cero ocurrencias de «cueva», cero de «caverna» y cero de «dolomía»; los únicos cuerpos carbonatados del área son lentes de mármol de menos de un kilómetro cuadrado, todos en el departamento vecino. Lo que hay son esquistos verdes, un gabro, serpentinitas, una granodiorita y pizarras, con «intensa meteorización» y roca fresca «sólo en los lechos de las quebradas y ríos», y «la región entre Pácora y Salamina está caracterizada por deslizamientos»",
           "documentado: sí hay correlato, y es arqueológico — «PIEDRA DE EL DORADO. En la finca el Dorado existe una piedra grabada que contiene jeroglíficos: figuras de ranas, lagartijas, cuadrados, espirales, círculos, etc. Al frente de ella hay una cueva con escalas labradas en la roca, en donde también se cree que se encuentra el tesoro del gran Pipintá»",
           "documentado: y otra en el municipio vecino, la Piedra de Pipintá «ubicada en el Alto de Poso a una altura de 1500 m.s.n.m… una enorme roca que disimula la entrada a la cueva», con «un estrecho salón que a la vez se comunica con otros de menos amplitud». Dos cuevas, dos municipios, un solo nombre en disputa",
@@ -5338,6 +6071,371 @@
           "view_type": "object_three_quarter",
           "purpose": "hechura, escala y uso del objeto",
           "aspect": "1:1",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "idolo-de-paucura__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "idolo-de-paucura"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "«Junto a la puerta del señor Pimana se alzaba un ídolo de madera del tamaño de un hombre, de buen cuerpo, con los brazos abiertos y el rostro vuelto hacia donde nace el sol. Ese estaba afuera, lo veía cualquiera que llegara, y no hablaba.»"
+        },
+        {
+          "myth": "el-diablo",
+          "field": "versiones",
+          "note": "Cieza dice haber visto él mismo, en Paucora, «un ídolo de madera de tamaño humano con los brazos abiertos» a la puerta de Pimana; y en Paucura las mantas pequeñas sí existen (dossier §6.1)."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Figura de madera de pie, de tamaño humano y buen cuerpo, con los dos brazos abiertos en horizontal y la cara vuelta hacia el sol naciente, plantada junto a una puerta de casa y a plena luz: la única figura del corpus que está afuera, quieta y a la vista, y la única sin humo alrededor.",
+        "materials": [
+          "madera tallada resuelta en pocos planos grandes de papel pardo con la veta recortada a lo largo, sin pintura ni oro encima",
+          "cara como óvalo plano de madera con los rasgos recortados aparte, sin expresión",
+          "la jamba de la puerta de la casa de Pimana como un solo plano a su lado, para dar la escala"
+        ],
+        "palette_logic": "Pardo claro de madera a pleno día, contra el verde de la montaña: es la lámina más clara del primer relato, opuesta a la penumbra del retrete.",
+        "scale": "Del alto de un hombre, medido contra la puerta de la casa. 1:1 con la puerta y un tramo de camino.",
+        "continuity_markers": [
+          "brazos abiertos siempre",
+          "la cara hacia el oriente, con la luz de frente",
+          "afuera y a pleno día: nunca humo, nunca ojos encendidos"
+        ],
+        "documented_features": [
+          "«Un ídolo de madera del tamaño de un hombre, de buen cuerpo, con los brazos abiertos y el rostro vuelto hacia donde nace el sol», junto a la puerta del señor Pimana, en Paucura (canon, campo mito; Cieza cap. XX, canon campo historia)",
+          "«Ese estaba afuera, lo veía cualquiera que llegara, y no hablaba» (canon, campo mito)",
+          "El oratorio que Cieza dice haber visto con sus ojos estaba en Paucora, no en Arma (dossier §12.5)"
+        ],
+        "editorial_features": [
+          "La talla no está descrita más allá de tamaño, cuerpo, brazos y orientación: se resuelve lisa y genérica, sin copiar ninguna pieza de madera conservada. Reversible.",
+          "Ningún rasgo demoníaco: Cieza lo mete en su capítulo sobre el demonio, pero el relato sólo dice que estaba afuera y no hablaba (regla de la traducción colonial, dossier §2).",
+          "La casa de Pimana no se diseña aparte: su puerta es el único plano de arquitectura de la hoja, y lleva cubierta de hoja de caña, que es la de Paucura según el dossier, no la paja de Arma."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Cuycuyes V1 - object_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que aquí sube y se enrolla: el humo del sahumerio en capas lentas dentro del retrete, la neblina que levanta la cascada, y el resplandor que se deshace en cintas sobre el cañón. La estera se resuelve por trenzado de tiras planas, que es su construcción real, y no por textura impresa.",
+        "primary_request": "hechura, escala y uso del objeto para El ídolo de madera a la puerta de Pimana. Figura de madera de pie, de tamaño humano y buen cuerpo, con los dos brazos abiertos en horizontal y la cara vuelta hacia el sol naciente, plantada junto a una puerta de casa y a plena luz: la única figura del corpus que está afuera, quieta y a la vista, y la única sin humo alrededor.",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Del alto de un hombre, medido contra la puerta de la casa. 1:1 con la puerta y un tramo de camino.",
+        "lighting_mood": "Dos luces opuestas, una por relato, y ésa es la separación del corpus. El oratorio es interior cerrado sin ventana, iluminado sólo por las brasas de los incensarios desde abajo: negros profundos, un solo plano iluminado, los bordes de las esteras perdiéndose, y dos puntos de luz en alto que son lo único que el ojo encuentra. El camino es exterior de montaña bajo bruma medida —544 lux en la franja alta, humedad cercana al noventa por ciento—: luz plana, blanca y sin dirección, con el cañón abriéndose mil quinientos metros más abajo y el resplandor apareciendo como un punto contra esa masa gris. Nada emite luz propia salvo los ojos y el espejismo, y ninguno de los dos ilumina lo que tiene alrededor.",
+        "materials_textures": "madera tallada resuelta en pocos planos grandes de papel pardo con la veta recortada a lo largo, sin pintura ni oro encima; cara como óvalo plano de madera con los rasgos recortados aparte, sin expresión; la jamba de la puerta de la casa de Pimana como un solo plano a su lado, para dar la escala",
+        "era": "Dos capas que no se tocan. A, época de contacto, primera mitad del siglo XVI: casa grande y redonda de varas y vigas cerrando arriba en arco, cubierta de paja, apartados entoldados con esteras; cuerpos desnudos con maure de un palmo de ancho, pelo trasquilado, cara pintada en amarillo o azul y negro, cuerpo untado de resina y cubierto de polvo rojo; oro de cuerpo y de guerra —corona, patena al pecho, brazal, chagualas ensartadas en una vara que cargan dos hombres—; encensarios de barro, resinas y hierbas rastreras. B, mundo regional tardío, siglos XIX y XX: arriero con sombrero de cañabrava de ala grande, pañuelo rabo e gallo, franela cruda, delantal a rayas, pantalón de dril recogido, quimbas, carriel y peinilla; mula con mulera, enjalma, retranca, pretal, lía, sobrecarga, cinchón y garabato; mantas de tela local de trama gruesa en azul turquí. Ni un adorno de contacto sobre un cuerpo de la capa B, ni una pieza de la capa B dentro del oratorio.",
+        "constraints": [
+          "documentado: «Un ídolo de madera del tamaño de un hombre, de buen cuerpo, con los brazos abiertos y el rostro vuelto hacia donde nace el sol», junto a la puerta del señor Pimana, en Paucura (canon, campo mito; Cieza cap. XX, canon campo historia)",
+          "documentado: «Ese estaba afuera, lo veía cualquiera que llegara, y no hablaba» (canon, campo mito)",
+          "documentado: El oratorio que Cieza dice haber visto con sus ojos estaba en Paucora, no en Arma (dossier §12.5)",
+          "El corpus autoriza exactamente dos colores, blanco y negro, en las flores del sahumerio: son el único par cromático del texto y hay que reservarlos para ahí, sobre una lámina que por lo demás vive en pardos y grises.",
+          "El oro es rojizo y pulido, y aparece dos veces con sentido opuesto: sobre un cuerpo en la capa de contacto, y como resplandor lejano que se deshace en la capa tardía. Nunca como montón, nunca como pieza de vitrina.",
+          "El interior del oratorio se construye en valores y no en tonos: negro profundo, un plano iluminado desde abajo por brasa y dos puntos claros. La saturación entra sólo con el rojo de la bija y el de la resina.",
+          "El exterior va en la gama medida de la bruma alta: blanco lechoso sin dirección, verdes muy apagados de bosque húmedo y el crema turbio del río en el fondo del cañón.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas y no de modelado.",
+          "Sin demonio, cuernos, alas, pezuñas, rostro monstruoso ni ídolo monumental: la figura es una silueta humana ambigua con dos puntos de luz, y no se identifica con ningún nombre.",
+          "Sin sacrificio, sangre, violencia ni escena de canibalismo, que son archivo colonial en disputa y no relato.",
+          "Sin reproducir un bien identificable: ni pieza catalogada de orfebrería del Cauca medio, ni la piedra grabada de El Dorado, ni los petroglifos de la cascada de Nudillales.",
+          "Sin que la imagen funcione como mapa: ni perfil de cuchilla reconocible, ni boca de cueva localizable, ni confluencia legible, en un territorio cuyo saqueo está documentado con cifras.",
+          "Sin mezclar épocas: ni adorno de contacto sobre un arriero, ni carriel, sombrero de iraca o manta tejida ancha dentro del oratorio o en un escondite prehispánico.",
+          "Sin karst: nada de estalactitas, columnas ni galerías calcáreas, que no existen en este territorio; y sin cactus ni desierto espinoso en el cañón, que es bosque seco con guaduales."
+        ],
+        "technique_close": "En el plano corto el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte; el cuerpo se construye por planos superpuestos y nunca modelado. La pintura facial del siglo XVI son dos o tres recortes planos apoyados sobre el óvalo, y el polvo rojo sobre resina es un tono mate uniforme, no un degradado. La figura del oratorio no es una silueta dibujada: es el hueco que dejan las capas de humo al superponerse, con dos perforaciones mínimas de papel claro por detrás. La mula se resuelve con pocas piezas planas grandes y el borde recortado en dientes en crin y cola."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "object_three_quarter",
+          "purpose": "hechura, escala y uso del objeto",
+          "aspect": "1:1",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_hombre_adulto__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_hombre_adulto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "Los de Arma salen a pelear, esconden el oro y vuelven a pelear desnudos; los ministros conducen el rito."
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "Los de Arma salen a pelear, esconden el oro y vuelven a pelear desnudos; los ministros conducen el rito."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre de cuerpo mediano y moreno, de pie, desnudo con el maure de un palmo, el pelo trasquilado, la cara pintada en campos de amarillo y la piel entera cubierta de bija roja mate: sin oro, que es su estado cuando la gente lo ha bajado del cuerpo.",
+        "materials": [
+          "piel en papel pardo mate cubierta por una capa mate de polvo rojo de bija",
+          "maure de unos veinte por treinta centímetros",
+          "pintura de cara en campos planos de amarillo, o de azul y negro",
+          "pelo trasquilado en una sola pieza corta"
+        ],
+        "palette_logic": "Rojo mate de bija sobre pardo, y amarillo o azul-negro sólo en la cara.",
+        "scale": "Cuerpo mediano, medido contra la puerta de la casa redonda. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "maure como única prenda",
+          "bija roja sobre toda la piel",
+          "pelo trasquilado",
+          "sin oro en la hoja de tipo: el oro va en su ficha y sobre el cuerpo que lo lleva"
+        ],
+        "documented_features": [
+          "dossier §6.1 (cuy-cieza-1553): «son de medianos cuerpos, todos morenos… andan ellas y ellos desnudos, salvo que para cubrir sus vergüenzas se ponen delante dellas unos maures tan anchos como un palmo y tan largos como palmo y medio», y «algunas de las mujeres andan tresquiladas, y lo mismo sus maridos»",
+          "dossier §6.2 (cuy-cdi-1540): cara pintada de amarillo o azul y negro, cuerpo untado de resina olorosa y encima polvo rojo de bija «para defensa del sol»",
+          "dossier §6.1: en Arma no hay mantas de algodón —son de Paucura— ni melenas largas",
+          "REGLA DE CAPA (dossier §6 y salvaguarda): este tipo es de la capa de contacto del siglo XVI y sólo de ella; nada de la capa de arriería —sombrero de caña, carriel, pañuelo, dril, mula— en su hoja ni en su plano",
+          "canon, campo mito: después de esconder el oro, «para la siguiente pelea salió desnuda»; y los ministros que conducen el rito"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte y la pintura en campos planos encima; el cuerpo, en pocos planos grandes de papel pardo mate cubiertos por una capa mate de bija, sin músculo modelado.",
+          "El pelo trasquilado es una sola pieza corta ajustada al cráneo; nunca mechón por mechón.",
+          "La hoja de tipo va sin oro a propósito: el oro de guerra tiene ficha propia y se pone encima."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Cuycuyes V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que aquí sube y se enrolla: el humo del sahumerio en capas lentas dentro del retrete, la neblina que levanta la cascada, y el resplandor que se deshace en cintas sobre el cañón. La estera se resuelve por trenzado de tiras planas, que es su construcción real, y no por textura impresa.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · hombre de Arma adulto (capa de contacto). Hombre de cuerpo mediano y moreno, de pie, desnudo con el maure de un palmo, el pelo trasquilado, la cara pintada en campos de amarillo y la piel entera cubierta de bija roja mate: sin oro, que es su estado cuando la gente lo ha bajado del cuerpo.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Cuerpo mediano, medido contra la puerta de la casa redonda. Cuerpo entero 9:16.",
+        "lighting_mood": "Dos luces opuestas, una por relato, y ésa es la separación del corpus. El oratorio es interior cerrado sin ventana, iluminado sólo por las brasas de los incensarios desde abajo: negros profundos, un solo plano iluminado, los bordes de las esteras perdiéndose, y dos puntos de luz en alto que son lo único que el ojo encuentra. El camino es exterior de montaña bajo bruma medida —544 lux en la franja alta, humedad cercana al noventa por ciento—: luz plana, blanca y sin dirección, con el cañón abriéndose mil quinientos metros más abajo y el resplandor apareciendo como un punto contra esa masa gris. Nada emite luz propia salvo los ojos y el espejismo, y ninguno de los dos ilumina lo que tiene alrededor.",
+        "materials_textures": "piel en papel pardo mate cubierta por una capa mate de polvo rojo de bija; maure de unos veinte por treinta centímetros; pintura de cara en campos planos de amarillo, o de azul y negro; pelo trasquilado en una sola pieza corta",
+        "era": "Dos capas que no se tocan. A, época de contacto, primera mitad del siglo XVI: casa grande y redonda de varas y vigas cerrando arriba en arco, cubierta de paja, apartados entoldados con esteras; cuerpos desnudos con maure de un palmo de ancho, pelo trasquilado, cara pintada en amarillo o azul y negro, cuerpo untado de resina y cubierto de polvo rojo; oro de cuerpo y de guerra —corona, patena al pecho, brazal, chagualas ensartadas en una vara que cargan dos hombres—; encensarios de barro, resinas y hierbas rastreras. B, mundo regional tardío, siglos XIX y XX: arriero con sombrero de cañabrava de ala grande, pañuelo rabo e gallo, franela cruda, delantal a rayas, pantalón de dril recogido, quimbas, carriel y peinilla; mula con mulera, enjalma, retranca, pretal, lía, sobrecarga, cinchón y garabato; mantas de tela local de trama gruesa en azul turquí. Ni un adorno de contacto sobre un cuerpo de la capa B, ni una pieza de la capa B dentro del oratorio.",
+        "constraints": [
+          "documentado: «son de medianos cuerpos, todos morenos… andan ellas y ellos desnudos, salvo que para cubrir sus vergüenzas se ponen delante dellas unos maures tan anchos como un palmo y tan largos como palmo y medio», y «algunas de las mujeres andan tresquiladas, y lo mismo sus maridos»",
+          "documentado: cara pintada de amarillo o azul y negro, cuerpo untado de resina olorosa y encima polvo rojo de bija «para defensa del sol»",
+          "documentado: en Arma no hay mantas de algodón —son de Paucura— ni melenas largas",
+          "documentado: REGLA DE CAPA (dossier §6 y salvaguarda): este tipo es de la capa de contacto del siglo XVI y sólo de ella; nada de la capa de arriería —sombrero de caña, carriel, pañuelo, dril, mula— en su hoja ni en su plano",
+          "documentado: después de esconder el oro, «para la siguiente pelea salió desnuda»; y los ministros que conducen el rito",
+          "El corpus autoriza exactamente dos colores, blanco y negro, en las flores del sahumerio: son el único par cromático del texto y hay que reservarlos para ahí, sobre una lámina que por lo demás vive en pardos y grises.",
+          "El oro es rojizo y pulido, y aparece dos veces con sentido opuesto: sobre un cuerpo en la capa de contacto, y como resplandor lejano que se deshace en la capa tardía. Nunca como montón, nunca como pieza de vitrina.",
+          "El interior del oratorio se construye en valores y no en tonos: negro profundo, un plano iluminado desde abajo por brasa y dos puntos claros. La saturación entra sólo con el rojo de la bija y el de la resina.",
+          "El exterior va en la gama medida de la bruma alta: blanco lechoso sin dirección, verdes muy apagados de bosque húmedo y el crema turbio del río en el fondo del cañón.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas y no de modelado.",
+          "Sin demonio, cuernos, alas, pezuñas, rostro monstruoso ni ídolo monumental: la figura es una silueta humana ambigua con dos puntos de luz, y no se identifica con ningún nombre.",
+          "Sin sacrificio, sangre, violencia ni escena de canibalismo, que son archivo colonial en disputa y no relato.",
+          "Sin reproducir un bien identificable: ni pieza catalogada de orfebrería del Cauca medio, ni la piedra grabada de El Dorado, ni los petroglifos de la cascada de Nudillales.",
+          "Sin que la imagen funcione como mapa: ni perfil de cuchilla reconocible, ni boca de cueva localizable, ni confluencia legible, en un territorio cuyo saqueo está documentado con cifras.",
+          "Sin mezclar épocas: ni adorno de contacto sobre un arriero, ni carriel, sombrero de iraca o manta tejida ancha dentro del oratorio o en un escondite prehispánico.",
+          "Sin karst: nada de estalactitas, columnas ni galerías calcáreas, que no existen en este territorio; y sin cactus ni desierto espinoso en el cañón, que es bosque seco con guaduales."
+        ],
+        "technique_close": "En el plano corto el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte; el cuerpo se construye por planos superpuestos y nunca modelado. La pintura facial del siglo XVI son dos o tres recortes planos apoyados sobre el óvalo, y el polvo rojo sobre resina es un tono mate uniforme, no un degradado. La figura del oratorio no es una silueta dibujada: es el hueco que dejan las capas de humo al superponerse, con dos perforaciones mínimas de papel claro por detrás. La mula se resuelve con pocas piezas planas grandes y el borde recortado en dientes en crin y cola."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_adulta__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_adulta"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-diablo",
+          "field": "mito",
+          "note": "La gente de muchos moradores de la casa redonda, que baja el oro del cuerpo y lo esconde."
+        },
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "La gente de muchos moradores de la casa redonda, que baja el oro del cuerpo y lo esconde."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer de cuerpo mediano y morena, de pie, desnuda con el maure de un palmo, el pelo trasquilado igual que el de los hombres y la piel entera cubierta de bija roja mate; ninguna manta de algodón.",
+        "materials": [
+          "piel en papel pardo mate cubierta de bija roja mate",
+          "maure de un palmo",
+          "pintura de cara en campos planos azul y negro",
+          "pelo trasquilado en una pieza corta"
+        ],
+        "palette_logic": "Rojo mate de bija sobre pardo, azul-negro en la cara.",
+        "scale": "Algo por debajo del hombre. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "sin manta de algodón: es de Paucura",
+          "pelo trasquilado igual que el del hombre",
+          "bija sobre toda la piel"
+        ],
+        "documented_features": [
+          "dossier §6.1 (cuy-cieza-1553): «son de medianos cuerpos, todos morenos… andan ellas y ellos desnudos, salvo que para cubrir sus vergüenzas se ponen delante dellas unos maures tan anchos como un palmo y tan largos como palmo y medio», y «algunas de las mujeres andan tresquiladas, y lo mismo sus maridos»",
+          "dossier §6.2 (cuy-cdi-1540): cara pintada de amarillo o azul y negro, cuerpo untado de resina olorosa y encima polvo rojo de bija «para defensa del sol»",
+          "dossier §6.1: en Arma no hay mantas de algodón —son de Paucura— ni melenas largas",
+          "REGLA DE CAPA (dossier §6 y salvaguarda): este tipo es de la capa de contacto del siglo XVI y sólo de ella; nada de la capa de arriería —sombrero de caña, carriel, pañuelo, dril, mula— en su hoja ni en su plano",
+          "canon, campo mito: la casa redonda tiene «muchos moradores, repartidos en apartados que se separaban colgando esteras»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte y la pintura en campos planos encima; el cuerpo, en pocos planos grandes de papel pardo mate cubiertos por una capa mate de bija, sin músculo modelado.",
+          "El pelo trasquilado es una sola pieza corta ajustada al cráneo; nunca mechón por mechón.",
+          "El reparto de colores de cara entre hombre y mujer es decisión de hoja: la fuente dice «amarillo ó azul é negro» sin repartir por sexo."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Cuycuyes V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que aquí sube y se enrolla: el humo del sahumerio en capas lentas dentro del retrete, la neblina que levanta la cascada, y el resplandor que se deshace en cintas sobre el cañón. La estera se resuelve por trenzado de tiras planas, que es su construcción real, y no por textura impresa.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer de Arma adulta (capa de contacto). Mujer de cuerpo mediano y morena, de pie, desnuda con el maure de un palmo, el pelo trasquilado igual que el de los hombres y la piel entera cubierta de bija roja mate; ninguna manta de algodón.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Algo por debajo del hombre. Cuerpo entero 9:16.",
+        "lighting_mood": "Dos luces opuestas, una por relato, y ésa es la separación del corpus. El oratorio es interior cerrado sin ventana, iluminado sólo por las brasas de los incensarios desde abajo: negros profundos, un solo plano iluminado, los bordes de las esteras perdiéndose, y dos puntos de luz en alto que son lo único que el ojo encuentra. El camino es exterior de montaña bajo bruma medida —544 lux en la franja alta, humedad cercana al noventa por ciento—: luz plana, blanca y sin dirección, con el cañón abriéndose mil quinientos metros más abajo y el resplandor apareciendo como un punto contra esa masa gris. Nada emite luz propia salvo los ojos y el espejismo, y ninguno de los dos ilumina lo que tiene alrededor.",
+        "materials_textures": "piel en papel pardo mate cubierta de bija roja mate; maure de un palmo; pintura de cara en campos planos azul y negro; pelo trasquilado en una pieza corta",
+        "era": "Dos capas que no se tocan. A, época de contacto, primera mitad del siglo XVI: casa grande y redonda de varas y vigas cerrando arriba en arco, cubierta de paja, apartados entoldados con esteras; cuerpos desnudos con maure de un palmo de ancho, pelo trasquilado, cara pintada en amarillo o azul y negro, cuerpo untado de resina y cubierto de polvo rojo; oro de cuerpo y de guerra —corona, patena al pecho, brazal, chagualas ensartadas en una vara que cargan dos hombres—; encensarios de barro, resinas y hierbas rastreras. B, mundo regional tardío, siglos XIX y XX: arriero con sombrero de cañabrava de ala grande, pañuelo rabo e gallo, franela cruda, delantal a rayas, pantalón de dril recogido, quimbas, carriel y peinilla; mula con mulera, enjalma, retranca, pretal, lía, sobrecarga, cinchón y garabato; mantas de tela local de trama gruesa en azul turquí. Ni un adorno de contacto sobre un cuerpo de la capa B, ni una pieza de la capa B dentro del oratorio.",
+        "constraints": [
+          "documentado: «son de medianos cuerpos, todos morenos… andan ellas y ellos desnudos, salvo que para cubrir sus vergüenzas se ponen delante dellas unos maures tan anchos como un palmo y tan largos como palmo y medio», y «algunas de las mujeres andan tresquiladas, y lo mismo sus maridos»",
+          "documentado: cara pintada de amarillo o azul y negro, cuerpo untado de resina olorosa y encima polvo rojo de bija «para defensa del sol»",
+          "documentado: en Arma no hay mantas de algodón —son de Paucura— ni melenas largas",
+          "documentado: REGLA DE CAPA (dossier §6 y salvaguarda): este tipo es de la capa de contacto del siglo XVI y sólo de ella; nada de la capa de arriería —sombrero de caña, carriel, pañuelo, dril, mula— en su hoja ni en su plano",
+          "documentado: la casa redonda tiene «muchos moradores, repartidos en apartados que se separaban colgando esteras»",
+          "El corpus autoriza exactamente dos colores, blanco y negro, en las flores del sahumerio: son el único par cromático del texto y hay que reservarlos para ahí, sobre una lámina que por lo demás vive en pardos y grises.",
+          "El oro es rojizo y pulido, y aparece dos veces con sentido opuesto: sobre un cuerpo en la capa de contacto, y como resplandor lejano que se deshace en la capa tardía. Nunca como montón, nunca como pieza de vitrina.",
+          "El interior del oratorio se construye en valores y no en tonos: negro profundo, un plano iluminado desde abajo por brasa y dos puntos claros. La saturación entra sólo con el rojo de la bija y el de la resina.",
+          "El exterior va en la gama medida de la bruma alta: blanco lechoso sin dirección, verdes muy apagados de bosque húmedo y el crema turbio del río en el fondo del cañón.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas y no de modelado.",
+          "Sin demonio, cuernos, alas, pezuñas, rostro monstruoso ni ídolo monumental: la figura es una silueta humana ambigua con dos puntos de luz, y no se identifica con ningún nombre.",
+          "Sin sacrificio, sangre, violencia ni escena de canibalismo, que son archivo colonial en disputa y no relato.",
+          "Sin reproducir un bien identificable: ni pieza catalogada de orfebrería del Cauca medio, ni la piedra grabada de El Dorado, ni los petroglifos de la cascada de Nudillales.",
+          "Sin que la imagen funcione como mapa: ni perfil de cuchilla reconocible, ni boca de cueva localizable, ni confluencia legible, en un territorio cuyo saqueo está documentado con cifras.",
+          "Sin mezclar épocas: ni adorno de contacto sobre un arriero, ni carriel, sombrero de iraca o manta tejida ancha dentro del oratorio o en un escondite prehispánico.",
+          "Sin karst: nada de estalactitas, columnas ni galerías calcáreas, que no existen en este territorio; y sin cactus ni desierto espinoso en el cañón, que es bosque seco con guaduales."
+        ],
+        "technique_close": "En el plano corto el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte; el cuerpo se construye por planos superpuestos y nunca modelado. La pintura facial del siglo XVI son dos o tres recortes planos apoyados sobre el óvalo, y el polvo rojo sobre resina es un tono mate uniforme, no un degradado. La figura del oratorio no es una silueta dibujada: es el hueco que dejan las capas de humo al superponerse, con dos perforaciones mínimas de papel claro por detrás. La mula se resuelve con pocas piezas planas grandes y el borde recortado en dientes en crin y cola."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_anciano__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_anciano"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "el-tesoro-del-pipinta",
+          "field": "mito",
+          "note": "Pipintá, hombre viejo y riquísimo, se presenta ante el capitán extranjero."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre viejo de pie, algo encorvado, desnudo con el maure, la bija roja sobre la piel, el pelo trasquilado gris y una barba cana corta en una sola pieza: rico por el oro que lleva puesto —una patena al pecho— y viejo por la barba y la curva.",
+        "materials": [
+          "piel en papel pardo mate con bija roja",
+          "barba cana corta en una sola pieza plana",
+          "patena de oro al pecho en papel dorado mate",
+          "maure de un palmo"
+        ],
+        "palette_logic": "Rojo de bija, gris de la barba y un solo punto de oro rojizo.",
+        "scale": "Estatura mediana reducida por la curva. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "barba cana siempre",
+          "una sola pieza de oro sobre el pecho",
+          "maure como única prenda"
+        ],
+        "documented_features": [
+          "dossier §6.1 (cuy-cieza-1553): «son de medianos cuerpos, todos morenos… andan ellas y ellos desnudos, salvo que para cubrir sus vergüenzas se ponen delante dellas unos maures tan anchos como un palmo y tan largos como palmo y medio», y «algunas de las mujeres andan tresquiladas, y lo mismo sus maridos»",
+          "dossier §6.2 (cuy-cdi-1540): cara pintada de amarillo o azul y negro, cuerpo untado de resina olorosa y encima polvo rojo de bija «para defensa del sol»",
+          "dossier §6.1: en Arma no hay mantas de algodón —son de Paucura— ni melenas largas",
+          "REGLA DE CAPA (dossier §6 y salvaguarda): este tipo es de la capa de contacto del siglo XVI y sólo de ella; nada de la capa de arriería —sombrero de caña, carriel, pañuelo, dril, mula— en su hoja ni en su plano",
+          "dossier §6.2 (cuy-cdi-1540): el otro señor era «viejo, unas barbas canas que otro nunca se vió en aquellas provincias»",
+          "canon, campo mito: Pipintá es «un hombre viejo y riquísimo»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte y la pintura en campos planos encima; el cuerpo, en pocos planos grandes de papel pardo mate cubiertos por una capa mate de bija, sin músculo modelado.",
+          "El pelo trasquilado es una sola pieza corta ajustada al cráneo; nunca mechón por mechón.",
+          "La patena al pecho traduce «riquísimo» con la pieza más sobria del repertorio documentado; reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Cuycuyes V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que aquí sube y se enrolla: el humo del sahumerio en capas lentas dentro del retrete, la neblina que levanta la cascada, y el resplandor que se deshace en cintas sobre el cañón. La estera se resuelve por trenzado de tiras planas, que es su construcción real, y no por textura impresa.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · anciano de Arma (capa de contacto). Hombre viejo de pie, algo encorvado, desnudo con el maure, la bija roja sobre la piel, el pelo trasquilado gris y una barba cana corta en una sola pieza: rico por el oro que lleva puesto —una patena al pecho— y viejo por la barba y la curva.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura mediana reducida por la curva. Cuerpo entero 9:16.",
+        "lighting_mood": "Dos luces opuestas, una por relato, y ésa es la separación del corpus. El oratorio es interior cerrado sin ventana, iluminado sólo por las brasas de los incensarios desde abajo: negros profundos, un solo plano iluminado, los bordes de las esteras perdiéndose, y dos puntos de luz en alto que son lo único que el ojo encuentra. El camino es exterior de montaña bajo bruma medida —544 lux en la franja alta, humedad cercana al noventa por ciento—: luz plana, blanca y sin dirección, con el cañón abriéndose mil quinientos metros más abajo y el resplandor apareciendo como un punto contra esa masa gris. Nada emite luz propia salvo los ojos y el espejismo, y ninguno de los dos ilumina lo que tiene alrededor.",
+        "materials_textures": "piel en papel pardo mate con bija roja; barba cana corta en una sola pieza plana; patena de oro al pecho en papel dorado mate; maure de un palmo",
+        "era": "Dos capas que no se tocan. A, época de contacto, primera mitad del siglo XVI: casa grande y redonda de varas y vigas cerrando arriba en arco, cubierta de paja, apartados entoldados con esteras; cuerpos desnudos con maure de un palmo de ancho, pelo trasquilado, cara pintada en amarillo o azul y negro, cuerpo untado de resina y cubierto de polvo rojo; oro de cuerpo y de guerra —corona, patena al pecho, brazal, chagualas ensartadas en una vara que cargan dos hombres—; encensarios de barro, resinas y hierbas rastreras. B, mundo regional tardío, siglos XIX y XX: arriero con sombrero de cañabrava de ala grande, pañuelo rabo e gallo, franela cruda, delantal a rayas, pantalón de dril recogido, quimbas, carriel y peinilla; mula con mulera, enjalma, retranca, pretal, lía, sobrecarga, cinchón y garabato; mantas de tela local de trama gruesa en azul turquí. Ni un adorno de contacto sobre un cuerpo de la capa B, ni una pieza de la capa B dentro del oratorio.",
+        "constraints": [
+          "documentado: «son de medianos cuerpos, todos morenos… andan ellas y ellos desnudos, salvo que para cubrir sus vergüenzas se ponen delante dellas unos maures tan anchos como un palmo y tan largos como palmo y medio», y «algunas de las mujeres andan tresquiladas, y lo mismo sus maridos»",
+          "documentado: cara pintada de amarillo o azul y negro, cuerpo untado de resina olorosa y encima polvo rojo de bija «para defensa del sol»",
+          "documentado: en Arma no hay mantas de algodón —son de Paucura— ni melenas largas",
+          "documentado: REGLA DE CAPA (dossier §6 y salvaguarda): este tipo es de la capa de contacto del siglo XVI y sólo de ella; nada de la capa de arriería —sombrero de caña, carriel, pañuelo, dril, mula— en su hoja ni en su plano",
+          "documentado: el otro señor era «viejo, unas barbas canas que otro nunca se vió en aquellas provincias»",
+          "documentado: Pipintá es «un hombre viejo y riquísimo»",
+          "El corpus autoriza exactamente dos colores, blanco y negro, en las flores del sahumerio: son el único par cromático del texto y hay que reservarlos para ahí, sobre una lámina que por lo demás vive en pardos y grises.",
+          "El oro es rojizo y pulido, y aparece dos veces con sentido opuesto: sobre un cuerpo en la capa de contacto, y como resplandor lejano que se deshace en la capa tardía. Nunca como montón, nunca como pieza de vitrina.",
+          "El interior del oratorio se construye en valores y no en tonos: negro profundo, un plano iluminado desde abajo por brasa y dos puntos claros. La saturación entra sólo con el rojo de la bija y el de la resina.",
+          "El exterior va en la gama medida de la bruma alta: blanco lechoso sin dirección, verdes muy apagados de bosque húmedo y el crema turbio del río en el fondo del cañón.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas y no de modelado.",
+          "Sin demonio, cuernos, alas, pezuñas, rostro monstruoso ni ídolo monumental: la figura es una silueta humana ambigua con dos puntos de luz, y no se identifica con ningún nombre.",
+          "Sin sacrificio, sangre, violencia ni escena de canibalismo, que son archivo colonial en disputa y no relato.",
+          "Sin reproducir un bien identificable: ni pieza catalogada de orfebrería del Cauca medio, ni la piedra grabada de El Dorado, ni los petroglifos de la cascada de Nudillales.",
+          "Sin que la imagen funcione como mapa: ni perfil de cuchilla reconocible, ni boca de cueva localizable, ni confluencia legible, en un territorio cuyo saqueo está documentado con cifras.",
+          "Sin mezclar épocas: ni adorno de contacto sobre un arriero, ni carriel, sombrero de iraca o manta tejida ancha dentro del oratorio o en un escondite prehispánico.",
+          "Sin karst: nada de estalactitas, columnas ni galerías calcáreas, que no existen en este territorio; y sin cactus ni desierto espinoso en el cañón, que es bosque seco con guaduales."
+        ],
+        "technique_close": "En el plano corto el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte; el cuerpo se construye por planos superpuestos y nunca modelado. La pintura facial del siglo XVI son dos o tres recortes planos apoyados sobre el óvalo, y el polvo rojo sobre resina es un tono mate uniforme, no un degradado. La figura del oratorio no es una silueta dibujada: es el hueco que dejan las capas de humo al superponerse, con dos perforaciones mínimas de papel claro por detrás. La mula se resuelve con pocas piezas planas grandes y el borde recortado en dientes en crin y cola."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],

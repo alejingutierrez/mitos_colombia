@@ -778,8 +778,8 @@
     "dossier": "docs/investigacion/ansermas.md"
   },
   "inventory": {
-    "status": "reconciling",
-    "frozen": false,
+    "status": "approved_frozen",
+    "frozen": true,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -789,7 +789,7 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19",
+    "approved_at": "2026-09-24",
     "reconciliation": {
       "opened_at": "2026-09-24",
       "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
@@ -798,8 +798,40 @@
         "los-pasos-de-xixaraca"
       ],
       "new_myths": [],
-      "unchanged_myths": []
-    }
+      "unchanged_myths": [],
+      "closed_at": "2026-09-24",
+      "summary": "2 relatos releídos: 1 añadida (los que se santiguan, embebidos), 5 excluidas por el canon nuevo (cerro Opiramá, su abertura, otras plagas, cascadas Lágrimas de Michua, saltos de Bellavista), 8 rediseñadas (Tamaracas sin encierro y con estado de hueste en silueta, españoles pasan a embebidos, minería narrada sin lámina, cultivos, huellas, río, Xixarama, extranjeros) y 2 tipos base; mujer joven, niño, anciano y anciana declarados ausentes."
+    },
+    "declared_absences": [
+      {
+        "entity_id": "tipo_mujer_joven",
+        "name": "Tipo base · mujer joven de Guacuma",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Los dos relatos hablan de «la gente» y de las generaciones en abstracto, sin poner en escena a nadie de esa edad; no se inventa un tipo que ningún relato sostiene."
+      },
+      {
+        "entity_id": "tipo_nino",
+        "name": "Tipo base · niño de Guacuma",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Los dos relatos hablan de «la gente» y de las generaciones en abstracto, sin poner en escena a nadie de esa edad; no se inventa un tipo que ningún relato sostiene."
+      },
+      {
+        "entity_id": "tipo_anciano",
+        "name": "Tipo base · anciano de Guacuma",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Los dos relatos hablan de «la gente» y de las generaciones en abstracto, sin poner en escena a nadie de esa edad; no se inventa un tipo que ningún relato sostiene."
+      },
+      {
+        "entity_id": "tipo_anciana",
+        "name": "Tipo base · anciana de Guacuma",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Los dos relatos hablan de «la gente» y de las generaciones en abstracto, sin poner en escena a nadie de esa edad; no se inventa un tipo que ningún relato sostiene."
+      }
+    ]
   },
   "myths": {
     "las-huellas-de-mapura": {
@@ -822,9 +854,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura separó la plaga de la especie, y la separación vino de dos sitios a la vez: del propio texto, que pone «en forma de langosta, de enfermedad y granizo» en un solo renglón —un insecto, una dolencia y un fenómeno meteorológico no son una anatomía, son una categoría de calamidad—, y del terreno, donde no existe ninguna langosta de plaga en el alto Cauca ni ningún registro histórico de una; y detrás de esa separación apareció la que reordena el ciclo entero, porque «tamaraca» era en 1553 la palabra con que esta gente llamaba a los españoles, de modo que el plural de seres subterráneos es una reinterpretación posterior y la nube de langostas es la digestión de una invasión: si se dibuja sólo como insectos se pierde lo que el corpus dice, y si se dibuja con figuras humanas reconocibles se comete el prejuicio que el canon prohíbe, y por eso el inventario produjo masa sin especie y sin rostro.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito saca a los Tamaracas del Opiramá —ni cerro ni abertura: la localización venía de un blog— y los vuelve potencias sin forma fija que llegan como langostas, como hueste a pie con barbas y caballos que no se fue, y hoy como papeles, permisos y máquinas por el oro del cerro; la hoja gana el estado de hueste en silueta sin rostro, la minería queda narrada y sin lámina por la consulta previa, y el chontaduro y las otras plagas salen del relato.",
         "previous_note": "La lectura separó la plaga de la especie, y la separación vino de dos sitios a la vez: del propio texto, que pone «en forma de langosta, de enfermedad y granizo» en un solo renglón —un insecto, una dolencia y un fenómeno meteorológico no son una anatomía, son una categoría de calamidad—, y del terreno, donde no existe ninguna langosta de plaga en el alto Cauca ni ningún registro histórico de una; y detrás de esa separación apareció la que reordena el ciclo entero, porque «tamaraca» era en 1553 la palabra con que esta gente llamaba a los españoles, de modo que el plural de seres subterráneos es una reinterpretación posterior y la nube de langostas es la digestión de una invasión: si se dibuja sólo como insectos se pierde lo que el corpus dice, y si se dibuja con figuras humanas reconocibles se comete el prejuicio que el canon prohíbe, y por eso el inventario produjo masa sin especie y sin rostro."
       },
       "entity_refs": [
@@ -912,6 +944,16 @@
           "entity_id": "tamaracas_como_mineria_y_despojo",
           "role": "variant",
           "note": "Variante contemporánea: Cardona relacionó después el nombre con la violencia política de 1948 y los estudios ambientales lo usan hoy para amenazas mineras y deterioro territorial. Muestra que «Tamaracas» es una categoría móvil para daños históricos, y no se retroproyecta como doctrina antigua."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: la gente de Guacuma, hombres."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: la gente de Guacuma, mujeres."
         }
       ]
     },
@@ -935,9 +977,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura separó el lugar del nombre del lugar, y ahí se cayó una ficha: el río Mápura no existe — Mápura es una vereda del corregimiento de Irra, en el cañón del Cauca, mil metros por debajo del cerro—, de modo que la ficha se rehízo como orilla de río en la vereda de ese nombre y con las tres ubicaciones incompatibles que el mismo autor dio en tres textos declaradas en lugar de resueltas; y separó también lo que se sabe de lo que se ha pintado, porque la única descripción física de Xixaraca en circulación es un cuadro de un artista vivo colgado en una cafetería de Quinchía, y conocerla es exactamente lo que permite prohibirla y construir las dos hojas de deidad sobre posición, escala y relación con la tormenta en vez de sobre un cuerpo que ninguna fuente da.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito termina en la piedra: retira las Lágrimas de Michua y los saltos de Bellavista porque sólo los sostenía un blog, fija que las huellas las estampa Xixaraca solo al irse «derrotado y triste», con el pie entrando en la roca «como entra en el barro», y añade a la gente de hoy que pasa junto al agua y se santigua sin saber si es amenaza o despedida; los extranjeros quedan como una de dos causas en versiones.",
         "previous_note": "La lectura separó el lugar del nombre del lugar, y ahí se cayó una ficha: el río Mápura no existe — Mápura es una vereda del corregimiento de Irra, en el cañón del Cauca, mil metros por debajo del cerro—, de modo que la ficha se rehízo como orilla de río en la vereda de ese nombre y con las tres ubicaciones incompatibles que el mismo autor dio en tres textos declaradas en lugar de resueltas; y separó también lo que se sabe de lo que se ha pintado, porque la única descripción física de Xixaraca en circulación es un cuadro de un artista vivo colgado en una cafetería de Quinchía, y conocerla es exactamente lo que permite prohibirla y construir las dos hojas de deidad sobre posición, escala y relación con la tormenta en vez de sobre un cuerpo que ninguna fuente da."
       },
       "entity_refs": [
@@ -1015,6 +1057,21 @@
           "entity_id": "irra_naranjal_y_santa_elena",
           "role": "variant",
           "note": "Variantes de recorrido: aparecen sólo en «reconstrucciones más amplias» del trayecto, sin escena y sin descripción. El canon advierte que no se invente una ruta continua entre todas las marcas y saltos, y la ficha no la inventa."
+        },
+        {
+          "entity_id": "caminantes_que_se_santiguan",
+          "role": "secondary",
+          "note": "Nuevos en el canon reescrito: los de hoy que se santiguan ante las huellas; embebidos en el río."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: la gente de Guacuma, hombres."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: la gente de Guacuma, mujeres."
         }
       ]
     }
@@ -1072,6 +1129,11 @@
           "myth": "las-huellas-de-mapura",
           "field": "mito",
           "note": "Toda la trama de este corpus es una sola transmisión: tres textos del mismo autor recordando al mismo narrador, más dos trabajos académicos que dependen de él. Las únicas voces realmente independientes son la crónica de 1553, la síntesis etnológica de 1948 y la entrevista de 1977 a Gabriel Campeón, y ninguna de las tres narra el ciclo"
+        },
+        {
+          "myth": "los-pasos-de-xixaraca",
+          "field": "mito",
+          "note": "En el canon reescrito se va «derrotado y triste», «cuando ya no quedaba modo de sostener lo que había sostenido», y deja las huellas al irse."
         }
       ],
       "census_note": "Conduce los dos relatos: vive en Karambá, cuida a la gente de Guacuma, mantiene sujetos a los Tamaracas, los obliga a volver bajo Opiramá y al final se va dejando las huellas en la roca. La ficha tiene que sostener la corrección central del canon —Gabriel Campeón rechazó llamarlo «diablo»—: ni demonio ni deidad europeizada, y sin tocado genérico.",
@@ -1208,13 +1270,14 @@
       ]
     },
     "tamaracas": {
-      "name": "Los Tamaracas, seres de adentro",
+      "name": "Los Tamaracas, potencias enemigas",
       "kind": "criatura",
-      "description": "Conducen el conflicto del primer relato: encerrados en las profundidades de Opiramá, cambian de forma durante ciertos periodos, buscan una abertura y, cuando escapan, se extienden como nubes de langostas devorando las plantas. El estado extra sí lo muestra el relato y cambia por completo la silueta —de sombra contenida a plaga—, así que cuesta ficha. La hoja base debe declararse como forma abstracta, porque la fuente nunca describe su cuerpo.",
+      "description": "En el canon reescrito no son seres encerrados sino «potencias enemigas» que «no tenían una sola forma»: llegan como nube de langostas que se come lo sembrado, llegan a pie, armados, con barbas y con caballos «y esa vez no se fueron», y ahora vienen por el oro del cerro con papeles, permisos y máquinas. Vuelven siempre con otra cara.",
       "aliases": [],
       "states": [
         "canonico",
-        "nube_de_langostas"
+        "nube_de_langostas",
+        "hueste_a_pie_con_barbas_y_caballos"
       ],
       "evidence_basis": "editorial_interpretation",
       "sensitivity": "public",
@@ -1261,39 +1324,48 @@
           "myth": "las-huellas-de-mapura",
           "field": "mito",
           "note": "Toda la trama de este corpus es una sola transmisión: tres textos del mismo autor recordando al mismo narrador, más dos trabajos académicos que dependen de él. Las únicas voces realmente independientes son la crónica de 1553, la síntesis etnológica de 1948 y la entrevista de 1977 a Gabriel Campeón, y ninguna de las tres narra el ciclo"
+        },
+        {
+          "myth": "las-huellas-de-mapura",
+          "field": "mito",
+          "note": "El canon reescrito retira el encierro en el Opiramá y hace de los Tamaracas potencias sin forma fija: langostas, una hueste a pie con barbas y caballos que no se fue, y hoy papeles, permisos y máquinas por el oro del cerro."
         }
       ],
       "census_note": "Conducen el conflicto del primer relato: encerrados en las profundidades de Opiramá, cambian de forma durante ciertos periodos, buscan una abertura y, cuando escapan, se extienden como nubes de langostas devorando las plantas. El estado extra sí lo muestra el relato y cambia por completo la silueta —de sombra contenida a plaga—, así que cuesta ficha. La hoja base debe declararse como forma abstracta, porque la fuente nunca describe su cuerpo.",
       "design": {
-        "silhouette": "No tienen cuerpo y la hoja lo dice de entrada: la forma base es una masa oscura contenida bajo la línea del Opiramá —el valor más oscuro de la lámina, sin contorno estable, sin rostro y sin un solo miembro—, que sólo se lee porque la roca que la encierra sí tiene canto. En el estado de plaga esa misma masa se rompe en muchas piezas pequeñas iguales de canto vivo que se agrupan y se dispersan: densidad y nunca especie, sin ala resuelta, sin pata, sin antena y sin una sola figura humana dentro.",
+        "silhouette": "No tienen cuerpo y la hoja lo dice de entrada: la forma base es una masa oscura que avanza por el borde de la ladera sembrada —el valor más oscuro de la lámina, sin contorno estable, sin rostro y sin un solo miembro—, y cada estado es la misma masa tomando otra cara. En el estado de plaga se deshace en centenares de piezas iguales; en el de la hueste, la misma masa se recorta contra el cielo con el perfil de lanzas y cuellos de caballo, sin una sola cara ni una sola armadura legible.",
         "materials": [
-          "papel negro mate en una sola masa sin borde definido para la forma contenida, con la grieta de la roca como único contorno prestado",
+          "papel negro mate en una sola masa sin borde definido para la forma base, contra el canto vivo de la ladera",
           "muchas piezas pequeñas e idénticas de canto vivo para el estado de plaga, recortadas iguales y repetidas por centenares, que se leen como densidad y no como enjambre de una especie",
-          "roca de la base profunda del Opiramá conteniéndolos por arriba y por los lados: la contención es el material",
-          "mata de maíz mordida y hoja rota en la franja donde la masa ya pasó, como único rastro de su efecto"
+          "el borde de la ladera sembrada como límite contra el que avanza la masa: el límite que la gente tiene que volver a poner es el material",
+          "mata de maíz mordida y hoja rota en la franja donde la masa ya pasó, como único rastro de su efecto",
+          "para la hueste, el mismo papel negro recortado sólo en su borde superior —puntas de lanza, cuellos y orejas de caballo, un perfil de barba— y liso por dentro: la silueta dice quiénes son sin darles cara"
         ],
         "palette": "Sin color propio en ningún estado: son el valor más oscuro de la lámina en la que aparecen y su avance se lee por densidad, no por tono. Ninguna nota verde de insecto, ningún brillo de caparazón, ningún rojo.",
         "scale": "En la forma base, del tamaño de la cavidad que la contiene, sin poder medirse. En el estado de plaga, cada pieza es más pequeña que una uña y su escala sólo se entiende por comparación con la mata de maíz: el tamaño está en el número, no en la unidad.",
         "continuity": [
           "nunca tienen anatomía: en ninguna lámina, en ningún estado y en ningún plano de detalle",
           "nunca hay una figura humana reconocible dentro de la masa ni entre las piezas: esa identificación es la que el canon prohíbe expresamente",
-          "nunca salen del Opiramá hacia el Karambá por el aire libre sin una franja de cultivo de por medio: el relato dice que devoran, y el efecto tiene que estar en cuadro",
-          "no llevan cadena dibujada: el encadenamiento se lee como contención de la roca, no como hierro, que además no existe en esta época"
+          "no llevan cadena dibujada: el encadenamiento se lee como contención de la roca, no como hierro, que además no existe en esta época",
+          "la hueste es masa y perfil, nunca figuras individuales con rostro, casco, coraza o cruz: dibujar españoles reconocibles sería cometer el prejuicio que el dossier prohíbe en la otra dirección (§2)",
+          "la forma de hoy —papeles, permisos, máquinas— no se dibuja en ningún estado: el cerro está en consulta previa (§3)"
         ],
         "documented": [
+          "canon, campo mito: «No eran una sola cosa y no tenían una sola forma: eran potencias enemigas»; «una vez llegaron como nube de langostas y se comieron lo sembrado»; «otra vez llegaron a pie, armados, con barbas y con caballos, hablando una lengua que nadie había oído, y esa vez no se fueron»; «ahora vienen por el oro del cerro… con papeles, permisos y máquinas»",
           "dossier §7 (ans-cardona-2011): la fuente no los describe nunca en su forma base — están «escondidos», «encadenados», «encontraban la manera de escabullirse y disfrazarse», y al escapar «se extendían como nubes de langostas y otras plagas»",
-          "dossier §7 (ans-cardona-2016): su lista de manifestaciones —«en forma de langosta, de enfermedad y granizo»— pone en el mismo renglón un insecto, una dolencia y un fenómeno meteorológico: no son una especie, son una categoría de calamidad",
           "dossier §7 y §12.7 (ans-ica-langosta): no existe ninguna langosta de plaga en el alto Cauca — la única que forma plagas en Colombia es la langosta llanera de Meta y Vichada, y la especie sudamericana que forma mangas verdaderas no llega a Colombia; no hay ningún registro histórico de plaga de langosta en esta región",
-          "dossier §2 y §12.2 (ans-cieza-1553): «llaman al diablo Xixarama, y a los españoles, tamaraca» — en 1553 la palabra designaba literalmente a los españoles, y el plural de seres subterráneos es reinterpretación posterior: el mito de la plaga es la digestión de una invasión, y ésa es la clave del ciclo entero",
-          "dossier §7 (ans-cardona-2011): «las otras plagas» no se inventan porque la fuente no nombra ninguna"
+          "dossier §2 y §12.2 (ans-cieza-1553): «llaman al diablo Xixarama, y a los españoles, tamaraca» — en 1553 la palabra designaba literalmente a los españoles, y el plural de seres subterráneos es reinterpretación posterior: el mito de la plaga es la digestión de una invasión, y ésa es la clave del ciclo entero"
         ],
         "editorial": [
           "la forma abstracta es la decisión más editorial del dossier y va marcada como reversible: si la nube se dibuja sólo como insectos se pierde lo que el corpus está diciendo, y si se dibuja con figuras humanas reconocibles se comete el prejuicio que el canon prohíbe; la masa sin especie y sin rostro es la tercera salida y es una elección, no un dato",
           "el estado de plaga se cobra como lámina aparte porque cambia la silueta entera —de masa contenida a dispersión—, y así lo declaró el censo; lo que no cambia es que en ninguno de los dos estados hay anatomía",
-          "las versiones tardías que identifican a los Tamaracas con pueblos Noanamá, Tatamá o Chocó, y las que los leen como violencia política de 1948 o como minería y despojo, quedan fuera de toda lámina: no son una deriva de divulgación sino que están en la propia cadena académica, y por eso la exclusión se refuerza"
+          "las versiones tardías que identifican a los Tamaracas con pueblos Noanamá, Tatamá o Chocó, y las que los leen como violencia política de 1948 o como minería y despojo, quedan fuera de toda lámina: no son una deriva de divulgación sino que están en la propia cadena académica, y por eso la exclusión se refuerza",
+          "El encierro bajo el Opiramá que esta hoja dibujaba se retira porque el canon reescrito lo retira; la masa ahora avanza por la ladera en vez de estar contenida. Reversible si el canon vuelve a la localización.",
+          "La hueste a pie se cobra como estado porque el canon reescrito la pone en el relato como una forma de los Tamaracas, y el dossier ya decía que «Tamaraca» significaba «español» en 1553 (§2). Se resuelve como silueta sin rostro; si el editor prefiere no dibujarla, el estado cae y queda la plaga."
         ],
         "states_to_model": [
-          "nube_de_langostas"
+          "nube_de_langostas",
+          "hueste a pie con barbas y caballos, en silueta sin rostro"
         ]
       },
       "states_declared": [
@@ -1356,6 +1428,11 @@
           "myth": "las-huellas-de-mapura",
           "field": "mito",
           "note": "Michua y Xixaraca bajan de la cumbre «para compartir y bailar con sus protegidos»: es el único gesto de proximidad documentado en todo el ciclo y la única alternativa a representarlos como figuras remotas, pero procede de una fuente que depende de la cadena de Cardona y se declara como tal"
+        },
+        {
+          "myth": "las-huellas-de-mapura",
+          "field": "mito",
+          "note": "El canon reescrito dice qué sostiene Xixaraca para la gente: «que la siembra volviera, que los caminos pudieran andarse, que la gente pudiera quedarse donde estaba»; el daño de hoy es «que la gente tenga que irse»."
         }
       ],
       "census_note": "Los protegidos: bajo el cuidado de Xixaraca crecen sus cultivos y pueden recorrer los caminos; cuando la plaga sale, su abundancia se vuelve hambre; en una de las versiones son quienes olvidan agradecer y provocan la partida. Única gramática de cuerpos humanos del corpus.",
@@ -1502,13 +1579,9 @@
       ],
       "evidence_basis": "uncertain",
       "sensitivity": "public",
-      "visual_status": "required",
-      "model_requirements": [
-        "environment_model"
-      ],
-      "model_refs": [
-        "cerro_opirama__environment_model"
-      ],
+      "visual_status": "excluded",
+      "model_requirements": [],
+      "model_refs": [],
       "legacy_model_refs": [],
       "myth_refs": [
         "las-huellas-de-mapura"
@@ -1570,7 +1643,8 @@
         "documented_core",
         "academic_hypothesis",
         "uncertain"
-      ]
+      ],
+      "exclusion_reason": "no aparece en el canon reescrito del 2026-09-23: el relato ya no encierra a los Tamaracas bajo ningún cerro, y sus versiones retiran la localización —venía de un blog personal— y dejan abierto si Opiramá es río, cacique o cerro"
     },
     "huellas_en_la_roca": {
       "name": "Las grandes huellas humanas sobre la roca",
@@ -1618,6 +1692,11 @@
           "myth": "los-pasos-de-xixaraca",
           "field": "mito",
           "note": "Toda la trama de este corpus es una sola transmisión: tres textos del mismo autor recordando al mismo narrador, más dos trabajos académicos que dependen de él. Las únicas voces realmente independientes son la crónica de 1553, la síntesis etnológica de 1948 y la entrevista de 1977 a Gabriel Campeón, y ninguna de las tres narra el ciclo"
+        },
+        {
+          "myth": "los-pasos-de-xixaraca",
+          "field": "mito",
+          "note": "El canon reescrito fija que las estampa Xixaraca solo, al irse «derrotado y triste», con el pie entrando en la piedra «como entra en el barro»; las huellas están en el camino junto al agua y la gente que pasa se santigua."
         }
       ],
       "census_note": "Es el objeto por el que se cuenta el relato y da título a la página: al caminar sobre las rocas Xixaraca imprime grandes huellas humanas que quedan cerca del agua como memoria difícil de borrar. Las dos escenas planeadas las muestran. La ficha no las presenta como prueba arqueológica: el canon dice expresamente que las fuentes no permiten resolver su origen material.",
@@ -1638,6 +1717,7 @@
           "no hay ningún rasgo del entorno que permita identificar la piedra ni llegar a ella: ni confluencia legible, ni perfil de cerro reconocible, ni sendero"
         ],
         "documented": [
+          "canon, campo mito: «huellas humanas gigantescas estampadas en las rocas», «a la vista, junto al agua, en el camino por donde la gente pasa todos los días»; al irse, «el pie entró en la piedra como entra en el barro, del tamaño que él tenía»: «marcan una salida y no una llegada»",
           "dossier §5 y carencia 2 (ans-cardona-anfora-1993): en treinta años existen exactamente dos adjetivos publicados — «gigantescas huellas humanas, estampadas en las rocas» y «enormes, con forma humana». Ni tamaño, ni número, ni tipo de roca, ni fotografía, ni registro arqueológico",
           "dossier §5 (ans-cardona-anfora-1993): lo único que la fuente añade del soporte es que las rocas planas están «cerca del agua»",
           "dossier §5: el canon advierte expresamente que las fuentes no permiten resolver su origen material, y que pueden ser marcas naturales, grabados o lugares de memoria",
@@ -1646,7 +1726,8 @@
         "editorial": [
           "la forma concreta del pie, su orientación y su número son decisión editorial reversible: la fuente da un adjetivo y un soporte",
           "la ausencia deliberada de referencia de escala es la decisión central de esta hoja y es lo que impide que la lámina se lea como documentación de un hallazgo",
-          "la atribución a Xixaraca es la lectura principal del canon, que admite a la vez que en algunos relatos las marcas son de Michua y en otros de los dos: la hoja no fija autoría dentro de la imagen"
+          "la atribución a Xixaraca es la lectura principal del canon, que admite a la vez que en algunos relatos las marcas son de Michua y en otros de los dos: la hoja no fija autoría dentro de la imagen",
+          "Las huellas van en dirección de salida, alejándose del cerro hacia el agua, porque el canon reescrito dice que marcan una salida; su número sigue sin fuente. Las atribuciones a Michua o a los dos que circulan en otras reconstrucciones no se dibujan: el canon se queda con Xixaraca solo."
         ],
         "states_to_model": []
       },
@@ -1692,6 +1773,11 @@
           "myth": "los-pasos-de-xixaraca",
           "field": "mito",
           "note": "Lo que sí está documentado cerca del puerto de Irra son fuentes saladas, petroglifos y comunidades umbras: hay arte rupestre real y localizable en el mismo tramo donde la memoria pone las huellas, y por eso la lámina no puede parecerse a un panel grabado ni funcionar como guía para llegar"
+        },
+        {
+          "myth": "los-pasos-de-xixaraca",
+          "field": "mito",
+          "note": "El canon reescrito pone las huellas en un camino de paso diario junto al agua y a la gente que se santigua al pasar."
         }
       ],
       "census_note": "El lugar más constante de todas las versiones: por allí pasan los protectores al atravesar las montañas y allí quedan las marcas junto al agua. Rocas planas a la orilla; no es intercambiable con el cerro ni con las cascadas.",
@@ -1712,6 +1798,7 @@
           "no hay puente, barca, camino de acceso ni infraestructura de ninguna época"
         ],
         "documented": [
+          "canon, campo mito: las huellas están «a la vista, junto al agua, en el camino por donde la gente pasa todos los días», abajo y no en el cerro",
           "dossier §12.1 y carencia 2 (ans-irra-geografia): EL RÍO MÁPURA NO EXISTE — Mápura es una vereda del corregimiento de Irra, en el cañón del Cauca, y el censo la fichó como «el río Mápura y sus rocas». La ficha se rehace como orilla de río en la vereda de ese nombre",
           "dossier §12.1 y carencia 2 (ans-cardona-2011, ans-cardona-2016, ans-cardona-anfora-1993): el mismo autor da tres ubicaciones incompatibles de las huellas, y ese desacuerdo se respeta en lugar de resolverse dibujando",
           "dossier §1.3 (ans-irra-geografia): Irra está a 835 metros y 28 °C, mil metros por debajo de la cabecera de Quinchía: éste es el piso caliente del corpus",
@@ -1741,13 +1828,9 @@
       ],
       "evidence_basis": "uncertain",
       "sensitivity": "public",
-      "visual_status": "required",
-      "model_requirements": [
-        "environment_model"
-      ],
-      "model_refs": [
-        "cascadas_lagrimas_de_michua__environment_model"
-      ],
+      "visual_status": "excluded",
+      "model_requirements": [],
+      "model_refs": [],
       "legacy_model_refs": [],
       "myth_refs": [
         "los-pasos-de-xixaraca"
@@ -1772,6 +1855,11 @@
           "myth": "los-pasos-de-xixaraca",
           "field": "mito",
           "note": "Ninguna fuente da la altura de la caída de las cascadas, y la ficha oficial de turismo del cerro no publica altura, roca, vegetación ni clima: la administración que gestiona el lugar no lo describe, y toda la materia del paisaje viene de blogs y de un estudio de geología"
+        },
+        {
+          "myth": "los-pasos-de-xixaraca",
+          "field": "versiones",
+          "note": "«Hay un episodio que la ficha anterior daba por firme y que aquí se retira: las cascadas llamadas Lágrimas de Michua, en Bellavista… el relato termina en la piedra.»"
         }
       ],
       "census_note": "Escenario del acto final: las lágrimas descienden por la montaña hasta convertirse en cascadas, que la memoria regional identifica con los saltos de Bellavista. El canon advierte que no se invente una ruta continua entre huellas y saltos, de modo que es un sitio propio y no una continuación del río.",
@@ -1809,12 +1897,13 @@
         "documented_core",
         "contemporary_memory",
         "uncertain"
-      ]
+      ],
+      "exclusion_reason": "no aparece en el canon reescrito del 2026-09-23: el relato «termina en la piedra», y sus versiones retiran expresamente el episodio porque el nombre y el llanto «no aparecen en ninguna fuente localizable fuera de un blog personal y del propio sitio»; el título de la página cambia por eso"
     },
     "cultivos_de_maiz_y_chontaduro": {
       "name": "El maíz y el chontaduro",
       "kind": "planta",
-      "description": "Son lo que está en juego en el primer relato: bajo la protección de Xixaraca crecen, la plaga los devora y convierte la abundancia en hambre, y después hay que restablecer la relación entre montaña, agua y siembra. Aparecen en las dos escenas planeadas. Una hoja botánica con las dos especies nombradas, sanas y devoradas.",
+      "description": "Son lo que está en juego en el primer relato: bajo la protección de Xixaraca crecen, la plaga los devora y convierte la abundancia en hambre, y después hay que restablecer la relación entre montaña, agua y siembra. Aparecen en las dos escenas planeadas. Una hoja botánica con las dos especies nombradas, sanas y devoradas. En el canon reescrito del primer relato sólo queda «lo sembrado» y «el maíz»: el chontaduro ya no se nombra y queda sostenido por el dossier (Cardona 2011).",
       "aliases": [],
       "states": [
         "canonico"
@@ -1852,6 +1941,11 @@
           "myth": "las-huellas-de-mapura",
           "field": "mito",
           "note": "La vivienda documentada es de madera con empalizada de postes gruesos, esteras de suelo y camas elevadas cubiertas de estera; y los ansermas están registrados como agricultores sobresalientes, con algodón, maíz, ají, coca, yuca, batata y fríjol, más guayaba, guama, guanábana, níspero, aguacate, piña y la palma de pixivaes"
+        },
+        {
+          "myth": "las-huellas-de-mapura",
+          "field": "mito",
+          "note": "En el canon reescrito los cultivos son «lo sembrado» y «el maíz»; el chontaduro de la fuente de 2011 ya no se nombra."
         }
       ],
       "census_note": "Son lo que está en juego en el primer relato: bajo la protección de Xixaraca crecen, la plaga los devora y convierte la abundancia en hambre, y después hay que restablecer la relación entre montaña, agua y siembra. Aparecen en las dos escenas planeadas. Una hoja botánica con las dos especies nombradas, sanas y devoradas.",
@@ -1872,6 +1966,7 @@
           "no hay insecto dibujado sobre las plantas devoradas: el daño se ve, la causa pertenece a la ficha de los Tamaracas"
         ],
         "documented": [
+          "canon, campo mito: los Tamaracas «se comieron lo sembrado, y la abundancia se volvió hambre en pocos días», y con Michua «el cielo se ponía de parte del maíz»; el chontaduro ya no aparece en el canon reescrito",
           "dossier §1.3 y §12.5 (ans-cardona-2011, ans-cieza-1553): el relato pone «las cosechas de maíz y chontaduro» en la misma frase, pero la palma de pixivaes no crece por encima de unos 1.300 metros y la cabecera de Quinchía está a 1.825; el propio cronista fija el límite al describir las provincias frías: allí «hay de las mismas comidas y frutas… salvo que no hay de las palmas de los pixivaes; mas cogen gran cantidad de papas»",
           "dossier §1.3 (ans-irra-geografia): la contradicción se resuelve dentro del mismo municipio, porque Irra está a 835 metros y 28 °C: el maíz es del alto y el chontaduro del cañón",
           "dossier §1.3 (ans-cieza-1553): la palma está descrita por un testigo del XVI — «unas palmas delgadas muy largas, espinosas; en lo alto dellas crían un racimo de una fruta que llamamos pixivaes», de la que se hace pan y vino y cuyo cogollo da palmito",
@@ -1881,7 +1976,8 @@
         "editorial": [
           "las cuatro versiones caben en una sola plancha y por eso esta ficha no cobra hoja de estado, respetando lo que decidió el censo: sano y devorado cambian el canto de la hoja, no la silueta de la especie",
           "la separación por piso térmico dentro de la plancha es decisión editorial declarada y reversible, y es la consecuencia operativa del dossier: no se pone una palma de chontaduro en el mismo plano que el cerro",
-          "la variedad concreta de maíz que se dibuja sale de la memoria regional de los años cuarenta y no del relato: es marco de transmisión aplicado a una planta, y se declara"
+          "la variedad concreta de maíz que se dibuja sale de la memoria regional de los años cuarenta y no del relato: es marco de transmisión aplicado a una planta, y se declara",
+          "La palma de pixivaes se mantiene en la plancha porque la fuente de 2011 la pone junto al maíz (dossier §1.3), aunque el canon reescrito sólo diga maíz: si el editor prefiere seguir al canon, la plancha se queda con la mata de maíz y cuesta lo mismo."
         ],
         "states_to_model": []
       },
@@ -1968,7 +2064,7 @@
     "xixarama": {
       "name": "Xixarama",
       "kind": "deidad_fuerza",
-      "description": "Grafía de la crónica de Cieza y de varias síntesis históricas, frente al Xixaraca de la memoria regional de Quinchía. El canon conserva ambas y no asegura que sean personajes distintos: una sola ficha con las dos grafías declaradas.",
+      "description": "Grafía de la crónica de Cieza y de varias síntesis históricas, frente al Xixaraca de la memoria regional de Quinchía. El canon conserva ambas y no asegura que sean personajes distintos: una sola ficha con las dos grafías declaradas. El canon reescrito suma el estatuto de cacique embera de la memoria de 2020, que tampoco se funde.",
       "aliases": [],
       "states": [
         "canonico"
@@ -1997,11 +2093,16 @@
           "myth": "los-pasos-de-xixaraca",
           "field": "mito",
           "note": "Xixarama es, en la síntesis etnológica, el progenitor del sol y de la luna: es un dato cosmogónico real pero sin trama conservada, y el censo hizo bien en excluirlo; darle cuerpo a los hijos exigiría inventar dos figuras que ninguna fuente describe"
+        },
+        {
+          "myth": "los-pasos-de-xixaraca",
+          "field": "versiones",
+          "note": "El canon reescrito añade un tercer estatuto: en «Entre cerros y montañas» es «un cacique indígena de nombre Xixaraca, símbolo del liderazgo y la resistencia del pueblo Embera». Dios, diablo y cacique «no se funden aquí»."
         }
       ],
       "census_note": "Grafía de la crónica de Cieza y de varias síntesis históricas, frente al Xixaraca de la memoria regional de Quinchía. El canon conserva ambas y no asegura que sean personajes distintos: una sola ficha con las dos grafías declaradas.",
       "covered_by": "xixaraca",
-      "coverage_note": "Grafía de la crónica de Cieza y de varias síntesis históricas, frente al Xixaraca de la memoria regional de Quinchía. El canon conserva ambas y no asegura que sean personajes distintos: una sola ficha con las dos grafías declaradas.",
+      "coverage_note": "Grafía de la crónica de Cieza y de varias síntesis históricas, frente al Xixaraca de la memoria regional de Quinchía. El canon conserva ambas y no asegura que sean personajes distintos: una sola ficha con las dos grafías declaradas. El canon reescrito suma el estatuto de cacique embera de la memoria de 2020, que tampoco se funde.",
       "evidence_basis_mix": [
         "documented_core",
         "contemporary_memory",
@@ -2091,7 +2192,7 @@
       ],
       "evidence_basis": "editorial_interpretation",
       "sensitivity": "public",
-      "visual_status": "embedded",
+      "visual_status": "excluded",
       "model_requirements": [],
       "model_refs": [],
       "legacy_model_refs": [],
@@ -2111,12 +2212,11 @@
         }
       ],
       "census_note": "«Se extendían como nubes de langostas y otras plagas»: la fuente no nombra ni describe ninguna otra. Variante del mismo estado, declarada en la hoja de los Tamaracas sin inventar especies.",
-      "covered_by": "tamaracas",
-      "coverage_note": "«Se extendían como nubes de langostas y otras plagas»: la fuente no nombra ni describe ninguna otra. Variante del mismo estado, declarada en la hoja de los Tamaracas sin inventar especies.",
       "evidence_basis_mix": [
         "documented_core",
         "editorial_interpretation"
-      ]
+      ],
+      "exclusion_reason": "no aparece en el canon reescrito del 2026-09-23: el relato nombra sólo la nube de langostas; «enfermedad y granizo» quedaron fuera"
     },
     "abertura_de_opirama": {
       "name": "La abertura que buscan los Tamaracas",
@@ -2128,7 +2228,7 @@
       ],
       "evidence_basis": "uncertain",
       "sensitivity": "public",
-      "visual_status": "embedded",
+      "visual_status": "excluded",
       "model_requirements": [],
       "model_refs": [],
       "legacy_model_refs": [],
@@ -2148,12 +2248,11 @@
         }
       ],
       "census_note": "«Cambiaban de forma y buscaban una abertura»; la escena horizontal ya la resuelve como grieta del cerro. Parte del modelo espacial de Opiramá, no un lugar aparte.",
-      "covered_by": "cerro_opirama",
-      "coverage_note": "«Cambiaban de forma y buscaban una abertura»; la escena horizontal ya la resuelve como grieta del cerro. Parte del modelo espacial de Opiramá, no un lugar aparte.",
       "evidence_basis_mix": [
         "editorial_interpretation",
         "uncertain"
-      ]
+      ],
+      "exclusion_reason": "no aparece en el canon reescrito del 2026-09-23: sin encierro bajo el Opiramá no hay abertura por la que salgan; los Tamaracas ahora «llegan» y «vuelven con otra cara»"
     },
     "caminos_de_guacuma": {
       "name": "Los caminos que podían recorrerse",
@@ -2294,7 +2393,7 @@
       ],
       "evidence_basis": "uncertain",
       "sensitivity": "public",
-      "visual_status": "embedded",
+      "visual_status": "excluded",
       "model_requirements": [],
       "model_refs": [],
       "legacy_model_refs": [],
@@ -2311,27 +2410,31 @@
           "myth": "los-pasos-de-xixaraca",
           "field": "mito",
           "note": "La monografía de la propia vereda Bellavista contradice a todas las demás fuentes: dice que «no hay corrientes de agua» y sus leyendas son el pollo paletas, la barbacoa, la patasola y la mano peluda, sin Michua ni Xixaraca. La ficha de las cascadas se produce sin ruta de acceso y sin convertirlas en sitio verificable"
+        },
+        {
+          "myth": "los-pasos-de-xixaraca",
+          "field": "versiones",
+          "note": "«Hay un episodio que la ficha anterior daba por firme y que aquí se retira: las cascadas llamadas Lágrimas de Michua, en Bellavista… el relato termina en la piedra.»"
         }
       ],
       "census_note": "Nombre geográfico regional con el que la memoria identifica las Lágrimas de Michua. Mismo lugar, otra denominación: se declara dentro de la ficha de las cascadas.",
-      "covered_by": "cascadas_lagrimas_de_michua",
-      "coverage_note": "Nombre geográfico regional con el que la memoria identifica las Lágrimas de Michua. Mismo lugar, otra denominación: se declara dentro de la ficha de las cascadas.",
       "evidence_basis_mix": [
         "contemporary_memory",
         "uncertain"
-      ]
+      ],
+      "exclusion_reason": "no aparece en el canon reescrito del 2026-09-23: las cascadas de Bellavista existen, pero el canon retira que sean las Lágrimas de Michua"
     },
     "tamaraca_como_los_espanoles": {
       "name": "Tamaraca en la traducción de Cieza: los españoles",
       "kind": "colectivo",
-      "description": "Verificado en el primer párrafo de versiones. Se registra porque la pasada de variantes lo detecta y porque explica por qué los Tamaracas del relato de 1947 no se pueden dibujar como españoles.",
+      "description": "Ya no es sólo capa léxica de Cieza: el canon reescrito narra que los Tamaracas «llegaron a pie, armados, con barbas y con caballos, hablando una lengua que nadie había oído, y esa vez no se fueron».",
       "aliases": [],
       "states": [
         "canonico"
       ],
       "evidence_basis": "documented",
       "sensitivity": "public",
-      "visual_status": "excluded",
+      "visual_status": "embedded",
       "model_requirements": [],
       "model_refs": [],
       "legacy_model_refs": [],
@@ -2343,13 +2446,19 @@
           "myth": "las-huellas-de-mapura",
           "field": "mito",
           "note": "«Tamaraca» no significaba en el siglo XVI un ser subterráneo: Cieza escribe literalmente «Llaman al diablo Xixarama, y a los españoles, tamaraca». El plural de seres es una reinterpretación posterior, y el propio ciclo lo reconoce al dejar que los tamaracas se transmuten en langostas, en chocoes, en conquistadores y en liberales y conservadores"
+        },
+        {
+          "myth": "las-huellas-de-mapura",
+          "field": "mito",
+          "note": "«Otra vez llegaron a pie, armados, con barbas y con caballos, hablando una lengua que nadie había oído, y esa vez no se fueron.»"
         }
       ],
       "census_note": "Verificado en el primer párrafo de versiones. Se registra porque la pasada de variantes lo detecta y porque explica por qué los Tamaracas del relato de 1947 no se pueden dibujar como españoles.",
-      "exclusion_reason": "Sin cuerpo en el relato: en la traducción histórica de Cieza, Tamaraca es el término que los habitantes aplicaban a los conquistadores, no a seres subterráneos prehispánicos. Es una capa léxica del siglo XVI, no una entidad de la narración, y dibujarla fijaría una identificación que el canon deja abierta.",
       "evidence_basis_mix": [
         "documented_core"
-      ]
+      ],
+      "covered_by": "tamaracas",
+      "coverage_note": "Es el estado de hueste de la ficha de los Tamaracas: masa sin rostro con el perfil de lanzas y caballos. Nunca españoles reconocibles."
     },
     "tamaracas_como_pueblos_vecinos": {
       "name": "Los Tamaracas identificados con pueblos vecinos",
@@ -2378,6 +2487,11 @@
           "myth": "las-huellas-de-mapura",
           "field": "mito",
           "note": "Quien habita hoy el territorio no es una comunidad anserma: son la parcialidad Embera Karambá, de unas 2.900 personas y sin tierras propias, y el resguardo Escopetera y Pirza en dieciocho predios no contiguos; el cerro es objeto de consulta previa frente a la minería. Ninguna lámina puede presentarlos como los protagonistas del relato ni como sus herederos automáticos"
+        },
+        {
+          "myth": "las-huellas-de-mapura",
+          "field": "versiones",
+          "note": "El canon reescrito registra que la fuente universitaria enumera «indígenas Chocoes» como tercera forma y decide no reproducirla: «publicarlo hoy haría daño sin aportar nada al relato»."
         }
       ],
       "census_note": "Verificado en el cuarto párrafo del mito y en historia. Los imagePrompt ya lo prohíben por escrito («sin representar pueblos humanos como enemigos»). Es la exclusión más importante de este corpus.",
@@ -2389,7 +2503,7 @@
     "tamaracas_como_mineria_y_despojo": {
       "name": "Los Tamaracas como amenaza minera, violencia o despojo",
       "kind": "fenomeno",
-      "description": "Verificado en el tercer párrafo de versiones. Se registra para que nadie meta retroexcavadoras ni armas en una imagen del ciclo.",
+      "description": "El canon reescrito lo lleva al relato: «ahora vienen por el oro del cerro, y no traen langostas ni lanzas sino papeles, permisos y máquinas». La forma es nueva y el daño es el mismo.",
       "aliases": [],
       "states": [
         "canonico"
@@ -2408,10 +2522,15 @@
           "myth": "las-huellas-de-mapura",
           "field": "mito",
           "note": "«Tamaraca» no significaba en el siglo XVI un ser subterráneo: Cieza escribe literalmente «Llaman al diablo Xixarama, y a los españoles, tamaraca». El plural de seres es una reinterpretación posterior, y el propio ciclo lo reconoce al dejar que los tamaracas se transmuten en langostas, en chocoes, en conquistadores y en liberales y conservadores"
+        },
+        {
+          "myth": "las-huellas-de-mapura",
+          "field": "mito",
+          "note": "«Ahora vienen por el oro del cerro, y no traen langostas ni lanzas sino papeles, permisos y máquinas.»"
         }
       ],
       "census_note": "Verificado en el tercer párrafo de versiones. Se registra para que nadie meta retroexcavadoras ni armas en una imagen del ciclo.",
-      "exclusion_reason": "Sin escena en el relato: Cardona relacionó después el nombre con la violencia política de 1948 y estudios ambientales recientes lo usan para hablar de minería y deterioro territorial. El canon advierte que son usos móviles posteriores que no deben retroproyectarse como doctrina antigua.",
+      "exclusion_reason": "está en el relato pero no se dibuja: es conflicto vivo —el cerro Karambá está en consulta previa frente a la exploración minera (dossier §3)— y ninguna lámina puede tomar partido visual en él ni retratar a sus actores; queda como la cara de hoy que el relato nombra y la biblia no pinta",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -2443,10 +2562,15 @@
           "myth": "los-pasos-de-xixaraca",
           "field": "mito",
           "note": "La partida por llegada de extranjeros no tiene escena: el canon la registra como una de las causas posibles y el corpus no la pone en cuadro. La despedida se dibuja; la conquista no"
+        },
+        {
+          "myth": "los-pasos-de-xixaraca",
+          "field": "versiones",
+          "note": "«Las versiones que circulan en Quinchía hablan unas veces de la ingratitud de la gente y otras de la llegada de los conquistadores.»"
         }
       ],
       "census_note": "Verificado en el segundo párrafo del mito. Las escenas planeadas muestran la despedida, no la conquista.",
-      "exclusion_reason": "Se mencionan pero nunca se ven: son una de las causas que algunas versiones dan para la partida —«otras sitúan la ruptura en la llegada de extranjeros y en la destrucción del mundo antiguo»—, sin una sola escena, y el corpus no los pone en cuadro.",
+      "exclusion_reason": "no aparecen en el mito reescrito, que dice sólo que «el mundo cambió y Xixaraca se fue»; las versiones registran que unas culpan a la ingratitud de la gente y otras a los conquistadores, «y no son intercambiables». Sin escena",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -2546,6 +2670,163 @@
         "documented_core",
         "uncertain"
       ]
+    },
+    "caminantes_que_se_santiguan": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "Los que pasan y se santiguan",
+      "kind": "colectivo",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "rio_mapura",
+      "myth_refs": [
+        "los-pasos-de-xixaraca"
+      ],
+      "description": "La gente de hoy que pasa junto a las huellas todos los días y se santigua: unos aprietan el paso creyéndolas del diablo, otros se quedan mirando el agua creyéndolas del dios que se fue.",
+      "coverage_note": "Presente del relato, no tiempo de la historia: si la lámina del río los pide, es una sola figura lejana en el camino de la orilla, de espaldas, sin rostro y sin traje de época fijado; nunca en el mismo plano que la gente de Guacuma.",
+      "evidence": [
+        {
+          "myth": "los-pasos-de-xixaraca",
+          "field": "mito",
+          "note": "«Y la gente que pasa a su lado se santigua. No todos explican lo mismo…» «el gesto de persignarse sirve para las dos»."
+        }
+      ],
+      "model_requirements": []
+    },
+    "tipo_hombre_adulto": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_hombre_adulto__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · hombre de Guacuma adulto",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "las-huellas-de-mapura",
+        "los-pasos-de-xixaraca"
+      ],
+      "description": "Tipo base del hombre anserma de Guacuma antes de 1540: fija cara, cuerpo y adorno de la gente que Xixaraca y Michua protegen.",
+      "evidence": [
+        {
+          "myth": "las-huellas-de-mapura",
+          "field": "mito",
+          "note": "Xixaraca sostiene que la siembra vuelva y que la gente pueda quedarse."
+        },
+        {
+          "myth": "los-pasos-de-xixaraca",
+          "field": "mito",
+          "note": "Xixaraca sostiene que la siembra vuelva y que la gente pueda quedarse."
+        }
+      ],
+      "design": {
+        "silhouette": "Hombre adulto de pie en la ladera, desnudo y descalzo, con el pelo cortado por encima del hombro, el bulto de chaquira blanca bajo la rodilla y sobre el tobillo, una cinta de chaquira al cuello con una ranita de oro y un palo de sembrar en la mano.",
+        "materials": [
+          "piel en papel pardo mate",
+          "chaquira blanca menuda en bulto bajo la rodilla y sobre el tobillo, de canto granulado",
+          "cinta de chaquira al cuello con figurita de rana en papel dorado mate",
+          "palo de sembrar recto de madera"
+        ],
+        "palette": "Pardo de piel, el blanco de la chaquira como punto claro y un solo punto de oro mate.",
+        "scale": "Estatura adulta corriente, escalonada por la pendiente. Cuerpo entero 9:16.",
+        "continuity": [
+          "pelo por encima del hombro",
+          "chaquira bajo la rodilla siempre",
+          "descalzo",
+          "ninguna cabeza deformada"
+        ],
+        "documented": [
+          "dossier §6.2 (ans-cieza-1553): «andan desnudos y descalzos, y las mujeres traen mantas pequeñas y son de buen parescer»; «los principales y señores se cubren con una manta larga, y traen por la cintura maures»; ellas con «mantas de algodón galanas, con muchas pinturas», «los cabellos muy peinados», «collares de piezas ricas de oro», «zarcillos» y «peloticas de oro fino» en la nariz; mantas «chapadas de unas piezas de oro hechas a manera redonda, y otras como estrelletas»",
+          "dossier §6.2 (ans-campeon-valencia-2009, relación de 1542): bajo la rodilla y sobre el tobillo, «un gran bulto de chaquira, ques unas cuentecitas menudas y muy iguales, blancas… para que críen pantorrilla»; el maure de lienzo «muy pintado» con un rabo que llega casi al suelo; cuatro o cinco pares de zarcillos por oreja; los que no son señores con «una cinta de chaquira al cuello y al cabo della por yoyel una rama o un sapo de oro»; el cabello cortado por encima del hombro; uñas largas como signo de rango",
+          "dossier §6.2 y §12 (ans-hsai-1948): la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya",
+          "dossier §1, estrato A: nada de hierro, caballo, rueda, teja, cruz ni arma de fuego sobre estos cuerpos; la capa de 1947 —camisa blanca, jíquera, achiote— no entra en el mismo plano",
+          "dossier §6.2 (relación de 1542): los que no son señores llevan «una cinta de chaquira al cuello y al cabo della por yoyel una rama o un sapo de oro»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y la pintura facial, si la lleva, va como campos planos, nunca como trazo; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "Los dibujos de la manta son lenguaje de forma —bandas, campos, trazos— y nunca un patrón real (regla del ejemplar).",
+          "Ninguna lámina presenta a estos cuerpos como los Embera de hoy ni como sus herederos automáticos (dossier §3).",
+          "El palo de sembrar es atrezo de oficio elegido porque lo que el relato defiende es «lo sembrado»; reversible."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_adulta": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_mujer_adulta__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · mujer de Guacuma adulta",
+      "kind": "personaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "las-huellas-de-mapura",
+        "los-pasos-de-xixaraca"
+      ],
+      "description": "Tipo base de la mujer anserma de Guacuma antes de 1540.",
+      "evidence": [
+        {
+          "myth": "las-huellas-de-mapura",
+          "field": "mito",
+          "note": "La gente que la plaga deja con hambre y que Michua defiende."
+        },
+        {
+          "myth": "los-pasos-de-xixaraca",
+          "field": "mito",
+          "note": "La gente que la plaga deja con hambre y que Michua defiende."
+        }
+      ],
+      "design": {
+        "silhouette": "Mujer adulta de pie con la manta de algodón pintada hasta los pies, el pelo muy peinado, zarcillos y la pelotita de oro en la ventana de la nariz, y el oro laminado cosido a la manta en discos y estrellas.",
+        "materials": [
+          "manta de algodón pintada en lenguaje de forma, hasta los pies",
+          "discos y estrellas de papel dorado mate cosidos a la manta",
+          "zarcillos y pelotita de nariz en oro mate",
+          "pelo en una pieza plana muy peinada"
+        ],
+        "palette": "Crudo de algodón con pinturas en tierras apagadas, pardo de piel y oro mate.",
+        "scale": "Algo por debajo del hombre. Cuerpo entero 9:16.",
+        "continuity": [
+          "manta hasta los pies",
+          "oro siempre cosido o puesto, nunca suelto",
+          "descalza"
+        ],
+        "documented": [
+          "dossier §6.2 (ans-cieza-1553): «andan desnudos y descalzos, y las mujeres traen mantas pequeñas y son de buen parescer»; «los principales y señores se cubren con una manta larga, y traen por la cintura maures»; ellas con «mantas de algodón galanas, con muchas pinturas», «los cabellos muy peinados», «collares de piezas ricas de oro», «zarcillos» y «peloticas de oro fino» en la nariz; mantas «chapadas de unas piezas de oro hechas a manera redonda, y otras como estrelletas»",
+          "dossier §6.2 (ans-campeon-valencia-2009, relación de 1542): bajo la rodilla y sobre el tobillo, «un gran bulto de chaquira, ques unas cuentecitas menudas y muy iguales, blancas… para que críen pantorrilla»; el maure de lienzo «muy pintado» con un rabo que llega casi al suelo; cuatro o cinco pares de zarcillos por oreja; los que no son señores con «una cinta de chaquira al cuello y al cabo della por yoyel una rama o un sapo de oro»; el cabello cortado por encima del hombro; uñas largas como signo de rango",
+          "dossier §6.2 y §12 (ans-hsai-1948): la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya",
+          "dossier §1, estrato A: nada de hierro, caballo, rueda, teja, cruz ni arma de fuego sobre estos cuerpos; la capa de 1947 —camisa blanca, jíquera, achiote— no entra en el mismo plano"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y la pintura facial, si la lleva, va como campos planos, nunca como trazo; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "Los dibujos de la manta son lenguaje de forma —bandas, campos, trazos— y nunca un patrón real (regla del ejemplar).",
+          "Ninguna lámina presenta a estos cuerpos como los Embera de hoy ni como sus herederos automáticos (dossier §3).",
+          "El reparto entre manta pequeña y manta hasta los pies sigue a las dos fuentes (Cieza y la síntesis de 1948) y es decisión de hoja."
+        ],
+        "states_to_model": []
+      }
     }
   },
   "models": {
@@ -2586,6 +2867,11 @@
           "myth": "las-huellas-de-mapura",
           "field": "mito",
           "note": "Toda la trama de este corpus es una sola transmisión: tres textos del mismo autor recordando al mismo narrador, más dos trabajos académicos que dependen de él. Las únicas voces realmente independientes son la crónica de 1553, la síntesis etnológica de 1948 y la entrevista de 1977 a Gabriel Campeón, y ninguna de las tres narra el ciclo"
+        },
+        {
+          "myth": "los-pasos-de-xixaraca",
+          "field": "mito",
+          "note": "En el canon reescrito se va «derrotado y triste», «cuando ya no quedaba modo de sostener lo que había sostenido», y deja las huellas al irse."
         }
       ],
       "design_contract": {
@@ -2624,7 +2910,7 @@
         "asset_type": "Biblia visual Ansermas V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla y se descarga: el rayo, el remolino de la tormenta, el chorro doble de las dos cascadas y el enjambre en espiral que sale de la grieta. Las huellas son hueco recortado en la roca, no relieve. Sin trama decorativa de relleno.",
         "primary_request": "identidad corporal completa y legible para Xixaraca. Existe como posición antes que como cuerpo: siempre en la punta del Karambá, de pie, recortado entero contra el cielo cargado y vuelto hacia el Opiramá que tiene enfrente y a su misma altura. Es la única figura de la biblia que nunca se ve de cerca — silueta plana sin un rasgo dentro, sin tocado, sin insignia, sin arma y sin nada colgando—, y baja de esa cumbre una sola vez en todo el corpus: en la lámina de la despedida, cuando camina sobre las rocas de la orilla.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Altura humana leída contra el cerro entero, de modo que la figura quede pequeña sobre una masa de dos mil metros: su fuerza se muestra por posición y no por tamaño. Nunca es gigante, nunca llena el encuadre y nunca está por encima de la línea del cielo del cerro.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Altura humana leída contra el cerro entero, de modo que la figura quede pequeña sobre una masa de dos mil metros: su fuerza se muestra por posición y no por tamaño. Nunca es gigante, nunca llena el encuadre y nunca está por encima de la línea del cielo del cerro.",
         "lighting_mood": "Luz de tormenta de vertiente cafetera, que es la única atmósfera que el corpus documenta: cielo cargado y bajo, contraste alto y momentáneo del relámpago contra masas oscuras, y el resto del tiempo una luz plana de día cubierto sobre laderas sembradas. La escena de la despedida cambia el registro y sólo ése: luz rasante de tarde, larga y baja, sobre la roca del río. No hay luz propia en ninguna entidad: ni halo, ni aura, ni ojos brillantes; lo sobrenatural ocurre en el cielo y en el agua, nunca en un cuerpo.",
         "materials_textures": "un solo plano de papel oscuro y mate para la figura entera, sin división interior de prendas y sin cara: la carencia se dibuja, no se rellena; el pórfido gris del picacho bajo sus pies, que es lo único con textura en su lámina; cielo cargado y bajo como plano de fondo que le da todo el contorno: es un recorte contra el cielo y nunca contra la ladera; roca plana de orilla en la única lámina en que está abajo, con la huella como hueco recortado y no como pieza puesta encima",
         "era": "Dos capas que no se mezclan y un umbral entre ellas. La capa del relato es el mundo anserma anterior y contemporáneo a la entrada española, hasta 1540: cuerpo desnudo y descalzo, manta pintada, maure, chaquira bajo la rodilla, adorno de oro laminado, casas de madera desviadas unas de otras, esteras, armas de dardo, lanza y macana de palma negra, sierras sembradas sin bosque cerrado. Nada de hierro, caballo, teja, rueda ni cruz. La capa de la memoria que transmite el relato es el siglo XX del mercado de Quinchía —camisa blanca, jíquera, achiote en la cara, ollas y cayanas de barro, canastas de bejuco— y sólo entra si el guion la pide explícitamente como marco, nunca mezclada con la anterior.",
@@ -2658,7 +2944,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -2741,7 +3027,7 @@
         "asset_type": "Biblia visual Ansermas V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla y se descarga: el rayo, el remolino de la tormenta, el chorro doble de las dos cascadas y el enjambre en espiral que sale de la grieta. Las huellas son hueco recortado en la roca, no relieve. Sin trama decorativa de relleno.",
         "primary_request": "identidad corporal completa y legible para Michua. Se reconoce por la dirección y no por la cara: es la única figura del corpus que baja, siempre en diagonal descendente desde el pico hacia la siembra y siempre dentro del cuerpo de la tormenta, de modo que la mitad de su silueta queda comida por la capa de nube. Y es la única que al final se detiene, mira atrás y no avanza: de esa pausa salen las dos caídas de agua. Xixaraca está quieto arriba; ella cruza el cuadro.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; La misma altura que Xixaraca y deliberadamente igualada con él: el relato los pone como pareja de protectores y cualquier diferencia de talla decidiría una jerarquía que la fuente no da. Pequeña contra el cerro y contra la masa de nube.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; La misma altura que Xixaraca y deliberadamente igualada con él: el relato los pone como pareja de protectores y cualquier diferencia de talla decidiría una jerarquía que la fuente no da. Pequeña contra el cerro y contra la masa de nube.",
         "lighting_mood": "Luz de tormenta de vertiente cafetera, que es la única atmósfera que el corpus documenta: cielo cargado y bajo, contraste alto y momentáneo del relámpago contra masas oscuras, y el resto del tiempo una luz plana de día cubierto sobre laderas sembradas. La escena de la despedida cambia el registro y sólo ése: luz rasante de tarde, larga y baja, sobre la roca del río. No hay luz propia en ninguna entidad: ni halo, ni aura, ni ojos brillantes; lo sobrenatural ocurre en el cielo y en el agua, nunca en un cuerpo.",
         "materials_textures": "un solo plano de papel oscuro para la figura, del mismo gramaje que el de Xixaraca y sin un rasgo más: las dos carencias se dibujan iguales a propósito; capa de nube de papel translúcido cruzándola por delante, que es lo que la separa visualmente de la otra deidad en cualquier lámina; relámpago como una sola grieta blanca de canto duro entre masas oscuras, nunca como red de ramas y nunca saliendo de su mano; dos hilos de agua paralelos bajando desde el punto donde se detiene, en quilling largo y recto",
         "era": "Dos capas que no se mezclan y un umbral entre ellas. La capa del relato es el mundo anserma anterior y contemporáneo a la entrada española, hasta 1540: cuerpo desnudo y descalzo, manta pintada, maure, chaquira bajo la rodilla, adorno de oro laminado, casas de madera desviadas unas de otras, esteras, armas de dardo, lanza y macana de palma negra, sierras sembradas sin bosque cerrado. Nada de hierro, caballo, teja, rueda ni cruz. La capa de la memoria que transmite el relato es el siglo XX del mercado de Quinchía —camisa blanca, jíquera, achiote en la cara, ollas y cayanas de barro, canastas de bejuco— y sólo entra si el guion la pide explícitamente como marco, nunca mezclada con la anterior.",
@@ -2775,7 +3061,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -2820,52 +3106,59 @@
           "myth": "las-huellas-de-mapura",
           "field": "mito",
           "note": "Toda la trama de este corpus es una sola transmisión: tres textos del mismo autor recordando al mismo narrador, más dos trabajos académicos que dependen de él. Las únicas voces realmente independientes son la crónica de 1553, la síntesis etnológica de 1948 y la entrevista de 1977 a Gabriel Campeón, y ninguna de las tres narra el ciclo"
+        },
+        {
+          "myth": "las-huellas-de-mapura",
+          "field": "mito",
+          "note": "El canon reescrito retira el encierro en el Opiramá y hace de los Tamaracas potencias sin forma fija: langostas, una hueste a pie con barbas y caballos que no se fue, y hoy papeles, permisos y máquinas por el oro del cerro."
         }
       ],
       "design_contract": {
-        "distinctive_silhouette": "No tienen cuerpo y la hoja lo dice de entrada: la forma base es una masa oscura contenida bajo la línea del Opiramá —el valor más oscuro de la lámina, sin contorno estable, sin rostro y sin un solo miembro—, que sólo se lee porque la roca que la encierra sí tiene canto. En el estado de plaga esa misma masa se rompe en muchas piezas pequeñas iguales de canto vivo que se agrupan y se dispersan: densidad y nunca especie, sin ala resuelta, sin pata, sin antena y sin una sola figura humana dentro.",
+        "distinctive_silhouette": "No tienen cuerpo y la hoja lo dice de entrada: la forma base es una masa oscura que avanza por el borde de la ladera sembrada —el valor más oscuro de la lámina, sin contorno estable, sin rostro y sin un solo miembro—, y cada estado es la misma masa tomando otra cara. En el estado de plaga se deshace en centenares de piezas iguales; en el de la hueste, la misma masa se recorta contra el cielo con el perfil de lanzas y cuellos de caballo, sin una sola cara ni una sola armadura legible.",
         "materials": [
-          "papel negro mate en una sola masa sin borde definido para la forma contenida, con la grieta de la roca como único contorno prestado",
+          "papel negro mate en una sola masa sin borde definido para la forma base, contra el canto vivo de la ladera",
           "muchas piezas pequeñas e idénticas de canto vivo para el estado de plaga, recortadas iguales y repetidas por centenares, que se leen como densidad y no como enjambre de una especie",
-          "roca de la base profunda del Opiramá conteniéndolos por arriba y por los lados: la contención es el material",
-          "mata de maíz mordida y hoja rota en la franja donde la masa ya pasó, como único rastro de su efecto"
+          "el borde de la ladera sembrada como límite contra el que avanza la masa: el límite que la gente tiene que volver a poner es el material",
+          "mata de maíz mordida y hoja rota en la franja donde la masa ya pasó, como único rastro de su efecto",
+          "para la hueste, el mismo papel negro recortado sólo en su borde superior —puntas de lanza, cuellos y orejas de caballo, un perfil de barba— y liso por dentro: la silueta dice quiénes son sin darles cara"
         ],
         "palette_logic": "Sin color propio en ningún estado: son el valor más oscuro de la lámina en la que aparecen y su avance se lee por densidad, no por tono. Ninguna nota verde de insecto, ningún brillo de caparazón, ningún rojo.",
         "scale": "En la forma base, del tamaño de la cavidad que la contiene, sin poder medirse. En el estado de plaga, cada pieza es más pequeña que una uña y su escala sólo se entiende por comparación con la mata de maíz: el tamaño está en el número, no en la unidad.",
         "continuity_markers": [
           "nunca tienen anatomía: en ninguna lámina, en ningún estado y en ningún plano de detalle",
           "nunca hay una figura humana reconocible dentro de la masa ni entre las piezas: esa identificación es la que el canon prohíbe expresamente",
-          "nunca salen del Opiramá hacia el Karambá por el aire libre sin una franja de cultivo de por medio: el relato dice que devoran, y el efecto tiene que estar en cuadro",
-          "no llevan cadena dibujada: el encadenamiento se lee como contención de la roca, no como hierro, que además no existe en esta época"
+          "no llevan cadena dibujada: el encadenamiento se lee como contención de la roca, no como hierro, que además no existe en esta época",
+          "la hueste es masa y perfil, nunca figuras individuales con rostro, casco, coraza o cruz: dibujar españoles reconocibles sería cometer el prejuicio que el dossier prohíbe en la otra dirección (§2)",
+          "la forma de hoy —papeles, permisos, máquinas— no se dibuja en ningún estado: el cerro está en consulta previa (§3)"
         ],
         "documented_features": [
+          "canon, campo mito: «No eran una sola cosa y no tenían una sola forma: eran potencias enemigas»; «una vez llegaron como nube de langostas y se comieron lo sembrado»; «otra vez llegaron a pie, armados, con barbas y con caballos, hablando una lengua que nadie había oído, y esa vez no se fueron»; «ahora vienen por el oro del cerro… con papeles, permisos y máquinas»",
           "dossier §7 (ans-cardona-2011): la fuente no los describe nunca en su forma base — están «escondidos», «encadenados», «encontraban la manera de escabullirse y disfrazarse», y al escapar «se extendían como nubes de langostas y otras plagas»",
-          "dossier §7 (ans-cardona-2016): su lista de manifestaciones —«en forma de langosta, de enfermedad y granizo»— pone en el mismo renglón un insecto, una dolencia y un fenómeno meteorológico: no son una especie, son una categoría de calamidad",
           "dossier §7 y §12.7 (ans-ica-langosta): no existe ninguna langosta de plaga en el alto Cauca — la única que forma plagas en Colombia es la langosta llanera de Meta y Vichada, y la especie sudamericana que forma mangas verdaderas no llega a Colombia; no hay ningún registro histórico de plaga de langosta en esta región",
-          "dossier §2 y §12.2 (ans-cieza-1553): «llaman al diablo Xixarama, y a los españoles, tamaraca» — en 1553 la palabra designaba literalmente a los españoles, y el plural de seres subterráneos es reinterpretación posterior: el mito de la plaga es la digestión de una invasión, y ésa es la clave del ciclo entero",
-          "dossier §7 (ans-cardona-2011): «las otras plagas» no se inventan porque la fuente no nombra ninguna"
+          "dossier §2 y §12.2 (ans-cieza-1553): «llaman al diablo Xixarama, y a los españoles, tamaraca» — en 1553 la palabra designaba literalmente a los españoles, y el plural de seres subterráneos es reinterpretación posterior: el mito de la plaga es la digestión de una invasión, y ésa es la clave del ciclo entero"
         ],
         "editorial_features": [
           "la forma abstracta es la decisión más editorial del dossier y va marcada como reversible: si la nube se dibuja sólo como insectos se pierde lo que el corpus está diciendo, y si se dibuja con figuras humanas reconocibles se comete el prejuicio que el canon prohíbe; la masa sin especie y sin rostro es la tercera salida y es una elección, no un dato",
           "el estado de plaga se cobra como lámina aparte porque cambia la silueta entera —de masa contenida a dispersión—, y así lo declaró el censo; lo que no cambia es que en ninguno de los dos estados hay anatomía",
-          "las versiones tardías que identifican a los Tamaracas con pueblos Noanamá, Tatamá o Chocó, y las que los leen como violencia política de 1948 o como minería y despojo, quedan fuera de toda lámina: no son una deriva de divulgación sino que están en la propia cadena académica, y por eso la exclusión se refuerza"
+          "las versiones tardías que identifican a los Tamaracas con pueblos Noanamá, Tatamá o Chocó, y las que los leen como violencia política de 1948 o como minería y despojo, quedan fuera de toda lámina: no son una deriva de divulgación sino que están en la propia cadena académica, y por eso la exclusión se refuerza",
+          "El encierro bajo el Opiramá que esta hoja dibujaba se retira porque el canon reescrito lo retira; la masa ahora avanza por la ladera en vez de estar contenida. Reversible si el canon vuelve a la localización.",
+          "La hueste a pie se cobra como estado porque el canon reescrito la pone en el relato como una forma de los Tamaracas, y el dossier ya decía que «Tamaraca» significaba «español» en 1553 (§2). Se resuelve como silueta sin rostro; si el editor prefiere no dibujarla, el estado cae y queda la plaga."
         ]
       },
       "prompt_spec": {
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Ansermas V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla y se descarga: el rayo, el remolino de la tormenta, el chorro doble de las dos cascadas y el enjambre en espiral que sale de la grieta. Las huellas son hueco recortado en la roca, no relieve. Sin trama decorativa de relleno.",
-        "primary_request": "identidad corporal completa y legible para Los Tamaracas, seres de adentro. No tienen cuerpo y la hoja lo dice de entrada: la forma base es una masa oscura contenida bajo la línea del Opiramá —el valor más oscuro de la lámina, sin contorno estable, sin rostro y sin un solo miembro—, que sólo se lee porque la roca que la encierra sí tiene canto. En el estado de plaga esa misma masa se rompe en muchas piezas pequeñas iguales de canto vivo que se agrupan y se dispersan: densidad y nunca especie, sin ala resuelta, sin pata, sin antena y sin una sola figura humana dentro.",
+        "primary_request": "identidad corporal completa y legible para Los Tamaracas, potencias enemigas. No tienen cuerpo y la hoja lo dice de entrada: la forma base es una masa oscura que avanza por el borde de la ladera sembrada —el valor más oscuro de la lámina, sin contorno estable, sin rostro y sin un solo miembro—, y cada estado es la misma masa tomando otra cara. En el estado de plaga se deshace en centenares de piezas iguales; en el de la hueste, la misma masa se recorta contra el cielo con el perfil de lanzas y cuellos de caballo, sin una sola cara ni una sola armadura legible.",
         "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; En la forma base, del tamaño de la cavidad que la contiene, sin poder medirse. En el estado de plaga, cada pieza es más pequeña que una uña y su escala sólo se entiende por comparación con la mata de maíz: el tamaño está en el número, no en la unidad.",
         "lighting_mood": "Luz de tormenta de vertiente cafetera, que es la única atmósfera que el corpus documenta: cielo cargado y bajo, contraste alto y momentáneo del relámpago contra masas oscuras, y el resto del tiempo una luz plana de día cubierto sobre laderas sembradas. La escena de la despedida cambia el registro y sólo ése: luz rasante de tarde, larga y baja, sobre la roca del río. No hay luz propia en ninguna entidad: ni halo, ni aura, ni ojos brillantes; lo sobrenatural ocurre en el cielo y en el agua, nunca en un cuerpo.",
-        "materials_textures": "papel negro mate en una sola masa sin borde definido para la forma contenida, con la grieta de la roca como único contorno prestado; muchas piezas pequeñas e idénticas de canto vivo para el estado de plaga, recortadas iguales y repetidas por centenares, que se leen como densidad y no como enjambre de una especie; roca de la base profunda del Opiramá conteniéndolos por arriba y por los lados: la contención es el material; mata de maíz mordida y hoja rota en la franja donde la masa ya pasó, como único rastro de su efecto",
+        "materials_textures": "papel negro mate en una sola masa sin borde definido para la forma base, contra el canto vivo de la ladera; muchas piezas pequeñas e idénticas de canto vivo para el estado de plaga, recortadas iguales y repetidas por centenares, que se leen como densidad y no como enjambre de una especie; el borde de la ladera sembrada como límite contra el que avanza la masa: el límite que la gente tiene que volver a poner es el material; mata de maíz mordida y hoja rota en la franja donde la masa ya pasó, como único rastro de su efecto; para la hueste, el mismo papel negro recortado sólo en su borde superior —puntas de lanza, cuellos y orejas de caballo, un perfil de barba— y liso por dentro: la silueta dice quiénes son sin darles cara",
         "era": "Dos capas que no se mezclan y un umbral entre ellas. La capa del relato es el mundo anserma anterior y contemporáneo a la entrada española, hasta 1540: cuerpo desnudo y descalzo, manta pintada, maure, chaquira bajo la rodilla, adorno de oro laminado, casas de madera desviadas unas de otras, esteras, armas de dardo, lanza y macana de palma negra, sierras sembradas sin bosque cerrado. Nada de hierro, caballo, teja, rueda ni cruz. La capa de la memoria que transmite el relato es el siglo XX del mercado de Quinchía —camisa blanca, jíquera, achiote en la cara, ollas y cayanas de barro, canastas de bejuco— y sólo entra si el guion la pide explícitamente como marco, nunca mezclada con la anterior.",
         "constraints": [
+          "documentado: «No eran una sola cosa y no tenían una sola forma: eran potencias enemigas»; «una vez llegaron como nube de langostas y se comieron lo sembrado»; «otra vez llegaron a pie, armados, con barbas y con caballos, hablando una lengua que nadie había oído, y esa vez no se fueron»; «ahora vienen por el oro del cerro… con papeles, permisos y máquinas»",
           "documentado: la fuente no los describe nunca en su forma base — están «escondidos», «encadenados», «encontraban la manera de escabullirse y disfrazarse», y al escapar «se extendían como nubes de langostas y otras plagas»",
-          "documentado: su lista de manifestaciones —«en forma de langosta, de enfermedad y granizo»— pone en el mismo renglón un insecto, una dolencia y un fenómeno meteorológico: no son una especie, son una categoría de calamidad",
           "documentado: no existe ninguna langosta de plaga en el alto Cauca — la única que forma plagas en Colombia es la langosta llanera de Meta y Vichada, y la especie sudamericana que forma mangas verdaderas no llega a Colombia; no hay ningún registro histórico de plaga de langosta en esta región",
           "documentado: «llaman al diablo Xixarama, y a los españoles, tamaraca» — en 1553 la palabra designaba literalmente a los españoles, y el plural de seres subterráneos es reinterpretación posterior: el mito de la plaga es la digestión de una invasión, y ésa es la clave del ciclo entero",
-          "documentado: «las otras plagas» no se inventan porque la fuente no nombra ninguna",
           "El corpus no nombra un solo color, de modo que la paleta entera sale del territorio: pardo y gris de roca porfídica, verdes apagados de ladera sembrada, ocre del maíz seco y gris cargado de cielo de tormenta.",
           "El único momento cromático que la fuente autoriza es el agua que cambia de color en el combate, y se resuelve como oscurecimiento del agua, jamás como sangre ni como rojo saturado.",
           "El oro existe sólo como adorno sobre un cuerpo y nunca como montón, tesoro ni pieza aislada: lámina pequeña, mate y cosida a la tela, no metal brillante.",
@@ -2934,52 +3227,59 @@
           "myth": "las-huellas-de-mapura",
           "field": "mito",
           "note": "Toda la trama de este corpus es una sola transmisión: tres textos del mismo autor recordando al mismo narrador, más dos trabajos académicos que dependen de él. Las únicas voces realmente independientes son la crónica de 1553, la síntesis etnológica de 1948 y la entrevista de 1977 a Gabriel Campeón, y ninguna de las tres narra el ciclo"
+        },
+        {
+          "myth": "las-huellas-de-mapura",
+          "field": "mito",
+          "note": "El canon reescrito retira el encierro en el Opiramá y hace de los Tamaracas potencias sin forma fija: langostas, una hueste a pie con barbas y caballos que no se fue, y hoy papeles, permisos y máquinas por el oro del cerro."
         }
       ],
       "design_contract": {
-        "distinctive_silhouette": "No tienen cuerpo y la hoja lo dice de entrada: la forma base es una masa oscura contenida bajo la línea del Opiramá —el valor más oscuro de la lámina, sin contorno estable, sin rostro y sin un solo miembro—, que sólo se lee porque la roca que la encierra sí tiene canto. En el estado de plaga esa misma masa se rompe en muchas piezas pequeñas iguales de canto vivo que se agrupan y se dispersan: densidad y nunca especie, sin ala resuelta, sin pata, sin antena y sin una sola figura humana dentro.",
+        "distinctive_silhouette": "No tienen cuerpo y la hoja lo dice de entrada: la forma base es una masa oscura que avanza por el borde de la ladera sembrada —el valor más oscuro de la lámina, sin contorno estable, sin rostro y sin un solo miembro—, y cada estado es la misma masa tomando otra cara. En el estado de plaga se deshace en centenares de piezas iguales; en el de la hueste, la misma masa se recorta contra el cielo con el perfil de lanzas y cuellos de caballo, sin una sola cara ni una sola armadura legible.",
         "materials": [
-          "papel negro mate en una sola masa sin borde definido para la forma contenida, con la grieta de la roca como único contorno prestado",
+          "papel negro mate en una sola masa sin borde definido para la forma base, contra el canto vivo de la ladera",
           "muchas piezas pequeñas e idénticas de canto vivo para el estado de plaga, recortadas iguales y repetidas por centenares, que se leen como densidad y no como enjambre de una especie",
-          "roca de la base profunda del Opiramá conteniéndolos por arriba y por los lados: la contención es el material",
-          "mata de maíz mordida y hoja rota en la franja donde la masa ya pasó, como único rastro de su efecto"
+          "el borde de la ladera sembrada como límite contra el que avanza la masa: el límite que la gente tiene que volver a poner es el material",
+          "mata de maíz mordida y hoja rota en la franja donde la masa ya pasó, como único rastro de su efecto",
+          "para la hueste, el mismo papel negro recortado sólo en su borde superior —puntas de lanza, cuellos y orejas de caballo, un perfil de barba— y liso por dentro: la silueta dice quiénes son sin darles cara"
         ],
         "palette_logic": "Sin color propio en ningún estado: son el valor más oscuro de la lámina en la que aparecen y su avance se lee por densidad, no por tono. Ninguna nota verde de insecto, ningún brillo de caparazón, ningún rojo.",
         "scale": "En la forma base, del tamaño de la cavidad que la contiene, sin poder medirse. En el estado de plaga, cada pieza es más pequeña que una uña y su escala sólo se entiende por comparación con la mata de maíz: el tamaño está en el número, no en la unidad.",
         "continuity_markers": [
           "nunca tienen anatomía: en ninguna lámina, en ningún estado y en ningún plano de detalle",
           "nunca hay una figura humana reconocible dentro de la masa ni entre las piezas: esa identificación es la que el canon prohíbe expresamente",
-          "nunca salen del Opiramá hacia el Karambá por el aire libre sin una franja de cultivo de por medio: el relato dice que devoran, y el efecto tiene que estar en cuadro",
-          "no llevan cadena dibujada: el encadenamiento se lee como contención de la roca, no como hierro, que además no existe en esta época"
+          "no llevan cadena dibujada: el encadenamiento se lee como contención de la roca, no como hierro, que además no existe en esta época",
+          "la hueste es masa y perfil, nunca figuras individuales con rostro, casco, coraza o cruz: dibujar españoles reconocibles sería cometer el prejuicio que el dossier prohíbe en la otra dirección (§2)",
+          "la forma de hoy —papeles, permisos, máquinas— no se dibuja en ningún estado: el cerro está en consulta previa (§3)"
         ],
         "documented_features": [
+          "canon, campo mito: «No eran una sola cosa y no tenían una sola forma: eran potencias enemigas»; «una vez llegaron como nube de langostas y se comieron lo sembrado»; «otra vez llegaron a pie, armados, con barbas y con caballos, hablando una lengua que nadie había oído, y esa vez no se fueron»; «ahora vienen por el oro del cerro… con papeles, permisos y máquinas»",
           "dossier §7 (ans-cardona-2011): la fuente no los describe nunca en su forma base — están «escondidos», «encadenados», «encontraban la manera de escabullirse y disfrazarse», y al escapar «se extendían como nubes de langostas y otras plagas»",
-          "dossier §7 (ans-cardona-2016): su lista de manifestaciones —«en forma de langosta, de enfermedad y granizo»— pone en el mismo renglón un insecto, una dolencia y un fenómeno meteorológico: no son una especie, son una categoría de calamidad",
           "dossier §7 y §12.7 (ans-ica-langosta): no existe ninguna langosta de plaga en el alto Cauca — la única que forma plagas en Colombia es la langosta llanera de Meta y Vichada, y la especie sudamericana que forma mangas verdaderas no llega a Colombia; no hay ningún registro histórico de plaga de langosta en esta región",
-          "dossier §2 y §12.2 (ans-cieza-1553): «llaman al diablo Xixarama, y a los españoles, tamaraca» — en 1553 la palabra designaba literalmente a los españoles, y el plural de seres subterráneos es reinterpretación posterior: el mito de la plaga es la digestión de una invasión, y ésa es la clave del ciclo entero",
-          "dossier §7 (ans-cardona-2011): «las otras plagas» no se inventan porque la fuente no nombra ninguna"
+          "dossier §2 y §12.2 (ans-cieza-1553): «llaman al diablo Xixarama, y a los españoles, tamaraca» — en 1553 la palabra designaba literalmente a los españoles, y el plural de seres subterráneos es reinterpretación posterior: el mito de la plaga es la digestión de una invasión, y ésa es la clave del ciclo entero"
         ],
         "editorial_features": [
           "la forma abstracta es la decisión más editorial del dossier y va marcada como reversible: si la nube se dibuja sólo como insectos se pierde lo que el corpus está diciendo, y si se dibuja con figuras humanas reconocibles se comete el prejuicio que el canon prohíbe; la masa sin especie y sin rostro es la tercera salida y es una elección, no un dato",
           "el estado de plaga se cobra como lámina aparte porque cambia la silueta entera —de masa contenida a dispersión—, y así lo declaró el censo; lo que no cambia es que en ninguno de los dos estados hay anatomía",
-          "las versiones tardías que identifican a los Tamaracas con pueblos Noanamá, Tatamá o Chocó, y las que los leen como violencia política de 1948 o como minería y despojo, quedan fuera de toda lámina: no son una deriva de divulgación sino que están en la propia cadena académica, y por eso la exclusión se refuerza"
+          "las versiones tardías que identifican a los Tamaracas con pueblos Noanamá, Tatamá o Chocó, y las que los leen como violencia política de 1948 o como minería y despojo, quedan fuera de toda lámina: no son una deriva de divulgación sino que están en la propia cadena académica, y por eso la exclusión se refuerza",
+          "El encierro bajo el Opiramá que esta hoja dibujaba se retira porque el canon reescrito lo retira; la masa ahora avanza por la ladera en vez de estar contenida. Reversible si el canon vuelve a la localización.",
+          "La hueste a pie se cobra como estado porque el canon reescrito la pone en el relato como una forma de los Tamaracas, y el dossier ya decía que «Tamaraca» significaba «español» en 1553 (§2). Se resuelve como silueta sin rostro; si el editor prefiere no dibujarla, el estado cae y queda la plaga."
         ]
       },
       "prompt_spec": {
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Ansermas V1 - state_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla y se descarga: el rayo, el remolino de la tormenta, el chorro doble de las dos cascadas y el enjambre en espiral que sale de la grieta. Las huellas son hueco recortado en la roca, no relieve. Sin trama decorativa de relleno.",
-        "primary_request": "el cambio de estado sin perder la identidad para Los Tamaracas, seres de adentro. No tienen cuerpo y la hoja lo dice de entrada: la forma base es una masa oscura contenida bajo la línea del Opiramá —el valor más oscuro de la lámina, sin contorno estable, sin rostro y sin un solo miembro—, que sólo se lee porque la roca que la encierra sí tiene canto. En el estado de plaga esa misma masa se rompe en muchas piezas pequeñas iguales de canto vivo que se agrupan y se dispersan: densidad y nunca especie, sin ala resuelta, sin pata, sin antena y sin una sola figura humana dentro.",
+        "primary_request": "el cambio de estado sin perder la identidad para Los Tamaracas, potencias enemigas. No tienen cuerpo y la hoja lo dice de entrada: la forma base es una masa oscura que avanza por el borde de la ladera sembrada —el valor más oscuro de la lámina, sin contorno estable, sin rostro y sin un solo miembro—, y cada estado es la misma masa tomando otra cara. En el estado de plaga se deshace en centenares de piezas iguales; en el de la hueste, la misma masa se recorta contra el cielo con el perfil de lanzas y cuellos de caballo, sin una sola cara ni una sola armadura legible.",
         "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; En la forma base, del tamaño de la cavidad que la contiene, sin poder medirse. En el estado de plaga, cada pieza es más pequeña que una uña y su escala sólo se entiende por comparación con la mata de maíz: el tamaño está en el número, no en la unidad.",
         "lighting_mood": "Luz de tormenta de vertiente cafetera, que es la única atmósfera que el corpus documenta: cielo cargado y bajo, contraste alto y momentáneo del relámpago contra masas oscuras, y el resto del tiempo una luz plana de día cubierto sobre laderas sembradas. La escena de la despedida cambia el registro y sólo ése: luz rasante de tarde, larga y baja, sobre la roca del río. No hay luz propia en ninguna entidad: ni halo, ni aura, ni ojos brillantes; lo sobrenatural ocurre en el cielo y en el agua, nunca en un cuerpo.",
-        "materials_textures": "papel negro mate en una sola masa sin borde definido para la forma contenida, con la grieta de la roca como único contorno prestado; muchas piezas pequeñas e idénticas de canto vivo para el estado de plaga, recortadas iguales y repetidas por centenares, que se leen como densidad y no como enjambre de una especie; roca de la base profunda del Opiramá conteniéndolos por arriba y por los lados: la contención es el material; mata de maíz mordida y hoja rota en la franja donde la masa ya pasó, como único rastro de su efecto",
+        "materials_textures": "papel negro mate en una sola masa sin borde definido para la forma base, contra el canto vivo de la ladera; muchas piezas pequeñas e idénticas de canto vivo para el estado de plaga, recortadas iguales y repetidas por centenares, que se leen como densidad y no como enjambre de una especie; el borde de la ladera sembrada como límite contra el que avanza la masa: el límite que la gente tiene que volver a poner es el material; mata de maíz mordida y hoja rota en la franja donde la masa ya pasó, como único rastro de su efecto; para la hueste, el mismo papel negro recortado sólo en su borde superior —puntas de lanza, cuellos y orejas de caballo, un perfil de barba— y liso por dentro: la silueta dice quiénes son sin darles cara",
         "era": "Dos capas que no se mezclan y un umbral entre ellas. La capa del relato es el mundo anserma anterior y contemporáneo a la entrada española, hasta 1540: cuerpo desnudo y descalzo, manta pintada, maure, chaquira bajo la rodilla, adorno de oro laminado, casas de madera desviadas unas de otras, esteras, armas de dardo, lanza y macana de palma negra, sierras sembradas sin bosque cerrado. Nada de hierro, caballo, teja, rueda ni cruz. La capa de la memoria que transmite el relato es el siglo XX del mercado de Quinchía —camisa blanca, jíquera, achiote en la cara, ollas y cayanas de barro, canastas de bejuco— y sólo entra si el guion la pide explícitamente como marco, nunca mezclada con la anterior.",
         "constraints": [
+          "documentado: «No eran una sola cosa y no tenían una sola forma: eran potencias enemigas»; «una vez llegaron como nube de langostas y se comieron lo sembrado»; «otra vez llegaron a pie, armados, con barbas y con caballos, hablando una lengua que nadie había oído, y esa vez no se fueron»; «ahora vienen por el oro del cerro… con papeles, permisos y máquinas»",
           "documentado: la fuente no los describe nunca en su forma base — están «escondidos», «encadenados», «encontraban la manera de escabullirse y disfrazarse», y al escapar «se extendían como nubes de langostas y otras plagas»",
-          "documentado: su lista de manifestaciones —«en forma de langosta, de enfermedad y granizo»— pone en el mismo renglón un insecto, una dolencia y un fenómeno meteorológico: no son una especie, son una categoría de calamidad",
           "documentado: no existe ninguna langosta de plaga en el alto Cauca — la única que forma plagas en Colombia es la langosta llanera de Meta y Vichada, y la especie sudamericana que forma mangas verdaderas no llega a Colombia; no hay ningún registro histórico de plaga de langosta en esta región",
           "documentado: «llaman al diablo Xixarama, y a los españoles, tamaraca» — en 1553 la palabra designaba literalmente a los españoles, y el plural de seres subterráneos es reinterpretación posterior: el mito de la plaga es la digestión de una invasión, y ésa es la clave del ciclo entero",
-          "documentado: «las otras plagas» no se inventan porque la fuente no nombra ninguna",
           "El corpus no nombra un solo color, de modo que la paleta entera sale del territorio: pardo y gris de roca porfídica, verdes apagados de ladera sembrada, ocre del maíz seco y gris cargado de cielo de tormenta.",
           "El único momento cromático que la fuente autoriza es el agua que cambia de color en el combate, y se resuelve como oscurecimiento del agua, jamás como sangre ni como rojo saturado.",
           "El oro existe sólo como adorno sobre un cuerpo y nunca como montón, tesoro ni pieza aislada: lámina pequeña, mate y cosida a la tela, no metal brillante.",
@@ -3006,6 +3306,18 @@
           "aspect": "1:1",
           "states": [
             "nube_de_langostas"
+          ],
+          "reference_views": [
+            "canon"
+          ]
+        },
+        {
+          "id": "estado_hueste a pie con barbas y caballos, en silueta sin rostro",
+          "view_type": "state_variation",
+          "purpose": "el cambio de estado sin perder la identidad: hueste a pie con barbas y caballos, en silueta sin rostro",
+          "aspect": "1:1",
+          "states": [
+            "hueste a pie con barbas y caballos, en silueta sin rostro"
           ],
           "reference_views": [
             "canon"
@@ -3050,6 +3362,11 @@
           "myth": "las-huellas-de-mapura",
           "field": "mito",
           "note": "Michua y Xixaraca bajan de la cumbre «para compartir y bailar con sus protegidos»: es el único gesto de proximidad documentado en todo el ciclo y la única alternativa a representarlos como figuras remotas, pero procede de una fuente que depende de la cadena de Cardona y se declara como tal"
+        },
+        {
+          "myth": "las-huellas-de-mapura",
+          "field": "mito",
+          "note": "El canon reescrito dice qué sostiene Xixaraca para la gente: «que la siembra volviera, que los caminos pudieran andarse, que la gente pudiera quedarse donde estaba»; el daño de hoy es «que la gente tenga que irse»."
         }
       ],
       "design_contract": {
@@ -3247,108 +3564,6 @@
         }
       ]
     },
-    "cerro_opirama__environment_model": {
-      "purpose": "environment_model",
-      "entity_refs": [
-        "cerro_opirama"
-      ],
-      "placeholder": false,
-      "design_status": "ready_for_pilot_review",
-      "evidence_refs": [
-        {
-          "myth": "las-huellas-de-mapura",
-          "field": "mito",
-          "note": "El corpus Ansermas no contiene una sola palabra de color: en 12.161 caracteres de los cuatro campos de los dos mitos, «color» aparece una vez y sin nombrar ninguno —«el agua cambiaba de color en medio del combate»— y «sangre» una vez, como símil. La paleta entera de esta biblia tiene que salir del territorio, porque el relato no autoriza ni un tono"
-        },
-        {
-          "myth": "las-huellas-de-mapura",
-          "field": "mito",
-          "note": "Karambá y Opiramá son casi gemelos en altura —2.063 y 2.044 metros— y están a la vista el uno del otro, a unos tres kilómetros del casco urbano: la oposición del relato entre el cerro que protege y el cerro que contiene no es una jerarquía de tamaño sino una relación de dos hitos equivalentes frente a frente"
-        },
-        {
-          "myth": "las-huellas-de-mapura",
-          "field": "mito",
-          "note": "No existe ningún registro de cuevas, grietas ni cavidades en el Opiramá: la abertura por la que salen los Tamaracas es sólo mítica —«la base profunda del cerro de Opirama»— y la lámina tiene que resolverla como grieta del relato, nunca como formación localizable"
-        },
-        {
-          "myth": "las-huellas-de-mapura",
-          "field": "mito",
-          "note": "El paisaje habitado no es selva: el cronista insiste en que «la tierra en que tienen asentadas las poblaciones son sierras muy grandes, sin montaña ninguna», con las casas desviadas unas de otras, una casa muy grande a la entrada del pueblo y una placita cercada de cañas gordas. Vertiente abierta y sembrada, no bosque cerrado"
-        }
-      ],
-      "design_contract": {
-        "distinctive_silhouette": "Gemelo del Karambá en cota —2.044 contra 2.063— y su contrario exacto en lectura: se mira de frente y a la altura del ojo, no desde abajo, y su masa se resuelve como base profunda y cerrada, con una sola abertura en la falda y absolutamente nada en la cima. Donde el Karambá tiene picacho contra el cielo, éste tiene pie contra la sombra, y ese reparto es la tensión del primer relato.",
-        "materials": [
-          "masa de roca en planos grandes y cerrados, más oscuros y más planos que los del Karambá, sin picacho y sin filo recortado",
-          "una sola abertura en la falda, resuelta como grieta estrecha de canto duro y nunca como boca de cueva ni como puerta",
-          "papel negro mate en el interior de la grieta, sin fondo visible y sin nada dentro que se pueda leer como cuerpo",
-          "ladera sembrada al pie, la misma del Karambá, que es lo que recuerda que el cerro también sostiene la vida"
-        ],
-        "palette_logic": "Más oscuro y más plano que su gemelo, en grises cerrados sin el brillo del pórfido y sin el claro del cielo: la cumbre nunca se recorta contra luz. La ambigüedad de contener el peligro y a la vez sostener el cultivo se lee en que su pie es verde y su masa no.",
-        "scale": "Diecinueve metros más bajo que el Karambá, y esa casi igualdad es el dato: la oposición entre el que protege y el que contiene no es una jerarquía de tamaño sino una relación de dos hitos equivalentes frente a frente, a unos tres kilómetros del casco urbano y a la vista uno del otro.",
-        "continuity_markers": [
-          "nunca visto desde abajo ni con la cumbre contra el cielo: ese punto de vista es del Karambá",
-          "una sola abertura y siempre en la falda, nunca en la cima y nunca más de una",
-          "nada dentro de la grieta que tenga contorno de cuerpo: lo que contiene se resuelve en la ficha de los Tamaracas como masa sin forma",
-          "aparece siempre con el Karambá en el mismo encuadre o implícito enfrente: el relato vive de los dos y fundirlos en un solo paisaje destruiría la tensión"
-        ],
-        "documented_features": [
-          "dossier §6.1 (ans-cardona-2011): «al frente, allí más lejos de la quebrada Maldecida, en la base profunda del cerro de Opirama se escondían los tamaracas» — base profunda, al frente, y nada más",
-          "dossier §1.2 (ans-peakvisor-opirama): 2.044 m con 193 de prominencia, a unos 3,3 km del casco urbano: casi gemelo del Karambá y a la vista de él",
-          "dossier §7 (ans-cardona-2011): los Tamaracas «cambiaban de forma y buscaban una abertura», de modo que la abertura es del cerro y no un lugar aparte",
-          "dossier §1.2 (ans-geologia-2016): la misma geología del vulcanismo del occidente colombiano rige los dos cerros del par"
-        ],
-        "editorial_features": [
-          "no existe ningún rasgo interior documentado del Opiramá más allá de la afirmación mítica: no hay cuevas, grietas ni cámaras publicadas, y así lo registra la carencia 5. La forma y el número de aberturas son decisión reversible",
-          "la lectura frontal y a la altura del ojo es composición declarada, elegida precisamente para que los dos cerros no se lean como el mismo",
-          "la coordenada de la ficha señala el cerro como centro del episodio y no una entrada literal al mundo subterráneo: ninguna lámina dibuja un interior"
-        ]
-      },
-      "prompt_spec": {
-        "use_case": "stylized-concept",
-        "asset_type": "Biblia visual Ansermas V1 - environment_model",
-        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla y se descarga: el rayo, el remolino de la tormenta, el chorro doble de las dos cascadas y el enjambre en espiral que sale de la grieta. Las huellas son hueco recortado en la roca, no relieve. Sin trama decorativa de relleno.",
-        "primary_request": "el mundo hasta los cuatro limites, con su hora y su clima para El cerro Opiramá. Gemelo del Karambá en cota —2.044 contra 2.063— y su contrario exacto en lectura: se mira de frente y a la altura del ojo, no desde abajo, y su masa se resuelve como base profunda y cerrada, con una sola abertura en la falda y absolutamente nada en la cima. Donde el Karambá tiene picacho contra el cielo, éste tiene pie contra la sombra, y ese reparto es la tensión del primer relato.",
-        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Diecinueve metros más bajo que el Karambá, y esa casi igualdad es el dato: la oposición entre el que protege y el que contiene no es una jerarquía de tamaño sino una relación de dos hitos equivalentes frente a frente, a unos tres kilómetros del casco urbano y a la vista uno del otro.",
-        "lighting_mood": "Luz de tormenta de vertiente cafetera, que es la única atmósfera que el corpus documenta: cielo cargado y bajo, contraste alto y momentáneo del relámpago contra masas oscuras, y el resto del tiempo una luz plana de día cubierto sobre laderas sembradas. La escena de la despedida cambia el registro y sólo ése: luz rasante de tarde, larga y baja, sobre la roca del río. No hay luz propia en ninguna entidad: ni halo, ni aura, ni ojos brillantes; lo sobrenatural ocurre en el cielo y en el agua, nunca en un cuerpo.",
-        "materials_textures": "masa de roca en planos grandes y cerrados, más oscuros y más planos que los del Karambá, sin picacho y sin filo recortado; una sola abertura en la falda, resuelta como grieta estrecha de canto duro y nunca como boca de cueva ni como puerta; papel negro mate en el interior de la grieta, sin fondo visible y sin nada dentro que se pueda leer como cuerpo; ladera sembrada al pie, la misma del Karambá, que es lo que recuerda que el cerro también sostiene la vida",
-        "era": "Dos capas que no se mezclan y un umbral entre ellas. La capa del relato es el mundo anserma anterior y contemporáneo a la entrada española, hasta 1540: cuerpo desnudo y descalzo, manta pintada, maure, chaquira bajo la rodilla, adorno de oro laminado, casas de madera desviadas unas de otras, esteras, armas de dardo, lanza y macana de palma negra, sierras sembradas sin bosque cerrado. Nada de hierro, caballo, teja, rueda ni cruz. La capa de la memoria que transmite el relato es el siglo XX del mercado de Quinchía —camisa blanca, jíquera, achiote en la cara, ollas y cayanas de barro, canastas de bejuco— y sólo entra si el guion la pide explícitamente como marco, nunca mezclada con la anterior.",
-        "constraints": [
-          "documentado: «al frente, allí más lejos de la quebrada Maldecida, en la base profunda del cerro de Opirama se escondían los tamaracas» — base profunda, al frente, y nada más",
-          "documentado: 2.044 m con 193 de prominencia, a unos 3,3 km del casco urbano: casi gemelo del Karambá y a la vista de él",
-          "documentado: los Tamaracas «cambiaban de forma y buscaban una abertura», de modo que la abertura es del cerro y no un lugar aparte",
-          "documentado: la misma geología del vulcanismo del occidente colombiano rige los dos cerros del par",
-          "El corpus no nombra un solo color, de modo que la paleta entera sale del territorio: pardo y gris de roca porfídica, verdes apagados de ladera sembrada, ocre del maíz seco y gris cargado de cielo de tormenta.",
-          "El único momento cromático que la fuente autoriza es el agua que cambia de color en el combate, y se resuelve como oscurecimiento del agua, jamás como sangre ni como rojo saturado.",
-          "El oro existe sólo como adorno sobre un cuerpo y nunca como montón, tesoro ni pieza aislada: lámina pequeña, mate y cosida a la tela, no metal brillante.",
-          "Los Tamaracas no tienen color propio: son el valor más oscuro de la lámina en la que aparecen, y su avance se lee por densidad y no por tono.",
-          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
-        ],
-        "avoid": [
-          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
-          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas y no de modelado.",
-          "Sin iconografía diabólica europea en Xixaraca ni en Michua: ni cuernos, ni alas, ni pezuñas, ni fuego, ni deidad europeizada, ni tocado genérico ni regalia inventada.",
-          "Sin reproducir el cuadro de Xixaraca ni el mural de Michúa que existen hoy en Quinchía: son obra de autor vivo e identificable.",
-          "Sin ninguna figura humana reconocible dentro de la plaga, y sin insecto con anatomía resuelta: los Tamaracas no son un pueblo ni una especie.",
-          "Sin sangre explícita, batalla entre cuerpos, arma en uso, cadenas, conquistadores ni retroexcavadoras: el combate es tormenta y el despojo no entra en cuadro.",
-          "Sin reproducir un bien identificable: ni pieza catalogada de orfebrería del Cauca medio, ni panel rupestre del tramo de Irra, ni deformación craneal, que no corresponde a este pueblo.",
-          "Sin chontaduro en el mismo plano que el cerro: la palma pertenece al cañón, mil metros por debajo, y juntarlos en un solo encuadre falsea el territorio."
-        ],
-        "technique_close": "En el plano corto el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte; el cuerpo se construye por planos superpuestos y nunca modelado. Las dos fuerzas protectoras se resuelven por silueta grande y plana de un solo tono, sin rasgo facial resuelto, porque ninguna fuente les da cara. Los Tamaracas son masa: muchas piezas pequeñas iguales, de canto vivo, que se agrupan y se dispersan; nunca un insecto con anatomía ni una cara humana. La hoja de maíz y el racimo del chontaduro son recortes planos grandes con el borde en dientes, no fibras individuales."
-      },
-      "views": [
-        {
-          "id": "canon",
-          "view_type": "environment_establishing",
-          "purpose": "el mundo hasta los cuatro limites, con su hora y su clima",
-          "aspect": "16:9",
-          "states": [
-            "canonico"
-          ],
-          "reference_views": []
-        }
-      ]
-    },
     "huellas_en_la_roca__object_sheet": {
       "purpose": "object_sheet",
       "entity_refs": [
@@ -3381,6 +3596,11 @@
           "myth": "los-pasos-de-xixaraca",
           "field": "mito",
           "note": "Toda la trama de este corpus es una sola transmisión: tres textos del mismo autor recordando al mismo narrador, más dos trabajos académicos que dependen de él. Las únicas voces realmente independientes son la crónica de 1553, la síntesis etnológica de 1948 y la entrevista de 1977 a Gabriel Campeón, y ninguna de las tres narra el ciclo"
+        },
+        {
+          "myth": "los-pasos-de-xixaraca",
+          "field": "mito",
+          "note": "El canon reescrito fija que las estampa Xixaraca solo, al irse «derrotado y triste», con el pie entrando en la piedra «como entra en el barro»; las huellas están en el camino junto al agua y la gente que pasa se santigua."
         }
       ],
       "design_contract": {
@@ -3400,6 +3620,7 @@
           "no hay ningún rasgo del entorno que permita identificar la piedra ni llegar a ella: ni confluencia legible, ni perfil de cerro reconocible, ni sendero"
         ],
         "documented_features": [
+          "canon, campo mito: «huellas humanas gigantescas estampadas en las rocas», «a la vista, junto al agua, en el camino por donde la gente pasa todos los días»; al irse, «el pie entró en la piedra como entra en el barro, del tamaño que él tenía»: «marcan una salida y no una llegada»",
           "dossier §5 y carencia 2 (ans-cardona-anfora-1993): en treinta años existen exactamente dos adjetivos publicados — «gigantescas huellas humanas, estampadas en las rocas» y «enormes, con forma humana». Ni tamaño, ni número, ni tipo de roca, ni fotografía, ni registro arqueológico",
           "dossier §5 (ans-cardona-anfora-1993): lo único que la fuente añade del soporte es que las rocas planas están «cerca del agua»",
           "dossier §5: el canon advierte expresamente que las fuentes no permiten resolver su origen material, y que pueden ser marcas naturales, grabados o lugares de memoria",
@@ -3408,7 +3629,8 @@
         "editorial_features": [
           "la forma concreta del pie, su orientación y su número son decisión editorial reversible: la fuente da un adjetivo y un soporte",
           "la ausencia deliberada de referencia de escala es la decisión central de esta hoja y es lo que impide que la lámina se lea como documentación de un hallazgo",
-          "la atribución a Xixaraca es la lectura principal del canon, que admite a la vez que en algunos relatos las marcas son de Michua y en otros de los dos: la hoja no fija autoría dentro de la imagen"
+          "la atribución a Xixaraca es la lectura principal del canon, que admite a la vez que en algunos relatos las marcas son de Michua y en otros de los dos: la hoja no fija autoría dentro de la imagen",
+          "Las huellas van en dirección de salida, alejándose del cerro hacia el agua, porque el canon reescrito dice que marcan una salida; su número sigue sin fuente. Las atribuciones a Michua o a los dos que circulan en otras reconstrucciones no se dibujan: el canon se queda con Xixaraca solo."
         ]
       },
       "prompt_spec": {
@@ -3421,6 +3643,7 @@
         "materials_textures": "roca plana de orilla en un solo plano grande y claro, que es todo el soporte de la lámina; el hueco de la huella recortado por dentro del plano de la roca, con el canto del papel a la vista como única prueba de profundidad; papel negro mate en el fondo del hueco, sin textura y sin fondo legible; agua corriente al borde del encuadre, en quilling corto, porque lo único que la fuente añade es que están «cerca del agua»",
         "era": "Dos capas que no se mezclan y un umbral entre ellas. La capa del relato es el mundo anserma anterior y contemporáneo a la entrada española, hasta 1540: cuerpo desnudo y descalzo, manta pintada, maure, chaquira bajo la rodilla, adorno de oro laminado, casas de madera desviadas unas de otras, esteras, armas de dardo, lanza y macana de palma negra, sierras sembradas sin bosque cerrado. Nada de hierro, caballo, teja, rueda ni cruz. La capa de la memoria que transmite el relato es el siglo XX del mercado de Quinchía —camisa blanca, jíquera, achiote en la cara, ollas y cayanas de barro, canastas de bejuco— y sólo entra si el guion la pide explícitamente como marco, nunca mezclada con la anterior.",
         "constraints": [
+          "documentado: «huellas humanas gigantescas estampadas en las rocas», «a la vista, junto al agua, en el camino por donde la gente pasa todos los días»; al irse, «el pie entró en la piedra como entra en el barro, del tamaño que él tenía»: «marcan una salida y no una llegada»",
           "documentado: en treinta años existen exactamente dos adjetivos publicados — «gigantescas huellas humanas, estampadas en las rocas» y «enormes, con forma humana». Ni tamaño, ni número, ni tipo de roca, ni fotografía, ni registro arqueológico",
           "documentado: lo único que la fuente añade del soporte es que las rocas planas están «cerca del agua»",
           "documentado: el canon advierte expresamente que las fuentes no permiten resolver su origen material, y que pueden ser marcas naturales, grabados o lugares de memoria",
@@ -3478,6 +3701,11 @@
           "myth": "los-pasos-de-xixaraca",
           "field": "mito",
           "note": "Lo que sí está documentado cerca del puerto de Irra son fuentes saladas, petroglifos y comunidades umbras: hay arte rupestre real y localizable en el mismo tramo donde la memoria pone las huellas, y por eso la lámina no puede parecerse a un panel grabado ni funcionar como guía para llegar"
+        },
+        {
+          "myth": "los-pasos-de-xixaraca",
+          "field": "mito",
+          "note": "El canon reescrito pone las huellas en un camino de paso diario junto al agua y a la gente que se santigua al pasar."
         }
       ],
       "design_contract": {
@@ -3497,6 +3725,7 @@
           "no hay puente, barca, camino de acceso ni infraestructura de ninguna época"
         ],
         "documented_features": [
+          "canon, campo mito: las huellas están «a la vista, junto al agua, en el camino por donde la gente pasa todos los días», abajo y no en el cerro",
           "dossier §12.1 y carencia 2 (ans-irra-geografia): EL RÍO MÁPURA NO EXISTE — Mápura es una vereda del corregimiento de Irra, en el cañón del Cauca, y el censo la fichó como «el río Mápura y sus rocas». La ficha se rehace como orilla de río en la vereda de ese nombre",
           "dossier §12.1 y carencia 2 (ans-cardona-2011, ans-cardona-2016, ans-cardona-anfora-1993): el mismo autor da tres ubicaciones incompatibles de las huellas, y ese desacuerdo se respeta en lugar de resolverse dibujando",
           "dossier §1.3 (ans-irra-geografia): Irra está a 835 metros y 28 °C, mil metros por debajo de la cabecera de Quinchía: éste es el piso caliente del corpus",
@@ -3519,113 +3748,12 @@
         "materials_textures": "rocas planas de vega en planos grandes y horizontales, el soporte que la hoja de las huellas necesita; agua corriente baja en quilling largo y paralelo a la orilla, sin espuma y sin salto; arena y grava de orilla en granulado de recorte, no de textura pintada; matorral bajo y disperso de tierra caliente al borde, nunca bosque cerrado ni galería",
         "era": "Dos capas que no se mezclan y un umbral entre ellas. La capa del relato es el mundo anserma anterior y contemporáneo a la entrada española, hasta 1540: cuerpo desnudo y descalzo, manta pintada, maure, chaquira bajo la rodilla, adorno de oro laminado, casas de madera desviadas unas de otras, esteras, armas de dardo, lanza y macana de palma negra, sierras sembradas sin bosque cerrado. Nada de hierro, caballo, teja, rueda ni cruz. La capa de la memoria que transmite el relato es el siglo XX del mercado de Quinchía —camisa blanca, jíquera, achiote en la cara, ollas y cayanas de barro, canastas de bejuco— y sólo entra si el guion la pide explícitamente como marco, nunca mezclada con la anterior.",
         "constraints": [
+          "documentado: las huellas están «a la vista, junto al agua, en el camino por donde la gente pasa todos los días», abajo y no en el cerro",
           "documentado: EL RÍO MÁPURA NO EXISTE — Mápura es una vereda del corregimiento de Irra, en el cañón del Cauca, y el censo la fichó como «el río Mápura y sus rocas». La ficha se rehace como orilla de río en la vereda de ese nombre",
           "documentado: el mismo autor da tres ubicaciones incompatibles de las huellas, y ese desacuerdo se respeta en lugar de resolverse dibujando",
           "documentado: Irra está a 835 metros y 28 °C, mil metros por debajo de la cabecera de Quinchía: éste es el piso caliente del corpus",
           "documentado: lo único que la fuente dice del soporte es que son rocas planas «cerca del agua»",
           "documentado: en el mismo tramo hay petroglifos reales y fuentes saladas documentadas, de modo que ninguna lámina puede incluir perfil reconocible, confluencia legible ni sendero de acceso",
-          "El corpus no nombra un solo color, de modo que la paleta entera sale del territorio: pardo y gris de roca porfídica, verdes apagados de ladera sembrada, ocre del maíz seco y gris cargado de cielo de tormenta.",
-          "El único momento cromático que la fuente autoriza es el agua que cambia de color en el combate, y se resuelve como oscurecimiento del agua, jamás como sangre ni como rojo saturado.",
-          "El oro existe sólo como adorno sobre un cuerpo y nunca como montón, tesoro ni pieza aislada: lámina pequeña, mate y cosida a la tela, no metal brillante.",
-          "Los Tamaracas no tienen color propio: son el valor más oscuro de la lámina en la que aparecen, y su avance se lee por densidad y no por tono.",
-          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
-        ],
-        "avoid": [
-          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
-          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas y no de modelado.",
-          "Sin iconografía diabólica europea en Xixaraca ni en Michua: ni cuernos, ni alas, ni pezuñas, ni fuego, ni deidad europeizada, ni tocado genérico ni regalia inventada.",
-          "Sin reproducir el cuadro de Xixaraca ni el mural de Michúa que existen hoy en Quinchía: son obra de autor vivo e identificable.",
-          "Sin ninguna figura humana reconocible dentro de la plaga, y sin insecto con anatomía resuelta: los Tamaracas no son un pueblo ni una especie.",
-          "Sin sangre explícita, batalla entre cuerpos, arma en uso, cadenas, conquistadores ni retroexcavadoras: el combate es tormenta y el despojo no entra en cuadro.",
-          "Sin reproducir un bien identificable: ni pieza catalogada de orfebrería del Cauca medio, ni panel rupestre del tramo de Irra, ni deformación craneal, que no corresponde a este pueblo.",
-          "Sin chontaduro en el mismo plano que el cerro: la palma pertenece al cañón, mil metros por debajo, y juntarlos en un solo encuadre falsea el territorio."
-        ],
-        "technique_close": "En el plano corto el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte; el cuerpo se construye por planos superpuestos y nunca modelado. Las dos fuerzas protectoras se resuelven por silueta grande y plana de un solo tono, sin rasgo facial resuelto, porque ninguna fuente les da cara. Los Tamaracas son masa: muchas piezas pequeñas iguales, de canto vivo, que se agrupan y se dispersan; nunca un insecto con anatomía ni una cara humana. La hoja de maíz y el racimo del chontaduro son recortes planos grandes con el borde en dientes, no fibras individuales."
-      },
-      "views": [
-        {
-          "id": "canon",
-          "view_type": "environment_establishing",
-          "purpose": "el mundo hasta los cuatro limites, con su hora y su clima",
-          "aspect": "16:9",
-          "states": [
-            "canonico"
-          ],
-          "reference_views": []
-        }
-      ]
-    },
-    "cascadas_lagrimas_de_michua__environment_model": {
-      "purpose": "environment_model",
-      "entity_refs": [
-        "cascadas_lagrimas_de_michua"
-      ],
-      "placeholder": false,
-      "design_status": "ready_for_pilot_review",
-      "evidence_refs": [
-        {
-          "myth": "los-pasos-de-xixaraca",
-          "field": "mito",
-          "note": "El corpus Ansermas no contiene una sola palabra de color: en 12.161 caracteres de los cuatro campos de los dos mitos, «color» aparece una vez y sin nombrar ninguno —«el agua cambiaba de color en medio del combate»— y «sangre» una vez, como símil. La paleta entera de esta biblia tiene que salir del territorio, porque el relato no autoriza ni un tono"
-        },
-        {
-          "myth": "los-pasos-de-xixaraca",
-          "field": "mito",
-          "note": "Las Lágrimas de Michua son dos cascadas gemelas, en la vereda Bellavista del corregimiento de Batero, que descienden entre surcos de roca; la memoria regional las hace caer de la parte más alta del cerro. Son dos, y esa dualidad es el rasgo que la ficha debe fijar"
-        },
-        {
-          "myth": "los-pasos-de-xixaraca",
-          "field": "mito",
-          "note": "La monografía de la propia vereda Bellavista contradice a todas las demás fuentes: dice que «no hay corrientes de agua» y sus leyendas son el pollo paletas, la barbacoa, la patasola y la mano peluda, sin Michua ni Xixaraca. La ficha de las cascadas se produce sin ruta de acceso y sin convertirlas en sitio verificable"
-        },
-        {
-          "myth": "los-pasos-de-xixaraca",
-          "field": "mito",
-          "note": "Ninguna fuente da la altura de la caída de las cascadas, y la ficha oficial de turismo del cerro no publica altura, roca, vegetación ni clima: la administración que gestiona el lugar no lo describe, y toda la materia del paisaje viene de blogs y de un estudio de geología"
-        }
-      ],
-      "design_contract": {
-        "distinctive_silhouette": "Dos caídas gemelas y nunca una: dos hilos de agua paralelos, de la misma anchura y a la misma altura, descendiendo entre surcos de roca desde el filo alto. La escala es deliberadamente indeterminada —ninguna figura, ningún árbol y ningún elemento que permita medir el salto, porque ninguna fuente da su altura—, y se leen siempre de frente y desde lejos, nunca desde el pie y nunca con sendero a la vista.",
-        "materials": [
-          "dos hilos de agua idénticos en quilling largo y recto, paralelos y sin espuma al pie",
-          "surcos de roca como acanaladuras verticales del propio plano de piedra, recortadas y no pintadas",
-          "pared de roca entre los dos hilos, que es lo que los mantiene separados y lo que hace legible que son dos",
-          "cielo cargado detrás del filo, sin sol y sin arco iris"
-        ],
-        "palette_logic": "Gris de roca y blanco apagado de agua bajo cielo cargado: sin azul, sin turquesa y sin ningún verde saturado de vegetación de cascada. Es la lámina más pobre en color de todo el corpus y eso es correcto para él.",
-        "scale": "Indeterminada a propósito: la altura del salto es exactamente el dato que nadie publica, y la lámina lo respeta no dando ninguna referencia que permita calcularla. Se compone por encuadre cerrado sobre las dos caídas y su pared, sin horizonte y sin base.",
-        "continuity_markers": [
-          "siempre dos y siempre iguales: una sola caída, o dos de distinto tamaño, contradicen la única descripción publicada",
-          "nunca hay figura, árbol, casa ni objeto que sirva de escala",
-          "nunca hay sendero de acceso, mirador ni punto de vista que indique desde dónde se llega",
-          "nunca se dibuja el pie de la cascada ni la poza: se muestra la caída, no el sitio"
-        ],
-        "documented_features": [
-          "dossier §1.4 (ans-iespa-2021): las Lágrimas de Michua son dos, gemelas, en la vereda Bellavista del corregimiento de Batero, y descienden «entre surcos de roca»; esa dualidad es el rasgo que la ficha fija",
-          "dossier §1.4 (ans-cardona-2016): la memoria regional las hace caer de lo más alto del cerro",
-          "dossier §1.4 y carencia 3 (ans-bellavista-monografia): la monografía de la propia vereda, publicada por el municipio, dice en su apartado de hidrografía que «no hay corrientes de agua», y sus leyendas propias son el pollo paletas, la barbacoa, la patasola y la mano peluda — ni Michua ni Xixaraca aparecen. No hay manera de resolver eso desde un escritorio",
-          "dossier §1.4 y carencia 3: ninguna fuente da la altura del salto"
-        ],
-        "editorial_features": [
-          "la salida ante la contradicción de la vereda no es escoger sino dibujar las dos caídas sin ruta de acceso, sin escala absoluta y sin perfil reconocible: esa renuncia es la decisión editorial central de la hoja y es reversible si aparece una fuente hidrográfica",
-          "el canon advierte que no se invente una ruta continua entre las huellas y los saltos: por eso ésta es una lámina propia y no la continuación del río",
-          "la anchura de los hilos, la separación entre ellos y la forma de los surcos son composición declarada"
-        ]
-      },
-      "prompt_spec": {
-        "use_case": "stylized-concept",
-        "asset_type": "Biblia visual Ansermas V1 - environment_model",
-        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla y se descarga: el rayo, el remolino de la tormenta, el chorro doble de las dos cascadas y el enjambre en espiral que sale de la grieta. Las huellas son hueco recortado en la roca, no relieve. Sin trama decorativa de relleno.",
-        "primary_request": "el mundo hasta los cuatro limites, con su hora y su clima para Las Lágrimas de Michua (las cascadas). Dos caídas gemelas y nunca una: dos hilos de agua paralelos, de la misma anchura y a la misma altura, descendiendo entre surcos de roca desde el filo alto. La escala es deliberadamente indeterminada —ninguna figura, ningún árbol y ningún elemento que permita medir el salto, porque ninguna fuente da su altura—, y se leen siempre de frente y desde lejos, nunca desde el pie y nunca con sendero a la vista.",
-        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; Indeterminada a propósito: la altura del salto es exactamente el dato que nadie publica, y la lámina lo respeta no dando ninguna referencia que permita calcularla. Se compone por encuadre cerrado sobre las dos caídas y su pared, sin horizonte y sin base.",
-        "lighting_mood": "Luz de tormenta de vertiente cafetera, que es la única atmósfera que el corpus documenta: cielo cargado y bajo, contraste alto y momentáneo del relámpago contra masas oscuras, y el resto del tiempo una luz plana de día cubierto sobre laderas sembradas. La escena de la despedida cambia el registro y sólo ése: luz rasante de tarde, larga y baja, sobre la roca del río. No hay luz propia en ninguna entidad: ni halo, ni aura, ni ojos brillantes; lo sobrenatural ocurre en el cielo y en el agua, nunca en un cuerpo.",
-        "materials_textures": "dos hilos de agua idénticos en quilling largo y recto, paralelos y sin espuma al pie; surcos de roca como acanaladuras verticales del propio plano de piedra, recortadas y no pintadas; pared de roca entre los dos hilos, que es lo que los mantiene separados y lo que hace legible que son dos; cielo cargado detrás del filo, sin sol y sin arco iris",
-        "era": "Dos capas que no se mezclan y un umbral entre ellas. La capa del relato es el mundo anserma anterior y contemporáneo a la entrada española, hasta 1540: cuerpo desnudo y descalzo, manta pintada, maure, chaquira bajo la rodilla, adorno de oro laminado, casas de madera desviadas unas de otras, esteras, armas de dardo, lanza y macana de palma negra, sierras sembradas sin bosque cerrado. Nada de hierro, caballo, teja, rueda ni cruz. La capa de la memoria que transmite el relato es el siglo XX del mercado de Quinchía —camisa blanca, jíquera, achiote en la cara, ollas y cayanas de barro, canastas de bejuco— y sólo entra si el guion la pide explícitamente como marco, nunca mezclada con la anterior.",
-        "constraints": [
-          "documentado: las Lágrimas de Michua son dos, gemelas, en la vereda Bellavista del corregimiento de Batero, y descienden «entre surcos de roca»; esa dualidad es el rasgo que la ficha fija",
-          "documentado: la memoria regional las hace caer de lo más alto del cerro",
-          "documentado: dossier §1.4 y carencia 3 (ans-bellavista-monografia): la monografía de la propia vereda, publicada por el municipio, dice en su apartado de hidrografía que «no hay corrientes de agua», y sus leyendas propias son el pollo paletas, la barbacoa, la patasola y la mano peluda — ni Michua ni Xixaraca aparecen. No hay manera de resolver eso desde un escritorio",
-          "documentado: ninguna fuente da la altura del salto",
           "El corpus no nombra un solo color, de modo que la paleta entera sale del territorio: pardo y gris de roca porfídica, verdes apagados de ladera sembrada, ocre del maíz seco y gris cargado de cielo de tormenta.",
           "El único momento cromático que la fuente autoriza es el agua que cambia de color en el combate, y se resuelve como oscurecimiento del agua, jamás como sangre ni como rojo saturado.",
           "El oro existe sólo como adorno sobre un cuerpo y nunca como montón, tesoro ni pieza aislada: lámina pequeña, mate y cosida a la tela, no metal brillante.",
@@ -3684,6 +3812,11 @@
           "myth": "las-huellas-de-mapura",
           "field": "mito",
           "note": "La vivienda documentada es de madera con empalizada de postes gruesos, esteras de suelo y camas elevadas cubiertas de estera; y los ansermas están registrados como agricultores sobresalientes, con algodón, maíz, ají, coca, yuca, batata y fríjol, más guayaba, guama, guanábana, níspero, aguacate, piña y la palma de pixivaes"
+        },
+        {
+          "myth": "las-huellas-de-mapura",
+          "field": "mito",
+          "note": "En el canon reescrito los cultivos son «lo sembrado» y «el maíz»; el chontaduro de la fuente de 2011 ya no se nombra."
         }
       ],
       "design_contract": {
@@ -3703,6 +3836,7 @@
           "no hay insecto dibujado sobre las plantas devoradas: el daño se ve, la causa pertenece a la ficha de los Tamaracas"
         ],
         "documented_features": [
+          "canon, campo mito: los Tamaracas «se comieron lo sembrado, y la abundancia se volvió hambre en pocos días», y con Michua «el cielo se ponía de parte del maíz»; el chontaduro ya no aparece en el canon reescrito",
           "dossier §1.3 y §12.5 (ans-cardona-2011, ans-cieza-1553): el relato pone «las cosechas de maíz y chontaduro» en la misma frase, pero la palma de pixivaes no crece por encima de unos 1.300 metros y la cabecera de Quinchía está a 1.825; el propio cronista fija el límite al describir las provincias frías: allí «hay de las mismas comidas y frutas… salvo que no hay de las palmas de los pixivaes; mas cogen gran cantidad de papas»",
           "dossier §1.3 (ans-irra-geografia): la contradicción se resuelve dentro del mismo municipio, porque Irra está a 835 metros y 28 °C: el maíz es del alto y el chontaduro del cañón",
           "dossier §1.3 (ans-cieza-1553): la palma está descrita por un testigo del XVI — «unas palmas delgadas muy largas, espinosas; en lo alto dellas crían un racimo de una fruta que llamamos pixivaes», de la que se hace pan y vino y cuyo cogollo da palmito",
@@ -3712,7 +3846,8 @@
         "editorial_features": [
           "las cuatro versiones caben en una sola plancha y por eso esta ficha no cobra hoja de estado, respetando lo que decidió el censo: sano y devorado cambian el canto de la hoja, no la silueta de la especie",
           "la separación por piso térmico dentro de la plancha es decisión editorial declarada y reversible, y es la consecuencia operativa del dossier: no se pone una palma de chontaduro en el mismo plano que el cerro",
-          "la variedad concreta de maíz que se dibuja sale de la memoria regional de los años cuarenta y no del relato: es marco de transmisión aplicado a una planta, y se declara"
+          "la variedad concreta de maíz que se dibuja sale de la memoria regional de los años cuarenta y no del relato: es marco de transmisión aplicado a una planta, y se declara",
+          "La palma de pixivaes se mantiene en la plancha porque la fuente de 2011 la pone junto al maíz (dossier §1.3), aunque el canon reescrito sólo diga maíz: si el editor prefiere seguir al canon, la plancha se queda con la mata de maíz y cuesta lo mismo."
         ]
       },
       "prompt_spec": {
@@ -3725,6 +3860,7 @@
         "materials_textures": "hoja de maíz en tiras largas y curvas de papel, con la mazorca como pieza aparte y los granos resueltos como campo de color y no uno a uno; estípite de la palma delgado, muy alto y con las espinas como dientes cortos recortados en el propio canto: pocas piezas planas grandes, nunca espina por espina; racimo de pixivaes arriba, como una sola masa compacta de piezas pequeñas iguales; hoja mordida y tallo quebrado en las versiones devoradas, con el borde recortado irregular: el daño es canto, no mancha",
         "era": "Dos capas que no se mezclan y un umbral entre ellas. La capa del relato es el mundo anserma anterior y contemporáneo a la entrada española, hasta 1540: cuerpo desnudo y descalzo, manta pintada, maure, chaquira bajo la rodilla, adorno de oro laminado, casas de madera desviadas unas de otras, esteras, armas de dardo, lanza y macana de palma negra, sierras sembradas sin bosque cerrado. Nada de hierro, caballo, teja, rueda ni cruz. La capa de la memoria que transmite el relato es el siglo XX del mercado de Quinchía —camisa blanca, jíquera, achiote en la cara, ollas y cayanas de barro, canastas de bejuco— y sólo entra si el guion la pide explícitamente como marco, nunca mezclada con la anterior.",
         "constraints": [
+          "documentado: los Tamaracas «se comieron lo sembrado, y la abundancia se volvió hambre en pocos días», y con Michua «el cielo se ponía de parte del maíz»; el chontaduro ya no aparece en el canon reescrito",
           "documentado: el relato pone «las cosechas de maíz y chontaduro» en la misma frase, pero la palma de pixivaes no crece por encima de unos 1.300 metros y la cabecera de Quinchía está a 1.825; el propio cronista fija el límite al describir las provincias frías: allí «hay de las mismas comidas y frutas… salvo que no hay de las palmas de los pixivaes; mas cogen gran cantidad de papas»",
           "documentado: la contradicción se resuelve dentro del mismo municipio, porque Irra está a 835 metros y 28 °C: el maíz es del alto y el chontaduro del cañón",
           "documentado: la palma está descrita por un testigo del XVI — «unas palmas delgadas muy largas, espinosas; en lo alto dellas crían un racimo de una fruta que llamamos pixivaes», de la que se hace pan y vino y cuyo cogollo da palmito",
@@ -3853,6 +3989,193 @@
           "view_type": "phenomenon_phases",
           "purpose": "la regla del prodigio en fases legibles",
           "aspect": "16:9",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_hombre_adulto__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_hombre_adulto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "las-huellas-de-mapura",
+          "field": "mito",
+          "note": "Xixaraca sostiene que la siembra vuelva y que la gente pueda quedarse."
+        },
+        {
+          "myth": "los-pasos-de-xixaraca",
+          "field": "mito",
+          "note": "Xixaraca sostiene que la siembra vuelva y que la gente pueda quedarse."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre adulto de pie en la ladera, desnudo y descalzo, con el pelo cortado por encima del hombro, el bulto de chaquira blanca bajo la rodilla y sobre el tobillo, una cinta de chaquira al cuello con una ranita de oro y un palo de sembrar en la mano.",
+        "materials": [
+          "piel en papel pardo mate",
+          "chaquira blanca menuda en bulto bajo la rodilla y sobre el tobillo, de canto granulado",
+          "cinta de chaquira al cuello con figurita de rana en papel dorado mate",
+          "palo de sembrar recto de madera"
+        ],
+        "palette_logic": "Pardo de piel, el blanco de la chaquira como punto claro y un solo punto de oro mate.",
+        "scale": "Estatura adulta corriente, escalonada por la pendiente. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "pelo por encima del hombro",
+          "chaquira bajo la rodilla siempre",
+          "descalzo",
+          "ninguna cabeza deformada"
+        ],
+        "documented_features": [
+          "dossier §6.2 (ans-cieza-1553): «andan desnudos y descalzos, y las mujeres traen mantas pequeñas y son de buen parescer»; «los principales y señores se cubren con una manta larga, y traen por la cintura maures»; ellas con «mantas de algodón galanas, con muchas pinturas», «los cabellos muy peinados», «collares de piezas ricas de oro», «zarcillos» y «peloticas de oro fino» en la nariz; mantas «chapadas de unas piezas de oro hechas a manera redonda, y otras como estrelletas»",
+          "dossier §6.2 (ans-campeon-valencia-2009, relación de 1542): bajo la rodilla y sobre el tobillo, «un gran bulto de chaquira, ques unas cuentecitas menudas y muy iguales, blancas… para que críen pantorrilla»; el maure de lienzo «muy pintado» con un rabo que llega casi al suelo; cuatro o cinco pares de zarcillos por oreja; los que no son señores con «una cinta de chaquira al cuello y al cabo della por yoyel una rama o un sapo de oro»; el cabello cortado por encima del hombro; uñas largas como signo de rango",
+          "dossier §6.2 y §12 (ans-hsai-1948): la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya",
+          "dossier §1, estrato A: nada de hierro, caballo, rueda, teja, cruz ni arma de fuego sobre estos cuerpos; la capa de 1947 —camisa blanca, jíquera, achiote— no entra en el mismo plano",
+          "dossier §6.2 (relación de 1542): los que no son señores llevan «una cinta de chaquira al cuello y al cabo della por yoyel una rama o un sapo de oro»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y la pintura facial, si la lleva, va como campos planos, nunca como trazo; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "Los dibujos de la manta son lenguaje de forma —bandas, campos, trazos— y nunca un patrón real (regla del ejemplar).",
+          "Ninguna lámina presenta a estos cuerpos como los Embera de hoy ni como sus herederos automáticos (dossier §3).",
+          "El palo de sembrar es atrezo de oficio elegido porque lo que el relato defiende es «lo sembrado»; reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Ansermas V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla y se descarga: el rayo, el remolino de la tormenta, el chorro doble de las dos cascadas y el enjambre en espiral que sale de la grieta. Las huellas son hueco recortado en la roca, no relieve. Sin trama decorativa de relleno.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · hombre de Guacuma adulto. Hombre adulto de pie en la ladera, desnudo y descalzo, con el pelo cortado por encima del hombro, el bulto de chaquira blanca bajo la rodilla y sobre el tobillo, una cinta de chaquira al cuello con una ranita de oro y un palo de sembrar en la mano.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura adulta corriente, escalonada por la pendiente. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de tormenta de vertiente cafetera, que es la única atmósfera que el corpus documenta: cielo cargado y bajo, contraste alto y momentáneo del relámpago contra masas oscuras, y el resto del tiempo una luz plana de día cubierto sobre laderas sembradas. La escena de la despedida cambia el registro y sólo ése: luz rasante de tarde, larga y baja, sobre la roca del río. No hay luz propia en ninguna entidad: ni halo, ni aura, ni ojos brillantes; lo sobrenatural ocurre en el cielo y en el agua, nunca en un cuerpo.",
+        "materials_textures": "piel en papel pardo mate; chaquira blanca menuda en bulto bajo la rodilla y sobre el tobillo, de canto granulado; cinta de chaquira al cuello con figurita de rana en papel dorado mate; palo de sembrar recto de madera",
+        "era": "Dos capas que no se mezclan y un umbral entre ellas. La capa del relato es el mundo anserma anterior y contemporáneo a la entrada española, hasta 1540: cuerpo desnudo y descalzo, manta pintada, maure, chaquira bajo la rodilla, adorno de oro laminado, casas de madera desviadas unas de otras, esteras, armas de dardo, lanza y macana de palma negra, sierras sembradas sin bosque cerrado. Nada de hierro, caballo, teja, rueda ni cruz. La capa de la memoria que transmite el relato es el siglo XX del mercado de Quinchía —camisa blanca, jíquera, achiote en la cara, ollas y cayanas de barro, canastas de bejuco— y sólo entra si el guion la pide explícitamente como marco, nunca mezclada con la anterior.",
+        "constraints": [
+          "documentado: «andan desnudos y descalzos, y las mujeres traen mantas pequeñas y son de buen parescer»; «los principales y señores se cubren con una manta larga, y traen por la cintura maures»; ellas con «mantas de algodón galanas, con muchas pinturas», «los cabellos muy peinados», «collares de piezas ricas de oro», «zarcillos» y «peloticas de oro fino» en la nariz; mantas «chapadas de unas piezas de oro hechas a manera redonda, y otras como estrelletas»",
+          "documentado: bajo la rodilla y sobre el tobillo, «un gran bulto de chaquira, ques unas cuentecitas menudas y muy iguales, blancas… para que críen pantorrilla»; el maure de lienzo «muy pintado» con un rabo que llega casi al suelo; cuatro o cinco pares de zarcillos por oreja; los que no son señores con «una cinta de chaquira al cuello y al cabo della por yoyel una rama o un sapo de oro»; el cabello cortado por encima del hombro; uñas largas como signo de rango",
+          "documentado: la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya",
+          "documentado: nada de hierro, caballo, rueda, teja, cruz ni arma de fuego sobre estos cuerpos; la capa de 1947 —camisa blanca, jíquera, achiote— no entra en el mismo plano",
+          "documentado: los que no son señores llevan «una cinta de chaquira al cuello y al cabo della por yoyel una rama o un sapo de oro»",
+          "El corpus no nombra un solo color, de modo que la paleta entera sale del territorio: pardo y gris de roca porfídica, verdes apagados de ladera sembrada, ocre del maíz seco y gris cargado de cielo de tormenta.",
+          "El único momento cromático que la fuente autoriza es el agua que cambia de color en el combate, y se resuelve como oscurecimiento del agua, jamás como sangre ni como rojo saturado.",
+          "El oro existe sólo como adorno sobre un cuerpo y nunca como montón, tesoro ni pieza aislada: lámina pequeña, mate y cosida a la tela, no metal brillante.",
+          "Los Tamaracas no tienen color propio: son el valor más oscuro de la lámina en la que aparecen, y su avance se lee por densidad y no por tono.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas y no de modelado.",
+          "Sin iconografía diabólica europea en Xixaraca ni en Michua: ni cuernos, ni alas, ni pezuñas, ni fuego, ni deidad europeizada, ni tocado genérico ni regalia inventada.",
+          "Sin reproducir el cuadro de Xixaraca ni el mural de Michúa que existen hoy en Quinchía: son obra de autor vivo e identificable.",
+          "Sin ninguna figura humana reconocible dentro de la plaga, y sin insecto con anatomía resuelta: los Tamaracas no son un pueblo ni una especie.",
+          "Sin sangre explícita, batalla entre cuerpos, arma en uso, cadenas, conquistadores ni retroexcavadoras: el combate es tormenta y el despojo no entra en cuadro.",
+          "Sin reproducir un bien identificable: ni pieza catalogada de orfebrería del Cauca medio, ni panel rupestre del tramo de Irra, ni deformación craneal, que no corresponde a este pueblo.",
+          "Sin chontaduro en el mismo plano que el cerro: la palma pertenece al cañón, mil metros por debajo, y juntarlos en un solo encuadre falsea el territorio."
+        ],
+        "technique_close": "En el plano corto el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte; el cuerpo se construye por planos superpuestos y nunca modelado. Las dos fuerzas protectoras se resuelven por silueta grande y plana de un solo tono, sin rasgo facial resuelto, porque ninguna fuente les da cara. Los Tamaracas son masa: muchas piezas pequeñas iguales, de canto vivo, que se agrupan y se dispersan; nunca un insecto con anatomía ni una cara humana. La hoja de maíz y el racimo del chontaduro son recortes planos grandes con el borde en dientes, no fibras individuales."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_adulta__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_adulta"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "las-huellas-de-mapura",
+          "field": "mito",
+          "note": "La gente que la plaga deja con hambre y que Michua defiende."
+        },
+        {
+          "myth": "los-pasos-de-xixaraca",
+          "field": "mito",
+          "note": "La gente que la plaga deja con hambre y que Michua defiende."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer adulta de pie con la manta de algodón pintada hasta los pies, el pelo muy peinado, zarcillos y la pelotita de oro en la ventana de la nariz, y el oro laminado cosido a la manta en discos y estrellas.",
+        "materials": [
+          "manta de algodón pintada en lenguaje de forma, hasta los pies",
+          "discos y estrellas de papel dorado mate cosidos a la manta",
+          "zarcillos y pelotita de nariz en oro mate",
+          "pelo en una pieza plana muy peinada"
+        ],
+        "palette_logic": "Crudo de algodón con pinturas en tierras apagadas, pardo de piel y oro mate.",
+        "scale": "Algo por debajo del hombre. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "manta hasta los pies",
+          "oro siempre cosido o puesto, nunca suelto",
+          "descalza"
+        ],
+        "documented_features": [
+          "dossier §6.2 (ans-cieza-1553): «andan desnudos y descalzos, y las mujeres traen mantas pequeñas y son de buen parescer»; «los principales y señores se cubren con una manta larga, y traen por la cintura maures»; ellas con «mantas de algodón galanas, con muchas pinturas», «los cabellos muy peinados», «collares de piezas ricas de oro», «zarcillos» y «peloticas de oro fino» en la nariz; mantas «chapadas de unas piezas de oro hechas a manera redonda, y otras como estrelletas»",
+          "dossier §6.2 (ans-campeon-valencia-2009, relación de 1542): bajo la rodilla y sobre el tobillo, «un gran bulto de chaquira, ques unas cuentecitas menudas y muy iguales, blancas… para que críen pantorrilla»; el maure de lienzo «muy pintado» con un rabo que llega casi al suelo; cuatro o cinco pares de zarcillos por oreja; los que no son señores con «una cinta de chaquira al cuello y al cabo della por yoyel una rama o un sapo de oro»; el cabello cortado por encima del hombro; uñas largas como signo de rango",
+          "dossier §6.2 y §12 (ans-hsai-1948): la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya",
+          "dossier §1, estrato A: nada de hierro, caballo, rueda, teja, cruz ni arma de fuego sobre estos cuerpos; la capa de 1947 —camisa blanca, jíquera, achiote— no entra en el mismo plano"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y la pintura facial, si la lleva, va como campos planos, nunca como trazo; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "Los dibujos de la manta son lenguaje de forma —bandas, campos, trazos— y nunca un patrón real (regla del ejemplar).",
+          "Ninguna lámina presenta a estos cuerpos como los Embera de hoy ni como sus herederos automáticos (dossier §3).",
+          "El reparto entre manta pequeña y manta hasta los pies sigue a las dos fuentes (Cieza y la síntesis de 1948) y es decisión de hoja."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Ansermas V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla y se descarga: el rayo, el remolino de la tormenta, el chorro doble de las dos cascadas y el enjambre en espiral que sale de la grieta. Las huellas son hueco recortado en la roca, no relieve. Sin trama decorativa de relleno.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer de Guacuma adulta. Mujer adulta de pie con la manta de algodón pintada hasta los pies, el pelo muy peinado, zarcillos y la pelotita de oro en la ventana de la nariz, y el oro laminado cosido a la manta en discos y estrellas.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Algo por debajo del hombre. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de tormenta de vertiente cafetera, que es la única atmósfera que el corpus documenta: cielo cargado y bajo, contraste alto y momentáneo del relámpago contra masas oscuras, y el resto del tiempo una luz plana de día cubierto sobre laderas sembradas. La escena de la despedida cambia el registro y sólo ése: luz rasante de tarde, larga y baja, sobre la roca del río. No hay luz propia en ninguna entidad: ni halo, ni aura, ni ojos brillantes; lo sobrenatural ocurre en el cielo y en el agua, nunca en un cuerpo.",
+        "materials_textures": "manta de algodón pintada en lenguaje de forma, hasta los pies; discos y estrellas de papel dorado mate cosidos a la manta; zarcillos y pelotita de nariz en oro mate; pelo en una pieza plana muy peinada",
+        "era": "Dos capas que no se mezclan y un umbral entre ellas. La capa del relato es el mundo anserma anterior y contemporáneo a la entrada española, hasta 1540: cuerpo desnudo y descalzo, manta pintada, maure, chaquira bajo la rodilla, adorno de oro laminado, casas de madera desviadas unas de otras, esteras, armas de dardo, lanza y macana de palma negra, sierras sembradas sin bosque cerrado. Nada de hierro, caballo, teja, rueda ni cruz. La capa de la memoria que transmite el relato es el siglo XX del mercado de Quinchía —camisa blanca, jíquera, achiote en la cara, ollas y cayanas de barro, canastas de bejuco— y sólo entra si el guion la pide explícitamente como marco, nunca mezclada con la anterior.",
+        "constraints": [
+          "documentado: «andan desnudos y descalzos, y las mujeres traen mantas pequeñas y son de buen parescer»; «los principales y señores se cubren con una manta larga, y traen por la cintura maures»; ellas con «mantas de algodón galanas, con muchas pinturas», «los cabellos muy peinados», «collares de piezas ricas de oro», «zarcillos» y «peloticas de oro fino» en la nariz; mantas «chapadas de unas piezas de oro hechas a manera redonda, y otras como estrelletas»",
+          "documentado: bajo la rodilla y sobre el tobillo, «un gran bulto de chaquira, ques unas cuentecitas menudas y muy iguales, blancas… para que críen pantorrilla»; el maure de lienzo «muy pintado» con un rabo que llega casi al suelo; cuatro o cinco pares de zarcillos por oreja; los que no son señores con «una cinta de chaquira al cuello y al cabo della por yoyel una rama o un sapo de oro»; el cabello cortado por encima del hombro; uñas largas como signo de rango",
+          "documentado: la deformación craneal no corresponde a los ansermas, sólo a Pozo y Quimbaya",
+          "documentado: nada de hierro, caballo, rueda, teja, cruz ni arma de fuego sobre estos cuerpos; la capa de 1947 —camisa blanca, jíquera, achiote— no entra en el mismo plano",
+          "El corpus no nombra un solo color, de modo que la paleta entera sale del territorio: pardo y gris de roca porfídica, verdes apagados de ladera sembrada, ocre del maíz seco y gris cargado de cielo de tormenta.",
+          "El único momento cromático que la fuente autoriza es el agua que cambia de color en el combate, y se resuelve como oscurecimiento del agua, jamás como sangre ni como rojo saturado.",
+          "El oro existe sólo como adorno sobre un cuerpo y nunca como montón, tesoro ni pieza aislada: lámina pequeña, mate y cosida a la tela, no metal brillante.",
+          "Los Tamaracas no tienen color propio: son el valor más oscuro de la lámina en la que aparecen, y su avance se lee por densidad y no por tono.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Sin borde, cartón soporte, corrugado, mesa, estudio, ciclorama ni marco: el paisaje llega a los cuatro límites y la cámara está dentro de la maqueta.",
+          "Sin fotorrealismo, fotografía de papel, CGI, render 3D ni pintura digital: todo es papel recortado y quilling, y el volumen viene de capas y no de modelado.",
+          "Sin iconografía diabólica europea en Xixaraca ni en Michua: ni cuernos, ni alas, ni pezuñas, ni fuego, ni deidad europeizada, ni tocado genérico ni regalia inventada.",
+          "Sin reproducir el cuadro de Xixaraca ni el mural de Michúa que existen hoy en Quinchía: son obra de autor vivo e identificable.",
+          "Sin ninguna figura humana reconocible dentro de la plaga, y sin insecto con anatomía resuelta: los Tamaracas no son un pueblo ni una especie.",
+          "Sin sangre explícita, batalla entre cuerpos, arma en uso, cadenas, conquistadores ni retroexcavadoras: el combate es tormenta y el despojo no entra en cuadro.",
+          "Sin reproducir un bien identificable: ni pieza catalogada de orfebrería del Cauca medio, ni panel rupestre del tramo de Irra, ni deformación craneal, que no corresponde a este pueblo.",
+          "Sin chontaduro en el mismo plano que el cerro: la palma pertenece al cañón, mil metros por debajo, y juntarlos en un solo encuadre falsea el territorio."
+        ],
+        "technique_close": "En el plano corto el rostro es un óvalo plano de un solo tono y los rasgos son piezas recortadas aparte; el cuerpo se construye por planos superpuestos y nunca modelado. Las dos fuerzas protectoras se resuelven por silueta grande y plana de un solo tono, sin rasgo facial resuelto, porque ninguna fuente les da cara. Los Tamaracas son masa: muchas piezas pequeñas iguales, de canto vivo, que se agrupan y se dispersan; nunca un insecto con anatomía ni una cara humana. La hoja de maíz y el racimo del chontaduro son recortes planos grandes con el borde en dientes, no fibras individuales."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],

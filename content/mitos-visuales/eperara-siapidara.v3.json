@@ -807,8 +807,8 @@
     "dossier": "docs/investigacion/eperara-siapidara.md"
   },
   "inventory": {
-    "status": "reconciling",
-    "frozen": false,
+    "status": "approved_frozen",
+    "frozen": true,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -818,7 +818,7 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19",
+    "approved_at": "2026-09-24",
     "reconciliation": {
       "opened_at": "2026-09-24",
       "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
@@ -827,8 +827,33 @@
         "tachi-akhore-y-la-palabra-de-mangle"
       ],
       "new_myths": [],
-      "unchanged_myths": []
-    }
+      "unchanged_myths": [],
+      "closed_at": "2026-09-24",
+      "summary": "2 relatos releídos: 13 añadidas (cerros de la huida e iguana requeridas; creciente, pareja vuelta piedra, chicao, tambora y frutas, río de dos corrientes y tortugas embebidas; malos vueltos animales, pueblos que se quedaron, laguna del color y karichipari excluidos), 0 excluidas por el canon nuevo, 5 rediseñadas (escalera de oro pasa de excluida a ficha con decisión de oro abierta, gente, aguas, utilería, apuesta de la sal) y 3 tipos base; niño, anciano y anciana declarados ausentes."
+    },
+    "declared_absences": [
+      {
+        "entity_id": "tipo_nino",
+        "name": "Tipo base · niño eperara",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Ninguno de los dos relatos pone a esta gente en escena: la gente sale de las estacas «mujeres y hombres», adulta desde el primer instante (dossier §6), y el único niño es Tachi Akhore, que es deidad y crece rápido. No se inventa."
+      },
+      {
+        "entity_id": "tipo_anciano",
+        "name": "Tipo base · anciano eperara",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Ninguno de los dos relatos pone a esta gente en escena: la gente sale de las estacas «mujeres y hombres», adulta desde el primer instante (dossier §6), y el único niño es Tachi Akhore, que es deidad y crece rápido. No se inventa."
+      },
+      {
+        "entity_id": "tipo_anciana",
+        "name": "Tipo base · anciana eperara",
+        "kind": "personaje",
+        "was": "not_created",
+        "reason": "Ninguno de los dos relatos pone a esta gente en escena: la gente sale de las estacas «mujeres y hombres», adulta desde el primer instante (dossier §6), y el único niño es Tachi Akhore, que es deidad y crece rápido. No se inventa."
+      }
+    ]
   },
   "myths": {
     "origen-del-pueblo-eperara": {
@@ -851,9 +876,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura separó a la que ordena de la que ejecuta: cada acto de esta página tiene dos sujetos —Tachi Nawe advierte, pide sembrar, manda cortar y entrega el rejo a medianoche; Tachi Akhore siembra, observa, corta, saca estacas, amarra fibras, clava, se cansa, bebe, se arrodilla y da cuatro golpes—, de modo que el inventario no podía fundirlos en una sola figura creadora, y lo que quedó claro al separarlos es que la única que nunca pisa la playa es también la única que este relato aporta y ninguna otra página hereda.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito ya no se detiene en la playa: añade entera la huida a los cerros —la creciente que se canta y se danza, la iguana que mide el agua y queda marcada, el joven y la mujer vueltos piedra, los malos vueltos animales, el chicao que vuelve con una hoja— y el desenlace de la escalera de oro que Tachi Akhore alza dejando en tierra a los que se quedaron comiendo fruta; la escalera, que el inventario excluía por ser «continuación del ciclo», pasa a ficha y deja abierta la prohibición de oro del dossier.",
         "previous_note": "La lectura separó a la que ordena de la que ejecuta: cada acto de esta página tiene dos sujetos —Tachi Nawe advierte, pide sembrar, manda cortar y entrega el rejo a medianoche; Tachi Akhore siembra, observa, corta, saca estacas, amarra fibras, clava, se cansa, bebe, se arrodilla y da cuatro golpes—, de modo que el inventario no podía fundirlos en una sola figura creadora, y lo que quedó claro al separarlos es que la única que nunca pisa la playa es también la única que este relato aporta y ninguna otra página hereda."
       },
       "entity_refs": [
@@ -936,6 +961,71 @@
           "entity_id": "hoja_utileria_eperara",
           "role": "plot_object",
           "note": "Cuatro objetos menores en una sola hoja. Va por debajo del grupo de cinco porque el corpus no da más utilería: los dos relatos trabajan con palma, agua y cuerpos, casi sin cosas."
+        },
+        {
+          "entity_id": "cerros_de_la_huida",
+          "role": "setting",
+          "note": "Escenario nuevo del canon reescrito: el cerro de la creciente y el más alto de la escalera."
+        },
+        {
+          "entity_id": "iguana",
+          "role": "secondary",
+          "note": "Nueva en el canon reescrito: mide la creciente y queda marcada por el agua."
+        },
+        {
+          "entity_id": "inundacion_del_cerro",
+          "role": "magic_subject",
+          "note": "La creciente: estado de la ficha de los cerros."
+        },
+        {
+          "entity_id": "pareja_vuelta_piedra",
+          "role": "magic_subject",
+          "note": "Nueva: dos piedras juntas en la ladera, sin escena."
+        },
+        {
+          "entity_id": "malos_vueltos_animales",
+          "role": "magic_subject",
+          "note": "Nueva; sin forma descrita, fuera de lámina."
+        },
+        {
+          "entity_id": "aves_mensajeras",
+          "role": "secondary",
+          "note": "Nuevas: sólo el chicao vuelve, con una hoja; embebido en los cerros."
+        },
+        {
+          "entity_id": "tambora_y_frutas_del_camino",
+          "role": "plot_object",
+          "note": "Nuevas: la tambora de la fila y la fruta que deja a los últimos en tierra."
+        },
+        {
+          "entity_id": "pueblos_que_se_quedaron",
+          "role": "secondary",
+          "note": "Nombres de pueblos vivos; no se dibujan diferenciados."
+        },
+        {
+          "entity_id": "laguna_del_color",
+          "role": "variant",
+          "note": "Variante de la ONIC, fuera de lámina."
+        },
+        {
+          "entity_id": "karichipari_y_playa_sitara",
+          "role": "variant",
+          "note": "Variante de Quiroz, fuera de lámina."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los hombres de la minga y de la fila."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: las mujeres de la playa y de la fila."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base: la muchacha eperara."
         }
       ]
     },
@@ -959,9 +1049,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "La lectura separó el árbol de su caída y descubrió que son dos formas y no dos momentos: en pie, Pania Pak'uru es un cuerpo cerrado que se sana cada noche y borra los golpes del día, así que lo que los dos perezosos abrazan no es una puerta sino un boquete que la madera quiere cerrar; caído, deja de ser planta y se vuelve el mapa del agua —tronco en río mayor, ramas en quebradas, hojas en lagunas, raíz en mar—, y por eso la ficha del árbol y la del modelo de entorno son la misma forma vista dos veces.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito conserva el árbol que se sana y los dos perezosos patas arriba, fija la Conga como Hesaa «negra, de cintura delgada, cargando el agua en la boca», reparte el árbol caído en río, quebradas, lagunas y mar, y trae al relato lo que antes era continuación del ciclo: el río de dos corrientes y la pareja de tortugas que lo deja corriendo sólo hacia abajo; la apuesta de la sal queda en versiones.",
         "previous_note": "La lectura separó el árbol de su caída y descubrió que son dos formas y no dos momentos: en pie, Pania Pak'uru es un cuerpo cerrado que se sana cada noche y borra los golpes del día, así que lo que los dos perezosos abrazan no es una puerta sino un boquete que la madera quiere cerrar; caído, deja de ser planta y se vuelve el mapa del agua —tronco en río mayor, ramas en quebradas, hojas en lagunas, raíz en mar—, y por eso la ficha del árbol y la del modelo de entorno son la misma forma vista dos veces."
       },
       "entity_refs": [
@@ -1024,6 +1114,26 @@
           "entity_id": "hoja_utileria_eperara",
           "role": "plot_object",
           "note": "Cuatro objetos menores en una sola hoja. Va por debajo del grupo de cinco porque el corpus no da más utilería: los dos relatos trabajan con palma, agua y cuerpos, casi sin cosas."
+        },
+        {
+          "entity_id": "rio_de_dos_corrientes",
+          "role": "magic_subject",
+          "note": "Nuevo en el relato: el río de dos corrientes que queda corriendo hacia abajo."
+        },
+        {
+          "entity_id": "pareja_de_tortugas",
+          "role": "secondary",
+          "note": "Nueva en el relato: dos tortugas en el río, sin escena."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los hombres de la minga y de la fila."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: las mujeres de la playa y de la fila."
         }
       ]
     }
@@ -1413,6 +1523,11 @@
           "myth": "origen-del-pueblo-eperara",
           "field": "mito",
           "note": "La gente se levanta adulta y mixta —«la playa se llenó de voces, mujeres y hombres»— y en el segundo relato es la misma gente golpeando el tronco de día y de noche por turnos, «unos continuaban mientras otros recuperaban fuerzas»: hay que poder dibujar cansancio y relevo, no una masa uniforme"
+        },
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "El canon reescrito lleva al pueblo de la playa a los cerros: canta y danza contra la creciente, sube en fila al ritmo de la tambora y se parte entre los que suben la escalera y los que se quedan comiendo caimito y granadilla."
         }
       ],
       "census_note": "Una sola gramática de grupo para los dos relatos: son el mismo pueblo en dos momentos (la playa llena de voces y la minga que golpea el tronco sin descanso). Fija cuerpos, edades y vestuario sobrio, sin tocados panindígenas.",
@@ -1433,7 +1548,7 @@
           "los cinco grupos que el relato nombra no se diferencian por diseño: son el mismo cuerpo y la misma ropa, porque inventarles marcas sería inventar identidades"
         ],
         "documented": [
-          "corpus: «La playa se llenó de voces, mujeres y hombres», y de la palma «procedieron los grupos» que el relato nombra sin darles un solo rasgo",
+          "canon, campo mito: las estacas «gritaron y se convirtieron en seres humanos: ¡aquí estamos nosotros!»; «en esa playa vivieron mucho tiempo, cantando y danzando»; después suben en fila a los cerros, las mujeres de la última fila se quedan comiendo fruta y los de adelante suben la escalera",
           "corpus del segundo relato: «Se organizaron para golpear el tronco sin descanso, de día y de noche. Unos continuaban mientras otros recuperaban fuerzas»",
           "dossier §6 sobre unad-garcia-2024: antes de la chaquira los collares eran de bejuco chocho «con pepas de color rojo y negro»",
           "dossier §4 y §10: los cinco grupos se nombran y no se dibujan diferenciados, porque el canon advierte que las grafías varían y que no se usan para decidir identidades actuales"
@@ -1685,6 +1800,11 @@
           "myth": "tachi-akhore-y-la-palabra-de-mangle",
           "field": "mito",
           "note": "Todos los animales tienen chimia, «piedras sagradas… inmersas dentro de los animales», y «todos los árboles forestales tienen chimia, que es el espíritu encargado de cuidar la naturaleza». Ningún animal y ningún árbol se dibuja como decorado: cada uno lleva dentro una piedra que es alguien"
+        },
+        {
+          "myth": "tachi-akhore-y-la-palabra-de-mangle",
+          "field": "mito",
+          "note": "El canon reescrito fija la transformación: de la rabia Tachi Akhore le aprieta la cintura y «desde entonces Hesaa quedó así: negra, de cintura delgada, cargando el agua en la boca»."
         }
       ],
       "census_note": "Guardiana mezquina del árbol y motor del conflicto. La transformación está mostrada (Tachi Akhore le aprieta la cintura y queda negra, de cintura delgada, cargando agua en la boca): cambia la silueta y cuesta hoja de estado.",
@@ -1766,6 +1886,11 @@
           "myth": "tachi-akhore-y-la-palabra-de-mangle",
           "field": "mito",
           "note": "Todos los animales tienen chimia, «piedras sagradas… inmersas dentro de los animales», y «todos los árboles forestales tienen chimia, que es el espíritu encargado de cuidar la naturaleza». Ningún animal y ningún árbol se dibuja como decorado: cada uno lleva dentro una piedra que es alguien"
+        },
+        {
+          "myth": "tachi-akhore-y-la-palabra-de-mangle",
+          "field": "mito",
+          "note": "En el canon reescrito los dejan «sosteniendo la abertura con los brazos» y al otro día están «tirados patas arriba» con el tronco entero de nuevo."
         }
       ],
       "census_note": "Reciben un encargo y su fracaso mueve la trama (quedan tendidos de espaldas y el árbol amanece entero); ese fracaso es lo que obliga a trabajar sin descanso. Estar patas arriba es una pose, no un estado: una sola hoja.",
@@ -1857,6 +1982,11 @@
           "myth": "origen-del-pueblo-eperara",
           "field": "mito",
           "note": "Los Eperaara reconocen cinco árboles de manglar con nombre en sia pedee pero sólo tres como mangle: T'ãrra jɨrũ (rojo, «mangle madre»), Ipoporro u Op'oo te (negro o iguanero) y T'ãrra jɨrũ-t'orroo (blanco); el nato (Nat'o p'ore) y el piñuelo (Pak'uru-Jiatauk'abi) son especies asociadas. El mangle rojo mide de 4 a 10 m, con raíces fúlcreas ramificadas, curvas y arqueadas, corteza olivo pálido por fuera y rojiza por dentro y propágulos curvos colgando"
+        },
+        {
+          "myth": "tachi-akhore-y-la-palabra-de-mangle",
+          "field": "mito",
+          "note": "El canon reescrito añade al final del relato el río de dos corrientes y la pareja de tortugas que hace que quede corriendo sólo hacia abajo."
         }
       ],
       "census_note": "Modelo de entorno de los dos relatos y resultado del segundo. Debe llevar declarado el estado previo, la tierra seca, como variante del mismo modelo.",
@@ -1878,7 +2008,7 @@
           "el manglar no se dibuja como paraíso intacto: hay tocones y claros, porque el nato se extrae hasta el 90 % y el mangle rojo hasta el 25 %"
         ],
         "documented": [
-          "corpus: «Del tronco nació un río enorme; de las ramas surgieron ríos menores y quebradas; las hojas se volvieron lagos y lagunas; de la raíz apareció el mar», y «los cauces conservaron la forma del árbol derribado»",
+          "canon, campo mito: «Del tronco se hizo un río enorme; de las ramas, las quebradas y los ríos pequeños; de las hojas, los lagos y las lagunas; de la raíz, un mar inmenso», y el río, que tuvo dos corrientes, quedó corriendo «solamente hacia abajo»; «los cauces conservaron la forma del árbol caído»",
           "dossier §3 sobre grem-sia-2017: los cinco paisajes nombrados por la comunidad son «manglares, lodazales de natal, firmes, guandales y aluviales», y el suelo del mangle es ácido, de alta concentración de carbono orgánico y nitrógeno, no arena",
           "dossier §3: tres mangles reconocidos como tales en sia pedee —T'ãrra jɨrũ (rojo, «mangle madre»), Ipoporro/Op'oo te (iguanero), T'ãrra jɨrũ-t'orroo (blanco)— y dos asociados que no son mangle, Nat'o p'ore (nato) y Pak'uru-Jiatauk'abi (piñuelo)",
           "dossier §3: el mangle rojo mide de 4 a 10 m, con raíces fúlcreas «ramificadas, curvas y arqueadas», corteza olivo pálido con manchas grises por fuera y rojiza por dentro, hojas verde oscuro arriba y amarillentas por debajo agrupadas en las puntas, y propágulos curvos colgando",
@@ -2339,18 +2469,25 @@
       ]
     },
     "escalera_de_oro_y_la_inundacion": {
-      "name": "La inundación y la escalera de oro",
+      "name": "La escalera de oro colgada en la loma",
       "kind": "objeto",
-      "description": "El oro es además un imán de estereotipo; el módulo prohíbe oro en las ilustraciones de este frente.",
+      "description": "En el canon reescrito es el desenlace del relato: los de adelante la encuentran colgada en la loma del cerro más alto y suben; Tachi Akhore pregunta si ya subieron todos, le dicen que sí y la alza, y los que venían comiendo fruta se quedan: «Por eso quedamos en esta tierra».",
       "aliases": [],
       "states": [
-        "canonico"
+        "canonico",
+        "alzada_con_los_ultimos_colgados"
       ],
       "evidence_basis": "documented",
       "sensitivity": "public",
-      "visual_status": "excluded",
-      "model_requirements": [],
-      "model_refs": [],
+      "visual_status": "required",
+      "model_requirements": [
+        "object_sheet",
+        "state_sheet"
+      ],
+      "model_refs": [
+        "escalera_de_oro_y_la_inundacion__object_sheet",
+        "escalera_de_oro_y_la_inundacion__state_sheet"
+      ],
       "legacy_model_refs": [],
       "myth_refs": [
         "origen-del-pueblo-eperara"
@@ -2360,18 +2497,50 @@
           "myth": "origen-del-pueblo-eperara",
           "field": "mito",
           "note": "La inundación, la escalera de oro, el curso de los ríos, la marea y la competencia para salar el mar son continuación del ciclo que estas dos páginas no narran, y el módulo prohíbe además el oro en las ilustraciones de este frente: el oro es un imán de estereotipo en el Pacífico"
+        },
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "«Los de adelante encontraron una escalera de oro colgada en la loma y empezaron a subir. Tachi Akhore preguntó si ya habían subido todos… y alzó la escalera. Los que venían comiendo fruta corrieron; algunos alcanzaron a colgarse»."
         }
       ],
       "census_note": "El oro es además un imán de estereotipo; el módulo prohíbe oro en las ilustraciones de este frente.",
-      "exclusion_reason": "se mencionan pero nunca se ven: el relato declara que son la continuación del ciclo y esta página se detiene antes",
       "evidence_basis_mix": [
         "documented_core"
-      ]
+      ],
+      "design": {
+        "silhouette": "Una escalera larga y estrecha que cuelga de lo alto sin tocar nada arriba —su extremo superior se pierde en la luz del día resplandeciente—, con el pie apenas apoyado en la hierba de la loma: se reconoce porque es la única línea vertical recta de toda la biblia en un mundo de raíces curvas y agua horizontal.",
+        "materials": [
+          "largueros y peldaños en papel dorado mate, de grano apagado y sin brillo ni destello, recortados en pocas piezas planas largas",
+          "atadura de cada peldaño resuelta como una vuelta de quilling en tono ocre, sin clavo ni herraje",
+          "la loma al pie como un plano de hierba de firme, no de manglar"
+        ],
+        "palette": "Oro mate y ocre sobre el verde claro de la loma y el blanco cálido del día resplandeciente: el único dorado de la biblia, y deliberadamente apagado para que no se lea como tesoro.",
+        "scale": "Tan alta que su extremo superior sale del encuadre; los peldaños a la distancia de un paso humano, medidos contra una figura que sube. 1:1 con la loma al pie.",
+        "continuity": [
+          "el extremo de arriba nunca se ve: la escalera viene de un lugar que la lámina no muestra",
+          "oro siempre mate, nunca brillante ni con destello",
+          "en su estado alzado, los pocos que alcanzan a colgarse van en los peldaños bajos y el pie ya no toca la loma"
+        ],
+        "documented": [
+          "«Los de adelante encontraron una escalera de oro colgada en la loma y empezaron a subir» (canon, campo mito)",
+          "Tachi Akhore «alzó la escalera»; «algunos alcanzaron a colgarse, pero el resto gritaba y se lamentaba y él no los oyó. Por eso quedamos en esta tierra» (canon, campo mito)",
+          "El oro es un imán de estereotipo en el Pacífico y el dossier (§1) lo prohibía para este frente cuando la página no narraba la escalera (dossier §1)"
+        ],
+        "editorial": [
+          "DECISIÓN ABIERTA, declarada: el dossier prohibió el oro «porque la escalera de oro pertenece a la continuación del ciclo que estas dos páginas no narran»; el canon reescrito ahora la narra y es el desenlace. Se le da ficha para que no la invente el ilustrador, resuelta en oro mate sin brillo; si el editor mantiene la prohibición, esta ficha se retira y el desenlace se compone sólo con la loma y la gente que queda.",
+          "Ni peldaños labrados ni ornamento: sólo largueros y travesaños, porque el texto no la describe más que por su material.",
+          "El estado alzado, con los últimos colgados de los peldaños bajos, es el único que el relato hace visible; los que se quedan gritando abajo se dibujan de espaldas y a distancia, sin pathos."
+        ],
+        "states_to_model": [
+          "alzada con los últimos colgados de los peldaños bajos"
+        ]
+      }
     },
     "mareas_y_competencia_para_salar_el_mar": {
-      "name": "El curso de los ríos, la marea y la competencia para salar el mar",
+      "name": "La apuesta de la sal",
       "kind": "fenomeno",
-      "description": "El canon advierte expresamente que no se trasladan al desenlace «para fabricar una sola moraleja».",
+      "description": "En el Plan de Vida, un hombre desafía a Tachi Akhore a volver salada el agua del mar: trae canoadas de sal y no lo consigue; Tachi Akhore echa una cucharada y el otro termina maldecido y echado mar adentro, convertido en diablo. Las dos corrientes del río, que antes iban en esta entidad, pasan al relato.",
       "aliases": [],
       "states": [
         "canonico"
@@ -2390,10 +2559,15 @@
           "myth": "tachi-akhore-y-la-palabra-de-mangle",
           "field": "mito",
           "note": "La inundación, la escalera de oro, el curso de los ríos, la marea y la competencia para salar el mar son continuación del ciclo que estas dos páginas no narran, y el módulo prohíbe además el oro en las ilustraciones de este frente: el oro es un imán de estereotipo en el Pacífico"
+        },
+        {
+          "myth": "tachi-akhore-y-la-palabra-de-mangle",
+          "field": "versiones",
+          "note": "«Aquí se conserva el episodio de las dos corrientes… y se deja la apuesta de la sal como continuación del ciclo, sin trasladarla al desenlace.»"
         }
       ],
       "census_note": "El canon advierte expresamente que no se trasladan al desenlace «para fabricar una sola moraleja».",
-      "exclusion_reason": "se mencionan pero nunca se ven: episodios posteriores del ciclo que la página registra sin narrar",
+      "exclusion_reason": "el canon reescrito deja la apuesta de la sal en versiones, «como continuación del ciclo, sin trasladarla al desenlace»; el episodio de las dos corrientes sí entra al relato y tiene entidad propia (rio_de_dos_corrientes)",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -2475,7 +2649,8 @@
           "bejuco de yaré en tira larga y estrecha de papel de fibra parda, mate, enrollada en espiral cerrada y atada por sí misma",
           "fibras de palma en tiras finísimas de papel claro, en un solo manojo suelto",
           "hachas con cabeza de material declarado sin resolver —piedra pulida o hierro, la ficha dibuja la silueta más sobria y lo dice— y mango recto de madera clara",
-          "recipiente bajo, sin asa, sin pie y sin decoración, en papel pardo liso, con el jugo como una sola pieza de papel más claro"
+          "recipiente bajo, sin asa, sin pie y sin decoración, en papel pardo liso, con el jugo como una sola pieza de papel más claro",
+          "tambora como tambor de cuerpo corto y parche de cuero atado, con la forma del siru que el dossier documenta, y dos frutas de mano —caimito morado y granadilla amarilla— como piezas planas"
         ],
         "palette": "Pardos y crudos sobre fondo liso, sin un solo objeto más saturado que otro: la hoja está ordenada para que nada de lo que hay aquí compita con una figura, y para que el rejo no se lea como el objeto importante de la lámina.",
         "scale": "Todo medido contra la mano: el rollo de yaré cabe en una palma, el manojo de fibras en un puño, el hacha es de un brazo y el recipiente de dos manos. Ninguna pieza se agranda para hacerla solemne.",
@@ -2489,7 +2664,8 @@
           "corpus: «Le entregó un rejo de yaré»; «amarró a cada una fibras de la palma»; «Todos llevaron sus hachas»; «Tachi Nawe le dio jugo de granadilla»",
           "dossier §0.2 sobre aciesna-2005 y unad-garcia-2024: el yaré del relato es el mismo «bejuco de Yare “Potre”» con el que la Tachi Nawe ordena fuetazos «delante de toda la comunidad», y en 2024 el mismo término aparece como fibra de cestería con relato de origen propio y con la regla de «pedir permiso a la planta»",
           "dossier §10, salvaguarda 1: el rejo se dibuja como objeto entregado —que es lo que el relato dice— y nunca en uso, porque es instrumento de justicia propia vigente",
-          "dossier §11: la granadilla, el hacha y la minga no aparecen en ninguna fuente eperara consultada, y son tres piezas del relato que quedan sin respaldo material"
+          "dossier §11: la granadilla, el hacha y la minga no aparecen en ninguna fuente eperara consultada, y son tres piezas del relato que quedan sin respaldo material",
+          "canon reescrito, campo mito: la fila sale «al ritmo de la tambora», y la fruta del camino es «caimito y granadilla»"
         ],
         "editorial": [
           "el material del hacha queda declarado sin resolver: el hierro es poscolombino y la piedra pulida la alternativa precolombina, ninguna fuente eperara describe el hacha, y la ficha dibuja la silueta más sobria posible en vez de decidir",
@@ -2504,6 +2680,575 @@
         "documented_core",
         "editorial_interpretation"
       ]
+    },
+    "cerros_de_la_huida": {
+      "aliases": [],
+      "states": [
+        "canonico",
+        "agua_subiendo_al_pie_del_cerro"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "cerros_de_la_huida__environment_model",
+        "cerros_de_la_huida__state_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "origen-del-pueblo-eperara"
+      ],
+      "name": "Los cerros de la huida",
+      "kind": "paisaje",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "environment_model",
+        "state_sheet"
+      ],
+      "description": "El cerro adonde Tachi Akhore lleva a sus hijos a buscar un mundo aparte, donde el agua empieza a subir, y el otro cerro más alto, con la loma de la escalera, adonde salen en fila un día resplandeciente.",
+      "evidence": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "«Emprendieron camino hacia el cerro. Estando allí el agua empezó a subir»; «Después salieron hacia otro cerro más alto en un día resplandeciente»."
+        }
+      ],
+      "design": {
+        "silhouette": "Dos lomas de tierra firme que se levantan sobre el manglar y el agua, la segunda más alta y con una ladera abierta de hierba donde termina el camino: se reconoce porque es el único terreno seco y en pendiente de toda la biblia, y porque el agua siempre está abajo, rodeándolo.",
+        "materials": [
+          "tierra firme en planos de papel pardo rojizo, distinta del barro casi negro del manglar",
+          "bosque de firme en pocas piezas grandes de verde oscuro, sin raíces fúlcreas",
+          "ladera de hierba corta en recortes finos encajados, donde cuelga la escalera",
+          "agua parda en láminas horizontales al pie, que en el estado de creciente sube por la ladera"
+        ],
+        "palette": "Pardo rojizo de firme y verde oscuro de bosque contra el pardo del agua; el día de la segunda salida, blanco cálido resplandeciente en el cielo.",
+        "scale": "La loma se mide contra la fila de gente que sube, que ocupa menos de un tercio de la ladera; plano general 16:9.",
+        "continuity": [
+          "el agua siempre abajo, nunca por encima de la cima",
+          "la segunda loma es más alta que la primera en toda lámina",
+          "sin manglar en la ladera: es firme"
+        ],
+        "documented": [
+          "El relato sube de la playa a un cerro, y de ahí a «otro cerro más alto» (canon, campo mito)",
+          "«Estando allí el agua empezó a subir, y él dijo que había que cantarle y danzarle para que el mundo no se inundara» (canon, campo mito)",
+          "Los cinco paisajes que nombra la comunidad son «manglares, lodazales de natal, firmes, guandales y aluviales» (dossier §3, grem-sia-2017): el cerro es firme"
+        ],
+        "editorial": [
+          "La forma de los dos cerros no está en ninguna fuente: se resuelven como firmes del Pacífico sur, y la decisión es reversible.",
+          "Ningún cerro con perfil reconocible: el texto no los nombra y la biblia no los ubica."
+        ],
+        "states_to_model": [
+          "agua subiendo al pie del cerro"
+        ]
+      }
+    },
+    "iguana": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "iguana__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "origen-del-pueblo-eperara"
+      ],
+      "name": "La iguana que mide el agua",
+      "kind": "animal",
+      "evidence_basis": "documented",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "description": "La ponen en el agua para saber si el nivel sube o baja, «y por eso la iguana tiene las marcas que deja el agua».",
+      "evidence": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "«Pusieron a la iguana en el agua para saber si el nivel subía o bajaba, y por eso la iguana tiene las marcas que deja el agua.»"
+        }
+      ],
+      "design": {
+        "silhouette": "Iguana verde de cuerpo largo y cola más larga que el cuerpo, medio sumergida y quieta, con la cresta dorsal en dientes y el flanco cruzado por bandas horizontales como líneas de nivel: el agua le dejó su medida en el cuerpo.",
+        "materials": [
+          "cuerpo en pocas piezas planas grandes de papel verde, con la cresta recortada en dientes sobre el canto del lomo",
+          "bandas del flanco como tiras más oscuras superpuestas en horizontal, paralelas a la superficie del agua",
+          "agua parda en lámina plana que le corta el cuerpo a media altura"
+        ],
+        "palette": "Verde de iguana y bandas en verde más oscuro, contra el pardo del agua: el único verde saturado de la fauna.",
+        "scale": "Iguana adulta de un metro con la cola, medida contra la orilla del cerro. 1:1.",
+        "continuity": [
+          "las bandas del flanco siempre horizontales, como marcas de nivel",
+          "siempre con el agua a media altura del cuerpo",
+          "cresta en dientes, nunca espinas una por una"
+        ],
+        "documented": [
+          "La ponen en el agua como medida de la creciente, y de ahí le vienen «las marcas que deja el agua» (canon, campo mito)",
+          "El dossier registra el mangle Ipoporro/Op'oo te como mangle iguanero (dossier §3): la iguana es animal del manglar eperara"
+        ],
+        "editorial": [
+          "La especie no está nombrada: se resuelve como iguana verde del Pacífico, genérica; reversible.",
+          "Las «marcas que deja el agua» se leen como bandas horizontales del flanco: es la interpretación de la etiología, no un dato de especie."
+        ],
+        "states_to_model": []
+      }
+    },
+    "inundacion_del_cerro": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "origen-del-pueblo-eperara"
+      ],
+      "name": "La creciente que se canta y se danza",
+      "kind": "fenomeno",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "cerros_de_la_huida",
+      "description": "El agua sube estando en el cerro, y Tachi Akhore manda cantarle y danzarle para que el mundo no se inunde.",
+      "coverage_note": "Es el estado de creciente de la ficha de los cerros: el agua sube por la ladera. El canto y la danza se componen como reunión, sin coreografía reconstruida.",
+      "evidence": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "«Estando allí el agua empezó a subir, y él dijo que había que cantarle y danzarle para que el mundo no se inundara.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "pareja_vuelta_piedra": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "contextual",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "origen-del-pueblo-eperara"
+      ],
+      "name": "El joven y la mujer vueltos piedra",
+      "kind": "fenomeno",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "cerros_de_la_huida",
+      "description": "Un joven que fue a rajar leña y una mujer que fue a cargarla y lo sedujo quedaron pegados para siempre y se volvieron piedras, porque en aquel tiempo estaba prohibido.",
+      "coverage_note": "Entra en el cerro sólo como dos piedras juntas en la ladera, sin figura y sin escena de la seducción: la falta y el castigo se narran, no se dibujan.",
+      "evidence": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "«Un joven fue a rajar leña y una mujer fue después a cargarla y lo sedujo; como en aquel tiempo estaba prohibido, quedaron pegados para siempre y se volvieron piedras.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "malos_vueltos_animales": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "origen-del-pueblo-eperara"
+      ],
+      "name": "Los malos vueltos aves, peces y fieras",
+      "kind": "fenomeno",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "description": "Tachi Akhore escoge entre la gente y convierte a los malos en aves, peces, animales de monte y fieras del mar.",
+      "exclusion_reason": "transformación masiva sin una sola forma descrita: dibujarla obligaría a inventar qué gente se volvió qué animal",
+      "evidence": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "«Tachi Akhore fue escogiendo entre la gente y convirtió a los malos en aves, peces, animales de monte y fieras del mar.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "aves_mensajeras": {
+      "aliases": [
+        "chicao"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "origen-del-pueblo-eperara"
+      ],
+      "name": "El paletón, el pelícano, el loro y el chicao",
+      "kind": "animal",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "cerros_de_la_huida",
+      "description": "Tachi Akhore manda al paletón, al pelícano y al loro a buscar tierra seca y no vuelven; el último, el chicao, regresa con una hoja.",
+      "coverage_note": "Sólo el chicao vuelve y su única acción es traer la hoja: entra en la lámina de los cerros como pájaro pequeño y oscuro en vuelo bajo con una hoja en el pico. La especie no está identificada en el dossier y no se inventa; los otros tres no vuelven y no se dibujan.",
+      "evidence": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "«Mandó al paletón, al pelícano y al loro a buscar tierra seca y no volvieron; el último, el chicao, regresó con una hoja.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "tambora_y_frutas_del_camino": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "origen-del-pueblo-eperara"
+      ],
+      "name": "La tambora, el caimito y la granadilla del camino",
+      "kind": "objeto",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "hoja_utileria_eperara",
+      "description": "La fila sale al ritmo de la tambora; las mujeres de la última fila convencen a los hombres de coger caimito y granadilla y se quedan comiendo.",
+      "coverage_note": "Tambor y frutas de mano, sin descripción: caben en la hoja de utilería junto al jugo de granadilla. El dossier documenta el siru como tambor épera (§0), y la tambora se resuelve con esa forma.",
+      "evidence": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "«encabezando la fila Tachi Akhore y Tachi Nawe al ritmo de la tambora»; «las mujeres de la última fila insistieron a los hombres para que cogieran caimito y granadilla»."
+        }
+      ],
+      "model_requirements": []
+    },
+    "pueblos_que_se_quedaron": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "contextual",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "origen-del-pueblo-eperara"
+      ],
+      "name": "Los que se quedaron en esta tierra",
+      "kind": "colectivo",
+      "evidence_basis": "documented",
+      "visual_status": "excluded",
+      "description": "«Entre los que se quedaron están los Eperara Siapidaara, los Nonamapidaara, los chamíes y los katíos.»",
+      "exclusion_reason": "el relato nombra pueblos vivos, y el dossier prohíbe expresamente traer nada chamí ni katío a esta biblia (§0): los que se quedan se dibujan sólo como la gente eperara del corpus, sin rasgos de otro pueblo",
+      "evidence": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "«Por eso quedamos en esta tierra, y entre los que se quedaron están los Eperara Siapidaara, los Nonamapidaara, los chamíes y los katíos.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "laguna_del_color": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "sensitive",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "origen-del-pueblo-eperara"
+      ],
+      "name": "La laguna de agua bendita y el color de la gente",
+      "kind": "fenomeno",
+      "evidence_basis": "variant",
+      "visual_status": "excluded",
+      "description": "En la versión de la ONIC todos salen negros de la palma y el color llega con una laguna de agua bendita: blancos, canela, y negros con las palmas y plantas blancas.",
+      "exclusion_reason": "variante de la ONIC que el canon no incorpora y que clasifica a la gente por color; no entra a lámina",
+      "evidence": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "versiones",
+          "note": "Según la ONIC, «los primeros que alcanzan a bañarse enteros salen blancos… y los últimos alcanzan a mojarse las manos y los pies». En el Plan de Vida ese episodio no está."
+        }
+      ],
+      "model_requirements": []
+    },
+    "karichipari_y_playa_sitara": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "contextual",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "origen-del-pueblo-eperara"
+      ],
+      "name": "El karichipari y la playa sitará",
+      "kind": "fenomeno",
+      "evidence_basis": "variant",
+      "visual_status": "excluded",
+      "description": "Un tercer relato de la publicación de Quiroz sitúa la escena en una playa llamada «sitará» y hace nacer con la gente el canto y la danza del karichipari.",
+      "exclusion_reason": "variante sin narrador nombrado; el canto y la danza son práctica viva sin descripción, y la biblia no reconstruye coreografías",
+      "evidence": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "versiones",
+          "note": "Un tercer relato «sitúa la escena en una playa llamada “sitará” y hace nacer con la gente el canto y la danza del karichipari»."
+        }
+      ],
+      "model_requirements": []
+    },
+    "rio_de_dos_corrientes": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "El río de dos corrientes",
+      "kind": "fenomeno",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "aguas_del_pacifico",
+      "myth_refs": [
+        "tachi-akhore-y-la-palabra-de-mangle"
+      ],
+      "description": "Tachi Akhore hace primero que el río corra a la vez hacia arriba y hacia abajo; por las tortugas dispone que los dos lados corran sólo hacia abajo.",
+      "coverage_note": "Es un estado del río mayor de la ficha de aguas: la regla que queda —todo corre hacia abajo— es la que dibuja esa hoja; el estado anterior de dos corrientes no pide lámina propia.",
+      "evidence": [
+        {
+          "myth": "tachi-akhore-y-la-palabra-de-mangle",
+          "field": "mito",
+          "note": "«Tachi Akhore hizo primero que el río tuviera dos corrientes a la vez… Entonces dispuso que los dos lados del río corrieran solamente hacia abajo, y así quedó.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "pareja_de_tortugas": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "contextual",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "name": "La pareja de tortugas",
+      "kind": "animal",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "aguas_del_pacifico",
+      "myth_refs": [
+        "tachi-akhore-y-la-palabra-de-mangle"
+      ],
+      "description": "Una pareja de tortugas se la pasa haciendo el amor yendo para arriba y para abajo del río, y por dar mal ejemplo Tachi Akhore deja que el río corra sólo hacia abajo.",
+      "coverage_note": "Dos tortugas de río nadando juntas en el cauce, sin escena sexual: entran en la ficha de aguas como fauna del río mayor. La especie no está en el dossier.",
+      "evidence": [
+        {
+          "myth": "tachi-akhore-y-la-palabra-de-mangle",
+          "field": "mito",
+          "note": "«una pareja de tortugas se la pasaba haciendo el amor yendo para arriba y para abajo, y él dijo que eso no estaba bien porque daba mal ejemplo»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "tipo_hombre_adulto": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_hombre_adulto__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · hombre eperara adulto",
+      "kind": "personaje",
+      "evidence_basis": "inferred",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "origen-del-pueblo-eperara",
+        "tachi-akhore-y-la-palabra-de-mangle"
+      ],
+      "description": "Tipo base de los hombres eperara: fija cara, cuerpo y vestido de los que se levantan de las estacas, de la fila a los cerros y de la minga que tumba el árbol.",
+      "evidence": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "Los hombres de la minga tumban el árbol por turnos; los de la playa suben en fila a los cerros."
+        },
+        {
+          "myth": "tachi-akhore-y-la-palabra-de-mangle",
+          "field": "mito",
+          "note": "Los hombres de la minga tumban el árbol por turnos; los de la playa suben en fila a los cerros."
+        }
+      ],
+      "design": {
+        "silhouette": "Hombre adulto de pie con un hacha de mango recto apoyada en el hombro, la pieza lisa a la cintura, el torso descubierto y el pelo negro corto: cuerpo de trabajo, con la fatiga del relevo en los hombros caídos.",
+        "materials": [
+          "piel en papel pardo mate",
+          "pieza lisa a la cintura de un solo tono",
+          "hacha de mango recto de madera clara, con la cabeza de material sin resolver en silueta sobria"
+        ],
+        "palette": "Pardo de piel, un tono de tela apagada y madera clara; ninguna nota saturada.",
+        "scale": "Estatura adulta corriente. Cuerpo entero 9:16.",
+        "continuity": [
+          "pieza lisa a la cintura siempre",
+          "sin pintura facial",
+          "el hacha como único objeto, nunca machete ni escopeta"
+        ],
+        "documented": [
+          "Deslinde emberá del dossier (§0): nada chamí, katío, dóbida ni wounaan —ni bohío circular, ni damagua, ni guayuco rojo, ni jagua ni kipará, ni werregue, ni marimba—",
+          "El vestido propio existe y se usa, dice ACIESNA, pero ninguna fuente colombiana lo describe; el p'aru que se enrolla en la cintura es de fuentes ecuatorianas (dossier §6 y §11.2)",
+          "Antes de la chaquira, manillas y collares eran de bejuco chocho «con pepas de color rojo y negro» (dossier §6, unad-garcia-2024)",
+          "Época: ninguna prenda industrial, ni lancha, ni motor, ni cruz cristiana (dossier §1)",
+          "canon, campo mito (Pania Pak'uru): «Cada uno cogió su hacha» en la minga, y tumban «de día y de noche, unos golpeando mientras otros reponían fuerzas»",
+          "dossier §6: hay que poder dibujar «cansancio y relevo, no una masa uniforme»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "La prenda es una sola pieza lisa a la cintura, sin estampado ni fleco, porque el vestido propio no está descrito: se declara interpretación editorial reversible y no se importa el p'aru ecuatoriano ni la damagua katío.",
+          "El pelo, una o dos piezas planas grandes negras; ninguna pintura facial, porque no hay jagua documentada y el achiote sólo aparece en un relato de la joven Thusî (dossier §6).",
+          "El hacha no aparece en ninguna fuente eperara consultada (dossier §11.4): su material queda sin resolver y se dibuja en silueta sobria."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_adulta": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_mujer_adulta__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · mujer eperara adulta",
+      "kind": "personaje",
+      "evidence_basis": "inferred",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "origen-del-pueblo-eperara",
+        "tachi-akhore-y-la-palabra-de-mangle"
+      ],
+      "description": "Tipo base de la mujer eperara: fija cara, cuerpo y vestido de las mujeres de la playa, de la última fila que se queda comiendo fruta y de la minga.",
+      "evidence": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "Las mujeres de la última fila se quedan comiendo caimito y granadilla y no alcanzan la escalera."
+        },
+        {
+          "myth": "tachi-akhore-y-la-palabra-de-mangle",
+          "field": "mito",
+          "note": "Las mujeres de la última fila se quedan comiendo caimito y granadilla y no alcanzan la escalera."
+        }
+      ],
+      "design": {
+        "silhouette": "Mujer adulta de pie con un collar de pepas rojas y negras, la pieza lisa a la cintura y el pelo largo en una sola pieza; en las manos, una fruta del camino.",
+        "materials": [
+          "piel en papel pardo mate",
+          "pieza lisa a la cintura, más larga que la del hombre",
+          "collar de semillas rojas y negras ensartadas, como piezas pequeñas y redondas"
+        ],
+        "palette": "Pardo de piel y el rojo y negro del collar como único acento.",
+        "scale": "Algo por debajo del hombre adulto. Cuerpo entero 9:16.",
+        "continuity": [
+          "collar de pepas rojas y negras",
+          "pelo largo en una pieza",
+          "sin pintura facial"
+        ],
+        "documented": [
+          "Deslinde emberá del dossier (§0): nada chamí, katío, dóbida ni wounaan —ni bohío circular, ni damagua, ni guayuco rojo, ni jagua ni kipará, ni werregue, ni marimba—",
+          "El vestido propio existe y se usa, dice ACIESNA, pero ninguna fuente colombiana lo describe; el p'aru que se enrolla en la cintura es de fuentes ecuatorianas (dossier §6 y §11.2)",
+          "Antes de la chaquira, manillas y collares eran de bejuco chocho «con pepas de color rojo y negro» (dossier §6, unad-garcia-2024)",
+          "Época: ninguna prenda industrial, ni lancha, ni motor, ni cruz cristiana (dossier §1)",
+          "canon, campo mito: «las mujeres de la última fila insistieron a los hombres para que cogieran caimito y granadilla, y se quedaron comiendo»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "La prenda es una sola pieza lisa a la cintura, sin estampado ni fleco, porque el vestido propio no está descrito: se declara interpretación editorial reversible y no se importa el p'aru ecuatoriano ni la damagua katío.",
+          "El pelo, una o dos piezas planas grandes negras; ninguna pintura facial, porque no hay jagua documentada y el achiote sólo aparece en un relato de la joven Thusî (dossier §6).",
+          "El collar de pepas va en la mujer adulta y no en todas las figuras: reparto de hoja, reversible."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_joven": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_mujer_joven__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "name": "Tipo base · mujer eperara joven",
+      "kind": "personaje",
+      "evidence_basis": "inferred",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "myth_refs": [
+        "origen-del-pueblo-eperara"
+      ],
+      "description": "Tipo base de la muchacha eperara: fija cara y cuerpo de la mujer que va a cargar la leña del joven y de las jóvenes de la playa.",
+      "evidence": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "La mujer que va a cargar la leña del joven."
+        }
+      ],
+      "design": {
+        "silhouette": "Muchacha delgada y erguida con un atado de leña a la espalda sostenido por una banda, la pieza lisa a la cintura, el pelo largo suelto y una manilla de pepas en la muñeca.",
+        "materials": [
+          "piel en papel pardo mate claro",
+          "pieza lisa a la cintura",
+          "manilla de pepas rojas y negras",
+          "atado de leña en tres o cuatro piezas planas, con banda de fibra"
+        ],
+        "palette": "Pardo claro de piel, madera de la leña y el punto rojo de la manilla.",
+        "scale": "Casi de estatura adulta. Cuerpo entero 9:16.",
+        "continuity": [
+          "pelo largo suelto",
+          "manilla de pepas, sin collar",
+          "la leña como su objeto"
+        ],
+        "documented": [
+          "Deslinde emberá del dossier (§0): nada chamí, katío, dóbida ni wounaan —ni bohío circular, ni damagua, ni guayuco rojo, ni jagua ni kipará, ni werregue, ni marimba—",
+          "El vestido propio existe y se usa, dice ACIESNA, pero ninguna fuente colombiana lo describe; el p'aru que se enrolla en la cintura es de fuentes ecuatorianas (dossier §6 y §11.2)",
+          "Antes de la chaquira, manillas y collares eran de bejuco chocho «con pepas de color rojo y negro» (dossier §6, unad-garcia-2024)",
+          "Época: ninguna prenda industrial, ni lancha, ni motor, ni cruz cristiana (dossier §1)",
+          "canon, campo mito: «Un joven fue a rajar leña y una mujer fue después a cargarla y lo sedujo»"
+        ],
+        "editorial": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "La prenda es una sola pieza lisa a la cintura, sin estampado ni fleco, porque el vestido propio no está descrito: se declara interpretación editorial reversible y no se importa el p'aru ecuatoriano ni la damagua katío.",
+          "El pelo, una o dos piezas planas grandes negras; ninguna pintura facial, porque no hay jagua documentada y el achiote sólo aparece en un relato de la joven Thusî (dossier §6).",
+          "Que la mujer de la leña sea joven es inferencia de que seduce a «un joven»; el texto no le da edad. Su lámina de tipo es la de una muchacha cargando leña, nunca la escena de la falta."
+        ],
+        "states_to_model": []
+      }
     }
   },
   "models": {
@@ -2581,7 +3326,7 @@
         "asset_type": "Biblia visual Eperara Siapidara V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
         "primary_request": "identidad corporal completa y legible para Tachi Nawe. Mujer adulta de pie y de tres cuartos, la única figura de esta biblia dibujada a propósito sin un solo rasgo que la individualice —óvalo de cara de un tono con ojos y boca reducidos a tres piezas mínimas iguales— y la única recortada en claro contra un fondo más oscuro, porque ella es la luna y la luz sale de su lado y no del cielo.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura humana adulta y ni un centímetro más: el relato la hace parir, hablar de cerca con su hijo y darle jugo de granadilla en la casa. Cualquier agrandamiento la convertiría en el ídolo que la salvaguarda del dossier prohíbe expresamente.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura humana adulta y ni un centímetro más: el relato la hace parir, hablar de cerca con su hijo y darle jugo de granadilla en la casa. Cualquier agrandamiento la convertiría en el ídolo que la salvaguarda del dossier prohíbe expresamente.",
         "lighting_mood": "Luz de Pacífico cubierto: cielo bajo y sin sol visible, sin sombra proyectada dura, con el agua devolviendo más luz que el cielo y la silueta del mangle recortada contra ese reflejo. De noche, el firmamento «oscuro y vacío» sobre la playa, con la luna como única fuente, porque Tachi Nawe es la luna y el acto central ocurre cerca de la medianoche.",
         "materials_textures": "una sola pieza de papel liso sin estampado, sin fleco y sin borde tejido para todo el vestido: el hueco documental se resuelve por lo mínimo, no por el adorno; collar de pepas rojas y negras del bejuco chocho, ensartadas sueltas y de tamaño desigual, en papel mate sin brillo de vidrio; pelo en dos piezas planas grandes de papel negro mate con el borde recortado en dientes, nunca mechón por mechón; manos y antebrazos en papel del mismo tono que la cara, sin línea de dibujo encima: los dedos se resuelven por canto recortado",
         "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
@@ -2614,7 +3359,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -2690,7 +3435,7 @@
         "asset_type": "Biblia visual Eperara Siapidara V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
         "primary_request": "identidad corporal completa y legible para Tachi Akhore. Joven adulto de cuerpo entero dibujado siempre en trabajo y siempre con el eje del cuerpo quebrado —torso inclinado sobre las estacas, rodilla en la arena ante las hileras, brazos altos con el hacha—: es la única figura de la biblia a la que se le ve el esfuerzo, y lleva por detrás de la cabeza un disco liso de papel sin rayos y sin cara.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; La misma estatura que la gente que él mismo levanta, y ésa es la prueba: el relato lo hace cansarse, tener sed, volver a la casa a beber y arrodillarse ante las hileras. Un sol monumental rompería los cuatro actos que el corpus le da.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; La misma estatura que la gente que él mismo levanta, y ésa es la prueba: el relato lo hace cansarse, tener sed, volver a la casa a beber y arrodillarse ante las hileras. Un sol monumental rompería los cuatro actos que el corpus le da.",
         "lighting_mood": "Luz de Pacífico cubierto: cielo bajo y sin sol visible, sin sombra proyectada dura, con el agua devolviendo más luz que el cielo y la silueta del mangle recortada contra ese reflejo. De noche, el firmamento «oscuro y vacío» sobre la playa, con la luna como única fuente, porque Tachi Nawe es la luna y el acto central ocurre cerca de la medianoche.",
         "materials_textures": "cuerpo en papel pardo cálido, un punto más alto de valor que el de su madre, porque él es la vela del cielo y ella la luna; una sola pieza lisa a la cintura, sin estampado ni fleco: el mismo hueco de vestido declarado para todo el corpus; disco liso de papel claro detrás de la cabeza, de canto visto y sin rayos, nunca aureola ni corona solar; pelo negro mate en dos planos grandes recogido hacia atrás, para que las dos manos y la cara queden libres en el gesto de los cuatro golpes",
         "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
@@ -2722,7 +3467,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -2967,6 +3712,11 @@
           "myth": "origen-del-pueblo-eperara",
           "field": "mito",
           "note": "La gente se levanta adulta y mixta —«la playa se llenó de voces, mujeres y hombres»— y en el segundo relato es la misma gente golpeando el tronco de día y de noche por turnos, «unos continuaban mientras otros recuperaban fuerzas»: hay que poder dibujar cansancio y relevo, no una masa uniforme"
+        },
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "El canon reescrito lleva al pueblo de la playa a los cerros: canta y danza contra la creciente, sube en fila al ritmo de la tambora y se parte entre los que suben la escalera y los que se quedan comiendo caimito y granadilla."
         }
       ],
       "design_contract": {
@@ -2986,7 +3736,7 @@
           "los cinco grupos que el relato nombra no se diferencian por diseño: son el mismo cuerpo y la misma ropa, porque inventarles marcas sería inventar identidades"
         ],
         "documented_features": [
-          "corpus: «La playa se llenó de voces, mujeres y hombres», y de la palma «procedieron los grupos» que el relato nombra sin darles un solo rasgo",
+          "canon, campo mito: las estacas «gritaron y se convirtieron en seres humanos: ¡aquí estamos nosotros!»; «en esa playa vivieron mucho tiempo, cantando y danzando»; después suben en fila a los cerros, las mujeres de la última fila se quedan comiendo fruta y los de adelante suben la escalera",
           "corpus del segundo relato: «Se organizaron para golpear el tronco sin descanso, de día y de noche. Unos continuaban mientras otros recuperaban fuerzas»",
           "dossier §6 sobre unad-garcia-2024: antes de la chaquira los collares eran de bejuco chocho «con pepas de color rojo y negro»",
           "dossier §4 y §10: los cinco grupos se nombran y no se dibujan diferenciados, porque el canon advierte que las grafías varían y que no se usan para decidir identidades actuales"
@@ -3008,7 +3758,7 @@
         "materials_textures": "cuerpos en tres tonos cercanos de papel pardo, repartidos sin patrón para que el grupo no se lea como una serie; una sola pieza lisa a la cintura por persona, sin estampado y sin fleco: el hueco de vestido declarado para todo el corpus, resuelto por lo mínimo; algún collar de pepas rojas y negras de bejuco chocho, en pocas personas y no en todas, como lo que había antes del vidrio; pelo en una o dos piezas planas grandes por cabeza, con el borde recortado en dientes y peinados distintos entre sí",
         "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
         "constraints": [
-          "documentado: «La playa se llenó de voces, mujeres y hombres», y de la palma «procedieron los grupos» que el relato nombra sin darles un solo rasgo",
+          "documentado: las estacas «gritaron y se convirtieron en seres humanos: ¡aquí estamos nosotros!»; «en esa playa vivieron mucho tiempo, cantando y danzando»; después suben en fila a los cerros, las mujeres de la última fila se quedan comiendo fruta y los de adelante suben la escalera",
           "documentado: «Se organizaron para golpear el tronco sin descanso, de día y de noche. Unos continuaban mientras otros recuperaban fuerzas»",
           "documentado: antes de la chaquira los collares eran de bejuco chocho «con pepas de color rojo y negro»",
           "documentado: los cinco grupos se nombran y no se dibujan diferenciados, porque el canon advierte que las grafías varían y que no se usan para decidir identidades actuales",
@@ -3415,6 +4165,11 @@
           "myth": "tachi-akhore-y-la-palabra-de-mangle",
           "field": "mito",
           "note": "Todos los animales tienen chimia, «piedras sagradas… inmersas dentro de los animales», y «todos los árboles forestales tienen chimia, que es el espíritu encargado de cuidar la naturaleza». Ningún animal y ningún árbol se dibuja como decorado: cada uno lleva dentro una piedra que es alguien"
+        },
+        {
+          "myth": "tachi-akhore-y-la-palabra-de-mangle",
+          "field": "mito",
+          "note": "El canon reescrito fija la transformación: de la rabia Tachi Akhore le aprieta la cintura y «desde entonces Hesaa quedó así: negra, de cintura delgada, cargando el agua en la boca»."
         }
       ],
       "design_contract": {
@@ -3452,7 +4207,7 @@
         "asset_type": "Biblia visual Eperara Siapidara V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
         "primary_request": "identidad corporal completa y legible para Hesaa, la Conga. Persona de cintura marcadísima —el único cuerpo de la biblia que se dibuja estrechándose en la mitad antes de que nada le ocurra— en postura de guarda: de pie delante del tronco, de frente al que llega y con las dos manos ocupadas sosteniendo agua que no reparte. Transformada, el mismo eje de cintura pero en una hormiga de cuerpo entero.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Como persona, estatura adulta enfrentada de igual a igual con Tachi Akhore, porque el relato la hace oponerse y resistir. Como hormiga, se dibuja en primer plano cerrado y a tamaño de mano, con el agua en la boca dando la medida: 18 a 30 mm de obrera, enormes para una hormiga y todas del mismo tamaño.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Como persona, estatura adulta enfrentada de igual a igual con Tachi Akhore, porque el relato la hace oponerse y resistir. Como hormiga, se dibuja en primer plano cerrado y a tamaño de mano, con el agua en la boca dando la medida: 18 a 30 mm de obrera, enormes para una hormiga y todas del mismo tamaño.",
         "lighting_mood": "Luz de Pacífico cubierto: cielo bajo y sin sol visible, sin sombra proyectada dura, con el agua devolviendo más luz que el cielo y la silueta del mangle recortada contra ese reflejo. De noche, el firmamento «oscuro y vacío» sobre la playa, con la luna como única fuente, porque Tachi Nawe es la luna y el acto central ocurre cerca de la medianoche.",
         "materials_textures": "cuerpo humano en papel pardo oscuro, más oscuro que el de la gente, sin estampado y sin adorno: el relato no le da una sola palabra de descripción; en el estado de hormiga, tres piezas planas grandes —cabeza, tórax y gáster— unidas por dos cantos estrechos, en papel negro rojizo mate; vellosidad resuelta por el borde recortado en dientes menudos de esas tres piezas, jamás pelo por pelo; gota de agua en la boca como una sola pieza de papel claro, que es el rasgo con el que el relato la deja para siempre",
         "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
@@ -3485,7 +4240,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -3520,6 +4275,11 @@
           "myth": "tachi-akhore-y-la-palabra-de-mangle",
           "field": "mito",
           "note": "Todos los animales tienen chimia, «piedras sagradas… inmersas dentro de los animales», y «todos los árboles forestales tienen chimia, que es el espíritu encargado de cuidar la naturaleza». Ningún animal y ningún árbol se dibuja como decorado: cada uno lleva dentro una piedra que es alguien"
+        },
+        {
+          "myth": "tachi-akhore-y-la-palabra-de-mangle",
+          "field": "mito",
+          "note": "El canon reescrito fija la transformación: de la rabia Tachi Akhore le aprieta la cintura y «desde entonces Hesaa quedó así: negra, de cintura delgada, cargando el agua en la boca»."
         }
       ],
       "design_contract": {
@@ -3557,7 +4317,7 @@
         "asset_type": "Biblia visual Eperara Siapidara V1 - state_sheet",
         "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
         "primary_request": "el cambio de estado sin perder la identidad para Hesaa, la Conga. Persona de cintura marcadísima —el único cuerpo de la biblia que se dibuja estrechándose en la mitad antes de que nada le ocurra— en postura de guarda: de pie delante del tronco, de frente al que llega y con las dos manos ocupadas sosteniendo agua que no reparte. Transformada, el mismo eje de cintura pero en una hormiga de cuerpo entero.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Como persona, estatura adulta enfrentada de igual a igual con Tachi Akhore, porque el relato la hace oponerse y resistir. Como hormiga, se dibuja en primer plano cerrado y a tamaño de mano, con el agua en la boca dando la medida: 18 a 30 mm de obrera, enormes para una hormiga y todas del mismo tamaño.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Como persona, estatura adulta enfrentada de igual a igual con Tachi Akhore, porque el relato la hace oponerse y resistir. Como hormiga, se dibuja en primer plano cerrado y a tamaño de mano, con el agua en la boca dando la medida: 18 a 30 mm de obrera, enormes para una hormiga y todas del mismo tamaño.",
         "lighting_mood": "Luz de Pacífico cubierto: cielo bajo y sin sol visible, sin sombra proyectada dura, con el agua devolviendo más luz que el cielo y la silueta del mangle recortada contra ese reflejo. De noche, el firmamento «oscuro y vacío» sobre la playa, con la luna como única fuente, porque Tachi Nawe es la luna y el acto central ocurre cerca de la medianoche.",
         "materials_textures": "cuerpo humano en papel pardo oscuro, más oscuro que el de la gente, sin estampado y sin adorno: el relato no le da una sola palabra de descripción; en el estado de hormiga, tres piezas planas grandes —cabeza, tórax y gáster— unidas por dos cantos estrechos, en papel negro rojizo mate; vellosidad resuelta por el borde recortado en dientes menudos de esas tres piezas, jamás pelo por pelo; gota de agua en la boca como una sola pieza de papel claro, que es el rasgo con el que el relato la deja para siempre",
         "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
@@ -3590,7 +4350,7 @@
           "id": "estado_hormiga_conga",
           "view_type": "state_variation",
           "purpose": "el cambio de estado sin perder la identidad: hormiga_conga",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "hormiga_conga"
           ],
@@ -3622,6 +4382,11 @@
           "myth": "tachi-akhore-y-la-palabra-de-mangle",
           "field": "mito",
           "note": "Todos los animales tienen chimia, «piedras sagradas… inmersas dentro de los animales», y «todos los árboles forestales tienen chimia, que es el espíritu encargado de cuidar la naturaleza». Ningún animal y ningún árbol se dibuja como decorado: cada uno lleva dentro una piedra que es alguien"
+        },
+        {
+          "myth": "tachi-akhore-y-la-palabra-de-mangle",
+          "field": "mito",
+          "note": "En el canon reescrito los dejan «sosteniendo la abertura con los brazos» y al otro día están «tirados patas arriba» con el tronco entero de nuevo."
         }
       ],
       "design_contract": {
@@ -3735,6 +4500,11 @@
           "myth": "origen-del-pueblo-eperara",
           "field": "mito",
           "note": "Los Eperaara reconocen cinco árboles de manglar con nombre en sia pedee pero sólo tres como mangle: T'ãrra jɨrũ (rojo, «mangle madre»), Ipoporro u Op'oo te (negro o iguanero) y T'ãrra jɨrũ-t'orroo (blanco); el nato (Nat'o p'ore) y el piñuelo (Pak'uru-Jiatauk'abi) son especies asociadas. El mangle rojo mide de 4 a 10 m, con raíces fúlcreas ramificadas, curvas y arqueadas, corteza olivo pálido por fuera y rojiza por dentro y propágulos curvos colgando"
+        },
+        {
+          "myth": "tachi-akhore-y-la-palabra-de-mangle",
+          "field": "mito",
+          "note": "El canon reescrito añade al final del relato el río de dos corrientes y la pareja de tortugas que hace que quede corriendo sólo hacia abajo."
         }
       ],
       "design_contract": {
@@ -3755,7 +4525,7 @@
           "el manglar no se dibuja como paraíso intacto: hay tocones y claros, porque el nato se extrae hasta el 90 % y el mangle rojo hasta el 25 %"
         ],
         "documented_features": [
-          "corpus: «Del tronco nació un río enorme; de las ramas surgieron ríos menores y quebradas; las hojas se volvieron lagos y lagunas; de la raíz apareció el mar», y «los cauces conservaron la forma del árbol derribado»",
+          "canon, campo mito: «Del tronco se hizo un río enorme; de las ramas, las quebradas y los ríos pequeños; de las hojas, los lagos y las lagunas; de la raíz, un mar inmenso», y el río, que tuvo dos corrientes, quedó corriendo «solamente hacia abajo»; «los cauces conservaron la forma del árbol caído»",
           "dossier §3 sobre grem-sia-2017: los cinco paisajes nombrados por la comunidad son «manglares, lodazales de natal, firmes, guandales y aluviales», y el suelo del mangle es ácido, de alta concentración de carbono orgánico y nitrógeno, no arena",
           "dossier §3: tres mangles reconocidos como tales en sia pedee —T'ãrra jɨrũ (rojo, «mangle madre»), Ipoporro/Op'oo te (iguanero), T'ãrra jɨrũ-t'orroo (blanco)— y dos asociados que no son mangle, Nat'o p'ore (nato) y Pak'uru-Jiatauk'abi (piñuelo)",
           "dossier §3: el mangle rojo mide de 4 a 10 m, con raíces fúlcreas «ramificadas, curvas y arqueadas», corteza olivo pálido con manchas grises por fuera y rojiza por dentro, hojas verde oscuro arriba y amarillentas por debajo agrupadas en las puntas, y propágulos curvos colgando",
@@ -3779,7 +4549,7 @@
         "materials_textures": "raíces fúlcreas del mangle rojo en pocas piezas planas grandes, arqueadas y superpuestas por detrás con sombra corta, nunca una por una: es la trampa de este paisaje y la regla es la inversa de lo que se supone; corteza de mangle en papel olivo pálido con manchas grises, con una sola veta roja visible allí donde hay corte; hojas en pocas piezas grandes, verde oscuro por la cara y amarillentas por el envés, agrupadas en las puntas de las ramas; barro de manglar en papel pardo oscuro y mate, casi negro, porque el suelo es ácido y de alto carbono orgánico, no arena; agua salobre parda en láminas planas grandes, siempre más clara que el cielo",
         "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
         "constraints": [
-          "documentado: «Del tronco nació un río enorme; de las ramas surgieron ríos menores y quebradas; las hojas se volvieron lagos y lagunas; de la raíz apareció el mar», y «los cauces conservaron la forma del árbol derribado»",
+          "documentado: «Del tronco se hizo un río enorme; de las ramas, las quebradas y los ríos pequeños; de las hojas, los lagos y las lagunas; de la raíz, un mar inmenso», y el río, que tuvo dos corrientes, quedó corriendo «solamente hacia abajo»; «los cauces conservaron la forma del árbol caído»",
           "documentado: los cinco paisajes nombrados por la comunidad son «manglares, lodazales de natal, firmes, guandales y aluviales», y el suelo del mangle es ácido, de alta concentración de carbono orgánico y nitrógeno, no arena",
           "documentado: tres mangles reconocidos como tales en sia pedee —T'ãrra jɨrũ (rojo, «mangle madre»), Ipoporro/Op'oo te (iguanero), T'ãrra jɨrũ-t'orroo (blanco)— y dos asociados que no son mangle, Nat'o p'ore (nato) y Pak'uru-Jiatauk'abi (piñuelo)",
           "documentado: el mangle rojo mide de 4 a 10 m, con raíces fúlcreas «ramificadas, curvas y arqueadas», corteza olivo pálido con manchas grises por fuera y rojiza por dentro, hojas verde oscuro arriba y amarillentas por debajo agrupadas en las puntas, y propágulos curvos colgando",
@@ -3816,6 +4586,184 @@
         }
       ]
     },
+    "escalera_de_oro_y_la_inundacion__object_sheet": {
+      "purpose": "object_sheet",
+      "entity_refs": [
+        "escalera_de_oro_y_la_inundacion"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "La inundación, la escalera de oro, el curso de los ríos, la marea y la competencia para salar el mar son continuación del ciclo que estas dos páginas no narran, y el módulo prohíbe además el oro en las ilustraciones de este frente: el oro es un imán de estereotipo en el Pacífico"
+        },
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "«Los de adelante encontraron una escalera de oro colgada en la loma y empezaron a subir. Tachi Akhore preguntó si ya habían subido todos… y alzó la escalera. Los que venían comiendo fruta corrieron; algunos alcanzaron a colgarse»."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Una escalera larga y estrecha que cuelga de lo alto sin tocar nada arriba —su extremo superior se pierde en la luz del día resplandeciente—, con el pie apenas apoyado en la hierba de la loma: se reconoce porque es la única línea vertical recta de toda la biblia en un mundo de raíces curvas y agua horizontal.",
+        "materials": [
+          "largueros y peldaños en papel dorado mate, de grano apagado y sin brillo ni destello, recortados en pocas piezas planas largas",
+          "atadura de cada peldaño resuelta como una vuelta de quilling en tono ocre, sin clavo ni herraje",
+          "la loma al pie como un plano de hierba de firme, no de manglar"
+        ],
+        "palette_logic": "Oro mate y ocre sobre el verde claro de la loma y el blanco cálido del día resplandeciente: el único dorado de la biblia, y deliberadamente apagado para que no se lea como tesoro.",
+        "scale": "Tan alta que su extremo superior sale del encuadre; los peldaños a la distancia de un paso humano, medidos contra una figura que sube. 1:1 con la loma al pie.",
+        "continuity_markers": [
+          "el extremo de arriba nunca se ve: la escalera viene de un lugar que la lámina no muestra",
+          "oro siempre mate, nunca brillante ni con destello",
+          "en su estado alzado, los pocos que alcanzan a colgarse van en los peldaños bajos y el pie ya no toca la loma"
+        ],
+        "documented_features": [
+          "«Los de adelante encontraron una escalera de oro colgada en la loma y empezaron a subir» (canon, campo mito)",
+          "Tachi Akhore «alzó la escalera»; «algunos alcanzaron a colgarse, pero el resto gritaba y se lamentaba y él no los oyó. Por eso quedamos en esta tierra» (canon, campo mito)",
+          "El oro es un imán de estereotipo en el Pacífico y el dossier (§1) lo prohibía para este frente cuando la página no narraba la escalera (dossier §1)"
+        ],
+        "editorial_features": [
+          "DECISIÓN ABIERTA, declarada: el dossier prohibió el oro «porque la escalera de oro pertenece a la continuación del ciclo que estas dos páginas no narran»; el canon reescrito ahora la narra y es el desenlace. Se le da ficha para que no la invente el ilustrador, resuelta en oro mate sin brillo; si el editor mantiene la prohibición, esta ficha se retira y el desenlace se compone sólo con la loma y la gente que queda.",
+          "Ni peldaños labrados ni ornamento: sólo largueros y travesaños, porque el texto no la describe más que por su material.",
+          "El estado alzado, con los últimos colgados de los peldaños bajos, es el único que el relato hace visible; los que se quedan gritando abajo se dibujan de espaldas y a distancia, sin pathos."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Eperara Siapidara V1 - object_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "hechura, escala y uso del objeto para La escalera de oro colgada en la loma. Una escalera larga y estrecha que cuelga de lo alto sin tocar nada arriba —su extremo superior se pierde en la luz del día resplandeciente—, con el pie apenas apoyado en la hierba de la loma: se reconoce porque es la única línea vertical recta de toda la biblia en un mundo de raíces curvas y agua horizontal.",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Tan alta que su extremo superior sale del encuadre; los peldaños a la distancia de un paso humano, medidos contra una figura que sube. 1:1 con la loma al pie.",
+        "lighting_mood": "Luz de Pacífico cubierto: cielo bajo y sin sol visible, sin sombra proyectada dura, con el agua devolviendo más luz que el cielo y la silueta del mangle recortada contra ese reflejo. De noche, el firmamento «oscuro y vacío» sobre la playa, con la luna como única fuente, porque Tachi Nawe es la luna y el acto central ocurre cerca de la medianoche.",
+        "materials_textures": "largueros y peldaños en papel dorado mate, de grano apagado y sin brillo ni destello, recortados en pocas piezas planas largas; atadura de cada peldaño resuelta como una vuelta de quilling en tono ocre, sin clavo ni herraje; la loma al pie como un plano de hierba de firme, no de manglar",
+        "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
+        "constraints": [
+          "documentado: «Los de adelante encontraron una escalera de oro colgada en la loma y empezaron a subir» (canon, campo mito)",
+          "documentado: Tachi Akhore «alzó la escalera»; «algunos alcanzaron a colgarse, pero el resto gritaba y se lamentaba y él no los oyó. Por eso quedamos en esta tierra» (canon, campo mito)",
+          "documentado: El oro es un imán de estereotipo en el Pacífico y el dossier (§1) lo prohibía para este frente cuando la página no narraba la escalera (dossier §1)",
+          "Cada lámina declara el punto de la marea y el modelo de entorno lo obedece: la playa con las hileras de estacas sólo existe con marea baja, y el mundo con sed del segundo relato es el mismo entorno sin agua.",
+          "El cielo es siempre el valor más bajo y el agua el más alto: aquí el suelo mojado ilumina y el cielo cierra, que es lo contrario de la convención.",
+          "El único rojo del corpus es el del interior del mangle en el corte y el de las semillas del collar; no hay rojo de tela, ni de pintura corporal, ni de fruto.",
+          "Sin oro en ninguna lámina, en ningún tamaño y bajo ningún pretexto.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin bohío de planta circular ni cubierta cónica, sin damagua percutida y sin guayuco rojo hasta la rodilla: nada del complejo katío o chamí entra aquí",
+          "sin jagua ni kipará: la única fuente hallada es panameña y de otros pueblos; el pigmento documentado aquí es el achiote",
+          "sin werregue ni su iconografía, que es oficio wounaan del delta del San Juan, y sin marimba, que es de la población afrodescendiente del Pacífico sur",
+          "sin patrón real ni inventado de cestería, de chaquira ni de tejido, y sin las seis piezas con nombre propio dibujadas con su dibujo",
+          "sin casa sagrada te-waibia, sin cruz de conchas de piangua, sin jaipana, sin dapáto y sin ritual de la mesa",
+          "sin fuetazo, sin cepo y sin ninguna escena de justicia propia: el rejo aparece sólo como objeto entregado",
+          "sin oro, sin escalera de oro, sin inundación y sin competencia para salar el mar: son continuación del ciclo que estas páginas no narran",
+          "sin joven ambicioso, sin machete y sin estero de mangle como escenario del segundo relato: eso era la invención editorial ya retirada"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el cuerpo se resuelve en piezas distintas de la cara. Las raíces fúlcreas del mangle, el pelaje del perezoso y las fibras amarradas a las estacas son pocas piezas planas grandes —arqueadas, superpuestas por detrás y con sombra corta—, nunca una por una. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "object_three_quarter",
+          "purpose": "hechura, escala y uso del objeto",
+          "aspect": "1:1",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "escalera_de_oro_y_la_inundacion__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "escalera_de_oro_y_la_inundacion"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "La inundación, la escalera de oro, el curso de los ríos, la marea y la competencia para salar el mar son continuación del ciclo que estas dos páginas no narran, y el módulo prohíbe además el oro en las ilustraciones de este frente: el oro es un imán de estereotipo en el Pacífico"
+        },
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "«Los de adelante encontraron una escalera de oro colgada en la loma y empezaron a subir. Tachi Akhore preguntó si ya habían subido todos… y alzó la escalera. Los que venían comiendo fruta corrieron; algunos alcanzaron a colgarse»."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Una escalera larga y estrecha que cuelga de lo alto sin tocar nada arriba —su extremo superior se pierde en la luz del día resplandeciente—, con el pie apenas apoyado en la hierba de la loma: se reconoce porque es la única línea vertical recta de toda la biblia en un mundo de raíces curvas y agua horizontal.",
+        "materials": [
+          "largueros y peldaños en papel dorado mate, de grano apagado y sin brillo ni destello, recortados en pocas piezas planas largas",
+          "atadura de cada peldaño resuelta como una vuelta de quilling en tono ocre, sin clavo ni herraje",
+          "la loma al pie como un plano de hierba de firme, no de manglar"
+        ],
+        "palette_logic": "Oro mate y ocre sobre el verde claro de la loma y el blanco cálido del día resplandeciente: el único dorado de la biblia, y deliberadamente apagado para que no se lea como tesoro.",
+        "scale": "Tan alta que su extremo superior sale del encuadre; los peldaños a la distancia de un paso humano, medidos contra una figura que sube. 1:1 con la loma al pie.",
+        "continuity_markers": [
+          "el extremo de arriba nunca se ve: la escalera viene de un lugar que la lámina no muestra",
+          "oro siempre mate, nunca brillante ni con destello",
+          "en su estado alzado, los pocos que alcanzan a colgarse van en los peldaños bajos y el pie ya no toca la loma"
+        ],
+        "documented_features": [
+          "«Los de adelante encontraron una escalera de oro colgada en la loma y empezaron a subir» (canon, campo mito)",
+          "Tachi Akhore «alzó la escalera»; «algunos alcanzaron a colgarse, pero el resto gritaba y se lamentaba y él no los oyó. Por eso quedamos en esta tierra» (canon, campo mito)",
+          "El oro es un imán de estereotipo en el Pacífico y el dossier (§1) lo prohibía para este frente cuando la página no narraba la escalera (dossier §1)"
+        ],
+        "editorial_features": [
+          "DECISIÓN ABIERTA, declarada: el dossier prohibió el oro «porque la escalera de oro pertenece a la continuación del ciclo que estas dos páginas no narran»; el canon reescrito ahora la narra y es el desenlace. Se le da ficha para que no la invente el ilustrador, resuelta en oro mate sin brillo; si el editor mantiene la prohibición, esta ficha se retira y el desenlace se compone sólo con la loma y la gente que queda.",
+          "Ni peldaños labrados ni ornamento: sólo largueros y travesaños, porque el texto no la describe más que por su material.",
+          "El estado alzado, con los últimos colgados de los peldaños bajos, es el único que el relato hace visible; los que se quedan gritando abajo se dibujan de espaldas y a distancia, sin pathos."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Eperara Siapidara V1 - state_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "el cambio de estado sin perder la identidad para La escalera de oro colgada en la loma. Una escalera larga y estrecha que cuelga de lo alto sin tocar nada arriba —su extremo superior se pierde en la luz del día resplandeciente—, con el pie apenas apoyado en la hierba de la loma: se reconoce porque es la única línea vertical recta de toda la biblia en un mundo de raíces curvas y agua horizontal.",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Tan alta que su extremo superior sale del encuadre; los peldaños a la distancia de un paso humano, medidos contra una figura que sube. 1:1 con la loma al pie.",
+        "lighting_mood": "Luz de Pacífico cubierto: cielo bajo y sin sol visible, sin sombra proyectada dura, con el agua devolviendo más luz que el cielo y la silueta del mangle recortada contra ese reflejo. De noche, el firmamento «oscuro y vacío» sobre la playa, con la luna como única fuente, porque Tachi Nawe es la luna y el acto central ocurre cerca de la medianoche.",
+        "materials_textures": "largueros y peldaños en papel dorado mate, de grano apagado y sin brillo ni destello, recortados en pocas piezas planas largas; atadura de cada peldaño resuelta como una vuelta de quilling en tono ocre, sin clavo ni herraje; la loma al pie como un plano de hierba de firme, no de manglar",
+        "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
+        "constraints": [
+          "documentado: «Los de adelante encontraron una escalera de oro colgada en la loma y empezaron a subir» (canon, campo mito)",
+          "documentado: Tachi Akhore «alzó la escalera»; «algunos alcanzaron a colgarse, pero el resto gritaba y se lamentaba y él no los oyó. Por eso quedamos en esta tierra» (canon, campo mito)",
+          "documentado: El oro es un imán de estereotipo en el Pacífico y el dossier (§1) lo prohibía para este frente cuando la página no narraba la escalera (dossier §1)",
+          "Cada lámina declara el punto de la marea y el modelo de entorno lo obedece: la playa con las hileras de estacas sólo existe con marea baja, y el mundo con sed del segundo relato es el mismo entorno sin agua.",
+          "El cielo es siempre el valor más bajo y el agua el más alto: aquí el suelo mojado ilumina y el cielo cierra, que es lo contrario de la convención.",
+          "El único rojo del corpus es el del interior del mangle en el corte y el de las semillas del collar; no hay rojo de tela, ni de pintura corporal, ni de fruto.",
+          "Sin oro en ninguna lámina, en ningún tamaño y bajo ningún pretexto.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin bohío de planta circular ni cubierta cónica, sin damagua percutida y sin guayuco rojo hasta la rodilla: nada del complejo katío o chamí entra aquí",
+          "sin jagua ni kipará: la única fuente hallada es panameña y de otros pueblos; el pigmento documentado aquí es el achiote",
+          "sin werregue ni su iconografía, que es oficio wounaan del delta del San Juan, y sin marimba, que es de la población afrodescendiente del Pacífico sur",
+          "sin patrón real ni inventado de cestería, de chaquira ni de tejido, y sin las seis piezas con nombre propio dibujadas con su dibujo",
+          "sin casa sagrada te-waibia, sin cruz de conchas de piangua, sin jaipana, sin dapáto y sin ritual de la mesa",
+          "sin fuetazo, sin cepo y sin ninguna escena de justicia propia: el rejo aparece sólo como objeto entregado",
+          "sin oro, sin escalera de oro, sin inundación y sin competencia para salar el mar: son continuación del ciclo que estas páginas no narran",
+          "sin joven ambicioso, sin machete y sin estero de mangle como escenario del segundo relato: eso era la invención editorial ya retirada"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el cuerpo se resuelve en piezas distintas de la cara. Las raíces fúlcreas del mangle, el pelaje del perezoso y las fibras amarradas a las estacas son pocas piezas planas grandes —arqueadas, superpuestas por detrás y con sombra corta—, nunca una por una. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "estado_alzada con los últimos colgados de los peldaños bajos",
+          "view_type": "state_variation",
+          "purpose": "el cambio de estado sin perder la identidad: alzada con los últimos colgados de los peldaños bajos",
+          "aspect": "1:1",
+          "states": [
+            "alzada con los últimos colgados de los peldaños bajos"
+          ],
+          "reference_views": [
+            "canon"
+          ]
+        }
+      ]
+    },
     "hoja_utileria_eperara__object_sheet": {
       "purpose": "object_sheet",
       "entity_refs": [
@@ -3841,7 +4789,8 @@
           "bejuco de yaré en tira larga y estrecha de papel de fibra parda, mate, enrollada en espiral cerrada y atada por sí misma",
           "fibras de palma en tiras finísimas de papel claro, en un solo manojo suelto",
           "hachas con cabeza de material declarado sin resolver —piedra pulida o hierro, la ficha dibuja la silueta más sobria y lo dice— y mango recto de madera clara",
-          "recipiente bajo, sin asa, sin pie y sin decoración, en papel pardo liso, con el jugo como una sola pieza de papel más claro"
+          "recipiente bajo, sin asa, sin pie y sin decoración, en papel pardo liso, con el jugo como una sola pieza de papel más claro",
+          "tambora como tambor de cuerpo corto y parche de cuero atado, con la forma del siru que el dossier documenta, y dos frutas de mano —caimito morado y granadilla amarilla— como piezas planas"
         ],
         "palette_logic": "Pardos y crudos sobre fondo liso, sin un solo objeto más saturado que otro: la hoja está ordenada para que nada de lo que hay aquí compita con una figura, y para que el rejo no se lea como el objeto importante de la lámina.",
         "scale": "Todo medido contra la mano: el rollo de yaré cabe en una palma, el manojo de fibras en un puño, el hacha es de un brazo y el recipiente de dos manos. Ninguna pieza se agranda para hacerla solemne.",
@@ -3855,7 +4804,8 @@
           "corpus: «Le entregó un rejo de yaré»; «amarró a cada una fibras de la palma»; «Todos llevaron sus hachas»; «Tachi Nawe le dio jugo de granadilla»",
           "dossier §0.2 sobre aciesna-2005 y unad-garcia-2024: el yaré del relato es el mismo «bejuco de Yare “Potre”» con el que la Tachi Nawe ordena fuetazos «delante de toda la comunidad», y en 2024 el mismo término aparece como fibra de cestería con relato de origen propio y con la regla de «pedir permiso a la planta»",
           "dossier §10, salvaguarda 1: el rejo se dibuja como objeto entregado —que es lo que el relato dice— y nunca en uso, porque es instrumento de justicia propia vigente",
-          "dossier §11: la granadilla, el hacha y la minga no aparecen en ninguna fuente eperara consultada, y son tres piezas del relato que quedan sin respaldo material"
+          "dossier §11: la granadilla, el hacha y la minga no aparecen en ninguna fuente eperara consultada, y son tres piezas del relato que quedan sin respaldo material",
+          "canon reescrito, campo mito: la fila sale «al ritmo de la tambora», y la fruta del camino es «caimito y granadilla»"
         ],
         "editorial_features": [
           "el material del hacha queda declarado sin resolver: el hierro es poscolombino y la piedra pulida la alternativa precolombina, ninguna fuente eperara describe el hacha, y la ficha dibuja la silueta más sobria posible en vez de decidir",
@@ -3871,13 +4821,14 @@
         "primary_request": "hechura, escala y uso del objeto para hoja utileria eperara. Cuatro objetos sueltos sobre fondo liso y sin mesa, ordenados por tamaño y no por escena: el rollo de bejuco de yaré en espiral cerrada, un manojo de fibras de palma sin anudar, dos hachas de perfil con el mango hacia el mismo lado, y un recipiente bajo y sin asa con el jugo dentro. Es la única lámina del corpus donde no hay cuerpo, agua ni horizonte.",
         "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Todo medido contra la mano: el rollo de yaré cabe en una palma, el manojo de fibras en un puño, el hacha es de un brazo y el recipiente de dos manos. Ninguna pieza se agranda para hacerla solemne.",
         "lighting_mood": "Luz de Pacífico cubierto: cielo bajo y sin sol visible, sin sombra proyectada dura, con el agua devolviendo más luz que el cielo y la silueta del mangle recortada contra ese reflejo. De noche, el firmamento «oscuro y vacío» sobre la playa, con la luna como única fuente, porque Tachi Nawe es la luna y el acto central ocurre cerca de la medianoche.",
-        "materials_textures": "bejuco de yaré en tira larga y estrecha de papel de fibra parda, mate, enrollada en espiral cerrada y atada por sí misma; fibras de palma en tiras finísimas de papel claro, en un solo manojo suelto; hachas con cabeza de material declarado sin resolver —piedra pulida o hierro, la ficha dibuja la silueta más sobria y lo dice— y mango recto de madera clara; recipiente bajo, sin asa, sin pie y sin decoración, en papel pardo liso, con el jugo como una sola pieza de papel más claro",
+        "materials_textures": "bejuco de yaré en tira larga y estrecha de papel de fibra parda, mate, enrollada en espiral cerrada y atada por sí misma; fibras de palma en tiras finísimas de papel claro, en un solo manojo suelto; hachas con cabeza de material declarado sin resolver —piedra pulida o hierro, la ficha dibuja la silueta más sobria y lo dice— y mango recto de madera clara; recipiente bajo, sin asa, sin pie y sin decoración, en papel pardo liso, con el jugo como una sola pieza de papel más claro; tambora como tambor de cuerpo corto y parche de cuero atado, con la forma del siru que el dossier documenta, y dos frutas de mano —caimito morado y granadilla amarilla— como piezas planas",
         "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
         "constraints": [
           "documentado: «Le entregó un rejo de yaré»; «amarró a cada una fibras de la palma»; «Todos llevaron sus hachas»; «Tachi Nawe le dio jugo de granadilla»",
           "documentado: el yaré del relato es el mismo «bejuco de Yare “Potre”» con el que la Tachi Nawe ordena fuetazos «delante de toda la comunidad», y en 2024 el mismo término aparece como fibra de cestería con relato de origen propio y con la regla de «pedir permiso a la planta»",
           "documentado: el rejo se dibuja como objeto entregado —que es lo que el relato dice— y nunca en uso, porque es instrumento de justicia propia vigente",
           "documentado: la granadilla, el hacha y la minga no aparecen en ninguna fuente eperara consultada, y son tres piezas del relato que quedan sin respaldo material",
+          "documentado: la fila sale «al ritmo de la tambora», y la fruta del camino es «caimito y granadilla»",
           "Cada lámina declara el punto de la marea y el modelo de entorno lo obedece: la playa con las hileras de estacas sólo existe con marea baja, y el mundo con sed del segundo relato es el mismo entorno sin agua.",
           "El cielo es siempre el valor más bajo y el agua el más alto: aquí el suelo mojado ilumina y el cielo cierra, que es lo contrario de la convención.",
           "El único rojo del corpus es el del interior del mangle en el corte y el de las semillas del collar; no hay rojo de tela, ni de pintura corporal, ni de fruto.",
@@ -3902,6 +4853,531 @@
           "view_type": "object_three_quarter",
           "purpose": "hechura, escala y uso del objeto",
           "aspect": "1:1",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "cerros_de_la_huida__environment_model": {
+      "purpose": "environment_model",
+      "entity_refs": [
+        "cerros_de_la_huida"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "«Emprendieron camino hacia el cerro. Estando allí el agua empezó a subir»; «Después salieron hacia otro cerro más alto en un día resplandeciente»."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Dos lomas de tierra firme que se levantan sobre el manglar y el agua, la segunda más alta y con una ladera abierta de hierba donde termina el camino: se reconoce porque es el único terreno seco y en pendiente de toda la biblia, y porque el agua siempre está abajo, rodeándolo.",
+        "materials": [
+          "tierra firme en planos de papel pardo rojizo, distinta del barro casi negro del manglar",
+          "bosque de firme en pocas piezas grandes de verde oscuro, sin raíces fúlcreas",
+          "ladera de hierba corta en recortes finos encajados, donde cuelga la escalera",
+          "agua parda en láminas horizontales al pie, que en el estado de creciente sube por la ladera"
+        ],
+        "palette_logic": "Pardo rojizo de firme y verde oscuro de bosque contra el pardo del agua; el día de la segunda salida, blanco cálido resplandeciente en el cielo.",
+        "scale": "La loma se mide contra la fila de gente que sube, que ocupa menos de un tercio de la ladera; plano general 16:9.",
+        "continuity_markers": [
+          "el agua siempre abajo, nunca por encima de la cima",
+          "la segunda loma es más alta que la primera en toda lámina",
+          "sin manglar en la ladera: es firme"
+        ],
+        "documented_features": [
+          "El relato sube de la playa a un cerro, y de ahí a «otro cerro más alto» (canon, campo mito)",
+          "«Estando allí el agua empezó a subir, y él dijo que había que cantarle y danzarle para que el mundo no se inundara» (canon, campo mito)",
+          "Los cinco paisajes que nombra la comunidad son «manglares, lodazales de natal, firmes, guandales y aluviales» (dossier §3, grem-sia-2017): el cerro es firme"
+        ],
+        "editorial_features": [
+          "La forma de los dos cerros no está en ninguna fuente: se resuelven como firmes del Pacífico sur, y la decisión es reversible.",
+          "Ningún cerro con perfil reconocible: el texto no los nombra y la biblia no los ubica."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Eperara Siapidara V1 - environment_model",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "el mundo hasta los cuatro limites, con su hora y su clima para Los cerros de la huida. Dos lomas de tierra firme que se levantan sobre el manglar y el agua, la segunda más alta y con una ladera abierta de hierba donde termina el camino: se reconoce porque es el único terreno seco y en pendiente de toda la biblia, y porque el agua siempre está abajo, rodeándolo.",
+        "composition_framing": "16:9; mundo full bleed hasta los cuatro limites; La loma se mide contra la fila de gente que sube, que ocupa menos de un tercio de la ladera; plano general 16:9.",
+        "lighting_mood": "Luz de Pacífico cubierto: cielo bajo y sin sol visible, sin sombra proyectada dura, con el agua devolviendo más luz que el cielo y la silueta del mangle recortada contra ese reflejo. De noche, el firmamento «oscuro y vacío» sobre la playa, con la luna como única fuente, porque Tachi Nawe es la luna y el acto central ocurre cerca de la medianoche.",
+        "materials_textures": "tierra firme en planos de papel pardo rojizo, distinta del barro casi negro del manglar; bosque de firme en pocas piezas grandes de verde oscuro, sin raíces fúlcreas; ladera de hierba corta en recortes finos encajados, donde cuelga la escalera; agua parda en láminas horizontales al pie, que en el estado de creciente sube por la ladera",
+        "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
+        "constraints": [
+          "documentado: El relato sube de la playa a un cerro, y de ahí a «otro cerro más alto» (canon, campo mito)",
+          "documentado: «Estando allí el agua empezó a subir, y él dijo que había que cantarle y danzarle para que el mundo no se inundara» (canon, campo mito)",
+          "documentado: Los cinco paisajes que nombra la comunidad son «manglares, lodazales de natal, firmes, guandales y aluviales» (dossier §3, grem-sia-2017): el cerro es firme",
+          "Cada lámina declara el punto de la marea y el modelo de entorno lo obedece: la playa con las hileras de estacas sólo existe con marea baja, y el mundo con sed del segundo relato es el mismo entorno sin agua.",
+          "El cielo es siempre el valor más bajo y el agua el más alto: aquí el suelo mojado ilumina y el cielo cierra, que es lo contrario de la convención.",
+          "El único rojo del corpus es el del interior del mangle en el corte y el de las semillas del collar; no hay rojo de tela, ni de pintura corporal, ni de fruto.",
+          "Sin oro en ninguna lámina, en ningún tamaño y bajo ningún pretexto.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin bohío de planta circular ni cubierta cónica, sin damagua percutida y sin guayuco rojo hasta la rodilla: nada del complejo katío o chamí entra aquí",
+          "sin jagua ni kipará: la única fuente hallada es panameña y de otros pueblos; el pigmento documentado aquí es el achiote",
+          "sin werregue ni su iconografía, que es oficio wounaan del delta del San Juan, y sin marimba, que es de la población afrodescendiente del Pacífico sur",
+          "sin patrón real ni inventado de cestería, de chaquira ni de tejido, y sin las seis piezas con nombre propio dibujadas con su dibujo",
+          "sin casa sagrada te-waibia, sin cruz de conchas de piangua, sin jaipana, sin dapáto y sin ritual de la mesa",
+          "sin fuetazo, sin cepo y sin ninguna escena de justicia propia: el rejo aparece sólo como objeto entregado",
+          "sin oro, sin escalera de oro, sin inundación y sin competencia para salar el mar: son continuación del ciclo que estas páginas no narran",
+          "sin joven ambicioso, sin machete y sin estero de mangle como escenario del segundo relato: eso era la invención editorial ya retirada"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el cuerpo se resuelve en piezas distintas de la cara. Las raíces fúlcreas del mangle, el pelaje del perezoso y las fibras amarradas a las estacas son pocas piezas planas grandes —arqueadas, superpuestas por detrás y con sombra corta—, nunca una por una. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "environment_establishing",
+          "purpose": "el mundo hasta los cuatro limites, con su hora y su clima",
+          "aspect": "16:9",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "cerros_de_la_huida__state_sheet": {
+      "purpose": "state_sheet",
+      "entity_refs": [
+        "cerros_de_la_huida"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "«Emprendieron camino hacia el cerro. Estando allí el agua empezó a subir»; «Después salieron hacia otro cerro más alto en un día resplandeciente»."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Dos lomas de tierra firme que se levantan sobre el manglar y el agua, la segunda más alta y con una ladera abierta de hierba donde termina el camino: se reconoce porque es el único terreno seco y en pendiente de toda la biblia, y porque el agua siempre está abajo, rodeándolo.",
+        "materials": [
+          "tierra firme en planos de papel pardo rojizo, distinta del barro casi negro del manglar",
+          "bosque de firme en pocas piezas grandes de verde oscuro, sin raíces fúlcreas",
+          "ladera de hierba corta en recortes finos encajados, donde cuelga la escalera",
+          "agua parda en láminas horizontales al pie, que en el estado de creciente sube por la ladera"
+        ],
+        "palette_logic": "Pardo rojizo de firme y verde oscuro de bosque contra el pardo del agua; el día de la segunda salida, blanco cálido resplandeciente en el cielo.",
+        "scale": "La loma se mide contra la fila de gente que sube, que ocupa menos de un tercio de la ladera; plano general 16:9.",
+        "continuity_markers": [
+          "el agua siempre abajo, nunca por encima de la cima",
+          "la segunda loma es más alta que la primera en toda lámina",
+          "sin manglar en la ladera: es firme"
+        ],
+        "documented_features": [
+          "El relato sube de la playa a un cerro, y de ahí a «otro cerro más alto» (canon, campo mito)",
+          "«Estando allí el agua empezó a subir, y él dijo que había que cantarle y danzarle para que el mundo no se inundara» (canon, campo mito)",
+          "Los cinco paisajes que nombra la comunidad son «manglares, lodazales de natal, firmes, guandales y aluviales» (dossier §3, grem-sia-2017): el cerro es firme"
+        ],
+        "editorial_features": [
+          "La forma de los dos cerros no está en ninguna fuente: se resuelven como firmes del Pacífico sur, y la decisión es reversible.",
+          "Ningún cerro con perfil reconocible: el texto no los nombra y la biblia no los ubica."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Eperara Siapidara V1 - state_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "el cambio de estado sin perder la identidad para Los cerros de la huida. Dos lomas de tierra firme que se levantan sobre el manglar y el agua, la segunda más alta y con una ladera abierta de hierba donde termina el camino: se reconoce porque es el único terreno seco y en pendiente de toda la biblia, y porque el agua siempre está abajo, rodeándolo.",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; La loma se mide contra la fila de gente que sube, que ocupa menos de un tercio de la ladera; plano general 16:9.",
+        "lighting_mood": "Luz de Pacífico cubierto: cielo bajo y sin sol visible, sin sombra proyectada dura, con el agua devolviendo más luz que el cielo y la silueta del mangle recortada contra ese reflejo. De noche, el firmamento «oscuro y vacío» sobre la playa, con la luna como única fuente, porque Tachi Nawe es la luna y el acto central ocurre cerca de la medianoche.",
+        "materials_textures": "tierra firme en planos de papel pardo rojizo, distinta del barro casi negro del manglar; bosque de firme en pocas piezas grandes de verde oscuro, sin raíces fúlcreas; ladera de hierba corta en recortes finos encajados, donde cuelga la escalera; agua parda en láminas horizontales al pie, que en el estado de creciente sube por la ladera",
+        "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
+        "constraints": [
+          "documentado: El relato sube de la playa a un cerro, y de ahí a «otro cerro más alto» (canon, campo mito)",
+          "documentado: «Estando allí el agua empezó a subir, y él dijo que había que cantarle y danzarle para que el mundo no se inundara» (canon, campo mito)",
+          "documentado: Los cinco paisajes que nombra la comunidad son «manglares, lodazales de natal, firmes, guandales y aluviales» (dossier §3, grem-sia-2017): el cerro es firme",
+          "Cada lámina declara el punto de la marea y el modelo de entorno lo obedece: la playa con las hileras de estacas sólo existe con marea baja, y el mundo con sed del segundo relato es el mismo entorno sin agua.",
+          "El cielo es siempre el valor más bajo y el agua el más alto: aquí el suelo mojado ilumina y el cielo cierra, que es lo contrario de la convención.",
+          "El único rojo del corpus es el del interior del mangle en el corte y el de las semillas del collar; no hay rojo de tela, ni de pintura corporal, ni de fruto.",
+          "Sin oro en ninguna lámina, en ningún tamaño y bajo ningún pretexto.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin bohío de planta circular ni cubierta cónica, sin damagua percutida y sin guayuco rojo hasta la rodilla: nada del complejo katío o chamí entra aquí",
+          "sin jagua ni kipará: la única fuente hallada es panameña y de otros pueblos; el pigmento documentado aquí es el achiote",
+          "sin werregue ni su iconografía, que es oficio wounaan del delta del San Juan, y sin marimba, que es de la población afrodescendiente del Pacífico sur",
+          "sin patrón real ni inventado de cestería, de chaquira ni de tejido, y sin las seis piezas con nombre propio dibujadas con su dibujo",
+          "sin casa sagrada te-waibia, sin cruz de conchas de piangua, sin jaipana, sin dapáto y sin ritual de la mesa",
+          "sin fuetazo, sin cepo y sin ninguna escena de justicia propia: el rejo aparece sólo como objeto entregado",
+          "sin oro, sin escalera de oro, sin inundación y sin competencia para salar el mar: son continuación del ciclo que estas páginas no narran",
+          "sin joven ambicioso, sin machete y sin estero de mangle como escenario del segundo relato: eso era la invención editorial ya retirada"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el cuerpo se resuelve en piezas distintas de la cara. Las raíces fúlcreas del mangle, el pelaje del perezoso y las fibras amarradas a las estacas son pocas piezas planas grandes —arqueadas, superpuestas por detrás y con sombra corta—, nunca una por una. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "estado_agua subiendo al pie del cerro",
+          "view_type": "state_variation",
+          "purpose": "el cambio de estado sin perder la identidad: agua subiendo al pie del cerro",
+          "aspect": "1:1",
+          "states": [
+            "agua subiendo al pie del cerro"
+          ],
+          "reference_views": [
+            "canon"
+          ]
+        }
+      ]
+    },
+    "iguana__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "iguana"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "«Pusieron a la iguana en el agua para saber si el nivel subía o bajaba, y por eso la iguana tiene las marcas que deja el agua.»"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Iguana verde de cuerpo largo y cola más larga que el cuerpo, medio sumergida y quieta, con la cresta dorsal en dientes y el flanco cruzado por bandas horizontales como líneas de nivel: el agua le dejó su medida en el cuerpo.",
+        "materials": [
+          "cuerpo en pocas piezas planas grandes de papel verde, con la cresta recortada en dientes sobre el canto del lomo",
+          "bandas del flanco como tiras más oscuras superpuestas en horizontal, paralelas a la superficie del agua",
+          "agua parda en lámina plana que le corta el cuerpo a media altura"
+        ],
+        "palette_logic": "Verde de iguana y bandas en verde más oscuro, contra el pardo del agua: el único verde saturado de la fauna.",
+        "scale": "Iguana adulta de un metro con la cola, medida contra la orilla del cerro. 1:1.",
+        "continuity_markers": [
+          "las bandas del flanco siempre horizontales, como marcas de nivel",
+          "siempre con el agua a media altura del cuerpo",
+          "cresta en dientes, nunca espinas una por una"
+        ],
+        "documented_features": [
+          "La ponen en el agua como medida de la creciente, y de ahí le vienen «las marcas que deja el agua» (canon, campo mito)",
+          "El dossier registra el mangle Ipoporro/Op'oo te como mangle iguanero (dossier §3): la iguana es animal del manglar eperara"
+        ],
+        "editorial_features": [
+          "La especie no está nombrada: se resuelve como iguana verde del Pacífico, genérica; reversible.",
+          "Las «marcas que deja el agua» se leen como bandas horizontales del flanco: es la interpretación de la etiología, no un dato de especie."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Eperara Siapidara V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para La iguana que mide el agua. Iguana verde de cuerpo largo y cola más larga que el cuerpo, medio sumergida y quieta, con la cresta dorsal en dientes y el flanco cruzado por bandas horizontales como líneas de nivel: el agua le dejó su medida en el cuerpo.",
+        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Iguana adulta de un metro con la cola, medida contra la orilla del cerro. 1:1.",
+        "lighting_mood": "Luz de Pacífico cubierto: cielo bajo y sin sol visible, sin sombra proyectada dura, con el agua devolviendo más luz que el cielo y la silueta del mangle recortada contra ese reflejo. De noche, el firmamento «oscuro y vacío» sobre la playa, con la luna como única fuente, porque Tachi Nawe es la luna y el acto central ocurre cerca de la medianoche.",
+        "materials_textures": "cuerpo en pocas piezas planas grandes de papel verde, con la cresta recortada en dientes sobre el canto del lomo; bandas del flanco como tiras más oscuras superpuestas en horizontal, paralelas a la superficie del agua; agua parda en lámina plana que le corta el cuerpo a media altura",
+        "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
+        "constraints": [
+          "documentado: La ponen en el agua como medida de la creciente, y de ahí le vienen «las marcas que deja el agua» (canon, campo mito)",
+          "documentado: El dossier registra el mangle Ipoporro/Op'oo te como mangle iguanero (dossier §3): la iguana es animal del manglar eperara",
+          "Cada lámina declara el punto de la marea y el modelo de entorno lo obedece: la playa con las hileras de estacas sólo existe con marea baja, y el mundo con sed del segundo relato es el mismo entorno sin agua.",
+          "El cielo es siempre el valor más bajo y el agua el más alto: aquí el suelo mojado ilumina y el cielo cierra, que es lo contrario de la convención.",
+          "El único rojo del corpus es el del interior del mangle en el corte y el de las semillas del collar; no hay rojo de tela, ni de pintura corporal, ni de fruto.",
+          "Sin oro en ninguna lámina, en ningún tamaño y bajo ningún pretexto.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin bohío de planta circular ni cubierta cónica, sin damagua percutida y sin guayuco rojo hasta la rodilla: nada del complejo katío o chamí entra aquí",
+          "sin jagua ni kipará: la única fuente hallada es panameña y de otros pueblos; el pigmento documentado aquí es el achiote",
+          "sin werregue ni su iconografía, que es oficio wounaan del delta del San Juan, y sin marimba, que es de la población afrodescendiente del Pacífico sur",
+          "sin patrón real ni inventado de cestería, de chaquira ni de tejido, y sin las seis piezas con nombre propio dibujadas con su dibujo",
+          "sin casa sagrada te-waibia, sin cruz de conchas de piangua, sin jaipana, sin dapáto y sin ritual de la mesa",
+          "sin fuetazo, sin cepo y sin ninguna escena de justicia propia: el rejo aparece sólo como objeto entregado",
+          "sin oro, sin escalera de oro, sin inundación y sin competencia para salar el mar: son continuación del ciclo que estas páginas no narran",
+          "sin joven ambicioso, sin machete y sin estero de mangle como escenario del segundo relato: eso era la invención editorial ya retirada"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el cuerpo se resuelve en piezas distintas de la cara. Las raíces fúlcreas del mangle, el pelaje del perezoso y las fibras amarradas a las estacas son pocas piezas planas grandes —arqueadas, superpuestas por detrás y con sombra corta—, nunca una por una. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "1:1",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_hombre_adulto__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_hombre_adulto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "Los hombres de la minga tumban el árbol por turnos; los de la playa suben en fila a los cerros."
+        },
+        {
+          "myth": "tachi-akhore-y-la-palabra-de-mangle",
+          "field": "mito",
+          "note": "Los hombres de la minga tumban el árbol por turnos; los de la playa suben en fila a los cerros."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre adulto de pie con un hacha de mango recto apoyada en el hombro, la pieza lisa a la cintura, el torso descubierto y el pelo negro corto: cuerpo de trabajo, con la fatiga del relevo en los hombros caídos.",
+        "materials": [
+          "piel en papel pardo mate",
+          "pieza lisa a la cintura de un solo tono",
+          "hacha de mango recto de madera clara, con la cabeza de material sin resolver en silueta sobria"
+        ],
+        "palette_logic": "Pardo de piel, un tono de tela apagada y madera clara; ninguna nota saturada.",
+        "scale": "Estatura adulta corriente. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "pieza lisa a la cintura siempre",
+          "sin pintura facial",
+          "el hacha como único objeto, nunca machete ni escopeta"
+        ],
+        "documented_features": [
+          "Deslinde emberá del dossier (§0): nada chamí, katío, dóbida ni wounaan —ni bohío circular, ni damagua, ni guayuco rojo, ni jagua ni kipará, ni werregue, ni marimba—",
+          "El vestido propio existe y se usa, dice ACIESNA, pero ninguna fuente colombiana lo describe; el p'aru que se enrolla en la cintura es de fuentes ecuatorianas (dossier §6 y §11.2)",
+          "Antes de la chaquira, manillas y collares eran de bejuco chocho «con pepas de color rojo y negro» (dossier §6, unad-garcia-2024)",
+          "Época: ninguna prenda industrial, ni lancha, ni motor, ni cruz cristiana (dossier §1)",
+          "canon, campo mito (Pania Pak'uru): «Cada uno cogió su hacha» en la minga, y tumban «de día y de noche, unos golpeando mientras otros reponían fuerzas»",
+          "dossier §6: hay que poder dibujar «cansancio y relevo, no una masa uniforme»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "La prenda es una sola pieza lisa a la cintura, sin estampado ni fleco, porque el vestido propio no está descrito: se declara interpretación editorial reversible y no se importa el p'aru ecuatoriano ni la damagua katío.",
+          "El pelo, una o dos piezas planas grandes negras; ninguna pintura facial, porque no hay jagua documentada y el achiote sólo aparece en un relato de la joven Thusî (dossier §6).",
+          "El hacha no aparece en ninguna fuente eperara consultada (dossier §11.4): su material queda sin resolver y se dibuja en silueta sobria."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Eperara Siapidara V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · hombre eperara adulto. Hombre adulto de pie con un hacha de mango recto apoyada en el hombro, la pieza lisa a la cintura, el torso descubierto y el pelo negro corto: cuerpo de trabajo, con la fatiga del relevo en los hombros caídos.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura adulta corriente. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de Pacífico cubierto: cielo bajo y sin sol visible, sin sombra proyectada dura, con el agua devolviendo más luz que el cielo y la silueta del mangle recortada contra ese reflejo. De noche, el firmamento «oscuro y vacío» sobre la playa, con la luna como única fuente, porque Tachi Nawe es la luna y el acto central ocurre cerca de la medianoche.",
+        "materials_textures": "piel en papel pardo mate; pieza lisa a la cintura de un solo tono; hacha de mango recto de madera clara, con la cabeza de material sin resolver en silueta sobria",
+        "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
+        "constraints": [
+          "documentado: Deslinde emberá del dossier (§0): nada chamí, katío, dóbida ni wounaan —ni bohío circular, ni damagua, ni guayuco rojo, ni jagua ni kipará, ni werregue, ni marimba—",
+          "documentado: El vestido propio existe y se usa, dice ACIESNA, pero ninguna fuente colombiana lo describe; el p'aru que se enrolla en la cintura es de fuentes ecuatorianas (dossier §6 y §11.2)",
+          "documentado: Antes de la chaquira, manillas y collares eran de bejuco chocho «con pepas de color rojo y negro» (dossier §6, unad-garcia-2024)",
+          "documentado: Época: ninguna prenda industrial, ni lancha, ni motor, ni cruz cristiana (dossier §1)",
+          "documentado: «Cada uno cogió su hacha» en la minga, y tumban «de día y de noche, unos golpeando mientras otros reponían fuerzas»",
+          "documentado: hay que poder dibujar «cansancio y relevo, no una masa uniforme»",
+          "Cada lámina declara el punto de la marea y el modelo de entorno lo obedece: la playa con las hileras de estacas sólo existe con marea baja, y el mundo con sed del segundo relato es el mismo entorno sin agua.",
+          "El cielo es siempre el valor más bajo y el agua el más alto: aquí el suelo mojado ilumina y el cielo cierra, que es lo contrario de la convención.",
+          "El único rojo del corpus es el del interior del mangle en el corte y el de las semillas del collar; no hay rojo de tela, ni de pintura corporal, ni de fruto.",
+          "Sin oro en ninguna lámina, en ningún tamaño y bajo ningún pretexto.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin bohío de planta circular ni cubierta cónica, sin damagua percutida y sin guayuco rojo hasta la rodilla: nada del complejo katío o chamí entra aquí",
+          "sin jagua ni kipará: la única fuente hallada es panameña y de otros pueblos; el pigmento documentado aquí es el achiote",
+          "sin werregue ni su iconografía, que es oficio wounaan del delta del San Juan, y sin marimba, que es de la población afrodescendiente del Pacífico sur",
+          "sin patrón real ni inventado de cestería, de chaquira ni de tejido, y sin las seis piezas con nombre propio dibujadas con su dibujo",
+          "sin casa sagrada te-waibia, sin cruz de conchas de piangua, sin jaipana, sin dapáto y sin ritual de la mesa",
+          "sin fuetazo, sin cepo y sin ninguna escena de justicia propia: el rejo aparece sólo como objeto entregado",
+          "sin oro, sin escalera de oro, sin inundación y sin competencia para salar el mar: son continuación del ciclo que estas páginas no narran",
+          "sin joven ambicioso, sin machete y sin estero de mangle como escenario del segundo relato: eso era la invención editorial ya retirada"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el cuerpo se resuelve en piezas distintas de la cara. Las raíces fúlcreas del mangle, el pelaje del perezoso y las fibras amarradas a las estacas son pocas piezas planas grandes —arqueadas, superpuestas por detrás y con sombra corta—, nunca una por una. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_adulta__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_adulta"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "Las mujeres de la última fila se quedan comiendo caimito y granadilla y no alcanzan la escalera."
+        },
+        {
+          "myth": "tachi-akhore-y-la-palabra-de-mangle",
+          "field": "mito",
+          "note": "Las mujeres de la última fila se quedan comiendo caimito y granadilla y no alcanzan la escalera."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer adulta de pie con un collar de pepas rojas y negras, la pieza lisa a la cintura y el pelo largo en una sola pieza; en las manos, una fruta del camino.",
+        "materials": [
+          "piel en papel pardo mate",
+          "pieza lisa a la cintura, más larga que la del hombre",
+          "collar de semillas rojas y negras ensartadas, como piezas pequeñas y redondas"
+        ],
+        "palette_logic": "Pardo de piel y el rojo y negro del collar como único acento.",
+        "scale": "Algo por debajo del hombre adulto. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "collar de pepas rojas y negras",
+          "pelo largo en una pieza",
+          "sin pintura facial"
+        ],
+        "documented_features": [
+          "Deslinde emberá del dossier (§0): nada chamí, katío, dóbida ni wounaan —ni bohío circular, ni damagua, ni guayuco rojo, ni jagua ni kipará, ni werregue, ni marimba—",
+          "El vestido propio existe y se usa, dice ACIESNA, pero ninguna fuente colombiana lo describe; el p'aru que se enrolla en la cintura es de fuentes ecuatorianas (dossier §6 y §11.2)",
+          "Antes de la chaquira, manillas y collares eran de bejuco chocho «con pepas de color rojo y negro» (dossier §6, unad-garcia-2024)",
+          "Época: ninguna prenda industrial, ni lancha, ni motor, ni cruz cristiana (dossier §1)",
+          "canon, campo mito: «las mujeres de la última fila insistieron a los hombres para que cogieran caimito y granadilla, y se quedaron comiendo»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "La prenda es una sola pieza lisa a la cintura, sin estampado ni fleco, porque el vestido propio no está descrito: se declara interpretación editorial reversible y no se importa el p'aru ecuatoriano ni la damagua katío.",
+          "El pelo, una o dos piezas planas grandes negras; ninguna pintura facial, porque no hay jagua documentada y el achiote sólo aparece en un relato de la joven Thusî (dossier §6).",
+          "El collar de pepas va en la mujer adulta y no en todas las figuras: reparto de hoja, reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Eperara Siapidara V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer eperara adulta. Mujer adulta de pie con un collar de pepas rojas y negras, la pieza lisa a la cintura y el pelo largo en una sola pieza; en las manos, una fruta del camino.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Algo por debajo del hombre adulto. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de Pacífico cubierto: cielo bajo y sin sol visible, sin sombra proyectada dura, con el agua devolviendo más luz que el cielo y la silueta del mangle recortada contra ese reflejo. De noche, el firmamento «oscuro y vacío» sobre la playa, con la luna como única fuente, porque Tachi Nawe es la luna y el acto central ocurre cerca de la medianoche.",
+        "materials_textures": "piel en papel pardo mate; pieza lisa a la cintura, más larga que la del hombre; collar de semillas rojas y negras ensartadas, como piezas pequeñas y redondas",
+        "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
+        "constraints": [
+          "documentado: Deslinde emberá del dossier (§0): nada chamí, katío, dóbida ni wounaan —ni bohío circular, ni damagua, ni guayuco rojo, ni jagua ni kipará, ni werregue, ni marimba—",
+          "documentado: El vestido propio existe y se usa, dice ACIESNA, pero ninguna fuente colombiana lo describe; el p'aru que se enrolla en la cintura es de fuentes ecuatorianas (dossier §6 y §11.2)",
+          "documentado: Antes de la chaquira, manillas y collares eran de bejuco chocho «con pepas de color rojo y negro» (dossier §6, unad-garcia-2024)",
+          "documentado: Época: ninguna prenda industrial, ni lancha, ni motor, ni cruz cristiana (dossier §1)",
+          "documentado: «las mujeres de la última fila insistieron a los hombres para que cogieran caimito y granadilla, y se quedaron comiendo»",
+          "Cada lámina declara el punto de la marea y el modelo de entorno lo obedece: la playa con las hileras de estacas sólo existe con marea baja, y el mundo con sed del segundo relato es el mismo entorno sin agua.",
+          "El cielo es siempre el valor más bajo y el agua el más alto: aquí el suelo mojado ilumina y el cielo cierra, que es lo contrario de la convención.",
+          "El único rojo del corpus es el del interior del mangle en el corte y el de las semillas del collar; no hay rojo de tela, ni de pintura corporal, ni de fruto.",
+          "Sin oro en ninguna lámina, en ningún tamaño y bajo ningún pretexto.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin bohío de planta circular ni cubierta cónica, sin damagua percutida y sin guayuco rojo hasta la rodilla: nada del complejo katío o chamí entra aquí",
+          "sin jagua ni kipará: la única fuente hallada es panameña y de otros pueblos; el pigmento documentado aquí es el achiote",
+          "sin werregue ni su iconografía, que es oficio wounaan del delta del San Juan, y sin marimba, que es de la población afrodescendiente del Pacífico sur",
+          "sin patrón real ni inventado de cestería, de chaquira ni de tejido, y sin las seis piezas con nombre propio dibujadas con su dibujo",
+          "sin casa sagrada te-waibia, sin cruz de conchas de piangua, sin jaipana, sin dapáto y sin ritual de la mesa",
+          "sin fuetazo, sin cepo y sin ninguna escena de justicia propia: el rejo aparece sólo como objeto entregado",
+          "sin oro, sin escalera de oro, sin inundación y sin competencia para salar el mar: son continuación del ciclo que estas páginas no narran",
+          "sin joven ambicioso, sin machete y sin estero de mangle como escenario del segundo relato: eso era la invención editorial ya retirada"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el cuerpo se resuelve en piezas distintas de la cara. Las raíces fúlcreas del mangle, el pelaje del perezoso y las fibras amarradas a las estacas son pocas piezas planas grandes —arqueadas, superpuestas por detrás y con sombra corta—, nunca una por una. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_joven__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_joven"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "origen-del-pueblo-eperara",
+          "field": "mito",
+          "note": "La mujer que va a cargar la leña del joven."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Muchacha delgada y erguida con un atado de leña a la espalda sostenido por una banda, la pieza lisa a la cintura, el pelo largo suelto y una manilla de pepas en la muñeca.",
+        "materials": [
+          "piel en papel pardo mate claro",
+          "pieza lisa a la cintura",
+          "manilla de pepas rojas y negras",
+          "atado de leña en tres o cuatro piezas planas, con banda de fibra"
+        ],
+        "palette_logic": "Pardo claro de piel, madera de la leña y el punto rojo de la manilla.",
+        "scale": "Casi de estatura adulta. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "pelo largo suelto",
+          "manilla de pepas, sin collar",
+          "la leña como su objeto"
+        ],
+        "documented_features": [
+          "Deslinde emberá del dossier (§0): nada chamí, katío, dóbida ni wounaan —ni bohío circular, ni damagua, ni guayuco rojo, ni jagua ni kipará, ni werregue, ni marimba—",
+          "El vestido propio existe y se usa, dice ACIESNA, pero ninguna fuente colombiana lo describe; el p'aru que se enrolla en la cintura es de fuentes ecuatorianas (dossier §6 y §11.2)",
+          "Antes de la chaquira, manillas y collares eran de bejuco chocho «con pepas de color rojo y negro» (dossier §6, unad-garcia-2024)",
+          "Época: ninguna prenda industrial, ni lancha, ni motor, ni cruz cristiana (dossier §1)",
+          "canon, campo mito: «Un joven fue a rajar leña y una mujer fue después a cargarla y lo sedujo»"
+        ],
+        "editorial_features": [
+          "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
+          "La prenda es una sola pieza lisa a la cintura, sin estampado ni fleco, porque el vestido propio no está descrito: se declara interpretación editorial reversible y no se importa el p'aru ecuatoriano ni la damagua katío.",
+          "El pelo, una o dos piezas planas grandes negras; ninguna pintura facial, porque no hay jagua documentada y el achiote sólo aparece en un relato de la joven Thusî (dossier §6).",
+          "Que la mujer de la leña sea joven es inferencia de que seduce a «un joven»; el texto no le da edad. Su lámina de tipo es la de una muchacha cargando leña, nunca la escena de la falta."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Eperara Siapidara V1 - identity_sheet",
+        "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer eperara joven. Muchacha delgada y erguida con un atado de leña a la espalda sostenido por una banda, la pieza lisa a la cintura, el pelo largo suelto y una manilla de pepas en la muñeca.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Casi de estatura adulta. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de Pacífico cubierto: cielo bajo y sin sol visible, sin sombra proyectada dura, con el agua devolviendo más luz que el cielo y la silueta del mangle recortada contra ese reflejo. De noche, el firmamento «oscuro y vacío» sobre la playa, con la luna como única fuente, porque Tachi Nawe es la luna y el acto central ocurre cerca de la medianoche.",
+        "materials_textures": "piel en papel pardo mate claro; pieza lisa a la cintura; manilla de pepas rojas y negras; atado de leña en tres o cuatro piezas planas, con banda de fibra",
+        "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
+        "constraints": [
+          "documentado: Deslinde emberá del dossier (§0): nada chamí, katío, dóbida ni wounaan —ni bohío circular, ni damagua, ni guayuco rojo, ni jagua ni kipará, ni werregue, ni marimba—",
+          "documentado: El vestido propio existe y se usa, dice ACIESNA, pero ninguna fuente colombiana lo describe; el p'aru que se enrolla en la cintura es de fuentes ecuatorianas (dossier §6 y §11.2)",
+          "documentado: Antes de la chaquira, manillas y collares eran de bejuco chocho «con pepas de color rojo y negro» (dossier §6, unad-garcia-2024)",
+          "documentado: Época: ninguna prenda industrial, ni lancha, ni motor, ni cruz cristiana (dossier §1)",
+          "documentado: «Un joven fue a rajar leña y una mujer fue después a cargarla y lo sedujo»",
+          "Cada lámina declara el punto de la marea y el modelo de entorno lo obedece: la playa con las hileras de estacas sólo existe con marea baja, y el mundo con sed del segundo relato es el mismo entorno sin agua.",
+          "El cielo es siempre el valor más bajo y el agua el más alto: aquí el suelo mojado ilumina y el cielo cierra, que es lo contrario de la convención.",
+          "El único rojo del corpus es el del interior del mangle en el corte y el de las semillas del collar; no hay rojo de tela, ni de pintura corporal, ni de fruto.",
+          "Sin oro en ninguna lámina, en ningún tamaño y bajo ningún pretexto.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "sin bohío de planta circular ni cubierta cónica, sin damagua percutida y sin guayuco rojo hasta la rodilla: nada del complejo katío o chamí entra aquí",
+          "sin jagua ni kipará: la única fuente hallada es panameña y de otros pueblos; el pigmento documentado aquí es el achiote",
+          "sin werregue ni su iconografía, que es oficio wounaan del delta del San Juan, y sin marimba, que es de la población afrodescendiente del Pacífico sur",
+          "sin patrón real ni inventado de cestería, de chaquira ni de tejido, y sin las seis piezas con nombre propio dibujadas con su dibujo",
+          "sin casa sagrada te-waibia, sin cruz de conchas de piangua, sin jaipana, sin dapáto y sin ritual de la mesa",
+          "sin fuetazo, sin cepo y sin ninguna escena de justicia propia: el rejo aparece sólo como objeto entregado",
+          "sin oro, sin escalera de oro, sin inundación y sin competencia para salar el mar: son continuación del ciclo que estas páginas no narran",
+          "sin joven ambicioso, sin machete y sin estero de mangle como escenario del segundo relato: eso era la invención editorial ya retirada"
+        ],
+        "technique_close": "Todo lo anterior es papel: la cara es un óvalo plano de un solo tono con los rasgos recortados como piezas aparte; el cuerpo se resuelve en piezas distintas de la cara. Las raíces fúlcreas del mangle, el pelaje del perezoso y las fibras amarradas a las estacas son pocas piezas planas grandes —arqueadas, superpuestas por detrás y con sombra corta—, nunca una por una. Ninguna superficie se modela en volumen. Si algo se lee como fotografía, escultura o render, está mal."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],

@@ -1,0 +1,158 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "cordoba-sinu-mestizo",
+  "comunidad": "Córdoba y el Sinú",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/cordoba-sinu-mestizo.v3.json",
+    "sha256": "357681346f414b9fce38771eeefdbf4f586617a4cb9bea79dea7bcc0c8e4189b"
+  },
+  "canon": {
+    "sha256": "2895fda0dc55b17bb0c61d11c59cfdeaa984f8a59545958e98741430b9f823d8",
+    "verificado_en": "2026-09-25T14:03:58.228Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre adulto campesino del Sinú",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "conejo-y-la-mona-de-cera",
+        "conejo-y-la-fiesta-de-toro",
+        "el-costeno-y-los-cachacos",
+        "el-desayuno-del-indio",
+        "el-mocho-y-el-tigre",
+        "el-paisa-y-el-gringo",
+        "este-era-un-rey-que-tenia-dos-hijas-bonitas",
+        "este-era-un-tipo-que-tenia-una-novia",
+        "lo-justo-y-lo-legal",
+        "los-tres-cachacos-y-la-cantara-de-ron-neque",
+        "los-tres-curas-enamorados",
+        "quien-manda-mas-en-casa",
+        "rambao",
+        "tia-zorra-en-el-maizal-de-tio-conejo",
+        "tio-conejo-zapatero",
+        "veinte-para-el-bollo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9524,
+      "prompt_sha256": "b95499c9d0b3d5f380e2b6779982cfbf808ee2c426ac599203fe26b5a80ae0b3"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer adulta campesina del Sinú",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-mocho-y-el-tigre",
+        "el-hijo-desobediente",
+        "este-era-un-joven-que-estaba-estudiando",
+        "juan-bobo-y-sus-hermanos",
+        "quien-manda-mas-en-casa",
+        "rambao"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9200,
+      "prompt_sha256": "0c446d534cf5b1bd29f4a858975d8b2fad3c4c85aec0f66f0de0105ee5e96ed5"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño y muchacho del caserío",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-hijo-desobediente",
+        "el-burro-y-la-policia",
+        "este-era-un-joven-que-estaba-estudiando",
+        "este-era-un-tipo-que-tenia-una-novia",
+        "juan-bobo-y-sus-hermanos",
+        "rambao"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8960,
+      "prompt_sha256": "f48c105ed43e900e597d0f8dede4202031f1d115ef89a2d1a2adf11600c6d0a6"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer joven del Sinú",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "este-era-un-joven-que-estaba-estudiando",
+        "este-era-un-tipo-que-tenia-una-novia",
+        "la-confesion",
+        "los-tres-curas-enamorados",
+        "rambao"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9002,
+      "prompt_sha256": "5afa56916cce38aead096b2086ea5512e6c345c0c8c0d5f46a412bdf103d6dfc"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base · anciana campesina del Sinú",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "juan-bobo-y-la-vieja",
+        "la-confesion",
+        "la-vieja-el-burro-y-los-huevos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9029,
+      "prompt_sha256": "f1d5266d0ecbf37cd0a2a44e0584d571c8e3391b86102e7cc53e86f8c9e37c3e"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base · anciano campesino del Sinú",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "rambao"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8946,
+      "prompt_sha256": "4306d8127f0b35bcc6f41cc391cd8d986281c88127673d2dc52a48269690c839"
+    }
+  ]
+}

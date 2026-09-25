@@ -592,8 +592,8 @@
     "dossier": "docs/investigacion/nukak-maku.md"
   },
   "inventory": {
-    "status": "reconciling",
-    "frozen": false,
+    "status": "approved_frozen",
+    "frozen": true,
     "method": "Lectura completa de los cuatro campos por mito y siete pasadas independientes de extraccion.",
     "inclusion_rule": "Se incluye toda identidad, ser, animal, colectivo, objeto, planta, arquitectura, lugar, paisaje o fenomeno que conduzca una accion, cambie de estado, reaparezca o sea necesario para continuidad visual.",
     "exclusion_rule": "Una entidad detectada solo se excluye de modelo propio con razon explicita; los elementos embebidos declaran que otra ficha los cubre.",
@@ -603,7 +603,7 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19",
+    "approved_at": "2026-09-24",
     "reconciliation": {
       "opened_at": "2026-09-24",
       "reason": "El canon de Neon cambio despues del congelado (cierre del catalogo, 2026-09-22/23). Cada relato marcado pending_reconciliation se relee completo con las siete pasadas contra el inventario existente.",
@@ -611,7 +611,9 @@
         "creacion-nukak-maku"
       ],
       "new_myths": [],
-      "unchanged_myths": []
+      "unchanged_myths": [],
+      "closed_at": "2026-09-24",
+      "summary": "1 relato releído: 7 añadidas (mayores con nombre, baap, pajarito wayo, fogón, resina y Cerro de las Cerbatanas embebidos), 0 excluidas por el canon nuevo, 7 refundadas o rediseñadas (kawéni' yore descritos y fuera de lámina, kawéni' jeñe, caños con nombre, muji y mamo, canastos de yaré, Aukurɨbo con el wayo, familias con el baap) y 6 tipos base sin nada chimila."
     }
   },
   "myths": {
@@ -635,9 +637,9 @@
           "variant_differences"
         ],
         "unresolved_mentions": [],
-        "review_status": "pending_reconciliation",
-        "reviewed_at": null,
-        "note": "Lo que separó esta lectura fue que el relato casi no describe cuerpos y en cambio describe una obra: la fuente de Embe da el emplazamiento del hueco —una playa junto a la laguna Kein inbe', antes de la confluencia— su profundidad de tres o cuatro metros y la resina resbalosa de la boca, mientras que de Machoroko sólo dice que es una mujer y que escarba con uñas de oso hormiguero; por eso la extracción cargó las fichas de lugar y de fenómeno y dejó las de figura apoyadas en dos datos, y por eso la pasada de estados sólo cobró los dos de Aukurɨbo, que son las únicas siluetas que el texto cambia.",
+        "review_status": "editorial_approved",
+        "reviewed_at": "2026-09-24",
+        "note": "El canon reescrito recoge por fin la narración de Embe que el dossier ya había leído —Machoroko mujer, la resina de la boca, el fogón de hojas de maíz, muji y mamo, los canastos de yaré— y añade lo que ninguna nota tenía: los kawéni' yore con cara pintada, sin ropa y con flechas bailando su baap en bak (siguen fuera de lámina, ahora por la razón correcta), el pajarito wayo que devuelve a Aukurɨbo a su hogar, el Cerro de las Cerbatanas, seis mayores con nombre, el baap de la confluencia y los nombres de los caños, que se registran sin rotularse.",
         "previous_note": "Lo que separó esta lectura fue que el relato casi no describe cuerpos y en cambio describe una obra: la fuente de Embe da el emplazamiento del hueco —una playa junto a la laguna Kein inbe', antes de la confluencia— su profundidad de tres o cuatro metros y la resina resbalosa de la boca, mientras que de Machoroko sólo dice que es una mujer y que escarba con uñas de oso hormiguero; por eso la extracción cargó las fichas de lugar y de fenómeno y dejó las de figura apoyadas en dos datos, y por eso la pasada de estados sólo cobró los dos de Aukurɨbo, que son las únicas siluetas que el texto cambia."
       },
       "entity_refs": [
@@ -785,6 +787,66 @@
           "entity_id": "hoja_semillas_nikak_2",
           "role": "plot_object",
           "note": "Segunda hoja de cinco piezas: las cuatro semillas restantes más el canasto que las carga. La yuca dulce y la amarga deben leerse distintas."
+        },
+        {
+          "entity_id": "mayores_con_nombre",
+          "role": "secondary",
+          "note": "Nombres nuevos del canon reescrito: cada uno al frente de su grupo, sin rasgo propio."
+        },
+        {
+          "entity_id": "baile_baap",
+          "role": "magic_subject",
+          "note": "Nuevo en el canon reescrito: el baap de la confluencia se compone como reunión, nunca como coreografía."
+        },
+        {
+          "entity_id": "pajarito_wayo",
+          "role": "secondary",
+          "note": "El canto que devuelve a Aukurɨbo a bak; embebido en su ficha."
+        },
+        {
+          "entity_id": "fogon_de_hojas_de_maiz",
+          "role": "plot_object",
+          "note": "La llama baja de hoja de maíz; en la ficha de Aukurɨbo."
+        },
+        {
+          "entity_id": "resina_resbalosa",
+          "role": "plot_object",
+          "note": "La defensa de la boca del hueco; en la ficha del paso."
+        },
+        {
+          "entity_id": "cerro_de_las_cerbatanas",
+          "role": "setting",
+          "note": "Sólo sitúa a los descendientes de Aukurɨbo."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base: los hombres de los grupos que salen."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base: las mujeres de los grupos, las señoras con nombre y la base de Machoroko."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base: las muchachas de las familias."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base: los niños de las familias."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Tipo base: los mayores y la base corporal de Aukurɨbo."
+        },
+        {
+          "entity_id": "tipo_anciana",
+          "role": "secondary",
+          "note": "Tipo base: las abuelas de las familias."
         }
       ]
     }
@@ -941,6 +1003,11 @@
           "myth": "creacion-nukak-maku",
           "field": "mito",
           "note": "Hay dos tintes y no tienen el mismo estatuto: el achiote (Bixa orellana) y el eoro (Arrabidea chica) son sustancias constitutivas del cuerpo humano, pero el eoro es además sustancia de uso chamanístico y ritual entregada por los takueyi. Se usa la existencia del rojo en la cara y jamás un diseño concreto, y nunca un motivo de eoro."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "«Mientras estaba ahí cantó un pajarito wayo, y al oírlo se acordó: allá es mi hogar, el lugar que me gusta, donde está el caño que me gusta. No tuvo fuerza para seguir el camino.»"
         }
       ],
       "census_note": "Primero en cruzar, recordado como mayor y jefe verdadero. Las dos transformaciones están mostradas y cambian la silueta, así que una hoja de identidad más una hoja de estados con oruga y mariposa. Es la escena vertical aprobada.",
@@ -966,14 +1033,16 @@
           "Siente frío y «trató de calentarse en un fogón que prendieron con hojas de maíz»: es el único fuego del relato y es de hoja, no de leña, de modo que la llama es baja y el humo alto.",
           "Sin fuerza para caminar se transforma en oruga y después en mariposa, y en forma de mariposa vuelve a bak con parte de su familia: las dos transformaciones están mostradas y cambian la silueta.",
           "Los que salieron «ya eran como nosotros, tenían el cuerpo como nosotros»: la frase es del narrador y cierra cualquier deriva hacia lo protohumano o lo monstruoso, también en él.",
-          "Lo que un Nɨkak lleva está dicho por ellos mismos: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas»; en esta ficha, sólo el canasto, que es lo único que el relato manufactura."
+          "Lo que un Nɨkak lleva está dicho por ellos mismos: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas»; en esta ficha, sólo el canasto, que es lo único que el relato manufactura.",
+          "En el canon reescrito, junto al fogón de hojas de maíz «cantó un pajarito wayo, y al oírlo se acordó: allá es mi hogar»; vuelve a bak como mariposa y «sus hijos viven todavía por donde queda el Cerro de las Cerbatanas» (canon, campo mito)"
         ],
         "editorial": [
           "La oruga y la mariposa no tienen especie en ninguna fuente: se resuelven por la función —la forma que ya no puede caminar y la forma que puede volver abajo— y no por una especie amazónica elegida, que sería inventarla.",
           "La vejez se marca por postura y por proporción, no por arrugas ni por pelo blanco: el rostro es un óvalo plano de un solo tono y no admite modelado.",
           "El fogón se dibuja delante de él y no debajo: el texto no dice dónde estaba.",
           "El achiote de la cara y la cabeza rapada se le aplican por la misma regla que al colectivo, como existencia documentada fuera del relato y nunca como diseño; son reversibles.",
-          "Su nombre significa ‘gente de árbol' y esa etimología no se dibuja: no lleva corteza, ni rama, ni ningún rasgo vegetal."
+          "Su nombre significa ‘gente de árbol' y esa etimología no se dibuja: no lleva corteza, ni rama, ni ningún rasgo vegetal.",
+          "El pajarito wayo no se dibuja en su hoja: el canon sólo dice que cantó, y lo que la lámina cobra es el gesto del viejo que oye y recuerda, con la cabeza vuelta hacia arriba. Reversible si un guion lo pide y una fuente le da forma."
         ],
         "states_to_model": [
           "oruga",
@@ -1042,6 +1111,11 @@
           "myth": "creacion-nukak-maku",
           "field": "mito",
           "note": "Las nueve semillas traídas de bak son propias y no de los kawéni', y dos llevan nombre Nɨkak en la fuente: muji es el totumo y es grande, y mamo es el ñame. El relato distingue además la yuca dulce de la amarga, y las dos hojas de semillas deben mostrarlas distintas."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "El canon reescrito nombra a seis mayores o grupos que salen —Yauda', Jioro wün, las señoras Pugna y Yuredoa, Nepna bitui, Tai'a' bitui— y añade que en la confluencia «bailaron un baile baap»."
         }
       ],
       "census_note": "Protagonista colectivo real del relato: se ocultan, preparan la entrada, salen en pequeños grupos, descansan juntos, se separan y siembran. Una sola gramática de grupo, con canastos y semillas, que también cubre a los mayores que guían y a la Gente Tucán.",
@@ -1071,7 +1145,8 @@
           "Se separan por decisión y no por desgracia: «Nosotros mejor nos quedamos acá, dizque dijeron así. Se enamoraron de ese cañito».",
           "Los grupos tienen nombre —Wayari muno, Mipa muno, Taka yudn muno, Meu muno, Juu o Dɨi muno, Koro' a muno— y los mayores que guían tienen nombre propio y parentesco vivo: son personas con nombre, no una multitud.",
           "La Gente Tucán, Wɨkɨ i mena, son los Tsáse, un pueblo emparentado sin un solo rasgo descrito: entran como marcador de grupo dentro de esta gramática y jamás como hombres-pájaro.",
-          "La pintura y los aretes son lo que hace a un Nɨkak verdadero y lo dicen ellos; el corte de pelo —cabeza y cejas rapadas— lo señalan los mayores como práctica que se está perdiendo."
+          "La pintura y los aretes son lo que hace a un Nɨkak verdadero y lo dicen ellos; el corte de pelo —cabeza y cejas rapadas— lo señalan los mayores como práctica que se está perdiendo.",
+          "El canon reescrito nombra a los que salen: «Yauda' y Jioro wün, las señoras Pugna y Yuredoa, Nepna bitui y Tai'a' bitui con los suyos»; «algunos se quedaron abajo», y cerca de la confluencia «descansaron todos y bailaron un baile baap» antes de separarse por el Mipa y por el Wayari (canon, campo mito)"
         ],
         "editorial": [
           "No se localizó ninguna imagen ni descripción de un canasto de bejuco yaré Nɨkak: la trama, la boca y el modo de cargarlo son decisión reversible, tomada como forma genérica de canasto de carga con banda de frente.",
@@ -1364,7 +1439,8 @@
           "La anchura relativa de los dos cauces y la forma de la lengua de playa son composición, no dato.",
           "Las especies de palma y de hoja del sotobosque se resuelven como vegetación genérica de interfluvio: el relato no nombra una sola planta que no sea semilla de cultivo.",
           "El descanso y la reunión se pueden componer, pero el baile baap no: ni coreografía, ni atuendo, ni instrumento. Si una autoridad Nɨkak autoriza insinuarlo, se añade; hoy no está.",
-          "La separación de los grupos se compone como deliberación —figuras vueltas unas hacia otras— y no como éxodo: nadie huyendo y nadie llorando."
+          "La separación de los grupos se compone como deliberación —figuras vueltas unas hacia otras— y no como éxodo: nadie huyendo y nadie llorando.",
+          "El baap que el canon reescrito pone en la confluencia se compone sólo como reunión en círculo abierto y descanso, sin coreografía, atuendo ni instrumento reconstruidos (dossier §3 y §11); si una autoridad Nɨkak lo objeta, queda sólo el descanso."
         ],
         "states_to_model": []
       },
@@ -1414,7 +1490,7 @@
     "mayores_que_guian": {
       "name": "Los mayores que guían a sus familias",
       "kind": "colectivo",
-      "description": "Eligen caños, lagunas y sectores y dan nombre a los lugares, pero son miembros del colectivo ya fichado, sin descripción individual.",
+      "description": "Cada grupo sale «cada uno con su mayor» y cada mayor escoge caños y lagunas; el canon reescrito nombra a varios (ver mayores_con_nombre), sin describir a ninguno.",
       "aliases": [],
       "states": [
         "canonico"
@@ -1462,7 +1538,7 @@
       ],
       "census_note": "Eligen caños, lagunas y sectores y dan nombre a los lugares, pero son miembros del colectivo ya fichado, sin descripción individual.",
       "covered_by": "familias_nikak",
-      "coverage_note": "Eligen caños, lagunas y sectores y dan nombre a los lugares, pero son miembros del colectivo ya fichado, sin descripción individual.",
+      "coverage_note": "Cada grupo sale «cada uno con su mayor» y cada mayor escoge caños y lagunas; el canon reescrito nombra a varios (ver mayores_con_nombre), sin describir a ninguno.",
       "evidence_basis_mix": [
         "documented_core",
         "contemporary_memory",
@@ -1594,8 +1670,16 @@
     "canos_lagunas_y_sectores": {
       "name": "Caños, lagunas y sectores donde se detienen",
       "kind": "paisaje",
-      "description": "Variantes del mismo modelo de entorno. El relato dice que les dieron nombre, pero no nombra ninguno: no hay lugar identificable que fichar.",
-      "aliases": [],
+      "description": "El canon reescrito ya los nombra —el caño Wana' a müj, Jabebü, Tugpe, Joo'ni inbe', la sabana, Wipai—, y también la laguna Kein inbe' del hueco: «en esos lugares quedaron los nombres de sus pasos».",
+      "aliases": [
+        "caño Wana' a müj",
+        "Jabebü",
+        "Tugpe",
+        "Joo'ni inbe'",
+        "la sabana",
+        "Wipai",
+        "Kein inbe'"
+      ],
       "states": [
         "canonico"
       ],
@@ -1623,11 +1707,16 @@
           "myth": "creacion-nukak-maku",
           "field": "mito",
           "note": "Los caños, lagunas y sectores donde se detuvieron sí tienen nombre en la fuente —Joo'ni inbe', Ñupe inbe' o Tûpe in, Wana' a muj, Kein inbe'— y aun así no se rotulan, no se mapean y no se dibujan con perfil reconocible: el censo los excluyó por creer que no se nombraba ninguno, y la razón correcta es la salvaguarda, no la ausencia."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "«Cada mayor llevó a su gente por donde le pareció, escogiendo caños y lagunas —el caño Wana' a müj, Jabebü, Tugpe, Joo'ni inbe', la sabana, Wipai—, y en esos lugares quedaron los nombres de sus pasos.»"
         }
       ],
       "census_note": "Variantes del mismo modelo de entorno. El relato dice que les dieron nombre, pero no nombra ninguno: no hay lugar identificable que fichar.",
       "covered_by": "ye_selva_y_confluencia",
-      "coverage_note": "Variantes del mismo modelo de entorno. El relato dice que les dieron nombre, pero no nombra ninguno: no hay lugar identificable que fichar.",
+      "coverage_note": "Nombres que sólo sitúan: variantes del mismo modelo de entorno de yê. Se registran y no se rotulan, no se mapean ni se dibujan con perfil reconocible (salvaguarda 5 del dossier: el territorio está bajo presión).",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -1726,10 +1815,12 @@
       ]
     },
     "totumo": {
-      "name": "Totumo",
+      "name": "Muji, el totumo grande",
       "kind": "planta",
-      "description": "Nombrado entre las semillas; su fruto es además recipiente, pero el relato no lo usa como objeto.",
-      "aliases": [],
+      "description": "El canon reescrito lo nombra muji; el dossier (§5) lo traduce «totumo grande». Una de las nueve semillas traídas desde bak.",
+      "aliases": [
+        "muji"
+      ],
       "states": [
         "canonico"
       ],
@@ -1751,7 +1842,7 @@
       ],
       "census_note": "Nombrado entre las semillas; su fruto es además recipiente, pero el relato no lo usa como objeto.",
       "covered_by": "hoja_semillas_nikak_1",
-      "coverage_note": "Nombrado entre las semillas; su fruto es además recipiente, pero el relato no lo usa como objeto.",
+      "coverage_note": "El canon reescrito lo nombra muji; el dossier (§5) lo traduce «totumo grande». Una de las nueve semillas traídas desde bak.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -1881,10 +1972,12 @@
       ]
     },
     "name": {
-      "name": "Ñame",
+      "name": "Mamo, el ñame",
       "kind": "planta",
-      "description": "Cierra la lista de nueve cultivos traídos desde bak.",
-      "aliases": [],
+      "description": "El canon reescrito lo nombra mamo; el dossier (§5) lo traduce «ñame». Cierra la lista de nueve cultivos traídos desde bak.",
+      "aliases": [
+        "mamo"
+      ],
       "states": [
         "canonico"
       ],
@@ -1906,7 +1999,7 @@
       ],
       "census_note": "Cierra la lista de nueve cultivos traídos desde bak.",
       "covered_by": "hoja_semillas_nikak_2",
-      "coverage_note": "Cierra la lista de nueve cultivos traídos desde bak.",
+      "coverage_note": "El canon reescrito lo nombra mamo; el dossier (§5) lo traduce «ñame». Cierra la lista de nueve cultivos traídos desde bak.",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -1914,7 +2007,7 @@
     "canastos": {
       "name": "Canastos de carga",
       "kind": "objeto",
-      "description": "Único objeto manufacturado del relato: «Las cargaban con canastos». Va con las semillas porque su función es transportarlas.",
+      "description": "«Canastos grandes tejidos con bejuco yaré»: el canon reescrito da ya el material, que antes sólo estaba en el dossier. Único objeto manufacturado del relato; va con las semillas porque las transporta.",
       "aliases": [],
       "states": [
         "canonico"
@@ -1943,26 +2036,33 @@
           "myth": "creacion-nukak-maku",
           "field": "mito",
           "note": "Salir de bak no fue ser creado: los Nɨkak ya existían, ya sembraban y ya tenían familias y jefes, y cargaron sus semillas. La imagen que el corpus autoriza no es una cosmogonía sino una mudanza con canastos."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "«Traían las semillas desde abajo, en canastos grandes tejidos con bejuco yaré»."
         }
       ],
       "census_note": "Único objeto manufacturado del relato: «Las cargaban con canastos». Va con las semillas porque su función es transportarlas.",
       "covered_by": "hoja_semillas_nikak_2",
-      "coverage_note": "Único objeto manufacturado del relato: «Las cargaban con canastos». Va con las semillas porque su función es transportarlas.",
+      "coverage_note": "«Canastos grandes tejidos con bejuco yaré»: el canon reescrito da ya el material, que antes sólo estaba en el dossier. Único objeto manufacturado del relato; va con las semillas porque las transporta.",
       "evidence_basis_mix": [
         "documented_core",
         "variant"
       ]
     },
     "perseguidores_de_bak": {
-      "name": "Los seres que perseguían a los Nɨkak en bak",
+      "name": "Los kawéni' yore, que perseguían a los Nɨkak en bak",
       "kind": "criatura",
-      "description": "Verificado contra el texto. Conducen la acción, pero eso no basta si no hay nada que dibujar: si un keyframe los necesita, se resuelven como amenaza fuera de campo.",
-      "aliases": [],
+      "description": "En el canon reescrito tienen nombre y cuerpo: «gente que no es Nɨkak» que bailaba un baap cantando «nañure», jugaba y se flechaba entre sí, andaba «con la cara pintada, sin ropa y sin escopetas», y perseguía y flechaba a los Nɨkak para comérselos.",
+      "aliases": [
+        "kawéni' yore"
+      ],
       "states": [
         "canonico"
       ],
       "evidence_basis": "documented",
-      "sensitivity": "public",
+      "sensitivity": "sensitive",
       "visual_status": "excluded",
       "model_requirements": [],
       "model_refs": [],
@@ -1985,10 +2085,15 @@
           "myth": "creacion-nukak-maku",
           "field": "mito",
           "note": "Los kawéni' yore sí están descritos —«se pintaban la cara y no tenían ropa ni escopetas» y perseguían a los Nɨkak «con flechas para comérselos»—, de modo que la exclusión del censo era correcta pero estaba mal fundada: no se excluyen por falta de datos sino porque kawéni' es la palabra Nɨkak para los que no son Nɨkak, y este proyecto no dibuja a un pueblo vecino como caníbal. Amenaza fuera de campo."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "«Andaban con la cara pintada, sin ropa y sin escopetas, y a los Nɨkak los perseguían y los flechaban para comérselos»; bailaban un baap cantando «nañure, nañure, nañure»."
         }
       ],
       "census_note": "Verificado contra el texto. Conducen la acción, pero eso no basta si no hay nada que dibujar: si un keyframe los necesita, se resuelven como amenaza fuera de campo.",
-      "exclusion_reason": "sin evidencia visual: el relato sólo dice que «otros seres los perseguían, los atacaban y querían impedirles continuar», sin una sola línea sobre su forma; dibujarlos sería inventarlos",
+      "exclusion_reason": "do_not_visualize, con la razón refundada (dossier §6, matriz 21): ya no falta descripción —el canon reescrito les da cara pintada, cuerpo sin ropa, flechas y baile—, pero kawéni' es la palabra Nɨkak para los que no son Nɨkak, y dibujar a un pueblo vecino como caníbal es lo que este proyecto no hace. Amenaza fuera de campo: la resina de la boca del hueco es su única huella en lámina",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -2066,8 +2171,10 @@
     "otros_pobladores_y_la_violencia_del_contacto": {
       "name": "Los otros pobladores y su violencia",
       "kind": "colectivo",
-      "description": "El cierre del mito es memoria de desplazamiento contemporáneo (contacto oficial 1988, epidemias). Se narra, no se ilustra.",
-      "aliases": [],
+      "description": "El canon reescrito los nombra: «los kawéni' jeñe, los mayores de los que no son Nɨkak», que llegan con escopetas; los abuelos se retiran a lugares tranquilos y duplican los hijos porque ya les habían matado parientes.",
+      "aliases": [
+        "kawéni' jeñe"
+      ],
       "states": [
         "canonico"
       ],
@@ -2090,10 +2197,15 @@
           "myth": "creacion-nukak-maku",
           "field": "mito",
           "note": "Regla ética de toda la biblia: nadie huyendo, nadie llorando, nadie armado contra nadie, ninguna reliquia y ninguna desnudez expuesta como exotismo. Los Nɨkak no se ilustran como primitivos ni como víctimas, y el proceso de formar y vivir como Nɨkak baka' es una manifestación viva con medidas de salvaguardia."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "«Más adelante llegaron los kawéni' jeñe, los mayores de los que no son Nɨkak, y llegaron con escopetas. Los abuelos se retiraron… y duplicaron los hijos.»"
         }
       ],
       "census_note": "El cierre del mito es memoria de desplazamiento contemporáneo (contacto oficial 1988, epidemias). Se narra, no se ilustra.",
-      "exclusion_reason": "materia sensible y sin descripción: el relato cierra con la llegada y la violencia de otros pobladores sin describirlos, y el canon advierte contra convertir el desplazamiento forzado en espectáculo",
+      "exclusion_reason": "materia sensible: el cierre es memoria de desplazamiento y de parientes muertos por escopeta (dossier §1: «el cierre no se ilustra en absoluto»); ahora tienen nombre, kawéni' jeñe, y un solo atributo, la escopeta, que la regla de las manos saca de toda lámina",
       "evidence_basis_mix": [
         "documented_core"
       ]
@@ -2192,7 +2304,8 @@
           "Dos de ellas tienen nombre Nɨkak en la fuente y el censo no lo tenía: el totumo es muji y es grande.",
           "Las semillas no son utilería decorativa en este relato: son la prueba de que salir de bak fue trasladar una agricultura y no huir con las manos vacías. Eran propias, «no eran de los kawéni'».",
           "Van en canastos grandes hechos con el propio bejuco yaré, que es la única manufactura del relato.",
-          "El corpus no nombra un solo color: la paleta sale de la tierra, el bejuco y la semilla."
+          "El corpus no nombra un solo color: la paleta sale de la tierra, el bejuco y la semilla.",
+          "El canon reescrito da la misma lista con los nombres nɨkak: «chontaduro, tabaco, caña, muji, plátano, yuca dulce y yuca amarga, maíz, mamo», traída «en canastos grandes tejidos con bejuco yaré» (canon, campo mito)"
         ],
         "editorial": [
           "La forma de cada semilla y de cada fruto se resuelve por la especie botánica común y no por un ejemplar documentado Nɨkak, que no existe en el expediente: es decisión reversible.",
@@ -2281,6 +2394,531 @@
         "documented_core",
         "variant"
       ]
+    },
+    "mayores_con_nombre": {
+      "aliases": [
+        "Yauda'",
+        "Jioro wün",
+        "la señora Pugna",
+        "la señora Yuredoa",
+        "Nepna bitui",
+        "Tai'a' bitui"
+      ],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-nukak-maku"
+      ],
+      "name": "Yauda', Jioro wün, Pugna, Yuredoa, Nepna bitui y Tai'a' bitui",
+      "kind": "colectivo",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "familias_nikak",
+      "description": "Los mayores y grupos que el canon reescrito nombra al salir; Pugna y Yuredoa son «señoras». Yauda' era, según el dossier, el padre del narrador.",
+      "coverage_note": "Personas con nombre y parentesco vivo, sin un rasgo físico en ninguna fuente: van dentro de la gramática de familias, cada una al frente de su grupo pequeño, sin cara propia. Darles retrato sería inventarlos.",
+      "evidence": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "«Salieron Yauda' y Jioro wün, salieron las señoras Pugna y Yuredoa, salieron Nepna bitui y Tai'a' bitui con los suyos.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "baile_baap": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "contextual",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-nukak-maku"
+      ],
+      "name": "El baile baap",
+      "kind": "fenomeno",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "ye_selva_y_confluencia",
+      "description": "Dos baap en el relato: el de los kawéni' yore en bak, cantando «nañure», y el de los Nɨkak al descansar cerca de la confluencia antes de separarse.",
+      "coverage_note": "El baap nɨkak entra en la lámina de la confluencia como reunión y descanso, sin coreografía, atuendo ni instrumentos (dossier §3: es un baile vivo); el de los kawéni' yore no se dibuja, con ellos.",
+      "evidence": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Los kawéni' yore «bailaba[n] un baap cantando “nañure, nañure, nañure”»; y «cerca de donde los dos ríos se juntan descansaron todos y bailaron un baile baap»."
+        }
+      ],
+      "model_requirements": []
+    },
+    "pajarito_wayo": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-nukak-maku"
+      ],
+      "name": "El pajarito wayo",
+      "kind": "animal",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "aukuribo",
+      "description": "Canta junto al fogón y hace que Aukurɨbo recuerde su hogar en bak.",
+      "coverage_note": "Sólo se oye y no tiene especie identificada en el dossier: su hoja es la del viejo que escucha. Si un keyframe lo pide, es un pájaro pequeño lejano, sin especie.",
+      "evidence": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "«Cantó un pajarito wayo, y al oírlo se acordó: allá es mi hogar.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "fogon_de_hojas_de_maiz": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-nukak-maku"
+      ],
+      "name": "El fogón de hojas de maíz",
+      "kind": "objeto",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "aukuribo",
+      "description": "Se lo prenden a Aukurɨbo cuando siente frío al salir: la única llama del relato.",
+      "coverage_note": "Va en la hoja de Aukurɨbo, que ya se compone sentado junto a una llama baja de hoja de maíz.",
+      "evidence": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "«Arriba sintió frío y le prendieron un fogón con hojas de maíz para que se calentara.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "resina_resbalosa": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-nukak-maku"
+      ],
+      "name": "La resina resbalosa de la boca del hueco",
+      "kind": "objeto",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "paso_entre_bak_y_ye",
+      "description": "La echan los Nɨkak en la boca del hueco antes de subir, para que los kawéni' yore se rueden hacia abajo.",
+      "coverage_note": "Es el brocal untado y brillante del paso: su hoja ya la dibuja.",
+      "evidence": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "«Primero echaron en la boca del hueco una resina resbalosa, para que los kawéni' yore que quisieran seguirlos se rodaran hacia abajo.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "cerro_de_las_cerbatanas": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-nukak-maku"
+      ],
+      "name": "El Cerro de las Cerbatanas",
+      "kind": "lugar",
+      "evidence_basis": "documented",
+      "visual_status": "embedded",
+      "covered_by": "ye_selva_y_confluencia",
+      "description": "Por donde viven todavía los hijos de Aukurɨbo.",
+      "coverage_note": "Nombre que sólo sitúa; no se rotula ni se dibuja con perfil reconocible (salvaguarda 5).",
+      "evidence": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "«Sus hijos viven todavía por donde queda el Cerro de las Cerbatanas.»"
+        }
+      ],
+      "model_requirements": []
+    },
+    "tipo_hombre_adulto": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_hombre_adulto__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-nukak-maku"
+      ],
+      "name": "Tipo base · hombre nɨkak adulto",
+      "kind": "personaje",
+      "evidence_basis": "variant",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "description": "Tipo base de los hombres nɨkak que salen de bak: fija cara, cuerpo y adorno de los grupos que caminan con sus mayores.",
+      "evidence": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Los que salen van «en grupos pequeños y cada uno con su mayor», cargando las semillas en canastos de bejuco yaré."
+        }
+      ],
+      "design": {
+        "silhouette": "Hombre adulto de pie y de tres cuartos, cabeza y cejas rapadas en un solo plano curvo, el rojo plano en la cara, un arete pequeño y el canasto grande de bejuco a la espalda sostenido por una banda en la frente: la silueta es la carga, no el cuerpo.",
+        "materials": [
+          "cabeza rapada como un solo plano curvo sin costura",
+          "canasto grande de bejuco yaré con banda de frente, en tiras entrecruzadas de papel",
+          "arete pequeño de una sola pieza colgante"
+        ],
+        "palette": "Pardo mate de piel, tierra media del bejuco y el rojo de achiote en la cara como único acento.",
+        "scale": "Estatura adulta corriente; el canasto ocupa del hombro a la cadera. Cuerpo entero 9:16.",
+        "continuity": [
+          "cabeza y cejas rapadas siempre",
+          "el rojo en la cara como campo liso",
+          "el canasto siempre, las manos libres de armas"
+        ],
+        "documented": [
+          "Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "«Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "«Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "«Después fueron saliendo los demás, en grupos pequeños y cada uno con su mayor», con las semillas en canastos (canon, campo mito)"
+        ],
+        "editorial": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y el rojo de achiote va encima como un campo plano sin línea, punto ni motivo; el cuerpo se arma con pocos planos grandes de papel pardo mate. Cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "Ninguna prenda: el relato y el dossier no documentan ninguna y el canon prohíbe añadir vestuario. La regla de la dignidad (salvaguarda 3) se cumple por encuadre y postura, de tres cuartos y con el canasto, nunca con una prenda inventada. Reversible sólo por lectura comunitaria.",
+          "Los aretes son forma genérica —una pieza pequeña colgante de un solo tono—, jamás una pieza real; ningún motivo de eoro, que es do_not_visualize.",
+          "Sin cerbatana ni arco en la hoja: están documentados para el pueblo pero el relato no los usa, y la regla de la dignidad pide nadie armado."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_adulta": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_mujer_adulta__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-nukak-maku"
+      ],
+      "name": "Tipo base · mujer nɨkak adulta",
+      "kind": "personaje",
+      "evidence_basis": "variant",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "description": "Tipo base de las mujeres nɨkak: fija cara, cuerpo y adorno de las señoras que salen con su gente —Pugna y Yuredoa entre ellas— y la base corporal de Machoroko.",
+      "evidence": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Salen «las señoras Pugna y Yuredoa» con los suyos, y las familias cargan las semillas."
+        }
+      ],
+      "design": {
+        "silhouette": "Mujer adulta de pie, cabeza rapada, rojo plano en la cara, brazalete de fibra en el antebrazo y el canasto grande de bejuco a la espalda con banda de frente; el cuerpo algo más bajo y ancho que el del hombre.",
+        "materials": [
+          "cabeza rapada en un plano curvo",
+          "brazalete de fibra de moriche como tira lisa de un tono",
+          "canasto de bejuco yaré con banda de frente"
+        ],
+        "palette": "Pardo mate de piel, fibra cruda del brazalete, tierra del bejuco y el rojo de la cara.",
+        "scale": "Un palmo por debajo del hombre adulto. Cuerpo entero 9:16.",
+        "continuity": [
+          "cabeza rapada",
+          "brazalete de fibra como su marca",
+          "canasto siempre"
+        ],
+        "documented": [
+          "Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "«Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "«Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "Las hamacas y brazaletes de fibra de moriche los tejen las mujeres (PES, dossier §6), y se usan como forma genérica",
+          "El canon reescrito nombra a «las señoras Pugna y Yuredoa», que salen con los suyos (canon, campo mito)"
+        ],
+        "editorial": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y el rojo de achiote va encima como un campo plano sin línea, punto ni motivo; el cuerpo se arma con pocos planos grandes de papel pardo mate. Cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "Ninguna prenda: el relato y el dossier no documentan ninguna y el canon prohíbe añadir vestuario. La regla de la dignidad (salvaguarda 3) se cumple por encuadre y postura, de tres cuartos y con el canasto, nunca con una prenda inventada. Reversible sólo por lectura comunitaria.",
+          "Los aretes son forma genérica —una pieza pequeña colgante de un solo tono—, jamás una pieza real; ningún motivo de eoro, que es do_not_visualize.",
+          "El brazalete como marca de la mujer adulta es decisión de hoja a partir de que ellas lo tejen; reversible."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_mujer_joven": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_mujer_joven__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-nukak-maku"
+      ],
+      "name": "Tipo base · mujer nɨkak joven",
+      "kind": "personaje",
+      "evidence_basis": "variant",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "description": "Tipo base de la muchacha nɨkak dentro de las familias que salen de bak.",
+      "evidence": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Salen familias enteras, cada una con su mayor, y siembran donde se quedan."
+        }
+      ],
+      "design": {
+        "silhouette": "Muchacha de cuerpo recto y delgado, cabeza rapada, el rojo plano en la cara y un canasto más pequeño a la espalda: camina detrás de la mujer adulta.",
+        "materials": [
+          "cabeza rapada en un plano curvo",
+          "canasto de bejuco más pequeño con banda de frente",
+          "arete pequeño de una pieza"
+        ],
+        "palette": "Pardo mate claro de piel y el rojo de la cara.",
+        "scale": "Casi de estatura adulta. Cuerpo entero 9:16.",
+        "continuity": [
+          "cabeza rapada",
+          "canasto más pequeño que el de los adultos",
+          "el rojo en la cara como campo liso"
+        ],
+        "documented": [
+          "Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "«Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "«Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "«Cada mayor llevó a su gente»: los que salen son familias enteras con sus semillas (canon, campo mito)"
+        ],
+        "editorial": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y el rojo de achiote va encima como un campo plano sin línea, punto ni motivo; el cuerpo se arma con pocos planos grandes de papel pardo mate. Cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "Ninguna prenda: el relato y el dossier no documentan ninguna y el canon prohíbe añadir vestuario. La regla de la dignidad (salvaguarda 3) se cumple por encuadre y postura, de tres cuartos y con el canasto, nunca con una prenda inventada. Reversible sólo por lectura comunitaria.",
+          "Los aretes son forma genérica —una pieza pequeña colgante de un solo tono—, jamás una pieza real; ningún motivo de eoro, que es do_not_visualize.",
+          "El relato no nombra muchachas: el tipo existe porque salen familias enteras, y la edad es decisión de reparto del grupo doméstico. Reversible."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_nino": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_nino__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-nukak-maku"
+      ],
+      "name": "Tipo base · niño nɨkak",
+      "kind": "personaje",
+      "evidence_basis": "variant",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "description": "Tipo base del niño nɨkak: los hijos que los abuelos «duplicaron» y los niños de las familias que salen.",
+      "evidence": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Los abuelos duplican los hijos para recuperar la familia; las familias salen con sus niños."
+        }
+      ],
+      "design": {
+        "silhouette": "Niño de seis u ocho años de pie junto a un adulto, cabeza rapada, sin canasto, con un puñado de semillas en las dos manos: la cabeza grande respecto al tronco.",
+        "materials": [
+          "cabeza rapada en un plano curvo",
+          "semillas en la mano como piezas pequeñas de un solo tono"
+        ],
+        "palette": "Pardo mate de piel, sin rojo en la cara: la pintura es marca de adulto en esta hoja.",
+        "scale": "A la cadera de un adulto. Cuerpo entero 9:16.",
+        "continuity": [
+          "sin canasto",
+          "siempre junto a un adulto",
+          "sin pintura"
+        ],
+        "documented": [
+          "Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "«Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "«Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "Los abuelos «duplicaron los hijos, porque ya les habían matado parientes y había que recuperar la familia» (canon, campo mito)",
+          "Los niños aprenden a hacer canoas de balso como juguete: es la única canoa del expediente, y no entra al relato (dossier §2)"
+        ],
+        "editorial": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y el rojo de achiote va encima como un campo plano sin línea, punto ni motivo; el cuerpo se arma con pocos planos grandes de papel pardo mate. Cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "Ninguna prenda: el relato y el dossier no documentan ninguna y el canon prohíbe añadir vestuario. La regla de la dignidad (salvaguarda 3) se cumple por encuadre y postura, de tres cuartos y con el canasto, nunca con una prenda inventada. Reversible sólo por lectura comunitaria.",
+          "Los aretes son forma genérica —una pieza pequeña colgante de un solo tono—, jamás una pieza real; ningún motivo de eoro, que es do_not_visualize.",
+          "Sin rojo en la cara por decisión de hoja, no por fuente: reversible si una lectura nɨkak dice otra cosa."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_anciano": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_anciano__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-nukak-maku"
+      ],
+      "name": "Tipo base · anciano nɨkak",
+      "kind": "personaje",
+      "evidence_basis": "variant",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "description": "Tipo base del viejo nɨkak: fija cara, cuerpo y adorno de los mayores que guían y la base corporal de Aukurɨbo.",
+      "evidence": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Aukurɨbo, «un viejo que era jefe verdadero», sale primero; cada grupo lo guía su mayor."
+        }
+      ],
+      "design": {
+        "silhouette": "Viejo de pie un poco encorvado, cabeza y cejas rapadas, el rojo plano en la cara y un canasto a la espalda más liviano que el de los jóvenes; la edad se lee por la curva de la espalda y la delgadez de brazos y piernas, no por arrugas.",
+        "materials": [
+          "cabeza rapada en un plano curvo",
+          "canasto de bejuco con banda de frente",
+          "arete pequeño de una pieza"
+        ],
+        "palette": "Pardo mate apagado de piel y el rojo de la cara.",
+        "scale": "Estatura adulta reducida por la curva de la espalda. Cuerpo entero 9:16.",
+        "continuity": [
+          "espalda curva",
+          "el rojo como campo liso",
+          "sin arrugas dibujadas: el óvalo sigue plano"
+        ],
+        "documented": [
+          "Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "«Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "«Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "«El primero que salió fue Aukurɨbo, un viejo que era jefe verdadero»; cada grupo sale «con su mayor» (canon, campo mito)"
+        ],
+        "editorial": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y el rojo de achiote va encima como un campo plano sin línea, punto ni motivo; el cuerpo se arma con pocos planos grandes de papel pardo mate. Cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "Ninguna prenda: el relato y el dossier no documentan ninguna y el canon prohíbe añadir vestuario. La regla de la dignidad (salvaguarda 3) se cumple por encuadre y postura, de tres cuartos y con el canasto, nunca con una prenda inventada. Reversible sólo por lectura comunitaria.",
+          "Los aretes son forma genérica —una pieza pequeña colgante de un solo tono—, jamás una pieza real; ningún motivo de eoro, que es do_not_visualize.",
+          "La curva de la espalda como marca de edad es decisión de hoja: la técnica no modela rostro. Reversible."
+        ],
+        "states_to_model": []
+      }
+    },
+    "tipo_anciana": {
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "sensitivity": "public",
+      "model_refs": [
+        "tipo_anciana__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "creacion-nukak-maku"
+      ],
+      "name": "Tipo base · anciana nɨkak",
+      "kind": "personaje",
+      "evidence_basis": "variant",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "description": "Tipo base de la vieja nɨkak dentro de las familias: las abuelas que se retiran con los abuelos.",
+      "evidence": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Los abuelos se retiran a vivir tranquilos cuando llegan los kawéni' jeñe."
+        }
+      ],
+      "design": {
+        "silhouette": "Anciana de pie y quieta, cabeza rapada, rojo plano en la cara, brazalete de fibra y un canasto pequeño a la espalda; la espalda algo curva y los brazos delgados.",
+        "materials": [
+          "cabeza rapada en un plano curvo",
+          "brazalete de fibra de moriche liso",
+          "canasto pequeño de bejuco con banda de frente"
+        ],
+        "palette": "Pardo mate apagado, fibra cruda y el rojo de la cara.",
+        "scale": "Algo por debajo de la mujer adulta. Cuerpo entero 9:16.",
+        "continuity": [
+          "espalda curva",
+          "brazalete de fibra",
+          "el rojo como campo liso"
+        ],
+        "documented": [
+          "Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "«Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "«Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "«Los abuelos se retiraron a lugares donde pudieran vivir tranquilos» (canon, campo mito)",
+          "Las mujeres tejen los brazaletes de fibra de moriche (PES, dossier §6)"
+        ],
+        "editorial": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y el rojo de achiote va encima como un campo plano sin línea, punto ni motivo; el cuerpo se arma con pocos planos grandes de papel pardo mate. Cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "Ninguna prenda: el relato y el dossier no documentan ninguna y el canon prohíbe añadir vestuario. La regla de la dignidad (salvaguarda 3) se cumple por encuadre y postura, de tres cuartos y con el canasto, nunca con una prenda inventada. Reversible sólo por lectura comunitaria.",
+          "Los aretes son forma genérica —una pieza pequeña colgante de un solo tono—, jamás una pieza real; ningún motivo de eoro, que es do_not_visualize.",
+          "El relato dice «abuelos» sin separar sexo: la anciana es inferencia del grupo doméstico. Reversible."
+        ],
+        "states_to_model": []
+      }
     }
   },
   "models": {
@@ -2361,7 +2999,7 @@
         "asset_type": "Biblia visual Nɨkak V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Tierra de playa de río como papel granulado; bejuco del canasto como tiras entrecruzadas reales de papel; semillas como piezas pequeñas y plenas de un solo tono. Los dos mundos se construyen por planos escalonados en profundidad, con el hueco como la única costura entre ellos, y nunca por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Machoroko. Mujer sola, de rodillas sobre la arena mojada de una playa de río, con el torso girado hacia un hoyo que todavía no atraviesa nada y los dos brazos hundidos hasta el codo: las manos rematan en uñas largas y curvas de oso palmero y son lo único de ella que no es humano. Es la única figura de esta biblia que trabaja el suelo con las manos y la única que aparece sin canasto.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Figura adulta de cuerpo entero a escala humana, medida contra el hoyo: el hueco terminado tiene tres o cuatro metros de profundidad, de modo que la lámina de identidad la muestra en el comienzo del trabajo, cuando el hoyo todavía le llega a la rodilla, y la escala del pozo acabado se resuelve en la ficha del paso.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura adulta de cuerpo entero a escala humana, medida contra el hoyo: el hueco terminado tiene tres o cuatro metros de profundidad, de modo que la lámina de identidad la muestra en el comienzo del trabajo, cuando el hoyo todavía le llega a la rodilla, y la escala del pozo acabado se resuelve en la ficha del paso.",
         "lighting_mood": "Luz de interior de bosque húmedo: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos excepciones y sólo dos: la boca del hueco, único punto donde la luz de arriba baja hacia bak y se lee como columna de claridad sin volumetría; y el fogón de hojas de maíz de Aukurɨbo, llama baja de humo alto y poca brasa. Bak no es oscuro: tiene la misma luz de bosque que yê.",
         "materials_textures": "arena y barro de playa de río amontonados en una media luna alrededor del hoyo, con la veta húmeda más oscura que la seca; uñas de oso palmero, largas, curvas y de un solo tono córneo, recortadas como piezas aparte y superpuestas a la mano; achiote rojo en la cara, plano y sin ningún diseño",
         "era": "Tiempo del nacimiento, sin fecha, y con un inventario material estricto: canasto grande de bejuco yaré, nueve semillas, fogón de hojas de maíz, resina, una playa de río, una laguna, la selva del interfluvio Guaviare-Inírida y dos ríos que divergen. Nada más se manufactura en el relato. Fuera de él y sólo como contexto declarado: cerbatana, arco, flechas, hamaca y brazaletes de moriche. Y el cierre del relato —los kawéni', sus escopetas, el desplazamiento del siglo XX— se narra y no se ilustra en ninguna lámina.",
@@ -2396,7 +3034,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -2441,6 +3079,11 @@
           "myth": "creacion-nukak-maku",
           "field": "mito",
           "note": "Hay dos tintes y no tienen el mismo estatuto: el achiote (Bixa orellana) y el eoro (Arrabidea chica) son sustancias constitutivas del cuerpo humano, pero el eoro es además sustancia de uso chamanístico y ritual entregada por los takueyi. Se usa la existencia del rojo en la cara y jamás un diseño concreto, y nunca un motivo de eoro."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "«Mientras estaba ahí cantó un pajarito wayo, y al oírlo se acordó: allá es mi hogar, el lugar que me gusta, donde está el caño que me gusta. No tuvo fuerza para seguir el camino.»"
         }
       ],
       "design_contract": {
@@ -2465,14 +3108,16 @@
           "Siente frío y «trató de calentarse en un fogón que prendieron con hojas de maíz»: es el único fuego del relato y es de hoja, no de leña, de modo que la llama es baja y el humo alto.",
           "Sin fuerza para caminar se transforma en oruga y después en mariposa, y en forma de mariposa vuelve a bak con parte de su familia: las dos transformaciones están mostradas y cambian la silueta.",
           "Los que salieron «ya eran como nosotros, tenían el cuerpo como nosotros»: la frase es del narrador y cierra cualquier deriva hacia lo protohumano o lo monstruoso, también en él.",
-          "Lo que un Nɨkak lleva está dicho por ellos mismos: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas»; en esta ficha, sólo el canasto, que es lo único que el relato manufactura."
+          "Lo que un Nɨkak lleva está dicho por ellos mismos: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas»; en esta ficha, sólo el canasto, que es lo único que el relato manufactura.",
+          "En el canon reescrito, junto al fogón de hojas de maíz «cantó un pajarito wayo, y al oírlo se acordó: allá es mi hogar»; vuelve a bak como mariposa y «sus hijos viven todavía por donde queda el Cerro de las Cerbatanas» (canon, campo mito)"
         ],
         "editorial_features": [
           "La oruga y la mariposa no tienen especie en ninguna fuente: se resuelven por la función —la forma que ya no puede caminar y la forma que puede volver abajo— y no por una especie amazónica elegida, que sería inventarla.",
           "La vejez se marca por postura y por proporción, no por arrugas ni por pelo blanco: el rostro es un óvalo plano de un solo tono y no admite modelado.",
           "El fogón se dibuja delante de él y no debajo: el texto no dice dónde estaba.",
           "El achiote de la cara y la cabeza rapada se le aplican por la misma regla que al colectivo, como existencia documentada fuera del relato y nunca como diseño; son reversibles.",
-          "Su nombre significa ‘gente de árbol' y esa etimología no se dibuja: no lleva corteza, ni rama, ni ningún rasgo vegetal."
+          "Su nombre significa ‘gente de árbol' y esa etimología no se dibuja: no lleva corteza, ni rama, ni ningún rasgo vegetal.",
+          "El pajarito wayo no se dibuja en su hoja: el canon sólo dice que cantó, y lo que la lámina cobra es el gesto del viejo que oye y recuerda, con la cabeza vuelta hacia arriba. Reversible si un guion lo pide y una fuente le da forma."
         ]
       },
       "prompt_spec": {
@@ -2480,7 +3125,7 @@
         "asset_type": "Biblia visual Nɨkak V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Tierra de playa de río como papel granulado; bejuco del canasto como tiras entrecruzadas reales de papel; semillas como piezas pequeñas y plenas de un solo tono. Los dos mundos se construyen por planos escalonados en profundidad, con el hueco como la única costura entre ellos, y nunca por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Aukurɨbo, la Gente de Árbol. Viejo sentado y encogido junto a una llama baja de hoja de maíz, con las rodillas contra el pecho y las manos abiertas hacia el fuego, el único cuerpo de la biblia que aparece detenido mientras todos los demás caminan: es el que salió primero y el que ya no puede seguir.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Adulto de cuerpo entero sentado, medido contra el fogón, que le llega a la rodilla. En la hoja de estados, la oruga y la mariposa se muestran a la misma escala relativa que un cuerpo humano ocupando el encuadre: no se miniaturizan, porque lo que cambia es la silueta y no el tamaño de la lámina.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Adulto de cuerpo entero sentado, medido contra el fogón, que le llega a la rodilla. En la hoja de estados, la oruga y la mariposa se muestran a la misma escala relativa que un cuerpo humano ocupando el encuadre: no se miniaturizan, porque lo que cambia es la silueta y no el tamaño de la lámina.",
         "lighting_mood": "Luz de interior de bosque húmedo: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos excepciones y sólo dos: la boca del hueco, único punto donde la luz de arriba baja hacia bak y se lee como columna de claridad sin volumetría; y el fogón de hojas de maíz de Aukurɨbo, llama baja de humo alto y poca brasa. Bak no es oscuro: tiene la misma luz de bosque que yê.",
         "materials_textures": "hoja de maíz seca ardiendo con llama baja, mucho humo enrollado y casi ninguna brasa; cuerpo de pocos planos grandes de papel, con la curva del encogimiento resuelta en un solo canto; para el estado oruga, un cuerpo segmentado de pocas piezas plenas y anilladas, sin pelo pieza por pieza; para el estado mariposa, dos alas de una sola pieza plana cada una, con el borde recortado en dientes",
         "era": "Tiempo del nacimiento, sin fecha, y con un inventario material estricto: canasto grande de bejuco yaré, nueve semillas, fogón de hojas de maíz, resina, una playa de río, una laguna, la selva del interfluvio Guaviare-Inírida y dos ríos que divergen. Nada más se manufactura en el relato. Fuera de él y sólo como contexto declarado: cerbatana, arco, flechas, hamaca y brazaletes de moriche. Y el cierre del relato —los kawéni', sus escopetas, el desplazamiento del siglo XX— se narra y no se ilustra en ninguna lámina.",
@@ -2491,6 +3136,7 @@
           "documentado: Sin fuerza para caminar se transforma en oruga y después en mariposa, y en forma de mariposa vuelve a bak con parte de su familia: las dos transformaciones están mostradas y cambian la silueta.",
           "documentado: Los que salieron «ya eran como nosotros, tenían el cuerpo como nosotros»: la frase es del narrador y cierra cualquier deriva hacia lo protohumano o lo monstruoso, también en él.",
           "documentado: Lo que un Nɨkak lleva está dicho por ellos mismos: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas»; en esta ficha, sólo el canasto, que es lo único que el relato manufactura.",
+          "documentado: En el canon reescrito, junto al fogón de hojas de maíz «cantó un pajarito wayo, y al oírlo se acordó: allá es mi hogar»; vuelve a bak como mariposa y «sus hijos viven todavía por donde queda el Cerro de las Cerbatanas» (canon, campo mito)",
           "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
           "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
           "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
@@ -2514,7 +3160,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -2559,6 +3205,11 @@
           "myth": "creacion-nukak-maku",
           "field": "mito",
           "note": "Hay dos tintes y no tienen el mismo estatuto: el achiote (Bixa orellana) y el eoro (Arrabidea chica) son sustancias constitutivas del cuerpo humano, pero el eoro es además sustancia de uso chamanístico y ritual entregada por los takueyi. Se usa la existencia del rojo en la cara y jamás un diseño concreto, y nunca un motivo de eoro."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "«Mientras estaba ahí cantó un pajarito wayo, y al oírlo se acordó: allá es mi hogar, el lugar que me gusta, donde está el caño que me gusta. No tuvo fuerza para seguir el camino.»"
         }
       ],
       "design_contract": {
@@ -2583,14 +3234,16 @@
           "Siente frío y «trató de calentarse en un fogón que prendieron con hojas de maíz»: es el único fuego del relato y es de hoja, no de leña, de modo que la llama es baja y el humo alto.",
           "Sin fuerza para caminar se transforma en oruga y después en mariposa, y en forma de mariposa vuelve a bak con parte de su familia: las dos transformaciones están mostradas y cambian la silueta.",
           "Los que salieron «ya eran como nosotros, tenían el cuerpo como nosotros»: la frase es del narrador y cierra cualquier deriva hacia lo protohumano o lo monstruoso, también en él.",
-          "Lo que un Nɨkak lleva está dicho por ellos mismos: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas»; en esta ficha, sólo el canasto, que es lo único que el relato manufactura."
+          "Lo que un Nɨkak lleva está dicho por ellos mismos: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas»; en esta ficha, sólo el canasto, que es lo único que el relato manufactura.",
+          "En el canon reescrito, junto al fogón de hojas de maíz «cantó un pajarito wayo, y al oírlo se acordó: allá es mi hogar»; vuelve a bak como mariposa y «sus hijos viven todavía por donde queda el Cerro de las Cerbatanas» (canon, campo mito)"
         ],
         "editorial_features": [
           "La oruga y la mariposa no tienen especie en ninguna fuente: se resuelven por la función —la forma que ya no puede caminar y la forma que puede volver abajo— y no por una especie amazónica elegida, que sería inventarla.",
           "La vejez se marca por postura y por proporción, no por arrugas ni por pelo blanco: el rostro es un óvalo plano de un solo tono y no admite modelado.",
           "El fogón se dibuja delante de él y no debajo: el texto no dice dónde estaba.",
           "El achiote de la cara y la cabeza rapada se le aplican por la misma regla que al colectivo, como existencia documentada fuera del relato y nunca como diseño; son reversibles.",
-          "Su nombre significa ‘gente de árbol' y esa etimología no se dibuja: no lleva corteza, ni rama, ni ningún rasgo vegetal."
+          "Su nombre significa ‘gente de árbol' y esa etimología no se dibuja: no lleva corteza, ni rama, ni ningún rasgo vegetal.",
+          "El pajarito wayo no se dibuja en su hoja: el canon sólo dice que cantó, y lo que la lámina cobra es el gesto del viejo que oye y recuerda, con la cabeza vuelta hacia arriba. Reversible si un guion lo pide y una fuente le da forma."
         ]
       },
       "prompt_spec": {
@@ -2598,7 +3251,7 @@
         "asset_type": "Biblia visual Nɨkak V1 - state_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Tierra de playa de río como papel granulado; bejuco del canasto como tiras entrecruzadas reales de papel; semillas como piezas pequeñas y plenas de un solo tono. Los dos mundos se construyen por planos escalonados en profundidad, con el hueco como la única costura entre ellos, y nunca por perspectiva atmosférica pintada.",
         "primary_request": "el cambio de estado sin perder la identidad para Aukurɨbo, la Gente de Árbol. Viejo sentado y encogido junto a una llama baja de hoja de maíz, con las rodillas contra el pecho y las manos abiertas hacia el fuego, el único cuerpo de la biblia que aparece detenido mientras todos los demás caminan: es el que salió primero y el que ya no puede seguir.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Adulto de cuerpo entero sentado, medido contra el fogón, que le llega a la rodilla. En la hoja de estados, la oruga y la mariposa se muestran a la misma escala relativa que un cuerpo humano ocupando el encuadre: no se miniaturizan, porque lo que cambia es la silueta y no el tamaño de la lámina.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Adulto de cuerpo entero sentado, medido contra el fogón, que le llega a la rodilla. En la hoja de estados, la oruga y la mariposa se muestran a la misma escala relativa que un cuerpo humano ocupando el encuadre: no se miniaturizan, porque lo que cambia es la silueta y no el tamaño de la lámina.",
         "lighting_mood": "Luz de interior de bosque húmedo: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos excepciones y sólo dos: la boca del hueco, único punto donde la luz de arriba baja hacia bak y se lee como columna de claridad sin volumetría; y el fogón de hojas de maíz de Aukurɨbo, llama baja de humo alto y poca brasa. Bak no es oscuro: tiene la misma luz de bosque que yê.",
         "materials_textures": "hoja de maíz seca ardiendo con llama baja, mucho humo enrollado y casi ninguna brasa; cuerpo de pocos planos grandes de papel, con la curva del encogimiento resuelta en un solo canto; para el estado oruga, un cuerpo segmentado de pocas piezas plenas y anilladas, sin pelo pieza por pieza; para el estado mariposa, dos alas de una sola pieza plana cada una, con el borde recortado en dientes",
         "era": "Tiempo del nacimiento, sin fecha, y con un inventario material estricto: canasto grande de bejuco yaré, nueve semillas, fogón de hojas de maíz, resina, una playa de río, una laguna, la selva del interfluvio Guaviare-Inírida y dos ríos que divergen. Nada más se manufactura en el relato. Fuera de él y sólo como contexto declarado: cerbatana, arco, flechas, hamaca y brazaletes de moriche. Y el cierre del relato —los kawéni', sus escopetas, el desplazamiento del siglo XX— se narra y no se ilustra en ninguna lámina.",
@@ -2609,6 +3262,7 @@
           "documentado: Sin fuerza para caminar se transforma en oruga y después en mariposa, y en forma de mariposa vuelve a bak con parte de su familia: las dos transformaciones están mostradas y cambian la silueta.",
           "documentado: Los que salieron «ya eran como nosotros, tenían el cuerpo como nosotros»: la frase es del narrador y cierra cualquier deriva hacia lo protohumano o lo monstruoso, también en él.",
           "documentado: Lo que un Nɨkak lleva está dicho por ellos mismos: «A nosotros nos fue dado solo llevar canasto, cerbatana, arcos y flechas»; en esta ficha, sólo el canasto, que es lo único que el relato manufactura.",
+          "documentado: En el canon reescrito, junto al fogón de hojas de maíz «cantó un pajarito wayo, y al oírlo se acordó: allá es mi hogar»; vuelve a bak como mariposa y «sus hijos viven todavía por donde queda el Cerro de las Cerbatanas» (canon, campo mito)",
           "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
           "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
           "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
@@ -2632,7 +3286,7 @@
           "id": "estado_oruga",
           "view_type": "state_variation",
           "purpose": "el cambio de estado sin perder la identidad: oruga",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "oruga"
           ],
@@ -2644,7 +3298,7 @@
           "id": "estado_mariposa",
           "view_type": "state_variation",
           "purpose": "el cambio de estado sin perder la identidad: mariposa",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "mariposa"
           ],
@@ -2691,6 +3345,11 @@
           "myth": "creacion-nukak-maku",
           "field": "mito",
           "note": "Las nueve semillas traídas de bak son propias y no de los kawéni', y dos llevan nombre Nɨkak en la fuente: muji es el totumo y es grande, y mamo es el ñame. El relato distingue además la yuca dulce de la amarga, y las dos hojas de semillas deben mostrarlas distintas."
+        },
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "El canon reescrito nombra a seis mayores o grupos que salen —Yauda', Jioro wün, las señoras Pugna y Yuredoa, Nepna bitui, Tai'a' bitui— y añade que en la confluencia «bailaron un baile baap»."
         }
       ],
       "design_contract": {
@@ -2719,7 +3378,8 @@
           "Se separan por decisión y no por desgracia: «Nosotros mejor nos quedamos acá, dizque dijeron así. Se enamoraron de ese cañito».",
           "Los grupos tienen nombre —Wayari muno, Mipa muno, Taka yudn muno, Meu muno, Juu o Dɨi muno, Koro' a muno— y los mayores que guían tienen nombre propio y parentesco vivo: son personas con nombre, no una multitud.",
           "La Gente Tucán, Wɨkɨ i mena, son los Tsáse, un pueblo emparentado sin un solo rasgo descrito: entran como marcador de grupo dentro de esta gramática y jamás como hombres-pájaro.",
-          "La pintura y los aretes son lo que hace a un Nɨkak verdadero y lo dicen ellos; el corte de pelo —cabeza y cejas rapadas— lo señalan los mayores como práctica que se está perdiendo."
+          "La pintura y los aretes son lo que hace a un Nɨkak verdadero y lo dicen ellos; el corte de pelo —cabeza y cejas rapadas— lo señalan los mayores como práctica que se está perdiendo.",
+          "El canon reescrito nombra a los que salen: «Yauda' y Jioro wün, las señoras Pugna y Yuredoa, Nepna bitui y Tai'a' bitui con los suyos»; «algunos se quedaron abajo», y cerca de la confluencia «descansaron todos y bailaron un baile baap» antes de separarse por el Mipa y por el Wayari (canon, campo mito)"
         ],
         "editorial_features": [
           "No se localizó ninguna imagen ni descripción de un canasto de bejuco yaré Nɨkak: la trama, la boca y el modo de cargarlo son decisión reversible, tomada como forma genérica de canasto de carga con banda de frente.",
@@ -2749,6 +3409,7 @@
           "documentado: Los grupos tienen nombre —Wayari muno, Mipa muno, Taka yudn muno, Meu muno, Juu o Dɨi muno, Koro' a muno— y los mayores que guían tienen nombre propio y parentesco vivo: son personas con nombre, no una multitud.",
           "documentado: La Gente Tucán, Wɨkɨ i mena, son los Tsáse, un pueblo emparentado sin un solo rasgo descrito: entran como marcador de grupo dentro de esta gramática y jamás como hombres-pájaro.",
           "documentado: La pintura y los aretes son lo que hace a un Nɨkak verdadero y lo dicen ellos; el corte de pelo —cabeza y cejas rapadas— lo señalan los mayores como práctica que se está perdiendo.",
+          "documentado: El canon reescrito nombra a los que salen: «Yauda' y Jioro wün, las señoras Pugna y Yuredoa, Nepna bitui y Tai'a' bitui con los suyos»; «algunos se quedaron abajo», y cerca de la confluencia «descansaron todos y bailaron un baile baap» antes de separarse por el Mipa y por el Wayari (canon, campo mito)",
           "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
           "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
           "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
@@ -3092,7 +3753,8 @@
           "La anchura relativa de los dos cauces y la forma de la lengua de playa son composición, no dato.",
           "Las especies de palma y de hoja del sotobosque se resuelven como vegetación genérica de interfluvio: el relato no nombra una sola planta que no sea semilla de cultivo.",
           "El descanso y la reunión se pueden componer, pero el baile baap no: ni coreografía, ni atuendo, ni instrumento. Si una autoridad Nɨkak autoriza insinuarlo, se añade; hoy no está.",
-          "La separación de los grupos se compone como deliberación —figuras vueltas unas hacia otras— y no como éxodo: nadie huyendo y nadie llorando."
+          "La separación de los grupos se compone como deliberación —figuras vueltas unas hacia otras— y no como éxodo: nadie huyendo y nadie llorando.",
+          "El baap que el canon reescrito pone en la confluencia se compone sólo como reunión en círculo abierto y descanso, sin coreografía, atuendo ni instrumento reconstruidos (dossier §3 y §11); si una autoridad Nɨkak lo objeta, queda sólo el descanso."
         ]
       },
       "prompt_spec": {
@@ -3179,7 +3841,8 @@
           "Dos de ellas tienen nombre Nɨkak en la fuente y el censo no lo tenía: el totumo es muji y es grande.",
           "Las semillas no son utilería decorativa en este relato: son la prueba de que salir de bak fue trasladar una agricultura y no huir con las manos vacías. Eran propias, «no eran de los kawéni'».",
           "Van en canastos grandes hechos con el propio bejuco yaré, que es la única manufactura del relato.",
-          "El corpus no nombra un solo color: la paleta sale de la tierra, el bejuco y la semilla."
+          "El corpus no nombra un solo color: la paleta sale de la tierra, el bejuco y la semilla.",
+          "El canon reescrito da la misma lista con los nombres nɨkak: «chontaduro, tabaco, caña, muji, plátano, yuca dulce y yuca amarga, maíz, mamo», traída «en canastos grandes tejidos con bejuco yaré» (canon, campo mito)"
         ],
         "editorial_features": [
           "La forma de cada semilla y de cada fruto se resuelve por la especie botánica común y no por un ejemplar documentado Nɨkak, que no existe en el expediente: es decisión reversible.",
@@ -3204,6 +3867,7 @@
           "documentado: Las semillas no son utilería decorativa en este relato: son la prueba de que salir de bak fue trasladar una agricultura y no huir con las manos vacías. Eran propias, «no eran de los kawéni'».",
           "documentado: Van en canastos grandes hechos con el propio bejuco yaré, que es la única manufactura del relato.",
           "documentado: El corpus no nombra un solo color: la paleta sale de la tierra, el bejuco y la semilla.",
+          "documentado: El canon reescrito da la misma lista con los nombres nɨkak: «chontaduro, tabaco, caña, muji, plátano, yuca dulce y yuca amarga, maíz, mamo», traída «en canastos grandes tejidos con bejuco yaré» (canon, campo mito)",
           "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
           "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
           "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
@@ -3321,6 +3985,551 @@
           "view_type": "botanical_plate",
           "purpose": "porte, hoja, fruto y ciclo documentado",
           "aspect": "1:1",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_hombre_adulto__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_hombre_adulto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Los que salen van «en grupos pequeños y cada uno con su mayor», cargando las semillas en canastos de bejuco yaré."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre adulto de pie y de tres cuartos, cabeza y cejas rapadas en un solo plano curvo, el rojo plano en la cara, un arete pequeño y el canasto grande de bejuco a la espalda sostenido por una banda en la frente: la silueta es la carga, no el cuerpo.",
+        "materials": [
+          "cabeza rapada como un solo plano curvo sin costura",
+          "canasto grande de bejuco yaré con banda de frente, en tiras entrecruzadas de papel",
+          "arete pequeño de una sola pieza colgante"
+        ],
+        "palette_logic": "Pardo mate de piel, tierra media del bejuco y el rojo de achiote en la cara como único acento.",
+        "scale": "Estatura adulta corriente; el canasto ocupa del hombro a la cadera. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "cabeza y cejas rapadas siempre",
+          "el rojo en la cara como campo liso",
+          "el canasto siempre, las manos libres de armas"
+        ],
+        "documented_features": [
+          "Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "«Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "«Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "«Después fueron saliendo los demás, en grupos pequeños y cada uno con su mayor», con las semillas en canastos (canon, campo mito)"
+        ],
+        "editorial_features": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y el rojo de achiote va encima como un campo plano sin línea, punto ni motivo; el cuerpo se arma con pocos planos grandes de papel pardo mate. Cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "Ninguna prenda: el relato y el dossier no documentan ninguna y el canon prohíbe añadir vestuario. La regla de la dignidad (salvaguarda 3) se cumple por encuadre y postura, de tres cuartos y con el canasto, nunca con una prenda inventada. Reversible sólo por lectura comunitaria.",
+          "Los aretes son forma genérica —una pieza pequeña colgante de un solo tono—, jamás una pieza real; ningún motivo de eoro, que es do_not_visualize.",
+          "Sin cerbatana ni arco en la hoja: están documentados para el pueblo pero el relato no los usa, y la regla de la dignidad pide nadie armado."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Nɨkak V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Tierra de playa de río como papel granulado; bejuco del canasto como tiras entrecruzadas reales de papel; semillas como piezas pequeñas y plenas de un solo tono. Los dos mundos se construyen por planos escalonados en profundidad, con el hueco como la única costura entre ellos, y nunca por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · hombre nɨkak adulto. Hombre adulto de pie y de tres cuartos, cabeza y cejas rapadas en un solo plano curvo, el rojo plano en la cara, un arete pequeño y el canasto grande de bejuco a la espalda sostenido por una banda en la frente: la silueta es la carga, no el cuerpo.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura adulta corriente; el canasto ocupa del hombro a la cadera. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de interior de bosque húmedo: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos excepciones y sólo dos: la boca del hueco, único punto donde la luz de arriba baja hacia bak y se lee como columna de claridad sin volumetría; y el fogón de hojas de maíz de Aukurɨbo, llama baja de humo alto y poca brasa. Bak no es oscuro: tiene la misma luz de bosque que yê.",
+        "materials_textures": "cabeza rapada como un solo plano curvo sin costura; canasto grande de bejuco yaré con banda de frente, en tiras entrecruzadas de papel; arete pequeño de una sola pieza colgante",
+        "era": "Tiempo del nacimiento, sin fecha, y con un inventario material estricto: canasto grande de bejuco yaré, nueve semillas, fogón de hojas de maíz, resina, una playa de río, una laguna, la selva del interfluvio Guaviare-Inírida y dos ríos que divergen. Nada más se manufactura en el relato. Fuera de él y sólo como contexto declarado: cerbatana, arco, flechas, hamaca y brazaletes de moriche. Y el cierre del relato —los kawéni', sus escopetas, el desplazamiento del siglo XX— se narra y no se ilustra en ninguna lámina.",
+        "constraints": [
+          "documentado: Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "documentado: «Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "documentado: Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "documentado: «Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "documentado: Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "documentado: «Después fueron saliendo los demás, en grupos pequeños y cada uno con su mayor», con las semillas en canastos (canon, campo mito)",
+          "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
+          "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
+          "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
+          "El oro, el metal y el brillo no existen en este corpus: todo material es mate, y ninguna superficie refleja.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Nada Kakua: ni Idn Kamni, ni saliva, ni tierra amasada, ni Río de Leche, ni el raudal de Kat-tsa-pa, ni de fondo.",
+          "Ninguna canoa, ningún remo y ninguna embarcación: los Nɨkak van a pie.",
+          "Ningún machete, hacha, escopeta, moneda, tela industrial ni objeto de mercado.",
+          "Ningún diseño de pintura corporal, y jamás un motivo de eoro, que es sustancia chamanística.",
+          "Ningún canto, fórmula ni procedimiento chamánico, y ninguna coreografía, atuendo ni instrumento del baile baap.",
+          "Ninguna figura de los kawéni' ni de los perseguidores: la amenaza queda fuera de campo.",
+          "Nadie huyendo, nadie llorando, nadie armado, ninguna reliquia y ninguna desnudez expuesta como exotismo.",
+          "Ningún lugar localizable: ni rótulo, ni mapa, ni perfil de río o de laguna reconocible."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza rapada es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Las alas de la mariposa y el cuerpo de la oruga siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca escama por escama. El quilling se reserva para lo que enrolla de verdad: la resina que chorrea en la boca del hueco, el humo del fogón de hojas de maíz, la espiral del bejuco yaré del canasto."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_adulta__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_adulta"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Salen «las señoras Pugna y Yuredoa» con los suyos, y las familias cargan las semillas."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer adulta de pie, cabeza rapada, rojo plano en la cara, brazalete de fibra en el antebrazo y el canasto grande de bejuco a la espalda con banda de frente; el cuerpo algo más bajo y ancho que el del hombre.",
+        "materials": [
+          "cabeza rapada en un plano curvo",
+          "brazalete de fibra de moriche como tira lisa de un tono",
+          "canasto de bejuco yaré con banda de frente"
+        ],
+        "palette_logic": "Pardo mate de piel, fibra cruda del brazalete, tierra del bejuco y el rojo de la cara.",
+        "scale": "Un palmo por debajo del hombre adulto. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "cabeza rapada",
+          "brazalete de fibra como su marca",
+          "canasto siempre"
+        ],
+        "documented_features": [
+          "Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "«Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "«Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "Las hamacas y brazaletes de fibra de moriche los tejen las mujeres (PES, dossier §6), y se usan como forma genérica",
+          "El canon reescrito nombra a «las señoras Pugna y Yuredoa», que salen con los suyos (canon, campo mito)"
+        ],
+        "editorial_features": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y el rojo de achiote va encima como un campo plano sin línea, punto ni motivo; el cuerpo se arma con pocos planos grandes de papel pardo mate. Cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "Ninguna prenda: el relato y el dossier no documentan ninguna y el canon prohíbe añadir vestuario. La regla de la dignidad (salvaguarda 3) se cumple por encuadre y postura, de tres cuartos y con el canasto, nunca con una prenda inventada. Reversible sólo por lectura comunitaria.",
+          "Los aretes son forma genérica —una pieza pequeña colgante de un solo tono—, jamás una pieza real; ningún motivo de eoro, que es do_not_visualize.",
+          "El brazalete como marca de la mujer adulta es decisión de hoja a partir de que ellas lo tejen; reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Nɨkak V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Tierra de playa de río como papel granulado; bejuco del canasto como tiras entrecruzadas reales de papel; semillas como piezas pequeñas y plenas de un solo tono. Los dos mundos se construyen por planos escalonados en profundidad, con el hueco como la única costura entre ellos, y nunca por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer nɨkak adulta. Mujer adulta de pie, cabeza rapada, rojo plano en la cara, brazalete de fibra en el antebrazo y el canasto grande de bejuco a la espalda con banda de frente; el cuerpo algo más bajo y ancho que el del hombre.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Un palmo por debajo del hombre adulto. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de interior de bosque húmedo: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos excepciones y sólo dos: la boca del hueco, único punto donde la luz de arriba baja hacia bak y se lee como columna de claridad sin volumetría; y el fogón de hojas de maíz de Aukurɨbo, llama baja de humo alto y poca brasa. Bak no es oscuro: tiene la misma luz de bosque que yê.",
+        "materials_textures": "cabeza rapada en un plano curvo; brazalete de fibra de moriche como tira lisa de un tono; canasto de bejuco yaré con banda de frente",
+        "era": "Tiempo del nacimiento, sin fecha, y con un inventario material estricto: canasto grande de bejuco yaré, nueve semillas, fogón de hojas de maíz, resina, una playa de río, una laguna, la selva del interfluvio Guaviare-Inírida y dos ríos que divergen. Nada más se manufactura en el relato. Fuera de él y sólo como contexto declarado: cerbatana, arco, flechas, hamaca y brazaletes de moriche. Y el cierre del relato —los kawéni', sus escopetas, el desplazamiento del siglo XX— se narra y no se ilustra en ninguna lámina.",
+        "constraints": [
+          "documentado: Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "documentado: «Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "documentado: Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "documentado: «Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "documentado: Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "documentado: Las hamacas y brazaletes de fibra de moriche los tejen las mujeres (PES, dossier §6), y se usan como forma genérica",
+          "documentado: El canon reescrito nombra a «las señoras Pugna y Yuredoa», que salen con los suyos (canon, campo mito)",
+          "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
+          "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
+          "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
+          "El oro, el metal y el brillo no existen en este corpus: todo material es mate, y ninguna superficie refleja.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Nada Kakua: ni Idn Kamni, ni saliva, ni tierra amasada, ni Río de Leche, ni el raudal de Kat-tsa-pa, ni de fondo.",
+          "Ninguna canoa, ningún remo y ninguna embarcación: los Nɨkak van a pie.",
+          "Ningún machete, hacha, escopeta, moneda, tela industrial ni objeto de mercado.",
+          "Ningún diseño de pintura corporal, y jamás un motivo de eoro, que es sustancia chamanística.",
+          "Ningún canto, fórmula ni procedimiento chamánico, y ninguna coreografía, atuendo ni instrumento del baile baap.",
+          "Ninguna figura de los kawéni' ni de los perseguidores: la amenaza queda fuera de campo.",
+          "Nadie huyendo, nadie llorando, nadie armado, ninguna reliquia y ninguna desnudez expuesta como exotismo.",
+          "Ningún lugar localizable: ni rótulo, ni mapa, ni perfil de río o de laguna reconocible."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza rapada es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Las alas de la mariposa y el cuerpo de la oruga siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca escama por escama. El quilling se reserva para lo que enrolla de verdad: la resina que chorrea en la boca del hueco, el humo del fogón de hojas de maíz, la espiral del bejuco yaré del canasto."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_joven__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_joven"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Salen familias enteras, cada una con su mayor, y siembran donde se quedan."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Muchacha de cuerpo recto y delgado, cabeza rapada, el rojo plano en la cara y un canasto más pequeño a la espalda: camina detrás de la mujer adulta.",
+        "materials": [
+          "cabeza rapada en un plano curvo",
+          "canasto de bejuco más pequeño con banda de frente",
+          "arete pequeño de una pieza"
+        ],
+        "palette_logic": "Pardo mate claro de piel y el rojo de la cara.",
+        "scale": "Casi de estatura adulta. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "cabeza rapada",
+          "canasto más pequeño que el de los adultos",
+          "el rojo en la cara como campo liso"
+        ],
+        "documented_features": [
+          "Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "«Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "«Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "«Cada mayor llevó a su gente»: los que salen son familias enteras con sus semillas (canon, campo mito)"
+        ],
+        "editorial_features": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y el rojo de achiote va encima como un campo plano sin línea, punto ni motivo; el cuerpo se arma con pocos planos grandes de papel pardo mate. Cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "Ninguna prenda: el relato y el dossier no documentan ninguna y el canon prohíbe añadir vestuario. La regla de la dignidad (salvaguarda 3) se cumple por encuadre y postura, de tres cuartos y con el canasto, nunca con una prenda inventada. Reversible sólo por lectura comunitaria.",
+          "Los aretes son forma genérica —una pieza pequeña colgante de un solo tono—, jamás una pieza real; ningún motivo de eoro, que es do_not_visualize.",
+          "El relato no nombra muchachas: el tipo existe porque salen familias enteras, y la edad es decisión de reparto del grupo doméstico. Reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Nɨkak V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Tierra de playa de río como papel granulado; bejuco del canasto como tiras entrecruzadas reales de papel; semillas como piezas pequeñas y plenas de un solo tono. Los dos mundos se construyen por planos escalonados en profundidad, con el hueco como la única costura entre ellos, y nunca por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · mujer nɨkak joven. Muchacha de cuerpo recto y delgado, cabeza rapada, el rojo plano en la cara y un canasto más pequeño a la espalda: camina detrás de la mujer adulta.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Casi de estatura adulta. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de interior de bosque húmedo: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos excepciones y sólo dos: la boca del hueco, único punto donde la luz de arriba baja hacia bak y se lee como columna de claridad sin volumetría; y el fogón de hojas de maíz de Aukurɨbo, llama baja de humo alto y poca brasa. Bak no es oscuro: tiene la misma luz de bosque que yê.",
+        "materials_textures": "cabeza rapada en un plano curvo; canasto de bejuco más pequeño con banda de frente; arete pequeño de una pieza",
+        "era": "Tiempo del nacimiento, sin fecha, y con un inventario material estricto: canasto grande de bejuco yaré, nueve semillas, fogón de hojas de maíz, resina, una playa de río, una laguna, la selva del interfluvio Guaviare-Inírida y dos ríos que divergen. Nada más se manufactura en el relato. Fuera de él y sólo como contexto declarado: cerbatana, arco, flechas, hamaca y brazaletes de moriche. Y el cierre del relato —los kawéni', sus escopetas, el desplazamiento del siglo XX— se narra y no se ilustra en ninguna lámina.",
+        "constraints": [
+          "documentado: Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "documentado: «Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "documentado: Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "documentado: «Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "documentado: Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "documentado: «Cada mayor llevó a su gente»: los que salen son familias enteras con sus semillas (canon, campo mito)",
+          "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
+          "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
+          "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
+          "El oro, el metal y el brillo no existen en este corpus: todo material es mate, y ninguna superficie refleja.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Nada Kakua: ni Idn Kamni, ni saliva, ni tierra amasada, ni Río de Leche, ni el raudal de Kat-tsa-pa, ni de fondo.",
+          "Ninguna canoa, ningún remo y ninguna embarcación: los Nɨkak van a pie.",
+          "Ningún machete, hacha, escopeta, moneda, tela industrial ni objeto de mercado.",
+          "Ningún diseño de pintura corporal, y jamás un motivo de eoro, que es sustancia chamanística.",
+          "Ningún canto, fórmula ni procedimiento chamánico, y ninguna coreografía, atuendo ni instrumento del baile baap.",
+          "Ninguna figura de los kawéni' ni de los perseguidores: la amenaza queda fuera de campo.",
+          "Nadie huyendo, nadie llorando, nadie armado, ninguna reliquia y ninguna desnudez expuesta como exotismo.",
+          "Ningún lugar localizable: ni rótulo, ni mapa, ni perfil de río o de laguna reconocible."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza rapada es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Las alas de la mariposa y el cuerpo de la oruga siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca escama por escama. El quilling se reserva para lo que enrolla de verdad: la resina que chorrea en la boca del hueco, el humo del fogón de hojas de maíz, la espiral del bejuco yaré del canasto."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_nino__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_nino"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Los abuelos duplican los hijos para recuperar la familia; las familias salen con sus niños."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Niño de seis u ocho años de pie junto a un adulto, cabeza rapada, sin canasto, con un puñado de semillas en las dos manos: la cabeza grande respecto al tronco.",
+        "materials": [
+          "cabeza rapada en un plano curvo",
+          "semillas en la mano como piezas pequeñas de un solo tono"
+        ],
+        "palette_logic": "Pardo mate de piel, sin rojo en la cara: la pintura es marca de adulto en esta hoja.",
+        "scale": "A la cadera de un adulto. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "sin canasto",
+          "siempre junto a un adulto",
+          "sin pintura"
+        ],
+        "documented_features": [
+          "Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "«Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "«Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "Los abuelos «duplicaron los hijos, porque ya les habían matado parientes y había que recuperar la familia» (canon, campo mito)",
+          "Los niños aprenden a hacer canoas de balso como juguete: es la única canoa del expediente, y no entra al relato (dossier §2)"
+        ],
+        "editorial_features": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y el rojo de achiote va encima como un campo plano sin línea, punto ni motivo; el cuerpo se arma con pocos planos grandes de papel pardo mate. Cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "Ninguna prenda: el relato y el dossier no documentan ninguna y el canon prohíbe añadir vestuario. La regla de la dignidad (salvaguarda 3) se cumple por encuadre y postura, de tres cuartos y con el canasto, nunca con una prenda inventada. Reversible sólo por lectura comunitaria.",
+          "Los aretes son forma genérica —una pieza pequeña colgante de un solo tono—, jamás una pieza real; ningún motivo de eoro, que es do_not_visualize.",
+          "Sin rojo en la cara por decisión de hoja, no por fuente: reversible si una lectura nɨkak dice otra cosa."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Nɨkak V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Tierra de playa de río como papel granulado; bejuco del canasto como tiras entrecruzadas reales de papel; semillas como piezas pequeñas y plenas de un solo tono. Los dos mundos se construyen por planos escalonados en profundidad, con el hueco como la única costura entre ellos, y nunca por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · niño nɨkak. Niño de seis u ocho años de pie junto a un adulto, cabeza rapada, sin canasto, con un puñado de semillas en las dos manos: la cabeza grande respecto al tronco.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; A la cadera de un adulto. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de interior de bosque húmedo: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos excepciones y sólo dos: la boca del hueco, único punto donde la luz de arriba baja hacia bak y se lee como columna de claridad sin volumetría; y el fogón de hojas de maíz de Aukurɨbo, llama baja de humo alto y poca brasa. Bak no es oscuro: tiene la misma luz de bosque que yê.",
+        "materials_textures": "cabeza rapada en un plano curvo; semillas en la mano como piezas pequeñas de un solo tono",
+        "era": "Tiempo del nacimiento, sin fecha, y con un inventario material estricto: canasto grande de bejuco yaré, nueve semillas, fogón de hojas de maíz, resina, una playa de río, una laguna, la selva del interfluvio Guaviare-Inírida y dos ríos que divergen. Nada más se manufactura en el relato. Fuera de él y sólo como contexto declarado: cerbatana, arco, flechas, hamaca y brazaletes de moriche. Y el cierre del relato —los kawéni', sus escopetas, el desplazamiento del siglo XX— se narra y no se ilustra en ninguna lámina.",
+        "constraints": [
+          "documentado: Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "documentado: «Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "documentado: Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "documentado: «Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "documentado: Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "documentado: Los abuelos «duplicaron los hijos, porque ya les habían matado parientes y había que recuperar la familia» (canon, campo mito)",
+          "documentado: Los niños aprenden a hacer canoas de balso como juguete: es la única canoa del expediente, y no entra al relato (dossier §2)",
+          "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
+          "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
+          "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
+          "El oro, el metal y el brillo no existen en este corpus: todo material es mate, y ninguna superficie refleja.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Nada Kakua: ni Idn Kamni, ni saliva, ni tierra amasada, ni Río de Leche, ni el raudal de Kat-tsa-pa, ni de fondo.",
+          "Ninguna canoa, ningún remo y ninguna embarcación: los Nɨkak van a pie.",
+          "Ningún machete, hacha, escopeta, moneda, tela industrial ni objeto de mercado.",
+          "Ningún diseño de pintura corporal, y jamás un motivo de eoro, que es sustancia chamanística.",
+          "Ningún canto, fórmula ni procedimiento chamánico, y ninguna coreografía, atuendo ni instrumento del baile baap.",
+          "Ninguna figura de los kawéni' ni de los perseguidores: la amenaza queda fuera de campo.",
+          "Nadie huyendo, nadie llorando, nadie armado, ninguna reliquia y ninguna desnudez expuesta como exotismo.",
+          "Ningún lugar localizable: ni rótulo, ni mapa, ni perfil de río o de laguna reconocible."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza rapada es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Las alas de la mariposa y el cuerpo de la oruga siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca escama por escama. El quilling se reserva para lo que enrolla de verdad: la resina que chorrea en la boca del hueco, el humo del fogón de hojas de maíz, la espiral del bejuco yaré del canasto."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_anciano__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_anciano"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Aukurɨbo, «un viejo que era jefe verdadero», sale primero; cada grupo lo guía su mayor."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Viejo de pie un poco encorvado, cabeza y cejas rapadas, el rojo plano en la cara y un canasto a la espalda más liviano que el de los jóvenes; la edad se lee por la curva de la espalda y la delgadez de brazos y piernas, no por arrugas.",
+        "materials": [
+          "cabeza rapada en un plano curvo",
+          "canasto de bejuco con banda de frente",
+          "arete pequeño de una pieza"
+        ],
+        "palette_logic": "Pardo mate apagado de piel y el rojo de la cara.",
+        "scale": "Estatura adulta reducida por la curva de la espalda. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "espalda curva",
+          "el rojo como campo liso",
+          "sin arrugas dibujadas: el óvalo sigue plano"
+        ],
+        "documented_features": [
+          "Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "«Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "«Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "«El primero que salió fue Aukurɨbo, un viejo que era jefe verdadero»; cada grupo sale «con su mayor» (canon, campo mito)"
+        ],
+        "editorial_features": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y el rojo de achiote va encima como un campo plano sin línea, punto ni motivo; el cuerpo se arma con pocos planos grandes de papel pardo mate. Cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "Ninguna prenda: el relato y el dossier no documentan ninguna y el canon prohíbe añadir vestuario. La regla de la dignidad (salvaguarda 3) se cumple por encuadre y postura, de tres cuartos y con el canasto, nunca con una prenda inventada. Reversible sólo por lectura comunitaria.",
+          "Los aretes son forma genérica —una pieza pequeña colgante de un solo tono—, jamás una pieza real; ningún motivo de eoro, que es do_not_visualize.",
+          "La curva de la espalda como marca de edad es decisión de hoja: la técnica no modela rostro. Reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Nɨkak V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Tierra de playa de río como papel granulado; bejuco del canasto como tiras entrecruzadas reales de papel; semillas como piezas pequeñas y plenas de un solo tono. Los dos mundos se construyen por planos escalonados en profundidad, con el hueco como la única costura entre ellos, y nunca por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · anciano nɨkak. Viejo de pie un poco encorvado, cabeza y cejas rapadas, el rojo plano en la cara y un canasto a la espalda más liviano que el de los jóvenes; la edad se lee por la curva de la espalda y la delgadez de brazos y piernas, no por arrugas.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura adulta reducida por la curva de la espalda. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de interior de bosque húmedo: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos excepciones y sólo dos: la boca del hueco, único punto donde la luz de arriba baja hacia bak y se lee como columna de claridad sin volumetría; y el fogón de hojas de maíz de Aukurɨbo, llama baja de humo alto y poca brasa. Bak no es oscuro: tiene la misma luz de bosque que yê.",
+        "materials_textures": "cabeza rapada en un plano curvo; canasto de bejuco con banda de frente; arete pequeño de una pieza",
+        "era": "Tiempo del nacimiento, sin fecha, y con un inventario material estricto: canasto grande de bejuco yaré, nueve semillas, fogón de hojas de maíz, resina, una playa de río, una laguna, la selva del interfluvio Guaviare-Inírida y dos ríos que divergen. Nada más se manufactura en el relato. Fuera de él y sólo como contexto declarado: cerbatana, arco, flechas, hamaca y brazaletes de moriche. Y el cierre del relato —los kawéni', sus escopetas, el desplazamiento del siglo XX— se narra y no se ilustra en ninguna lámina.",
+        "constraints": [
+          "documentado: Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "documentado: «Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "documentado: Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "documentado: «Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "documentado: Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "documentado: «El primero que salió fue Aukurɨbo, un viejo que era jefe verdadero»; cada grupo sale «con su mayor» (canon, campo mito)",
+          "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
+          "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
+          "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
+          "El oro, el metal y el brillo no existen en este corpus: todo material es mate, y ninguna superficie refleja.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Nada Kakua: ni Idn Kamni, ni saliva, ni tierra amasada, ni Río de Leche, ni el raudal de Kat-tsa-pa, ni de fondo.",
+          "Ninguna canoa, ningún remo y ninguna embarcación: los Nɨkak van a pie.",
+          "Ningún machete, hacha, escopeta, moneda, tela industrial ni objeto de mercado.",
+          "Ningún diseño de pintura corporal, y jamás un motivo de eoro, que es sustancia chamanística.",
+          "Ningún canto, fórmula ni procedimiento chamánico, y ninguna coreografía, atuendo ni instrumento del baile baap.",
+          "Ninguna figura de los kawéni' ni de los perseguidores: la amenaza queda fuera de campo.",
+          "Nadie huyendo, nadie llorando, nadie armado, ninguna reliquia y ninguna desnudez expuesta como exotismo.",
+          "Ningún lugar localizable: ni rótulo, ni mapa, ni perfil de río o de laguna reconocible."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza rapada es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Las alas de la mariposa y el cuerpo de la oruga siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca escama por escama. El quilling se reserva para lo que enrolla de verdad: la resina que chorrea en la boca del hueco, el humo del fogón de hojas de maíz, la espiral del bejuco yaré del canasto."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_anciana__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_anciana"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-nukak-maku",
+          "field": "mito",
+          "note": "Los abuelos se retiran a vivir tranquilos cuando llegan los kawéni' jeñe."
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Anciana de pie y quieta, cabeza rapada, rojo plano en la cara, brazalete de fibra y un canasto pequeño a la espalda; la espalda algo curva y los brazos delgados.",
+        "materials": [
+          "cabeza rapada en un plano curvo",
+          "brazalete de fibra de moriche liso",
+          "canasto pequeño de bejuco con banda de frente"
+        ],
+        "palette_logic": "Pardo mate apagado, fibra cruda y el rojo de la cara.",
+        "scale": "Algo por debajo de la mujer adulta. Cuerpo entero 9:16.",
+        "continuity_markers": [
+          "espalda curva",
+          "brazalete de fibra",
+          "el rojo como campo liso"
+        ],
+        "documented_features": [
+          "Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "«Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "«Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "«Los abuelos se retiraron a lugares donde pudieran vivir tranquilos» (canon, campo mito)",
+          "Las mujeres tejen los brazaletes de fibra de moriche (PES, dossier §6)"
+        ],
+        "editorial_features": [
+          "El rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y el rojo de achiote va encima como un campo plano sin línea, punto ni motivo; el cuerpo se arma con pocos planos grandes de papel pardo mate. Cara y cuerpo se nombran por separado para que el modelo no esculpa.",
+          "Ninguna prenda: el relato y el dossier no documentan ninguna y el canon prohíbe añadir vestuario. La regla de la dignidad (salvaguarda 3) se cumple por encuadre y postura, de tres cuartos y con el canasto, nunca con una prenda inventada. Reversible sólo por lectura comunitaria.",
+          "Los aretes son forma genérica —una pieza pequeña colgante de un solo tono—, jamás una pieza real; ningún motivo de eoro, que es do_not_visualize.",
+          "El relato dice «abuelos» sin separar sexo: la anciana es inferencia del grupo doméstico. Reversible."
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Nɨkak V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa. Tierra de playa de río como papel granulado; bejuco del canasto como tiras entrecruzadas reales de papel; semillas como piezas pequeñas y plenas de un solo tono. Los dos mundos se construyen por planos escalonados en profundidad, con el hueco como la única costura entre ellos, y nunca por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · anciana nɨkak. Anciana de pie y quieta, cabeza rapada, rojo plano en la cara, brazalete de fibra y un canasto pequeño a la espalda; la espalda algo curva y los brazos delgados.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Algo por debajo de la mujer adulta. Cuerpo entero 9:16.",
+        "lighting_mood": "Luz de interior de bosque húmedo: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Dos excepciones y sólo dos: la boca del hueco, único punto donde la luz de arriba baja hacia bak y se lee como columna de claridad sin volumetría; y el fogón de hojas de maíz de Aukurɨbo, llama baja de humo alto y poca brasa. Bak no es oscuro: tiene la misma luz de bosque que yê.",
+        "materials_textures": "cabeza rapada en un plano curvo; brazalete de fibra de moriche liso; canasto pequeño de bejuco con banda de frente",
+        "era": "Tiempo del nacimiento, sin fecha, y con un inventario material estricto: canasto grande de bejuco yaré, nueve semillas, fogón de hojas de maíz, resina, una playa de río, una laguna, la selva del interfluvio Guaviare-Inírida y dos ríos que divergen. Nada más se manufactura en el relato. Fuera de él y sólo como contexto declarado: cerbatana, arco, flechas, hamaca y brazaletes de moriche. Y el cierre del relato —los kawéni', sus escopetas, el desplazamiento del siglo XX— se narra y no se ilustra en ninguna lámina.",
+        "constraints": [
+          "documentado: Deslinde escrito en la ficha, no al pie: este tipo es Nɨkak. Nada Kakua —Idn Kamni, Río de Leche— y nada chimila: la página pública de este relato muestra hoy una imagen chimila (decisiones abiertas §4), y ningún rasgo, prenda ni paleta de esa imagen entra aquí",
+          "documentado: «Tenían el cuerpo como nosotros» (dossier §3, narración de Embe): cuerpo humano corriente, sin deriva protohumana ni exótica",
+          "documentado: Cabeza y cejas rapadas y cara pintada de rojo: así los describe el PES en 1988, en voz de los colonos, y lo confirman los mayores —«los nükak ya no se están cortando el pelo»—; el rojo es achiote, Bixa orellana (dossier §6, contemporary_memory)",
+          "documentado: «Para ser un nükak verdadero se utilizan los aretes… ellos necesitan la pintura para reconocer la gente» (PES, dossier §6)",
+          "documentado: Regla de las manos: canasto, y fuera del relato cerbatana, arco y flechas; nunca canoa, machete, hacha, escopeta ni objeto de mercado (dossier §11, salvaguarda 2)",
+          "documentado: «Los abuelos se retiraron a lugares donde pudieran vivir tranquilos» (canon, campo mito)",
+          "documentado: Las mujeres tejen los brazaletes de fibra de moriche (PES, dossier §6)",
+          "El corpus no nombra un solo color: la paleta sale de la tierra de playa, el bejuco, la semilla y el verde apagado del bosque de interfluvio.",
+          "El único rojo de la biblia es el achiote en la cara, y es reconocimiento y no adorno: nunca lleva diseño, y no hay ningún otro rojo saturado.",
+          "Bak y yê comparten paleta: la diferencia entre los dos mundos no es de tono ni de luz, es de que abajo los perseguían.",
+          "El oro, el metal y el brillo no existen en este corpus: todo material es mate, y ninguna superficie refleja.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "Nada Kakua: ni Idn Kamni, ni saliva, ni tierra amasada, ni Río de Leche, ni el raudal de Kat-tsa-pa, ni de fondo.",
+          "Ninguna canoa, ningún remo y ninguna embarcación: los Nɨkak van a pie.",
+          "Ningún machete, hacha, escopeta, moneda, tela industrial ni objeto de mercado.",
+          "Ningún diseño de pintura corporal, y jamás un motivo de eoro, que es sustancia chamanística.",
+          "Ningún canto, fórmula ni procedimiento chamánico, y ninguna coreografía, atuendo ni instrumento del baile baap.",
+          "Ninguna figura de los kawéni' ni de los perseguidores: la amenaza queda fuera de campo.",
+          "Nadie huyendo, nadie llorando, nadie armado, ninguna reliquia y ninguna desnudez expuesta como exotismo.",
+          "Ningún lugar localizable: ni rótulo, ni mapa, ni perfil de río o de laguna reconocible."
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. La cabeza rapada es un solo plano curvo sin costura. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Las alas de la mariposa y el cuerpo de la oruga siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca escama por escama. El quilling se reserva para lo que enrolla de verdad: la resina que chorrea en la boca del hueco, el humo del fogón de hojas de maíz, la espiral del bejuco yaré del canasto."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
