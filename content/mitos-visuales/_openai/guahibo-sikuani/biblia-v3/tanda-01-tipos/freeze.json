@@ -1,0 +1,147 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "guahibo-sikuani",
+  "comunidad": "Sikuani (Guahíbo)",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/guahibo-sikuani.v3.json",
+    "sha256": "9b642f8e20d4f0f07471372b98745950fb34e5d359f0bf928915ce9d7f6f596a"
+  },
+  "canon": {
+    "sha256": "b915af478564a4987fb3256d1d08a4fe205b8aebfd5572ecf4fe54ec6e1ed923",
+    "verificado_en": "2026-09-25T13:59:46.707Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre adulto sikuani",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos",
+        "el-tigre",
+        "historia-de-un-brujo",
+        "historia-de-un-tigre",
+        "kawiri-monae",
+        "la-comida-para-los-muertos",
+        "la-mujer-sarnosa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6173,
+      "prompt_sha256": "052e7f476e32b15599e1e14ba32b3caf758375a0527c81cc9f18f64b1a89b726"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer adulta sikuani",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos",
+        "el-tigre",
+        "historia-de-un-tigre",
+        "historia-de-un-viejo",
+        "kawiri-monae",
+        "la-mujer-sarnosa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5632,
+      "prompt_sha256": "c46ef054cedc0e35e79ade631f3418affb663f58a0105cf65020f31a81784fc5"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño sikuani",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-tigre",
+        "historia-de-un-tigre",
+        "historia-de-un-viejo",
+        "kawiri-monae",
+        "la-mujer-sarnosa",
+        "la-comida-para-los-muertos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5419,
+      "prompt_sha256": "a8f203fde406726d080d4d90c759caefdfc3720e395670f3f421bd48896e86a2"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base · anciana sikuani",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos",
+        "historia-de-un-tigre",
+        "historia-de-un-viejo",
+        "la-danta-y-el-terecay"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5384,
+      "prompt_sha256": "11017285ff2c79445dfcc9894a03b0ba64b154e2055393b58b9ff6d4580a0435"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer joven sikuani",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos",
+        "la-comida-para-los-muertos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5488,
+      "prompt_sha256": "0859633b73b60534c0c145cda30b17d7de618a59f8418d941eb64d6a0c7ecfc4"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base · anciano sikuani",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "historia-de-un-viejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5301,
+      "prompt_sha256": "53492adfed2ed70971a3ad0fc915e2bfb7bb0e6aa0366189d82b4401b3e3554e"
+    }
+  ]
+}
