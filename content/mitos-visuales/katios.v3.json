@@ -1010,7 +1010,7 @@
     },
     "derivation_note": "Las entidades, sus evidencias y los refs se derivaron del censo y de la matriz de evidencia. El rol sale de la categoria segun ROL_POR_CATEGORIA; la entidad primaria es una candidata propuesta por el script y hay que confirmarla leyendo el relato. El bloque design y la nota de cada bitacora se escriben a mano.",
     "approved_by": "Propietario editorial del proyecto",
-    "approved_at": "2026-09-19"
+    "approved_at": "2026-09-24"
   },
   "myths": {
     "a-transformacion-del-hombre-que-no-podia-cazar": {
@@ -1077,6 +1077,11 @@
           "entity_id": "pakore",
           "role": "magic_subject",
           "note": "Verificado: el expediente del cazador dice de ella «ese marco explica de qué habla el título, pero no es este relato y no debe leerse como si lo fuera». En «Los Bibidigomia» sólo aparece como el tigre guardián de la narración de 1929 —imamá pacoré—, que el canon separa de la de Bailarín. Además es la dueña de la caza, materia de consulta."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base del hombre emberá katío del estrato de fundación: individualiza la gramática de `gente-embera-katio` —guayuco de corteza hasta la rodilla, chaquiras cruzadas en el tórax, juafa azul oscuro, negro de jagua, pelo largo suelto— para los hombres sin nombre de este relato."
         }
       ]
     },
@@ -1159,6 +1164,11 @@
           "entity_id": "montanas-del-noroccidente",
           "role": "setting",
           "note": "La montaña a la que sale la mujer que mira al sol, el Cerro León, la cordillera ya en Antioquia, la peña del diluvio, los filos y peñas del occidente antioqueño. Un modelo de entorno para todas ellas; el Cerro Plateado va aparte porque tiene rasgo propio."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base de la mujer emberá katío: individualiza la gramática de `mujeres-embera` —paruma de corteza, torso descubierto, chaquiras al cuello, juafa, pelo largo suelto, un hombro cargado— para las mujeres sin nombre de este relato."
         }
       ]
     },
@@ -1321,6 +1331,16 @@
           "entity_id": "hoja_utileria_hogar",
           "role": "plot_object",
           "note": "Seis objetos menores del interior del bohío y del fogón, todos de uso repetido y ninguno con peso narrativo propio: la totuma que tapa la gota de agua y se pone boca abajo sobre el niño, las ollas de chicha del convite, la hamaca donde mecen al niño, las canastadas de ajíes, la hoguera donde arde el cadáver de Costé y el agua caliente que acaba con el Aribamia."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base del hombre emberá katío del estrato de fundación: individualiza la gramática de `gente-embera-katio` —guayuco de corteza hasta la rodilla, chaquiras cruzadas en el tórax, juafa azul oscuro, negro de jagua, pelo largo suelto— para los hombres sin nombre de este relato."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base de la mujer emberá katío: individualiza la gramática de `mujeres-embera` —paruma de corteza, torso descubierto, chaquiras al cuello, juafa, pelo largo suelto, un hombro cargado— para las mujeres sin nombre de este relato."
         }
       ]
     },
@@ -1423,6 +1443,11 @@
           "entity_id": "hoja_utileria_hogar",
           "role": "plot_object",
           "note": "Seis objetos menores del interior del bohío y del fogón, todos de uso repetido y ninguno con peso narrativo propio: la totuma que tapa la gota de agua y se pone boca abajo sobre el niño, las ollas de chicha del convite, la hamaca donde mecen al niño, las canastadas de ajíes, la hoguera donde arde el cadáver de Costé y el agua caliente que acaba con el Aribamia."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base del hombre emberá katío del estrato de fundación: individualiza la gramática de `gente-embera-katio` —guayuco de corteza hasta la rodilla, chaquiras cruzadas en el tórax, juafa azul oscuro, negro de jagua, pelo largo suelto— para los hombres sin nombre de este relato."
         }
       ]
     },
@@ -1590,6 +1615,31 @@
           "entity_id": "hoja_utileria_materia_de_creacion",
           "role": "plot_object",
           "note": "Cinco piezas menudas del relato de la creación, más materia que objeto: la carta anacrónica del refundido misionero, la piedra fina de la pareja fallida, el barro que anima, la gota tapada con totuma y el pedacito de costilla. Se agrupan porque ninguna se ve más de un instante."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base del hombre emberá katío del estrato de fundación: individualiza la gramática de `gente-embera-katio` —guayuco de corteza hasta la rodilla, chaquiras cruzadas en el tórax, juafa azul oscuro, negro de jagua, pelo largo suelto— para los hombres sin nombre de este relato."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base de la mujer emberá katío: individualiza la gramática de `mujeres-embera` —paruma de corteza, torso descubierto, chaquiras al cuello, juafa, pelo largo suelto, un hombro cargado— para las mujeres sin nombre de este relato."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base del niño emberá katío: fija cara y cuerpo para las tres alturas de la gramática `ninos`, sin mostrar nunca la muerte de un niño que el relato cuenta."
+        },
+        {
+          "entity_id": "tipo_anciano",
+          "role": "secondary",
+          "note": "Tipo base: «apenas ven el primer relámpago escupen, para inmunizarse, y lo mismo hacen las personas mayores»: el anciano en el gesto de escupir al relámpago."
+        },
+        {
+          "entity_id": "tipo_anciana",
+          "role": "secondary",
+          "note": "Tipo base: las personas mayores que escupen ante el primer relámpago; la anciana hace el mismo gesto."
         }
       ]
     },
@@ -1874,6 +1924,11 @@
           "entity_id": "hoja_utileria_hogar",
           "role": "plot_object",
           "note": "Seis objetos menores del interior del bohío y del fogón, todos de uso repetido y ninguno con peso narrativo propio: la totuma que tapa la gota de agua y se pone boca abajo sobre el niño, las ollas de chicha del convite, la hamaca donde mecen al niño, las canastadas de ajíes, la hoguera donde arde el cadáver de Costé y el agua caliente que acaba con el Aribamia."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base del hombre emberá katío del estrato de fundación: individualiza la gramática de `gente-embera-katio` —guayuco de corteza hasta la rodilla, chaquiras cruzadas en el tórax, juafa azul oscuro, negro de jagua, pelo largo suelto— para los hombres sin nombre de este relato."
         }
       ]
     },
@@ -2061,6 +2116,16 @@
           "entity_id": "hoja_utileria_materia_de_creacion",
           "role": "plot_object",
           "note": "Cinco piezas menudas del relato de la creación, más materia que objeto: la carta anacrónica del refundido misionero, la piedra fina de la pareja fallida, el barro que anima, la gota tapada con totuma y el pedacito de costilla. Se agrupan porque ninguna se ve más de un instante."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base del hombre emberá katío del estrato de fundación: individualiza la gramática de `gente-embera-katio` —guayuco de corteza hasta la rodilla, chaquiras cruzadas en el tórax, juafa azul oscuro, negro de jagua, pelo largo suelto— para los hombres sin nombre de este relato."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base de la mujer emberá katío: individualiza la gramática de `mujeres-embera` —paruma de corteza, torso descubierto, chaquiras al cuello, juafa, pelo largo suelto, un hombro cargado— para las mujeres sin nombre de este relato."
         }
       ]
     },
@@ -2138,6 +2203,11 @@
           "entity_id": "carautas",
           "role": "secondary",
           "note": "Verificado: sólo en «historia» y «versiones», como lectura etnohistórica de Vargas y Botero sobre quiénes son los dueños del oro de las crónicas y sobre el posible origen de la palabra catío. No hay carauta en ningún «mito»."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base del hombre emberá katío del estrato de fundación: individualiza la gramática de `gente-embera-katio` —guayuco de corteza hasta la rodilla, chaquiras cruzadas en el tórax, juafa azul oscuro, negro de jagua, pelo largo suelto— para los hombres sin nombre de este relato."
         }
       ]
     },
@@ -2200,6 +2270,11 @@
           "entity_id": "hermanos-pegados-por-el-incesto",
           "role": "secondary",
           "note": "Verificado en los dos mitos: «recibieron un castigo que todavía están sufriendo, aunque de qué hechura sea ese castigo no se cuenta». La hechura sólo la da la variante de 1929 —quedar pegados en la acción vergonzosa junto a una piedra enorme—, que el relato publicado se niega a referir y que además es sexualmente explícita."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base del hombre emberá katío del estrato de fundación: individualiza la gramática de `gente-embera-katio` —guayuco de corteza hasta la rodilla, chaquiras cruzadas en el tórax, juafa azul oscuro, negro de jagua, pelo largo suelto— para los hombres sin nombre de este relato."
         }
       ]
     },
@@ -2407,6 +2482,11 @@
           "entity_id": "hoja_utileria_materia_de_creacion",
           "role": "plot_object",
           "note": "Cinco piezas menudas del relato de la creación, más materia que objeto: la carta anacrónica del refundido misionero, la piedra fina de la pareja fallida, el barro que anima, la gota tapada con totuma y el pedacito de costilla. Se agrupan porque ninguna se ve más de un instante."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base del hombre emberá katío del estrato de fundación: individualiza la gramática de `gente-embera-katio` —guayuco de corteza hasta la rodilla, chaquiras cruzadas en el tórax, juafa azul oscuro, negro de jagua, pelo largo suelto— para los hombres sin nombre de este relato."
         }
       ]
     },
@@ -2539,6 +2619,16 @@
           "entity_id": "ballena-y-ancumia",
           "role": "secondary",
           "note": "Verificado en «versiones»: pertenecen a las notas de 1929, de las que el canon dice que «no traen una variante de detalle sino otra narración» —allí quien concibe es un hombre, las acusaciones son tres y el árbol es un sauce—. El mito publicado sigue el texto de 1924 y no los tiene."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base de la mujer emberá katío: individualiza la gramática de `mujeres-embera` —paruma de corteza, torso descubierto, chaquiras al cuello, juafa, pelo largo suelto, un hombro cargado— para las mujeres sin nombre de este relato."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base: la mujer del linaje domicó que estaba pescando cuando concibió; figura joven de paruma recogida para entrar al agua."
         }
       ]
     },
@@ -2631,6 +2721,11 @@
           "entity_id": "hoja_utileria_herramientas",
           "role": "plot_object",
           "note": "Seis herramientas y aparejos de trabajo y captura. Ninguno conduce por sí mismo: sirven un golpe, un tirón o un lance y desaparecen. El arco, la lanza miatzu y la canoa quedan fuera de la hoja porque cada uno sostiene un relato entero."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base del niño emberá katío: fija cara y cuerpo para las tres alturas de la gramática `ninos`, sin mostrar nunca la muerte de un niño que el relato cuenta."
         }
       ]
     },
@@ -2753,6 +2848,26 @@
           "entity_id": "velo-enganoso",
           "role": "magic_subject",
           "note": "Verificado en el mito: «Caragabí les pasó por los ojos como un velo engañoso, para que vieran el cielo muy lejos». Es un acto invisible y una comparación; no hay objeto ni forma que dibujar, y ponerle una sería inventarla."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base del hombre emberá katío del estrato de fundación: individualiza la gramática de `gente-embera-katio` —guayuco de corteza hasta la rodilla, chaquiras cruzadas en el tórax, juafa azul oscuro, negro de jagua, pelo largo suelto— para los hombres sin nombre de este relato."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base de la mujer emberá katío: individualiza la gramática de `mujeres-embera` —paruma de corteza, torso descubierto, chaquiras al cuello, juafa, pelo largo suelto, un hombro cargado— para las mujeres sin nombre de este relato."
+        },
+        {
+          "entity_id": "tipo_mujer_joven",
+          "role": "secondary",
+          "note": "Tipo base: «subía una india con un niño de brazos cargado a la espalda, como acostumbran cargarlos»; el tipo le da el cuerpo sin la caída."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base del niño emberá katío: fija cara y cuerpo para las tres alturas de la gramática `ninos`, sin mostrar nunca la muerte de un niño que el relato cuenta."
         }
       ]
     },
@@ -2910,6 +3025,21 @@
           "entity_id": "hoja_utileria_herramientas",
           "role": "plot_object",
           "note": "Seis herramientas y aparejos de trabajo y captura. Ninguno conduce por sí mismo: sirven un golpe, un tirón o un lance y desaparecen. El arco, la lanza miatzu y la canoa quedan fuera de la hoja porque cada uno sostiene un relato entero."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base del hombre emberá katío del estrato de fundación: individualiza la gramática de `gente-embera-katio` —guayuco de corteza hasta la rodilla, chaquiras cruzadas en el tórax, juafa azul oscuro, negro de jagua, pelo largo suelto— para los hombres sin nombre de este relato."
+        },
+        {
+          "entity_id": "tipo_mujer_adulta",
+          "role": "secondary",
+          "note": "Tipo base de la mujer emberá katío: individualiza la gramática de `mujeres-embera` —paruma de corteza, torso descubierto, chaquiras al cuello, juafa, pelo largo suelto, un hombro cargado— para las mujeres sin nombre de este relato."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base del niño emberá katío: fija cara y cuerpo para las tres alturas de la gramática `ninos`, sin mostrar nunca la muerte de un niño que el relato cuenta."
         }
       ]
     },
@@ -3037,6 +3167,11 @@
           "entity_id": "hoja_utileria_hogar",
           "role": "plot_object",
           "note": "Seis objetos menores del interior del bohío y del fogón, todos de uso repetido y ninguno con peso narrativo propio: la totuma que tapa la gota de agua y se pone boca abajo sobre el niño, las ollas de chicha del convite, la hamaca donde mecen al niño, las canastadas de ajíes, la hoguera donde arde el cadáver de Costé y el agua caliente que acaba con el Aribamia."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base del hombre emberá katío del estrato de fundación: individualiza la gramática de `gente-embera-katio` —guayuco de corteza hasta la rodilla, chaquiras cruzadas en el tórax, juafa azul oscuro, negro de jagua, pelo largo suelto— para los hombres sin nombre de este relato."
         }
       ]
     },
@@ -3244,6 +3379,11 @@
           "entity_id": "hoja_utileria_materia_de_creacion",
           "role": "plot_object",
           "note": "Cinco piezas menudas del relato de la creación, más materia que objeto: la carta anacrónica del refundido misionero, la piedra fina de la pareja fallida, el barro que anima, la gota tapada con totuma y el pedacito de costilla. Se agrupan porque ninguna se ve más de un instante."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base del hombre emberá katío del estrato de fundación: individualiza la gramática de `gente-embera-katio` —guayuco de corteza hasta la rodilla, chaquiras cruzadas en el tórax, juafa azul oscuro, negro de jagua, pelo largo suelto— para los hombres sin nombre de este relato."
         }
       ]
     },
@@ -3376,6 +3516,16 @@
           "entity_id": "nunsi-y-birri",
           "role": "secondary",
           "note": "Verificado: aparecen únicamente como nombres de las secciones vecinas en los libros fuente —«justo antes de los Nunsí», «entre la pieza de Gioró y la del birri»—, usados para situar la página en el impreso. No son personajes de ningún relato."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base del hombre emberá katío del estrato de fundación: individualiza la gramática de `gente-embera-katio` —guayuco de corteza hasta la rodilla, chaquiras cruzadas en el tórax, juafa azul oscuro, negro de jagua, pelo largo suelto— para los hombres sin nombre de este relato."
+        },
+        {
+          "entity_id": "tipo_nino",
+          "role": "secondary",
+          "note": "Tipo base del niño emberá katío: fija cara y cuerpo para las tres alturas de la gramática `ninos`, sin mostrar nunca la muerte de un niño que el relato cuenta."
         }
       ]
     },
@@ -3488,11 +3638,495 @@
           "entity_id": "hoja_utileria_guerra",
           "role": "plot_object",
           "note": "Cinco piezas menores de la memoria de guerra, ninguna descrita con detalle en el corpus. Las cabezas de trofeo y el collar de dientes no entran aquí: los dos son señales que actúan —se mueven solas, suenan como campanas— y llevan ficha propia."
+        },
+        {
+          "entity_id": "tipo_hombre_adulto",
+          "role": "secondary",
+          "note": "Tipo base del hombre emberá katío del estrato de fundación: individualiza la gramática de `gente-embera-katio` —guayuco de corteza hasta la rodilla, chaquiras cruzadas en el tórax, juafa azul oscuro, negro de jagua, pelo largo suelto— para los hombres sin nombre de este relato."
         }
       ]
     }
   },
   "entities": {
+    "tipo_hombre_adulto": {
+      "name": "Hombre emberá katío adulto (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base del hombre emberá katío del estrato de fundación: guayuco de corteza percutida de damagua en corte vertical hasta la rodilla, collares de chaquira cruzados en el tórax, juafa azul oscuro en muñecas y tobillos, negro de jagua en bandas de trazo doble y pelo negro largo suelto sobre los hombros. Fija la cara y el cuerpo que heredan Caragabí, Séver, Cobaima, el jaibaná y los hijos de Séver.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_hombre_adulto__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "a-transformacion-del-hombre-que-no-podia-cazar",
+        "antomia",
+        "aribamias",
+        "baha",
+        "coste",
+        "creacion-katios",
+        "dabeiba",
+        "el-origen-del-sol-y-la-luna",
+        "fragmentos-de-otras-tradiciones",
+        "la-escalera-del-cielo",
+        "los-bibidigomias",
+        "los-domicoes",
+        "sever",
+        "tradicion-del-cerro",
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-katios",
+          "field": "mito",
+          "note": "El guayuco emberá es «una tela de corte vertical y larga que les llegaba hasta la rodilla», sujeta a la cadera con amarre de fibra natural; la corteza de damagua (Poulsenia armata) era la materia antigua del vestuario, trabajada por los hombres (dossier §6)"
+        },
+        {
+          "myth": "sever",
+          "field": "mito",
+          "note": "Los hombres llevan collares de chaquira «entrecruzados de manera permanente en su tórax»; la juafa es de cuentas azul oscuro en muñecas y tobillos (dossier §6)"
+        },
+        {
+          "myth": "baha",
+          "field": "mito",
+          "note": "Caragabí coge a Baha «de la cabellera»; el corpus nombra el pelo tres veces y siempre largo y suelto (dossier §6)"
+        },
+        {
+          "myth": "los-domicoes",
+          "field": "mito",
+          "note": "Negro de jagua para el cuerpo, trazo doble por el trinche de dos puntas; el rojo de achiote en la cara de una figura ordinaria queda contextual y no se usa (dossier §6)"
+        }
+      ],
+      "census_note": "Tipo base del hombre emberá katío del estrato de fundación: guayuco de corteza percutida de damagua en corte vertical hasta la rodilla, collares de chaquira cruzados en el tórax, juafa azul oscuro en muñecas y tobillos, negro de jagua en bandas de trazo doble y pelo negro largo suelto sobre los hombros. Fija la cara y el cuerpo que heredan Caragabí, Séver, Cobaima, el jaibaná y los hijos de Séver.",
+      "design": {
+        "silhouette": "Hombre adulto de pie y de tres cuartos, torso desnudo cruzado por dos tiras de chaquira en aspa sobre el pecho, guayuco de corteza de una sola pieza que cae vertical hasta la rodilla desde un amarre de fibra en la cadera, juafa azul oscuro en muñecas y tobillos; en una mano un arco y dos flechas, el pelo negro largo suelto sobre los hombros. Dos bandas anchas de negro de jagua, de trazo doble, le recorren brazos y pantorrillas.",
+        "materials": [
+          "cuerpo en planos de papel pardo de un solo tono, sin músculo modelado",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados como piezas separadas, sin pintura roja",
+          "guayuco de corteza percutida: papel sin trama, apelmazado, mate, de crudo a pardo claro, con la irregularidad del percutido",
+          "amarre de fibra natural torcida a la cadera",
+          "chaquiras en tiras lisas de papel de cuentas, sin figura reconocible",
+          "juafa: vueltas de papel de cuentas azul oscuro en muñecas y tobillos",
+          "negro de jagua como bandas planas recortadas en papel negro mate, en pares paralelos",
+          "pelo negro liso y largo en pocas piezas planas grandes con el borde en dientes"
+        ],
+        "palette": "Pardo de la piel, crudo de la corteza, negro de jagua y el azul oscuro de la juafa como único color frío; nada de rojo en la cara, nada de plata.",
+        "scale": "Figura entera en 9:16, de la misma altura de hombro que todo el colectivo: la jerarquía nunca se marca con talla.",
+        "continuity": [
+          "ningún patrón real de kipará: la pintura es banda plana de trazo doble y nunca un diseño reconocible",
+          "sin chaguala, sin nariguera de media luna y sin rojo en la cara: eso es cuna",
+          "sin plata en el estrato de fundación: karuso y brazaletes de plata son coloniales",
+          "sin ambura, que es sólo de fiesta, y sin insignia de jaibaná: corona, espejo, bastón o figura tallada",
+          "sin bodoquera: el corpus nombra arco y flecha",
+          "Caragabí, Séver, Cobaima y el jaibaná heredan este cuerpo y este vestido y sólo escriben lo que se aparta"
+        ],
+        "documented": [
+          "guayuco emberá de corte vertical y largo hasta la rodilla, sujeto a la cadera con amarre de fibra natural (dossier §6, chasoy)",
+          "la corteza de damagua percutida era la materia antigua de paruma y guayuco, trabajo del hombre (dossier §6)",
+          "collares de chaquira entrecruzados de manera permanente en el tórax de los hombres (dossier §6, severino)",
+          "juafa de cuentas azul oscuro en muñecas y tobillos (dossier §6)",
+          "negro de jagua para el cuerpo, preparado con ceniza de balso, trazado con trinche de dos puntas (dossier §6)",
+          "pelo negro liso, largo y suelto sobre los hombros en hombres y mujeres (dossier §6, corpus)",
+          "arco y flecha en el corpus; caza, pesca, agricultura y talla son oficio del hombre (dossier §6)"
+        ],
+        "editorial": [
+          "que el estrato de fundación vaya en corteza y no en tela es interpretación editorial declarada: ninguna fuente fecha el cambio antes del siglo XX en términos absolutos (dossier §9)",
+          "vestido, adorno y pintura salen de fuentes pan-emberá y de un libro misionero de 1924, no de una monografía katía (dossier §11)",
+          "el guayuco rojo de la etapa de tela comercial no entra: se toma el corte, no el color",
+          "rostro, edad y la ubicación concreta de las bandas de jagua son construcción editorial"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "inferred",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_mujer_adulta": {
+      "name": "Mujer emberá katío adulta (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base de la mujer emberá katío del estrato de fundación: paruma de corteza de metro y medio atada a la cintura con un amarre sencillo, torso descubierto, collares de chaquira verticales al cuello, juafa azul oscuro, negro de jagua y pelo largo suelto, con un hombro siempre cargado —canasto liso, totuma, leña—.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_mujer_adulta__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "ancastor",
+        "antomia",
+        "baha",
+        "creacion-katios",
+        "herupotoarra",
+        "la-escalera-del-cielo",
+        "los-bibidigomias"
+      ],
+      "evidence": [
+        {
+          "myth": "creacion-katios",
+          "field": "mito",
+          "note": "Paruma: «tela de metro y medio de largo, única pieza que conformaba el vestuario de la mujer, sujetada a la cintura mediante un amarre sencillo»; en el corpus es lo que Caragabí da a la primera pareja (dossier §6)"
+        },
+        {
+          "myth": "los-bibidigomias",
+          "field": "mito",
+          "note": "La mujer se ocupa del alimento, la confección, la crianza, la cestería, la huerta y la pesca; el barequeo lo hacen los dos (dossier §6)"
+        },
+        {
+          "myth": "antomia",
+          "field": "mito",
+          "note": "Okamâ: collares de chaquira de varios colores «generalmente usados de manera vertical»; cruzados sólo para la danza (dossier §6)"
+        }
+      ],
+      "census_note": "Tipo base de la mujer emberá katío del estrato de fundación: paruma de corteza de metro y medio atada a la cintura con un amarre sencillo, torso descubierto, collares de chaquira verticales al cuello, juafa azul oscuro, negro de jagua y pelo largo suelto, con un hombro siempre cargado —canasto liso, totuma, leña—.",
+      "design": {
+        "silhouette": "Mujer adulta de pie, con la línea del cuerpo inclinada hacia el hombro que carga un canasto liso de bejuco, el otro brazo libre; paruma de corteza atada a la cintura con un amarre sencillo que le cae a media pierna, torso descubierto con collares de chaquira colgando en vertical, juafa azul oscuro en muñecas y tobillos, bandas de jagua de trazo doble en los antebrazos y el pelo negro largo suelto cayendo hacia el lado contrario al de la carga.",
+        "materials": [
+          "cuerpo en planos de papel pardo de un solo tono, sin volumen modelado",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados como piezas separadas, sin rojo",
+          "paruma de corteza percutida en una sola pieza de papel sin trama, crudo a pardo claro, con el amarre sencillo a la vista",
+          "collares de chaquira en tiras lisas verticales, de varios colores apagados, sin figura",
+          "juafa en vueltas de papel azul oscuro",
+          "negro de jagua en bandas planas de papel negro mate, en pares",
+          "canasto de bejuco liso, sin figuras tejidas",
+          "pelo negro liso y largo en pocas piezas planas grandes"
+        ],
+        "palette": "Pardo de la piel, crudo de la corteza, negro de jagua, azul oscuro de la juafa y los tonos apagados de las chaquiras; ningún estampado.",
+        "scale": "Figura entera en 9:16, a la misma altura de hombro que el hombre; el canasto ocupa el ancho de su espalda.",
+        "continuity": [
+          "ninguna paruma estampada ni de colores vistosos en el estrato de fundación: eso es tela industrial del siglo XX",
+          "canastos siempre lisos, sin figuras tejidas",
+          "sin ambura ni corona de flores fuera de escena de fiesta",
+          "sin rojo en la cara y sin ningún patrón real de kipará",
+          "el niño se carga a la espalda, no en brazos"
+        ],
+        "documented": [
+          "paruma de metro y medio, pieza única, amarre sencillo a la cintura, torso descubierto en el estrato antiguo (dossier §6)",
+          "okamâ de chaquira usado de manera vertical; cruzado sólo para la danza (dossier §6)",
+          "juafa azul oscuro en muñecas y tobillos (dossier §6)",
+          "negro de jagua sobre el cuerpo como pintura pública (dossier §6)",
+          "pelo largo y suelto en hombres y mujeres (dossier §6)",
+          "oficios de la mujer: alimento, confección, crianza, cestería, huerta y pesca (dossier §6)"
+        ],
+        "editorial": [
+          "la paruma de corteza y no de tela en el estrato de fundación es interpretación editorial declarada (dossier §9)",
+          "el torso descubierto es la lectura documentada de Chasoy y se declara por si una autoridad katía prefiere lo contrario",
+          "rostro, edad y el canasto concreto son construcción editorial"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "inferred",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_mujer_joven": {
+      "name": "Mujer emberá katío joven (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base de la muchacha emberá katío: la india joven que sube la escalera con un niño de brazos cargado a la espalda, la mujer del linaje domicó que pesca en el río. Misma paruma de corteza que la adulta, recogida más alto para entrar al agua.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_mujer_joven__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "herupotoarra",
+        "la-escalera-del-cielo"
+      ],
+      "evidence": [
+        {
+          "myth": "la-escalera-del-cielo",
+          "field": "mito",
+          "note": "«Subía una india con un niño de brazos cargado a la espalda, como acostumbran cargarlos» (módulo de reescritura katío, campo mito)"
+        },
+        {
+          "myth": "herupotoarra",
+          "field": "mito",
+          "note": "«Una mujer de ese linaje estaba pescando cuando concibió de una nutria entre los dedos de un pie»; la pesca es también oficio de la mujer (dossier §6)"
+        }
+      ],
+      "census_note": "Tipo base de la muchacha emberá katío: la india joven que sube la escalera con un niño de brazos cargado a la espalda, la mujer del linaje domicó que pesca en el río. Misma paruma de corteza que la adulta, recogida más alto para entrar al agua.",
+      "design": {
+        "silhouette": "Muchacha delgada de pie con el agua a los tobillos, la paruma de corteza recogida hasta la rodilla y atada alto a la cintura, torso descubierto con un solo collar corto de chaquira, juafa azul oscuro en las muñecas y un niño de brazos sujeto a la espalda con una tira de corteza que le cruza el pecho; el pelo negro largo suelto a un lado.",
+        "materials": [
+          "cuerpo en planos estrechos de papel pardo de un solo tono",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados como piezas separadas",
+          "paruma de corteza percutida en papel sin trama, recogida en pliegues planos",
+          "tira de corteza para cargar al niño, cruzada sobre el pecho",
+          "collar corto de chaquira en tira lisa y juafa azul oscuro",
+          "pelo negro liso y largo en pocas piezas planas grandes",
+          "agua en dos o tres láminas planas de papel alrededor de los tobillos"
+        ],
+        "palette": "La gama de la mujer adulta con menos jagua sobre el cuerpo y el azul oscuro de la juafa como único color frío.",
+        "scale": "Figura entera en 9:16, algo más delgada que la mujer adulta; el niño a la espalda no sobresale por encima de su cabeza.",
+        "continuity": [
+          "nunca en la caída de la escalera ni en la concepción: el tipo es la muchacha de todos los días",
+          "sin ambura, que también es de pubertad y alianza matrimonial y por eso sólo de fiesta",
+          "sin rojo en la cara, sin patrón real de kipará y sin plata"
+        ],
+        "documented": [
+          "la india sube con un niño de brazos cargado a la espalda, «como acostumbran cargarlos» (corpus, la-escalera-del-cielo)",
+          "la mujer pesca (corpus, herupotoarra; dossier §6)",
+          "paruma de corteza, juafa y pelo largo suelto como vestido de la mujer (dossier §6)",
+          "el ambura se usa en pubertad, alianzas matrimoniales, fiestas y cosechas y no en lo cotidiano (dossier §6)"
+        ],
+        "editorial": [
+          "la tira de corteza para cargar al niño no está documentada en su hechura: decisión editorial reversible",
+          "menos jagua que la adulta es gradación editorial, no dato",
+          "la paruma de corteza en el estrato de fundación es interpretación editorial declarada; rostro y edad son construcción editorial"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "inferred",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_nino": {
+      "name": "Niño emberá katío (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base de los niños emberá katío: el que anda y el mayorcito de la gramática `ninos`, con guayuco corto de corteza y el pelo negro suelto. Es el niño del Cerro Plateado, los huérfanos que busca el yaedé y los niños que Baha robaba, sin que ninguna lámina muestre su muerte.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_nino__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "baha",
+        "icades-name",
+        "la-escalera-del-cielo",
+        "los-bibidigomias",
+        "tradicion-del-cerro"
+      ],
+      "evidence": [
+        {
+          "myth": "baha",
+          "field": "mito",
+          "note": "«Cuando hay tempestad y el niño está tendido en su hamaca, le ponen una totuma boca abajo sobre el estómago»; mientras truena no pueden jugar con los animales de la casa (módulo de reescritura katío, campo mito)"
+        },
+        {
+          "myth": "tradicion-del-cerro",
+          "field": "mito",
+          "note": "Antomiá roba un niño y una niña; el niño grita «Ave María purísima», capa del editor misionero que se declara y no se corrige (dossier §1)"
+        }
+      ],
+      "census_note": "Tipo base de los niños emberá katío: el que anda y el mayorcito de la gramática `ninos`, con guayuco corto de corteza y el pelo negro suelto. Es el niño del Cerro Plateado, los huérfanos que busca el yaedé y los niños que Baha robaba, sin que ninguna lámina muestre su muerte.",
+      "design": {
+        "silhouette": "Niño de seis o siete años de pie junto a una hamaca, con un guayuco corto de corteza atado a la cadera, el pelo negro suelto hasta los hombros, las dos manos sosteniendo una totuma pequeña boca abajo contra el pecho; cuerpo delgado y entero, sin carga.",
+        "materials": [
+          "cuerpo en pocas piezas cortas de papel pardo de un solo tono",
+          "cara aparte: óvalo plano más redondo, de un solo tono, con los rasgos recortados como piezas separadas",
+          "guayuco corto de corteza percutida en papel sin trama, con amarre de fibra",
+          "totuma en media esfera plana de papel ocre",
+          "pelo negro liso en una o dos piezas planas"
+        ],
+        "palette": "Pardo, crudo de la corteza, ocre de la totuma y negro del pelo; una sola banda de jagua corta en un brazo, más escasa que en el adulto.",
+        "scale": "A la cadera de un adulto —el mayorcito de la gramática `ninos`—, en 9:16 con la hamaca como referencia.",
+        "continuity": [
+          "ninguna lámina muestra la muerte, el robo consumado ni el cuerpo de un niño en la palmera",
+          "la totuma boca abajo es de la escena de la tempestad y no se vuelve atributo permanente",
+          "sin adorno de fiesta, sin rojo en la cara",
+          "los huérfanos no se marcan de ninguna manera"
+        ],
+        "documented": [
+          "el niño en la hamaca con la totuma boca abajo sobre el estómago durante la tempestad (corpus, baha)",
+          "el guayuco de corteza y el pelo largo suelto son el vestido de la gente (dossier §6)",
+          "la capa misionera del corpus se declara, no se corrige (dossier §1)"
+        ],
+        "editorial": [
+          "el guayuco corto infantil no está documentado aparte: hereda la decisión editorial de la gramática `ninos`, reversible",
+          "la gradación del jagua con la edad es invención editorial de esa gramática",
+          "edad y rostro son construcción editorial"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "inferred",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_anciano": {
+      "name": "Anciano emberá katío (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base del hombre mayor emberá katío: las personas mayores que escupen ante el primer relámpago para inmunizarse. Mismo guayuco y mismas chaquiras cruzadas que el adulto, cuerpo enjuto y el pelo largo suelto con canas.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_anciano__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "baha"
+      ],
+      "evidence": [
+        {
+          "myth": "baha",
+          "field": "mito",
+          "note": "«Apenas ven el primer relámpago escupen, para inmunizarse, y lo mismo hacen las personas mayores» (módulo de reescritura katío, campo mito)"
+        },
+        {
+          "myth": "baha",
+          "field": "mito",
+          "note": "La jagua sirve también como tintura para el cabello y es medicinal contra la caída del pelo (dossier §6)"
+        }
+      ],
+      "census_note": "Tipo base del hombre mayor emberá katío: las personas mayores que escupen ante el primer relámpago para inmunizarse. Mismo guayuco y mismas chaquiras cruzadas que el adulto, cuerpo enjuto y el pelo largo suelto con canas.",
+      "design": {
+        "silhouette": "Hombre mayor de pie en el vano del bohío, el cuerpo enjuto algo inclinado hacia adelante, la cabeza girada hacia el cielo y los labios fruncidos en el gesto de escupir hacia el relámpago; guayuco de corteza hasta la rodilla, dos tiras de chaquira cruzadas en el pecho, juafa en las muñecas, pelo largo suelto con unas pocas tiras grises.",
+        "materials": [
+          "cuerpo en planos largos y estrechos de papel pardo más apagado",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados aparte y pliegues recortados en frente y comisuras",
+          "guayuco de corteza percutida más oscura y gastada",
+          "chaquiras en tiras lisas cruzadas y juafa azul oscuro",
+          "pelo negro largo en pocas piezas planas con dos o tres tiras grises",
+          "bandas de jagua en papel negro, más desvaídas que las del adulto"
+        ],
+        "palette": "Pardo apagado, corteza oscura, negro y gris del pelo, azul oscuro de la juafa.",
+        "scale": "Figura entera en 9:16, de la misma altura de hombro que el colectivo aunque algo encorvado.",
+        "continuity": [
+          "no es jaibaná: sin corona, espejo, bastón, figura tallada ni jai",
+          "no retrata a Rafael Bailarín ni a ningún narrador o autoridad nombrada",
+          "sin rojo en la cara, sin plata, sin patrón de kipará"
+        ],
+        "documented": [
+          "las personas mayores escupen ante el primer relámpago (corpus, baha)",
+          "guayuco de corteza, chaquiras cruzadas en el tórax, juafa y pelo largo suelto (dossier §6)",
+          "la jagua tiñe el cabello y se usa contra su caída (dossier §6)"
+        ],
+        "editorial": [
+          "las pocas canas son decisión editorial coherente con el uso documentado de la jagua como tinte del pelo",
+          "el corpus casi no da ancianos: este tipo se sostiene en una sola frase y se declara así",
+          "el cuerpo enjuto, el rostro y la edad son construcción editorial"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "inferred",
+        "editorial_interpretation"
+      ]
+    },
+    "tipo_anciana": {
+      "name": "Anciana emberá katío (tipo)",
+      "kind": "personaje",
+      "description": "Tipo base de la mujer mayor emberá katío: entre las personas mayores que escupen ante el relámpago. Paruma de corteza, torso descubierto, collares verticales de chaquira, sentada junto a la olla de barro con el pelo largo suelto y alguna cana.",
+      "aliases": [],
+      "states": [
+        "canonico"
+      ],
+      "evidence_basis": "inferred",
+      "sensitivity": "public",
+      "visual_status": "required",
+      "model_requirements": [
+        "identity_sheet"
+      ],
+      "model_refs": [
+        "tipo_anciana__identity_sheet"
+      ],
+      "legacy_model_refs": [],
+      "myth_refs": [
+        "baha"
+      ],
+      "evidence": [
+        {
+          "myth": "baha",
+          "field": "mito",
+          "note": "«Lo mismo hacen las personas mayores» ante el primer relámpago (módulo de reescritura katío, campo mito)"
+        },
+        {
+          "myth": "baha",
+          "field": "mito",
+          "note": "Olla de barro, totuma y hamaca pertenecen al estrato de fundación; paruma de corteza con amarre sencillo es el vestido de la mujer (dossier §1 y §6)"
+        }
+      ],
+      "census_note": "Tipo base de la mujer mayor emberá katío: entre las personas mayores que escupen ante el relámpago. Paruma de corteza, torso descubierto, collares verticales de chaquira, sentada junto a la olla de barro con el pelo largo suelto y alguna cana.",
+      "design": {
+        "silhouette": "Mujer mayor sentada en el suelo del bohío junto a una olla de barro, la paruma de corteza atada a la cintura y cubriéndole las piernas dobladas, el torso descubierto con collares de chaquira colgando en vertical, la cabeza alzada y los labios fruncidos hacia el relámpago; pelo largo suelto con tiras grises.",
+        "materials": [
+          "cuerpo en planos de papel pardo apagado, sin volumen modelado",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados aparte y pliegues recortados",
+          "paruma de corteza percutida oscura y gastada, con el amarre sencillo",
+          "collares de chaquira verticales en tiras lisas y juafa azul oscuro",
+          "olla de barro en papel ocre sin decoración",
+          "pelo negro largo en piezas planas con tiras grises"
+        ],
+        "palette": "Pardo apagado, corteza oscura, ocre de la olla, azul oscuro de la juafa y gris del pelo.",
+        "scale": "Figura entera sentada en 9:16; la olla le llega a la rodilla.",
+        "continuity": [
+          "no es la india jaibaná del Moindú ni ninguna figura con ficha propia",
+          "sin insignia ritual, sin rojo en la cara, sin plata ni estampado",
+          "sin ambura ni corona de flores"
+        ],
+        "documented": [
+          "las personas mayores escupen ante el primer relámpago (corpus, baha)",
+          "paruma de corteza, torso descubierto, okamâ vertical, juafa y pelo largo suelto (dossier §6)",
+          "olla de barro como objeto del estrato de fundación (dossier §1)"
+        ],
+        "editorial": [
+          "la postura sentada junto a la olla es decisión editorial dentro de los oficios documentados de la mujer",
+          "el corpus casi no da ancianas: el tipo se sostiene en una sola frase y se declara así",
+          "canas, rostro y edad son construcción editorial"
+        ],
+        "states_to_model": []
+      },
+      "states_declared": [],
+      "evidence_basis_mix": [
+        "documented_core",
+        "inferred",
+        "editorial_interpretation"
+      ]
+    },
     "caragabi": {
       "name": "Caragabí",
       "kind": "deidad_fuerza",
@@ -13859,6 +14493,594 @@
     }
   },
   "models": {
+    "tipo_hombre_adulto__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_hombre_adulto"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-katios",
+          "field": "mito",
+          "note": "El guayuco emberá es «una tela de corte vertical y larga que les llegaba hasta la rodilla», sujeta a la cadera con amarre de fibra natural; la corteza de damagua (Poulsenia armata) era la materia antigua del vestuario, trabajada por los hombres (dossier §6)"
+        },
+        {
+          "myth": "sever",
+          "field": "mito",
+          "note": "Los hombres llevan collares de chaquira «entrecruzados de manera permanente en su tórax»; la juafa es de cuentas azul oscuro en muñecas y tobillos (dossier §6)"
+        },
+        {
+          "myth": "baha",
+          "field": "mito",
+          "note": "Caragabí coge a Baha «de la cabellera»; el corpus nombra el pelo tres veces y siempre largo y suelto (dossier §6)"
+        },
+        {
+          "myth": "los-domicoes",
+          "field": "mito",
+          "note": "Negro de jagua para el cuerpo, trazo doble por el trinche de dos puntas; el rojo de achiote en la cara de una figura ordinaria queda contextual y no se usa (dossier §6)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre adulto de pie y de tres cuartos, torso desnudo cruzado por dos tiras de chaquira en aspa sobre el pecho, guayuco de corteza de una sola pieza que cae vertical hasta la rodilla desde un amarre de fibra en la cadera, juafa azul oscuro en muñecas y tobillos; en una mano un arco y dos flechas, el pelo negro largo suelto sobre los hombros. Dos bandas anchas de negro de jagua, de trazo doble, le recorren brazos y pantorrillas.",
+        "materials": [
+          "cuerpo en planos de papel pardo de un solo tono, sin músculo modelado",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados como piezas separadas, sin pintura roja",
+          "guayuco de corteza percutida: papel sin trama, apelmazado, mate, de crudo a pardo claro, con la irregularidad del percutido",
+          "amarre de fibra natural torcida a la cadera",
+          "chaquiras en tiras lisas de papel de cuentas, sin figura reconocible",
+          "juafa: vueltas de papel de cuentas azul oscuro en muñecas y tobillos",
+          "negro de jagua como bandas planas recortadas en papel negro mate, en pares paralelos",
+          "pelo negro liso y largo en pocas piezas planas grandes con el borde en dientes"
+        ],
+        "palette_logic": "Pardo de la piel, crudo de la corteza, negro de jagua y el azul oscuro de la juafa como único color frío; nada de rojo en la cara, nada de plata.",
+        "scale": "Figura entera en 9:16, de la misma altura de hombro que todo el colectivo: la jerarquía nunca se marca con talla.",
+        "continuity_markers": [
+          "ningún patrón real de kipará: la pintura es banda plana de trazo doble y nunca un diseño reconocible",
+          "sin chaguala, sin nariguera de media luna y sin rojo en la cara: eso es cuna",
+          "sin plata en el estrato de fundación: karuso y brazaletes de plata son coloniales",
+          "sin ambura, que es sólo de fiesta, y sin insignia de jaibaná: corona, espejo, bastón o figura tallada",
+          "sin bodoquera: el corpus nombra arco y flecha",
+          "Caragabí, Séver, Cobaima y el jaibaná heredan este cuerpo y este vestido y sólo escriben lo que se aparta"
+        ],
+        "documented_features": [
+          "guayuco emberá de corte vertical y largo hasta la rodilla, sujeto a la cadera con amarre de fibra natural (dossier §6, chasoy)",
+          "la corteza de damagua percutida era la materia antigua de paruma y guayuco, trabajo del hombre (dossier §6)",
+          "collares de chaquira entrecruzados de manera permanente en el tórax de los hombres (dossier §6, severino)",
+          "juafa de cuentas azul oscuro en muñecas y tobillos (dossier §6)",
+          "negro de jagua para el cuerpo, preparado con ceniza de balso, trazado con trinche de dos puntas (dossier §6)",
+          "pelo negro liso, largo y suelto sobre los hombros en hombres y mujeres (dossier §6, corpus)",
+          "arco y flecha en el corpus; caza, pesca, agricultura y talla son oficio del hombre (dossier §6)"
+        ],
+        "editorial_features": [
+          "que el estrato de fundación vaya en corteza y no en tela es interpretación editorial declarada: ninguna fuente fecha el cambio antes del siglo XX en términos absolutos (dossier §9)",
+          "vestido, adorno y pintura salen de fuentes pan-emberá y de un libro misionero de 1924, no de una monografía katía (dossier §11)",
+          "el guayuco rojo de la etapa de tela comercial no entra: se toma el corte, no el color",
+          "rostro, edad y la ubicación concreta de las bandas de jagua son construcción editorial"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Katíos V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Hombre emberá katío adulto (tipo). Hombre adulto de pie y de tres cuartos, torso desnudo cruzado por dos tiras de chaquira en aspa sobre el pecho, guayuco de corteza de una sola pieza que cae vertical hasta la rodilla desde un amarre de fibra en la cadera, juafa azul oscuro en muñecas y tobillos; en una mano un arco y dos flechas, el pelo negro largo suelto sobre los hombros. Dos bandas anchas de negro de jagua, de trazo doble, le recorren brazos y pantorrillas.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera en 9:16, de la misma altura de hombro que todo el colectivo: la jerarquía nunca se marca con talla.",
+        "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
+        "materials_textures": "cuerpo en planos de papel pardo de un solo tono, sin músculo modelado; cara aparte: óvalo plano de un solo tono con los rasgos recortados como piezas separadas, sin pintura roja; guayuco de corteza percutida: papel sin trama, apelmazado, mate, de crudo a pardo claro, con la irregularidad del percutido; amarre de fibra natural torcida a la cadera; chaquiras en tiras lisas de papel de cuentas, sin figura reconocible; juafa: vueltas de papel de cuentas azul oscuro en muñecas y tobillos; negro de jagua como bandas planas recortadas en papel negro mate, en pares paralelos; pelo negro liso y largo en pocas piezas planas grandes con el borde en dientes",
+        "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
+        "constraints": [
+          "documentado: guayuco emberá de corte vertical y largo hasta la rodilla, sujeto a la cadera con amarre de fibra natural (dossier §6, chasoy)",
+          "documentado: la corteza de damagua percutida era la materia antigua de paruma y guayuco, trabajo del hombre (dossier §6)",
+          "documentado: collares de chaquira entrecruzados de manera permanente en el tórax de los hombres (dossier §6, severino)",
+          "documentado: juafa de cuentas azul oscuro en muñecas y tobillos (dossier §6)",
+          "documentado: negro de jagua para el cuerpo, preparado con ceniza de balso, trazado con trinche de dos puntas (dossier §6)",
+          "documentado: pelo negro liso, largo y suelto sobre los hombros en hombres y mujeres (dossier §6, corpus)",
+          "documentado: arco y flecha en el corpus; caza, pesca, agricultura y talla son oficio del hombre (dossier §6)",
+          "El oro es el único metal del mundo de fundación y es materia, no luz: papel dorado mate, granulado como polvo en la batea; la plata sólo existe en el estrato de conquista.",
+          "El bosque se construye con pardos, ocres, grises y negros de papel húmedo, y el verde entra sólo como la capa más delgada de encima, desaturado: el corpus nombra el verde nueve veces y siete son un topónimo.",
+          "El blanco aparece únicamente donde el corpus lo nombra —Ancastor, el Antomiá torro, la espuma del Aribamia, la paloma, la peña del Cerro Plateado, los reyes blancos— y cuando aparece es el valor más alto del cuadro.",
+          "El negro es doble y los dos son mate: negro de jagua sobre la piel, en bandas anchas de trazo doble, y negro de papel en la sombra entre capas.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "nada de fotorrealismo, render 3D, diorama sobre mesa, maqueta con marco ni cartón soporte visible",
+          "ningún pelaje ni plumaje pieza por pieza: pocas piezas planas grandes con el borde en dientes",
+          "ningún tambo rectangular ni techo a dos aguas: el bohío va de planta circular, cubierta cónica y sobre pilotes",
+          "ninguna chaguala ni nariguera de media luna ni pintura roja de guerra: eso es cuna, no katío",
+          "ningún patrón real de kipará, ningún diseño de okama, ninguna cuenta de figuras de karuso",
+          "ninguna insignia ritual del jaibaná: sin corona con espejo, sin bastón, sin figura tallada, sin jai con cuerpo",
+          "ninguna plata, moneda, herramienta de metal forjado ni arma de fuego en el estrato de fundación",
+          "ningún güibán colorado, ninguna sepultura y ninguna escena de tratamiento del cadáver"
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Pelo, plumaje y pelaje siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón ni pluma por pluma. El quilling se reserva para lo que enrolla de verdad —remolinos de agua, humo, espirales de bejuco, la espuma blanca del Aribamia—."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_adulta__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_adulta"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "creacion-katios",
+          "field": "mito",
+          "note": "Paruma: «tela de metro y medio de largo, única pieza que conformaba el vestuario de la mujer, sujetada a la cintura mediante un amarre sencillo»; en el corpus es lo que Caragabí da a la primera pareja (dossier §6)"
+        },
+        {
+          "myth": "los-bibidigomias",
+          "field": "mito",
+          "note": "La mujer se ocupa del alimento, la confección, la crianza, la cestería, la huerta y la pesca; el barequeo lo hacen los dos (dossier §6)"
+        },
+        {
+          "myth": "antomia",
+          "field": "mito",
+          "note": "Okamâ: collares de chaquira de varios colores «generalmente usados de manera vertical»; cruzados sólo para la danza (dossier §6)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer adulta de pie, con la línea del cuerpo inclinada hacia el hombro que carga un canasto liso de bejuco, el otro brazo libre; paruma de corteza atada a la cintura con un amarre sencillo que le cae a media pierna, torso descubierto con collares de chaquira colgando en vertical, juafa azul oscuro en muñecas y tobillos, bandas de jagua de trazo doble en los antebrazos y el pelo negro largo suelto cayendo hacia el lado contrario al de la carga.",
+        "materials": [
+          "cuerpo en planos de papel pardo de un solo tono, sin volumen modelado",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados como piezas separadas, sin rojo",
+          "paruma de corteza percutida en una sola pieza de papel sin trama, crudo a pardo claro, con el amarre sencillo a la vista",
+          "collares de chaquira en tiras lisas verticales, de varios colores apagados, sin figura",
+          "juafa en vueltas de papel azul oscuro",
+          "negro de jagua en bandas planas de papel negro mate, en pares",
+          "canasto de bejuco liso, sin figuras tejidas",
+          "pelo negro liso y largo en pocas piezas planas grandes"
+        ],
+        "palette_logic": "Pardo de la piel, crudo de la corteza, negro de jagua, azul oscuro de la juafa y los tonos apagados de las chaquiras; ningún estampado.",
+        "scale": "Figura entera en 9:16, a la misma altura de hombro que el hombre; el canasto ocupa el ancho de su espalda.",
+        "continuity_markers": [
+          "ninguna paruma estampada ni de colores vistosos en el estrato de fundación: eso es tela industrial del siglo XX",
+          "canastos siempre lisos, sin figuras tejidas",
+          "sin ambura ni corona de flores fuera de escena de fiesta",
+          "sin rojo en la cara y sin ningún patrón real de kipará",
+          "el niño se carga a la espalda, no en brazos"
+        ],
+        "documented_features": [
+          "paruma de metro y medio, pieza única, amarre sencillo a la cintura, torso descubierto en el estrato antiguo (dossier §6)",
+          "okamâ de chaquira usado de manera vertical; cruzado sólo para la danza (dossier §6)",
+          "juafa azul oscuro en muñecas y tobillos (dossier §6)",
+          "negro de jagua sobre el cuerpo como pintura pública (dossier §6)",
+          "pelo largo y suelto en hombres y mujeres (dossier §6)",
+          "oficios de la mujer: alimento, confección, crianza, cestería, huerta y pesca (dossier §6)"
+        ],
+        "editorial_features": [
+          "la paruma de corteza y no de tela en el estrato de fundación es interpretación editorial declarada (dossier §9)",
+          "el torso descubierto es la lectura documentada de Chasoy y se declara por si una autoridad katía prefiere lo contrario",
+          "rostro, edad y el canasto concreto son construcción editorial"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Katíos V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Mujer emberá katío adulta (tipo). Mujer adulta de pie, con la línea del cuerpo inclinada hacia el hombro que carga un canasto liso de bejuco, el otro brazo libre; paruma de corteza atada a la cintura con un amarre sencillo que le cae a media pierna, torso descubierto con collares de chaquira colgando en vertical, juafa azul oscuro en muñecas y tobillos, bandas de jagua de trazo doble en los antebrazos y el pelo negro largo suelto cayendo hacia el lado contrario al de la carga.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera en 9:16, a la misma altura de hombro que el hombre; el canasto ocupa el ancho de su espalda.",
+        "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
+        "materials_textures": "cuerpo en planos de papel pardo de un solo tono, sin volumen modelado; cara aparte: óvalo plano de un solo tono con los rasgos recortados como piezas separadas, sin rojo; paruma de corteza percutida en una sola pieza de papel sin trama, crudo a pardo claro, con el amarre sencillo a la vista; collares de chaquira en tiras lisas verticales, de varios colores apagados, sin figura; juafa en vueltas de papel azul oscuro; negro de jagua en bandas planas de papel negro mate, en pares; canasto de bejuco liso, sin figuras tejidas; pelo negro liso y largo en pocas piezas planas grandes",
+        "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
+        "constraints": [
+          "documentado: paruma de metro y medio, pieza única, amarre sencillo a la cintura, torso descubierto en el estrato antiguo (dossier §6)",
+          "documentado: okamâ de chaquira usado de manera vertical; cruzado sólo para la danza (dossier §6)",
+          "documentado: juafa azul oscuro en muñecas y tobillos (dossier §6)",
+          "documentado: negro de jagua sobre el cuerpo como pintura pública (dossier §6)",
+          "documentado: pelo largo y suelto en hombres y mujeres (dossier §6)",
+          "documentado: oficios de la mujer: alimento, confección, crianza, cestería, huerta y pesca (dossier §6)",
+          "El oro es el único metal del mundo de fundación y es materia, no luz: papel dorado mate, granulado como polvo en la batea; la plata sólo existe en el estrato de conquista.",
+          "El bosque se construye con pardos, ocres, grises y negros de papel húmedo, y el verde entra sólo como la capa más delgada de encima, desaturado: el corpus nombra el verde nueve veces y siete son un topónimo.",
+          "El blanco aparece únicamente donde el corpus lo nombra —Ancastor, el Antomiá torro, la espuma del Aribamia, la paloma, la peña del Cerro Plateado, los reyes blancos— y cuando aparece es el valor más alto del cuadro.",
+          "El negro es doble y los dos son mate: negro de jagua sobre la piel, en bandas anchas de trazo doble, y negro de papel en la sombra entre capas.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "nada de fotorrealismo, render 3D, diorama sobre mesa, maqueta con marco ni cartón soporte visible",
+          "ningún pelaje ni plumaje pieza por pieza: pocas piezas planas grandes con el borde en dientes",
+          "ningún tambo rectangular ni techo a dos aguas: el bohío va de planta circular, cubierta cónica y sobre pilotes",
+          "ninguna chaguala ni nariguera de media luna ni pintura roja de guerra: eso es cuna, no katío",
+          "ningún patrón real de kipará, ningún diseño de okama, ninguna cuenta de figuras de karuso",
+          "ninguna insignia ritual del jaibaná: sin corona con espejo, sin bastón, sin figura tallada, sin jai con cuerpo",
+          "ninguna plata, moneda, herramienta de metal forjado ni arma de fuego en el estrato de fundación",
+          "ningún güibán colorado, ninguna sepultura y ninguna escena de tratamiento del cadáver"
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Pelo, plumaje y pelaje siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón ni pluma por pluma. El quilling se reserva para lo que enrolla de verdad —remolinos de agua, humo, espirales de bejuco, la espuma blanca del Aribamia—."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_mujer_joven__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_mujer_joven"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "la-escalera-del-cielo",
+          "field": "mito",
+          "note": "«Subía una india con un niño de brazos cargado a la espalda, como acostumbran cargarlos» (módulo de reescritura katío, campo mito)"
+        },
+        {
+          "myth": "herupotoarra",
+          "field": "mito",
+          "note": "«Una mujer de ese linaje estaba pescando cuando concibió de una nutria entre los dedos de un pie»; la pesca es también oficio de la mujer (dossier §6)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Muchacha delgada de pie con el agua a los tobillos, la paruma de corteza recogida hasta la rodilla y atada alto a la cintura, torso descubierto con un solo collar corto de chaquira, juafa azul oscuro en las muñecas y un niño de brazos sujeto a la espalda con una tira de corteza que le cruza el pecho; el pelo negro largo suelto a un lado.",
+        "materials": [
+          "cuerpo en planos estrechos de papel pardo de un solo tono",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados como piezas separadas",
+          "paruma de corteza percutida en papel sin trama, recogida en pliegues planos",
+          "tira de corteza para cargar al niño, cruzada sobre el pecho",
+          "collar corto de chaquira en tira lisa y juafa azul oscuro",
+          "pelo negro liso y largo en pocas piezas planas grandes",
+          "agua en dos o tres láminas planas de papel alrededor de los tobillos"
+        ],
+        "palette_logic": "La gama de la mujer adulta con menos jagua sobre el cuerpo y el azul oscuro de la juafa como único color frío.",
+        "scale": "Figura entera en 9:16, algo más delgada que la mujer adulta; el niño a la espalda no sobresale por encima de su cabeza.",
+        "continuity_markers": [
+          "nunca en la caída de la escalera ni en la concepción: el tipo es la muchacha de todos los días",
+          "sin ambura, que también es de pubertad y alianza matrimonial y por eso sólo de fiesta",
+          "sin rojo en la cara, sin patrón real de kipará y sin plata"
+        ],
+        "documented_features": [
+          "la india sube con un niño de brazos cargado a la espalda, «como acostumbran cargarlos» (corpus, la-escalera-del-cielo)",
+          "la mujer pesca (corpus, herupotoarra; dossier §6)",
+          "paruma de corteza, juafa y pelo largo suelto como vestido de la mujer (dossier §6)",
+          "el ambura se usa en pubertad, alianzas matrimoniales, fiestas y cosechas y no en lo cotidiano (dossier §6)"
+        ],
+        "editorial_features": [
+          "la tira de corteza para cargar al niño no está documentada en su hechura: decisión editorial reversible",
+          "menos jagua que la adulta es gradación editorial, no dato",
+          "la paruma de corteza en el estrato de fundación es interpretación editorial declarada; rostro y edad son construcción editorial"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Katíos V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Mujer emberá katío joven (tipo). Muchacha delgada de pie con el agua a los tobillos, la paruma de corteza recogida hasta la rodilla y atada alto a la cintura, torso descubierto con un solo collar corto de chaquira, juafa azul oscuro en las muñecas y un niño de brazos sujeto a la espalda con una tira de corteza que le cruza el pecho; el pelo negro largo suelto a un lado.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera en 9:16, algo más delgada que la mujer adulta; el niño a la espalda no sobresale por encima de su cabeza.",
+        "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
+        "materials_textures": "cuerpo en planos estrechos de papel pardo de un solo tono; cara aparte: óvalo plano de un solo tono con los rasgos recortados como piezas separadas; paruma de corteza percutida en papel sin trama, recogida en pliegues planos; tira de corteza para cargar al niño, cruzada sobre el pecho; collar corto de chaquira en tira lisa y juafa azul oscuro; pelo negro liso y largo en pocas piezas planas grandes; agua en dos o tres láminas planas de papel alrededor de los tobillos",
+        "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
+        "constraints": [
+          "documentado: la india sube con un niño de brazos cargado a la espalda, «como acostumbran cargarlos» (corpus, la-escalera-del-cielo)",
+          "documentado: la mujer pesca (corpus, herupotoarra; dossier §6)",
+          "documentado: paruma de corteza, juafa y pelo largo suelto como vestido de la mujer (dossier §6)",
+          "documentado: el ambura se usa en pubertad, alianzas matrimoniales, fiestas y cosechas y no en lo cotidiano (dossier §6)",
+          "El oro es el único metal del mundo de fundación y es materia, no luz: papel dorado mate, granulado como polvo en la batea; la plata sólo existe en el estrato de conquista.",
+          "El bosque se construye con pardos, ocres, grises y negros de papel húmedo, y el verde entra sólo como la capa más delgada de encima, desaturado: el corpus nombra el verde nueve veces y siete son un topónimo.",
+          "El blanco aparece únicamente donde el corpus lo nombra —Ancastor, el Antomiá torro, la espuma del Aribamia, la paloma, la peña del Cerro Plateado, los reyes blancos— y cuando aparece es el valor más alto del cuadro.",
+          "El negro es doble y los dos son mate: negro de jagua sobre la piel, en bandas anchas de trazo doble, y negro de papel en la sombra entre capas.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "nada de fotorrealismo, render 3D, diorama sobre mesa, maqueta con marco ni cartón soporte visible",
+          "ningún pelaje ni plumaje pieza por pieza: pocas piezas planas grandes con el borde en dientes",
+          "ningún tambo rectangular ni techo a dos aguas: el bohío va de planta circular, cubierta cónica y sobre pilotes",
+          "ninguna chaguala ni nariguera de media luna ni pintura roja de guerra: eso es cuna, no katío",
+          "ningún patrón real de kipará, ningún diseño de okama, ninguna cuenta de figuras de karuso",
+          "ninguna insignia ritual del jaibaná: sin corona con espejo, sin bastón, sin figura tallada, sin jai con cuerpo",
+          "ninguna plata, moneda, herramienta de metal forjado ni arma de fuego en el estrato de fundación",
+          "ningún güibán colorado, ninguna sepultura y ninguna escena de tratamiento del cadáver"
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Pelo, plumaje y pelaje siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón ni pluma por pluma. El quilling se reserva para lo que enrolla de verdad —remolinos de agua, humo, espirales de bejuco, la espuma blanca del Aribamia—."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_nino__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_nino"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "baha",
+          "field": "mito",
+          "note": "«Cuando hay tempestad y el niño está tendido en su hamaca, le ponen una totuma boca abajo sobre el estómago»; mientras truena no pueden jugar con los animales de la casa (módulo de reescritura katío, campo mito)"
+        },
+        {
+          "myth": "tradicion-del-cerro",
+          "field": "mito",
+          "note": "Antomiá roba un niño y una niña; el niño grita «Ave María purísima», capa del editor misionero que se declara y no se corrige (dossier §1)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Niño de seis o siete años de pie junto a una hamaca, con un guayuco corto de corteza atado a la cadera, el pelo negro suelto hasta los hombros, las dos manos sosteniendo una totuma pequeña boca abajo contra el pecho; cuerpo delgado y entero, sin carga.",
+        "materials": [
+          "cuerpo en pocas piezas cortas de papel pardo de un solo tono",
+          "cara aparte: óvalo plano más redondo, de un solo tono, con los rasgos recortados como piezas separadas",
+          "guayuco corto de corteza percutida en papel sin trama, con amarre de fibra",
+          "totuma en media esfera plana de papel ocre",
+          "pelo negro liso en una o dos piezas planas"
+        ],
+        "palette_logic": "Pardo, crudo de la corteza, ocre de la totuma y negro del pelo; una sola banda de jagua corta en un brazo, más escasa que en el adulto.",
+        "scale": "A la cadera de un adulto —el mayorcito de la gramática `ninos`—, en 9:16 con la hamaca como referencia.",
+        "continuity_markers": [
+          "ninguna lámina muestra la muerte, el robo consumado ni el cuerpo de un niño en la palmera",
+          "la totuma boca abajo es de la escena de la tempestad y no se vuelve atributo permanente",
+          "sin adorno de fiesta, sin rojo en la cara",
+          "los huérfanos no se marcan de ninguna manera"
+        ],
+        "documented_features": [
+          "el niño en la hamaca con la totuma boca abajo sobre el estómago durante la tempestad (corpus, baha)",
+          "el guayuco de corteza y el pelo largo suelto son el vestido de la gente (dossier §6)",
+          "la capa misionera del corpus se declara, no se corrige (dossier §1)"
+        ],
+        "editorial_features": [
+          "el guayuco corto infantil no está documentado aparte: hereda la decisión editorial de la gramática `ninos`, reversible",
+          "la gradación del jagua con la edad es invención editorial de esa gramática",
+          "edad y rostro son construcción editorial"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Katíos V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Niño emberá katío (tipo). Niño de seis o siete años de pie junto a una hamaca, con un guayuco corto de corteza atado a la cadera, el pelo negro suelto hasta los hombros, las dos manos sosteniendo una totuma pequeña boca abajo contra el pecho; cuerpo delgado y entero, sin carga.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; A la cadera de un adulto —el mayorcito de la gramática `ninos`—, en 9:16 con la hamaca como referencia.",
+        "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
+        "materials_textures": "cuerpo en pocas piezas cortas de papel pardo de un solo tono; cara aparte: óvalo plano más redondo, de un solo tono, con los rasgos recortados como piezas separadas; guayuco corto de corteza percutida en papel sin trama, con amarre de fibra; totuma en media esfera plana de papel ocre; pelo negro liso en una o dos piezas planas",
+        "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
+        "constraints": [
+          "documentado: el niño en la hamaca con la totuma boca abajo sobre el estómago durante la tempestad (corpus, baha)",
+          "documentado: el guayuco de corteza y el pelo largo suelto son el vestido de la gente (dossier §6)",
+          "documentado: la capa misionera del corpus se declara, no se corrige (dossier §1)",
+          "El oro es el único metal del mundo de fundación y es materia, no luz: papel dorado mate, granulado como polvo en la batea; la plata sólo existe en el estrato de conquista.",
+          "El bosque se construye con pardos, ocres, grises y negros de papel húmedo, y el verde entra sólo como la capa más delgada de encima, desaturado: el corpus nombra el verde nueve veces y siete son un topónimo.",
+          "El blanco aparece únicamente donde el corpus lo nombra —Ancastor, el Antomiá torro, la espuma del Aribamia, la paloma, la peña del Cerro Plateado, los reyes blancos— y cuando aparece es el valor más alto del cuadro.",
+          "El negro es doble y los dos son mate: negro de jagua sobre la piel, en bandas anchas de trazo doble, y negro de papel en la sombra entre capas.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "nada de fotorrealismo, render 3D, diorama sobre mesa, maqueta con marco ni cartón soporte visible",
+          "ningún pelaje ni plumaje pieza por pieza: pocas piezas planas grandes con el borde en dientes",
+          "ningún tambo rectangular ni techo a dos aguas: el bohío va de planta circular, cubierta cónica y sobre pilotes",
+          "ninguna chaguala ni nariguera de media luna ni pintura roja de guerra: eso es cuna, no katío",
+          "ningún patrón real de kipará, ningún diseño de okama, ninguna cuenta de figuras de karuso",
+          "ninguna insignia ritual del jaibaná: sin corona con espejo, sin bastón, sin figura tallada, sin jai con cuerpo",
+          "ninguna plata, moneda, herramienta de metal forjado ni arma de fuego en el estrato de fundación",
+          "ningún güibán colorado, ninguna sepultura y ninguna escena de tratamiento del cadáver"
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Pelo, plumaje y pelaje siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón ni pluma por pluma. El quilling se reserva para lo que enrolla de verdad —remolinos de agua, humo, espirales de bejuco, la espuma blanca del Aribamia—."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_anciano__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_anciano"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "baha",
+          "field": "mito",
+          "note": "«Apenas ven el primer relámpago escupen, para inmunizarse, y lo mismo hacen las personas mayores» (módulo de reescritura katío, campo mito)"
+        },
+        {
+          "myth": "baha",
+          "field": "mito",
+          "note": "La jagua sirve también como tintura para el cabello y es medicinal contra la caída del pelo (dossier §6)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Hombre mayor de pie en el vano del bohío, el cuerpo enjuto algo inclinado hacia adelante, la cabeza girada hacia el cielo y los labios fruncidos en el gesto de escupir hacia el relámpago; guayuco de corteza hasta la rodilla, dos tiras de chaquira cruzadas en el pecho, juafa en las muñecas, pelo largo suelto con unas pocas tiras grises.",
+        "materials": [
+          "cuerpo en planos largos y estrechos de papel pardo más apagado",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados aparte y pliegues recortados en frente y comisuras",
+          "guayuco de corteza percutida más oscura y gastada",
+          "chaquiras en tiras lisas cruzadas y juafa azul oscuro",
+          "pelo negro largo en pocas piezas planas con dos o tres tiras grises",
+          "bandas de jagua en papel negro, más desvaídas que las del adulto"
+        ],
+        "palette_logic": "Pardo apagado, corteza oscura, negro y gris del pelo, azul oscuro de la juafa.",
+        "scale": "Figura entera en 9:16, de la misma altura de hombro que el colectivo aunque algo encorvado.",
+        "continuity_markers": [
+          "no es jaibaná: sin corona, espejo, bastón, figura tallada ni jai",
+          "no retrata a Rafael Bailarín ni a ningún narrador o autoridad nombrada",
+          "sin rojo en la cara, sin plata, sin patrón de kipará"
+        ],
+        "documented_features": [
+          "las personas mayores escupen ante el primer relámpago (corpus, baha)",
+          "guayuco de corteza, chaquiras cruzadas en el tórax, juafa y pelo largo suelto (dossier §6)",
+          "la jagua tiñe el cabello y se usa contra su caída (dossier §6)"
+        ],
+        "editorial_features": [
+          "las pocas canas son decisión editorial coherente con el uso documentado de la jagua como tinte del pelo",
+          "el corpus casi no da ancianos: este tipo se sostiene en una sola frase y se declara así",
+          "el cuerpo enjuto, el rostro y la edad son construcción editorial"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Katíos V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Anciano emberá katío (tipo). Hombre mayor de pie en el vano del bohío, el cuerpo enjuto algo inclinado hacia adelante, la cabeza girada hacia el cielo y los labios fruncidos en el gesto de escupir hacia el relámpago; guayuco de corteza hasta la rodilla, dos tiras de chaquira cruzadas en el pecho, juafa en las muñecas, pelo largo suelto con unas pocas tiras grises.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera en 9:16, de la misma altura de hombro que el colectivo aunque algo encorvado.",
+        "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
+        "materials_textures": "cuerpo en planos largos y estrechos de papel pardo más apagado; cara aparte: óvalo plano de un solo tono con los rasgos recortados aparte y pliegues recortados en frente y comisuras; guayuco de corteza percutida más oscura y gastada; chaquiras en tiras lisas cruzadas y juafa azul oscuro; pelo negro largo en pocas piezas planas con dos o tres tiras grises; bandas de jagua en papel negro, más desvaídas que las del adulto",
+        "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
+        "constraints": [
+          "documentado: las personas mayores escupen ante el primer relámpago (corpus, baha)",
+          "documentado: guayuco de corteza, chaquiras cruzadas en el tórax, juafa y pelo largo suelto (dossier §6)",
+          "documentado: la jagua tiñe el cabello y se usa contra su caída (dossier §6)",
+          "El oro es el único metal del mundo de fundación y es materia, no luz: papel dorado mate, granulado como polvo en la batea; la plata sólo existe en el estrato de conquista.",
+          "El bosque se construye con pardos, ocres, grises y negros de papel húmedo, y el verde entra sólo como la capa más delgada de encima, desaturado: el corpus nombra el verde nueve veces y siete son un topónimo.",
+          "El blanco aparece únicamente donde el corpus lo nombra —Ancastor, el Antomiá torro, la espuma del Aribamia, la paloma, la peña del Cerro Plateado, los reyes blancos— y cuando aparece es el valor más alto del cuadro.",
+          "El negro es doble y los dos son mate: negro de jagua sobre la piel, en bandas anchas de trazo doble, y negro de papel en la sombra entre capas.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "nada de fotorrealismo, render 3D, diorama sobre mesa, maqueta con marco ni cartón soporte visible",
+          "ningún pelaje ni plumaje pieza por pieza: pocas piezas planas grandes con el borde en dientes",
+          "ningún tambo rectangular ni techo a dos aguas: el bohío va de planta circular, cubierta cónica y sobre pilotes",
+          "ninguna chaguala ni nariguera de media luna ni pintura roja de guerra: eso es cuna, no katío",
+          "ningún patrón real de kipará, ningún diseño de okama, ninguna cuenta de figuras de karuso",
+          "ninguna insignia ritual del jaibaná: sin corona con espejo, sin bastón, sin figura tallada, sin jai con cuerpo",
+          "ninguna plata, moneda, herramienta de metal forjado ni arma de fuego en el estrato de fundación",
+          "ningún güibán colorado, ninguna sepultura y ninguna escena de tratamiento del cadáver"
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Pelo, plumaje y pelaje siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón ni pluma por pluma. El quilling se reserva para lo que enrolla de verdad —remolinos de agua, humo, espirales de bejuco, la espuma blanca del Aribamia—."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
+    "tipo_anciana__identity_sheet": {
+      "purpose": "identity_sheet",
+      "entity_refs": [
+        "tipo_anciana"
+      ],
+      "placeholder": false,
+      "design_status": "ready_for_pilot_review",
+      "evidence_refs": [
+        {
+          "myth": "baha",
+          "field": "mito",
+          "note": "«Lo mismo hacen las personas mayores» ante el primer relámpago (módulo de reescritura katío, campo mito)"
+        },
+        {
+          "myth": "baha",
+          "field": "mito",
+          "note": "Olla de barro, totuma y hamaca pertenecen al estrato de fundación; paruma de corteza con amarre sencillo es el vestido de la mujer (dossier §1 y §6)"
+        }
+      ],
+      "design_contract": {
+        "distinctive_silhouette": "Mujer mayor sentada en el suelo del bohío junto a una olla de barro, la paruma de corteza atada a la cintura y cubriéndole las piernas dobladas, el torso descubierto con collares de chaquira colgando en vertical, la cabeza alzada y los labios fruncidos hacia el relámpago; pelo largo suelto con tiras grises.",
+        "materials": [
+          "cuerpo en planos de papel pardo apagado, sin volumen modelado",
+          "cara aparte: óvalo plano de un solo tono con los rasgos recortados aparte y pliegues recortados",
+          "paruma de corteza percutida oscura y gastada, con el amarre sencillo",
+          "collares de chaquira verticales en tiras lisas y juafa azul oscuro",
+          "olla de barro en papel ocre sin decoración",
+          "pelo negro largo en piezas planas con tiras grises"
+        ],
+        "palette_logic": "Pardo apagado, corteza oscura, ocre de la olla, azul oscuro de la juafa y gris del pelo.",
+        "scale": "Figura entera sentada en 9:16; la olla le llega a la rodilla.",
+        "continuity_markers": [
+          "no es la india jaibaná del Moindú ni ninguna figura con ficha propia",
+          "sin insignia ritual, sin rojo en la cara, sin plata ni estampado",
+          "sin ambura ni corona de flores"
+        ],
+        "documented_features": [
+          "las personas mayores escupen ante el primer relámpago (corpus, baha)",
+          "paruma de corteza, torso descubierto, okamâ vertical, juafa y pelo largo suelto (dossier §6)",
+          "olla de barro como objeto del estrato de fundación (dossier §1)"
+        ],
+        "editorial_features": [
+          "la postura sentada junto a la olla es decisión editorial dentro de los oficios documentados de la mujer",
+          "el corpus casi no da ancianas: el tipo se sostiene en una sola frase y se declara así",
+          "canas, rostro y edad son construcción editorial"
+        ]
+      },
+      "prompt_spec": {
+        "use_case": "stylized-concept",
+        "asset_type": "Biblia visual Katíos V1 - identity_sheet",
+        "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
+        "primary_request": "identidad corporal completa y legible para Anciana emberá katío (tipo). Mujer mayor sentada en el suelo del bohío junto a una olla de barro, la paruma de corteza atada a la cintura y cubriéndole las piernas dobladas, el torso descubierto con collares de chaquira colgando en vertical, la cabeza alzada y los labios fruncidos hacia el relámpago; pelo largo suelto con tiras grises.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Figura entera sentada en 9:16; la olla le llega a la rodilla.",
+        "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
+        "materials_textures": "cuerpo en planos de papel pardo apagado, sin volumen modelado; cara aparte: óvalo plano de un solo tono con los rasgos recortados aparte y pliegues recortados; paruma de corteza percutida oscura y gastada, con el amarre sencillo; collares de chaquira verticales en tiras lisas y juafa azul oscuro; olla de barro en papel ocre sin decoración; pelo negro largo en piezas planas con tiras grises",
+        "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
+        "constraints": [
+          "documentado: las personas mayores escupen ante el primer relámpago (corpus, baha)",
+          "documentado: paruma de corteza, torso descubierto, okamâ vertical, juafa y pelo largo suelto (dossier §6)",
+          "documentado: olla de barro como objeto del estrato de fundación (dossier §1)",
+          "El oro es el único metal del mundo de fundación y es materia, no luz: papel dorado mate, granulado como polvo en la batea; la plata sólo existe en el estrato de conquista.",
+          "El bosque se construye con pardos, ocres, grises y negros de papel húmedo, y el verde entra sólo como la capa más delgada de encima, desaturado: el corpus nombra el verde nueve veces y siete son un topónimo.",
+          "El blanco aparece únicamente donde el corpus lo nombra —Ancastor, el Antomiá torro, la espuma del Aribamia, la paloma, la peña del Cerro Plateado, los reyes blancos— y cuando aparece es el valor más alto del cuadro.",
+          "El negro es doble y los dos son mate: negro de jagua sobre la piel, en bandas anchas de trazo doble, y negro de papel en la sombra entre capas.",
+          "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas"
+        ],
+        "avoid": [
+          "nada de fotorrealismo, render 3D, diorama sobre mesa, maqueta con marco ni cartón soporte visible",
+          "ningún pelaje ni plumaje pieza por pieza: pocas piezas planas grandes con el borde en dientes",
+          "ningún tambo rectangular ni techo a dos aguas: el bohío va de planta circular, cubierta cónica y sobre pilotes",
+          "ninguna chaguala ni nariguera de media luna ni pintura roja de guerra: eso es cuna, no katío",
+          "ningún patrón real de kipará, ningún diseño de okama, ninguna cuenta de figuras de karuso",
+          "ninguna insignia ritual del jaibaná: sin corona con espejo, sin bastón, sin figura tallada, sin jai con cuerpo",
+          "ninguna plata, moneda, herramienta de metal forjado ni arma de fuego en el estrato de fundación",
+          "ningún güibán colorado, ninguna sepultura y ninguna escena de tratamiento del cadáver"
+        ],
+        "technique_close": "En plano corto: el rostro es un óvalo plano de un solo tono, sin modelado ni volumen, y los rasgos son piezas recortadas aparte y superpuestas —una tira para la ceja, una lágrima de papel para el ojo, una franja para la boca—. El cuerpo se arma con pocos planos grandes de papel, no con músculos. Pelo, plumaje y pelaje siguen la regla inversa a la intuitiva: pocas piezas planas grandes con el borde recortado en dientes, nunca mechón por mechón ni pluma por pluma. El quilling se reserva para lo que enrolla de verdad —remolinos de agua, humo, espirales de bejuco, la espuma blanca del Aribamia—."
+      },
+      "views": [
+        {
+          "id": "canon",
+          "view_type": "canonical_full_body",
+          "purpose": "identidad corporal completa y legible",
+          "aspect": "9:16",
+          "states": [
+            "canonico"
+          ],
+          "reference_views": []
+        }
+      ]
+    },
     "caragabi__identity_sheet": {
       "purpose": "identity_sheet",
       "entity_refs": [
@@ -13931,7 +15153,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Caragabí. Figura de pie, frontal y entera, que es la única del corpus cuyo torso desnudo va sembrado de puntos de papel dorado a la hoja: la cabellera cae en dos planos grandes hasta por debajo del hombro y las manos van juntas delante del pecho, en el gesto de frotarlas del que salió la luz clarísima.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura humana adulta, sin agrandar: el corpus lo hace luchar cuerpo a cuerpo con Tutruicá, enlazarlo con lazo y coger a Baha de la cabellera, y todo eso exige que mida lo que un hombre.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura humana adulta, sin agrandar: el corpus lo hace luchar cuerpo a cuerpo con Tutruicá, enlazarlo con lazo y coger a Baha de la cabellera, y todo eso exige que mida lo que un hombre.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "corteza percutida de damagua en guayuco de una sola pieza hasta la rodilla, cruda y sin tejer; chaquiras de oro sobre el cuerpo: papel dorado a la hoja mate recortado en puntos menudos, nunca cadena ni pieza forjada; negro de jagua cocida con ceniza de balso en bandas anchas de trazo doble sobre pecho y brazos; pelo en pocas piezas planas grandes de papel negro mate con el borde recortado en dientes",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -13964,7 +15186,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -14044,7 +15266,7 @@
         "asset_type": "Biblia visual Katíos V1 - state_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "el cambio de estado sin perder la identidad para Caragabí. Figura de pie, frontal y entera, que es la única del corpus cuyo torso desnudo va sembrado de puntos de papel dorado a la hoja: la cabellera cae en dos planos grandes hasta por debajo del hombro y las manos van juntas delante del pecho, en el gesto de frotarlas del que salió la luz clarísima.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Estatura humana adulta, sin agrandar: el corpus lo hace luchar cuerpo a cuerpo con Tutruicá, enlazarlo con lazo y coger a Baha de la cabellera, y todo eso exige que mida lo que un hombre.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura humana adulta, sin agrandar: el corpus lo hace luchar cuerpo a cuerpo con Tutruicá, enlazarlo con lazo y coger a Baha de la cabellera, y todo eso exige que mida lo que un hombre.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "corteza percutida de damagua en guayuco de una sola pieza hasta la rodilla, cruda y sin tejer; chaquiras de oro sobre el cuerpo: papel dorado a la hoja mate recortado en puntos menudos, nunca cadena ni pieza forjada; negro de jagua cocida con ceniza de balso en bandas anchas de trazo doble sobre pecho y brazos; pelo en pocas piezas planas grandes de papel negro mate con el borde recortado en dientes",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -14077,7 +15299,7 @@
           "id": "estado_renacido del horno",
           "view_type": "state_variation",
           "purpose": "el cambio de estado sin perder la identidad: renacido del horno",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "renacido del horno"
           ],
@@ -14138,7 +15360,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Tutruicá. El mismo porte humano que Caragabí pero visto siempre desde arriba y contra un plano de fondo más oscuro: es la única figura del corpus que se lee a través de la capa de sombra del mundo de abajo, con los hombros recortados sobre un cerco de papel negro y las manos abiertas mostrando barro, no oro.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Igual de alto que Caragabí y deliberadamente igualado con él: el relato los pone a medirse en tres pruebas, y cualquier diferencia de talla decidiría lo que el corpus deja en empate.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Igual de alto que Caragabí y deliberadamente igualado con él: el relato los pone a medirse en tres pruebas, y cualquier diferencia de talla decidiría lo que el corpus deja en empate.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "barro crudo de papel pardo grisáceo húmedo en las palmas y los antebrazos: es lo que él enseña; guayuco de corteza percutida idéntico en hechura al de arriba, sin un solo adorno encima; cerco de papel negro mate a su espalda, la sombra del globo desde el que lo divisan; pelo negro liso en dos planos grandes, más corto de vuelo que el de Caragabí porque a él nadie lo agarra",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -14170,7 +15392,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -14244,7 +15466,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Antomiá. Figura humana de porte torcido, la única de la biblia que se dibuja con el eje del cuerpo desplazado respecto de sus pies, como quien se ríe de lado: sin cuernos y sin cola en la ficha base, y con el pelo recogido hacia atrás en un solo plano para que la cara quede entera y descubierta.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Talla humana, ni gigante ni menudo: compite por hacer gente y entra en la olla de la prueba, dos actos que sólo funcionan si mide lo que sus rivales.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Talla humana, ni gigante ni menudo: compite por hacer gente y entra en la olla de la prueba, dos actos que sólo funcionan si mide lo que sus rivales.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "cuerpo en dos tonos de papel, uno por cada clase que el corpus declara —el blanco y el negro—, empalmados en el mismo canto vertical; guayuco de corteza igual al de la gente: el corpus no le da traje propio; negro de jagua en bandas anchas, pero rotas y desalineadas frente a las de la gente; sin papel dorado: es el que enseña a sacar el oro, no el que lo lleva puesto",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -14276,7 +15498,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -14345,7 +15567,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Antomiá paima (el negro). El único cuerpo de la biblia que se construye alrededor de un vientre: un abdomen de papel abombado, hinchado en capas concéntricas de quilling que sobresalen del plano del torso, sobre piernas cortas y con la boca abierta en la tira de papel del canto que da al llegar.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Del tamaño de un hombre y no de un gigante: entra en un bohío a robar comida, se para junto a la escalera y cae del tablado, tres actos de escala doméstica.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Del tamaño de un hombre y no de un gigante: entra en un bohío a robar comida, se para junto a la escalera y cae del tablado, tres actos de escala doméstica.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "torso y vientre en espirales de quilling de canto, la única figura humana de la biblia que usa quilling en el cuerpo; papel negro mate en toda la superficie de la piel: es el diablo negro y el negro es su nombre; guayuco de corteza, el mismo de la gente, para que el robo se lea como robo de vecino; boca en franja de papel recortada aparte y montada sobre el óvalo plano de la cara",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -14377,7 +15599,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -14446,7 +15668,7 @@
         "asset_type": "Biblia visual Katíos V1 - state_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "el cambio de estado sin perder la identidad para Antomiá paima (el negro). El único cuerpo de la biblia que se construye alrededor de un vientre: un abdomen de papel abombado, hinchado en capas concéntricas de quilling que sobresalen del plano del torso, sobre piernas cortas y con la boca abierta en la tira de papel del canto que da al llegar.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Del tamaño de un hombre y no de un gigante: entra en un bohío a robar comida, se para junto a la escalera y cae del tablado, tres actos de escala doméstica.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Del tamaño de un hombre y no de un gigante: entra en un bohío a robar comida, se para junto a la escalera y cae del tablado, tres actos de escala doméstica.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "torso y vientre en espirales de quilling de canto, la única figura humana de la biblia que usa quilling en el cuerpo; papel negro mate en toda la superficie de la piel: es el diablo negro y el negro es su nombre; guayuco de corteza, el mismo de la gente, para que el robo se lea como robo de vecino; boca en franja de papel recortada aparte y montada sobre el óvalo plano de la cara",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -14478,7 +15700,7 @@
           "id": "estado_vientre inflado y reventado",
           "view_type": "state_variation",
           "purpose": "el cambio de estado sin perder la identidad: vientre inflado y reventado",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "vientre inflado y reventado"
           ],
@@ -14535,7 +15757,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Dabeiba. Mujer joven de pie sobre la línea de una cumbre, vista de perfil y con los brazos abiertos hacia abajo en vez de hacia arriba: es la única figura de la biblia que está enseñando, y su silueta la fijan las manos mostrando y el borde de la paruma levantado por el viento de altura.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Humana en la primera lámina y humana cuando se eleva: el corpus dice que sube al cerro y se eleva, no que crezca, y agrandarla la convertiría en la diosa que el relato no describe.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Humana en la primera lámina y humana cuando se eleva: el corpus dice que sube al cerro y se eleva, no que crezca, y agrandarla la convertiría en la diosa que el relato no describe.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "paruma de corteza percutida de damagua, pieza única atada a la cintura con amarre sencillo, torso descubierto; collares de chaquiras al cuello, en tiras lisas sin figura, y juafa de cuentas azul oscuro en muñecas y tobillos; pelo negro liso y largo, suelto, movido en un solo plano por el aire de la cumbre; papel gris de nube y blanco de granizo en la capa de detrás, nunca sobre su cuerpo",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -14567,7 +15789,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -14621,7 +15843,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Humántahu (el sol). Hermano joven de pie y de espaldas a la figura que lo acompaña, el único personaje de la biblia que se dibuja apartándose: el torso gira hacia fuera del cuadro y una sola mano queda tendida atrás, hacia la hermana de la que lo separan.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; De hombre joven en la ficha base y de disco a la altura del ojo en el estado: nunca un sol de fondo lejano, porque el relato lo hace reclamar su sitio y apartarse, y eso exige que se le vea la cara.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; De hombre joven en la ficha base y de disco a la altura del ojo en el estado: nunca un sol de fondo lejano, porque el relato lo hace reclamar su sitio y apartarse, y eso exige que se le vea la cara.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "guayuco de corteza percutida, corte vertical de una pieza hasta la rodilla, amarre de fibra en la cadera; collares de chaquiras cruzados sobre el tórax, en tiras lisas; pelo negro largo suelto, con el plano del lado que se aleja recortado más limpio que el otro; para el estado, papel dorado a la hoja en disco liso y mate, sin rayos ni corona",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -14653,7 +15875,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -14707,7 +15929,7 @@
         "asset_type": "Biblia visual Katíos V1 - state_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "el cambio de estado sin perder la identidad para Humántahu (el sol). Hermano joven de pie y de espaldas a la figura que lo acompaña, el único personaje de la biblia que se dibuja apartándose: el torso gira hacia fuera del cuadro y una sola mano queda tendida atrás, hacia la hermana de la que lo separan.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; De hombre joven en la ficha base y de disco a la altura del ojo en el estado: nunca un sol de fondo lejano, porque el relato lo hace reclamar su sitio y apartarse, y eso exige que se le vea la cara.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; De hombre joven en la ficha base y de disco a la altura del ojo en el estado: nunca un sol de fondo lejano, porque el relato lo hace reclamar su sitio y apartarse, y eso exige que se le vea la cara.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "guayuco de corteza percutida, corte vertical de una pieza hasta la rodilla, amarre de fibra en la cadera; collares de chaquiras cruzados sobre el tórax, en tiras lisas; pelo negro largo suelto, con el plano del lado que se aleja recortado más limpio que el otro; para el estado, papel dorado a la hoja en disco liso y mate, sin rayos ni corona",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -14739,7 +15961,7 @@
           "id": "estado_astro",
           "view_type": "state_variation",
           "purpose": "el cambio de estado sin perder la identidad: astro",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "astro"
           ],
@@ -14795,7 +16017,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Gedeco (la luna). Hermana de pie con la cara vuelta hacia el lado golpeado, la única figura humana de la biblia que lleva una mancha aplicada sobre el óvalo del rostro: en estado de astro esa misma mancha sobrevive como una isla de papel más oscuro sobre el disco, descentrada y con el borde irregular de un manotazo.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; De mujer en la ficha base y de disco del mismo diámetro que el del sol en el estado: son hermanos y el corpus los reparte a la vez, así que igualarlos es parte del dato.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; De mujer en la ficha base y de disco del mismo diámetro que el del sol en el estado: son hermanos y el corpus los reparte a la vez, así que igualarlos es parte del dato.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "paruma de corteza percutida atada a la cintura con amarre sencillo, torso descubierto; juafa de cuentas azul oscuro en muñecas y tobillos, la sola nota de color de la figura; pelo negro largo suelto, con un plano cruzándole media cara del lado de la bofetada; para el estado, disco de papel gris perla mate con la mancha recortada aparte y superpuesta",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -14827,7 +16049,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -14881,7 +16103,7 @@
         "asset_type": "Biblia visual Katíos V1 - state_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "el cambio de estado sin perder la identidad para Gedeco (la luna). Hermana de pie con la cara vuelta hacia el lado golpeado, la única figura humana de la biblia que lleva una mancha aplicada sobre el óvalo del rostro: en estado de astro esa misma mancha sobrevive como una isla de papel más oscuro sobre el disco, descentrada y con el borde irregular de un manotazo.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; De mujer en la ficha base y de disco del mismo diámetro que el del sol en el estado: son hermanos y el corpus los reparte a la vez, así que igualarlos es parte del dato.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; De mujer en la ficha base y de disco del mismo diámetro que el del sol en el estado: son hermanos y el corpus los reparte a la vez, así que igualarlos es parte del dato.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "paruma de corteza percutida atada a la cintura con amarre sencillo, torso descubierto; juafa de cuentas azul oscuro en muñecas y tobillos, la sola nota de color de la figura; pelo negro largo suelto, con un plano cruzándole media cara del lado de la bofetada; para el estado, disco de papel gris perla mate con la mancha recortada aparte y superpuesta",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -14913,7 +16135,7 @@
           "id": "estado_astro con la mancha de la bofetada",
           "view_type": "state_variation",
           "purpose": "el cambio de estado sin perder la identidad: astro con la mancha de la bofetada",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "astro con la mancha de la bofetada"
           ],
@@ -14979,7 +16201,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Baha, el trueno. Hombre en el aire, la única figura de la biblia que se dibuja sin suelo debajo: el cuerpo entero echado hacia atrás por el impulso del lanzamiento, la cabellera tirando en el sentido contrario y un tambor pequeño colgando de una mano que no lo aprieta.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Talla de hombre en un cuadro de cielo: el corpus lo hace hombre riquísimo y no dios, y el tamaño no crece al ser lanzado.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Talla de hombre en un cuadro de cielo: el corpus lo hace hombre riquísimo y no dios, y el tamaño no crece al ser lanzado.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "guayuco de corteza percutida; es el hombre riquísimo del corpus y aun así el estrato no le da tela; papel dorado a la hoja mate en la capa de atrás, nunca sobre su cuerpo: el oro que tuvo es su casa, no su ropa; cabellera en dos planos grandes tirados hacia arriba, con el borde en dientes; tambor pequeño de papel pardo en la mano floja",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -15011,7 +16233,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -15065,7 +16287,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Baha, el rayo. Hombre visto desde abajo y en contrapicado, con los brazos cargados y la lanza clavada de frente en el pecho: es la única figura de la biblia atravesada por un objeto, y el asta que le sale del esternón fija la silueta antes que el cuerpo.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; De hombre, pero siempre encuadrado desde abajo para que se lea la altura del cogollo de la palmera más alta, que es lo que el relato mide.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; De hombre, pero siempre encuadrado desde abajo para que se lea la altura del cogollo de la palmera más alta, que es lo que el relato mide.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "asta de la lanza miatzu en papel pardo sin adorno, entrando por el pecho; guayuco de corteza percutida, igual al de los demás hombres del estrato; papel verde grisáceo de cogollo de palmera en la capa de arriba, el sitio al que sube los cuerpos; pelo negro largo, atado a nada",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -15097,7 +16319,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -15156,7 +16378,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para El hombre que no podía cazar. Hombre de espaldas, a media zancada y ya cruzando el agua, la única figura de la biblia que se dibuja incompleta a propósito: las piernas quedan cortadas por la lámina de la quebrada y el borde del papel del cuerpo se recorta en dientes finos por el lado del monte, como si la vegetación empezara a comérselo.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; De hombre adulto y siempre pequeña dentro del cuadro: el relato lo deja al otro lado y lo disuelve en los sonidos y los movimientos del monte, y el tamaño en la lámina es parte de ese final.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; De hombre adulto y siempre pequeña dentro del cuadro: el relato lo deja al otro lado y lo disuelve en los sonidos y los movimientos del monte, y el tamaño en la lámina es parte de ese final.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "guayuco de corteza percutida, mojado y pegado a la pierna en la parte que va en el agua; arco y flechas colgando de la mano floja, no tensados: es el que falla; borde del cuerpo recortado en dientes finos por el lado del monte, y liso por el lado de la quebrada; papel de hoja mojada superpuesto al hombro, en la misma gama del fondo",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -15188,7 +16410,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -15267,7 +16489,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Cobaima. Hombre mayor de pie con los pies separados y las dos manos abiertas hacia abajo sobre el agua, la única figura de la biblia que se dibuja en el gesto de cerrar: los brazos van bajos y extendidos como quien tapa una boca de río, y no lleva nada en las manos.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; De hombre adulto entrado en años, a escala de orilla: sus tres actos —la malla, la piedra, la mina— son actos a la medida de un río, no de un cielo.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; De hombre adulto entrado en años, a escala de orilla: sus tres actos —la malla, la piedra, la mina— son actos a la medida de un río, no de un cielo.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "guayuco de corteza percutida, gastado y con el canto irregular del percutido bien visible; negro de jagua en bandas anchas de trazo doble sobre pecho y brazos, sin diseño reconocible; pelo negro largo suelto, con algunos planos recortados en papel gris para la edad; agua turbia de papel pardo en la capa inmediatamente delante de sus pies",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -15299,7 +16521,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -15373,7 +16595,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para El jaibaná (rol sin nombre). Figura de pie en apoyo contra un poste, la única de la biblia cuya silueta incluye un punto de contacto con la arquitectura: el hombro y el omóplato se recortan pegados al canto del estantillo, y los dos brazos van juntos hacia delante como quien va a empujar algo de frente.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; De adulto y siempre en interior, a la escala del estantillo: el corpus lo pone dentro de la casa —sueña, se respalda, aprende por el túnel—, nunca en descampado.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; De adulto y siempre en interior, a la escala del estantillo: el corpus lo pone dentro de la casa —sueña, se respalda, aprende por el túnel—, nunca en descampado.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "guayuco de corteza percutida en la variante masculina, paruma de corteza en la femenina: el corpus dice «hombre o mujer» y la ficha lleva las dos; negro de jagua sobre el cuerpo, más cerrado y más ancho que el de la gente; collares de chaquiras lisos al cuello, sin corona y sin espejo; estantillo de madera mojada como pieza fija de su lámina",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -15405,7 +16627,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -15469,7 +16691,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para La india jaibaná del moindú. Mujer agachada junto a una olla grande puesta al fuego, de perfil y con las dos manos dentro del recipiente: es la única figura de la biblia que se dibuja cocinando, y la silueta la cierran el codo levantado y la raíz gruesa que sostiene sobre el borde de la olla.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; De mujer adulta agachada, con la olla llegándole a la altura de la rodilla: el corpus la llama «la gran olla» y ése es el único dato de tamaño que da.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; De mujer adulta agachada, con la olla llegándole a la altura de la rodilla: el corpus la llama «la gran olla» y ése es el único dato de tamaño que da.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "paruma de corteza percutida atada a la cintura, torso descubierto, el borde inferior recogido por el agacharse; olla de barro cocido grande, de papel pardo rojizo mate, puesta sobre base de tierra; raíz de moindú en papel pardo claro, gruesa y con el corte fresco visible; pelo negro largo recogido hacia un lado por el gesto, en un solo plano",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -15501,7 +16723,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -15555,7 +16777,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Ambuima. Hombre de pie y quieto con diez astas clavadas en el cuerpo y ninguna herida, la única silueta de la biblia que gana densidad en vez de perderla: las flechas salen en abanico del torso y la figura sigue erguida, con una sola mano abierta apoyada de plano en el costado del que tiene enfrente.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; De hombre, con el abanico de astas ensanchando la silueta hasta casi el doble de su ancho: el volumen es de las flechas, no del cuerpo.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; De hombre, con el abanico de astas ensanchando la silueta hasta casi el doble de su ancho: el volumen es de las flechas, no del cuerpo.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "diez astas de flecha de chonta clavadas, en papel pardo oscuro y todas del mismo grosor; guayuco de corteza percutida, intacto bajo el abanico de astas; papel de avispa —amarillo pardo y negro en bandas— reservado a la capa que sale de su boca al morir, nunca sobre el cuerpo vivo; bohío bellísimo detrás, con la cubierta cónica más tupida y mejor amarrada de toda la biblia",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -15587,7 +16809,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -15651,7 +16873,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Herupotoarra. Hombre joven cuyo punto de partida visual es la pantorrilla: la única figura de la biblia que se dibuja con una pierna marcada por una abertura cerrada, y que aparece siempre subiendo o cayendo —nunca de pie en reposo—, con los dos palos de su escala saliéndole de las manos hacia arriba.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; De hombre joven, siempre encuadrado con un arriba y un abajo visibles: sube a la luna, cae a Armucurá, vuelve y muere, y sin los dos extremos en el cuadro la figura no dice nada.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; De hombre joven, siempre encuadrado con un arriba y un abajo visibles: sube a la luna, cae a Armucurá, vuelve y muere, y sin los dos extremos en el cuadro la figura no dice nada.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "dos palos de madera mojada de largo desigual, el par que se estira al decir uariáde; guayuco de corteza percutida; es el nacido de una pierna y no lleva nada que lo señale; marca cerrada en la pantorrilla, recortada como una pieza de papel encajada, no como una herida abierta; arco y diez flechas de chonta a la espalda en la parte del relato en que ataca",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -15683,7 +16905,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -15737,7 +16959,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para La mujer que concibió de la nutria. Mujer de pie dentro del agua hasta media pierna, con el cuerpo inclinado hacia delante y la mirada baja sobre sus propios pies: es la única figura de la biblia cuyo centro de atención está en el empeine, y la silueta se cierra con la curva del cesto de pesca contra la cadera.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; De mujer adulta, con el agua a media pantorrilla y el cesto a la cadera: el corpus la sitúa pescando, y la altura del agua es lo único que fija la escena.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; De mujer adulta, con el agua a media pantorrilla y el cesto a la cadera: el corpus la sitúa pescando, y la altura del agua es lo único que fija la escena.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "paruma de corteza percutida recogida y atada más alto por el agua, con el amarre sencillo bien visible; cesto de pesca de bejuco liso, sin una sola figura tejida; agua turbia de papel pardo cortando la pierna en una línea limpia; pelo negro largo cayendo hacia delante en un solo plano por la inclinación",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -15769,7 +16991,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -15848,7 +17070,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Séver. Hombre en la postura del tiro perfecto —pies plantados, arco totalmente abierto, la cuerda tocando la comisura— y, en las láminas finales, el mismo cuerpo de pie y erizado de astas: es la única figura de la biblia que se lee entera por la línea del arco tenso.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; De hombre alto, medido contra la canoa: el corpus lo hace labrar la canoa del Genené y bajar por el Atrato con cinco hijos, y la eslora es su patrón de tamaño.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; De hombre alto, medido contra la canoa: el corpus lo hace labrar la canoa del Genené y bajar por el Atrato con cinco hijos, y la eslora es su patrón de tamaño.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "arco grande de chonta con la cuerda de fibra, abierto hasta el máximo; guayuco de corteza percutida, corte vertical hasta la rodilla, amarre de fibra en la cadera; collares de chaquiras cruzados sobre el tórax, en tiras lisas y sin colgante; dientes ensartados en una pita, colgados en la capa de atrás y nunca sobre su cuerpo",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -15880,7 +17102,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -15939,7 +17161,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Emágai. Muchacho encogido entre raíces tablares, la única figura de la biblia enmarcada por el propio decorado: las aletas del árbol Comba le suben a los dos lados como paredes y él queda encajado en el hueco, con una mano apretándose el costado herido.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; El más pequeño de los cinco hermanos, medido contra la raíz tablar que lo dobla en altura: la escala es lo que cuenta el escondite.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; El más pequeño de los cinco hermanos, medido contra la raíz tablar que lo dobla en altura: la escala es lo que cuenta el escondite.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "raíces tablares de madera mojada, en dos planos grandes de papel pardo que lo encierran; guayuco de corteza percutida, más corto que el de los adultos por la edad; asta de flecha rota en el costado, con la punta tratada y el corte del asta visible; cañaflechal de papel gris pálido en el fondo de la escena de la huida",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -15971,7 +17193,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -16025,7 +17247,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para El indio Atamía. Hombre agachado sobre una rodilla y con la cabeza vuelta hacia arriba, la única figura de la biblia que mira al dosel: la silueta la hacen el torso bajo, el cuello estirado y el brazo apoyado en el suelo, en la postura de quien lee un rastro y levanta la vista para hallar la casa del árbol.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; De hombre adulto agachado, y siempre en la parte baja del cuadro: el árbol de los Bibidigomia ocupa el resto, y la desproporción es el relato.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; De hombre adulto agachado, y siempre en la parte baja del cuadro: el árbol de los Bibidigomia ocupa el resto, y la desproporción es el relato.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "guayuco de corteza percutida, con barro fresco en la rodilla y el antebrazo apoyados; hojarasca de papel pardo y ocre en la capa de delante, a la altura de su mano; arco descolgado a la espalda, sin flecha puesta: va a rastrear, no a pelear; balcón del árbol hueco insinuado como un canto de papel en la capa superior del cuadro",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -16057,7 +17279,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -16111,7 +17333,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para La indiecita bibidigomia. Muchacha sentada con las piernas cruzadas y un brazo estirado hacia arriba sosteniendo la cuerda de una hamaca que está fuera del cuadro: es la única figura de la biblia unida a un objeto invisible, y la línea tensa de la cuerda desde su mano hasta el borde superior es la mitad de su silueta.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; Adolescente, más baja que las mujeres de la gramática de grupo y más alta que los niños: su edad propia es la razón por la que no cabe en ninguna de las dos fichas colectivas.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Adolescente, más baja que las mujeres de la gramática de grupo y más alta que los niños: su edad propia es la razón por la que no cabe en ninguna de las dos fichas colectivas.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "cuerda de hamaca de fibra, tensa y en diagonal, saliendo del encuadre; paruma de corteza percutida corta, a la medida de una muchacha; pelo negro largo suelto, cayendo entero por delante de un hombro; penumbra de interior de bohío de papel negro mate, la capa más cerrada de su lámina",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -16143,7 +17365,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -16197,7 +17419,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para El hermanito del cerro. Niño en el borde exacto de una peña, inclinado más allá de la vertical y sin caer: la única silueta de la biblia que contradice la gravedad, con el peso entero fuera del apoyo, la boca abierta en el grito y los dos brazos hacia atrás.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; De niño, y minúsculo contra la peña: el relato mide el cerro por el hecho de que se ve desde lejos, y la figura es lo que da esa medida.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; De niño, y minúsculo contra la peña: el relato mide el cerro por el hecho de que se ve desde lejos, y la figura es lo que da esa medida.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "canto de peña de papel gris pálido, recortado con filo limpio y sin dentado, justo bajo sus pies; guayuco de corteza percutida corto, a medida de niño; boca en franja de papel recortada aparte, abierta, la pieza más pequeña y más decisiva de su lámina; vacío del abismo resuelto como el plano de papel más lejano y más oscuro del cuadro",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -16229,7 +17451,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
@@ -16288,7 +17510,7 @@
         "asset_type": "Biblia visual Katíos V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja sólo para el oro; capas escalonadas en profundidad que construyen el bosque húmedo por planos superpuestos y no por perspectiva atmosférica pintada.",
         "primary_request": "identidad corporal completa y legible para Ambeu. Hombre de pie y de frente en campo abierto, con los brazos levantados llamando a los que vienen detrás y, en la segunda lámina, el mismo cuerpo visto desde arriba en el fondo de un pozo: es la única figura de la biblia que tiene una silueta de convocatoria y otra de caída, y las dos son el mismo encuadre invertido.",
-        "composition_framing": "1:1; mundo full bleed hasta los cuatro limites; De hombre adulto y siempre en relación con un grupo: forma tropas nuevas una y otra vez, y la ficha no funciona si no se ve contra cuántos.",
+        "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; De hombre adulto y siempre en relación con un grupo: forma tropas nuevas una y otra vez, y la ficha no funciona si no se ve contra cuántos.",
         "lighting_mood": "Luz de interior de bosque húmedo tropical: ambiente difusa, alta y suave, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida, dura o cálida queda reservada al prodigio —la luz clarísima de las manos de Caragabí, la luz quemante de la hoguera de Costé, las luces que Antomiá apaga y enciende, el brillo de las planchas de metal bruñido de la escalera—.",
         "materials_textures": "guayuco de corteza percutida, el único traje del bando indio en el estrato de la conquista; arco y flechas en la mano alzada, sin un solo elemento de metal forjado; ramas cortadas y tierra removida en la capa de delante de la segunda lámina: la trampa que lo resuelve; papel gris de humo de pólvora ajena, siempre en la capa de enfrente y nunca sobre su cuerpo",
         "era": "Tres estratos que no se mezclan. Fundación (la mayoría del corpus): hacha de piedra, arco y flecha, canoa labrada, totuma, olla de barro, hamaca, vestido de corteza percutida de damagua, oro sobre el cuerpo y sacado a mano de los filones; sin metal forjado, sin moneda, sin plata, sin tela industrial, sin arma de fuego. Guerras cunas: lo mismo más canoas por el Atrato, flecha envenenada, cañaflechal, playa y mar de Urabá. Conquista: sólo aquí entran europeos, armas de fuego y las cuatro casas de oro.",
@@ -16320,7 +17542,7 @@
           "id": "canon",
           "view_type": "canonical_full_body",
           "purpose": "identidad corporal completa y legible",
-          "aspect": "1:1",
+          "aspect": "9:16",
           "states": [
             "canonico"
           ],
