@@ -1,0 +1,93 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ufaina",
+  "comunidad": "Tanimuka (Ufaina)",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ufaina.v3.json",
+    "sha256": "a1a0fe06b7a8f469a4b7494d153f9faa41053cd3ab877dfb171aab0382808627"
+  },
+  "canon": {
+    "sha256": "1aaa30b3d70bf5aafd9d3828039d6e628c8a39470a236d76f2cfa906cd8e6361",
+    "verificado_en": "2026-09-25T13:42:05.129Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base · anciana tanimuka (ufaina)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6029,
+      "prompt_sha256": "32c37d6855bffe586b9009edae8df95b262d2e5ce1b345a784a93683b3941eb0"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base · anciano tanimuka (ufaina)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6101,
+      "prompt_sha256": "ac27140a7d0ba8fe7ca162e8d14a8504d461cc86b07da88ba6b8cefe85e982e6"
+    },
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre adulto tanimuka (ufaina)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6494,
+      "prompt_sha256": "63d5e0de46f16f428f4d6e7568b9aa2b3aeb62995dffaa17f9c90d490be5b45b"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer adulta tanimuka (ufaina)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6423,
+      "prompt_sha256": "c1f54ba866bd2e3ff99be306c9a5db045b77b99e2f767a9618aa42952b1d54a2"
+    }
+  ]
+}

@@ -134,9 +134,28 @@ function peso(plan, model) {
   return (plan.entities[model.entity_refs[0]]?.myth_refs || []).length;
 }
 
+/**
+ * El modelo esculpe por defecto, y cuerpo y cara se arreglan en pasos
+ * distintos: chami V1 necesito tres pilotos para aprenderlo (v1 esculpido, v2
+ * arreglo el cuerpo, v3 la cara). Los planes V3 ya nombran el rostro plano,
+ * pero no el cuerpo. Esta es la regla aprobada, con las cuentas de piezas de
+ * `refuerzo-papel-v3.md`, y va justo despues del bloque de tecnica.
+ */
+export const CUERPO_Y_CARA = [
+  "CUERPO Y CARA, DENTRO DE ESA TECNICA:",
+  "- El cuerpo NO se esculpe: torso, brazos y piernas son dos o tres RECORTES PLANOS grandes de cartulina mate, con el canto del corte visible y sin degradado ni modelado dentro de la pieza. La profundidad la da la sombra nitida entre capas, no el volumen.",
+  "- La cara es un OVALO PLANO de un solo tono parejo, sin luz ni sombra dentro; encima, como piezas recortadas aparte, el pelo en dos o tres formas, dos cejas, dos ojos minimos y una boca. La nariz se insinua por el borde del recorte, nunca sombreada. La edad se lee por proporcion, postura y pelo, no por arrugas pintadas.",
+  "- Una mano es una sola pieza. Si alguien mira la lamina y piensa «lo esculpieron», esta mal: tiene que pensar «lo recortaron y lo pegaron por capas».",
+].join("\n");
+
+const CAPAS_CON_CUERPO = new Set(["tipos", "mortales", "miticos", "colectivos"]);
+
 /** Una vista de estado nombra su estado; la ficha canonica no dice nada mas. */
-function promptDeVista(model, view) {
-  const base = ensamblar(model.prompt_spec);
+function promptDeVista(model, view, capaId) {
+  let base = ensamblar(model.prompt_spec);
+  if (CAPAS_CON_CUERPO.has(capaId)) {
+    base = base.replace(/\n\nUse case: /, `\n\n${CUERPO_Y_CARA}\n\nUse case: `);
+  }
   if (view.id === "canon" || !view.states?.length) return base;
   const linea = `Estado que muestra esta lamina: ${view.states.join(", ")}. Es la misma figura de su hoja canonica, con la misma cara, proporcion y paleta; cambia solo lo que el estado cambia.`;
   return base.replace(/\nPrimary request: /, `\n${linea}\nPrimary request: `);
@@ -223,7 +242,7 @@ async function main() {
       const entity = plan.entities[m.entity_refs[0]];
       for (const view of m.views) {
         const job = `${id}--${view.id}`;
-        const prompt = promptDeVista(m, view);
+        const prompt = promptDeVista(m, view, capa.id);
         writeFileSync(join(dir, "prompts", `${job}.prompt.txt`), `${prompt}\n`);
         requests.push({
           prompt, model: MODELO, size: SIZE[view.aspect] || "1024x1024",

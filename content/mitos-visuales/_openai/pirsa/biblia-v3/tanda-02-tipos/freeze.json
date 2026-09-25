@@ -1,0 +1,93 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "pirsa",
+  "comunidad": "Pirsa",
+  "tanda": "tanda-02-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/pirsa.v3.json",
+    "sha256": "270b3317e8ad34df3f7f11abf133237b621400a068e802bde76b0ecaec4c66be"
+  },
+  "canon": {
+    "sha256": "e592ee7612a8063860ff3bdcd32c65cad12593fde05f0903e23abafe87f94019",
+    "verificado_en": "2026-09-25T13:42:51.543Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre de Pirsa adulto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6768,
+      "prompt_sha256": "9fec8567601dbcca697b71f5156c98e2d763cb855507cc3dbba92ba42959b94d"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer de Pirsa adulta",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6718,
+      "prompt_sha256": "bfc7c09bfc69d4c7ed57825240723cbc90e1acfa2190edafe14ef5708525239f"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer de Pirsa joven",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6322,
+      "prompt_sha256": "419faeff3914278a723410099a2b6ed8b5384669b2c382e3dda3062e1ebc4239"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño de Pirsa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6212,
+      "prompt_sha256": "a6a3bc4d1eeee10ed908321272838122d4f927a6aeb14f1d09a6fbbfce106595"
+    }
+  ]
+}

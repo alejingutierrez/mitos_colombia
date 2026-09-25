@@ -1,0 +1,137 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "andoque",
+  "comunidad": "Andoque (Gente del Hacha)",
+  "tanda": "tanda-02-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/andoque.v3.json",
+    "sha256": "4b0ae18ca645dffa5fa333575e493b56cf35d1d7e5fe446bd6ed9ac632a33626"
+  },
+  "canon": {
+    "sha256": "1464c50fa3a580f64f525602622acdadb0f163d4bd0942dd7decb8df15cc5afb",
+    "verificado_en": "2026-09-25T13:42:51.195Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Hombre andoque adulto (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "la-guerra-del-palo-hablador",
+        "la-venganza-de-los-brujos",
+        "las-sirenas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7352,
+      "prompt_sha256": "a70e027bc557587d022a96dc3b0a5b356f65fb44afcb2a3c4ef882f0ae004f32"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Anciano andoque (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-mundo-de-ultratumba",
+        "la-guerra-del-palo-hablador",
+        "las-sirenas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6990,
+      "prompt_sha256": "383ecdd28c1c92d5021457af51eee72da25af1f2320317f788db2cae0d6c09a8"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Mujer andoque adulta (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7027,
+      "prompt_sha256": "c257d7d14a40725dfa0bc8b7c9ef4ca343491b807a34fb8513b8e64e1cfb6828"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Anciana andoque (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6797,
+      "prompt_sha256": "a9e340e67d2dc99f3a08812b7c7169475205312d4aa0b59f338a27a733a9eb35"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Mujer andoque joven (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-mundo-de-ultratumba",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6799,
+      "prompt_sha256": "fd845cbeb1e21d6cce5d5bb7b02a2c2a570b317a026a77dfc89b384d18543b74"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Niño andoque (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "las-sirenas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6690,
+      "prompt_sha256": "ec8e582565864eea3e8ff8cb993942c5b4fa250c48dc930d74633efe2f5a194b"
+    }
+  ]
+}

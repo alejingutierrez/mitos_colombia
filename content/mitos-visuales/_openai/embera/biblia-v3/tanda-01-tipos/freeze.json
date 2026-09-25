@@ -1,0 +1,110 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "embera",
+  "comunidad": "Embera",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/embera.v3.json",
+    "sha256": "b4730acad386b6c6253a48a0324c23f442149f8fd4eb5b869ebf544d0dffaedd"
+  },
+  "canon": {
+    "sha256": "c63a3ed13c323e894a92ebe4c994be06637f9a34d1e703031bad914c4b1edebd",
+    "verificado_en": "2026-09-25T13:42:04.963Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base · anciana emberá",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5663,
+      "prompt_sha256": "1e92154597d5d5e8834b99b06e20fadb9722c0abca5a8a57fdd6d519a5f96694"
+    },
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre emberá adulto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6031,
+      "prompt_sha256": "367e902f24287995cca07de2a79948967db0cedfb2dea64cae3da43837bb6263"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer emberá adulta",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5855,
+      "prompt_sha256": "d82fc2d80dcb5a5308cc1824b5f4c40f083af33d29e491e95e7fc8cf5c3ae066"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer emberá joven",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5506,
+      "prompt_sha256": "9aa8445255991db82830ca56b277b275ab940588bcf9172715fc7495b6c63231"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño emberá",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5533,
+      "prompt_sha256": "6729e8699f58237a1b4f16cabdb8dce900a39649c18f65b3242594295a0f925c"
+    }
+  ]
+}
