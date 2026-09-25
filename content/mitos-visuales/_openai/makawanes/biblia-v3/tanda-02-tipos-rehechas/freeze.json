@@ -1,0 +1,80 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "makawanes",
+  "comunidad": "Makaguán",
+  "tanda": "tanda-02-tipos-rehechas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/makawanes.v3.json",
+    "sha256": "a8df517623f8b4c7bb6facb374b032403cf631fa7eb7361b76594bb9bc7646b0"
+  },
+  "canon": {
+    "sha256": "4b909272d7fc7ea60af087d7555d666ff1de6e8bc91a706f308ff8f08a1f8b6d",
+    "verificado_en": "2026-09-25T14:02:13.734Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 8,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre adulto makaguán",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-makawanes",
+        "la-gran-inundacion",
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6876,
+      "prompt_sha256": "c331e71d54d85ea9b2cd0601fd651b6e577751eb20a5bea12172ce59c7b2d434"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer joven makaguán",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-makawanes",
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6656,
+      "prompt_sha256": "d29056651dc558e635201860f1b9cc2abaff1422e3c65f10b3dfe9773475e9cc"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño makaguán",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-makawanes",
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6322,
+      "prompt_sha256": "4a86e9c87e5a5e647d4060d8bb65c443689c82f9f60d14598a8fcec5000efd0e"
+    }
+  ]
+}

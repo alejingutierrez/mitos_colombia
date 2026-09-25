@@ -151,11 +151,38 @@ export const CUERPO_Y_CARA = [
 
 const CAPAS_CON_CUERPO = new Set(["tipos", "mortales", "miticos", "colectivos"]);
 
+/**
+ * Una hoja de una sola figura no se parte. Cuando la ficha declara dos
+ * estratos de epoca, el modelo los dibuja lado a lado en el mismo cuadro —la
+ * trampa de cuycuyes, repetida en los tipos makaguan— o arma una hoja de
+ * referencia con rotulos, como el anciano sikuani. El otro estrato tiene su
+ * propia lamina de estado.
+ */
+export const UNA_SOLA_FIGURA = "UNA SOLA LAMINA: una sola figura, de cuerpo entero, en un solo tiempo y un solo lugar. Sin panel dividido, sin segunda version de la misma persona, sin vistas multiples y sin rotulos, letras ni texto de ninguna clase.";
+const CAPAS_DE_UNA_FIGURA = new Set(["tipos", "mortales", "miticos"]);
+
+/**
+ * 23 siluetas describen en la misma frase la forma canonica y la de otro
+ * estado («En su estado contemporaneo, el mismo cuerpo con camiseta…»). En la
+ * lamina canonica el modelo las dibuja las dos, lado a lado. La canonica se
+ * queda sin esas frases; la de estado las conserva, porque son su descripcion.
+ */
+export function sinOtrosEstados(texto) {
+  return String(texto)
+    .split(/(?<=[.;])\s+(?=En (?:su |el )?estado\b)/)
+    .filter((frase) => !/^En (?:su |el )?estado\b(?! can[oó]nico)/i.test(frase))
+    .join(" ");
+}
+
 /** Una vista de estado nombra su estado; la ficha canonica no dice nada mas. */
 function promptDeVista(model, view, capaId) {
-  let base = ensamblar(model.prompt_spec);
+  const spec = view.id === "canon"
+    ? { ...model.prompt_spec, primary_request: sinOtrosEstados(model.prompt_spec.primary_request) }
+    : model.prompt_spec;
+  let base = ensamblar(spec);
   if (CAPAS_CON_CUERPO.has(capaId)) {
-    base = base.replace(/\n\nUse case: /, `\n\n${CUERPO_Y_CARA}\n\nUse case: `);
+    const extra = CAPAS_DE_UNA_FIGURA.has(capaId) ? `\n${UNA_SOLA_FIGURA}` : "";
+    base = base.replace(/\n\nUse case: /, `\n\n${CUERPO_Y_CARA}${extra}\n\nUse case: `);
   }
   if (view.id === "canon" || !view.states?.length) return base;
   const linea = `Estado que muestra esta lamina: ${view.states.join(", ")}. Es la misma figura de su hoja canonica, con la misma cara, proporcion y paleta; cambia solo lo que el estado cambia.`;
