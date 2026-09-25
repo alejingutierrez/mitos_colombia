@@ -1,0 +1,149 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tolima-huila-mestizo",
+  "comunidad": "Tolima y Huila",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tolima-huila-mestizo.v3.json",
+    "sha256": "9dffba7aef09ee37d8689d7a34d8333a814a6b3e6b2da5f82c2a3b4f1ab38cd0"
+  },
+  "canon": {
+    "sha256": "e3603f47534a458fbe0d16a341b049be3b48e059ddfb532221d2ee481c5cf9cf",
+    "verificado_en": "2026-09-25T14:15:58.801Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre adulto del alto Magdalena",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "brujas-y-duendes",
+        "el-cazador",
+        "el-chenche",
+        "el-guango",
+        "el-poira",
+        "el-silbador",
+        "el-sombreron",
+        "el-tunjo",
+        "la-candileja",
+        "la-muelona",
+        "la-patasola",
+        "la-patasola-mixto",
+        "la-tarasca"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8487,
+      "prompt_sha256": "9a2612e08c27daecd64abf8bccb9f21345fc091eb477525d9c204caf6f511a9e"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer adulta del alto Magdalena",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-poira",
+        "el-silbador",
+        "el-sombreron",
+        "la-madre-agua",
+        "la-patasola-mixto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7951,
+      "prompt_sha256": "c837483740281eae321dff3b012d03aedcdd5fd3dc4d388f3e8866349bef05ec"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base · anciano del alto Magdalena",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "brujas-y-duendes",
+        "el-chenche",
+        "el-tunjo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7760,
+      "prompt_sha256": "448735f68d5b064ece3636835864313a2cccff593e1338d84d5c0dfb623c8c21"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño del alto Magdalena",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-silbador",
+        "la-madre-agua",
+        "la-patasola-mixto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7735,
+      "prompt_sha256": "b5afdebb4cd9c4d6ce00d1529eaf8a4b5106ea339d0db69dd5b0906afabca78f"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base · anciana del alto Magdalena",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-silbador",
+        "la-candileja"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7598,
+      "prompt_sha256": "8455367aabf628c5102d0c03698886a6724b097910a148a36ae6c4303d83b306"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer joven del alto Magdalena",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "brujas-y-duendes",
+        "el-silbador"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7783,
+      "prompt_sha256": "498ebe4c6127336eaf757931c4baae4a87cbcbfbdf399ba9430d2f2c61f4ebb1"
+    }
+  ]
+}

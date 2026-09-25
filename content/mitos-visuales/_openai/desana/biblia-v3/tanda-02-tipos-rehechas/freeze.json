@@ -1,0 +1,64 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "desana",
+  "comunidad": "Desana",
+  "tanda": "tanda-02-tipos-rehechas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/desana.v3.json",
+    "sha256": "bea6a4152285c2e533a4989bf4c374b6f2fd8a3827c322492b7d8d3529313d74"
+  },
+  "canon": {
+    "sha256": "8b8f46b02293c31171ca7a65e5be964d782b26572a712b75a0811e6db9d2dc34",
+    "verificado_en": "2026-09-25T14:21:03.805Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 5,
+  "fichas": [
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base: mujer adulta desana",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-desana",
+        "el-origen-de-la-mandioca-desana",
+        "guelamun-ye-el-nieto-del-trueno",
+        "nuguye-y-sepiro-fuego-y-creciente"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5812,
+      "prompt_sha256": "99db3eb76555a931297f288d751d910c1b27efd9595f192198e3e69d9ed9f5a9"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base: mujer joven desana",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "agamahsapu-y-el-tiempo-del-umari",
+        "gainpaya-y-el-origen-del-chontaduro",
+        "yurupari"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5815,
+      "prompt_sha256": "f8892b28b3f756f1ca96fe0d8c3346f4dfcf5f8a0f1ca08ca81c3082c8bada2b"
+    }
+  ]
+}
