@@ -52,7 +52,9 @@ export const CAPAS = [
   // la anatomia tiran del volumen, y ahi se aplica la regla invertida.
   { id: "animales", titulo: "animales y criaturas", toma: (e) => e.kind === "animal" || e.kind === "criatura" },
   { id: "atrezo", titulo: "atrezo, objetos y plantas", toma: (e) => e.kind === "objeto" || e.kind === "planta" },
-  { id: "mundo", titulo: "arquitectura, lugares, paisajes y fenomenos", toma: (e) => ["arquitectura", "lugar", "paisaje", "fenomeno"].includes(e.kind) },
+  { id: "mundo", titulo: "arquitectura y fenomenos, sobre papel", toma: (e) => ["arquitectura", "fenomeno"].includes(e.kind) },
+  // Paisajes y lugares cierran la biblia: son lo unico a fondo completo.
+  { id: "paisajes", titulo: "paisajes y lugares, a fondo completo", toma: (e) => ["paisaje", "lugar"].includes(e.kind) },
 ];
 
 function parseArgs(argv) {
@@ -175,10 +177,51 @@ export function sinOtrosEstados(texto) {
 }
 
 /** Una vista de estado nombra su estado; la ficha canonica no dice nada mas. */
-function promptDeVista(model, view, capaId) {
-  const spec = view.id === "canon"
+/**
+ * Regla del editor, 2026-09-26: una ficha de biblia es una hoja de referencia.
+ * Personajes, animales, criaturas, objetos, plantas, arquitectura y fenomenos
+ * van SOBRE PAPEL BLANCO HUESO, la figura sola; solo `paisaje` y `lugar`
+ * llevan fondo completo a sangre. Los `technique_first` de los planes V3 dicen
+ * lo contrario («full bleed hasta los cuatro limites»), asi que aqui se quitan
+ * esas frases, la regla de fondo abre y cierra el prompt, y la luz del
+ * territorio se cambia por luz de estudio sobre el papel.
+ */
+export const CON_FONDO = new Set(["paisaje", "lugar"]);
+const FRASE_DE_ESCENARIO = /(full bleed|cuatro l[ií]mites|a sangre|dentro del diorama|dentro de la escena|recorta su per[ií]metro|sin borde|cart[oó]n soporte|ciclorama|fondo neutro|mundo llega)/i;
+export const FONDO_PAPEL = "FICHA DE REFERENCIA SOBRE PAPEL, MANDA SOBRE TODO LO DEMAS: la figura, hecha de papel recortado y quilling, esta sola sobre un pliego liso de papel blanco hueso mate que ocupa todo el cuadro, fotografiada desde el frente con luz de estudio suave; su propia sombra corta y nitida cae sobre ese papel. Sin escenario, sin paisaje, sin cielo ni horizonte, sin suelo con terreno, sin arquitectura detras y sin figuras secundarias.";
+const CIERRE_PAPEL = "Fondo: pliego liso de papel blanco hueso, sin escenario; solo la figura y su sombra.";
+
+const frases = (texto) => String(texto || "").split(/(?<=[.!?])\s+/);
+// «Inmersiva» y «esta tecnica manda sobre todo» pertenecen al escenario: en una
+// ficha, lo que manda es el pliego de papel.
+const sinEscenario = (texto) => frases(texto)
+  .filter((f) => !FRASE_DE_ESCENARIO.test(f) && !/manda sobre todo/i.test(f))
+  .map((f) => f.replace(/\s+inmersiv[ao]s?/gi, ""))
+  .join(" ");
+
+export function sobrePapel(spec) {
+  return {
+    ...spec,
+    technique_first: `${FONDO_PAPEL}\n${sinEscenario(spec.technique_first)}`,
+    composition_framing: String(spec.composition_framing || "")
+      .replace(/mundo full bleed hasta los cuatro l[ií]mites/i, "figura sola sobre papel blanco hueso liso, con aire alrededor"),
+    lighting_mood: "Luz de estudio suave y direccional sobre el papel, que marca el canto de cada pieza y deja una sombra corta sobre el pliego; sin luz de paisaje ni hora del dia.",
+    constraints: (spec.constraints || []).filter(
+      (c) => !/^El terreno|primer plano, plano medio y fondo/i.test(c) && !FRASE_DE_ESCENARIO.test(c),
+    ),
+    avoid: [
+      ...(spec.avoid || []).filter((a) => !FRASE_DE_ESCENARIO.test(a)),
+      "ningun escenario, paisaje, cielo, horizonte, suelo con terreno ni figura secundaria detras de la ficha",
+    ],
+    technique_close: `${sinEscenario(spec.technique_close)} ${CIERRE_PAPEL}`,
+  };
+}
+
+function promptDeVista(model, view, capaId, kind) {
+  let spec = view.id === "canon"
     ? { ...model.prompt_spec, primary_request: sinOtrosEstados(model.prompt_spec.primary_request) }
     : model.prompt_spec;
+  if (!CON_FONDO.has(kind)) spec = sobrePapel(spec);
   let base = ensamblar(spec);
   if (CAPAS_CON_CUERPO.has(capaId)) {
     const extra = CAPAS_DE_UNA_FIGURA.has(capaId) ? `\n${UNA_SOLA_FIGURA}` : "";
@@ -275,7 +318,7 @@ async function main() {
       const entity = plan.entities[m.entity_refs[0]];
       for (const view of m.views) {
         const job = `${id}--${view.id}`;
-        const prompt = promptDeVista(m, view, capa.id);
+        const prompt = promptDeVista(m, view, capa.id, entity.kind);
         writeFileSync(join(dir, "prompts", `${job}.prompt.txt`), `${prompt}\n`);
         requests.push({
           prompt, model: MODELO, size: SIZE[view.aspect] || "1024x1024",
