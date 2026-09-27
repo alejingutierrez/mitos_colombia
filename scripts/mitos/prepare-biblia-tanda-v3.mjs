@@ -148,6 +148,7 @@ export const CUERPO_Y_CARA = [
   "CUERPO Y CARA, DENTRO DE ESA TECNICA:",
   "- El cuerpo NO se esculpe: torso, brazos y piernas son dos o tres RECORTES PLANOS grandes de cartulina mate, con el canto del corte visible y sin degradado ni modelado dentro de la pieza. La profundidad la da la sombra nitida entre capas, no el volumen.",
   "- La cara es un OVALO PLANO de un solo tono parejo, sin luz ni sombra dentro; encima, como piezas recortadas aparte, el pelo en dos o tres formas, dos cejas, dos ojos minimos y una boca. La nariz se insinua por el borde del recorte, nunca sombreada. La edad se lee por proporcion, postura y pelo, no por arrugas pintadas.",
+  "- NADA DE CARA DE ANIMACION (el editor la rechazo en los ninos kogui, 2026-09-26): ni ojos grandes y redondos, ni brillo o reflejo en la pupila, ni pestañas marcadas, ni mejillas infladas, ni cabeza de muñeco, ni sonrisa de personaje de pelicula; nada de Pixar, Disney ni anime. Los ojos son dos piezas minimas de papel oscuro, pequeñas y almendradas, sin brillo. Un niño o una muchacha se leen por la talla y la proporcion del cuerpo, no por una cara aniñada de caricatura.",
   "- Una mano es una sola pieza. Si alguien mira la lamina y piensa «lo esculpieron», esta mal: tiene que pensar «lo recortaron y lo pegaron por capas».",
 ].join("\n");
 
