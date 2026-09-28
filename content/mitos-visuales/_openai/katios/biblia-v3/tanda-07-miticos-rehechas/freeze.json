@@ -1,0 +1,66 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "katios",
+  "comunidad": "Katíos",
+  "tanda": "tanda-07-miticos-rehechas",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/katios.v3.json",
+    "sha256": "95433c3689a47a6cd556c1bd53507637716480628a24e85bbb4d5e7f8c2ed42d"
+  },
+  "canon": {
+    "sha256": "de27d790f202032beb5e5da24c37ad0457de3c5ea66f10b4fdd7c7f234b286ef",
+    "verificado_en": "2026-09-28T04:53:58.226Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 13,
+  "fichas_ya_preparadas": 13,
+  "fichas": [
+    {
+      "job": "antomia__identity_sheet--canon",
+      "modelo": "antomia__identity_sheet",
+      "entidad": "Antomiá",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "antomia",
+        "creacion-katios",
+        "icades-name",
+        "tradicion-del-cerro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7262,
+      "prompt_sha256": "2aa699c13c0ecf4d4b68a4e43347359945434257b0690de8aed633fce362081c"
+    },
+    {
+      "job": "gedeco__identity_sheet--canon",
+      "modelo": "gedeco__identity_sheet",
+      "entidad": "Gedeco (la luna)",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-del-sol-y-la-luna",
+        "herupotoarra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7248,
+      "prompt_sha256": "bd8f82f323b4d5cffd0cc9ed4189a6a560d929ac39edef448bcac9ccd6c08646"
+    }
+  ]
+}
