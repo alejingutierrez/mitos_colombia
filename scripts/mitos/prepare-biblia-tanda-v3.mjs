@@ -204,8 +204,13 @@ export function sobrePapel(spec) {
   return {
     ...spec,
     technique_first: `${FONDO_PAPEL}\n${sinEscenario(spec.technique_first)}`,
+    // La escala de algunas fichas describe una escena («por detras del hombro
+    // de otra figura fuera de foco»): en papel eso pinta figuras borrosas.
     composition_framing: String(spec.composition_framing || "")
-      .replace(/mundo full bleed hasta los cuatro l[ií]mites/i, "figura sola sobre papel blanco hueso liso, con aire alrededor"),
+      .replace(/mundo full bleed hasta los cuatro l[ií]mites/i, "figura sola sobre papel blanco hueso liso, con aire alrededor")
+      .split(/(?<=[.;,])\s+/)
+      .filter((f) => !/(otra figura|fuera de foco|primer t[ée]rmino|detr[aá]s del hombro)/i.test(f))
+      .join(" "),
     lighting_mood: "Luz de estudio suave y direccional sobre el papel, que marca el canto de cada pieza y deja una sombra corta sobre el pliego; sin luz de paisaje ni hora del dia.",
     constraints: (spec.constraints || []).filter(
       (c) => !/^El terreno|primer plano, plano medio y fondo/i.test(c) && !FRASE_DE_ESCENARIO.test(c),
@@ -218,19 +223,37 @@ export function sobrePapel(spec) {
   };
 }
 
-function promptDeVista(model, view, capaId, kind) {
+/**
+ * Una lamina de estado dibuja el estado. Los tigres kogui salieron como el
+ * mismo hombre porque el prompt repetia la silueta humana y decia «cambia solo
+ * lo que el estado cambia»; lo que el plan dice del estado vive en frases de la
+ * silueta y en `continuity` («su estado de tigre parte del cuerpo del jaguar y
+ * conserva la mochila»). Aqui la peticion se arma con esas frases.
+ */
+export function peticionDeEstado(model, view, nombre) {
+  const estado = view.states.join(", ");
+  const clave = estado.split(/[\s(,]/)[0].toLowerCase();
+  const habla = (t) => /estado/i.test(t) || (clave.length > 3 && t.toLowerCase().includes(clave));
+  const silueta = frases(model.design_contract?.distinctive_silhouette).filter(habla);
+  const continuidad = (model.design_contract?.continuity_markers || []).filter(habla);
+  const jaguar = /tigre|jaguar/i.test(estado + continuidad.join(" "))
+    ? " El tigre es el de Colombia: jaguar americano, rosetas con punto interior; nunca tigre de bengala ni leopardo."
+    : "";
+  const punto = (t) => (/[.!?]$/.test(t.trim()) ? t.trim() : `${t.trim()}.`);
+  return `${view.purpose}, para ${nombre}. Dibuja la forma que ese estado describe, entera, aunque ya no sea humana; de la figura canonica conserva solo lo que aqui se dice que conserva. ${[...silueta, ...continuidad].map(punto).join(" ")}${jaguar}`;
+}
+
+function promptDeVista(model, view, capaId, kind, nombre) {
   let spec = view.id === "canon"
     ? { ...model.prompt_spec, primary_request: sinOtrosEstados(model.prompt_spec.primary_request) }
-    : model.prompt_spec;
+    : { ...model.prompt_spec, primary_request: peticionDeEstado(model, view, nombre) };
   if (!CON_FONDO.has(kind)) spec = sobrePapel(spec);
   let base = ensamblar(spec);
   if (CAPAS_CON_CUERPO.has(capaId)) {
     const extra = CAPAS_DE_UNA_FIGURA.has(capaId) ? `\n${UNA_SOLA_FIGURA}` : "";
     base = base.replace(/\n\nUse case: /, `\n\n${CUERPO_Y_CARA}${extra}\n\nUse case: `);
   }
-  if (view.id === "canon" || !view.states?.length) return base;
-  const linea = `Estado que muestra esta lamina: ${view.states.join(", ")}. Es la misma figura de su hoja canonica, con la misma cara, proporcion y paleta; cambia solo lo que el estado cambia.`;
-  return base.replace(/\nPrimary request: /, `\n${linea}\nPrimary request: `);
+  return base;
 }
 
 function siguienteNumero(corpus) {
@@ -319,7 +342,7 @@ async function main() {
       const entity = plan.entities[m.entity_refs[0]];
       for (const view of m.views) {
         const job = `${id}--${view.id}`;
-        const prompt = promptDeVista(m, view, capa.id, entity.kind);
+        const prompt = promptDeVista(m, view, capa.id, entity.kind, entity.name);
         writeFileSync(join(dir, "prompts", `${job}.prompt.txt`), `${prompt}\n`);
         requests.push({
           prompt, model: MODELO, size: SIZE[view.aspect] || "1024x1024",
