@@ -183,6 +183,10 @@ function buildPromptSpec({ plan, entity, purpose, view }) {
       // La silueta ya viaja entera en `primary_request`, y `entity.description`
       // es campo de inventario —lo que la figura hace en todo el corpus—, no de
       // diseño: en una hoja de identidad empuja al modelo a narrar nueve actos.
+      // La paleta propia de la ficha no llegaba al prompt: el arco iris kogui,
+      // que su ficha limita a los grados de tierra del corpus, salio con los
+      // siete colores saturados que la biblia reserva a otra piedra.
+      ...(entity.design.palette ? [`paleta de esta ficha: ${entity.design.palette}`] : []),
       ...(entity.design.documented || []).map((feature) => `documentado: ${feature.replace(CITA, "")}`),
       ...(vs.palette_rules || []),
       "primer plano, plano medio y fondo a distancias fisicas distintas, con aire, oclusiones, cantos internos y sombras proyectadas",

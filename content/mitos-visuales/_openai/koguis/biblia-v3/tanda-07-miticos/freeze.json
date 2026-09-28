@@ -1,0 +1,243 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "koguis",
+  "comunidad": "Kogui (Kággaba)",
+  "tanda": "tanda-07-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/koguis.v3.json",
+    "sha256": "a603f6c5e746c369d9560a3f4637713cf96b631bccb71ec2f4dc34137094dac8"
+  },
+  "canon": {
+    "sha256": "edca8fad668f5e006d7587f11184f1111e3139a171111e1e903647bc29cfc6f3",
+    "verificado_en": "2026-09-28T02:30:26.619Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 11,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "gran_madre__identity_sheet--canon",
+      "modelo": "gran_madre__identity_sheet",
+      "entidad": "La Gran Madre (la Magri / Luitsama / Magri Regina / Gauteován)",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "canibalismo",
+        "creacion-koguis",
+        "el-algodon-koguis",
+        "el-maiz-koguis",
+        "el-sol-mama",
+        "guateovan",
+        "kashindukwe",
+        "la-candela-gotze",
+        "namaku",
+        "naowa-entrega-el-gobierno-a-su-hijo",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7600,
+      "prompt_sha256": "38118b68514b423d589e3be026e00bad46604ac660a275ddea5a9b395ef65108"
+    },
+    {
+      "job": "sol_mama__identity_sheet--canon",
+      "modelo": "sol_mama__identity_sheet",
+      "entidad": "El Sol (Mama)",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-arco-iris-susabanka",
+        "el-sol-mama",
+        "guateovan",
+        "kasauge-el-padre-arbol",
+        "kashindukwe",
+        "la-candela-gotze"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7289,
+      "prompt_sha256": "3bb56eba0a1622854ac74b16bbf8045e1c1fb949ddfb55b0eb26750de915f162"
+    },
+    {
+      "job": "sol_mama__state_sheet--estado_hombrecito feo y mal hecho, antes de ser vestido",
+      "modelo": "sol_mama__state_sheet",
+      "entidad": "El Sol (Mama)",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_hombrecito feo y mal hecho, antes de ser vestido",
+      "estados": [
+        "hombrecito feo y mal hecho, antes de ser vestido"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-arco-iris-susabanka",
+        "el-sol-mama",
+        "guateovan",
+        "kasauge-el-padre-arbol",
+        "kashindukwe",
+        "la-candela-gotze"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7309,
+      "prompt_sha256": "99872f78820cae6b131a7180cc5cd3c76b3cf8195c0a357674b7f783d4518bba"
+    },
+    {
+      "job": "naowa_wastora__identity_sheet--canon",
+      "modelo": "naowa_wastora__identity_sheet",
+      "entidad": "Madre Naowa (Haba-Naowa / Madre Wastora)",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-koguis",
+        "el-primer-hombre-y-la-primera-mujer",
+        "madre-wastora",
+        "naowa-entrega-el-gobierno-a-su-hijo"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7204,
+      "prompt_sha256": "5d385bc26b8de19248aca9cc532768a5de6ab84c2b1d9d871d885a5e32f534ed"
+    },
+    {
+      "job": "naowa_wastora__state_sheet--estado_con barba, bigote, poporo y bastón",
+      "modelo": "naowa_wastora__state_sheet",
+      "entidad": "Madre Naowa (Haba-Naowa / Madre Wastora)",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_con barba, bigote, poporo y bastón",
+      "estados": [
+        "con barba, bigote, poporo y bastón"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-koguis",
+        "el-primer-hombre-y-la-primera-mujer",
+        "madre-wastora",
+        "naowa-entrega-el-gobierno-a-su-hijo"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7107,
+      "prompt_sha256": "ab8ddfcd170c1136884b4e852421319a02aa1461d71b72da95d0fa985415094f"
+    },
+    {
+      "job": "luna__identity_sheet--canon",
+      "modelo": "luna__identity_sheet",
+      "entidad": "La Luna",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-arco-iris-susabanka",
+        "el-sol-mama"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6754,
+      "prompt_sha256": "b6735cc7f2815eacaa57c75834c3574fb786743c9379df7720ed76d906e9d814"
+    },
+    {
+      "job": "madre_del_bastimento__identity_sheet--canon",
+      "modelo": "madre_del_bastimento__identity_sheet",
+      "entidad": "El padre del bastimento, que era una mujer",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kasauge-el-padre-arbol",
+        "los-primeros-indios"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6802,
+      "prompt_sha256": "044a06f43db9d096898dadfd898483e0ea2abc18085864f70024a03cb091f0a9"
+    },
+    {
+      "job": "hiwiha__identity_sheet--canon",
+      "modelo": "hiwiha__identity_sheet",
+      "entidad": "Hiwihá, madre de las enfermedades",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-enfermedad-hiwiha"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6681,
+      "prompt_sha256": "7dfff9b0ce62780ec72e8d31fa0af4711ba3c3971eda6561799a7e65a6145d5d"
+    },
+    {
+      "job": "susabanka__identity_sheet--canon",
+      "modelo": "susabanka__identity_sheet",
+      "entidad": "Susabanka, el arco iris",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-arco-iris-susabanka"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6983,
+      "prompt_sha256": "2ec70d387af86bd00cd0b986a1d42305bee8e82ce63ebe3424b559ce8e106a33"
+    },
+    {
+      "job": "susabanka__state_sheet--estado_hecho piedra",
+      "modelo": "susabanka__state_sheet",
+      "entidad": "Susabanka, el arco iris",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_hecho piedra",
+      "estados": [
+        "hecho piedra"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-arco-iris-susabanka"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7032,
+      "prompt_sha256": "9eeea9b95f386ee2aa3bcfe13905b18111859000060b737045ea388ed418bb5a"
+    },
+    {
+      "job": "tierra_negra__identity_sheet--canon",
+      "modelo": "tierra_negra__identity_sheet",
+      "entidad": "La Tierra Negra, madre del cultivo",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-koguis"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6847,
+      "prompt_sha256": "044c0a8fec55d26410cf76e0d03927bcde90229eb96ea59bf89ec0f5d1eb1634"
+    }
+  ]
+}

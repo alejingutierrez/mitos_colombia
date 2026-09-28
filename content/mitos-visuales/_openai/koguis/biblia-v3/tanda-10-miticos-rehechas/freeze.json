@@ -1,0 +1,50 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "koguis",
+  "comunidad": "Kogui (Kággaba)",
+  "tanda": "tanda-10-miticos-rehechas",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/koguis.v3.json",
+    "sha256": "393111cd6df3d03b8e4b21a66fc16b45d9f1eab6b75d6c1653e0fe55306f57cf"
+  },
+  "canon": {
+    "sha256": "edca8fad668f5e006d7587f11184f1111e3139a171111e1e903647bc29cfc6f3",
+    "verificado_en": "2026-09-28T02:35:43.748Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 11,
+  "fichas_ya_preparadas": 11,
+  "fichas": [
+    {
+      "job": "sol_mama__state_sheet--estado_hombrecito feo y mal hecho, antes de ser vestido",
+      "modelo": "sol_mama__state_sheet",
+      "entidad": "El Sol (Mama)",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_hombrecito feo y mal hecho, antes de ser vestido",
+      "estados": [
+        "hombrecito feo y mal hecho, antes de ser vestido"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-arco-iris-susabanka",
+        "el-sol-mama",
+        "guateovan",
+        "kasauge-el-padre-arbol",
+        "kashindukwe",
+        "la-candela-gotze"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5860,
+      "prompt_sha256": "2b094eaa6ee64fcc12a18866a97991f1b2ae91045787a7e6db637ba614053666"
+    }
+  ]
+}

@@ -243,10 +243,22 @@ export function peticionDeEstado(model, view, nombre) {
   return `${view.purpose}, para ${nombre}. Dibuja la forma que ese estado describe, entera, aunque ya no sea humana; de la figura canonica conserva solo lo que aqui se dice que conserva. ${[...silueta, ...continuidad].map(punto).join(" ")}${jaguar}`;
 }
 
+// Un estado «antes de» (el Sol antes de ser vestido de oro) no puede cargar
+// los materiales de la ficha canonica: el Sol salio ya vestido de oro.
+const ANTERIOR = /\bantes de\b/i;
+
 function promptDeVista(model, view, capaId, kind, nombre) {
   let spec = view.id === "canon"
     ? { ...model.prompt_spec, primary_request: sinOtrosEstados(model.prompt_spec.primary_request) }
     : { ...model.prompt_spec, primary_request: peticionDeEstado(model, view, nombre) };
+  if (view.id !== "canon" && ANTERIOR.test(view.states.join(" "))) {
+    spec = {
+      ...spec,
+      materials_textures: "Todavia no lleva nada de lo que la ficha canonica le pone encima: va con lo que llevaria cualquier persona de su comunidad, en el mismo papel sin brillo.",
+      // La paleta y los rasgos documentados describen la figura ya cambiada.
+      constraints: (spec.constraints || []).filter((c) => !/^(paleta de esta ficha|documentado):/i.test(c)),
+    };
+  }
   if (!CON_FONDO.has(kind)) spec = sobrePapel(spec);
   let base = ensamblar(spec);
   if (CAPAS_CON_CUERPO.has(capaId)) {
