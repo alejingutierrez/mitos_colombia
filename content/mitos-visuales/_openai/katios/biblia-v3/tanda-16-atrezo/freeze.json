@@ -1,0 +1,408 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "katios",
+  "comunidad": "Katíos",
+  "tanda": "tanda-16-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/katios.v3.json",
+    "sha256": "f9be2226192a255af2522fb3e144f1264bdda5ccada0d4efa1433ed94953b054"
+  },
+  "canon": {
+    "sha256": "de27d790f202032beb5e5da24c37ad0457de3c5ea66f10b4fdd7c7f234b286ef",
+    "verificado_en": "2026-09-28T15:20:21.818Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 20,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_hogar__object_sheet--canon",
+      "modelo": "hoja_utileria_hogar__object_sheet",
+      "entidad": "hoja utileria hogar",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "sever",
+        "fragmentos-de-otras-tradiciones",
+        "baha",
+        "creacion-katios",
+        "antomia",
+        "los-domicoes",
+        "los-bibidigomias",
+        "coste",
+        "aribamias"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6148,
+      "prompt_sha256": "df48b4c9b96f7d93146c3e91e61e0a1f0c643b7912b95fa1bf7c697a51fa71c5"
+    },
+    {
+      "job": "arco-y-flechas__object_sheet--canon",
+      "modelo": "arco-y-flechas__object_sheet",
+      "entidad": "Arco y flechas",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "sever",
+        "coste",
+        "los-domicoes",
+        "herupotoarra",
+        "tradiciones-relativas-a-la-conquista",
+        "los-bibidigomias"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6078,
+      "prompt_sha256": "02523ce4c6b4c2e6138cd1a59f9fa1cfd254f7806007a88a5f18b509bc0ce2c6"
+    },
+    {
+      "job": "oro__object_sheet--canon",
+      "modelo": "oro__object_sheet",
+      "entidad": "El oro",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "baha",
+        "coste",
+        "cobaima",
+        "antomia",
+        "tradiciones-relativas-a-la-conquista",
+        "la-escalera-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6229,
+      "prompt_sha256": "376ef889e4e5be19e5a834b372b0cc26ae9c89325fdbc0ae6a54c02baa411fd2"
+    },
+    {
+      "job": "hoja_utileria_herramientas__object_sheet--canon",
+      "modelo": "hoja_utileria_herramientas__object_sheet",
+      "entidad": "hoja utileria herramientas",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "fragmentos-de-otras-tradiciones",
+        "cobaima",
+        "icades-name",
+        "los-bibidigomias",
+        "creacion-katios"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6279,
+      "prompt_sha256": "3248291021c14b8ed1800db2f4fa4c6d723ca56dcd6d51063da8e1acb5176719"
+    },
+    {
+      "job": "hoja_utileria_materia_de_creacion__object_sheet--canon",
+      "modelo": "hoja_utileria_materia_de_creacion__object_sheet",
+      "entidad": "hoja utileria materia de creacion",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-katios",
+        "fragmentos-de-otras-tradiciones",
+        "baha",
+        "cobaima",
+        "sever"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6340,
+      "prompt_sha256": "6202477c25a79ad98b02716e8e15ab779cd24ee1a5ba60f702898a188ed1aead"
+    },
+    {
+      "job": "cabezas-trofeo__object_sheet--canon",
+      "modelo": "cabezas-trofeo__object_sheet",
+      "entidad": "Cabezas y calaveras de trofeo",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-domicoes",
+        "sever",
+        "tradiciones-relativas-a-la-conquista",
+        "los-bibidigomias"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5948,
+      "prompt_sha256": "355940b147df1c7e816d685650af381cbeee532391d53d5ab70f746323ee225e"
+    },
+    {
+      "job": "arbol-comba__botanical_sheet--canon",
+      "modelo": "arbol-comba__botanical_sheet",
+      "entidad": "El árbol Comba",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "sever",
+        "coste"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5771,
+      "prompt_sha256": "014a366f7cf8e8df920d93bcb5c138a56655eb77acdcf40e61035e7368ad66e9"
+    },
+    {
+      "job": "canoa__object_sheet--canon",
+      "modelo": "canoa__object_sheet",
+      "entidad": "Canoa",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-katios",
+        "sever"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5911,
+      "prompt_sha256": "0cb3f752cef100e98bd5fd084c88028b1285f41a8fd11febd2e302e7166bed55"
+    },
+    {
+      "job": "chontaduro__botanical_sheet--canon",
+      "modelo": "chontaduro__botanical_sheet",
+      "entidad": "Chontaduro",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "ancastor",
+        "herupotoarra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5899,
+      "prompt_sha256": "26af5ceb3707589502e84bd20b5d2b53fac82b7ca37afc03cd1d9d8d3c6e471e"
+    },
+    {
+      "job": "collar-de-dientes__object_sheet--canon",
+      "modelo": "collar-de-dientes__object_sheet",
+      "entidad": "El collar de dientes que suena como campanas",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "sever",
+        "los-domicoes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5890,
+      "prompt_sha256": "6243de1ff498b6ed5bde7fa7c703e3b6faca35cbd06b8126f5bfde620015a0b0"
+    },
+    {
+      "job": "genene__botanical_sheet--canon",
+      "modelo": "genene__botanical_sheet",
+      "entidad": "El árbol Genené",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "fragmentos-de-otras-tradiciones",
+        "sever"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5748,
+      "prompt_sha256": "3498d20ed171acdff92c5e76631a3832db985435f0d128724fdd7a6c0ecc11e8"
+    },
+    {
+      "job": "hoja_utileria_guerra__object_sheet--canon",
+      "modelo": "hoja_utileria_guerra__object_sheet",
+      "entidad": "hoja utileria guerra",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "sever",
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6152,
+      "prompt_sha256": "2c6173825888854f716a529b08fb2f9de1b6e40b060b30a7083f566211db0940"
+    },
+    {
+      "job": "horno-de-la-prueba-del-fuego__object_sheet--canon",
+      "modelo": "horno-de-la-prueba-del-fuego__object_sheet",
+      "entidad": "El horno de la prueba del fuego",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-katios",
+        "antomia"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6026,
+      "prompt_sha256": "a673bf56b80a7bb8063b55a613c04fe5c567e05f9877e215956599a405929456"
+    },
+    {
+      "job": "moindu__botanical_sheet--canon",
+      "modelo": "moindu__botanical_sheet",
+      "entidad": "Raíz de moindú (tobo)",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "antomia",
+        "tradicion-del-cerro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5721,
+      "prompt_sha256": "38a3d48a9c40fba57fa9a403c2fd2d2edfed706dff1eea620713674165637ef7"
+    },
+    {
+      "job": "ajies-barbasco-y-anamu__botanical_sheet--canon",
+      "modelo": "ajies-barbasco-y-anamu__botanical_sheet",
+      "entidad": "Ajíes, barbascos y anamú",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-bibidigomias"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6021,
+      "prompt_sha256": "7b051810bb2cfec99a4dd21f4b6a799330a7b529d10c57c2f72d6eec96a2d12b"
+    },
+    {
+      "job": "cirios-de-genene__object_sheet--canon",
+      "modelo": "cirios-de-genene__object_sheet",
+      "entidad": "Los cuatro cirios del Genené",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5946,
+      "prompt_sha256": "56ff4083e8d51502030d41046095082348008294b2c7db4c137497900c974cbe"
+    },
+    {
+      "job": "lanza-miatzu__object_sheet--canon",
+      "modelo": "lanza-miatzu__object_sheet",
+      "entidad": "La lanza miatzu",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "baha"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5818,
+      "prompt_sha256": "45573ac8036737eba7e8dc0c815e1746db357022346e5689504d9d2e2b20440c"
+    },
+    {
+      "job": "maiz__botanical_sheet--canon",
+      "modelo": "maiz__botanical_sheet",
+      "entidad": "Maíz",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "ancastor"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5942,
+      "prompt_sha256": "d12d50efe30647299227dede7d631c1eb53fba53bdb1afd756c8f22d17462693"
+    },
+    {
+      "job": "name__botanical_sheet--canon",
+      "modelo": "name__botanical_sheet",
+      "entidad": "El ñame",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "icades-name"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5858,
+      "prompt_sha256": "6a4ff42ac78c14596be6e56c7a2c083025d5581bcb10c325263aa28a2436953a"
+    },
+    {
+      "job": "tambor-de-baha__object_sheet--canon",
+      "modelo": "tambor-de-baha__object_sheet",
+      "entidad": "El tambor de Baha",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "baha"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5763,
+      "prompt_sha256": "07ce0fe5ed42d6552a738a6dbcf6a878190af9873724e7272d70c1e010c0dd9a"
+    }
+  ]
+}
