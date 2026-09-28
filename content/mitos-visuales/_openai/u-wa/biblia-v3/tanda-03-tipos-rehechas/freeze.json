@@ -1,0 +1,44 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "u-wa",
+  "comunidad": "U’wa",
+  "tanda": "tanda-03-tipos-rehechas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/u-wa.v3.json",
+    "sha256": "5e5462ec1faa17ad393b4cbaccc5e11a5e2c3cbcf01983f403221e88f1fa1ff2"
+  },
+  "canon": {
+    "sha256": "a90c54e7ee6b64a69b74d22cb095455d84c1040f832c2a85fbbf36891e532aed",
+    "verificado_en": "2026-09-28T20:10:42.243Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 6,
+  "fichas": [
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base: mujer joven u'wa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-u-wa",
+        "lisha-la-madre-del-agua",
+        "mensajes-de-los-animales-uwa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6813,
+      "prompt_sha256": "117599d3485a62e4e19425ff2d66f0c4794aef4b6bf928d0b55b514b2ea160a8"
+    }
+  ]
+}
