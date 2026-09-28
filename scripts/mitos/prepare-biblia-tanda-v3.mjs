@@ -229,7 +229,7 @@ export function sobrePapel(spec) {
     // La escala de algunas fichas describe una escena («por detras del hombro
     // de otra figura fuera de foco»): en papel eso pinta figuras borrosas.
     composition_framing: String(spec.composition_framing || "")
-      .replace(/mundo full bleed hasta los cuatro l[ií]mites/i, "figura sola sobre papel blanco hueso liso, con aire alrededor")
+      .replace(/mundo full bleed hasta los cuatro l[ií]mites/i, "la ficha sola sobre papel blanco hueso liso, con aire alrededor")
       .split(/(?<=[.;,])\s+/)
       .filter((f) => !/(otra figura|fuera de foco|primer t[ée]rmino|detr[aá]s del hombro|segundo cuadro|acotad|\bcota)/i.test(f))
       .join(" ")
@@ -334,6 +334,11 @@ function promptDeVista(model, view, capaId, kind, nombre, estados = []) {
         .filter((c) => !/^en (el|la) (primer|segundo|tercer)/i.test(c.trim()))
         .join(" "),
       composition_framing: sinClausulasDe(model.prompt_spec.composition_framing, otros),
+      // El picure canonico salia con las quemaduras de su estado porque un
+      // rasgo documentado las nombra: la canonica no carga rasgos de otro estado.
+      constraints: (model.prompt_spec.constraints || []).filter(
+        (c) => !(/^documentado:/i.test(c) && nombra(c, estados.filter((e) => !/^can[oó]nico$/i.test(e)).flatMap(raicesDe))),
+      ),
     }
     : {
       ...model.prompt_spec,

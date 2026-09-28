@@ -1,0 +1,344 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "guahibo-sikuani",
+  "comunidad": "Sikuani (Guahíbo)",
+  "tanda": "tanda-10-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/guahibo-sikuani.v3.json",
+    "sha256": "f28cc94045f6ee2db3647fcfe56df9e8d2dbe9fac8218a1a0fe8a5bd7bc7c3b4"
+  },
+  "canon": {
+    "sha256": "b915af478564a4987fb3256d1d08a4fe205b8aebfd5572ecf4fe54ec6e1ed923",
+    "verificado_en": "2026-09-28T22:44:20.693Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 18,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hormigas_cortadoras_bachacos__identity_sheet--canon",
+      "modelo": "hormigas_cortadoras_bachacos__identity_sheet",
+      "entidad": "Las hormigas cortadoras de hojas (bachacos)",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-creador-del-cosmos",
+        "kawiri-monae"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5556,
+      "prompt_sha256": "e752e9edb085cc6514629d55f262b095725b18fddf0b931a33a94a64d3033a85"
+    },
+    {
+      "job": "jaguar__identity_sheet--canon",
+      "modelo": "jaguar__identity_sheet",
+      "entidad": "El jaguar",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-tigre",
+        "historia-de-un-tigre"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5676,
+      "prompt_sha256": "f017470681ae33a0a3140fc489d68882a0fedede2fa138a91a8e31e0033cfd8d"
+    },
+    {
+      "job": "kutsikutsi__identity_sheet--canon",
+      "modelo": "kutsikutsi__identity_sheet",
+      "entidad": "Kutsikutsi, el mico de noche",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "kaliwirnae-el-arbol-de-los-alimentos",
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5652,
+      "prompt_sha256": "30d567988f4ed6a89885fe14208fa8cb8436e7c4b35267b704ca5f2e7c059b33"
+    },
+    {
+      "job": "kutsikutsi__state_sheet--estado_marcas_de_quemadura",
+      "modelo": "kutsikutsi__state_sheet",
+      "entidad": "Kutsikutsi, el mico de noche",
+      "categoria": "animal",
+      "vista": "estado_marcas_de_quemadura",
+      "estados": [
+        "marcas_de_quemadura"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "kaliwirnae-el-arbol-de-los-alimentos",
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5585,
+      "prompt_sha256": "f0211acac12599ae4f207295d85a2e99d27b5b8b0ae7f2bbc86971a8f5d78eec"
+    },
+    {
+      "job": "lapa__identity_sheet--canon",
+      "modelo": "lapa__identity_sheet",
+      "entidad": "La lapa",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "historia-de-un-brujo",
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5345,
+      "prompt_sha256": "a7c2f9804595624226ccc24116fda9a19db7a9cd2943de061dc4709cb22112b3"
+    },
+    {
+      "job": "lapa__state_sheet--estado_sin_cola",
+      "modelo": "lapa__state_sheet",
+      "entidad": "La lapa",
+      "categoria": "animal",
+      "vista": "estado_sin_cola",
+      "estados": [
+        "sin_cola"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "historia-de-un-brujo",
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5345,
+      "prompt_sha256": "f68d01cd2e763d25118abe2a80d7b9716dbaa91c74d69b86f192eaa627ae56b5"
+    },
+    {
+      "job": "picure__identity_sheet--canon",
+      "modelo": "picure__identity_sheet",
+      "entidad": "El picure",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "historia-de-un-brujo",
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5312,
+      "prompt_sha256": "b940df8a87a111695e323d8a5f64b364b5ff1c363bacee3cd8136e0b0f1dbb7c"
+    },
+    {
+      "job": "picure__state_sheet--estado_marcas_de_quemadura",
+      "modelo": "picure__state_sheet",
+      "entidad": "El picure",
+      "categoria": "animal",
+      "vista": "estado_marcas_de_quemadura",
+      "estados": [
+        "marcas_de_quemadura"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "historia-de-un-brujo",
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5389,
+      "prompt_sha256": "395e0dd0e3280bcb863414e3c4cb4ada8dd2e06ef64e66e4708d2c47f9a7e8d4"
+    },
+    {
+      "job": "aguila_enorme__identity_sheet--canon",
+      "modelo": "aguila_enorme__identity_sheet",
+      "entidad": "El águila enorme",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "historia-de-un-brujo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5513,
+      "prompt_sha256": "e1e595d5980e35a243985c0cb0999dda7f9fefbfc5705029f5376160f69020c8"
+    },
+    {
+      "job": "aguilas_gavilan_primito__identity_sheet--canon",
+      "modelo": "aguilas_gavilan_primito__identity_sheet",
+      "entidad": "Las dos águilas con apariencia de gavilán primito",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5866,
+      "prompt_sha256": "56db8f62e673654dea390551600855fbcc7f13a27d7f3a04e313fb4cb75942ad"
+    },
+    {
+      "job": "aguilas_gavilan_primito__state_sheet--estado_muerta y caída sobre el monte, abriendo la sabana entre la selva",
+      "modelo": "aguilas_gavilan_primito__state_sheet",
+      "entidad": "Las dos águilas con apariencia de gavilán primito",
+      "categoria": "criatura",
+      "vista": "estado_muerta y caída sobre el monte, abriendo la sabana entre la selva",
+      "estados": [
+        "muerta y caída sobre el monte, abriendo la sabana entre la selva"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5685,
+      "prompt_sha256": "15a1ad14a36692f53cd3b5ef243e63a2fd9768bcd69aa8fc50082ba0ab9649ba"
+    },
+    {
+      "job": "ainawi__identity_sheet--canon",
+      "modelo": "ainawi__identity_sheet",
+      "entidad": "El áinawi",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-mujer-sarnosa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5696,
+      "prompt_sha256": "9c349e7cb474d37653cd51dfa8a0904c69242144b9eb6eed33d65262519dc5ee"
+    },
+    {
+      "job": "anciana_canibal__identity_sheet--canon",
+      "modelo": "anciana_canibal__identity_sheet",
+      "entidad": "La anciana caníbal",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "historia-de-un-viejo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5265,
+      "prompt_sha256": "204b165b9f9c9fc3ea3803c51428f176e81a298b603162a90ea39c235d5cb2e0"
+    },
+    {
+      "job": "danta__identity_sheet--canon",
+      "modelo": "danta__identity_sheet",
+      "entidad": "La danta",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-danta-y-el-terecay"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5565,
+      "prompt_sha256": "add7391b4f2f0b2b7626eeca9605e159fa9eaec843275f2732a499a43f53b16f"
+    },
+    {
+      "job": "kawiri_monae__identity_sheet--canon",
+      "modelo": "kawiri_monae__identity_sheet",
+      "entidad": "Los Kawiri Monae",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "kawiri-monae"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5789,
+      "prompt_sha256": "b19934f15a9b76267fec7d2fdf8e0add2dae7a7d013b1f92de77c4c434716caa"
+    },
+    {
+      "job": "pajuil__identity_sheet--canon",
+      "modelo": "pajuil__identity_sheet",
+      "entidad": "El pajuil",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "historia-de-un-viejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5366,
+      "prompt_sha256": "7c466809f4d547f976ff4bdaf4ee56398ad9cc64741a9145cbc2519c7d5a9fe5"
+    },
+    {
+      "job": "serpientes_kueima__identity_sheet--canon",
+      "modelo": "serpientes_kueima__identity_sheet",
+      "entidad": "Las cuatro serpientes Kueima",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "historia-de-un-brujo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5089,
+      "prompt_sha256": "81e91bef72d74966212ec417fa32d9e471a723b7513898544cc83cdfe42998eb"
+    },
+    {
+      "job": "terecay__identity_sheet--canon",
+      "modelo": "terecay__identity_sheet",
+      "entidad": "El terecay",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-danta-y-el-terecay"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5510,
+      "prompt_sha256": "caac99b9be6c62d30615179aa21db82eb4a1a9b915d9eb352a38bd39070482fc"
+    }
+  ]
+}

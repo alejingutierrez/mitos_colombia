@@ -1,0 +1,65 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "guahibo-sikuani",
+  "comunidad": "Sikuani (Guahíbo)",
+  "tanda": "tanda-11-animales-rehechas",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/guahibo-sikuani.v3.json",
+    "sha256": "7354d296099eaf7a57ba375df5e9bc0c2694e16a21b8e6ade949b2a0dc46eafb"
+  },
+  "canon": {
+    "sha256": "b915af478564a4987fb3256d1d08a4fe205b8aebfd5572ecf4fe54ec6e1ed923",
+    "verificado_en": "2026-09-28T22:48:21.621Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 18,
+  "fichas_ya_preparadas": 18,
+  "fichas": [
+    {
+      "job": "picure__identity_sheet--canon",
+      "modelo": "picure__identity_sheet",
+      "entidad": "El picure",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "historia-de-un-brujo",
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5100,
+      "prompt_sha256": "32ea26c15ac54e7da4310df2156860fdaa4d5f41a19e3062347634a6ab8f258e"
+    },
+    {
+      "job": "kawiri_monae__identity_sheet--canon",
+      "modelo": "kawiri_monae__identity_sheet",
+      "entidad": "Los Kawiri Monae",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "kawiri-monae"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5921,
+      "prompt_sha256": "3e23842884be3129212dd0d009818585a44751631a1d940acfc4db06ebeeac7d"
+    }
+  ]
+}
