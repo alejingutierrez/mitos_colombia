@@ -1,0 +1,190 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "koguis",
+  "comunidad": "Kogui (Kággaba)",
+  "tanda": "tanda-17-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/koguis.v3.json",
+    "sha256": "393111cd6df3d03b8e4b21a66fc16b45d9f1eab6b75d6c1653e0fe55306f57cf"
+  },
+  "canon": {
+    "sha256": "edca8fad668f5e006d7587f11184f1111e3139a171111e1e903647bc29cfc6f3",
+    "verificado_en": "2026-09-28T04:33:04.809Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 7,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "sierra_nevada__environment_model--canon",
+      "modelo": "sierra_nevada__environment_model",
+      "entidad": "La Sierra Nevada",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "canibalismo",
+        "creacion-koguis",
+        "el-algodon-koguis",
+        "el-arco-iris-susabanka",
+        "el-maiz-koguis",
+        "el-primer-hombre-y-la-primera-mujer",
+        "el-sol-mama",
+        "guateovan",
+        "incesto-de-padre-hija",
+        "kasauge-el-padre-arbol",
+        "kashindukwe",
+        "kimaku",
+        "la-candela-gotze",
+        "la-enfermedad-hiwiha",
+        "los-primeros-indios",
+        "madre-wastora",
+        "namaku",
+        "naowa-entrega-el-gobierno-a-su-hijo",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7469,
+      "prompt_sha256": "5fcd486969dabecea0748568a968932394cb512e337a9c29c70b6862d5edf700"
+    },
+    {
+      "job": "poblado_kogui__spatial_model--canon",
+      "modelo": "poblado_kogui__spatial_model",
+      "entidad": "El poblado kogui",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "canibalismo",
+        "el-maiz-koguis",
+        "kashindukwe",
+        "la-enfermedad-hiwiha",
+        "namaku",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7225,
+      "prompt_sha256": "32cd03f9122b4c2489d454b89b9f12f5bdb421469ebee2f21f1b06c90229faec"
+    },
+    {
+      "job": "roza__spatial_model--canon",
+      "modelo": "roza__spatial_model",
+      "entidad": "La roza",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "canibalismo",
+        "el-algodon-koguis",
+        "el-maiz-koguis",
+        "kashindukwe",
+        "los-primeros-indios",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6813,
+      "prompt_sha256": "e1f2f0d77ff18cd7364f15397d3b7952a50d4bcf4e5725cb3a9e8fad9f762d28"
+    },
+    {
+      "job": "quebrada_y_rio__environment_model--canon",
+      "modelo": "quebrada_y_rio__environment_model",
+      "entidad": "La quebrada y el río de montaña",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "kimaku",
+        "la-enfermedad-hiwiha",
+        "namaku",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6847,
+      "prompt_sha256": "8a1564a034a04827ace8ac3eef8a9a2e8ea32afffce83e4b06c5bb8f29ed999e"
+    },
+    {
+      "job": "mar_y_agua_primordial__environment_model--canon",
+      "modelo": "mar_y_agua_primordial__environment_model",
+      "entidad": "El agua sin tierra (y el mar del final)",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "canibalismo",
+        "creacion-koguis",
+        "kasauge-el-padre-arbol",
+        "kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6876,
+      "prompt_sha256": "706e33ecd357d2dc9ef27a997ccc5827e200a6afeb58536cf671db17f89fbedc"
+    },
+    {
+      "job": "bosque_de_la_sierra__environment_model--canon",
+      "modelo": "bosque_de_la_sierra__environment_model",
+      "entidad": "El bosque nacido del cuerpo de Kasaugue",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-koguis",
+        "kasauge-el-padre-arbol",
+        "la-candela-gotze"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7173,
+      "prompt_sha256": "24f26570adf422536c36fa101d6e27837a751deb576f27431fe521ca4e218b70"
+    },
+    {
+      "job": "laguna__spatial_model--canon",
+      "modelo": "laguna__spatial_model",
+      "entidad": "La laguna",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "kimaku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6582,
+      "prompt_sha256": "e90e534778b98834a244d91a67fa0c5e01c413ff54f2ceabbee476edc086c11d"
+    }
+  ]
+}

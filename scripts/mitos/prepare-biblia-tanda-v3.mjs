@@ -196,6 +196,13 @@ export function sinOtrosEstados(texto) {
  * territorio se cambia por luz de estudio sobre el papel.
  */
 export const CON_FONDO = new Set(["paisaje", "lugar"]);
+
+/**
+ * Los paisajes kogui volvieron a la trampa del fotorrealismo por donde el
+ * modelo mas la busca: el agua con reflejo de espejo, la niebla como humo y la
+ * piedra con textura de roca real. La laguna salio fotografia entera.
+ */
+export const PAISAJE_EN_PAPEL = "PAISAJE EN PAPEL, MANDA SOBRE TODO LO DEMAS: el agua son laminas planas de papel con el canto recortado en ondas o tiras de quilling, sin reflejo de espejo, sin transparencia y sin brillo fotografico; la niebla y las nubes son hojas de papel translucido recortadas con borde visible, nunca humo ni vapor; la piedra es cartulina con facetas recortadas, nunca textura de roca real; la vegetacion son siluetas de papel superpuestas. Si parece una fotografia de paisaje, esta mal: tiene que parecer una maqueta de papel fotografiada.";
 const FRASE_DE_ESCENARIO = /(full bleed|cuatro l[ií]mites|a sangre|dentro del diorama|dentro de la escena|recorta su per[ií]metro|sin borde|cart[oó]n soporte|ciclorama|fondo neutro|mundo llega)/i;
 export const FONDO_PAPEL = "FICHA DE REFERENCIA SOBRE PAPEL, MANDA SOBRE TODO LO DEMAS: la figura, hecha de papel recortado y quilling, esta sola sobre un pliego liso de papel blanco hueso mate que ocupa todo el cuadro, fotografiada desde el frente con luz de estudio suave; su propia sombra corta y nitida cae sobre ese papel. Sin escenario, sin paisaje, sin cielo ni horizonte, sin suelo con terreno, sin arquitectura detras y sin figuras secundarias.";
 const CIERRE_PAPEL = "Fondo: pliego liso de papel blanco hueso, sin escenario; solo la figura y su sombra.";
@@ -272,6 +279,7 @@ function promptDeVista(model, view, capaId, kind, nombre) {
     };
   }
   if (!CON_FONDO.has(kind)) spec = sobrePapel(spec);
+  else spec = { ...spec, technique_first: `${PAISAJE_EN_PAPEL}\n${spec.technique_first}` };
   let base = ensamblar(spec);
   if (CAPAS_CON_CUERPO.has(capaId)) {
     const extra = CAPAS_DE_UNA_FIGURA.has(capaId) ? `\n${UNA_SOLA_FIGURA}` : "";
