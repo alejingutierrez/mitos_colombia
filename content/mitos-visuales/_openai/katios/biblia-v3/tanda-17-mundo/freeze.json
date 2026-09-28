@@ -1,0 +1,184 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "katios",
+  "comunidad": "Katíos",
+  "tanda": "tanda-17-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/katios.v3.json",
+    "sha256": "f9be2226192a255af2522fb3e144f1264bdda5ccada0d4efa1433ed94953b054"
+  },
+  "canon": {
+    "sha256": "de27d790f202032beb5e5da24c37ad0457de3c5ea66f10b4fdd7c7f234b286ef",
+    "verificado_en": "2026-09-28T15:27:10.032Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "bohio__spatial_model--canon",
+      "modelo": "bohio__spatial_model",
+      "entidad": "El bohío",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "antomia",
+        "baha",
+        "herupotoarra",
+        "los-domicoes",
+        "sever",
+        "los-bibidigomias",
+        "tradicion-del-cerro",
+        "cobaima"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6578,
+      "prompt_sha256": "516006db29ab26697a48f0bec883f733e090aef0ed3bc10448e338ce5395ec06"
+    },
+    {
+      "job": "fuego__phenomenon_rule--canon",
+      "modelo": "fuego__phenomenon_rule",
+      "entidad": "El fuego",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "antomia",
+        "coste",
+        "sever",
+        "fragmentos-de-otras-tradiciones",
+        "tradicion-del-cerro",
+        "creacion-katios"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6288,
+      "prompt_sha256": "0495dc8e521e66f3a383d755adb73840e711ffcad7d71ff7a91140c984b029d0"
+    },
+    {
+      "job": "casa-de-oro__spatial_model--canon",
+      "modelo": "casa-de-oro__spatial_model",
+      "entidad": "La casa de oro",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "baha",
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6170,
+      "prompt_sha256": "11864a2abb0d7f36f0c446eae37ca7770c3c148aa977e7b99ee71681087d02a4"
+    },
+    {
+      "job": "diluvio__phenomenon_rule--canon",
+      "modelo": "diluvio__phenomenon_rule",
+      "entidad": "El diluvio",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "fragmentos-de-otras-tradiciones",
+        "cobaima"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6041,
+      "prompt_sha256": "7e13ce4fb892eaac0604a64702c112662d703a1db68849304a01563c37cec04d"
+    },
+    {
+      "job": "escalera-de-cristal__spatial_model--canon",
+      "modelo": "escalera-de-cristal__spatial_model",
+      "entidad": "La escalera del cielo",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-escalera-del-cielo",
+        "los-domicoes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6290,
+      "prompt_sha256": "688096acc24f63f467671cafc1bdfbdd9c5acf056364a8bcda32979d5fe9b371"
+    },
+    {
+      "job": "tormenta__phenomenon_rule--canon",
+      "modelo": "tormenta__phenomenon_rule",
+      "entidad": "La tempestad",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "baha",
+        "dabeiba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6135,
+      "prompt_sha256": "ceca0ef1e2beadca99739171d87bf4ad04ce75e79c0f746f9b1cfb794179c513"
+    },
+    {
+      "job": "arbol-hueco-de-los-bibidigomia__spatial_model--canon",
+      "modelo": "arbol-hueco-de-los-bibidigomia__spatial_model",
+      "entidad": "El árbol hueco con balcón",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-bibidigomias"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6030,
+      "prompt_sha256": "6c8821c00e14ee5fb4ff10c6b511f5de5103c21102952d7c53b25fdb6359fee5"
+    },
+    {
+      "job": "escala-de-herupotoarra__spatial_model--canon",
+      "modelo": "escala-de-herupotoarra__spatial_model",
+      "entidad": "La escala de dos palos que se estira",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "herupotoarra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6167,
+      "prompt_sha256": "e6fb815ffb3efd0b9597a25a8a29088721d2d923e197936373b671f649af744d"
+    }
+  ]
+}
