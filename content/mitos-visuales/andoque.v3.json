@@ -3829,11 +3829,11 @@
       ],
       "census_note": "Se presenta como jaguar, persigue, pierde el guayuco, negocia su devolución y enseña el uso y la contra de una hierba. Habla, persigue y otorga.",
       "design": {
-        "silhouette": "Hombre de pie con la cadera desnuda y el nudo del guayuco deshecho colgando suelto de un solo lado: es la única figura humana de la biblia a la que le falta la prenda que todas las demás llevan, y ésa —no una máscara ni un atributo de brujo— es su descripción entera.",
+        "silhouette": "Hombre de pie, de tres cuartos, que sujeta con una mano delante de la cadera el guayuco de corteza ya desatado, con el nudo deshecho y un cabo colgando suelto de un solo lado: es la única figura humana de la biblia a la que se le cayó la prenda que todas las demás llevan atada, y ésa —no una máscara ni un atributo de brujo— es su descripción entera.",
         "materials": [
           "cabo suelto del guayuco perdido, tira de corteza batida colgando sin tensión",
           "manojo de hierba en la mano abierta, en dos piezas: la hoja que causa y la que cura, iguales de forma y distintas de tono",
-          "cuerpo en planos superpuestos de papel pardo medio, con el plano de la cadera desnudo y sin pieza encima",
+          "cuerpo en planos superpuestos de papel pardo medio",
           "huellas de zarpa a medio formar en el suelo, en piezas planas que todavía no cierran una pata completa"
         ],
         "palette": "Los mismos pardos que cualquier cuerpo del ciclo, sin una sola marca que lo señale como otro: la diferencia con un andoque no puede ser de color, porque el corpus no la dice.",
@@ -3853,9 +3853,11 @@
         "editorial": [
           "las huellas a medio formar en el suelo son invención de composición para anunciar la transformación sin dibujarla, y son reversibles",
           "distinguir las dos hierbas por tono y no por especie es decisión forzada por la carencia: la fuente no identifica ninguna",
-          "no se le da ningún rasgo étnico diferenciador: el marco regional no autoriza a inventar una fisonomía huitoto"
+          "no se le da ningún rasgo étnico diferenciador: el marco regional no autoriza a inventar una fisonomía huitoto",
+          "Composición ajustada el 2026-09-28: el filtro de OpenAI bloqueó la lámina como sexual. La pérdida del guayuco se cuenta ahora con la prenda desatada sujeta a mano delante de la cadera, el nudo deshecho a la vista; el rasgo narrativo se conserva sin mostrar la desnudez."
         ],
-        "states_to_model": []
+        "states_to_model": [],
+        "silhouette_previa": "Hombre de pie con la cadera desnuda y el nudo del guayuco deshecho colgando suelto de un solo lado: es la única figura humana de la biblia a la que le falta la prenda que todas las demás llevan, y ésa —no una máscara ni un atributo de brujo— es su descripción entera."
       },
       "states_declared": [],
       "evidence_basis_mix": [
@@ -11232,11 +11234,11 @@
         }
       ],
       "design_contract": {
-        "distinctive_silhouette": "Hombre de pie con la cadera desnuda y el nudo del guayuco deshecho colgando suelto de un solo lado: es la única figura humana de la biblia a la que le falta la prenda que todas las demás llevan, y ésa —no una máscara ni un atributo de brujo— es su descripción entera.",
+        "distinctive_silhouette": "Hombre de pie, de tres cuartos, que sujeta con una mano delante de la cadera el guayuco de corteza ya desatado, con el nudo deshecho y un cabo colgando suelto de un solo lado: es la única figura humana de la biblia a la que se le cayó la prenda que todas las demás llevan atada, y ésa —no una máscara ni un atributo de brujo— es su descripción entera.",
         "materials": [
           "cabo suelto del guayuco perdido, tira de corteza batida colgando sin tensión",
           "manojo de hierba en la mano abierta, en dos piezas: la hoja que causa y la que cura, iguales de forma y distintas de tono",
-          "cuerpo en planos superpuestos de papel pardo medio, con el plano de la cadera desnudo y sin pieza encima",
+          "cuerpo en planos superpuestos de papel pardo medio",
           "huellas de zarpa a medio formar en el suelo, en piezas planas que todavía no cierran una pata completa"
         ],
         "palette_logic": "Los mismos pardos que cualquier cuerpo del ciclo, sin una sola marca que lo señale como otro: la diferencia con un andoque no puede ser de color, porque el corpus no la dice.",
@@ -11256,17 +11258,18 @@
         "editorial_features": [
           "las huellas a medio formar en el suelo son invención de composición para anunciar la transformación sin dibujarla, y son reversibles",
           "distinguir las dos hierbas por tono y no por especie es decisión forzada por la carencia: la fuente no identifica ninguna",
-          "no se le da ningún rasgo étnico diferenciador: el marco regional no autoriza a inventar una fisonomía huitoto"
+          "no se le da ningún rasgo étnico diferenciador: el marco regional no autoriza a inventar una fisonomía huitoto",
+          "Composición ajustada el 2026-09-28: el filtro de OpenAI bloqueó la lámina como sexual. La pérdida del guayuco se cuenta ahora con la prenda desatada sujeta a mano delante de la cadera, el nudo deshecho a la vista; el rasgo narrativo se conserva sin mostrar la desnudez."
         ]
       },
       "prompt_spec": {
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Andoque (Gente del Hacha) V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición mineral y silueta legible a distancia, con quilling reservado a lo que en este territorio se enrolla o se enrosca: la espiral del petroglifo, el gusano sobre el tronco, la boa, el remolino del raudal, el nido colgante del mochilero y la vuelta del bejuco. Sin trama decorativa de relleno y sin grafismo geométrico que imite un diseño indígena.",
-        "primary_request": "identidad corporal completa y legible para El especialista huitoto. Hombre de pie con la cadera desnuda y el nudo del guayuco deshecho colgando suelto de un solo lado: es la única figura humana de la biblia a la que le falta la prenda que todas las demás llevan, y ésa —no una máscara ni un atributo de brujo— es su descripción entera.",
+        "primary_request": "identidad corporal completa y legible para El especialista huitoto. Hombre de pie, de tres cuartos, que sujeta con una mano delante de la cadera el guayuco de corteza ya desatado, con el nudo deshecho y un cabo colgando suelto de un solo lado: es la única figura humana de la biblia a la que se le cayó la prenda que todas las demás llevan atada, y ésa —no una máscara ni un atributo de brujo— es su descripción entera.",
         "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura de hombre igual a la de Trueno-de-piedra: la fuente los enfrenta de igual a igual y una diferencia de talla inventaría jerarquía.",
         "lighting_mood": "Luz de selva cerrada: cenital, filtrada por el dosel, en manchas duras sobre un fondo profundo y oscuro, con el suelo casi negro. Sobre el río y los afloramientos de arenisca la luz se abre y el contraste sube. Tres luces propias y sólo tres: la mariposa blanca «de sol» en la capa anterior a Sol y Luna, que da una claridad fría y baja sin disco solar ni sombras de sol; el fuego robado, que es la única luz cálida del corpus; y la garganta rojo fuego del chupaflor de candela.",
-        "materials_textures": "cabo suelto del guayuco perdido, tira de corteza batida colgando sin tensión; manojo de hierba en la mano abierta, en dos piezas: la hoja que causa y la que cura, iguales de forma y distintas de tono; cuerpo en planos superpuestos de papel pardo medio, con el plano de la cadera desnudo y sin pieza encima; huellas de zarpa a medio formar en el suelo, en piezas planas que todavía no cierran una pata completa",
+        "materials_textures": "cabo suelto del guayuco perdido, tira de corteza batida colgando sin tensión; manojo de hierba en la mano abierta, en dos piezas: la hoja que causa y la que cura, iguales de forma y distintas de tono; cuerpo en planos superpuestos de papel pardo medio; huellas de zarpa a medio formar en el suelo, en piezas planas que todavía no cierran una pata completa",
         "era": "Cinco capas que no se mezclan. A, antes del sol: balso, huevo, tinte negro, tronco hueco, hacha de piedra, sin sol ni luna en el cielo y sin metal. B, el diluvio y el fuego: arenisca, barro, hueso, macana, espejo, red de fibra, piedra tetee, árbol tona, sin metal. C, los gigantes, postdiluviana: piedra grabada, palma de milpeso, canangucho, árbol madi, río. D, tiempo tribal hasta hacia 1900: maloca, chagra de yuca amarga, arco y flecha, chinchorro de cumare, guayuco de corteza, hacha de piedra y ya también de acero por trueque. E, cauchería y reagrupamiento, 1900-1932 y después: mercancía, fardo de caucho, escopeta, atadura, tela, hacha de acero, maloca reconstruida.",
         "constraints": [
           "paleta de esta ficha: Los mismos pardos que cualquier cuerpo del ciclo, sin una sola marca que lo señale como otro: la diferencia con un andoque no puede ser de color, porque el corpus no la dice.",
