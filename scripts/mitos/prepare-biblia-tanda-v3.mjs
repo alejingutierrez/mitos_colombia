@@ -182,8 +182,10 @@ export const SIN_LAMINA_TECNICA = "NO ES UNA LAMINA TECNICA NI UNA FICHA DE MUSE
  */
 export function sinOtrosEstados(texto) {
   return String(texto)
-    .split(/(?<=[.;])\s+(?=En (?:su |el )?estado\b)/)
-    .filter((frase) => !/^En (?:su |el )?estado\b(?! can[oó]nico)/i.test(frase))
+    // Tambien en minuscula tras punto y coma: la laguna de Lisha salia llena y
+    // seca en la misma lamina canonica («…; en el estado, el cuenco esta seco»).
+    .split(/(?<=[.;])\s+(?=[Ee]n (?:su |el )?estado\b)/)
+    .filter((frase) => !/^en (?:su |el )?estado\b(?! can[oó]nico)/i.test(frase))
     .join(" ");
 }
 

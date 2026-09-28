@@ -1,0 +1,50 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "u-wa",
+  "comunidad": "U’wa",
+  "tanda": "tanda-14-paisajes-rehechas",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/u-wa.v3.json",
+    "sha256": "e1e4ee9024b780d4cabc07b01806fede67230def7aecb7203360a7e23addae2f"
+  },
+  "canon": {
+    "sha256": "a90c54e7ee6b64a69b74d22cb095455d84c1040f832c2a85fbbf36891e532aed",
+    "verificado_en": "2026-09-28T21:27:21.425Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 12,
+  "fichas_ya_preparadas": 12,
+  "fichas": [
+    {
+      "job": "laguna_de_lisha__spatial_model--canon",
+      "modelo": "laguna_de_lisha__spatial_model",
+      "entidad": "La laguna de Lisha",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "lisha-la-madre-del-agua"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5438,
+      "prompt_sha256": "32f30b05e566c6beb5daa632a13fa53e631912725278af360b4e9999c56796b9"
+    }
+  ]
+}
