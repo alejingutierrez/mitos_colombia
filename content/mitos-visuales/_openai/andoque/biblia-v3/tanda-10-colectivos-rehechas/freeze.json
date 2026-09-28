@@ -1,0 +1,49 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "andoque",
+  "comunidad": "Andoque (Gente del Hacha)",
+  "tanda": "tanda-10-colectivos-rehechas",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/andoque.v3.json",
+    "sha256": "345fea24f9db5aa63f80eb37a31746c72094210f716082508180bc887113a806"
+  },
+  "canon": {
+    "sha256": "1464c50fa3a580f64f525602622acdadb0f163d4bd0942dd7decb8df15cc5afb",
+    "verificado_en": "2026-09-28T16:32:15.442Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 10,
+  "fichas_ya_preparadas": 10,
+  "fichas": [
+    {
+      "job": "colectivo_fauna_menor_del_monte__group_grammar--canon",
+      "modelo": "colectivo_fauna_menor_del_monte__group_grammar",
+      "entidad": "Fauna menor del monte andoque",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-sol-que-nace-en-araracuara",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7778,
+      "prompt_sha256": "9075b41cabb68bc2d76ddbbbfdf9feb1c314b69eed35f3fb94dde4ed4c0f90bc"
+    }
+  ]
+}

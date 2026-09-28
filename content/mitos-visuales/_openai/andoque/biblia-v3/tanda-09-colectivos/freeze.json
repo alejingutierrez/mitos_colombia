@@ -1,0 +1,216 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "andoque",
+  "comunidad": "Andoque (Gente del Hacha)",
+  "tanda": "tanda-09-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/andoque.v3.json",
+    "sha256": "345fea24f9db5aa63f80eb37a31746c72094210f716082508180bc887113a806"
+  },
+  "canon": {
+    "sha256": "1464c50fa3a580f64f525602622acdadb0f163d4bd0942dd7decb8df15cc5afb",
+    "verificado_en": "2026-09-28T16:30:14.663Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 10,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "colectivo_gente_andoque_tiempo_de_origen__group_grammar--canon",
+      "modelo": "colectivo_gente_andoque_tiempo_de_origen__group_grammar",
+      "entidad": "Gente Andoque del tiempo de origen",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-mundo-de-ultratumba",
+        "el-sol-que-nace-en-araracuara",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-guerra-del-palo-hablador",
+        "la-venganza-de-los-brujos",
+        "las-sirenas"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8011,
+      "prompt_sha256": "660aff5db3f06ffecc67b1076bae15d1e158183163f68295842d9c2747f36799"
+    },
+    {
+      "job": "colectivo_fauna_menor_del_monte__group_grammar--canon",
+      "modelo": "colectivo_fauna_menor_del_monte__group_grammar",
+      "entidad": "Fauna menor del monte andoque",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-sol-que-nace-en-araracuara",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7778,
+      "prompt_sha256": "9075b41cabb68bc2d76ddbbbfdf9feb1c314b69eed35f3fb94dde4ed4c0f90bc"
+    },
+    {
+      "job": "colectivo_gente_andoque_epoca_cauchera__group_grammar--canon",
+      "modelo": "colectivo_gente_andoque_epoca_cauchera__group_grammar",
+      "entidad": "Gente Andoque de la época cauchera",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-retorno-de-plumon-amarillo",
+        "el-retorno-de-plumon-de-fiebre",
+        "los-caucheros-de-la-casa-arana",
+        "los-grupos-de-mi-juventud"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7723,
+      "prompt_sha256": "3b8796ff947acae4016215e1884a81fca3c86956593c3133682b44c9a31535da"
+    },
+    {
+      "job": "gente_de_abajo__group_grammar--canon",
+      "modelo": "gente_de_abajo__group_grammar",
+      "entidad": "La gente de abajo",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-mundo-de-ultratumba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7801,
+      "prompt_sha256": "75d3f053d7f9992215a52cbab3b9818efe63bc2db1c0c9a9b067394510f8c9f4"
+    },
+    {
+      "job": "los_dos_huerfanos__group_grammar--canon",
+      "modelo": "los_dos_huerfanos__group_grammar",
+      "entidad": "Los dos huérfanos",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7752,
+      "prompt_sha256": "99d6f17492f37dde5272bfc6d2c71a74c2210dc0118946d70d2b884e05e4e97c"
+    },
+    {
+      "job": "los_gigantes__group_grammar--canon",
+      "modelo": "los_gigantes__group_grammar",
+      "entidad": "Los gigantes",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "los-gigantes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7851,
+      "prompt_sha256": "1d281fcc39e089f69ebd73d4aa3fcaaf50f35fb3f5398175fde79d7180e71580"
+    },
+    {
+      "job": "los_quemadores__group_grammar--canon",
+      "modelo": "los_quemadores__group_grammar",
+      "entidad": "Los Quemadores y los agentes de la Casa Arana",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-guerra-del-palo-hablador",
+        "los-caucheros-de-la-casa-arana"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7635,
+      "prompt_sha256": "37dbe6ace2be91054229552800dda4312ef3d9705ca62484afb7f49e1250429c"
+    },
+    {
+      "job": "peces_y_pesca_del_rio__group_grammar--canon",
+      "modelo": "peces_y_pesca_del_rio__group_grammar",
+      "entidad": "Peces y pesca del río",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-sol-que-nace-en-araracuara",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7811,
+      "prompt_sha256": "f0c6c59695cdf1e9612caf0fdc91f114c5131e6ce94656df678cd32ee889a383"
+    },
+    {
+      "job": "colectivo_asedio_del_palo_hablador__group_grammar--canon",
+      "modelo": "colectivo_asedio_del_palo_hablador__group_grammar",
+      "entidad": "El asedio del Palo Hablador",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7675,
+      "prompt_sha256": "316ee240532465d19c2951c8c36dfd8c0172151e7abe75fdac918d10f3d94f28"
+    },
+    {
+      "job": "los_dos_transformadores__group_grammar--canon",
+      "modelo": "los_dos_transformadores__group_grammar",
+      "entidad": "Los dos transformadores",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-venganza-de-los-brujos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7569,
+      "prompt_sha256": "c856ac4beb042eb1bc193ee6360a411cb0e4083df36422728603b1fe7b08e59d"
+    }
+  ]
+}
