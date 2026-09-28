@@ -163,6 +163,7 @@ const CAPAS_CON_CUERPO = new Set(["tipos", "mortales", "miticos", "colectivos"])
  */
 export const UNA_SOLA_FIGURA = "UNA SOLA LAMINA: una sola figura, de cuerpo entero, en un solo tiempo y un solo lugar. Sin panel dividido, sin segunda version de la misma persona, sin vistas multiples y sin rotulos, letras ni texto de ninguna clase.";
 const CAPAS_DE_UNA_FIGURA = new Set(["tipos", "mortales", "miticos"]);
+export const UN_SOLO_GRUPO = "UN SOLO CUADRO: el grupo entero en una sola composicion continua sobre el papel, sin vinetas, sin escenas separadas, sin paneles y sin rotulos, letras, flechas ni texto de ninguna clase.";
 
 /**
  * El atrezo kogui salio como hoja de museo: rotulos, cotas, reglas de medida,
@@ -282,7 +283,9 @@ function promptDeVista(model, view, capaId, kind, nombre) {
   else spec = { ...spec, technique_first: `${PAISAJE_EN_PAPEL}\n${spec.technique_first}` };
   let base = ensamblar(spec);
   if (CAPAS_CON_CUERPO.has(capaId)) {
-    const extra = CAPAS_DE_UNA_FIGURA.has(capaId) ? `\n${UNA_SOLA_FIGURA}` : "";
+    // Un colectivo es un solo grupo en un solo cuadro: los ninos katios
+    // salieron con rotulos y la gente katia como collage de ocho vinetas.
+    const extra = CAPAS_DE_UNA_FIGURA.has(capaId) ? `\n${UNA_SOLA_FIGURA}` : `\n${UN_SOLO_GRUPO}`;
     base = base.replace(/\n\nUse case: /, `\n\n${CUERPO_Y_CARA}${extra}\n\nUse case: `);
   } else {
     base = base.replace(/\n\nUse case: /, `\n\n${SIN_LAMINA_TECNICA}\n\nUse case: `);
