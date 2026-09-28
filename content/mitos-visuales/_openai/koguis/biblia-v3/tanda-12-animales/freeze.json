@@ -1,0 +1,139 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "koguis",
+  "comunidad": "Kogui (Kággaba)",
+  "tanda": "tanda-12-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/koguis.v3.json",
+    "sha256": "393111cd6df3d03b8e4b21a66fc16b45d9f1eab6b75d6c1653e0fe55306f57cf"
+  },
+  "canon": {
+    "sha256": "edca8fad668f5e006d7587f11184f1111e3139a171111e1e903647bc29cfc6f3",
+    "verificado_en": "2026-09-28T04:01:58.379Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "jaguar__identity_sheet--canon",
+      "modelo": "jaguar__identity_sheet",
+      "entidad": "El tigre (jaguar)",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "canibalismo",
+        "el-primer-hombre-y-la-primera-mujer",
+        "el-sol-mama",
+        "kashindukwe",
+        "namaku",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5804,
+      "prompt_sha256": "5ef8a72c85dbb5c3b34914540e2394374f67750c466c2e3aa0a8041177e7e3e7"
+    },
+    {
+      "job": "criatura_sin_huesos__identity_sheet--canon",
+      "modelo": "criatura_sin_huesos__identity_sheet",
+      "entidad": "La criatura sin huesos",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "incesto-de-padre-hija",
+        "madre-wastora"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5810,
+      "prompt_sha256": "18d014302b9cf33abd46a7ffdcf6f5d03745e6ac9659a9aa5d5dbea719f03782"
+    },
+    {
+      "job": "chucha__identity_sheet--canon",
+      "modelo": "chucha__identity_sheet",
+      "entidad": "La chucha",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5631,
+      "prompt_sha256": "b53e1c6fb5f7465792813b73dc7874da10373ec37746656413fc28d1d89786d7"
+    },
+    {
+      "job": "kandutu__identity_sheet--canon",
+      "modelo": "kandutu__identity_sheet",
+      "entidad": "Kándutu, el animalito como un cocuyo",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-sol-mama"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5369,
+      "prompt_sha256": "f09638de3fac2057ac9fadb901d98cba61f954230bcf051a8451585d0ef4df5a"
+    },
+    {
+      "job": "mujer_multiple_yangauki__identity_sheet--canon",
+      "modelo": "mujer_multiple_yangauki__identity_sheet",
+      "entidad": "La mujer múltiple (Yangauki)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5872,
+      "prompt_sha256": "ce1681a60cbd3620ddffaa82a924b74052f09c785c7336b03301bfd420e6df34"
+    },
+    {
+      "job": "mujer_multiple_yangauki__state_sheet--estado_desdoblada en siete, hasta quedar una mujer común",
+      "modelo": "mujer_multiple_yangauki__state_sheet",
+      "entidad": "La mujer múltiple (Yangauki)",
+      "categoria": "criatura",
+      "vista": "estado_desdoblada en siete, hasta quedar una mujer común",
+      "estados": [
+        "desdoblada en siete, hasta quedar una mujer común"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5794,
+      "prompt_sha256": "428a2fb13430788598f4070d4742d1dd17b3cefbbc6b98daed12f204a8322ecc"
+    }
+  ]
+}
