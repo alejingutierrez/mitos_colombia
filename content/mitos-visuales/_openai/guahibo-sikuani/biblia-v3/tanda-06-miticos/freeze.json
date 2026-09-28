@@ -1,0 +1,79 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "guahibo-sikuani",
+  "comunidad": "Sikuani (Guahíbo)",
+  "tanda": "tanda-06-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/guahibo-sikuani.v3.json",
+    "sha256": "b413064aaaf66c1080037f5c39df5a2d30bf207d20611f76f16dd9db50e8fcda"
+  },
+  "canon": {
+    "sha256": "b915af478564a4987fb3256d1d08a4fe205b8aebfd5572ecf4fe54ec6e1ed923",
+    "verificado_en": "2026-09-28T22:38:31.905Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "kuemi__identity_sheet--canon",
+      "modelo": "kuemi__identity_sheet",
+      "entidad": "Kuemi",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6396,
+      "prompt_sha256": "1c87dd5b34684facaed31beef42e5884720b4001f7c450144c05617c7c063fa1"
+    },
+    {
+      "job": "kuemi__state_sheet--estado_franja_luminosa_de_la_via_lactea",
+      "modelo": "kuemi__state_sheet",
+      "entidad": "Kuemi",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_franja_luminosa_de_la_via_lactea",
+      "estados": [
+        "franja_luminosa_de_la_via_lactea"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6645,
+      "prompt_sha256": "ca19c7818e9b43b773100c6f0aa5d92f5822e24e31062a8b5cb67dcc76abebb1"
+    },
+    {
+      "job": "kuwei__identity_sheet--canon",
+      "modelo": "kuwei__identity_sheet",
+      "entidad": "Kuwei",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6677,
+      "prompt_sha256": "bc8d3f8d796e52ce206ac80766d1669e1e8e454d5ba02213af77b3122ddccc04"
+    }
+  ]
+}
