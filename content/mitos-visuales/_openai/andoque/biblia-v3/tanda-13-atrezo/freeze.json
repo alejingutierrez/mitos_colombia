@@ -1,0 +1,229 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "andoque",
+  "comunidad": "Andoque (Gente del Hacha)",
+  "tanda": "tanda-13-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/andoque.v3.json",
+    "sha256": "cdcf1d4a02c9d6f8ba1a3778878c3bf7f4b9989da5ae0c76807a79740bb44519"
+  },
+  "canon": {
+    "sha256": "1464c50fa3a580f64f525602622acdadb0f163d4bd0942dd7decb8df15cc5afb",
+    "verificado_en": "2026-09-28T19:36:16.738Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 11,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_andoque_oficio__object_sheet--canon",
+      "modelo": "hoja_utileria_andoque_oficio__object_sheet",
+      "entidad": "hoja utileria andoque oficio",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-sol-que-nace-en-araracuara",
+        "la-guerra-del-palo-hablador",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "el-mundo-de-ultratumba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7275,
+      "prompt_sha256": "b54e4cee4bbbd81b939ed6e8cca18d5383e52543e31b59f7bfbef2dba1108f5b"
+    },
+    {
+      "job": "hoja_utileria_andoque_caza_y_trampa__object_sheet--canon",
+      "modelo": "hoja_utileria_andoque_caza_y_trampa__object_sheet",
+      "entidad": "hoja utileria andoque caza y trampa",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "los-fantasmas",
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6888,
+      "prompt_sha256": "8642c1e59c88b3692ca856e3dd665885aa9a2924a898bce74449e04a28742618"
+    },
+    {
+      "job": "arco_y_flechas__object_sheet--canon",
+      "modelo": "arco_y_flechas__object_sheet",
+      "entidad": "Arco y flechas",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-guerra-del-palo-hablador",
+        "la-venganza-de-los-brujos",
+        "las-sirenas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6469,
+      "prompt_sha256": "4e2c4052d4a2a979c4d01228c3eb4a02d096260b78f74a208dffad7de7d14899"
+    },
+    {
+      "job": "palo_hablador__botanical_sheet--canon",
+      "modelo": "palo_hablador__botanical_sheet",
+      "entidad": "El Palo Hablador",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6522,
+      "prompt_sha256": "24d5e6527f2cf76a6d95e15c086d2f107bb7d8e335d8ee0ac34ca236e7937824"
+    },
+    {
+      "job": "palo_hablador__state_sheet--estado_partido_y_petrificado",
+      "modelo": "palo_hablador__state_sheet",
+      "entidad": "El Palo Hablador",
+      "categoria": "planta",
+      "vista": "estado_partido_y_petrificado",
+      "estados": [
+        "partido_y_petrificado"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6141,
+      "prompt_sha256": "1edb316fed00f4342fd9f00e93f291879548508a8b3dd64c3664a808376a07b3"
+    },
+    {
+      "job": "arbol_tona__botanical_sheet--canon",
+      "modelo": "arbol_tona__botanical_sheet",
+      "entidad": "El árbol tona",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6564,
+      "prompt_sha256": "1891c65e0d3b66a23288abcd9a39ec787e6e239d38a48b9fc6cc6ed403aec248"
+    },
+    {
+      "job": "espada_de_trueno__object_sheet--canon",
+      "modelo": "espada_de_trueno__object_sheet",
+      "entidad": "La espada de Trueno",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6464,
+      "prompt_sha256": "ecf670bff7ce1d98fd44025258635abe46a1f8e186c10bd40ac3c97bf9e71ca3"
+    },
+    {
+      "job": "guayuco_de_transformacion__object_sheet--canon",
+      "modelo": "guayuco_de_transformacion__object_sheet",
+      "entidad": "El guayuco de transformación",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-brujeria-de-la-danta"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6658,
+      "prompt_sha256": "152b91fd11171a711bb954e9b3b40bdfc1e60071c8263508d5a6906f616b2778"
+    },
+    {
+      "job": "hacha_andoque__object_sheet--canon",
+      "modelo": "hacha_andoque__object_sheet",
+      "entidad": "El hacha",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6872,
+      "prompt_sha256": "ece80408d50c4c32d549d92e08f8ed104e6199e2c42b4fd6c16b891362db7cad"
+    },
+    {
+      "job": "mercancias_y_fardos_de_caucho__object_sheet--canon",
+      "modelo": "mercancias_y_fardos_de_caucho__object_sheet",
+      "entidad": "Mercancías de la Casa Arana y fardos de caucho",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-caucheros-de-la-casa-arana"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6813,
+      "prompt_sha256": "1b674abf7640de868e5283a046c6f224068f89cf0a2255c0479f5ba82993fc6d"
+    },
+    {
+      "job": "tronco_hueco_y_higueron__botanical_sheet--canon",
+      "modelo": "tronco_hueco_y_higueron__botanical_sheet",
+      "entidad": "El tronco hueco y el higuerón",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6646,
+      "prompt_sha256": "6745562987effb4c03d5d74a7a19d5ec81737c6bf8736bdb71e6ec15950f0a89"
+    }
+  ]
+}
