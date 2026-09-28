@@ -1,0 +1,265 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "guahibo-sikuani",
+  "comunidad": "Sikuani (Guahíbo)",
+  "tanda": "tanda-05-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/guahibo-sikuani.v3.json",
+    "sha256": "b413064aaaf66c1080037f5c39df5a2d30bf207d20611f76f16dd9db50e8fcda"
+  },
+  "canon": {
+    "sha256": "b915af478564a4987fb3256d1d08a4fe205b8aebfd5572ecf4fe54ec6e1ed923",
+    "verificado_en": "2026-09-28T22:05:55.348Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 27,
+  "fichas_ya_preparadas": 15,
+  "fichas": [
+    {
+      "job": "mujer_ausente__identity_sheet--canon",
+      "modelo": "mujer_ausente__identity_sheet",
+      "entidad": "La mujer ausente",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kawiri-monae"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6122,
+      "prompt_sha256": "0c88917765778bca647d75bde7431866d5127a9bd261474393f7e5332fb67dc7"
+    },
+    {
+      "job": "mujer_de_kuemi_tsikiriri__identity_sheet--canon",
+      "modelo": "mujer_de_kuemi_tsikiriri__identity_sheet",
+      "entidad": "La mujer de Kuemi, madre de los ponzoñosos (Tsikiriri)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6301,
+      "prompt_sha256": "2adc378553fc4411fcc4c72113a2a6586ab8a81e2f01a539b05163c55f177ca0"
+    },
+    {
+      "job": "mujer_de_kuemi_tsikiriri__state_sheet--estado_comida por los caribes- sólo queda el hueso de la cadera",
+      "modelo": "mujer_de_kuemi_tsikiriri__state_sheet",
+      "entidad": "La mujer de Kuemi, madre de los ponzoñosos (Tsikiriri)",
+      "categoria": "personaje",
+      "vista": "estado_comida por los caribes: sólo queda el hueso de la cadera",
+      "estados": [
+        "comida por los caribes: sólo queda el hueso de la cadera"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6225,
+      "prompt_sha256": "78ba1c20f7e830e60f6d970c4c1ba5344c4ee31721910a61ac94b8c0343123ed"
+    },
+    {
+      "job": "mujer_de_tsorueto__identity_sheet--canon",
+      "modelo": "mujer_de_tsorueto__identity_sheet",
+      "entidad": "La mujer de la casa Tsorueto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-tigre"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6307,
+      "prompt_sha256": "23668c3e06fbf94256418ca5e74f0833ac5b02e363e969a2188cfe465951ce34"
+    },
+    {
+      "job": "mujer_del_ainawi__identity_sheet--canon",
+      "modelo": "mujer_del_ainawi__identity_sheet",
+      "entidad": "La mujer del áinawi",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-mujer-sarnosa"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6411,
+      "prompt_sha256": "6b95dee578b6a03c09833bfe504731f05df4eebb50cf7c8b6897dbff227c3508"
+    },
+    {
+      "job": "nina_de_historia_de_un_viejo__identity_sheet--canon",
+      "modelo": "nina_de_historia_de_un_viejo__identity_sheet",
+      "entidad": "La hermana",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "historia-de-un-viejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5964,
+      "prompt_sha256": "20e6891a91000ca251298b70edac97f886f432f87894686aac5b6ccd3987971e"
+    },
+    {
+      "job": "nino_de_historia_de_un_viejo__identity_sheet--canon",
+      "modelo": "nino_de_historia_de_un_viejo__identity_sheet",
+      "entidad": "El hermano",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "historia-de-un-viejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6292,
+      "prompt_sha256": "b5ec76354ec96720bafcd01c16218a07a2c1a4944ea94eb0a0f09e5b47ef0237"
+    },
+    {
+      "job": "primer_esposo__identity_sheet--canon",
+      "modelo": "primer_esposo__identity_sheet",
+      "entidad": "El primer esposo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-mujer-sarnosa"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6037,
+      "prompt_sha256": "3285b87da3be97e0307e25f0abf501d2a95250c21c7ea8001b026ad8a12664b1"
+    },
+    {
+      "job": "primeras_figuras_humanas_de_kuwei__identity_sheet--canon",
+      "modelo": "primeras_figuras_humanas_de_kuwei__identity_sheet",
+      "entidad": "Las tres mujeres de palo, barro y cera",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6664,
+      "prompt_sha256": "19e254791eef7ff67668bf43ffd4100f68e6147479e85c77168f3acfc70f76ec"
+    },
+    {
+      "job": "primeras_figuras_humanas_de_kuwei__state_sheet--estado_figura_de_barro_deshecha_por_el_agua",
+      "modelo": "primeras_figuras_humanas_de_kuwei__state_sheet",
+      "entidad": "Las tres mujeres de palo, barro y cera",
+      "categoria": "personaje",
+      "vista": "estado_figura_de_barro_deshecha_por_el_agua",
+      "estados": [
+        "figura_de_barro_deshecha_por_el_agua"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6415,
+      "prompt_sha256": "207c30b6b5a8306384d320a0e1b16c0e65a5f26970f58741b21454cb39a0137a"
+    },
+    {
+      "job": "primeras_figuras_humanas_de_kuwei__state_sheet--estado_figura_de_cera_derretida_por_el_sol",
+      "modelo": "primeras_figuras_humanas_de_kuwei__state_sheet",
+      "entidad": "Las tres mujeres de palo, barro y cera",
+      "categoria": "personaje",
+      "vista": "estado_figura_de_cera_derretida_por_el_sol",
+      "estados": [
+        "figura_de_cera_derretida_por_el_sol"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6414,
+      "prompt_sha256": "4b526bdff2f915915efeefd1814cae720abf1d1a4c1343da65d8be7350725f6a"
+    },
+    {
+      "job": "primeras_figuras_humanas_de_kuwei__state_sheet--estado_mujer de palo reducida a cenizas por la candela",
+      "modelo": "primeras_figuras_humanas_de_kuwei__state_sheet",
+      "entidad": "Las tres mujeres de palo, barro y cera",
+      "categoria": "personaje",
+      "vista": "estado_mujer de palo reducida a cenizas por la candela",
+      "estados": [
+        "mujer de palo reducida a cenizas por la candela"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6426,
+      "prompt_sha256": "2c6d86ca495ed4f923f81e9d6bd4c5f58a2bba909626257db488a4adc46964b0"
+    },
+    {
+      "job": "puakali__identity_sheet--canon",
+      "modelo": "puakali__identity_sheet",
+      "entidad": "Puakali, hija de Kuemi y mujer de Kuwei",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6410,
+      "prompt_sha256": "b845dfcba8439e6529df576dd4e619f940b2bb2319b18c836101555217f3f13a"
+    },
+    {
+      "job": "viudo_padre__identity_sheet--canon",
+      "modelo": "viudo_padre__identity_sheet",
+      "entidad": "El viudo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "historia-de-un-viejo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6122,
+      "prompt_sha256": "92d8ff5e7ae7d986c623281967d10a20b23737c5fa7105f1a37cb3d299d0cc8f"
+    }
+  ]
+}

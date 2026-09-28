@@ -1,0 +1,284 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "guahibo-sikuani",
+  "comunidad": "Sikuani (Guahíbo)",
+  "tanda": "tanda-04-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/guahibo-sikuani.v3.json",
+    "sha256": "b413064aaaf66c1080037f5c39df5a2d30bf207d20611f76f16dd9db50e8fcda"
+  },
+  "canon": {
+    "sha256": "b915af478564a4987fb3256d1d08a4fe205b8aebfd5572ecf4fe54ec6e1ed923",
+    "verificado_en": "2026-09-28T22:03:32.949Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 27,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "kajuyali__identity_sheet--canon",
+      "modelo": "kajuyali__identity_sheet",
+      "entidad": "Kajuyali, el hijo de Kuwei que siembra los pescados",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos",
+        "la-comida-para-los-muertos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6485,
+      "prompt_sha256": "7bcef4f9e1d7b942ae4b4302cb24fac4ae92f47166994fa2332c90dc82683a67"
+    },
+    {
+      "job": "kajuyali__state_sheet--estado_con una sola pierna, sentado en el borde de su canoa",
+      "modelo": "kajuyali__state_sheet",
+      "entidad": "Kajuyali, el hijo de Kuwei que siembra los pescados",
+      "categoria": "personaje",
+      "vista": "estado_con una sola pierna, sentado en el borde de su canoa",
+      "estados": [
+        "con una sola pierna, sentado en el borde de su canoa"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos",
+        "la-comida-para-los-muertos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6681,
+      "prompt_sha256": "e31584f6fe3f8ad731842de99ae5d8de5aedb7329be5e5fbd7e626d4210fdc23"
+    },
+    {
+      "job": "anciana_que_cuidaba_animales__identity_sheet--canon",
+      "modelo": "anciana_que_cuidaba_animales__identity_sheet",
+      "entidad": "La anciana que cuidaba animales",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-danta-y-el-terecay"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6090,
+      "prompt_sha256": "821426e5c9c87e4ed7cd433d4ef8e0794cdec59f16efab3a4cb4a348f1344824"
+    },
+    {
+      "job": "brujo__identity_sheet--canon",
+      "modelo": "brujo__identity_sheet",
+      "entidad": "El brujo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "historia-de-un-brujo"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6507,
+      "prompt_sha256": "24e7683142e69a55445c89cf95b7be7ec0b5e9eda84200cfb540aadfddfde3ad"
+    },
+    {
+      "job": "brujo__state_sheet--estado_cadena_de_transformaciones",
+      "modelo": "brujo__state_sheet",
+      "entidad": "El brujo",
+      "categoria": "personaje",
+      "vista": "estado_cadena_de_transformaciones",
+      "estados": [
+        "cadena_de_transformaciones"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "historia-de-un-brujo"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6786,
+      "prompt_sha256": "e74137f8eee4e5df4fd29dc4d5fee111217c0afa4f20680fbbdd12704115fe1e"
+    },
+    {
+      "job": "cunada__identity_sheet--canon",
+      "modelo": "cunada__identity_sheet",
+      "entidad": "La cuñada",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "historia-de-un-tigre"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6114,
+      "prompt_sha256": "709d8d2df644e5a1a66db521a48fe6f31c40d6d836b9465e1212c5f039c24f3e"
+    },
+    {
+      "job": "esposa_del_hermano_menor__identity_sheet--canon",
+      "modelo": "esposa_del_hermano_menor__identity_sheet",
+      "entidad": "La esposa del hermano menor",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "historia-de-un-tigre"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6182,
+      "prompt_sha256": "05a464b2a6dc2e83ba699227ee3890dfc45dd98fe173448b607a626cfd6982ba"
+    },
+    {
+      "job": "hermano_menor_de_historia_de_un_tigre__identity_sheet--canon",
+      "modelo": "hermano_menor_de_historia_de_un_tigre__identity_sheet",
+      "entidad": "El hermano menor",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "historia-de-un-tigre"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6301,
+      "prompt_sha256": "3ad1dc4c4695c6261dda44aa5b09f7070fd5163c21e09d919a30431e482707e6"
+    },
+    {
+      "job": "hijo_de_la_mujer_ausente__identity_sheet--canon",
+      "modelo": "hijo_de_la_mujer_ausente__identity_sheet",
+      "entidad": "El hijo de la mujer ausente",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kawiri-monae"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5951,
+      "prompt_sha256": "c6e718692f0dea147b65787a08c144258f64509026193b5faa9c315474422029"
+    },
+    {
+      "job": "hijo_de_la_mujer_ausente__state_sheet--estado_muchacho_crecido",
+      "modelo": "hijo_de_la_mujer_ausente__state_sheet",
+      "entidad": "El hijo de la mujer ausente",
+      "categoria": "personaje",
+      "vista": "estado_muchacho_crecido",
+      "estados": [
+        "muchacho_crecido"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kawiri-monae"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6184,
+      "prompt_sha256": "b427efe70aeed5c536f9868ca9a80a0cf57b6b61eb5e47a41001c33fd2aa1cf5"
+    },
+    {
+      "job": "hijo_del_ainawi__identity_sheet--canon",
+      "modelo": "hijo_del_ainawi__identity_sheet",
+      "entidad": "El hijo del áinawi",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-mujer-sarnosa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6257,
+      "prompt_sha256": "508958896ee8a976b1176c9b0b8cd508e648d377b538ea0a0fdfa65d63a7471c"
+    },
+    {
+      "job": "hombre_de_tsorueto__identity_sheet--canon",
+      "modelo": "hombre_de_tsorueto__identity_sheet",
+      "entidad": "El hombre de la casa Tsorueto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-tigre"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6243,
+      "prompt_sha256": "8656ea520a7b4189931141614fddea8f4197eeeae5d9a5e636622a5daae374c1"
+    },
+    {
+      "job": "jumeneduawa__identity_sheet--canon",
+      "modelo": "jumeneduawa__identity_sheet",
+      "entidad": "Jumeneduawa, la hermana menor que clava la flecha",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-comida-para-los-muertos"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6401,
+      "prompt_sha256": "f297566c85f2d5358addb298f2b7db152798fad03b265177bbb4d4e15ab5458c"
+    },
+    {
+      "job": "madrastra__identity_sheet--canon",
+      "modelo": "madrastra__identity_sheet",
+      "entidad": "La nueva esposa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "historia-de-un-viejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6229,
+      "prompt_sha256": "a14644f9fe5bf49dee1f0191b713145e1bd40072edee9dbdf9f521cee62dcb6a"
+    },
+    {
+      "job": "matsuldani__identity_sheet--canon",
+      "modelo": "matsuldani__identity_sheet",
+      "entidad": "Matsuldani, el hijo que saca a la gente de la tierra",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6166,
+      "prompt_sha256": "7dec3743b0c09e474a88ef3441f59757738bf754bac3fb85b7b37f0cefadf026"
+    }
+  ]
+}
