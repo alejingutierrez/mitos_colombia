@@ -1,0 +1,63 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "u-wa",
+  "comunidad": "U’wa",
+  "tanda": "tanda-07-colectivos-rehechas",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/u-wa.v3.json",
+    "sha256": "5e5462ec1faa17ad393b4cbaccc5e11a5e2c3cbcf01983f403221e88f1fa1ff2"
+  },
+  "canon": {
+    "sha256": "a90c54e7ee6b64a69b74d22cb095455d84c1040f832c2a85fbbf36891e532aed",
+    "verificado_en": "2026-09-28T20:23:48.410Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 8,
+  "fichas": [
+    {
+      "job": "tigres_de_los_llanos__group_grammar--canon",
+      "modelo": "tigres_de_los_llanos__group_grammar",
+      "entidad": "Los tigres de los Llanos Orientales",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-competencia-de-los-tigres-uwa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6474,
+      "prompt_sha256": "3deaf7b74ad5e1698d20bf81d318bcd987d54c8d259c001e7f9565ab2245621c"
+    },
+    {
+      "job": "tigres_del_territorio_ancestral__group_grammar--canon",
+      "modelo": "tigres_del_territorio_ancestral__group_grammar",
+      "entidad": "Los tigres del territorio ancestral",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-competencia-de-los-tigres-uwa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6565,
+      "prompt_sha256": "f4bfb1b4dd6be9acbba24e377e6e09fdb1b9e5011fb95ce400ecf8dfa534d4a9"
+    }
+  ]
+}

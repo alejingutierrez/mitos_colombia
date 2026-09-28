@@ -300,7 +300,8 @@ const sinClausulasTexto = (texto, claves) => {
 // Un estado que vuelve persona al ser (Ancastor en forma humana) no puede
 // cargar los materiales del ser: salia otra vez el ave con sus alas.
 const A_PERSONA = /forma humana|en humano|como hombre|como mujer|forma de (hombre|mujer|persona)/i;
-const FELINO = /\b(tigre|jaguar|imam[aá])\b/i;
+// «Tigres» en plural no disparaba la regla: los tigres u'wa salieron rayados.
+const FELINO = /\b(tigres?|tigras?|jaguar(es)?|imam[aá])\b/i;
 
 function promptDeVista(model, view, capaId, kind, nombre, estados = []) {
   const otros = estados.filter((e) => !/^can[oó]nico$/i.test(e)).map(claveDe);
@@ -325,7 +326,14 @@ function promptDeVista(model, view, capaId, kind, nombre, estados = []) {
     };
   }
   if (FELINO.test(nombre)) {
-    spec = { ...spec, avoid: [...(spec.avoid || []), "ningun colmillo de sable ni diente largo fuera de la boca: es un jaguar americano, de colmillos cortos"] };
+    spec = {
+      ...spec,
+      avoid: [
+        ...(spec.avoid || []),
+        "ningun colmillo de sable ni diente largo fuera de la boca: es un jaguar americano, de colmillos cortos",
+        "ninguna raya: en Colombia «tigre» es el jaguar americano, nunca el tigre de bengala rayado ni el leopardo",
+      ],
+    };
   }
   if (view.id !== "canon" && ANTERIOR.test(view.states.join(" "))) {
     spec = {
