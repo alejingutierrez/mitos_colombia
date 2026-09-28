@@ -253,17 +253,34 @@ export function sobrePapel(spec) {
  * silueta y en `continuity` («su estado de tigre parte del cuerpo del jaguar y
  * conserva la mochila»). Aqui la peticion se arma con esas frases.
  */
+// Raices de las palabras con sustancia de un estado («comejenes» -> «comejen»,
+// «constelaciones» -> «constel»). «Hechos», «estado» y similares no distinguen.
+const VACIAS = new Set(["estado", "hechos", "hecho", "hecha", "hechas", "subiendo", "mismo", "misma", "forma", "entero", "entera"]);
+export const raicesDe = (estado) => String(estado).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+  .split(/[^a-zñ]+/).filter((w) => w.length >= 6 && !VACIAS.has(w)).map((w) => w.slice(0, 7));
+const clausulasDe = (texto) => String(texto || "").split(/(?<=[.;])\s+/).filter(Boolean);
+const nombra = (t, raices) => {
+  const n = t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  return raices.some((r) => n.includes(r));
+};
+
 export function peticionDeEstado(model, view, nombre) {
   const estado = view.states.join(", ");
+  const raices = raicesDe(estado);
   const clave = estado.split(/[\s(,]/)[0].toLowerCase();
-  const habla = (t) => /estado/i.test(t) || (clave.length > 3 && t.toLowerCase().includes(clave));
-  const silueta = frases(model.design_contract?.distinctive_silhouette).filter(habla);
-  const continuidad = (model.design_contract?.continuity_markers || []).filter(habla);
+  // La familia Tsamani describe sus dos estados en la misma frase: se toma
+  // la clausula que nombra este estado; sin ninguna, la que dice «estado».
+  const elegir = (lista) => {
+    const propias = lista.filter((t) => nombra(t, raices) || (clave.length > 3 && t.toLowerCase().includes(clave)));
+    return propias.length ? propias : lista.filter((t) => /estado/i.test(t));
+  };
+  const silueta = elegir(clausulasDe(model.design_contract?.distinctive_silhouette));
+  const continuidad = elegir(model.design_contract?.continuity_markers || []);
   const jaguar = /tigre|jaguar/i.test(estado + continuidad.join(" "))
     ? " El tigre es el de Colombia: jaguar americano, rosetas con punto interior; nunca tigre de bengala ni leopardo."
     : "";
   const punto = (t) => (/[.!?]$/.test(t.trim()) ? t.trim() : `${t.trim()}.`);
-  return `${view.purpose}, para ${nombre}. Dibuja la forma que ese estado describe, entera, aunque ya no sea humana; de la figura canonica conserva solo lo que aqui se dice que conserva. ${[...silueta, ...continuidad].map(punto).join(" ")}${jaguar}`;
+  return `${view.purpose}, para ${nombre}. Dibuja solo la forma que ese estado describe, entera, aunque ya no sea humana; de la figura canonica conserva solo lo que aqui se dice que conserva. ${[...silueta, ...continuidad].map(punto).join(" ")}${jaguar}`;
 }
 
 // Un estado «antes de» (el Sol antes de ser vestido de oro) no puede cargar
@@ -311,7 +328,11 @@ function promptDeVista(model, view, capaId, kind, nombre, estados = []) {
   let spec = view.id === "canon"
     ? {
       ...model.prompt_spec,
-      primary_request: sinClausulasTexto(sinOtrosEstados(model.prompt_spec.primary_request), otros),
+      primary_request: sinClausulasTexto(sinOtrosEstados(model.prompt_spec.primary_request), otros)
+        .split(/(?<=[.;])\s+/)
+        .filter((c) => !nombra(c, estados.filter((e) => !/^can[oó]nico$/i.test(e)).flatMap(raicesDe)))
+        .filter((c) => !/^en (el|la) (primer|segundo|tercer)/i.test(c.trim()))
+        .join(" "),
       composition_framing: sinClausulasDe(model.prompt_spec.composition_framing, otros),
     }
     : {

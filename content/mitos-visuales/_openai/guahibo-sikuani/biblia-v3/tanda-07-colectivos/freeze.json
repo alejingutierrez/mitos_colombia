@@ -1,0 +1,122 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "guahibo-sikuani",
+  "comunidad": "Sikuani (Guahíbo)",
+  "tanda": "tanda-07-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/guahibo-sikuani.v3.json",
+    "sha256": "b413064aaaf66c1080037f5c39df5a2d30bf207d20611f76f16dd9db50e8fcda"
+  },
+  "canon": {
+    "sha256": "b915af478564a4987fb3256d1d08a4fe205b8aebfd5572ecf4fe54ec6e1ed923",
+    "verificado_en": "2026-09-28T22:40:07.961Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "colectivo_gente_sikuani__group_grammar--canon",
+      "modelo": "colectivo_gente_sikuani__group_grammar",
+      "entidad": "Elenco Sikuani",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-tigre",
+        "historia-de-un-brujo",
+        "historia-de-un-tigre",
+        "historia-de-un-viejo",
+        "kaliwirnae-el-arbol-de-los-alimentos",
+        "kawiri-monae",
+        "la-danta-y-el-terecay",
+        "la-mujer-sarnosa",
+        "la-comida-para-los-muertos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6668,
+      "prompt_sha256": "f0d2f13240fdcc03affbbce4dd1f065b3201b0f1f9924bb2d3e7d9ce16aec6bb"
+    },
+    {
+      "job": "cuatro_perros__group_grammar--canon",
+      "modelo": "cuatro_perros__group_grammar",
+      "entidad": "Los cuatro perros",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "historia-de-un-viejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6598,
+      "prompt_sha256": "cee3f5defb65ed8a359cd8195c729305ace56eafd13650803bbeed4592e4d544"
+    },
+    {
+      "job": "familia_tsamani__group_grammar--canon",
+      "modelo": "familia_tsamani__group_grammar",
+      "entidad": "La familia Tsamani, los cinco hermanos",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-comida-para-los-muertos"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6983,
+      "prompt_sha256": "c29f635bed2caaf05478feea5576bc8e13389e701bc49e445df67c4c919edc69"
+    },
+    {
+      "job": "familia_tsamani__state_sheet--estado_hechos comejenes subiendo por la escalera de flechas",
+      "modelo": "familia_tsamani__state_sheet",
+      "entidad": "La familia Tsamani, los cinco hermanos",
+      "categoria": "colectivo",
+      "vista": "estado_hechos comejenes subiendo por la escalera de flechas",
+      "estados": [
+        "hechos comejenes subiendo por la escalera de flechas"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-comida-para-los-muertos"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6973,
+      "prompt_sha256": "07685d1cf7983d19180873ff94b88a08a0c61702695007c06f7a1534f80446e5"
+    },
+    {
+      "job": "familia_tsamani__state_sheet--estado_hechos constelaciones en lo alto",
+      "modelo": "familia_tsamani__state_sheet",
+      "entidad": "La familia Tsamani, los cinco hermanos",
+      "categoria": "colectivo",
+      "vista": "estado_hechos constelaciones en lo alto",
+      "estados": [
+        "hechos constelaciones en lo alto"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-comida-para-los-muertos"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6953,
+      "prompt_sha256": "d8e4a925533cda86d74982e0f39445e7ac8c67c37fd8248725c2bb5ee546560a"
+    }
+  ]
+}
