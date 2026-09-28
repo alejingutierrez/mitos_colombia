@@ -1,0 +1,368 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "koguis",
+  "comunidad": "Kogui (Kággaba)",
+  "tanda": "tanda-13-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/koguis.v3.json",
+    "sha256": "393111cd6df3d03b8e4b21a66fc16b45d9f1eab6b75d6c1653e0fe55306f57cf"
+  },
+  "canon": {
+    "sha256": "edca8fad668f5e006d7587f11184f1111e3139a171111e1e903647bc29cfc6f3",
+    "verificado_en": "2026-09-28T04:09:23.521Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 18,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "maiz__botanical_sheet--canon",
+      "modelo": "maiz__botanical_sheet",
+      "entidad": "Maíz",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-maiz-koguis",
+        "kasauge-el-padre-arbol",
+        "los-primeros-indios",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5895,
+      "prompt_sha256": "61e189dc23d520960603972c8630db3eff581d02e59fa0a0191debd2b9a6a94f"
+    },
+    {
+      "job": "malanga__botanical_sheet--canon",
+      "modelo": "malanga__botanical_sheet",
+      "entidad": "Malanga",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-arco-iris-susabanka",
+        "el-maiz-koguis",
+        "el-sol-mama",
+        "kasauge-el-padre-arbol",
+        "los-primeros-indios"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5416,
+      "prompt_sha256": "f7110fd4baa923ce365b7c202cbeb384711c5b04e5de82e2e5b5c8d861328ea2"
+    },
+    {
+      "job": "platano__botanical_sheet--canon",
+      "modelo": "platano__botanical_sheet",
+      "entidad": "Plátano",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-arco-iris-susabanka",
+        "el-sol-mama",
+        "kasauge-el-padre-arbol",
+        "los-primeros-indios",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5424,
+      "prompt_sha256": "6266cb626d92abdd1d8bd7594d1fc4043a87f9119a649d41e0a17d1c03aa2df0"
+    },
+    {
+      "job": "libro__object_sheet--canon",
+      "modelo": "libro__object_sheet",
+      "entidad": "El libro",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "canibalismo",
+        "el-primer-hombre-y-la-primera-mujer",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5376,
+      "prompt_sha256": "721ed9ef179640ad6a10687b9e3ab59fd4260a9a974fef39251618c0fb6cc548"
+    },
+    {
+      "job": "yuca__botanical_sheet--canon",
+      "modelo": "yuca__botanical_sheet",
+      "entidad": "Yuca",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-arco-iris-susabanka",
+        "el-sol-mama",
+        "kasauge-el-padre-arbol",
+        "los-primeros-indios"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5495,
+      "prompt_sha256": "8f3b999c64af806260c53fdb3d9b32a16c375ba810c8caedc737efa69244b57a"
+    },
+    {
+      "job": "bola_azul__object_sheet--canon",
+      "modelo": "bola_azul__object_sheet",
+      "entidad": "La bolita azul (maluteyauye / piedra azul o verde)",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "canibalismo",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5855,
+      "prompt_sha256": "00d3ccf410b8f0a702df1bb0919a443fa69ba2dff664a92935d5692be5ea5091"
+    },
+    {
+      "job": "calavera_de_tigre__object_sheet--canon",
+      "modelo": "calavera_de_tigre__object_sheet",
+      "entidad": "La calavera de tigre",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "canibalismo",
+        "el-sol-mama",
+        "kashindukwe"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5467,
+      "prompt_sha256": "fa9a95166f22b2d2d8b7040a91a3e0aa598c6b5296ca22f69f12d982401c5071"
+    },
+    {
+      "job": "mochila__object_sheet--canon",
+      "modelo": "mochila__object_sheet",
+      "entidad": "La mochila",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-maiz-koguis",
+        "el-sol-mama",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6080,
+      "prompt_sha256": "129c0082acd5c666608571d6bacd6d070cc123cc9953829ebc44f175521435c4"
+    },
+    {
+      "job": "pina__botanical_sheet--canon",
+      "modelo": "pina__botanical_sheet",
+      "entidad": "Piña",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "canibalismo",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5602,
+      "prompt_sha256": "29d1f89912368f5fea2f4ae9df8897cf2296f82ae4eb00e95a79d48691928919"
+    },
+    {
+      "job": "poporo__object_sheet--canon",
+      "modelo": "poporo__object_sheet",
+      "entidad": "El poporo",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "canibalismo",
+        "el-primer-hombre-y-la-primera-mujer",
+        "naowa-entrega-el-gobierno-a-su-hijo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5979,
+      "prompt_sha256": "22ddbc91eb0bc7fd333a07afbf1e232b2e044a2f323f378adeaf395ef22a982d"
+    },
+    {
+      "job": "trampa_de_machucon__object_sheet--canon",
+      "modelo": "trampa_de_machucon__object_sheet",
+      "entidad": "La trampa de machucón",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "canibalismo",
+        "kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5537,
+      "prompt_sha256": "0a57bbb9544fe194db88724414e251581d29cb468edb383c72c2f16fb11b1dc9"
+    },
+    {
+      "job": "coca_haiu__botanical_sheet--canon",
+      "modelo": "coca_haiu__botanical_sheet",
+      "entidad": "Coca (haiu)",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "namaku",
+        "naowa-entrega-el-gobierno-a-su-hijo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5472,
+      "prompt_sha256": "aae3a6d19e4a64b82d88acf27f9bfd9710a742fb45fc3cdff14a86c01c79ca58"
+    },
+    {
+      "job": "algodon__botanical_sheet--canon",
+      "modelo": "algodon__botanical_sheet",
+      "entidad": "Algodón",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-algodon-koguis"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5749,
+      "prompt_sha256": "e267ec41071af116feab6690c423f55146b5da36384ea30abdb93e5054fb477a"
+    },
+    {
+      "job": "baston_de_autoridad__object_sheet--canon",
+      "modelo": "baston_de_autoridad__object_sheet",
+      "entidad": "El bastón de gobierno",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "naowa-entrega-el-gobierno-a-su-hijo"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5379,
+      "prompt_sha256": "eeff06911dd22645be57ddca71966fde42b3fda0a59658a8b2be543e4bfe3700"
+    },
+    {
+      "job": "bastoncito_de_oro__object_sheet--canon",
+      "modelo": "bastoncito_de_oro__object_sheet",
+      "entidad": "El bastoncito de oro de Terana",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "kimaku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5424,
+      "prompt_sha256": "4f038809238ed10a87b49bed81ad469293c4af62f12928db10f715ada4d1a262"
+    },
+    {
+      "job": "cuatro_flechas_de_fuego__object_sheet--canon",
+      "modelo": "cuatro_flechas_de_fuego__object_sheet",
+      "entidad": "Las cuatro flechas de fuego",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-candela-gotze"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5630,
+      "prompt_sha256": "2ba6b47457a3ed753c2d817edaabc53f9f6ff5f996c4ebd73c5eae09fff67bf3"
+    },
+    {
+      "job": "instrumentos_de_musica__object_sheet--canon",
+      "modelo": "instrumentos_de_musica__object_sheet",
+      "entidad": "Carrizo, trompa y caja",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-koguis"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5555,
+      "prompt_sha256": "bbe3057eb0876e3fb76e08298e88f86752ac13c9747f636faa601dfeae980c1f"
+    },
+    {
+      "job": "kagaba_kuitse__object_sheet--canon",
+      "modelo": "kagaba_kuitse__object_sheet",
+      "entidad": "Kagaba-Kuitse, la piedra de gente",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "madre-wastora"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5803,
+      "prompt_sha256": "1f4840dabe2f9bdb8a60c8d50fe1c31b577f5445fa9f39dd035d25dc17027269"
+    }
+  ]
+}

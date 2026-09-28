@@ -165,6 +165,14 @@ export const UNA_SOLA_FIGURA = "UNA SOLA LAMINA: una sola figura, de cuerpo ente
 const CAPAS_DE_UNA_FIGURA = new Set(["tipos", "mortales", "miticos"]);
 
 /**
+ * El atrezo kogui salio como hoja de museo: rotulos, cotas, reglas de medida,
+ * una silueta humana de «1,70 m» y vinetas de detalle. El proposito de la ficha
+ * de objeto («hechura, escala y uso») lo empuja al diagrama. La escala se dice
+ * con una mano o con el objeto mismo, nunca con una cota.
+ */
+export const SIN_LAMINA_TECNICA = "NO ES UNA LAMINA TECNICA NI UNA FICHA DE MUSEO: una sola composicion de papel, sin rotulos, titulos, letras, numeros, cotas, flechas de medida, reglas, siluetas de escala ni vinetas de detalle. Si la escala importa, se lee por una mano o un cuerpo de papel junto al objeto, nunca por una medida escrita.";
+
+/**
  * 23 siluetas describen en la misma frase la forma canonica y la de otro
  * estado («En su estado contemporaneo, el mismo cuerpo con camiseta…»). En la
  * lamina canonica el modelo las dibuja las dos, lado a lado. La canonica se
@@ -192,6 +200,9 @@ const FRASE_DE_ESCENARIO = /(full bleed|cuatro l[ií]mites|a sangre|dentro del d
 export const FONDO_PAPEL = "FICHA DE REFERENCIA SOBRE PAPEL, MANDA SOBRE TODO LO DEMAS: la figura, hecha de papel recortado y quilling, esta sola sobre un pliego liso de papel blanco hueso mate que ocupa todo el cuadro, fotografiada desde el frente con luz de estudio suave; su propia sombra corta y nitida cae sobre ese papel. Sin escenario, sin paisaje, sin cielo ni horizonte, sin suelo con terreno, sin arquitectura detras y sin figuras secundarias.";
 const CIERRE_PAPEL = "Fondo: pliego liso de papel blanco hueso, sin escenario; solo la figura y su sombra.";
 
+// Una medida escrita («-25 x 53 cm-») sale dibujada como cota sobre la lamina.
+const MEDIDA = /\s*[-,(]?\s*(de\s+)?\d+([.,]\d+)?\s*(x|×)\s*\d+([.,]\d+)?\s*(cm|mm|m)\b\s*[-,)]?/gi;
+
 const frases = (texto) => String(texto || "").split(/(?<=[.!?])\s+/);
 // «Inmersiva» y «esta tecnica manda sobre todo» pertenecen al escenario: en una
 // ficha, lo que manda es el pliego de papel.
@@ -209,12 +220,13 @@ export function sobrePapel(spec) {
     composition_framing: String(spec.composition_framing || "")
       .replace(/mundo full bleed hasta los cuatro l[ií]mites/i, "figura sola sobre papel blanco hueso liso, con aire alrededor")
       .split(/(?<=[.;,])\s+/)
-      .filter((f) => !/(otra figura|fuera de foco|primer t[ée]rmino|detr[aá]s del hombro)/i.test(f))
-      .join(" "),
+      .filter((f) => !/(otra figura|fuera de foco|primer t[ée]rmino|detr[aá]s del hombro|segundo cuadro|acotad|\bcota)/i.test(f))
+      .join(" ")
+      .replace(MEDIDA, ""),
     lighting_mood: "Luz de estudio suave y direccional sobre el papel, que marca el canto de cada pieza y deja una sombra corta sobre el pliego; sin luz de paisaje ni hora del dia.",
-    constraints: (spec.constraints || []).filter(
-      (c) => !/^El terreno|primer plano, plano medio y fondo/i.test(c) && !FRASE_DE_ESCENARIO.test(c),
-    ),
+    constraints: (spec.constraints || [])
+      .filter((c) => !/^El terreno|primer plano, plano medio y fondo/i.test(c) && !FRASE_DE_ESCENARIO.test(c))
+      .map((c) => c.replace(MEDIDA, "")),
     avoid: [
       ...(spec.avoid || []).filter((a) => !FRASE_DE_ESCENARIO.test(a)),
       "ningun escenario, paisaje, cielo, horizonte, suelo con terreno ni figura secundaria detras de la ficha",
@@ -264,6 +276,8 @@ function promptDeVista(model, view, capaId, kind, nombre) {
   if (CAPAS_CON_CUERPO.has(capaId)) {
     const extra = CAPAS_DE_UNA_FIGURA.has(capaId) ? `\n${UNA_SOLA_FIGURA}` : "";
     base = base.replace(/\n\nUse case: /, `\n\n${CUERPO_Y_CARA}${extra}\n\nUse case: `);
+  } else {
+    base = base.replace(/\n\nUse case: /, `\n\n${SIN_LAMINA_TECNICA}\n\nUse case: `);
   }
   return base;
 }
