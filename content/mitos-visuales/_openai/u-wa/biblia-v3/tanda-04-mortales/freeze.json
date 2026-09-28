@@ -1,0 +1,180 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "u-wa",
+  "comunidad": "U’wa",
+  "tanda": "tanda-04-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/u-wa.v3.json",
+    "sha256": "5e5462ec1faa17ad393b4cbaccc5e11a5e2c3cbcf01983f403221e88f1fa1ff2"
+  },
+  "canon": {
+    "sha256": "a90c54e7ee6b64a69b74d22cb095455d84c1040f832c2a85fbbf36891e532aed",
+    "verificado_en": "2026-09-28T20:11:23.596Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 9,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hombre_uwa_del_carpintero__identity_sheet--canon",
+      "modelo": "hombre_uwa_del_carpintero__identity_sheet",
+      "entidad": "El amigo U’wa del pájaro carpintero",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-pajaro-carpintero-y-el-poder-de-curar"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6380,
+      "prompt_sha256": "23bb9c695f98c0fdf1f8decbe48e4fc10812615e53d1e44e612c3214a9fc4749"
+    },
+    {
+      "job": "iurusa__identity_sheet--canon",
+      "modelo": "iurusa__identity_sheet",
+      "entidad": "Iurusa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6411,
+      "prompt_sha256": "c383bf01e16b63bb35d5009bc1e6af393f7bdfba41e686586014c8f89fe501b7"
+    },
+    {
+      "job": "kaeta__identity_sheet--canon",
+      "modelo": "kaeta__identity_sheet",
+      "entidad": "Kaeta",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6153,
+      "prompt_sha256": "182057b6f42499b59a465eb66b9b57825be75d5f3c67f5d90b091b55d269292f"
+    },
+    {
+      "job": "kubashoa__identity_sheet--canon",
+      "modelo": "kubashoa__identity_sheet",
+      "entidad": "Kubashoa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6614,
+      "prompt_sha256": "c1e259b630d2a497670a3d25106ad17f311feb13d60020f274800da2770bb9eb"
+    },
+    {
+      "job": "kubashoa__state_sheet--estado_tigre_poderoso",
+      "modelo": "kubashoa__state_sheet",
+      "entidad": "Kubashoa",
+      "categoria": "personaje",
+      "vista": "estado_tigre_poderoso",
+      "estados": [
+        "tigre_poderoso"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6437,
+      "prompt_sha256": "517141f692f36078b47669c57a81017bd95b454affc75bdde724be0221e0090d"
+    },
+    {
+      "job": "kusbasha__identity_sheet--canon",
+      "modelo": "kusbasha__identity_sheet",
+      "entidad": "Kusbasha",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "lisha-la-madre-del-agua"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6384,
+      "prompt_sha256": "a89428c0b299383f56dccca400c051a19a2979d3d1f90f92b69ea3258880aa04"
+    },
+    {
+      "job": "padre_de_bakokuira__identity_sheet--canon",
+      "modelo": "padre_de_bakokuira__identity_sheet",
+      "entidad": "El padre de la familia de Bakokuira",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-oso-y-el-hombre-uwa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6460,
+      "prompt_sha256": "3be208ce321f0d4d353eb25c7207c7a7f5140f97d06e1ca4a822b8184c7d1f79"
+    },
+    {
+      "job": "uktara__identity_sheet--canon",
+      "modelo": "uktara__identity_sheet",
+      "entidad": "Uktara",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-recorrido-de-uktara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6552,
+      "prompt_sha256": "b42214025c5632f90099cc4b04f0c212da8ed62560390f51820c7bcfd244901d"
+    },
+    {
+      "job": "viajero_uwa_de_monoa__identity_sheet--canon",
+      "modelo": "viajero_uwa_de_monoa__identity_sheet",
+      "entidad": "El viajero U’wa de las rutas de intercambio",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6693,
+      "prompt_sha256": "aacef8556430c4c30d981173c2c9da4ba4cad6bb3b622d7b9ef91f2d0feb1249"
+    }
+  ]
+}
