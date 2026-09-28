@@ -171,6 +171,7 @@ export const UN_SOLO_GRUPO = "UN SOLO CUADRO: el grupo entero en una sola compos
  * de objeto («hechura, escala y uso») lo empuja al diagrama. La escala se dice
  * con una mano o con el objeto mismo, nunca con una cota.
  */
+export const SIN_CARA_DE_ANIMACION = "Si la figura tiene cara, nada de cara de animacion: ni ojos grandes con brillo, ni cabeza de muñeco, ni mejillas infladas; nada de Pixar, Disney ni anime. Ojos minimos de papel oscuro, sin brillo.";
 export const SIN_LAMINA_TECNICA = "NO ES UNA LAMINA TECNICA NI UNA FICHA DE MUSEO: una sola composicion de papel, sin rotulos, titulos, letras, numeros, cotas, flechas de medida, reglas, siluetas de escala ni vinetas de detalle. Si la escala importa, se lee por una mano o un cuerpo de papel junto al objeto, nunca por una medida escrita.";
 
 /**
@@ -352,7 +353,10 @@ function promptDeVista(model, view, capaId, kind, nombre, estados = []) {
     const extra = CAPAS_DE_UNA_FIGURA.has(capaId) ? `\n${UNA_SOLA_FIGURA}` : `\n${UN_SOLO_GRUPO}`;
     base = base.replace(/\n\nUse case: /, `\n\n${CUERPO_Y_CARA}${extra}\n\nUse case: `);
   } else {
-    base = base.replace(/\n\nUse case: /, `\n\n${SIN_LAMINA_TECNICA}\n\nUse case: `);
+    // Las criaturas de cuerpo humano (el nino Monoa, Konara) van en la capa de
+    // animales y tambien salian con cara de pelicula.
+    const cara = capaId === "animales" ? `\n${SIN_CARA_DE_ANIMACION}` : "";
+    base = base.replace(/\n\nUse case: /, `\n\n${SIN_LAMINA_TECNICA}${cara}\n\nUse case: `);
   }
   return base;
 }
