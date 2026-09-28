@@ -1,0 +1,96 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "andoque",
+  "comunidad": "Andoque (Gente del Hacha)",
+  "tanda": "tanda-08-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/andoque.v3.json",
+    "sha256": "345fea24f9db5aa63f80eb37a31746c72094210f716082508180bc887113a806"
+  },
+  "canon": {
+    "sha256": "1464c50fa3a580f64f525602622acdadb0f163d4bd0942dd7decb8df15cc5afb",
+    "verificado_en": "2026-09-28T16:15:14.475Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "dona_cucarron_de_vida__identity_sheet--canon",
+      "modelo": "dona_cucarron_de_vida__identity_sheet",
+      "entidad": "Doña Cucarrón-de-vida",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7848,
+      "prompt_sha256": "d9bd13e42a9e3607f40f32add2a0fe06acd960ec561b6b8c8c47614090761296"
+    },
+    {
+      "job": "luna__identity_sheet--canon",
+      "modelo": "luna__identity_sheet",
+      "entidad": "Luna",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7753,
+      "prompt_sha256": "71f4ae5966190e8f54873fcb30b000a3e91b1fbc83117b5092f386e9b9581542"
+    },
+    {
+      "job": "sol__identity_sheet--canon",
+      "modelo": "sol__identity_sheet",
+      "entidad": "Sol",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7682,
+      "prompt_sha256": "66a520cc3ae507a61a1e3b6db784ce96b0fda8f492d83957b1c24a4696aad871"
+    },
+    {
+      "job": "trueno__identity_sheet--canon",
+      "modelo": "trueno__identity_sheet",
+      "entidad": "Trueno",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7666,
+      "prompt_sha256": "6fc712b504a811467bfd4a5561cab71a113d17c121ab9d5b2f142976b29648d3"
+    }
+  ]
+}
