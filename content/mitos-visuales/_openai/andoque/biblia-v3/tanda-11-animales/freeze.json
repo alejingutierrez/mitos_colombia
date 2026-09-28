@@ -1,0 +1,240 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "andoque",
+  "comunidad": "Andoque (Gente del Hacha)",
+  "tanda": "tanda-11-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/andoque.v3.json",
+    "sha256": "345fea24f9db5aa63f80eb37a31746c72094210f716082508180bc887113a806"
+  },
+  "canon": {
+    "sha256": "1464c50fa3a580f64f525602622acdadb0f163d4bd0942dd7decb8df15cc5afb",
+    "verificado_en": "2026-09-28T19:31:05.530Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 12,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "boa__identity_sheet--canon",
+      "modelo": "boa__identity_sheet",
+      "entidad": "Boa",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "la-brujeria-de-la-danta",
+        "la-venganza-de-los-brujos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6362,
+      "prompt_sha256": "a6b7748a8c49690ed799b346de2be3475f71a568058774b5dbc5b869b418b3ca"
+    },
+    {
+      "job": "jaguar__identity_sheet--canon",
+      "modelo": "jaguar__identity_sheet",
+      "entidad": "Jaguar",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "la-brujeria-de-la-danta",
+        "la-venganza-de-los-brujos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6457,
+      "prompt_sha256": "c39a32557f281eddf21f4da9799b0b35960c875932bb0c3b1bdc32bca3d8f3b2"
+    },
+    {
+      "job": "aguila_canibal__identity_sheet--canon",
+      "modelo": "aguila_canibal__identity_sheet",
+      "entidad": "El Águila Caníbal",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6534,
+      "prompt_sha256": "0556058fb3b2e6a123c7330f38a6ec99ae7eedc06731b69018cef0117b638150"
+    },
+    {
+      "job": "murcielago__identity_sheet--canon",
+      "modelo": "murcielago__identity_sheet",
+      "entidad": "Murciélago",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-sol-que-nace-en-araracuara",
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6394,
+      "prompt_sha256": "b69ba96af97d782fac7d44f762fc3b72f393337970e19f1e4cc425bfd9e3591d"
+    },
+    {
+      "job": "cuero_negro__identity_sheet--canon",
+      "modelo": "cuero_negro__identity_sheet",
+      "entidad": "Cuero-negro",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6369,
+      "prompt_sha256": "da016685101fecf0baaf63990e5aacb4f9a1957ac184b8eb12997815b6defa32"
+    },
+    {
+      "job": "danta__identity_sheet--canon",
+      "modelo": "danta__identity_sheet",
+      "entidad": "Danta",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-brujeria-de-la-danta"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6494,
+      "prompt_sha256": "e56e6b27dbe53cb4478cfc3aa1f94532b5afc4d1de62b7f2d03b341a19284054"
+    },
+    {
+      "job": "el_fantasma__identity_sheet--canon",
+      "modelo": "el_fantasma__identity_sheet",
+      "entidad": "El fantasma",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-fantasmas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6447,
+      "prompt_sha256": "0977a350acdfff715cf3bc20c15b89fe0f26a149e6cefdee7656cd4b95fdd469"
+    },
+    {
+      "job": "mariposa_cara_de_fantasma__identity_sheet--canon",
+      "modelo": "mariposa_cara_de_fantasma__identity_sheet",
+      "entidad": "Mariposa-cara-de-fantasma",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-fantasmas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6321,
+      "prompt_sha256": "0f89c5e42ce6f7f60422d819912611c79bbe94db82285a5a6896e866c6887be5"
+    },
+    {
+      "job": "mochilero_de_candela__identity_sheet--canon",
+      "modelo": "mochilero_de_candela__identity_sheet",
+      "entidad": "Mochilero-de-candela",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6512,
+      "prompt_sha256": "8f7b1588e170c4f8d379d52f0f30fa8d767b246a14fb7d82326631cdcd9e0120"
+    },
+    {
+      "job": "sabudui_pajuil_real__identity_sheet--canon",
+      "modelo": "sabudui_pajuil_real__identity_sheet",
+      "entidad": "Sabudui, el pajuil real",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6591,
+      "prompt_sha256": "135e72f8596a13d3ce5b1d7950c580cd002e3181c217a6aa42d065ef6db6690d"
+    },
+    {
+      "job": "seres_del_agua_de_sitakara__identity_sheet--canon",
+      "modelo": "seres_del_agua_de_sitakara__identity_sheet",
+      "entidad": "Los seres del agua de Sitakara",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "las-sirenas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6745,
+      "prompt_sha256": "a39ef37156429791ef542ec6de39aad74969af9adbab2d725e9514c77267f78d"
+    },
+    {
+      "job": "tortuga_redonda__identity_sheet--canon",
+      "modelo": "tortuga_redonda__identity_sheet",
+      "entidad": "Tortuga-redonda",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6536,
+      "prompt_sha256": "774eb67594b1407cf1eddcc8e7a3be00222745402568700c632de4ff9c97255f"
+    }
+  ]
+}
