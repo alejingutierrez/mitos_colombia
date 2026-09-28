@@ -1,0 +1,277 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "katios",
+  "comunidad": "Katíos",
+  "tanda": "tanda-18-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/katios.v3.json",
+    "sha256": "f9be2226192a255af2522fb3e144f1264bdda5ccada0d4efa1433ed94953b054"
+  },
+  "canon": {
+    "sha256": "de27d790f202032beb5e5da24c37ad0457de3c5ea66f10b4fdd7c7f234b286ef",
+    "verificado_en": "2026-09-28T15:30:47.478Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 13,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "rio__environment_model--canon",
+      "modelo": "rio__environment_model",
+      "entidad": "El río",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "a-transformacion-del-hombre-que-no-podia-cazar",
+        "cobaima",
+        "creacion-katios",
+        "sever",
+        "herupotoarra",
+        "fragmentos-de-otras-tradiciones",
+        "antomia"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6759,
+      "prompt_sha256": "5a1ee1937993ea1116034d612a5b8354925284bf35efb9a4e830cbbbfed64af5"
+    },
+    {
+      "job": "selva-humeda-del-noroccidente__environment_model--canon",
+      "modelo": "selva-humeda-del-noroccidente__environment_model",
+      "entidad": "La selva húmeda del noroccidente",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "a-transformacion-del-hombre-que-no-podia-cazar",
+        "aribamias",
+        "los-bibidigomias",
+        "coste",
+        "sever",
+        "cobaima",
+        "icades-name"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6990,
+      "prompt_sha256": "ae4d77ee17a340636b5233bc2bed7858ad9f18969e813682dc62c5de981c2cdf"
+    },
+    {
+      "job": "montanas-del-noroccidente__environment_model--canon",
+      "modelo": "montanas-del-noroccidente__environment_model",
+      "entidad": "Las montañas del noroccidente",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "dabeiba",
+        "ancastor",
+        "cobaima",
+        "fragmentos-de-otras-tradiciones",
+        "tradicion-del-cerro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6757,
+      "prompt_sha256": "67cc10c60440dab9582bc136ad0d0ce07681eb93dea365622b3146a2ee682867"
+    },
+    {
+      "job": "bajia__spatial_model--canon",
+      "modelo": "bajia__spatial_model",
+      "entidad": "El Bajía",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "ancastor",
+        "la-escalera-del-cielo",
+        "creacion-katios",
+        "dabeiba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6796,
+      "prompt_sha256": "aca8bba6d5dd77a2d71b5075a05641ad069a6ca782d80ca79a15143d7febd890"
+    },
+    {
+      "job": "mar-y-playa__environment_model--canon",
+      "modelo": "mar-y-playa__environment_model",
+      "entidad": "El mar y la playa",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-domicoes",
+        "sever",
+        "tradiciones-relativas-a-la-conquista",
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6795,
+      "prompt_sha256": "fb76e35327355d44194131a5cbac983daf36d6531c43e476b67d03018ad510c6"
+    },
+    {
+      "job": "armucura__spatial_model--canon",
+      "modelo": "armucura__spatial_model",
+      "entidad": "Armucurá",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "herupotoarra",
+        "creacion-katios"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6783,
+      "prompt_sha256": "25a073ead5328b726aa21f356b8116500742cf2fca8ee8822b5baa3c0a4ad46f"
+    },
+    {
+      "job": "arcoiris-embibicuras__spatial_model--canon",
+      "modelo": "arcoiris-embibicuras__spatial_model",
+      "entidad": "El arcoíris de Embibicuras",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cobaima"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6776,
+      "prompt_sha256": "038e619591be5a679bef0755f733191b9bce4fd4a112a4efb260c665880a00d6"
+    },
+    {
+      "job": "cerro-plateado-de-musinga__spatial_model--canon",
+      "modelo": "cerro-plateado-de-musinga__spatial_model",
+      "entidad": "El Cerro Plateado",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "tradicion-del-cerro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6836,
+      "prompt_sha256": "0bb2adf7bf3c43d49f34e4066de18961054a739721c2e42a39946a6e396d4ad4"
+    },
+    {
+      "job": "cueva-de-coste__spatial_model--canon",
+      "modelo": "cueva-de-coste__spatial_model",
+      "entidad": "La cueva de Costé",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "coste"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6511,
+      "prompt_sha256": "bdf6df3d9cafab2fe019b38e4aa25f4b43d245ac3c75b3a6f9443d1efc0c1c61"
+    },
+    {
+      "job": "edaa__spatial_model--canon",
+      "modelo": "edaa__spatial_model",
+      "entidad": "Edaa",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "antomia"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6659,
+      "prompt_sha256": "fb083c13f6ee5e0b36596953a6478292746a81a840e81a4ee64ed408a58853b3"
+    },
+    {
+      "job": "gioro-lloro__spatial_model--canon",
+      "modelo": "gioro-lloro__spatial_model",
+      "entidad": "Gioró (Lloró), tierra sagrada",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-escalera-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6634,
+      "prompt_sha256": "79177ab1e8afc39b8b0c3a2d093ddb92543336af42488f700d7672b1d46ad822"
+    },
+    {
+      "job": "mina-de-oro-que-come__spatial_model--canon",
+      "modelo": "mina-de-oro-que-come__spatial_model",
+      "entidad": "La mina donde el oro se comía a la gente",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cobaima"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6773,
+      "prompt_sha256": "2fc00b7d0addb896d670ea2f042df43d61288362014f78d5a9bd71bdf2dd6075"
+    },
+    {
+      "job": "piedra-gigante-como-barco__spatial_model--canon",
+      "modelo": "piedra-gigante-como-barco__spatial_model",
+      "entidad": "La piedra gigante parecida a un barco",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cobaima"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6605,
+      "prompt_sha256": "4382261f06376abbbe76861a66e5ad9f51b7e3a8724e0f4a994d6407fb0708b0"
+    }
+  ]
+}
