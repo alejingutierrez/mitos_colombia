@@ -1,0 +1,88 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "u-wa",
+  "comunidad": "U’wa",
+  "tanda": "tanda-12-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/u-wa.v3.json",
+    "sha256": "e1e4ee9024b780d4cabc07b01806fede67230def7aecb7203360a7e23addae2f"
+  },
+  "canon": {
+    "sha256": "a90c54e7ee6b64a69b74d22cb095455d84c1040f832c2a85fbbf36891e532aed",
+    "verificado_en": "2026-09-28T21:16:23.543Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "casa_uwa__spatial_model--canon",
+      "modelo": "casa_uwa__spatial_model",
+      "entidad": "La casa U’wa",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-oso-y-el-hombre-uwa",
+        "el-pajaro-carpintero-y-el-poder-de-curar",
+        "lisha-la-madre-del-agua",
+        "mensajes-de-los-animales-uwa"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5458,
+      "prompt_sha256": "02cc5f91467b422ba82644df9008c6343f41d1e9225e9bf59484ca99abbea5d4"
+    },
+    {
+      "job": "soplo_y_secreta__phenomenon_rule--canon",
+      "modelo": "soplo_y_secreta__phenomenon_rule",
+      "entidad": "El soplo y la secreta",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-pajaro-carpintero-y-el-poder-de-curar",
+        "kubashoa-el-hijo-del-tabaco",
+        "mensajes-de-los-animales-uwa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5403,
+      "prompt_sha256": "fa6ea11133b20382816573077d8f2600efcc173a8a466363a04858fe3c006053"
+    },
+    {
+      "job": "corral_de_yanoa__spatial_model--canon",
+      "modelo": "corral_de_yanoa__spatial_model",
+      "entidad": "El corral de Yanoa",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "yanoa-y-sirbetuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5054,
+      "prompt_sha256": "4d5098da11e71f5bb360956ec0541da1f29513f9a4486ef344dd861b34799fdb"
+    }
+  ]
+}
