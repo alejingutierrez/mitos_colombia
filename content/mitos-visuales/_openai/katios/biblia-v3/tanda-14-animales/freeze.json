@@ -1,0 +1,353 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "katios",
+  "comunidad": "Katíos",
+  "tanda": "tanda-14-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/katios.v3.json",
+    "sha256": "f9be2226192a255af2522fb3e144f1264bdda5ccada0d4efa1433ed94953b054"
+  },
+  "canon": {
+    "sha256": "de27d790f202032beb5e5da24c37ad0457de3c5ea66f10b4fdd7c7f234b286ef",
+    "verificado_en": "2026-09-28T14:41:34.209Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 18,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tigre__identity_sheet--canon",
+      "modelo": "tigre__identity_sheet",
+      "entidad": "Tigre (imamá)",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "coste",
+        "los-bibidigomias",
+        "cobaima",
+        "sever",
+        "creacion-katios",
+        "aribamias"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6142,
+      "prompt_sha256": "e82e0c95cd06fe8b5488b4127ec8fe4562f585606cc10e48611e93035484e33b"
+    },
+    {
+      "job": "tigre__state_sheet--estado_cachorro",
+      "modelo": "tigre__state_sheet",
+      "entidad": "Tigre (imamá)",
+      "categoria": "animal",
+      "vista": "estado_cachorro",
+      "estados": [
+        "cachorro"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "coste",
+        "los-bibidigomias",
+        "cobaima",
+        "sever",
+        "creacion-katios",
+        "aribamias"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6399,
+      "prompt_sha256": "153d51aad6e24732917062b1baa3d269f10b1859557b05b621b06af4611ca2d5"
+    },
+    {
+      "job": "peces-de-rio__identity_sheet--canon",
+      "modelo": "peces-de-rio__identity_sheet",
+      "entidad": "Peces de río",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "fragmentos-de-otras-tradiciones",
+        "cobaima",
+        "antomia",
+        "herupotoarra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5909,
+      "prompt_sha256": "c62100b424e37cd2fb5674bbc9292f7c3e3a58bc21c88766dd90f85914fd1013"
+    },
+    {
+      "job": "culebra__identity_sheet--canon",
+      "modelo": "culebra__identity_sheet",
+      "entidad": "Culebra",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "tradicion-del-cerro",
+        "creacion-katios",
+        "herupotoarra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5977,
+      "prompt_sha256": "96b117b0b9bbc2f34675c4340f3e8855cfd4ef56584e37b076ed0f021fb4b6d6"
+    },
+    {
+      "job": "gallinazo__identity_sheet--canon",
+      "modelo": "gallinazo__identity_sheet",
+      "entidad": "Gallinazo",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "fragmentos-de-otras-tradiciones",
+        "baha",
+        "tradicion-del-cerro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6051,
+      "prompt_sha256": "1dfd58fa54a5161ae3cd2b72509f049884e5f4a1c1c12d1677b121891e594408"
+    },
+    {
+      "job": "ancastor__identity_sheet--canon",
+      "modelo": "ancastor__identity_sheet",
+      "entidad": "Ancastor",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "ancastor"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6053,
+      "prompt_sha256": "e7968f56401cd0c8ec7a49a6758c1848ca7b8c8b055f5aac6c5b94cb75c2ae43"
+    },
+    {
+      "job": "ancastor__state_sheet--estado_forma humana",
+      "modelo": "ancastor__state_sheet",
+      "entidad": "Ancastor",
+      "categoria": "criatura",
+      "vista": "estado_forma humana",
+      "estados": [
+        "forma humana"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "ancastor"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6080,
+      "prompt_sha256": "d60a4e7aa9cf4a1adfbe6d1cbcd74621c57ea4022cb08429da4edf4e3fb34cc8"
+    },
+    {
+      "job": "aribamia__identity_sheet--canon",
+      "modelo": "aribamia__identity_sheet",
+      "entidad": "Aribamia",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "aribamias"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6187,
+      "prompt_sha256": "28673109aeac95495e620e2d13d8e7dfb90fa27f160cbbdaeaef0b356499f5e4"
+    },
+    {
+      "job": "aribamia__state_sheet--estado_en formación (espuma blanca - cuerpo que se cubre de pelo)",
+      "modelo": "aribamia__state_sheet",
+      "entidad": "Aribamia",
+      "categoria": "criatura",
+      "vista": "estado_en formación (espuma blanca / cuerpo que se cubre de pelo)",
+      "estados": [
+        "en formación (espuma blanca / cuerpo que se cubre de pelo)"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "aribamias"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6216,
+      "prompt_sha256": "1018511bd0babcdfb2a7940f1e63a563995773e00d1b31c183bca22b89706864"
+    },
+    {
+      "job": "chidima__identity_sheet--canon",
+      "modelo": "chidima__identity_sheet",
+      "entidad": "Chidima, la ardilla diminuta",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5888,
+      "prompt_sha256": "0f3ece3322955e66c8c745704ca4dc392e2dfcfe22dc0cc69746d9d52e3436c1"
+    },
+    {
+      "job": "coste__identity_sheet--canon",
+      "modelo": "coste__identity_sheet",
+      "entidad": "Costé",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "coste"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6122,
+      "prompt_sha256": "4bc35aa6f5f5434d75fee87a9050c7fb2dd5ca3322f3331bed1adb9c8edb5093"
+    },
+    {
+      "job": "garza__identity_sheet--canon",
+      "modelo": "garza__identity_sheet",
+      "entidad": "Garza",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5753,
+      "prompt_sha256": "ca27b0b76d9c21698a522bb46f62372e3a61ada1b7569cacfa595c9956c0fcf6"
+    },
+    {
+      "job": "mono__identity_sheet--canon",
+      "modelo": "mono__identity_sheet",
+      "entidad": "Mico y mono de monte",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5899,
+      "prompt_sha256": "832c1b6bae14acc13761cb8f15cdb7efc380a59cbce29807db73a6dd4a4e123d"
+    },
+    {
+      "job": "nutria__identity_sheet--canon",
+      "modelo": "nutria__identity_sheet",
+      "entidad": "Nutria",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "herupotoarra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5701,
+      "prompt_sha256": "c48e7e88cbb86861248bebc5952f05b1182b91e33d3b2a6774a58c536c3345ec"
+    },
+    {
+      "job": "paloma__identity_sheet--canon",
+      "modelo": "paloma__identity_sheet",
+      "entidad": "Paloma",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5892,
+      "prompt_sha256": "1547b03de77b14fe739cb02f269a9e8d326588cc2703562265d0baf85875088c"
+    },
+    {
+      "job": "pato-de-monte__identity_sheet--canon",
+      "modelo": "pato-de-monte__identity_sheet",
+      "entidad": "Pato de monte",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5855,
+      "prompt_sha256": "0e62ab2733c854fad23058fbed4c8b606c767b8f9f5f62ef7ca46fb04f162437"
+    },
+    {
+      "job": "trienene__identity_sheet--canon",
+      "modelo": "trienene__identity_sheet",
+      "entidad": "Trienené, el pájaro carpintero",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "herupotoarra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5883,
+      "prompt_sha256": "ae6c524474fe9f78ef776d46b3e719bb0368547cfd3048778b4afaf008219a91"
+    },
+    {
+      "job": "yaede__identity_sheet--canon",
+      "modelo": "yaede__identity_sheet",
+      "entidad": "Los Yaedé",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "icades-name"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5952,
+      "prompt_sha256": "53d990129a30f6a6a7f14545bfc711a55274b6dc4ef67c18883ad77b4b13357f"
+    }
+  ]
+}

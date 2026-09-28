@@ -267,10 +267,66 @@ export function peticionDeEstado(model, view, nombre) {
 // los materiales de la ficha canonica: el Sol salio ya vestido de oro.
 const ANTERIOR = /\bantes de\b/i;
 
-function promptDeVista(model, view, capaId, kind, nombre) {
+// Clave de un estado: su primera palabra con sustancia («cachorro», «forma»).
+const claveDe = (estado) => String(estado).toLowerCase().split(/[\s(,/]+/).find((w) => w.length > 3) || "";
+const clausulas = (texto) => String(texto || "").split(/(?<=[.;])\s+/);
+
+/**
+ * El tigre katio salio en la lamina canonica junto a su cachorro, porque la
+ * silueta y la escala describen los dos en la misma frase. La canonica quita
+ * las clausulas que nombran otro estado; la de estado se queda, en la escala,
+ * con las que nombran el suyo.
+ */
+// composition_framing es «<aspecto>; <fondo>; <escala>»: la cabeza no se toca.
+function partirComposicion(texto) {
+  const partes = String(texto || "").split("; ");
+  return [partes.slice(0, 2).join("; "), partes.slice(2).join("; ")];
+}
+function sinClausulasDe(texto, claves) {
+  const [cabeza, escala] = partirComposicion(texto);
+  const kept = clausulas(escala).filter((c) => !claves.some((k) => k && c.toLowerCase().includes(k)));
+  return [cabeza, kept.join(" ")].filter(Boolean).join("; ");
+}
+function soloClausulasDe(texto, clave) {
+  const [cabeza, escala] = partirComposicion(texto);
+  const kept = clausulas(escala).filter((c) => clave && c.toLowerCase().includes(clave));
+  return [cabeza, kept.join(" ")].filter(Boolean).join("; ");
+}
+const sinClausulasTexto = (texto, claves) => {
+  const kept = clausulas(texto).filter((c) => !claves.some((k) => k && c.toLowerCase().includes(k)));
+  return kept.length ? kept.join(" ") : String(texto || "");
+};
+
+// Un estado que vuelve persona al ser (Ancastor en forma humana) no puede
+// cargar los materiales del ser: salia otra vez el ave con sus alas.
+const A_PERSONA = /forma humana|en humano|como hombre|como mujer|forma de (hombre|mujer|persona)/i;
+const FELINO = /\b(tigre|jaguar|imam[aá])\b/i;
+
+function promptDeVista(model, view, capaId, kind, nombre, estados = []) {
+  const otros = estados.filter((e) => !/^can[oó]nico$/i.test(e)).map(claveDe);
   let spec = view.id === "canon"
-    ? { ...model.prompt_spec, primary_request: sinOtrosEstados(model.prompt_spec.primary_request) }
-    : { ...model.prompt_spec, primary_request: peticionDeEstado(model, view, nombre) };
+    ? {
+      ...model.prompt_spec,
+      primary_request: sinClausulasTexto(sinOtrosEstados(model.prompt_spec.primary_request), otros),
+      composition_framing: sinClausulasDe(model.prompt_spec.composition_framing, otros),
+    }
+    : {
+      ...model.prompt_spec,
+      primary_request: peticionDeEstado(model, view, nombre),
+      composition_framing: soloClausulasDe(model.prompt_spec.composition_framing, claveDe(view.states.join(" "))),
+    };
+  if (view.id !== "canon" && A_PERSONA.test(view.states.join(" "))) {
+    spec = {
+      ...spec,
+      materials_textures: "Cuerpo de persona entera, con el vestido de la gente de su comunidad, en papel plano sin brillo; del ser original conserva solo el rasgo que la peticion nombra.",
+      primary_request: spec.primary_request.replace("aunque ya no sea humana", "una persona de cuerpo humano entero, de pie, sin alas, pelo ni cuerpo de animal"),
+      composition_framing: partirComposicion(spec.composition_framing)[0],
+      constraints: (spec.constraints || []).filter((c) => !/^(paleta de esta ficha|documentado):/i.test(c)),
+    };
+  }
+  if (FELINO.test(nombre)) {
+    spec = { ...spec, avoid: [...(spec.avoid || []), "ningun colmillo de sable ni diente largo fuera de la boca: es un jaguar americano, de colmillos cortos"] };
+  }
   if (view.id !== "canon" && ANTERIOR.test(view.states.join(" "))) {
     spec = {
       ...spec,
@@ -378,8 +434,9 @@ async function main() {
     for (const [id, m] of elegidos) {
       const entity = plan.entities[m.entity_refs[0]];
       for (const view of m.views) {
-        const job = `${id}--${view.id}`;
-        const prompt = promptDeVista(m, view, capa.id, entity.kind, entity.name);
+        // Un estado puede traer «/» u otros separadores de ruta en su nombre.
+        const job = `${id}--${view.id}`.replace(/[\/\\:*?"<>|]+/g, "-");
+        const prompt = promptDeVista(m, view, capa.id, entity.kind, entity.name, entity.states || []);
         writeFileSync(join(dir, "prompts", `${job}.prompt.txt`), `${prompt}\n`);
         requests.push({
           prompt, model: MODELO, size: SIZE[view.aspect] || "1024x1024",
