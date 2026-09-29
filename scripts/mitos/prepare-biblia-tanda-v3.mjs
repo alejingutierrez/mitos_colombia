@@ -328,6 +328,14 @@ const A_PERSONA = /forma humana|en humano|como hombre|como mujer|forma de (hombr
 // «Tigres» en plural no disparaba la regla: los tigres u'wa salieron rayados.
 const FELINO = /\b(tigres?|tigras?|jaguar(es)?|imam[aá])\b/i;
 
+/**
+ * Reintento tras un bloqueo del filtro de OpenAI (sexual / autolesion), en la
+ * produccion en masa: la misma receta que se aplico a mano en wayuu, pirsa,
+ * katios y andoque, sin tocar el plan. La lamina queda marcada en su freeze.
+ */
+export const PUDOR = "COMPOSICION RECATADA (reintento tras bloqueo del filtro): la figura se ve de tres cuartos o de lado, con el pelo, los brazos o un objeto delante del pecho y la prenda documentada cubriendo la cadera; ninguna desnudez frontal; nada colgando, ninguna cuerda tensa ni pies en el aire. El vestido documentado no cambia y no se inventa ninguna prenda.";
+let conPudor = false;
+
 function promptDeVista(model, view, capaId, kind, nombre, estados = []) {
   const otros = estados.filter((e) => !/^can[oó]nico$/i.test(e)).map(claveDe);
   let spec = view.id === "canon"
@@ -380,6 +388,7 @@ function promptDeVista(model, view, capaId, kind, nombre, estados = []) {
   if (!CON_FONDO.has(kind)) spec = sobrePapel(spec);
   else spec = { ...spec, technique_first: `${PAISAJE_EN_PAPEL}\n${spec.technique_first}` };
   let base = ensamblar(spec);
+  if (conPudor) base = base.replace(/\n\nUse case: /, `\n\n${PUDOR}\n\nUse case: `);
   if (CAPAS_CON_CUERPO.has(capaId)) {
     // Un colectivo es un solo grupo en un solo cuadro: los ninos katios
     // salieron con rotulos y la gente katia como collage de ocho vinetas.
@@ -422,6 +431,7 @@ function aprobar(args) {
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   if (args.aprobar) return aprobar(args);
+  conPudor = Boolean(args.pudor);
 
   const corpora = String(args.corpus || "").split(",").map((s) => s.trim()).filter(Boolean);
   const capa = CAPAS.find((c) => c.id === String(args.capa || ""));
@@ -467,7 +477,7 @@ async function main() {
       continue;
     }
 
-    const tanda = String(args.tanda || `tanda-${String(siguienteNumero(corpus)).padStart(2, "0")}-${capa.id}${pedidos ? "-rehechas" : ""}`);
+    const tanda = String(args.tanda || `tanda-${String(siguienteNumero(corpus)).padStart(2, "0")}-${capa.id}${pedidos ? (conPudor ? "-recatadas" : "-rehechas") : ""}`);
     const dir = join(baseDir(corpus), tanda);
     if (existsSync(dir)) throw new Error(`ya existe ${dir}: cada preparacion va a una carpeta nueva`);
     const salida = resolve("output/imagegen", corpus, "biblia-v3", tanda);
