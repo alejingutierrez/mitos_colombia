@@ -411,7 +411,7 @@ function promptDeVista(model, view, capaId, kind, nombre, estados = []) {
   // cara y cuerpo: pediria ojos y boca sobre un recorte que no los tiene.
   const enSilueta = /siluetas? de recorte/i.test(model.design_contract?.distinctive_silhouette || "");
   if (enSilueta) {
-    base = base.replace(/\n\nUse case: /, `\n\nFIGURA EN SILUETA: cada cuerpo es un solo recorte plano de un tono, sin cara, sin ojos, sin boca y sin ningun detalle anatomico; se lee por el contorno. Solo los objetos y adornos nombrados llevan color y detalle.\n${SIN_LAMINA_TECNICA}\n\nUse case: `);
+    base = base.replace(/\n\nUse case: /, `\n\nFIGURA EN SILUETA: cada cuerpo es un solo recorte plano de un tono, sin cara, sin ojos, sin boca y sin ningun detalle anatomico; se lee por el contorno. Las siluetas humanas van erguidas y con proporcion humana corriente: nunca encorvadas, simiescas ni ordenadas de menor a mayor como una cadena evolutiva. Solo los objetos y adornos nombrados llevan color y detalle.\n${SIN_LAMINA_TECNICA}\n\nUse case: `);
   } else if (CAPAS_CON_CUERPO.has(capaId)) {
     // Un colectivo es un solo grupo en un solo cuadro: los ninos katios
     // salieron con rotulos y la gente katia como collage de ocho vinetas.
