@@ -1,0 +1,99 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "motilon-bari",
+  "comunidad": "Barí",
+  "tanda": "tanda-09-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/motilon-bari.v3.json",
+    "sha256": "2775ffb3bfc432b435ab7b3dd4a3840cb24764f89acda013c3ed27d3ea99fbf9"
+  },
+  "canon": {
+    "sha256": "aa03517f459efabb921c1e2ef28e49ae58b3aa900ca061c516ba03060880951a",
+    "verificado_en": "2026-09-29T01:58:38.359Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tucan__identity_sheet--canon",
+      "modelo": "tucan__identity_sheet",
+      "entidad": "Tucán",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron",
+        "nandou-chibaig-y-las-luces-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6291,
+      "prompt_sha256": "992e56bb646e78243717d68f88faedf272a87635a7c6ae664591b1a0c1905c08"
+    },
+    {
+      "job": "chigbari-guia__identity_sheet--canon",
+      "modelo": "chigbari-guia__identity_sheet",
+      "entidad": "Chigbarí guía",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "caminar-liviano-hacia-el-mas-alla"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5543,
+      "prompt_sha256": "d448bbb2944f81d7e1e3706c112aa69139f3206f92f328b68da41cfe4615e8cc"
+    },
+    {
+      "job": "condor__identity_sheet--canon",
+      "modelo": "condor__identity_sheet",
+      "entidad": "Zamuro blanco (bachirugdú)",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5907,
+      "prompt_sha256": "757c6020aea0eaf4a2d3f73590594ed538f632dcd4f39105f25d9f3e2009cd86"
+    },
+    {
+      "job": "gallinazo-zamuro__identity_sheet--canon",
+      "modelo": "gallinazo-zamuro__identity_sheet",
+      "entidad": "Zamuro negro (bagchíba) y el gallinazo que corta la cuerda",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5604,
+      "prompt_sha256": "a85ffbecf3a7f35419bf6844f23c030bf0ee2e69704d1fe4ffcfca4983f9d2b7"
+    }
+  ]
+}

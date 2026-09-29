@@ -1,0 +1,61 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ansermas",
+  "comunidad": "Ansermas",
+  "tanda": "tanda-02-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ansermas.v3.json",
+    "sha256": "44ef24e617ea8a3cfc4ed5663025742227371ccb7af362bae4a15d486a95cb87"
+  },
+  "canon": {
+    "sha256": "ec2e513c8def2f32c0bec9c1fabcce9c07393d0a7339f7f2b1675a864c90203b",
+    "verificado_en": "2026-09-29T02:03:24.632Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre de Guacuma adulto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "las-huellas-de-mapura",
+        "los-pasos-de-xixaraca"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8283,
+      "prompt_sha256": "0c941b03be729c2184a511b10d884f36bfc587be7683eb04a113950bcdfed693"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer de Guacuma adulta",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "las-huellas-de-mapura",
+        "los-pasos-de-xixaraca"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8055,
+      "prompt_sha256": "41c53838d24e416d7e56081426fc01581f7b03994da1e5d6ecbae8cec5147742"
+    }
+  ]
+}

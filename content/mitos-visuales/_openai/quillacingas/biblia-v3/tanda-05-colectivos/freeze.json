@@ -1,0 +1,85 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "quillacingas",
+  "comunidad": "Quillacingas",
+  "tanda": "tanda-05-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/quillacingas.v3.json",
+    "sha256": "00c78e7401248c308d099f8a50ddcc92c795e0b0a5d20e1b6c039d6061a08654"
+  },
+  "canon": {
+    "sha256": "22e4e45588698691b545d9a3c7e306acd5795b81849509c6c8121ada8f1b03d4",
+    "verificado_en": "2026-09-29T01:56:57.839Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "comunidad_quillasinga__group_grammar--canon",
+      "modelo": "comunidad_quillasinga__group_grammar",
+      "entidad": "Comunidad quillasinga",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-de-los-colibries",
+        "cualanquizan",
+        "el-llamado-de-inti",
+        "el-rabo-de-casapamba",
+        "origen-de-la-isla-la-corota",
+        "sirena-de-la-laguna-de-la-cocha"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8770,
+      "prompt_sha256": "c7ea02adaca4473032d55c6ae2e27fdb0a575ace1937449b24ce3d67d1d1ed81"
+    },
+    {
+      "job": "duendes__group_grammar--canon",
+      "modelo": "duendes__group_grammar",
+      "entidad": "Duendes juguetones",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8557,
+      "prompt_sha256": "951c1ff1ad90f64863117a14789ccf4d44f60ecfc59133f029c40322edf2cce3"
+    },
+    {
+      "job": "viajeros_de_sibundoy__group_grammar--canon",
+      "modelo": "viajeros_de_sibundoy__group_grammar",
+      "entidad": "Viajeros del Valle de Sibundoy",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-de-los-colibries"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8454,
+      "prompt_sha256": "977e960ed0c01accc634a1cc410c3a6357994f8fb31e56d90cadbb89f0384eb4"
+    }
+  ]
+}

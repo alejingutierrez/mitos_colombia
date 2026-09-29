@@ -1,0 +1,100 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "barasana",
+  "comunidad": "Barasana",
+  "tanda": "tanda-04-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/barasana.v3.json",
+    "sha256": "63a71278101405757bb0624c0ed918ebab9ba2d2df6fe234fa28db05a53a3ff2"
+  },
+  "canon": {
+    "sha256": "ff3d70797dc45bbc973d04baf1004c1e75592064c3b93d9d9dda760d8de6ff91",
+    "verificado_en": "2026-09-29T01:57:24.079Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "luna_muyhu__identity_sheet--canon",
+      "modelo": "luna_muyhu__identity_sheet",
+      "entidad": "Luna (Muyhu / Abe)",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-luna",
+        "sol-luna-dia-y-noche"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6316,
+      "prompt_sha256": "11ba180e4d6dfdf87cb7a09421272b2828ea53340eacfd47d3a52a3235fbdb13"
+    },
+    {
+      "job": "luna_muyhu__state_sheet--estado_rostro marcado con pintura negra",
+      "modelo": "luna_muyhu__state_sheet",
+      "entidad": "Luna (Muyhu / Abe)",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_rostro marcado con pintura negra",
+      "estados": [
+        "rostro marcado con pintura negra"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-luna",
+        "sol-luna-dia-y-noche"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6908,
+      "prompt_sha256": "ec7d3922f0f799ce0cdd2a0641f42fe1bb2503e4055067a2eae2cd7fa4a494a3"
+    },
+    {
+      "job": "luna_muyhu__state_sheet--estado_armadillo",
+      "modelo": "luna_muyhu__state_sheet",
+      "entidad": "Luna (Muyhu / Abe)",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_armadillo",
+      "estados": [
+        "armadillo"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-luna",
+        "sol-luna-dia-y-noche"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6875,
+      "prompt_sha256": "a59dd91a6ae57cf8a458d0d39d55daffd32bcdebbc007dd1714264baf70662b2"
+    },
+    {
+      "job": "sol_barasana__identity_sheet--canon",
+      "modelo": "sol_barasana__identity_sheet",
+      "entidad": "El Sol",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano",
+        "sol-luna-dia-y-noche"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7299,
+      "prompt_sha256": "73b8ed40e4b320f87ab3c00141143e29f6650ed7c22d4cef2798bab8b7b6c017"
+    }
+  ]
+}

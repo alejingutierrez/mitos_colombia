@@ -1,0 +1,170 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tucano",
+  "comunidad": "Tucano",
+  "tanda": "tanda-04-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tucano.v3.json",
+    "sha256": "3328d35e2cabdae942974b80bff65672e5d002bf0baa7e431e6248fdb0c51b94"
+  },
+  "canon": {
+    "sha256": "c2c891d8239e415d3d353744fa980cfb41c99c3ff809a4d7bc9ec03abd8495f4",
+    "verificado_en": "2026-09-29T01:54:31.247Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "yupuri_bauro__identity_sheet--canon",
+      "modelo": "yupuri_bauro__identity_sheet",
+      "entidad": "Yúpuri Baúro",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-del-hombre",
+        "la-aparicion-del-sol-del-viento-y-los-mares",
+        "la-semilla-de-la-yuca-tucano",
+        "los-blancos-dominan-a-los-indios",
+        "yepa-abandona-la-tierra"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6637,
+      "prompt_sha256": "dcda70462751a3b3e2c0290ba12926ddd44596bd60d0c4cdef74e6dbde50bbef"
+    },
+    {
+      "job": "aleman__identity_sheet--canon",
+      "modelo": "aleman__identity_sheet",
+      "entidad": "Alemán",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-blancos-dominan-a-los-indios",
+        "la-aparicion-del-sol-del-viento-y-los-mares"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6715,
+      "prompt_sha256": "cc8be704b888946ac47ec65aceafda3af768dbec9672224b80abbd0fcee71c3a"
+    },
+    {
+      "job": "yepara_dujuio__identity_sheet--canon",
+      "modelo": "yepara_dujuio__identity_sheet",
+      "entidad": "Yepára Dujuío",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-aparicion-del-sol-del-viento-y-los-mares",
+        "el-origen-del-hombre"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6019,
+      "prompt_sha256": "869d87f12e8fbcc728d32b684164cc2bb501ca9bdaad55a6a22658bd953c717f"
+    },
+    {
+      "job": "yepara_dujuio__state_sheet--estado_muñeca de huesos y tierra",
+      "modelo": "yepara_dujuio__state_sheet",
+      "entidad": "Yepára Dujuío",
+      "categoria": "personaje",
+      "vista": "estado_muñeca de huesos y tierra",
+      "estados": [
+        "muñeca de huesos y tierra"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-aparicion-del-sol-del-viento-y-los-mares",
+        "el-origen-del-hombre"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6745,
+      "prompt_sha256": "780a2dc127b2ff43cd66802727720e491a8485b17b8761e1bdc9b30d739b1504"
+    },
+    {
+      "job": "mujer_de_yupuri_bauro__identity_sheet--canon",
+      "modelo": "mujer_de_yupuri_bauro__identity_sheet",
+      "entidad": "La mujer de Yúpuri Baúro",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-semilla-de-la-yuca-tucano"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6422,
+      "prompt_sha256": "a8ab6eef0467cae0637cae391a09e3c79b8da2a34d0120c24a9d89b099cba306"
+    },
+    {
+      "job": "se_del_caimo__identity_sheet--canon",
+      "modelo": "se_del_caimo__identity_sheet",
+      "entidad": "Sé, el del palo de caimo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-del-hombre"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6226,
+      "prompt_sha256": "2f2c88c9afabd4db18efe0285691a2a0853e3fe750610a409037f0b60e79c047"
+    },
+    {
+      "job": "seritia_y_pataro__identity_sheet--canon",
+      "modelo": "seritia_y_pataro__identity_sheet",
+      "entidad": "Serítia y Patáro",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "yepa-abandona-la-tierra"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6439,
+      "prompt_sha256": "fd0e2fa265761be0e3e2d94d911bec8b51de8a73c66da05c2c3fb0119e0f2b44"
+    },
+    {
+      "job": "yepa_vejkeo__identity_sheet--canon",
+      "modelo": "yepa_vejkeo__identity_sheet",
+      "entidad": "Yepá Uejkeó",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-semilla-de-la-yuca-tucano"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6634,
+      "prompt_sha256": "cdffe114c441cd6468feea414a52e7c1b14059c21985be7cef8cd0c14d498391"
+    }
+  ]
+}

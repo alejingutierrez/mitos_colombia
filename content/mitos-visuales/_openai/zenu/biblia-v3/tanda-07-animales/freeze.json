@@ -1,0 +1,64 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "zenu",
+  "comunidad": "Zenú",
+  "tanda": "tanda-07-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/zenu.v3.json",
+    "sha256": "d065f5fc0c636242bf57ac4b226b58c8693ee1dc4767e35a1fb3766157a5c4d5"
+  },
+  "canon": {
+    "sha256": "a10e153154dd795fc7a5dd4f8d66a2356fad0efc05b2dfbdb0b4ec72e6d3411c",
+    "verificado_en": "2026-09-29T01:56:44.143Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "caiman_de_oro__identity_sheet--canon",
+      "modelo": "caiman_de_oro__identity_sheet",
+      "entidad": "Caimán de oro",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-caiman-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7713,
+      "prompt_sha256": "a98bbf32a3741198819ba85a236cb6d65e0cd6bc2cc4055d4715cdfe2f979c7c"
+    },
+    {
+      "job": "torcora__identity_sheet--canon",
+      "modelo": "torcora__identity_sheet",
+      "entidad": "Torcorá",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-ojo-de-la-canoa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7388,
+      "prompt_sha256": "8082db37b33d2f109cefd280f69843420ca1df22ba97cf2f74fb5d1b2c85206b"
+    }
+  ]
+}

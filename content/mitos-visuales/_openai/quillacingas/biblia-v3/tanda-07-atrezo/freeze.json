@@ -1,0 +1,155 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "quillacingas",
+  "comunidad": "Quillacingas",
+  "tanda": "tanda-07-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/quillacingas.v3.json",
+    "sha256": "00c78e7401248c308d099f8a50ddcc92c795e0b0a5d20e1b6c039d6061a08654"
+  },
+  "canon": {
+    "sha256": "22e4e45588698691b545d9a3c7e306acd5795b81849509c6c8121ada8f1b03d4",
+    "verificado_en": "2026-09-29T01:58:30.241Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 7,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_quillacinga__object_sheet--canon",
+      "modelo": "hoja_utileria_quillacinga__object_sheet",
+      "entidad": "hoja utileria quillacinga",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "cualanquizan",
+        "el-llamado-de-inti",
+        "sirena-de-la-laguna-de-la-cocha"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7677,
+      "prompt_sha256": "d77ec823bc9e29bb199a023fa6797d914958f7a21952eac24fcb1b6f701f07d7"
+    },
+    {
+      "job": "pilche__object_sheet--canon",
+      "modelo": "pilche__object_sheet",
+      "entidad": "Pilche (recipiente de calabazo)",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "cualanquizan",
+        "el-rabo-de-casapamba",
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7449,
+      "prompt_sha256": "7f4a73031d9fabd7fc9ccd7902f558c9587414938e65d3c8ddbf9cdcbff2105c"
+    },
+    {
+      "job": "totora__botanical_sheet--canon",
+      "modelo": "totora__botanical_sheet",
+      "entidad": "Totora",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "cualanquizan",
+        "el-rabo-de-casapamba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7546,
+      "prompt_sha256": "171f7abecce55af3e6db944ddf930dfcd27373768afaae3c3b43068263976dbb"
+    },
+    {
+      "job": "libros_de_la_sabiduria__object_sheet--canon",
+      "modelo": "libros_de_la_sabiduria__object_sheet",
+      "entidad": "Libros de la sabiduría",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-rabo-de-casapamba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7083,
+      "prompt_sha256": "10e5f2c6866ef826637d3abccf4dda217052f600df326d8523662793973ad7de"
+    },
+    {
+      "job": "piedra_grabada__object_sheet--canon",
+      "modelo": "piedra_grabada__object_sheet",
+      "entidad": "Piedra grabada con espirales y monos",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7815,
+      "prompt_sha256": "d7c1b06dc7ed21f45f180e535c6e820b4af7e27e13a698b66fb5a4a0c96ad5bc"
+    },
+    {
+      "job": "pincullo__object_sheet--canon",
+      "modelo": "pincullo__object_sheet",
+      "entidad": "Pincullo",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7180,
+      "prompt_sha256": "ed5a24e8b8fdf34edda5c98ed05625baba6e8282053491c4330cc18fe2775554"
+    },
+    {
+      "job": "silla__object_sheet--canon",
+      "modelo": "silla__object_sheet",
+      "entidad": "La silla",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-de-la-isla-la-corota"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6969,
+      "prompt_sha256": "ee5252b6004e279bfa95c124504bb29dc3d16151abaf2392c39938a8a8091f44"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ansermas",
+  "comunidad": "Ansermas",
+  "tanda": "tanda-04-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ansermas.v3.json",
+    "sha256": "44ef24e617ea8a3cfc4ed5663025742227371ccb7af362bae4a15d486a95cb87"
+  },
+  "canon": {
+    "sha256": "ec2e513c8def2f32c0bec9c1fabcce9c07393d0a7339f7f2b1675a864c90203b",
+    "verificado_en": "2026-09-29T02:04:21.623Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "michua__identity_sheet--canon",
+      "modelo": "michua__identity_sheet",
+      "entidad": "Michua",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "las-huellas-de-mapura",
+        "los-pasos-de-xixaraca"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9388,
+      "prompt_sha256": "728399128c74febe3a489c3c03a822c862c9ef0211d79dcca57816e6f103d8f8"
+    },
+    {
+      "job": "xixaraca__identity_sheet--canon",
+      "modelo": "xixaraca__identity_sheet",
+      "entidad": "Xixaraca",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "las-huellas-de-mapura",
+        "los-pasos-de-xixaraca"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9612,
+      "prompt_sha256": "3388d77e76a4013a9db14f11e4248fefe8554ebc47118a2cf7b6e604ee28b93e"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ticuna",
+  "comunidad": "Ticuna",
+  "tanda": "tanda-03-tipos-recatadas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ticuna.v3.json",
+    "sha256": "fd0c6ffe84de74c45161ae42823d427354bcefa0940f5eb72ce2559eac09f0a3"
+  },
+  "canon": {
+    "sha256": "508298d7f6b1c813ab2d8c0bf8438b2829b11c5b30bc6045eb9ce969dbb95dc9",
+    "verificado_en": "2026-09-29T02:04:26.078Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 6,
+  "fichas": [
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Niño tikuna (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6084,
+      "prompt_sha256": "9a7a18bf568b838e330059170a17b333874dd764d6de193434ae3c1920af1a2c"
+    }
+  ]
+}

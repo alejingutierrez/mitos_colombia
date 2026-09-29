@@ -1,0 +1,187 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tucano",
+  "comunidad": "Tucano",
+  "tanda": "tanda-10-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tucano.v3.json",
+    "sha256": "3328d35e2cabdae942974b80bff65672e5d002bf0baa7e431e6248fdb0c51b94"
+  },
+  "canon": {
+    "sha256": "c2c891d8239e415d3d353744fa980cfb41c99c3ff809a4d7bc9ec03abd8495f4",
+    "verificado_en": "2026-09-29T01:59:46.682Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 9,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "banco__object_sheet--canon",
+      "modelo": "banco__object_sheet",
+      "entidad": "El banco",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-origen-del-hombre",
+        "la-aparicion-del-sol-del-viento-y-los-mares",
+        "los-blancos-dominan-a-los-indios"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5401,
+      "prompt_sha256": "73c6f7f272f632935fdbbb795626087f82407b3698c6ba4390765cf1a786f628"
+    },
+    {
+      "job": "hoja_utileria_tucano_1__object_sheet--canon",
+      "modelo": "hoja_utileria_tucano_1__object_sheet",
+      "entidad": "hoja utileria tucano 1",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-origen-del-hombre",
+        "yepa-castiaga-a-los-animales"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5348,
+      "prompt_sha256": "a33f1619110623b98e5c2eb178baf73c3812949dbcd9241efce4e453bc806d33"
+    },
+    {
+      "job": "caja_de_la_noche__object_sheet--canon",
+      "modelo": "caja_de_la_noche__object_sheet",
+      "entidad": "La caja de la noche",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "yepa-abandona-la-tierra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5132,
+      "prompt_sha256": "6c79fd46281516489eaa81b581a81b1f59ba9db333ff9eb9fdc7342d88fde9a5"
+    },
+    {
+      "job": "hoja_utileria_tucano_2__object_sheet--canon",
+      "modelo": "hoja_utileria_tucano_2__object_sheet",
+      "entidad": "hoja utileria tucano 2",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "yepa-abandona-la-tierra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4773,
+      "prompt_sha256": "94ef3f9dec56b11a12105aeaaf63c2d3445679a8366adabb9eaa3291df233d95"
+    },
+    {
+      "job": "papel_y_cuaderno__object_sheet--canon",
+      "modelo": "papel_y_cuaderno__object_sheet",
+      "entidad": "El papel y el cuaderno",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-blancos-dominan-a-los-indios"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5367,
+      "prompt_sha256": "5a33725044dec3dfdf6a5c237b98432f6c9c2c69b33603904e62994f3ab8d638"
+    },
+    {
+      "job": "semillas_del_sueno__object_sheet--canon",
+      "modelo": "semillas_del_sueno__object_sheet",
+      "entidad": "Las pequeñas semillas del sueño",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "yepa-abandona-la-tierra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4988,
+      "prompt_sha256": "90c4cb5eeb1a11ff55f5bc2b05d8b89a30c2ccd99cbecd4470dfcd5c013ac5f6"
+    },
+    {
+      "job": "silbato_poderoso__object_sheet--canon",
+      "modelo": "silbato_poderoso__object_sheet",
+      "entidad": "El pito de Wejké",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "cuando-la-danta-perdio-su-hegemonia"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5340,
+      "prompt_sha256": "61d76be5cc089b39ba3d222ddcdec35aa14ef5665963e27ef76bb141900e69ca"
+    },
+    {
+      "job": "yuca_tucano__botanical_sheet--canon",
+      "modelo": "yuca_tucano__botanical_sheet",
+      "entidad": "La yuca",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-semilla-de-la-yuca-tucano"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5343,
+      "prompt_sha256": "f842dda81d88052e51b018b7d2d188dc565b0300db85969c73f92c3b78ea17df"
+    },
+    {
+      "job": "yuca_tucano__state_sheet--estado_yuca como figura-persona",
+      "modelo": "yuca_tucano__state_sheet",
+      "entidad": "La yuca",
+      "categoria": "planta",
+      "vista": "estado_yuca como figura-persona",
+      "estados": [
+        "yuca como figura-persona"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-semilla-de-la-yuca-tucano"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5420,
+      "prompt_sha256": "57c549632b503818435873052c59ada179c2b9b5f1350f3e7a44da54764d06f9"
+    }
+  ]
+}

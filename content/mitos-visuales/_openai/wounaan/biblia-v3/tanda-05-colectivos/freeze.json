@@ -1,0 +1,119 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "wounaan",
+  "comunidad": "Wounaan",
+  "tanda": "tanda-05-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/wounaan.v3.json",
+    "sha256": "260ca9c8d6260e63fc8772b82840e7288036bc9bd46f6591cc2a53bb4354747b"
+  },
+  "canon": {
+    "sha256": "4b1d21cb745ba08ba396fa1a73653b34d5c61368954d4e50d2e4719efce1a7ce",
+    "verificado_en": "2026-09-29T02:03:52.568Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "comunidad-wounaan__group_grammar--canon",
+      "modelo": "comunidad-wounaan__group_grammar",
+      "entidad": "Comunidad Wounaan",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas",
+        "la-sal-del-weguer",
+        "las-manos-de-barro",
+        "madre-name"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8772,
+      "prompt_sha256": "350991bea87467b03138622542bb20205c9f0b13be38b04018dd9e128217cd13"
+    },
+    {
+      "job": "cuatro-flautistas__group_grammar--canon",
+      "modelo": "cuatro-flautistas__group_grammar",
+      "entidad": "Cuatro hombres que acompañan con flautas",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7038,
+      "prompt_sha256": "f5dd7f60705e69ab8e5cc139f99871bfb5e032bde395b65e8f232e5e8469d055"
+    },
+    {
+      "job": "gente-de-barro__group_grammar--canon",
+      "modelo": "gente-de-barro__group_grammar",
+      "entidad": "Gente de barro de la playa del Baudó",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "las-manos-de-barro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6814,
+      "prompt_sha256": "135b01a020738a6cf72267eba74a7a5ff00dbbd6b430b14dc41b4a0482226a8d"
+    },
+    {
+      "job": "gente-de-barro__state_sheet--estado_levantadas, ya con vida",
+      "modelo": "gente-de-barro__state_sheet",
+      "entidad": "Gente de barro de la playa del Baudó",
+      "categoria": "colectivo",
+      "vista": "estado_levantadas, ya con vida",
+      "estados": [
+        "levantadas, ya con vida"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "las-manos-de-barro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6848,
+      "prompt_sha256": "f84a42c8dec1c9adcb78ac0de396b6ce89df529dca3fae6e8990964339f4e799"
+    },
+    {
+      "job": "pasajeros-protectores__group_grammar--canon",
+      "modelo": "pasajeros-protectores__group_grammar",
+      "entidad": "Pasajeros tallados: figuras humanas y animales",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-barca-de-dos-tintas"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7149,
+      "prompt_sha256": "a62b08ccdad53131aa34497dde39e241d0a47aacc379171783f13cf585ad7ad1"
+    }
+  ]
+}

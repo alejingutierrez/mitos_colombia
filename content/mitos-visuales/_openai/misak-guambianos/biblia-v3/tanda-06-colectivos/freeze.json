@@ -1,0 +1,170 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "misak-guambianos",
+  "comunidad": "Misak",
+  "tanda": "tanda-06-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/misak-guambianos.v3.json",
+    "sha256": "2654736a385b128df94e9e69cb88c133010a7d0716aea520b4e67bc71214a23f"
+  },
+  "canon": {
+    "sha256": "e1f4b3ac5eb29b91762c1fa126904c37f0d896fd0a58bc3702f11c78c26002c8",
+    "verificado_en": "2026-09-29T01:53:37.998Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "comunidad_misak__group_grammar--canon",
+      "modelo": "comunidad_misak__group_grammar",
+      "entidad": "Comunidad misak",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-misak-guambianos",
+        "el-nino-serpiente",
+        "el-pajaro-que-se-come-las-almas",
+        "el-viejo-tempestad",
+        "la-mama-grande",
+        "pedro-el-mago-travieso"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9321,
+      "prompt_sha256": "f695f1306467cc0ebff07d89832963a4e40d7d798c6dddf01ea86d07cc2f27c3"
+    },
+    {
+      "job": "animales_refugiados__group_grammar--canon",
+      "modelo": "animales_refugiados__group_grammar",
+      "entidad": "Animales refugiados (venados, aves, perros, animales del monte)",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "pedro-el-mago-travieso"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8390,
+      "prompt_sha256": "80b4503bcb8fb84620126ce61ca06e8f4d2f30c1a60f4d94ddb738afce0ff028"
+    },
+    {
+      "job": "espanoles_invasores__group_grammar--canon",
+      "modelo": "espanoles_invasores__group_grammar",
+      "entidad": "Españoles que imponen nombres y bautizan",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-mama-grande"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8609,
+      "prompt_sha256": "6c93d685551e358fe6a5cbd4924c1dd38bbeedbf43424edb6951b3aee3667f91"
+    },
+    {
+      "job": "guerreros_pijaos__group_grammar--canon",
+      "modelo": "guerreros_pijaos__group_grammar",
+      "entidad": "Guerreros pijaos",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-mama-grande"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8163,
+      "prompt_sha256": "6422c720065dabf241d39e9f9242bbb30207d36dc17fc5eb4cfbb3ac96ec79e0"
+    },
+    {
+      "job": "guerreros_pijaos__state_sheet--estado_transformados_en_frailejones",
+      "modelo": "guerreros_pijaos__state_sheet",
+      "entidad": "Guerreros pijaos",
+      "categoria": "colectivo",
+      "vista": "estado_transformados_en_frailejones",
+      "estados": [
+        "transformados_en_frailejones"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-mama-grande"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8913,
+      "prompt_sha256": "5ee32d0040ee3fc24cb1bd8299b6e6cc5d12b5c8323e2e9648973e8a91fb3454"
+    },
+    {
+      "job": "hijos_vientos__group_grammar--canon",
+      "modelo": "hijos_vientos__group_grammar",
+      "entidad": "Hijos vientos",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-viento-y-sus-hijos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8513,
+      "prompt_sha256": "9febb5050fb3accd045a4c272b579a417467d588216d45fd8b21aaab18e2e5a7"
+    },
+    {
+      "job": "los_pishau__group_grammar--canon",
+      "modelo": "los_pishau__group_grammar",
+      "entidad": "Los Pishau, hijos del agua",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-misak-guambianos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9291,
+      "prompt_sha256": "7d94b94b37e1378a1b2d30e4480d7392c44074f9be3da427b3afa6b70ce1204b"
+    },
+    {
+      "job": "los_pishau__state_sheet--estado_mayores_fuertes_y_sabios",
+      "modelo": "los_pishau__state_sheet",
+      "entidad": "Los Pishau, hijos del agua",
+      "categoria": "colectivo",
+      "vista": "estado_mayores_fuertes_y_sabios",
+      "estados": [
+        "mayores_fuertes_y_sabios"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-misak-guambianos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9125,
+      "prompt_sha256": "12655c88c0494e9b8f9eb319b6b20f685aed35d22551778334626b33f846b15b"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "barasana",
+  "comunidad": "Barasana",
+  "tanda": "tanda-02-tipos-recatadas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/barasana.v3.json",
+    "sha256": "63a71278101405757bb0624c0ed918ebab9ba2d2df6fe234fa28db05a53a3ff2"
+  },
+  "canon": {
+    "sha256": "ff3d70797dc45bbc973d04baf1004c1e75592064c3b93d9d9dda760d8de6ff91",
+    "verificado_en": "2026-09-29T01:54:28.377Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 6,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base: hombre adulto barasano",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-de-la-gente-de-los-frutales-silvestres",
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano",
+        "la-cuerda-de-leche-y-la-anaconda-yeba",
+        "la-luna",
+        "sol-luna-dia-y-noche"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7228,
+      "prompt_sha256": "870f4d80ef35a6d1c41a9b5064007acdefe35979f6cadbe1d295b2ead6b32089"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base: mujer adulta barasana",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano",
+        "los-cerros-estantillos-y-la-cera-de-abejas",
+        "sol-luna-dia-y-noche"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7225,
+      "prompt_sha256": "ad51a90e70bffc7cb29ea61d4d5a7a529143f6c9becc2f67e457c221d784dc58"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base: anciana barasana",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7158,
+      "prompt_sha256": "ad89f7834b91040bac779243b86f258adee24dce57963dda04d8adfeae1465dc"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base: niño barasano",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7186,
+      "prompt_sha256": "c341b3492f827c9b9698242bde0ddce814176ada4833a218a97d2577405ef274"
+    }
+  ]
+}

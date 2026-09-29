@@ -1,0 +1,188 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "barasana",
+  "comunidad": "Barasana",
+  "tanda": "tanda-07-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/barasana.v3.json",
+    "sha256": "63a71278101405757bb0624c0ed918ebab9ba2d2df6fe234fa28db05a53a3ff2"
+  },
+  "canon": {
+    "sha256": "ff3d70797dc45bbc973d04baf1004c1e75592064c3b93d9d9dda760d8de6ff91",
+    "verificado_en": "2026-09-29T02:01:50.534Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 9,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_barasana_2__object_sheet--canon",
+      "modelo": "hoja_utileria_barasana_2__object_sheet",
+      "entidad": "hoja utileria barasana 2",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-luna",
+        "el-origen-de-la-gente-de-los-frutales-silvestres",
+        "la-cuerda-de-leche-y-la-anaconda-yeba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5786,
+      "prompt_sha256": "dfcdb15419b237d301b2b9fe91f883b87ea6e5f7fc7fa6ef98228a32bdcbfd05"
+    },
+    {
+      "job": "cera_de_abejas__object_sheet--canon",
+      "modelo": "cera_de_abejas__object_sheet",
+      "entidad": "La Cera de Abejas",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-cerros-estantillos-y-la-cera-de-abejas",
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5993,
+      "prompt_sha256": "59c1234c4bd8b295877a4c7fb05db23566e016f8c51f2aace1919d89ef812aed"
+    },
+    {
+      "job": "vasija__object_sheet--canon",
+      "modelo": "vasija__object_sheet",
+      "entidad": "La vasija",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-luna",
+        "sol-luna-dia-y-noche"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5439,
+      "prompt_sha256": "e262f72ce9838d539ad5c5c8bd5dd144dfcb09fcb9ea870b63dee396f335bdaa"
+    },
+    {
+      "job": "arbol_de_caimo__botanical_sheet--canon",
+      "modelo": "arbol_de_caimo__botanical_sheet",
+      "entidad": "El árbol de caimo",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5392,
+      "prompt_sha256": "7c25867c6fa590dc87a9e567bca70f0fa6872203a1b2d183e82815bee288637d"
+    },
+    {
+      "job": "canoa_anaconda_del_origen__object_sheet--canon",
+      "modelo": "canoa_anaconda_del_origen__object_sheet",
+      "entidad": "La canoa con forma de anaconda",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5356,
+      "prompt_sha256": "37933b0567e51043a328dbab421324e4d920c9eed572a179c8c2b2fd9c0e0c6b"
+    },
+    {
+      "job": "corona_luminosa_de_luna__object_sheet--canon",
+      "modelo": "corona_luminosa_de_luna__object_sheet",
+      "entidad": "La corona luminosa de Luna",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "sol-luna-dia-y-noche"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5355,
+      "prompt_sha256": "0f973d251a8a4ad2d0f998694b413f6b27e8231419765bcc7d462c89d437c482"
+    },
+    {
+      "job": "embarcacion_de_fuego_del_sol__object_sheet--canon",
+      "modelo": "embarcacion_de_fuego_del_sol__object_sheet",
+      "entidad": "La embarcación de fuego del Sol",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5480,
+      "prompt_sha256": "a61357cbcbe653f190832011e287961703c39b5aa869f24669b94102903463c3"
+    },
+    {
+      "job": "hoja_utileria_barasana_1__object_sheet--canon",
+      "modelo": "hoja_utileria_barasana_1__object_sheet",
+      "entidad": "hoja utileria barasana 1",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5719,
+      "prompt_sha256": "75bc3a9621c6a5c139f07bf34965f2712b362448c9eedb84b5dad51ab9ad5404"
+    },
+    {
+      "job": "palmas_y_frutales_silvestres__botanical_sheet--canon",
+      "modelo": "palmas_y_frutales_silvestres__botanical_sheet",
+      "entidad": "Las palmas y árboles frutales silvestres",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-origen-de-la-gente-de-los-frutales-silvestres"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6247,
+      "prompt_sha256": "9e53c4f45156c0017b76957ef86204d191847f9df937449a3346652818601b21"
+    }
+  ]
+}

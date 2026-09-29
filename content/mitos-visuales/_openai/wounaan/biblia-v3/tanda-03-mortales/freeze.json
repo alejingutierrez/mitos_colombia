@@ -1,0 +1,80 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "wounaan",
+  "comunidad": "Wounaan",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/wounaan.v3.json",
+    "sha256": "260ca9c8d6260e63fc8772b82840e7288036bc9bd46f6591cc2a53bb4354747b"
+  },
+  "canon": {
+    "sha256": "4b1d21cb745ba08ba396fa1a73653b34d5c61368954d4e50d2e4719efce1a7ce",
+    "verificado_en": "2026-09-29T02:02:53.011Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "benkhuun__identity_sheet--canon",
+      "modelo": "benkhuun__identity_sheet",
+      "entidad": "Benkhuun",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-barca-de-dos-tintas",
+        "el-baston-de-sueno"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7626,
+      "prompt_sha256": "94e622992ae8c87d01b523b989f654b163b9f6c209695037cceea2a3ce148344"
+    },
+    {
+      "job": "lideresa-de-la-rogativa__identity_sheet--canon",
+      "modelo": "lideresa-de-la-rogativa__identity_sheet",
+      "entidad": "Mujer que lidera el ruego",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7327,
+      "prompt_sha256": "150c5d4d05c2e652a9395434d7bba3ab20b5464c433cbe0e917450d5a2e81477"
+    },
+    {
+      "job": "anciana-madre-name__identity_sheet--canon",
+      "modelo": "anciana-madre-name__identity_sheet",
+      "entidad": "Anciana que lleva los ñames",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "madre-name"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7654,
+      "prompt_sha256": "c4ff18976f576bc3f435a5aa8c8975a0aa20ace0ba70e3140b533e6d6eb55869"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "zenu",
+  "comunidad": "Zenú",
+  "tanda": "tanda-02-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/zenu.v3.json",
+    "sha256": "d065f5fc0c636242bf57ac4b226b58c8693ee1dc4767e35a1fb3766157a5c4d5"
+  },
+  "canon": {
+    "sha256": "a10e153154dd795fc7a5dd4f8d66a2356fad0efc05b2dfbdb0b4ec72e6d3411c",
+    "verificado_en": "2026-09-29T01:53:36.911Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre zenú (estrato de fundación)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "mexion-y-manexca",
+        "la-noche-mas-larga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7983,
+      "prompt_sha256": "83ac7ad727fa67bab29876b39dcc5d0a924444e8de08adbbc62ff568c3051de1"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer zenú (estrato de fundación)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "mexion-y-manexca",
+        "la-noche-mas-larga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7897,
+      "prompt_sha256": "af798cf427ce0ec108297207edf51ae0d8c69157f7f61d6864bc44297a052620"
+    }
+  ]
+}

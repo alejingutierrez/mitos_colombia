@@ -1,0 +1,137 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "zenu",
+  "comunidad": "Zenú",
+  "tanda": "tanda-10-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/zenu.v3.json",
+    "sha256": "d065f5fc0c636242bf57ac4b226b58c8693ee1dc4767e35a1fb3766157a5c4d5"
+  },
+  "canon": {
+    "sha256": "a10e153154dd795fc7a5dd4f8d66a2356fad0efc05b2dfbdb0b4ec72e6d3411c",
+    "verificado_en": "2026-09-29T02:00:20.783Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "cerro_corcovao__environment_model--canon",
+      "modelo": "cerro_corcovao__environment_model",
+      "entidad": "Cerro Corcovao / Tofeme",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "trono-corcovao",
+        "el-caiman-de-oro",
+        "el-totumo-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8418,
+      "prompt_sha256": "f4b6382b229acdc82b0514825561e0de94b7375ed4858b5b8d06e5dfa250a316"
+    },
+    {
+      "job": "cienaga_la_sierpe__environment_model--canon",
+      "modelo": "cienaga_la_sierpe__environment_model",
+      "entidad": "Ciénaga de La Sierpe",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-ojo-de-la-canoa"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8339,
+      "prompt_sha256": "b00082d7141ccb8a5f5ebd32b93804a669311447b2095610d2fa8b21584209f6"
+    },
+    {
+      "job": "isla_flotante__spatial_model--canon",
+      "modelo": "isla_flotante__spatial_model",
+      "entidad": "Isla flotante",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "trono-corcovao"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7393,
+      "prompt_sha256": "d43721dccaf273920133aedd2830460997b795649bb8e539ffa93beccd384460"
+    },
+    {
+      "job": "monte_del_encanto__environment_model--canon",
+      "modelo": "monte_del_encanto__environment_model",
+      "entidad": "Monte del encanto",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-totumo-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7814,
+      "prompt_sha256": "d35478af447809c3dea10a38bcdd626ea8074b90798fbb953f20a4edf82e0c5a"
+    },
+    {
+      "job": "paisaje_gran_zenu__environment_model--canon",
+      "modelo": "paisaje_gran_zenu__environment_model",
+      "entidad": "Gran Zenú: sabanas, lomas, cerros y aguas",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "mexion-y-manexca"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8492,
+      "prompt_sha256": "9f2813ca90f76c49c267809d02485047a39b12bfa440773c54292ad7f03bf3e2"
+    },
+    {
+      "job": "resguardo_san_andres__spatial_model--canon",
+      "modelo": "resguardo_san_andres__spatial_model",
+      "entidad": "Resguardo de San Andrés de Sotavento en corte",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-caiman-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8268,
+      "prompt_sha256": "17bc9831761c33a59291f5ae958e6aefb64070622cdc51eeee9b29c11367b0f4"
+    }
+  ]
+}

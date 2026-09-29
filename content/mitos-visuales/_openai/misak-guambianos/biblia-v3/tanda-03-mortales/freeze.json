@@ -1,0 +1,163 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "misak-guambianos",
+  "comunidad": "Misak",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/misak-guambianos.v3.json",
+    "sha256": "2654736a385b128df94e9e69cb88c133010a7d0716aea520b4e67bc71214a23f"
+  },
+  "canon": {
+    "sha256": "e1f4b3ac5eb29b91762c1fa126904c37f0d896fd0a58bc3702f11c78c26002c8",
+    "verificado_en": "2026-09-29T01:51:12.132Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "anciana_severa__identity_sheet--canon",
+      "modelo": "anciana_severa__identity_sheet",
+      "entidad": "La madre de la hija, abuela del niño serpiente",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-nino-serpiente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8041,
+      "prompt_sha256": "6df92e2e8abf67569b923804e8b2454d3ff468dc15a7992cae4242ce13d92c62"
+    },
+    {
+      "job": "esposa_de_tumpe__identity_sheet--canon",
+      "modelo": "esposa_de_tumpe__identity_sheet",
+      "entidad": "Esposa de Tumpe",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-viento-y-sus-hijos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8132,
+      "prompt_sha256": "dc74875bd3d7c8d8a1e86b2ae8b090904e0cd46b22654731c20895b33ebd265a"
+    },
+    {
+      "job": "esposa_de_tumpe__state_sheet--estado_remolino",
+      "modelo": "esposa_de_tumpe__state_sheet",
+      "entidad": "Esposa de Tumpe",
+      "categoria": "personaje",
+      "vista": "estado_remolino",
+      "estados": [
+        "remolino"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-viento-y-sus-hijos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8767,
+      "prompt_sha256": "6e814436b66a2855740104f6509b7d9780e62db15d427de53a7aeaab6413fc9f"
+    },
+    {
+      "job": "joven_encerrada__identity_sheet--canon",
+      "modelo": "joven_encerrada__identity_sheet",
+      "entidad": "La hija, madre del niño serpiente",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-nino-serpiente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8641,
+      "prompt_sha256": "e1740bdf49ea571419066e34d507bcb1be922f5c002c536ec4761ca953cdc094"
+    },
+    {
+      "job": "mama_manuela_caramaya__identity_sheet--canon",
+      "modelo": "mama_manuela_caramaya__identity_sheet",
+      "entidad": "Mama Manuela Caramaya",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-mama-grande"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 10010,
+      "prompt_sha256": "69d1e01b78ab07f70845f3b85759e92f12b1e34a89d3c058b21b265755e48fb1"
+    },
+    {
+      "job": "pedro_de_urdimales__identity_sheet--canon",
+      "modelo": "pedro_de_urdimales__identity_sheet",
+      "entidad": "Pedro de Urdimales",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "pedro-el-mago-travieso"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8703,
+      "prompt_sha256": "d68c24a9b301a4d16337017cad9ed21966eee1f0fcfa72434501a7b42768f554"
+    },
+    {
+      "job": "tumpe__identity_sheet--canon",
+      "modelo": "tumpe__identity_sheet",
+      "entidad": "Tumpe, Padre Viento",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-viento-y-sus-hijos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7610,
+      "prompt_sha256": "8bfb654a7454021645a4e036533471328ea87c69919e1c21d3169dd18ff72255"
+    },
+    {
+      "job": "tumpe__state_sheet--estado_viento_verdadero_sobre_las_cumbres",
+      "modelo": "tumpe__state_sheet",
+      "entidad": "Tumpe, Padre Viento",
+      "categoria": "personaje",
+      "vista": "estado_viento_verdadero_sobre_las_cumbres",
+      "estados": [
+        "viento_verdadero_sobre_las_cumbres"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-viento-y-sus-hijos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9969,
+      "prompt_sha256": "eea6ff6d9e6ba82a528dbeed3b1d4a4f2dca542757fbc35077bb2e1333daf29a"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "motilon-bari",
+  "comunidad": "Barí",
+  "tanda": "tanda-03-tipos-recatadas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/motilon-bari.v3.json",
+    "sha256": "2775ffb3bfc432b435ab7b3dd4a3840cb24764f89acda013c3ed27d3ea99fbf9"
+  },
+  "canon": {
+    "sha256": "aa03517f459efabb921c1e2ef28e49ae58b3aa900ca061c516ba03060880951a",
+    "verificado_en": "2026-09-29T01:54:28.995Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 5,
+  "fichas": [
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Mujer adulta barí (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "caminar-liviano-hacia-el-mas-alla",
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron",
+        "sabaseba-y-los-hijos-de-la-pina",
+        "sibabio-y-las-cenizas-del-mundo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6780,
+      "prompt_sha256": "cf3364e6e1074de52640fdc67c89ef6cfcdeca221ee2a44b1257178e54b8fefb"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Niño barí (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nandou-chibaig-y-las-luces-del-cielo",
+        "sabaseba-y-los-hijos-de-la-pina",
+        "sibabio-y-las-cenizas-del-mundo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6096,
+      "prompt_sha256": "1c2eb67c83d5629b12394b71674e9af5a1d5f5fd33e458c9d58d3314565940e9"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Anciana barí (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "sibabio-y-las-cenizas-del-mundo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6425,
+      "prompt_sha256": "3bb5fbb85059549e36289da399ddd4b2d5d3b6fa034333c24d09e18f19824dcb"
+    }
+  ]
+}

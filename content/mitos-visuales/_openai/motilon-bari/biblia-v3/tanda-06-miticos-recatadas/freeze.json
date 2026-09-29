@@ -1,0 +1,67 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "motilon-bari",
+  "comunidad": "Barí",
+  "tanda": "tanda-06-miticos-recatadas",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/motilon-bari.v3.json",
+    "sha256": "2775ffb3bfc432b435ab7b3dd4a3840cb24764f89acda013c3ed27d3ea99fbf9"
+  },
+  "canon": {
+    "sha256": "aa03517f459efabb921c1e2ef28e49ae58b3aa900ca061c516ba03060880951a",
+    "verificado_en": "2026-09-29T01:56:40.053Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 6,
+  "fichas": [
+    {
+      "job": "chibaig__identity_sheet--canon",
+      "modelo": "chibaig__identity_sheet",
+      "entidad": "Chibáig",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nandou-chibaig-y-las-luces-del-cielo",
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron",
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7076,
+      "prompt_sha256": "b11de0bd3c0a3ce11bb938769cf7ba55cd9fc7e32edfd8d60029ef3530dbeb00"
+    },
+    {
+      "job": "chibaig__state_sheet--estado_sombrero pequeño, la fase menguante",
+      "modelo": "chibaig__state_sheet",
+      "entidad": "Chibáig",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_sombrero pequeño, la fase menguante",
+      "estados": [
+        "sombrero pequeño, la fase menguante"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nandou-chibaig-y-las-luces-del-cielo",
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron",
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8046,
+      "prompt_sha256": "693d03b795e05c4308cb4142760af41a6a20a698093a2e763d60ce6a6c5e3ac5"
+    }
+  ]
+}

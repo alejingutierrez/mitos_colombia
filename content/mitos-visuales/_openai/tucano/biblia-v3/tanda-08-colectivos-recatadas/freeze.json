@@ -1,0 +1,53 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tucano",
+  "comunidad": "Tucano",
+  "tanda": "tanda-08-colectivos-recatadas",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tucano.v3.json",
+    "sha256": "3328d35e2cabdae942974b80bff65672e5d002bf0baa7e431e6248fdb0c51b94"
+  },
+  "canon": {
+    "sha256": "c2c891d8239e415d3d353744fa980cfb41c99c3ff809a4d7bc9ec03abd8495f4",
+    "verificado_en": "2026-09-29T01:58:05.186Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 5,
+  "fichas": [
+    {
+      "job": "gente_tucano__group_grammar--canon",
+      "modelo": "gente_tucano__group_grammar",
+      "entidad": "La gente Tucano",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cuando-la-danta-perdio-su-hegemonia",
+        "el-origen-del-hombre",
+        "la-aparicion-del-sol-del-viento-y-los-mares",
+        "la-semilla-de-la-yuca-tucano",
+        "los-blancos-dominan-a-los-indios",
+        "yepa-abandona-la-tierra",
+        "yepa-castiaga-a-los-animales"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7086,
+      "prompt_sha256": "5c01220dfd0695dd0b4c0a73b137bdee6c5486353c6dd460246c6533b6fe47a8"
+    }
+  ]
+}

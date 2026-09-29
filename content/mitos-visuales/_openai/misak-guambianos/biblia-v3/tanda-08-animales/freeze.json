@@ -1,0 +1,183 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "misak-guambianos",
+  "comunidad": "Misak",
+  "tanda": "tanda-08-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/misak-guambianos.v3.json",
+    "sha256": "2654736a385b128df94e9e69cb88c133010a7d0716aea520b4e67bc71214a23f"
+  },
+  "canon": {
+    "sha256": "e1f4b3ac5eb29b91762c1fa126904c37f0d896fd0a58bc3702f11c78c26002c8",
+    "verificado_en": "2026-09-29T01:55:52.621Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 9,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "buho_de_la_sombra__identity_sheet--canon",
+      "modelo": "buho_de_la_sombra__identity_sheet",
+      "entidad": "El búho que espanta la sombra",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-pajaro-que-se-come-las-almas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6703,
+      "prompt_sha256": "4517448083f6425428ce77bac20ba150f99c3b44d23124dee02ed2f294099a59"
+    },
+    {
+      "job": "cuyes__identity_sheet--canon",
+      "modelo": "cuyes__identity_sheet",
+      "entidad": "Cuyes",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-mama-grande"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7466,
+      "prompt_sha256": "b6bc09b2c12aa1dc23d5bf8c42a2b88bdaa7e204b18b0bcb2f319d670437d63b"
+    },
+    {
+      "job": "hombre_de_dientes_de_oro__identity_sheet--canon",
+      "modelo": "hombre_de_dientes_de_oro__identity_sheet",
+      "entidad": "El hombre de dientes de oro, que era culebra",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-nino-serpiente"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6899,
+      "prompt_sha256": "bd6fa33c9f0ae4f383321937c2f62df21a4be5a856284217c83e0b5136a39520"
+    },
+    {
+      "job": "hombre_de_dientes_de_oro__state_sheet--estado_culebra en la pieza",
+      "modelo": "hombre_de_dientes_de_oro__state_sheet",
+      "entidad": "El hombre de dientes de oro, que era culebra",
+      "categoria": "criatura",
+      "vista": "estado_culebra en la pieza",
+      "estados": [
+        "culebra en la pieza"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-nino-serpiente"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7618,
+      "prompt_sha256": "910fe235955b7091b8e23aba476926ded7a9142c8841299b9bab8cee5861d3b6"
+    },
+    {
+      "job": "kuanmusik__identity_sheet--canon",
+      "modelo": "kuanmusik__identity_sheet",
+      "entidad": "Kuanmusik, el chiflador",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-pajaro-que-se-come-las-almas"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6857,
+      "prompt_sha256": "16ae004a620479b87945508ac10b4462e334f0ddb341d7d61b7172ded4767d0b"
+    },
+    {
+      "job": "kuawera__identity_sheet--canon",
+      "modelo": "kuawera__identity_sheet",
+      "entidad": "Kuawera, el perro que viene por el aire",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-pajaro-que-se-come-las-almas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7035,
+      "prompt_sha256": "0f8292a0a1345cdb6edf1f2e932d43c6cf03bb6654c8c7c8aa1f67700b863a4d"
+    },
+    {
+      "job": "nino_serpiente__identity_sheet--canon",
+      "modelo": "nino_serpiente__identity_sheet",
+      "entidad": "Niño serpiente",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-nino-serpiente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7025,
+      "prompt_sha256": "03f6c78b2b2bc78b65023b625bc88641836fa99844432c48ee1b66ae2cb0510e"
+    },
+    {
+      "job": "nino_serpiente__state_sheet--estado_cuerpo_de_serpiente",
+      "modelo": "nino_serpiente__state_sheet",
+      "entidad": "Niño serpiente",
+      "categoria": "criatura",
+      "vista": "estado_cuerpo_de_serpiente",
+      "estados": [
+        "cuerpo_de_serpiente"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-nino-serpiente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7482,
+      "prompt_sha256": "98c7daa07610c813fb14987ea6478538e0daf8735ef68facf3e34bc93a9d9d24"
+    },
+    {
+      "job": "yemwasro__identity_sheet--canon",
+      "modelo": "yemwasro__identity_sheet",
+      "entidad": "Yemwasro, el ave con forma de águila",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-pajaro-que-se-come-las-almas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7165,
+      "prompt_sha256": "c01962f88b5c21eaf69ce525da27da3b87899aba7d552b694aff3a71496ae07a"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tucano",
+  "comunidad": "Tucano",
+  "tanda": "tanda-03-tipos-recatadas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tucano.v3.json",
+    "sha256": "3328d35e2cabdae942974b80bff65672e5d002bf0baa7e431e6248fdb0c51b94"
+  },
+  "canon": {
+    "sha256": "c2c891d8239e415d3d353744fa980cfb41c99c3ff809a4d7bc9ec03abd8495f4",
+    "verificado_en": "2026-09-29T01:54:03.976Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 2,
+  "fichas": [
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base: mujer adulta tucano",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-del-hombre",
+        "la-semilla-de-la-yuca-tucano"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6934,
+      "prompt_sha256": "396c9c2d57871b728cbed118d318e1232a898299c88d8bf3dbca92e9d3dc9c16"
+    }
+  ]
+}

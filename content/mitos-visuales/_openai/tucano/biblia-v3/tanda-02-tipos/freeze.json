@@ -1,0 +1,65 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tucano",
+  "comunidad": "Tucano",
+  "tanda": "tanda-02-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tucano.v3.json",
+    "sha256": "3328d35e2cabdae942974b80bff65672e5d002bf0baa7e431e6248fdb0c51b94"
+  },
+  "canon": {
+    "sha256": "c2c891d8239e415d3d353744fa980cfb41c99c3ff809a4d7bc9ec03abd8495f4",
+    "verificado_en": "2026-09-29T01:53:36.805Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base: hombre adulto tucano",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "cuando-la-danta-perdio-su-hegemonia",
+        "el-origen-del-hombre",
+        "la-aparicion-del-sol-del-viento-y-los-mares",
+        "la-semilla-de-la-yuca-tucano",
+        "los-blancos-dominan-a-los-indios",
+        "yepa-abandona-la-tierra"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6649,
+      "prompt_sha256": "ba0747fb78237cb683f0e9582f039e29cd1dfc9c5267f6912283045ba355720d"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base: mujer adulta tucano",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-del-hombre",
+        "la-semilla-de-la-yuca-tucano"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6586,
+      "prompt_sha256": "2b4c0f775b83f4683043ef3908a81741e9b177747ec82e5cf9bbcd02660d917f"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "barasana",
+  "comunidad": "Barasana",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/barasana.v3.json",
+    "sha256": "63a71278101405757bb0624c0ed918ebab9ba2d2df6fe234fa28db05a53a3ff2"
+  },
+  "canon": {
+    "sha256": "ff3d70797dc45bbc973d04baf1004c1e75592064c3b93d9d9dda760d8de6ff91",
+    "verificado_en": "2026-09-29T01:53:36.797Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base: hombre adulto barasano",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-de-la-gente-de-los-frutales-silvestres",
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano",
+        "la-cuerda-de-leche-y-la-anaconda-yeba",
+        "la-luna",
+        "sol-luna-dia-y-noche"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6880,
+      "prompt_sha256": "f598c3386a318511e4f673c9643c4930ffcb02fed08c5e6679d7cb9952021d0d"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base: mujer adulta barasana",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano",
+        "los-cerros-estantillos-y-la-cera-de-abejas",
+        "sol-luna-dia-y-noche"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6877,
+      "prompt_sha256": "f05f8e066ccac65fbe73b2e417d845089ddbec9e245ae78e14326f709a97f95f"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base: anciana barasana",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6810,
+      "prompt_sha256": "a0f109c9f12cdeb4727b25f8c989ac86b29029f66c8f246a34e6bf3e9b652ce4"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base: anciano barasano",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6785,
+      "prompt_sha256": "8e15c52295e3a7505ce10591ed88e6a53540b3a9854610a7702239a4d235bc6d"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base: mujer joven barasana",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6780,
+      "prompt_sha256": "997990d340d10d055a181481caf1947afd0f4f7d2d2de852588d04948336eb1c"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base: niño barasano",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6838,
+      "prompt_sha256": "001e28fb6fd071c73c7dd4705b40f902378a20246885310e2461c0458e4d0301"
+    }
+  ]
+}

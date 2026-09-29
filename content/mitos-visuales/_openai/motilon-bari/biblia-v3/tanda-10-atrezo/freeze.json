@@ -1,0 +1,223 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "motilon-bari",
+  "comunidad": "Barí",
+  "tanda": "tanda-10-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/motilon-bari.v3.json",
+    "sha256": "2775ffb3bfc432b435ab7b3dd4a3840cb24764f89acda013c3ed27d3ea99fbf9"
+  },
+  "canon": {
+    "sha256": "aa03517f459efabb921c1e2ef28e49ae58b3aa900ca061c516ba03060880951a",
+    "verificado_en": "2026-09-29T01:59:40.988Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 11,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_bari_domestica__object_sheet--canon",
+      "modelo": "hoja_utileria_bari_domestica__object_sheet",
+      "entidad": "hoja utileria bari domestica",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-gran-arbol-que-hizo-los-rios",
+        "sibabio-y-las-cenizas-del-mundo",
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5804,
+      "prompt_sha256": "9d0f27f40fb54cfb62bb016735d16147ef716cdb0f95359fb4ed2f27b0646d2d"
+    },
+    {
+      "job": "yuca__botanical_sheet--canon",
+      "modelo": "yuca__botanical_sheet",
+      "entidad": "Yuca",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "caminar-liviano-hacia-el-mas-alla",
+        "sabaseba-y-los-hijos-de-la-pina",
+        "sibabio-y-las-cenizas-del-mundo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5368,
+      "prompt_sha256": "b32a104f7c16afc124614ff49cbd596afdcd150c19a2b71ab3cacd5ea284f97b"
+    },
+    {
+      "job": "hoja_utileria_bari_viaje__object_sheet--canon",
+      "modelo": "hoja_utileria_bari_viaje__object_sheet",
+      "entidad": "hoja utileria bari viaje",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "caminar-liviano-hacia-el-mas-alla",
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5568,
+      "prompt_sha256": "268bea7069681625195f1381be9ca78ab7121d8f1214d9eb4ca10627101f448c"
+    },
+    {
+      "job": "arbol-gigantesco__botanical_sheet--canon",
+      "modelo": "arbol-gigantesco__botanical_sheet",
+      "entidad": "El árbol asá (la ceiba que guarda los ríos)",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-gran-arbol-que-hizo-los-rios"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5733,
+      "prompt_sha256": "580bf6a34413f32af4a0ed28ed0edf48d0b782c4ebea19d55b0ddd5f315c721e"
+    },
+    {
+      "job": "arbol-gigantesco__state_sheet--estado_cortado, con surcos de agua por los cortes y un caño por cada rama quebrada",
+      "modelo": "arbol-gigantesco__state_sheet",
+      "entidad": "El árbol asá (la ceiba que guarda los ríos)",
+      "categoria": "planta",
+      "vista": "estado_cortado, con surcos de agua por los cortes y un caño por cada rama quebrada",
+      "estados": [
+        "cortado, con surcos de agua por los cortes y un caño por cada rama quebrada"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-gran-arbol-que-hizo-los-rios"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5908,
+      "prompt_sha256": "2e80852e8503a7ca502b720b9e6364e6caf6bea63c0ae82d4b19ff6b7a29fa9f"
+    },
+    {
+      "job": "bejuco-celeste__botanical_sheet--canon",
+      "modelo": "bejuco-celeste__botanical_sheet",
+      "entidad": "Bejuco entre la Luna o el cielo y la Tierra",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5251,
+      "prompt_sha256": "4d84eaae2056b7eff2c1ffe4c7c9d1234917dedbfb9c66bb27e74993d9138ec0"
+    },
+    {
+      "job": "bejuco-celeste__state_sheet--estado_cortado",
+      "modelo": "bejuco-celeste__state_sheet",
+      "entidad": "Bejuco entre la Luna o el cielo y la Tierra",
+      "categoria": "planta",
+      "vista": "estado_cortado",
+      "estados": [
+        "cortado"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5601,
+      "prompt_sha256": "8a0c4821cce3f243245f2688a39c239bba669a6e57ddff9e0ab04a28244e2f24"
+    },
+    {
+      "job": "corona-de-plumas-de-shiroko__object_sheet--canon",
+      "modelo": "corona-de-plumas-de-shiroko__object_sheet",
+      "entidad": "La corona de plumas de shirokó",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "nandou-chibaig-y-las-luces-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5157,
+      "prompt_sha256": "1d83ca18789eb49d12d82a6fa41946a48a2ccaff3aa01c103402a2f471b7bbfa"
+    },
+    {
+      "job": "corona-de-plumas-de-shiroko__state_sheet--estado_luciendo sólo la mitad",
+      "modelo": "corona-de-plumas-de-shiroko__state_sheet",
+      "entidad": "La corona de plumas de shirokó",
+      "categoria": "objeto",
+      "vista": "estado_luciendo sólo la mitad",
+      "estados": [
+        "luciendo sólo la mitad"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "nandou-chibaig-y-las-luces-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5062,
+      "prompt_sha256": "d58154817d18600ea3a5cf07d856ebeb76c1a1df2a011e15c20bebacf42dd812"
+    },
+    {
+      "job": "pina__botanical_sheet--canon",
+      "modelo": "pina__botanical_sheet",
+      "entidad": "Piña de la que salen los primeros Barí",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5691,
+      "prompt_sha256": "12bf7b45981736f5ac7ecf74077b46cf869d21b74a3fa8e416759354bf497f82"
+    },
+    {
+      "job": "pina__state_sheet--estado_partida, con la gente emergiendo",
+      "modelo": "pina__state_sheet",
+      "entidad": "Piña de la que salen los primeros Barí",
+      "categoria": "planta",
+      "vista": "estado_partida, con la gente emergiendo",
+      "estados": [
+        "partida, con la gente emergiendo"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5714,
+      "prompt_sha256": "02bd1cb56ac4b7ec20d183f61afcf1b3a0b7356b2ade73dcc23b0ad16594cff1"
+    }
+  ]
+}

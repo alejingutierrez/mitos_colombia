@@ -1,0 +1,103 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "misak-guambianos",
+  "comunidad": "Misak",
+  "tanda": "tanda-09-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/misak-guambianos.v3.json",
+    "sha256": "2654736a385b128df94e9e69cb88c133010a7d0716aea520b4e67bc71214a23f"
+  },
+  "canon": {
+    "sha256": "e1f4b3ac5eb29b91762c1fa126904c37f0d896fd0a58bc3702f11c78c26002c8",
+    "verificado_en": "2026-09-29T01:57:35.879Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_misak_casa__object_sheet--canon",
+      "modelo": "hoja_utileria_misak_casa__object_sheet",
+      "entidad": "hoja utileria misak casa",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-nino-serpiente",
+        "el-pajaro-que-se-come-las-almas",
+        "creacion-misak-guambianos",
+        "la-mama-grande"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8019,
+      "prompt_sha256": "eba7694ad6f79d923295397ab7f9c8aefbc1dab3447f85bee4a821eb2b26d623"
+    },
+    {
+      "job": "hoja_utileria_misak_paramo__object_sheet--canon",
+      "modelo": "hoja_utileria_misak_paramo__object_sheet",
+      "entidad": "hoja utileria misak paramo",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-viejo-tempestad",
+        "creacion-misak-guambianos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8007,
+      "prompt_sha256": "37a6ba72433a05c519c16ba2ae31a4a4071554509588deffe96302e041d206c2"
+    },
+    {
+      "job": "sierpi_tronco_atravesado__botanical_sheet--canon",
+      "modelo": "sierpi_tronco_atravesado__botanical_sheet",
+      "entidad": "Sierpi, el tronco atravesado que sangra",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-nino-serpiente"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7160,
+      "prompt_sha256": "0482355afb2dd6e8eeeafa1515b7cae51e25b21ba2a6fc7ab148a6f935c7d722"
+    },
+    {
+      "job": "vara_de_oro__object_sheet--canon",
+      "modelo": "vara_de_oro__object_sheet",
+      "entidad": "Vara de oro con fuego en la punta",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-viejo-tempestad"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7742,
+      "prompt_sha256": "2a05bf532f73abde1f2e74f911d089996b111ac638e3eadf373c45f3600463e1"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "zenu",
+  "comunidad": "Zenú",
+  "tanda": "tanda-04-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/zenu.v3.json",
+    "sha256": "d065f5fc0c636242bf57ac4b226b58c8693ee1dc4767e35a1fb3766157a5c4d5"
+  },
+  "canon": {
+    "sha256": "a10e153154dd795fc7a5dd4f8d66a2356fad0efc05b2dfbdb0b4ec72e6d3411c",
+    "verificado_en": "2026-09-29T01:54:55.445Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "manexca__identity_sheet--canon",
+      "modelo": "manexca__identity_sheet",
+      "entidad": "Manexca",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "mexion-y-manexca",
+        "la-noche-mas-larga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8167,
+      "prompt_sha256": "788ffce9cfbe999fdaa51a1c307dda1b186ffae431b14f7e2996d890e9fd4590"
+    },
+    {
+      "job": "mexion__identity_sheet--canon",
+      "modelo": "mexion__identity_sheet",
+      "entidad": "Mexión",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "mexion-y-manexca",
+        "la-noche-mas-larga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8447,
+      "prompt_sha256": "7699156940be10ced2c2c3834f3e6c65860495cd4ee5d3a9db2607f46e1e9127"
+    },
+    {
+      "job": "mexion__state_sheet--estado_thi_luna",
+      "modelo": "mexion__state_sheet",
+      "entidad": "Mexión",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_thi_luna",
+      "estados": [
+        "thi_luna"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "mexion-y-manexca",
+        "la-noche-mas-larga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8078,
+      "prompt_sha256": "8f9142d46d3212869097803f841b71fe629f21c33a82761beb4443bc1a45d130"
+    },
+    {
+      "job": "ninha_sol__identity_sheet--canon",
+      "modelo": "ninha_sol__identity_sheet",
+      "entidad": "Ninha, el Sol",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "mexion-y-manexca"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8271,
+      "prompt_sha256": "59265523ea64db16f1be8e05e6442376fcadd3188225d200e95af42f10648729"
+    }
+  ]
+}

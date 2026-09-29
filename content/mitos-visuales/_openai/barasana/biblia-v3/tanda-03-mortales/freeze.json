@@ -1,0 +1,248 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "barasana",
+  "comunidad": "Barasana",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/barasana.v3.json",
+    "sha256": "63a71278101405757bb0624c0ed918ebab9ba2d2df6fe234fa28db05a53a3ff2"
+  },
+  "canon": {
+    "sha256": "ff3d70797dc45bbc973d04baf1004c1e75592064c3b93d9d9dda760d8de6ff91",
+    "verificado_en": "2026-09-29T01:55:17.139Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 12,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hombre_escondido__identity_sheet--canon",
+      "modelo": "hombre_escondido__identity_sheet",
+      "entidad": "El hombre escondido en lo alto de la casa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "sol-luna-dia-y-noche"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6529,
+      "prompt_sha256": "170acdcb5e4d63b5c8f09655f9d8c1b591a383a32881566c2a7163a7f5de5c83"
+    },
+    {
+      "job": "kahe_sawari__identity_sheet--canon",
+      "modelo": "kahe_sawari__identity_sheet",
+      "entidad": "Kahe Sawari",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6660,
+      "prompt_sha256": "8e787e9da805617e9afe1e83716b3cdfe2eafba38cf39f6916e9a3092b96b5bf"
+    },
+    {
+      "job": "kahe_sawari__state_sheet--estado_copo de algodón",
+      "modelo": "kahe_sawari__state_sheet",
+      "entidad": "Kahe Sawari",
+      "categoria": "personaje",
+      "vista": "estado_copo de algodón",
+      "estados": [
+        "copo de algodón"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7359,
+      "prompt_sha256": "3c480ce03087e749c1ba93ff8ba494e7763e822ea1af719104d74e0a5ffd5ea0"
+    },
+    {
+      "job": "kahe_sawari__state_sheet--estado_araña",
+      "modelo": "kahe_sawari__state_sheet",
+      "entidad": "Kahe Sawari",
+      "categoria": "personaje",
+      "vista": "estado_araña",
+      "estados": [
+        "araña"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7424,
+      "prompt_sha256": "742db765e26c46d0198864fd25dd10c84a892bd78035b53ce8295aa4c16013ae"
+    },
+    {
+      "job": "kata_yai__identity_sheet--canon",
+      "modelo": "kata_yai__identity_sheet",
+      "entidad": "Kata Yai",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7165,
+      "prompt_sha256": "78e396c4f74bba148c5ad51e92c326d871c13cd04ae49e63aef92c5d03b859e4"
+    },
+    {
+      "job": "madre_de_los_jaguares__identity_sheet--canon",
+      "modelo": "madre_de_los_jaguares__identity_sheet",
+      "entidad": "La madre de los jaguares",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6783,
+      "prompt_sha256": "5e124b86496c995821bc48a229605b27d5d2ede0c458391ca13407766568475a"
+    },
+    {
+      "job": "meneri_ya__identity_sheet--canon",
+      "modelo": "meneri_ya__identity_sheet",
+      "entidad": "Méneri-Ya",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6737,
+      "prompt_sha256": "8131c0efcf7285a386c9d8cdda23b805564307d2cbe93255b26508de511a726f"
+    },
+    {
+      "job": "meni_chaman__identity_sheet--canon",
+      "modelo": "meni_chaman__identity_sheet",
+      "entidad": "Meni Chamán",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6500,
+      "prompt_sha256": "adcc9fb218cfbb162d962872185b12f6276dc91f5659955f26ffb9d6fdfd9d9c"
+    },
+    {
+      "job": "sawa_sawa__identity_sheet--canon",
+      "modelo": "sawa_sawa__identity_sheet",
+      "entidad": "Sawa Sawa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6327,
+      "prompt_sha256": "92b3733f5c9e1736ff9d7f12d93577efb2477592d2a78c1cd6eed4e9686672d1"
+    },
+    {
+      "job": "sawa_sawa__state_sheet--estado_guacamaya",
+      "modelo": "sawa_sawa__state_sheet",
+      "entidad": "Sawa Sawa",
+      "categoria": "personaje",
+      "vista": "estado_guacamaya",
+      "estados": [
+        "guacamaya"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7267,
+      "prompt_sha256": "4a76761b88983219374a8c15243db4bbbd2edf90894a447ab746cd5cffc99b9c"
+    },
+    {
+      "job": "torcedor_de_cumare__identity_sheet--canon",
+      "modelo": "torcedor_de_cumare__identity_sheet",
+      "entidad": "El Torcedor de Cumare",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-de-la-gente-de-los-frutales-silvestres"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6612,
+      "prompt_sha256": "551d4524b4cc1e731a77e518fec1e96b9d2f70e55cab86807ded9517dc524c68"
+    },
+    {
+      "job": "warimi__identity_sheet--canon",
+      "modelo": "warimi__identity_sheet",
+      "entidad": "Warimi",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6786,
+      "prompt_sha256": "bee4181e7b657173133b830ad7c9319d4287918ee9349e98442d71586e9d8d5c"
+    },
+    {
+      "job": "warimi__state_sheet--estado_recién nacido que salta al agua",
+      "modelo": "warimi__state_sheet",
+      "entidad": "Warimi",
+      "categoria": "personaje",
+      "vista": "estado_recién nacido que salta al agua",
+      "estados": [
+        "recién nacido que salta al agua"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6788,
+      "prompt_sha256": "b81fb1dc6cb4fcd56f1ffcf39aae23a6f30389a4967bbfa0c42d052486126134"
+    }
+  ]
+}
