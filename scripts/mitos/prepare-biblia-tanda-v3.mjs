@@ -275,7 +275,12 @@ export function peticionDeEstado(model, view, nombre) {
     return propias.length ? propias : lista.filter((t) => /estado/i.test(t));
   };
   const silueta = elegir(clausulasDe(model.design_contract?.distinctive_silhouette));
-  const continuidad = elegir(model.design_contract?.continuity_markers || []);
+  // Las prohibiciones de la ficha valen en todos sus estados: Baaribo ardiendo
+  // salio con un penacho que su «sin adorno de cabeza» prohibe.
+  const otrosEstados = (model.views || []).flatMap((v) => v.states || []).filter((e) => e !== estado).flatMap(raicesDe);
+  const prohibiciones = (model.design_contract?.continuity_markers || [])
+    .filter((t) => /^(sin|nunca|ning[uú]n|no )/i.test(t.trim()) && !nombra(t, otrosEstados));
+  const continuidad = [...new Set([...elegir(model.design_contract?.continuity_markers || []), ...prohibiciones])];
   const jaguar = /tigre|jaguar/i.test(estado + continuidad.join(" "))
     ? " El tigre es el de Colombia: jaguar americano, rosetas con punto interior; nunca tigre de bengala ni leopardo."
     : "";
