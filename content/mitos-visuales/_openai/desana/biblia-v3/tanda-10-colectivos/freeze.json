@@ -1,0 +1,255 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "desana",
+  "comunidad": "Desana",
+  "tanda": "tanda-10-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/desana.v3.json",
+    "sha256": "1579f98eb3bb8c3857a7ddede829604a73a1968d43e47fb1b758b065dde7909d"
+  },
+  "canon": {
+    "sha256": "8b8f46b02293c31171ca7a65e5be964d782b26572a712b75a0811e6db9d2dc34",
+    "verificado_en": "2026-09-29T01:20:16.248Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 13,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "gente_desana__group_grammar--canon",
+      "modelo": "gente_desana__group_grammar",
+      "entidad": "La gente Desana",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "agamahsapu-y-el-tiempo-del-umari",
+        "el-origen-de-la-mandioca-desana",
+        "el-origen-de-la-noche-desana",
+        "guelamun-ye-el-nieto-del-trueno",
+        "nuguye-y-sepiro-fuego-y-creciente",
+        "yurupari"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6415,
+      "prompt_sha256": "15b0f558398757486cf458d381ed8f38e1f6aad6ea000eee18dc2e6686f3f477"
+    },
+    {
+      "job": "aves_hijas_agamahsapu__group_grammar--canon",
+      "modelo": "aves_hijas_agamahsapu__group_grammar",
+      "entidad": "Las garzas y los socós de Ãgãmahsãpu",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "agamahsapu-y-el-tiempo-del-umari"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6333,
+      "prompt_sha256": "d1e580e5e2665b2da60e59f35723ef06531cc22fc23ccd0451c0adf7468f1fc5"
+    },
+    {
+      "job": "criaturas_de_la_noche__group_grammar--canon",
+      "modelo": "criaturas_de_la_noche__group_grammar",
+      "entidad": "Las aves nocturnas, grillos e insectos de la noche",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-origen-de-la-noche-desana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6273,
+      "prompt_sha256": "efa09c0e094f9a9f0e138600b713f416d86016c6cbc1a67175157d2b7fa49fc3"
+    },
+    {
+      "job": "futura_humanidad__group_grammar--canon",
+      "modelo": "futura_humanidad__group_grammar",
+      "entidad": "La futura humanidad que emerge en Ipanoré",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-desana"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6950,
+      "prompt_sha256": "66fb18918cb3269bc2d279ffe45f279269c3499e1a160053c39b98b0e5cf5549"
+    },
+    {
+      "job": "gente_peces_cobras__group_grammar--canon",
+      "modelo": "gente_peces_cobras__group_grammar",
+      "entidad": "La familia de Pirõ: los hermanos peces y culebras",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "gainpaya-y-el-origen-del-chontaduro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5845,
+      "prompt_sha256": "8965217e91563edda521dfb64162cf99e5fa34afbd5300a35c3a1848c6568f22"
+    },
+    {
+      "job": "gente_peces_cobras__state_sheet--estado_culebras gigantes del río",
+      "modelo": "gente_peces_cobras__state_sheet",
+      "entidad": "La familia de Pirõ: los hermanos peces y culebras",
+      "categoria": "colectivo",
+      "vista": "estado_culebras gigantes del río",
+      "estados": [
+        "culebras gigantes del río"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "gainpaya-y-el-origen-del-chontaduro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6522,
+      "prompt_sha256": "d10244753006b28db8ab6c65bc8c6454117073330f8bcac319d7a8971db55271"
+    },
+    {
+      "job": "hermanos_mayores_noche__group_grammar--canon",
+      "modelo": "hermanos_mayores_noche__group_grammar",
+      "entidad": "Los hermanos mayores",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-origen-de-la-noche-desana"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6218,
+      "prompt_sha256": "8ee522cd3194cefbe9cc6c6f7de91e8c93ea97406e6c316a2a3cc1b8b7019b79"
+    },
+    {
+      "job": "hijas_de_abe__group_grammar--canon",
+      "modelo": "hijas_de_abe__group_grammar",
+      "entidad": "Las dos hijas de Abe, Luna",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "yurupari"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6477,
+      "prompt_sha256": "f8750f8fb390183ddda474ffc502a57d324f536408580aea838dc3a5e28ab93a"
+    },
+    {
+      "job": "hijas_de_diapiro__group_grammar--canon",
+      "modelo": "hijas_de_diapiro__group_grammar",
+      "entidad": "Las dos hijas de Diápirõ",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "agamahsapu-y-el-tiempo-del-umari"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6433,
+      "prompt_sha256": "83c54f1e1282e4b4e921a567e41a7b61efb063f460362579b065f3110151909e"
+    },
+    {
+      "job": "hijos_de_abe__group_grammar--canon",
+      "modelo": "hijos_de_abe__group_grammar",
+      "entidad": "Los hijos e hijas de Abe",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "nuguye-y-sepiro-fuego-y-creciente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6268,
+      "prompt_sha256": "63fc7dc51369e65a73686fbc2f536035ba79d4b78aabc85e1153c56a2d703038"
+    },
+    {
+      "job": "hombres_trueno__group_grammar--canon",
+      "modelo": "hombres_trueno__group_grammar",
+      "entidad": "Los cinco Hombres Trueno (Hombres de Cuarzo)",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-desana"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6558,
+      "prompt_sha256": "34dd1d686de16bd46edc7db4ca3d0e3bb0963ef0a207be143fa3667b29102beb"
+    },
+    {
+      "job": "jovenes_iniciacion__group_grammar--canon",
+      "modelo": "jovenes_iniciacion__group_grammar",
+      "entidad": "Los jóvenes en preparación",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "guelamun-ye-el-nieto-del-trueno"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6303,
+      "prompt_sha256": "ea07a8643a9cdd6b57cd6682dea3ebc10d50d0cad9a593db43e7303391dbb458"
+    },
+    {
+      "job": "peces_del_rio__group_grammar--canon",
+      "modelo": "peces_del_rio__group_grammar",
+      "entidad": "Los Waimahsã, la Gente Pez, y el aracú de cabeza roja",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "yurupari"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6192,
+      "prompt_sha256": "14b6faf509fc90be2a6c7b94b4d0f1c969156c03aed5e595fbf4cbdbc82a4fd6"
+    }
+  ]
+}
