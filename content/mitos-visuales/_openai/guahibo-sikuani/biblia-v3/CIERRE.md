@@ -37,3 +37,13 @@ Las tandas 01 y 02 de tipos (con escenario) quedan rechazadas.
   (el picure salía con sus quemaduras).
 - La composición en papel dice «la ficha sola», no «figura sola»: los grupos
   de la capa de criaturas salían como una sola figura.
+
+## Abierto por el editor (2026-09-28)
+
+- **«El mar» no es territorio sikuani.** El editor señaló que el pueblo no
+  tiene cercanía al mar. El canon dice «llegó hasta el mar» y, en el relato de
+  las hermanas, «el lugar donde el cielo se une con el mar»: es el agua del
+  borde del mundo, no una costa. La lámina del paisaje y la del hermano (de
+  espaldas frente a olas, con cuatro perros) quedan pendientes de rehacer
+  cuando el editor elija entre: agua sin orilla del borde del mundo, el río
+  grande (Orinoco o Meta en Maipures), o retirar el paisaje.
