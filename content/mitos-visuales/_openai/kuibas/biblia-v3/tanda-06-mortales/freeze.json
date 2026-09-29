@@ -1,0 +1,44 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "kuibas",
+  "comunidad": "Kuiva (Wamonae)",
+  "tanda": "tanda-06-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/kuibas.v3.json",
+    "sha256": "5f20302091e9a8b7f757ce1357cb393e9a0a54b801d479c6155d1c16037c25e4"
+  },
+  "canon": {
+    "sha256": "7d0004d1ca8d0709864534a5c645a05b716b82370b7891be44d5fe97a3f0d5ff",
+    "verificado_en": "2026-09-29T02:20:22.111Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 1,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "boupe__identity_sheet--canon",
+      "modelo": "boupe__identity_sheet",
+      "entidad": "Boupé, el primer jefe",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-kuibas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7081,
+      "prompt_sha256": "aa199a7a9a102c00683e7021b1fe31a1e790669422d6d6cb9ec00a8194f15d01"
+    }
+  ]
+}

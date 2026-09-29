@@ -1,0 +1,81 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "kuibas",
+  "comunidad": "Kuiva (Wamonae)",
+  "tanda": "piloto-01-personas",
+  "capa": "personas",
+  "categorias": [
+    "personaje",
+    "deidad_fuerza",
+    "colectivo"
+  ],
+  "piloto": true,
+  "fecha": "2026-09-24",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/kuibas.v3.json",
+    "sha256": "7a91deaaef96c8b732618cda7d1d4253632f719a1382fc4a25e18ec5fda0d383"
+  },
+  "canon": {
+    "actas_verificadas": 2,
+    "relatos_reescritos": 0,
+    "verificado_en": "2026-09-24T22:49:48.486Z"
+  },
+  "fichas_en_capa": 5,
+  "fichas": [
+    {
+      "job": "boupe__identity_sheet--canon",
+      "modelo": "boupe__identity_sheet",
+      "entidad": "Boupé, el primer jefe",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-kuibas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5431,
+      "prompt_sha256": "2b330abfe54d58f3367963b94b11bdeb4708fdeb3555f7c21e381ebaae60368d"
+    },
+    {
+      "job": "daimu__identity_sheet--canon",
+      "modelo": "daimu__identity_sheet",
+      "entidad": "Daimú",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-kuibas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5296,
+      "prompt_sha256": "7af2f9be8fdc44a921a3761d0403d2978df900a5621fde393e9399ed4c64beac"
+    },
+    {
+      "job": "primeras_personas__group_grammar--canon",
+      "modelo": "primeras_personas__group_grammar",
+      "entidad": "Las primeras personas",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-kuibas",
+        "namon-y-la-inundacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6221,
+      "prompt_sha256": "e0fb15988af3d0a49743a41cb5dc238458d9806913508e3597ff1e72240175f5"
+    }
+  ]
+}

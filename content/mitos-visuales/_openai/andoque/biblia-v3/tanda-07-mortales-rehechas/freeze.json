@@ -1,0 +1,44 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "andoque",
+  "comunidad": "Andoque (Gente del Hacha)",
+  "tanda": "tanda-07-mortales-rehechas",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/andoque.v3.json",
+    "sha256": "345fea24f9db5aa63f80eb37a31746c72094210f716082508180bc887113a806"
+  },
+  "canon": {
+    "sha256": "1464c50fa3a580f64f525602622acdadb0f163d4bd0942dd7decb8df15cc5afb",
+    "verificado_en": "2026-09-28T16:10:11.764Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 15,
+  "fichas_ya_preparadas": 15,
+  "fichas": [
+    {
+      "job": "especialista_huitoto__identity_sheet--canon",
+      "modelo": "especialista_huitoto__identity_sheet",
+      "entidad": "El especialista huitoto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-brujeria-de-la-danta"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7747,
+      "prompt_sha256": "38f2da71b4a7c023a3e0d59192c2f84b2f17b830be5aec6cd4321752be121532"
+    }
+  ]
+}

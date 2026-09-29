@@ -1,0 +1,123 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "barasana",
+  "comunidad": "Barasana",
+  "tanda": "tanda-08-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/barasana.v3.json",
+    "sha256": "63a71278101405757bb0624c0ed918ebab9ba2d2df6fe234fa28db05a53a3ff2"
+  },
+  "canon": {
+    "sha256": "ff3d70797dc45bbc973d04baf1004c1e75592064c3b93d9d9dda760d8de6ff91",
+    "verificado_en": "2026-09-29T02:03:42.118Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "calendario_y_epocas__phenomenon_rule--canon",
+      "modelo": "calendario_y_epocas__phenomenon_rule",
+      "entidad": "El calendario de épocas: día, noche y estaciones",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-origen-de-la-gente-de-los-frutales-silvestres",
+        "los-cerros-estantillos-y-la-cera-de-abejas",
+        "sol-luna-dia-y-noche",
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6044,
+      "prompt_sha256": "c192b393599487eb704e17cda218d1646ebebd4ff946cb09e362331bf85f2542"
+    },
+    {
+      "job": "maloca_barasana__spatial_model--canon",
+      "modelo": "maloca_barasana__spatial_model",
+      "entidad": "La maloca",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-origen-de-la-gente-de-los-frutales-silvestres",
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano",
+        "la-cuerda-de-leche-y-la-anaconda-yeba",
+        "los-cerros-estantillos-y-la-cera-de-abejas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5982,
+      "prompt_sha256": "077874e9835110af403f66c507716d2f60e23bd55d06a24f031bbdaa43dfd245"
+    },
+    {
+      "job": "casa_abandonada__spatial_model--canon",
+      "modelo": "casa_abandonada__spatial_model",
+      "entidad": "La casa abandonada",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "sol-luna-dia-y-noche"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5691,
+      "prompt_sha256": "3fbe92ec4f2d0d6598e9eabe442f75ee93ee4feff0a69fb1a8b274b4caf7f5cc"
+    },
+    {
+      "job": "eclipse_y_luna_roja__phenomenon_rule--canon",
+      "modelo": "eclipse_y_luna_roja__phenomenon_rule",
+      "entidad": "El eclipse y la luna roja",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "sol-luna-dia-y-noche"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5494,
+      "prompt_sha256": "1a1dbeec222713cb97c71b398ec76361a8afbbb50df29454c73b0abce99ebe0b"
+    },
+    {
+      "job": "puente_de_warimi__spatial_model--canon",
+      "modelo": "puente_de_warimi__spatial_model",
+      "entidad": "El puente de Warimi",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5434,
+      "prompt_sha256": "bb23cecfbafa7758739ba74560155c03851c54c2a467c15e78c60ce06317d9a5"
+    }
+  ]
+}

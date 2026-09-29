@@ -1,0 +1,52 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "zenu",
+  "comunidad": "Zenú",
+  "tanda": "tanda-11-miticos-rehechas",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/zenu.v3.json",
+    "sha256": "e86bc62afa6114bf039d14d0e82fdbc9a399b731979771dd7930d6876bcd07ef"
+  },
+  "canon": {
+    "sha256": "a10e153154dd795fc7a5dd4f8d66a2356fad0efc05b2dfbdb0b4ec72e6d3411c",
+    "verificado_en": "2026-09-29T03:31:21.123Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 4,
+  "fichas": [
+    {
+      "job": "manexca__identity_sheet--canon",
+      "modelo": "manexca__identity_sheet",
+      "entidad": "Manexca",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "mexion-y-manexca",
+        "la-noche-mas-larga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7288,
+      "prompt_sha256": "a481a8d71180caadd60b0958f57bf858c1c580ed35969a7087ecaebc4d91faa3"
+    }
+  ]
+}

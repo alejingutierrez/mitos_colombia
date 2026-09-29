@@ -1,0 +1,263 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "amazonia-mestizo-mixto",
+  "comunidad": "Amazonía ribereña mestiza",
+  "tanda": "tanda-06-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/amazonia-mestizo-mixto.v3.json",
+    "sha256": "fea46c1ab8f6b063283d925332b6158a17c0d78a373ec2dee760e858196271ec"
+  },
+  "canon": {
+    "sha256": "2f6f707553d5db5bf527413fc9dccfe903963879388b8ebee73d2d100adcfe9a",
+    "verificado_en": "2026-09-29T02:22:21.937Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 10,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "pueblo_ribereno__group_grammar--canon",
+      "modelo": "pueblo_ribereno__group_grammar",
+      "entidad": "Gente de la aldea ribereña",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "chuya-chaqui",
+        "el-bufeo",
+        "el-descubrimiento-del-agua-y-los-peces",
+        "el-diluvio-guinadoma",
+        "el-hijo-de-tuhixana",
+        "el-nacimiento-de-los-matapi",
+        "el-origen-de-las-frutas",
+        "kanuma",
+        "origen-de-la-luna",
+        "origen-de-los-micos-boquiblancos",
+        "origen-de-los-vegetales-cultivaldos",
+        "taife",
+        "taik",
+        "yacuruna",
+        "el-chuy-achaque",
+        "la-cobra-grande",
+        "madre-de-playa",
+        "moe-e-ipi",
+        "ngutapa-y-chimuiyae",
+        "nonuetoma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8530,
+      "prompt_sha256": "8efa6735c525e5da4a2388113b07c8c0656f0e108df13b9bffddd4cee8536eb0"
+    },
+    {
+      "job": "bestiario_menor_de_selva__group_grammar--canon",
+      "modelo": "bestiario_menor_de_selva__group_grammar",
+      "entidad": "Bestiario menor de selva",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "chuya-chaqui",
+        "el-diluvio-guinadoma",
+        "ngutapa-y-chimuiyae",
+        "nonuetoma",
+        "taik",
+        "kanuma",
+        "el-origen-de-las-frutas",
+        "el-hijo-de-tuhixana",
+        "el-bufeo",
+        "el-chuy-achaque",
+        "el-descubrimiento-del-agua-y-los-peces",
+        "la-curupira",
+        "moe-e-ipi",
+        "origen-del-agua",
+        "taife",
+        "yacuruna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9919,
+      "prompt_sha256": "02e74df06a8706f2e1941668695b732efc6286d699dd34385ef5dfa2a0f48d7b"
+    },
+    {
+      "job": "cazador_y_pescador_ribereno__group_grammar--canon",
+      "modelo": "cazador_y_pescador_ribereno__group_grammar",
+      "entidad": "Cazador y pescador ribereño",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "chuya-chaqui",
+        "el-chuy-achaque",
+        "el-cotomachaco",
+        "la-curupira",
+        "origen-del-gavilan",
+        "origen-del-sol",
+        "el-bufeo",
+        "origen-de-los-micos-boquiblancos",
+        "yacuruna"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 10089,
+      "prompt_sha256": "f34d68787f88d4dccde11f30d943812467643660606ac619aea7f46b089d9d1d"
+    },
+    {
+      "job": "aves_de_la_selva__group_grammar--canon",
+      "modelo": "aves_de_la_selva__group_grammar",
+      "entidad": "Aves menores de la selva",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "ngutapa-y-chimuiyae",
+        "origen-del-agua",
+        "taik",
+        "el-hijo-de-tuhixana",
+        "nonuetoma",
+        "el-cotomachaco",
+        "kanuma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8200,
+      "prompt_sha256": "9398291d99516f19d504d3bc2420475ca040c68e2db18463247fea1e3be54a69"
+    },
+    {
+      "job": "peces_del_rio__group_grammar--canon",
+      "modelo": "peces_del_rio__group_grammar",
+      "entidad": "Peces del río",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-descubrimiento-del-agua-y-los-peces",
+        "el-bufeo",
+        "moe-e-ipi",
+        "kanuma",
+        "nonuetoma",
+        "origen-de-los-vegetales-cultivaldos",
+        "yacuruna"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8655,
+      "prompt_sha256": "1eef66f6ea1340b80292f4cb30e4238233768892eecc72ef325ba96ce1768304"
+    },
+    {
+      "job": "anciana_de_la_maloca__group_grammar--canon",
+      "modelo": "anciana_de_la_maloca__group_grammar",
+      "entidad": "Anciana de la maloca",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "chuya-chaqui",
+        "el-descubrimiento-del-agua-y-los-peces",
+        "el-origen-de-las-frutas",
+        "origen-de-la-luna",
+        "origen-del-sol",
+        "taik"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8698,
+      "prompt_sha256": "2b0ea5ccb44d531a39dcf71ae707620b6f6cf13952ff57f957683f49e1db773c"
+    },
+    {
+      "job": "ninos_de_la_aldea__group_grammar--canon",
+      "modelo": "ninos_de_la_aldea__group_grammar",
+      "entidad": "Niños de la aldea",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "taife",
+        "el-chuy-achaque",
+        "el-bufeo",
+        "origen-de-los-micos-boquiblancos"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8616,
+      "prompt_sha256": "178f8ac0dce4c3b370c48724606b7538f6c163b038a0161e3677c00bbac22264"
+    },
+    {
+      "job": "sabedor_del_monte__group_grammar--canon",
+      "modelo": "sabedor_del_monte__group_grammar",
+      "entidad": "Sabedor / brujo del monte",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-nacimiento-de-los-matapi",
+        "nonuetoma",
+        "el-chuy-achaque"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8698,
+      "prompt_sha256": "6d7ca6eff41f909899f25123ba8a028bc44ce19d6308f8de54a0b6d4e6986737"
+    },
+    {
+      "job": "dos_hermanas_de_taik__group_grammar--canon",
+      "modelo": "dos_hermanas_de_taik__group_grammar",
+      "entidad": "Las dos hermanas de Taik",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "taik"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8119,
+      "prompt_sha256": "d21dd39acafc330259d586bb5fa684dab448cad6c5ad5532e255d1b8c7204c6c"
+    },
+    {
+      "job": "lyamatuna__group_grammar--canon",
+      "modelo": "lyamatuna__group_grammar",
+      "entidad": "Las Lyamátuna",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "kanuma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8235,
+      "prompt_sha256": "8540ff9f73bd0a59e66e0c6411b73d0983c581972ebe2c7c807c34e2c6d5d8c6"
+    }
+  ]
+}

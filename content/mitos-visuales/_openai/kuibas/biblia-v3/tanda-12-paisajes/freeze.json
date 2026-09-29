@@ -1,0 +1,85 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "kuibas",
+  "comunidad": "Kuiva (Wamonae)",
+  "tanda": "tanda-12-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/kuibas.v3.json",
+    "sha256": "5f20302091e9a8b7f757ce1357cb393e9a0a54b801d479c6155d1c16037c25e4"
+  },
+  "canon": {
+    "sha256": "7d0004d1ca8d0709864534a5c645a05b716b82370b7891be44d5fe97a3f0d5ff",
+    "verificado_en": "2026-09-29T02:23:24.741Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "sabana_y_arboles_frutales__environment_model--canon",
+      "modelo": "sabana_y_arboles_frutales__environment_model",
+      "entidad": "La sabana con árboles frutales",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-kuibas",
+        "namon-y-la-inundacion"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7211,
+      "prompt_sha256": "fba73a278a1f4b51a0579807292a4d89607689abd69a1f9a1413f023a7a9df11"
+    },
+    {
+      "job": "la_cueva__spatial_model--canon",
+      "modelo": "la_cueva__spatial_model",
+      "entidad": "La cueva de la primera noche",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-kuibas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6426,
+      "prompt_sha256": "2eadb34ac1c9dcc9530d2016f1d29a7fe36937a9c0121718c323f706a9a186c2"
+    },
+    {
+      "job": "monte_seco_de_namon__spatial_model--canon",
+      "modelo": "monte_seco_de_namon__spatial_model",
+      "entidad": "La montaña pequeña que permaneció seca",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "namon-y-la-inundacion"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6547,
+      "prompt_sha256": "2a019213df8c483298b96531fdef5594122b92dc80a3b6b769f3c3b2bca023ae"
+    }
+  ]
+}

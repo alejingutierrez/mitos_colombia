@@ -1,0 +1,170 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "zenu",
+  "comunidad": "Zenú",
+  "tanda": "tanda-08-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/zenu.v3.json",
+    "sha256": "d065f5fc0c636242bf57ac4b226b58c8693ee1dc4767e35a1fb3766157a5c4d5"
+  },
+  "canon": {
+    "sha256": "a10e153154dd795fc7a5dd4f8d66a2356fad0efc05b2dfbdb0b4ec72e6d3411c",
+    "verificado_en": "2026-09-29T01:57:20.375Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 7,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_zenu_sustento__object_sheet--canon",
+      "modelo": "hoja_utileria_zenu_sustento__object_sheet",
+      "entidad": "hoja utileria zenu sustento",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "mexion-y-manexca",
+        "la-noche-mas-larga",
+        "el-totumo-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7454,
+      "prompt_sha256": "8516e8332b83119ab448c2302a7b6e94e4692bbbdd3a180e99af81b950229287"
+    },
+    {
+      "job": "totumo_de_oro__botanical_sheet--canon",
+      "modelo": "totumo_de_oro__botanical_sheet",
+      "entidad": "Totumo de oro (árbol y fruto dorado)",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "trono-corcovao",
+        "el-totumo-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7425,
+      "prompt_sha256": "b9ef3b7525cf1219e13ffb780fe4ce45a0d917cc7c4d7b667308395aa5e1711c"
+    },
+    {
+      "job": "canoa_encantada__object_sheet--canon",
+      "modelo": "canoa_encantada__object_sheet",
+      "entidad": "Canoa encantada de La Sierpe",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-ojo-de-la-canoa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7041,
+      "prompt_sha256": "abc946ac645d04c0538c4094eafb0e710d6452c96f59ce4b8e283cfc4a4cc0b1"
+    },
+    {
+      "job": "capa_sombrero_universo__object_sheet--canon",
+      "modelo": "capa_sombrero_universo__object_sheet",
+      "entidad": "Capa de caña flecha convertida en sombrero-universo",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-noche-mas-larga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7782,
+      "prompt_sha256": "9416fdc6c283e9dd3749bf3fe987bf20193bac6ecb13375f35ce89deb0b09024"
+    },
+    {
+      "job": "capa_sombrero_universo__state_sheet--estado_capa_extendida",
+      "modelo": "capa_sombrero_universo__state_sheet",
+      "entidad": "Capa de caña flecha convertida en sombrero-universo",
+      "categoria": "objeto",
+      "vista": "estado_capa_extendida",
+      "estados": [
+        "capa_extendida"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-noche-mas-larga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8069,
+      "prompt_sha256": "1bfc9c6686f1cba744a4708b380b8e06fe11768610e33bb2add258663ef9f3bc"
+    },
+    {
+      "job": "capa_sombrero_universo__state_sheet--estado_sombrero_con_corona_y_vueltas",
+      "modelo": "capa_sombrero_universo__state_sheet",
+      "entidad": "Capa de caña flecha convertida en sombrero-universo",
+      "categoria": "objeto",
+      "vista": "estado_sombrero_con_corona_y_vueltas",
+      "estados": [
+        "sombrero_con_corona_y_vueltas"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-noche-mas-larga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8084,
+      "prompt_sha256": "639e61931310a9ad2e3eb59759a163d5b5017bddb5e5d50ba2002c57f7f30dc0"
+    },
+    {
+      "job": "limon_de_acero__object_sheet--canon",
+      "modelo": "limon_de_acero__object_sheet",
+      "entidad": "Limón de acero",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-ojo-de-la-canoa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6915,
+      "prompt_sha256": "d6b21ccbc326d918a29cd5452b222c4b8799620efdb1ff4f29083ec218a87661"
+    },
+    {
+      "job": "piedras_del_techo__object_sheet--canon",
+      "modelo": "piedras_del_techo__object_sheet",
+      "entidad": "Piedras sobre el techo",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "juan-lara-y-la-trenza-del-aire"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6939,
+      "prompt_sha256": "7a33c4663ea1bd777bebd4b9870b927959e2be5e4f456a7df5ac82939d144248"
+    }
+  ]
+}

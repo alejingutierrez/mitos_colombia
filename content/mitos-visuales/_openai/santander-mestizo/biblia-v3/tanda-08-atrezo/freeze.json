@@ -1,0 +1,307 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "santander-mestizo",
+  "comunidad": "Santander mestizo",
+  "tanda": "tanda-08-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/santander-mestizo.v3.json",
+    "sha256": "d5b07ab1f712e5293471956f31a70a947fceb6dc9a6f1f82ce4c214672c215a7"
+  },
+  "canon": {
+    "sha256": "001778764d5a15260f48f1d6bc2a7f74857486623e73ca5c9681e13fe8ec3cdd",
+    "verificado_en": "2026-09-29T02:30:28.266Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 13,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_casa_y_fiesta__object_sheet--canon",
+      "modelo": "hoja_utileria_casa_y_fiesta__object_sheet",
+      "entidad": "hoja utileria casa y fiesta",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "tal-para-cual",
+        "la-vista-del-libertador",
+        "el-trapiche-ardiendo",
+        "duende-del-salto",
+        "nueva-version-de-la-luz-del-limonal",
+        "la-campana-del-diablo",
+        "la-hilandera",
+        "el-diablo-de-umpala",
+        "cuento-fantastico",
+        "el-anima-coy",
+        "el-reventon-de-jacobo",
+        "lagunas-encantadas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7652,
+      "prompt_sha256": "fbc7dc7fe9f28ccf35257920b1d2d0ee0ee7c161889fdfb8105c474d01b5af73"
+    },
+    {
+      "job": "hoja_utileria_vestuario__object_sheet--canon",
+      "modelo": "hoja_utileria_vestuario__object_sheet",
+      "entidad": "hoja utileria vestuario",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-hilandera",
+        "lagunas-encantadas",
+        "el-diablo-de-umpala",
+        "la-diabla-castigadora",
+        "la-cueva-del-diablo",
+        "la-sayona-del-cementerio",
+        "el-ermitano-iracundo",
+        "el-fantasma-de-el-horizonte",
+        "la-vista-del-libertador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8427,
+      "prompt_sha256": "27877a8ff91e2fe59acc5cc16befb3a8c7d9f3f57f258e8ad79a80e1bb614b5a"
+    },
+    {
+      "job": "entierro_y_guaca__object_sheet--canon",
+      "modelo": "entierro_y_guaca__object_sheet",
+      "entidad": "El entierro",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-reventon-de-jacobo",
+        "la-monedita-en-la-alcancia",
+        "el-carriazo-de-vereda-san-isidro",
+        "la-cueva-de-la-pisca",
+        "lo-que-ensenan-las-cuevas",
+        "los-tunjos-de-la-cantera",
+        "lagunas-encantadas",
+        "el-quijote-piedecuestano"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7004,
+      "prompt_sha256": "f48dadea0e04735c1674705388aa1c7f6baadbf19ca2649c09d86bfaf9a8bf12"
+    },
+    {
+      "job": "hoja_utileria_devocion__object_sheet--canon",
+      "modelo": "hoja_utileria_devocion__object_sheet",
+      "entidad": "hoja utileria devocion",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "nueva-version-de-la-luz-del-limonal",
+        "lagunas-encantadas",
+        "la-mula-maneada",
+        "tal-para-cual",
+        "la-cueva-de-la-pisca",
+        "el-pollo-de-las-animas",
+        "el-anima-coy"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7371,
+      "prompt_sha256": "cb7463bbf83eaaee0ceb1f2193de63b232c2e1f553ec64b81df439c5ff1d301c"
+    },
+    {
+      "job": "hoja_utileria_entierro__object_sheet--canon",
+      "modelo": "hoja_utileria_entierro__object_sheet",
+      "entidad": "hoja utileria entierro",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-monedita-en-la-alcancia",
+        "la-hilandera",
+        "el-reventon-de-jacobo",
+        "lo-que-ensenan-las-cuevas",
+        "los-tunjos-de-la-cantera",
+        "la-mula-del-diablo",
+        "la-piedra-del-muerto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7177,
+      "prompt_sha256": "c56a0540106acc30959931cb93a9e3274c880562414374d057fdb0b08d7506a9"
+    },
+    {
+      "job": "fique_y_tabaco__botanical_sheet--canon",
+      "modelo": "fique_y_tabaco__botanical_sheet",
+      "entidad": "El fique y el tabaco",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-hilandera",
+        "la-cueva-del-diablo",
+        "tal-para-cual",
+        "la-monedita-en-la-alcancia",
+        "la-mechuda",
+        "la-mancarita"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7228,
+      "prompt_sha256": "1c5a0dc1457277304b0de70f10f174c2b13e6fe80ca979a504fd1631d8e3f675"
+    },
+    {
+      "job": "arbol_centenario__botanical_sheet--canon",
+      "modelo": "arbol_centenario__botanical_sheet",
+      "entidad": "El árbol centenario del camino",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-campana-del-diablo",
+        "el-carriazo-de-vereda-san-isidro",
+        "el-reventon-de-jacobo",
+        "el-doctor-galeacer"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6860,
+      "prompt_sha256": "fa9a32e8f784d3b9313e8b61afb27ba694c907d47ab7a0ea8af7bf4a4b70ca13"
+    },
+    {
+      "job": "hoja_utileria_armas_coloniales__object_sheet--canon",
+      "modelo": "hoja_utileria_armas_coloniales__object_sheet",
+      "entidad": "hoja utileria armas coloniales",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "talabad",
+        "el-quijote-piedecuestano",
+        "tal-para-cual",
+        "duende-del-salto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7394,
+      "prompt_sha256": "be60564471cf728290e6c9bb58381e17eb8a8302431781d34842f4fb64964f8b"
+    },
+    {
+      "job": "hoja_utileria_fique__object_sheet--canon",
+      "modelo": "hoja_utileria_fique__object_sheet",
+      "entidad": "hoja utileria fique",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-hilandera",
+        "la-monedita-en-la-alcancia",
+        "la-mechuda",
+        "la-diabla-castigadora"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7257,
+      "prompt_sha256": "bb56f112dac4ac57c400dbf0d1810bd008e16e7626302dcffa916ae4f444c2c0"
+    },
+    {
+      "job": "hoja_utileria_arrieria__object_sheet--canon",
+      "modelo": "hoja_utileria_arrieria__object_sheet",
+      "entidad": "hoja utileria arrieria",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-cueva-del-diablo",
+        "la-cueva-de-la-pisca",
+        "la-mula-del-diablo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7164,
+      "prompt_sha256": "0b0d82122dd557e616ad276f9be5fb3158def16ffd3e0882b427f6d30800a7f7"
+    },
+    {
+      "job": "lampara_de_petroleo__object_sheet--canon",
+      "modelo": "lampara_de_petroleo__object_sheet",
+      "entidad": "La lámpara de petróleo",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-lampara-de-petroleo",
+        "el-trapiche-ardiendo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6890,
+      "prompt_sha256": "febcab4ec97506833b4bc220dfffeffa6ece3809a166afe9023ed5ec59bde5f9"
+    },
+    {
+      "job": "campana_de_plata__object_sheet--canon",
+      "modelo": "campana_de_plata__object_sheet",
+      "entidad": "La campana de plata del caracolí",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-campana-del-diablo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6901,
+      "prompt_sha256": "b097e82f86f1c0d4751509e8171df77d8c16026bfca720753b865ef41d93eac6"
+    },
+    {
+      "job": "hoja_utileria_contra_el_espanto__object_sheet--canon",
+      "modelo": "hoja_utileria_contra_el_espanto__object_sheet",
+      "entidad": "hoja utileria contra el espanto",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-mula-maneada"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7268,
+      "prompt_sha256": "9ab945afa905600f156e5d4fccc56d4650c5747761eccbcc86aeda2be8e17533"
+    }
+  ]
+}

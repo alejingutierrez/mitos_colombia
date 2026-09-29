@@ -1,0 +1,51 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ticuna",
+  "comunidad": "Ticuna",
+  "tanda": "tanda-11-tipos-rehechas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ticuna.v3.json",
+    "sha256": "e91be5e0fc63a0bc664991ec45f32e391ecf165ff805473584b0382b4337aa60"
+  },
+  "canon": {
+    "sha256": "508298d7f6b1c813ab2d8c0bf8438b2829b11c5b30bc6045eb9ce969dbb95dc9",
+    "verificado_en": "2026-09-29T03:31:19.122Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 6,
+  "fichas": [
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Niño tikuna (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4743,
+      "prompt_sha256": "09480e5eee4b465e4acb8884f6d53c6ee9010ea8b7b3c4c3a439ce7e94793d66"
+    }
+  ]
+}

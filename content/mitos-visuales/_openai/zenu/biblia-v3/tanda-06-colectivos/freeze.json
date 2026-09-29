@@ -1,0 +1,64 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "zenu",
+  "comunidad": "Zenú",
+  "tanda": "tanda-06-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/zenu.v3.json",
+    "sha256": "d065f5fc0c636242bf57ac4b226b58c8693ee1dc4767e35a1fb3766157a5c4d5"
+  },
+  "canon": {
+    "sha256": "a10e153154dd795fc7a5dd4f8d66a2356fad0efc05b2dfbdb0b4ec72e6d3411c",
+    "verificado_en": "2026-09-29T01:56:13.348Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "pobladores_primeros_gran_zenu__group_grammar--canon",
+      "modelo": "pobladores_primeros_gran_zenu__group_grammar",
+      "entidad": "Primeros pobladores del Gran Zenú",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "mexion-y-manexca",
+        "la-noche-mas-larga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8848,
+      "prompt_sha256": "89c62ed187c6533457dda45a36134d9ee6ebd9bb77f853f0713e60970e204820"
+    },
+    {
+      "job": "familia_de_la_casa__group_grammar--canon",
+      "modelo": "familia_de_la_casa__group_grammar",
+      "entidad": "Familia que acompaña",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "juan-lara-y-la-trenza-del-aire"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7941,
+      "prompt_sha256": "365ed7c3c33a7be0f6add41c1d25279c26011b653d8507224c4907d4c4993de3"
+    }
+  ]
+}

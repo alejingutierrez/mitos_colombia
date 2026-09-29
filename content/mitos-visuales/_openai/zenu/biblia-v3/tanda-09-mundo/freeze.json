@@ -1,0 +1,151 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "zenu",
+  "comunidad": "Zenú",
+  "tanda": "tanda-09-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/zenu.v3.json",
+    "sha256": "d065f5fc0c636242bf57ac4b226b58c8693ee1dc4767e35a1fb3766157a5c4d5"
+  },
+  "canon": {
+    "sha256": "a10e153154dd795fc7a5dd4f8d66a2356fad0efc05b2dfbdb0b4ec72e6d3411c",
+    "verificado_en": "2026-09-29T01:58:58.280Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 7,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "ciclo_dia_noche__phenomenon_rule--canon",
+      "modelo": "ciclo_dia_noche__phenomenon_rule",
+      "entidad": "Ciclo de oscuridad, luz continua y primera noche",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "mexion-y-manexca"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6749,
+      "prompt_sha256": "f5b9b2078fb5ec0b76f4c9ad1e2a6fa7e01087f302b60fc0bc15e30260d797d7"
+    },
+    {
+      "job": "ciclo_dia_noche__state_sheet--estado_oscuridad_primordial",
+      "modelo": "ciclo_dia_noche__state_sheet",
+      "entidad": "Ciclo de oscuridad, luz continua y primera noche",
+      "categoria": "fenomeno",
+      "vista": "estado_oscuridad_primordial",
+      "estados": [
+        "oscuridad_primordial"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "mexion-y-manexca"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6828,
+      "prompt_sha256": "cf5d10bbf3b49735bb73def9fe9c3602c1ed5b860b75fb14c2e5e3eea4564bb7"
+    },
+    {
+      "job": "extravio_del_camino__phenomenon_rule--canon",
+      "modelo": "extravio_del_camino__phenomenon_rule",
+      "entidad": "Extravío: el sendero que vuelve al mismo árbol",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-totumo-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7104,
+      "prompt_sha256": "0ff3466645f83877a4381634a2199da30167ed97ae023a9c4eb1971b1e97a877"
+    },
+    {
+      "job": "risa_en_el_aire__phenomenon_rule--canon",
+      "modelo": "risa_en_el_aire__phenomenon_rule",
+      "entidad": "Risa en el aire",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "juan-lara-y-la-trenza-del-aire"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6988,
+      "prompt_sha256": "df39f769adadb9824504942f6e4407cc1ff3dde9d7f26c1755e7f71a5607cf8a"
+    },
+    {
+      "job": "trueno_y_tormenta_corcovao__phenomenon_rule--canon",
+      "modelo": "trueno_y_tormenta_corcovao__phenomenon_rule",
+      "entidad": "Trueno seco y tormenta del Corcovao",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "trono-corcovao"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6670,
+      "prompt_sha256": "f6adaa5a740bf49b438822fce228101ca14ffa41e5ee0bd81259b676d0c16d01"
+    },
+    {
+      "job": "trueno_y_tormenta_corcovao__state_sheet--estado_tormenta_e_inundacion",
+      "modelo": "trueno_y_tormenta_corcovao__state_sheet",
+      "entidad": "Trueno seco y tormenta del Corcovao",
+      "categoria": "fenomeno",
+      "vista": "estado_tormenta_e_inundacion",
+      "estados": [
+        "tormenta_e_inundacion"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "trono-corcovao"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6660,
+      "prompt_sha256": "7cbfff0d9c52aa063450c1224a1ee562c4f935f58d011c3f876fc3b7e08f0167"
+    },
+    {
+      "job": "vivienda_rural_cordobesa__spatial_model--canon",
+      "modelo": "vivienda_rural_cordobesa__spatial_model",
+      "entidad": "Vivienda rural cordobesa",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "juan-lara-y-la-trenza-del-aire"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7114,
+      "prompt_sha256": "eb6383f78d927458641f8fd7b64fef2079a66fe840cd48e1bfddc71dd4a00e7e"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "cuycuyes",
+  "comunidad": "Cuycuyes",
+  "tanda": "tanda-06-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/cuycuyes.v3.json",
+    "sha256": "3f4991a7f736909efd3d3250e8d8e1a3991e358ed40f95f9306038a7e712393d"
+  },
+  "canon": {
+    "sha256": "565ecebefc0ba4d3e8232b92b40be1ab8340f033f3c2b786ee1cb0eb93a1283e",
+    "verificado_en": "2026-09-29T02:10:52.751Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos"
+  ],
+  "fichas_en_capa": 1,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "ser-de-los-ojos-resplandecientes__identity_sheet--canon",
+      "modelo": "ser-de-los-ojos-resplandecientes__identity_sheet",
+      "entidad": "Ser de ojos resplandecientes",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-diablo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9193,
+      "prompt_sha256": "2cd91a6bc6c5671ab5e98a186aefa86a2acc68e3a03a25dd3006e83e66a20fec"
+    }
+  ]
+}

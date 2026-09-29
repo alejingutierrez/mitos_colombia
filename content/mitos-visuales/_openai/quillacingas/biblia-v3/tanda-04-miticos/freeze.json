@@ -1,0 +1,62 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "quillacingas",
+  "comunidad": "Quillacingas",
+  "tanda": "tanda-04-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/quillacingas.v3.json",
+    "sha256": "00c78e7401248c308d099f8a50ddcc92c795e0b0a5d20e1b6c039d6061a08654"
+  },
+  "canon": {
+    "sha256": "22e4e45588698691b545d9a3c7e306acd5795b81849509c6c8121ada8f1b03d4",
+    "verificado_en": "2026-09-29T01:56:31.534Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "el_queche__identity_sheet--canon",
+      "modelo": "el_queche__identity_sheet",
+      "entidad": "El Queche, espíritu de siete colores",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8467,
+      "prompt_sha256": "b0cda2c82393f4c284d973610b07e055acebc769a76001cacef650545c8aa085"
+    },
+    {
+      "job": "sol_y_luna_invocados__identity_sheet--canon",
+      "modelo": "sol_y_luna_invocados__identity_sheet",
+      "entidad": "El Sol y la Luna invocados",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-de-los-colibries"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8434,
+      "prompt_sha256": "9458120ab3b148f993438b8cc1e28c430fcc04d37afd8bdfde78eb03fcb3584e"
+    }
+  ]
+}

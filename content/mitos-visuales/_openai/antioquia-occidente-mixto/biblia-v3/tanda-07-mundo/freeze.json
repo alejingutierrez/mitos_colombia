@@ -1,0 +1,197 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "antioquia-occidente-mixto",
+  "comunidad": "Occidente antioqueño mixto",
+  "tanda": "tanda-07-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/antioquia-occidente-mixto.v3.json",
+    "sha256": "907cf95313f620a930af113c992f4710a28954226fc13b245385946621c5d950"
+  },
+  "canon": {
+    "sha256": "49563b7fbab3cd617190cedd3a3694581a547d150705ffb9d03a938003bb7d76",
+    "verificado_en": "2026-09-29T03:07:42.323Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 9,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "calle_empedrada_y_plaza__spatial_model--canon",
+      "modelo": "calle_empedrada_y_plaza__spatial_model",
+      "entidad": "Calle empedrada y plaza",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-dama-verde",
+        "maria-la-larga",
+        "no-hay-deuda-que-no-se-pague",
+        "el-perro-negro",
+        "la-rodillona"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7695,
+      "prompt_sha256": "a9f104103004852789231df91668a3f634e3e4408dbdf7659718ae3d4486cb82"
+    },
+    {
+      "job": "calle_empedrada_y_plaza__state_sheet--estado_plaza colonial de la Villa de Arma, 1542- tierra apisonada, caserío de paja, puertas bajas y ni una pieza de madera tallada",
+      "modelo": "calle_empedrada_y_plaza__state_sheet",
+      "entidad": "Calle empedrada y plaza",
+      "categoria": "arquitectura",
+      "vista": "estado_plaza colonial de la Villa de Arma, 1542: tierra apisonada, caserío de paja, puertas bajas y ni una pieza de madera tallada",
+      "estados": [
+        "plaza colonial de la Villa de Arma, 1542: tierra apisonada, caserío de paja, puertas bajas y ni una pieza de madera tallada"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-dama-verde",
+        "maria-la-larga",
+        "no-hay-deuda-que-no-se-pague",
+        "el-perro-negro",
+        "la-rodillona"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9369,
+      "prompt_sha256": "410f638bf2a226c82e767a63f04b77af106fac2658d6f055ff1e5618745d5ece"
+    },
+    {
+      "job": "tormenta_lluvia_y_relampago__phenomenon_rule--canon",
+      "modelo": "tormenta_lluvia_y_relampago__phenomenon_rule",
+      "entidad": "Tormenta, lluvia y relámpago",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "dobaida",
+        "el-perro-negro",
+        "el-patetarro",
+        "la-cabellona",
+        "maria-centeno"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8444,
+      "prompt_sha256": "89190ab365a17523855fff22063263361dec3e2a5d1e2ba047fde1d92d575769"
+    },
+    {
+      "job": "boca_de_mina_y_tunel_de_montana__spatial_model--canon",
+      "modelo": "boca_de_mina_y_tunel_de_montana__spatial_model",
+      "entidad": "Boca de mina y túnel de montaña",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-patetarro",
+        "maria-centeno"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8488,
+      "prompt_sha256": "31ecb240d19b5cc195a566af21e2748b49fdcec66a30e0d4c9e7d431e145c022"
+    },
+    {
+      "job": "casa_de_tapia_y_corredor__spatial_model--canon",
+      "modelo": "casa_de_tapia_y_corredor__spatial_model",
+      "entidad": "La casa de tapia y su corredor",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "las-ilusiones"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9551,
+      "prompt_sha256": "1d1d83f9c4d744b3fd88467c2d7627bef052a3bfac324846620df194dcc5b955"
+    },
+    {
+      "job": "fogon_de_brasas__spatial_model--canon",
+      "modelo": "fogon_de_brasas__spatial_model",
+      "entidad": "El fogón de brasas",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-rescoldos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8382,
+      "prompt_sha256": "8cce120869b02c8ae7a5880d9992be9648c22e6289100236ff2a3f5582c7abe1"
+    },
+    {
+      "job": "iglesias_levantadas_en_una_noche__spatial_model--canon",
+      "modelo": "iglesias_levantadas_en_una_noche__spatial_model",
+      "entidad": "Las iglesias levantadas en una noche",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "maria-centeno"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8102,
+      "prompt_sha256": "6b1c3605681eaac0a2495d1d6a00954aa1334479933030cc2f8b8c7582f2ed82"
+    },
+    {
+      "job": "las_ilusiones_malas__phenomenon_rule--canon",
+      "modelo": "las_ilusiones_malas__phenomenon_rule",
+      "entidad": "Las Ilusiones Malas",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "las-ilusiones"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7591,
+      "prompt_sha256": "3acb82c2a3f0942f05c4e0e7b59910df5cd5dcaffe7a48811847819c1cad7cdb"
+    },
+    {
+      "job": "las_ilusiones_malas__state_sheet--estado_figura blanca larga, sin cabeza ni manos, tendida sobre el tejado de una casa abandonada y asomada sobre las copas, crecida y después encogida",
+      "modelo": "las_ilusiones_malas__state_sheet",
+      "entidad": "Las Ilusiones Malas",
+      "categoria": "fenomeno",
+      "vista": "estado_figura blanca larga, sin cabeza ni manos, tendida sobre el tejado de una casa abandonada y asomada sobre las copas, crecida y después encogida",
+      "estados": [
+        "figura blanca larga, sin cabeza ni manos, tendida sobre el tejado de una casa abandonada y asomada sobre las copas, crecida y después encogida"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "las-ilusiones"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8857,
+      "prompt_sha256": "d9b2edccbbe21193eafdb4cbfbce64e300f1eb02794750896410a6e570a33e51"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "quimbaya",
+  "comunidad": "Quimbaya",
+  "tanda": "tanda-10-tipos-rehechas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/quimbaya.v3.json",
+    "sha256": "769745fdec0681e35cd67b9f875dd4eaec62c00b2b376a0bd532e4895213389d"
+  },
+  "canon": {
+    "sha256": "f3d06bb1d1580d062cde491b91523719658943e00e9b8d7758863a7405e21b1e",
+    "verificado_en": "2026-09-29T03:31:18.188Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "atrezo",
+    "mundo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 5,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre quimbaya adulto (capa de 1553)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "batatabati"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7115,
+      "prompt_sha256": "6461507417352bff0c84c9e5795311c216ecb97cbeba1242f192f4b8622427c3"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer quimbaya adulta (capa de 1553)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "batatabati"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7187,
+      "prompt_sha256": "037557709edd38c04a335d2ea29a67da6c2006a73e3b4f05acfda4f591ed8127"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · muchacho quimbaya (capa de 1553)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "batatabati"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6873,
+      "prompt_sha256": "63f0d515cc6c9d317f1c2053d212dd871ef5f26991fea962db0f99f43d520a6a"
+    }
+  ]
+}

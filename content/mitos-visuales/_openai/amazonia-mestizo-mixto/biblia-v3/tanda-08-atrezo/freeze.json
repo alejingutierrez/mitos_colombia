@@ -1,0 +1,298 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "amazonia-mestizo-mixto",
+  "comunidad": "Amazonía ribereña mestiza",
+  "tanda": "tanda-08-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/amazonia-mestizo-mixto.v3.json",
+    "sha256": "fea46c1ab8f6b063283d925332b6158a17c0d78a373ec2dee760e858196271ec"
+  },
+  "canon": {
+    "sha256": "2f6f707553d5db5bf527413fc9dccfe903963879388b8ebee73d2d100adcfe9a",
+    "verificado_en": "2026-09-29T02:28:56.127Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 13,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_maloca_y_cocina__object_sheet--canon",
+      "modelo": "hoja_utileria_maloca_y_cocina__object_sheet",
+      "entidad": "hoja utileria maloca y cocina",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "chuya-chaqui",
+        "origen-del-sol",
+        "ngutapa-y-chimuiyae",
+        "el-descubrimiento-del-agua-y-los-peces",
+        "taik",
+        "el-bufeo",
+        "kanuma",
+        "origen-de-los-micos-boquiblancos",
+        "origen-del-gavilan",
+        "moe-e-ipi",
+        "el-nacimiento-de-los-matapi",
+        "el-origen-de-las-frutas",
+        "origen-de-la-luna",
+        "taife"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9293,
+      "prompt_sha256": "715e21a790b0a3c0c242efea38cec12d0f236dadd2dc9b2c83bf305cd679b3d1"
+    },
+    {
+      "job": "hoja_utileria_caza_y_pesca__object_sheet--canon",
+      "modelo": "hoja_utileria_caza_y_pesca__object_sheet",
+      "entidad": "hoja utileria caza y pesca",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "ngutapa-y-chimuiyae",
+        "el-cotomachaco",
+        "la-cobra-grande",
+        "taife",
+        "el-descubrimiento-del-agua-y-los-peces",
+        "kanuma",
+        "origen-del-gavilan",
+        "el-bufeo",
+        "el-nacimiento-de-los-matapi",
+        "la-curupira",
+        "moe-e-ipi",
+        "origen-de-los-vegetales-cultivaldos",
+        "yacuruna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9071,
+      "prompt_sha256": "e034942ecd985fb6830e9f3713fc0488d5207bcb26fb2df121352690d00e731f"
+    },
+    {
+      "job": "hoja_botanica_monte_y_fibra__botanical_sheet--canon",
+      "modelo": "hoja_botanica_monte_y_fibra__botanical_sheet",
+      "entidad": "hoja botanica monte y fibra",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-agua",
+        "taife",
+        "kanuma",
+        "taik",
+        "origen-del-sol",
+        "moe-e-ipi",
+        "el-chuy-achaque",
+        "el-nacimiento-de-los-matapi",
+        "ngutapa-y-chimuiyae"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8442,
+      "prompt_sha256": "79dde87e53a4acbbf21dd0dfaa2a4236d1b5b25532c20261d97cc1773548737c"
+    },
+    {
+      "job": "canoa_y_balsa__object_sheet--canon",
+      "modelo": "canoa_y_balsa__object_sheet",
+      "entidad": "Canoa, balsa y embarcación del río",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-hijo-de-tuhixana",
+        "la-cobra-grande",
+        "el-bufeo",
+        "yacuruna",
+        "kanuma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6503,
+      "prompt_sha256": "1e2419af2dce106cf50fe6923dc3105053da24933d9106e2fc250aca669ed621"
+    },
+    {
+      "job": "hoja_botanica_chagra__botanical_sheet--canon",
+      "modelo": "hoja_botanica_chagra__botanical_sheet",
+      "entidad": "hoja botanica chagra",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-de-los-vegetales-cultivaldos",
+        "taife",
+        "peleas-y-aventuras-entre-el-sobrino-conejo-y-el-tio-tigre",
+        "el-origen-de-las-frutas",
+        "petapeta"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7992,
+      "prompt_sha256": "0f33c351b6ea125f2856ef15c7ca64bdd01ed4326e872834cb214b38b1f49f72"
+    },
+    {
+      "job": "hoja_utileria_encanto_y_engano__object_sheet--canon",
+      "modelo": "hoja_utileria_encanto_y_engano__object_sheet",
+      "entidad": "hoja utileria encanto y engano",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-diluvio-guinadoma",
+        "taife",
+        "origen-de-la-luna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7470,
+      "prompt_sha256": "63de2afb5eca14cf3318cb18fd148c4dfdc324524507efd5700e1e8cb15dcee1"
+    },
+    {
+      "job": "lupuna_arbol_del_mundo__botanical_sheet--canon",
+      "modelo": "lupuna_arbol_del_mundo__botanical_sheet",
+      "entidad": "La lupuna, árbol del mundo",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-agua",
+        "el-nacimiento-de-los-matapi",
+        "moe-e-ipi"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7725,
+      "prompt_sha256": "47435e51ca78b0beef4ce3faa97ec816a1f192be2216f38f78240a238e39cd0e"
+    },
+    {
+      "job": "canasta_magica__object_sheet--canon",
+      "modelo": "canasta_magica__object_sheet",
+      "entidad": "La canasta mágica",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-de-los-vegetales-cultivaldos",
+        "petapeta"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6515,
+      "prompt_sha256": "324eef6d4990aebd293080fb1d2eee64c676479a42576c55c409959e8b40ca5d"
+    },
+    {
+      "job": "figura_pegajosa__object_sheet--canon",
+      "modelo": "figura_pegajosa__object_sheet",
+      "entidad": "La figura pegajosa",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "peleas-y-aventuras-entre-el-sobrino-conejo-y-el-tio-tigre"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6342,
+      "prompt_sha256": "9e0c4d4c5ca77cbf60fa25a331622e31d78b201c2a527991b5bfbbed3e2dced8"
+    },
+    {
+      "job": "monilla_amena__botanical_sheet--canon",
+      "modelo": "monilla_amena__botanical_sheet",
+      "entidad": "Monilla Amena, el Palo-de-la-Abundancia",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-origen-de-las-frutas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7378,
+      "prompt_sha256": "80b6e54c4e17ae994cda7a19594bc35293bb499c63ec77d9278e890211c273ce"
+    },
+    {
+      "job": "tinajas_del_agua__object_sheet--canon",
+      "modelo": "tinajas_del_agua__object_sheet",
+      "entidad": "Los cuatro estantillos del agua y los peces",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-descubrimiento-del-agua-y-los-peces"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6292,
+      "prompt_sha256": "c7c2aa7bb6dd44704be24a3d12a7f608b5e74c39e1635692b8bb7b31c6dcd4b7"
+    },
+    {
+      "job": "tinajas_del_agua__state_sheet--estado_derribado- el último estantillo cae, se hace el río y es una boa cuyo camino es el cauce",
+      "modelo": "tinajas_del_agua__state_sheet",
+      "entidad": "Los cuatro estantillos del agua y los peces",
+      "categoria": "objeto",
+      "vista": "estado_derribado: el último estantillo cae, se hace el río y es una boa cuyo camino es el cauce",
+      "estados": [
+        "derribado: el último estantillo cae, se hace el río y es una boa cuyo camino es el cauce"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-descubrimiento-del-agua-y-los-peces"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7980,
+      "prompt_sha256": "55865461c06e6e5bb0520e66ce784b0a6611d19e852b33c8571767fcfb5eaa17"
+    },
+    {
+      "job": "umari__botanical_sheet--canon",
+      "modelo": "umari__botanical_sheet",
+      "entidad": "El humarí del corazón de la lupuna",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "moe-e-ipi"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6231,
+      "prompt_sha256": "2d00a2f35ef2e28fa0976b1625dc7608f027fb04646b3dc68be68e631bfbfe27"
+    }
+  ]
+}

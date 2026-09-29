@@ -1,0 +1,63 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "guahibo-sikuani",
+  "comunidad": "Sikuani (Guahíbo)",
+  "tanda": "tanda-09-colectivos-rehechas",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/guahibo-sikuani.v3.json",
+    "sha256": "f28cc94045f6ee2db3647fcfe56df9e8d2dbe9fac8218a1a0fe8a5bd7bc7c3b4"
+  },
+  "canon": {
+    "sha256": "b915af478564a4987fb3256d1d08a4fe205b8aebfd5572ecf4fe54ec6e1ed923",
+    "verificado_en": "2026-09-28T22:42:48.108Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 4,
+  "fichas": [
+    {
+      "job": "familia_tsamani__state_sheet--estado_hechos comejenes subiendo por la escalera de flechas",
+      "modelo": "familia_tsamani__state_sheet",
+      "entidad": "La familia Tsamani, los cinco hermanos",
+      "categoria": "colectivo",
+      "vista": "estado_hechos comejenes subiendo por la escalera de flechas",
+      "estados": [
+        "hechos comejenes subiendo por la escalera de flechas"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-comida-para-los-muertos"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6877,
+      "prompt_sha256": "b3b287adc0a7c82ddb05297c4c30f4b81d623ae58e3642f6cd696ffc87c03e7c"
+    },
+    {
+      "job": "familia_tsamani__state_sheet--estado_hechos constelaciones en lo alto",
+      "modelo": "familia_tsamani__state_sheet",
+      "entidad": "La familia Tsamani, los cinco hermanos",
+      "categoria": "colectivo",
+      "vista": "estado_hechos constelaciones en lo alto",
+      "estados": [
+        "hechos constelaciones en lo alto"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-comida-para-los-muertos"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6924,
+      "prompt_sha256": "4daa300bf1ac58e552f3fc7add0c24634f8fdd8ae6a6f758697c23333dc1a19c"
+    }
+  ]
+}

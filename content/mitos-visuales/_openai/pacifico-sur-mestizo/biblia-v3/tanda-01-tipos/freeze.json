@@ -1,0 +1,137 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "pacifico-sur-mestizo",
+  "comunidad": "Pacífico sur (Nariño, Cauca, Valle)",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/pacifico-sur-mestizo.v3.json",
+    "sha256": "fee4a3c209ab5adfc667b7000eaa7e1ba08c3d710d190c0e078704d6a3a065d1"
+  },
+  "canon": {
+    "sha256": "117b563146a75b81fe76e90c1f490f8070a5a0a92111267442e052bf553d1334",
+    "verificado_en": "2026-09-25T14:15:31.796Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Hombre adulto mestizo del Valle y el Cauca (tipo base)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-hada-de-los-canaverales",
+        "el-duende-peluquero",
+        "buziraco",
+        "el-roble-del-caballero",
+        "catalina-la-napanga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8748,
+      "prompt_sha256": "52128aa9e958bffedca13a1968ca24bf332356d936431f0ec573b75101a302d1"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Mujer adulta mestiza del Valle y el Cauca (tipo base)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-hada-de-los-canaverales",
+        "buziraco",
+        "catalina-la-napanga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8578,
+      "prompt_sha256": "bdf46fe2bb04f87f9f8a2ac33e6247b9971c2d48b52d64f2579ffc134184c5b3"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Anciana mestiza del Valle y el Cauca (tipo base)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-casa-de-la-tradicion",
+        "buziraco"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8308,
+      "prompt_sha256": "76b1b6fc92158205ed9145b880097496c231bbf478c3ae36c56a2e35f6274317"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Anciano mestizo del Valle y el Cauca (tipo base)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-casa-de-la-tradicion",
+        "buziraco"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8343,
+      "prompt_sha256": "bbda3a22f78d2426cfb66e917e142237532ba8a8cdef64e95c1f07ef39ac0356"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Mujer joven mestiza del Valle y el Cauca (tipo base)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "catalina-la-napanga",
+        "buziraco"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8305,
+      "prompt_sha256": "b8f70a856b36c88cb0fe51e9840ccf202bca21628741ce6790df2db1284dee54"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Niño o niña de vereda del Valle (tipo base)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-duende-peluquero",
+        "buziraco"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8175,
+      "prompt_sha256": "d7da2277f2a179d35304cd5bc38186d87789d78bc386f2392f8e312a6681cf98"
+    }
+  ]
+}

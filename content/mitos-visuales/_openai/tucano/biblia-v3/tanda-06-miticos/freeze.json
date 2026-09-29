@@ -1,0 +1,108 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tucano",
+  "comunidad": "Tucano",
+  "tanda": "tanda-06-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tucano.v3.json",
+    "sha256": "3328d35e2cabdae942974b80bff65672e5d002bf0baa7e431e6248fdb0c51b94"
+  },
+  "canon": {
+    "sha256": "c2c891d8239e415d3d353744fa980cfb41c99c3ff809a4d7bc9ec03abd8495f4",
+    "verificado_en": "2026-09-29T01:56:15.730Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "yepa_huake__identity_sheet--canon",
+      "modelo": "yepa_huake__identity_sheet",
+      "entidad": "Yepá Huáke",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-del-hombre",
+        "la-aparicion-del-sol-del-viento-y-los-mares",
+        "la-semilla-de-la-yuca-tucano",
+        "los-blancos-dominan-a-los-indios",
+        "yepa-abandona-la-tierra",
+        "yepa-castiaga-a-los-animales",
+        "cuando-la-danta-perdio-su-hegemonia"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6848,
+      "prompt_sha256": "f07bf226a1a0ddd1303190cda966766f69aa44250202ddad4e2b127c6708b5e9"
+    },
+    {
+      "job": "yepa_huake__state_sheet--estado_sin el brazo izquierdo, que se vuelve persona",
+      "modelo": "yepa_huake__state_sheet",
+      "entidad": "Yepá Huáke",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_sin el brazo izquierdo, que se vuelve persona",
+      "estados": [
+        "sin el brazo izquierdo, que se vuelve persona"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-del-hombre",
+        "la-aparicion-del-sol-del-viento-y-los-mares",
+        "la-semilla-de-la-yuca-tucano",
+        "los-blancos-dominan-a-los-indios",
+        "yepa-abandona-la-tierra",
+        "yepa-castiaga-a-los-animales",
+        "cuando-la-danta-perdio-su-hegemonia"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7398,
+      "prompt_sha256": "88d5c32e454e3a798542b1579f3b34e07079ed9eb4bdb877ca17fdef811893ce"
+    },
+    {
+      "job": "dueno_de_la_noche_tucano__identity_sheet--canon",
+      "modelo": "dueno_de_la_noche_tucano__identity_sheet",
+      "entidad": "Sotá, dueño de la noche",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "yepa-abandona-la-tierra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6543,
+      "prompt_sha256": "4bd4094817f269ced26eb1aebb447240e672533992dbc20cbbda38585de0ab74"
+    },
+    {
+      "job": "sol_tucano__identity_sheet--canon",
+      "modelo": "sol_tucano__identity_sheet",
+      "entidad": "El Sol",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-aparicion-del-sol-del-viento-y-los-mares"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6417,
+      "prompt_sha256": "f5e3a0697dcba279e8c90fc7a284d6d1f17f80a154a28ea5a9dd00c94b5532c8"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "eje-cafetero-mestizo",
+  "comunidad": "Eje cafetero (Caldas)",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/eje-cafetero-mestizo.v3.json",
+    "sha256": "39cc8f036b7edd4c4176e04256e3a687ba61b9d6ea064511a3914e39cf9f2d19"
+  },
+  "canon": {
+    "sha256": "c480be8b294ba9a5b26ca90be264f109e039624b866d0d0c6e73f71fb7fb54da",
+    "verificado_en": "2026-09-25T14:15:26.945Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre adulto del occidente caldense (primera mitad del siglo XX)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "cuento-de-animas",
+        "el-aserrador",
+        "el-coco",
+        "el-viejo-del-costal",
+        "las-brujas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 10038,
+      "prompt_sha256": "c1ed2844f3a70f4229b25de6102ac65adc109e5f3820dd2c153463c5c30d79a5"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer adulta del occidente caldense (primera mitad del siglo XX)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "cuento-de-animas",
+        "el-aserrador",
+        "el-coco",
+        "el-viejo-del-costal",
+        "las-brujas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9680,
+      "prompt_sha256": "7eff74375e48c8701ddd1a7f2550b771c1ca9635fde39896bfc5f368008c4d14"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base · anciano del occidente caldense (primera mitad del siglo XX)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-aserrador",
+        "el-viejo-del-costal"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9856,
+      "prompt_sha256": "74b7d0b3f66b2dce9ce24198668be00d9048051dea8288eaaaa5c5f2096e61c5"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño del occidente caldense (primera mitad del siglo XX)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-coco",
+        "el-viejo-del-costal"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9076,
+      "prompt_sha256": "e1890117b2c054d6ad9b09983de12546c2132bf3b592fbe1598473a06fd4020c"
+    }
+  ]
+}

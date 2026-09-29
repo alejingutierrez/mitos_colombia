@@ -1,0 +1,66 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "boyaca-mestizo",
+  "comunidad": "Boyaca mestizo",
+  "tanda": "tanda-08-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/boyaca-mestizo.v3.json",
+    "sha256": "444d54391d1a18ae4afcbb4489c6a9dadc6218f3ef00f0a60112c4033012ca91"
+  },
+  "canon": {
+    "sha256": "4734a8c80e7f44d4d1a061f43160737e9a8e7ce1e2db619bd38883a4fc672eed",
+    "verificado_en": "2026-09-29T03:00:00.649Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tunja_colonial__spatial_model--canon",
+      "modelo": "tunja_colonial__spatial_model",
+      "entidad": "Tunja colonial",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-tesoro-de-buzaga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7113,
+      "prompt_sha256": "39e326b24a7b731060723a28e339b27652fe7c29e8b66d4a6dc2997a6c9a1308"
+    },
+    {
+      "job": "vivienda_y_taller_de_alfarero__spatial_model--canon",
+      "modelo": "vivienda_y_taller_de_alfarero__spatial_model",
+      "entidad": "Vivienda y taller de alfarero",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6954,
+      "prompt_sha256": "ba79bb0bed31d03730f0c19f8170f29b56228cb4e7f0cc252553e778afdc21c1"
+    }
+  ]
+}

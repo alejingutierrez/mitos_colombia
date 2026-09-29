@@ -1,0 +1,115 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ufaina",
+  "comunidad": "Tanimuka (Ufaina)",
+  "tanda": "tanda-08-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ufaina.v3.json",
+    "sha256": "aa64b80ecc70f5aaf4142aa291dc9c4bd8964c26d6d3253721afa1ec6f44d595"
+  },
+  "canon": {
+    "sha256": "1aaa30b3d70bf5aafd9d3828039d6e628c8a39470a236d76f2cfa906cd8e6361",
+    "verificado_en": "2026-09-29T02:14:14.580Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "arbol_que_se_vuelve_apaporis__botanical_sheet--canon",
+      "modelo": "arbol_que_se_vuelve_apaporis__botanical_sheet",
+      "entidad": "El árbol enorme que se vuelve el río Apaporis",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7278,
+      "prompt_sha256": "7ae1b80b316caf43ab96a08bdb701bc0dffacfa38f67451611875aa90a436511"
+    },
+    {
+      "job": "arbol_que_se_vuelve_apaporis__state_sheet--estado_caido_convertido_en_rio",
+      "modelo": "arbol_que_se_vuelve_apaporis__state_sheet",
+      "entidad": "El árbol enorme que se vuelve el río Apaporis",
+      "categoria": "planta",
+      "vista": "estado_caido_convertido_en_rio",
+      "estados": [
+        "caido_convertido_en_rio"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7477,
+      "prompt_sha256": "6cf0aef380da786d5866b4c268928f3b8596e307579f2cf589ad252dd07ffab9"
+    },
+    {
+      "job": "cuatro_depositos_de_agua__object_sheet--canon",
+      "modelo": "cuatro_depositos_de_agua__object_sheet",
+      "entidad": "Los cuatro depósitos de agua",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8480,
+      "prompt_sha256": "a959e05c80c0abc1c614931e144fe3cb788095d4fafd9bc091476f68a7c94126"
+    },
+    {
+      "job": "hoja_utileria_ufaina__object_sheet--canon",
+      "modelo": "hoja_utileria_ufaina__object_sheet",
+      "entidad": "hoja utileria ufaina",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8197,
+      "prompt_sha256": "6157f60553bfd95a2f1b37345855f4aa4997097d92c477481866a9120126ad9b"
+    },
+    {
+      "job": "palma_de_bombona__botanical_sheet--canon",
+      "modelo": "palma_de_bombona__botanical_sheet",
+      "entidad": "La gran palma de bombona",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7157,
+      "prompt_sha256": "8d30432514b576c08def95bd9a2bcfc250b0cdfe78f355328013c1b227858479"
+    }
+  ]
+}

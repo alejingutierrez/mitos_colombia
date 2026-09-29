@@ -1,0 +1,186 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "desana",
+  "comunidad": "Desana",
+  "tanda": "tanda-08-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/desana.v3.json",
+    "sha256": "2e23d64f2624805c6e7355a7f5d755f25e7c8b1c4f287460e57927d1180b81c5"
+  },
+  "canon": {
+    "sha256": "8b8f46b02293c31171ca7a65e5be964d782b26572a712b75a0811e6db9d2dc34",
+    "verificado_en": "2026-09-29T01:15:13.904Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 9,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "yeba_goamu__identity_sheet--canon",
+      "modelo": "yeba_goamu__identity_sheet",
+      "entidad": "Yebá Gõãmü",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-desana",
+        "el-origen-de-la-noche-desana",
+        "nuguye-y-sepiro-fuego-y-creciente",
+        "yurupari"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6643,
+      "prompt_sha256": "5a6c26a9ac2579f9a42358e8c89b51193c6014eb418cdd8977ffdc93f9365afa"
+    },
+    {
+      "job": "abe_sol__identity_sheet--canon",
+      "modelo": "abe_sol__identity_sheet",
+      "entidad": "Abe, el Sol",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-desana",
+        "nuguye-y-sepiro-fuego-y-creciente"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5979,
+      "prompt_sha256": "cc94bf880b2aec629c91ea8cb1b216d5b74a0fa5daedc77d074c2920c5095172"
+    },
+    {
+      "job": "abe_sol__state_sheet--estado_astro nacido del adorno luminoso sobre el bastón",
+      "modelo": "abe_sol__state_sheet",
+      "entidad": "Abe, el Sol",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_astro nacido del adorno luminoso sobre el bastón",
+      "estados": [
+        "astro nacido del adorno luminoso sobre el bastón"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-desana",
+        "nuguye-y-sepiro-fuego-y-creciente"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6826,
+      "prompt_sha256": "418b3d020a2850a782ddd536dde5ecffce879f7680fd0cf417993a331fd453b9"
+    },
+    {
+      "job": "agamahsapu__identity_sheet--canon",
+      "modelo": "agamahsapu__identity_sheet",
+      "entidad": "Ãgãmahsãpu",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "agamahsapu-y-el-tiempo-del-umari"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6590,
+      "prompt_sha256": "92a8396cc7f80720e1be88552b256a9db528a32a29e9dd2f8f3f54aaa72d63e1"
+    },
+    {
+      "job": "nami__identity_sheet--canon",
+      "modelo": "nami__identity_sheet",
+      "entidad": "Ñami, el Dueño de la Noche",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-de-la-noche-desana"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6324,
+      "prompt_sha256": "fc925148fda1bb867c97160fa32857a9cf07df6a5b02332b7bb19329ca695b81"
+    },
+    {
+      "job": "nami__state_sheet--estado_vestido de viejo para dormir",
+      "modelo": "nami__state_sheet",
+      "entidad": "Ñami, el Dueño de la Noche",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_vestido de viejo para dormir",
+      "estados": [
+        "vestido de viejo para dormir"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-de-la-noche-desana"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6526,
+      "prompt_sha256": "044859162717252e1d67ffe346be01cf137e54d0bf4c7e31548255dc52aa02f2"
+    },
+    {
+      "job": "piro__identity_sheet--canon",
+      "modelo": "piro__identity_sheet",
+      "entidad": "Pirõ, la culebra más grande del río",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "gainpaya-y-el-origen-del-chontaduro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6100,
+      "prompt_sha256": "8f2400b3b90104fd28fcdece5e1d6e486911f40919a5fdf1a662f1de91d83c03"
+    },
+    {
+      "job": "piro__state_sheet--estado_culebra más grande del río",
+      "modelo": "piro__state_sheet",
+      "entidad": "Pirõ, la culebra más grande del río",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_culebra más grande del río",
+      "estados": [
+        "culebra más grande del río"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "gainpaya-y-el-origen-del-chontaduro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6479,
+      "prompt_sha256": "e59320c1f75861b7cdfbc493705563379637210a7c94e1be86318a0b98273c89"
+    },
+    {
+      "job": "yeba_buro__identity_sheet--canon",
+      "modelo": "yeba_buro__identity_sheet",
+      "entidad": "Yebá Buró, la Abuela del Mundo",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-desana"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7012,
+      "prompt_sha256": "8a3bfdefd7d6def9f6acff416ea1f44f924a15c2e8197e3d8c6cce8d049d35a0"
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "koguis",
+  "comunidad": "Kogui (Kággaba)",
+  "tanda": "tanda-16-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/koguis.v3.json",
+    "sha256": "393111cd6df3d03b8e4b21a66fc16b45d9f1eab6b75d6c1653e0fe55306f57cf"
+  },
+  "canon": {
+    "sha256": "edca8fad668f5e006d7587f11184f1111e3139a171111e1e903647bc29cfc6f3",
+    "verificado_en": "2026-09-28T04:18:00.433Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "nuhue_kansa_maria__spatial_model--canon",
+      "modelo": "nuhue_kansa_maria__spatial_model",
+      "entidad": "La casa ceremonial (nuhué / Kansa María), exterior",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "canibalismo",
+        "el-maiz-koguis",
+        "el-primer-hombre-y-la-primera-mujer",
+        "el-sol-mama",
+        "guateovan",
+        "kashindukwe",
+        "naowa-entrega-el-gobierno-a-su-hijo",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7084,
+      "prompt_sha256": "1718d1926841cf07eb1f12f67313dc8d0c7a3c274a6a8504c59e808afa86cfed"
+    },
+    {
+      "job": "casa_de_habitacion_kogui__spatial_model--canon",
+      "modelo": "casa_de_habitacion_kogui__spatial_model",
+      "entidad": "La casa de habitación kogui",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-koguis",
+        "el-primer-hombre-y-la-primera-mujer",
+        "kasauge-el-padre-arbol",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6832,
+      "prompt_sha256": "fe5acd2c6bc9eda128340a970b6932fcc77cf4c2c25ef8932959add63a3ab13f"
+    },
+    {
+      "job": "sangre__phenomenon_rule--canon",
+      "modelo": "sangre__phenomenon_rule",
+      "entidad": "La sangre",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "canibalismo",
+        "el-primer-hombre-y-la-primera-mujer",
+        "madre-wastora",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5691,
+      "prompt_sha256": "91c40e4781929d23e72a73f2e85f9a640c43a40faae5d5e2fa03749496969668"
+    },
+    {
+      "job": "oscuridad_antes_del_sol__phenomenon_rule--canon",
+      "modelo": "oscuridad_antes_del_sol__phenomenon_rule",
+      "entidad": "La oscuridad anterior al sol",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-koguis",
+        "el-sol-mama",
+        "la-candela-gotze"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6016,
+      "prompt_sha256": "3d1e7404146b8f946a46064de9d895e7f68c5573a45f08faca4692ebfb1be269"
+    },
+    {
+      "job": "vision_que_cambia__phenomenon_rule--canon",
+      "modelo": "vision_que_cambia__phenomenon_rule",
+      "entidad": "La visión que cambia (la gente que parece comida y al revés)",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "canibalismo",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5920,
+      "prompt_sha256": "b185a4f70f7187ec4acb429bb2b117ab63e85b54781fb878f5f63de0e8ed6c1c"
+    },
+    {
+      "job": "candela__phenomenon_rule--canon",
+      "modelo": "candela__phenomenon_rule",
+      "entidad": "La candela",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "kimaku",
+        "la-candela-gotze"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5949,
+      "prompt_sha256": "2878d636be676cba5a8bc0aad83f0c76535793417d2d51a07cc46707b82af245"
+    },
+    {
+      "job": "tierra_que_endurece__phenomenon_rule--canon",
+      "modelo": "tierra_que_endurece__phenomenon_rule",
+      "entidad": "La tierra blanda que endurece",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-koguis",
+        "incesto-de-padre-hija"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6113,
+      "prompt_sha256": "b47b93c41c5d0982b52875ce172f88cfae1ae5faf792bd398bdcc5068f07aa99"
+    },
+    {
+      "job": "casa_de_la_magri_nueve_cuartos__spatial_model--canon",
+      "modelo": "casa_de_la_magri_nueve_cuartos__spatial_model",
+      "entidad": "La casa de la Magri, de nueve cuartos",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-koguis"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6225,
+      "prompt_sha256": "d08404e802376407395246acdf0a0f31cfd04309ccacd4bf0b4f04fd4d9a665e"
+    }
+  ]
+}

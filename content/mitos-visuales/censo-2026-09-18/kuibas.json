@@ -1,0 +1,335 @@
+{
+  "id": "kuibas",
+  "label": "Kuiva (Wamonae)",
+  "pages": 2,
+  "canon_pages": 2,
+  "read_note": "Leí los dos relatos completos (creacion-kuibas, namon-y-la-inundacion) con sus cuatro campos, editorial/kuiva/universe.mjs y definitions.mjs con las escenas ya escritas, y §«Qué construye la Biblia». Sorprende lo poco corpóreo que es este corpus: el primer acto no tiene personajes, tiene un cielo herido —trueno, relámpago que sube, hendidura, sangre, costra que se quiebra— y de ahí sale la gente. Por eso la ficha más cara no es un cuerpo sino una regla de fenómeno con fases. Los tres nombres propios (Boupé, Daimú, Namon) actúan cada uno una vez y sin una sola línea de descripción física, así que las fichas tendrán que decidir cuerpo con muy poco y declararlo como decisión editorial reversible. Lo dudoso y grave: el canon advierte que ciertas misiones intervinieron relatos Kuiva para promover la agricultura sedentaria, y justamente las enseñanzas agrícolas de Boupé son lo que la antología añade; dibujar cultivos y linderos tomaría partido en una discusión que el canon deja abierta, así que quedan excluidos con la advertencia visible. Dos relatos dan 13 fichas: pequeño, pero no menos, porque cueva, monte seco, inundación y herida del cielo son cuatro escenarios que no se sustituyen entre sí.",
+  "entities": [
+    {
+      "id": "herida_del_cielo",
+      "name": "La herida del cielo: relámpago, sangre y costra",
+      "kind": "fenomeno",
+      "myths": ["creacion-kuibas"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El origen entero: un trueno, un relámpago que en vez de caer sube y abre una hendidura, la sangre que sale, otro relámpago que la seca y la vuelve costra, la costra que se quiebra y cae. Es el acto sin el cual no hay gente, y gobierna cielo, color y luz del primer tramo. Una sola hoja de regla, con las tres fases declaradas dentro; no se abre ficha por fase porque es un mismo cuerpo que se transforma de corrido."
+    },
+    {
+      "id": "primeras_personas",
+      "name": "Las primeras personas",
+      "kind": "colectivo",
+      "myths": ["creacion-kuibas", "namon-y-la-inundacion"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cada fragmento de costra se transforma en una persona; se reúnen, duermen en la cueva, ven el Sol por primera vez, imitan a los pájaros y reciben a Boupé y a Daimú. Es la única gramática de cuerpos humanos del corpus y presta figuras también a los que se ríen de Namon, a los sobrevivientes y a los niños con hambre."
+    },
+    {
+      "id": "boupe",
+      "name": "Boupé, el primer jefe",
+      "kind": "personaje",
+      "myths": ["creacion-kuibas"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escogido por el grupo, conduce el segundo movimiento del relato: distribuye espacios, enseña a fabricar arcos y flechas, a cazar, a cocinar y a bañarse, compartir y convivir. Ya está en la escena vertical planeada. La fuente no le da un solo rasgo físico: la ficha debe declarar su cuerpo como decisión editorial reversible, y sin insignias de autoridad inventadas."
+    },
+    {
+      "id": "daimu",
+      "name": "Daimú",
+      "kind": "deidad_fuerza",
+      "myths": ["creacion-kuibas"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Aparece después de Boupé, cierra los ojos de las personas y les enseña a dormir; la edición consultada la llama diosa del sueño. Acto propio, nombre propio y cierre del relato: ficha. La escena vertical ya la pide «sugerida», de modo que la hoja tiene que resolver qué tan corpórea es."
+    },
+    {
+      "id": "namon",
+      "name": "Namon",
+      "kind": "deidad_fuerza",
+      "myths": ["namon-y-la-inundacion"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce el segundo relato de principio a fin: avisa de la inundación, manda construir canoas y balsas, dispone de la montaña que permanecerá seca, anuncia que el agua bajará y hace aparecer el sime y el jojomo porque la gente no los conocía. Se ficha como fuerza y no como jefe humano por ese poder de hacer aparecer alimentos; el canon advierte que Namon, Namun y Namona nombran varios relatos distintos y que esta hoja sólo cubre el número 28."
+    },
+    {
+      "id": "aves_frugivoras",
+      "name": "Los pájaros que picotean los frutos",
+      "kind": "colectivo",
+      "myths": ["creacion-kuibas"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conducen el aprendizaje del alimento: las personas tenían hambre y no sabían qué comer hasta que observaron a las aves acercarse a los árboles, picotear sus frutos y seguir volando. Sin especie nombrada, así que la hoja fija una gramática de bandada y no un ave concreta."
+    },
+    {
+      "id": "pavo_de_monte",
+      "name": "El pavo de monte",
+      "kind": "animal",
+      "myths": ["namon-y-la-inundacion"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Único animal que actúa en el segundo relato: escarba entre los árboles y hojas podridos y encuentra gusanos, y ese gesto es la señal de que la tierra vuelve a dar alimento. Ya está en la escena vertical planeada."
+    },
+    {
+      "id": "balsa",
+      "name": "La balsa",
+      "kind": "objeto",
+      "myths": ["namon-y-la-inundacion"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el objeto por el que se cuenta el relato: Namon manda construir canoas y balsas, pero en la versión publicada sobreviven las personas que estaban sobre balsas y no quienes prepararon canoas. La hoja tiene que resolver la diferencia entre ambas embarcaciones, porque de esa diferencia depende quién vive."
+    },
+    {
+      "id": "la_inundacion_kuiva",
+      "name": "La inundación y el descenso de las aguas",
+      "kind": "fenomeno",
+      "myths": ["namon-y-la-inundacion"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El agua sube y cubre la tierra, está por todas partes, no hay dónde buscar comida y después retrocede poco a poco dejando árboles y hojas podridos. Regla de fenómeno con nivel, color y estado de la vegetación; sin ella cada plano tendría un agua distinta. No se mezcla con la herida del cielo: son dos reglas de relatos distintos."
+    },
+    {
+      "id": "monte_seco_de_namon",
+      "name": "La montaña pequeña que permaneció seca",
+      "kind": "lugar",
+      "myths": ["namon-y-la-inundacion"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del acto: Namon disponía de ella, allí estaba el árbol naxaerabo y también alimento, y es el único punto fuera del agua. La escena horizontal ya la pide como «una pequeña altura con un árbol». No es intercambiable con la sabana ni con la cueva."
+    },
+    {
+      "id": "la_cueva",
+      "name": "La cueva de la primera noche",
+      "kind": "lugar",
+      "myths": ["creacion-kuibas"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del acto de cierre del primer relato: al caer la noche las recién llegadas buscan refugio allí y duermen; allí amanece por primera vez y allí Daimú enseña a dormir. La escena vertical ya sitúa a Boupé cerca de ella."
+    },
+    {
+      "id": "sabana_y_arboles_frutales",
+      "name": "La sabana con árboles frutales",
+      "kind": "paisaje",
+      "myths": ["creacion-kuibas", "namon-y-la-inundacion"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El único paisaje del corpus y el soporte de los dos relatos: llano abierto, árboles con frutos, el cielo muy presente. Debe cargar además la fauna del comienzo y la condición de luz del primer amanecer, que son parte del ambiente y no entidades aparte."
+    },
+    {
+      "id": "sangre_del_cielo",
+      "name": "La sangre que sale de la hendidura",
+      "kind": "fenomeno",
+      "myths": ["creacion-kuibas"],
+      "decision": "embedded",
+      "covered_by": "herida_del_cielo",
+      "sheets": 0,
+      "note": "Primera fase de la misma regla. La escena horizontal ya la resuelve como «fragmentos rojos simbólicos», es decir, sin literalidad sangrienta; se declara dentro de la hoja del fenómeno."
+    },
+    {
+      "id": "costra_y_fragmentos",
+      "name": "La costra que se quiebra y sus fragmentos",
+      "kind": "fenomeno",
+      "myths": ["creacion-kuibas"],
+      "decision": "embedded",
+      "covered_by": "herida_del_cielo",
+      "sheets": 0,
+      "note": "Segunda y tercera fase: el relámpago seca la sangre y la vuelve costra, la costra se quiebra y cada fragmento cae y se transforma en persona. Cambia de forma, pero es el mismo cuerpo del fenómeno: fase, no ficha."
+    },
+    {
+      "id": "el_primer_sol",
+      "name": "El Sol del primer amanecer",
+      "kind": "fenomeno",
+      "myths": ["creacion-kuibas"],
+      "decision": "embedded",
+      "covered_by": "sabana_y_arboles_frutales",
+      "sheets": 0,
+      "note": "«Cuando amaneció, vieron por primera vez al Sol, que iluminaba la tierra». El relato no lo personifica ni le da acción: es la condición de luz del amanecer y se declara como estado del modelo de ambiente."
+    },
+    {
+      "id": "animales_del_comienzo",
+      "name": "Los animales que vivían solos en la tierra",
+      "kind": "colectivo",
+      "myths": ["creacion-kuibas"],
+      "decision": "embedded",
+      "covered_by": "sabana_y_arboles_frutales",
+      "sheets": 0,
+      "note": "«Al comienzo no había personas. En la tierra vivían únicamente los animales». No se nombra ni se describe ninguno y no actúan: fauna del paisaje, declarada en su modelo."
+    },
+    {
+      "id": "los_que_se_rieron",
+      "name": "Quienes se rieron de la advertencia",
+      "kind": "colectivo",
+      "myths": ["namon-y-la-inundacion"],
+      "decision": "embedded",
+      "covered_by": "primeras_personas",
+      "sheets": 0,
+      "note": "«Algunas personas se rieron. Pensaban que Namon estaba mintiendo». Su papel es de actitud, no de cuerpo distinto: figuras de la misma gramática."
+    },
+    {
+      "id": "sobrevivientes_sobre_balsas",
+      "name": "Los sobrevivientes sobre las balsas",
+      "kind": "colectivo",
+      "myths": ["namon-y-la-inundacion"],
+      "decision": "embedded",
+      "covered_by": "primeras_personas",
+      "sheets": 0,
+      "note": "Las familias que quedan con vida y a las que Namon anuncia que el agua bajará. La escena horizontal ya las pone sobre una balsa; mismo colectivo humano."
+    },
+    {
+      "id": "ninos_con_hambre",
+      "name": "Los niños con hambre",
+      "kind": "colectivo",
+      "myths": ["namon-y-la-inundacion"],
+      "decision": "embedded",
+      "covered_by": "primeras_personas",
+      "sheets": 0,
+      "note": "«Los niños sentían hambre y los sobrevivientes no encontraban tierra donde buscar comida». Obligan a que la gramática del colectivo declare escala infantil, pero no son una entidad aparte."
+    },
+    {
+      "id": "canoa",
+      "name": "Las canoas",
+      "kind": "objeto",
+      "myths": ["namon-y-la-inundacion"],
+      "decision": "embedded",
+      "covered_by": "balsa",
+      "sheets": 0,
+      "note": "Namon las manda construir junto con las balsas, pero quienes las prepararon no lograron sobrevivir. Misma familia de objeto y suerte contraria: se produce dentro de la hoja de la balsa para que la diferencia quede fijada en un solo lugar."
+    },
+    {
+      "id": "naxaerabo",
+      "name": "El árbol naxaerabo",
+      "kind": "planta",
+      "myths": ["namon-y-la-inundacion"],
+      "decision": "embedded",
+      "covered_by": "monte_seco_de_namon",
+      "sheets": 0,
+      "note": "«Allí había un árbol llamado naxaerabo y también alimento». Se nombra pero no se describe, y su única función es estar en la montaña seca: se resuelve dentro de ese modelo espacial, con el nombre declarado y sin inventarle especie."
+    },
+    {
+      "id": "arboles_y_hojas_podridos",
+      "name": "Los árboles y las hojas podridos",
+      "kind": "paisaje",
+      "myths": ["namon-y-la-inundacion"],
+      "decision": "embedded",
+      "covered_by": "la_inundacion_kuiva",
+      "sheets": 0,
+      "note": "Lo que queda cuando el agua retrocede y donde escarba el pavo de monte. Es el estado final de la regla del agua, no un paisaje nuevo."
+    },
+    {
+      "id": "mangos",
+      "name": "Los mangos",
+      "kind": "planta",
+      "myths": ["creacion-kuibas"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_kuiba",
+      "sheets": 0,
+      "note": "«Probaron los frutos y encontraron unos mangos, con los que pudieron alimentarse». Primer alimento humano del corpus, pero es un fruto de mano: entra en la hoja de utilería."
+    },
+    {
+      "id": "arcos_y_flechas",
+      "name": "Arcos y flechas",
+      "kind": "objeto",
+      "myths": ["creacion-kuibas"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_kuiba",
+      "sheets": 0,
+      "note": "Boupé muestra cómo fabricarlos. Sin descripción de forma ni material: utilería, con el diseño declarado como decisión editorial."
+    },
+    {
+      "id": "sime",
+      "name": "Sime, el tubérculo silvestre",
+      "kind": "planta",
+      "myths": ["namon-y-la-inundacion"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_kuiba",
+      "sheets": 0,
+      "note": "Namon lo hace aparecer porque las personas no conocían ese alimento. Nombre propio y función clara, pero tamaño de objeto de mano y sin ciclo descrito: va a la hoja de utilería, con nombre y silueta distinguible dentro de ella."
+    },
+    {
+      "id": "jojomo",
+      "name": "Jojomo, el fruto de palma",
+      "kind": "planta",
+      "myths": ["namon-y-la-inundacion"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_kuiba",
+      "sheets": 0,
+      "note": "El segundo alimento creado tras la inundación. Mismo caso que el sime: se produce en la hoja de utilería y no como hoja botánica propia, pero no se funde con él —son dos alimentos distintos y así deben leerse."
+    },
+    {
+      "id": "gusanos",
+      "name": "Los gusanos",
+      "kind": "animal",
+      "myths": ["namon-y-la-inundacion"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_kuiba",
+      "sheets": 0,
+      "note": "Lo que el pavo de monte encuentra al escarbar. Elemento mínimo de escena, sin acción ni descripción: utilería."
+    },
+    {
+      "id": "cultivos_ensenados_por_boupe",
+      "name": "Los cultivos y el cultivar enseñado por Boupé",
+      "kind": "planta",
+      "myths": ["creacion-kuibas"],
+      "decision": "excluded",
+      "reason": "Sin evidencia visual y con cautela de atribución declarada por el canon: la fuente dice que Boupé «enseñó a cultivar» sin nombrar una sola planta, un campo ni una herramienta, y el propio canon advierte que ciertas misiones cristianas intervinieron relatos Kuiva para promover la agricultura sedentaria. Dibujar una sementera tomaría partido en una discusión que la ficha deja abierta.",
+      "sheets": 0,
+      "note": "Verificado en el quinto párrafo del mito y en la sección versiones. Si el editor quiere producir la escena de las enseñanzas, hay que resolverlo antes como decisión declarada, no como dato."
+    },
+    {
+      "id": "limites_asignados",
+      "name": "Los espacios distribuidos y sus límites",
+      "kind": "lugar",
+      "myths": ["creacion-kuibas"],
+      "decision": "excluded",
+      "reason": "Sin evidencia visual: «Boupé distribuyó espacios para vivir y enseñó a respetar los límites asignados», pero no se describe ninguna marca, cerca, señal ni forma de vivienda. Dibujar el lindero sería inventarlo.",
+      "sheets": 0,
+      "note": "Verificado en el quinto párrafo del mito. Comparte la misma cautela misionera que los cultivos."
+    },
+    {
+      "id": "calabaza_de_la_crecida_futura",
+      "name": "La calabaza pequeña de la próxima crecida",
+      "kind": "objeto",
+      "myths": ["namon-y-la-inundacion"],
+      "decision": "excluded",
+      "reason": "Se menciona pero nunca se ve: el cierre de la versión anuncia otra subida futura que vendría de una calabaza pequeña y que no mataría a todas las personas. No ocurre dentro del relato y el canon pide no convertirla en profecía fechada.",
+      "sheets": 0,
+      "note": "Verificado en el penúltimo párrafo del mito."
+    },
+    {
+      "id": "ciclos_no_consultados_del_indice",
+      "name": "Los otros relatos del índice: Namun, Namona, los primeros Jiwi y las salidas de debajo de la tierra",
+      "kind": "colectivo",
+      "myths": ["creacion-kuibas", "namon-y-la-inundacion"],
+      "decision": "excluded",
+      "reason": "Sin evidencia: el índice de Wilbert y Simoneau registra 177 relatos, al menos ocho entradas de inundación y varias creaciones de Namon o Namun, pero sólo se dispone de títulos. El canon prohíbe expresamente reconstruir escenas a partir de un título.",
+      "sheets": 0,
+      "note": "Se registra para dejar constancia de que el ciclo es mucho más grande que estas dos páginas y de que el censo no lo cubre ni finge cubrirlo. Verificado en historia y versiones de ambos relatos."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_kuiba",
+      "kind": "objeto",
+      "covers": ["mangos", "arcos_y_flechas", "sime", "jojomo", "gusanos"],
+      "sheets": 1,
+      "note": "Cinco piezas menores en una hoja: los alimentos de los dos relatos y la única herramienta nombrada. Sime y jojomo se dibujan diferenciados y con su nombre, porque el relato insiste en que son dos alimentos nuevos y distintos; ninguna pieza se diseña con adornos ni acabados que la fuente no da."
+    }
+  ],
+  "totals": {
+    "entities": 31,
+    "required": 12,
+    "embedded": 15,
+    "excluded": 4,
+    "sheets": 13
+  }
+}

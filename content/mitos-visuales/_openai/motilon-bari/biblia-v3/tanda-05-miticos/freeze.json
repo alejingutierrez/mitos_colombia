@@ -1,0 +1,140 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "motilon-bari",
+  "comunidad": "Barí",
+  "tanda": "tanda-05-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/motilon-bari.v3.json",
+    "sha256": "2775ffb3bfc432b435ab7b3dd4a3840cb24764f89acda013c3ed27d3ea99fbf9"
+  },
+  "canon": {
+    "sha256": "aa03517f459efabb921c1e2ef28e49ae58b3aa900ca061c516ba03060880951a",
+    "verificado_en": "2026-09-29T01:55:49.605Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "sabaseba__identity_sheet--canon",
+      "modelo": "sabaseba__identity_sheet",
+      "entidad": "Sabaseba",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "sabaseba-y-los-hijos-de-la-pina",
+        "sibabio-y-las-cenizas-del-mundo",
+        "nandou-chibaig-y-las-luces-del-cielo",
+        "el-gran-arbol-que-hizo-los-rios",
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7060,
+      "prompt_sha256": "2fe5e5c5061d40cb0c6ed413b29e415d90e0ec66541425c158610178e2582ca5"
+    },
+    {
+      "job": "chibaig__identity_sheet--canon",
+      "modelo": "chibaig__identity_sheet",
+      "entidad": "Chibáig",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nandou-chibaig-y-las-luces-del-cielo",
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron",
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6728,
+      "prompt_sha256": "3b344b5b36fd5feeae2def2bb867efbc33df255d66ce5d7c05d3a904fa3af720"
+    },
+    {
+      "job": "chibaig__state_sheet--estado_sombrero pequeño, la fase menguante",
+      "modelo": "chibaig__state_sheet",
+      "entidad": "Chibáig",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_sombrero pequeño, la fase menguante",
+      "estados": [
+        "sombrero pequeño, la fase menguante"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nandou-chibaig-y-las-luces-del-cielo",
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron",
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7698,
+      "prompt_sha256": "ebc535cf7233bd3ca221d0e1a8d1214c807ad3eefce3ef38a3d2a18438a118d3"
+    },
+    {
+      "job": "nandou__identity_sheet--canon",
+      "modelo": "nandou__identity_sheet",
+      "entidad": "Ñandóu",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nandou-chibaig-y-las-luces-del-cielo",
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5998,
+      "prompt_sha256": "6cb0e8175340084611611f96fe25a8bc8fcda8785737c4699b029d38eca2a1fc"
+    },
+    {
+      "job": "nandou__state_sheet--estado_Sol, con la corona puesta",
+      "modelo": "nandou__state_sheet",
+      "entidad": "Ñandóu",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_Sol, con la corona puesta",
+      "estados": [
+        "Sol, con la corona puesta"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nandou-chibaig-y-las-luces-del-cielo",
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7140,
+      "prompt_sha256": "e873f941ab71ed9d21f676786f94aa4800d0687e73f1573d8f3de956b8c40ade"
+    },
+    {
+      "job": "taigda-chigbana__identity_sheet--canon",
+      "modelo": "taigda-chigbana__identity_sheet",
+      "entidad": "Taigda Chigbana",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "caminar-liviano-hacia-el-mas-alla"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6249,
+      "prompt_sha256": "cd66939ba8cbce355836085eb15ae52f8bb9509a2c2e4b7be162f963b548aa4c"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "misak-guambianos",
+  "comunidad": "Misak",
+  "tanda": "tanda-10-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/misak-guambianos.v3.json",
+    "sha256": "2654736a385b128df94e9e69cb88c133010a7d0716aea520b4e67bc71214a23f"
+  },
+  "canon": {
+    "sha256": "e1f4b3ac5eb29b91762c1fa126904c37f0d896fd0a58bc3702f11c78c26002c8",
+    "verificado_en": "2026-09-29T01:58:43.608Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "casa_misak_de_paja__spatial_model--canon",
+      "modelo": "casa_misak_de_paja__spatial_model",
+      "entidad": "Casa misak de paja",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-nino-serpiente",
+        "la-mama-grande"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7643,
+      "prompt_sha256": "e63c2d7d40bceab31d717ec3399e24b7b923bab78bb7d46f71fb78729ae5f624"
+    },
+    {
+      "job": "tormenta_de_los_dos_rayos__phenomenon_rule--canon",
+      "modelo": "tormenta_de_los_dos_rayos__phenomenon_rule",
+      "entidad": "Tormenta de los dos rayos",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-viejo-tempestad",
+        "el-viento-y-sus-hijos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7777,
+      "prompt_sha256": "95171fa2efc78624531c00610eed04aefccf236de5e5ec80eae65e1742b9e92e"
+    },
+    {
+      "job": "tormenta_de_los_dos_rayos__state_sheet--estado_rayo_de_paramo_azulado",
+      "modelo": "tormenta_de_los_dos_rayos__state_sheet",
+      "entidad": "Tormenta de los dos rayos",
+      "categoria": "fenomeno",
+      "vista": "estado_rayo_de_paramo_azulado",
+      "estados": [
+        "rayo_de_paramo_azulado"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-viejo-tempestad",
+        "el-viento-y-sus-hijos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8614,
+      "prompt_sha256": "b50814ebb6269db0ece210c965d6c5a3bc6df6b5627a48d013cf274bcd21751a"
+    },
+    {
+      "job": "almas_luminosas__phenomenon_rule--canon",
+      "modelo": "almas_luminosas__phenomenon_rule",
+      "entidad": "El mosik, la sombra del enfermo, y el musik que se va",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-pajaro-que-se-come-las-almas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7655,
+      "prompt_sha256": "fac178092c348abb5f22dbd7e5a18c85146bcc90aeee0ad56550a87c545a3161"
+    },
+    {
+      "job": "ciclo_del_agua__phenomenon_rule--canon",
+      "modelo": "ciclo_del_agua__phenomenon_rule",
+      "entidad": "Ciclo del agua: páramo, mar y nube",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-misak-guambianos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7491,
+      "prompt_sha256": "81e751f404f83399606018bc9b6f91afced736f92d6449910f615e9274a5545e"
+    },
+    {
+      "job": "derrumbe_parto_del_agua__phenomenon_rule--canon",
+      "modelo": "derrumbe_parto_del_agua__phenomenon_rule",
+      "entidad": "Derrumbe: el parto del agua",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-misak-guambianos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7390,
+      "prompt_sha256": "996a39ffcd17e531c1693cc6af9d5946fc130fb63a116aae2f30db29f6778f38"
+    },
+    {
+      "job": "inundacion_de_la_planicie__phenomenon_rule--canon",
+      "modelo": "inundacion_de_la_planicie__phenomenon_rule",
+      "entidad": "Inundación de la planicie",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "pedro-el-mago-travieso"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7466,
+      "prompt_sha256": "509767128f4b898813284e50922a433ed20cf7fb305636e6b55f4f3f52d1b528"
+    },
+    {
+      "job": "kosrompoto_aroiris__phenomenon_rule--canon",
+      "modelo": "kosrompoto_aroiris__phenomenon_rule",
+      "entidad": "Kosrompoto, el aroiris",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-misak-guambianos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7504,
+      "prompt_sha256": "a5c21c4a008c2745f6f1e184ed619ba5f1213ed316ece8f5e5cfa7a38d3322ad"
+    }
+  ]
+}

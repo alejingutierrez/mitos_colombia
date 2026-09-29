@@ -1,0 +1,65 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "embera",
+  "comunidad": "Embera",
+  "tanda": "tanda-09-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/embera.v3.json",
+    "sha256": "43c7f4f10e60ebf1b050bc1d22039f0fa7372f99d0f9242acc6c6ac0e7157dd8"
+  },
+  "canon": {
+    "sha256": "c63a3ed13c323e894a92ebe4c994be06637f9a34d1e703031bad914c4b1edebd",
+    "verificado_en": "2026-09-29T02:17:59.537Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "poblado_burumia_en_el_alto__spatial_model--canon",
+      "modelo": "poblado_burumia_en_el_alto__spatial_model",
+      "entidad": "El poblado Burumia sobre el alto",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6665,
+      "prompt_sha256": "9a5f430d8ba41c1fcecbcb54794afda3c28a87f241ec0b5b4f0ae2945116ad32"
+    },
+    {
+      "job": "poblado_burumia_en_el_alto__state_sheet--estado_conteo_nocturno_desde_el_aire_con_la_casa_apartada_fuera",
+      "modelo": "poblado_burumia_en_el_alto__state_sheet",
+      "entidad": "El poblado Burumia sobre el alto",
+      "categoria": "arquitectura",
+      "vista": "estado_conteo_nocturno_desde_el_aire_con_la_casa_apartada_fuera",
+      "estados": [
+        "conteo_nocturno_desde_el_aire_con_la_casa_apartada_fuera"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6502,
+      "prompt_sha256": "cb7643e98df7afb0cb74e9ca3c6d9d0f52678e39a2ed1af25f7c14114f7d05cd"
+    }
+  ]
+}

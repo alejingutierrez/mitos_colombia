@@ -1,0 +1,155 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "santander-mestizo",
+  "comunidad": "Santander mestizo",
+  "tanda": "tanda-05-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/santander-mestizo.v3.json",
+    "sha256": "d5b07ab1f712e5293471956f31a70a947fceb6dc9a6f1f82ce4c214672c215a7"
+  },
+  "canon": {
+    "sha256": "001778764d5a15260f48f1d6bc2a7f74857486623e73ca5c9681e13fe8ec3cdd",
+    "verificado_en": "2026-09-29T02:23:35.870Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "gente_del_pueblo__group_grammar--canon",
+      "modelo": "gente_del_pueblo__group_grammar",
+      "entidad": "La gente del pueblo",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-anima-coy",
+        "la-hilandera",
+        "la-sayona-del-cementerio",
+        "la-cueva-de-la-pisca",
+        "el-trapiche-ardiendo",
+        "la-mula-maneada",
+        "la-vista-del-libertador",
+        "el-quijote-piedecuestano",
+        "el-fantasma-de-el-horizonte",
+        "duende-del-salto",
+        "el-pollo-de-las-animas",
+        "la-campana-del-diablo",
+        "la-lampara-de-petroleo",
+        "la-mechuda",
+        "la-mula-del-diablo",
+        "la-piedra-del-muerto",
+        "la-puerta-del-perdon"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8084,
+      "prompt_sha256": "34598cc91c2e9c86bf03c4bd4482920c5eb732bb7e3b32f2d5fa583f642d679d"
+    },
+    {
+      "job": "conquistadores__group_grammar--canon",
+      "modelo": "conquistadores__group_grammar",
+      "entidad": "Los conquistadores",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "lagunas-encantadas",
+        "el-quijote-piedecuestano",
+        "talabad",
+        "duende-del-salto"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8084,
+      "prompt_sha256": "5ddcb393ec90f480893642acef8844354ee985255401c82ebf013bd9077cca46"
+    },
+    {
+      "job": "hilanderas_fiqueras__group_grammar--canon",
+      "modelo": "hilanderas_fiqueras__group_grammar",
+      "entidad": "Las hilanderas y torcedoras de fique",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-hilandera",
+        "la-mechuda",
+        "la-monedita-en-la-alcancia"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8195,
+      "prompt_sha256": "0cd70cc470def5be66c639edb5183cd81a5e3d219a67176d467d5edfc90e6b83"
+    },
+    {
+      "job": "animas_en_pena__group_grammar--canon",
+      "modelo": "animas_en_pena__group_grammar",
+      "entidad": "Las ánimas en pena",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-pollo-de-las-animas",
+        "el-anima-coy"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7809,
+      "prompt_sha256": "e89a452652be5466674363ef6c2a99e4500fb46ae498acd6c3ad0c1e2e2a3f23"
+    },
+    {
+      "job": "aves_nocturnas_del_monte__group_grammar--canon",
+      "modelo": "aves_nocturnas_del_monte__group_grammar",
+      "entidad": "Las aves de la noche santandereana",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-mancarita",
+        "el-anima-coy"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7920,
+      "prompt_sha256": "470dafb9fdac5722a957afa43a2815c84ed84b7821965c7117d14360c75ea702"
+    },
+    {
+      "job": "brujas_pajaro_negro__group_grammar--canon",
+      "modelo": "brujas_pajaro_negro__group_grammar",
+      "entidad": "Brujas en forma de pájaro negro",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-mula-maneada",
+        "la-monedita-en-la-alcancia"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7727,
+      "prompt_sha256": "af9a04b230d5324bad54f29185e0bf8a655e9023dd49aa0b5c2c1bcf4f24427b"
+    }
+  ]
+}

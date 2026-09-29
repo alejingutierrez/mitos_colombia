@@ -1,0 +1,184 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "pananes",
+  "comunidad": "Panán",
+  "tanda": "tanda-05-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/pananes.v3.json",
+    "sha256": "8d93b70d1b0b66bb77b0d395d4643339ab639357c4bf9a86d329850dde0f158b"
+  },
+  "canon": {
+    "sha256": "e4799c1c37247920d8ac717adb1374d600de3d353adbc42bf9d861a458f135f3",
+    "verificado_en": "2026-09-29T02:25:48.670Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 9,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "caballo__identity_sheet--canon",
+      "modelo": "caballo__identity_sheet",
+      "entidad": "El caballo",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "al-duende",
+        "la-cangagua-o-la-chorrera-del-duende"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7177,
+      "prompt_sha256": "b514d1b9a258c885985a58c8b285f6693d0e9b104ccc018ae924e1a5017a411f"
+    },
+    {
+      "job": "duende_de_panan__identity_sheet--canon",
+      "modelo": "duende_de_panan__identity_sheet",
+      "entidad": "El duende de Panán",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "al-duende",
+        "la-cangagua-o-la-chorrera-del-duende"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7247,
+      "prompt_sha256": "ac85b86dcdead3413d349f98aaffed6f9f131aaa3d6d6a8c687612a4de401958"
+    },
+    {
+      "job": "duende_de_panan__state_sheet--estado_forma_de_nino_del_sector",
+      "modelo": "duende_de_panan__state_sheet",
+      "entidad": "El duende de Panán",
+      "categoria": "criatura",
+      "vista": "estado_forma_de_nino_del_sector",
+      "estados": [
+        "forma_de_nino_del_sector"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "al-duende",
+        "la-cangagua-o-la-chorrera-del-duende"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7039,
+      "prompt_sha256": "a4a7f4b4df55f8ce16810d9872c5117969adb78c8ba08462d44b6911a146402a"
+    },
+    {
+      "job": "chutun__identity_sheet--canon",
+      "modelo": "chutun__identity_sheet",
+      "entidad": "El Chutún",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-chutun"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7285,
+      "prompt_sha256": "b1bf85104281427dbc7384190b0d66db42f9b5372118e1935aa8289ba7726a22"
+    },
+    {
+      "job": "dragon_de_tres_cabezas_de_la_tuta__identity_sheet--canon",
+      "modelo": "dragon_de_tres_cabezas_de_la_tuta__identity_sheet",
+      "entidad": "El dragón de tres cabezas de La Tuta",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-tuta"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7214,
+      "prompt_sha256": "18a40867f4676768acb417f2b5d5e217969ba6730198dda264b9b2ebdcd827b7"
+    },
+    {
+      "job": "el_anima__identity_sheet--canon",
+      "modelo": "el_anima__identity_sheet",
+      "entidad": "El Ánima",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7108,
+      "prompt_sha256": "c8ac0efce0c990357d459b849ecf3686b2ed090b5512fce1e8f4affbf1b4ed98"
+    },
+    {
+      "job": "la_vieja__identity_sheet--canon",
+      "modelo": "la_vieja__identity_sheet",
+      "entidad": "La Vieja",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7302,
+      "prompt_sha256": "b1b5d9c2e406b9dfcafe36f805217f1e34c089519492f7bbbd252ac121824a2f"
+    },
+    {
+      "job": "la_viuda__identity_sheet--canon",
+      "modelo": "la_viuda__identity_sheet",
+      "entidad": "La Viuda",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7168,
+      "prompt_sha256": "01bd611e4552bb4da21ef7f5d8b6c92a89f3fa19dc6dd3b1786bba3e0ed8e69f"
+    },
+    {
+      "job": "lechuza__identity_sheet--canon",
+      "modelo": "lechuza__identity_sheet",
+      "entidad": "La lechuza",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7151,
+      "prompt_sha256": "4cbe7230f242ad5faeb50d1b30d39bb2de8d0b1a314a37c6c86956ff2003f818"
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "id": "choco-afro",
+  "label": "Chocó afrodescendiente",
+  "era": "colonial tardía y republicana, Chocó minero y ribereño (Atrato, Istmina, Beté, Quibdó, Mecana)",
+  "pages": 6,
+  "canon_pages": 4,
+  "read_note": "Leí las 6 páginas completas (relato, historia, versiones, research_notes). Cuatro con canon: Chimbilaco, Kijimba de las Ánimas, La Sierpe de Beté, La Yesca. Dos solo content: Anansi (araña sacristana de Istmina) y Tulavieja/Tunda (Adriano Lemos en el río Mecana). SORPRESAS Y DUDAS: (1) El encargo describe un Chocó de minería de aluvión, barequeo, bogas y champanes. Los relatos NO lo sostienen: 'barequear oro' aparece una sola vez, de pasada, en Chimbilaco; no hay una sola batea, ni un solo boga, ni un champán en todo el corpus. No ficho lo que no está: si el editor quiere minería, hay que escribirla primero en los relatos. Lo que sí hay, en cambio, es río de canoa y pesca, casa de tabla, iglesia, camposanto y canto ritual. (2) 'Chirimía' aparece una única vez y como símil ('la lluvia suena como chirimía en techo de zinc'); no hay banda en escena. El tambor sí existe, como hebra del Kijimba y en el canto responsorial. No hay gualí ni alabao nombrados: hay 'canto responsorial', 'arrullo' y 'velas'. (3) DERIVA GRAVE CONTRA editorial/afrocolombianos/: el módulo declara que Chimbilaco se TRANSFIERE a Yagua (Amazonas) por no ser tradición afrochocoana; que el Kijimba-llave, el amuleto, el Atrato y San Pacho fueron AÑADIDOS y se retiran en favor de la narración de Rosalba Cossío (una mujer que sigue una tambora hasta una casa de figuras blancas); y que la historia de Adriano Lemos NO aparece en el expediente y se reemplaza por una Tunda de Tumaco. Además el módulo mete en este corpus dos páginas que el volcado no trae: 'el-riviel-del-rosario' (reescrito como El Riviel y la mochita, Buenaventura) y 'como-aparecio-la-muerte-en-el-choco'. Censé el volcado, que es lo que pidió el encargo, pero las fichas marcadas con FLAG pueden quedar sin texto que las sostenga si se aplica el módulo. (4) Cuidado con el estereotipo: el único personaje con cuerpo descrito por su color es Adriano Lemos ('estatura cimarrona y piel negra como la noche'). La ficha se escribe como hombre con oficio —cazador de escopeta y perros— y no como tipo folclórico. El chinango queda excluido justamente para no caricaturizar al brujo negro. (5) No presté nada a las biblias embera y wounaan: la única palabra de riesgo era 'chinango', y va excluida.",
+  "entities": [
+    {
+      "id": "anansi_arana_sacristana",
+      "name": "Anansi, la araña sacristana de Istmina",
+      "kind": "criatura",
+      "myths": [
+        "anansi"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": true,
+      "note": "Araña del tamaño de tres dedos de niño que teje en las esquinas de la iglesia, destapa el copón, se emborracha en el cáliz y se salva profetizando desde el campanario. Conduce toda la acción. PANREGIONAL verificado: Nansi/Anansi también aparece en caribe-restante (ciclo isleño de San Andrés y Providencia) y en cordoba-sinu. El de aquí es una araña católica de sacristía en un pueblo del San Juan; el isleño es un embaucador de monte, molino y montura en criollo inglés. Son dos mundos, no dos poses: el editor decide ficha nacional con variantes o una por región."
+    },
+    {
+      "id": "chimbilaco",
+      "name": "El Chimbilaco",
+      "kind": "criatura",
+      "myths": [
+        "chimbilaco"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Sombra alada amasada por la selva: alas de cuero mojado, boca roja como brasa, dientes blancos como pepita recién lavada, y sin patas a propósito ('para no dejar huellas'). Persigue, apaga velas, desorienta y también guía. Absorbe la luz falsa sobre el río (versión 5). FLAG: editorial/afrocolombianos/universe.mjs lo transfiere a Yagua como rumor amazónico contemporáneo y niega la atribución afrochocoana; si se aplica, esta ficha sale del corpus entera."
+    },
+    {
+      "id": "la_sierpe_de_bete",
+      "name": "La Sierpe de Beté",
+      "kind": "criatura",
+      "myths": [
+        "la-sierpe-de-bete"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Bejuco de agua con escamas como pedacitos de luna y tres cabezas con oficio distinto: una canta, otra ríe, la tercera solo mira y al parpadear ennegrece el río. Se enrosca al Atrato y lo aprieta 'como si fuera cintura'. Una sola ficha: las tres cabezas son un cuerpo, no tres estados."
+    },
+    {
+      "id": "la_yesca",
+      "name": "La Yesca",
+      "kind": "criatura",
+      "myths": [
+        "la-yesca"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "bejuco visible, limpio y brillante, colgado como cuerda viva",
+        "abrazo invisible: el aire vuelto soga en pecho y cuello"
+      ],
+      "panregional": false,
+      "note": "No es animal ni mujer: es un daño 'puesto'. Las versiones 1 y 2 muestran las dos siluetas y son incompatibles entre sí —una es liana con cuerpo, la otra es presión sin cuerpo—, así que el segundo estado cuesta ficha. Absorbe los bejucos y las raíces que cierran el camino: son ella, no decorado."
+    },
+    {
+      "id": "la_tunda_tulavieja",
+      "name": "La Tulavieja (la Tunda)",
+      "kind": "criatura",
+      "myths": [
+        "tulavieja-tunda"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Mujer encorvada y andrajosa con pata de molinillo que se asoma detrás de un jigua-rastrojo gritando '¡icoz!', resiste el balazo y persigue hasta el cementerio; se lleva la presa, no al hombre. Absorbe la columna de humo con la que desaparece. PANREGIONAL NO, y esto contradice el encargo: grepeé los catorce volcados y 'Tunda'/'Tulavieja' solo sale en choco-afro. Es figura del Pacífico, no nacional. FLAG: editorial/afrocolombianos/ borra la historia de Adriano Lemos por no estar en el expediente y la reemplaza por una Tunda de Tumaco que toma el rostro de la madre —otra silueta por completo."
+    },
+    {
+      "id": "las_animas_en_fila",
+      "name": "Las ánimas de la Kijimba",
+      "kind": "colectivo",
+      "myths": [
+        "kijimba-de-las-animas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": true,
+      "note": "No flotan: llegan caminando en fila por calle encharcada, con sombrero ladeado y zapatos limpios, como quien viene de baile, y traen reglas (nadie se burla, nadie niega agua, nadie canta por lucirse). PANREGIONAL verificado: las ánimas aparecen en 5 de los catorce volcados (choco-afro, eje-cafetero, tolima-huila, santander, varios-sin-territorio). Lo propio de aquí es que discuten al Ánima Sola: el reclamo del ánima es que 'la habían llamado sola cuando no era sola'. Esa corrección es la ficha."
+    },
+    {
+      "id": "kijimba_la_llave",
+      "name": "El Kijimba (la llave que se calienta en la palma)",
+      "kind": "objeto",
+      "myths": [
+        "kijimba-de-las-animas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Objeto por el que se cuenta el relato: una llave hecha de una hebra de tambor, una gota del Atrato y una palabra bien dicha, que se calienta como carbón prendido con cada respuesta del coro. FLAG: el módulo editorial declara inventados la llave, el amuleto, el Atrato y San Pacho; si se aplica, esta ficha desaparece y el objeto pasa a ser una tambora que llama de lejos."
+    },
+    {
+      "id": "cantadoras_y_mayores_del_canto",
+      "name": "Cantadoras y mayores del canto ritual",
+      "kind": "colectivo",
+      "myths": [
+        "kijimba-de-las-animas",
+        "la-sierpe-de-bete",
+        "la-yesca"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "cantadoras del arrullo, en pie junto al altar de velas",
+        "el mayor que desamarra desde la otra canoa, con sal y hojas amargas"
+      ],
+      "panregional": false,
+      "note": "Reaparece en tres relatos con cuerpo reconocible: la cantadora que arma el altar y dirige el canto responsorial (Kijimba), las cantadoras que ensayan bajito y arrancan el arrullo cuando llega la Sierpe, y el mayor que en La Yesca canta 'no para espantar, sino para pedir permiso'. Dos estados porque el sitio y la postura cambian la silueta: de pie en tierra frente al altar, o sentado remando. Gente con oficio, no coro folclórico. Absorbe el tambor y el canto responsorial."
+    },
+    {
+      "id": "hombre_del_rio_y_del_monte",
+      "name": "El hombre del río y del monte",
+      "kind": "personaje",
+      "myths": [
+        "tulavieja-tunda",
+        "chimbilaco",
+        "la-sierpe-de-bete",
+        "la-yesca",
+        "kijimba-de-las-animas"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "el cazador de escopeta y perros (Adriano Lemos, río Mecana)",
+        "el joven que se burla, con machete y linterna nueva o atarraya fina"
+      ],
+      "panregional": false,
+      "note": "Dedupe fuerte: cinco relatos ponen al mismo tipo humano en escena. Adriano Lemos sale a cazar por necesidad; el muchacho de Chimbilaco entra al monte riéndose con linterna nueva y machete; el 'valiente' de Beté se monta a la canoa con atarraya nueva comprada fiada; el pescador de La Yesca se burla de un chinango; el atrevido de Kijimba se ríe bajito. Dos estados, no cinco fichas, porque cambia el aparejo y la intención, no el cuerpo. Absorbe sus perros, la escopeta, el machete, la linterna y la atarraya. Se dibuja como hombre con oficio en su territorio: nada de exotismo ni de tipo folclórico."
+    },
+    {
+      "id": "gente_de_pueblo_chocoano",
+      "name": "Gente de pueblo chocoano",
+      "kind": "colectivo",
+      "myths": [
+        "anansi",
+        "kijimba-de-las-animas",
+        "la-sierpe-de-bete",
+        "la-yesca"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "La población que llena las cuatro escenas colectivas: los de Istmina que buscan a Anansi por el pueblo entero, el barrio alborotado entre misa y comparsa, Beté que cuelga banderitas y prende velas en patronales, la plaza donde se burlan del chinango. Una sola hoja porque siempre es la misma gente cambiando de motivo. Absorbe las banderitas de patronales y al cura de Istmina, que actúa pero no recibe más cuerpo que su enojo."
+    },
+    {
+      "id": "fauna_del_monte_chocoano",
+      "name": "Fauna del monte chocoano",
+      "kind": "colectivo",
+      "myths": [
+        "anansi",
+        "tulavieja-tunda",
+        "chimbilaco"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Grupo nombrado dos veces con inventario propio: guaguas, armadillos, guatines, culebras y osos que 'circulaban junto a las casas' en Anansi; guaguas, venados, tatabro y la pava que Adriano abate en la Tunda. Una hoja con el repertorio, no una ficha por bicho. Absorbe al guaco, que en Chimbilaco solo canta como aviso de muerte."
+    },
+    {
+      "id": "bosque_humedo_chocoano",
+      "name": "Bosque húmedo: trocha, pantano y raíz",
+      "kind": "paisaje",
+      "myths": [
+        "chimbilaco",
+        "la-yesca",
+        "tulavieja-tunda"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Escenario del acto en tres relatos y no intercambiable con el río: es el monte que se cierra, el barro 'que agarra los tobillos como manos', el sendero que se repite, la raíz donde amanece el muchacho. Absorbe el jigua-rastrojo y el río Mecana, que se nombra pero no llega a ser escenario propio."
+    },
+    {
+      "id": "atrato_ancho_y_sus_canoas",
+      "name": "El Atrato ancho y sus canoas",
+      "kind": "paisaje",
+      "myths": [
+        "kijimba-de-las-animas",
+        "la-sierpe-de-bete",
+        "la-yesca",
+        "chimbilaco"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El río donde se pone ancho, con las canoas amarradas y en marcha. Cuatro relatos. Absorbe la canoa de un tronco (de pesca y de fiesta), el vaso de agua del Atrato como espejo y la ola 'que no era de mar, sino de selva' con que la Sierpe levanta el cauce. NO incluye bogas ni champanes: ningún relato los pone en escena."
+    },
+    {
+      "id": "casa_sobre_pilotes",
+      "name": "Casa de tabla sobre pilotes, techo de palma o zinc",
+      "kind": "arquitectura",
+      "myths": [
+        "chimbilaco",
+        "kijimba-de-las-animas",
+        "tulavieja-tunda"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Las 'casas de palma' que el Chimbilaco sobrevuela, el techo de zinc donde la lluvia suena, la choza de Adriano. Tres relatos con cuerpo reconocible."
+    },
+    {
+      "id": "iglesia_y_camposanto_chocoano",
+      "name": "Iglesia y camposanto de pueblo chocoano",
+      "kind": "arquitectura",
+      "myths": [
+        "anansi",
+        "tulavieja-tunda"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Una sola hoja para los dos: torre de tabla con campanario y cuerdas de campana (donde Anansi se esconde y profetiza) y el camposanto contiguo de cruces de madera que echan chispas cuando Adriano lo cruza huyendo. Van juntos porque en estos pueblos están juntos, y porque las dos páginas que los usan son solo-content: no habrá guion ni video, pero sí aportan escenario a la biblia."
+    },
+    {
+      "id": "el_cura_de_istmina",
+      "name": "El cura de Istmina",
+      "kind": "personaje",
+      "myths": [
+        "anansi"
+      ],
+      "decision": "embedded",
+      "covered_by": "gente_de_pueblo_chocoano",
+      "sheets": 0,
+      "note": "Duerme, se enfurece y sube a la torre, pero el relato no le da más cuerpo que la ira en el rostro. Sale de la misma población ya fichada."
+    },
+    {
+      "id": "el_guaco",
+      "name": "El guaco que anuncia muerte",
+      "kind": "animal",
+      "myths": [
+        "chimbilaco"
+      ],
+      "decision": "embedded",
+      "covered_by": "fauna_del_monte_chocoano",
+      "sheets": 0,
+      "note": "Solo canta: 'justo cuando el guaco canta y el mundo se acuerda de los que se van'. Entra en la hoja de fauna, no en escena propia."
+    },
+    {
+      "id": "los_perros_de_adriano",
+      "name": "Los perros de cacería",
+      "kind": "animal",
+      "myths": [
+        "tulavieja-tunda"
+      ],
+      "decision": "embedded",
+      "covered_by": "hombre_del_rio_y_del_monte",
+      "sheets": 0,
+      "note": "Olfatean con entusiasmo y no encuentran nada; son aparejo del cazador, se dibujan con él."
+    },
+    {
+      "id": "la_pava_abatida",
+      "name": "La pava",
+      "kind": "animal",
+      "myths": [
+        "tulavieja-tunda"
+      ],
+      "decision": "embedded",
+      "covered_by": "fauna_del_monte_chocoano",
+      "sheets": 0,
+      "note": "Resplandece sobre una rama como presagio, cae de un disparo y desaparece con el espanto. Es la pieza de caza del inventario de fauna."
+    },
+    {
+      "id": "la_tela_y_la_escalera_de_seda",
+      "name": "Tela de araña y escalera de seda",
+      "kind": "objeto",
+      "myths": [
+        "anansi"
+      ],
+      "decision": "embedded",
+      "covered_by": "anansi_arana_sacristana",
+      "sheets": 0,
+      "note": "La escalera 'cómicamente torcida' hasta el campanario y la cuerda con que se rescata del vino son cuerpo de Anansi, no utilería aparte."
+    },
+    {
+      "id": "los_bejucos_del_monte",
+      "name": "Bejucos y lianas que abrazan",
+      "kind": "planta",
+      "myths": [
+        "la-yesca"
+      ],
+      "decision": "embedded",
+      "covered_by": "la_yesca",
+      "sheets": 0,
+      "note": "Los bejucos no rodean a La Yesca: son La Yesca. Se dibujan en su ficha."
+    },
+    {
+      "id": "el_canto_responsorial",
+      "name": "El canto responsorial y el arrullo",
+      "kind": "fenomeno",
+      "myths": [
+        "kijimba-de-las-animas",
+        "la-sierpe-de-bete"
+      ],
+      "decision": "embedded",
+      "covered_by": "cantadoras_y_mayores_del_canto",
+      "sheets": 0,
+      "note": "'Se responde como si el barrio entero fuera un solo pecho'. Es lo que hacen las cantadoras; se muestra en su hoja, con bocas abiertas y manos, no como entidad separada."
+    },
+    {
+      "id": "las_banderitas_de_patronales",
+      "name": "Banderitas de fiesta patronal",
+      "kind": "objeto",
+      "myths": [
+        "la-sierpe-de-bete"
+      ],
+      "decision": "embedded",
+      "covered_by": "gente_de_pueblo_chocoano",
+      "sheets": 0,
+      "note": "'Cuelga banderitas'. Adorno menor que viste a la población ya fichada."
+    },
+    {
+      "id": "el_tambor",
+      "name": "El tambor",
+      "kind": "objeto",
+      "myths": [
+        "kijimba-de-las-animas"
+      ],
+      "decision": "embedded",
+      "covered_by": "cantadoras_y_mayores_del_canto",
+      "sheets": 0,
+      "note": "Aparece como 'una hebra de tambor' dentro del Kijimba y detrás del canto. No hay escena de percusión: se dibuja en manos de quien canta."
+    },
+    {
+      "id": "la_luz_falsa_sobre_el_rio",
+      "name": "La luz falsa sobre el agua",
+      "kind": "fenomeno",
+      "myths": [
+        "chimbilaco"
+      ],
+      "decision": "embedded",
+      "covered_by": "chimbilaco",
+      "sheets": 0,
+      "note": "Versión 5: 'se manifiesta como una luz falsa sobre el río'. Es una manifestación suya, no otra entidad."
+    },
+    {
+      "id": "la_columna_de_humo",
+      "name": "La columna de humo",
+      "kind": "fenomeno",
+      "myths": [
+        "tulavieja-tunda"
+      ],
+      "decision": "embedded",
+      "covered_by": "la_tunda_tulavieja",
+      "sheets": 0,
+      "note": "Lo último que ve Adriano al mirar atrás; es la forma en que ella se retira."
+    },
+    {
+      "id": "el_chinango",
+      "name": "El chinango que 'pone' el daño",
+      "kind": "personaje",
+      "myths": [
+        "la-yesca"
+      ],
+      "decision": "excluded",
+      "reason": "sin evidencia visual y dibujarlo sería inventarlo, con riesgo de caricatura",
+      "sheets": 0,
+      "note": "Verificado contra el texto: el relato solo dice 'Un brujo, de esos que saben el nombre secreto de las ramas, la pone en el camino de quien le estorba' y que el muchacho 'se burló de un chinango en la plaza'. Ni rostro, ni ropa, ni gesto. Dibujarlo obligaría a inventar un brujo negro genérico, que es justo el estereotipo que este corpus debe evitar. El daño ya tiene cuerpo: La Yesca."
+    },
+    {
+      "id": "las_estrellas_consejeras",
+      "name": "Las estrellas que aconsejan",
+      "kind": "fenomeno",
+      "myths": [
+        "tulavieja-tunda"
+      ],
+      "decision": "excluded",
+      "reason": "se menciona pero nunca se ve como figura",
+      "sheets": 0,
+      "note": "Verificado: 'las estrellas le hablaban y, como únicas consejeras, guiaban sus pasos en el dilema sagrado entre pescar o cazar'. Hablan pero no toman forma; el cielo se resuelve dentro del paisaje."
+    },
+    {
+      "id": "la_chirimia",
+      "name": "La chirimía",
+      "kind": "objeto",
+      "myths": [
+        "kijimba-de-las-animas"
+      ],
+      "decision": "excluded",
+      "reason": "solo aparece como símil, nunca en escena",
+      "sheets": 0,
+      "note": "Verificado: la única ocurrencia en los seis relatos es 'la lluvia suena como chirimía en techo de zinc'. No hay banda, ni clarinete, ni bombo. Ficharla sería traer una chirimía que el corpus no tiene."
+    },
+    {
+      "id": "el_barequeo_y_la_mina",
+      "name": "Barequeo y minería de aluvión",
+      "kind": "lugar",
+      "myths": [
+        "chimbilaco"
+      ],
+      "decision": "excluded",
+      "reason": "sin evidencia visual: se menciona una vez, de pasada, y nunca se ve",
+      "sheets": 0,
+      "note": "Verificado leyendo los seis relatos: la única mención es 'en los tiempos en que la gente se iba a barequear oro y a cortar madera sin pedir permiso al monte' (Chimbilaco), como antecedente del pacto río-selva. No hay batea, ni socavón, ni barequera en cámara. El encargo espera minería; el corpus no la escribió. Si el editor la quiere, hay que escribirla en un relato antes de ficharla."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_altar_y_monte",
+      "kind": "objeto",
+      "covers": [
+        "copón y cáliz consagrados",
+        "hostias y vino de misa",
+        "cinco velas y flores de altar",
+        "vaso de agua del Atrato como espejo",
+        "sal y hojas amargas del desamarre"
+      ],
+      "sheets": 1,
+      "note": "Cinco objetos menores que ninguna ficha mayor absorbe y que aparecen repartidos entre Anansi (copón, cáliz, hostias, vino), Kijimba (cinco velas, flores, vaso de agua) y La Yesca (sal y hojas amargas). Van en una sola hoja de utilería porque son props de mano, no escenarios."
+    }
+  ],
+  "totals": {
+    "entities": 30,
+    "required": 15,
+    "embedded": 11,
+    "excluded": 4,
+    "sheets": 19,
+    "panregional_required": 2
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "varios-sin-territorio",
+  "comunidad": "Folclor nacional sin territorio",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/varios-sin-territorio.v3.json",
+    "sha256": "960a317c807ac538873f57921f7eb1ee2bdc9f7c716935e83d742a83ff8dbcbf"
+  },
+  "canon": {
+    "sha256": "c1bf9aa902622b9cc85521f658c702c1ade9370c2901b2317eac5892c1fb77f3",
+    "verificado_en": "2026-09-29T02:33:25.123Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "el_caminante_de_camino_real__identity_sheet--canon",
+      "modelo": "el_caminante_de_camino_real__identity_sheet",
+      "entidad": "El caminante del camino real (trasnochador, vagabundo, viajero)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-meneses",
+        "el-hojarasquin-del-monte"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8022,
+      "prompt_sha256": "7a29e922bb0f5030a657e40cd46b83062d8eaad51f2913f891d67fcbf6976c44"
+    },
+    {
+      "job": "el_judio_errante__identity_sheet--canon",
+      "modelo": "el_judio_errante__identity_sheet",
+      "entidad": "El Judío Errante (Ahasverus)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-judio-errante"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7662,
+      "prompt_sha256": "1b6de9f27b6685b154f4a2e0193f2b02b41f0e5375d2f0129bbf84dc517017b2"
+    },
+    {
+      "job": "francisco_el_hombre__identity_sheet--canon",
+      "modelo": "francisco_el_hombre__identity_sheet",
+      "entidad": "Francisco el Hombre",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "francisco-el-hombre"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7809,
+      "prompt_sha256": "948fc2336ec399a8be049a0379a438155bca35565e09e78b3e4a845b8273b5ce"
+    },
+    {
+      "job": "la_madre_del_hombre_caiman__identity_sheet--canon",
+      "modelo": "la_madre_del_hombre_caiman__identity_sheet",
+      "entidad": "La madre del Hombre Caimán",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-hombre-caiman"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7529,
+      "prompt_sha256": "049ab5002fb0cdcaf78904c32453d29c8e17016fb9025914b4de9d4c475a763f"
+    }
+  ]
+}

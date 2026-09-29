@@ -1,0 +1,51 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "misak-guambianos",
+  "comunidad": "Misak",
+  "tanda": "tanda-13-mortales-rehechas",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/misak-guambianos.v3.json",
+    "sha256": "65fec4ede9f777e80f4d29cecbd62e9e1736ba36a7a18c9a592d1300cee9a380"
+  },
+  "canon": {
+    "sha256": "e1f4b3ac5eb29b91762c1fa126904c37f0d896fd0a58bc3702f11c78c26002c8",
+    "verificado_en": "2026-09-29T02:04:01.369Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 8,
+  "fichas": [
+    {
+      "job": "mama_manuela_caramaya__identity_sheet--canon",
+      "modelo": "mama_manuela_caramaya__identity_sheet",
+      "entidad": "Mama Manuela Caramaya",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-mama-grande"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 10031,
+      "prompt_sha256": "87fc48c01e5dec561fa54f403a0d5d6fafdc9b54a39000be749ea04c8503f53b"
+    }
+  ]
+}

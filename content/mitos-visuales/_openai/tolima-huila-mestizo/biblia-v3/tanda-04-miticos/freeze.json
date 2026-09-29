@@ -1,0 +1,119 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tolima-huila-mestizo",
+  "comunidad": "Tolima y Huila",
+  "tanda": "tanda-04-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tolima-huila-mestizo.v3.json",
+    "sha256": "b7f1f1559682e274cff21c66142964574468ec3ae942600e92a58a29ba06b0f9"
+  },
+  "canon": {
+    "sha256": "e3603f47534a458fbe0d16a341b049be3b48e059ddfb532221d2ee481c5cf9cf",
+    "verificado_en": "2026-09-29T02:45:00.222Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "mohan_poira__identity_sheet--canon",
+      "modelo": "mohan_poira__identity_sheet",
+      "entidad": "El Mohán / El Poira",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-poira",
+        "el-chenche",
+        "brujas-y-duendes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8682,
+      "prompt_sha256": "c5ccda08b8d815d69ac176b2bdb3b557c3d9aaf841ab72a86e6f94028ac91ca3"
+    },
+    {
+      "job": "mohan_poira__state_sheet--estado_Mohán de Chenche- hombre alto de mediana edad, nariz aguileña, barba espesa y cabellos largos, en cuclillas junto a la moya, con alhajas que brillan bajo el agua",
+      "modelo": "mohan_poira__state_sheet",
+      "entidad": "El Mohán / El Poira",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_Mohán de Chenche: hombre alto de mediana edad, nariz aguileña, barba espesa y cabellos largos, en cuclillas junto a la moya, con alhajas que brillan bajo el agua",
+      "estados": [
+        "Mohán de Chenche: hombre alto de mediana edad, nariz aguileña, barba espesa y cabellos largos, en cuclillas junto a la moya, con alhajas que brillan bajo el agua"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-poira",
+        "el-chenche",
+        "brujas-y-duendes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9089,
+      "prompt_sha256": "a7442c6d70e32fadee902a3bd02d00be2de32ea2e8f992132fdabfd19ce4ef5d"
+    },
+    {
+      "job": "mohan_poira__state_sheet--estado_forma oscura, huraña y feroz de las moyas de Coyaima, encorvada sobre la piedra del charco",
+      "modelo": "mohan_poira__state_sheet",
+      "entidad": "El Mohán / El Poira",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_forma oscura, huraña y feroz de las moyas de Coyaima, encorvada sobre la piedra del charco",
+      "estados": [
+        "forma oscura, huraña y feroz de las moyas de Coyaima, encorvada sobre la piedra del charco"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-poira",
+        "el-chenche",
+        "brujas-y-duendes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9018,
+      "prompt_sha256": "44c679d43840e39ca8c4fbc434c51f4c3948a02f247660f94f496eb2582502d5"
+    },
+    {
+      "job": "espiritu_protector_del_inocente__identity_sheet--canon",
+      "modelo": "espiritu_protector_del_inocente__identity_sheet",
+      "entidad": "El espíritu protector del inocente",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "dioses-lares"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8559,
+      "prompt_sha256": "3b2e642661dc30323422b607187cb582d3d8a6ad96beb40be6127b06f81e8ab2"
+    },
+    {
+      "job": "la_madre_de_agua__identity_sheet--canon",
+      "modelo": "la_madre_de_agua__identity_sheet",
+      "entidad": "La Madre de Agua",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-madre-agua"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8730,
+      "prompt_sha256": "7ed17ba88d3c81475a857be43dafb33bb862531c6745a0cc55ea27a688ef8e73"
+    }
+  ]
+}

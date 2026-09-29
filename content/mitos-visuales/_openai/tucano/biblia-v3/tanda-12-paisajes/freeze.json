@@ -1,0 +1,122 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tucano",
+  "comunidad": "Tucano",
+  "tanda": "tanda-12-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tucano.v3.json",
+    "sha256": "3328d35e2cabdae942974b80bff65672e5d002bf0baa7e431e6248fdb0c51b94"
+  },
+  "canon": {
+    "sha256": "c2c891d8239e415d3d353744fa980cfb41c99c3ff809a4d7bc9ec03abd8495f4",
+    "verificado_en": "2026-09-29T02:02:21.530Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "diaojpekowi__spatial_model--canon",
+      "modelo": "diaojpekowi__spatial_model",
+      "entidad": "Diaojpekowí",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cuando-la-danta-perdio-su-hegemonia",
+        "el-origen-del-hombre",
+        "los-blancos-dominan-a-los-indios"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5419,
+      "prompt_sha256": "4ea87bdb2712274901fefe7f5ec4e62a3689efbe71463d7c9f2a13808de1271f"
+    },
+    {
+      "job": "monte_vaupes__environment_model--canon",
+      "modelo": "monte_vaupes__environment_model",
+      "entidad": "El monte del Vaupés",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cuando-la-danta-perdio-su-hegemonia",
+        "yepa-castiaga-a-los-animales"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5713,
+      "prompt_sha256": "b0d4b2ab4a9bbed27c981cf6126c031f88aabd5218608d731e16ed65c836cd04"
+    },
+    {
+      "job": "rios_vaupes_negro_amazonas__environment_model--canon",
+      "modelo": "rios_vaupes_negro_amazonas__environment_model",
+      "entidad": "Los ríos Vaupés, Negro y Amazonas",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-origen-del-hombre",
+        "la-aparicion-del-sol-del-viento-y-los-mares"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5679,
+      "prompt_sha256": "3201c3cb0c07ab5c0b2cb2244fb2021e18a549bb574ec6646ab65a6c3f2037fc"
+    },
+    {
+      "job": "huerta_de_yuca__spatial_model--canon",
+      "modelo": "huerta_de_yuca__spatial_model",
+      "entidad": "La huerta detrás de Diawí",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-semilla-de-la-yuca-tucano"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5781,
+      "prompt_sha256": "2c6a50ac0cbc21183fe991d8e4949af1e348e25525c9c11c8875fd029882a219"
+    },
+    {
+      "job": "mares__environment_model--canon",
+      "modelo": "mares__environment_model",
+      "entidad": "Los mares alrededor de la tierra",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-aparicion-del-sol-del-viento-y-los-mares"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5431,
+      "prompt_sha256": "78aea0190d53b2804dd94763265e58852ba4bdb1a938dd5618930d063cbdbb1d"
+    }
+  ]
+}

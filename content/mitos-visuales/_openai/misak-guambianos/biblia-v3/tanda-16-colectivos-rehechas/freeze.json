@@ -1,0 +1,51 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "misak-guambianos",
+  "comunidad": "Misak",
+  "tanda": "tanda-16-colectivos-rehechas",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/misak-guambianos.v3.json",
+    "sha256": "a4f705349cd0124d23171698e2b6dbec50308d4246063cdcb386b2f094f54178"
+  },
+  "canon": {
+    "sha256": "e1f4b3ac5eb29b91762c1fa126904c37f0d896fd0a58bc3702f11c78c26002c8",
+    "verificado_en": "2026-09-29T03:32:29.041Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 8,
+  "fichas": [
+    {
+      "job": "guerreros_pijaos__state_sheet--estado_transformados_en_frailejones",
+      "modelo": "guerreros_pijaos__state_sheet",
+      "entidad": "Guerreros pijaos",
+      "categoria": "colectivo",
+      "vista": "estado_transformados_en_frailejones",
+      "estados": [
+        "transformados_en_frailejones"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-mama-grande"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8951,
+      "prompt_sha256": "a8b47ecd7a0b4c076e6a3ee5f9ee85f67ccaf6fed8e20d85201ca2aa73307fde"
+    }
+  ]
+}

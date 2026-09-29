@@ -1,0 +1,135 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tucano",
+  "comunidad": "Tucano",
+  "tanda": "tanda-09-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tucano.v3.json",
+    "sha256": "3328d35e2cabdae942974b80bff65672e5d002bf0baa7e431e6248fdb0c51b94"
+  },
+  "canon": {
+    "sha256": "c2c891d8239e415d3d353744fa980cfb41c99c3ff809a4d7bc9ec03abd8495f4",
+    "verificado_en": "2026-09-29T01:58:37.413Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "boraro__identity_sheet--canon",
+      "modelo": "boraro__identity_sheet",
+      "entidad": "Boraró",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "cuando-la-danta-perdio-su-hegemonia",
+        "yepa-castiaga-a-los-animales"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5956,
+      "prompt_sha256": "acdf122c4d7db45b16f8b582c9a292aeda1f097c36016a599c821888471a195f"
+    },
+    {
+      "job": "boraro_numio__identity_sheet--canon",
+      "modelo": "boraro_numio__identity_sheet",
+      "entidad": "Boraró Numió",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "cuando-la-danta-perdio-su-hegemonia",
+        "yepa-castiaga-a-los-animales"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5773,
+      "prompt_sha256": "8347d27d9c7ba8cfa8971d11153104ce83e4771d608c8a79cdd2d01c7288bd42"
+    },
+    {
+      "job": "canoa_transformacion_guio__identity_sheet--canon",
+      "modelo": "canoa_transformacion_guio__identity_sheet",
+      "entidad": "La Canoa de Transformación (el gran güío)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-origen-del-hombre",
+        "cuando-la-danta-perdio-su-hegemonia"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5682,
+      "prompt_sha256": "f2daf48652281bd0aa9e423251e7848a7f60fd3298fbd82fafa05b4fe682d4a7"
+    },
+    {
+      "job": "emo_mono__identity_sheet--canon",
+      "modelo": "emo_mono__identity_sheet",
+      "entidad": "Emo, el mono",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "cuando-la-danta-perdio-su-hegemonia"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5303,
+      "prompt_sha256": "d7bc5d00237476ceb2f4152619bb8efb1e03fd76bf19a5b453fca15ef1a4d1fc"
+    },
+    {
+      "job": "ser_cantor_nocturno__identity_sheet--canon",
+      "modelo": "ser_cantor_nocturno__identity_sheet",
+      "entidad": "El pequeño ser que canta en la oscuridad",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "yepa-abandona-la-tierra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5357,
+      "prompt_sha256": "4b25c0180098d67b3f11e4320983331c4f6865ee742d5607ef01f69942bb668d"
+    },
+    {
+      "job": "vejke_danta__identity_sheet--canon",
+      "modelo": "vejke_danta__identity_sheet",
+      "entidad": "Wejké, la danta",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "cuando-la-danta-perdio-su-hegemonia"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5646,
+      "prompt_sha256": "97639e75d9ff9388c2db4e105d2d884d724affdff284149e0e016ef7c4d758cd"
+    }
+  ]
+}

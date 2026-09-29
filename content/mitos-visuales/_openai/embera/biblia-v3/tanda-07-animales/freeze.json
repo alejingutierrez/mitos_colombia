@@ -1,0 +1,63 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "embera",
+  "comunidad": "Embera",
+  "tanda": "tanda-07-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/embera.v3.json",
+    "sha256": "43c7f4f10e60ebf1b050bc1d22039f0fa7372f99d0f9242acc6c6ac0e7157dd8"
+  },
+  "canon": {
+    "sha256": "c63a3ed13c323e894a92ebe4c994be06637f9a34d1e703031bad914c4b1edebd",
+    "verificado_en": "2026-09-29T02:16:21.198Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "explorador_murcielago__identity_sheet--canon",
+      "modelo": "explorador_murcielago__identity_sheet",
+      "entidad": "El explorador transformado en murciélago",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6320,
+      "prompt_sha256": "ca6f57110c4d88fc3ce24fb47da86164ff86d37f5cb43b065be00298b565ea40"
+    },
+    {
+      "job": "perro_de_la_canoa__identity_sheet--canon",
+      "modelo": "perro_de_la_canoa__identity_sheet",
+      "entidad": "El perro que baja en la canoa",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5802,
+      "prompt_sha256": "8cd2c2bca0868ebaf52961ada84fbc355acc54ff09aa2b9e0b11d1555faf91de"
+    }
+  ]
+}

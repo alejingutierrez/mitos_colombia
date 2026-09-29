@@ -1,0 +1,43 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "makawanes",
+  "comunidad": "Makaguán",
+  "tanda": "tanda-03-tipos-rehechas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/makawanes.v3.json",
+    "sha256": "a8df517623f8b4c7bb6facb374b032403cf631fa7eb7361b76594bb9bc7646b0"
+  },
+  "canon": {
+    "sha256": "4b909272d7fc7ea60af087d7555d666ff1de6e8bc91a706f308ff8f08a1f8b6d",
+    "verificado_en": "2026-09-25T14:02:27.344Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 8,
+  "fichas": [
+    {
+      "job": "tipo_nino__state_sheet--estado_estrato contemporáneo de El Vigía, con ropa de hoy",
+      "modelo": "tipo_nino__state_sheet",
+      "entidad": "Tipo base · niño makaguán",
+      "categoria": "personaje",
+      "vista": "estado_estrato contemporáneo de El Vigía, con ropa de hoy",
+      "estados": [
+        "estrato contemporáneo de El Vigía, con ropa de hoy"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-makawanes",
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6526,
+      "prompt_sha256": "60330afc4c24497013a1569174dd44b558c4704b3d637c05223264e07336a73d"
+    }
+  ]
+}

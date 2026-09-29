@@ -1,0 +1,2871 @@
+{
+  "id": "katios",
+  "label": "Katíos",
+  "pages": 19,
+  "canon_pages": 19,
+  "read_note": "Leí entero `canon/katios.canon.md` (19 mitos, sha256 de27d790…), los cuatro campos editoriales de cada página —mito, historia, versiones y research_notes— y además las listas de fuentes declaradas, porque varias traen descripciones de cuerpo que el relato no da. Contrasté con editorial/katio/universe.mjs (21 expedientes de origen, 19 canónicos: `el-gusano-gigante` se fue a Chamí, `dobaida` y `el-tesoro-de-dabeiba` a Mixto, `baha` se añadió), community.mjs, media.mjs y docs/biblia-visual-v3.md §«Qué construye la Biblia». No consulté base de datos ni web. LO QUE SORPRENDIÓ: (1) el ahorro real no está en los dioses sino en los roles sin nombre —la gente, las mujeres, los niños, el jaibaná, los cazadores, los peones, los diez salvados— que reaparecen en catorce relatos y se resuelven con cuatro gramáticas de grupo; (2) el corpus dice SIEMPRE «bohío», nunca «tambo»: la única vez que aparece «tambo» es dentro de la variante de Rubén Domicó que el propio expediente prohíbe fundir con el relato; (3) no hay una sola mención de pintura corporal, kipara, jagua como tinte, paruma ni okama en los cuatro campos, de modo que no hay nada que fichar ahí y tampoco riesgo de inventar un ejemplar; (4) el oro atraviesa siete relatos (bohío de oro, cuatro casas de oro, Costé de oro, la mina que se come a la gente, los filones de los burumiáes, el tamborcito, los tesoros ocultos) y una sola ficha de material lo cubre; (5) Herupotoarra y Heroputoharra, el constructor de la escalera de cristal, son la MISMA persona, declarado en el expediente: una ficha, no dos. LO QUE QUEDÓ DUDOSO: si Antomiá torro y Antomiá paima son un ser con dos colores o dos seres —el relato dice «hay dos clases» y les da hazañas distintas, así que fiché el genérico y el paima, y embebí el torro; si el cachorro de tigre merece ficha propia (lo concedí porque el relato los cría en casa y les vende el cuero); y si Edaa y Armucurá son el mismo mundo de abajo bajo dos nombres —el corpus no lo resuelve y las fuentes lo discuten, así que los separé. AVISO DE VECINDAD: Chamí y Katío son pueblos Embera distintos y el corpus está lleno de material que las fuentes atribuyen a «los Embera» en general o expresamente a chamíes (Nengarabe, Reichel-Dolmatoff en Río Frío, Tamaniza en Putumayo), a dóbida (Nuquí, golfo de Tribugá) o a emberá del istmo de Panamá (Nordenskiöld); nada de eso se contó como entidad katía, y donde una figura vecina pesaba —Pãkõré, Porré, Ocotuma, Genserá, Jerú Potó— la dejé excluida con su razón. Tampoco conté narradores ni recopiladores (Zaquidiama Domicó, Rafael Bailarín, Tohuratzabidá Domicó, Severino de Santa Teresa, las Hermanas misioneras): son procedencia, no personajes.",
+  "entities": [
+    {
+      "id": "caragabi",
+      "name": "Caragabí",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "antomia",
+        "baha",
+        "cobaima",
+        "creacion-katios",
+        "el-origen-del-sol-y-la-luna",
+        "fragmentos-de-otras-tradiciones",
+        "la-escalera-del-cielo",
+        "los-domicoes",
+        "sever"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "renacido del horno"
+      ],
+      "note": "Dios de arriba y motor de nueve relatos: crea, enlaza, derriba el Genené, reparte apellidos, coloca sol y luna, quita la escalera. El estado cuesta ficha porque el relato lo describe con cuerpo nuevo al salir del horno: «hermoso, vestido el cuerpo de chaquiras de oro y con la cabellera cayéndole sobre los hombros». Alias Karagabí, Carabí."
+    },
+    {
+      "id": "tutruica",
+      "name": "Tutruicá",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "creacion-katios",
+        "fragmentos-de-otras-tradiciones",
+        "herupotoarra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Dios del mundo de abajo, eterno, que enseña el secreto del barro y cuyas tierras son Armucurá. Sin estado extra: del horno sólo se dice «salió el mismo prodigio», sin un solo rasgo propio, así que la ficha base lo lleva. Alias Tutruiká, Trituku, Yábea."
+    },
+    {
+      "id": "antomia",
+      "name": "Antomiá",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "antomia",
+        "creacion-katios",
+        "icades-name",
+        "tradicion-del-cerro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Se burla del dios embriagado, compite por hacer gente, es vencido y sepultado en Edaa, enseña a los burumiáes a sacar oro. El expediente advierte que «demonio» e «infierno» son traducción misionera y que rige el bien y el mal: la ficha va sin iconografía diabólica cristiana. Alias Antumiá, Tumiaw, Tumí, /atomiá/."
+    },
+    {
+      "id": "antomia-paima",
+      "name": "Antomiá paima (el negro)",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "antomia",
+        "tradicion-del-cerro"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "vientre inflado y reventado"
+      ],
+      "note": "Cuerpo propio y hazañas propias en dos relatos: el ladrón que canta al llegar y muere por la raíz de moindú, y el que habita el cerro plateado, roba a los dos niños y celebra la fiesta. El estado cuesta ficha porque el relato lo muestra: «se paró junto a la escalera con el estómago inflado, cayó del tablado y se reventó», y de ahí salen el fuego, el humo y las piedras de los ríos."
+    },
+    {
+      "id": "antomia-torro",
+      "name": "Antomiá torro (el blanco)",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "antomia",
+        "creacion-katios",
+        "tradicion-del-cerro"
+      ],
+      "decision": "embedded",
+      "covered_by": "antomia",
+      "sheets": 0,
+      "note": "Variante del mismo ser ya fichado: el corpus lo distingue sólo por el color y por la escena de la olla, de la que «salió todo quemado». Sin cuerpo aparte descrito."
+    },
+    {
+      "id": "dabeiba",
+      "name": "Dabeiba",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "dabeiba"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Joven, bellísima y llena de sabiduría»: enseña a labrar, construir, tejer y administrar, sube al cerro, se eleva y desde arriba preside lluvia, granizo, trueno, rayo, huracanes, borrascas y terremotos. Es el relato entero. El expediente prohíbe fundirla con Dobaiba, la provincia de oro de las crónicas."
+    },
+    {
+      "id": "humantahu",
+      "name": "Humántahu (el sol)",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-origen-del-sol-y-la-luna",
+        "la-escalera-del-cielo"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "astro"
+      ],
+      "note": "Hermano que amó a su hermana y fue convertido en astro por Caragabí; reclama su sitio y se aparta. El estado cuesta ficha: persona y astro son dos siluetas y el relato muestra el paso de una a otra. Alias /ũmagau/, Umantau."
+    },
+    {
+      "id": "gedeco",
+      "name": "Gedeco (la luna)",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "el-origen-del-sol-y-la-luna",
+        "herupotoarra"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "astro con la mancha de la bofetada"
+      ],
+      "note": "Igual que el sol, y además el estado de astro es obligatorio por otro relato: Herupotoarra le descarga «una bofetada tremenda, y las manchas que la luna lleva son todavía la marca de aquel golpe». Alias /jedeko/, Jedeko."
+    },
+    {
+      "id": "baha-trueno",
+      "name": "Baha, el trueno",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "baha"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Hombre riquísimo del bohío de oro que se niega al cambio; Caragabí lo coge de la cabellera, lo arroja a los aires y desde entonces lleva un tambor en la mano. Se ficha aparte del rayo porque la research_note del expediente declara la relación entre las dos secuencias «no resuelta» y fundirlas sería decidir lo que el corpus deja abierto."
+    },
+    {
+      "id": "baha-rayo",
+      "name": "Baha, el rayo",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "baha"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Hombre que no era de los indios, robaba niños chiquitos y subía sus cuerpos al cogollo de la palmera más alta; dos jaibanás le clavan la lanza miatzu en el pecho. El expediente avisa que Severino lo describió con una calificación racial suya y no del personaje: la ficha no la recoge."
+    },
+    {
+      "id": "tatzitzetze",
+      "name": "Tatzitzetze",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "creacion-katios"
+      ],
+      "decision": "excluded",
+      "reason": "sin_evidencia_visual",
+      "sheets": 0,
+      "note": "Verificado en el mito: «De la saliva de Tatzitzetze, que no tuvo principio y se hizo a sí mismo, brotó Caragabí» y nada más; se alza contra él y lo vence en una línea de resumen, sin escena, sin cuerpo y sin un solo rasgo. Dibujarlo sería inventarle una figura. Alias Dachizese, /gayhizeze/."
+    },
+    {
+      "id": "hombre-que-no-podia-cazar",
+      "name": "El hombre que no podía cazar",
+      "kind": "personaje",
+      "myths": [
+        "a-transformacion-del-hombre-que-no-podia-cazar"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Protagonista único de su relato: sale, falla, sigue el camino de los animales, cruza quebradas y se queda del otro lado. Sin estado extra: el texto dice que «su ausencia quedó unida a los sonidos y movimientos del monte», nunca en qué se convirtió, y el propio expediente retira la transformación en manao por inventada."
+    },
+    {
+      "id": "cobaima",
+      "name": "Cobaima",
+      "kind": "personaje",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Primer jaibaná, ordena el territorio, nombra ríos, confina a los animales malos y desarma la mina que se comía a la gente. Viene de voz comunitaria contemporánea (Dachi Chiuu / CNMH, Alto Andágueda) y por eso es publicable, pero la ficha va sin insignia ritual: ni bastón, ni figura tallada, ni escena de curación, ni jai a la vista."
+    },
+    {
+      "id": "jaibana",
+      "name": "El jaibaná (rol sin nombre)",
+      "kind": "personaje",
+      "myths": [
+        "aribamias",
+        "baha",
+        "antomia",
+        "herupotoarra",
+        "tradicion-del-cerro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Rol humano recurrente en cinco relatos con cuerpo reconocible: los que toman el güibán, los dos jaibaná ara de la lanza, los grandes que sueñan cómo matar al Aribamia, los que aprenden por el túnel. Una sola ficha de persona con variante femenina. La práctica es materia sensible y queda fuera: aquí se ficha quién es, nunca qué hace en la cura."
+    },
+    {
+      "id": "india-jaibana-del-moindu",
+      "name": "La india jaibaná del moindú",
+      "kind": "personaje",
+      "myths": [
+        "antomia"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce el episodio entero: le roban la comida, sale a pasear, deja el bohío arreglado, prepara la gran olla de caldo de pescado con raíz de moindú y mata al ladrón. Ficha propia y no miembro genérico porque el relato la pone a decidir y a ejecutar."
+    },
+    {
+      "id": "ambuima",
+      "name": "Ambuima",
+      "kind": "personaje",
+      "myths": [
+        "herupotoarra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Un jaibaná muy temido que vivía en un bohío bellísimo»: resiste diez flechas, mata a Herupotoarra aplicándole la mano en el costado y al morir se convierte en avispas venenosas. El enjambre va en su propia ficha de grupo. Alias Ambumiá."
+    },
+    {
+      "id": "herupotoarra",
+      "name": "Herupotoarra",
+      "kind": "personaje",
+      "myths": [
+        "herupotoarra",
+        "la-escalera-del-cielo",
+        "los-domicoes"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Nacido de la pantorrilla, sube a la luna, cae a Armucurá, vuelve y muere. En «La escalera del cielo» y en «Los Domicó» es el mismo personaje bajo la grafía Heroputoharra, el Domicó que construyó la escalera de cristal: una sola ficha para tres relatos, no tres. Alias Gerú-potó-uarra, Jinu Potó, Jinopotabar."
+    },
+    {
+      "id": "madre-de-herupotoarra",
+      "name": "La mujer que concibió de la nutria",
+      "kind": "personaje",
+      "myths": [
+        "herupotoarra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Del linaje de los domicoes; concibe pescando, entre los dedos de un pie, y el hijo le nace de la pantorrilla, de lo que muere. La gramática de grupo de las mujeres no puede llevar esa imagen: es un cuerpo con un suceso propio y es el arranque del relato."
+    },
+    {
+      "id": "sever",
+      "name": "Séver",
+      "kind": "personaje",
+      "myths": [
+        "sever",
+        "los-domicoes"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Sacado de una gota de agua, flechador perfecto, padre de cinco, hace canoa del Genené y sostiene la guerra hasta quedar «cosido a flechazos». Sin estado extra: la muerte es una escena, no un cuerpo persistente, y los ojos pulverizados que se soba dan agilidad y vista de noche sin cambiar silueta."
+    },
+    {
+      "id": "emagai",
+      "name": "Emágai",
+      "kind": "personaje",
+      "myths": [
+        "sever"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El hijo menor: herido con flecha envenenada, escondido entre las raíces del árbol Comba, tomado en rehenes, desafía y vence al Capitán de los Cunas y huye de noche. Es el único de los cinco hermanos que conduce acción propia."
+    },
+    {
+      "id": "tragabari",
+      "name": "Tragábari",
+      "kind": "personaje",
+      "myths": [
+        "sever"
+      ],
+      "decision": "embedded",
+      "covered_by": "hijos-de-sever",
+      "sheets": 0,
+      "note": "Nombrado en la lista de los cinco hijos y nada más; no habla, no decide, no se describe."
+    },
+    {
+      "id": "hainaeru",
+      "name": "Hainaeru",
+      "kind": "personaje",
+      "myths": [
+        "sever"
+      ],
+      "decision": "embedded",
+      "covered_by": "hijos-de-sever",
+      "sheets": 0,
+      "note": "Nombrado en la lista de los cinco hijos y nada más. En la variante de 1929 se escribe Jainaeru."
+    },
+    {
+      "id": "jaibama",
+      "name": "Jaibama",
+      "kind": "personaje",
+      "myths": [
+        "sever"
+      ],
+      "decision": "embedded",
+      "covered_by": "hijos-de-sever",
+      "sheets": 0,
+      "note": "Nombrado en la lista de los cinco hijos y nada más."
+    },
+    {
+      "id": "chiano",
+      "name": "Chiano",
+      "kind": "personaje",
+      "myths": [
+        "sever"
+      ],
+      "decision": "embedded",
+      "covered_by": "hijos-de-sever",
+      "sheets": 0,
+      "note": "Muere atisbando desde el cañaflechal. Es víctima, no agente, y no se describe; la gramática del grupo lo lleva. En la variante de 1929 se llama Guiano y son sus huesos los que hacen la flauta."
+    },
+    {
+      "id": "atamia",
+      "name": "El indio Atamía",
+      "kind": "personaje",
+      "myths": [
+        "los-bibidigomias"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Nombrado y mandado a rastrear: encuentra la casa del árbol, vuelve y cuenta que a los llevados ya se los habían comido. Conduce dos acciones del relato. Chaves lo glosa entre paréntesis como «diablo» y la ficha no adopta esa glosa, que es del recopilador."
+    },
+    {
+      "id": "indiecita-bibidigomia",
+      "name": "La indiecita bibidigomia",
+      "kind": "personaje",
+      "myths": [
+        "los-bibidigomias"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cautiva a la que no matan: mece la hamaca, se come el seso del niño, dice que duerme, y a medianoche repite con un hombre. Conduce el tercio final del relato con cuerpo propio y edad propia."
+    },
+    {
+      "id": "hermanito-del-cerro",
+      "name": "El hermanito del cerro",
+      "kind": "personaje",
+      "myths": [
+        "tradicion-del-cerro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Se escapa del robo, vuelve a buscar a su hermana, grita dos veces y apaga las luces de la fiesta, y queda para siempre al borde del abismo «a punto de caer, pero sin poder caer». La postura suspendida se resuelve dentro del modelo espacial del cerro, no como ficha aparte."
+    },
+    {
+      "id": "nina-robada-del-cerro",
+      "name": "La niña robada del cerro",
+      "kind": "personaje",
+      "myths": [
+        "tradicion-del-cerro"
+      ],
+      "decision": "embedded",
+      "covered_by": "hermanito-del-cerro",
+      "sheets": 0,
+      "note": "Del mismo par de hermanos; el relato no le da más rasgo que el miedo y la culebrita verde con que la hacen obedecer, y no sale de allí. La ficha del hermano fija la pareja."
+    },
+    {
+      "id": "ambeu",
+      "name": "Ambeu",
+      "kind": "personaje",
+      "myths": [
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Jefe indio «de extraordinario valor y destreza militar», invulnerable a las balas, que forma tropas nuevas una y otra vez hasta que lo hacen caer en el hoyo cubierto de ramas. Segundo fragmento entero del relato."
+    },
+    {
+      "id": "corpus-y-umucumia",
+      "name": "Corpus y Umucumia",
+      "kind": "personaje",
+      "myths": [
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "decision": "embedded",
+      "covered_by": "ambeu",
+      "sheets": 0,
+      "note": "«Eran sus hijos y ayudantes, valerosos como él»: una línea, sin acción ni descripción. Van dentro de la ficha del padre."
+    },
+    {
+      "id": "capitan-de-los-cunas",
+      "name": "El Capitán de los Cunas",
+      "kind": "personaje",
+      "myths": [
+        "sever"
+      ],
+      "decision": "embedded",
+      "covered_by": "cunas",
+      "sheets": 0,
+      "note": "Intenta matar al cautivo cada cuatro días y es vencido por Emágai, pero el corpus no le da un solo rasgo que lo separe de los suyos: se resuelve como jerarquía dentro de la gramática del grupo."
+    },
+    {
+      "id": "capitan-de-los-domicos",
+      "name": "El Capitán de los Domicós",
+      "kind": "personaje",
+      "myths": [
+        "los-domicoes"
+      ],
+      "decision": "embedded",
+      "covered_by": "gente-embera-katio",
+      "sheets": 0,
+      "note": "Reúne a su gente, la adiestra dentro del bohío y cuelga las cabezas alrededor; sin descripción física propia. Se resuelve como jerarquía dentro de la gramática de la gente."
+    },
+    {
+      "id": "ancastor",
+      "name": "Ancastor",
+      "kind": "criatura",
+      "myths": [
+        "ancastor"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "forma humana"
+      ],
+      "note": "Ave blanca que se vuelve hombre, abre las alas y sube a dos mujeres al Bajía, una en cada ala. El estado cuesta ficha porque el relato lo muestra en las dos siluetas. La research_note manda que sea ave blanca, no ángel con alas; las fuentes de 2012 lo llaman «el golero blanco», que apunta al gallinazo rey. Alias Ankosotor."
+    },
+    {
+      "id": "aribamia",
+      "name": "Aribamia",
+      "kind": "criatura",
+      "myths": [
+        "aribamias"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "en formación (espuma blanca / cuerpo que se cubre de pelo)"
+      ],
+      "note": "«Un gran cuadrúpedo de cabeza enorme, hecha en forma de cántaro», que vive en montes sombríos, come cangrejos y se come a quien encuentra. El expediente elige el cuadrúpedo de 1929 y descarta el bípedo de Severino; la ficha no funde los dos cuerpos. El estado cuesta ficha porque las tres maneras de volverse Aribamia son siluetas intermedias que el relato describe. Alias Aribamiá, Aribadá, Aripadá, mohán."
+    },
+    {
+      "id": "yaede",
+      "name": "Los Yaedé",
+      "kind": "criatura",
+      "myths": [
+        "icades-name"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Unos diablos gigantes llamados Yaedé, y esos diablos se comían a los niños huérfanos»: vienen, se llevan y vuelven con regularidad hasta que uno cae en la trampa. Dan título y cuerpo al relato. Sin estado extra: el despedazamiento es una escena y el ñame en que se convierten los despojos ya tiene su propia ficha botánica. Severino escribe Yeadé y Yaedé en el mismo párrafo; las notas de 1929 dejan a los gigantes sin nombre y ponen a Antomiá en su lugar, y por eso las dos fichas conviven en el censo."
+    },
+    {
+      "id": "padre-de-la-trampa",
+      "name": "El padre que armó la trampa",
+      "kind": "personaje",
+      "myths": [
+        "icades-name"
+      ],
+      "decision": "embedded",
+      "covered_by": "gente-embera-katio",
+      "sheets": 0,
+      "note": "Arma el lazo, pone a su propio hijo, atisba desde lejos con la barra en la mano y da el golpe. Conduce el relato, pero el corpus no le da un solo rasgo que lo separe de cualquier hombre de la comunidad: la gramática de la gente lo lleva, con la barra y el lazo de la hoja de utilería."
+    },
+    {
+      "id": "coste",
+      "name": "Costé",
+      "kind": "criatura",
+      "myths": [
+        "coste"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Unos diablos que eran de oro y eran los dueños del oro. Se llamaban Costé y eran cuatro.» Una sola ficha para los cuatro: el relato no les da cuerpos distintos, sólo muertes distintas —los ojos, el corazón en el dedo pulgar del pie izquierdo, la cueva, la conversión en tigres—. Ahí está el ahorro y el propio Vasco lo confirma al decir que lo que cambia es el procedimiento para matarlos."
+    },
+    {
+      "id": "coste-version-dabeiba",
+      "name": "El Costé de Rubén Domicó (Dabeiba)",
+      "kind": "criatura",
+      "myths": [
+        "coste"
+      ],
+      "decision": "excluded",
+      "reason": "otra_narracion_que_el_expediente_prohibe_fundir",
+      "sheets": 0,
+      "note": "Verificado en «versiones»: «no es una variante de esta: es otra, y no debe fundirse con ella». Es uno solo, del tamaño de un indio muy grande, con barberas en los brazos y dientes de oro puro, tambo, castración, engorde y batea, y lo derrota su propia madre flaca. Nada de eso ocurre en el mito publicado, y con él quedan fuera las barberas, los dientes de oro, la vieja y la batea."
+    },
+    {
+      "id": "tigre",
+      "name": "Tigre (imamá)",
+      "kind": "animal",
+      "myths": [
+        "coste",
+        "los-bibidigomias",
+        "cobaima",
+        "sever",
+        "creacion-katios",
+        "aribamias"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "cachorro"
+      ],
+      "note": "En seis relatos: los cuatro tigres en que se convierte el cuarto Costé, la tigresa preñada, el que baja del árbol de los Bibidigomia y la tigra que brinca y salva la especie, los animales malos de Cobaima, los ojos pulverizados de Séver, la cabeza y garras del Aribamia de Severino. El cachorro cuesta ficha porque el relato los cría en casa y les vende el cuero: es su propia silueta y su propio acto."
+    },
+    {
+      "id": "mono",
+      "name": "Mico y mono de monte",
+      "kind": "animal",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Una sola gramática para los tres trepadores nombrados del Genené: el relato los distingue por el nombre y por el orden, nunca por el cuerpo. Ahorro deliberado de dos fichas."
+    },
+    {
+      "id": "yerre",
+      "name": "El mico Yerre",
+      "kind": "animal",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "embedded",
+      "covered_by": "mono",
+      "sheets": 0,
+      "note": "Primero en subir, no pudo. Sin descripción física que lo separe."
+    },
+    {
+      "id": "zrua",
+      "name": "El mono Zruá",
+      "kind": "animal",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "embedded",
+      "covered_by": "mono",
+      "sheets": 0,
+      "note": "Segundo en subir, tampoco obtuvo resultado. Sin descripción física que lo separe."
+    },
+    {
+      "id": "amisurra",
+      "name": "El mono Amisurrá",
+      "kind": "animal",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "embedded",
+      "covered_by": "mono",
+      "sheets": 0,
+      "note": "Tercero en subir, impotente también. Sin descripción física que lo separe."
+    },
+    {
+      "id": "chidima",
+      "name": "Chidima, la ardilla diminuta",
+      "kind": "animal",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Otra ardilla más diminuta, que llaman Chidima: desenredó las ramas y cayó a una con la fruta y con el árbol.» Conduce la acción decisiva del relato del agua y su tamaño es el rasgo de que depende la prueba."
+    },
+    {
+      "id": "ardilla-mayor",
+      "name": "La primera ardilla",
+      "kind": "animal",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "embedded",
+      "covered_by": "chidima",
+      "sheets": 0,
+      "note": "Misma especie, mayor; sólo se distingue porque la fruta le cayó antes. La ficha de Chidima fija las dos tallas."
+    },
+    {
+      "id": "paloma",
+      "name": "Paloma",
+      "kind": "animal",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Dos apariciones en el mismo relato y las dos conducen: la paloma que le busca el agua a Caragabí por otros mundos, y la blanquísima nacida de la saliva bajo la totuma, la única emisaria que vuelve y da con el lugar seco."
+    },
+    {
+      "id": "garza",
+      "name": "Garza",
+      "kind": "animal",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Primera emisaria del diluvio: halla mucho pescado y no se cuida de volver. Desobedece, es decir conduce. En la variante de 1929 se le asigna ahí mismo su oficio, comer peces vivos."
+    },
+    {
+      "id": "gallinazo",
+      "name": "Gallinazo",
+      "kind": "animal",
+      "myths": [
+        "fragmentos-de-otras-tradiciones",
+        "baha",
+        "tradicion-del-cerro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Tres relatos: el emisario que se queda comiendo peces muertos, los que comen las carnes calcinadas que Baha sube al cogollo de la palmera, y la forma que tienen muchos de los Antomiás en la fiesta del cerro. Una ficha para los tres usos."
+    },
+    {
+      "id": "pato-de-monte",
+      "name": "Pato de monte",
+      "kind": "animal",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Tercer emisario: se entretiene con un pescado llamado guacuco y también olvida el encargo. Es una especie distinta, con silueta distinta, y el compás del relato pide ver fallar a tres aves diferentes."
+    },
+    {
+      "id": "trienene",
+      "name": "Trienené, el pájaro carpintero",
+      "kind": "animal",
+      "myths": [
+        "herupotoarra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Pasó volando un trienené, que es el pájaro carpintero, y con su pico barrenó en poco tiempo la escala encantada hasta dar con ella en tierra.» Conduce el giro del relato y viene nombrado en lengua."
+    },
+    {
+      "id": "nutria",
+      "name": "Nutria",
+      "kind": "animal",
+      "myths": [
+        "herupotoarra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Engendra a Herupotoarra entre los dedos de un pie de la mujer que pescaba. Una sola aparición, pero es el acto que abre el relato y no hay animal fichado que la cubra."
+    },
+    {
+      "id": "culebra",
+      "name": "Culebra",
+      "kind": "animal",
+      "myths": [
+        "tradicion-del-cerro",
+        "creacion-katios",
+        "herupotoarra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Una ficha para tres usos: la culebrita verde con que golpean a la niña en el cerro, la forma de culebra que Caragabí toma en la prueba del agua y la culebra que guía el regreso en la narración de 1929. El color lo fija cada uso; Severino la trae azul y 1929 verde, y el mito publicado sigue el verde."
+    },
+    {
+      "id": "peces-de-rio",
+      "name": "Peces de río",
+      "kind": "animal",
+      "myths": [
+        "fragmentos-de-otras-tradiciones",
+        "cobaima",
+        "antomia",
+        "herupotoarra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cuatro relatos: los peces muertos y vivos del diluvio, los que la malla no dejaba subir en el río Odo, el caldo de pescado de la india jaibaná y la mujer que estaba pescando. Una gramática de cardumen, con el guacuco dentro."
+    },
+    {
+      "id": "guacuco",
+      "name": "Guacuco",
+      "kind": "animal",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "embedded",
+      "covered_by": "peces-de-rio",
+      "sheets": 0,
+      "note": "Nombrado una vez como el pez con que se entretiene el pato de monte; es un ejemplar dentro de la gramática de peces."
+    },
+    {
+      "id": "cangrejo",
+      "name": "Cangrejo",
+      "kind": "animal",
+      "myths": [
+        "aribamias"
+      ],
+      "decision": "embedded",
+      "covered_by": "aribamia",
+      "sheets": 0,
+      "note": "Sólo existe como el alimento del Aribamia: «Se alimenta de cangrejos». Va dentro de su ficha, no aparte."
+    },
+    {
+      "id": "gente-embera-katio",
+      "name": "La gente emberá katío",
+      "kind": "colectivo",
+      "myths": [
+        "a-transformacion-del-hombre-que-no-podia-cazar",
+        "antomia",
+        "aribamias",
+        "baha",
+        "coste",
+        "creacion-katios",
+        "dabeiba",
+        "el-origen-del-sol-y-la-luna",
+        "fragmentos-de-otras-tradiciones",
+        "la-escalera-del-cielo",
+        "los-bibidigomias",
+        "los-domicoes",
+        "sever",
+        "tradicion-del-cerro",
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "LA FICHA QUE MÁS AHORRA. Quince relatos hablan de «los indios», «la comunidad», «la gente», y siempre es el mismo cuerpo: los compañeros de cacería, los peones de Caragabí, los diez salvados del diluvio, los que suben y bajan la escalera, los del convite de los apellidos, la expedición contra Costé, los que queman ajíes bajo el árbol, los que huyen por el túnel de Musinga, los guerreros Domicó. Una gramática de grupo; las armas son fichas aparte."
+    },
+    {
+      "id": "domicoes-guerreros",
+      "name": "Los guerreros Domicó",
+      "kind": "colectivo",
+      "myths": [
+        "los-domicoes"
+      ],
+      "decision": "embedded",
+      "covered_by": "gente-embera-katio",
+      "sheets": 0,
+      "note": "Se adiestran con los arcos dentro del bohío, bajan a la arena y cortan cabezas; el corpus no les da traje, marca ni cuerpo distinto del de la gente. Lo que los diferencia son el arco y las cabezas, que ya tienen ficha."
+    },
+    {
+      "id": "expedicion-de-cazadores",
+      "name": "La partida de cazadores",
+      "kind": "colectivo",
+      "myths": [
+        "a-transformacion-del-hombre-que-no-podia-cazar",
+        "coste",
+        "los-bibidigomias"
+      ],
+      "decision": "embedded",
+      "covered_by": "gente-embera-katio",
+      "sheets": 0,
+      "note": "Los diez y luego los veinte que salen contra Costé, los compañeros del hombre que no podía cazar, los que iban de cacería y se perdían. Mismo cuerpo, distinto encargo."
+    },
+    {
+      "id": "peones-de-caragabi",
+      "name": "Los peones de Caragabí",
+      "kind": "colectivo",
+      "myths": [
+        "fragmentos-de-otras-tradiciones",
+        "creacion-katios"
+      ],
+      "decision": "embedded",
+      "covered_by": "gente-embera-katio",
+      "sheets": 0,
+      "note": "«Fue con todos sus peones a derribar el Genené»; y la gente que Tutruicá reúne para cortar leña seis días. Sin rasgo propio."
+    },
+    {
+      "id": "los-diez-salvados",
+      "name": "Los diez salvados del diluvio",
+      "kind": "colectivo",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "embedded",
+      "covered_by": "gente-embera-katio",
+      "sheets": 0,
+      "note": "«Caragabí y diez personas más, que se salvaron en una elevada peña.» Se cuentan, no se describen."
+    },
+    {
+      "id": "bebezon-o-convite",
+      "name": "El convite / la bebezón",
+      "kind": "colectivo",
+      "myths": [
+        "los-domicoes",
+        "el-origen-del-sol-y-la-luna"
+      ],
+      "decision": "embedded",
+      "covered_by": "gente-embera-katio",
+      "sheets": 0,
+      "note": "La reunión donde Caragabí reparte los apellidos. Es una escena hecha de gente ya fichada más las ollas de chicha de la hoja de utilería; no necesita modelo propio."
+    },
+    {
+      "id": "mujeres-embera",
+      "name": "Las mujeres emberá",
+      "kind": "colectivo",
+      "myths": [
+        "ancastor",
+        "antomia",
+        "creacion-katios",
+        "herupotoarra",
+        "la-escalera-del-cielo",
+        "los-bibidigomias",
+        "baha"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Gramática de grupo para las mujeres del corpus: las que lloran a la muerta, la que sube la escalera con el niño a la espalda, las que van por agua y leña, las que cuidan a los recién nacidos. Siete relatos, una ficha."
+    },
+    {
+      "id": "india-de-la-escalera",
+      "name": "La india que subía con el niño a la espalda",
+      "kind": "colectivo",
+      "myths": [
+        "la-escalera-del-cielo"
+      ],
+      "decision": "embedded",
+      "covered_by": "mujeres-embera",
+      "sheets": 0,
+      "note": "No actúa: está distraída y el niño arranca la flor. El corpus discute si lleva al niño en brazos (Severino) o a la espalda (1929) y el mito publicado sigue la espalda; eso es una pose, no un cuerpo aparte."
+    },
+    {
+      "id": "las-dos-mujeres-de-ancastor",
+      "name": "Las dos mujeres que subieron al Bajía",
+      "kind": "colectivo",
+      "myths": [
+        "ancastor"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Protagonistas del relato: suben una en cada ala, desobedecen guardando un grano de maíz en la boca y una fruta de chontaduro, bajan, cuentan y siembran. Una ficha que fija a las dos, porque siempre actúan como par."
+    },
+    {
+      "id": "mujeres-de-senos-grandes-del-bajia",
+      "name": "Las mujeres de senos grandes del Bajía",
+      "kind": "colectivo",
+      "myths": [
+        "ancastor"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Unas mujeres de senos tan grandes que les llegaban a las rodillas», a las que Ancastor prohíbe hablar. Es una de las dos únicas cosas que el relato describe del mundo de arriba y su cuerpo no cabe en la gramática de las mujeres."
+    },
+    {
+      "id": "los-muertos-del-bajia",
+      "name": "Los muertos conocidos del Bajía",
+      "kind": "colectivo",
+      "myths": [
+        "ancastor"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Mucha gente conocida que ya se había muerto», entre ellos la hermana y un hermano al que habían matado, a quienes no se puede abrazar. Es la razón del viaje y la lección del relato: hay que verlos."
+    },
+    {
+      "id": "la-hermana-muerta-y-el-hermano-matado",
+      "name": "La hermana muerta y el hermano al que habían matado",
+      "kind": "colectivo",
+      "myths": [
+        "ancastor"
+      ],
+      "decision": "embedded",
+      "covered_by": "los-muertos-del-bajia",
+      "sheets": 0,
+      "note": "La señora que se murió al principio, a la que encuentran arriba, y el hermano que estaba entre los muertos conocidos. A los dos los iban a abrazar y Ancastor lo impidió. Ninguno se describe: van dentro del grupo de los muertos."
+    },
+    {
+      "id": "ninos",
+      "name": "Los niños",
+      "kind": "colectivo",
+      "myths": [
+        "baha",
+        "la-escalera-del-cielo",
+        "icades-name",
+        "los-bibidigomias",
+        "tradicion-del-cerro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Segundo gran ahorro. Cinco relatos usan niños y siempre el mismo cuerpo: el de brazos que arranca la flor, los huérfanos que se come el yaedé, el hijo puesto en la trampa, el de la hamaca al que le comen el seso, el recién nacido al que soban los labios con barro y le ponen la totuma boca abajo, los chiquitos que roba Baha. Una gramática de grupo por edades."
+    },
+    {
+      "id": "nino-de-la-escalera",
+      "name": "El niño que arrancó la flor",
+      "kind": "colectivo",
+      "myths": [
+        "la-escalera-del-cielo"
+      ],
+      "decision": "embedded",
+      "covered_by": "ninos",
+      "sheets": 0,
+      "note": "Niño de brazos; el relato le da un gesto, no un cuerpo."
+    },
+    {
+      "id": "ninos-huerfanos",
+      "name": "Los niños huérfanos de madre",
+      "kind": "colectivo",
+      "myths": [
+        "icades-name"
+      ],
+      "decision": "embedded",
+      "covered_by": "ninos",
+      "sheets": 0,
+      "note": "«No a cualquier niño: a los que habían quedado sin madre.» Es una condición, no un rasgo visual."
+    },
+    {
+      "id": "hijo-en-la-trampa",
+      "name": "El hijo puesto en la trampa",
+      "kind": "colectivo",
+      "myths": [
+        "icades-name"
+      ],
+      "decision": "embedded",
+      "covered_by": "ninos",
+      "sheets": 0,
+      "note": "El relato ni siquiera dice qué le pasó después; el propio expediente marca ese silencio. Sin descripción."
+    },
+    {
+      "id": "nino-de-la-hamaca",
+      "name": "El niño de la hamaca",
+      "kind": "colectivo",
+      "myths": [
+        "los-bibidigomias"
+      ],
+      "decision": "embedded",
+      "covered_by": "ninos",
+      "sheets": 0,
+      "note": "Lo mecen y lo encuentran muerto. Sin descripción propia."
+    },
+    {
+      "id": "recien-nacido",
+      "name": "El recién nacido protegido del rayo",
+      "kind": "colectivo",
+      "myths": [
+        "baha"
+      ],
+      "decision": "embedded",
+      "covered_by": "ninos",
+      "sheets": 0,
+      "note": "Le soban los labios con barro antes de mamar, lo frotan con fauna menor y le ponen la totuma boca abajo sobre el estómago. El cuerpo es el de la gramática de niños; los objetos, los de la hoja de utilería."
+    },
+    {
+      "id": "burumiaes",
+      "name": "Los burumiáes",
+      "kind": "colectivo",
+      "myths": [
+        "antomia",
+        "los-bibidigomias",
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Los indios de la primera edad, los burumiáes, andaban desnudos y no tenían herramientas.» Cuerpo distinto del de la gente actual —desnudez, ausencia de herramienta, manos usadas como aspas para sacar oro— y reaparecen en la memoria de las tres edades. Ficha propia."
+    },
+    {
+      "id": "cunas",
+      "name": "Los Cunas",
+      "kind": "colectivo",
+      "myths": [
+        "sever",
+        "los-domicoes"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Salidos de la llovizna, «aprendieron muy bien a manejar el arco y vivían en bohíos hermosos», no ven de noche, desterrados a las orillas del Atrato y finalmente retirados al mar. Enemigo colectivo de dos relatos, con hábito propio."
+    },
+    {
+      "id": "hijos-de-sever",
+      "name": "Los cinco hijos de Séver",
+      "kind": "colectivo",
+      "myths": [
+        "sever"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Bajan en canoa con el padre, vencen dos veces y hacen el gran escarmiento nocturno gracias a la potencia visiva heredada. Una gramática de grupo que cubre a Tragábari, Hainaeru, Chiano y Jaibama; Emágai lleva ficha aparte porque conduce solo."
+    },
+    {
+      "id": "bibidigomia",
+      "name": "Los Bibidigomia",
+      "kind": "colectivo",
+      "myths": [
+        "los-bibidigomias"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Otros indios» que cogían a los cazadores y se los comían, sin casa, sin jefe y sin manos de cuchillo: el mito publicado sigue a Rafael Bailarín y no las notas de 1929. Su ficha de grupo lleva también las formas en que bajan del árbol. Alias Bibidi gomia, bibidí, bibidikomía."
+    },
+    {
+      "id": "el-ultimo-que-bajo-del-arbol",
+      "name": "El último que bajó del árbol",
+      "kind": "colectivo",
+      "myths": [
+        "los-bibidigomias"
+      ],
+      "decision": "embedded",
+      "covered_by": "bibidigomia",
+      "sheets": 0,
+      "note": "El relato lo describe sólo con una etiqueta racial —«bajó en forma de un negro»— y la research_note del expediente ordena retirar la racialización editorial. No se ficha una figura aparte: la variante se resuelve dentro de la gramática del grupo, sin marca racial."
+    },
+    {
+      "id": "colectivo-antomias",
+      "name": "Los Antomiás",
+      "kind": "colectivo",
+      "myths": [
+        "tradicion-del-cerro",
+        "antomia"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Bailaban y tenían cuernos y cola. Muchos eran como gavilanes o como gallinazos.» Es el escenario del acto central del cerro —la fiesta con luces y licores— y reaparece como los compañeros que bajan con Antomiá a Edaa. Gramática de grupo con sus formas animales dentro."
+    },
+    {
+      "id": "gavilanes-y-gallinazos-de-la-fiesta",
+      "name": "Las formas de gavilán y gallinazo de los Antomiás",
+      "kind": "colectivo",
+      "myths": [
+        "tradicion-del-cerro"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo-antomias",
+      "sheets": 0,
+      "note": "No son aves del monte: es el aspecto que tienen muchos de los Antomiás en la fiesta. Va dentro de la gramática del grupo."
+    },
+    {
+      "id": "mujeres-antomiaes",
+      "name": "Las mujeres antomiáes",
+      "kind": "colectivo",
+      "myths": [
+        "antomia"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo-antomias",
+      "sheets": 0,
+      "note": "Se juntaron con los burumiáes; el corpus no les da cuerpo distinto del de los suyos. Variante femenina dentro de la gramática del grupo."
+    },
+    {
+      "id": "perros-de-edaa",
+      "name": "Los convertidos en perros",
+      "kind": "colectivo",
+      "myths": [
+        "antomia"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo-antomias",
+      "sheets": 0,
+      "note": "«Que sean perros», dijo Caragabí, y él y los suyos fueron arrojados a Edaa convertidos en usó. El relato los vuelve perros comunes, sin rasgo propio, así que el estado se resuelve dentro de la gramática del grupo."
+    },
+    {
+      "id": "animales-malos",
+      "name": "Los animales malos del fondo de los ríos",
+      "kind": "colectivo",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Tigres, caballos, burros, tatabros» que tomaban el espíritu de los humanos y a los que Cobaima confina a las zonas profundas. Manada heterogénea que actúa como una y con la que se negocia: el tigre tiene ficha propia y los demás van en la gramática del grupo."
+    },
+    {
+      "id": "tatabro",
+      "name": "Tatabro",
+      "kind": "animal",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "embedded",
+      "covered_by": "animales-malos",
+      "sheets": 0,
+      "note": "Nombrado dentro de la lista de animales malos, sin acción ni descripción propias."
+    },
+    {
+      "id": "caballo",
+      "name": "Caballo",
+      "kind": "animal",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "embedded",
+      "covered_by": "animales-malos",
+      "sheets": 0,
+      "note": "Nombrado dentro de la lista de animales malos. Es animal traído, y su presencia en el relato del Alto Andágueda se anota tal cual, sin corregirla."
+    },
+    {
+      "id": "burro",
+      "name": "Burro",
+      "kind": "animal",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "embedded",
+      "covered_by": "animales-malos",
+      "sheets": 0,
+      "note": "Nombrado dentro de la lista de animales malos, sin acción propia."
+    },
+    {
+      "id": "fauna-menor",
+      "name": "Fauna menor de la casa",
+      "kind": "colectivo",
+      "myths": [
+        "baha"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Grillo, lombrices y mariposas pequeñas con que frotan al recién nacido antes de su primer alimento, y el sapo con el que los niños no pueden jugar mientras truena. Están en escena y son cuatro bichos menudos: una sola gramática los cubre."
+    },
+    {
+      "id": "grillo",
+      "name": "Grillo",
+      "kind": "animal",
+      "myths": [
+        "baha"
+      ],
+      "decision": "embedded",
+      "covered_by": "fauna-menor",
+      "sheets": 0,
+      "note": "Se frota al recién nacido con él antes del primer alimento."
+    },
+    {
+      "id": "lombrices",
+      "name": "Lombrices",
+      "kind": "animal",
+      "myths": [
+        "baha",
+        "creacion-katios"
+      ],
+      "decision": "embedded",
+      "covered_by": "fauna-menor",
+      "sheets": 0,
+      "note": "Se frota al recién nacido con ellas; y es también una de las formas momentáneas de Caragabí en la prueba del agua."
+    },
+    {
+      "id": "mariposas-pequenas",
+      "name": "Mariposas pequeñas",
+      "kind": "animal",
+      "myths": [
+        "baha"
+      ],
+      "decision": "embedded",
+      "covered_by": "fauna-menor",
+      "sheets": 0,
+      "note": "Se frota al recién nacido con ellas antes del primer alimento."
+    },
+    {
+      "id": "sapo",
+      "name": "Sapo",
+      "kind": "animal",
+      "myths": [
+        "baha"
+      ],
+      "decision": "embedded",
+      "covered_by": "fauna-menor",
+      "sheets": 0,
+      "note": "«Mientras truena, los niños no pueden jugar con los animales de la casa ni con el sapo.» Está en el entorno doméstico del relato; va en la gramática de fauna menor. El tambor de piel de sapo de loma (memburé) es variante del Andágueda recogida por Pinto y no entra."
+    },
+    {
+      "id": "insectos-de-herupotoarra",
+      "name": "Los insectos que salieron de los muertos",
+      "kind": "colectivo",
+      "myths": [
+        "herupotoarra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El remate del relato es el contraste entre dos familias: de la boca de Herupotoarra salen moscas, tábanos y mosquitos inofensivos, y de Ambuima, avispas venenosas. Una sola gramática de enjambre que fija las dos familias, porque el sentido está en verlas juntas."
+    },
+    {
+      "id": "moscas-tabanos-y-mosquitos",
+      "name": "Moscas, tábanos y mosquitos",
+      "kind": "animal",
+      "myths": [
+        "herupotoarra"
+      ],
+      "decision": "embedded",
+      "covered_by": "insectos-de-herupotoarra",
+      "sheets": 0,
+      "note": "Los inofensivos, salidos de la boca de Herupotoarra al mediodía siguiente de su muerte."
+    },
+    {
+      "id": "avispas-venenosas",
+      "name": "Avispas venenosas",
+      "kind": "animal",
+      "myths": [
+        "herupotoarra"
+      ],
+      "decision": "embedded",
+      "covered_by": "insectos-de-herupotoarra",
+      "sheets": 0,
+      "note": "En lo que se convirtió Ambuima al morir. Familia venenosa dentro de la misma gramática de enjambre."
+    },
+    {
+      "id": "primera-pareja",
+      "name": "El primer hombre y la primera mujer",
+      "kind": "colectivo",
+      "myths": [
+        "creacion-katios"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "de piedra fina mompahuará"
+      ],
+      "note": "Los de barro andan y hablan por virtud de la bolita de costilla; los de piedra quedaban animados pero «no hablaban: tan sólo se reían». Dos materiales, dos siluetas, las dos mostradas: el estado cuesta ficha. Los muñecos de barro de Tutruicá van dentro."
+    },
+    {
+      "id": "munecos-de-barro-de-tutruica",
+      "name": "Los muñecos de barro de Tutruicá",
+      "kind": "colectivo",
+      "myths": [
+        "creacion-katios"
+      ],
+      "decision": "embedded",
+      "covered_by": "primera-pareja",
+      "sheets": 0,
+      "note": "«Además de reír, se movían y andaban»: misma materia y misma gramática que la pareja de barro, distinto autor. No necesita modelo aparte."
+    },
+    {
+      "id": "reyes-indios",
+      "name": "Los reyes indios",
+      "kind": "colectivo",
+      "myths": [
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El rey que se niega al reparto y muere decapitado, y la reina que queda cautiva y llora ante el rey blanco. Una ficha para el par. La research_note ordena retirar los estereotipos de regalía dorada, y el expediente avisa que «rey y reina» es un molde monárquico impuesto sobre organizaciones que no lo eran: la ficha va sin corona."
+    },
+    {
+      "id": "reyes-blancos",
+      "name": "Los reyes blancos de más allá del mar",
+      "kind": "colectivo",
+      "myths": [
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El rey que se indigna, sienta a la cautiva en su presencia y manda una segunda expedición, y la reina que lo acompaña. Conducen la segunda mitad del primer fragmento."
+    },
+    {
+      "id": "soldados-blancos",
+      "name": "Los soldados blancos / los españoles",
+      "kind": "colectivo",
+      "myths": [
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Vencen por «la superioridad de las armas extranjeras», decapitan, se parten en dos mitades, esconden los tesoros y cavan el hoyo cubierto de ramas. Actúan en los dos fragmentos del relato."
+    },
+    {
+      "id": "arco-y-flechas",
+      "name": "Arco y flechas",
+      "kind": "objeto",
+      "myths": [
+        "sever",
+        "coste",
+        "los-domicoes",
+        "herupotoarra",
+        "tradiciones-relativas-a-la-conquista",
+        "los-bibidigomias"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Seis relatos: Séver flecha con perfección y esconde sus flechas en el Genené, a Costé lo matan tirándole a los ojos, los Domicó se adiestran dentro del bohío, Herupotoarra hace diez flechas contra Ambuima, a Ambeu lo rematan con flechas y piedras. Ficha de objeto obligatoria."
+    },
+    {
+      "id": "flecha-envenenada",
+      "name": "Flecha envenenada",
+      "kind": "objeto",
+      "myths": [
+        "sever"
+      ],
+      "decision": "embedded",
+      "covered_by": "arco-y-flechas",
+      "sheets": 0,
+      "note": "La que hiere a Emágai en el costado; misma pieza con la punta tratada."
+    },
+    {
+      "id": "lanza-miatzu",
+      "name": "La lanza miatzu",
+      "kind": "objeto",
+      "myths": [
+        "baha"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el objeto por el que se cuenta la segunda mitad del relato: la que los dos jaibanás clavan en el pecho del rayo y la que «no tiene nada de bonito» que se guarda en los bohíos y se saca al tejado mirando al cielo apenas se oye el bramido. Dos estados de uso, un solo cuerpo."
+    },
+    {
+      "id": "canoa",
+      "name": "Canoa",
+      "kind": "objeto",
+      "myths": [
+        "creacion-katios",
+        "sever"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Labrada de un árbol corpulento en la prueba del agua; hecha de Genené por Séver; cincuenta acabadas en la guerra; amarradas en la orilla por la expedición que lo mata. Dos relatos y muchas escenas."
+    },
+    {
+      "id": "tambor-de-baha",
+      "name": "El tambor de Baha",
+      "kind": "objeto",
+      "myths": [
+        "baha"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Desde entonces lleva un tambor en la mano, y lo toca para avisar a los hombres que empieza la lluvia.» Es el objeto que explica el trueno; sin él la ficha del personaje no dice nada."
+    },
+    {
+      "id": "horno-de-la-prueba-del-fuego",
+      "name": "El horno de la prueba del fuego",
+      "kind": "objeto",
+      "myths": [
+        "creacion-katios",
+        "antomia"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Construyeron un horno enorme»: seis días de leña, cerrado herméticamente hasta la puesta del sol. El mismo aparato es «la gran olla de la prueba del fuego» donde se quema Antomiá torro. Dos relatos, una ficha."
+    },
+    {
+      "id": "cabezas-trofeo",
+      "name": "Cabezas y calaveras de trofeo",
+      "kind": "objeto",
+      "myths": [
+        "los-domicoes",
+        "sever",
+        "tradiciones-relativas-a-la-conquista",
+        "los-bibidigomias"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Las cabezas de los Cunas suspendidas alrededor del bohío, que «se movían por sí solas y se les erizaban los cabellos»; la cabeza de Séver llevada como trofeo; la del rey indio presentada al rey blanco; el montón de calaveras dentro del árbol hueco. Cuatro relatos y una sola familia de objeto."
+    },
+    {
+      "id": "calaveras-del-arbol",
+      "name": "El montón de calaveras",
+      "kind": "objeto",
+      "myths": [
+        "los-bibidigomias"
+      ],
+      "decision": "embedded",
+      "covered_by": "cabezas-trofeo",
+      "sheets": 0,
+      "note": "Lo que ven al asomarse al árbol: las de todos los cazadores comidos. Misma familia de objeto, en estado descarnado."
+    },
+    {
+      "id": "collar-de-dientes",
+      "name": "El collar de dientes que suena como campanas",
+      "kind": "objeto",
+      "myths": [
+        "sever",
+        "los-domicoes"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Séver «les arrancó los dientes, los ensartó en una pita y los colgó alrededor de su bohío: cuando aquellos dientes se agitaban solos y sonaban como campanas, era señal de que los suyos vencerían». En 1929 son colmillos que suenan al rociarlos con chicha o guarapo. Objeto-señal de dos relatos."
+    },
+    {
+      "id": "oro",
+      "name": "El oro",
+      "kind": "objeto",
+      "myths": [
+        "baha",
+        "coste",
+        "cobaima",
+        "antomia",
+        "tradiciones-relativas-a-la-conquista",
+        "la-escalera-del-cielo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Ficha de material, no de joya: filones, vetas, la mina que se comía a la gente, los tesoros escondidos dos veces, los diablos que son de oro, las chaquiras del dios renacido. Seis relatos con una sola ficha; separar cada aparición sería el error de conteo más caro de este corpus."
+    },
+    {
+      "id": "cirios-de-genene",
+      "name": "Los cuatro cirios del Genené",
+      "kind": "objeto",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«A sus cuatro lados hay otros tantos cirios encendidos de una piedra durísima, que arderán hasta el fin del mundo», y de ellos saldrá el río de fuego que lo arrasará todo. En 1929 son cuatro velas enormes de metal. Objeto propio y semilla del final del relato."
+    },
+    {
+      "id": "genene",
+      "name": "El árbol Genené",
+      "kind": "planta",
+      "myths": [
+        "fragmentos-de-otras-tradiciones",
+        "sever"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "tronco derribado"
+      ],
+      "note": "El árbol inmensamente grande que encerraba el agua; de su concavidad el mar, de sus ramas los ríos, de sus brotes riachuelos y arroyos. Séver esconde en él sus flechas y de él labra su canoa. El estado cuesta ficha: el árbol en pie y el tronco tumbado con el raudal saliendo son dos siluetas y las dos se muestran. Alias jenené."
+    },
+    {
+      "id": "bejucos-del-genene",
+      "name": "Los bejucos que enredan al Genené",
+      "kind": "planta",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "embedded",
+      "covered_by": "genene",
+      "sheets": 0,
+      "note": "«Multitud de bejucos que impedían que cayera en tierra»; son parte del árbol en su estado derribado."
+    },
+    {
+      "id": "maiz",
+      "name": "Maíz",
+      "kind": "planta",
+      "myths": [
+        "ancastor"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el objeto por el que se cuenta el relato: no lo había en este mundo, una de las mujeres guarda un grano en la boca, lo siembran y todos cosechan. Ficha botánica con mazorca, grano y planta sembrada."
+    },
+    {
+      "id": "chontaduro",
+      "name": "Chontaduro",
+      "kind": "planta",
+      "myths": [
+        "ancastor",
+        "herupotoarra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Baja del Bajía junto con el maíz, escondido por la otra mujer; y en Armucurá sus habitantes «se alimentaban del vapor del chontaduro». Dos relatos. Las fuentes insisten en que maíz y chontaduro viajan siempre juntos."
+    },
+    {
+      "id": "name",
+      "name": "El ñame",
+      "kind": "planta",
+      "myths": [
+        "icades-name"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el objeto por el que se cuenta el relato y su etimología: «El Yaedé quedó convertido en Yame. De sus despojos se formó el ñame, y de ahí procede el ñame que se come ahora.»"
+    },
+    {
+      "id": "moindu",
+      "name": "Raíz de moindú (tobo)",
+      "kind": "planta",
+      "myths": [
+        "antomia",
+        "tradicion-del-cerro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Raíz de moindú, que parece arracacha y ensancha los intestinos»: el arma con la que muere Antomiá paima. Vuelve en la variante de Severino del cerro, donde cuecen raíces de tobo con carne. Descripción botánica explícita en el corpus, dos relatos."
+    },
+    {
+      "id": "ajies-barbasco-y-anamu",
+      "name": "Ajíes, barbascos y anamú",
+      "kind": "planta",
+      "myths": [
+        "los-bibidigomias"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Recogieron ajíes, barbascos y anamú por canastadas y volvieron a quemarlos en la raíz del palo»: el humo que emborracha a los de adentro y gana el relato. Tres plantas nombradas, una sola ficha botánica."
+    },
+    {
+      "id": "arbol-comba",
+      "name": "El árbol Comba",
+      "kind": "planta",
+      "myths": [
+        "sever",
+        "coste"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Árbol nombrado que es sitio de dos actos en dos relatos: Emágai se refugia entre sus raíces y allí lo hallan, y la tigresa pare sus dos cachorros al pie de un gran árbol de comba. El nombre se pierde en la versión que reproduce Vasco, y por eso conviene fijarlo."
+    },
+    {
+      "id": "guiban-colorado",
+      "name": "El güibán colorado",
+      "kind": "planta",
+      "myths": [
+        "aribamias"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Verificado en el mito: «El güibán colorado es una hoja», y nada más; Severino añade sólo que el zumo se toma en menguante. No hay una sola nota botánica, así que fijar una especie real sería inventarla, y su uso —tomarla en vida para volverse Aribamia después de muerto— toca la transformación del jaibaná, que pide consulta."
+    },
+    {
+      "id": "palmera-mas-alta",
+      "name": "La palmera más alta",
+      "kind": "planta",
+      "myths": [
+        "baha"
+      ],
+      "decision": "embedded",
+      "covered_by": "selva-humeda-del-noroccidente",
+      "sheets": 0,
+      "note": "Al cogollo sube el rayo los cuerpos de los niños. Una sola aparición y sin especie; el modelo de entorno la lleva como elemento de vegetación."
+    },
+    {
+      "id": "canaflechal",
+      "name": "El cañaflechal",
+      "kind": "planta",
+      "myths": [
+        "sever"
+      ],
+      "decision": "embedded",
+      "covered_by": "selva-humeda-del-noroccidente",
+      "sheets": 0,
+      "note": "Desde él atisba Chiano y Séver lo incendia para sacar a los Cunas a las playas. Es una mancha de vegetación de orilla; va como variante dentro del modelo de entorno, con el fuego aportado por su propia ficha."
+    },
+    {
+      "id": "bohio",
+      "name": "El bohío",
+      "kind": "arquitectura",
+      "myths": [
+        "antomia",
+        "baha",
+        "herupotoarra",
+        "los-domicoes",
+        "sever",
+        "los-bibidigomias",
+        "tradicion-del-cerro",
+        "cobaima"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Ocho relatos. El corpus dice siempre bohío, nunca tambo —la única vez que aparece «tambo» es dentro de la variante de Rubén Domicó que el expediente prohíbe fundir—. La ficha lleva el tablado, la escalera, el estantillo y el tejado, que son partes de la misma construcción: el mismo bohío del que cae Antomiá paima, en cuyo estantillo se respaldan los jaibanás y sobre cuyo tejado se pone la lanza."
+    },
+    {
+      "id": "tablado-escalera-estantillo-y-tejado",
+      "name": "Tablado, escalera, estantillo y tejado",
+      "kind": "arquitectura",
+      "myths": [
+        "antomia",
+        "baha"
+      ],
+      "decision": "embedded",
+      "covered_by": "bohio",
+      "sheets": 0,
+      "note": "Partes de la misma construcción, no objetos sueltos: el tablado del que cae el ladrón, la escalera junto a la que se para, el estantillo en que se respaldan los dos jaibanás y el tejado donde se coloca la lanza."
+    },
+    {
+      "id": "casa-de-oro",
+      "name": "La casa de oro",
+      "kind": "arquitectura",
+      "myths": [
+        "baha",
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Dos relatos: el bohío de oro «más hermoso que el del propio dios» por el que Baha se niega y es arrojado al aire, y las «cuatro casas de oro, adornadas todas de oro» de los reyes indios que desatan la expedición. Es una construcción distinta del bohío y motor de ambos relatos."
+    },
+    {
+      "id": "escalera-de-cristal",
+      "name": "La escalera del cielo",
+      "kind": "arquitectura",
+      "myths": [
+        "la-escalera-del-cielo",
+        "los-domicoes"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Dos tallos de una planta bellísima, con botones, tallos y flores por peldaños, transparente como el cristal, con planchas de metal bruñido en los flancos y apoyada sobre dos hermosísimas flores. Es el objeto por el que se cuenta el relato. El expediente advierte que no debe confundirse con la escala de Herupotoarra."
+    },
+    {
+      "id": "flores-y-planchas-de-la-escalera",
+      "name": "Las flores y las planchas de metal bruñido",
+      "kind": "objeto",
+      "myths": [
+        "la-escalera-del-cielo"
+      ],
+      "decision": "embedded",
+      "covered_by": "escalera-de-cristal",
+      "sheets": 0,
+      "note": "La flor arrancada es el gesto que rompe el paso entre los mundos, y las planchas evitan el desmayo al subir: las dos son partes de la misma pieza."
+    },
+    {
+      "id": "escala-de-herupotoarra",
+      "name": "La escala de dos palos que se estira",
+      "kind": "arquitectura",
+      "myths": [
+        "herupotoarra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Colocó entonces dos palos en forma de escala… a medida que iba pronunciando uariáde, uariáde, la escala se estiraba hacia arriba.» El expediente prohíbe expresamente confundirla con la de cristal: aquélla se rompe por una flor, ésta la troza un carpintero. Dos fichas, no una."
+    },
+    {
+      "id": "arbol-hueco-de-los-bibidigomia",
+      "name": "El árbol hueco con balcón",
+      "kind": "arquitectura",
+      "myths": [
+        "los-bibidigomias"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Vivían en un gran árbol hueco que tenía como un balcón»: es la casa de los caníbales, el escenario de todo el relato, y no es intercambiable con ningún árbol ni con ningún bohío ya fichado."
+    },
+    {
+      "id": "carcel-de-quibdo",
+      "name": "La cárcel de Quibdó",
+      "kind": "arquitectura",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "excluded",
+      "reason": "sin_evidencia_visual",
+      "sheets": 0,
+      "note": "Verificado en el mito: «Cobaima estuvo en una cárcel en Quibdó, pero se voló de ese lugar hacia la cabecera del río Andágueda». Eso es todo: ni época, ni material, ni forma. Cualquier diseño sería una cárcel colonial inventada por el ilustrador."
+    },
+    {
+      "id": "bajia",
+      "name": "El Bajía",
+      "kind": "lugar",
+      "myths": [
+        "ancastor",
+        "la-escalera-del-cielo",
+        "creacion-katios",
+        "dabeiba"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El cielo donde están los muertos: se llega por el aire, hay una casa grande, hay maíz y chontaduro, se oyen cantos y músicas desde abajo. Cuatro relatos. El expediente avisa de no confundir Bajía, el cielo, con Baha, el trueno. Alias Bajá, bajía."
+    },
+    {
+      "id": "casa-grande-del-bajia",
+      "name": "La casa grande del Bajía",
+      "kind": "arquitectura",
+      "myths": [
+        "ancastor"
+      ],
+      "decision": "embedded",
+      "covered_by": "bajia",
+      "sheets": 0,
+      "note": "«Llegaron a una casa grande y encontraron unas mujeres…»; es lo único construido que el relato describe allá arriba, y va dentro del modelo espacial del cielo."
+    },
+    {
+      "id": "armucura",
+      "name": "Armucurá",
+      "kind": "lugar",
+      "myths": [
+        "herupotoarra",
+        "creacion-katios"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El mundo de abajo de Tutruicá, adonde cae Herupotoarra con su escala: «sus habitantes no morían: se alimentaban del vapor del chontaduro y estaban exentos de las necesidades del cuerpo». Dos relatos. Alias /armukurá/, aramúko, Armucará."
+    },
+    {
+      "id": "edaa",
+      "name": "Edaa",
+      "kind": "lugar",
+      "myths": [
+        "antomia"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Lo sepultó en Edaa, que está dentro de la tierra, y cerró su puerta para que no pudiera salir jamás», y allí son arrojados también los convertidos en perros. Se ficha aparte de Armucurá porque el corpus no dice que sean el mismo sitio y aquí lo definitorio es la puerta cerrada. Severino lo traduce como «el infierno»: la ficha no adopta esa iconografía."
+    },
+    {
+      "id": "gioro-lloro",
+      "name": "Gioró (Lloró), tierra sagrada",
+      "kind": "lugar",
+      "myths": [
+        "la-escalera-del-cielo"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Esto sucedió en Gioró, tierra de Quibdó, que es tierra sagrada»: allí Caragabí hizo muchas de sus hazañas y todavía se ve la gran piedra lisa sobre la que se apoyaba la escalera. Escenario nombrado, con resto visible, no intercambiable."
+    },
+    {
+      "id": "piedra-lisa-de-gioro",
+      "name": "La gran piedra lisa",
+      "kind": "objeto",
+      "myths": [
+        "la-escalera-del-cielo"
+      ],
+      "decision": "embedded",
+      "covered_by": "gioro-lloro",
+      "sheets": 0,
+      "note": "La base que aún se ve; es el rasgo que define el lugar y va dentro de su modelo espacial."
+    },
+    {
+      "id": "cerro-plateado-de-musinga",
+      "name": "El Cerro Plateado",
+      "kind": "lugar",
+      "myths": [
+        "tradicion-del-cerro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario entero del relato y no intercambiable con ninguna montaña: la peña pelada que refleja como plata y se ve desde lejos, el abismo profundo, el niño que se sostiene sin poder caer. La ficha lleva también el valle de Musinga y el camino subterráneo que sale por Urrao, porque el relato no los describe por dentro."
+    },
+    {
+      "id": "valle-de-musinga-y-tunel-a-urrao",
+      "name": "El valle de Musinga y el camino subterráneo a Urrao",
+      "kind": "lugar",
+      "myths": [
+        "tradicion-del-cerro"
+      ],
+      "decision": "embedded",
+      "covered_by": "cerro-plateado-de-musinga",
+      "sheets": 0,
+      "note": "«Los indios que vivían en el valle hicieron un camino subterráneo que salía por Urrao y se retiraron a otras partes, por miedo.» Ni el valle ni el túnel se describen: el modelo espacial del cerro y su comarca los lleva."
+    },
+    {
+      "id": "cueva-de-coste",
+      "name": "La cueva de Costé",
+      "kind": "lugar",
+      "myths": [
+        "coste"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Toparon con el tercer Costé en la cueva de una peña» y después «lo hallaron en una cueva donde guardaba los restos de los muertos». Escenario de dos actos del relato, con un contenido que ningún paisaje fichado cubre."
+    },
+    {
+      "id": "restos-de-los-muertos-en-la-cueva",
+      "name": "Los restos de los muertos de la cueva",
+      "kind": "objeto",
+      "myths": [
+        "coste"
+      ],
+      "decision": "embedded",
+      "covered_by": "cueva-de-coste",
+      "sheets": 0,
+      "note": "Lo que guarda dentro; es el contenido que define el lugar y va con su modelo espacial."
+    },
+    {
+      "id": "piedra-gigante-como-barco",
+      "name": "La piedra gigante parecida a un barco",
+      "kind": "lugar",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Bonita, parecida a un barco y apartada de los demás lugares»; antes fue una casa y sobrevivió a una inundación que destruyó el pueblo; quien se acercaba podía ser tragado. Escenario propio de un acto de Cobaima y sin equivalente en el corpus."
+    },
+    {
+      "id": "espiritus-de-mujeres-de-la-piedra",
+      "name": "Los espíritus de mujeres trabajando",
+      "kind": "colectivo",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "embedded",
+      "covered_by": "piedra-gigante-como-barco",
+      "sheets": 0,
+      "note": "«Vio espíritus de mujeres trabajando con piedras, harina, hachas y barro»: es lo que se ve dentro del lugar y va con su modelo espacial, con su utilería ya fichada aparte."
+    },
+    {
+      "id": "arcoiris-embibicuras",
+      "name": "El arcoíris de Embibicuras",
+      "kind": "lugar",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Un arcoíris grande donde vivían humanos, animales y plantas juntos», que no podían salir sin exponer a la muerte a los suyos y sin afectar el río y el bosque, y a los que Cobaima dejó encerrados allí. Un lugar hecho de arcoíris: no lo cubre ningún paisaje ni ningún fenómeno ya fichado."
+    },
+    {
+      "id": "mina-de-oro-que-come",
+      "name": "La mina donde el oro se comía a la gente",
+      "kind": "lugar",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Ya en la cordillera de Antioquia: «una mina donde el oro se comía a la gente y a los animales, y después de comérselos su popó se volvía oro». Último acto de Cobaima y el único lugar minero del corpus."
+    },
+    {
+      "id": "popo-que-se-vuelve-oro",
+      "name": "El popó que se volvía oro",
+      "kind": "objeto",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "embedded",
+      "covered_by": "mina-de-oro-que-come",
+      "sheets": 0,
+      "note": "El detalle que define la mina; va con su modelo espacial, sin ficha aparte."
+    },
+    {
+      "id": "rio-odo",
+      "name": "El río Odo",
+      "kind": "lugar",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "embedded",
+      "covered_by": "rio",
+      "sheets": 0,
+      "note": "Río de dos entradas al que Cobaima le retira la malla y al que llama Odo, «atrapado». Lo que lo distingue es la malla, que va en la hoja de utilería; el río en sí lo cubre la ficha de paisaje."
+    },
+    {
+      "id": "aguasal",
+      "name": "Comunidad Aguasal",
+      "kind": "lugar",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "embedded",
+      "covered_by": "rio",
+      "sheets": 0,
+      "note": "«Un río que tenía sal natural adentro»; el corpus no da un solo rasgo visible que lo separe de otro río."
+    },
+    {
+      "id": "rio-atrato",
+      "name": "El Atrato",
+      "kind": "lugar",
+      "myths": [
+        "sever"
+      ],
+      "decision": "embedded",
+      "covered_by": "rio",
+      "sheets": 0,
+      "note": "Orillas del destierro de los Cunas, curso que suben las expediciones y sitio del baño donde matan a Séver. Es un río nombrado, no un paisaje distinto del ya fichado."
+    },
+    {
+      "id": "quebradas",
+      "name": "Las quebradas",
+      "kind": "lugar",
+      "myths": [
+        "a-transformacion-del-hombre-que-no-podia-cazar"
+      ],
+      "decision": "embedded",
+      "covered_by": "rio",
+      "sheets": 0,
+      "note": "«Cruzó quebradas y llegó a un ámbito…». Las fuentes las leen como el paso entre mundos, pero el relato sólo las nombra: van dentro del modelo de río."
+    },
+    {
+      "id": "cerro-leon",
+      "name": "El Cerro León",
+      "kind": "lugar",
+      "myths": [
+        "dabeiba"
+      ],
+      "decision": "embedded",
+      "covered_by": "montanas-del-noroccidente",
+      "sheets": 0,
+      "note": "Verificado en el mito: sólo «lo más empinado del Cerro León», sin un rasgo que lo distinga de cualquier cumbre. Es intercambiable con el paisaje de montaña ya fichado, así que no cuesta ficha."
+    },
+    {
+      "id": "pena-de-los-diez-salvados",
+      "name": "La elevada peña del diluvio",
+      "kind": "lugar",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "embedded",
+      "covered_by": "montanas-del-noroccidente",
+      "sheets": 0,
+      "note": "«Una elevada peña adonde no alcanzaron las aguas», donde pasan el año. Sin rasgo propio; el modelo de montaña la lleva con el agua del fenómeno del diluvio."
+    },
+    {
+      "id": "selva-humeda-del-noroccidente",
+      "name": "La selva húmeda del noroccidente",
+      "kind": "paisaje",
+      "myths": [
+        "a-transformacion-del-hombre-que-no-podia-cazar",
+        "aribamias",
+        "los-bibidigomias",
+        "coste",
+        "sever",
+        "cobaima",
+        "icades-name"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El monte de la cacería, «los montes sombríos y solitarios donde no llega nadie» del Aribamia, el bosque donde se pierden los cazadores, el monte al que se van los tigrecitos. Modelo de entorno base del corpus; lleva dentro el cañaflechal y las palmeras."
+    },
+    {
+      "id": "rio",
+      "name": "El río",
+      "kind": "paisaje",
+      "myths": [
+        "a-transformacion-del-hombre-que-no-podia-cazar",
+        "cobaima",
+        "creacion-katios",
+        "sever",
+        "herupotoarra",
+        "fragmentos-de-otras-tradiciones",
+        "antomia"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Segundo modelo de entorno base: cauces, quebradas, cabeceras, orillas, pozas y las zonas profundas adonde Cobaima confina a los animales malos. Cubre el Atrato, el Andágueda, el Odo, Aguasal y la cabecera de Bagadó, que el corpus nombra pero no describe."
+    },
+    {
+      "id": "montanas-del-noroccidente",
+      "name": "Las montañas del noroccidente",
+      "kind": "paisaje",
+      "myths": [
+        "dabeiba",
+        "ancastor",
+        "cobaima",
+        "fragmentos-de-otras-tradiciones",
+        "tradicion-del-cerro"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "La montaña a la que sale la mujer que mira al sol, el Cerro León, la cordillera ya en Antioquia, la peña del diluvio, los filos y peñas del occidente antioqueño. Un modelo de entorno para todas ellas; el Cerro Plateado va aparte porque tiene rasgo propio."
+    },
+    {
+      "id": "mar-y-playa",
+      "name": "El mar y la playa",
+      "kind": "paisaje",
+      "myths": [
+        "los-domicoes",
+        "sever",
+        "tradiciones-relativas-a-la-conquista",
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«A las orillas del mar» matan a los tres Domicós y a la arena descienden a pelear; los Cunas se retiran al mar; los reyes blancos vienen de más allá del mar; de la concavidad del Genené procede el mar. Cuatro relatos y un entorno que ni la selva ni el río cubren."
+    },
+    {
+      "id": "tormenta",
+      "name": "La tempestad",
+      "kind": "fenomeno",
+      "myths": [
+        "baha",
+        "dabeiba"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Lluvia, trueno, relámpago, el primer relámpago al que escupen, la tempestad con el niño en la hamaca; y los fenómenos que preside Dabeiba: lluvia, granizo, trueno, rayo, huracanes, borrascas y terremotos. Una regla de fenómeno para todos."
+    },
+    {
+      "id": "granizo-huracanes-borrascas-y-terremotos",
+      "name": "Granizo, huracanes, borrascas y terremotos",
+      "kind": "fenomeno",
+      "myths": [
+        "dabeiba"
+      ],
+      "decision": "embedded",
+      "covered_by": "tormenta",
+      "sheets": 0,
+      "note": "Enumerados en una sola frase de lo que Dabeiba preside desde el cielo, sin escena propia. Van como fases de la misma regla."
+    },
+    {
+      "id": "diluvio",
+      "name": "El diluvio",
+      "kind": "fenomeno",
+      "myths": [
+        "fragmentos-de-otras-tradiciones",
+        "cobaima"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "«Al brotar las aguas se inundó toda la tierra y sus ondas arrastraron a todos los vivientes… Un año duró la inundación.» Y la inundación que destruyó el pueblo de la piedra-barco. Es un entorno entero durante un año del relato, no un efecto."
+    },
+    {
+      "id": "fuego",
+      "name": "El fuego",
+      "kind": "fenomeno",
+      "myths": [
+        "antomia",
+        "coste",
+        "sever",
+        "fragmentos-de-otras-tradiciones",
+        "tradicion-del-cerro",
+        "creacion-katios"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Seis relatos y un origen: del vientre reventado de Antomiá paima «salieron fuego, humo y piedras. Antes no había nada de eso». Lleva la hoguera de Costé y su luz quemante, el incendio del cañaflechal y de los quince bohíos, el humo de los ajíes, el horno, y el río de fuego que saldrá de los cirios al fin de los siglos."
+    },
+    {
+      "id": "rio-de-fuego-del-fin-del-mundo",
+      "name": "El río de fuego del fin de los siglos",
+      "kind": "fenomeno",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "embedded",
+      "covered_by": "fuego",
+      "sheets": 0,
+      "note": "«De esos cirios se originará un río de fuego que irá en aumento y lo arrasará todo.» Fase final de la misma regla de fenómeno."
+    },
+    {
+      "id": "humo",
+      "name": "El humo",
+      "kind": "fenomeno",
+      "myths": [
+        "los-bibidigomias",
+        "antomia"
+      ],
+      "decision": "embedded",
+      "covered_by": "fuego",
+      "sheets": 0,
+      "note": "El que emborracha a los Bibidigomia y el que sale del vientre reventado. Fase de la misma regla."
+    },
+    {
+      "id": "sangre-que-se-multiplica",
+      "name": "La sangre del Aribamia",
+      "kind": "fenomeno",
+      "myths": [
+        "aribamias"
+      ],
+      "decision": "embedded",
+      "covered_by": "aribamia",
+      "sheets": 0,
+      "note": "«De cada gota de sangre que le cae al suelo se levanta un Aribamia nuevo», y el agua caliente es lo que le quita a esa sangre la capacidad de reproducirse. Es una propiedad del cuerpo ya fichado, no un ser aparte."
+    },
+    {
+      "id": "agua-caliente",
+      "name": "El agua caliente",
+      "kind": "objeto",
+      "myths": [
+        "aribamias"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_hogar",
+      "sheets": 0,
+      "note": "«Queda una manera, y es el agua caliente»: el único recurso que acaba con el Aribamia. El mito publicado no describe recipiente; las dos ollas puestas a hervir son de la nota de Chaves sobre otro relato. Va como pieza menor del fogón."
+    },
+    {
+      "id": "tejidos",
+      "name": "Los tejidos",
+      "kind": "objeto",
+      "myths": [
+        "dabeiba"
+      ],
+      "decision": "embedded",
+      "covered_by": "gente-embera-katio",
+      "sheets": 0,
+      "note": "«Enseñó a fabricar tejidos», y nada más: ni técnica, ni patrón, ni pieza. El textil se resuelve como vestuario dentro de la gramática de la gente, con lenguaje y sin diseño fijado; inventar un ejemplar de patrón sería exactamente lo que el encargo prohíbe."
+    },
+    {
+      "id": "labranza-y-pueblos",
+      "name": "Los terrenos labrados y los pueblos levantados",
+      "kind": "arquitectura",
+      "myths": [
+        "dabeiba"
+      ],
+      "decision": "embedded",
+      "covered_by": "bohio",
+      "sheets": 0,
+      "note": "«Enseñó a labrar los terrenos. Enseñó a construir habitaciones y a levantar pueblos.» El caserío y la roza son agregados del mismo modelo constructivo y el relato no describe ninguno de los dos."
+    },
+    {
+      "id": "estrellas-y-luz",
+      "name": "Las estrellas y la luz",
+      "kind": "fenomeno",
+      "myths": [
+        "el-origen-del-sol-y-la-luna"
+      ],
+      "decision": "embedded",
+      "covered_by": "bajia",
+      "sheets": 0,
+      "note": "«Después Caragabí arregló la luz y las estrellas»: una línea entera, sin forma ni número. El modelo del cielo las lleva."
+    },
+    {
+      "id": "canto-y-musica-del-cielo",
+      "name": "Los cantos y las músicas del cielo",
+      "kind": "fenomeno",
+      "myths": [
+        "la-escalera-del-cielo"
+      ],
+      "decision": "embedded",
+      "covered_by": "bajia",
+      "sheets": 0,
+      "note": "«Desde abajo se alcanzaban a ver las cosas de allá y se oían muy bien sus cantos y sus músicas», y «la música se sigue recordando». Es sonido, no figura, y no debe confundirse con el canto ritual del jaibaná, que queda excluido por sensible."
+    },
+    {
+      "id": "globo-envuelto-en-sombras",
+      "name": "El globo envuelto en sombras",
+      "kind": "fenomeno",
+      "myths": [
+        "creacion-katios"
+      ],
+      "decision": "embedded",
+      "covered_by": "armucura",
+      "sheets": 0,
+      "note": "«El dios de arriba divisó abajo algo como un globo envuelto en sombras y bajó a ver qué era.» Es el mundo de abajo visto desde arriba antes de bajar: un modo de mirar el lugar ya fichado, no otro lugar."
+    },
+    {
+      "id": "fruta-de-la-prueba",
+      "name": "La fruta que llevan en la boca",
+      "kind": "planta",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "embedded",
+      "covered_by": "genene",
+      "sheets": 0,
+      "note": "«Todos debían trepar llevando una fruta en la boca, y el que cayera antes que la fruta al suelo sería el poderoso.» El relato no nombra la especie; va como fruto genérico dentro de la ficha botánica del árbol, y no se le fija una especie real."
+    },
+    {
+      "id": "totuma",
+      "name": "Totuma",
+      "kind": "objeto",
+      "myths": [
+        "sever",
+        "fragmentos-de-otras-tradiciones",
+        "baha",
+        "creacion-katios"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_hogar",
+      "sheets": 0,
+      "note": "Tapa la gota de agua de la que salen el indio y la mujer, cubre la saliva que se vuelve paloma y se pone boca abajo sobre el estómago del niño durante la tempestad. Objeto menor de uso constante."
+    },
+    {
+      "id": "olla-de-chicha-y-guarapo",
+      "name": "Ollas de chicha y guarapo",
+      "kind": "objeto",
+      "myths": [
+        "antomia",
+        "los-domicoes",
+        "sever"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_hogar",
+      "sheets": 0,
+      "note": "Las ollas que deja arregladas la india jaibaná, la chicha del convite y de la bebezón, el guarapo con que se rocía el collar."
+    },
+    {
+      "id": "hamaca",
+      "name": "Hamaca",
+      "kind": "objeto",
+      "myths": [
+        "los-bibidigomias",
+        "baha"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_hogar",
+      "sheets": 0,
+      "note": "El niño mecido en ella por la indiecita y el niño tendido en la suya durante la tempestad."
+    },
+    {
+      "id": "canasta",
+      "name": "Canasta",
+      "kind": "objeto",
+      "myths": [
+        "los-bibidigomias"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_hogar",
+      "sheets": 0,
+      "note": "«Recogieron ajíes, barbascos y anamú por canastadas.» Objeto menor de carga."
+    },
+    {
+      "id": "hoguera",
+      "name": "Hoguera",
+      "kind": "objeto",
+      "myths": [
+        "coste"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_hogar",
+      "sheets": 0,
+      "note": "«Dejaron el cadáver consumiéndose en una hoguera, y el reflejo de aquel fuego llegó hasta la casa de los indios en forma de una luz quemante.» La pira construida; la llama en sí la lleva la ficha de fuego."
+    },
+    {
+      "id": "hacha-de-piedra",
+      "name": "Hachas de piedra durísima",
+      "kind": "objeto",
+      "myths": [
+        "fragmentos-de-otras-tradiciones",
+        "cobaima"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_herramientas",
+      "sheets": 0,
+      "note": "Con las que derriban el Genené —de hierro y acero mezclados en la variante de 1929— y las que usan los espíritus de mujeres dentro de la piedra-barco."
+    },
+    {
+      "id": "barra-de-hierro",
+      "name": "Barra de hierro",
+      "kind": "objeto",
+      "myths": [
+        "icades-name"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_herramientas",
+      "sheets": 0,
+      "note": "El arma con la que el padre despedaza al yaedé de un solo golpe. El expediente corrige expresamente que es barra y no macana."
+    },
+    {
+      "id": "garrote",
+      "name": "Garrote",
+      "kind": "objeto",
+      "myths": [
+        "los-bibidigomias"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_herramientas",
+      "sheets": 0,
+      "note": "Con el que matan uno por uno a los que van cayendo del árbol."
+    },
+    {
+      "id": "lazo-corredizo",
+      "name": "Lazo corredizo",
+      "kind": "objeto",
+      "myths": [
+        "creacion-katios",
+        "icades-name"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_herramientas",
+      "sheets": 0,
+      "note": "Con el que Caragabí enlaza a Tutruicá desde su mundo, y con el que el indio arma la trampa para el yaedé."
+    },
+    {
+      "id": "malla-del-rio-odo",
+      "name": "La malla del río Odo",
+      "kind": "objeto",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_herramientas",
+      "sheets": 0,
+      "note": "«Una malla que no dejaba subir a los peces hasta la orilla»; Cobaima la retira y de ahí el nombre del río."
+    },
+    {
+      "id": "palanca",
+      "name": "Palanca",
+      "kind": "objeto",
+      "myths": [
+        "creacion-katios"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_herramientas",
+      "sheets": 0,
+      "note": "Con la que cada dios remueve la peña para arrastrar al otro al fondo en la prueba del agua."
+    },
+    {
+      "id": "flauta-de-huesos-de-sever",
+      "name": "La flauta de huesos",
+      "kind": "objeto",
+      "myths": [
+        "sever"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_guerra",
+      "sheets": 0,
+      "note": "«Con sus huesos hicieron una flauta, pero al ensayarla se reventó.» En 1929 son los huesos de Guiano y el reventón es la señal de que no vencerían."
+    },
+    {
+      "id": "pita-del-collar",
+      "name": "La pita",
+      "kind": "objeto",
+      "myths": [
+        "sever"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_guerra",
+      "sheets": 0,
+      "note": "El cordel en que se ensartan los dientes; pieza menor de la ficha del collar."
+    },
+    {
+      "id": "piedras-arrojadizas",
+      "name": "Piedras arrojadizas",
+      "kind": "objeto",
+      "myths": [
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_guerra",
+      "sheets": 0,
+      "note": "Con flechas y piedras rematan a Ambeu en el fondo del hoyo; el expediente subraya que no es con armas de fuego."
+    },
+    {
+      "id": "armas-de-fuego-espanolas",
+      "name": "Las armas extranjeras",
+      "kind": "objeto",
+      "myths": [
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_guerra",
+      "sheets": 0,
+      "note": "«La superioridad de las armas extranjeras» y las balas que no podían matar a Ambeu. El corpus no las describe: la hoja las resuelve como pieza de época, sin detalle inventado."
+    },
+    {
+      "id": "hoyo-cubierto-de-ramas",
+      "name": "El hoyo cubierto de ramas",
+      "kind": "objeto",
+      "myths": [
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_guerra",
+      "sheets": 0,
+      "note": "La trampa que resuelve lo que las balas no pudieron. Es un dispositivo, no un lugar: el relato sólo dice profundo y cubierto."
+    },
+    {
+      "id": "carta-de-tutruica",
+      "name": "La carta de Tutruicá",
+      "kind": "objeto",
+      "myths": [
+        "creacion-katios"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_materia_de_creacion",
+      "sheets": 0,
+      "note": "«Al fin el de abajo se compadeció y le mandó una carta.» Objeto anacrónico del refundido misionero que el mito publicado conserva; se ficha como pieza menor y se anota como tal."
+    },
+    {
+      "id": "piedra-mompahuara",
+      "name": "La piedra fina mompahuará",
+      "kind": "objeto",
+      "myths": [
+        "creacion-katios",
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_materia_de_creacion",
+      "sheets": 0,
+      "note": "Materia de la primera pareja fallida, y la piedra durísima de los cuatro cirios. En el volumen de 1959 se lee raompahuaiá."
+    },
+    {
+      "id": "barro",
+      "name": "El barro",
+      "kind": "objeto",
+      "myths": [
+        "creacion-katios",
+        "baha",
+        "cobaima"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_materia_de_creacion",
+      "sheets": 0,
+      "note": "Materia definitiva de la gente, el que soban en los labios del recién nacido y el que trabajan los espíritus de mujeres dentro de la piedra. Una pieza de materia para los tres usos."
+    },
+    {
+      "id": "gota-de-agua",
+      "name": "La gota de agua",
+      "kind": "objeto",
+      "myths": [
+        "sever",
+        "creacion-katios"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_materia_de_creacion",
+      "sheets": 0,
+      "note": "Producida de la nada y tapada con una totuma nueva: de ahí sale el indio catío, la mujer y, esparcida en llovizna, la multitud de Cunas."
+    },
+    {
+      "id": "bolita-de-costilla",
+      "name": "La bolita de costilla",
+      "kind": "objeto",
+      "myths": [
+        "creacion-katios"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_materia_de_creacion",
+      "sheets": 0,
+      "note": "«Se quitó un pedacito de costilla, hizo con él una bolita y la introdujo en las dos imágenes.» Pieza menor que decide la animación de la gente."
+    },
+    {
+      "id": "jais",
+      "name": "Los jai",
+      "kind": "criatura",
+      "myths": [
+        "cobaima",
+        "antomia"
+      ],
+      "decision": "excluded",
+      "reason": "do_not_visualize",
+      "sheets": 0,
+      "note": "Materia expresamente sensible en katío. Verificado: en Cobaima aparecen sólo como algo que Caragabí le enseña a hacer —«a comunicarse con los jais»— y en la historia de Antomiá como lo que el jaibaná obtiene aliándose con él. Nunca se describen y nunca están en escena. No se visualizan."
+    },
+    {
+      "id": "bastones-y-figuras-de-curacion",
+      "name": "Los bastones y las figuras talladas",
+      "kind": "objeto",
+      "myths": [
+        "aribamias"
+      ],
+      "decision": "excluded",
+      "reason": "do_not_visualize",
+      "sheets": 0,
+      "note": "Materia expresamente sensible. Verificado: no están en ningún «mito»; comparecen sólo en la lista de fuentes, en la versión de Pinto que Vasco recoge, donde se entregan a la viuda del jaibaná y «al pasar a manos extrañas pierden su virtud». Esa frase es razón suficiente para no dibujarlos."
+    },
+    {
+      "id": "canto-ritual-del-jaibana",
+      "name": "El canto de los jaibanás",
+      "kind": "fenomeno",
+      "myths": [
+        "aribamias"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Materia expresamente sensible. Verificado: aparece sólo en la versión de Pinto citada en las fuentes, donde los colegas del jaibaná cantan pidiéndole que no reencarne. No hay canto ritual en ningún «mito» publicado; el canto que sí está —el del Antomiá ladrón preguntando por su comida— no es ritual y va dentro de su ficha."
+    },
+    {
+      "id": "sacar-espinas-chupando",
+      "name": "Sacar espinas chupando",
+      "kind": "fenomeno",
+      "myths": [
+        "tradicion-del-cerro"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Materia sensible: es práctica de curación. Verificado en el mito: «En ese camino aprendieron a sacar espinas chupando, como hacen los jaibanáes», y en «versiones», donde en Severino pertenece al origen del jaibanismo y una diabla se lo enseña a dos niños robados. No se representa el acto."
+    },
+    {
+      "id": "sepultura-del-aribamia",
+      "name": "La sepultura del que se vuelve Aribamia",
+      "kind": "lugar",
+      "myths": [
+        "aribamias"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Materia expresamente sensible: sitios de entierro. Verificado en el mito: la sepultura que amanece abierta y sin rastro de cadáver, y la que a los quince días echa la espumita blanca. La transformación sí se ficha, como estado del Aribamia; la tumba, no."
+    },
+    {
+      "id": "chuzo-de-macana",
+      "name": "El chuzo de macana que cose el cadáver a la tierra",
+      "kind": "objeto",
+      "myths": [
+        "aribamias"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Materia sensible: manipulación del cadáver en la sepultura. Verificado: está en «historia» y «versiones» como recurso preventivo de Severino y de Cayón, no en el mito publicado, que sigue a 1929 y ofrece el agua caliente en su lugar."
+    },
+    {
+      "id": "espiritus-de-jaibanas-muertos",
+      "name": "Los espíritus de jaibanás muertos de la piedra",
+      "kind": "colectivo",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Materia sensible: muertos del oficio en el sitio donde murieron. Verificado en el mito: «vio también espíritus de otros jaibanás que habían muerto ahí», sin una sola nota de forma. Los espíritus de mujeres trabajando sí se resuelven dentro del lugar; éstos no se representan."
+    },
+    {
+      "id": "diabla-del-origen-del-jaibanismo",
+      "name": "La diabla que enseñó el jaibanismo",
+      "kind": "criatura",
+      "myths": [
+        "antomia",
+        "tradicion-del-cerro"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required",
+      "sheets": 0,
+      "note": "Verificado en «versiones» de Antomiá: «Severino lo recogió de Donungubi Domicó como obra de una diabla que se llevó a dos niños al monte; las notas de 1929 dicen que fue Antomiá torro». Es el origen del jaibanismo —materia sensible— y además una atribución en disputa que ningún «mito» del corpus narra."
+    },
+    {
+      "id": "duenos-de-los-animales",
+      "name": "Los dueños de los animales",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "a-transformacion-del-hombre-que-no-podia-cazar"
+      ],
+      "decision": "excluded",
+      "reason": "sin_evidencia_visual",
+      "sheets": 0,
+      "note": "Verificado en el mito: «comprendió que los seres del bosque tenían sus propios dueños, familias y lugares», y eso es todo lo que se dice de ellos. No se ven, no hablan y no se describen. Ponerles la figura de Pãkõré sería importar el marco etnográfico que el propio expediente separa del relato."
+    },
+    {
+      "id": "pakore",
+      "name": "Pãkõré / Imamá-Pãkõré (tigre-suegra)",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "a-transformacion-del-hombre-que-no-podia-cazar",
+        "los-bibidigomias"
+      ],
+      "decision": "excluded",
+      "reason": "fuera_del_relato_publicado",
+      "sheets": 0,
+      "note": "Verificado: el expediente del cazador dice de ella «ese marco explica de qué habla el título, pero no es este relato y no debe leerse como si lo fuera». En «Los Bibidigomia» sólo aparece como el tigre guardián de la narración de 1929 —imamá pacoré—, que el canon separa de la de Bailarín. Además es la dueña de la caza, materia de consulta."
+    },
+    {
+      "id": "antomia-wera",
+      "name": "Antomiá wera",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "antomia"
+      ],
+      "decision": "excluded",
+      "reason": "fuera_del_relato_publicado",
+      "sheets": 0,
+      "note": "Verificado en «historia»: es una noticia de Cardona y Guerra (2013), campo de Nuquí y el Chocó, según la cual Antomiá «vive con su Antomiá wera, más poderosa que él». No actúa en ningún relato del corpus y no tiene una sola línea de descripción."
+    },
+    {
+      "id": "baracoco",
+      "name": "El baracoco",
+      "kind": "animal",
+      "myths": [
+        "la-escalera-del-cielo",
+        "los-domicoes"
+      ],
+      "decision": "excluded",
+      "reason": "sin_evidencia_visual",
+      "sheets": 0,
+      "note": "Verificado: «allí convirtió en baracoco a su mujer» y, en «versiones», «la mujer de Caragabí queda convertida en baracoco». Ninguno de los dos textos dice qué es un baracoco. Dibujarlo sería inventar la especie entera."
+    },
+    {
+      "id": "mujer-y-cunada-de-caragabi",
+      "name": "La mujer y la cuñada de Caragabí",
+      "kind": "personaje",
+      "myths": [
+        "la-escalera-del-cielo",
+        "los-domicoes"
+      ],
+      "decision": "excluded",
+      "reason": "mencionadas_nunca_vistas",
+      "sheets": 0,
+      "note": "Verificado: aparecen en una sola subordinada —«allí convirtió en baracoco a su mujer y allí subió al cielo con su cuñada»— como hazañas pasadas enumeradas para acreditar que Gioró es tierra sagrada. No hay escena ni rasgo."
+    },
+    {
+      "id": "orre",
+      "name": "Orre",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "excluded",
+      "reason": "mencionado_nunca_visto",
+      "sheets": 0,
+      "note": "Verificado en el mito: la paloma consiguió el agua «no en este mundo sino en otro, cuyo soberano se llama Orre», y no vuelve a aparecer. Un soberano nombrado en una subordinada, sin acción y sin cuerpo."
+    },
+    {
+      "id": "wounaan-y-dule",
+      "name": "Los wounaan y los dule",
+      "kind": "colectivo",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "excluded",
+      "reason": "mencionados_nunca_vistos",
+      "sheets": 0,
+      "note": "Verificado en el mito: Caragabí «le contó también quiénes había en el Chocó: los emberá, los wounaan y los dule», y sigue la lista de por dónde se dividieron. Es una enumeración geográfica: ninguno aparece en escena ni recibe rasgo. Son además pueblos distintos y darles cuerpo desde este corpus sería inventarlos."
+    },
+    {
+      "id": "carautas",
+      "name": "Los carautas",
+      "kind": "colectivo",
+      "myths": [
+        "tradiciones-relativas-a-la-conquista",
+        "dabeiba"
+      ],
+      "decision": "excluded",
+      "reason": "fuera_del_relato_publicado",
+      "sheets": 0,
+      "note": "Verificado: sólo en «historia» y «versiones», como lectura etnohistórica de Vargas y Botero sobre quiénes son los dueños del oro de las crónicas y sobre el posible origen de la palabra catío. No hay carauta en ningún «mito»."
+    },
+    {
+      "id": "yamberas",
+      "name": "Los yamberas",
+      "kind": "criatura",
+      "myths": [
+        "icades-name"
+      ],
+      "decision": "excluded",
+      "reason": "fuera_del_relato_publicado",
+      "sheets": 0,
+      "note": "Verificado en «versiones»: es una lectura de Cardona y Guerra de 2013 —seres que se transforman en diminutos, gigantes o humanos, regidos por Antomiá— que el propio expediente manda atribuir a sus autores. Ningún «mito» del corpus trae un yambera."
+    },
+    {
+      "id": "gentzera",
+      "name": "Gentzerá / Genserá",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "fragmentos-de-otras-tradiciones"
+      ],
+      "decision": "excluded",
+      "reason": "fuera_del_relato_publicado",
+      "sheets": 0,
+      "note": "Verificado: el mito publicado sigue la edición de 1924, que va del sueño al árbol sin intermediarios. Gentzerá —bañándose y pescando dentro de la peña o del propio jenené, partida en dos y vuelta hormiga negra— está sólo en la edición de 1959 y en las notas de 1929, y Genserá escondiendo el agua está en una versión dóbida de Nuquí que el expediente prohíbe fundir."
+    },
+    {
+      "id": "juratsarra",
+      "name": "Juratsarra y los Bibidi gomia de manos de cuchillo",
+      "kind": "criatura",
+      "myths": [
+        "los-bibidigomias"
+      ],
+      "decision": "excluded",
+      "reason": "fuera_del_relato_publicado",
+      "sheets": 0,
+      "note": "Verificado en «versiones»: «los Bibidi gomia son seres raros, mezcla de diablo, animal e indio, que viven en la copa de los árboles más gigantescos, tienen cuchillos por manos y un jefe llamado Juratsarra» —y eso es la narración de 1929, que el canon declara «otra historia», no una variante. El mito publicado dice expresamente que son «otros indios», sin jefe y sin manos de cuchillo."
+    },
+    {
+      "id": "hermanos-pegados-por-el-incesto",
+      "name": "Los hermanos castigados",
+      "kind": "personaje",
+      "myths": [
+        "el-origen-del-sol-y-la-luna",
+        "los-domicoes"
+      ],
+      "decision": "excluded",
+      "reason": "no_representable",
+      "sheets": 0,
+      "note": "Verificado en los dos mitos: «recibieron un castigo que todavía están sufriendo, aunque de qué hechura sea ese castigo no se cuenta». La hechura sólo la da la variante de 1929 —quedar pegados en la acción vergonzosa junto a una piedra enorme—, que el relato publicado se niega a referir y que además es sexualmente explícita."
+    },
+    {
+      "id": "eclipse",
+      "name": "Los eclipses",
+      "kind": "fenomeno",
+      "myths": [
+        "los-domicoes",
+        "la-escalera-del-cielo"
+      ],
+      "decision": "excluded",
+      "reason": "fuera_del_relato_publicado",
+      "sheets": 0,
+      "note": "Verificado: sólo en «versiones», atado al castigo de 1929 —«cuando logran apartarse un poquito suceden los eclipses»—. Como el castigo queda excluido por no contado, su consecuencia también."
+    },
+    {
+      "id": "velo-enganoso",
+      "name": "El velo engañoso sobre los ojos",
+      "kind": "fenomeno",
+      "myths": [
+        "la-escalera-del-cielo"
+      ],
+      "decision": "excluded",
+      "reason": "sin_evidencia_visual",
+      "sheets": 0,
+      "note": "Verificado en el mito: «Caragabí les pasó por los ojos como un velo engañoso, para que vieran el cielo muy lejos». Es un acto invisible y una comparación; no hay objeto ni forma que dibujar, y ponerle una sería inventarla."
+    },
+    {
+      "id": "formas-de-caragabi-en-la-prueba-del-agua",
+      "name": "Las formas de Caragabí en la prueba del agua",
+      "kind": "fenomeno",
+      "myths": [
+        "creacion-katios"
+      ],
+      "decision": "embedded",
+      "covered_by": "caragabi",
+      "sheets": 0,
+      "note": "«Tomó forma de culebra, de lombriz, de hormiga… se hizo agua y salió a flote», y lo mismo Tutruicá. Cuatro formas instantáneas dentro de una sola secuencia, sin cuerpo propio descrito: la culebra y la lombriz ya tienen dónde resolverse y el resto va como variante dentro de la ficha del dios."
+    },
+    {
+      "id": "animales-de-la-casa",
+      "name": "Los animales de la casa",
+      "kind": "colectivo",
+      "myths": [
+        "baha",
+        "coste"
+      ],
+      "decision": "excluded",
+      "reason": "sin_evidencia_visual",
+      "sheets": 0,
+      "note": "Verificado: «los niños no pueden jugar con los animales de la casa ni con el sapo» y «bajaron a comerse animales de la gente». Ninguno de los dos textos dice qué animales son. El sapo, que sí está nombrado, va en la gramática de fauna menor; el resto no se inventa."
+    },
+    {
+      "id": "venado-leon-y-guagua",
+      "name": "Venado, león y guagua",
+      "kind": "animal",
+      "myths": [
+        "sever"
+      ],
+      "decision": "excluded",
+      "reason": "mencionados_nunca_vistos",
+      "sheets": 0,
+      "note": "Verificado en el mito: sólo comparecen como ingrediente —«para ver de noche lo mismo que de día, se frotó con ojos de venado, de león y de guagua»—. No hay un solo animal de esas especies en escena en todo el corpus."
+    },
+    {
+      "id": "ballena-y-ancumia",
+      "name": "La ballena y el ancumia",
+      "kind": "animal",
+      "myths": [
+        "herupotoarra"
+      ],
+      "decision": "excluded",
+      "reason": "fuera_del_relato_publicado",
+      "sheets": 0,
+      "note": "Verificado en «versiones»: pertenecen a las notas de 1929, de las que el canon dice que «no traen una variante de detalle sino otra narración» —allí quien concibe es un hombre, las acusaciones son tres y el árbol es un sauce—. El mito publicado sigue el texto de 1924 y no los tiene."
+    },
+    {
+      "id": "elementos-de-la-variante-de-1929-de-sever",
+      "name": "Puerto Cuna, la bomba, el almendro y el frasco azul",
+      "kind": "objeto",
+      "myths": [
+        "sever"
+      ],
+      "decision": "excluded",
+      "reason": "fuera_del_relato_publicado",
+      "sheets": 0,
+      "note": "Verificado en «versiones»: el frasco azul de agua generadora, el almendro junto a cuya raíz cae el hijo herido, la bomba que los Cunas hacen estallar y el Puerto Cuna adonde sólo vuelven las canoas ensangrentadas son todos de la versión anónima de 1929, que el expediente declara que «no se funden» con la de Tohuratzabidá Domicó que el mito sigue."
+    },
+    {
+      "id": "peuarata",
+      "name": "El peuarata y los haces de hojas de tobo",
+      "kind": "criatura",
+      "myths": [
+        "aribamias"
+      ],
+      "decision": "excluded",
+      "reason": "retirado_por_el_expediente",
+      "sheets": 0,
+      "note": "Verificado en «historia»: «el párrafo del peuarata y los haces de hojas de tobo, moindú, no pertenece a este expediente… Trata del alma de cualquier difunto que busca compañero para no andar solo, no del jaibaná que se transforma.» El propio canon lo retira."
+    },
+    {
+      "id": "nunsi-y-birri",
+      "name": "Los Nunsí y el birri",
+      "kind": "criatura",
+      "myths": [
+        "icades-name",
+        "tradicion-del-cerro"
+      ],
+      "decision": "excluded",
+      "reason": "no_son_entidades_del_corpus",
+      "sheets": 0,
+      "note": "Verificado: aparecen únicamente como nombres de las secciones vecinas en los libros fuente —«justo antes de los Nunsí», «entre la pieza de Gioró y la del birri»—, usados para situar la página en el impreso. No son personajes de ningún relato."
+    },
+    {
+      "id": "porre-y-ocotuma",
+      "name": "Porré y Ocotuma",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "cobaima"
+      ],
+      "decision": "excluded",
+      "reason": "fuera_del_relato_publicado",
+      "sheets": 0,
+      "note": "Verificado en «versiones»: «Ninguno de esos nombres es Cobaima, y la coincidencia de motivo no autoriza a trasladarlos a su itinerario.» Porré es la Madre de Oro de las cabeceras y Ocotuma un charco del Alto Andágueda, los dos de material chamí y del Chocó medio recogido por otros autores."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_hogar",
+      "kind": "objeto",
+      "covers": [
+        "totuma",
+        "olla-de-chicha-y-guarapo",
+        "hamaca",
+        "canasta",
+        "hoguera",
+        "agua-caliente"
+      ],
+      "sheets": 1,
+      "note": "Seis objetos menores del interior del bohío y del fogón, todos de uso repetido y ninguno con peso narrativo propio: la totuma que tapa la gota de agua y se pone boca abajo sobre el niño, las ollas de chicha del convite, la hamaca donde mecen al niño, las canastadas de ajíes, la hoguera donde arde el cadáver de Costé y el agua caliente que acaba con el Aribamia."
+    },
+    {
+      "id": "hoja_utileria_herramientas",
+      "kind": "objeto",
+      "covers": [
+        "hacha-de-piedra",
+        "barra-de-hierro",
+        "garrote",
+        "lazo-corredizo",
+        "malla-del-rio-odo",
+        "palanca"
+      ],
+      "sheets": 1,
+      "note": "Seis herramientas y aparejos de trabajo y captura. Ninguno conduce por sí mismo: sirven un golpe, un tirón o un lance y desaparecen. El arco, la lanza miatzu y la canoa quedan fuera de la hoja porque cada uno sostiene un relato entero."
+    },
+    {
+      "id": "hoja_utileria_guerra",
+      "kind": "objeto",
+      "covers": [
+        "flauta-de-huesos-de-sever",
+        "pita-del-collar",
+        "piedras-arrojadizas",
+        "armas-de-fuego-espanolas",
+        "hoyo-cubierto-de-ramas"
+      ],
+      "sheets": 1,
+      "note": "Cinco piezas menores de la memoria de guerra, ninguna descrita con detalle en el corpus. Las cabezas de trofeo y el collar de dientes no entran aquí: los dos son señales que actúan —se mueven solas, suenan como campanas— y llevan ficha propia."
+    },
+    {
+      "id": "hoja_utileria_materia_de_creacion",
+      "kind": "objeto",
+      "covers": [
+        "carta-de-tutruica",
+        "piedra-mompahuara",
+        "barro",
+        "gota-de-agua",
+        "bolita-de-costilla"
+      ],
+      "sheets": 1,
+      "note": "Cinco piezas menudas del relato de la creación, más materia que objeto: la carta anacrónica del refundido misionero, la piedra fina de la pareja fallida, el barro que anima, la gota tapada con totuma y el pedacito de costilla. Se agrupan porque ninguna se ve más de un instante."
+    }
+  ],
+  "totals": {
+    "entities": 219,
+    "required": 92,
+    "embedded": 94,
+    "excluded": 33,
+    "sheets": 105
+  }
+}

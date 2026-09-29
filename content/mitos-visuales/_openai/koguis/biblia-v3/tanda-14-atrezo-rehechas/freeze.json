@@ -1,0 +1,162 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "koguis",
+  "comunidad": "Kogui (Kággaba)",
+  "tanda": "tanda-14-atrezo-rehechas",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/koguis.v3.json",
+    "sha256": "393111cd6df3d03b8e4b21a66fc16b45d9f1eab6b75d6c1653e0fe55306f57cf"
+  },
+  "canon": {
+    "sha256": "edca8fad668f5e006d7587f11184f1111e3139a171111e1e903647bc29cfc6f3",
+    "verificado_en": "2026-09-28T04:13:23.099Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 18,
+  "fichas_ya_preparadas": 18,
+  "fichas": [
+    {
+      "job": "platano__botanical_sheet--canon",
+      "modelo": "platano__botanical_sheet",
+      "entidad": "Plátano",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-arco-iris-susabanka",
+        "el-sol-mama",
+        "kasauge-el-padre-arbol",
+        "los-primeros-indios",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5729,
+      "prompt_sha256": "a92cc18968058e93b078bf7c54f68ae9510ae5c321e17ec3fdb3052fe3d51bfe"
+    },
+    {
+      "job": "bola_azul__object_sheet--canon",
+      "modelo": "bola_azul__object_sheet",
+      "entidad": "La bolita azul (maluteyauye / piedra azul o verde)",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "canibalismo",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6160,
+      "prompt_sha256": "c6a934ecb45798022ca577a8d62216a815d0efe4fe1ed36719c7bf0c64081a7d"
+    },
+    {
+      "job": "mochila__object_sheet--canon",
+      "modelo": "mochila__object_sheet",
+      "entidad": "La mochila",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-maiz-koguis",
+        "el-sol-mama",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6385,
+      "prompt_sha256": "aaeb9c845ae21c895f4a906d525b92cd27f70f3fd0f3b2433508747a22723aef"
+    },
+    {
+      "job": "poporo__object_sheet--canon",
+      "modelo": "poporo__object_sheet",
+      "entidad": "El poporo",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "canibalismo",
+        "el-primer-hombre-y-la-primera-mujer",
+        "naowa-entrega-el-gobierno-a-su-hijo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6284,
+      "prompt_sha256": "0435483bc6407d22739276ea5e50dd6e40cffd4fcab7778b7daa8e7dafd6c35b"
+    },
+    {
+      "job": "trampa_de_machucon__object_sheet--canon",
+      "modelo": "trampa_de_machucon__object_sheet",
+      "entidad": "La trampa de machucón",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "canibalismo",
+        "kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5842,
+      "prompt_sha256": "47235d346108e4e495bb485f7c8bdd395b4d40ed85b7901d4093371fcb393c57"
+    },
+    {
+      "job": "bastoncito_de_oro__object_sheet--canon",
+      "modelo": "bastoncito_de_oro__object_sheet",
+      "entidad": "El bastoncito de oro de Terana",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "kimaku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5729,
+      "prompt_sha256": "14bd5abe36ca9cf73da5699c67f4c12732d4f47ec00170719e32dc46ae989874"
+    },
+    {
+      "job": "kagaba_kuitse__object_sheet--canon",
+      "modelo": "kagaba_kuitse__object_sheet",
+      "entidad": "Kagaba-Kuitse, la piedra de gente",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "madre-wastora"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6108,
+      "prompt_sha256": "c10139f42cb055434f2295200ec3436b477931f667a63e6d0ec3eb6e7453c619"
+    }
+  ]
+}

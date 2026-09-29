@@ -1,0 +1,78 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "umbra",
+  "comunidad": "Umbra",
+  "tanda": "tanda-04-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/umbra.v3.json",
+    "sha256": "7aeb052ddc0c7b85569c29e886c007d49e99cb442c3dc875a086150c2a9e0f17"
+  },
+  "canon": {
+    "sha256": "6aa19a1a16d43ab735dc5998716522f47331d2189bd68238997b040f79e6fa09",
+    "verificado_en": "2026-09-29T02:08:28.044Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "el_hermano__identity_sheet--canon",
+      "modelo": "el_hermano__identity_sheet",
+      "entidad": "El hermano, el visitante nocturno",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "tasime-el-incesto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9532,
+      "prompt_sha256": "a6c7fa17b097e6e48ed48b7c74ce938428e244cc1c116d56677a903b950cd084"
+    },
+    {
+      "job": "el_hermano__state_sheet--estado_lobo",
+      "modelo": "el_hermano__state_sheet",
+      "entidad": "El hermano, el visitante nocturno",
+      "categoria": "personaje",
+      "vista": "estado_lobo",
+      "estados": [
+        "lobo"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "tasime-el-incesto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9173,
+      "prompt_sha256": "ca968da483d44d638bc66f8864d6648c96b66decda3edb0fa77df16597d1f902"
+    },
+    {
+      "job": "la_joven_de_guakurama__identity_sheet--canon",
+      "modelo": "la_joven_de_guakurama__identity_sheet",
+      "entidad": "La joven de Guakurama",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "tasime-el-incesto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8741,
+      "prompt_sha256": "badc4a5f80ca349f299643e91d7a04945eca81d60f163eab958ac8b1ba0521a6"
+    }
+  ]
+}

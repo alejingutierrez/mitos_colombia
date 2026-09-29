@@ -1,0 +1,235 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "pananes",
+  "comunidad": "Panán",
+  "tanda": "tanda-08-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/pananes.v3.json",
+    "sha256": "8d93b70d1b0b66bb77b0d395d4643339ab639357c4bf9a86d329850dde0f158b"
+  },
+  "canon": {
+    "sha256": "e4799c1c37247920d8ac717adb1374d600de3d353adbc42bf9d861a458f135f3",
+    "verificado_en": "2026-09-29T02:29:46.425Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 11,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "paisaje_de_veredas_y_caminos_de_panan__environment_model--canon",
+      "modelo": "paisaje_de_veredas_y_caminos_de_panan__environment_model",
+      "entidad": "Veredas, caminos y aguas de Panán",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "al-duende",
+        "el-chuchun-y-las-tres-quebradas",
+        "el-chutun",
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo",
+        "el-cueche",
+        "la-basilica-encantada",
+        "la-cangagua-o-la-chorrera-del-duende",
+        "la-entundada-el-quedado-el-espanto",
+        "la-huacas",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan",
+        "la-tuta",
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8512,
+      "prompt_sha256": "e4b04e9d1a2f4618e56d8b45fbd62492820b52c704a0d40f9d08b2c09f9b20d4"
+    },
+    {
+      "job": "paisaje_de_paramo_de_panan__environment_model--canon",
+      "modelo": "paisaje_de_paramo_de_panan__environment_model",
+      "entidad": "Páramo alto de Panán",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-cualchio-y-la-olla-del-granizo",
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo",
+        "guamurran-madre-de-agua",
+        "la-laguna-de-maria-panana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8171,
+      "prompt_sha256": "d9ea6cc43d4f851d5a8befd14e6d18fe5c56ea2f0455d1cce83cc0226217de57"
+    },
+    {
+      "job": "chagra_de_panan__spatial_model--canon",
+      "modelo": "chagra_de_panan__spatial_model",
+      "entidad": "La chagra de Panán",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-chutun",
+        "la-entundada-el-quedado-el-espanto",
+        "la-tuta"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7903,
+      "prompt_sha256": "4300168b3050fab82135f9734cc70bd662660260028c02fea2167c1372dc5f00"
+    },
+    {
+      "job": "la_tuta__spatial_model--canon",
+      "modelo": "la_tuta__spatial_model",
+      "entidad": "La Tuta",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-tuta",
+        "la-huacas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8352,
+      "prompt_sha256": "6fc2040d7f32ed6fafbf95294af37dd135189bbad434c5001b3d69b72c06cf6e"
+    },
+    {
+      "job": "cangagua_chorrera_del_duende__spatial_model--canon",
+      "modelo": "cangagua_chorrera_del_duende__spatial_model",
+      "entidad": "La Cangagua o Chorrera del Duende",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-cangagua-o-la-chorrera-del-duende"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8476,
+      "prompt_sha256": "37a8bf85ff8b09cb6cbabfcc4675635121b249e3e106e42481811a80e393c349"
+    },
+    {
+      "job": "chuchun_y_las_tres_quebradas__spatial_model--canon",
+      "modelo": "chuchun_y_las_tres_quebradas__spatial_model",
+      "entidad": "Chuchún y las tres quebradas",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-chuchun-y-las-tres-quebradas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8000,
+      "prompt_sha256": "c0e7fe8095d003aa3555c5888e9bf6b4c47d8ab08602371359607726c7888e2a"
+    },
+    {
+      "job": "cuchicuelan__spatial_model--canon",
+      "modelo": "cuchicuelan__spatial_model",
+      "entidad": "Cuchicuelan",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7826,
+      "prompt_sha256": "7bef1ae77c69f87f14646212e0806034cafe74776b4364238f731e694d562362"
+    },
+    {
+      "job": "cucho_de_cuaichala__spatial_model--canon",
+      "modelo": "cucho_de_cuaichala__spatial_model",
+      "entidad": "El Cucho de Cuaichala",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8085,
+      "prompt_sha256": "6c42afc02a34c59b376bb22b7b95db10865ce0478713e62539b629205480a994"
+    },
+    {
+      "job": "guamurran_cienaga_de_paramo__environment_model--canon",
+      "modelo": "guamurran_cienaga_de_paramo__environment_model",
+      "entidad": "Guamurran, la ciénaga de páramo",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "guamurran-madre-de-agua"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7956,
+      "prompt_sha256": "f591e8086ddae62681beb3ba3eea4540f6751534b92becdda467077f4a9d8553"
+    },
+    {
+      "job": "laguna_de_maria_panana__spatial_model--canon",
+      "modelo": "laguna_de_maria_panana__spatial_model",
+      "entidad": "La Laguna de María Panana",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-laguna-de-maria-panana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7987,
+      "prompt_sha256": "b4f60973f5124c49c06578818581c97b73d1c1abf08e85a0e2eeb29880e149a5"
+    },
+    {
+      "job": "olla_del_granizo_del_cualchio__spatial_model--canon",
+      "modelo": "olla_del_granizo_del_cualchio__spatial_model",
+      "entidad": "La Olla del Granizo del Cualchio",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-cualchio-y-la-olla-del-granizo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7810,
+      "prompt_sha256": "a702c2f50378a46b0c57059da0656a46a43245b8618d7b5fc74d9dcc25ad5348"
+    }
+  ]
+}

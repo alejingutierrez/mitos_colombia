@@ -1,0 +1,131 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "wounaan",
+  "comunidad": "Wounaan",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/wounaan.v3.json",
+    "sha256": "260ca9c8d6260e63fc8772b82840e7288036bc9bd46f6591cc2a53bb4354747b"
+  },
+  "canon": {
+    "sha256": "4b1d21cb745ba08ba396fa1a73653b34d5c61368954d4e50d2e4719efce1a7ce",
+    "verificado_en": "2026-09-29T02:01:29.094Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre wounaan adulto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-baston-de-sueno",
+        "la-sal-del-weguer",
+        "madre-name"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6982,
+      "prompt_sha256": "09182cb48ddcd0796bc93b5f8e52cc0b9d81ec0c3c0b2e511224c0f824a8b4ab"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer wounaan adulta",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-baston-de-sueno",
+        "la-sal-del-weguer",
+        "madre-name"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7012,
+      "prompt_sha256": "0460cb51d693207748708eb928982fdfb8725641be6416a37f7fdb6c528c6fd0"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base · anciana wounaan",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "madre-name"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6697,
+      "prompt_sha256": "75d65fb098243833b62a72c770ca8bcd463c47b5c0170b7965e8b3333e3cc107"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base · anciano wounaan",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-barca-de-dos-tintas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6780,
+      "prompt_sha256": "849c0ee6bd2bc989211ffedf9d276b9dc9a9e36f8b855a48b9f0e0a598beb29e"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · muchacha wounaan",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-barca-de-dos-tintas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6952,
+      "prompt_sha256": "c88aaca9b276811e68ed31bdf0e3291cb083afe52a30f3c8c3bc4c8e964da27a"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño wounaan",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "madre-name"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6793,
+      "prompt_sha256": "1158bae91ac1e07ae63481918cd558cdf52eb81f14f4d4b08fcebbefac5603db"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "caribe-restante-mestizo",
+  "comunidad": "Caribe restante (Magdalena, Cesar, San Andrés)",
+  "tanda": "tanda-03-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/caribe-restante-mestizo.v3.json",
+    "sha256": "86ece956812c9a8bfa74bdc0d8f6739e1b7e8f0c98764df37ad58c78a6b2e33b"
+  },
+  "canon": {
+    "sha256": "23c3a0846f2f3742c390ba7412138b0740a886ab53b10154ee075b8422745b46",
+    "verificado_en": "2026-09-29T03:04:00.579Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "animales_del_monte_isleno__group_grammar--canon",
+      "modelo": "animales_del_monte_isleno__group_grammar",
+      "entidad": "Animales del monte isleño (víctimas del molino y presas)",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "beda-nansi-beda-monkey-y-el-molino",
+        "mico-y-nansi"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9130,
+      "prompt_sha256": "fa1bd5078da1685aa0df7fd68419a602f220fd63cb995884e0182690aa35dced"
+    },
+    {
+      "job": "gente_islena__group_grammar--canon",
+      "modelo": "gente_islena__group_grammar",
+      "entidad": "Gente isleña (las muchachas y el pueblo del patio)",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "tigre-y-nansi",
+        "el-tesoro-de-morgan"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8959,
+      "prompt_sha256": "6760656af80b6feb25c6c7d69f42edaa2b6ba9c71aedfd155fbed7edc3e3c757"
+    },
+    {
+      "job": "soldadesca_espanola__group_grammar--canon",
+      "modelo": "soldadesca_espanola__group_grammar",
+      "entidad": "Soldadesca española de la provincia de Santa Marta",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-castellano-de-san-juan",
+        "genus-irritable-vatum"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8443,
+      "prompt_sha256": "05081f4cf5824da752ec820f023c0019ccd0bf268f8017d51cabe8185fcdd46a"
+    },
+    {
+      "job": "parranda_vallenata__group_grammar--canon",
+      "modelo": "parranda_vallenata__group_grammar",
+      "entidad": "La parranda (el gentío de la colita)",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-bruja-del-trinche"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8992,
+      "prompt_sha256": "8fe2b31671e884808170ec995f34854fe036d38f6b4c5a1d56d5d5f89ddb9480"
+    },
+    {
+      "job": "perros_del_baile_de_gala__group_grammar--canon",
+      "modelo": "perros_del_baile_de_gala__group_grammar",
+      "entidad": "Los perros del Gran Baile de Gala",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "tiger-y-el-baile-de-perros"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9207,
+      "prompt_sha256": "59ac571a090426e458b6edf46280ec47da6e8eb41a73de9d6fc54b302e1c0562"
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "koguis",
+  "comunidad": "Kogui (Kággaba)",
+  "tanda": "tanda-11-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/koguis.v3.json",
+    "sha256": "393111cd6df3d03b8e4b21a66fc16b45d9f1eab6b75d6c1653e0fe55306f57cf"
+  },
+  "canon": {
+    "sha256": "edca8fad668f5e006d7587f11184f1111e3139a171111e1e903647bc29cfc6f3",
+    "verificado_en": "2026-09-28T03:49:04.834Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 13,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "colectivo_gente_kogui__group_grammar--canon",
+      "modelo": "colectivo_gente_kogui__group_grammar",
+      "entidad": "La gente kogui (hombres, mujeres, niños y viejos)",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "canibalismo",
+        "creacion-koguis",
+        "el-algodon-koguis",
+        "el-primer-hombre-y-la-primera-mujer",
+        "incesto-de-padre-hija",
+        "kashindukwe",
+        "madre-wastora",
+        "naowa-entrega-el-gobierno-a-su-hijo",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7368,
+      "prompt_sha256": "33a7b452cc20b9f905cc90c5db01129ab25865d172c3cc8cb1b7b22ad127b520"
+    },
+    {
+      "job": "colectivo_mamas__group_grammar--canon",
+      "modelo": "colectivo_mamas__group_grammar",
+      "entidad": "Los mamas",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "canibalismo",
+        "creacion-koguis",
+        "el-maiz-koguis",
+        "guateovan",
+        "incesto-de-padre-hija",
+        "kashindukwe",
+        "namaku",
+        "naowa-entrega-el-gobierno-a-su-hijo",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7216,
+      "prompt_sha256": "460e84aae7877bfb12a9758e6d57a48220c0a32e4695d003d2926a54d81734d0"
+    },
+    {
+      "job": "colectivo_animales_del_monte__group_grammar--canon",
+      "modelo": "colectivo_animales_del_monte__group_grammar",
+      "entidad": "Los animales del monte",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "nunkasha-y-kashindukwe",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6577,
+      "prompt_sha256": "31c73e73fa1f17cf52a510218e2a8b366a01a065482891f299bee67a0556a9bc"
+    },
+    {
+      "job": "colectivo_gente_de_tigre__group_grammar--canon",
+      "modelo": "colectivo_gente_de_tigre__group_grammar",
+      "entidad": "La gente de tigre (los que de día son indios y de noche fieras)",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "canibalismo",
+        "kashindukwe",
+        "namaku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7017,
+      "prompt_sha256": "1013988d7a4136bbf194da882239f2f2bc1d683ed7ff106fbf14716d85f4d519"
+    },
+    {
+      "job": "colectivo_padres_madres_antiguos__group_grammar--canon",
+      "modelo": "colectivo_padres_madres_antiguos__group_grammar",
+      "entidad": "Los padres y madres antiguos nombrados sin cuerpo",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "guateovan",
+        "la-enfermedad-hiwiha"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6980,
+      "prompt_sha256": "1a6344ffe33d297b4d3fada256d09060dd7d12ca0728f967b17649db324a50b9"
+    },
+    {
+      "job": "colectivo_cabos__group_grammar--canon",
+      "modelo": "colectivo_cabos__group_grammar",
+      "entidad": "Los cabos",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6806,
+      "prompt_sha256": "f6ebda3269264324abb2f5564b1e13c3c8bbfd0c3fbfec72618d2eacfed62bea"
+    },
+    {
+      "job": "colectivo_pajaros__group_grammar--canon",
+      "modelo": "colectivo_pajaros__group_grammar",
+      "entidad": "Los pájaros",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6589,
+      "prompt_sha256": "cad22e7e4d5a592ea52b3965041c465c746794a90c9d83904d071fd6c8568c15"
+    },
+    {
+      "job": "colectivo_animales_sin_huesos__group_grammar--canon",
+      "modelo": "colectivo_animales_sin_huesos__group_grammar",
+      "entidad": "Los animales sin huesos que parió Naowa",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-primer-hombre-y-la-primera-mujer"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6726,
+      "prompt_sha256": "dc470b61a84d689a377631a0714ca903a05e69bfe062238f6a6322501ff780b8"
+    },
+    {
+      "job": "colectivo_capuchinos__group_grammar--canon",
+      "modelo": "colectivo_capuchinos__group_grammar",
+      "entidad": "Los capuchinos, gente de Kasaugue",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "kasauge-el-padre-arbol"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6941,
+      "prompt_sha256": "36e026d97713bb5f7cdb320b486d366793a13530da769ffb84c4570470909b1f"
+    },
+    {
+      "job": "colectivo_mujeres_cucaracha__group_grammar--canon",
+      "modelo": "colectivo_mujeres_cucaracha__group_grammar",
+      "entidad": "Las mujeres cucarachas",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7141,
+      "prompt_sha256": "61c43aaa548f547d74f0c616d17c6102fdd947ece2f446f5c28b58276cf84e13"
+    },
+    {
+      "job": "colectivo_mujeres_inventadas__group_grammar--canon",
+      "modelo": "colectivo_mujeres_inventadas__group_grammar",
+      "entidad": "Las mujeres inventadas por el padre malo",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "kimaku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6909,
+      "prompt_sha256": "bbfeace2b7f1e51593183ad67c5e6ee185aae333647319c96c5ac7094fcface0"
+    },
+    {
+      "job": "colectivo_nueve_hijas_tierras__group_grammar--canon",
+      "modelo": "colectivo_nueve_hijas_tierras__group_grammar",
+      "entidad": "Las nueve hijas-tierras de la Magri",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-koguis"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6853,
+      "prompt_sha256": "99c037845330c78abf948b4561281abc22af254ab23978a5d648b6510d006b69"
+    },
+    {
+      "job": "colectivo_pueblos_del_mundo__group_grammar--canon",
+      "modelo": "colectivo_pueblos_del_mundo__group_grammar",
+      "entidad": "Los pueblos que hizo Haba-Naowa",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "madre-wastora"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6776,
+      "prompt_sha256": "4e0308b5bd78be66cb5697caaaa2a0ea4b67839d6fc1326eeaa323a9af47a8b5"
+    }
+  ]
+}

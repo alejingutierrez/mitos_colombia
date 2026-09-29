@@ -1,0 +1,259 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "u-wa",
+  "comunidad": "U’wa",
+  "tanda": "tanda-05-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/u-wa.v3.json",
+    "sha256": "5e5462ec1faa17ad393b4cbaccc5e11a5e2c3cbcf01983f403221e88f1fa1ff2"
+  },
+  "canon": {
+    "sha256": "a90c54e7ee6b64a69b74d22cb095455d84c1040f832c2a85fbbf36891e532aed",
+    "verificado_en": "2026-09-28T20:18:38.264Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 13,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "canwara__identity_sheet--canon",
+      "modelo": "canwara__identity_sheet",
+      "entidad": "Canwará (Kanwara)",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-u-wa",
+        "las-hijas-del-sol-y-la-miel",
+        "el-pajaro-carpintero-y-el-poder-de-curar",
+        "la-competencia-de-los-tigres-uwa",
+        "mensajes-de-los-animales-uwa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6401,
+      "prompt_sha256": "ded6cb6b0519dcedb3976013eb92549aa4c7387c134210ad0b33bf9a2fdb8697"
+    },
+    {
+      "job": "yagshowa__identity_sheet--canon",
+      "modelo": "yagshowa__identity_sheet",
+      "entidad": "Yagshowa",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "las-hijas-del-sol-y-la-miel",
+        "la-competencia-de-los-tigres-uwa",
+        "yanoa-y-sirbetuna"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6265,
+      "prompt_sha256": "dce18e29ed321cb54365b162ac1a81194d12d20936dc982247d582bc52efd14e"
+    },
+    {
+      "job": "bistoa__identity_sheet--canon",
+      "modelo": "bistoa__identity_sheet",
+      "entidad": "Bistoa",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-competencia-de-los-tigres-uwa",
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6303,
+      "prompt_sha256": "e0577ca7b9a859570db0bfc24d321c6f365bdd43ef8a6aeeec731cfac02ce02c"
+    },
+    {
+      "job": "rukwa__identity_sheet--canon",
+      "modelo": "rukwa__identity_sheet",
+      "entidad": "Rukwa",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-u-wa",
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6173,
+      "prompt_sha256": "c53f4269f3933ab7282b1fbba4d26deb1d6915dc0dc3829ab266a5da3c9fc469"
+    },
+    {
+      "job": "ruwahama__identity_sheet--canon",
+      "modelo": "ruwahama__identity_sheet",
+      "entidad": "Rúwahama",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "las-hijas-del-sol-y-la-miel",
+        "yanoa-y-sirbetuna"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6325,
+      "prompt_sha256": "bb1e3f922a6ff1e78d9c9308e701f458b2fffaf862bd30701542a4ef8b0a404f"
+    },
+    {
+      "job": "sira__identity_sheet--canon",
+      "modelo": "sira__identity_sheet",
+      "entidad": "Sira",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-u-wa",
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6418,
+      "prompt_sha256": "ec4b747ff6b623e8e93d08fa81327f12f5d299847dcdcc8fe9b830f0ba35ef14"
+    },
+    {
+      "job": "dasa_duba__identity_sheet--canon",
+      "modelo": "dasa_duba__identity_sheet",
+      "entidad": "Dasa Duba",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "yanoa-y-sirbetuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6243,
+      "prompt_sha256": "19300764b5da298531fd35b442dab157f4c16402962d57c7000690b1f458d5b8"
+    },
+    {
+      "job": "madre_del_fuego__identity_sheet--canon",
+      "modelo": "madre_del_fuego__identity_sheet",
+      "entidad": "La madre del fuego",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-u-wa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6016,
+      "prompt_sha256": "6e903e4e6f707fb977eb49fd9bf60021dd8dfc53a7a929441fd1cf0309d67653"
+    },
+    {
+      "job": "rurcoca__identity_sheet--canon",
+      "modelo": "rurcoca__identity_sheet",
+      "entidad": "Rurcocá",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-u-wa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6347,
+      "prompt_sha256": "679da4bbeac8ba7059536c3d9d120d3ac68db7c3cc900a83482efb92724ba5ea"
+    },
+    {
+      "job": "ruruna__identity_sheet--canon",
+      "modelo": "ruruna__identity_sheet",
+      "entidad": "Ruruna",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-u-wa"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6261,
+      "prompt_sha256": "f6de5d02659e795a9cce5e14068d3a3a6dc5892dcf529b7812fb440b4039b09b"
+    },
+    {
+      "job": "sirbetuna__identity_sheet--canon",
+      "modelo": "sirbetuna__identity_sheet",
+      "entidad": "Sirbetuna",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "yanoa-y-sirbetuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6232,
+      "prompt_sha256": "45ecc9e13cefdac8a701cc6a59717dc9f9ffd1575572a78149f43e17b87785e0"
+    },
+    {
+      "job": "yanoa__identity_sheet--canon",
+      "modelo": "yanoa__identity_sheet",
+      "entidad": "Yanoa",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "yanoa-y-sirbetuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6390,
+      "prompt_sha256": "d9dd59f52f4432cad5e991210c9612b3aede75a049b7e6b396eb92527c9c1dda"
+    },
+    {
+      "job": "yanoa__state_sheet--estado_ave",
+      "modelo": "yanoa__state_sheet",
+      "entidad": "Yanoa",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_ave",
+      "estados": [
+        "ave"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "yanoa-y-sirbetuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6419,
+      "prompt_sha256": "af9e2739a34e4a3c21903d2b5f19ff4ff9a97a9a4eff6d2c8c57e2e793ff392c"
+    }
+  ]
+}

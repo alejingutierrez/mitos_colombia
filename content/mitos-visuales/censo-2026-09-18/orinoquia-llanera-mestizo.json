@@ -1,0 +1,2200 @@
+{
+  "id": "orinoquia-llanera-mestizo",
+  "label": "Orinoquia llanera",
+  "era": "republicana y del siglo XX, hato y sabana; con dos paginas ancladas en la colonia jesuitica de 1626 y 1767",
+  "pages": 19,
+  "canon_pages": 0,
+  "read_note": "Lei las 19 paginas completas desde el cuerpo real de la pagina (campo content), no desde el modulo editorial. Eso importa: el modulo editorial/orinoquia-mestizo-final/ contiene una revision que NO esta aplicada en las paginas, y los dos textos cuentan historias distintas. Ejemplos verificados: en el modulo El llano cobra sus deudas es la ruina de la hacienda de don Victoriano, y en la pagina es la cronica de la fundacion de Tamara en 1626; en el modulo La bola de fuego elimina a David Gamboa y prohibe rostro en las llamas, y en la pagina David Gamboa es el protagonista y del nucleo emerge una mujer de cabellos dorados. El censo va contra la pagina. Tres sorpresas. Primera: esto no es un corpus de espantos. Solo 8 de 19 paginas tienen aparicion; las otras 11 son cuentos literarios largos, costumbristas o de cronica, con reparto individual y nombre propio, y eso es lo que dispara el numero de fichas por relato. Segunda: no hay Silbon, ni Llorona, ni Madremonte, ni diablo apostador en estas 19 paginas, y tampoco hay arpa ni cuatro ni bongo; la musica es tiple, maracas y coplas, y la vaqueria si esta. Garza y chiguiro si aparecen, en El llano ayer y hoy y en El tesoro de Caribare. Tercera y la mas grave para presupuestar: la pagina Los delfines dorados no contiene delfines. Ni uno. El cuerpo narra la cura de Maria de los Angeles en el hato La Rubiera y la palabra delfin no aparece. Quedo dudoso si el narrador en primera persona de ocho paginas es una sola persona; los unifique en una ficha y lo declaro, porque ninguna lo describe fisicamente. Tambien quedo dudoso Boquicha, que aparece en el otro corpus, no en este. Ninguna de las 19 tiene campo mito: sobre ellas no se escribe guion ni se hace video, pero aportan entidades.",
+  "entities": [
+    {
+      "id": "sabana_llanera",
+      "name": "Sabana llanera",
+      "kind": "paisaje",
+      "myths": [
+        "amanecer-llanero",
+        "el-toro-negro-patorreal",
+        "la-culebra-cascabel",
+        "el-llano-ayer-hoy",
+        "el-llano-cobra-sus-deudas",
+        "el-tesoro-de-caribare",
+        "la-bola-de-fuego",
+        "las-chanzas-de-don-felipe",
+        "los-tres-luceros",
+        "los-delfines-dorados"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "sabana_quemada_y_agrietada"
+      ],
+      "panregional": false,
+      "note": "El horizonte abierto de pasto y cielo es el escenario de diez relatos: la esmeralda lo crea, Patorreal lo cruza, la Bola de Fuego salta sobre el, la sombra de Manare lo recorre. Una sola hoja de entorno, mas un estado quemado porque El llano ayer y hoy pone en escena cenizas, pastos calcinados, grietas de sequia y aves de rapina: la silueta del paisaje cambia por completo."
+    },
+    {
+      "id": "estero_laguna_y_morichal",
+      "name": "Estero, laguna y morichal",
+      "kind": "paisaje",
+      "myths": [
+        "amanecer-llanero",
+        "el-tesoro-de-caribare",
+        "el-llano-ayer-hoy",
+        "el-domador-de-brujas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Humedal con agua quieta, palmas y aves: las lagunas nacidas del llanto de Pamoare, la lagunita donde la garza talla cruces, los esteros de patos y garzones, la Laguna Jardines de la Esperanza. No es intercambiable con la sabana seca."
+    },
+    {
+      "id": "rio_llanero",
+      "name": "Rio llanero de sabana",
+      "kind": "paisaje",
+      "myths": [
+        "el-brujo-de-la-costa-del-pauto",
+        "el-llano-ayer-hoy",
+        "la-culebra-cascabel",
+        "el-tesoro-de-caribare",
+        "los-delfines-dorados",
+        "los-tres-luceros",
+        "el-llano-cobra-sus-deudas",
+        "el-toro-negro-patorreal"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Cravo, Ariporo, Tate, Pauto, Quachiria, Meta, Orinoco, Casanare y Arauca aparecen con la misma descripcion: cauce ancho, playas de verano, embarcaciones. Ocho relatos, una hoja."
+    },
+    {
+      "id": "monte_y_quebrada_del_piedemonte",
+      "name": "Monte y quebrada del piedemonte",
+      "kind": "paisaje",
+      "myths": [
+        "el-dominguez",
+        "el-tirapiedra",
+        "madre-rio-o-mohana",
+        "el-domador-de-brujas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Bosque cerrado de arboles gigantes, caminos viejos y quebradas de agua fria. Es el reverso del llano abierto y el habitat de tres apariciones; el camino viejo nocturno del Tirapiedra vive dentro de esta hoja."
+    },
+    {
+      "id": "carretera_nocturna_del_piedemonte",
+      "name": "Carretera nocturna",
+      "kind": "lugar",
+      "myths": [
+        "los-monstruos-de-paratebueno",
+        "la-bruja-de-los-ojos-miel"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "La via a Paratebueno y el camino embarrado con abismo por donde sube el campero. Es el escenario propio de las dos apariciones motorizadas del corpus y no lo cubre ningun paisaje anterior."
+    },
+    {
+      "id": "hato_llanero",
+      "name": "Hato llanero",
+      "kind": "arquitectura",
+      "myths": [
+        "el-toro-negro-patorreal",
+        "los-delfines-dorados",
+        "las-chanzas-de-don-felipe",
+        "la-bruja-de-los-ojos-miel",
+        "la-bola-de-fuego",
+        "el-dominguez",
+        "el-brujo-de-la-costa-del-pauto",
+        "el-tesoro-de-caribare"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El Viso, La Rubiera, El Recuerdo, El Zacaton, Hato Valbuena, Hato Chico, Las Tigras y la finca de Paz de Ariporo son la misma casa grande con tranquero, corrales y galpon. Ocho hatos, una hoja: aqui esta el ahorro mayor del corpus."
+    },
+    {
+      "id": "rancho_llanero_de_conuco",
+      "name": "Rancho de conuco",
+      "kind": "arquitectura",
+      "myths": [
+        "los-tres-luceros",
+        "amanecer-llanero",
+        "la-culebra-cascabel"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "La ranchita de Ambrosio junto a las sementeras, con chinchorros colgados, y la choza donde Pamoare pasa el blanqueo. Vivienda de palma y horcones, opuesta al hato: no se resuelve con la misma hoja."
+    },
+    {
+      "id": "casona_vieja_de_la_botija",
+      "name": "Casona vieja de muros gruesos",
+      "kind": "arquitectura",
+      "myths": [
+        "la-tertulia-de-la-italiana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Toda la accion ocurre dentro de ella: se derriba la pared, aparece la botija, se entierra el oro y mueren los ninos. No es el hato ni el rancho de palma, y el muro que se rompe es el objeto escenico del relato."
+    },
+    {
+      "id": "sitio_de_parrando_y_cantina",
+      "name": "Sitio de parrando, cantina y gallera",
+      "kind": "arquitectura",
+      "myths": [
+        "el-domador-de-brujas",
+        "la-tertulia-de-la-italiana",
+        "los-monstruos-de-paratebueno",
+        "las-chanzas-de-don-felipe",
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "La cantina del pueblo, el parrando de Samaria, el cafeteadero La Italiana, el Pollo de Oro, la gallera de Paz de Ariporo y la fiesta de Los angelitos son el mismo local de mesas, luz caliente, musica y trago. Seis lugares nombrados, una hoja."
+    },
+    {
+      "id": "pueblo_llanero_de_tapia_y_teja",
+      "name": "Pueblo llanero colonial",
+      "kind": "arquitectura",
+      "myths": [
+        "el-llano-cobra-sus-deudas",
+        "los-tres-luceros",
+        "el-tesoro-de-caribare"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Tamara fundada en 1626 con su resguardo jesuita entre cerros, Pore y Orocue como puerto fluvial. Calle, iglesia y plaza: ninguna hoja de hato o de cantina resuelve un pueblo."
+    },
+    {
+      "id": "tumba_llanera_con_cruz",
+      "name": "Tumba llanera con cruz de madera",
+      "kind": "lugar",
+      "myths": [
+        "el-toro-negro-patorreal",
+        "los-tres-luceros"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Patorreal escarba junto a la tumba del Catire, Melecio hijo se arrodilla ante la cruz tosca, y Ambrosio, Carlos y Victoria quedan enterrados juntos en un rincon de la llanura. Dos relatos, mismo cuerpo."
+    },
+    {
+      "id": "boveda_del_tesoro_de_caribabare",
+      "name": "Boveda de mamposteria de Caribabare",
+      "kind": "arquitectura",
+      "myths": [
+        "el-tesoro-de-caribare"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "La excavacion revestida de piedra y calicanto, llena de cajas y sellada con lapidas bajo el cauce desviado. Es el objeto por el que se cuenta el relato y no lo cubre ningun paisaje."
+    },
+    {
+      "id": "escenario_de_la_fabula_de_calila",
+      "name": "Escenario de la fabula de Calila",
+      "kind": "arquitectura",
+      "myths": [
+        "leal-hasta-la-muerte"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El foso disimulado entre hojas, las puertas y murallas de la ciudad, la casa del rey y la prision con barrotes. Mundo ajeno al llano: una sola hoja espacial para toda la fabula arabe embutida en la pagina."
+    },
+    {
+      "id": "saul_nino_mentiroso",
+      "name": "Saul, el Nino Mentiroso",
+      "kind": "personaje",
+      "myths": [
+        "el-llano-ayer-hoy",
+        "la-culebra-cascabel",
+        "la-tertulia-de-la-italiana",
+        "el-toro-negro-patorreal",
+        "los-tres-luceros",
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Narrador exagerado de seis paginas: pesca en el Cravo, vuela la piara con dinamita, llega de negro al cafeteadero, cuenta Patorreal y los luceros. Cuerpo reconocible y recurrente; una hoja cubre seis relatos."
+    },
+    {
+      "id": "pascual",
+      "name": "Pascual",
+      "kind": "personaje",
+      "myths": [
+        "el-domador-de-brujas",
+        "el-dominguez",
+        "el-tirapiedra",
+        "la-bruja-de-los-ojos-miel",
+        "madre-rio-o-mohana"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "volando_en_escoba"
+      ],
+      "panregional": false,
+      "note": "Baquiano de poncho cruzado, rula en mano y dientes de oro; narra cinco paginas del piedemonte. El estado extra no es capricho: en El domador de brujas agarra una escoba vieja y vuela hacia la luna, y esa silueta no la da la hoja de identidad."
+    },
+    {
+      "id": "narrador_viajero",
+      "name": "Narrador viajero",
+      "kind": "personaje",
+      "myths": [
+        "el-brujo-de-la-costa-del-pauto",
+        "la-bruja-de-los-ojos-miel",
+        "madre-rio-o-mohana",
+        "los-monstruos-de-paratebueno",
+        "la-culebra-cascabel",
+        "la-tertulia-de-la-italiana",
+        "las-chanzas-de-don-felipe",
+        "el-llano-ayer-hoy"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "La voz en primera persona de ocho paginas: dueno de finca, conductor del campero, doctor junto a la quebrada, contertulio. Ninguna la describe fisicamente, todas la ponen en el mismo registro de hombre adulto criollo que llega, escucha y se va. Se unifica en una hoja y se declara la union."
+    },
+    {
+      "id": "casanari",
+      "name": "Casanari",
+      "kind": "personaje",
+      "myths": [
+        "amanecer-llanero"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Conduce el relato entero: huye con Pamoare, arroja la esmeralda que crea el llano, construye la choza del blanqueo, teje la corona de plumas y muere bajo el jaguar."
+    },
+    {
+      "id": "pamoare",
+      "name": "Pamoare",
+      "kind": "personaje",
+      "myths": [
+        "amanecer-llanero"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "La otra mitad de la cosmogonia: pasa el blanqueo, funda el linaje, llora las lagunas y entra al rio que toma su nombre. Corona de plumas y tunica de colores son vestuario dentro de su hoja, no estado aparte: la silueta no cambia."
+    },
+    {
+      "id": "don_agapito",
+      "name": "Don Agapito",
+      "kind": "personaje",
+      "myths": [
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Hombre encorvado como arbol vencido, perseguido por la justicia, que dispara su revolver contra lo que lo inquieta y muere de cancer creyendose embrujado. Abre y cierra la primera mitad del relato."
+    },
+    {
+      "id": "abelardo_piriachi",
+      "name": "Abelardo Piriachi",
+      "kind": "personaje",
+      "myths": [
+        "el-brujo-de-la-costa-del-pauto",
+        "los-tres-luceros"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El curandero de San Luis de Palenque, de gestos toscos, que cura a don Lisandro con leche de higueron y brandy y despues es atado en la vereda del Mangal. Su hoja cubre tambien al yerbatero Catimay de Los tres luceros: mismo oficio, mismo atrezo, y el texto no le da cuerpo propio a Catimay."
+    },
+    {
+      "id": "don_tarsicio",
+      "name": "Don Tarsicio",
+      "kind": "personaje",
+      "myths": [
+        "el-domador-de-brujas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El domador que llega en 1982 con digitopuntura, magnetismo y voz de cantor, y vence a la bruja mayor cantando en el parrando de Samaria. Conduce todo el relato."
+    },
+    {
+      "id": "catire_melecio",
+      "name": "Catire Melecio",
+      "kind": "personaje",
+      "myths": [
+        "el-toro-negro-patorreal"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Llanero de piel curtida que doma la tierra, funda El Viso y muere embestido por un toro barroso. Su muerte es la bisagra del relato y su tumba el lugar donde escarba Patorreal."
+    },
+    {
+      "id": "rosa_linda",
+      "name": "Rosa Linda",
+      "kind": "personaje",
+      "myths": [
+        "el-toro-negro-patorreal"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Morena de quince anos que el Catire conoce en un baile de Angelitos, queda viuda y une su vida a un nuevo esposo. Actua en tres momentos del relato."
+    },
+    {
+      "id": "joven_melecio_hijo",
+      "name": "Melecio hijo",
+      "kind": "personaje",
+      "myths": [
+        "el-toro-negro-patorreal"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El hijo catire que estudia en Bogota, regresa a El Viso al saber la muerte del padre y se arrodilla ante la cruz con flores del jardin. Es quien sostiene el desenlace."
+    },
+    {
+      "id": "david_gamboa",
+      "name": "David Gamboa",
+      "kind": "personaje",
+      "myths": [
+        "la-bola-de-fuego"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Vaquero de Todos los Santos que cruza solo la sabana hacia el Hato Valbuena, enfrenta la luz arrastrando el machete y maldiciendo, y vuelve convertido en hombre de silencios. Es el testigo por el que se cuenta la pagina."
+    },
+    {
+      "id": "maria_de_los_angeles",
+      "name": "Maria de los Angeles",
+      "kind": "personaje",
+      "myths": [
+        "los-delfines-dorados"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Hija de don Antonio, mordida por una rabo de aji mientras juega con los patos carreteros; su enfermedad y su cura organizan el relato."
+    },
+    {
+      "id": "jose_amalio_el_catire",
+      "name": "Catire Jose Amalio",
+      "kind": "personaje",
+      "myths": [
+        "los-delfines-dorados"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Joven alto de ojos azules y sangre sajona entre los Salivas, conocedor de plantas desde el Orinoco. Cura al caballicero y despues a Maria de los Angeles en secreto. Descripcion fisica explicita, caso raro en el corpus."
+    },
+    {
+      "id": "don_antonio_heredia",
+      "name": "Don Antonio Heredia",
+      "kind": "personaje",
+      "myths": [
+        "los-delfines-dorados"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Dueno del mayor hato del lugar; su orgullo le impide llamar al indio y esa negativa es el conflicto del relato."
+    },
+    {
+      "id": "dona_juana",
+      "name": "Dona Juana",
+      "kind": "personaje",
+      "myths": [
+        "los-delfines-dorados"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Esposa de don Antonio: urde el plan, manda a Andres en secreto y hace posible la cura. Conduce el giro de la historia."
+    },
+    {
+      "id": "felipe_el_loco",
+      "name": "Felipe el loco",
+      "kind": "personaje",
+      "myths": [
+        "las-chanzas-de-don-felipe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Dueno del hato El Recuerdo, heredero de estirpe de libertadores, que se hace pasar por teniente de la chusma, amarra a los guates al palo de mango y al amanecer los recompensa con mulas y dinero."
+    },
+    {
+      "id": "ambrosio",
+      "name": "Ambrosio",
+      "kind": "personaje",
+      "myths": [
+        "los-tres-luceros"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Alto y enjuto, viudo, dueno del lazo y del conuco a orillas del Quachiria. Cria a Carlos y Victoria, les arranca la promesa y muere de la tos que atribuyen a un cachicamo en el estomago."
+    },
+    {
+      "id": "carlos",
+      "name": "Carlos",
+      "kind": "personaje",
+      "myths": [
+        "los-tres-luceros"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Queda huerfano a los diez anos, se vuelve el hombre de la casa, es reclamado por la guerrilla y devuelto, y muere enfrentando al verraco negro."
+    },
+    {
+      "id": "victoria",
+      "name": "Victoria",
+      "kind": "personaje",
+      "myths": [
+        "los-tres-luceros"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Hermana que convierte la tierra en jardin, espera el caballo que vuelve solo y se entrega al rio Quachiria. La pagina la pone en escena sola en su decision final."
+    },
+    {
+      "id": "viajero_de_la_fabula",
+      "name": "El viajero de la fabula",
+      "kind": "personaje",
+      "myths": [
+        "leal-hasta-la-muerte"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Saca del foso al mono, la pantera, la serpiente y al hombre, es traicionado, encarcelado y finalmente reivindicado ante el rey. Protagonista de toda la primera mitad de la pagina."
+    },
+    {
+      "id": "joyero_traidor",
+      "name": "El joyero traidor",
+      "kind": "personaje",
+      "myths": [
+        "leal-hasta-la-muerte"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El hombre rescatado del foso que vende al viajero como asesino de la hija del rey. Su traicion es el motor moral del relato y su castigo el cierre."
+    },
+    {
+      "id": "padre_manare",
+      "name": "Padre Manare",
+      "kind": "personaje",
+      "myths": [
+        "el-tesoro-de-caribare"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "sombra_negra_de_plenilunio"
+      ],
+      "panregional": false,
+      "note": "El jesuita que entierra el tesoro con dos peones y desaparece en el exilio. El estado aparte si se gana la hoja: en plenilunio los llaneros ven una sombra negra de religioso recorriendo la pampa, sin cuerpo que la proyecte. Su hoja cubre tambien al padre Dadey y a los jesuitas de El llano cobra sus deudas."
+    },
+    {
+      "id": "el_dominguez",
+      "name": "El Dominguez",
+      "kind": "criatura",
+      "myths": [
+        "el-dominguez"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": true,
+      "note": "Duende de piernas como alicate y apariencia humana que sale solo los domingos, toca tiple y bambucos y persigue muchachas. Panregional: es un duende, figura que reaparece en varios corpus de este censo, pero esta version es exclusivamente del monte llanero: sale de dia y no de noche, se define por el domingo, vive entre ceibas, macanos amarillos y guacamayos, y su falta no es trenzar caballos sino el acoso a las jovenes. El editor debe decidir si es variante regional de la ficha nacional del Duende o ficha propia."
+    },
+    {
+      "id": "bola_de_fuego_candileja",
+      "name": "La Bola de Fuego o Candileja",
+      "kind": "criatura",
+      "myths": [
+        "la-bola-de-fuego"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "mujer_de_cabellos_dorados_en_el_nucleo"
+      ],
+      "panregional": true,
+      "note": "Panregional: la Candileja aparece en varios corpus del censo. Lo llanero aqui es que cruza la sabana abierta rumbo a un hato en noche de fiestas patronales, que la contra no es el rezo sino la maldicion y el machete arrastrado, y que la biografia que se le da es la de Candelaria y don Esteban en las fiestas de San Pascual Bailon. El estado aparte es obligatorio porque el texto muestra dos siluetas: la esfera anaranjada que se enciende y se apaga, y la mujer de cabellos dorados que emerge del nucleo y hace gestos."
+    },
+    {
+      "id": "el_tirapiedra",
+      "name": "El Tirapiedra",
+      "kind": "criatura",
+      "myths": [
+        "el-tirapiedra"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Aqui si tiene cuerpo, a diferencia de otras versiones: fue el estudiante de la Nacional al que llamaban el muerto, flaco, palido y de mirada perdida, apedreado por una multitud. Ahora arroja piedras invisibles en los caminos viejos. Una hoja fija esa delgadez espectral y la trayectoria de las piedras."
+    },
+    {
+      "id": "tres_damas_espectrales",
+      "name": "Las tres damas de Paratebueno",
+      "kind": "criatura",
+      "myths": [
+        "los-monstruos-de-paratebueno"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "calaveras_danzantes"
+      ],
+      "panregional": false,
+      "note": "Tres mujeres que resplandecen en el Pollo de Oro, suben al carro y en plena carretera se revelan como calaveras danzantes. El estado cuesta hoja porque el texto pone en escena las dos siluetas y el cambio es el relato entero. No se marca panregional: la dama de la carretera es familia nacional, pero este trio nace de la rebelion liberal llanera y de los hermanos Parra."
+    },
+    {
+      "id": "mujer_de_ojos_de_miel",
+      "name": "La bruja de los ojos de miel",
+      "kind": "criatura",
+      "myths": [
+        "la-bruja-de-los-ojos-miel"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Mujer elegante de tacones firmes sobre el barro y cabello color trigo seco bajo el aguacero, cuyo peso hunde el campero y cuyos ojos dejan una obsesion. La cara no se ve: la hoja debe fijar esa ocultacion como rasgo, no resolverla."
+    },
+    {
+      "id": "mojana_madre_rio",
+      "name": "La Mojana o Madre Rio",
+      "kind": "criatura",
+      "myths": [
+        "madre-rio-o-mohana"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "mojana_de_cabellos_dorados"
+      ],
+      "panregional": true,
+      "note": "Panregional: es la hembra del Mohan y el Mohan tambien esta fichado en el corpus boyacense de este mismo censo. Lo del piedemonte llanero es que se aparece a pleno dia junto a una quebrada de ceibas, sale del camino de servidumbre y se presenta como campesina fuerte de cabello castano recogido y diente de oro, con botella de aguardiente. El segundo estado es la Mojana caribena que Pascual describe: cabellos dorados, ojos de oceano, casa sumergida de piedra. Dos siluetas incompatibles en la misma pagina, dos hojas."
+    },
+    {
+      "id": "patorreal_toro_negro",
+      "name": "El toro negro Patorreal",
+      "kind": "criatura",
+      "myths": [
+        "el-toro-negro-patorreal"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Toro negro como la noche que nace de la tierra donde yace el Catire, escarba junto a la tumba y hace remolinear el ganado en estampida. Es el titulo de la pagina y nadie lo domina."
+    },
+    {
+      "id": "verraco_negro",
+      "name": "El verraco negro",
+      "kind": "criatura",
+      "myths": [
+        "los-tres-luceros"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Bestia salida como de un sueno ancestral que aterroriza los caminos y mata a Carlos en un duelo. No es la piara domestica: es un animal unico y monstruoso, y sin el no hay desenlace."
+    },
+    {
+      "id": "tres_luceros",
+      "name": "Los tres luceros",
+      "kind": "fenomeno",
+      "myths": [
+        "los-tres-luceros",
+        "leal-hasta-la-muerte"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Tres luces que brillan juntas bajo el manto nocturno como las almas de Ambrosio, Carlos y Victoria. La misma regla grafica resuelve el cierre estelar de Leal hasta la muerte, donde los espiritus del cazador y su perro se elevan al firmamento: solo cambia el numero."
+    },
+    {
+      "id": "tormenta_y_aguacero_llanero",
+      "name": "Tormenta y aguacero llanero",
+      "kind": "fenomeno",
+      "myths": [
+        "la-bola-de-fuego",
+        "la-bruja-de-los-ojos-miel",
+        "la-culebra-cascabel",
+        "el-toro-negro-patorreal",
+        "los-monstruos-de-paratebueno"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "No es decorado: la lluvia es la condicion de aparicion en dos de las tres apariciones motorizadas y el aguacero es lo que revela a la bruja, cuyo cabello permanece seco. Regla de agua, viento y barro que cinco relatos necesitan."
+    },
+    {
+      "id": "diluvio_chiricoa",
+      "name": "El diluvio chiricoa",
+      "kind": "fenomeno",
+      "myths": [
+        "el-tesoro-de-caribare"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Mito injertado dentro de la pagina: las cruces que la garza talla en el agua, la inundacion y las dos familias que ascienden en totumos que crecen con la marea. Es un acto propio con imagen propia, y su hoja incluye a las familias y los totumos."
+    },
+    {
+      "id": "caballo_llanero",
+      "name": "Caballo llanero con silla",
+      "kind": "animal",
+      "myths": [
+        "el-llano-ayer-hoy",
+        "los-tres-luceros",
+        "las-chanzas-de-don-felipe",
+        "el-toro-negro-patorreal",
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Montura de trabajo y de camino; en Los tres luceros vuelve solo con la noticia de la muerte de Carlos. La silla llanera y el lazo son parte de esta hoja."
+    },
+    {
+      "id": "mula_y_burro_de_carga",
+      "name": "Mula y burro de carga",
+      "kind": "animal",
+      "myths": [
+        "las-chanzas-de-don-felipe",
+        "el-brujo-de-la-costa-del-pauto",
+        "la-culebra-cascabel"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Las mulas con que Felipe recompensa a los guates, las bestias cargadas de los propios guates, la mula que Piriachi busca al dia siguiente y el burrito gocho de Saul nino. Cuerpo distinto del caballo de silla y del ganado."
+    },
+    {
+      "id": "culebra_cascabel",
+      "name": "Culebra cascabel",
+      "kind": "animal",
+      "myths": [
+        "la-culebra-cascabel",
+        "los-delfines-dorados"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Duena silenciosa de la cueva, muerde a la perrita y desencadena la venganza con dinamita. Su hoja cubre tambien la cuatronarices y la rabo de aji de Los delfines dorados: el texto no distingue sus cuerpos, solo su veneno."
+    },
+    {
+      "id": "encuentro_perro",
+      "name": "Encuentro, el perro",
+      "kind": "animal",
+      "myths": [
+        "leal-hasta-la-muerte",
+        "la-culebra-cascabel",
+        "la-bola-de-fuego"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El perro del cazador Vicente, paradigma de devocion mas alla de la muerte, da titulo a la pagina. La hoja cubre tambien a la perrita mordida por la cascabel y a los perros que aullan ante la Bola de Fuego."
+    },
+    {
+      "id": "jaguar",
+      "name": "El jaguar",
+      "kind": "animal",
+      "myths": [
+        "amanecer-llanero"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Mata a Casanari y con eso quiebra la cosmogonia: sin el no hay llanto, lagunas ni dispersion del linaje. Conduce la accion aunque aparezca una sola vez."
+    },
+    {
+      "id": "garza_blanca_del_diluvio",
+      "name": "La garza blanca",
+      "kind": "animal",
+      "myths": [
+        "el-tesoro-de-caribare",
+        "el-llano-cobra-sus-deudas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Llega a la lagunita y talla cruces en el agua con el pico antes de que se desate el diluvio: actua y anuncia. No la cubre la bandada, y su pluma es ademas el articulo de exportacion que nombra El llano cobra sus deudas."
+    },
+    {
+      "id": "mariposas_del_llano",
+      "name": "Mariposas amarillas del llano",
+      "kind": "animal",
+      "myths": [
+        "el-llano-ayer-hoy",
+        "madre-rio-o-mohana",
+        "el-domador-de-brujas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Las mariposas amarillas que acompanan el llanto de Saul, la que se detiene junto a la quebrada antes de la Mojana, y las brujas que regresan convertidas en mariposas sobre el agua sagrada. Tres relatos y una transformacion: una sola hoja."
+    },
+    {
+      "id": "comunidad_llanera",
+      "name": "Comunidad llanera",
+      "kind": "colectivo",
+      "myths": [
+        "el-brujo-de-la-costa-del-pauto",
+        "el-tirapiedra",
+        "la-tertulia-de-la-italiana",
+        "los-monstruos-de-paratebueno",
+        "el-dominguez",
+        "la-bola-de-fuego",
+        "la-culebra-cascabel",
+        "las-chanzas-de-don-felipe",
+        "el-llano-ayer-hoy",
+        "el-domador-de-brujas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Gramatica de grupo con tres registros que el corpus exige: llanero de trabajo, familia campesina y visitante de pueblo o ciudad. Absorbe una docena de nombrados sin cuerpo propio (Rosendo, dona Rosario, Julio Pineda, Enrique Parra, el taita, el medico, la comitiva de la Expedicion Botanica) y evita otras tantas hojas de una sola linea."
+    },
+    {
+      "id": "peonada_del_hato",
+      "name": "Peonada del hato",
+      "kind": "colectivo",
+      "myths": [
+        "el-tesoro-de-caribare",
+        "el-toro-negro-patorreal",
+        "los-delfines-dorados",
+        "las-chanzas-de-don-felipe",
+        "el-llano-cobra-sus-deudas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Los dos peones que cavan la boveda, los peones que sienten erizarse el pelo ante Patorreal, Andres que corre a buscar al curandero, los hombres que Felipe manda amarrar. Vestuario de faena y herramienta: no lo cubre la comunidad."
+    },
+    {
+      "id": "ninos_del_llano",
+      "name": "Ninos del llano",
+      "kind": "colectivo",
+      "myths": [
+        "la-tertulia-de-la-italiana",
+        "los-tres-luceros",
+        "el-tirapiedra",
+        "el-dominguez",
+        "madre-rio-o-mohana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Los hijos que mueren de hambre sobre el oro, Carlos y Victoria de tres y ocho anos, el nino que mata la piedra perdida, la mona de dieciseis, los ninos que la Mojana se lleva del agua. Cinco relatos, y es lo que evita duplicar cada personaje en version infantil."
+    },
+    {
+      "id": "guates_campesinos_de_tierra_fria",
+      "name": "Los guates",
+      "kind": "colectivo",
+      "myths": [
+        "las-chanzas-de-don-felipe"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Campesinos de tierras frias que bajan al llano con sus bestias cargadas de productos. Son visualmente otra cosa que el llanero, y el relato entero se sostiene en esa diferencia: son ellos los amarrados al palo de mango."
+    },
+    {
+      "id": "brujas_de_la_vereda_del_carmen",
+      "name": "Las brujas de la Vereda del Carmen",
+      "kind": "colectivo",
+      "myths": [
+        "el-domador-de-brujas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Se posan sobre los techos con siseo de veinte gallinas, ocupan casas y espantan a los moradores. Mercedes, que finge dolencia mortal, y la bruja mayor de porte de morena son miembros de este grupo y no piden hoja aparte; su transformacion en mariposas la resuelve la hoja de mariposas."
+    },
+    {
+      "id": "aves_del_llano",
+      "name": "Aves del llano",
+      "kind": "colectivo",
+      "myths": [
+        "el-llano-ayer-hoy",
+        "amanecer-llanero",
+        "los-delfines-dorados",
+        "el-tesoro-de-caribare"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Alcaravanes, guereres, patos, garzones, aguilas enmascaradas, aves de rapina y patos carreteros. Son el termometro del paisaje en El llano ayer y hoy, donde la bandada de antes se opone al cielo de carronieras."
+    },
+    {
+      "id": "ganado_llanero",
+      "name": "Ganado llanero",
+      "kind": "colectivo",
+      "myths": [
+        "el-toro-negro-patorreal",
+        "los-delfines-dorados",
+        "el-llano-cobra-sus-deudas",
+        "el-llano-ayer-hoy",
+        "los-tres-luceros",
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Reses que bojean, vacas lecheras, toros criollos en lucha y toros de lidia traidos para enfrentar depredadores. Cubre tambien al toro barroso que mata al Catire y a los diez toros con que se paga al brujo."
+    },
+    {
+      "id": "piara_de_cerdos",
+      "name": "La marranera",
+      "kind": "colectivo",
+      "myths": [
+        "la-culebra-cascabel"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "La piara que Saul pastorea con zurriago, que lo persigue como sombra, que se come su almuerzo y que muere entera en la explosion. Es el antagonista comico y el precio del chiste."
+    },
+    {
+      "id": "mono_pantera_y_serpiente_de_la_fabula",
+      "name": "Mono, pantera y serpiente de la fabula",
+      "kind": "colectivo",
+      "myths": [
+        "leal-hasta-la-muerte"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Los tres animales agradecidos que salen del foso, advierten al viajero y despues lo salvan con frutos, joyas y una mordedura calculada. Actuan como personajes, pero comparten funcion y registro de ilustracion de fabula: una hoja de grupo, no tres."
+    },
+    {
+      "id": "corte_del_rey_de_la_fabula",
+      "name": "La corte del rey de la fabula",
+      "kind": "colectivo",
+      "myths": [
+        "leal-hasta-la-muerte"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El rey, el principe mordido, los sabios del reino y la hija muerta. Cast del desenlace de la fabula, en un mundo que no es el llanero."
+    },
+    {
+      "id": "esmeralda_creadora",
+      "name": "La esmeralda creadora",
+      "kind": "objeto",
+      "myths": [
+        "amanecer-llanero"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "La gema que el dios de las alturas concede y que, al estallar contra las arenas, crea sabanas, rios, palmeras y bosques. Es literalmente el objeto por el que se cuenta el relato."
+    },
+    {
+      "id": "tesoro_enterrado_llanero",
+      "name": "Tesoro enterrado",
+      "kind": "objeto",
+      "myths": [
+        "la-tertulia-de-la-italiana",
+        "el-tesoro-de-caribare",
+        "los-delfines-dorados",
+        "el-domador-de-brujas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "La botija de morrocotas en el muro, las cajas con vasos sagrados y lingotes de la boveda, los caucos de monedas enterrados en La Rubiera y los tesoros del subsuelo que Tarsicio dice haber desbloqueado. Cuatro relatos con el mismo cuerpo: oro amonedado y cofres."
+    },
+    {
+      "id": "vehiculo_de_carretera",
+      "name": "Campero de carretera",
+      "kind": "objeto",
+      "myths": [
+        "la-bruja-de-los-ojos-miel",
+        "los-monstruos-de-paratebueno"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El viejo campero Viasa que se inclina bajo un peso imposible y el carro que lleva a los tres amigos hacia Paratebueno. Prop moderno que dos apariciones necesitan para existir."
+    },
+    {
+      "id": "plantas_medicinales_del_curandero",
+      "name": "Plantas y preparados del curandero",
+      "kind": "planta",
+      "myths": [
+        "el-brujo-de-la-costa-del-pauto",
+        "los-delfines-dorados",
+        "madre-rio-o-mohana",
+        "los-tres-luceros",
+        "el-dominguez"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Leche de higueron, jabon y brandy de Piriachi; plantas y raices que Jose Amalio reune con el brasero; las hierbas amargas que Pascual receta; ruda y albahaca del Dominguez. Ninguna se nombra por especie identificable, y eso debe quedar escrito en la hoja: se fija un conjunto deliberadamente generico."
+    },
+    {
+      "id": "arbol_monumental_del_llano",
+      "name": "Arbol monumental del llano",
+      "kind": "planta",
+      "myths": [
+        "el-dominguez",
+        "el-domador-de-brujas",
+        "madre-rio-o-mohana",
+        "el-toro-negro-patorreal",
+        "amanecer-llanero"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Ceibas, macanos amarillos, guacamayos, la ceiba de Tutuman, las ceibas colosales de la quebrada, el matapalo ancestral bajo el que se cuentan las historias y las palmas que bordean los rios. Cinco relatos apoyan su escena en un arbol gigante."
+    },
+    {
+      "id": "conuco_y_cultivos",
+      "name": "Conuco y cultivos",
+      "kind": "planta",
+      "myths": [
+        "los-tres-luceros",
+        "el-llano-cobra-sus-deudas",
+        "el-llano-ayer-hoy",
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Platano, maiz y yuca en las sementeras de Ambrosio; algodon y cafe del resguardo de Tamara; cafetales de la infancia; guaduales y maizales de Paz de Ariporo. Una hoja botanica de cultivo para todo el corpus."
+    },
+    {
+      "id": "silla_llanera_y_lazo",
+      "name": "Silla llanera y lazo",
+      "kind": "objeto",
+      "myths": [
+        "los-tres-luceros",
+        "el-llano-ayer-hoy"
+      ],
+      "decision": "embedded",
+      "covered_by": "caballo_llanero",
+      "sheets": 0,
+      "note": "El lazo es la extension natural de Ambrosio y el arte de enlazar es lo que Saul recuerda como conocimiento perdido. Aperos de la montura: van en la hoja del caballo."
+    },
+    {
+      "id": "sombrero_y_poncho_llanero",
+      "name": "Sombrero y poncho cruzado",
+      "kind": "objeto",
+      "myths": [
+        "el-dominguez",
+        "el-llano-ayer-hoy"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_llanera",
+      "sheets": 0,
+      "note": "Vestuario, no entidad: el poncho cruzado de Pascual baquiano y el atuendo de faena quedan en la gramatica de grupo."
+    },
+    {
+      "id": "toro_barroso",
+      "name": "El toro barroso",
+      "kind": "animal",
+      "myths": [
+        "el-toro-negro-patorreal"
+      ],
+      "decision": "embedded",
+      "covered_by": "ganado_llanero",
+      "sheets": 0,
+      "note": "Mata al Catire, pero es un toro bravo del hato sin descripcion que lo separe de la manada; la hoja de ganado lo resuelve."
+    },
+    {
+      "id": "vacas_lecheras_y_toros_de_lidia",
+      "name": "Vacas lecheras y toros de lidia",
+      "kind": "animal",
+      "myths": [
+        "el-llano-cobra-sus-deudas"
+      ],
+      "decision": "embedded",
+      "covered_by": "ganado_llanero",
+      "sheets": 0,
+      "note": "Variantes del mismo cuerpo dentro del hato."
+    },
+    {
+      "id": "diez_toros_de_marfil",
+      "name": "Los diez toros de marfil",
+      "kind": "animal",
+      "myths": [
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "decision": "embedded",
+      "covered_by": "ganado_llanero",
+      "sheets": 0,
+      "note": "El pago al brujo por revivir a don Lisandro. Color y edad, no cuerpo nuevo."
+    },
+    {
+      "id": "chiguiros_y_venados",
+      "name": "Chiguiros y venados",
+      "kind": "animal",
+      "myths": [
+        "el-llano-ayer-hoy"
+      ],
+      "decision": "embedded",
+      "covered_by": "sabana_llanera",
+      "sheets": 0,
+      "note": "Aparecen en una sola enumeracion de la abundancia perdida, sin accion propia; la hoja de entorno lleva su fauna."
+    },
+    {
+      "id": "luna_y_plenilunio",
+      "name": "La luna llanera",
+      "kind": "fenomeno",
+      "myths": [
+        "el-tesoro-de-caribare",
+        "el-toro-negro-patorreal",
+        "el-tirapiedra",
+        "el-domador-de-brujas",
+        "la-bola-de-fuego"
+      ],
+      "decision": "embedded",
+      "covered_by": "sabana_llanera",
+      "sheets": 0,
+      "note": "Plenilunio, luna menguante, luna roja: condicion de iluminacion de media docena de apariciones. Es cielo, no entidad."
+    },
+    {
+      "id": "capa_negra_de_petroleo",
+      "name": "La capa negra como aceite de seje",
+      "kind": "fenomeno",
+      "myths": [
+        "amanecer-llanero"
+      ],
+      "decision": "embedded",
+      "covered_by": "sabana_llanera",
+      "sheets": 0,
+      "note": "El cataclismo que sepulta el llano bajo una capa negra. Se resuelve como franja del subsuelo dentro del modelo de entorno."
+    },
+    {
+      "id": "quebrada_de_las_ceibas",
+      "name": "La quebrada de las ceibas",
+      "kind": "lugar",
+      "myths": [
+        "madre-rio-o-mohana"
+      ],
+      "decision": "embedded",
+      "covered_by": "monte_y_quebrada_del_piedemonte",
+      "sheets": 0,
+      "note": "Agua fria entre raices donde el doctor lanza piedrecillas. Es el mismo cuerpo de monte y agua ya fichado."
+    },
+    {
+      "id": "camino_viejo_nocturno",
+      "name": "El camino viejo",
+      "kind": "lugar",
+      "myths": [
+        "el-tirapiedra",
+        "el-dominguez"
+      ],
+      "decision": "embedded",
+      "covered_by": "monte_y_quebrada_del_piedemonte",
+      "sheets": 0,
+      "note": "Por los caminos viejos no se debe andar despues del atardecer: el sendero esta dentro del modelo espacial del monte."
+    },
+    {
+      "id": "cerro_de_los_venados",
+      "name": "El cerro de los Venados",
+      "kind": "lugar",
+      "myths": [
+        "la-tertulia-de-la-italiana"
+      ],
+      "decision": "embedded",
+      "covered_by": "monte_y_quebrada_del_piedemonte",
+      "sheets": 0,
+      "note": "Solo se nombra como horizonte sobre el que se forma la tormenta."
+    },
+    {
+      "id": "guaduales_y_maizales",
+      "name": "Guaduales y maizales",
+      "kind": "planta",
+      "myths": [
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "decision": "embedded",
+      "covered_by": "conuco_y_cultivos",
+      "sheets": 0,
+      "note": "Telon vegetal de la finca de Paz de Ariporo."
+    },
+    {
+      "id": "cafetales",
+      "name": "Cafetales en flor",
+      "kind": "planta",
+      "myths": [
+        "el-llano-ayer-hoy",
+        "el-llano-cobra-sus-deudas"
+      ],
+      "decision": "embedded",
+      "covered_by": "conuco_y_cultivos",
+      "sheets": 0,
+      "note": "El cafe del pueblo de raices tamaras y el del resguardo jesuita."
+    },
+    {
+      "id": "almendra_de_cacay_ruda_y_albahaca",
+      "name": "Almendra de cacay, ruda y albahaca",
+      "kind": "planta",
+      "myths": [
+        "el-dominguez"
+      ],
+      "decision": "embedded",
+      "covered_by": "plantas_medicinales_del_curandero",
+      "sheets": 0,
+      "note": "Las unicas plantas nombradas por especie en el corpus, y siempre como aroma o nostalgia, nunca dibujadas."
+    },
+    {
+      "id": "leche_de_higueron_y_jabon",
+      "name": "Leche de higueron y jabon misterioso",
+      "kind": "objeto",
+      "myths": [
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "decision": "embedded",
+      "covered_by": "plantas_medicinales_del_curandero",
+      "sheets": 0,
+      "note": "Insumos de la cura de don Lisandro."
+    },
+    {
+      "id": "palmas_y_matapalo",
+      "name": "Palmas de rio y matapalo",
+      "kind": "planta",
+      "myths": [
+        "el-toro-negro-patorreal",
+        "amanecer-llanero"
+      ],
+      "decision": "embedded",
+      "covered_by": "arbol_monumental_del_llano",
+      "sheets": 0,
+      "note": "Las palmas guardianas de las orillas y el matapalo bajo el que se cuentan los relatos."
+    },
+    {
+      "id": "ceiba_de_tutuman",
+      "name": "La ceiba de Tutuman",
+      "kind": "planta",
+      "myths": [
+        "el-domador-de-brujas"
+      ],
+      "decision": "embedded",
+      "covered_by": "arbol_monumental_del_llano",
+      "sheets": 0,
+      "note": "Arbol de raices profundas que Tutuman salvaguarda; misma hoja de gigante."
+    },
+    {
+      "id": "tranquero_y_corrales",
+      "name": "Tranquero y corrales",
+      "kind": "arquitectura",
+      "myths": [
+        "las-chanzas-de-don-felipe",
+        "el-toro-negro-patorreal"
+      ],
+      "decision": "embedded",
+      "covered_by": "hato_llanero",
+      "sheets": 0,
+      "note": "El tranquero donde Felipe contempla sus dominios y que su hijo abre al amanecer. Parte del hato."
+    },
+    {
+      "id": "casa_cural_de_caribabare",
+      "name": "La casa cural",
+      "kind": "arquitectura",
+      "myths": [
+        "el-tesoro-de-caribare"
+      ],
+      "decision": "embedded",
+      "covered_by": "hato_llanero",
+      "sheets": 0,
+      "note": "Las penumbras que sorben los cargamentos antes de la boveda; construccion del mismo repertorio colonial llanero."
+    },
+    {
+      "id": "gallera_de_paz_de_ariporo",
+      "name": "La gallera de Paz de Ariporo",
+      "kind": "arquitectura",
+      "myths": [
+        "las-chanzas-de-don-felipe"
+      ],
+      "decision": "embedded",
+      "covered_by": "sitio_de_parrando_y_cantina",
+      "sheets": 0,
+      "note": "Local de reunion y apuesta; misma hoja de sitio de parrando."
+    },
+    {
+      "id": "gallos_de_pelea",
+      "name": "Gallos de pelea",
+      "kind": "animal",
+      "myths": [
+        "las-chanzas-de-don-felipe"
+      ],
+      "decision": "embedded",
+      "covered_by": "sitio_de_parrando_y_cantina",
+      "sheets": 0,
+      "note": "Solo se nombra el desafio de gallos; los animales no actuan."
+    },
+    {
+      "id": "el_pollo_de_oro",
+      "name": "El Pollo de Oro",
+      "kind": "arquitectura",
+      "myths": [
+        "los-monstruos-de-paratebueno"
+      ],
+      "decision": "embedded",
+      "covered_by": "sitio_de_parrando_y_cantina",
+      "sheets": 0,
+      "note": "Sitio de joropo con mesas y sillas donde una dama fue asesinada; mismo cuerpo de local."
+    },
+    {
+      "id": "cafeteadero_la_italiana",
+      "name": "El cafeteadero La Italiana",
+      "kind": "arquitectura",
+      "myths": [
+        "la-tertulia-de-la-italiana"
+      ],
+      "decision": "embedded",
+      "covered_by": "sitio_de_parrando_y_cantina",
+      "sheets": 0,
+      "note": "Cafe con humo de cigarro y murmullo de conversaciones."
+    },
+    {
+      "id": "fiesta_de_los_angelitos",
+      "name": "La fiesta de Los angelitos",
+      "kind": "arquitectura",
+      "myths": [
+        "el-brujo-de-la-costa-del-pauto",
+        "el-toro-negro-patorreal"
+      ],
+      "decision": "embedded",
+      "covered_by": "sitio_de_parrando_y_cantina",
+      "sheets": 0,
+      "note": "Parranda de maracas y tiples en Maporal del Pauto, y el baile donde el Catire conoce a Rosa Linda."
+    },
+    {
+      "id": "foso_trampa_de_la_fabula",
+      "name": "El foso disimulado",
+      "kind": "lugar",
+      "myths": [
+        "leal-hasta-la-muerte"
+      ],
+      "decision": "embedded",
+      "covered_by": "escenario_de_la_fabula_de_calila",
+      "sheets": 0,
+      "note": "Hoyo cubierto de hojas donde caen el hombre y los tres animales. Primera mitad del escenario de la fabula."
+    },
+    {
+      "id": "bejucos_de_la_trampa",
+      "name": "Los bejucos",
+      "kind": "objeto",
+      "myths": [
+        "leal-hasta-la-muerte"
+      ],
+      "decision": "embedded",
+      "covered_by": "escenario_de_la_fabula_de_calila",
+      "sheets": 0,
+      "note": "Gruesos como brazos de titan, sirven de cuerda para el rescate."
+    },
+    {
+      "id": "padre_dadey",
+      "name": "El padre Dadey",
+      "kind": "personaje",
+      "myths": [
+        "el-llano-cobra-sus-deudas"
+      ],
+      "decision": "embedded",
+      "covered_by": "padre_manare",
+      "sheets": 0,
+      "note": "Funda Tamara en 1626, pero el texto no le da cuerpo: misma sotana y misma epoca que Manare."
+    },
+    {
+      "id": "jesuitas_del_llano",
+      "name": "Los jesuitas del llano",
+      "kind": "colectivo",
+      "myths": [
+        "el-tesoro-de-caribare",
+        "el-llano-cobra-sus-deudas"
+      ],
+      "decision": "embedded",
+      "covered_by": "padre_manare",
+      "sheets": 0,
+      "note": "Sombras diligentes que movilizan tesoros y fundan resguardos; sin descripcion individual."
+    },
+    {
+      "id": "catimay_yerbatero",
+      "name": "Catimay, el yerbatero",
+      "kind": "personaje",
+      "myths": [
+        "los-tres-luceros"
+      ],
+      "decision": "embedded",
+      "covered_by": "abelardo_piriachi",
+      "sheets": 0,
+      "note": "Llamado para curar la tos de Ambrosio. Mismo oficio y mismo atrezo que Piriachi, sin cuerpo propio en el texto."
+    },
+    {
+      "id": "don_lisandro",
+      "name": "Don Lisandro",
+      "kind": "personaje",
+      "myths": [
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_llanera",
+      "sheets": 0,
+      "note": "Hacendado curado a punta de banos dentro de una anecdota referida; no se describe."
+    },
+    {
+      "id": "don_esteban",
+      "name": "Don Esteban",
+      "kind": "personaje",
+      "myths": [
+        "la-bola-de-fuego"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_llanera",
+      "sheets": 0,
+      "note": "Parrandero de coplas asesinado con hacha por Candelaria. Registro de fiestero dentro de la gramatica de grupo."
+    },
+    {
+      "id": "rosendo_el_mono",
+      "name": "Rosendo, el Mono",
+      "kind": "personaje",
+      "myths": [
+        "el-tirapiedra"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_llanera",
+      "sheets": 0,
+      "note": "Companero de camino que carga un hacha y se derrumba de miedo; sin descripcion fisica."
+    },
+    {
+      "id": "dona_rosario",
+      "name": "Dona Rosario",
+      "kind": "personaje",
+      "myths": [
+        "el-tirapiedra"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_llanera",
+      "sheets": 0,
+      "note": "Anfitriona cuya visita prolongada los hace salir tarde."
+    },
+    {
+      "id": "julio_pineda",
+      "name": "El ingeniero Julio Pineda",
+      "kind": "personaje",
+      "myths": [
+        "la-tertulia-de-la-italiana"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_llanera",
+      "sheets": 0,
+      "note": "Contertulio del cafeteadero, asesor sabio y contradictorio."
+    },
+    {
+      "id": "julio_conductor",
+      "name": "Julio, el amigo al volante",
+      "kind": "personaje",
+      "myths": [
+        "los-monstruos-de-paratebueno"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_llanera",
+      "sheets": 0,
+      "note": "Impasible frente a la calavera que lo besa."
+    },
+    {
+      "id": "enrique_parra",
+      "name": "El senor Enrique Parra",
+      "kind": "personaje",
+      "myths": [
+        "los-monstruos-de-paratebueno"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_llanera",
+      "sheets": 0,
+      "note": "Sobreviviente que explica el pasado sangriento del camino."
+    },
+    {
+      "id": "el_taita_de_saul",
+      "name": "El taita de Saul",
+      "kind": "personaje",
+      "myths": [
+        "la-culebra-cascabel"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_llanera",
+      "sheets": 0,
+      "note": "Dueno de la finca cerca de Aguascalientes, con escopeta y escepticismo."
+    },
+    {
+      "id": "medico_del_pueblo",
+      "name": "El medico",
+      "kind": "personaje",
+      "myths": [
+        "la-tertulia-de-la-italiana",
+        "las-chanzas-de-don-felipe"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_llanera",
+      "sheets": 0,
+      "note": "Diagnostica hambre sobre los cuerpos de los ninos; y es a quien se cabalga a buscar tras el disparo."
+    },
+    {
+      "id": "hijo_de_don_felipe",
+      "name": "El hijo de don Felipe",
+      "kind": "personaje",
+      "myths": [
+        "las-chanzas-de-don-felipe"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_llanera",
+      "sheets": 0,
+      "note": "Herido de rasguno por la bala perdida; abre el tranquero al amanecer."
+    },
+    {
+      "id": "comitiva_de_la_expedicion_botanica",
+      "name": "La comitiva de la Expedicion Botanica",
+      "kind": "colectivo",
+      "myths": [
+        "el-dominguez"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_llanera",
+      "sheets": 0,
+      "note": "Profesor Hidrobo, doctor Camilo Castro Chaquea, Angel Maria Rios, don Hernandez y la asistente del doctor Arias. Registro de visitante de ciudad dentro del grupo."
+    },
+    {
+      "id": "hermanos_ortega",
+      "name": "Los hermanos Ortega",
+      "kind": "personaje",
+      "myths": [
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_llanera",
+      "sheets": 0,
+      "note": "Duenos de Las Tigras que acompanan el viaje a San Luis de Palenque."
+    },
+    {
+      "id": "vicente_cazador",
+      "name": "Vicente, el cazador",
+      "kind": "personaje",
+      "myths": [
+        "leal-hasta-la-muerte"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_llanera",
+      "sheets": 0,
+      "note": "Dueno de Encuentro. Verificado contra el texto: el cuerpo de la pagina no lo narra, solo lo resume el apartado de versiones, y no se le da ningun rasgo fisico."
+    },
+    {
+      "id": "familia_de_la_botija",
+      "name": "La familia de la botija",
+      "kind": "colectivo",
+      "myths": [
+        "la-tertulia-de-la-italiana"
+      ],
+      "decision": "embedded",
+      "covered_by": "comunidad_llanera",
+      "sheets": 0,
+      "note": "Padre, madre e hijos de la casona; el texto los define por la discusion, no por el cuerpo."
+    },
+    {
+      "id": "andres_el_peon",
+      "name": "Andres, el peon",
+      "kind": "personaje",
+      "myths": [
+        "los-delfines-dorados"
+      ],
+      "decision": "embedded",
+      "covered_by": "peonada_del_hato",
+      "sheets": 0,
+      "note": "Agradecido por una cura anterior, sale de noche a buscar a Jose Amalio."
+    },
+    {
+      "id": "mona_de_dieciseis",
+      "name": "La mona de dieciseis veranos",
+      "kind": "personaje",
+      "myths": [
+        "el-dominguez"
+      ],
+      "decision": "embedded",
+      "covered_by": "ninos_del_llano",
+      "sheets": 0,
+      "note": "Aparece destellando en la llanura y provoca la suplica del duende."
+    },
+    {
+      "id": "perrita_de_saul",
+      "name": "La perrita de Saul",
+      "kind": "animal",
+      "myths": [
+        "la-culebra-cascabel"
+      ],
+      "decision": "embedded",
+      "covered_by": "encuentro_perro",
+      "sheets": 0,
+      "note": "Companera inquebrantable mordida por la cascabel; mismo cuerpo de perro llanero."
+    },
+    {
+      "id": "perros_que_aullan",
+      "name": "Los perros que aullan",
+      "kind": "animal",
+      "myths": [
+        "la-bola-de-fuego"
+      ],
+      "decision": "embedded",
+      "covered_by": "encuentro_perro",
+      "sheets": 0,
+      "note": "Aullan en la lejania al paso de la luz."
+    },
+    {
+      "id": "cuatronarices_y_rabo_de_aji",
+      "name": "Cuatronarices y rabo de aji",
+      "kind": "animal",
+      "myths": [
+        "los-delfines-dorados"
+      ],
+      "decision": "embedded",
+      "covered_by": "culebra_cascabel",
+      "sheets": 0,
+      "note": "Dos serpientes que muerden al caballicero y a Maria de los Angeles. El texto las nombra por su veneno, no por su cuerpo."
+    },
+    {
+      "id": "dos_familias_chiricoas",
+      "name": "Las dos familias chiricoas",
+      "kind": "colectivo",
+      "myths": [
+        "el-tesoro-de-caribare"
+      ],
+      "decision": "embedded",
+      "covered_by": "diluvio_chiricoa",
+      "sheets": 0,
+      "note": "Elegidas por hacer mechitos de cera para alumbrar a Dios; ascienden en los totumos. Se ponen en escena dentro de la hoja del diluvio."
+    },
+    {
+      "id": "totumos_que_crecen",
+      "name": "Los totumos que crecen con la marea",
+      "kind": "planta",
+      "myths": [
+        "el-tesoro-de-caribare"
+      ],
+      "decision": "embedded",
+      "covered_by": "diluvio_chiricoa",
+      "sheets": 0,
+      "note": "Vehiculo de salvacion; inseparable de la escena del diluvio."
+    },
+    {
+      "id": "escoba_voladora",
+      "name": "La escoba vieja",
+      "kind": "objeto",
+      "myths": [
+        "el-domador-de-brujas"
+      ],
+      "decision": "embedded",
+      "covered_by": "pascual",
+      "sheets": 0,
+      "note": "Sin escoba no hay vuelo: va en la hoja de estado de Pascual."
+    },
+    {
+      "id": "estrellas_del_cazador_y_su_perro",
+      "name": "Las estrellas del cazador y su perro",
+      "kind": "fenomeno",
+      "myths": [
+        "leal-hasta-la-muerte"
+      ],
+      "decision": "embedded",
+      "covered_by": "tres_luceros",
+      "sheets": 0,
+      "note": "Misma regla grafica de almas convertidas en luz; solo cambia el numero."
+    },
+    {
+      "id": "morrocotas_y_lingotes",
+      "name": "Morrocotas, lingotes y cofres",
+      "kind": "objeto",
+      "myths": [
+        "la-tertulia-de-la-italiana",
+        "el-tesoro-de-caribare"
+      ],
+      "decision": "embedded",
+      "covered_by": "tesoro_enterrado_llanero",
+      "sheets": 0,
+      "note": "Contenido del mismo cuerpo de tesoro."
+    },
+    {
+      "id": "caucos_de_monedas_enterrados",
+      "name": "Los caucos con monedas de oro",
+      "kind": "objeto",
+      "myths": [
+        "los-delfines-dorados"
+      ],
+      "decision": "embedded",
+      "covered_by": "tesoro_enterrado_llanero",
+      "sheets": 0,
+      "note": "Enterrados en La Rubiera por quienes cerraban su vinculo con el oro en silencio eterno."
+    },
+    {
+      "id": "campero_viasa",
+      "name": "El campero Viasa",
+      "kind": "objeto",
+      "myths": [
+        "la-bruja-de-los-ojos-miel"
+      ],
+      "decision": "embedded",
+      "covered_by": "vehiculo_de_carretera",
+      "sheets": 0,
+      "note": "Modelo concreto del mismo prop."
+    },
+    {
+      "id": "mojon_y_barro_del_camino",
+      "name": "Barro y cunetas de la carretera",
+      "kind": "lugar",
+      "myths": [
+        "los-monstruos-de-paratebueno",
+        "la-bruja-de-los-ojos-miel"
+      ],
+      "decision": "embedded",
+      "covered_by": "carretera_nocturna_del_piedemonte",
+      "sheets": 0,
+      "note": "Sendero embarrado, abismo y borde de via: parte del modelo espacial."
+    },
+    {
+      "id": "dinamita_con_mecha",
+      "name": "Tres barras de dinamita",
+      "kind": "objeto",
+      "myths": [
+        "la-culebra-cascabel"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_armas_y_faenas",
+      "sheets": 0,
+      "note": "Con fulminante y mecha chisporroteante, vestigio de cuando los llaneros pescaban con explosivos. Objeto menor: lo que da titulo a la pagina es la cascabel, no la carga."
+    },
+    {
+      "id": "machete_llanero",
+      "name": "Machete",
+      "kind": "objeto",
+      "myths": [
+        "la-bola-de-fuego"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_armas_y_faenas",
+      "sheets": 0,
+      "note": "Arrastrado contra la tierra mientras David maldice."
+    },
+    {
+      "id": "armas_de_fuego_del_llano",
+      "name": "Revolver, pistola y escopeta",
+      "kind": "objeto",
+      "myths": [
+        "el-brujo-de-la-costa-del-pauto",
+        "las-chanzas-de-don-felipe",
+        "la-culebra-cascabel"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_armas_y_faenas",
+      "sheets": 0,
+      "note": "El revolver de Agapito, la exquisita pistola calibre 25 y la escopeta que Saul no encuentra."
+    },
+    {
+      "id": "hacha",
+      "name": "El hacha",
+      "kind": "objeto",
+      "myths": [
+        "la-bola-de-fuego",
+        "el-tirapiedra"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_armas_y_faenas",
+      "sheets": 0,
+      "note": "Con la que Candelaria mata a Esteban y la que Rosendo carga por el camino."
+    },
+    {
+      "id": "zurriago",
+      "name": "El zurriago",
+      "kind": "objeto",
+      "myths": [
+        "la-culebra-cascabel"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_armas_y_faenas",
+      "sheets": 0,
+      "note": "Tiembla en la mano del nino que recoge la tropa de cerdos."
+    },
+    {
+      "id": "instrumentos_del_joropo",
+      "name": "Tiple, maracas y coplas",
+      "kind": "objeto",
+      "myths": [
+        "el-dominguez",
+        "el-brujo-de-la-costa-del-pauto",
+        "los-monstruos-de-paratebueno"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_fiesta_y_casa",
+      "sheets": 0,
+      "note": "Nota para el editor: en todo el corpus no aparecen ni arpa ni cuatro. La musica llanera de estas paginas es tiple, maracas, coplas y joropo."
+    },
+    {
+      "id": "chinchorro_y_hamaca",
+      "name": "Chinchorro y hamaca",
+      "kind": "objeto",
+      "myths": [
+        "los-tres-luceros",
+        "la-culebra-cascabel"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_fiesta_y_casa",
+      "sheets": 0,
+      "note": "Colgados en la ranchita, y la hamaca en que llevan al nino envenenado al pueblo."
+    },
+    {
+      "id": "aguardiente_y_guarapo",
+      "name": "Aguardiente y guarapo",
+      "kind": "objeto",
+      "myths": [
+        "madre-rio-o-mohana",
+        "la-bola-de-fuego",
+        "el-brujo-de-la-costa-del-pauto",
+        "las-chanzas-de-don-felipe"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_fiesta_y_casa",
+      "sheets": 0,
+      "note": "La botella que comparte la Mojana, el guarapo de las fiestas patronales, el fermento dorado de Maporal."
+    },
+    {
+      "id": "corona_de_plumas_y_tunica",
+      "name": "Corona de plumas y tunica de colores",
+      "kind": "objeto",
+      "myths": [
+        "amanecer-llanero"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_fiesta_y_casa",
+      "sheets": 0,
+      "note": "Confeccionadas por Casanari para el fin del blanqueo. Vestuario ceremonial de un rito que el cuento inventa: la hoja debe declararlo."
+    },
+    {
+      "id": "cuerdas_para_atar_ninos",
+      "name": "Las cuerdas con que atan a los ninos",
+      "kind": "objeto",
+      "myths": [
+        "madre-rio-o-mohana"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_fiesta_y_casa",
+      "sheets": 0,
+      "note": "Defensa de los padres contra el llamado de la Mojana."
+    },
+    {
+      "id": "semillas_de_pinon",
+      "name": "Las pepitas rojas de pinon",
+      "kind": "planta",
+      "myths": [
+        "la-culebra-cascabel"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_comercio_y_monte",
+      "sheets": 0,
+      "note": "Un punado de semillas que casi mata a Saul nino."
+    },
+    {
+      "id": "sarrapia_cueros_y_plumas",
+      "name": "Sarrapia, cueros y plumas de garza",
+      "kind": "objeto",
+      "myths": [
+        "el-llano-cobra-sus-deudas"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_comercio_y_monte",
+      "sheets": 0,
+      "note": "La carga que bajaba por el Meta y el Orinoco rumbo a Europa."
+    },
+    {
+      "id": "mechitos_de_cera_de_abejas",
+      "name": "Mechitos de cera de abejas",
+      "kind": "objeto",
+      "myths": [
+        "el-tesoro-de-caribare"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_comercio_y_monte",
+      "sheets": 0,
+      "note": "Lo que salva a las dos familias chiricoas: alumbraban a Dios."
+    },
+    {
+      "id": "detector_de_minas",
+      "name": "El detector de minas",
+      "kind": "objeto",
+      "myths": [
+        "el-tesoro-de-caribare"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_comercio_y_monte",
+      "sheets": 0,
+      "note": "Chirriando como serpiente despierta, encuentra la voz del tesoro en 1944."
+    },
+    {
+      "id": "brasero_del_curandero",
+      "name": "El brasero",
+      "kind": "objeto",
+      "myths": [
+        "los-delfines-dorados"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_comercio_y_monte",
+      "sheets": 0,
+      "note": "De el sube el humo con que Jose Amalio envuelve a la enferma."
+    },
+    {
+      "id": "gran_jefe_indio",
+      "name": "El gran jefe indio",
+      "kind": "personaje",
+      "myths": [
+        "amanecer-llanero"
+      ],
+      "decision": "excluded",
+      "reason": "Decreta la muerte de Casanari desde fuera de escena y el cuento no le da un solo rasgo fisico.",
+      "sheets": 0,
+      "note": "Verificado leyendo el relato: solo aparece en la frase que explica la persecucion. Dibujarlo obligaria a inventar la identidad visual de un jefe indigena que el texto unicamente invoca, que es el error que esta ficha debe evitar."
+    },
+    {
+      "id": "descendientes_achaguas_amoruas_betoyes",
+      "name": "Achaguas, amoruas y betoyes",
+      "kind": "colectivo",
+      "myths": [
+        "amanecer-llanero"
+      ],
+      "decision": "excluded",
+      "reason": "Se enumeran como troncos de tribus descendientes de la pareja, sin una sola linea descriptiva.",
+      "sheets": 0,
+      "note": "Ficharlos seria adjudicar identidad visual a tres pueblos reales a partir de una genealogia literaria."
+    },
+    {
+      "id": "indios_salivas",
+      "name": "Los indios Salivas",
+      "kind": "colectivo",
+      "myths": [
+        "los-delfines-dorados"
+      ],
+      "decision": "excluded",
+      "reason": "El relato los nombra como el pueblo de Jose Amalio y dice que el sol reflejaba en ellos historias no escritas; nunca los pone en escena ni los describe.",
+      "sheets": 0,
+      "note": "Jose Amalio si tiene ficha porque tiene cuerpo descrito; su pueblo no."
+    },
+    {
+      "id": "delfines_dorados",
+      "name": "Los delfines dorados",
+      "kind": "criatura",
+      "myths": [
+        "los-delfines-dorados"
+      ],
+      "decision": "excluded",
+      "reason": "El titulo los anuncia y el cuerpo de la pagina no los narra: no hay transformacion, no hay delfines, no hay una sola linea que los describa.",
+      "sheets": 0,
+      "note": "Hallazgo que el editor debe conocer antes de presupuestar: la pagina se llama Los delfines dorados y cuenta la cura de Maria de los Angeles en La Rubiera. Si se quiere la imagen del titulo hay que escribir primero el episodio, no ficharlo."
+    },
+    {
+      "id": "hija_del_presidente",
+      "name": "La hija del Presidente",
+      "kind": "personaje",
+      "myths": [
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "decision": "excluded",
+      "reason": "Mencion politica de paso, sin cuerpo ni accion narrada: solo dispersa planes de bienestar como simiente al viento.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "tito_morales",
+      "name": "El compadre Tito Morales",
+      "kind": "personaje",
+      "myths": [
+        "la-culebra-cascabel"
+      ],
+      "decision": "excluded",
+      "reason": "Solo el nombre del dueno de la finca vecina; no actua ni aparece.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "coleccionista_americano",
+      "name": "El coleccionista americano",
+      "kind": "personaje",
+      "myths": [
+        "la-tertulia-de-la-italiana"
+      ],
+      "decision": "excluded",
+      "reason": "Comprador remoto del oro, nombrado en una subordinada; nunca entra en escena.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "jose_eustasio_rivera",
+      "name": "Jose Eustasio Rivera",
+      "kind": "personaje",
+      "myths": [
+        "el-llano-cobra-sus-deudas"
+      ],
+      "decision": "excluded",
+      "reason": "Escritor real citado dentro de una cronica por haber encontrado en Orocue su Voragine; no es personaje del relato.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "miguel_el_inmune",
+      "name": "Miguel",
+      "kind": "personaje",
+      "myths": [
+        "la-bruja-de-los-ojos-miel"
+      ],
+      "decision": "excluded",
+      "reason": "Solo existe en la biografia decimononica que Pascual refiere; el relato no lo pone en escena.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "amanecer_el_amado",
+      "name": "Amanecer",
+      "kind": "personaje",
+      "myths": [
+        "la-bruja-de-los-ojos-miel"
+      ],
+      "decision": "excluded",
+      "reason": "El ser que la acompano hasta 1906, desaparecido. El texto nunca dice que es ni como se ve, y decidirlo seria inventarlo.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "cachicamo_en_el_estomago",
+      "name": "El cachicamo en el estomago",
+      "kind": "animal",
+      "myths": [
+        "los-tres-luceros"
+      ],
+      "decision": "excluded",
+      "reason": "Causa magica que los rumores atribuyen a la tos de Ambrosio; nunca aparece como animal en escena.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "cocodrilo_en_las_entranas",
+      "name": "El cocodrilo en las entranas",
+      "kind": "animal",
+      "myths": [
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "decision": "excluded",
+      "reason": "La replica de cocodrilo que latia dentro de don Lisandro es una figura de habladuria; el texto no la muestra.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "espejismo_de_verano",
+      "name": "El espejismo del verano",
+      "kind": "fenomeno",
+      "myths": [
+        "la-bola-de-fuego"
+      ],
+      "decision": "excluded",
+      "reason": "Explicacion esceptica que el propio texto ofrece; no produce imagen distinta del reflejo del sol sobre la sabana seca ya fichada.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "contra_sexual_y_ritual",
+      "name": "La contra",
+      "kind": "objeto",
+      "myths": [
+        "madre-rio-o-mohana",
+        "la-bruja-de-los-ojos-miel"
+      ],
+      "decision": "excluded",
+      "reason": "Se receta enfrentarse al espectro con la pasion del amor mundano y se alude a un ritual especial, pero ninguna de las dos paginas describe objeto ni procedimiento.",
+      "sheets": 0,
+      "note": "Se documenta como motivo y no se representa."
+    },
+    {
+      "id": "tesoros_de_los_guayupes",
+      "name": "Los tesoros de los Guayupes",
+      "kind": "objeto",
+      "myths": [
+        "el-domador-de-brujas"
+      ],
+      "decision": "excluded",
+      "reason": "Se invocan como rumor sobre lo que Tarsicio desbloqueo en el subsuelo; no se describe ni pieza ni lugar.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "jefe_indio_levitando",
+      "name": "El jefe indio levitando sobre Villavicencio",
+      "kind": "personaje",
+      "myths": [
+        "el-domador-de-brujas"
+      ],
+      "decision": "excluded",
+      "reason": "Suenos indescifrables dentro de un rumor; no hay cuerpo ni accion que fichar.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "pigmeos_danzantes",
+      "name": "Los objetos diminutos como pigmeos danzantes",
+      "kind": "criatura",
+      "myths": [
+        "el-domador-de-brujas"
+      ],
+      "decision": "excluded",
+      "reason": "Aparecen en una enumeracion de rumores y se arrojan al agua de la Laguna Jardines de la Esperanza; ninguna accion los sostiene.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "guerrilla_y_violencia_de_los_cincuenta",
+      "name": "La guerrilla y la Violencia",
+      "kind": "colectivo",
+      "myths": [
+        "los-tres-luceros",
+        "los-monstruos-de-paratebueno"
+      ],
+      "decision": "excluded",
+      "reason": "Telon historico en dos relatos: las guerrillas reclaman peones y el comandante devuelve a Carlos, pero ningun combatiente se pone en escena ni se describe.",
+      "sheets": 0,
+      "note": ""
+    },
+    {
+      "id": "hermanos_parra",
+      "name": "Los hermanos Parra",
+      "kind": "colectivo",
+      "myths": [
+        "los-monstruos-de-paratebueno"
+      ],
+      "decision": "excluded",
+      "reason": "Legado de la rebelion liberal llanera invocado como explicacion; solo Enrique habla, y su cuerpo lo cubre la comunidad llanera.",
+      "sheets": 0,
+      "note": ""
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_armas_y_faenas",
+      "kind": "objeto",
+      "covers": [
+        "dinamita_con_mecha",
+        "machete_llanero",
+        "armas_de_fuego_del_llano",
+        "hacha",
+        "zurriago"
+      ],
+      "sheets": 1,
+      "note": "Cinco objetos menores de faena y violencia que ninguna hoja de identidad necesita por separado."
+    },
+    {
+      "id": "hoja_utileria_fiesta_y_casa",
+      "kind": "objeto",
+      "covers": [
+        "instrumentos_del_joropo",
+        "chinchorro_y_hamaca",
+        "aguardiente_y_guarapo",
+        "corona_de_plumas_y_tunica",
+        "cuerdas_para_atar_ninos"
+      ],
+      "sheets": 1,
+      "note": "Utileria de parranda y de vivienda. Aqui queda registrado que el corpus no tiene arpa ni cuatro."
+    },
+    {
+      "id": "hoja_utileria_comercio_y_monte",
+      "kind": "objeto",
+      "covers": [
+        "semillas_de_pinon",
+        "sarrapia_cueros_y_plumas",
+        "mechitos_de_cera_de_abejas",
+        "detector_de_minas",
+        "brasero_del_curandero"
+      ],
+      "sheets": 1,
+      "note": "Objetos de comercio, monte y cura que aparecen una sola vez cada uno."
+    }
+  ],
+  "totals": {
+    "entities": 160,
+    "required": 70,
+    "embedded": 71,
+    "excluded": 19,
+    "sheets": 79,
+    "panregional_required": 3
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ufaina",
+  "comunidad": "Tanimuka (Ufaina)",
+  "tanda": "tanda-10-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ufaina.v3.json",
+    "sha256": "aa64b80ecc70f5aaf4142aa291dc9c4bd8964c26d6d3253721afa1ec6f44d595"
+  },
+  "canon": {
+    "sha256": "1aaa30b3d70bf5aafd9d3828039d6e628c8a39470a236d76f2cfa906cd8e6361",
+    "verificado_en": "2026-09-29T02:16:07.304Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 1,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "selva_y_rio_apaporis__environment_model--canon",
+      "modelo": "selva_y_rio_apaporis__environment_model",
+      "entidad": "Selva del bajo Apaporis y su cauce sinuoso",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8265,
+      "prompt_sha256": "448e4a4cb619edd6b13484f7d2195239f953a6ab5146ecaafaae7b768ff63d92"
+    }
+  ]
+}

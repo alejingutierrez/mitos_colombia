@@ -1,0 +1,101 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "quillacingas",
+  "comunidad": "Quillacingas",
+  "tanda": "tanda-06-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/quillacingas.v3.json",
+    "sha256": "00c78e7401248c308d099f8a50ddcc92c795e0b0a5d20e1b6c039d6061a08654"
+  },
+  "canon": {
+    "sha256": "22e4e45588698691b545d9a3c7e306acd5795b81849509c6c8121ada8f1b03d4",
+    "verificado_en": "2026-09-29T01:57:28.116Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "sirena_de_la_cocha__identity_sheet--canon",
+      "modelo": "sirena_de_la_cocha__identity_sheet",
+      "entidad": "Sirena de La Cocha",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "sirena-de-la-laguna-de-la-cocha",
+        "cualanquizan",
+        "el-llamado-de-inti",
+        "el-rabo-de-casapamba"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8572,
+      "prompt_sha256": "1159bb6c3f697066801bc42018ff8ef0d7893c8a4740f1cd7039e1996fcd991a"
+    },
+    {
+      "job": "guardianes_perros_gigantes__identity_sheet--canon",
+      "modelo": "guardianes_perros_gigantes__identity_sheet",
+      "entidad": "Dos guardianes semejantes a perros gigantes",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-rabo-de-casapamba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7342,
+      "prompt_sha256": "822f56f0aeb84a05eb9a1534e6c06c214aa6ebbaaf14c1805e7c21a6d4c464c7"
+    },
+    {
+      "job": "quinde__identity_sheet--canon",
+      "modelo": "quinde__identity_sheet",
+      "entidad": "Quinde, el colibrí mágico",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7695,
+      "prompt_sha256": "12ee974eef2f674ea8e80068addd6a7a5daa3542cf375aee0c80aabdb286ac68"
+    },
+    {
+      "job": "quinde__state_sheet--estado_rana",
+      "modelo": "quinde__state_sheet",
+      "entidad": "Quinde, el colibrí mágico",
+      "categoria": "criatura",
+      "vista": "estado_rana",
+      "estados": [
+        "rana"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8100,
+      "prompt_sha256": "164c6e898ada0979984d1b6947edb7a336031e53e700cb7950d21fc74c493447"
+    }
+  ]
+}

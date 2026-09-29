@@ -1,0 +1,255 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "katios",
+  "comunidad": "Katíos",
+  "tanda": "tanda-04-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/katios.v3.json",
+    "sha256": "2bec78c2857584861e3eaba066e1c8f29018bb7dfcfd9224f188c4eb4f5b706a"
+  },
+  "canon": {
+    "sha256": "de27d790f202032beb5e5da24c37ad0457de3c5ea66f10b4fdd7c7f234b286ef",
+    "verificado_en": "2026-09-28T04:46:25.227Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 13,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "jaibana__identity_sheet--canon",
+      "modelo": "jaibana__identity_sheet",
+      "entidad": "El jaibaná (rol sin nombre)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "aribamias",
+        "baha",
+        "antomia",
+        "herupotoarra",
+        "tradicion-del-cerro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7299,
+      "prompt_sha256": "e6ccde32ab2e32f80205417ab5309f551e0be760758e82af1e25a079c53f30ed"
+    },
+    {
+      "job": "herupotoarra__identity_sheet--canon",
+      "modelo": "herupotoarra__identity_sheet",
+      "entidad": "Herupotoarra",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "herupotoarra",
+        "la-escalera-del-cielo",
+        "los-domicoes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7252,
+      "prompt_sha256": "50b1151e89e2d23277245c6787bbe7e07983bc5e11b17c64f03d3b2d071e7e62"
+    },
+    {
+      "job": "sever__identity_sheet--canon",
+      "modelo": "sever__identity_sheet",
+      "entidad": "Séver",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "sever",
+        "los-domicoes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7093,
+      "prompt_sha256": "f6d83c05b5d9fe635ff5e39339ceeff0b00873eb97c8675ec2fcaecf3b2c9241"
+    },
+    {
+      "job": "ambeu__identity_sheet--canon",
+      "modelo": "ambeu__identity_sheet",
+      "entidad": "Ambeu",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "tradiciones-relativas-a-la-conquista"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7262,
+      "prompt_sha256": "2ed14feb9ba3a030f2f2c3c3c157a9938a0190c3675160b9c793d48ceb7b4171"
+    },
+    {
+      "job": "ambuima__identity_sheet--canon",
+      "modelo": "ambuima__identity_sheet",
+      "entidad": "Ambuima",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "herupotoarra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7003,
+      "prompt_sha256": "5a28efaf67ab918533be44563aa5d26010e74ed9305f3b9757e19f28f87b3b13"
+    },
+    {
+      "job": "atamia__identity_sheet--canon",
+      "modelo": "atamia__identity_sheet",
+      "entidad": "El indio Atamía",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-bibidigomias"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7149,
+      "prompt_sha256": "123996bd5aa15c28c58d2e502e915b8e306b6f3bc2f47ddb40d76dc7299a526f"
+    },
+    {
+      "job": "cobaima__identity_sheet--canon",
+      "modelo": "cobaima__identity_sheet",
+      "entidad": "Cobaima",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "cobaima"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7160,
+      "prompt_sha256": "03b44f1040327c5e525062b6a43acd68568a3bb646aa05b0f7b33d8ef2949831"
+    },
+    {
+      "job": "emagai__identity_sheet--canon",
+      "modelo": "emagai__identity_sheet",
+      "entidad": "Emágai",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "sever"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7121,
+      "prompt_sha256": "c673c49355c39ffa92bea7bd243742dc4228714462b323ac9a548acf5f04fffe"
+    },
+    {
+      "job": "hermanito-del-cerro__identity_sheet--canon",
+      "modelo": "hermanito-del-cerro__identity_sheet",
+      "entidad": "El hermanito del cerro",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "tradicion-del-cerro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6975,
+      "prompt_sha256": "35d00597100e0344e5addafdd5d349c4a1ddf44add000382785c99bbc0ae5836"
+    },
+    {
+      "job": "hombre-que-no-podia-cazar__identity_sheet--canon",
+      "modelo": "hombre-que-no-podia-cazar__identity_sheet",
+      "entidad": "El hombre que no podía cazar",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "a-transformacion-del-hombre-que-no-podia-cazar"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7224,
+      "prompt_sha256": "e223c0d7492941762385e3c121a2caf90c3507bf8dd87a723b40c9c818e46997"
+    },
+    {
+      "job": "india-jaibana-del-moindu__identity_sheet--canon",
+      "modelo": "india-jaibana-del-moindu__identity_sheet",
+      "entidad": "La india jaibaná del moindú",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "antomia"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7036,
+      "prompt_sha256": "445fa09b371ed01b37ce3a5efcc383f8faf16ffa619c7abe0bec6eb184e4e534"
+    },
+    {
+      "job": "indiecita-bibidigomia__identity_sheet--canon",
+      "modelo": "indiecita-bibidigomia__identity_sheet",
+      "entidad": "La indiecita bibidigomia",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-bibidigomias"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7016,
+      "prompt_sha256": "56754e430c3e8f9e44e08e3818d3a0fc2bd32db234921d6a4a79b4b559993af5"
+    },
+    {
+      "job": "madre-de-herupotoarra__identity_sheet--canon",
+      "modelo": "madre-de-herupotoarra__identity_sheet",
+      "entidad": "La mujer que concibió de la nutria",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "herupotoarra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7048,
+      "prompt_sha256": "78cb07b7f9cb8c358e5af0195bf7ed533dc93df7f10f689bd46264a1166694c3"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "wounaan",
+  "comunidad": "Wounaan",
+  "tanda": "tanda-08-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/wounaan.v3.json",
+    "sha256": "260ca9c8d6260e63fc8772b82840e7288036bc9bd46f6591cc2a53bb4354747b"
+  },
+  "canon": {
+    "sha256": "4b1d21cb745ba08ba396fa1a73653b34d5c61368954d4e50d2e4719efce1a7ce",
+    "verificado_en": "2026-09-29T02:07:13.521Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "atrezo"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "casa-wounaan-sobre-pilotes__spatial_model--canon",
+      "modelo": "casa-wounaan-sobre-pilotes__spatial_model",
+      "entidad": "Casa Wounaan sobre pilotes",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas",
+        "madre-name"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6754,
+      "prompt_sha256": "ec250f3865bb4672b71403277333b2e0a1ae02b4fd046aa6f0245a09722713e8"
+    },
+    {
+      "job": "sueno-de-los-antepasados__phenomenon_rule--canon",
+      "modelo": "sueno-de-los-antepasados__phenomenon_rule",
+      "entidad": "Sueño que comunica los motivos",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5850,
+      "prompt_sha256": "b9fae8d5a7211a3c0a7ccd19cc1ce351f8a01efd2fd82e1ceea039991c899fa0"
+    },
+    {
+      "job": "vivienda-ceremonial__spatial_model--canon",
+      "modelo": "vivienda-ceremonial__spatial_model",
+      "entidad": "Vivienda ceremonial de la rogativa",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6605,
+      "prompt_sha256": "8aef070fbeedad7b94120b06ebc83cf46c2c3053ca63dc9aa86fa81194e201b1"
+    },
+    {
+      "job": "prueba-de-salar-el-mar__phenomenon_rule--canon",
+      "modelo": "prueba-de-salar-el-mar__phenomenon_rule",
+      "entidad": "Prueba de salar el mar",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-sal-del-weguer"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5917,
+      "prompt_sha256": "8d8a5bbb9aca134bca59049f2c8291b79d5cf706a12ca27c2412154b0bc4fa6f"
+    }
+  ]
+}

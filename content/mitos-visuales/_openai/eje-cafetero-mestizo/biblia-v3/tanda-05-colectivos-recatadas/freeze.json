@@ -1,0 +1,46 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "eje-cafetero-mestizo",
+  "comunidad": "Eje cafetero (Caldas)",
+  "tanda": "tanda-05-colectivos-recatadas",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/eje-cafetero-mestizo.v3.json",
+    "sha256": "9f8ba174bd5891e94e91e954f2bcea2a27d598d31a430ba67beeaa845313959f"
+  },
+  "canon": {
+    "sha256": "c480be8b294ba9a5b26ca90be264f109e039624b866d0d0c6e73f71fb7fb54da",
+    "verificado_en": "2026-09-29T03:02:59.908Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 4,
+  "fichas": [
+    {
+      "job": "procesion_de_animas__group_grammar--canon",
+      "modelo": "procesion_de_animas__group_grammar",
+      "entidad": "La procesión de ánimas",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cuento-de-animas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 10655,
+      "prompt_sha256": "75365c69cef6e34d4634179ef98b21588132e2128fff55a0645f3fe05fff57a8"
+    }
+  ]
+}

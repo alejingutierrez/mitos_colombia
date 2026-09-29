@@ -1,0 +1,51 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "koguis",
+  "comunidad": "Kogui (Kággaba)",
+  "tanda": "tanda-19-colectivos-rehechas",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/koguis.v3.json",
+    "sha256": "1d8c4fe32d75222afd8edda74f55507dcc380ebba73a55cb872350564e0df3ba"
+  },
+  "canon": {
+    "sha256": "edca8fad668f5e006d7587f11184f1111e3139a171111e1e903647bc29cfc6f3",
+    "verificado_en": "2026-09-29T03:31:11.485Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 13,
+  "fichas_ya_preparadas": 13,
+  "fichas": [
+    {
+      "job": "colectivo_mujeres_inventadas__group_grammar--canon",
+      "modelo": "colectivo_mujeres_inventadas__group_grammar",
+      "entidad": "Las mujeres inventadas por el padre malo",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "kimaku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6238,
+      "prompt_sha256": "f8dfc021d640729f812e2d209cba088b6185f4db8e3711c62d60070746b8b1a9"
+    }
+  ]
+}

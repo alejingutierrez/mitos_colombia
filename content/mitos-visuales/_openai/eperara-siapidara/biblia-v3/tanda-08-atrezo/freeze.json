@@ -1,0 +1,151 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "eperara-siapidara",
+  "comunidad": "Eperara Siapidara",
+  "tanda": "tanda-08-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/eperara-siapidara.v3.json",
+    "sha256": "f1e09e8865885cbc1c82b23127acb4831384108fbe78b9de2e448e7afee04951"
+  },
+  "canon": {
+    "sha256": "b8209cc2e51efedb8160a2273d05eb0f6f1990842891324ddd3568e633bad132",
+    "verificado_en": "2026-09-29T02:15:04.947Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 7,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_eperara__object_sheet--canon",
+      "modelo": "hoja_utileria_eperara__object_sheet",
+      "entidad": "hoja utileria eperara",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-pueblo-eperara",
+        "tachi-akhore-y-la-palabra-de-mangle"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6388,
+      "prompt_sha256": "6937e09dede67b7acbee1e565d1a6a36ddf77e5ad97c19105b894fc2db812ba9"
+    },
+    {
+      "job": "escalera_de_oro_y_la_inundacion__object_sheet--canon",
+      "modelo": "escalera_de_oro_y_la_inundacion__object_sheet",
+      "entidad": "La escalera de oro colgada en la loma",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-pueblo-eperara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5524,
+      "prompt_sha256": "3b00eba8530a35adbb8930fc106a54073b88fbb83a2edd55fb31612a1a7592ae"
+    },
+    {
+      "job": "escalera_de_oro_y_la_inundacion__state_sheet--estado_alzada con los últimos colgados de los peldaños bajos",
+      "modelo": "escalera_de_oro_y_la_inundacion__state_sheet",
+      "entidad": "La escalera de oro colgada en la loma",
+      "categoria": "objeto",
+      "vista": "estado_alzada con los últimos colgados de los peldaños bajos",
+      "estados": [
+        "alzada con los últimos colgados de los peldaños bajos"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-pueblo-eperara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5379,
+      "prompt_sha256": "58a83573bef142a5636168fcc7deaeb4b74719ae2f8beebcb568b23bc8d615bc"
+    },
+    {
+      "job": "estacas_de_palma__object_sheet--canon",
+      "modelo": "estacas_de_palma__object_sheet",
+      "entidad": "Estacas puntiagudas con fibras, clavadas en hileras",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-pueblo-eperara"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6152,
+      "prompt_sha256": "2fc9adfb02bae98f4976ba9291a15f3fc151826ecd6649bac26b932a0357e245"
+    },
+    {
+      "job": "palma_werre_chontaduro__botanical_sheet--canon",
+      "modelo": "palma_werre_chontaduro__botanical_sheet",
+      "entidad": "Palma de werre o chontaduro",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-pueblo-eperara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6551,
+      "prompt_sha256": "7f2edc07c52f7749f83a31c3f16ea48c0adf8a166352557aa060436114d84f53"
+    },
+    {
+      "job": "pania_pakuru__botanical_sheet--canon",
+      "modelo": "pania_pakuru__botanical_sheet",
+      "entidad": "Pania Pak'uru, el árbol del agua",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "tachi-akhore-y-la-palabra-de-mangle"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6527,
+      "prompt_sha256": "43ccbe72e0de8ce11836e84f16579746b7d64f9a7181c9eef93b14afa3829229"
+    },
+    {
+      "job": "pania_pakuru__state_sheet--estado_caido_convertido_en_aguas",
+      "modelo": "pania_pakuru__state_sheet",
+      "entidad": "Pania Pak'uru, el árbol del agua",
+      "categoria": "planta",
+      "vista": "estado_caido_convertido_en_aguas",
+      "estados": [
+        "caido_convertido_en_aguas"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "tachi-akhore-y-la-palabra-de-mangle"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6295,
+      "prompt_sha256": "a45a7d738007a8ef1b719d23f42eb7e30f3ffd7868f4ae22fcbfa6d5b9a5aeba"
+    }
+  ]
+}

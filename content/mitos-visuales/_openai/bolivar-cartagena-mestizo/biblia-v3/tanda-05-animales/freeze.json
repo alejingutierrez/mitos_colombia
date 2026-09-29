@@ -1,0 +1,136 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "bolivar-cartagena-mestizo",
+  "comunidad": "Bolívar y Cartagena",
+  "tanda": "tanda-05-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/bolivar-cartagena-mestizo.v3.json",
+    "sha256": "83a8f0f7117f21713d8a9f83d2fae957cb5e5b2dcb3f677a8464a95a80e79464"
+  },
+  "canon": {
+    "sha256": "2ed33a67c241b696ca40521259c9ed080fe10d09734bfa7b23f718b9e36a0ae6",
+    "verificado_en": "2026-09-29T02:28:44.542Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "caballo-y-mulo-criollos__identity_sheet--canon",
+      "modelo": "caballo-y-mulo-criollos__identity_sheet",
+      "entidad": "Caballo y mulo criollos",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-auriga-a-quien-mato-el-pasado",
+        "zequiel",
+        "al-convento",
+        "una-reunion-clandestina",
+        "un-quejido-una-luz"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7973,
+      "prompt_sha256": "a92053d170b923d608405ef32682b2be9845114fe3249a108c3ed901393f8164"
+    },
+    {
+      "job": "aparecido-de-corredor__identity_sheet--canon",
+      "modelo": "aparecido-de-corredor__identity_sheet",
+      "entidad": "Aparecido de corredor de casona",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "doce-en-punto-de-la-noche",
+        "la-casa-de-don-benito"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8305,
+      "prompt_sha256": "dde583fc81b83e2652384ac77429c087b55cbdab002f1ad7000204f62d9a5e86"
+    },
+    {
+      "job": "caballo-sin-cabeza__identity_sheet--canon",
+      "modelo": "caballo-sin-cabeza__identity_sheet",
+      "entidad": "El caballo sin cabeza del Playón del Blanco",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "folklore-macabro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8494,
+      "prompt_sha256": "8d1322f93d9fee9de695837ce86f7c6d1d3bd89c2e0ef06fad63cf333a72879d"
+    },
+    {
+      "job": "la-cojnua__identity_sheet--canon",
+      "modelo": "la-cojnua__identity_sheet",
+      "entidad": "La «cojnúa»",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-heroe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8089,
+      "prompt_sha256": "0182e7e9b44d0e075b2d8eca732398cf6a265335e836566d3a3d26da03b605e5"
+    },
+    {
+      "job": "la-sombra-gris__identity_sheet--canon",
+      "modelo": "la-sombra-gris__identity_sheet",
+      "entidad": "La Sombra Gris",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-sombra"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8195,
+      "prompt_sha256": "413f19ec896b79c7e564225923d63de6eaebba208736f261c81b94a23e55e586"
+    },
+    {
+      "job": "mono-con-candil__identity_sheet--canon",
+      "modelo": "mono-con-candil__identity_sheet",
+      "entidad": "El mono con el candil",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "un-quejido-una-luz"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7821,
+      "prompt_sha256": "213e5a2f2353b056e046a86eea082a2ec4449b9fb9191e267fe896d42a780b85"
+    }
+  ]
+}

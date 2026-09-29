@@ -1,0 +1,214 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "orinoquia-llanera-mestizo",
+  "comunidad": "Orinoquia llanera",
+  "tanda": "tanda-06-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/orinoquia-llanera-mestizo.v3.json",
+    "sha256": "5c9e9ba72406879a1a2374b67948c258d48aa4fad470bb90c45fc5cd2188ece4"
+  },
+  "canon": {
+    "sha256": "3ccbd7d1dc15e78468cdc4a4a8d493f21cee98326daf946d28c8d999be60fa3e",
+    "verificado_en": "2026-09-29T02:56:31.866Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 9,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_fiesta_y_casa__object_sheet--canon",
+      "modelo": "hoja_utileria_fiesta_y_casa__object_sheet",
+      "entidad": "hoja utileria fiesta y casa",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "amanecer-llanero",
+        "el-brujo-de-la-costa-del-pauto",
+        "el-dominguez",
+        "la-culebra-cascabel",
+        "las-chanzas-de-don-felipe",
+        "los-monstruos-de-paratebueno",
+        "los-tres-luceros",
+        "madre-rio-o-mohana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7282,
+      "prompt_sha256": "5781ce38f05fa6ec26147babcb078e8a85da8ca5328dc2bf74d24ab771f1e19b"
+    },
+    {
+      "job": "hoja_utileria_armas_y_faenas__object_sheet--canon",
+      "modelo": "hoja_utileria_armas_y_faenas__object_sheet",
+      "entidad": "hoja utileria armas y faenas",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-brujo-de-la-costa-del-pauto",
+        "el-tirapiedra",
+        "la-bola-de-fuego",
+        "la-culebra-cascabel",
+        "las-chanzas-de-don-felipe",
+        "el-llano-cobra-sus-deudas",
+        "el-toro-negro-patorreal"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7247,
+      "prompt_sha256": "3d0d4013935b19451f47d4100b940f6a5a4ba4e803607aa46c6a136f633f494e"
+    },
+    {
+      "job": "arbol_monumental_del_llano__botanical_sheet--canon",
+      "modelo": "arbol_monumental_del_llano__botanical_sheet",
+      "entidad": "Arbol monumental del llano",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-dominguez",
+        "el-domador-de-brujas",
+        "el-toro-negro-patorreal",
+        "amanecer-llanero",
+        "las-chanzas-de-don-felipe",
+        "los-tres-luceros"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6796,
+      "prompt_sha256": "c0a8212b373516894aca4a6544fa9c8083a5b0299d885c6e1a5c504a2e61647d"
+    },
+    {
+      "job": "plantas_medicinales_del_curandero__botanical_sheet--canon",
+      "modelo": "plantas_medicinales_del_curandero__botanical_sheet",
+      "entidad": "Plantas y preparados del curandero",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-brujo-de-la-costa-del-pauto",
+        "los-delfines-dorados",
+        "madre-rio-o-mohana",
+        "los-tres-luceros",
+        "el-dominguez"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7112,
+      "prompt_sha256": "74ea32e5a24d3f8db3a13a52980d5dcf62ac6efcea1e57886c110bf103980b7b"
+    },
+    {
+      "job": "conuco_y_cultivos__botanical_sheet--canon",
+      "modelo": "conuco_y_cultivos__botanical_sheet",
+      "entidad": "Conuco y cultivos",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-tres-luceros",
+        "el-llano-cobra-sus-deudas",
+        "el-brujo-de-la-costa-del-pauto",
+        "el-dominguez"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6798,
+      "prompt_sha256": "ecc11c3b704ab2a82b241b17dcba6028ea398264c1707c8aa9ef8f47ccd08d32"
+    },
+    {
+      "job": "hoja_utileria_comercio_y_monte__object_sheet--canon",
+      "modelo": "hoja_utileria_comercio_y_monte__object_sheet",
+      "entidad": "hoja utileria comercio y monte",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-llano-cobra-sus-deudas",
+        "el-tesoro-de-caribare",
+        "la-culebra-cascabel",
+        "los-delfines-dorados"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6947,
+      "prompt_sha256": "92f1b13d5872400f314878b037b6f7e701e87ef6cf78fa513ee22251f0c7843c"
+    },
+    {
+      "job": "tesoro_enterrado_llanero__object_sheet--canon",
+      "modelo": "tesoro_enterrado_llanero__object_sheet",
+      "entidad": "Tesoro enterrado",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-tertulia-de-la-italiana",
+        "el-tesoro-de-caribare",
+        "los-delfines-dorados"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6949,
+      "prompt_sha256": "48404b777acdc047980c785c33595410586f171504d0cb153e9d7da62641583b"
+    },
+    {
+      "job": "vehiculo_de_carretera__object_sheet--canon",
+      "modelo": "vehiculo_de_carretera__object_sheet",
+      "entidad": "Campero de carretera",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-bruja-de-los-ojos-miel",
+        "los-monstruos-de-paratebueno"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7008,
+      "prompt_sha256": "d53aabba11709cec16e2e2436178ffdf5787a7068326d8d9165bf2f6ac18a7fd"
+    },
+    {
+      "job": "esmeralda_creadora__object_sheet--canon",
+      "modelo": "esmeralda_creadora__object_sheet",
+      "entidad": "La esmeralda creadora",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "amanecer-llanero"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6678,
+      "prompt_sha256": "b896fad9ce8d4e1e9872d57c258ddaab87016fe723853b7a1b5324eef36365c2"
+    }
+  ]
+}

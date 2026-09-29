@@ -98,6 +98,30 @@ npm run mitos:preflight:biblia -- --plan <plan.json> --stage design
 npm run mitos:preflight:biblia -- --plan <plan.json> --stage generate   # debe dar PASS
 ```
 
+### Cómo se generan las láminas de una biblia V3
+
+Las 42 biblias V3 se cerraron el 2026-09-28 así (`docs/biblias-v3-produccion.md`),
+y es el método para cualquier biblia nueva:
+
+- **Una comunidad a la vez**, y dentro de ella **capa por capa**: tipos base
+  (hombre, mujer, joven, niño, anciano, anciana) → mortales → míticos →
+  colectivos → animales y criaturas → atrezo → arquitectura y fenómenos →
+  paisajes y lugares. La gente de la comunidad va primero.
+- **Fichas sobre papel blanco hueso**; sólo paisajes y lugares a fondo completo.
+- **Caras sin estilo de animación** (ni Pixar, ni Disney, ni anime).
+- `node scripts/mitos/prepare-biblia-tanda-v3.mjs --corpus <c> --capa <capa>`
+  prepara la tanda (comprueba canon contra Neon, `--stage design` y la capa
+  anterior aprobada); `scripts/mitos/generar-tanda-v3.sh <c>/<tanda>` la genera;
+  `--aprobar` registra la aprobación del editor. En masa:
+  `scripts/mitos/producir-biblia-v3.sh <c>`. Hojas y balance:
+  `node scripts/mitos/hojas-biblia-v3.mjs <c>`.
+- **Revisa cada hoja contra el plan antes de corregir**: muchas rarezas son
+  fidelidad (los capuchinos frailes, el candado de 1946, el jaguar sin rosetas).
+- **Bloqueos del filtro de OpenAI**: prenda documentada → silueta de un solo
+  tono → `AUSENTES.json` con razón. Nunca inventar una prenda.
+- **Si el canon de Neon cambió** después del inventario, primero
+  `scripts/mitos/descongelar-corpus-biblia.mjs` y la relectura.
+
 **Las dos puertas de QA son independientes y ninguna compensa a la otra**:
 fidelidad cultural y potencia mítica. Una lámina fiel y muerta no pasa; una
 lámina poderosa e inventada, tampoco.

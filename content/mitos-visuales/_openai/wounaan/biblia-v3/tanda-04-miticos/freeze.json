@@ -1,0 +1,82 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "wounaan",
+  "comunidad": "Wounaan",
+  "tanda": "tanda-04-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/wounaan.v3.json",
+    "sha256": "260ca9c8d6260e63fc8772b82840e7288036bc9bd46f6591cc2a53bb4354747b"
+  },
+  "canon": {
+    "sha256": "4b1d21cb745ba08ba396fa1a73653b34d5c61368954d4e50d2e4719efce1a7ce",
+    "verificado_en": "2026-09-29T02:03:23.744Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "ewandam__identity_sheet--canon",
+      "modelo": "ewandam__identity_sheet",
+      "entidad": "Ewandam",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "las-manos-de-barro",
+        "la-sal-del-weguer",
+        "madre-name",
+        "el-baston-de-sueno"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7508,
+      "prompt_sha256": "c2e89a7356baa2049b7be8569fa8473f73d73a24706fe50fdad8426d51418d47"
+    },
+    {
+      "job": "dosat__identity_sheet--canon",
+      "modelo": "dosat__identity_sheet",
+      "entidad": "Dosat",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-sal-del-weguer"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7483,
+      "prompt_sha256": "db0e53ef5d823a011fc009297620d836c67cf57e5305198ceeccd092024bf846"
+    },
+    {
+      "job": "maach-aai__identity_sheet--canon",
+      "modelo": "maach-aai__identity_sheet",
+      "entidad": "Maach Aai",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "las-manos-de-barro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6949,
+      "prompt_sha256": "bee5ab1fba9695ae22acba3586a68ae7bcdf75829e92b10c4a1232061c87f247"
+    }
+  ]
+}

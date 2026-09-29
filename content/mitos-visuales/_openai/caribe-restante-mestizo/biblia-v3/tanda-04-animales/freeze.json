@@ -1,0 +1,225 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "caribe-restante-mestizo",
+  "comunidad": "Caribe restante (Magdalena, Cesar, San Andrés)",
+  "tanda": "tanda-04-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/caribe-restante-mestizo.v3.json",
+    "sha256": "86ece956812c9a8bfa74bdc0d8f6739e1b7e8f0c98764df37ad58c78a6b2e33b"
+  },
+  "canon": {
+    "sha256": "23c3a0846f2f3742c390ba7412138b0740a886ab53b10154ee075b8422745b46",
+    "verificado_en": "2026-09-29T03:05:00.379Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos"
+  ],
+  "fichas_en_capa": 11,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "beda_tiger__identity_sheet--canon",
+      "modelo": "beda_tiger__identity_sheet",
+      "entidad": "Beda Tiger (Hermano Tigre)",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "tigre-y-nansi",
+        "tiger-y-el-baile-de-perros",
+        "un-perro-una-cabra-y-beda-tiger"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8266,
+      "prompt_sha256": "c952e1e1444baf3096e942a101ab33bc7ebdcec64dd2a5f230f9ac297ad3ede0"
+    },
+    {
+      "job": "beda_tiger__state_sheet--estado_anfitrión- el mismo cuerpo erguido dentro de su casa de madera, tocando el violín bajo la barbilla mientras canta",
+      "modelo": "beda_tiger__state_sheet",
+      "entidad": "Beda Tiger (Hermano Tigre)",
+      "categoria": "animal",
+      "vista": "estado_anfitrión: el mismo cuerpo erguido dentro de su casa de madera, tocando el violín bajo la barbilla mientras canta",
+      "estados": [
+        "anfitrión: el mismo cuerpo erguido dentro de su casa de madera, tocando el violín bajo la barbilla mientras canta"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "tigre-y-nansi",
+        "tiger-y-el-baile-de-perros",
+        "un-perro-una-cabra-y-beda-tiger"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9170,
+      "prompt_sha256": "f4ca285bfc92a3e3056cada32edbc78dd6606954f74edf4e2994d9d8ae336725"
+    },
+    {
+      "job": "nansi_isleno__identity_sheet--canon",
+      "modelo": "nansi_isleno__identity_sheet",
+      "entidad": "Nansi (Beda Nansi, Old Nansi, Miss Nansi)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "beda-nansi-beda-monkey-y-el-molino",
+        "mico-y-nansi",
+        "tigre-y-nansi"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8349,
+      "prompt_sha256": "990b4119c03ddfaaa56ae3bf3bb247547cbe63070b6d171c9adba3a173d9e602"
+    },
+    {
+      "job": "nansi_isleno__state_sheet--estado_jinete- la misma silueta enderezada sobre dos piernas, con montura, brida, fusta y espuelas, montando a Tiger",
+      "modelo": "nansi_isleno__state_sheet",
+      "entidad": "Nansi (Beda Nansi, Old Nansi, Miss Nansi)",
+      "categoria": "criatura",
+      "vista": "estado_jinete: la misma silueta enderezada sobre dos piernas, con montura, brida, fusta y espuelas, montando a Tiger",
+      "estados": [
+        "jinete: la misma silueta enderezada sobre dos piernas, con montura, brida, fusta y espuelas, montando a Tiger"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "beda-nansi-beda-monkey-y-el-molino",
+        "mico-y-nansi",
+        "tigre-y-nansi"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9422,
+      "prompt_sha256": "661ee7d578d5bfafdf46d1ce8c445d686310f5873aaab186af71c88fbfdb725e"
+    },
+    {
+      "job": "mico__identity_sheet--canon",
+      "modelo": "mico__identity_sheet",
+      "entidad": "Mico (Beda Monkey, Hermano Mico)",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "beda-nansi-beda-monkey-y-el-molino",
+        "mico-y-nansi"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8395,
+      "prompt_sha256": "f8c8dfdd5025f0c7de1aa3226cb46a480be198555eaeff4d930732c808714dce"
+    },
+    {
+      "job": "buho_y_culebra__identity_sheet--canon",
+      "modelo": "buho_y_culebra__identity_sheet",
+      "entidad": "El búho gigante y la culebra mapaná",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-bruja-del-trinche"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8100,
+      "prompt_sha256": "5fae4b0379a1809ccefb7d7c6ccda41951ee48026a83735d30a6cb64e035e1e7"
+    },
+    {
+      "job": "la_bruja_del_trinche__identity_sheet--canon",
+      "modelo": "la_bruja_del_trinche__identity_sheet",
+      "entidad": "Dolores Escalona, la bruja de Los Venados",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-bruja-del-trinche"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7571,
+      "prompt_sha256": "19de02b3d279d9620f663cc47cda1bbc54bfe89fa76086c9788ec953142379a9"
+    },
+    {
+      "job": "la_bruja_del_trinche__state_sheet--estado_mujer hermosa- la bruja convertida en muchacha que nadie en la fiesta conoce y que entrega el trago",
+      "modelo": "la_bruja_del_trinche__state_sheet",
+      "entidad": "Dolores Escalona, la bruja de Los Venados",
+      "categoria": "criatura",
+      "vista": "estado_mujer hermosa: la bruja convertida en muchacha que nadie en la fiesta conoce y que entrega el trago",
+      "estados": [
+        "mujer hermosa: la bruja convertida en muchacha que nadie en la fiesta conoce y que entrega el trago"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-bruja-del-trinche"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8852,
+      "prompt_sha256": "496c6a5047db09549f9ed25d75cea07682280ecbe4b8cee92da0b84dccb2a057"
+    },
+    {
+      "job": "perro_del_tambor_y_la_cabra__identity_sheet--canon",
+      "modelo": "perro_del_tambor_y_la_cabra__identity_sheet",
+      "entidad": "El perro del tambor y la cabra",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "un-perro-una-cabra-y-beda-tiger"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8282,
+      "prompt_sha256": "16864f06939e800bee6ac10f36024143efe8ffc6ca0bbf9c74525b2f565e29f9"
+    },
+    {
+      "job": "rosario_la_sirena_de_hurtado__identity_sheet--canon",
+      "modelo": "rosario_la_sirena_de_hurtado__identity_sheet",
+      "entidad": "Rosario Arciniegas, la Sirena de Hurtado",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-sirena-de-hurtado"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7671,
+      "prompt_sha256": "0d53021b2011b8f465803fcf8fd70598e7ed408d0356362d622ed1c2b4bc44d3"
+    },
+    {
+      "job": "rosario_la_sirena_de_hurtado__state_sheet--estado_sirena- el mismo torso de muchacha sobre una cola de pez doblada en forma de ese sobre la roca, entera y tranquila",
+      "modelo": "rosario_la_sirena_de_hurtado__state_sheet",
+      "entidad": "Rosario Arciniegas, la Sirena de Hurtado",
+      "categoria": "criatura",
+      "vista": "estado_sirena: el mismo torso de muchacha sobre una cola de pez doblada en forma de ese sobre la roca, entera y tranquila",
+      "estados": [
+        "sirena: el mismo torso de muchacha sobre una cola de pez doblada en forma de ese sobre la roca, entera y tranquila"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-sirena-de-hurtado"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9209,
+      "prompt_sha256": "20d00f26d9261ba014a3a5cbc4927d157c131f25284dd4adaf88463999449803"
+    }
+  ]
+}

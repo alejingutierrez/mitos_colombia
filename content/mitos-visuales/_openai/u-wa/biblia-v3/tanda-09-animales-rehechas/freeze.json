@@ -1,0 +1,64 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "u-wa",
+  "comunidad": "U’wa",
+  "tanda": "tanda-09-animales-rehechas",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/u-wa.v3.json",
+    "sha256": "49e5b2c84a5f4dc3e0325c14a22027c7bf57663ad40b6e2652b807d5e9afe28f"
+  },
+  "canon": {
+    "sha256": "a90c54e7ee6b64a69b74d22cb095455d84c1040f832c2a85fbbf36891e532aed",
+    "verificado_en": "2026-09-28T21:01:40.819Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 16,
+  "fichas_ya_preparadas": 16,
+  "fichas": [
+    {
+      "job": "monoa_nino__identity_sheet--canon",
+      "modelo": "monoa_nino__identity_sheet",
+      "entidad": "El niño Monoa",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4974,
+      "prompt_sha256": "4accf2e0af5a2da07c9d6c9b737cb81128b5f4049c130a7ece9a654f1b79c51a"
+    },
+    {
+      "job": "urkoa__identity_sheet--canon",
+      "modelo": "urkoa__identity_sheet",
+      "entidad": "Urkoa",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5433,
+      "prompt_sha256": "721d774a226448cd53e838640b76be075b114ada4a113369064dc87e8ab2fccf"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "makawanes",
+  "comunidad": "Makaguán",
+  "tanda": "tanda-10-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/makawanes.v3.json",
+    "sha256": "9cea69eda49e020a1469dd5cee333493e6ddee57f343165fe3e5d34e2cad317c"
+  },
+  "canon": {
+    "sha256": "4b909272d7fc7ea60af087d7555d666ff1de6e8bc91a706f308ff8f08a1f8b6d",
+    "verificado_en": "2026-09-29T02:10:43.190Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "gran_inundacion__phenomenon_rule--canon",
+      "modelo": "gran_inundacion__phenomenon_rule",
+      "entidad": "La gran inundación",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-gran-inundacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6572,
+      "prompt_sha256": "36a46829be7b548e68eaf90fe6ef0eeea99ed71a4a0900489832dbda35f20d4d"
+    },
+    {
+      "job": "resguardo_el_vigia__spatial_model--canon",
+      "modelo": "resguardo_el_vigia__spatial_model",
+      "entidad": "Lo construido del resguardo: escuela, cementerio y caminos",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7551,
+      "prompt_sha256": "a47c3a0375cbdcc9fb54a6d11112f8b8260cfa7a48464e522632d5ac29e021bc"
+    }
+  ]
+}

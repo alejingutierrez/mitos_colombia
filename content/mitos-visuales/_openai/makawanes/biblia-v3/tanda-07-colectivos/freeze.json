@@ -1,0 +1,80 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "makawanes",
+  "comunidad": "Makaguán",
+  "tanda": "tanda-07-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/makawanes.v3.json",
+    "sha256": "9cea69eda49e020a1469dd5cee333493e6ddee57f343165fe3e5d34e2cad317c"
+  },
+  "canon": {
+    "sha256": "4b909272d7fc7ea60af087d7555d666ff1de6e8bc91a706f308ff8f08a1f8b6d",
+    "verificado_en": "2026-09-29T02:07:59.607Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "miticos"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "primeros_makaguanes__group_grammar--canon",
+      "modelo": "primeros_makaguanes__group_grammar",
+      "entidad": "Los primeros Makaguanes antiguos",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-makawanes",
+        "la-gran-inundacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8344,
+      "prompt_sha256": "72b21be4e06f5501f3888a04b1bbdcc3d7ab93fac42d2129f5672f01831e8b2e"
+    },
+    {
+      "job": "gente_del_resguardo_hoy__group_grammar--canon",
+      "modelo": "gente_del_resguardo_hoy__group_grammar",
+      "entidad": "La gente del resguardo de El Vigía",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-alma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8456,
+      "prompt_sha256": "4f5a7427ee204b8a968d2aef0767945a893dc2b10c6cd1b84822d0b85dab942f"
+    },
+    {
+      "job": "wachirajua_espiritus__group_grammar--canon",
+      "modelo": "wachirajua_espiritus__group_grammar",
+      "entidad": "Los Wachirajua (seres de humo o almas)",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-makawanes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7206,
+      "prompt_sha256": "e014d8292ba15493998ca8f1bab69d9866a80ad6c913d20d823c2da08aaef98d"
+    }
+  ]
+}

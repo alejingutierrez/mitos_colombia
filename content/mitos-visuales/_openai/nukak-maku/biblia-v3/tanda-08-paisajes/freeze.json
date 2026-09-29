@@ -1,0 +1,66 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "nukak-maku",
+  "comunidad": "Nɨkak",
+  "tanda": "tanda-08-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/nukak-maku.v3.json",
+    "sha256": "63fc63c7b3c4fe485cb66c73a147a07ef03b7ca129bebe44d38fe04e145c3f7e"
+  },
+  "canon": {
+    "sha256": "ad8318bbd3861726280aba3914f17446c3f6b3cb32895a703a1e2698caf8d476",
+    "verificado_en": "2026-09-29T02:21:23.301Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "bak__spatial_model--canon",
+      "modelo": "bak__spatial_model",
+      "entidad": "Bak, el mundo de abajo",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-nukak-maku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7955,
+      "prompt_sha256": "3fedb83c7bb4bc80678f005f0c92a698464fba365bb83ceb9dfd60be1820f4cd"
+    },
+    {
+      "job": "ye_selva_y_confluencia__environment_model--canon",
+      "modelo": "ye_selva_y_confluencia__environment_model",
+      "entidad": "Yê: selva del Guaviare y la confluencia de los dos ríos",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-nukak-maku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7774,
+      "prompt_sha256": "71fc214d83486a1be7e354862a3f6eb460e51273d6abf663663ec573d7514a9a"
+    }
+  ]
+}

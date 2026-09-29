@@ -1,0 +1,66 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "kuibas",
+  "comunidad": "Kuiva (Wamonae)",
+  "tanda": "tanda-11-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/kuibas.v3.json",
+    "sha256": "5f20302091e9a8b7f757ce1357cb393e9a0a54b801d479c6155d1c16037c25e4"
+  },
+  "canon": {
+    "sha256": "7d0004d1ca8d0709864534a5c645a05b716b82370b7891be44d5fe97a3f0d5ff",
+    "verificado_en": "2026-09-29T02:23:00.000Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "herida_del_cielo__phenomenon_rule--canon",
+      "modelo": "herida_del_cielo__phenomenon_rule",
+      "entidad": "La herida del cielo: relámpago, sangre y costra",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-kuibas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5851,
+      "prompt_sha256": "8f454e5f21f7e6a245d6cac4cc0bd8055ec3ec810c12bae50043f238a0f1f366"
+    },
+    {
+      "job": "la_inundacion_kuiva__phenomenon_rule--canon",
+      "modelo": "la_inundacion_kuiva__phenomenon_rule",
+      "entidad": "La inundación y el descenso de las aguas",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "namon-y-la-inundacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5943,
+      "prompt_sha256": "b5a76d8b8512bea665ffd5a86b043143e56bd9fd6848dfad725cb1084eaa17b3"
+    }
+  ]
+}

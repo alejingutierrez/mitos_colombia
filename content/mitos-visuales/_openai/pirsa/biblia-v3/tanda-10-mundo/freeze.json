@@ -1,0 +1,99 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "pirsa",
+  "comunidad": "Pirsa",
+  "tanda": "tanda-10-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/pirsa.v3.json",
+    "sha256": "1ba6aea16374296d95f4489212eebd468426b1ca1a067e9ad553700201250160"
+  },
+  "canon": {
+    "sha256": "e592ee7612a8063860ff3bdcd32c65cad12593fde05f0903e23abafe87f94019",
+    "verificado_en": "2026-09-29T02:27:25.333Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "casa_de_alojamiento__spatial_model--canon",
+      "modelo": "casa_de_alojamiento__spatial_model",
+      "entidad": "La casa de Juan Pacheco en Anserma",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6903,
+      "prompt_sha256": "d5e3c0d3550dba127d73efde02a5bbce65392a9ef22dd5e9364dddb289a7a652"
+    },
+    {
+      "job": "casa_de_tamaracunga_en_pirsa__spatial_model--canon",
+      "modelo": "casa_de_tamaracunga_en_pirsa__spatial_model",
+      "entidad": "La casa de Tamaracunga en Pirsa",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6528,
+      "prompt_sha256": "3277b60e04e17a6433cfb19a3ba6f9aee1aff989775cbc7855b4b70e610bac19"
+    },
+    {
+      "job": "iglesia_de_anserma__spatial_model--canon",
+      "modelo": "iglesia_de_anserma__spatial_model",
+      "entidad": "Iglesia de techo de paja en Anserma",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7029,
+      "prompt_sha256": "917393eeeb39faa6627313920b4c8828daea936a4a3d79f9946475f64655f288"
+    },
+    {
+      "job": "presencias_sin_cuerpo__phenomenon_rule--canon",
+      "modelo": "presencias_sin_cuerpo__phenomenon_rule",
+      "entidad": "Las presencias: piedras que caen, silbidos, golpes y la copa que se levanta",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7807,
+      "prompt_sha256": "9c58bcc84438fea6833b9e4d1d70d8d2a411471f3b3be8640eec60404fba8558"
+    }
+  ]
+}

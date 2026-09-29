@@ -1,0 +1,61 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "choco-afro",
+  "comunidad": "Chocó afrodescendiente",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/choco-afro.v3.json",
+    "sha256": "a9f012588cba4d7584dcaa120def60e260984c8e26850fba51e8794f31806cf9"
+  },
+  "canon": {
+    "sha256": "0188296e71d30b1ac2f9e6a28efd8ede61858969899d9c739dda74cec673e3d2",
+    "verificado_en": "2026-09-29T03:04:50.922Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "kijimba_la_senora_del_baile__identity_sheet--canon",
+      "modelo": "kijimba_la_senora_del_baile__identity_sheet",
+      "entidad": "Kijimba, la señora que iba a todo baile",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kijimba-de-las-animas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 10063,
+      "prompt_sha256": "1697ddd59846496061ab0a60633134e8f62da6b2e2aa447a142f90a919a4e4e5"
+    },
+    {
+      "job": "kijimba_la_senora_del_baile__state_sheet--estado_en la casa de blanco, con el trago de hiel en la mano y el coro encima",
+      "modelo": "kijimba_la_senora_del_baile__state_sheet",
+      "entidad": "Kijimba, la señora que iba a todo baile",
+      "categoria": "personaje",
+      "vista": "estado_en la casa de blanco, con el trago de hiel en la mano y el coro encima",
+      "estados": [
+        "en la casa de blanco, con el trago de hiel en la mano y el coro encima"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kijimba-de-las-animas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 10025,
+      "prompt_sha256": "4200b9c7109eb6b5e09df7e7a921cf0bf49b64abfe990e0a27a913bc85731000"
+    }
+  ]
+}

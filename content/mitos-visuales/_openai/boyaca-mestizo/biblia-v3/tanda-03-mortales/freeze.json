@@ -1,0 +1,182 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "boyaca-mestizo",
+  "comunidad": "Boyaca mestizo",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/boyaca-mestizo.v3.json",
+    "sha256": "444d54391d1a18ae4afcbb4489c6a9dadc6218f3ef00f0a60112c4033012ca91"
+  },
+  "canon": {
+    "sha256": "4734a8c80e7f44d4d1a061f43160737e9a8e7ce1e2db619bd38883a4fc672eed",
+    "verificado_en": "2026-09-29T02:54:50.463Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 9,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "fura__identity_sheet--canon",
+      "modelo": "fura__identity_sheet",
+      "entidad": "Fura",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "furatena",
+        "la-sombra-creadora"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8087,
+      "prompt_sha256": "f46b7907f175d2aa41f28747521896963c04e9a0c0b7a353e81a5ce790fb97c2"
+    },
+    {
+      "job": "tena__identity_sheet--canon",
+      "modelo": "tena__identity_sheet",
+      "entidad": "Tena",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "furatena",
+        "la-sombra-creadora"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7704,
+      "prompt_sha256": "af3b5e778b3965aaf61c1f3b0499491c04c8976269dc4ff18b637a0d4dd6fd1c"
+    },
+    {
+      "job": "lope_badillo__identity_sheet--canon",
+      "modelo": "lope_badillo__identity_sheet",
+      "entidad": "Lope Badillo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-tesoro-de-buzaga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8139,
+      "prompt_sha256": "62d78904c03d97c6998cfe2cdc0025179a3243611a4d5440055eda95bdd9e317"
+    },
+    {
+      "job": "madre_de_mayavita__identity_sheet--canon",
+      "modelo": "madre_de_mayavita__identity_sheet",
+      "entidad": "La madre de Mayavita",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8005,
+      "prompt_sha256": "0ce52b80047f52cd11ea9fc6b053ada5356c1ae28f566085712040dfd030409d"
+    },
+    {
+      "job": "mayavita__identity_sheet--canon",
+      "modelo": "mayavita__identity_sheet",
+      "entidad": "Mayavita",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7879,
+      "prompt_sha256": "bfcfef3277f2467797ec6d5c7a2a438f0a54e493fc6706477d70a34c2b2311ef"
+    },
+    {
+      "job": "mongata__identity_sheet--canon",
+      "modelo": "mongata__identity_sheet",
+      "entidad": "Mongata",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8101,
+      "prompt_sha256": "b40ac15806c55541e713d101d795c29677937ed95633078c05f46f20fdcabed9"
+    },
+    {
+      "job": "padre_benito_de_laserna__identity_sheet--canon",
+      "modelo": "padre_benito_de_laserna__identity_sheet",
+      "entidad": "Padre Benito de Laserna",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-tesoro-de-buzaga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8148,
+      "prompt_sha256": "b7c57502314ee0b74aa3d6e09c57cf433a9a3017447e42a2456697103dcef9a8"
+    },
+    {
+      "job": "vieja_india_guardiana__identity_sheet--canon",
+      "modelo": "vieja_india_guardiana__identity_sheet",
+      "entidad": "La vieja india",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-tesoro-de-buzaga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7829,
+      "prompt_sha256": "3ec1b244be6c086a654f3fd5d75430706a913c244bede4478fc318c91a164575"
+    },
+    {
+      "job": "zarbi__identity_sheet--canon",
+      "modelo": "zarbi__identity_sheet",
+      "entidad": "Zarbi",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "furatena"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7637,
+      "prompt_sha256": "b215ff0f33e5e451be097528e036a8a524c49325054d69ba119703a9a5cb5e63"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "pacifico-sur-mestizo",
+  "comunidad": "Pacífico sur (Nariño, Cauca, Valle)",
+  "tanda": "tanda-05-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/pacifico-sur-mestizo.v3.json",
+    "sha256": "1afd63cc494a592771ae22e52c379f166c86061f51697ad4efdfd655e9abd34b"
+  },
+  "canon": {
+    "sha256": "117b563146a75b81fe76e90c1f490f8070a5a0a92111267442e052bf553d1334",
+    "verificado_en": "2026-09-29T02:57:09.286Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "vecindario_del_pacifico_sur__group_grammar--canon",
+      "modelo": "vecindario_del_pacifico_sur__group_grammar",
+      "entidad": "Vecindario mestizo: la gente de la plaza y la del barrio",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-roble-del-caballero",
+        "catalina-la-napanga",
+        "buziraco",
+        "la-casa-de-la-tradicion"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8161,
+      "prompt_sha256": "326fd8956d35c0ac89c4ecd98f0aafa3b145589b21427939ea47f7871ec2ae38"
+    },
+    {
+      "job": "vecindario_del_pacifico_sur__state_sheet--estado_Cali de barrio- la procesión del 3 de mayo que sube al cerro de las cruces y la gente de San Antonio",
+      "modelo": "vecindario_del_pacifico_sur__state_sheet",
+      "entidad": "Vecindario mestizo: la gente de la plaza y la del barrio",
+      "categoria": "colectivo",
+      "vista": "estado_Cali de barrio: la procesión del 3 de mayo que sube al cerro de las cruces y la gente de San Antonio",
+      "estados": [
+        "Cali de barrio: la procesión del 3 de mayo que sube al cerro de las cruces y la gente de San Antonio"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-roble-del-caballero",
+        "catalina-la-napanga",
+        "buziraco",
+        "la-casa-de-la-tradicion"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9681,
+      "prompt_sha256": "fcc20fe4fcdcaf9e295e219c1cf258d494f49157d9e68bcf8e5985bd923373bb"
+    },
+    {
+      "job": "corteros_de_cana__group_grammar--canon",
+      "modelo": "corteros_de_cana__group_grammar",
+      "entidad": "Corteros de caña y gente de vereda",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-hada-de-los-canaverales",
+        "el-duende-peluquero"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9331,
+      "prompt_sha256": "560373e85a48fbfc820eed7f4026049e6b4b1be88e4b55b19e010ef294487294"
+    }
+  ]
+}

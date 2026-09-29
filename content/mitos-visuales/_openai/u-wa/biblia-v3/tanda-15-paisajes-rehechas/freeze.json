@@ -1,0 +1,52 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "u-wa",
+  "comunidad": "U’wa",
+  "tanda": "tanda-15-paisajes-rehechas",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/u-wa.v3.json",
+    "sha256": "6a1bf102a5e0f3b3806fec982361efabf8241714b1cb9a3cb80f7f917f19ef1c"
+  },
+  "canon": {
+    "sha256": "a90c54e7ee6b64a69b74d22cb095455d84c1040f832c2a85fbbf36891e532aed",
+    "verificado_en": "2026-09-28T21:30:01.094Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 12,
+  "fichas_ya_preparadas": 12,
+  "fichas": [
+    {
+      "job": "esferas_de_colores__environment_model--canon",
+      "modelo": "esferas_de_colores__environment_model",
+      "entidad": "Las esferas de colores y las cuatro dimensiones",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-u-wa",
+        "la-competencia-de-los-tigres-uwa",
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5865,
+      "prompt_sha256": "9a72b1fbca5cc333c779f93ab3da30deaa4da6bcfe09f6f7dd4c73d71e44246f"
+    }
+  ]
+}

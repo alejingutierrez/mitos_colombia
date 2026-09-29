@@ -1,0 +1,199 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "misak-guambianos",
+  "comunidad": "Misak",
+  "tanda": "tanda-11-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/misak-guambianos.v3.json",
+    "sha256": "2654736a385b128df94e9e69cb88c133010a7d0716aea520b4e67bc71214a23f"
+  },
+  "canon": {
+    "sha256": "e1f4b3ac5eb29b91762c1fa126904c37f0d896fd0a58bc3702f11c78c26002c8",
+    "verificado_en": "2026-09-29T02:00:17.679Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 9,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "lomas_y_guaicadas_de_guambia__environment_model--canon",
+      "modelo": "lomas_y_guaicadas_de_guambia__environment_model",
+      "entidad": "Lomas, hondonadas y guaicadas de Guambía",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-nino-serpiente",
+        "el-pajaro-que-se-come-las-almas",
+        "el-viento-y-sus-hijos",
+        "pedro-el-mago-travieso",
+        "la-mama-grande",
+        "el-viejo-tempestad"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9058,
+      "prompt_sha256": "8e7d3b2b60383afb79bf8b3b07143807910a182b44e0fa0ad7a14cd24a4fbf25"
+    },
+    {
+      "job": "lomas_y_guaicadas_de_guambia__state_sheet--estado_planicie_previa_sin_relieve",
+      "modelo": "lomas_y_guaicadas_de_guambia__state_sheet",
+      "entidad": "Lomas, hondonadas y guaicadas de Guambía",
+      "categoria": "paisaje",
+      "vista": "estado_planicie_previa_sin_relieve",
+      "estados": [
+        "planicie_previa_sin_relieve"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-nino-serpiente",
+        "el-pajaro-que-se-come-las-almas",
+        "el-viento-y-sus-hijos",
+        "pedro-el-mago-travieso",
+        "la-mama-grande",
+        "el-viejo-tempestad"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8997,
+      "prompt_sha256": "ad0a927a1b23afd981aec2325498ad457911280e60b4d03bf6f804d911ed999e"
+    },
+    {
+      "job": "paramo_alto_con_lagunas__environment_model--canon",
+      "modelo": "paramo_alto_con_lagunas__environment_model",
+      "entidad": "Páramo alto con lagunas",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-misak-guambianos",
+        "el-viejo-tempestad",
+        "el-viento-y-sus-hijos",
+        "la-mama-grande"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9556,
+      "prompt_sha256": "b6afcbc3ee4d60d3fbd3a20a0048652732b5caf6c5693226f2ac676ec0dc497c"
+    },
+    {
+      "job": "cueva_de_la_transformacion__spatial_model--canon",
+      "modelo": "cueva_de_la_transformacion__spatial_model",
+      "entidad": "Cueva donde Tumpe se vuelve viento",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-viento-y-sus-hijos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8078,
+      "prompt_sha256": "19d009889795a0a954968a3ed13d1c5ff5847f211075992e0a4eebce0ef76d3b"
+    },
+    {
+      "job": "laguna_de_tenebio__spatial_model--canon",
+      "modelo": "laguna_de_tenebio__spatial_model",
+      "entidad": "Laguna formada sobre la loma (Tenebío)",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-nino-serpiente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8055,
+      "prompt_sha256": "1f8f60bce5e11db6f22464d413543e8fcfe34bc61fd6affcca9c70c567e6944d"
+    },
+    {
+      "job": "laguna_de_tenebio__state_sheet--estado_seca, con la chamba y el tronco partido",
+      "modelo": "laguna_de_tenebio__state_sheet",
+      "entidad": "Laguna formada sobre la loma (Tenebío)",
+      "categoria": "lugar",
+      "vista": "estado_seca, con la chamba y el tronco partido",
+      "estados": [
+        "seca, con la chamba y el tronco partido"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-nino-serpiente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8111,
+      "prompt_sha256": "67636b71ffce68c4185f80b2ae6ede19ff550cebe8ab55324ef3888e9c95a86d"
+    },
+    {
+      "job": "loma_desprendida__spatial_model--canon",
+      "modelo": "loma_desprendida__spatial_model",
+      "entidad": "Loma arrancada que se desplaza",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "pedro-el-mago-travieso"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8841,
+      "prompt_sha256": "bcfc3395e0264ff695ec85e3ea96f247f953e306d0eee76c16edb0d1256ef757"
+    },
+    {
+      "job": "nupisu_laguna_de_piendamo__spatial_model--canon",
+      "modelo": "nupisu_laguna_de_piendamo__spatial_model",
+      "entidad": "Nupisu, laguna de Piendamó",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-misak-guambianos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8684,
+      "prompt_sha256": "7689fcc800cf4015d81dd715fb056e783006787e26b7f38efdc431caa472030b"
+    },
+    {
+      "job": "pena_de_nuyapalo__spatial_model--canon",
+      "modelo": "pena_de_nuyapalo__spatial_model",
+      "entidad": "Peña de Nuyapalo",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-mama-grande"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8592,
+      "prompt_sha256": "8275f504602d28fb59ec1855e00dc0ba1e43d456a6c51da058135252442bfd97"
+    }
+  ]
+}

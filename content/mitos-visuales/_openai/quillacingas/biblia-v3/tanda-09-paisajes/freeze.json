@@ -1,0 +1,217 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "quillacingas",
+  "comunidad": "Quillacingas",
+  "tanda": "tanda-09-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/quillacingas.v3.json",
+    "sha256": "00c78e7401248c308d099f8a50ddcc92c795e0b0a5d20e1b6c039d6061a08654"
+  },
+  "canon": {
+    "sha256": "22e4e45588698691b545d9a3c7e306acd5795b81849509c6c8121ada8f1b03d4",
+    "verificado_en": "2026-09-29T02:01:01.933Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 10,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "laguna_de_la_cocha__environment_model--canon",
+      "modelo": "laguna_de_la_cocha__environment_model",
+      "entidad": "Laguna de La Cocha",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cualanquizan",
+        "el-llamado-de-inti",
+        "el-rabo-de-casapamba",
+        "origen-de-la-isla-la-corota",
+        "sirena-de-la-laguna-de-la-cocha"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8785,
+      "prompt_sha256": "b7470eafc1366ec84d32645298f2b2bf7444c26be0be4d39e0f6fa4dc0bd44ca"
+    },
+    {
+      "job": "laguna_de_la_cocha__state_sheet--estado_cocha_seca_y_sin_color",
+      "modelo": "laguna_de_la_cocha__state_sheet",
+      "entidad": "Laguna de La Cocha",
+      "categoria": "paisaje",
+      "vista": "estado_cocha_seca_y_sin_color",
+      "estados": [
+        "cocha_seca_y_sin_color"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "cualanquizan",
+        "el-llamado-de-inti",
+        "el-rabo-de-casapamba",
+        "origen-de-la-isla-la-corota",
+        "sirena-de-la-laguna-de-la-cocha"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8631,
+      "prompt_sha256": "7e5a4b2d101e37f430d42f5c9ef7c4da768a934b28a139b05b84396b6e9ea82c"
+    },
+    {
+      "job": "cerro_tabano__spatial_model--canon",
+      "modelo": "cerro_tabano__spatial_model",
+      "entidad": "Cerro Tábano",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cualanquizan",
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8285,
+      "prompt_sha256": "74183cd52fc27feefbadc62510f02eb3a4d58e51e121c0bf639637f64563bae8"
+    },
+    {
+      "job": "cerros_de_la_cuenca__environment_model--canon",
+      "modelo": "cerros_de_la_cuenca__environment_model",
+      "entidad": "Anillo de cerros de la cuenca (Patascoy, Bordoncillo, Alcalde)",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cualanquizan",
+        "el-rabo-de-casapamba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8748,
+      "prompt_sha256": "6c302b77f2dba3ec82186fbcbb3879816864e49f7d2afec50e5067a69bf15927"
+    },
+    {
+      "job": "ciudad_sumergida__spatial_model--canon",
+      "modelo": "ciudad_sumergida__spatial_model",
+      "entidad": "Ciudad sumergida bajo la laguna",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cualanquizan",
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8907,
+      "prompt_sha256": "681dbb20d36135c53f2de98aba7174ec92ac2f4fe75fe1e8831d18135cca1257"
+    },
+    {
+      "job": "isla_la_corota__spatial_model--canon",
+      "modelo": "isla_la_corota__spatial_model",
+      "entidad": "Isla La Corota",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "origen-de-la-isla-la-corota",
+        "cualanquizan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8156,
+      "prompt_sha256": "b00f7293b12ddaf59cab41d0c7c8c99f269dba344e0d032b9b4f314ed49606fb"
+    },
+    {
+      "job": "isla_la_corota__state_sheet--estado_cuatro_apoyos_bajo_el_agua",
+      "modelo": "isla_la_corota__state_sheet",
+      "entidad": "Isla La Corota",
+      "categoria": "lugar",
+      "vista": "estado_cuatro_apoyos_bajo_el_agua",
+      "estados": [
+        "cuatro_apoyos_bajo_el_agua"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-de-la-isla-la-corota",
+        "cualanquizan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8938,
+      "prompt_sha256": "c12eea0216a706c0be3d44a74667b45fb2ccb8165013a5dbd50fd17c6ed5085c"
+    },
+    {
+      "job": "montes_y_caminos_del_encano__environment_model--canon",
+      "modelo": "montes_y_caminos_del_encano__environment_model",
+      "entidad": "Montes y caminos de El Encano",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-de-los-colibries",
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8690,
+      "prompt_sha256": "2b0067d48c146f0d0bd9f61ded859bd0ac8d4255b7204c7e9153d28f02261d0f"
+    },
+    {
+      "job": "cascada_killinzayacu__spatial_model--canon",
+      "modelo": "cascada_killinzayacu__spatial_model",
+      "entidad": "Cascada Killinzayacu",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8109,
+      "prompt_sha256": "1b931ca5790da4ee35327f402f2335445b7b28a396eea43aeb2b69ce18447429"
+    },
+    {
+      "job": "rabo_de_casapamba__spatial_model--canon",
+      "modelo": "rabo_de_casapamba__spatial_model",
+      "entidad": "Rabo de Casapamba (el canal sin vegetación)",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-rabo-de-casapamba"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8494,
+      "prompt_sha256": "b47a13c6d4bc0709576902d84267e28599041ebfd511933d2d0581d8666c9c9e"
+    }
+  ]
+}

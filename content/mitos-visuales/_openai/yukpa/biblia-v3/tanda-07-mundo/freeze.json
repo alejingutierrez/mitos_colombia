@@ -1,0 +1,82 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "yukpa",
+  "comunidad": "Yukpa",
+  "tanda": "tanda-07-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/yukpa.v3.json",
+    "sha256": "cfd2272fc59a92456b0411462623adfc6cfc0494b59b8c706d08512aa4ea342c"
+  },
+  "canon": {
+    "sha256": "c6e8138cdb632f14fc5002dbde79f78b7451a54c8cf3412c8a5d6b65d535bb71",
+    "verificado_en": "2026-09-29T02:22:28.162Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "diluvio_y_oscuridad_prolongada__phenomenon_rule--canon",
+      "modelo": "diluvio_y_oscuridad_prolongada__phenomenon_rule",
+      "entidad": "Diluvio: lluvia y oscuridad prolongadas",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-piedra-que-flota"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6334,
+      "prompt_sha256": "a5caa3e61ed07544dec81f20521eb1c96a6c370717ca5be38cd1942f5e38290d"
+    },
+    {
+      "job": "nacimiento_de_la_noche__phenomenon_rule--canon",
+      "modelo": "nacimiento_de_la_noche__phenomenon_rule",
+      "entidad": "Nacimiento de la noche y alternancia día/noche",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-dos-caminos-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6594,
+      "prompt_sha256": "e4130fdb9e41f8d8666eb34c29e24b7ecbd7f1402f0818f6896e447826cac3c7"
+    },
+    {
+      "job": "vivienda_yukpa__spatial_model--canon",
+      "modelo": "vivienda_yukpa__spatial_model",
+      "entidad": "Vivienda y parcela Yukpa",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-piedra-que-flota"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7362,
+      "prompt_sha256": "bf4fbc0f229a12250ea4b607ff644b38e8ed6c6a59e5dd3a5c7256e51c26ec83"
+    }
+  ]
+}

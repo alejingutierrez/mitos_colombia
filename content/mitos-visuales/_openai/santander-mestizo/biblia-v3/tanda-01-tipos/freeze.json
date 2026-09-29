@@ -1,0 +1,182 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "santander-mestizo",
+  "comunidad": "Santander mestizo",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/santander-mestizo.v3.json",
+    "sha256": "c66530f67a75c23bc14134d729e5028bd544c810b1ae06c7d03a7654040ee1b2"
+  },
+  "canon": {
+    "sha256": "001778764d5a15260f48f1d6bc2a7f74857486623e73ca5c9681e13fe8ec3cdd",
+    "verificado_en": "2026-09-25T14:03:58.122Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base: hombre adulto de Piedecuesta (siglo XIX)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "cuento-fantastico",
+        "duende-del-salto",
+        "el-anima-coy",
+        "el-carriazo-de-vereda-san-isidro",
+        "el-diablo-de-umpala",
+        "el-doctor-galeacer",
+        "el-pollo-de-las-animas",
+        "el-reventon-de-jacobo",
+        "el-trapiche-ardiendo",
+        "la-campana-del-diablo",
+        "la-cueva-de-la-pisca",
+        "la-cueva-del-diablo",
+        "la-lampara-de-petroleo",
+        "la-monedita-en-la-alcancia",
+        "la-mula-del-diablo",
+        "la-mula-maneada",
+        "la-piedra-del-muerto",
+        "la-puerta-del-perdon",
+        "la-sayona-del-cementerio",
+        "la-vista-del-libertador",
+        "lagunas-encantadas",
+        "lo-que-ensenan-las-cuevas",
+        "los-tunjos-de-la-cantera"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8867,
+      "prompt_sha256": "6fa07c393862d26810273d7bd6ec1ed9206346181112f5463280d82dbf17ed8b"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base: mujer adulta de Piedecuesta (siglo XIX)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "duende-del-salto",
+        "el-anima-coy",
+        "el-diablo-de-umpala",
+        "el-pollo-de-las-animas",
+        "el-trapiche-ardiendo",
+        "la-diabla-castigadora",
+        "la-hilandera",
+        "la-lampara-de-petroleo",
+        "la-mancarita",
+        "la-monedita-en-la-alcancia",
+        "la-mula-del-diablo",
+        "la-mula-maneada",
+        "la-puerta-del-perdon",
+        "la-vista-del-libertador",
+        "lo-que-ensenan-las-cuevas",
+        "los-tunjos-de-la-cantera"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8454,
+      "prompt_sha256": "e3a05655ec7b77e16f217b50574113bba4822891312741c24ea824c45d676c11"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base: niño de Piedecuesta (siglo XIX)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-trapiche-ardiendo",
+        "la-campana-del-diablo",
+        "la-mancarita",
+        "la-monedita-en-la-alcancia",
+        "la-puerta-del-perdon",
+        "la-sayona-del-cementerio",
+        "nueva-version-de-la-luz-del-limonal"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8233,
+      "prompt_sha256": "e96d0e4279efd7397d66774306e5ce8fa6b4cf2240f47720b939e50943c88a00"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base: anciana de Piedecuesta (siglo XIX)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-pollo-de-las-animas",
+        "el-trapiche-ardiendo",
+        "la-hilandera",
+        "la-mechuda",
+        "los-tunjos-de-la-cantera"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8089,
+      "prompt_sha256": "13aa2aca9b935b48da1a2fe219fe7486bd4e9ded1849499272762e31c649f98b"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base: anciano de Piedecuesta (siglo XIX)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-fantasma-de-el-horizonte",
+        "la-mancarita",
+        "la-monedita-en-la-alcancia",
+        "la-mula-maneada",
+        "la-puerta-del-perdon"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8430,
+      "prompt_sha256": "4ab227239a93fc75ff63c91654f376dad2c361340c7ff14cb564f6854778b0c4"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base: mujer joven de Piedecuesta (siglo XIX)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "duende-del-salto",
+        "el-fantasma-de-el-horizonte",
+        "la-mechuda",
+        "la-vista-del-libertador",
+        "nueva-version-de-la-luz-del-limonal"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8455,
+      "prompt_sha256": "c33000dee07c548343c0e4cf8ec2b912d7c8c395279d6abb23e7f2e96d3db9a7"
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "id": "ufaina",
+  "label": "Ufaina / Tanimuka",
+  "pages": 1,
+  "canon_pages": 1,
+  "read_note": "Leí «Los Imarikakana y el origen del mundo Ufaina» con sus cuatro campos y editorial/ufaina/{universe,definitions,community,sources}.mjs; canon y módulo coinciden. El hallazgo que más pesa en el censo: esta «una página» no es un relato, son cuatro episodios completos dentro de un mismo viaje (primera maloca, obtención de la noche, liberación del agua, caída del árbol que se vuelve Apaporis), recorte declarado de un ciclo que Hildebrand dividió en cuarenta y cuatro capítulos. Por eso su biblia sale en 14 hojas, por encima de la banda de 8 a 12: no es inflación, es que hay cuatro mitos en una URL. Sobre el nombre: el canon NO sostiene que «Ufaina» sea un exónimo. Dice lo contrario y con precisión: Hildebrand recogió el ciclo en 1972 «con hablantes Tanimuka que se autodenominaban Ufaina». Lo que sí es cierto, y creo que es lo que hay que reportar, es que Ufaina hoy es una denominación secundaria: MinCultura la registra como una entre «otras denominaciones» del pueblo Tanimuca, Parques Nacionales nombra a los Yairi marâ o Tanimuka en el Yaigojé Apaporis, y el propio módulo titula la comunidad «Ufaina / Tanimuka». O sea: no es un exónimo impuesto, es una autodenominación de 1972 congelada como etiqueta de sitio mientras la denominación viva es otra. La biblia debería llamarse Tanimuka (Ufaina). Segundo hallazgo: los límites sensibles están escritos y son duros. El Yuruparí quedó fuera por petición expresa de los interlocutores, y el encargo añade la maloca por dentro; ficho la maloca sólo como estructura y cubierta, y dejo el interior ritual como consult_required. Tercero: hay un paralelo Makuna casi idéntico (los Ayawa derriban un árbol del que salen aguas y peces) que la propia fuente marca como «no incorporable»; lo dejo excluded porque es la mezcla más fácil de cometer en el Apaporis. Quedó dudoso el tratamiento de la casa del Sol: se llega a ella pero no se describe, así que la embebo en el paisaje y el escenario del acto queda en el árbol.",
+  "entities": [
+    {
+      "id": "imarikakana_los_cuatro",
+      "name": "Los cuatro Imarikakana",
+      "kind": "colectivo",
+      "myths": ["creacion-ufaina"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Protagonistas de los cuatro episodios: construyen, piden, viajan y derriban. Gramática de grupo de cuatro hermanos adultos con jerarquía de edad legible, porque el menor actúa aparte todo el tiempo. El registro temprano los nombra Minokuribí, Karifú, Borokurí y Kayafikí; los trabajos contemporáneos dicen Imarimakâra."
+    },
+    {
+      "id": "imarika_kayafiki",
+      "name": "Imárika Kayafikí, el menor",
+      "kind": "personaje",
+      "myths": ["creacion-ufaina"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Ficha propia porque es quien conduce tres de los cuatro episodios por su cuenta: afloja los amarres de la caja, abre la esfera negra, sigue a la mujer del agua, descubre la trampa de la hija del Sol y corta las ataduras de la copa. La edición conserva su nombre justamente «cuando la acción depende específicamente del menor»."
+    },
+    {
+      "id": "el_abuelo_dueno_de_las_hojas",
+      "name": "El abuelo, dueño de las hojas",
+      "kind": "personaje",
+      "myths": ["creacion-ufaina"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce el primer episodio y da la noche en el segundo: pregunta por los soportes, señala en su propio pecho la medida de los cuatro estantillos, enseña que cada material tiene dueño y entrega los dos recipientes con su advertencia."
+    },
+    {
+      "id": "mujer_mayor_del_agua",
+      "name": "La mujer mayor que guardaba el agua y los peces",
+      "kind": "personaje",
+      "myths": ["creacion-ufaina"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce el tercer episodio: sale en secreto cada mañana, trae alimento y miente sobre la escasez del agua. Su acaparamiento es lo que se rompe."
+    },
+    {
+      "id": "hija_del_sol",
+      "name": "La hija del Sol",
+      "kind": "personaje",
+      "myths": ["creacion-ufaina"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce el cuarto episodio: cada noche vuelve a colocar las astillas y el tronco amanece entero, y después amarra la copa al cielo. Es la antagonista del desenlace."
+    },
+    {
+      "id": "primera_maloca",
+      "name": "La primera maloca (estructura y cubierta)",
+      "kind": "arquitectura",
+      "myths": ["creacion-ufaina"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Objeto por el que se cuenta el primer episodio y escenario del aprendizaje: cuatro estantillos con la medida del pecho del abuelo, y media cubierta porque las hojas se escaparon. SENSIBLE: se ficha sólo estructura, cubierta y exterior; el interior y su disposición ritual quedan fuera (ver entidad excluida)."
+    },
+    {
+      "id": "palma_de_bombona",
+      "name": "La gran palma de bombona",
+      "kind": "planta",
+      "myths": ["creacion-ufaina"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Bajo ella viven los cuatro al comienzo: es el escenario del acto cero y una especie concreta, distinta de los milpesos cuya hoja sirve de cubierta. Sin ficha botánica se dibuja una palmera cualquiera y se pierde la diferencia entre las dos palmas del relato."
+    },
+    {
+      "id": "cuatro_depositos_de_agua",
+      "name": "Los cuatro depósitos de agua",
+      "kind": "objeto",
+      "myths": ["creacion-ufaina"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Objeto por el que se cuenta el tercer episodio, y con cuatro variantes que el texto distingue: unas aguas sin peces, otras con seres peligrosos y una donde peces y otros habitantes están juntos. Incluye el soporte que se derriba y de donde sale el cauce sinuoso."
+    },
+    {
+      "id": "arbol_que_se_vuelve_apaporis",
+      "name": "El árbol enorme que se vuelve el río Apaporis",
+      "kind": "planta",
+      "myths": ["creacion-ufaina"],
+      "decision": "required",
+      "sheets": 2,
+      "states": ["caido_convertido_en_rio"],
+      "note": "Clímax del ciclo y escenario del cuarto episodio: se corta de día, sana de noche, tiene la copa amarrada al cielo y al caer hacia el occidente se vuelve el Apaporis. El estado caído está mostrado y cambia todo, así que cuesta hoja aparte."
+    },
+    {
+      "id": "peces",
+      "name": "Peces",
+      "kind": "animal",
+      "myths": ["creacion-ufaina"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Aparecen dos veces y por dos vías distintas: viven en los depósitos de la mujer mayor y nacen de las astillas arrojadas al lago. Su origen es uno de los resultados del ciclo y la hoja debe mostrar la astilla y el pez en una misma lámina."
+    },
+    {
+      "id": "obtencion_de_la_noche",
+      "name": "La obtención de la noche",
+      "kind": "fenomeno",
+      "myths": ["creacion-ufaina"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Regla del segundo episodio: un soplo negro que cubre el Sol y la Luna, una oscuridad en la que hay que aprender a moverse, y después el ritmo recuperado entre claridad y sombra. Gobierna la iluminación de toda la biblia."
+    },
+    {
+      "id": "selva_y_rio_apaporis",
+      "name": "Selva del bajo Apaporis y su cauce sinuoso",
+      "kind": "paisaje",
+      "myths": ["creacion-ufaina"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Modelo de entorno del ciclo entero y resultado del desenlace. Coordenadas aproximadas del bajo Apaporis dentro de un territorio multiétnico, nunca un sitio sagrado identificado."
+    },
+    {
+      "id": "imarika_minokuribi_karifu_borokuri",
+      "name": "Imárika Minokuribí, Imárika Karifú e Imárika Borokurí",
+      "kind": "personaje",
+      "myths": ["creacion-ufaina"],
+      "decision": "embedded",
+      "covered_by": "imarikakana_los_cuatro",
+      "sheets": 0,
+      "note": "Los tres hermanos mayores sólo aparecen nombrados en el registro temprano y actúan siempre como conjunto; la página usa el nombre colectivo. Darles fichas individuales sería inventarles carácter."
+    },
+    {
+      "id": "cuatro_estantillos",
+      "name": "Los cuatro estantillos y su medida",
+      "kind": "objeto",
+      "myths": ["creacion-ufaina"],
+      "decision": "embedded",
+      "covered_by": "primera_maloca",
+      "sheets": 0,
+      "note": "Son la estructura misma de la maloca y el contenido de la enseñanza (la medida señalada en el pecho del abuelo); van en su modelo espacial."
+    },
+    {
+      "id": "refugio_pequeno_inicial",
+      "name": "El refugio pequeño que todavía no era maloca",
+      "kind": "arquitectura",
+      "myths": ["creacion-ufaina"],
+      "decision": "embedded",
+      "covered_by": "primera_maloca",
+      "sheets": 0,
+      "note": "Estado previo del mismo aprendizaje: «cada respuesta mostraba que aún no era una maloca». Se resuelve como vista de proceso en la misma hoja."
+    },
+    {
+      "id": "sol_y_luna",
+      "name": "El Sol y la Luna cubiertos por el soplo negro",
+      "kind": "fenomeno",
+      "myths": ["creacion-ufaina"],
+      "decision": "embedded",
+      "covered_by": "obtencion_de_la_noche",
+      "sheets": 0,
+      "note": "Aparecen sólo como los astros que la oscuridad tapa; no actúan ni se describen como seres. Van en la lámina de la regla."
+    },
+    {
+      "id": "animales_nocturnos",
+      "name": "Los animales capaces de ver y alimentarse de noche",
+      "kind": "animal",
+      "myths": ["creacion-ufaina"],
+      "decision": "embedded",
+      "covered_by": "obtencion_de_la_noche",
+      "sheets": 0,
+      "note": "El relato no nombra una sola especie. Se resuelven como siluetas dentro de la lámina de la noche; elegir especies concretas sería inventar fauna con nombre propio."
+    },
+    {
+      "id": "casa_del_sol",
+      "name": "La casa del Sol",
+      "kind": "lugar",
+      "myths": ["creacion-ufaina"],
+      "decision": "embedded",
+      "covered_by": "selva_y_rio_apaporis",
+      "sheets": 0,
+      "note": "Destino nombrado sin una línea de descripción; el escenario del acto es el árbol que está en pie allí. Se resuelve como localización dentro del modelo de entorno, sin interior y sin arquitectura inventada."
+    },
+    {
+      "id": "lago_de_las_astillas",
+      "name": "El lago donde las astillas se vuelven peces",
+      "kind": "lugar",
+      "myths": ["creacion-ufaina"],
+      "decision": "embedded",
+      "covered_by": "selva_y_rio_apaporis",
+      "sheets": 0,
+      "note": "Cuerpo de agua sin rasgos propios; variante del mismo modelo fluvial."
+    },
+    {
+      "id": "cauce_sinuoso",
+      "name": "El cauce sinuoso que abre el agua liberada",
+      "kind": "lugar",
+      "myths": ["creacion-ufaina"],
+      "decision": "embedded",
+      "covered_by": "selva_y_rio_apaporis",
+      "sheets": 0,
+      "note": "Resultado del tercer episodio y anticipo del Apaporis; es el mismo modelo de entorno en formación."
+    },
+    {
+      "id": "caja_de_hojas_amarrada",
+      "name": "La caja de hojas bien amarrada",
+      "kind": "objeto",
+      "myths": ["creacion-ufaina"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_ufaina",
+      "sheets": 0,
+      "note": "Objeto menor con un beat grande: el abuelo advierte que sólo se abra al llegar, Kayafikí afloja los amarres y las hojas escapan al monte. El episodio se cuenta por la maloca, no por la caja."
+    },
+    {
+      "id": "esfera_negra",
+      "name": "La pequeña esfera negra de la noche",
+      "kind": "objeto",
+      "myths": ["creacion-ufaina"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_ufaina",
+      "sheets": 0,
+      "note": "Gemela estructural de la caja: recipiente pequeño, misma advertencia, misma desobediencia. Es el continente; la ficha del episodio es la noche que sale de él."
+    },
+    {
+      "id": "astillas",
+      "name": "Las astillas del árbol",
+      "kind": "objeto",
+      "myths": ["creacion-ufaina"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_ufaina",
+      "sheets": 0,
+      "note": "Se reponen cada noche en el tronco hasta que Kayafikí las arroja al lago. Su forma va en la hoja de utilería y su transformación en la ficha de peces."
+    },
+    {
+      "id": "hojas_de_milpesos",
+      "name": "Las hojas de milpesos de la cubierta",
+      "kind": "planta",
+      "myths": ["creacion-ufaina"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_ufaina",
+      "sheets": 0,
+      "note": "Material de techado que se pide al abuelo, se transporta en la caja, escapa al monte y alcanza sólo para media maloca. Va como pieza de utilería atada, no como ficha botánica: la palma que sí se ficha es la bombona."
+    },
+    {
+      "id": "soporte_del_deposito",
+      "name": "El soporte del depósito que se derriba",
+      "kind": "objeto",
+      "myths": ["creacion-ufaina"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_ufaina",
+      "sheets": 0,
+      "note": "Pieza menor pero es lo que se rompe para liberar el agua; sin ella el tercer episodio no tiene gesto."
+    },
+    {
+      "id": "yurupari",
+      "name": "El Yuruparí",
+      "kind": "objeto",
+      "myths": ["creacion-ufaina"],
+      "decision": "excluded",
+      "reason": "do_not_visualize: Hildebrand lo dejó fuera de la publicación de 1975 por petición expresa de sus interlocutores, y el módulo mantiene esa exclusión",
+      "sheets": 0,
+      "note": "No es una omisión de conveniencia: es la petición registrada de quienes narraron. No se ficha, no se insinúa y no se compone en segundo plano."
+    },
+    {
+      "id": "interior_ritual_de_la_maloca",
+      "name": "El interior de la maloca y su disposición ritual",
+      "kind": "arquitectura",
+      "myths": ["creacion-ufaina"],
+      "decision": "excluded",
+      "reason": "consult_required: la maloca por dentro es materia sensible en el Apaporis y el relato no describe su interior; el estudio de 1984 la lee como modelo del cosmos, que es justamente lo que no se puede reconstruir sin consulta",
+      "sheets": 0,
+      "note": "La ficha de la primera maloca cubre estructura, estantillos y cubierta. Cualquier keyframe que necesite el adentro se detiene aquí."
+    },
+    {
+      "id": "formulas_y_procedimientos_de_curacion",
+      "name": "Fórmulas y procedimientos de curación",
+      "kind": "fenomeno",
+      "myths": ["creacion-ufaina"],
+      "decision": "excluded",
+      "reason": "do_not_visualize: el módulo los registra como narrativa sólo de contexto y prohíbe convertir conocimientos operativos en contenido público",
+      "sheets": 0,
+      "note": "No están en el relato adaptado; los dejo escritos para que el límite exista antes del diseño."
+    },
+    {
+      "id": "seres_peligrosos_de_los_depositos",
+      "name": "Los seres peligrosos de uno de los depósitos",
+      "kind": "criatura",
+      "myths": ["creacion-ufaina"],
+      "decision": "excluded",
+      "reason": "sin evidencia visual: el texto sólo dice «otras con seres peligrosos» y no da una sola forma; dibujarlos sería inventar un bestiario amazónico",
+      "sheets": 0,
+      "note": "Verificado contra el relato. Si el guion los necesita, se resuelven como agua turbia o movimiento, nunca como criaturas diseñadas."
+    },
+    {
+      "id": "el_sol_como_personaje",
+      "name": "El Sol como personaje",
+      "kind": "deidad_fuerza",
+      "myths": ["creacion-ufaina"],
+      "decision": "excluded",
+      "reason": "se menciona pero nunca se ve: el relato nombra su casa y su hija, y el Sol mismo no actúa ni se describe en ningún momento",
+      "sheets": 0,
+      "note": "Séptima pasada. Como astro cubierto por el soplo negro sí aparece, y eso va embebido en la regla de la noche."
+    },
+    {
+      "id": "ayawa_makuna",
+      "name": "Los Ayawa y el árbol Makuna",
+      "kind": "deidad_fuerza",
+      "myths": ["creacion-ufaina"],
+      "decision": "excluded",
+      "reason": "paralelo regional de otro pueblo: la etnografía Makuna documenta a los Ayawa derribando un árbol del que salen aguas y peces, y la propia fuente advierte que no es una variante incorporable ni una fuente para vestir o ritualizar estas imágenes",
+      "sheets": 0,
+      "note": "Es la mezcla más fácil de cometer en el Apaporis, porque el episodio se parece casi línea por línea. Lo registro como excluido para que quede escrito antes de diseñar."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_ufaina",
+      "kind": "objeto",
+      "covers": ["caja_de_hojas_amarrada", "esfera_negra", "astillas", "hojas_de_milpesos", "soporte_del_deposito"],
+      "sheets": 1,
+      "note": "Cinco piezas menores en una hoja. Dos de ellas, la caja y la esfera, son recipientes prohibidos que el menor abre antes de tiempo: comparten regla y conviene diseñarlas juntas para que se lean como pareja."
+    }
+  ],
+  "totals": {
+    "entities": 31,
+    "required": 12,
+    "embedded": 13,
+    "excluded": 6,
+    "sheets": 14
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "quimbaya",
+  "comunidad": "Quimbaya",
+  "tanda": "tanda-11-tipos-rehechas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/quimbaya.v3.json",
+    "sha256": "55ab6fd0a25c96b6c48e8c367ac53020c66c7b4702b4e1bf38d66cb0c37e89d7"
+  },
+  "canon": {
+    "sha256": "f3d06bb1d1580d062cde491b91523719658943e00e9b8d7758863a7405e21b1e",
+    "verificado_en": "2026-09-29T03:32:27.023Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "atrezo",
+    "mundo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 5,
+  "fichas": [
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer quimbaya adulta (capa de 1553)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "batatabati"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8062,
+      "prompt_sha256": "11da880dd8928168e0108d9d7c153914a560cae72771ffad703ccce379edd4ee"
+    }
+  ]
+}

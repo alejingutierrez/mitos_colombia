@@ -1,0 +1,119 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "misak-guambianos",
+  "comunidad": "Misak",
+  "tanda": "tanda-02-tipos-recatadas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/misak-guambianos.v3.json",
+    "sha256": "2654736a385b128df94e9e69cb88c133010a7d0716aea520b4e67bc71214a23f"
+  },
+  "canon": {
+    "sha256": "e1f4b3ac5eb29b91762c1fa126904c37f0d896fd0a58bc3702f11c78c26002c8",
+    "verificado_en": "2026-09-29T01:50:21.347Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 6,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Hombre adulto misak (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-misak-guambianos",
+        "el-nino-serpiente",
+        "el-viejo-tempestad",
+        "pedro-el-mago-travieso"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8960,
+      "prompt_sha256": "5750a281d63a45172d480c7f4fb611896fe51c9b1de23c6c3edfc9e8f4393d73"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Mujer adulta misak (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-misak-guambianos",
+        "la-mama-grande",
+        "pedro-el-mago-travieso"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8349,
+      "prompt_sha256": "ec7fb7f7d39c03e1aee179fa641cfe4bd8515f2cff20e2976834b6ad2115206e"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Niño misak (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-misak-guambianos",
+        "la-mama-grande",
+        "pedro-el-mago-travieso"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8128,
+      "prompt_sha256": "f78dfc9a62b0cb639fdb1b889cbee7e8bb984e4df23e1662edd49623b81cacc1"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Anciana misak (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-nino-serpiente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7962,
+      "prompt_sha256": "ed5364cc9c1115915dfa9eee6e9757f5b76e0e5a6dc468c57bc1b1ef3f08b0a7"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Mujer joven misak (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-nino-serpiente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7981,
+      "prompt_sha256": "e25b81289d777eaa1ac8c1531e029412cc7c6de5d389dc2de4d3314c0914ae05"
+    }
+  ]
+}

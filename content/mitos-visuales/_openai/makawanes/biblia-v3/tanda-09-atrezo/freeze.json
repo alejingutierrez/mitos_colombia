@@ -1,0 +1,66 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "makawanes",
+  "comunidad": "Makaguán",
+  "tanda": "tanda-09-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/makawanes.v3.json",
+    "sha256": "9cea69eda49e020a1469dd5cee333493e6ddee57f343165fe3e5d34e2cad317c"
+  },
+  "canon": {
+    "sha256": "4b909272d7fc7ea60af087d7555d666ff1de6e8bc91a706f308ff8f08a1f8b6d",
+    "verificado_en": "2026-09-29T02:10:07.072Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_makaguan__object_sheet--canon",
+      "modelo": "hoja_utileria_makaguan__object_sheet",
+      "entidad": "hoja utileria makaguan",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-makawanes",
+        "la-gran-inundacion",
+        "el-alma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7341,
+      "prompt_sha256": "68b6b22b543a603a7945c402918d24cc3ff7f2276aef32cc97a3586468bdd47d"
+    },
+    {
+      "job": "palma_grande__botanical_sheet--canon",
+      "modelo": "palma_grande__botanical_sheet",
+      "entidad": "La palma grande derribada para vino",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-gran-inundacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6275,
+      "prompt_sha256": "592eb98df4b66c25f820fed23fd38945668c1036fbba6393e84ae77d2b384025"
+    }
+  ]
+}

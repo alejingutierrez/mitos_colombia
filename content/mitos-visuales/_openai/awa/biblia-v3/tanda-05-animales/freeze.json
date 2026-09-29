@@ -1,0 +1,80 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "awa",
+  "comunidad": "Awa",
+  "tanda": "tanda-05-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/awa.v3.json",
+    "sha256": "71e999cc1d9d0241b3b7d2f9be767e3ae43f05871a9c5a55120625da99155fe1"
+  },
+  "canon": {
+    "sha256": "bae6e57ea34347d2f9cba2e03f031d8cf73be66457da7c33aebc986fe695bd02",
+    "verificado_en": "2026-09-29T02:17:48.863Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "armadillo__identity_sheet--canon",
+      "modelo": "armadillo__identity_sheet",
+      "entidad": "El armadillo",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "guagaja"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6104,
+      "prompt_sha256": "1abbdcb563fad904c8759658764132fc61ebeb6cd2141e0f62a67920235a619a"
+    },
+    {
+      "job": "hormigas__identity_sheet--canon",
+      "modelo": "hormigas__identity_sheet",
+      "entidad": "Las hormigas (y el kuguin)",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "guagaja"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6020,
+      "prompt_sha256": "88758f76459d39bb3a0b777cd2c8969f87a2068670536e2331d6dae7d5f86c4f"
+    },
+    {
+      "job": "kippu__identity_sheet--canon",
+      "modelo": "kippu__identity_sheet",
+      "entidad": "Kippu, el cangrejo",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "barbachas-del-arbol-grande"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6304,
+      "prompt_sha256": "41dca17f6305a88a5a4ab04b158ccbd25a3973d0ad2cc9faf5bb022a5f35000f"
+    }
+  ]
+}

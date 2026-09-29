@@ -1,0 +1,134 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "cuycuyes",
+  "comunidad": "Cuycuyes",
+  "tanda": "tanda-07-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/cuycuyes.v3.json",
+    "sha256": "3f4991a7f736909efd3d3250e8d8e1a3991e358ed40f95f9306038a7e712393d"
+  },
+  "canon": {
+    "sha256": "565ecebefc0ba4d3e8232b92b40be1ab8340f033f3c2b786ee1cb0eb93a1283e",
+    "verificado_en": "2026-09-29T02:11:27.521Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "adornos-de-oro-de-los-armados__object_sheet--canon",
+      "modelo": "adornos-de-oro-de-los-armados__object_sheet",
+      "entidad": "Adornos de oro que dieron el nombre de Armados",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-tesoro-del-pipinta",
+        "el-diablo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8610,
+      "prompt_sha256": "d5bd53e9dd143530cbb602ff0a1b38a85b86066229ea2ed99a200a46255edbd2"
+    },
+    {
+      "job": "hoja_utileria_cuycuyes__object_sheet--canon",
+      "modelo": "hoja_utileria_cuycuyes__object_sheet",
+      "entidad": "hoja utileria cuycuyes",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-diablo",
+        "el-tesoro-del-pipinta"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8983,
+      "prompt_sha256": "ddcee653e39bfa1a09c527d4e4f0b690af560e9172c6e3b6aa2b6de6a2db141f"
+    },
+    {
+      "job": "figuras-de-caciques-de-oro__object_sheet--canon",
+      "modelo": "figuras-de-caciques-de-oro__object_sheet",
+      "entidad": "Dieciséis figuras de caciques de oro macizo",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-tesoro-del-pipinta"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8370,
+      "prompt_sha256": "ab6a8c50f47d0b2470e2e31120d2092576e4959985dba54ade954123dbf579b6"
+    },
+    {
+      "job": "flores-blancas-y-negras__botanical_sheet--canon",
+      "modelo": "flores-blancas-y-negras__botanical_sheet",
+      "entidad": "Pequeñas flores blancas y negras",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-diablo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7900,
+      "prompt_sha256": "3b973def77b39e517d7ab307fa46749dd803a5f7806afa10be512ddee88881a9"
+    },
+    {
+      "job": "idolo-de-paucura__object_sheet--canon",
+      "modelo": "idolo-de-paucura__object_sheet",
+      "entidad": "El ídolo de madera a la puerta de Pimana",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-diablo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6931,
+      "prompt_sha256": "cd3066ae022a2a3bf67a9763a480a1ffc318eb5807157d8c644b5e41fc8ad9d1"
+    },
+    {
+      "job": "vasijas-de-sahumerio__object_sheet--canon",
+      "modelo": "vasijas-de-sahumerio__object_sheet",
+      "entidad": "Vasijas de barro para las resinas",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-diablo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8024,
+      "prompt_sha256": "a01e312840a2c54a6d13f4db31ea8def053203e4ae864e87527878be75442e3e"
+    }
+  ]
+}

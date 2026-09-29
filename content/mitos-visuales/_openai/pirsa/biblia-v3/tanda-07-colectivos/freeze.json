@@ -1,0 +1,62 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "pirsa",
+  "comunidad": "Pirsa",
+  "tanda": "tanda-07-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/pirsa.v3.json",
+    "sha256": "1ba6aea16374296d95f4489212eebd468426b1ca1a067e9ad553700201250160"
+  },
+  "canon": {
+    "sha256": "e592ee7612a8063860ff3bdcd32c65cad12593fde05f0903e23abafe87f94019",
+    "verificado_en": "2026-09-29T02:25:41.896Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "dos_acompanantes_cristianos__group_grammar--canon",
+      "modelo": "dos_acompanantes_cristianos__group_grammar",
+      "entidad": "Los dos cristianos que lo acompañan",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8279,
+      "prompt_sha256": "b814989c458bec050f4a0aacb9c5f4f751595d31762f88bd6924b675b7b61d13"
+    },
+    {
+      "job": "gente_de_pirsa__group_grammar--canon",
+      "modelo": "gente_de_pirsa__group_grammar",
+      "entidad": "Los más de doscientos seguidores de Pirsa",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-exorcismo-de-tamaracunga"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8768,
+      "prompt_sha256": "beee0e40fc86e85812cae43f899aea4acb4e82f0a8759ddbc2b887a811ad5640"
+    }
+  ]
+}

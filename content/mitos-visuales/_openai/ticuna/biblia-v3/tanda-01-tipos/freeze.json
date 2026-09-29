@@ -1,0 +1,120 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ticuna",
+  "comunidad": "Ticuna",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ticuna.v3.json",
+    "sha256": "e91d3db0cac1ae0ade8f56066ca8228a952a1c4107c37b655e249c7815652c5c"
+  },
+  "canon": {
+    "sha256": "508298d7f6b1c813ab2d8c0bf8438b2829b11c5b30bc6045eb9ce969dbb95dc9",
+    "verificado_en": "2026-09-25T14:15:34.662Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Hombre adulto tikuna (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe",
+        "origen-de-la-luna-tikuna",
+        "origen-del-friaje-tikuna",
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5796,
+      "prompt_sha256": "d31acaa3393fd82cae2db4bd0016c65e02853bafdb95c65c44678343f8878fd2"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Mujer adulta tikuna (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-canoa-de-moe",
+        "origen-de-la-luna-tikuna",
+        "origen-del-friaje-tikuna",
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5533,
+      "prompt_sha256": "063622baacc00644195107c2ddab8516d4d6bf299cc3e35268510c1ac983bb56"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Mujer joven tikuna (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-canoa-de-moe",
+        "origen-de-la-luna-tikuna",
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5154,
+      "prompt_sha256": "3dcd65a12d8ff14d0ee3f100dbb407f73b5ed53e614ddca1ab466df62367b9f5"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Anciana tikuna (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-canoa-de-moe",
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5138,
+      "prompt_sha256": "4df4024cee9824fe7e5eca40e55f3df6a8fe98aef41e74ef45dafbc65c8d8574"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Anciano tikuna (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5099,
+      "prompt_sha256": "e030162bb2caa0b8977f57202c1619e615561628bde95e0eff4845bffddf6768"
+    }
+  ]
+}

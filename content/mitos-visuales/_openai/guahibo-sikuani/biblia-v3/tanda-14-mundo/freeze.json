@@ -1,0 +1,102 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "guahibo-sikuani",
+  "comunidad": "Sikuani (Guahíbo)",
+  "tanda": "tanda-14-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/guahibo-sikuani.v3.json",
+    "sha256": "35c28e13ea11ddb6be4aab0a681cee6a1383795becb773f65cf72d7e52c94940"
+  },
+  "canon": {
+    "sha256": "b915af478564a4987fb3256d1d08a4fe205b8aebfd5572ecf4fe54ec6e1ed923",
+    "verificado_en": "2026-09-29T00:50:04.918Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "casa_sikuani__spatial_model--canon",
+      "modelo": "casa_sikuani__spatial_model",
+      "entidad": "La casa Sikuani",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "historia-de-un-tigre",
+        "historia-de-un-viejo",
+        "kawiri-monae"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5463,
+      "prompt_sha256": "27f640c261b0fe1772e2ed422f737252c529dd22475b7b7af4c66f8c379e51bb"
+    },
+    {
+      "job": "casa_tsorueto__spatial_model--canon",
+      "modelo": "casa_tsorueto__spatial_model",
+      "entidad": "La casa Tsorueto",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-tigre"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 4955,
+      "prompt_sha256": "5726d378dda99d6d4f1d5847bac5d934eed4d1e221b9d7805d1de1d30f8f2f1b"
+    },
+    {
+      "job": "casa_tsorueto__state_sheet--estado_ardiendo_con_las_entradas_cerradas",
+      "modelo": "casa_tsorueto__state_sheet",
+      "entidad": "La casa Tsorueto",
+      "categoria": "arquitectura",
+      "vista": "estado_ardiendo_con_las_entradas_cerradas",
+      "estados": [
+        "ardiendo_con_las_entradas_cerradas"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-tigre"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5513,
+      "prompt_sha256": "5ea0f1ad0c2a5a8a0e076dfaba456b36110e2f03eb9963bd092fcb4a987c7c0f"
+    },
+    {
+      "job": "salida_de_la_gente__phenomenon_rule--canon",
+      "modelo": "salida_de_la_gente__phenomenon_rule",
+      "entidad": "La gente que brota de la tierra en forma de pescado",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 4945,
+      "prompt_sha256": "154d932b902c292db525c116b239d51da6a0496d8cca1d4ff97cd2b15a102691"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "motilon-bari",
+  "comunidad": "Barí",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/motilon-bari.v3.json",
+    "sha256": "eb495e68173407eed3fb6bbe07d6fb6a246d04ab91b103869a0c2b4e3656bf38"
+  },
+  "canon": {
+    "sha256": "aa03517f459efabb921c1e2ef28e49ae58b3aa900ca061c516ba03060880951a",
+    "verificado_en": "2026-09-25T14:15:28.788Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Hombre adulto barí (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "caminar-liviano-hacia-el-mas-alla",
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron",
+        "el-gran-arbol-que-hizo-los-rios",
+        "nandou-chibaig-y-las-luces-del-cielo",
+        "sabaseba-y-los-hijos-de-la-pina",
+        "sibabio-y-las-cenizas-del-mundo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6150,
+      "prompt_sha256": "1e5acbd30019b3f38b47fec1262805366bb4f6fbeca27d53a51cd2a30f4926b5"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Mujer joven barí (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "caminar-liviano-hacia-el-mas-alla",
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5338,
+      "prompt_sha256": "472720d4dc86c5815504ed11855123c19a59a0304a7a4a3f374b92e30bdf8f0f"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "caribe-restante-mestizo",
+  "comunidad": "Caribe restante (Magdalena, Cesar, San Andrés)",
+  "tanda": "tanda-02-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/caribe-restante-mestizo.v3.json",
+    "sha256": "86ece956812c9a8bfa74bdc0d8f6739e1b7e8f0c98764df37ad58c78a6b2e33b"
+  },
+  "canon": {
+    "sha256": "23c3a0846f2f3742c390ba7412138b0740a886ab53b10154ee075b8422745b46",
+    "verificado_en": "2026-09-29T03:02:40.803Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 7,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "andres_el_juglar__identity_sheet--canon",
+      "modelo": "andres_el_juglar__identity_sheet",
+      "entidad": "Andrés Montúfar, el juglar acordeonero",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-bruja-del-trinche"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9276,
+      "prompt_sha256": "6f2e52b57794b752acd09587742c73e9ce83d87c046f76b3ec9307cbe5a96f44"
+    },
+    {
+      "job": "curandero_del_cesar__identity_sheet--canon",
+      "modelo": "curandero_del_cesar__identity_sheet",
+      "entidad": "Quin Vásquez, el brujo músico",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-bruja-del-trinche"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9018,
+      "prompt_sha256": "116d715250838e899afeabb59e30e19942ca7f9c7a1b5a2a122cc5739d4cf1b8"
+    },
+    {
+      "job": "don_nufio__identity_sheet--canon",
+      "modelo": "don_nufio__identity_sheet",
+      "entidad": "Don Núfio de los Santos y Sandoval, castellano de San Juan",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-castellano-de-san-juan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9638,
+      "prompt_sha256": "21f33f8f3a8d2b405706b8b322e58ad0ca2046402846a8007850fffee50df036"
+    },
+    {
+      "job": "hanspater_el_filibustero__identity_sheet--canon",
+      "modelo": "hanspater_el_filibustero__identity_sheet",
+      "entidad": "Adrián Hanspater, el filibustero holandés",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-castellano-de-san-juan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9301,
+      "prompt_sha256": "e4f1a40e44f1cb5a69b24a72344cd704b5401f3b079ce27d6e8978fc1a89f497"
+    },
+    {
+      "job": "pedro_chiquillo__identity_sheet--canon",
+      "modelo": "pedro_chiquillo__identity_sheet",
+      "entidad": "Pedro Chiquillo, el soldado coplero",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "genus-irritable-vatum"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9115,
+      "prompt_sha256": "3e1a3cd4402251df22c430795a3658095e7d055f30f9d9d683a03ab1f3c2f426"
+    },
+    {
+      "job": "san_pedro_claver__identity_sheet--canon",
+      "modelo": "san_pedro_claver__identity_sheet",
+      "entidad": "San Pedro Claver",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "las-clavelinas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9363,
+      "prompt_sha256": "88d22ab5294274dc1cfb6e27eada3310e5f5cf18ee045311c167887e6056d318"
+    },
+    {
+      "job": "yariva__identity_sheet--canon",
+      "modelo": "yariva__identity_sheet",
+      "entidad": "Yariva",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "las-clavelinas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9120,
+      "prompt_sha256": "394f0b386c69fa49824962eff7bfe903042463673ffeb7ca6b5fc472c2abb163"
+    }
+  ]
+}

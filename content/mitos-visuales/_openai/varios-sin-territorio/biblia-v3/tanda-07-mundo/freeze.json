@@ -1,0 +1,255 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "varios-sin-territorio",
+  "comunidad": "Folclor nacional sin territorio",
+  "tanda": "tanda-07-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/varios-sin-territorio.v3.json",
+    "sha256": "960a317c807ac538873f57921f7eb1ee2bdc9f7c716935e83d742a83ff8dbcbf"
+  },
+  "canon": {
+    "sha256": "c1bf9aa902622b9cc85521f658c702c1ade9370c2901b2317eac5892c1fb77f3",
+    "verificado_en": "2026-09-29T02:55:28.412Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 12,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "pueblo_colonial_andino_de_noche__spatial_model--canon",
+      "modelo": "pueblo_colonial_andino_de_noche__spatial_model",
+      "entidad": "Pueblo colonial andino de noche (calle, corredor, ventana en arco)",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-viudita",
+        "el-cura-sin-cabeza",
+        "la-mano-peluda",
+        "el-judio-errante",
+        "el-jinete-negro",
+        "la-barbacoa-del-muerto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6108,
+      "prompt_sha256": "d06300e0d1cbbc8bd41fac09c922788a3f994e65ca560ba32fd6cedbde46488d"
+    },
+    {
+      "job": "casa_campesina_andina__spatial_model--canon",
+      "modelo": "casa_campesina_andina__spatial_model",
+      "entidad": "Casa campesina andina (fachada de bahareque y cocina de fogón)",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-duendes",
+        "la-vieja-colmillona",
+        "el-anima-sola",
+        "la-barbacoa-del-muerto",
+        "la-mano-peluda"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6545,
+      "prompt_sha256": "22b494de1375b70ca15fbc63a229275f4e57733992ce059d9cd83173e914e621"
+    },
+    {
+      "job": "templo_colonial__spatial_model--canon",
+      "modelo": "templo_colonial__spatial_model",
+      "entidad": "Templo colonial (fachada y nave)",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-cura-sin-cabeza",
+        "el-judio-errante",
+        "la-viudita",
+        "la-barbacoa-del-muerto",
+        "el-jinete-negro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5993,
+      "prompt_sha256": "dacfc248e8fa12005e5140645795d1d7b15379991072f1c11c5b6885dba91b0d"
+    },
+    {
+      "job": "cementerio_de_pueblo__spatial_model--canon",
+      "modelo": "cementerio_de_pueblo__spatial_model",
+      "entidad": "Cementerio de pueblo con capilla",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-viudita",
+        "la-nina-de-la-carta",
+        "el-bus-fantasma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6536,
+      "prompt_sha256": "9a52be3085b7fe53fa616fdf67a466fe891d147a2e12f3fbc3a074ad3e38cadf"
+    },
+    {
+      "job": "palacio_subacuatico__spatial_model--canon",
+      "modelo": "palacio_subacuatico__spatial_model",
+      "entidad": "Palacio subacuático de oro y cristal",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-mohan",
+        "la-sirena-del-arco"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6272,
+      "prompt_sha256": "09e4e46906c468f9aae00924762c7778fc81708069f97e076db43dc621f1e251"
+    },
+    {
+      "job": "plaza_y_mercado_de_pueblo__spatial_model--canon",
+      "modelo": "plaza_y_mercado_de_pueblo__spatial_model",
+      "entidad": "Plaza y mercado de pueblo",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-mohan",
+        "el-hombre-caiman"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6334,
+      "prompt_sha256": "4bdff349a88f67702a3ef888779953018b9c61fdcb97c66e8f96542ada88edfb"
+    },
+    {
+      "job": "revelacion_de_calavera__phenomenon_rule--canon",
+      "modelo": "revelacion_de_calavera__phenomenon_rule",
+      "entidad": "La revelación de calavera (bajo el ala, bajo la mantilla)",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-viudita",
+        "la-llorona"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6310,
+      "prompt_sha256": "b51fa4eced0290f0b7b23f1139066bc8633e5e6cb867bfff0e4e0e3ce95a61f8"
+    },
+    {
+      "job": "senal_sonora_sin_cuerpo__phenomenon_rule--canon",
+      "modelo": "senal_sonora_sin_cuerpo__phenomenon_rule",
+      "entidad": "La señal sonora sin cuerpo (grito, silbo, eco que invierte la distancia)",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-griton",
+        "el-silbon"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6835,
+      "prompt_sha256": "1770e09108168b623f447ea6c1473b9d93d377db7c95ff2c75898fa45b7d4b96"
+    },
+    {
+      "job": "tormenta_de_monte_y_creciente__phenomenon_rule--canon",
+      "modelo": "tormenta_de_monte_y_creciente__phenomenon_rule",
+      "entidad": "La tormenta de monte: aguacero, relámpago y creciente",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-madremonte",
+        "el-griton"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6473,
+      "prompt_sha256": "001e0ea2fd77945598f43498fbacfe5482428b57e0fb761ec4ed257c42b24e75"
+    },
+    {
+      "job": "estacion_de_transmilenio__spatial_model--canon",
+      "modelo": "estacion_de_transmilenio__spatial_model",
+      "entidad": "Estación de TransMilenio de madrugada",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-bus-fantasma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6153,
+      "prompt_sha256": "2f8baa5087d49b7ca78e5e4638a98ee804f403157d78d4ade5c612011e26a77c"
+    },
+    {
+      "job": "neblina_que_cierra_el_camino__phenomenon_rule--canon",
+      "modelo": "neblina_que_cierra_el_camino__phenomenon_rule",
+      "entidad": "El extravío: el monte que se repite",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-madremonte"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6400,
+      "prompt_sha256": "86325a78c92cccd04baa3189c457ffd37b439312ab900ffcba1b489d2cd9a6ff"
+    },
+    {
+      "job": "trapiche_y_caney__spatial_model--canon",
+      "modelo": "trapiche_y_caney__spatial_model",
+      "entidad": "Trapiche y caney de molienda",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-silbon"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6338,
+      "prompt_sha256": "8bce321f95c18141ddf95dfbff1b27f9515f0cadc9aac280aa4a00da2dbc0bea"
+    }
+  ]
+}

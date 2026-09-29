@@ -1,0 +1,125 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "andoque",
+  "comunidad": "Andoque (Gente del Hacha)",
+  "tanda": "tanda-14-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/andoque.v3.json",
+    "sha256": "cdcf1d4a02c9d6f8ba1a3778878c3bf7f4b9989da5ae0c76807a79740bb44519"
+  },
+  "canon": {
+    "sha256": "1464c50fa3a580f64f525602622acdadb0f163d4bd0942dd7decb8df15cc5afb",
+    "verificado_en": "2026-09-28T19:56:12.019Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "maloca_andoque__spatial_model--canon",
+      "modelo": "maloca_andoque__spatial_model",
+      "entidad": "La maloca andoque (exterior)",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-retorno-de-plumon-amarillo",
+        "el-retorno-de-plumon-de-fiebre",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-guerra-del-palo-hablador",
+        "los-caucheros-de-la-casa-arana",
+        "los-grupos-de-mi-juventud"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7343,
+      "prompt_sha256": "ccd6486d65e1e50582818fbf31577dbe3fbf824f2fe73ccd6a5deb596a05f3dc"
+    },
+    {
+      "job": "diluvio__phenomenon_rule--canon",
+      "modelo": "diluvio__phenomenon_rule",
+      "entidad": "El diluvio",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6789,
+      "prompt_sha256": "beeb2543479cc166b0d0f5db880c1fe00743398c424eb5667ef519d2fb3214cb"
+    },
+    {
+      "job": "transformacion_de_especialistas__phenomenon_rule--canon",
+      "modelo": "transformacion_de_especialistas__phenomenon_rule",
+      "entidad": "La transformación de los especialistas",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-brujeria-de-la-danta",
+        "la-venganza-de-los-brujos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6702,
+      "prompt_sha256": "10c07a2a2ec155ff5ed5306579577f9e43a075812b3033269805d2cfeaf60aea"
+    },
+    {
+      "job": "casa_que_llegaba_al_cielo__spatial_model--canon",
+      "modelo": "casa_que_llegaba_al_cielo__spatial_model",
+      "entidad": "La casa que llegaba al cielo",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6795,
+      "prompt_sha256": "bfc47363045e28445a0dab50bed1c3ddfc43c89990598a1ed893c4cec3e10df1"
+    },
+    {
+      "job": "fuego_robado__phenomenon_rule--canon",
+      "modelo": "fuego_robado__phenomenon_rule",
+      "entidad": "El fuego robado",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6479,
+      "prompt_sha256": "510636a6a43cbf59cc0db2b03f4ec47d2b737d19c4126bc4e9878d7fafd67aa1"
+    }
+  ]
+}

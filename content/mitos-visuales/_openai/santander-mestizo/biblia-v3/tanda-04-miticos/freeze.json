@@ -1,0 +1,68 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "santander-mestizo",
+  "comunidad": "Santander mestizo",
+  "tanda": "tanda-04-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/santander-mestizo.v3.json",
+    "sha256": "d5b07ab1f712e5293471956f31a70a947fceb6dc9a6f1f82ce4c214672c215a7"
+  },
+  "canon": {
+    "sha256": "001778764d5a15260f48f1d6bc2a7f74857486623e73ca5c9681e13fe8ec3cdd",
+    "verificado_en": "2026-09-29T02:23:01.874Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "diablo_del_camino__identity_sheet--canon",
+      "modelo": "diablo_del_camino__identity_sheet",
+      "entidad": "El Diablo del camino (Mandingas)",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-cueva-del-diablo",
+        "la-campana-del-diablo",
+        "el-doctor-galeacer",
+        "el-carriazo-de-vereda-san-isidro",
+        "los-tunjos-de-la-cantera",
+        "lo-que-ensenan-las-cuevas",
+        "el-ermitano-iracundo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8031,
+      "prompt_sha256": "57a337849d5d370d29ebe1dba5bc43a75e9315b816796fe4ea42e19cbc2a770b"
+    },
+    {
+      "job": "san_antonio_de_la_cueva__identity_sheet--canon",
+      "modelo": "san_antonio_de_la_cueva__identity_sheet",
+      "entidad": "San Antonio custodio del oro",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8119,
+      "prompt_sha256": "88277919acfb86288ca60173a517e183d2b553c42bb9c7609c2d4b55d9b761a2"
+    }
+  ]
+}

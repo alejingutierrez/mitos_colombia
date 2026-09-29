@@ -1,0 +1,99 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ticuna",
+  "comunidad": "Ticuna",
+  "tanda": "tanda-07-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ticuna.v3.json",
+    "sha256": "fd0c6ffe84de74c45161ae42823d427354bcefa0940f5eb72ce2559eac09f0a3"
+  },
+  "canon": {
+    "sha256": "508298d7f6b1c813ab2d8c0bf8438b2829b11c5b30bc6045eb9ce969dbb95dc9",
+    "verificado_en": "2026-09-29T02:08:58.884Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "gran-boa__identity_sheet--canon",
+      "modelo": "gran-boa__identity_sheet",
+      "entidad": "Gran boa",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-canoa-de-moe",
+        "origen-del-friaje-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5046,
+      "prompt_sha256": "b4ed9fb431307ffe32066a09d5d1f39ce8a610c1481f87da55cef337404d7090"
+    },
+    {
+      "job": "mujer-boruga__identity_sheet--canon",
+      "modelo": "mujer-boruga__identity_sheet",
+      "entidad": "Mujer boruga escondida en la chagra",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5274,
+      "prompt_sha256": "8f8e44f81f755fd09b733d838b9456ef7c230e2bcab54dc1c7f4998d4a27d8c9"
+    },
+    {
+      "job": "raya__identity_sheet--canon",
+      "modelo": "raya__identity_sheet",
+      "entidad": "Raya",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-friaje-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5378,
+      "prompt_sha256": "3af9b5ea4fafa3e9e3b83719c4abe8b4c6f5d585568ab89098fbf08bd5e0c3e6"
+    },
+    {
+      "job": "tintin__identity_sheet--canon",
+      "modelo": "tintin__identity_sheet",
+      "entidad": "Tintín que transporta el corazón",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5192,
+      "prompt_sha256": "0abba6fd57d5d472b0eaab2d47e97ae61e52f0fbb66b7b0ac2457cba7889c969"
+    }
+  ]
+}

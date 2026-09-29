@@ -1,0 +1,174 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "barasana",
+  "comunidad": "Barasana",
+  "tanda": "tanda-09-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/barasana.v3.json",
+    "sha256": "63a71278101405757bb0624c0ed918ebab9ba2d2df6fe234fa28db05a53a3ff2"
+  },
+  "canon": {
+    "sha256": "ff3d70797dc45bbc973d04baf1004c1e75592064c3b93d9d9dda760d8de6ff91",
+    "verificado_en": "2026-09-29T02:04:41.832Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "selva_pira_parana__environment_model--canon",
+      "modelo": "selva_pira_parana__environment_model",
+      "entidad": "La selva del Pirá Paraná",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-origen-de-la-gente-de-los-frutales-silvestres",
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano",
+        "la-luna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6092,
+      "prompt_sha256": "ff90414c739ab5d46c0590af0397e3a310625f8f057491a2c9a5d0f2cb869b9a"
+    },
+    {
+      "job": "cerros_estantillos__environment_model--canon",
+      "modelo": "cerros_estantillos__environment_model",
+      "entidad": "Los Cerros-Estantillos",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano",
+        "los-cerros-estantillos-y-la-cera-de-abejas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6505,
+      "prompt_sha256": "9a4d7f2b3786f255d237348ceb939a1e26cfc83cd5243bb3da9a0548dc4567c1"
+    },
+    {
+      "job": "hueco_de_guacamaya__spatial_model--canon",
+      "modelo": "hueco_de_guacamaya__spatial_model",
+      "entidad": "El Hueco de Guacamaya",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano",
+        "los-cerros-estantillos-y-la-cera-de-abejas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5834,
+      "prompt_sha256": "e23bcb54a80611129c79867d73816123fbd19336fc37de5648c857791500ec8c"
+    },
+    {
+      "job": "rio_pira_parana__environment_model--canon",
+      "modelo": "rio_pira_parana__environment_model",
+      "entidad": "El Pirá Paraná",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-cuerda-de-leche-y-la-anaconda-yeba",
+        "los-cerros-estantillos-y-la-cera-de-abejas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5972,
+      "prompt_sha256": "5cf70ef1978f8f59e86ec5a38698bd1f7a614d4c5d0e6135395fd2b6e4c06690"
+    },
+    {
+      "job": "chagra_barasana__spatial_model--canon",
+      "modelo": "chagra_barasana__spatial_model",
+      "entidad": "La chagra",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-cerros-estantillos-y-la-cera-de-abejas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6008,
+      "prompt_sha256": "037e0a118822a31a7a5e113e63347b2072d2e76a7ccb80d269b6a8ef1c34bad7"
+    },
+    {
+      "job": "rio_de_leche__environment_model--canon",
+      "modelo": "rio_de_leche__environment_model",
+      "entidad": "El Río de Leche",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-cuerda-de-leche-y-la-anaconda-yeba"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5902,
+      "prompt_sha256": "39885480a6d67b0cd5d3c4d351edbf5117fba6cd06767f4fa81e46d619597dcd"
+    },
+    {
+      "job": "waiya_goheri__spatial_model--canon",
+      "modelo": "waiya_goheri__spatial_model",
+      "entidad": "Waiya Goheri",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-cuerda-de-leche-y-la-anaconda-yeba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5909,
+      "prompt_sha256": "cf2758df0b7ab85bbc527501edcea29368ba80082bd48a64e36788ba440d007a"
+    },
+    {
+      "job": "yebai_bota__spatial_model--canon",
+      "modelo": "yebai_bota__spatial_model",
+      "entidad": "Yebai Bota",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5907,
+      "prompt_sha256": "7a5bbed0042391f86b23335393de25efcb27597568481b1ec3ad478b77edbc61"
+    }
+  ]
+}

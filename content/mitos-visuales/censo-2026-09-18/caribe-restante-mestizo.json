@@ -1,0 +1,795 @@
+{
+  "id": "caribe-restante-mestizo",
+  "label": "Caribe restante (Magdalena, Cesar, San Andrés)",
+  "era": "tres tiempos sin bisagra: Santa Marta colonial (1590-1629), archipiélago criollo de plantación y piratería, y valle del Cesar juglar (siglo XX)",
+  "pages": 11,
+  "canon_pages": 2,
+  "read_note": "Leí las 11 páginas completas. Solo 2 tienen canon narrable, las dos del Cesar (La Bruja del Trinche, La Sirena de Hurtado); las otras 9 son solo content. SORPRESAS Y DUDAS: (1) Esto no es un corpus, son tres. San Andrés-Providencia (6 páginas de ciclo Nansi en criollo inglés), Magdalena colonial (3 páginas de crónica de conquista y piratería, con narrador español) y el Cesar vallenato (2 páginas, las únicas con mito). No comparten época, ni paisaje, ni voz, ni una sola entidad. Separé las notas y no dedupliqué nada entre bloques. (2) MI RECOMENDACIÓN ES SÍ: San Andrés necesita corpus propio. No por tamaño sino porque el ciclo Nansi tiene su propio bestiario cerrado (Nansi, Tiger, Mico, los perros, el molino), su propia lengua y su propia arquitectura; y porque hoy comparte bucket con una crónica colonial samaria que no lo toca. 14 de las 34 fichas requeridas son suyas (16 hojas de 41) y ninguna se comparte con las otras dos. Advertencia: partir el corpus sube la razón del resto. (3) LAS 6 PÁGINAS ISLEÑAS ESTÁN MAL AMBIENTADAS. Todas dicen 'selva', 'bosque', 'valle', 'río tortuoso de aguas negras'; una habla de cazar cerdos salvajes en 'espesos valles'. Eso es Caribe continental, no un archipiélago coralino. Solo El tesoro de Morgan y Tiger y el baile de perros traen playa, palmeras, coco y Sound Bay. Ficho el paisaje isleño real y excluyo explícitamente la selva continental: si se ilustra tal como está escrito, se instala un San Andrés falso. (4) 'Las clavelinas' está catalogada en Magdalena y transcurre íntegra en Cartagena (San Pedro Claver, murallas, la casa del capitán). Grepeé: Pedro Claver también sale en bolivar-cartagena-mestizo. Es error de taxonomía y riesgo de pagar dos veces la misma ficha. (5) DERIVA contra editorial/cesar-mestizo-residual/: el módulo dice que el trinche y la cruz de la guacharaca NO son de Dolores Escalona sino de un relato paralelo de Quín Vásquez. El trinche es el título y el centro visual de la página: si se aplica, la ficha del trinche cambia de dueño. (6) Dos exclusiones por sensibilidad que no negocio: el osario de los esclavizados en la gruta de Morgan, y los pueblos indígenas vistos por el cronista (chimilas emboscadores, 'indios de El Carbón' rebautizados 'valentejos' como chiste étnico). Los chimila además ya tienen biblia propia.",
+  "entities": [
+    {
+      "id": "nansi_isleno",
+      "name": "Nansi (Beda Nansi, Oída Nansi, Miss Nansi)",
+      "kind": "criatura",
+      "myths": [
+        "beda-nansi-beda-monkey-y-el-molino",
+        "mico-y-nansi",
+        "tigre-y-nansi",
+        "tiger-y-el-baile-de-perros"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "tejedor: araña/silueta que urde y queda atrapada en las aspas",
+        "jinete: figura humanoide con montura, brida, fusta y espuelas sobre Tiger"
+      ],
+      "panregional": true,
+      "note": "Embaucador en 4 de las 6 páginas isleñas. Dos estados obligados porque los textos lo exigen: en el molino es 'el astuto tejedor de destinos' de cuerpo indefinido, y en Tigre y Nansi monta con espuelas, lo que pide un cuerpo con piernas. No inventé un tercero. PANREGIONAL verificado por grep: Nansi/Anansi aparece en choco-afro (araña sacristana de Istmina), caribe-restante y cordoba-sinu. Lo propio de aquí es el criollo inglés, el molino, la montura y la rima 'Ahnansi, oh tú tingalai': un tramposo de plantación, no una araña de sacristía."
+    },
+    {
+      "id": "beda_tiger",
+      "name": "Beda Tiger (Hermano Tigre)",
+      "kind": "animal",
+      "myths": [
+        "tigre-y-nansi",
+        "tiger-y-el-baile-de-perros",
+        "un-perro-una-cabra-y-beda-tiger"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "ensillado y humillado: montura, brida y fusta, entrando al patio",
+        "anfitrión: de pie en su casa, con violín, batas y té"
+      ],
+      "panregional": false,
+      "note": "Tres páginas. Los dos estados son escenas distintas de silueta: el tigre convertido en caballo de paseo (la imagen del ciclo) y el tigre que recibe con toallas, batas y violín. Absorbe la montura, la brida, la fusta, las espuelas y el violín, que son su aparejo. En 'Tiger y el baile de perros' irrumpe como forastero y desata la estampida: mismo cuerpo."
+    },
+    {
+      "id": "mico",
+      "name": "Mico (Beda Monkey, Hermano Mico)",
+      "kind": "animal",
+      "myths": [
+        "beda-nansi-beda-monkey-y-el-molino",
+        "mico-y-nansi"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Dos páginas, cuerpo reconocible: menudo, de ojos brillantes, que observa desde las ramas y baja cuando entiende el patrón; en la otra es cazador con jauría y teje un rejo. Una sola hoja, con nota de ambigüedad: los textos oscilan entre mono en el árbol y cazador con perros, y no dan base para dos siluetas."
+    },
+    {
+      "id": "el_molino",
+      "name": "El molino que dice 'Yo molinero'",
+      "kind": "objeto",
+      "myths": [
+        "beda-nansi-beda-monkey-y-el-molino"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Objeto por el que se cuenta el relato y además agente: atrapa con sus aspas frías, contesta con 'un susurro ronco de mecanismos' y mata a quien pronuncia la frase. Un artefacto viejo plantado en el monte, sin molinero."
+    },
+    {
+      "id": "animales_del_monte_isleno",
+      "name": "Animales del monte isleño (víctimas del molino y presas)",
+      "kind": "colectivo",
+      "myths": [
+        "beda-nansi-beda-monkey-y-el-molino",
+        "mico-y-nansi"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Hoja de reparto con los que pasan y caen: Hermana Vaca con su tintineo de campanas, las cabras, los perros anónimos, y el cerdo robusto y resoplante que inmoviliza la jauría de Mico. Uno por uno no dan ficha; juntos son un inventario que las dos páginas necesitan."
+    },
+    {
+      "id": "perro_del_tambor_y_la_cabra",
+      "name": "El perro del tambor y la cabra",
+      "kind": "animal",
+      "myths": [
+        "un-perro-una-cabra-y-beda-tiger"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Los dos viajeros que conducen toda la página: el perro precavido que responde al violín con baquetas ('eso crees tú, mentiroso') y monta la guardia, y la cabra esquelética que baila y luego se esconde bajo la olla. Una hoja con la pareja, porque nunca se separan. Absorbe el tambor."
+    },
+    {
+      "id": "perros_del_baile_de_gala",
+      "name": "Los perros del Gran Baile de Gala",
+      "kind": "colectivo",
+      "myths": [
+        "tiger-y-el-baile-de-perros"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "La página entera es esta imagen y ninguna otra ficha la cubre: perros de etiqueta bajo la luna, y en la entrada la hilera de bundas colgadas de un clavo 'como extraños amuletos'. Absorbe la bunda y el clavo, que son literalmente parte de ellos."
+    },
+    {
+      "id": "gente_islena",
+      "name": "Gente isleña (las muchachas y el pueblo del patio)",
+      "kind": "colectivo",
+      "myths": [
+        "tigre-y-nansi",
+        "tiger-y-el-baile-de-perros"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El público humano que hace funcionar la humillación: el pueblo que prepara la ceremonia, la hija del rey y las muchachas por las que compiten, y las mujeres de Sound Bay que cantan la rima meciéndose. Absorbe a la hija del rey, que es premio y no agente."
+    },
+    {
+      "id": "paisaje_isleno",
+      "name": "Isla caribeña: playa, palmeras, arrecife y mar",
+      "kind": "paisaje",
+      "myths": [
+        "el-tesoro-de-morgan",
+        "tiger-y-el-baile-de-perros"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El único paisaje realmente insular del bloque: playa de luna llena, palmeras que murmuran, arena donde el perro escarba, cocos, y el mar de Sound Bay susurrando a la orilla. Escenario del acto en Morgan y no intercambiable con nada del continente. Se ficha precisamente para tener con qué reemplazar la selva mal escrita de las otras cuatro páginas."
+    },
+    {
+      "id": "casa_islena_madera_y_zinc",
+      "name": "Casa isleña de madera y zinc",
+      "kind": "arquitectura",
+      "myths": [
+        "tiger-y-el-baile-de-perros",
+        "un-perro-una-cabra-y-beda-tiger"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El gran salón del baile en Sound Bay y la casa del tigre, 'un lugar donde el tiempo se atolondraba entre paredes de madera perfumada', con su entrada que crepita y su fuego. Dos páginas. Es la arquitectura que el archipiélago pide y que ninguna ficha continental puede prestar."
+    },
+    {
+      "id": "animas_esclavizadas_del_tesoro",
+      "name": "Las ánimas de los esclavizados de Morgan",
+      "kind": "colectivo",
+      "myths": [
+        "el-tesoro-de-morgan"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Conducen la acción: hablan, ríen, guían por el pasaje escondido, cuentan su traición y proponen el trueque. SENSIBLE, y por eso se ficha con instrucción explícita: se dibujan como jóvenes de cuerpo entero, con rostro y ropa propios —el texto insiste en que están 'aún jóvenes en apariencia'—, de pie y hablando, nunca como calaveras, sábanas ni espectros genéricos, y nunca reducidos a decorado de terror. Su agravio es el centro moral de la página. Absorbe el navío etéreo que piden construir para volver a su origen."
+    },
+    {
+      "id": "gruta_del_tesoro",
+      "name": "La gruta y su recámara secreta",
+      "kind": "lugar",
+      "myths": [
+        "el-tesoro-de-morgan"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Escenario del acto: la cueva que 'murmuraba secretos de piedra y agua' y traga a los buscadores, con paredes 'que eran lienzos escritos por sombras' y la recámara deslumbrante al final del pasaje. No es intercambiable con la playa ya fichada."
+    },
+    {
+      "id": "tesoro_de_morgan",
+      "name": "El tesoro de Morgan",
+      "kind": "objeto",
+      "myths": [
+        "el-tesoro-de-morgan"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Objeto por el que se cuenta el relato: la riqueza en oro y joyas que las ánimas dejan ver 'de tal belleza que el corazón apenas podía soportarlo'. Absorbe el destello danzante, 'como un colibrí de luz', que es la señal que lo delata bajo la palmera."
+    },
+    {
+      "id": "buscador_y_su_perro",
+      "name": "El buscador de tesoros y su perro",
+      "kind": "personaje",
+      "myths": [
+        "el-tesoro-de-morgan"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Narrador en primera persona y motor de toda la página: bajan a la playa de noche, el perro escarba y desentierra el mapa, ambos entran a la gruta y cierran el pacto. Sin ellos no hay escena."
+    },
+    {
+      "id": "don_nufio",
+      "name": "Don Núfio de los Santos y Sandoval, castellano de San Juan",
+      "kind": "personaje",
+      "myths": [
+        "el-castellano-de-san-juan"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Conduce la página entera: manda las culebrinas, se alza en la muralla, arroja la carne, negocia la capitulación y muere de un flechazo bajo el brazo. Cuerpo trazable: cota de malla y escudo con banda sable sobre campo de gules."
+    },
+    {
+      "id": "hanspater_el_filibustero",
+      "name": "Adrián Hanspater, el filibustero holandés",
+      "kind": "personaje",
+      "myths": [
+        "el-castellano-de-san-juan"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": true,
+      "note": "Sitia, bombardea, ofrece tratados, saquea los templos y se lleva las culebrinas. PANREGIONAL verificado: 'pirata' sale en caribe-restante y en bolivar-cartagena-mestizo, y dentro de este mismo corpus el ciclo isleño invoca a Morgan. Lo propio del samario es que es holandés de escuadra, criado y catequizado en Santa Marta de niño: un filibustero de flota y culebrina, no un pirata de isla y cofre. Absorbe la escuadra de velas 'blancas como fantasmas y negras como presagios' avanzando a la ensenada."
+    },
+    {
+      "id": "castillo_de_san_juan",
+      "name": "El castillo de San Juan",
+      "kind": "arquitectura",
+      "myths": [
+        "el-castellano-de-san-juan"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Escenario del acto: la fortaleza 'erigida sobre su empedrada base', que mira el Caribe 'como un perro guardián'. Absorbe las culebrinas de la muralla, que son su artillería y el botín final."
+    },
+    {
+      "id": "soldadesca_espanola",
+      "name": "Soldadesca española de la provincia de Santa Marta",
+      "kind": "colectivo",
+      "myths": [
+        "el-castellano-de-san-juan",
+        "genus-irritable-vatum"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "la guarnición: diez soldados desfilando por la calle de honor pirata",
+        "la hueste en marcha: arcabuceros y rodeleros al son de chiribías y tambores"
+      ],
+      "panregional": false,
+      "note": "Misma tropa en dos páginas y dos configuraciones que cambian por completo la composición: el desfile humillado y revelador de los diez, y la columna de campaña con vanguardia, centro y retaguardia. Absorbe a los capitanes que la mandan —Cárcamo, Flórez, Almonacid, Juan de Human— y sus arcabuces y rodelas."
+    },
+    {
+      "id": "santa_marta_colonial",
+      "name": "Santa Marta colonial: ensenada, calles y Sierra al fondo",
+      "kind": "paisaje",
+      "myths": [
+        "el-castellano-de-san-juan",
+        "genus-irritable-vatum"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Escenario de dos páginas: la ciudad convertida en sala de armas, los balcones con rejas de donde asoman las doncellas, la ensenada por donde entran las velas, y la Sierra Nevada al fondo, 'picos tan elevados que tocaban el umbral de las esferas celestes'. La Sierra se dibuja como telón geográfico, sin aldeas ni gente serrana: es territorio de comunidades con biblias propias. Absorbe las doncellas de los balcones."
+    },
+    {
+      "id": "pedro_chiquillo",
+      "name": "Pedro Chiquillo, el soldado coplero",
+      "kind": "personaje",
+      "myths": [
+        "genus-irritable-vatum"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Conduce la página: bautiza el pueblo 'de los valentejos', desplumó con una copla la poesía de sus capitanes, se gana la reprimenda y se va a Chile a hacerse capitán. 'Sangraba travesuras en cada palabra'."
+    },
+    {
+      "id": "san_pedro_claver",
+      "name": "San Pedro Claver",
+      "kind": "personaje",
+      "myths": [
+        "las-clavelinas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": true,
+      "note": "Conduce el prodigio: llega cojeando apoyado en su muleta, llama a Yariva por su nombre, la despierta y la bautiza. PANREGIONAL verificado por grep: Pedro Claver también aparece en bolivar-cartagena-mestizo. Aquí es doble problema, porque además la página está catalogada en Magdalena y transcurre íntegra en Cartagena. Si el corpus Bolívar-Cartagena ya lo ficha, esta ficha se retira de aquí y se corrige la taxonomía. Absorbe a Francisco de Bobadilla 'el bobo', su compañero jesuita que conversa con los mosquitos, que comparte hábito y escala."
+    },
+    {
+      "id": "yariva",
+      "name": "Yariva",
+      "kind": "personaje",
+      "myths": [
+        "las-clavelinas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Joven mocaranga comprada en una feria de galeones, que muere sin bautismo y despierta pidiendo el sacramento 'con una sonrisa tan radiante como la luz del amanecer'. SENSIBLE: se dibuja de pie, despierta, con rostro y nombre propios y ropa suya, nunca como cuerpo yacente ni como posesión del capitán; el prodigio se cuenta desde su despertar, no desde su muerte. Sin ella no hay clavelina."
+    },
+    {
+      "id": "la_clavelina",
+      "name": "La clavelina, la flor sin aroma",
+      "kind": "planta",
+      "myths": [
+        "las-clavelinas"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Objeto por el que se cuenta el relato: brota del tiesto donde se vierte el agua del bautismo, perfuma la casa entera, y al morir Claver pierde el olor para siempre. La ficha tiene que servir para las dos lecturas, porque el remate del relato es olerla y no encontrar nada."
+    },
+    {
+      "id": "la_bruja_del_trinche",
+      "name": "La Bruja del Trinche",
+      "kind": "criatura",
+      "myths": [
+        "la-bruja-del-trinche"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": true,
+      "note": "Anciana de ojos quietos 'como agua de pozo' que no lleva escoba ni sombrero raro: lleva silencio y un trinche de guacharaca que brilla como aguja. Golpea el suelo una sola vez y ordena 'no toques más'. PANREGIONAL verificado: la bruja aparece en 11 de los catorce volcados. Lo propio de esta es que es autoridad de parranda, no de monte: sanciona el verso que humilla, y su cetro es un instrumento de música. Absorbe a la mujer desconocida y bonita que le ofrece el trago en el camino, que es ella misma en otra cara."
+    },
+    {
+      "id": "trinche_de_guacharaca",
+      "name": "El trinche de guacharaca",
+      "kind": "objeto",
+      "myths": [
+        "la-bruja-del-trinche"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Objeto por el que se cuenta el relato y que le da título: cetro-límite que 'no solo marca el ritmo: también marca el límite'. FLAG: editorial/cesar-mestizo-residual/ sostiene que el trinche y la cruz de la guacharaca pertenecen al relato paralelo de Quín Vásquez y no se atribuyen a Dolores Escalona; si se aplica, la ficha cambia de dueño aunque el objeto siga existiendo."
+    },
+    {
+      "id": "andres_el_juglar",
+      "name": "Andrés, el juglar acordeonero",
+      "kind": "personaje",
+      "myths": [
+        "la-bruja-del-trinche"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Conduce la transgresión y paga: llega con el acordeón apretado al pecho 'como quien guarda un corazón prestado', suelta versos de burla, sigue tocando después de la orden y acaba botando espuma en el patio. Es el protagonista de una de las dos únicas páginas con canon del corpus."
+    },
+    {
+      "id": "conjunto_vallenato",
+      "name": "El conjunto vallenato (acordeón, caja y guacharaca)",
+      "kind": "objeto",
+      "myths": [
+        "la-bruja-del-trinche",
+        "la-sirena-de-hurtado"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Dos páginas con cuerpo reconocible: en el Trinche es el trío en vivo ('caja, guacharaca y palmas'); en la Sirena es el timbre con que se describe el canto bajo el agua ('como acordeón debajo del agua, como caja golpeada por burbujas') y el que se calla en Semana Santa. Una hoja con los tres instrumentos juntos."
+    },
+    {
+      "id": "parranda_vallenata",
+      "name": "La parranda (el gentío de la colita)",
+      "kind": "colectivo",
+      "myths": [
+        "la-bruja-del-trinche",
+        "la-sirena-de-hurtado"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "El público que hace de plaza pública: el gentío de Los Venados entre palmas y velas, y los trasnochadores que en la otra página juran oír el canto cuando la parranda se apaga. Dos páginas."
+    },
+    {
+      "id": "buho_y_culebra",
+      "name": "El búho demasiado grande y la culebra",
+      "kind": "animal",
+      "myths": [
+        "la-bruja-del-trinche"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Ejecutan la sentencia: el búho 'demasiado grande' pasa rozando la luna y deja caer la culebra sobre el pecho del juglar, y ella muerde en la boca 'para que el verso se le quedara atravesado'. Van en una sola hoja porque la culebra cae del búho y la escena es una."
+    },
+    {
+      "id": "curandero_del_cesar",
+      "name": "El curandero del Cesar",
+      "kind": "personaje",
+      "myths": [
+        "la-bruja-del-trinche"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Actúa y fracasa: 'intentó arrancarle el mal con rezos, humo y agua bendita', y es quien manda sacar al enfermo al patio para que le dé el sereno, lo que abre la escena final. Absorbe sus rezos, el humo y el agua bendita."
+    },
+    {
+      "id": "casa_de_bahareque_del_cesar",
+      "name": "Casa de bahareque del Cesar (cocina y patio)",
+      "kind": "arquitectura",
+      "myths": [
+        "la-bruja-del-trinche"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Escenario del acto y marco del relato: las cocinas de bahareque 'cuando el café se colaba despacio y el acordeón se quedaba callado por respeto', y el patio donde muere el juglar bajo el cielo que se oscurece sin nube."
+    },
+    {
+      "id": "valle_del_rio_cesar",
+      "name": "Valle del río Cesar: camino polvoriento y hacienda ganadera",
+      "kind": "paisaje",
+      "myths": [
+        "la-bruja-del-trinche"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "'Los caminos polvorientos que van de Valencia de Jesús hacia Los Venados', bajo un sol 'que no perdona'. El trayecto entre el origen del juglar y el sitio de la prueba es geografía con función narrativa, no fondo."
+    },
+    {
+      "id": "rosario_la_sirena_de_hurtado",
+      "name": "Rosario Arciniegas, la Sirena de Hurtado",
+      "kind": "criatura",
+      "myths": [
+        "la-sirena-de-hurtado"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "muchacha: cabello suelto, de pie sobre la piedra del salto",
+        "sirena: cintura de muchacha y cola grande y brillante que late"
+      ],
+      "panregional": true,
+      "note": "Los dos estados los muestra el relato y cambian la silueta entera: salta como muchacha y sale con escamas donde tenía pies. PANREGIONAL verificado: la sirena aparece en 11 de los catorce volcados. Lo propio de esta es que es de río y no de mar, que la transformación ocurre un Jueves Santo por desobedecer una prohibición doméstica y religiosa, que su canto suena a acordeón bajo el agua, y que no es castigo puro sino adopción: 'el pozo no roba, sino que cobra'."
+    },
+    {
+      "id": "pozo_de_hurtado",
+      "name": "El Pozo de Hurtado y el río Guatapurí",
+      "kind": "lugar",
+      "myths": [
+        "la-sirena-de-hurtado"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "panregional": false,
+      "note": "Escenario del acto: agua fría entre piedras grandes, con la piedra alta desde donde se salta y desde donde ella se despide. 'No es un hueco de agua sino una boca'. Absorbe el cielo que se pone negro sin nube, que es el pozo cerrando los ojos, y la brisa que baja de la Sierra."
+    },
+    {
+      "id": "la_hija_del_rey",
+      "name": "La hija del rey y las muchachas",
+      "kind": "personaje",
+      "myths": [
+        "tigre-y-nansi"
+      ],
+      "decision": "embedded",
+      "covered_by": "gente_islena",
+      "sheets": 0,
+      "note": "'Una doncella de ojos tan profundos como la noche'. Es el premio en disputa: no actúa, se la disputan. Miembro de la población isleña ya fichada."
+    },
+    {
+      "id": "la_bunda_y_el_clavo",
+      "name": "La bunda colgada del clavo",
+      "kind": "objeto",
+      "myths": [
+        "tiger-y-el-baile-de-perros"
+      ],
+      "decision": "embedded",
+      "covered_by": "perros_del_baile_de_gala",
+      "sheets": 0,
+      "note": "Literalmente parte de los perros: se cuelga en la entrada como condición de entrada y se recupera mal en la estampida. Se dibuja en su hoja."
+    },
+    {
+      "id": "la_montura_y_las_espuelas",
+      "name": "Montura, brida, fusta y espuelas",
+      "kind": "objeto",
+      "myths": [
+        "tigre-y-nansi"
+      ],
+      "decision": "embedded",
+      "covered_by": "beda_tiger",
+      "sheets": 0,
+      "note": "Aparejo que convierte a Tiger en caballo de paseo; se dibuja puesto, en su estado ensillado."
+    },
+    {
+      "id": "el_violin_del_tigre",
+      "name": "El violín del tigre",
+      "kind": "objeto",
+      "myths": [
+        "un-perro-una-cabra-y-beda-tiger"
+      ],
+      "decision": "embedded",
+      "covered_by": "beda_tiger",
+      "sheets": 0,
+      "note": "'La voz ronca que resonaba como un acorde reverberante de su violín'. Va en su estado de anfitrión."
+    },
+    {
+      "id": "el_navio_etereo",
+      "name": "El navío etéreo",
+      "kind": "objeto",
+      "myths": [
+        "el-tesoro-de-morgan"
+      ],
+      "decision": "embedded",
+      "covered_by": "animas_esclavizadas_del_tesoro",
+      "sheets": 0,
+      "note": "Lo que las ánimas piden a cambio del tesoro: la nave que las devuelva a su origen. Es el deseo que las define; se dibuja con ellas."
+    },
+    {
+      "id": "el_destello_colibri",
+      "name": "El destello que señala el entierro",
+      "kind": "fenomeno",
+      "myths": [
+        "el-tesoro-de-morgan"
+      ],
+      "decision": "embedded",
+      "covered_by": "tesoro_de_morgan",
+      "sheets": 0,
+      "note": "'Un colibrí de luz que flotaba hacia una de las palmeras'. Es la señal del tesoro, no otra entidad: 'ciertos brillos bajo la luna eran mensajeros de viejas artes ocultas'."
+    },
+    {
+      "id": "las_culebrinas",
+      "name": "Las culebrinas del castillo",
+      "kind": "objeto",
+      "myths": [
+        "el-castellano-de-san-juan"
+      ],
+      "decision": "embedded",
+      "covered_by": "castillo_de_san_juan",
+      "sheets": 0,
+      "note": "Artillería de la muralla y botín final de Hanspater, que las aprecia 'como reliquias tomadas a sangre y fuego'. Son parte de la fortaleza."
+    },
+    {
+      "id": "la_escuadra_holandesa",
+      "name": "La escuadra de velas blancas y negras",
+      "kind": "objeto",
+      "myths": [
+        "el-castellano-de-san-juan"
+      ],
+      "decision": "embedded",
+      "covered_by": "hanspater_el_filibustero",
+      "sheets": 0,
+      "note": "La flota que avanza a la ensenada es la forma en que aparece el filibustero; se dibuja en su ficha, como su cuerpo mayor."
+    },
+    {
+      "id": "los_capitanes_de_la_provincia",
+      "name": "Cárcamo, Flórez, Almonacid y Juan de Human",
+      "kind": "colectivo",
+      "myths": [
+        "genus-irritable-vatum"
+      ],
+      "decision": "embedded",
+      "covered_by": "soldadesca_espanola",
+      "sheets": 0,
+      "note": "Mandan la columna y cruzan versos, pero ninguno recibe cuerpo más allá del rango y la juventud. Salen de la tropa ya fichada."
+    },
+    {
+      "id": "las_doncellas_del_balcon",
+      "name": "Las doncellas de los balcones",
+      "kind": "colectivo",
+      "myths": [
+        "genus-irritable-vatum"
+      ],
+      "decision": "embedded",
+      "covered_by": "santa_marta_colonial",
+      "sheets": 0,
+      "note": "'Asomaban sus rostros desde las rejas de los balcones, adornando la ciudad con sus miradas'. Son parte de la fachada de la ciudad, no un grupo con acción."
+    },
+    {
+      "id": "francisco_de_bobadilla",
+      "name": "Francisco de Bobadilla, 'el bobo'",
+      "kind": "personaje",
+      "myths": [
+        "las-clavelinas"
+      ],
+      "decision": "embedded",
+      "covered_by": "san_pedro_claver",
+      "sheets": 0,
+      "note": "Hermano jesuita que deja que los mosquitos beban de su sangre 'conversando con ellos como si fueran hermanos celestiales'. Mismo hábito y misma escala que Claver; se dibuja a su lado."
+    },
+    {
+      "id": "la_mujer_del_trago",
+      "name": "La mujer desconocida del trago dulce",
+      "kind": "personaje",
+      "myths": [
+        "la-bruja-del-trinche"
+      ],
+      "decision": "embedded",
+      "covered_by": "la_bruja_del_trinche",
+      "sheets": 0,
+      "note": "'Bonita como promesa', le ofrece el trago que sabe a cereza y raspa como sal. Es la bruja en otra cara: variante del mismo ser."
+    },
+    {
+      "id": "los_trasnochadores",
+      "name": "Los trasnochadores que oyen el canto",
+      "kind": "colectivo",
+      "myths": [
+        "la-sirena-de-hurtado"
+      ],
+      "decision": "embedded",
+      "covered_by": "parranda_vallenata",
+      "sheets": 0,
+      "note": "Versión 2: la sirena 'se oye más de lo que se ve; su canto aparece cuando la parranda se apaga'. Es la misma parranda, a otra hora."
+    },
+    {
+      "id": "la_madre_de_rosario",
+      "name": "La madre que cierra la puerta",
+      "kind": "personaje",
+      "myths": [
+        "la-sirena-de-hurtado"
+      ],
+      "decision": "embedded",
+      "covered_by": "parranda_vallenata",
+      "sheets": 0,
+      "note": "Una frase y una puerta: 'Hoy no se toca el río, Rosario, que el río toca de vuelta'. Sin cuerpo descrito; sale de la población del pueblo."
+    },
+    {
+      "id": "la_selva_y_el_rio_continental",
+      "name": "La selva, el valle y el río de aguas negras de las páginas isleñas",
+      "kind": "paisaje",
+      "myths": [
+        "beda-nansi-beda-monkey-y-el-molino",
+        "mico-y-nansi",
+        "tigre-y-nansi",
+        "un-perro-una-cabra-y-beda-tiger"
+      ],
+      "decision": "excluded",
+      "reason": "contradice el territorio: dibujarla instalaría un Caribe continental dentro del archipiélago",
+      "sheets": 0,
+      "note": "Verificado leyendo las cuatro páginas: 'la vasta extensión del monte', 'espesos valles' con cerdos salvajes, 'la selva se entrelazaba con el cielo', 'un río tortuoso, sus aguas negras como las profundidades de una pesadilla'. San Andrés y Providencia no tienen selva ni ríos de aguas negras. Es un defecto del texto, no del territorio. Las escenas se resuelven con paisaje_isleno y casa_islena_madera_y_zinc; si el editor quiere el monte, hay que reescribir el escenario primero."
+    },
+    {
+      "id": "morgan",
+      "name": "Henry Morgan",
+      "kind": "personaje",
+      "myths": [
+        "el-tesoro-de-morgan"
+      ],
+      "decision": "excluded",
+      "reason": "se menciona pero nunca se ve",
+      "sheets": 0,
+      "note": "Verificado: solo existe en el relato como nombre del tesoro, como el dueño de un sombrero negro que se entrega en trueque, y como 'aquel pirata que navegó no solo mares, sino también cuentos'. No entra en escena ni vivo ni muerto: lo que aparece son sus víctimas."
+    },
+    {
+      "id": "el_osario_y_los_cuatro_craneos",
+      "name": "El montículo de huesos y los cuatro cráneos",
+      "kind": "objeto",
+      "myths": [
+        "el-tesoro-de-morgan"
+      ],
+      "decision": "excluded",
+      "reason": "sensible: son los restos de personas esclavizadas asesinadas",
+      "sheets": 0,
+      "note": "Verificado: 'un montículo de huesos dormidos bajo la luna de piedra. Cuatro cráneos nos miraban desde el silencio', y más adelante 'una colina de huesos, un monumento a la avaricia'. También el fémur que el perro carga. Ilustrar el osario convierte a esas personas en atrezo de terror justo en la página donde el relato les devuelve voz y agravio. La escena se sostiene con las ánimas, que sí tienen ficha y sí hablan."
+    },
+    {
+      "id": "los_indios_chimilas",
+      "name": "Los chimilas que emboscan a don Núfio",
+      "kind": "colectivo",
+      "myths": [
+        "el-castellano-de-san-juan"
+      ],
+      "decision": "excluded",
+      "reason": "sensible y ajeno: tienen biblia propia y aquí solo existen como enemigo del cronista",
+      "sheets": 0,
+      "note": "Verificado: aparecen dos veces, ambas como amenaza —'las desgarradoras guerras contra los tupes, chimilas y otras tribus andinas' y la emboscada con la flecha bajo el brazo—, sin nombre, rostro ni territorio propio. El pueblo chimila ya tiene biblia (54 fichas / 23 mitos); ficharlos aquí repetiría el punto de vista colonial y prestaría iconografía de otra biblia."
+    },
+    {
+      "id": "los_indios_de_el_carbon",
+      "name": "Los 'indios de El Carbón' y el pueblo de Zaraguato",
+      "kind": "colectivo",
+      "myths": [
+        "genus-irritable-vatum"
+      ],
+      "decision": "excluded",
+      "reason": "sensible: la página los construye como enemigos vencidos y remata con un chiste étnico",
+      "sheets": 0,
+      "note": "Verificado: caen bajo el grito de '¡Santiago y Cierra España!', resisten, y el chiste que da nombre al lugar ('el pueblo de los valentejos') es un desprecio explícito hacia ellos que el propio resumen de la página reconoce como 'refiriéndose despectivamente a los indígenas'. Ilustrarlos desde este texto es ilustrar la burla."
+    },
+    {
+      "id": "las_coplas_y_los_versos",
+      "name": "Las coplas, la oda y el duelo poético",
+      "kind": "fenomeno",
+      "myths": [
+        "genus-irritable-vatum",
+        "el-castellano-de-san-juan"
+      ],
+      "decision": "excluded",
+      "reason": "se oye y se escribe, pero no tiene cuerpo dibujable propio",
+      "sheets": 0,
+      "note": "Verificado: los samarios 'cantaban coplas en su honor', Flórez manda 'un mensaje poético', Cárcamo 'persiguió las musas' y Chiquillo 'compuso una copla que desplumó la noble poesía'. Todo ocurre en palabras. Las escenas se sostienen con la soldadesca ya fichada."
+    },
+    {
+      "id": "la_semana_santa_de_valledupar",
+      "name": "El Jueves Santo y el silencio del pueblo",
+      "kind": "fenomeno",
+      "myths": [
+        "la-sirena-de-hurtado"
+      ],
+      "decision": "excluded",
+      "reason": "se cuenta por el silencio; no hay procesión ni imagen en escena",
+      "sheets": 0,
+      "note": "Verificado: 'en Semana Santa, cuando el pueblo baja la voz y hasta el acordeón se queda quieto'. No hay paso, ni nazareno, ni templo: el día sagrado existe como prohibición doméstica y como quietud. Se resuelve callando el conjunto vallenato ya fichado."
+    },
+    {
+      "id": "casa_y_capitan_de_cartagena",
+      "name": "La casa del capitán Silva y Castillo y las murallas de Cartagena",
+      "kind": "arquitectura",
+      "myths": [
+        "las-clavelinas"
+      ],
+      "decision": "excluded",
+      "reason": "el escenario pertenece al corpus de Cartagena; ficharlo aquí duplicaría",
+      "sheets": 0,
+      "note": "Verificado: toda la página transcurre en 'aquella Cartagena de Indias, donde las olas... y las murallas custodiaban una ciudad', en la casa del capitán y su patio con el tiesto. La página está mal catalogada en Magdalena y el corpus bolivar-cartagena-mestizo ya cubre esa arquitectura. Se conservan aquí solo Claver, Yariva y la clavelina, y con la advertencia de retirarlos si allá ya existen."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_islena",
+      "kind": "objeto",
+      "covers": [
+        "la barra de hierro clavada al pie del molino",
+        "la cabeza seca de perro tallada",
+        "el rejo tejido 'con hilo de sol naciente'",
+        "el ponqué de boda",
+        "la olla vieja y roída del río"
+      ],
+      "sheets": 1,
+      "note": "Props de mano del ciclo Nansi que ninguna ficha mayor absorbe. Cada uno es el gatillo de un engaño distinto, pero ninguno sostiene una hoja propia."
+    },
+    {
+      "id": "hoja_utileria_mar_y_botin",
+      "kind": "objeto",
+      "covers": [
+        "el mapa de cuero dentro del coco vacío",
+        "la pañoleta desgastada que lo envuelve",
+        "el sombrero negro de Morgan",
+        "las campanas y ornamentos robados de los templos",
+        "el trozo de carne arrojado desde la muralla"
+      ],
+      "sheets": 1,
+      "note": "Objetos menores de las páginas de mar, isleñas y samarias. El trozo de carne es la bisagra de todo El castellano de San Juan y aun así es un prop de mano: va aquí, con nota de que la cámara lo necesitará en primer plano."
+    },
+    {
+      "id": "hoja_utileria_colonial_y_vallenata",
+      "kind": "objeto",
+      "covers": [
+        "la piedra con vetas de oro traída de Tairona",
+        "las chiribías y tambores de la marcha",
+        "el tiesto con tierra del jardín",
+        "el trago dulce de cereza",
+        "las velas de la parranda que titilan"
+      ],
+      "sheets": 1,
+      "note": "Cierra los objetos sueltos de Magdalena y del Cesar. La piedra de Tairona se dibuja como piedra con vetas, sin ajuar ni pieza arqueológica reconocible: el relato la usa como excusa de un duelo de versos, no como hallazgo."
+    }
+  ],
+  "totals": {
+    "entities": 56,
+    "required": 34,
+    "embedded": 14,
+    "excluded": 8,
+    "sheets": 41,
+    "panregional_required": 5
+  }
+}

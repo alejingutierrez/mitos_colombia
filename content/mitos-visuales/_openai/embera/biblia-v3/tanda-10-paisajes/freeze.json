@@ -1,0 +1,66 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "embera",
+  "comunidad": "Embera",
+  "tanda": "tanda-10-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/embera.v3.json",
+    "sha256": "43c7f4f10e60ebf1b050bc1d22039f0fa7372f99d0f9242acc6c6ac0e7157dd8"
+  },
+  "canon": {
+    "sha256": "c63a3ed13c323e894a92ebe4c994be06637f9a34d1e703031bad914c4b1edebd",
+    "verificado_en": "2026-09-29T02:18:41.277Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "usagara_y_bojaya__environment_model--canon",
+      "modelo": "usagara_y_bojaya__environment_model",
+      "entidad": "Quebrada Usagará, río Bojayá y selva lluviosa del Chocó",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6944,
+      "prompt_sha256": "5210cedb578e9321252c51cb5918d8a6740001a790328430ec70c7c0a53e476f"
+    },
+    {
+      "job": "usagara_y_bojaya__state_sheet--estado_desembocadura_y_costa_abierta_del_rio_valle",
+      "modelo": "usagara_y_bojaya__state_sheet",
+      "entidad": "Quebrada Usagará, río Bojayá y selva lluviosa del Chocó",
+      "categoria": "paisaje",
+      "vista": "estado_desembocadura_y_costa_abierta_del_rio_valle",
+      "estados": [
+        "desembocadura_y_costa_abierta_del_rio_valle"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7295,
+      "prompt_sha256": "90cb044fc716ebbe16b3b8e2f3d039b09ebaddec10895b3d158931f727d5721f"
+    }
+  ]
+}

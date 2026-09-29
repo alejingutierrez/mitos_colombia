@@ -1,0 +1,144 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "u-wa",
+  "comunidad": "U’wa",
+  "tanda": "tanda-02-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/u-wa.v3.json",
+    "sha256": "843b9e5f2b38a54abe1ff6722556973054e64a50aea3a15491888ccdf6d87936"
+  },
+  "canon": {
+    "sha256": "a90c54e7ee6b64a69b74d22cb095455d84c1040f832c2a85fbbf36891e532aed",
+    "verificado_en": "2026-09-28T20:05:41.501Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base: hombre adulto u'wa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-u-wa",
+        "el-oso-y-el-hombre-uwa",
+        "el-pajaro-carpintero-y-el-poder-de-curar",
+        "el-recorrido-de-uktara",
+        "kubashoa-el-hijo-del-tabaco",
+        "lisha-la-madre-del-agua",
+        "mensajes-de-los-animales-uwa",
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7274,
+      "prompt_sha256": "45dabec02561f2aa979aa0f63ba9e5ddc879d153d0d1229db01d9eef4ba41f2c"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base: mujer adulta u'wa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-u-wa",
+        "el-oso-y-el-hombre-uwa",
+        "lisha-la-madre-del-agua",
+        "mensajes-de-los-animales-uwa",
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6999,
+      "prompt_sha256": "495864276075830d8a3b1ab4babbae66501c1a3ada15d5fb5ac5db5a65ea62bf"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base: niño u'wa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-oso-y-el-hombre-uwa",
+        "kubashoa-el-hijo-del-tabaco",
+        "mensajes-de-los-animales-uwa",
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6407,
+      "prompt_sha256": "5e51bb2a1d833af04cd4d68a7a37c29a5ee79dea2d1d034a31f6375172037935"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base: mujer joven u'wa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-u-wa",
+        "lisha-la-madre-del-agua",
+        "mensajes-de-los-animales-uwa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6747,
+      "prompt_sha256": "9a75fa5fce1558b03c4305ee63e6b2495fb537b9fa201110f1c9cb5365ccb8f7"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base: anciano u'wa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-recorrido-de-uktara",
+        "yanoa-y-sirbetuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6638,
+      "prompt_sha256": "11ceb73eebb62567a1a5169dabf1b2b3e665da609985132668e1525baf5bb199"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base: anciana u'wa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6614,
+      "prompt_sha256": "3d557d26d4940621e7b47a48dad9a8fad183bc17a514d05e0fa7ad606e2a4b0b"
+    }
+  ]
+}

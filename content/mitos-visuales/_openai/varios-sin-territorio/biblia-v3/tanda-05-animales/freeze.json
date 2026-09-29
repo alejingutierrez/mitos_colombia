@@ -1,0 +1,549 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "varios-sin-territorio",
+  "comunidad": "Folclor nacional sin territorio",
+  "tanda": "tanda-05-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/varios-sin-territorio.v3.json",
+    "sha256": "960a317c807ac538873f57921f7eb1ee2bdc9f7c716935e83d742a83ff8dbcbf"
+  },
+  "canon": {
+    "sha256": "c1bf9aa902622b9cc85521f658c702c1ade9370c2901b2317eac5892c1fb77f3",
+    "verificado_en": "2026-09-29T02:46:39.558Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos"
+  ],
+  "fichas_en_capa": 28,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "caballo_de_camino__identity_sheet--canon",
+      "modelo": "caballo_de_camino__identity_sheet",
+      "entidad": "Caballo de camino",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-jinete-negro",
+        "francisco-el-hombre",
+        "los-duendes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6680,
+      "prompt_sha256": "4a20258ec7a0ac25a37aee7f3be8c69dbac8269614e23d16d39bdefadb7fd871"
+    },
+    {
+      "job": "el_diablo_del_folclor__identity_sheet--canon",
+      "modelo": "el_diablo_del_folclor__identity_sheet",
+      "entidad": "El Diablo del folclor (Mandingas, Maldingas, el Malo)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-mandingas",
+        "francisco-el-hombre",
+        "el-barco-fantasma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6628,
+      "prompt_sha256": "40521ad566a446c09c254cbd695365a5d9892d68ecccdd9d190096e5d6e3cd0c"
+    },
+    {
+      "job": "el_diablo_del_folclor__state_sheet--estado_forastero de traje elegante e impecable que reta con un instrumento, todavía sin revelar los pies",
+      "modelo": "el_diablo_del_folclor__state_sheet",
+      "entidad": "El Diablo del folclor (Mandingas, Maldingas, el Malo)",
+      "categoria": "criatura",
+      "vista": "estado_forastero de traje elegante e impecable que reta con un instrumento, todavía sin revelar los pies",
+      "estados": [
+        "forastero de traje elegante e impecable que reta con un instrumento, todavía sin revelar los pies"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-mandingas",
+        "francisco-el-hombre",
+        "el-barco-fantasma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7402,
+      "prompt_sha256": "3df6cda384f1d64fc7dded95c5fd87166e85fefa78fdd7d586414af8ee626205"
+    },
+    {
+      "job": "el_diablo_del_folclor__state_sheet--estado_acordeonista gigante de cinco metros montado en un caballo enorme con el fuelle abierto",
+      "modelo": "el_diablo_del_folclor__state_sheet",
+      "entidad": "El Diablo del folclor (Mandingas, Maldingas, el Malo)",
+      "categoria": "criatura",
+      "vista": "estado_acordeonista gigante de cinco metros montado en un caballo enorme con el fuelle abierto",
+      "estados": [
+        "acordeonista gigante de cinco metros montado en un caballo enorme con el fuelle abierto"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-mandingas",
+        "francisco-el-hombre",
+        "el-barco-fantasma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7346,
+      "prompt_sha256": "dec18ab73eeb83eb08f699221a1f70c95f73a56a246234adf0a51d90de1477ad"
+    },
+    {
+      "job": "la_madremonte__identity_sheet--canon",
+      "modelo": "la_madremonte__identity_sheet",
+      "entidad": "La Madremonte",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-madremonte",
+        "el-hojarasquin-del-monte"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6914,
+      "prompt_sha256": "4d0da18359bf8b278605216a30c59ba53bdf837d9ab3d4484453fc3098af6dbe"
+    },
+    {
+      "job": "la_madremonte__state_sheet--estado_mujer vegetal de cabellos de helechos y lianas bajo sombrero de flores, piel de musgo y brazos de bejuco",
+      "modelo": "la_madremonte__state_sheet",
+      "entidad": "La Madremonte",
+      "categoria": "criatura",
+      "vista": "estado_mujer vegetal de cabellos de helechos y lianas bajo sombrero de flores, piel de musgo y brazos de bejuco",
+      "estados": [
+        "mujer vegetal de cabellos de helechos y lianas bajo sombrero de flores, piel de musgo y brazos de bejuco"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-madremonte",
+        "el-hojarasquin-del-monte"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7258,
+      "prompt_sha256": "0c895a4b28b69e449c93f27686e2bcc7952737b2093722aa4a131e158ae9b16d"
+    },
+    {
+      "job": "cetaceos_del_pacifico__identity_sheet--canon",
+      "modelo": "cetaceos_del_pacifico__identity_sheet",
+      "entidad": "Las ballenas jorobadas de la Sirena",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-sirena-del-arco"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6382,
+      "prompt_sha256": "612f540d88b8363c7bfaf3de05ee5f3006e77b053d0b1babf1f83950234e6bc3"
+    },
+    {
+      "job": "el_anima_sola__identity_sheet--canon",
+      "modelo": "el_anima_sola__identity_sheet",
+      "entidad": "El Ánima Sola",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-anima-sola"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6400,
+      "prompt_sha256": "31bf22c6fb30d2c2a648c6e8595ab14f8f3ed75e671df69a32357105a10ec536"
+    },
+    {
+      "job": "el_anima_sola__state_sheet--estado_señora de visita que remienda la ropa de los niños y se pone pálida antes de desaparecer",
+      "modelo": "el_anima_sola__state_sheet",
+      "entidad": "El Ánima Sola",
+      "categoria": "criatura",
+      "vista": "estado_señora de visita que remienda la ropa de los niños y se pone pálida antes de desaparecer",
+      "estados": [
+        "señora de visita que remienda la ropa de los niños y se pone pálida antes de desaparecer"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-anima-sola"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6152,
+      "prompt_sha256": "9f6836d40852bbf7c1b82445ed544374c9e5bbde4709a0f0eac7bfea3cd0b1e2"
+    },
+    {
+      "job": "el_cura_sin_cabeza__identity_sheet--canon",
+      "modelo": "el_cura_sin_cabeza__identity_sheet",
+      "entidad": "El Cura sin Cabeza",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-cura-sin-cabeza"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6869,
+      "prompt_sha256": "e83d1c258f65b48979e9c20a929bfe587437d6125ebc1c0f6df021304658cff0"
+    },
+    {
+      "job": "el_duende__identity_sheet--canon",
+      "modelo": "el_duende__identity_sheet",
+      "entidad": "El Duende",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-duendes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6922,
+      "prompt_sha256": "e647020c0718cda8ca693732fd085dacebf2ab66a2bf8ad51dd1708a83ccafca"
+    },
+    {
+      "job": "el_hojarasquin_del_monte__identity_sheet--canon",
+      "modelo": "el_hojarasquin_del_monte__identity_sheet",
+      "entidad": "El Hojarasquín del Monte",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-hojarasquin-del-monte"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6273,
+      "prompt_sha256": "285b48b5811262ab57e8df5967d3ac6df84844e3c1d87ce520537852c6a20601"
+    },
+    {
+      "job": "el_hojarasquin_del_monte__state_sheet--estado_mico gigante muy peludo, cubierto de musgo y hojas secas, encaramado y visto desde abajo",
+      "modelo": "el_hojarasquin_del_monte__state_sheet",
+      "entidad": "El Hojarasquín del Monte",
+      "categoria": "criatura",
+      "vista": "estado_mico gigante muy peludo, cubierto de musgo y hojas secas, encaramado y visto desde abajo",
+      "estados": [
+        "mico gigante muy peludo, cubierto de musgo y hojas secas, encaramado y visto desde abajo"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-hojarasquin-del-monte"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6859,
+      "prompt_sha256": "4227419a959355b682066ffca2b1c63f6bce6d4ceb812a5ecd4a46aaba2dad38"
+    },
+    {
+      "job": "el_hojarasquin_del_monte__state_sheet--estado_tronco seco escondido entre la hojarasca mientras el bosque reverdece",
+      "modelo": "el_hojarasquin_del_monte__state_sheet",
+      "entidad": "El Hojarasquín del Monte",
+      "categoria": "criatura",
+      "vista": "estado_tronco seco escondido entre la hojarasca mientras el bosque reverdece",
+      "estados": [
+        "tronco seco escondido entre la hojarasca mientras el bosque reverdece"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-hojarasquin-del-monte"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7134,
+      "prompt_sha256": "dc9ee7b7764217660972868d0d9667f110007aeb4fc0297a21243e0bea8076e6"
+    },
+    {
+      "job": "el_hombre_caiman__identity_sheet--canon",
+      "modelo": "el_hombre_caiman__identity_sheet",
+      "entidad": "El Hombre Caimán",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-hombre-caiman"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6375,
+      "prompt_sha256": "e12484dc4c3b1f944c1e3626e1ae3c16c3f5e00a18e4d2effaf76030c9ff0f8e"
+    },
+    {
+      "job": "el_hombre_caiman__state_sheet--estado_caimán entero al lanzarse al agua, antes de echarse las gotas del frasco",
+      "modelo": "el_hombre_caiman__state_sheet",
+      "entidad": "El Hombre Caimán",
+      "categoria": "criatura",
+      "vista": "estado_caimán entero al lanzarse al agua, antes de echarse las gotas del frasco",
+      "estados": [
+        "caimán entero al lanzarse al agua, antes de echarse las gotas del frasco"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-hombre-caiman"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5970,
+      "prompt_sha256": "2f0d9303bdccfb5527ca1c3d8d91831bed393aef51ef08802db09922158b7ca2"
+    },
+    {
+      "job": "el_mohan_poira__identity_sheet--canon",
+      "modelo": "el_mohan_poira__identity_sheet",
+      "entidad": "El Mohán del Tolima (el Mechudo)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-mohan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6450,
+      "prompt_sha256": "e9df80b9874e5c4b617ed33b41a7d256abd2da08845ddf58506429827cbc8a05"
+    },
+    {
+      "job": "el_mohan_poira__state_sheet--estado_hombre pequeño y musculoso de pelo y barba rojos que merca en el pueblo sin llevar sal",
+      "modelo": "el_mohan_poira__state_sheet",
+      "entidad": "El Mohán del Tolima (el Mechudo)",
+      "categoria": "criatura",
+      "vista": "estado_hombre pequeño y musculoso de pelo y barba rojos que merca en el pueblo sin llevar sal",
+      "estados": [
+        "hombre pequeño y musculoso de pelo y barba rojos que merca en el pueblo sin llevar sal"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-mohan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7228,
+      "prompt_sha256": "b09771e6b149c40480b6f8554956e1751fc8cef3014e9becacaa3fd4866013ce"
+    },
+    {
+      "job": "el_sombreron_jinete_negro__identity_sheet--canon",
+      "modelo": "el_sombreron_jinete_negro__identity_sheet",
+      "entidad": "El Jinete Negro de Ocaña (don Antón García de Bonilla)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-jinete-negro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6374,
+      "prompt_sha256": "e2034d6c0da8da68eff42e84ab32537d8ad3958c5cb5753d1176a1f72bffb63a"
+    },
+    {
+      "job": "el_sombreron_jinete_negro__state_sheet--estado_potro de fuego al galope con chispas en los cascos por la calle empedrada",
+      "modelo": "el_sombreron_jinete_negro__state_sheet",
+      "entidad": "El Jinete Negro de Ocaña (don Antón García de Bonilla)",
+      "categoria": "criatura",
+      "vista": "estado_potro de fuego al galope con chispas en los cascos por la calle empedrada",
+      "estados": [
+        "potro de fuego al galope con chispas en los cascos por la calle empedrada"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-jinete-negro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7089,
+      "prompt_sha256": "4106d1545955b28c71505491e25f3ee40726dd0126a787c2e59fd4d81a58c24d"
+    },
+    {
+      "job": "el_viejo_del_costal__identity_sheet--canon",
+      "modelo": "el_viejo_del_costal__identity_sheet",
+      "entidad": "El Viejo del Costal",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-mano-peluda"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6552,
+      "prompt_sha256": "4bea87464844eef8be8112a11943a6eef2a6bbff205325d8e91c4a21646cb624"
+    },
+    {
+      "job": "la_bruja_silbona__identity_sheet--canon",
+      "modelo": "la_bruja_silbona__identity_sheet",
+      "entidad": "La Bruja Silbona",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-silbon"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6294,
+      "prompt_sha256": "08d09bd9f03b6573c93690514b2d07036607c7a756d678ddaa96842a9056f542"
+    },
+    {
+      "job": "la_llorona__identity_sheet--canon",
+      "modelo": "la_llorona__identity_sheet",
+      "entidad": "La Llorona",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-llorona"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6732,
+      "prompt_sha256": "c29db2f8b9b96b83431d842718585d49863b12cbeac274026dc6f8744595e578"
+    },
+    {
+      "job": "la_llorona__state_sheet--estado_de largas vestiduras y rostro de calavera de órbitas encendidas, cargando un niño muerto como bulto de tela cerrado",
+      "modelo": "la_llorona__state_sheet",
+      "entidad": "La Llorona",
+      "categoria": "criatura",
+      "vista": "estado_de largas vestiduras y rostro de calavera de órbitas encendidas, cargando un niño muerto como bulto de tela cerrado",
+      "estados": [
+        "de largas vestiduras y rostro de calavera de órbitas encendidas, cargando un niño muerto como bulto de tela cerrado"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-llorona"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6747,
+      "prompt_sha256": "a2633bd7770b1ec87e1947e3c6815a935941d06a72a6a36c78b0bcb762206f68"
+    },
+    {
+      "job": "la_mano_peluda__identity_sheet--canon",
+      "modelo": "la_mano_peluda__identity_sheet",
+      "entidad": "La Mano Peluda",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-mano-peluda"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6788,
+      "prompt_sha256": "2d90905184a83f2815361b271f7c37f3ce60a02d2b38c440180739d930a59971"
+    },
+    {
+      "job": "la_mano_peluda__state_sheet--estado_manaza negra y velluda que se alarga por las rendijas y troneras del bahareque",
+      "modelo": "la_mano_peluda__state_sheet",
+      "entidad": "La Mano Peluda",
+      "categoria": "criatura",
+      "vista": "estado_manaza negra y velluda que se alarga por las rendijas y troneras del bahareque",
+      "estados": [
+        "manaza negra y velluda que se alarga por las rendijas y troneras del bahareque"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-mano-peluda"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7367,
+      "prompt_sha256": "d855280c345ae9c61b9a0bbe9959e8afa5b02c2321c7c437c45b8325cd138332"
+    },
+    {
+      "job": "la_nina_de_la_carta__identity_sheet--canon",
+      "modelo": "la_nina_de_la_carta__identity_sheet",
+      "entidad": "La Niña de la Carta",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-nina-de-la-carta"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6882,
+      "prompt_sha256": "bd2cd3d733354d117643bfb3d94284067effdd900cda665f9383c6196d3babb0"
+    },
+    {
+      "job": "la_sirena_del_arco__identity_sheet--canon",
+      "modelo": "la_sirena_del_arco__identity_sheet",
+      "entidad": "La Sirena del Arco",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-sirena-del-arco"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6885,
+      "prompt_sha256": "5553e6406ffd126b09634efa6e9b3ed53cdd6f5b76f42ee49ed4732d0304c3a5"
+    },
+    {
+      "job": "la_vieja_colmillona__identity_sheet--canon",
+      "modelo": "la_vieja_colmillona__identity_sheet",
+      "entidad": "La Vieja Colmillona",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-vieja-colmillona"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7551,
+      "prompt_sha256": "640b9a492061c4d9e68e6399d9d304314d2688dd3d3ff3a9c58dda59eb306a23"
+    },
+    {
+      "job": "la_viudita_enlutada__identity_sheet--canon",
+      "modelo": "la_viudita_enlutada__identity_sheet",
+      "entidad": "La Viudita",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-viudita"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6757,
+      "prompt_sha256": "54f1cc6a9b78eeb51a93b52edaa76478ad4b9d3ea425d6b67f5d806a3ee6b44d"
+    }
+  ]
+}

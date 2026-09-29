@@ -1,0 +1,62 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "quimbaya",
+  "comunidad": "Quimbaya",
+  "tanda": "tanda-05-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/quimbaya.v3.json",
+    "sha256": "7a8c010af754b07a8d4715ae9be991c98819d264ed16211b189e0d5df6e75ce9"
+  },
+  "canon": {
+    "sha256": "f3d06bb1d1580d062cde491b91523719658943e00e9b8d7758863a7405e21b1e",
+    "verificado_en": "2026-09-29T02:15:01.151Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "gente_de_los_pueblos_de_via__group_grammar--canon",
+      "modelo": "gente_de_los_pueblos_de_via__group_grammar",
+      "entidad": "La gente que llega de noche al bohío",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "nabsacadas-la-estrella-caida"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9775,
+      "prompt_sha256": "ada75c871290c4e37ceeb95ab3a179f4c6d15b33288950bb300a26d1b9913646"
+    },
+    {
+      "job": "grupos_del_juego__group_grammar--canon",
+      "modelo": "grupos_del_juego__group_grammar",
+      "entidad": "Los grupos del juego: mujeres, hombres y jóvenes",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "batatabati"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 10853,
+      "prompt_sha256": "c46031a514f69578a97d50109311e50b22342b779151c1ecb4ac733dbb860472"
+    }
+  ]
+}

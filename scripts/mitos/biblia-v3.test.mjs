@@ -796,3 +796,145 @@ test("toda figura humana o humanizada del lote activo supera la compuerta", () =
     assert.deepEqual(errors, [], errors.join("\n"));
   }
 });
+
+// 218 de las 240 paginas del corpus mestizo no tienen fila editorial: su
+// relato vive en `content`. Exigirles los cuatro campos obligaria a declarar
+// que se leyo algo que no existe.
+test("un corpus de paginas puede declarar sus propios campos, y queda obligado a explicarlo", () => {
+  const plan = fixture();
+  plan.corpus.required_fields = ["content"];
+  plan.corpus.fields_note =
+    "Paginas sin fila editorial: el relato vive en content y no hay historia, versiones ni research_notes.";
+  plan.source_snapshot.fields = ["content"];
+  plan.myths["hijo-del-condor"].extraction.reviewed_fields = ["content"];
+
+  const ok = validateBibleV3(plan, { stage: "inventory" });
+  assert.deepEqual(ok.errors, [], ok.errors.map((error) => `${error.path}: ${error.message}`).join("\n"));
+});
+
+test("cambiar los campos exigidos sin explicar por que es un error", () => {
+  const plan = fixture();
+  plan.corpus.required_fields = ["content"];
+  plan.source_snapshot.fields = ["content"];
+  plan.myths["hijo-del-condor"].extraction.reviewed_fields = ["content"];
+
+  const report = validateBibleV3(plan, { stage: "inventory" });
+  assert.ok(report.errors.some((error) => error.path === "corpus.fields_note"));
+});
+
+test("un corpus no puede declarar que no leyo el relato", () => {
+  const plan = fixture();
+  plan.corpus.required_fields = ["historia"];
+  plan.corpus.fields_note = "Excusa cualquiera.";
+  plan.source_snapshot.fields = ["historia"];
+  plan.myths["hijo-del-condor"].extraction.reviewed_fields = ["historia"];
+
+  const report = validateBibleV3(plan, { stage: "inventory" });
+  assert.ok(report.errors.some((error) => error.message.includes("mito o content")));
+});
+
+test("el contrato por defecto sigue exigiendo los cuatro campos", () => {
+  const plan = fixture();
+  plan.source_snapshot.fields = ["mito", "historia"];
+  const report = validateBibleV3(plan, { stage: "inventory" });
+  assert.ok(report.errors.some((error) => error.message.includes("falta leer versiones")));
+});
+
+test("un relato cuya unica primaria no llega a lamina queda bloqueado", () => {
+  // El constructor proponia primarias por rareza —la figura que aparece en menos
+  // mitos— y una entidad excluida es rarisima justamente porque no se produce.
+  // Cayo en la trampa 29 veces, y `bolivar-cartagena-mestizo` paso la compuerta
+  // `design` con ocho relatos cuya unica primaria era una persona embebida.
+  const plan = fixture();
+  const refs = plan.myths["hijo-del-condor"].entity_refs;
+  for (const ref of refs) if (ref.role === "primary") plan.entities[ref.entity_id].visual_status = "embedded";
+  const report = validateBibleV3(plan, { stage: "inventory" });
+  assert.equal(report.ok, false);
+  assert.ok(report.errors.some((error) => /ninguna primaria llega a lamina/.test(error.message)));
+});
+
+test("una primaria excluida con razon convive con otra que si se dibuja", () => {
+  // Wayuu registra el viajero compuesto de «Los dominios de Juya» como primaria
+  // y lo excluye para no falsear una tercera identidad, junto a Juya, que si
+  // tiene lamina. Eso es el contrato funcionando: lo detectado se anota aunque
+  // no se dibuje, y la regla mira el relato entero y no cada ref por separado.
+  const plan = fixture();
+  plan.entities.madre.visual_status = "embedded";
+  plan.entities.madre.covered_by = "hijo";
+  plan.entities.madre.coverage_note = "Se resuelve dentro del modelo indicado.";
+  plan.entities.madre.model_requirements = [];
+  plan.entities.madre.model_refs = [];
+  const report = validateBibleV3(plan, { stage: "inventory" });
+  assert.ok(!report.errors.some((error) => /ninguna primaria llega a lamina/.test(error.message)));
+});
+
+test("una pagina que no debe ilustrarse lo declara en vez de dejar la primaria colgando", () => {
+  // `esperanza-en-el-oriente` no es un relato sino una hipotesis comparativa de
+  // 1956, y sus cinco entidades estan excluidas con razon propia. Una pagina que
+  // no produce lamina es un resultado legitimo; lo que no se puede es callarlo.
+  const plan = fixture();
+  for (const ref of plan.myths["hijo-del-condor"].entity_refs) {
+    if (ref.role === "primary") plan.entities[ref.entity_id].visual_status = "embedded";
+  }
+  plan.myths["hijo-del-condor"].not_illustrated = "La pagina se lee y se registra, pero sus figuras pertenecen a tradiciones propias que ficharlas aqui borraria.";
+  const report = validateBibleV3(plan, { stage: "inventory" });
+  assert.ok(!report.errors.some((error) => /ninguna primaria llega a lamina/.test(error.message)));
+});
+
+test("un rol que el script propuso y nadie reviso bloquea la compuerta de diseno", () => {
+  // `role_derivada` es la marca temporal del constructor. Mientras siga puesta,
+  // nadie leyo ese rol contra el relato — y el rol es la unica parte del
+  // inventario que no se deriva de la categoria.
+  const plan = fixture();
+  plan.myths["hijo-del-condor"].entity_refs[0].role_derivada = "candidata, confirmar";
+  assert.ok(validateBibleV3(plan, { stage: "inventory" }).errors.every((error) => !/role_derivada/.test(error.message)));
+  const report = validateBibleV3(plan, { stage: "design" });
+  assert.equal(report.ok, false);
+  assert.ok(report.errors.some((error) => /nunca revisado/.test(error.message)));
+});
+
+test("una ficha no puede producir una lamina de un estado que no declara", () => {
+  // La Madremonte declaraba «forma temible» y producia «presencia insinuada»,
+  // que es justo el estado que su propio `editorial` dice que NO se produce.
+  const plan = fixture();
+  plan.entities.hijo.states = ["canonico", "forma temible: colmillos y manos descarnadas"];
+  plan.entities.hijo.design = { states_to_model: null };
+  plan.entities.hijo.design.states_to_model = ["presencia insinuada: una zarza que se mueve"];
+  const report = validateBibleV3(plan, { stage: "design" });
+  assert.equal(report.ok, false);
+  assert.ok(report.errors.some((e) => /estado que la ficha no declara/.test(e.message)));
+});
+
+test("una ficha sin estados declarados no encarga laminas de estado", () => {
+  // Siete fichas cobraban estado contra el censo y dejaban `states` en
+  // `["canonico"]`: la lamina existia y el registro decia que no habia estado.
+  const plan = fixture();
+  plan.entities.hijo.states = ["canonico"];
+  plan.entities.hijo.design = { states_to_model: null };
+  plan.entities.hijo.design.states_to_model = ["aguas bajas de julio a octubre"];
+  const report = validateBibleV3(plan, { stage: "design" });
+  assert.equal(report.ok, false);
+  assert.ok(report.errors.some((e) => /no declara ninguno/.test(e.message)));
+});
+
+test("expandir un estado declarado no es contradecirlo", () => {
+  // Una hoja de modelo necesita mas detalle que un inventario: «en obra, con un
+  // hueco por cerrar» se escribe «en obra, con el hueco del ultimo sillar
+  // abierto en el arco». Es el mismo estado, y exigir literalidad daba cuatro
+  // corpus en falso rojo.
+  const plan = fixture();
+  plan.entities.hijo.states = ["canonico", "en obra, con un hueco por cerrar"];
+  plan.entities.hijo.design = { states_to_model: null };
+  plan.entities.hijo.design.states_to_model = ["en obra, con el hueco del ultimo sillar abierto en el arco y las piedras en el suelo"];
+  assert.ok(validateBibleV3(plan, { stage: "design" }).errors.every((e) => !/states_to_model/.test(e.path)));
+});
+
+test("un estado de una sola palabra corta tambien casa", () => {
+  // «ave» y «Sol» son estados enteros en ticuna y en u'wa, y un filtro de mas
+  // de tres letras los dejaba sin una sola palabra con la que casar.
+  const plan = fixture();
+  plan.entities.hijo.states = ["canonico", "ave"];
+  plan.entities.hijo.design = { states_to_model: null };
+  plan.entities.hijo.design.states_to_model = ["ave"];
+  assert.ok(validateBibleV3(plan, { stage: "design" }).errors.every((e) => !/states_to_model/.test(e.path)));
+});

@@ -1,0 +1,302 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "u-wa",
+  "comunidad": "U’wa",
+  "tanda": "tanda-08-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/u-wa.v3.json",
+    "sha256": "5e5462ec1faa17ad393b4cbaccc5e11a5e2c3cbcf01983f403221e88f1fa1ff2"
+  },
+  "canon": {
+    "sha256": "a90c54e7ee6b64a69b74d22cb095455d84c1040f832c2a85fbbf36891e532aed",
+    "verificado_en": "2026-09-28T20:57:52.769Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 16,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "almas_de_la_otra_dimension__identity_sheet--canon",
+      "modelo": "almas_de_la_otra_dimension__identity_sheet",
+      "entidad": "Las almas de la dimensión de los muertos",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-recorrido-de-uktara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5326,
+      "prompt_sha256": "d57d2f8182b9f346e7781fdc54f88a029229243cae9ff736550199764c075261"
+    },
+    {
+      "job": "almas_de_la_otra_dimension__state_sheet--estado_murcielago_diurno",
+      "modelo": "almas_de_la_otra_dimension__state_sheet",
+      "entidad": "Las almas de la dimensión de los muertos",
+      "categoria": "criatura",
+      "vista": "estado_murcielago_diurno",
+      "estados": [
+        "murcielago_diurno"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-recorrido-de-uktara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5315,
+      "prompt_sha256": "7dda1d49d1592b359a082a3ab70fe2a2572a0d72c4106a266dea23d7cb48ceb2"
+    },
+    {
+      "job": "cientaro__identity_sheet--canon",
+      "modelo": "cientaro__identity_sheet",
+      "entidad": "El pájaro cientaro",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "mensajes-de-los-animales-uwa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5350,
+      "prompt_sha256": "4bce1a902b4a5ad5042be09d758c1dde3fea03fee7756e32f1bf6b3d342a77a2"
+    },
+    {
+      "job": "culebra_del_camino__identity_sheet--canon",
+      "modelo": "culebra_del_camino__identity_sheet",
+      "entidad": "La culebra del camino",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-pajaro-carpintero-y-el-poder-de-curar"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5010,
+      "prompt_sha256": "2a227736f0b3ea4566b3a3d236d6a0ba12280f70831372236689b54370b63753"
+    },
+    {
+      "job": "ganado_vacuno__identity_sheet--canon",
+      "modelo": "ganado_vacuno__identity_sheet",
+      "entidad": "El ganado y la vaca",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "yanoa-y-sirbetuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5009,
+      "prompt_sha256": "4a09816142d391c8e92982a8953afb8e63ad8015423d58525c8c099a6a2ec304"
+    },
+    {
+      "job": "konara__identity_sheet--canon",
+      "modelo": "konara__identity_sheet",
+      "entidad": "Konara",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4926,
+      "prompt_sha256": "39555d7eb4a4ad021173064c4d23e02d870ae3fde00647e202c53b5b9ec6cb9d"
+    },
+    {
+      "job": "lisha__identity_sheet--canon",
+      "modelo": "lisha__identity_sheet",
+      "entidad": "Lisha, la madre del agua",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "lisha-la-madre-del-agua"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4873,
+      "prompt_sha256": "fffd4754b468acbd7c3d1b5f23e374efb56bc37787e252c843768cfecdf3e1bc"
+    },
+    {
+      "job": "lisha__state_sheet--estado_olas_devoradoras",
+      "modelo": "lisha__state_sheet",
+      "entidad": "Lisha, la madre del agua",
+      "categoria": "criatura",
+      "vista": "estado_olas_devoradoras",
+      "estados": [
+        "olas_devoradoras"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "lisha-la-madre-del-agua"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4861,
+      "prompt_sha256": "cc95bc771f8417a2b6dd1b2740297407827fb593ef97aca9ae16abd31f5a77d4"
+    },
+    {
+      "job": "monoa_nino__identity_sheet--canon",
+      "modelo": "monoa_nino__identity_sheet",
+      "entidad": "El niño Monoa",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4777,
+      "prompt_sha256": "18660d3fd4bf58e9770a5a94e2e8558d27a09e20052b9a9266b2677e4bea5a59"
+    },
+    {
+      "job": "monoa_padre__identity_sheet--canon",
+      "modelo": "monoa_padre__identity_sheet",
+      "entidad": "Monoa, el de la montaña",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5265,
+      "prompt_sha256": "80713713435dfdfac62d0bf9807b208b03fe0fc6be080eb98279613ebf81f0e7"
+    },
+    {
+      "job": "oso_protector_de_bakokuira__identity_sheet--canon",
+      "modelo": "oso_protector_de_bakokuira__identity_sheet",
+      "entidad": "El oso protector de Bakokuira",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-oso-y-el-hombre-uwa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5356,
+      "prompt_sha256": "9198b3b0d545a31098156b9a5a5be5144d79d8fb0b86f4e4a30925fa60a943f6"
+    },
+    {
+      "job": "pajaro_carpintero_kejeta__identity_sheet--canon",
+      "modelo": "pajaro_carpintero_kejeta__identity_sheet",
+      "entidad": "El pájaro carpintero (Kejeta)",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-pajaro-carpintero-y-el-poder-de-curar"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5279,
+      "prompt_sha256": "a40aea8f1d4845507774198d27949689f675675fc746148076fffec7d5ea9165"
+    },
+    {
+      "job": "perdiz__identity_sheet--canon",
+      "modelo": "perdiz__identity_sheet",
+      "entidad": "La perdiz",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4758,
+      "prompt_sha256": "c718abadf019db1d4f003ea2200c3e7533b53b9139aa81fdabe0d24f4ddf5a3c"
+    },
+    {
+      "job": "pichones_de_ciguena__identity_sheet--canon",
+      "modelo": "pichones_de_ciguena__identity_sheet",
+      "entidad": "Los pichones de cigüeña",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4815,
+      "prompt_sha256": "32c06811a90882290c86e5278dc24d3717b617a8d4dd98fb66bbbbee687507e6"
+    },
+    {
+      "job": "tigrillo__identity_sheet--canon",
+      "modelo": "tigrillo__identity_sheet",
+      "entidad": "El tigrillo",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "mensajes-de-los-animales-uwa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5047,
+      "prompt_sha256": "e92954a9fa5eaf21322295dc7094f126c6a0e4cad8c666ff6bf4b6961011a999"
+    },
+    {
+      "job": "urkoa__identity_sheet--canon",
+      "modelo": "urkoa__identity_sheet",
+      "entidad": "Urkoa",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5200,
+      "prompt_sha256": "26457d40e497cad02fbd00867dc5b13b698b2522289f5378e322b8abb1828208"
+    }
+  ]
+}

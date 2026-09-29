@@ -1,0 +1,112 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ufaina",
+  "comunidad": "Tanimuka (Ufaina)",
+  "tanda": "tanda-05-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ufaina.v3.json",
+    "sha256": "aa64b80ecc70f5aaf4142aa291dc9c4bd8964c26d6d3253721afa1ec6f44d595"
+  },
+  "canon": {
+    "sha256": "1aaa30b3d70bf5aafd9d3828039d6e628c8a39470a236d76f2cfa906cd8e6361",
+    "verificado_en": "2026-09-29T02:12:08.303Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "el_abuelo_dueno_de_las_hojas__identity_sheet--canon",
+      "modelo": "el_abuelo_dueno_de_las_hojas__identity_sheet",
+      "entidad": "El abuelo, dueño de las hojas",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9612,
+      "prompt_sha256": "2b0f2472234053165a342fe740e1ad002b96820ce684848cc27d0094333e7843"
+    },
+    {
+      "job": "hija_del_sol__identity_sheet--canon",
+      "modelo": "hija_del_sol__identity_sheet",
+      "entidad": "La hija del Sol",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8143,
+      "prompt_sha256": "3560fe6b71188e2da370bff6e2aef73dd207924eea8b8fd3f2567e7164391eb3"
+    },
+    {
+      "job": "imarika_kayafiki__identity_sheet--canon",
+      "modelo": "imarika_kayafiki__identity_sheet",
+      "entidad": "Imárika Kayafikí, el menor",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8656,
+      "prompt_sha256": "a7e0aa2851de250d79b856a708174a8b15ba9c9d838a24512db193c036c807a7"
+    },
+    {
+      "job": "imarika_kayafiki__state_sheet--estado_convertido en ardilla, trepando el tronco para cortar el bejuco de la copa",
+      "modelo": "imarika_kayafiki__state_sheet",
+      "entidad": "Imárika Kayafikí, el menor",
+      "categoria": "personaje",
+      "vista": "estado_convertido en ardilla, trepando el tronco para cortar el bejuco de la copa",
+      "estados": [
+        "convertido en ardilla, trepando el tronco para cortar el bejuco de la copa"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 9365,
+      "prompt_sha256": "3e7306199c5ea578e4babd449330429e1b6f00acc4d362ec4d45059f0da53877"
+    },
+    {
+      "job": "mujer_mayor_del_agua__identity_sheet--canon",
+      "modelo": "mujer_mayor_del_agua__identity_sheet",
+      "entidad": "La tía que guardaba el agua en los cuatro estantillos",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8697,
+      "prompt_sha256": "a89a5f9f8cbda722c051baa64ebde3a5eac13bc1ef10cf0ea01a7f26cd129428"
+    }
+  ]
+}

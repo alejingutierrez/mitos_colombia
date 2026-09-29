@@ -1,0 +1,287 @@
+{
+  "id": "ansermas",
+  "label": "Ansermas",
+  "pages": 2,
+  "canon_pages": 2,
+  "read_note": "Leí los dos relatos completos (las-huellas-de-mapura = «Xixaraca, Michua y los Tamaracas» y los-pasos-de-xixaraca = «Las huellas de Xixaraca y las lágrimas de Michua») con sus cuatro campos, editorial/ansermas/universe.mjs y definitions.mjs con los dos pares de imagePrompt, y §«Qué construye la Biblia». Nota territorial: el encargo dice Caldas pero el canon y el módulo clasifican ambos relatos como «Andina > Risaralda > Ansermas»; dejé la categoría del canon. Este es un corpus de territorio, no de personajes: no hay un solo objeto de mano, no hay animales salvo la plaga, y el peso entero cae en cerros, río, cascadas y cultivos. Por eso no hay hoja de utilería: no existen cinco objetos menores que agrupar. Dos hallazgos importantes. Uno: el cerro Batero de este corpus es el mismo cerro Batero del corpus Umbra, en Quinchía; son dos biblias distintas y no pueden compartir ni una lámina, aunque la montaña sea la misma piedra. Dos: la palabra Tamaraca tiene tres capas —en Cieza nombra a los españoles, en el relato de 1947 nombra seres de adentro, y en usos recientes nombra minería y despojo—, y versiones tardías llegaron a identificarlos con pueblos vecinos vivos; eso último queda excluido con do_not_visualize. Quedó dudoso el estado base de los Tamaracas: el relato nunca describe su cuerpo antes de la plaga, así que la primera hoja tendrá que declararse abiertamente como forma abstracta contenida y no como criatura resuelta.",
+  "entities": [
+    {
+      "id": "xixaraca",
+      "name": "Xixaraca",
+      "kind": "deidad_fuerza",
+      "myths": ["las-huellas-de-mapura", "los-pasos-de-xixaraca"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce los dos relatos: vive en Karambá, cuida a la gente de Guacuma, mantiene sujetos a los Tamaracas, los obliga a volver bajo Opiramá y al final se va dejando las huellas en la roca. La ficha tiene que sostener la corrección central del canon —Gabriel Campeón rechazó llamarlo «diablo»—: ni demonio ni deidad europeizada, y sin tocado genérico."
+    },
+    {
+      "id": "michua",
+      "name": "Michua",
+      "kind": "deidad_fuerza",
+      "myths": ["las-huellas-de-mapura", "los-pasos-de-xixaraca"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Segunda fuerza protectora y cuerpo distinto del de Xixaraca: desciende desde Batero anunciada por relámpagos y tormenta, recorre nubes y pendientes, y al partir mira por última vez el territorio y llora hasta formar las cascadas. Está en las cuatro escenas ya planeadas."
+    },
+    {
+      "id": "tamaracas",
+      "name": "Los Tamaracas, seres de adentro",
+      "kind": "criatura",
+      "myths": ["las-huellas-de-mapura"],
+      "decision": "required",
+      "sheets": 2,
+      "states": ["nube_de_langostas"],
+      "note": "Conducen el conflicto del primer relato: encerrados en las profundidades de Opiramá, cambian de forma durante ciertos periodos, buscan una abertura y, cuando escapan, se extienden como nubes de langostas devorando las plantas. El estado extra sí lo muestra el relato y cambia por completo la silueta —de sombra contenida a plaga—, así que cuesta ficha. La hoja base debe declararse como forma abstracta, porque la fuente nunca describe su cuerpo."
+    },
+    {
+      "id": "gente_de_guacuma",
+      "name": "La gente de Guacuma",
+      "kind": "colectivo",
+      "myths": ["las-huellas-de-mapura", "los-pasos-de-xixaraca"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Los protegidos: bajo el cuidado de Xixaraca crecen sus cultivos y pueden recorrer los caminos; cuando la plaga sale, su abundancia se vuelve hambre; en una de las versiones son quienes olvidan agradecer y provocan la partida. Única gramática de cuerpos humanos del corpus."
+    },
+    {
+      "id": "cerro_karamba_batero",
+      "name": "El cerro Karambá, también llamado Batero",
+      "kind": "paisaje",
+      "myths": ["las-huellas-de-mapura", "los-pasos-de-xixaraca"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Lugar de Xixaraca y Michua y centro del territorio de Guacuma: desde sus alturas cuidan caminos, cultivos y aguas, y de allí desciende Michua. Es el modelo de ambiente de todo el entorno serrano, incluidos los caminos. ATENCIÓN: el mismo cerro aparece en el corpus Umbra; son biblias distintas y no comparten láminas ni tratamiento."
+    },
+    {
+      "id": "cerro_opirama",
+      "name": "El cerro Opiramá",
+      "kind": "paisaje",
+      "myths": ["las-huellas-de-mapura"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del acto del primer relato y contrario necesario de Karambá: en sus profundidades permanecen encerrados los Tamaracas, de allí buscan salir y allí los obligan a regresar. El relato vive de esa oposición entre dos cerros, así que fundirlos en un solo paisaje destruiría la tensión. Conserva además la ambigüedad de contener el peligro y sostener la vida."
+    },
+    {
+      "id": "huellas_en_la_roca",
+      "name": "Las grandes huellas humanas sobre la roca",
+      "kind": "objeto",
+      "myths": ["los-pasos-de-xixaraca"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el objeto por el que se cuenta el relato y da título a la página: al caminar sobre las rocas Xixaraca imprime grandes huellas humanas que quedan cerca del agua como memoria difícil de borrar. Las dos escenas planeadas las muestran. La ficha no las presenta como prueba arqueológica: el canon dice expresamente que las fuentes no permiten resolver su origen material."
+    },
+    {
+      "id": "rio_mapura",
+      "name": "El río Mápura y sus rocas",
+      "kind": "paisaje",
+      "myths": ["los-pasos-de-xixaraca"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El lugar más constante de todas las versiones: por allí pasan los protectores al atravesar las montañas y allí quedan las marcas junto al agua. Rocas planas a la orilla; no es intercambiable con el cerro ni con las cascadas."
+    },
+    {
+      "id": "cascadas_lagrimas_de_michua",
+      "name": "Las Lágrimas de Michua (las cascadas)",
+      "kind": "paisaje",
+      "myths": ["los-pasos-de-xixaraca"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del acto final: las lágrimas descienden por la montaña hasta convertirse en cascadas, que la memoria regional identifica con los saltos de Bellavista. El canon advierte que no se invente una ruta continua entre huellas y saltos, de modo que es un sitio propio y no una continuación del río."
+    },
+    {
+      "id": "cultivos_de_maiz_y_chontaduro",
+      "name": "El maíz y el chontaduro",
+      "kind": "planta",
+      "myths": ["las-huellas-de-mapura"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Son lo que está en juego en el primer relato: bajo la protección de Xixaraca crecen, la plaga los devora y convierte la abundancia en hambre, y después hay que restablecer la relación entre montaña, agua y siembra. Aparecen en las dos escenas planeadas. Una hoja botánica con las dos especies nombradas, sanas y devoradas."
+    },
+    {
+      "id": "tormenta_de_michua",
+      "name": "La tormenta: relámpagos y agua que cambia de color",
+      "kind": "fenomeno",
+      "myths": ["las-huellas-de-mapura"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es la forma que toma el combate: la llegada de Michua se anuncia con relámpagos y tormenta, el agua cambia de color en medio de la lucha y el cielo parece participar en la defensa de los cultivos. Regla de fenómeno indispensable, porque el canon prohíbe resolver el enfrentamiento como batalla humana."
+    },
+    {
+      "id": "xixarama",
+      "name": "Xixarama",
+      "kind": "deidad_fuerza",
+      "myths": ["los-pasos-de-xixaraca"],
+      "decision": "embedded",
+      "covered_by": "xixaraca",
+      "sheets": 0,
+      "note": "Grafía de la crónica de Cieza y de varias síntesis históricas, frente al Xixaraca de la memoria regional de Quinchía. El canon conserva ambas y no asegura que sean personajes distintos: una sola ficha con las dos grafías declaradas."
+    },
+    {
+      "id": "batero_como_nombre",
+      "name": "Batero (otro nombre del cerro)",
+      "kind": "paisaje",
+      "myths": ["las-huellas-de-mapura", "los-pasos-de-xixaraca"],
+      "decision": "embedded",
+      "covered_by": "cerro_karamba_batero",
+      "sheets": 0,
+      "note": "«El cerro Karambá —también llamado Batero—». Mismo accidente con dos nombres; se declara en la ficha del cerro para que Michua descienda siempre del mismo lugar."
+    },
+    {
+      "id": "nubes_de_langostas",
+      "name": "Las nubes de langostas",
+      "kind": "animal",
+      "myths": ["las-huellas-de-mapura"],
+      "decision": "embedded",
+      "covered_by": "tamaracas",
+      "sheets": 0,
+      "note": "No son un animal del mundo: son la forma que toman los Tamaracas al escapar. Se producen como estado de esa ficha, no como fauna propia."
+    },
+    {
+      "id": "otras_plagas",
+      "name": "Las otras plagas",
+      "kind": "animal",
+      "myths": ["las-huellas-de-mapura"],
+      "decision": "embedded",
+      "covered_by": "tamaracas",
+      "sheets": 0,
+      "note": "«Se extendían como nubes de langostas y otras plagas»: la fuente no nombra ni describe ninguna otra. Variante del mismo estado, declarada en la hoja de los Tamaracas sin inventar especies."
+    },
+    {
+      "id": "abertura_de_opirama",
+      "name": "La abertura que buscan los Tamaracas",
+      "kind": "lugar",
+      "myths": ["las-huellas-de-mapura"],
+      "decision": "embedded",
+      "covered_by": "cerro_opirama",
+      "sheets": 0,
+      "note": "«Cambiaban de forma y buscaban una abertura»; la escena horizontal ya la resuelve como grieta del cerro. Parte del modelo espacial de Opiramá, no un lugar aparte."
+    },
+    {
+      "id": "caminos_de_guacuma",
+      "name": "Los caminos que podían recorrerse",
+      "kind": "lugar",
+      "myths": ["las-huellas-de-mapura"],
+      "decision": "embedded",
+      "covered_by": "cerro_karamba_batero",
+      "sheets": 0,
+      "note": "Bajo la protección de Xixaraca «los caminos podían recorrerse sin que las fuerzas escondidas destruyeran las cosechas». Son una condición del territorio, no un sitio con escena: entran en el modelo de ambiente del cerro."
+    },
+    {
+      "id": "rocas_planas_del_mapura",
+      "name": "Las rocas planas de la orilla",
+      "kind": "paisaje",
+      "myths": ["los-pasos-de-xixaraca"],
+      "decision": "embedded",
+      "covered_by": "rio_mapura",
+      "sheets": 0,
+      "note": "Soporte de las huellas. Parte del modelo del río; la hoja de las huellas se monta sobre ellas."
+    },
+    {
+      "id": "agua_color_de_sangre",
+      "name": "El agua que parece sangre",
+      "kind": "fenomeno",
+      "myths": ["las-huellas-de-mapura"],
+      "decision": "embedded",
+      "covered_by": "tormenta_de_michua",
+      "sheets": 0,
+      "note": "Cardona registra que Michua baja con rayos y hace que el agua parezca sangre. Es una fase de la regla de la tormenta; los prompts prohíben sangre explícita, así que se resuelve como cambio de color y no como líquido corporal."
+    },
+    {
+      "id": "saltos_de_bellavista",
+      "name": "Los saltos de Bellavista",
+      "kind": "paisaje",
+      "myths": ["los-pasos-de-xixaraca"],
+      "decision": "embedded",
+      "covered_by": "cascadas_lagrimas_de_michua",
+      "sheets": 0,
+      "note": "Nombre geográfico regional con el que la memoria identifica las Lágrimas de Michua. Mismo lugar, otra denominación: se declara dentro de la ficha de las cascadas."
+    },
+    {
+      "id": "tamaraca_como_los_espanoles",
+      "name": "Tamaraca en la traducción de Cieza: los españoles",
+      "kind": "colectivo",
+      "myths": ["las-huellas-de-mapura"],
+      "decision": "excluded",
+      "reason": "Sin cuerpo en el relato: en la traducción histórica de Cieza, Tamaraca es el término que los habitantes aplicaban a los conquistadores, no a seres subterráneos prehispánicos. Es una capa léxica del siglo XVI, no una entidad de la narración, y dibujarla fijaría una identificación que el canon deja abierta.",
+      "sheets": 0,
+      "note": "Verificado en el primer párrafo de versiones. Se registra porque la pasada de variantes lo detecta y porque explica por qué los Tamaracas del relato de 1947 no se pueden dibujar como españoles."
+    },
+    {
+      "id": "tamaracas_como_pueblos_vecinos",
+      "name": "Los Tamaracas identificados con pueblos vecinos",
+      "kind": "colectivo",
+      "myths": ["las-huellas-de-mapura"],
+      "decision": "excluded",
+      "reason": "Sensible · do_not_visualize. Versiones tardías identificaron a pueblos Noanamá, Tatamá, Chocó u otros vecinos con el mal. El canon lo prohíbe expresamente: «Esta edición no los identifica con ningún pueblo indígena vivo ni presenta a comunidades vecinas como enemigas sobrenaturales». Cualquier figura humana reconocible en la plaga reproduce ese prejuicio.",
+      "sheets": 0,
+      "note": "Verificado en el cuarto párrafo del mito y en historia. Los imagePrompt ya lo prohíben por escrito («sin representar pueblos humanos como enemigos»). Es la exclusión más importante de este corpus."
+    },
+    {
+      "id": "tamaracas_como_mineria_y_despojo",
+      "name": "Los Tamaracas como amenaza minera, violencia o despojo",
+      "kind": "fenomeno",
+      "myths": ["las-huellas-de-mapura"],
+      "decision": "excluded",
+      "reason": "Sin escena en el relato: Cardona relacionó después el nombre con la violencia política de 1948 y estudios ambientales recientes lo usan para hablar de minería y deterioro territorial. El canon advierte que son usos móviles posteriores que no deben retroproyectarse como doctrina antigua.",
+      "sheets": 0,
+      "note": "Verificado en el tercer párrafo de versiones. Se registra para que nadie meta retroexcavadoras ni armas en una imagen del ciclo."
+    },
+    {
+      "id": "extranjeros_que_llegan",
+      "name": "Los extranjeros cuya llegada rompe el mundo antiguo",
+      "kind": "colectivo",
+      "myths": ["los-pasos-de-xixaraca"],
+      "decision": "excluded",
+      "reason": "Se mencionan pero nunca se ven: son una de las causas que algunas versiones dan para la partida —«otras sitúan la ruptura en la llegada de extranjeros y en la destrucción del mundo antiguo»—, sin una sola escena, y el corpus no los pone en cuadro.",
+      "sheets": 0,
+      "note": "Verificado en el segundo párrafo del mito. Las escenas planeadas muestran la despedida, no la conquista."
+    },
+    {
+      "id": "xixarama_progenitor_del_sol_y_la_luna",
+      "name": "Xixarama como progenitor del Sol y la Luna",
+      "kind": "deidad_fuerza",
+      "myths": ["los-pasos-de-xixaraca"],
+      "decision": "excluded",
+      "reason": "Sin evidencia narrativa ni visual: el dato aparece en síntesis de mediados del siglo XX, pero «no se conserva una trama pública suficientemente desarrollada» y universe.mjs lo declara contexto, no página. Dibujar al Sol y a la Luna como hijos exigiría inventarles cuerpo y escena.",
+      "sheets": 0,
+      "note": "Verificado en el cuarto párrafo de versiones y en ansermasContextOnlyNarratives."
+    },
+    {
+      "id": "santuarios_jeques_y_peticiones_de_lluvia",
+      "name": "Santuarios, jeques y peticiones de lluvia",
+      "kind": "arquitectura",
+      "myths": ["los-pasos-de-xixaraca"],
+      "decision": "excluded",
+      "reason": "Sensible · consult_required y sin trama verificable: universe.mjs los declara «rasgos de contexto ritual procedentes de cronistas y síntesis posteriores, no un cuento autónomo». Son prácticas religiosas descritas desde categorías coloniales; reconstruir un santuario o una ceremonia de lluvia sería fabricar culto.",
+      "sheets": 0,
+      "note": "Verificado en ansermasContextOnlyNarratives. Ninguna escena del corpus los necesita."
+    },
+    {
+      "id": "irra_naranjal_y_santa_elena",
+      "name": "Irra, Naranjal y Santa Elena",
+      "kind": "lugar",
+      "myths": ["los-pasos-de-xixaraca"],
+      "decision": "excluded",
+      "reason": "Se mencionan pero nunca se ven: aparecen sólo en «reconstrucciones más amplias» del recorrido, sin escena, sin descripción y sin que el canon acepte una ruta continua entre todas las marcas.",
+      "sheets": 0,
+      "note": "Verificado en el segundo párrafo de versiones. Mápura es el lugar constante y es el que se ficha."
+    }
+  ],
+  "sheet_groups": [],
+  "totals": {
+    "entities": 27,
+    "required": 11,
+    "embedded": 9,
+    "excluded": 7,
+    "sheets": 12
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "cuycuyes",
+  "comunidad": "Cuycuyes",
+  "tanda": "tanda-02-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/cuycuyes.v3.json",
+    "sha256": "3f4991a7f736909efd3d3250e8d8e1a3991e358ed40f95f9306038a7e712393d"
+  },
+  "canon": {
+    "sha256": "565ecebefc0ba4d3e8232b92b40be1ab8340f033f3c2b786ee1cb0eb93a1283e",
+    "verificado_en": "2026-09-29T02:08:52.313Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre de Arma adulto (capa de contacto)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-diablo",
+        "el-tesoro-del-pipinta"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8302,
+      "prompt_sha256": "65e197bda50a1e3946f3c5c0b4bdc7ea6d25f984dff4470e33ab629b93073912"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer de Arma adulta (capa de contacto)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-diablo",
+        "el-tesoro-del-pipinta"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8120,
+      "prompt_sha256": "2155ed29428244264dfb7730baf1765d087451997351a5732898ec0bfa9b46ac"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base · anciano de Arma (capa de contacto)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-tesoro-del-pipinta"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8219,
+      "prompt_sha256": "dbe90f46cf2717dcc6f18d37ad6598e7fc7e5098aa854d029567823326bee1c2"
+    }
+  ]
+}

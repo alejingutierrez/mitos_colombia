@@ -1,0 +1,139 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "motilon-bari",
+  "comunidad": "Barí",
+  "tanda": "tanda-07-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/motilon-bari.v3.json",
+    "sha256": "2775ffb3bfc432b435ab7b3dd4a3840cb24764f89acda013c3ed27d3ea99fbf9"
+  },
+  "canon": {
+    "sha256": "aa03517f459efabb921c1e2ef28e49ae58b3aa900ca061c516ba03060880951a",
+    "verificado_en": "2026-09-29T01:57:07.438Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "comunidad-bari__group_grammar--canon",
+      "modelo": "comunidad-bari__group_grammar",
+      "entidad": "Comunidad Barí",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "caminar-liviano-hacia-el-mas-alla",
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron",
+        "el-gran-arbol-que-hizo-los-rios",
+        "nandou-chibaig-y-las-luces-del-cielo",
+        "sabaseba-y-los-hijos-de-la-pina",
+        "sibabio-y-las-cenizas-del-mundo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7545,
+      "prompt_sha256": "d0061a44acc77c72f265e5a6965cc79c719d6461dc991bcb3b33fcf7ddba336f"
+    },
+    {
+      "job": "chigbari__group_grammar--canon",
+      "modelo": "chigbari__group_grammar",
+      "entidad": "Comunidades de chigbarí",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "caminar-liviano-hacia-el-mas-alla",
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6299,
+      "prompt_sha256": "4b4c7ce7ea7fa6a0241007de89a9f3f8f49a58d35dca56a0cc4166cfd0d92295"
+    },
+    {
+      "job": "saimadoyi__group_grammar--canon",
+      "modelo": "saimadoyi__group_grammar",
+      "entidad": "Saimadoyi, auxiliares de Sabaseba",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "sabaseba-y-los-hijos-de-la-pina",
+        "nandou-chibaig-y-las-luces-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6884,
+      "prompt_sha256": "463c96dc73db888931b9cdc52889c4b99b07dab164dff88c290240412a1d7e6f"
+    },
+    {
+      "job": "saimadoyi__state_sheet--estado_formas animales- aves, trepadores, corredores y nadadores",
+      "modelo": "saimadoyi__state_sheet",
+      "entidad": "Saimadoyi, auxiliares de Sabaseba",
+      "categoria": "colectivo",
+      "vista": "estado_formas animales: aves, trepadores, corredores y nadadores",
+      "estados": [
+        "formas animales: aves, trepadores, corredores y nadadores"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "sabaseba-y-los-hijos-de-la-pina",
+        "nandou-chibaig-y-las-luces-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6876,
+      "prompt_sha256": "f48d03c023ad307baaebd22d93dc4d3f3f0bc8240c54839c3c068008dbd65367"
+    },
+    {
+      "job": "gentes-nacidas-de-las-cenizas__group_grammar--canon",
+      "modelo": "gentes-nacidas-de-las-cenizas__group_grammar",
+      "entidad": "Personas y seres nacidos de las cenizas",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "sibabio-y-las-cenizas-del-mundo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6528,
+      "prompt_sha256": "03a75d31db65c8f17e98dbfaf8e41c07bf61595d8dcdd46aab4dedff6f9d1611"
+    },
+    {
+      "job": "muertos-bari__group_grammar--canon",
+      "modelo": "muertos-bari__group_grammar",
+      "entidad": "Barí muertos en la estación de llegada",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "caminar-liviano-hacia-el-mas-alla"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6660,
+      "prompt_sha256": "da7dffe3b361eb756ca282d0a756ba6aa085a6de04b80f9015844e3a4e16ea10"
+    }
+  ]
+}

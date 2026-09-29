@@ -1,0 +1,137 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "pananes",
+  "comunidad": "Panán",
+  "tanda": "tanda-06-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/pananes.v3.json",
+    "sha256": "8d93b70d1b0b66bb77b0d395d4643339ab639357c4bf9a86d329850dde0f158b"
+  },
+  "canon": {
+    "sha256": "e4799c1c37247920d8ac717adb1374d600de3d353adbc42bf9d861a458f135f3",
+    "verificado_en": "2026-09-29T02:27:32.314Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_panan__object_sheet--canon",
+      "modelo": "hoja_utileria_panan__object_sheet",
+      "entidad": "hoja utileria panan",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "al-duende",
+        "el-cueche",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan",
+        "la-cangagua-o-la-chorrera-del-duende",
+        "la-huacas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7399,
+      "prompt_sha256": "b56b6a7beabe699d17b726f21616d45750a015112e477155f90e1d7e061403cd"
+    },
+    {
+      "job": "ceramica_y_figuras_de_los_antepasados__object_sheet--canon",
+      "modelo": "ceramica_y_figuras_de_los_antepasados__object_sheet",
+      "entidad": "Cerámica y figuras de los antepasados",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-huacas",
+        "la-tuta"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7452,
+      "prompt_sha256": "e091405aa3d1cab0852c8e645e36475308ce670d90e00b8877581a8c6c7da173"
+    },
+    {
+      "job": "monte_nativo_altoandino__botanical_sheet--canon",
+      "modelo": "monte_nativo_altoandino__botanical_sheet",
+      "entidad": "El monte nativo altoandino",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-cualchio-y-la-olla-del-granizo",
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7153,
+      "prompt_sha256": "142c3679d2f681890754cb49fa2a92ba4feca91e51def8bfd2daec72728c659f"
+    },
+    {
+      "job": "baston_de_mando__object_sheet--canon",
+      "modelo": "baston_de_mando__object_sheet",
+      "entidad": "El bastón de mando",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-laguna-de-maria-panana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7350,
+      "prompt_sha256": "d2e5a38bb13e73167b521ee9711573b2d277dae4bbfd70801da034fb7da83546"
+    },
+    {
+      "job": "checher__botanical_sheet--canon",
+      "modelo": "checher__botanical_sheet",
+      "entidad": "El checher",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-chutun"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7036,
+      "prompt_sha256": "1e774090e4582d673cd0fcf03c9ea3a3a6085335ef85052b85a144e70876fcdf"
+    },
+    {
+      "job": "palo_santo__object_sheet--canon",
+      "modelo": "palo_santo__object_sheet",
+      "entidad": "El palo santo",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6804,
+      "prompt_sha256": "497c0745fde2435208a9e70c0ee2f78fbdddf16744e186ada29e1d9e507379b1"
+    }
+  ]
+}

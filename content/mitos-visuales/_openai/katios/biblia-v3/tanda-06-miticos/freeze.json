@@ -1,0 +1,276 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "katios",
+  "comunidad": "Katíos",
+  "tanda": "tanda-06-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/katios.v3.json",
+    "sha256": "469217e04fad089981db7e6213b2744dcc6c13e3cdedd544b94565dcd46f61d0"
+  },
+  "canon": {
+    "sha256": "de27d790f202032beb5e5da24c37ad0457de3c5ea66f10b4fdd7c7f234b286ef",
+    "verificado_en": "2026-09-28T04:51:27.336Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 13,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "caragabi__identity_sheet--canon",
+      "modelo": "caragabi__identity_sheet",
+      "entidad": "Caragabí",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "antomia",
+        "baha",
+        "cobaima",
+        "creacion-katios",
+        "el-origen-del-sol-y-la-luna",
+        "fragmentos-de-otras-tradiciones",
+        "la-escalera-del-cielo",
+        "los-domicoes",
+        "sever"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7373,
+      "prompt_sha256": "10494a4333c72437fce5208f0dcbabee29537b1c453a245da9b16fea63251346"
+    },
+    {
+      "job": "caragabi__state_sheet--estado_renacido del horno",
+      "modelo": "caragabi__state_sheet",
+      "entidad": "Caragabí",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_renacido del horno",
+      "estados": [
+        "renacido del horno"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "antomia",
+        "baha",
+        "cobaima",
+        "creacion-katios",
+        "el-origen-del-sol-y-la-luna",
+        "fragmentos-de-otras-tradiciones",
+        "la-escalera-del-cielo",
+        "los-domicoes",
+        "sever"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7248,
+      "prompt_sha256": "2502c3598c13b076395c6e56e8c51551d8ef9d456798e55c907313a8a3a11af6"
+    },
+    {
+      "job": "antomia__identity_sheet--canon",
+      "modelo": "antomia__identity_sheet",
+      "entidad": "Antomiá",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "antomia",
+        "creacion-katios",
+        "icades-name",
+        "tradicion-del-cerro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7169,
+      "prompt_sha256": "28e5afa5e9e862f23c9fd2952c1171df8e6e598d2e5530da2fa5dda95c7ef683"
+    },
+    {
+      "job": "tutruica__identity_sheet--canon",
+      "modelo": "tutruica__identity_sheet",
+      "entidad": "Tutruicá",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-katios",
+        "fragmentos-de-otras-tradiciones",
+        "herupotoarra"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7192,
+      "prompt_sha256": "22431c290908696e553950077dcae754fcf9873014694a61cfccfd8ab0e6e3fc"
+    },
+    {
+      "job": "antomia-paima__identity_sheet--canon",
+      "modelo": "antomia-paima__identity_sheet",
+      "entidad": "Antomiá paima (el negro)",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "antomia",
+        "tradicion-del-cerro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7158,
+      "prompt_sha256": "44baa68dfbccdcb81c5037fb68c4cac0a925a821da3064c0a630a77cb66b96f6"
+    },
+    {
+      "job": "antomia-paima__state_sheet--estado_vientre inflado y reventado",
+      "modelo": "antomia-paima__state_sheet",
+      "entidad": "Antomiá paima (el negro)",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_vientre inflado y reventado",
+      "estados": [
+        "vientre inflado y reventado"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "antomia",
+        "tradicion-del-cerro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7433,
+      "prompt_sha256": "f097fc325964c2decae5c82b37427586034e1ec8a3dbec710cf3b4ed935cb181"
+    },
+    {
+      "job": "gedeco__identity_sheet--canon",
+      "modelo": "gedeco__identity_sheet",
+      "entidad": "Gedeco (la luna)",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-del-sol-y-la-luna",
+        "herupotoarra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7157,
+      "prompt_sha256": "1475dc6ccc62b47ca94c4db07faafd3f2fa017a2c726df55a048cbf5d021f7c9"
+    },
+    {
+      "job": "gedeco__state_sheet--estado_astro con la mancha de la bofetada",
+      "modelo": "gedeco__state_sheet",
+      "entidad": "Gedeco (la luna)",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_astro con la mancha de la bofetada",
+      "estados": [
+        "astro con la mancha de la bofetada"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-del-sol-y-la-luna",
+        "herupotoarra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7523,
+      "prompt_sha256": "c882f402243774fdcca2ff2d9d0cd3afde68b51eb53664a0f1caffd9f6ace75f"
+    },
+    {
+      "job": "humantahu__identity_sheet--canon",
+      "modelo": "humantahu__identity_sheet",
+      "entidad": "Humántahu (el sol)",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-del-sol-y-la-luna",
+        "la-escalera-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7142,
+      "prompt_sha256": "2b78b69ee442fcb2d3875f364923b6ec65f9b8d868a9b84841ca64b5c7eb97d8"
+    },
+    {
+      "job": "humantahu__state_sheet--estado_astro",
+      "modelo": "humantahu__state_sheet",
+      "entidad": "Humántahu (el sol)",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_astro",
+      "estados": [
+        "astro"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-del-sol-y-la-luna",
+        "la-escalera-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7183,
+      "prompt_sha256": "ce198239b0c186ee1b65fcc1dd48b35305bc885b7fcd76d7a4cd9be38467e0ce"
+    },
+    {
+      "job": "baha-rayo__identity_sheet--canon",
+      "modelo": "baha-rayo__identity_sheet",
+      "entidad": "Baha, el rayo",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "baha"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6944,
+      "prompt_sha256": "d640f4f3cb5946e7e7cc9d4c017dc96eac24df0028cd65112b2912a4b1098bb2"
+    },
+    {
+      "job": "baha-trueno__identity_sheet--canon",
+      "modelo": "baha-trueno__identity_sheet",
+      "entidad": "Baha, el trueno",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "baha"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6964,
+      "prompt_sha256": "367f107468e48fcc3ab618e199342e07777b9f23e4ff1c09d43090d7b9d37e0e"
+    },
+    {
+      "job": "dabeiba__identity_sheet--canon",
+      "modelo": "dabeiba__identity_sheet",
+      "entidad": "Dabeiba",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "dabeiba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7237,
+      "prompt_sha256": "308ade42df1a7895042763c14911e6e10b9b370f793adb598e5c3e4f8d32515d"
+    }
+  ]
+}

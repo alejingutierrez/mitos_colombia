@@ -1,0 +1,1680 @@
+{
+  "id": "u-wa",
+  "label": "U’wa",
+  "pages": 11,
+  "canon_pages": 11,
+  "read_note": "Leí los cuatro campos editoriales (mito, historia, versiones, research_notes) de los 11 mitos de canon/u-wa.canon.md (sha e229c07d…, 11 mitos), más editorial/uwa/universe.mjs, community.mjs y la cabecera de definitions.mjs, y docs/biblia-visual-v3.md §«Qué construye la Biblia». No consulté base ni web. SORPRESA 1: el corpus U’wa casi no reutiliza personajes entre relatos — una cosmogonía (Rurcocá/Sira/Canwará/Rukwa/Ruruna) y nueve historias de sede comunitaria con elencos propios que no se cruzan. Todo el ahorro real está en paisaje, casa, camino, cuevas y sustancias rituales, no en personajes: 20 entidades cubren 61 apariciones de mito. SORPRESA 2: el canon prohíbe explícitamente tres imágenes (oso herido, interior anatómico de Lisha, muerte del niño Monoa); las dejo excluded con la cita del research_notes en vez de convertirlas en estados. SORPRESA 3: los Llanos Orientales son un paisaje U’wa requerido (frontera cosmológica en «La competencia de los tigres», destino de Yanoa-ave), pero NO puede reusar nada de la biblia Sikuani: se dibuja como el otro lado visto desde la sierra. DUDOSO 1: fusioné Canwará (mito 1) y Kanwara (mito 7) como variante ortográfica del mismo creador siguiendo §3 del doc («se evita crear duplicados por ortografía»); si el editor prefiere separarlos son +1 ficha. DUDOSO 2: el canon distingue Bisto (variante Agua Blanca, en «versiones» de la miel) de Bistoa (mito 6) sin resolverlo — dejé Bisto excluded para no afirmar identidad. DUDOSO 3: la madre del fuego y Dasa Duba conducen la acción pero el canon no les da cuerpo; las dejé required porque sin ellas dos relatos pierden su motor, con la advertencia de que solo pueden construirse sobre lo documentado. SENSIBILIDAD: apliqué la lista del encargo — cantos y ayuno, sitios del Cocuy, werjayá y su saber — y verifiqué cada mención en el texto (ayuno aparece una vez, en el cierre del mito 1; Werjaya dos veces, solo en «historia» del mito 3, donde el canon dice expresamente que no identifica al protagonista como tal). El yopo NO está en la lista sensible U’wa y el canon autoriza su escena («la escena del yopo se narra sin convertir la sustancia sagrada en un recurso fantástico»), por eso aquí sí tiene ficha — al revés que en Sikuani.",
+  "entities": [
+    {
+      "id": "rurcoca",
+      "name": "Rurcocá",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "creacion-u-wa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Primer ser: sentada en su banco en Cuarára, mascando coca celeste, piensa a Sira y le enseña a crear. Conduce el primer acto del corpus."
+    },
+    {
+      "id": "sira",
+      "name": "Sira",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "creacion-u-wa",
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Surge del pensamiento de Rurcocá y crea a su vez; en Kubashoa es el destino al que debe ir el protector. Dos relatos. El canon no lo homologa con Bistoa, Rukwa ni Canwará."
+    },
+    {
+      "id": "canwara",
+      "name": "Canwará (Kanwara)",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "creacion-u-wa",
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Crea desde el mundo rojo de abajo por encargo de la madre del fuego y enferma por exceso de yopo; en las hijas del Sol masca y piensa con Rukwa hasta producir el kanoba. Fusión por variante ortográfica (Canwará/Kanwara) según §3 del doc; declarada, no afirmada como equivalencia doctrinal."
+    },
+    {
+      "id": "rukwa",
+      "name": "Rukwa",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "creacion-u-wa",
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Manifestación solar de la luz: mezcla el calor del Sol con el agua de los lagos y pone el mundo en movimiento; envía el mensaje a Kanwara e indica a las abejas su descenso. Dos relatos."
+    },
+    {
+      "id": "ruruna",
+      "name": "Ruruna",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "creacion-u-wa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Recibe el encargo de sembrar gente: de las lagunas salen las parejas que originan los clanes. Otorga — conduce acción, aunque en una sola frase."
+    },
+    {
+      "id": "madre_del_fuego",
+      "name": "La madre del fuego",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "creacion-u-wa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Encarga a Canwará la creación en el mundo rojo de abajo; de esa orden dependen el peligro, el dolor y la mortalidad. Decide, luego tiene ficha. ADVERTENCIA: el canon solo le da fuego y el mundo rojo; nada más puede inventarse."
+    },
+    {
+      "id": "bistoa",
+      "name": "Bistoa",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "la-competencia-de-los-tigres-uwa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Nace en el cerro Tina tomando yopo; convoca a los tigres con el pensamiento, los armoniza con cuatro tomas, juzga la prueba y fija el límite territorial. Autoridad del relato."
+    },
+    {
+      "id": "dasa_duba",
+      "name": "Dasa Duba",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "yanoa-y-sirbetuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Llama a Yanoa con el pensamiento, le asigna cerro y ganado, le pone el deseo, llama a Sirbetuna y piensa la lucha. Motor íntegro del relato. ADVERTENCIA: el canon no le da cuerpo; la ficha solo puede fijar presencia y escala."
+    },
+    {
+      "id": "yanoa",
+      "name": "Yanoa",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "yanoa-y-sirbetuna"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "ave"
+      ],
+      "note": "Construye el corral, cuida las reses, teje con ituma/suskuara/kuibura/suara, pierde la lucha y se transforma en ave que vuela a los Llanos. La transformación se muestra y cambia la silueta. ADVERTENCIA: el canon dice que el ave no recibe especie ni canto; la ficha de estado debe quedar deliberadamente no identificable."
+    },
+    {
+      "id": "sirbetuna",
+      "name": "Sirbetuna",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "yanoa-y-sirbetuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reclama el ganado, amarra la vaca al primer intento, cocina y come solo, vence a Yanoa y guarda lejos los objetos de poder. Antagonista que decide y castiga."
+    },
+    {
+      "id": "kubashoa",
+      "name": "Kubashoa",
+      "kind": "personaje",
+      "myths": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "tigre_poderoso"
+      ],
+      "note": "Hijo del tabaco: camina a los cuatro días, viaja de noche, protege a su familia, secretea los pichones y trasciende desde la cueva. Se transforma en tigres poderosos — estado mostrado y de silueta distinta. NO es Kusbasha (el canon lo dice expresamente)."
+    },
+    {
+      "id": "iurusa",
+      "name": "Iurusa",
+      "kind": "personaje",
+      "myths": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Anciana que masca hoja de tabaco todos los días y de esa relación nace Kubashoa; cumple las instrucciones funerarias y regresa a la cueva al cuarto día."
+    },
+    {
+      "id": "kaeta",
+      "name": "Kaeta",
+      "kind": "personaje",
+      "myths": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Hermano mayor: acompaña a Kubashoa en huerta, caza y pesca durante el día y ejecuta con Iurusa lo que el hermano pide antes de morir. Presente en varias escenas del relato."
+    },
+    {
+      "id": "kusbasha",
+      "name": "Kusbasha",
+      "kind": "personaje",
+      "myths": [
+        "lisha-la-madre-del-agua"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Hombre poderoso que observa cuatro veces el camino de Lisha, es tragado a la quinta, corta sus centros vitales y reparte la sangre para que el agua fluya. NO es Kubashoa: el canon mantiene la distinción."
+    },
+    {
+      "id": "uktara",
+      "name": "Uktara",
+      "kind": "personaje",
+      "myths": [
+        "el-recorrido-de-uktara"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Atraviesa una entrada a la dimensión de los muertos, se niega a comer allí, obtiene semillas y vuelve en cuerpo y alma a transmitir lo observado."
+    },
+    {
+      "id": "padre_de_bakokuira",
+      "name": "El padre de la familia de Bakokuira",
+      "kind": "personaje",
+      "myths": [
+        "el-oso-y-el-hombre-uwa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Rol humano sin nombre que conduce todo el relato: regresa con carne o pescado, lee mal las huellas, arma la trampa, reconoce tarde al oso y pide armonización."
+    },
+    {
+      "id": "hombre_uwa_del_carpintero",
+      "name": "El amigo U’wa del pájaro carpintero",
+      "kind": "personaje",
+      "myths": [
+        "el-pajaro-carpintero-y-el-poder-de-curar"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Rol humano sin nombre: sale de cacería, pisa la culebra, recibe la curación y hereda el poder con su obligación. El canon dice expresamente que NO se le identifica como Werjaya."
+    },
+    {
+      "id": "viajero_uwa_de_monoa",
+      "name": "El viajero U’wa de las rutas de intercambio",
+      "kind": "personaje",
+      "myths": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Rol humano sin nombre: prepara el viaje, caza con Monoa, comprende el alcance del peligro y pide un hijo protector para su casa."
+    },
+    {
+      "id": "monoa_padre",
+      "name": "Monoa, el de la montaña",
+      "kind": "criatura",
+      "myths": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Miembro de la familia Monoa, hijos de la montaña que protegen a quienes transitan: invita a cazar, enfrenta con lanza y soga a los seres peligrosos y entrega un hijo. El canon obliga a separarlo del niño («para evitar tratarlos como una sola figura»)."
+    },
+    {
+      "id": "monoa_nino",
+      "name": "El niño Monoa",
+      "kind": "criatura",
+      "myths": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Queda con la familia U’wa, aprende a perseguir a los seres que amenazan a la gente y muere tras el ataque del Urkoa. Cuerpo distinto (niño) y arco propio; el canon exige no fundirlo con el padre."
+    },
+    {
+      "id": "urkoa",
+      "name": "Urkoa",
+      "kind": "criatura",
+      "myths": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Antagonista del clímax: enorme, con cuello y patas traseras capaces de golpear la cabeza del niño. Único de los cuatro seres peligrosos con indicios de cuerpo en el texto. ADVERTENCIA: research_notes prohíbe inventar apariencia más allá de esos indicios."
+    },
+    {
+      "id": "lisha",
+      "name": "Lisha, la madre del agua",
+      "kind": "criatura",
+      "myths": [
+        "lisha-la-madre-del-agua"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "olas_devoradoras"
+      ],
+      "note": "Vive en la laguna entre las peñas donde nace el Keroa; al levantarse se convierte en olas que arrastran y se comen lo que pasa. El paso de laguna quieta a olas se muestra y cambia la silueta. NO es Madremonte, Madreagua ni sirena."
+    },
+    {
+      "id": "almas_de_la_otra_dimension",
+      "name": "Las almas de la dimensión de los muertos",
+      "kind": "criatura",
+      "myths": [
+        "el-recorrido-de-uktara"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "murcielago_diurno"
+      ],
+      "note": "De noche son sombras con forma humana que trabajan la tierra y buscan alimento; de día parecen murciélagos. Doble forma mostrada por el relato, silueta distinta: base sombra nocturna + estado murciélago."
+    },
+    {
+      "id": "colectivo_gente_uwa",
+      "name": "Elenco U’wa",
+      "kind": "colectivo",
+      "myths": [
+        "creacion-u-wa",
+        "el-oso-y-el-hombre-uwa",
+        "el-pajaro-carpintero-y-el-poder-de-curar",
+        "el-recorrido-de-uktara",
+        "lisha-la-madre-del-agua",
+        "mensajes-de-los-animales-uwa",
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Gramática de grupo de la gente U’wa: adultos, mujeres con mochila, niños cargados en la espalda, viajeros. Cubre a la madre y los niños de Bakokuira, el hermano de Kusbasha, la familia de la chicha, los sabios, las parejas fundadoras y los clanes. Mayor dedupe del corpus: siete relatos."
+    },
+    {
+      "id": "los_tiga",
+      "name": "Los Tiga",
+      "kind": "colectivo",
+      "myths": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Familia numerosa de Taurete recordada como amenaza capaz de gran daño; comen los pichones secreteados y mueren. ADVERTENCIA: el canon prohíbe identificarlos con una etnia histórica o con demonios genéricos."
+    },
+    {
+      "id": "tigres_del_territorio_ancestral",
+      "name": "Los tigres del territorio ancestral",
+      "kind": "colectivo",
+      "myths": [
+        "la-competencia-de-los-tigres-uwa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Convocados por Bistoa desde Kuiunbara, Tinshoikuba y Sheonkuba; cruzan los cerros de las cuatro dimensiones y siguen controlando la zona. ADVERTENCIA: «tigre» es la palabra de la fuente; no se fuerza taxonomía."
+    },
+    {
+      "id": "tigres_de_los_llanos",
+      "name": "Los tigres de los Llanos Orientales",
+      "kind": "colectivo",
+      "myths": [
+        "la-competencia-de-los-tigres-uwa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Convocados también, fracasan una y otra vez, reciben la explicación sobre su conducta y aceptan la condición de no dañar. Deben leerse visualmente distintos de los tigres del territorio: la diferencia entre los dos grupos es el argumento del relato."
+    },
+    {
+      "id": "abejas_sin_aguijon",
+      "name": "Las abejas sin aguijón, hijas del Sol",
+      "kind": "colectivo",
+      "myths": [
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Nacen del kanoba, bajan por las puertas de las esferas, reciben cuerpos y nombres en Rayria y llegan al mundo diurno en parejas de machos y hembras. Cubre a Yagshowa (la que conduce) y a la pareja de reserva. ADVERTENCIA: sin colmena apícola moderna ni reina/obreras/zánganos."
+    },
+    {
+      "id": "aves_consejeras_del_sendero",
+      "name": "Las aves que avisan junto a los senderos",
+      "kind": "colectivo",
+      "myths": [
+        "mensajes-de-los-animales-uwa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Eligen esperar junto a los caminos y cambian la voz según el riesgo. Actúan como grupo y son una de las tres estrategias del relato; no son miembros del cientaro."
+    },
+    {
+      "id": "oso_protector_de_bakokuira",
+      "name": "El oso protector de Bakokuira",
+      "kind": "animal",
+      "myths": [
+        "el-oso-y-el-hombre-uwa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Observa y cuida a la familia, sube a buscar frutos, baja antes del amanecer y queda atrapado. Cubre también sus huellas, que son el objeto del malentendido. ADVERTENCIA: el canon no nombra especie ni admite rasgos taxonómicos."
+    },
+    {
+      "id": "pajaro_carpintero_kejeta",
+      "name": "El pájaro carpintero (Kejeta)",
+      "kind": "animal",
+      "myths": [
+        "el-pajaro-carpintero-y-el-poder-de-curar"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Amigo que espera en la casa, masca tabaco, secretea y sopla la herida, y después declara que el poder pasó a los U’wa. ADVERTENCIA: sin instrumentos occidentales, sin efectos luminosos, sin ave humanizada. El «cambio» posterior no se describe, así que no cuesta estado."
+    },
+    {
+      "id": "culebra_del_camino",
+      "name": "La culebra del camino",
+      "kind": "animal",
+      "myths": [
+        "el-pajaro-carpintero-y-el-poder-de-curar"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escondida bajo una hoja, muerde al hombre y desencadena todo el relato; permanece en el territorio sin condena. Sin especie declarada. Cubre la hoja que la esconde."
+    },
+    {
+      "id": "cientaro",
+      "name": "El pájaro cientaro",
+      "kind": "animal",
+      "myths": [
+        "mensajes-de-los-animales-uwa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Propone seguir a los viajeros cantando, los sopla para que sueñen profundo y convierte lo que conoce en canto. ADVERTENCIA: el canon conserva «cientaro» sin identificación zoológica."
+    },
+    {
+      "id": "tigrillo",
+      "name": "El tigrillo",
+      "kind": "animal",
+      "myths": [
+        "mensajes-de-los-animales-uwa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Sigue a la gente hasta sus casas sin amenazar y se conecta con su espíritu mientras duerme; el consejo aparece con la voz de un familiar o vecino. Cubre el sueño como recurso visual."
+    },
+    {
+      "id": "perdiz",
+      "name": "La perdiz",
+      "kind": "animal",
+      "myths": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Su canto en la época de lluvia anuncia a Kubashoa; es el plano de cierre del relato. ADVERTENCIA: el canon advierte que no toda perdiz es Kubashoa — la ficha es del ave, no del protector."
+    },
+    {
+      "id": "pichones_de_ciguena",
+      "name": "Los pichones de cigüeña",
+      "kind": "animal",
+      "myths": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Encontrados dentro de una cueva en Taurete y secreteados por Kubashoa; su consumo resuelve el conflicto. Objeto por el que se cuenta el desenlace. Cubre la cueva-nido de Taurete."
+    },
+    {
+      "id": "ganado_vacuno",
+      "name": "El ganado y la vaca",
+      "kind": "animal",
+      "myths": [
+        "yanoa-y-sirbetuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Reses asignadas a Yanoa, escapan del corral y pasan por encima de él; la vaca es amarrada, cocinada y comida por Sirbetuna. Elemento de contacto que el canon conserva a propósito, sin fabricar falsa antigüedad."
+    },
+    {
+      "id": "tabaco",
+      "name": "El tabaco",
+      "kind": "planta",
+      "myths": [
+        "el-pajaro-carpintero-y-el-poder-de-curar",
+        "kubashoa-el-hijo-del-tabaco",
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Masticado por Iurusa hasta que nace Kubashoa, masticado por el carpintero para curar, preparado antes del viaje de intercambio. Tres relatos y objeto por el que se cuenta el mito 5."
+    },
+    {
+      "id": "yopo",
+      "name": "El yopo",
+      "kind": "planta",
+      "myths": [
+        "creacion-u-wa",
+        "el-recorrido-de-uktara",
+        "la-competencia-de-los-tigres-uwa",
+        "lisha-la-madre-del-agua",
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cinco relatos: Canwará enferma por exceso, Bistoa nace tomándolo y da cuatro tomas, Kusbasha lo lleva y lo toma dentro de Lisha, se prepara para el viaje, y el glosario define «alimento espiritual» como yopo. NO está en la lista sensible U’wa y el canon autoriza la escena sin convertirlo en recurso fantástico; research_notes del mito 4 prohíbe detallar prácticas."
+    },
+    {
+      "id": "coca_ayo",
+      "name": "La coca / ayo",
+      "kind": "planta",
+      "myths": [
+        "creacion-u-wa",
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Coca celeste que masca Rurcocá durante el primer acto de creación; ayo preparado con cal antes de las rutas de intercambio. Dos relatos, sustancia distinta de tabaco y yopo."
+    },
+    {
+      "id": "miel_cera_y_cerumen",
+      "name": "Miel, cera y cerumen",
+      "kind": "objeto",
+      "myths": [
+        "las-hijas-del-sol-y-la-miel",
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Lo que las abejas traen al mundo intermedio y lo que se lleva en las rutas de intercambio. Es el objeto por el que se cuenta «el ordenamiento de la miel» y la caracterización lo señala como sustancia de pureza y fuerza."
+    },
+    {
+      "id": "vasijas_de_barro",
+      "name": "Las vasijas de barro",
+      "kind": "objeto",
+      "myths": [
+        "el-recorrido-de-uktara",
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Grandes vasijas donde Rukwa y Kanwara reúnen agua y producen vapor y lluvia; recipientes donde las almas cocinan la comida de cuyo olor se alimentan. Dos relatos, dos escenas centrales."
+    },
+    {
+      "id": "objetos_de_poder_de_yanoa",
+      "name": "Ituma, suskuara, kuibura y suara",
+      "kind": "objeto",
+      "myths": [
+        "yanoa-y-sirbetuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Elementos vinculados con poder y riqueza con que teje Yanoa y que Sirbetuna guarda lejos de los U’wa: son el objeto por el que se cuenta el relato. ADVERTENCIA: el canon ordena representarlos como tejidos u objetos abstractos, sin inventar armas, amuletos ni formas arqueológicas."
+    },
+    {
+      "id": "esferas_de_colores",
+      "name": "Las esferas de colores y las cuatro dimensiones",
+      "kind": "paisaje",
+      "myths": [
+        "creacion-u-wa",
+        "la-competencia-de-los-tigres-uwa",
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Arquitectura cosmológica: mundo blanco de arriba (luz, seco), contraparte roja de abajo (húmeda, oscura), mundo intermedio azul y amarillo nacido de la mezcla. Cubre las puertas por las que bajan las abejas y los cerros más altos de las cuatro dimensiones del mito 6, relación que el propio canon reconoce."
+    },
+    {
+      "id": "lagos_de_colores",
+      "name": "Los lagos de colores",
+      "kind": "lugar",
+      "myths": [
+        "creacion-u-wa",
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Donde las deidades guardan las materias y propiedades de lo existente y donde Rukwa mezcla el calor del Sol con el agua; incluye el lago Rayria de la esfera amarilla, en el que las abejas reciben cuerpos y nombres."
+    },
+    {
+      "id": "paisaje_sierra_y_paramo_uwa",
+      "name": "Sierra, páramo y alta montaña U’wa",
+      "kind": "paisaje",
+      "myths": [
+        "creacion-u-wa",
+        "el-oso-y-el-hombre-uwa",
+        "kubashoa-el-hijo-del-tabaco",
+        "la-competencia-de-los-tigres-uwa",
+        "mensajes-de-los-animales-uwa",
+        "monoa-el-hijo-de-la-montana",
+        "yanoa-y-sirbetuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Telón genérico de altura: nevado, páramo, cerros, lagunas altas. Siete relatos. Cubre cerro Tina, Lobara, Serobakara, Urko Kerata, Taurete y las montañas altas de Bakokuira. ADVERTENCIA: es paisaje, nunca un sitio identificable — todo el canon repite que no se geolocaliza y el encargo marca los sitios del Cocuy como sensibles."
+    },
+    {
+      "id": "paisaje_bosque_y_piedemonte_uwa",
+      "name": "Bosque nublado y piedemonte U’wa",
+      "kind": "paisaje",
+      "myths": [
+        "el-oso-y-el-hombre-uwa",
+        "el-pajaro-carpintero-y-el-poder-de-curar",
+        "el-recorrido-de-uktara",
+        "las-hijas-del-sol-y-la-miel",
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Banda altitudinal distinta de la sierra: bosque, rastrojo, quebradas, pantanos del camino. Cinco relatos. La estación seca del mito 7 (selva sin fuerza, hambre y sed) queda documentada como variante de paleta dentro de esta ficha, no como estado con silueta nueva."
+    },
+    {
+      "id": "cuevas_y_penas_uwa",
+      "name": "Cuevas y peñas U’wa",
+      "kind": "lugar",
+      "myths": [
+        "el-recorrido-de-uktara",
+        "kubashoa-el-hijo-del-tabaco",
+        "lisha-la-madre-del-agua"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cubre la cueva de la peña Toiroa donde se deja el cuerpo de Kubashoa y del que desaparece, las peñas entre las que vive Lisha y las entradas cubiertas por rocas del recorrido de Uktara. Tres relatos. Sin geolocalización."
+    },
+    {
+      "id": "rios_y_quebradas_uwa",
+      "name": "Ríos y quebradas del territorio U’wa",
+      "kind": "paisaje",
+      "myths": [
+        "lisha-la-madre-del-agua",
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El Keroa nacido de la sangre de Lisha y la red de corrientes que sostiene la vida; la quebrada Monoa Lia y los ríos, pantanos y lagunas del camino de intercambio."
+    },
+    {
+      "id": "laguna_de_lisha",
+      "name": "La laguna de Lisha",
+      "kind": "lugar",
+      "myths": [
+        "lisha-la-madre-del-agua"
+      ],
+      "decision": "required",
+      "sheets": 2,
+      "states": [
+        "laguna_agotada_y_nacimiento_del_caudal"
+      ],
+      "note": "Escenario del acto: la laguna entre las peñas donde nace el Keroa. El relato muestra cómo el agua baja hasta agotarse y cómo de la vena enterrada brota una gota, después una totumada y finalmente un caudal — cambio de silueta del lugar, mostrado, luego cuesta un estado."
+    },
+    {
+      "id": "dimension_de_los_muertos",
+      "name": "La dimensión de los muertos",
+      "kind": "paisaje",
+      "myths": [
+        "el-recorrido-de-uktara"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Mundo sin angustia: árboles que florecen y dan frutos sin trabajo, huertas limpias, racimos de plátano grandes, animales que pasan junto a las personas sin atacar. Escenario íntegro de un relato y no intercambiable con ningún paisaje del territorio visible. Cubre el umbral de entrada."
+    },
+    {
+      "id": "llanos_orientales",
+      "name": "Los Llanos Orientales vistos desde el territorio U’wa",
+      "kind": "paisaje",
+      "myths": [
+        "la-competencia-de-los-tigres-uwa",
+        "yanoa-y-sirbetuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El otro lado de la frontera cosmológica: de allí vienen los tigres que fracasan y hacia allá vuela Yanoa convertido en ave. ADVERTENCIA CRÍTICA: es un paisaje U’wa, no Sikuani. No puede reutilizar ni una pieza de la biblia Sikuani; se construye como llanura lejana vista desde la sierra, y el canon prohíbe leer el límite como frontera administrativa o describir a los vecinos como «salvajes»."
+    },
+    {
+      "id": "caminos_uwa",
+      "name": "Los caminos y senderos U’wa",
+      "kind": "lugar",
+      "myths": [
+        "el-oso-y-el-hombre-uwa",
+        "el-recorrido-de-uktara",
+        "mensajes-de-los-animales-uwa",
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El territorio se organiza mediante caminos: el camino habitual del oso, el camino entre Cascajal y Mulera con sus senderos, las rutas de intercambio de meses. Cuatro relatos."
+    },
+    {
+      "id": "huertas_uwa",
+      "name": "Las huertas U’wa",
+      "kind": "lugar",
+      "myths": [
+        "el-recorrido-de-uktara",
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Huerta donde Kubashoa acompaña a Kaeta y huertas limpias con racimos de plátano de la dimensión de los muertos. Cubre plátanos y cultivos."
+    },
+    {
+      "id": "casa_uwa",
+      "name": "La casa U’wa",
+      "kind": "arquitectura",
+      "myths": [
+        "el-oso-y-el-hombre-uwa",
+        "el-pajaro-carpintero-y-el-poder-de-curar",
+        "lisha-la-madre-del-agua",
+        "mensajes-de-los-animales-uwa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Vivienda alrededor de la cual juegan los niños y rondea el oso, donde espera el carpintero, donde Kusbasha recibe chicha y descanso, y hasta donde el tigrillo sigue a la gente. Cuatro relatos."
+    },
+    {
+      "id": "corral_de_yanoa",
+      "name": "El corral de Yanoa",
+      "kind": "arquitectura",
+      "myths": [
+        "yanoa-y-sirbetuna"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Construcción que Yanoa levanta y de la que escapan las reses pasándole por encima: escenario de dos beats del relato y objeto de contacto que el canon conserva a propósito."
+    },
+    {
+      "id": "soplo_y_secreta",
+      "name": "El soplo y la secreta",
+      "kind": "fenomeno",
+      "myths": [
+        "el-pajaro-carpintero-y-el-poder-de-curar",
+        "kubashoa-el-hijo-del-tabaco",
+        "mensajes-de-los-animales-uwa"
+      ],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Gesto que atraviesa tres relatos: el carpintero secretea y sopla la herida, Kubashoa secretea los pichones, el cientaro sopla a los viajeros para que sueñen. ADVERTENCIA: el canon autoriza solo el gesto simbólico — sin procedimiento médico reproducible, sin herida visible y sin el contenido de las fórmulas, que queda excluido aparte."
+    },
+    {
+      "id": "cuarara",
+      "name": "Cuarára",
+      "kind": "lugar",
+      "myths": [
+        "creacion-u-wa"
+      ],
+      "decision": "embedded",
+      "covered_by": "rurcoca",
+      "sheets": 0,
+      "note": "Lugar alto y estrecho «donde solo cabía ella»: es literalmente el asiento de Rurcocá y se resuelve dentro de su ficha."
+    },
+    {
+      "id": "banco_de_rurcoca",
+      "name": "El banco de Rurcocá",
+      "kind": "objeto",
+      "myths": [
+        "creacion-u-wa"
+      ],
+      "decision": "embedded",
+      "covered_by": "rurcoca",
+      "sheets": 0,
+      "note": "Mobiliario de la figura sentada; parte de su ficha, como la ropa o el techo."
+    },
+    {
+      "id": "materia_primordial",
+      "name": "La materia primordial",
+      "kind": "objeto",
+      "myths": [
+        "creacion-u-wa"
+      ],
+      "decision": "embedded",
+      "covered_by": "lagos_de_colores",
+      "sheets": 0,
+      "note": "Las materias y propiedades de lo existente que las deidades guardan en los lagos; se resuelve dentro de la ficha de los lagos."
+    },
+    {
+      "id": "semillas_primordiales",
+      "name": "Las semillas que empiezan a crecer",
+      "kind": "planta",
+      "myths": [
+        "creacion-u-wa"
+      ],
+      "decision": "embedded",
+      "covered_by": "lagos_de_colores",
+      "sheets": 0,
+      "note": "Brotan cuando Rukwa mezcla el calor del Sol con el agua de los lagos; parte de esa escena."
+    },
+    {
+      "id": "parejas_fundadoras_de_los_clanes",
+      "name": "Las parejas salidas de las lagunas",
+      "kind": "colectivo",
+      "myths": [
+        "creacion-u-wa"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_uwa",
+      "sheets": 0,
+      "note": "Recorren el territorio y dan origen a los clanes; visualmente son parejas U’wa y el elenco las cubre. universe.mjs las declara además narrativa de contexto integrada a la cosmogonía."
+    },
+    {
+      "id": "mundo_blanco_de_arriba",
+      "name": "El mundo blanco de arriba",
+      "kind": "paisaje",
+      "myths": [
+        "creacion-u-wa"
+      ],
+      "decision": "embedded",
+      "covered_by": "esferas_de_colores",
+      "sheets": 0,
+      "note": "Una de las tres bandas de la misma arquitectura cosmológica."
+    },
+    {
+      "id": "mundo_rojo_de_abajo",
+      "name": "El mundo rojo de abajo",
+      "kind": "paisaje",
+      "myths": [
+        "creacion-u-wa"
+      ],
+      "decision": "embedded",
+      "covered_by": "esferas_de_colores",
+      "sheets": 0,
+      "note": "Contraparte roja, húmeda y oscura; misma arquitectura."
+    },
+    {
+      "id": "mundo_intermedio",
+      "name": "El mundo intermedio azul y amarillo",
+      "kind": "paisaje",
+      "myths": [
+        "creacion-u-wa",
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "embedded",
+      "covered_by": "esferas_de_colores",
+      "sheets": 0,
+      "note": "Resultado de la mezcla de blanco y rojo; la Tierra habitada. Misma ficha."
+    },
+    {
+      "id": "cerros_de_las_cuatro_dimensiones",
+      "name": "Los cerros más altos de las cuatro dimensiones",
+      "kind": "lugar",
+      "myths": [
+        "la-competencia-de-los-tigres-uwa"
+      ],
+      "decision": "embedded",
+      "covered_by": "esferas_de_colores",
+      "sheets": 0,
+      "note": "Obstáculo de la prueba de los tigres; el propio canon reconoce la relación interna con los cuatro cielos o rutas del libro U’wa."
+    },
+    {
+      "id": "puertas_de_las_esferas",
+      "name": "Las puertas de las esferas de colores",
+      "kind": "arquitectura",
+      "myths": [
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "embedded",
+      "covered_by": "esferas_de_colores",
+      "sheets": 0,
+      "note": "Por ellas bajan las abejas; parte de la arquitectura cosmológica."
+    },
+    {
+      "id": "lago_rayria",
+      "name": "El lago Rayria",
+      "kind": "lugar",
+      "myths": [
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "embedded",
+      "covered_by": "lagos_de_colores",
+      "sheets": 0,
+      "note": "Lago de la esfera amarilla donde las abejas se bañan y reciben cuerpos y nombres: es uno de los lagos de colores."
+    },
+    {
+      "id": "cerro_tina",
+      "name": "El cerro Tina",
+      "kind": "lugar",
+      "myths": [
+        "la-competencia-de-los-tigres-uwa"
+      ],
+      "decision": "embedded",
+      "covered_by": "paisaje_sierra_y_paramo_uwa",
+      "sheets": 0,
+      "note": "Donde nace Bistoa y desde donde convoca; el canon no le da ningún rasgo que lo distinga de la alta montaña ya fichada."
+    },
+    {
+      "id": "cerros_lobara_y_serobakara",
+      "name": "Los cerros Lobara y Serobakara",
+      "kind": "lugar",
+      "myths": [
+        "mensajes-de-los-animales-uwa"
+      ],
+      "decision": "embedded",
+      "covered_by": "paisaje_sierra_y_paramo_uwa",
+      "sheets": 0,
+      "note": "Alturas desde las que los animales observan; sin rasgos propios en el canon."
+    },
+    {
+      "id": "cerro_urko_kerata",
+      "name": "El cerro Urko Kerata",
+      "kind": "lugar",
+      "myths": [
+        "yanoa-y-sirbetuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "paisaje_sierra_y_paramo_uwa",
+      "sheets": 0,
+      "note": "Asignado a Yanoa junto con el ganado; el canon dice expresamente que no se geolocaliza y no lo describe."
+    },
+    {
+      "id": "taurete",
+      "name": "Taurete",
+      "kind": "lugar",
+      "myths": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "decision": "embedded",
+      "covered_by": "paisaje_sierra_y_paramo_uwa",
+      "sheets": 0,
+      "note": "Territorio donde vive la familia Tiga; sin descripción propia. Su cueva queda en la ficha de los pichones."
+    },
+    {
+      "id": "bakokuira",
+      "name": "Bakokuira",
+      "kind": "lugar",
+      "myths": [
+        "el-oso-y-el-hombre-uwa"
+      ],
+      "decision": "embedded",
+      "covered_by": "paisaje_bosque_y_piedemonte_uwa",
+      "sheets": 0,
+      "note": "Montañas altas y bosque donde caen las lágrimas; se descompone en los dos paisajes ya fichados y en la casa U’wa."
+    },
+    {
+      "id": "cerro_toiroa",
+      "name": "El cerro / la peña Toiroa",
+      "kind": "lugar",
+      "myths": [
+        "kubashoa-el-hijo-del-tabaco",
+        "mensajes-de-los-animales-uwa"
+      ],
+      "decision": "embedded",
+      "covered_by": "cuevas_y_penas_uwa",
+      "sheets": 0,
+      "note": "Único topónimo que reaparece en dos relatos: la peña con la cueva de Kubashoa y uno de los cerros de reunión de los animales. Se resuelve entre la ficha de cuevas y peñas y la de sierra."
+    },
+    {
+      "id": "rio_keroa",
+      "name": "El río Keroa",
+      "kind": "paisaje",
+      "myths": [
+        "lisha-la-madre-del-agua"
+      ],
+      "decision": "embedded",
+      "covered_by": "rios_y_quebradas_uwa",
+      "sheets": 0,
+      "note": "Nace donde vivía Lisha y lleva su sangre por el territorio."
+    },
+    {
+      "id": "quebrada_monoa_lia",
+      "name": "La quebrada Monoa Lia",
+      "kind": "paisaje",
+      "myths": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "embedded",
+      "covered_by": "rios_y_quebradas_uwa",
+      "sheets": 0,
+      "note": "Recibe el nombre del niño cuya sangre se dispersó allí; el canon prohíbe geolocalizarla."
+    },
+    {
+      "id": "entradas_cubiertas_por_rocas",
+      "name": "Las entradas cubiertas por rocas",
+      "kind": "lugar",
+      "myths": [
+        "el-recorrido-de-uktara"
+      ],
+      "decision": "embedded",
+      "covered_by": "dimension_de_los_muertos",
+      "sheets": 0,
+      "note": "Umbral de la otra dimensión; parte de esa ficha. El canon prohíbe geolocalizarlas y advierte que la coordenada no es una invitación a buscarlas."
+    },
+    {
+      "id": "cascajal_y_mulera",
+      "name": "Cascajal y Mulera",
+      "kind": "lugar",
+      "myths": [
+        "mensajes-de-los-animales-uwa"
+      ],
+      "decision": "embedded",
+      "covered_by": "caminos_uwa",
+      "sheets": 0,
+      "note": "Extremos del camino donde se reúnen los animales; solo sitúan el sendero."
+    },
+    {
+      "id": "platanos_y_cultivos",
+      "name": "Plátanos y cultivos",
+      "kind": "planta",
+      "myths": [
+        "el-oso-y-el-hombre-uwa",
+        "el-recorrido-de-uktara"
+      ],
+      "decision": "embedded",
+      "covered_by": "huertas_uwa",
+      "sheets": 0,
+      "note": "Plátanos que la madre carga en la mochila y racimos grandes de la otra dimensión; parte de la huerta."
+    },
+    {
+      "id": "familia_uwa_de_bakokuira",
+      "name": "La madre y los niños de Bakokuira",
+      "kind": "colectivo",
+      "myths": [
+        "el-oso-y-el-hombre-uwa"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_uwa",
+      "sheets": 0,
+      "note": "Miembros genéricos del elenco: la madre con la mochila y los niños que juegan alrededor de la casa."
+    },
+    {
+      "id": "hermano_de_kusbasha",
+      "name": "El hermano mayor de Kusbasha",
+      "kind": "personaje",
+      "myths": [
+        "lisha-la-madre-del-agua"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_uwa",
+      "sheets": 0,
+      "note": "Observa el camino con él y lo rescata; adulto U’wa sin nombre ni rasgo propio, cubierto por la gramática del elenco."
+    },
+    {
+      "id": "familia_que_comparte_chicha",
+      "name": "La familia que comparte chicha de maíz",
+      "kind": "colectivo",
+      "myths": [
+        "lisha-la-madre-del-agua"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_uwa",
+      "sheets": 0,
+      "note": "Kusbasha los escucha antes de acercarse y luego lo reciben en la casa; miembros genéricos del elenco."
+    },
+    {
+      "id": "sabios_uwa",
+      "name": "Los sabios U’wa",
+      "kind": "colectivo",
+      "myths": [
+        "el-recorrido-de-uktara",
+        "yanoa-y-sirbetuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "colectivo_gente_uwa",
+      "sheets": 0,
+      "note": "Voces que enmarcan dos relatos («los sabios cuentan», «los sabios explican»); no entran en escena con cuerpo propio."
+    },
+    {
+      "id": "yagshowa",
+      "name": "Yagshowa",
+      "kind": "criatura",
+      "myths": [
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "embedded",
+      "covered_by": "abejas_sin_aguijon",
+      "sheets": 0,
+      "note": "Conduce a las demás abejas en el descenso: es la líder nombrada y su cuerpo es el del colectivo; el marcador distintivo vive dentro de la gramática de grupo."
+    },
+    {
+      "id": "pareja_de_abejas_de_reserva",
+      "name": "La pareja de abejas que queda como reserva",
+      "kind": "criatura",
+      "myths": [
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "embedded",
+      "covered_by": "abejas_sin_aguijon",
+      "sheets": 0,
+      "note": "Permanece arriba para que la materia no se agote; variante del mismo ser ya fichado."
+    },
+    {
+      "id": "kanoba",
+      "name": "El kanoba",
+      "kind": "objeto",
+      "myths": [
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "embedded",
+      "covered_by": "abejas_sin_aguijon",
+      "sheets": 0,
+      "note": "Saliva creadora y alimento que se transforma en abejas; materia de origen del colectivo, parte de su ficha."
+    },
+    {
+      "id": "familiares_muertos_de_uktara",
+      "name": "Los familiares muertos que Uktara reconoce",
+      "kind": "colectivo",
+      "myths": [
+        "el-recorrido-de-uktara"
+      ],
+      "decision": "embedded",
+      "covered_by": "almas_de_la_otra_dimension",
+      "sheets": 0,
+      "note": "Conversan como en la dimensión visible; miembros del colectivo de almas ya fichado."
+    },
+    {
+      "id": "semillas_traidas_por_uktara",
+      "name": "Las semillas de batata roja y kabesha",
+      "kind": "objeto",
+      "myths": [
+        "el-recorrido-de-uktara"
+      ],
+      "decision": "embedded",
+      "covered_by": "uktara",
+      "sheets": 0,
+      "note": "Prueba que el viajero trae en la mano. ADVERTENCIA: el canon prohíbe identificarlas científicamente (kabesha solo se define como «planta silvestre comestible»), así que la ficha de Uktara las lleva sin comprometer especie."
+    },
+    {
+      "id": "huellas_del_oso",
+      "name": "Las huellas del oso",
+      "kind": "objeto",
+      "myths": [
+        "el-oso-y-el-hombre-uwa"
+      ],
+      "decision": "embedded",
+      "covered_by": "oso_protector_de_bakokuira",
+      "sheets": 0,
+      "note": "Objeto del malentendido y del cierre del relato; rastro del animal, parte de su ficha."
+    },
+    {
+      "id": "hoja_que_esconde_la_culebra",
+      "name": "La hoja bajo la que se esconde la culebra",
+      "kind": "planta",
+      "myths": [
+        "el-pajaro-carpintero-y-el-poder-de-curar"
+      ],
+      "decision": "embedded",
+      "covered_by": "culebra_del_camino",
+      "sheets": 0,
+      "note": "Elemento de la escena de la mordedura; parte de la ficha de la culebra."
+    },
+    {
+      "id": "canto_de_la_perdiz",
+      "name": "El canto de la perdiz",
+      "kind": "fenomeno",
+      "myths": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "decision": "embedded",
+      "covered_by": "perdiz",
+      "sheets": 0,
+      "note": "Manifestación estacional de Kubashoa en época de lluvia; se resuelve dentro de la ficha del ave."
+    },
+    {
+      "id": "sueno_del_tigrillo",
+      "name": "El sueño en que aconseja el tigrillo",
+      "kind": "fenomeno",
+      "myths": [
+        "mensajes-de-los-animales-uwa"
+      ],
+      "decision": "embedded",
+      "covered_by": "tigrillo",
+      "sheets": 0,
+      "note": "El consejo aparece con la voz de un familiar, un vecino o un ser de otra dimensión; recurso visual de la ficha del tigrillo."
+    },
+    {
+      "id": "vapor_y_lluvia_de_las_vasijas",
+      "name": "El vapor y la lluvia de las vasijas",
+      "kind": "fenomeno",
+      "myths": [
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "embedded",
+      "covered_by": "vasijas_de_barro",
+      "sheets": 0,
+      "note": "El calor sobre el agua reunida produce vapor y lluvia; parte de la escena de las vasijas."
+    },
+    {
+      "id": "comida_de_vapor_de_las_almas",
+      "name": "La comida de la que las almas beben el olor",
+      "kind": "objeto",
+      "myths": [
+        "el-recorrido-de-uktara"
+      ],
+      "decision": "embedded",
+      "covered_by": "vasijas_de_barro",
+      "sheets": 0,
+      "note": "Las almas vuelan sobre el vapor en vez de comer; parte de la escena de los recipientes de barro. Es también lo que Uktara se niega a probar."
+    },
+    {
+      "id": "trampa_de_palos",
+      "name": "La trampa de palos",
+      "kind": "objeto",
+      "myths": [
+        "el-oso-y-el-hombre-uwa"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_caza_y_camino",
+      "sheets": 0,
+      "note": "El padre reúne palos y la prepara en el camino habitual del oso."
+    },
+    {
+      "id": "flechas_uwa",
+      "name": "Las flechas",
+      "kind": "objeto",
+      "myths": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_caza_y_camino",
+      "sheets": 0,
+      "note": "Preparadas antes de salir a las rutas de intercambio."
+    },
+    {
+      "id": "lanza_de_monoa",
+      "name": "La lanza de Monoa",
+      "kind": "objeto",
+      "myths": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_caza_y_camino",
+      "sheets": 0,
+      "note": "Con ella y con la soga enfrenta a los seres peligrosos; también son las herramientas de caza que entrega al niño."
+    },
+    {
+      "id": "soga_uwa",
+      "name": "La soga",
+      "kind": "objeto",
+      "myths": [
+        "monoa-el-hijo-de-la-montana",
+        "yanoa-y-sirbetuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_caza_y_camino",
+      "sheets": 0,
+      "note": "Monoa la usa contra los seres peligrosos; Yanoa la lanza sin lograr sujetar la vaca y Sirbetuna amarra al primer intento."
+    },
+    {
+      "id": "mochila_y_tejidos_de_carga",
+      "name": "La mochila y los tejidos de carga",
+      "kind": "objeto",
+      "myths": [
+        "el-oso-y-el-hombre-uwa",
+        "mensajes-de-los-animales-uwa",
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_caza_y_camino",
+      "sheets": 0,
+      "note": "La madre carga plátanos, los viajeros llevan mochilas cargadas y las rutas mueven tejidos. ADVERTENCIA: la hoja fija el objeto genérico; nunca un diseño real de tejido U’wa."
+    },
+    {
+      "id": "cuchillo_de_kusbasha",
+      "name": "El cuchillo de Kusbasha",
+      "kind": "objeto",
+      "myths": [
+        "lisha-la-madre-del-agua"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_casa_y_alimento",
+      "sheets": 0,
+      "note": "Uno de los tres elementos que lleva consigo al entrar en Lisha."
+    },
+    {
+      "id": "olla_de_sirbetuna",
+      "name": "La olla de Sirbetuna",
+      "kind": "objeto",
+      "myths": [
+        "yanoa-y-sirbetuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_casa_y_alimento",
+      "sheets": 0,
+      "note": "Declara tener espada, lanza, olla y fuego para preparar la vaca."
+    },
+    {
+      "id": "chicha_de_maiz_en_totuma",
+      "name": "La chicha de maíz y la totuma",
+      "kind": "objeto",
+      "myths": [
+        "lisha-la-madre-del-agua"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_casa_y_alimento",
+      "sheets": 0,
+      "note": "La familia la comparte antes de la hazaña y Kusbasha la recibe al volver; la totumada mide también el primer caudal del Keroa."
+    },
+    {
+      "id": "fuego_y_tizon",
+      "name": "El fuego",
+      "kind": "objeto",
+      "myths": [
+        "lisha-la-madre-del-agua",
+        "yanoa-y-sirbetuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_casa_y_alimento",
+      "sheets": 0,
+      "note": "Kusbasha lo enciende dentro de Lisha; Sirbetuna lo tiene para cocinar."
+    },
+    {
+      "id": "sal_para_las_reses",
+      "name": "La sal para las reses",
+      "kind": "objeto",
+      "myths": [
+        "yanoa-y-sirbetuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_casa_y_alimento",
+      "sheets": 0,
+      "note": "Yanoa vigila las reses y les da sal."
+    },
+    {
+      "id": "otoba",
+      "name": "La otoba",
+      "kind": "objeto",
+      "myths": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_intercambio_y_contacto",
+      "sheets": 0,
+      "note": "Bien que se lleva en las rutas de intercambio junto con cera y tejidos; el canon no la describe más."
+    },
+    {
+      "id": "cal_para_el_ayo",
+      "name": "La cal",
+      "kind": "objeto",
+      "myths": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_intercambio_y_contacto",
+      "sheets": 0,
+      "note": "Preparada antes de salir junto con tabaco, yopo y ayo."
+    },
+    {
+      "id": "espada_de_sirbetuna",
+      "name": "La espada de Sirbetuna",
+      "kind": "objeto",
+      "myths": [
+        "yanoa-y-sirbetuna"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_intercambio_y_contacto",
+      "sheets": 0,
+      "note": "Elemento de contacto que el canon conserva a propósito, sin fabricar falsa antigüedad prehispánica."
+    },
+    {
+      "id": "vestido_de_kusbasha",
+      "name": "El vestido que recibe Kusbasha",
+      "kind": "objeto",
+      "myths": [
+        "lisha-la-madre-del-agua"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_intercambio_y_contacto",
+      "sheets": 0,
+      "note": "En la casa recibe chicha, vestido y descanso tras perder sangre y fuerza."
+    },
+    {
+      "id": "alimento_purificado_del_camino",
+      "name": "El alimento purificado para el camino",
+      "kind": "objeto",
+      "myths": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_intercambio_y_contacto",
+      "sheets": 0,
+      "note": "Se lleva junto con otoba, cera y tejidos; el canon no detalla su preparación y la hoja no puede inventarla."
+    },
+    {
+      "id": "racha_teca_thira_y_siria",
+      "name": "Racha, Teca, Thira y la grafía Siria",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "creacion-u-wa"
+      ],
+      "decision": "excluded",
+      "reason": "Solo aparecen en «versiones» como nombres o manifestaciones relacionadas con luz y Sol en distintos mundos, y como grafía alterna de Sira; no actúan en ninguna escena y el propio canon dice que «no decide que todos los nombres sean sinónimos exactos».",
+      "sheets": 0,
+      "note": "Verificado en el campo versiones del mito 1. Registrarlos como alias sin ficha evita duplicar a Rukwa y a Sira."
+    },
+    {
+      "id": "seres_viajeros",
+      "name": "Los seres viajeros",
+      "kind": "criatura",
+      "myths": [
+        "creacion-u-wa"
+      ],
+      "decision": "excluded",
+      "reason": "Se nombran una sola vez como quienes «llevaron al mundo intermedio la materia primordial»; el canon no les da cuerpo, número, nombre ni escena, y dibujarlos sería inventar una categoría de seres.",
+      "sheets": 0,
+      "note": "Verificado en el campo mito del relato 1."
+    },
+    {
+      "id": "lagunas_de_origen_de_los_clanes",
+      "name": "Las lagunas de origen de los clanes",
+      "kind": "lugar",
+      "myths": [
+        "creacion-u-wa"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required — son sitios del Cocuy, materia sensible según el encargo; el canon insiste en que la coordenada es «solo un punto representativo» y que cada laguna «conservó la memoria de un nacimiento». Identificar o dibujar una laguna de origen concreta es fichar un sitio sagrado.",
+      "sheets": 0,
+      "note": "La escena de las parejas que salen del agua se monta sobre la ficha genérica de sierra y páramo, que no identifica ningún sitio."
+    },
+    {
+      "id": "kuiunbara_tinshoikuba_y_sheonkuba",
+      "name": "Kuiunbara, Tinshoikuba y Sheonkuba",
+      "kind": "lugar",
+      "myths": [
+        "la-competencia-de-los-tigres-uwa"
+      ],
+      "decision": "excluded",
+      "reason": "Se nombran solo como procedencia de los tigres del territorio ancestral; el relato nunca los describe ni los pone en escena.",
+      "sheets": 0,
+      "note": "Verificado en el primer párrafo del mito 6."
+    },
+    {
+      "id": "wikana_y_siskaa",
+      "name": "Wikana y Siskaa",
+      "kind": "lugar",
+      "myths": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "excluded",
+      "reason": "Son los destinos de las rutas de intercambio y se nombran en la frase de apertura; el canon no los describe ni ocurre en ellos ninguna escena — todo el relato pasa en el camino.",
+      "sheets": 0,
+      "note": "Verificado en el campo mito del relato 10."
+    },
+    {
+      "id": "kakasoa",
+      "name": "Kakasoa",
+      "kind": "criatura",
+      "myths": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "excluded",
+      "reason": "do_not_visualize — el glosario del libro lo define como «un ser invisible de las altas montañas peligroso para los U’wa» y los research_notes ordenan conservarlo «sin inventar apariencia». Es literalmente invisible.",
+      "sheets": 0,
+      "note": "Verificado en historia y research_notes del relato 10. Contrasta con el áinawi Sikuani, que sí se presenta con cuerpo de hombre."
+    },
+    {
+      "id": "shinkuata",
+      "name": "Shinkuata",
+      "kind": "criatura",
+      "myths": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "excluded",
+      "reason": "Aparece solo dentro de la enumeración de seres que quieren atacar al viajero, sin cuerpo, sin acción individual y sin definición en el glosario; los research_notes prohíben inventarle apariencia.",
+      "sheets": 0,
+      "note": "Verificado: el canon dice que el glosario «no ofrece definiciones completas de todos» y que inventarlas «produciría una falsa enciclopedia»."
+    },
+    {
+      "id": "konara",
+      "name": "Konara",
+      "kind": "criatura",
+      "myths": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "excluded",
+      "reason": "Igual que Shinkuata: solo figura en la enumeración de atacantes, sin cuerpo ni acción propia, y los research_notes prohíben inventarle apariencia.",
+      "sheets": 0,
+      "note": "Verificado en el campo mito y en research_notes del relato 10."
+    },
+    {
+      "id": "werjaya",
+      "name": "El Werjaya",
+      "kind": "personaje",
+      "myths": [
+        "el-pajaro-carpintero-y-el-poder-de-curar"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required — el encargo marca al werjayá y su saber como materia sensible, y el canon solo lo nombra en «historia» como marco institucional, diciendo expresamente que esos datos «no identifican al hombre de la historia como Werjaya ni reconstruyen una ceremonia completa».",
+      "sheets": 0,
+      "note": "Verificado: única mención en todo el corpus, en el campo historia del relato 3."
+    },
+    {
+      "id": "cantos_y_ayunos_uwa",
+      "name": "Los cantos y los ayunos",
+      "kind": "fenomeno",
+      "myths": [
+        "creacion-u-wa",
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required — el encargo marca los cantos y el ayuno como materia sensible. El canon los nombra como la tarea que sostiene el mundo («pensamiento, cantos, ayunos y ceremonias») y dice que el mito de la miel «se canta después de recolectar», pero nunca reproduce un canto ni describe un ayuno.",
+      "sheets": 0,
+      "note": "Verificado: «ayuno» aparece una sola vez en todo el corpus, en el cierre del relato 1."
+    },
+    {
+      "id": "reowa_y_aya",
+      "name": "Los complejos Reowa y Aya",
+      "kind": "fenomeno",
+      "myths": [
+        "creacion-u-wa"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required — universe.mjs los declara narrativa de contexto, no relato autónomo, porque «son familias de mitos cantados y ceremonias estacionales»; caen además dentro de la materia sensible de cantos.",
+      "sheets": 0,
+      "note": "Verificado en editorial/uwa/universe.mjs (uwaContextOnlyNarratives)."
+    },
+    {
+      "id": "ceremonia_anbaiya",
+      "name": "La celebración del ordenamiento de las abejas (Anbaiya)",
+      "kind": "fenomeno",
+      "myths": [
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "excluded",
+      "reason": "consult_required — el canon dice que Osborn «advierte que la versión celebrada ya era incompleta cuando realizó su investigación» y que la página «no pretende reconstruir ni reemplazar la celebración»; cada comunidad conserva autoridad sobre lo que puede comunicarse.",
+      "sheets": 0,
+      "note": "Verificado en historia y versiones del relato 7."
+    },
+    {
+      "id": "zorro_y_zarigueya",
+      "name": "El zorro y la zarigüeya",
+      "kind": "animal",
+      "myths": [
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "excluded",
+      "reason": "universe.mjs lo declara narrativa solo de contexto («El zorro y la zarigüeya y la soplada de los animales»); no se narra en ninguna de las once páginas, así que no existe escena que ilustrar.",
+      "sheets": 0,
+      "note": "Verificado en editorial/uwa/universe.mjs y en research_notes del relato 7 («quedan como contexto, no páginas fragmentarias»). Se deja explícito para que nadie los dibuje por parecer fauna disponible."
+    },
+    {
+      "id": "bisto_de_agua_blanca",
+      "name": "Bisto (variante de Agua Blanca)",
+      "kind": "deidad_fuerza",
+      "myths": [
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "decision": "excluded",
+      "reason": "Aparece solo en «versiones» como memoria de otro clan (tumba una colmena, entrega miel y enseña a procesar cera); la edición no declara que sea el mismo Bistoa del relato 6 y la fuente no describe su cuerpo ni pone la escena en la página.",
+      "sheets": 0,
+      "note": "Es la decisión que deliberadamente NO tomo: ni fusionar ni fichar. Si el editor quiere la escena de la colmena derribada de Agua Blanca, es una ficha nueva y una decisión de canon, no de censo."
+    },
+    {
+      "id": "personas_no_uwa_y_sus_animales",
+      "name": "Las personas no U’wa y sus animales de la otra dimensión",
+      "kind": "colectivo",
+      "myths": [
+        "el-recorrido-de-uktara"
+      ],
+      "decision": "excluded",
+      "reason": "El relato dice expresamente que «se oían, desde otros espacios, ruidos de personas no U’wa y de sus animales»: solo se escuchan y nunca se ven.",
+      "sheets": 0,
+      "note": "Verificado en el campo mito del relato 4. El canon además pide no interpretar su presencia como condena."
+    },
+    {
+      "id": "interior_de_lisha",
+      "name": "El interior de Lisha",
+      "kind": "lugar",
+      "myths": [
+        "lisha-la-madre-del-agua"
+      ],
+      "decision": "excluded",
+      "reason": "do_not_visualize — research_notes ordena «contenido corporal preservado en texto sin representación gráfica» y la historia precisa que «la dirección visual excluye anatomía, cadáveres y violencia». Cubre las cuatro espinas, los huesos, los cuatro corazones, riñones e hígados y la vena enterrada.",
+      "sheets": 0,
+      "note": "Verificado literalmente en historia y research_notes del relato 8. Es la prohibición visual más explícita del corpus."
+    },
+    {
+      "id": "oso_herido_en_la_trampa",
+      "name": "El oso herido en la trampa",
+      "kind": "animal",
+      "myths": [
+        "el-oso-y-el-hombre-uwa"
+      ],
+      "decision": "excluded",
+      "reason": "do_not_visualize — research_notes dice «IMAGEN: violencia solo simbólica; no mostrar animal herido».",
+      "sheets": 0,
+      "note": "Verificado literalmente. Por eso el oso no lleva estado extra: solo existe su ficha de identidad viva."
+    },
+    {
+      "id": "monoa_nino_herido",
+      "name": "El niño Monoa herido",
+      "kind": "criatura",
+      "myths": [
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "decision": "excluded",
+      "reason": "do_not_visualize — research_notes dice «CAUTELA: muerte infantil narrada e ilustrada solo de forma simbólica», y la historia añade que se cuenta «sin imagen de la herida ni dramatización corporal».",
+      "sheets": 0,
+      "note": "Verificado literalmente en historia y research_notes del relato 10."
+    },
+    {
+      "id": "cuerpo_de_kubashoa_y_el_ultimo_alimento",
+      "name": "El cuerpo de Kubashoa y el retiro del último alimento",
+      "kind": "objeto",
+      "myths": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "decision": "excluded",
+      "reason": "El canon advierte que «la muerte y tratamiento del cuerpo se cuentan porque sostienen la lógica del paso» y que «no se presentan como práctica funeraria general de todos los U’wa»; una ficha convertiría el procedimiento en modelo reproducible.",
+      "sheets": 0,
+      "note": "Verificado en el campo historia del relato 5. La cueva vacía al cuarto día sí puede montarse sobre la ficha de cuevas y peñas."
+    },
+    {
+      "id": "secreta_palabras_de_poder",
+      "name": "El contenido de la secreta",
+      "kind": "fenomeno",
+      "myths": [
+        "el-pajaro-carpintero-y-el-poder-de-curar"
+      ],
+      "decision": "excluded",
+      "reason": "research_notes dice «no se inventan secretas, fórmulas ni procedimiento médico» y la historia precisa que «el contenido de fórmulas medicinales o rituales no está en la fuente pública y no corresponde recrearlo».",
+      "sheets": 0,
+      "note": "Verificado literalmente. El gesto sí tiene ficha (soplo_y_secreta); las palabras no."
+    },
+    {
+      "id": "ebara",
+      "name": "El ebará",
+      "kind": "objeto",
+      "myths": [
+        "lisha-la-madre-del-agua"
+      ],
+      "decision": "excluded",
+      "reason": "Se nombra una sola vez en la lista de lo que lleva Kusbasha («cuchillo, yopo y ebará») y el canon no lo define ni lo describe en ningún campo; darle forma sería inventarlo.",
+      "sheets": 0,
+      "note": "Verificado: única aparición del término en todo el corpus U’wa."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_caza_y_camino",
+      "kind": "objeto",
+      "covers": [
+        "trampa_de_palos",
+        "flechas_uwa",
+        "lanza_de_monoa",
+        "soga_uwa",
+        "mochila_y_tejidos_de_carga"
+      ],
+      "sheets": 1,
+      "note": "Cinco objetos menores de caza y viaje que atraviesan los relatos 2, 9, 10 y 11. ADVERTENCIA: el tejido se fija como objeto genérico, nunca como un diseño real U’wa."
+    },
+    {
+      "id": "hoja_utileria_casa_y_alimento",
+      "kind": "objeto",
+      "covers": [
+        "cuchillo_de_kusbasha",
+        "olla_de_sirbetuna",
+        "chicha_de_maiz_en_totuma",
+        "fuego_y_tizon",
+        "sal_para_las_reses"
+      ],
+      "sheets": 1,
+      "note": "Cinco objetos menores domésticos de los relatos 8 y 11."
+    },
+    {
+      "id": "hoja_utileria_intercambio_y_contacto",
+      "kind": "objeto",
+      "covers": [
+        "otoba",
+        "cal_para_el_ayo",
+        "espada_de_sirbetuna",
+        "vestido_de_kusbasha",
+        "alimento_purificado_del_camino"
+      ],
+      "sheets": 1,
+      "note": "Cinco objetos menores de las rutas de intercambio y del contacto histórico (relatos 8, 10 y 11), que el canon conserva a propósito sin fabricar falsa antigüedad prehispánica."
+    }
+  ],
+  "totals": {
+    "entities": 130,
+    "required": 57,
+    "embedded": 52,
+    "excluded": 21,
+    "sheets": 65
+  }
+}

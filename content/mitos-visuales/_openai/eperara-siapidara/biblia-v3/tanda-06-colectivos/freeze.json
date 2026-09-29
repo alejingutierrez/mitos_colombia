@@ -1,0 +1,47 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "eperara-siapidara",
+  "comunidad": "Eperara Siapidara",
+  "tanda": "tanda-06-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/eperara-siapidara.v3.json",
+    "sha256": "f1e09e8865885cbc1c82b23127acb4831384108fbe78b9de2e448e7afee04951"
+  },
+  "canon": {
+    "sha256": "b8209cc2e51efedb8160a2273d05eb0f6f1990842891324ddd3568e633bad132",
+    "verificado_en": "2026-09-29T02:13:56.031Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 1,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "gente_eperara__group_grammar--canon",
+      "modelo": "gente_eperara__group_grammar",
+      "entidad": "Gente Eperara (los que se levantan de las estacas y los que sostienen la minga)",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "origen-del-pueblo-eperara",
+        "tachi-akhore-y-la-palabra-de-mangle"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7370,
+      "prompt_sha256": "fad4b5998b4e231236ba34a191e4c04cbb334a16487ead3e33c9fa80c932dd84"
+    }
+  ]
+}

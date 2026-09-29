@@ -1,0 +1,333 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ticuna",
+  "comunidad": "Ticuna",
+  "tanda": "tanda-04-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ticuna.v3.json",
+    "sha256": "fd0c6ffe84de74c45161ae42823d427354bcefa0940f5eb72ce2559eac09f0a3"
+  },
+  "canon": {
+    "sha256": "508298d7f6b1c813ab2d8c0bf8438b2829b11c5b30bc6045eb9ce969dbb95dc9",
+    "verificado_en": "2026-09-29T02:04:30.428Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 18,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "cazador-que-se-vuelve-sol__identity_sheet--canon",
+      "modelo": "cazador-que-se-vuelve-sol__identity_sheet",
+      "entidad": "Cazador que se convierte en Sol",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6995,
+      "prompt_sha256": "93ba977034c9c2b36c9aa57466330f13d24abd9ab19badc2c41746a3a0f34693"
+    },
+    {
+      "job": "cazador-que-se-vuelve-sol__state_sheet--estado_Sol",
+      "modelo": "cazador-que-se-vuelve-sol__state_sheet",
+      "entidad": "Cazador que se convierte en Sol",
+      "categoria": "personaje",
+      "vista": "estado_Sol",
+      "estados": [
+        "Sol"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6796,
+      "prompt_sha256": "d3fe8778e3b000e1b5deeead93284d196885bd1f28efc8cef7cc8abd1e38a0b3"
+    },
+    {
+      "job": "esposa-del-hombre-grulla__identity_sheet--canon",
+      "modelo": "esposa-del-hombre-grulla__identity_sheet",
+      "entidad": "Esposa del hombre grulla",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-del-friaje-tikuna"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6135,
+      "prompt_sha256": "74b77706fcff719cc357ae36ca3c5dd6d82259dbc430015d09a5ca933e8246da"
+    },
+    {
+      "job": "esposa-del-sol__identity_sheet--canon",
+      "modelo": "esposa-del-sol__identity_sheet",
+      "entidad": "Esposa del Sol",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5913,
+      "prompt_sha256": "ef4d5f6442cc0fe9d06c349fc83a90d30bdcbc8df02ac9eb619563d99bc6c86a"
+    },
+    {
+      "job": "esposa-del-sol__state_sheet--estado_árbol de algodón",
+      "modelo": "esposa-del-sol__state_sheet",
+      "entidad": "Esposa del Sol",
+      "categoria": "personaje",
+      "vista": "estado_árbol de algodón",
+      "estados": [
+        "árbol de algodón"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6759,
+      "prompt_sha256": "daa042f720f835e9e862160ff178cb18c1cebb28001aa7800752a851893d9e90"
+    },
+    {
+      "job": "hermana-del-joven-luna__identity_sheet--canon",
+      "modelo": "hermana-del-joven-luna__identity_sheet",
+      "entidad": "Hermana del joven Luna",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6282,
+      "prompt_sha256": "f7d05c1d19787d824c4c2a2feca062a248aee07b6c6bbeed03e24f2ee35a3f39"
+    },
+    {
+      "job": "hermano-menor-de-moe__identity_sheet--canon",
+      "modelo": "hermano-menor-de-moe__identity_sheet",
+      "entidad": "Hermano menor de Moe",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-canoa-de-moe"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6140,
+      "prompt_sha256": "e21fa73d04048c6e36c1196e3bfb6664e1244cb35e0a47f2ae08b2a392954402"
+    },
+    {
+      "job": "hombre-grulla__identity_sheet--canon",
+      "modelo": "hombre-grulla__identity_sheet",
+      "entidad": "Hombre que se transforma en grulla",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-del-friaje-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6035,
+      "prompt_sha256": "2c068d306e7d3e826069dbaa24c4a2229a656e68eaa56d074b1c69d128c3075a"
+    },
+    {
+      "job": "hombre-grulla__state_sheet--estado_grulla",
+      "modelo": "hombre-grulla__state_sheet",
+      "entidad": "Hombre que se transforma en grulla",
+      "categoria": "personaje",
+      "vista": "estado_grulla",
+      "estados": [
+        "grulla"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-del-friaje-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6752,
+      "prompt_sha256": "27fa26dba3c492f6a6683d1fe0796c6778249370148cedf3f5c344c58863c374"
+    },
+    {
+      "job": "joven-que-se-vuelve-luna__identity_sheet--canon",
+      "modelo": "joven-que-se-vuelve-luna__identity_sheet",
+      "entidad": "Joven que se convierte en Luna",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7106,
+      "prompt_sha256": "8cd3164a65b420ea3a11c9f5eba3c9ef094d0a43ef2aa53bb13e4c4596e8bb9a"
+    },
+    {
+      "job": "joven-que-se-vuelve-luna__state_sheet--estado_cuerpo luminoso, Luna llena",
+      "modelo": "joven-que-se-vuelve-luna__state_sheet",
+      "entidad": "Joven que se convierte en Luna",
+      "categoria": "personaje",
+      "vista": "estado_cuerpo luminoso, Luna llena",
+      "estados": [
+        "cuerpo luminoso, Luna llena"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6929,
+      "prompt_sha256": "309c0569de915b030c6720fb174b9a19285bf720a461c4be62f4901173cc6c17"
+    },
+    {
+      "job": "kuayare__identity_sheet--canon",
+      "modelo": "kuayare__identity_sheet",
+      "entidad": "Kuãyaré",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6210,
+      "prompt_sha256": "80a31dd5c73eb2214f5664e901c4483ee090bd0958121e5d38386e7c2261d4fa"
+    },
+    {
+      "job": "kuayare__state_sheet--estado_avispa",
+      "modelo": "kuayare__state_sheet",
+      "entidad": "Kuãyaré",
+      "categoria": "personaje",
+      "vista": "estado_avispa",
+      "estados": [
+        "avispa"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6365,
+      "prompt_sha256": "991fd3f5dc32009c2cfff18e57e8a9ba5a2082c770b5bbf96ef46f0429b06a08"
+    },
+    {
+      "job": "moe__identity_sheet--canon",
+      "modelo": "moe__identity_sheet",
+      "entidad": "Moe",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-canoa-de-moe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6523,
+      "prompt_sha256": "10f2934b11c2bf8ddaad281fb8b12f55be738fcef9a33bf4cc7d625a044ca15e"
+    },
+    {
+      "job": "moe__state_sheet--estado_ave",
+      "modelo": "moe__state_sheet",
+      "entidad": "Moe",
+      "categoria": "personaje",
+      "vista": "estado_ave",
+      "estados": [
+        "ave"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-canoa-de-moe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6454,
+      "prompt_sha256": "118dbc99d0382d907aae3e292d756bb8011bcfb4638fe92e4884204df2812fa3"
+    },
+    {
+      "job": "moru__identity_sheet--canon",
+      "modelo": "moru__identity_sheet",
+      "entidad": "Moru",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-canoa-de-moe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6248,
+      "prompt_sha256": "39e6857686e94b84b1eff128b1c0e84440913db391ce77dcb4cdc801e896c11c"
+    },
+    {
+      "job": "moru__state_sheet--estado_loro",
+      "modelo": "moru__state_sheet",
+      "entidad": "Moru",
+      "categoria": "personaje",
+      "vista": "estado_loro",
+      "estados": [
+        "loro"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-canoa-de-moe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6839,
+      "prompt_sha256": "3dfc3e5aeb9fa4ffc188830237dddfb925ac2e2842b7a90a0d2dcbda60634594"
+    },
+    {
+      "job": "mujer-nacida-del-umari__identity_sheet--canon",
+      "modelo": "mujer-nacida-del-umari__identity_sheet",
+      "entidad": "Mujer nacida del último fruto de umarí",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6020,
+      "prompt_sha256": "c873bd5f23974abfeef197f7668f7aca3b5bc6bd3e4e8799860dcf2ce553d01a"
+    }
+  ]
+}

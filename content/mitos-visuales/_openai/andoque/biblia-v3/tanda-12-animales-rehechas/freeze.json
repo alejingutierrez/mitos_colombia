@@ -1,0 +1,47 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "andoque",
+  "comunidad": "Andoque (Gente del Hacha)",
+  "tanda": "tanda-12-animales-rehechas",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/andoque.v3.json",
+    "sha256": "cdcf1d4a02c9d6f8ba1a3778878c3bf7f4b9989da5ae0c76807a79740bb44519"
+  },
+  "canon": {
+    "sha256": "1464c50fa3a580f64f525602622acdadb0f163d4bd0942dd7decb8df15cc5afb",
+    "verificado_en": "2026-09-28T19:33:34.261Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 12,
+  "fichas_ya_preparadas": 12,
+  "fichas": [
+    {
+      "job": "seres_del_agua_de_sitakara__identity_sheet--canon",
+      "modelo": "seres_del_agua_de_sitakara__identity_sheet",
+      "entidad": "Los seres del agua de Sitakara",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "las-sirenas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6781,
+      "prompt_sha256": "875ab5cda2b08ba8b149fa2158ab9203aa955a63e8bc291a4a151f77c77b52fc"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ticuna",
+  "comunidad": "Ticuna",
+  "tanda": "tanda-10-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ticuna.v3.json",
+    "sha256": "fd0c6ffe84de74c45161ae42823d427354bcefa0940f5eb72ce2559eac09f0a3"
+  },
+  "canon": {
+    "sha256": "508298d7f6b1c813ab2d8c0bf8438b2829b11c5b30bc6045eb9ce969dbb95dc9",
+    "verificado_en": "2026-09-29T02:13:24.738Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 9,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "selva-y-varzea-del-amazonas__environment_model--canon",
+      "modelo": "selva-y-varzea-del-amazonas__environment_model",
+      "entidad": "Selva y várzea del Trapecio Amazónico",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe",
+        "origen-de-la-luna-tikuna",
+        "origen-del-friaje-tikuna",
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5890,
+      "prompt_sha256": "cb6fba0580e011025b1ecb05f21d7e3a8449c34d05c338152612270d9852c435"
+    },
+    {
+      "job": "chagra__spatial_model--canon",
+      "modelo": "chagra__spatial_model",
+      "entidad": "Chagra",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-canoa-de-moe",
+        "origen-de-la-luna-tikuna",
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5436,
+      "prompt_sha256": "9aa5d2f74787bac501602c8291b63b789872a68d3a4d33a44b534b954cdc14f8"
+    },
+    {
+      "job": "cerro-woruapu-moruapu__spatial_model--canon",
+      "modelo": "cerro-woruapu-moruapu__spatial_model",
+      "entidad": "Cerro Woruapü o Moruapü",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5347,
+      "prompt_sha256": "2d92ef9c93d240f936de84ea97e1586c2b11b919e27cd2be49f175049a6139c6"
+    },
+    {
+      "job": "fuente-primordial__spatial_model--canon",
+      "modelo": "fuente-primordial__spatial_model",
+      "entidad": "Fuente de agua primordial",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5519,
+      "prompt_sha256": "7782a992ad42d763b651cf9e638c43caaa09e74ce8589831ace609c7533adef7"
+    },
+    {
+      "job": "mundo-oscuro-primordial__environment_model--canon",
+      "modelo": "mundo-oscuro-primordial__environment_model",
+      "entidad": "Mundo oscuro, nublado y semejante a vapor de agua",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5568,
+      "prompt_sha256": "eb431de2dac8675dd91e7c0074adff54785b88f9b2c11ccbfaae76bd3c0d13eb"
+    },
+    {
+      "job": "rio-tatu-amazonas__environment_model--canon",
+      "modelo": "rio-tatu-amazonas__environment_model",
+      "entidad": "Río Tatü, el Amazonas",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5535,
+      "prompt_sha256": "89ae225cf54956d3060d287e60aa6da61672bf113ae5397d29824b2c34c73f7c"
+    },
+    {
+      "job": "rio-tatu-amazonas__state_sheet--estado_aguas bajas de julio a octubre, con playas, barras e islas descubiertas",
+      "modelo": "rio-tatu-amazonas__state_sheet",
+      "entidad": "Río Tatü, el Amazonas",
+      "categoria": "paisaje",
+      "vista": "estado_aguas bajas de julio a octubre, con playas, barras e islas descubiertas",
+      "estados": [
+        "aguas bajas de julio a octubre, con playas, barras e islas descubiertas"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6157,
+      "prompt_sha256": "5813a6efb7a641b20b1455650b57c861660974b7c11dec274d8eddd8a98872aa"
+    },
+    {
+      "job": "laguna-de-las-grullas__spatial_model--canon",
+      "modelo": "laguna-de-las-grullas__spatial_model",
+      "entidad": "Laguna de la pesca colectiva",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "origen-del-friaje-tikuna"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5341,
+      "prompt_sha256": "f920f5f59a27220900d806213140a3548ec8f4c482bd3577a28c7d82fec48808"
+    },
+    {
+      "job": "quebrada-eware__spatial_model--canon",
+      "modelo": "quebrada-eware__spatial_model",
+      "entidad": "Quebrada Eware",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5670,
+      "prompt_sha256": "fb721513676b462a38704502a87047b4814e15edeefa15f5b2aa3f161e208c13"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "cordoba-sinu-mestizo",
+  "comunidad": "Córdoba y el Sinú",
+  "tanda": "tanda-04-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/cordoba-sinu-mestizo.v3.json",
+    "sha256": "8e3b8fb8c27d4013c025448dfd2d78a3c0fd8eab108f3bdc383407093e5379d3"
+  },
+  "canon": {
+    "sha256": "2895fda0dc55b17bb0c61d11c59cfdeaa984f8a59545958e98741430b9f823d8",
+    "verificado_en": "2026-09-29T02:33:09.846Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "san_pedro__identity_sheet--canon",
+      "modelo": "san_pedro__identity_sheet",
+      "entidad": "San Pedro",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-mina-de-oro-en-el-infierno",
+        "rambao"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8457,
+      "prompt_sha256": "7733248b46c277a0daf5be8a9f0ad37173180a587a0b87a37e7dd31cda8e3b2c"
+    },
+    {
+      "job": "la_muerte__identity_sheet--canon",
+      "modelo": "la_muerte__identity_sheet",
+      "entidad": "La Muerte (la comadre)",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "rambao"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8433,
+      "prompt_sha256": "9699bf795c69c0a8b3115a1c146f1bb86aad060fc150e6600e380b80493d3dae"
+    },
+    {
+      "job": "la_muerte__state_sheet--estado_presa en el zarzo, dos años tragando humo",
+      "modelo": "la_muerte__state_sheet",
+      "entidad": "La Muerte (la comadre)",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_presa en el zarzo, dos años tragando humo",
+      "estados": [
+        "presa en el zarzo, dos años tragando humo"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "rambao"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8799,
+      "prompt_sha256": "1050fa319f3eb6d3ed64b016dd74ba8bcdcd68e26d519eedbf64cbada37720c4"
+    },
+    {
+      "job": "maria_y_jesus_caminantes__identity_sheet--canon",
+      "modelo": "maria_y_jesus_caminantes__identity_sheet",
+      "entidad": "María y Jesús en el camino",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "rambao"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8694,
+      "prompt_sha256": "3e392077a8dcaaf28c3864ed7a016280f43540a8639946a19b829a552473bfd2"
+    },
+    {
+      "job": "papa_dios__identity_sheet--canon",
+      "modelo": "papa_dios__identity_sheet",
+      "entidad": "Papá Dios",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "las-orejas-del-tio-conejo"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8745,
+      "prompt_sha256": "daff541622411dc29641139bca185b6cc9da90af35612cd05e27d8c5e01b85ad"
+    }
+  ]
+}

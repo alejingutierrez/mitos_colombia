@@ -1,0 +1,103 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "quillacingas",
+  "comunidad": "Quillacingas",
+  "tanda": "tanda-08-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/quillacingas.v3.json",
+    "sha256": "00c78e7401248c308d099f8a50ddcc92c795e0b0a5d20e1b6c039d6061a08654"
+  },
+  "canon": {
+    "sha256": "22e4e45588698691b545d9a3c7e306acd5795b81849509c6c8121ada8f1b03d4",
+    "verificado_en": "2026-09-29T02:00:02.899Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "inundacion_de_la_cocha__phenomenon_rule--canon",
+      "modelo": "inundacion_de_la_cocha__phenomenon_rule",
+      "entidad": "Inundación que forma La Cocha",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cualanquizan",
+        "origen-de-la-isla-la-corota",
+        "el-rabo-de-casapamba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7433,
+      "prompt_sha256": "e66c723c24a1eebe1e66e6639161679efa15b91db49a03fc9621146bdfcaa82e"
+    },
+    {
+      "job": "casa_campesina_del_encano__spatial_model--canon",
+      "modelo": "casa_campesina_del_encano__spatial_model",
+      "entidad": "Casa campesina de El Encano",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-llamado-de-inti",
+        "cualanquizan"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7967,
+      "prompt_sha256": "68d0d03e1ce4a77bea6cab9e41e3623e84d7079ccc735a4cdb4170f51d21b991"
+    },
+    {
+      "job": "cabellera_convertida_en_totora_y_canal__phenomenon_rule--canon",
+      "modelo": "cabellera_convertida_en_totora_y_canal__phenomenon_rule",
+      "entidad": "Cabellera convertida en totora y en canal",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-rabo-de-casapamba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7478,
+      "prompt_sha256": "d2e517c5fb64c39116ead981b8b3ba44ae93a7db20bbdbf9f2c83a057ef5e422"
+    },
+    {
+      "job": "gradas_y_paso_subterraneo__spatial_model--canon",
+      "modelo": "gradas_y_paso_subterraneo__spatial_model",
+      "entidad": "Gradas y paso subterráneo hacia el Bordoncillo",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-rabo-de-casapamba"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7416,
+      "prompt_sha256": "2d61c5a43ead2ed5b8837cc9de209df179bf56a770fd25c0f3ab3663e1fe97ea"
+    }
+  ]
+}

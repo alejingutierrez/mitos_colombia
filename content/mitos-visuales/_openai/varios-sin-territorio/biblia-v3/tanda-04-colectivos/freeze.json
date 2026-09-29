@@ -1,0 +1,239 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "varios-sin-territorio",
+  "comunidad": "Folclor nacional sin territorio",
+  "tanda": "tanda-04-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/varios-sin-territorio.v3.json",
+    "sha256": "960a317c807ac538873f57921f7eb1ee2bdc9f7c716935e83d742a83ff8dbcbf"
+  },
+  "canon": {
+    "sha256": "c1bf9aa902622b9cc85521f658c702c1ade9370c2901b2317eac5892c1fb77f3",
+    "verificado_en": "2026-09-29T02:44:17.346Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 12,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "familia_campesina__group_grammar--canon",
+      "modelo": "familia_campesina__group_grammar",
+      "entidad": "Familia campesina (madre, niños, abuelo)",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-mano-peluda",
+        "los-duendes",
+        "la-viudita",
+        "la-barbacoa-del-muerto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7432,
+      "prompt_sha256": "150113a1369088718aa3d61a62d6f841ff284f8e2a4edfa6f804a0432d924c41"
+    },
+    {
+      "job": "jornaleros_en_tertulia_nocturna__group_grammar--canon",
+      "modelo": "jornaleros_en_tertulia_nocturna__group_grammar",
+      "entidad": "Jornaleros y peones en tertulia nocturna",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-silbon",
+        "la-vieja-colmillona"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7685,
+      "prompt_sha256": "971446fc7a51517a0a518150866cf2a727aeb5348ed5c95e18796645b8c4c453"
+    },
+    {
+      "job": "lenadores_y_cazadores_del_monte__group_grammar--canon",
+      "modelo": "lenadores_y_cazadores_del_monte__group_grammar",
+      "entidad": "Leñadores y cazadores del monte",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-hojarasquin-del-monte",
+        "la-madremonte"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7500,
+      "prompt_sha256": "d0e6888ca2d4644cd756120aef154ea45063464834395f950d604f6f8594f160"
+    },
+    {
+      "job": "marineros_y_pescadores_del_pacifico__group_grammar--canon",
+      "modelo": "marineros_y_pescadores_del_pacifico__group_grammar",
+      "entidad": "Marineros y pescadores del litoral Pacífico",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-barco-fantasma",
+        "la-sirena-del-arco"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7469,
+      "prompt_sha256": "f678567471cbe88acca026901a21d5c3e17b556913df087178afadf997b21571"
+    },
+    {
+      "job": "pescadores_riberenos_del_magdalena__group_grammar--canon",
+      "modelo": "pescadores_riberenos_del_magdalena__group_grammar",
+      "entidad": "Pescadores y bogas del Magdalena",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-mohan",
+        "el-hombre-caiman"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7583,
+      "prompt_sha256": "3f983292b22afff38893bfd5adbc500249b0514d3103d3bf330e77e8df049fcb"
+    },
+    {
+      "job": "los_meneses__group_grammar--canon",
+      "modelo": "los_meneses__group_grammar",
+      "entidad": "Los Meneses",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-meneses"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7800,
+      "prompt_sha256": "3c2c7e62de250cfa06cf7b369da0d168346a526e5ae4b4dd09bb475b45dc6309"
+    },
+    {
+      "job": "los_porteadores_del_guando__group_grammar--canon",
+      "modelo": "los_porteadores_del_guando__group_grammar",
+      "entidad": "Los cuatro porteadores del guando",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-barbacoa-del-muerto"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7337,
+      "prompt_sha256": "a28141f69efc92f90385051e9c76fdc56e40885caf86c62b4844db3e90b74e7e"
+    },
+    {
+      "job": "los_seis_expedicionarios__group_grammar--canon",
+      "modelo": "los_seis_expedicionarios__group_grammar",
+      "entidad": "Los seis expedicionarios",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-griton"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6983,
+      "prompt_sha256": "7d41a518a9807afc1679e323f4ecbeb4f5d7c3fa723d2b6fc2b7db4ec5a1cfae"
+    },
+    {
+      "job": "los_seis_expedicionarios__state_sheet--estado_los seis dispersos y empapados huyendo del grito en abanico",
+      "modelo": "los_seis_expedicionarios__state_sheet",
+      "entidad": "Los seis expedicionarios",
+      "categoria": "colectivo",
+      "vista": "estado_los seis dispersos y empapados huyendo del grito en abanico",
+      "estados": [
+        "los seis dispersos y empapados huyendo del grito en abanico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-griton"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7732,
+      "prompt_sha256": "33d48c662473a26fd6c2bdb5163358b9bd0dfef6c0e670c37beb1c82f1425581"
+    },
+    {
+      "job": "multitud_del_carnaval_de_barranquilla__group_grammar--canon",
+      "modelo": "multitud_del_carnaval_de_barranquilla__group_grammar",
+      "entidad": "La multitud del Carnaval de Barranquilla",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-mandingas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7740,
+      "prompt_sha256": "d8f538d9202388da8951803540400f23ea8eb2a1e112417dc26de44ed37c3150"
+    },
+    {
+      "job": "pasajeros_espectrales_del_bus__group_grammar--canon",
+      "modelo": "pasajeros_espectrales_del_bus__group_grammar",
+      "entidad": "Pasajeros espectrales del bus",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-bus-fantasma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7382,
+      "prompt_sha256": "2c4f7c77bf3634a277ce2cccead0372fa7425435ab19957983404d2d5e3d1b9c"
+    },
+    {
+      "job": "vecindario_de_plato_1940__group_grammar--canon",
+      "modelo": "vecindario_de_plato_1940__group_grammar",
+      "entidad": "El vecindario de Plato en 1940",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-hombre-caiman"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7827,
+      "prompt_sha256": "6ecaf2e2d2b7ba064f5c2215b051bd928c82e7dff4a57166cd2dd7f2e2650b63"
+    }
+  ]
+}

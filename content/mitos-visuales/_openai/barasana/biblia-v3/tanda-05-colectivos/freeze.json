@@ -1,0 +1,152 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "barasana",
+  "comunidad": "Barasana",
+  "tanda": "tanda-05-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/barasana.v3.json",
+    "sha256": "63a71278101405757bb0624c0ed918ebab9ba2d2df6fe234fa28db05a53a3ff2"
+  },
+  "canon": {
+    "sha256": "ff3d70797dc45bbc973d04baf1004c1e75592064c3b93d9d9dda760d8de6ff91",
+    "verificado_en": "2026-09-29T01:58:15.081Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 7,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "gente_barasano__group_grammar--canon",
+      "modelo": "gente_barasano__group_grammar",
+      "entidad": "La gente Barasano",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano",
+        "la-cuerda-de-leche-y-la-anaconda-yeba",
+        "los-cerros-estantillos-y-la-cera-de-abejas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6817,
+      "prompt_sha256": "ed86993aadbd3904c2d5f96538e8df8d26dc8578ec86249dff9242c785c36bd1"
+    },
+    {
+      "job": "gente_del_cielo__group_grammar--canon",
+      "modelo": "gente_del_cielo__group_grammar",
+      "entidad": "La Gente del Cielo",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-luna",
+        "los-cerros-estantillos-y-la-cera-de-abejas"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6769,
+      "prompt_sha256": "035ab61e3eee8d4b69c762b9d7d81b7fc3d1539d6aa9a2a54a0e93eca0a8aa1d"
+    },
+    {
+      "job": "jaguares_de_yurupari__group_grammar--canon",
+      "modelo": "jaguares_de_yurupari__group_grammar",
+      "entidad": "Los Jaguares de Yuruparí",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-origen-de-la-gente-de-los-frutales-silvestres",
+        "la-cuerda-de-leche-y-la-anaconda-yeba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7336,
+      "prompt_sha256": "09081fcbee17113e4f71f16479bd01df52d6794016271a3c1dc66318c2dbb94b"
+    },
+    {
+      "job": "anacondas_ancestrales__group_grammar--canon",
+      "modelo": "anacondas_ancestrales__group_grammar",
+      "entidad": "Las anacondas ancestrales",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-cuerda-de-leche-y-la-anaconda-yeba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6805,
+      "prompt_sha256": "9363c67aedaa15a37f8c17cd73a1e54ace436f5da1af0738bc369aee0b72ff7c"
+    },
+    {
+      "job": "anacondas_ancestrales__state_sheet--estado_forma humana tras la segunda etapa",
+      "modelo": "anacondas_ancestrales__state_sheet",
+      "entidad": "Las anacondas ancestrales",
+      "categoria": "colectivo",
+      "vista": "estado_forma humana tras la segunda etapa",
+      "estados": [
+        "forma humana tras la segunda etapa"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-cuerda-de-leche-y-la-anaconda-yeba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5923,
+      "prompt_sha256": "8f564892b0f5c4b4e62110385d528063ed3ed6bbe6dd6ad8d15e11cf31437dc2"
+    },
+    {
+      "job": "gente_frutales_silvestres__group_grammar--canon",
+      "modelo": "gente_frutales_silvestres__group_grammar",
+      "entidad": "La Gente de los Frutales Silvestres",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-origen-de-la-gente-de-los-frutales-silvestres"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6705,
+      "prompt_sha256": "b854e3d74ca3f86fdc80c4014ee8f4f201dde48ebbee67e4b7f1c1d613b7994f"
+    },
+    {
+      "job": "jaguares_del_trueno__group_grammar--canon",
+      "modelo": "jaguares_del_trueno__group_grammar",
+      "entidad": "Los Jaguares del Trueno",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6843,
+      "prompt_sha256": "280f43cb5a082ad6aea5505dc48389b66f7694c6ef799a7e81fb04c8d56a3932"
+    }
+  ]
+}

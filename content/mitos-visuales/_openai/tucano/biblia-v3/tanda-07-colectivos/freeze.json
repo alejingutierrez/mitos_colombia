@@ -1,0 +1,120 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tucano",
+  "comunidad": "Tucano",
+  "tanda": "tanda-07-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tucano.v3.json",
+    "sha256": "3328d35e2cabdae942974b80bff65672e5d002bf0baa7e431e6248fdb0c51b94"
+  },
+  "canon": {
+    "sha256": "c2c891d8239e415d3d353744fa980cfb41c99c3ff809a4d7bc9ec03abd8495f4",
+    "verificado_en": "2026-09-29T01:57:07.087Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "gente_tucano__group_grammar--canon",
+      "modelo": "gente_tucano__group_grammar",
+      "entidad": "La gente Tucano",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cuando-la-danta-perdio-su-hegemonia",
+        "el-origen-del-hombre",
+        "la-aparicion-del-sol-del-viento-y-los-mares",
+        "la-semilla-de-la-yuca-tucano",
+        "los-blancos-dominan-a-los-indios",
+        "yepa-abandona-la-tierra",
+        "yepa-castiaga-a-los-animales"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6738,
+      "prompt_sha256": "4f2a161037ec48bbc9be608423ae5748d26078ac0a54e120070004ecf4b516c7"
+    },
+    {
+      "job": "animales_del_diawi__group_grammar--canon",
+      "modelo": "animales_del_diawi__group_grammar",
+      "entidad": "Los animales reunidos en Diawí",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "yepa-castiaga-a-los-animales"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6611,
+      "prompt_sha256": "11c8eb99e4cfd6542fae2892a0d3bc7e776da9c52247c44de5d4b903544ef7a2"
+    },
+    {
+      "job": "animales_del_diawi__state_sheet--estado_forma primordial- cuerpo de gente con cola",
+      "modelo": "animales_del_diawi__state_sheet",
+      "entidad": "Los animales reunidos en Diawí",
+      "categoria": "colectivo",
+      "vista": "estado_forma primordial: cuerpo de gente con cola",
+      "estados": [
+        "forma primordial: cuerpo de gente con cola"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "yepa-castiaga-a-los-animales"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6901,
+      "prompt_sha256": "140b273db9afbdd024c643bbf5705313da7c28ba75015ceb2887f8f5a89c79b1"
+    },
+    {
+      "job": "mujeres_dejkepaeg_majsa__group_grammar--canon",
+      "modelo": "mujeres_dejkepaeg_majsa__group_grammar",
+      "entidad": "Las tres mujeres Dejkepaég Majsá",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-semilla-de-la-yuca-tucano"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6122,
+      "prompt_sha256": "6835b3aaa65d72f4153d97677405ec65f99bf4d9f0736d198ce3f3dd25f24ac2"
+    },
+    {
+      "job": "pueblos_y_jefes_de_la_canoa__group_grammar--canon",
+      "modelo": "pueblos_y_jefes_de_la_canoa__group_grammar",
+      "entidad": "Los pueblos, jefes y responsables de la travesía",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-origen-del-hombre"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6823,
+      "prompt_sha256": "91c51c830c4dba25018c2d0b94d8f359b729671c0c74376158420523532cf1b7"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "desana",
+  "comunidad": "Desana",
+  "tanda": "tanda-13-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/desana.v3.json",
+    "sha256": "5150271412e731c2bb739392ea129628445c141f3cf5dca9647a00c65ea16fd8"
+  },
+  "canon": {
+    "sha256": "8b8f46b02293c31171ca7a65e5be964d782b26572a712b75a0811e6db9d2dc34",
+    "verificado_en": "2026-09-29T01:33:44.384Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "paxiuba__botanical_sheet--canon",
+      "modelo": "paxiuba__botanical_sheet",
+      "entidad": "La palma de paxiúba",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "guelamun-ye-el-nieto-del-trueno",
+        "yurupari"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5305,
+      "prompt_sha256": "760e05a740d961d9ee0b5dc77b096d932c55a8df1b1413c27e52b0b5c34ab25c"
+    },
+    {
+      "job": "hoja_utileria_desana__object_sheet--canon",
+      "modelo": "hoja_utileria_desana__object_sheet",
+      "entidad": "hoja utileria desana",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-desana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5479,
+      "prompt_sha256": "9dfd860527b77800a766b2f7b0b1d1c5aa7549ef3af86d7d7a0102c58fea0078"
+    },
+    {
+      "job": "mandioca__botanical_sheet--canon",
+      "modelo": "mandioca__botanical_sheet",
+      "entidad": "La mandioca",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-origen-de-la-mandioca-desana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5543,
+      "prompt_sha256": "a1530edc1bc2ba6bac349f1b04ae19519e889862a12af6a8207e5653c060614a"
+    },
+    {
+      "job": "palma_chontaduro__botanical_sheet--canon",
+      "modelo": "palma_chontaduro__botanical_sheet",
+      "entidad": "La palma de chontaduro (pupunha) de cuatro variedades",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "gainpaya-y-el-origen-del-chontaduro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5361,
+      "prompt_sha256": "4fadd575982f65149cbf30eb84418604279bf63341d6fc400939772f6ff1fcbb"
+    },
+    {
+      "job": "recipiente_de_la_noche__object_sheet--canon",
+      "modelo": "recipiente_de_la_noche__object_sheet",
+      "entidad": "El recipiente que guarda la noche",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-origen-de-la-noche-desana"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5167,
+      "prompt_sha256": "61fa58fa04524f978549cf6febfd34c525d210ff1b0ade98f29d9abf67b26678"
+    },
+    {
+      "job": "umari__botanical_sheet--canon",
+      "modelo": "umari__botanical_sheet",
+      "entidad": "El umarí",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "agamahsapu-y-el-tiempo-del-umari"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5325,
+      "prompt_sha256": "acd3d4768ec3730fa56e7bd24a4039f4615d4eca95f366f65befa4e8140dba31"
+    }
+  ]
+}

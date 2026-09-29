@@ -1,0 +1,78 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "eperara-siapidara",
+  "comunidad": "Eperara Siapidara",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/eperara-siapidara.v3.json",
+    "sha256": "376913300c8e39649a8d50dc34ef5aec62d95d26047cf2dd00f41828365f9a83"
+  },
+  "canon": {
+    "sha256": "b8209cc2e51efedb8160a2273d05eb0f6f1990842891324ddd3568e633bad132",
+    "verificado_en": "2026-09-25T14:15:27.866Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre eperara adulto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-del-pueblo-eperara",
+        "tachi-akhore-y-la-palabra-de-mangle"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5967,
+      "prompt_sha256": "3de26dd8d319e08f3a251c69d45e31b7668a5bb3894cf791d2238b3fa2ac3e7b"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer eperara adulta",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-del-pueblo-eperara",
+        "tachi-akhore-y-la-palabra-de-mangle"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5841,
+      "prompt_sha256": "616f8087a62ffdcb481082bdce8ab2ccf1d5c229026f3ad77140274b2c3db001"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer eperara joven",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-del-pueblo-eperara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5796,
+      "prompt_sha256": "8362e26e7a4d20d441df89249437ff664d276fee465164bfc135c615cdae9281"
+    }
+  ]
+}

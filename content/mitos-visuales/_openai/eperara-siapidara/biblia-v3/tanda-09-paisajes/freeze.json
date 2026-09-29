@@ -1,0 +1,101 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "eperara-siapidara",
+  "comunidad": "Eperara Siapidara",
+  "tanda": "tanda-09-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/eperara-siapidara.v3.json",
+    "sha256": "f1e09e8865885cbc1c82b23127acb4831384108fbe78b9de2e448e7afee04951"
+  },
+  "canon": {
+    "sha256": "b8209cc2e51efedb8160a2273d05eb0f6f1990842891324ddd3568e633bad132",
+    "verificado_en": "2026-09-29T02:16:44.118Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "aguas_del_pacifico__environment_model--canon",
+      "modelo": "aguas_del_pacifico__environment_model",
+      "entidad": "Mundo de aguas del Pacífico (río mayor, quebradas, lagunas, mar y manglar)",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "origen-del-pueblo-eperara",
+        "tachi-akhore-y-la-palabra-de-mangle"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7612,
+      "prompt_sha256": "c4fb5eb706691f5c57a41e194e533f66b969edaccc0a73214ceee557bacfa81d"
+    },
+    {
+      "job": "cerros_de_la_huida__environment_model--canon",
+      "modelo": "cerros_de_la_huida__environment_model",
+      "entidad": "Los cerros de la huida",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "origen-del-pueblo-eperara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5905,
+      "prompt_sha256": "4394c5eba5c55db1cbe6dc8cba774ac005cecd57553bd3152e013481bb86ea4a"
+    },
+    {
+      "job": "cerros_de_la_huida__state_sheet--estado_agua subiendo al pie del cerro",
+      "modelo": "cerros_de_la_huida__state_sheet",
+      "entidad": "Los cerros de la huida",
+      "categoria": "paisaje",
+      "vista": "estado_agua subiendo al pie del cerro",
+      "estados": [
+        "agua subiendo al pie del cerro"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-pueblo-eperara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6040,
+      "prompt_sha256": "16f42b466b0c5d6e194ef268d2954d419ba79c21cab7933ae05c6ea2436c685d"
+    },
+    {
+      "job": "playa_pizarro__spatial_model--canon",
+      "modelo": "playa_pizarro__spatial_model",
+      "entidad": "Playa Pizarro, en la desembocadura del Baudó",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "origen-del-pueblo-eperara"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6709,
+      "prompt_sha256": "68f358bc7de3cda3c12c048ba42d97665d96a3ca382be54f4a305a9ec42ba198"
+    }
+  ]
+}

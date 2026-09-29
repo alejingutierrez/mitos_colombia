@@ -1,0 +1,171 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "andoque",
+  "comunidad": "Andoque (Gente del Hacha)",
+  "tanda": "tanda-15-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/andoque.v3.json",
+    "sha256": "cdcf1d4a02c9d6f8ba1a3778878c3bf7f4b9989da5ae0c76807a79740bb44519"
+  },
+  "canon": {
+    "sha256": "1464c50fa3a580f64f525602622acdadb0f163d4bd0942dd7decb8df15cc5afb",
+    "verificado_en": "2026-09-28T19:59:08.451Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 7,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "selva_amazonica_de_aduche__environment_model--canon",
+      "modelo": "selva_amazonica_de_aduche__environment_model",
+      "entidad": "Selva y bocanas de Aduche",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-mundo-de-ultratumba",
+        "el-retorno-de-plumon-amarillo",
+        "el-retorno-de-plumon-de-fiebre",
+        "el-sol-que-nace-en-araracuara",
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "la-brujeria-de-la-danta",
+        "la-guerra-del-palo-hablador",
+        "la-venganza-de-los-brujos",
+        "las-sirenas",
+        "los-caucheros-de-la-casa-arana",
+        "los-fantasmas",
+        "los-gigantes",
+        "los-grupos-de-mi-juventud"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8168,
+      "prompt_sha256": "34087e6d1016bb5a7f343f3f25e8681d2e7a2a8305405baeb8c7fab331b8e27b"
+    },
+    {
+      "job": "chagra_y_yucal__spatial_model--canon",
+      "modelo": "chagra_y_yucal__spatial_model",
+      "entidad": "La chagra y el yucal",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-mundo-de-ultratumba",
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7699,
+      "prompt_sha256": "78330b36e81b15481c9268b883c0e8745e2cfe03ed7b551afc8bff3395405927"
+    },
+    {
+      "job": "rio_duche__spatial_model--canon",
+      "modelo": "rio_duche__spatial_model",
+      "entidad": "El río Duché: remanso y bocana",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-guerra-del-palo-hablador",
+        "las-sirenas",
+        "los-grupos-de-mi-juventud"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7975,
+      "prompt_sha256": "6981325291853e5c1d6d2f87ab6117dab14b95da61b31edc648b786184a28c1f"
+    },
+    {
+      "job": "mundo_de_abajo__spatial_model--canon",
+      "modelo": "mundo_de_abajo__spatial_model",
+      "entidad": "El mundo de abajo",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "el-mundo-de-ultratumba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7781,
+      "prompt_sha256": "e80e1989115a11242f703d57552765808c25e0c83b29ed27e616702980cab7df"
+    },
+    {
+      "job": "sitio_del_llanto__spatial_model--canon",
+      "modelo": "sitio_del_llanto__spatial_model",
+      "entidad": "Sitio-del-llanto",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego",
+        "los-grupos-de-mi-juventud"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7518,
+      "prompt_sha256": "71c0db00a3b471d7ef2235ad071f7d44d3d82fae386ce4996d62720af7788dd3"
+    },
+    {
+      "job": "piedras_con_petroglifos__spatial_model--canon",
+      "modelo": "piedras_con_petroglifos__spatial_model",
+      "entidad": "Las piedras con dibujos",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-gigantes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7857,
+      "prompt_sha256": "dcac79e890e0bd94fd8969c183a0edcb94e7592399628b6959dfd28cf3459f0b"
+    },
+    {
+      "job": "sitakara__spatial_model--canon",
+      "modelo": "sitakara__spatial_model",
+      "entidad": "Sitakara",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "las-sirenas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7762,
+      "prompt_sha256": "57d0f53789d4719e5867cd53aca2141cac7e6cf48daa59b6c22fa63ccd34ed1d"
+    }
+  ]
+}

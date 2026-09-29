@@ -1,0 +1,398 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "cordoba-sinu-mestizo",
+  "comunidad": "Córdoba y el Sinú",
+  "tanda": "tanda-06-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/cordoba-sinu-mestizo.v3.json",
+    "sha256": "8e3b8fb8c27d4013c025448dfd2d78a3c0fd8eab108f3bdc383407093e5379d3"
+  },
+  "canon": {
+    "sha256": "2895fda0dc55b17bb0c61d11c59cfdeaa984f8a59545958e98741430b9f823d8",
+    "verificado_en": "2026-09-29T02:44:37.377Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 16,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tio_conejo__identity_sheet--canon",
+      "modelo": "tio_conejo__identity_sheet",
+      "entidad": "Tío Conejo",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "conejo-y-caiman",
+        "conejo-y-la-fiesta-de-toro",
+        "conejo-y-la-mona-de-cera",
+        "conejo-y-los-hijos-de-tia-tigra",
+        "el-viaje-al-cielo",
+        "la-muerte-de-tio-conejo",
+        "las-orejas-del-tio-conejo",
+        "tia-zorra-en-el-maizal-de-tio-conejo",
+        "tio-conejo-y-los-platanos",
+        "tio-conejo-y-morrocoy",
+        "tio-conejo-zapatero"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7538,
+      "prompt_sha256": "d67952ea5b1782e1190c9d0a7bd7122c34614846912265492cb7b085bae1748a"
+    },
+    {
+      "job": "tio_conejo__state_sheet--estado_orejas cortas, antes del don de papá Dios",
+      "modelo": "tio_conejo__state_sheet",
+      "entidad": "Tío Conejo",
+      "categoria": "criatura",
+      "vista": "estado_orejas cortas, antes del don de papá Dios",
+      "estados": [
+        "orejas cortas, antes del don de papá Dios"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "conejo-y-caiman",
+        "conejo-y-la-fiesta-de-toro",
+        "conejo-y-la-mona-de-cera",
+        "conejo-y-los-hijos-de-tia-tigra",
+        "el-viaje-al-cielo",
+        "la-muerte-de-tio-conejo",
+        "las-orejas-del-tio-conejo",
+        "tia-zorra-en-el-maizal-de-tio-conejo",
+        "tio-conejo-y-los-platanos",
+        "tio-conejo-y-morrocoy",
+        "tio-conejo-zapatero"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9220,
+      "prompt_sha256": "a1ffd76d52f3b52adac7c29bf8849e2942d61ba320596d9fdd3bf69e04033266"
+    },
+    {
+      "job": "tio_conejo__state_sheet--estado_haciéndose el muerto, tieso en mitad del camino",
+      "modelo": "tio_conejo__state_sheet",
+      "entidad": "Tío Conejo",
+      "categoria": "criatura",
+      "vista": "estado_haciéndose el muerto, tieso en mitad del camino",
+      "estados": [
+        "haciéndose el muerto, tieso en mitad del camino"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "conejo-y-caiman",
+        "conejo-y-la-fiesta-de-toro",
+        "conejo-y-la-mona-de-cera",
+        "conejo-y-los-hijos-de-tia-tigra",
+        "el-viaje-al-cielo",
+        "la-muerte-de-tio-conejo",
+        "las-orejas-del-tio-conejo",
+        "tia-zorra-en-el-maizal-de-tio-conejo",
+        "tio-conejo-y-los-platanos",
+        "tio-conejo-y-morrocoy",
+        "tio-conejo-zapatero"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8861,
+      "prompt_sha256": "9728157125d5f75e2c600421cc57b5631a1082fc3a0a992ecfccddc5262b3ab1"
+    },
+    {
+      "job": "tio_conejo__state_sheet--estado_decapitado, sentado en el suelo del patio, esperando que le peguen la cabeza- el final de La muerte de Tío Conejo",
+      "modelo": "tio_conejo__state_sheet",
+      "entidad": "Tío Conejo",
+      "categoria": "criatura",
+      "vista": "estado_decapitado, sentado en el suelo del patio, esperando que le peguen la cabeza: el final de La muerte de Tío Conejo",
+      "estados": [
+        "decapitado, sentado en el suelo del patio, esperando que le peguen la cabeza: el final de La muerte de Tío Conejo"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "conejo-y-caiman",
+        "conejo-y-la-fiesta-de-toro",
+        "conejo-y-la-mona-de-cera",
+        "conejo-y-los-hijos-de-tia-tigra",
+        "el-viaje-al-cielo",
+        "la-muerte-de-tio-conejo",
+        "las-orejas-del-tio-conejo",
+        "tia-zorra-en-el-maizal-de-tio-conejo",
+        "tio-conejo-y-los-platanos",
+        "tio-conejo-y-morrocoy",
+        "tio-conejo-zapatero"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9292,
+      "prompt_sha256": "0143795b4c888b192b633061f66aab0e5283fd6c8cc1831e81c6d84aaf057afa"
+    },
+    {
+      "job": "tio_tigre__identity_sheet--canon",
+      "modelo": "tio_tigre__identity_sheet",
+      "entidad": "Tío Tigre / Tía Tigra",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "conejo-y-la-fiesta-de-toro",
+        "conejo-y-los-hijos-de-tia-tigra",
+        "el-mocho-y-el-tigre",
+        "las-orejas-del-tio-conejo",
+        "tio-conejo-y-los-platanos",
+        "tio-conejo-zapatero"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8085,
+      "prompt_sha256": "e1667817ea5bf41d6975a151e245cb9f6327ad5e9d68807a93fa6c5277180242"
+    },
+    {
+      "job": "tio_tigre__state_sheet--estado_enjaezado de caballo- freno, silla y estribos, con Conejo montado y la garrocha en su mano, rumbo a la corraleja y después amarrado con la silla puesta a la vara de la tienda",
+      "modelo": "tio_tigre__state_sheet",
+      "entidad": "Tío Tigre / Tía Tigra",
+      "categoria": "criatura",
+      "vista": "estado_enjaezado de caballo: freno, silla y estribos, con Conejo montado y la garrocha en su mano, rumbo a la corraleja y después amarrado con la silla puesta a la vara de la tienda",
+      "estados": [
+        "enjaezado de caballo: freno, silla y estribos, con Conejo montado y la garrocha en su mano, rumbo a la corraleja y después amarrado con la silla puesta a la vara de la tienda"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "conejo-y-la-fiesta-de-toro",
+        "conejo-y-los-hijos-de-tia-tigra",
+        "el-mocho-y-el-tigre",
+        "las-orejas-del-tio-conejo",
+        "tio-conejo-y-los-platanos",
+        "tio-conejo-zapatero"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8500,
+      "prompt_sha256": "4be7b04d3d41a92cae881f276428a9319cb2ebafd2cc0d23a591a6da4f74fac7"
+    },
+    {
+      "job": "tia_zorra__identity_sheet--canon",
+      "modelo": "tia_zorra__identity_sheet",
+      "entidad": "Tía Zorra",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "conejo-y-la-mona-de-cera",
+        "el-viaje-al-cielo",
+        "tia-zorra-en-el-maizal-de-tio-conejo",
+        "tio-conejo-zapatero"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7779,
+      "prompt_sha256": "2a05a167614dab1c6dad485aa0b916e33b03b5c9ce542531600e421362b5352e"
+    },
+    {
+      "job": "tio_perro__identity_sheet--canon",
+      "modelo": "tio_perro__identity_sheet",
+      "entidad": "Tío Perro / los perros de la roza",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "conejo-y-la-mona-de-cera",
+        "las-orejas-del-tio-conejo",
+        "tia-zorra-en-el-maizal-de-tio-conejo",
+        "tio-conejo-zapatero"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7686,
+      "prompt_sha256": "eb898138f938d5e8db8dbec0bd0b50be104a8daca174a80d1fd4f8e236bb7174"
+    },
+    {
+      "job": "tio_gallo_y_la_gallina__identity_sheet--canon",
+      "modelo": "tio_gallo_y_la_gallina__identity_sheet",
+      "entidad": "Tío Gallo y la gallina de patio",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-muerte-de-tio-conejo",
+        "quien-manda-mas-en-casa",
+        "tio-conejo-zapatero"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7677,
+      "prompt_sha256": "fcb01c2e1b9490762cf1f5c4abab1e0b1fcbfbd5d5179f19db0b56d8cfb7f35b"
+    },
+    {
+      "job": "el_burro_y_la_burra__identity_sheet--canon",
+      "modelo": "el_burro_y_la_burra__identity_sheet",
+      "entidad": "El burro y la burra",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-burro-y-la-policia",
+        "la-vieja-el-burro-y-los-huevos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7899,
+      "prompt_sha256": "ab4072dd4702b4110566bbca2129a6638533f0d44c1fcc7aabe648106f1b0ae9"
+    },
+    {
+      "job": "el_caballo_de_sabana__identity_sheet--canon",
+      "modelo": "el_caballo_de_sabana__identity_sheet",
+      "entidad": "El caballo de sabana",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "juan-bobo-y-la-vieja",
+        "conejo-y-la-fiesta-de-toro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7772,
+      "prompt_sha256": "4eb04512de1f1806ffbb0a6ecdf0083c5366d364aa9a6a2ba42fda3137a87d19"
+    },
+    {
+      "job": "tio_gallinazo__identity_sheet--canon",
+      "modelo": "tio_gallinazo__identity_sheet",
+      "entidad": "Tío Gallinazo (Golero)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-viaje-al-cielo",
+        "las-orejas-del-tio-conejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7749,
+      "prompt_sha256": "2dde88bca9aee1031294e77d1113eb28071a48989362ea642a153743c6b44936"
+    },
+    {
+      "job": "tio_sapo__identity_sheet--canon",
+      "modelo": "tio_sapo__identity_sheet",
+      "entidad": "Tío Sapo",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-viaje-al-cielo",
+        "tio-sapo-y-cangrejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7730,
+      "prompt_sha256": "2f292a0428556be5dfdfd09a0d0c8bb4127d901e4314e55c39049c35e4df3a9d"
+    },
+    {
+      "job": "cucaracha__identity_sheet--canon",
+      "modelo": "cucaracha__identity_sheet",
+      "entidad": "Cucaracha",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "tio-conejo-zapatero"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7616,
+      "prompt_sha256": "c9ba16e24ca5ab9dc99793b29d0be067669c1655e570fe69f0e16a85f336750b"
+    },
+    {
+      "job": "tia_lechuza__identity_sheet--canon",
+      "modelo": "tia_lechuza__identity_sheet",
+      "entidad": "Tía Lechuza",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-viaje-al-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7411,
+      "prompt_sha256": "adc7017fbeb72347c95a0be31e07a218a61dd93a50e74aab213cd9c2f047028c"
+    },
+    {
+      "job": "tio_caiman_y_tia_caimana__identity_sheet--canon",
+      "modelo": "tio_caiman_y_tia_caimana__identity_sheet",
+      "entidad": "Tío Caimán y Tía Caimana",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "conejo-y-caiman"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7904,
+      "prompt_sha256": "b2a6ab6d703fdd9e19b487127cce7d39bd89d08d39bf76b2e15723abe1274c6f"
+    },
+    {
+      "job": "tio_cangrejo__identity_sheet--canon",
+      "modelo": "tio_cangrejo__identity_sheet",
+      "entidad": "Tío Cangrejo",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "tio-sapo-y-cangrejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7586,
+      "prompt_sha256": "2fa4e80b4350170bd71e36b6abff94afc37af2d2f8de291fc606effd67b0a736"
+    },
+    {
+      "job": "tio_morrocoy__identity_sheet--canon",
+      "modelo": "tio_morrocoy__identity_sheet",
+      "entidad": "Tío Morrocoy",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "tio-conejo-y-morrocoy"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7968,
+      "prompt_sha256": "95b6c3e52dafdd363e3c4bb615d222a126d3e9fbe246814daafde4546b4d2e9a"
+    }
+  ]
+}

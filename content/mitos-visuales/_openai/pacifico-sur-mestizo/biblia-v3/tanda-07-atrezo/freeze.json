@@ -1,0 +1,82 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "pacifico-sur-mestizo",
+  "comunidad": "Pacífico sur (Nariño, Cauca, Valle)",
+  "tanda": "tanda-07-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/pacifico-sur-mestizo.v3.json",
+    "sha256": "1afd63cc494a592771ae22e52c379f166c86061f51697ad4efdfd655e9abd34b"
+  },
+  "canon": {
+    "sha256": "117b563146a75b81fe76e90c1f490f8070a5a0a92111267442e052bf553d1334",
+    "verificado_en": "2026-09-29T02:59:36.455Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "las_tres_cruces__object_sheet--canon",
+      "modelo": "las_tres_cruces__object_sheet",
+      "entidad": "Las tres cruces del cerro",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "buziraco"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6799,
+      "prompt_sha256": "468589731431ee8c568407356c6fccf3dae1e4ff089ba48400b31b8611877cf2"
+    },
+    {
+      "job": "las_tres_cruces__state_sheet--estado_de hierro y concreto- terminadas en 1937, la central de 26 metros y las laterales de 22",
+      "modelo": "las_tres_cruces__state_sheet",
+      "entidad": "Las tres cruces del cerro",
+      "categoria": "objeto",
+      "vista": "estado_de hierro y concreto: terminadas en 1937, la central de 26 metros y las laterales de 22",
+      "estados": [
+        "de hierro y concreto: terminadas en 1937, la central de 26 metros y las laterales de 22"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "buziraco"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7870,
+      "prompt_sha256": "490d2873b6eda1f7067c380520536bbf16c58c1b3f63e240fdc5d3d11225ec14"
+    },
+    {
+      "job": "totuma_negra__object_sheet--canon",
+      "modelo": "totuma_negra__object_sheet",
+      "entidad": "El pilche con agua",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-totuma-de-la-cocha"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7199,
+      "prompt_sha256": "c7c080735a25aad1122c13d5a375a04dd36fd4ff153331424310d4cc3b1177db"
+    }
+  ]
+}

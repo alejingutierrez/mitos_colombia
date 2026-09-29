@@ -1,0 +1,202 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "u-wa",
+  "comunidad": "U’wa",
+  "tanda": "tanda-11-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/u-wa.v3.json",
+    "sha256": "e1e4ee9024b780d4cabc07b01806fede67230def7aecb7203360a7e23addae2f"
+  },
+  "canon": {
+    "sha256": "a90c54e7ee6b64a69b74d22cb095455d84c1040f832c2a85fbbf36891e532aed",
+    "verificado_en": "2026-09-28T21:13:26.579Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 9,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "yopo__botanical_sheet--canon",
+      "modelo": "yopo__botanical_sheet",
+      "entidad": "El yopo",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-u-wa",
+        "el-recorrido-de-uktara",
+        "la-competencia-de-los-tigres-uwa",
+        "lisha-la-madre-del-agua",
+        "monoa-el-hijo-de-la-montana",
+        "el-pajaro-carpintero-y-el-poder-de-curar"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 4977,
+      "prompt_sha256": "d8f5ec9fb9e69e2c242715577cee8338df816b02d056be00f8cb85a8974987f8"
+    },
+    {
+      "job": "hoja_utileria_caza_y_camino__object_sheet--canon",
+      "modelo": "hoja_utileria_caza_y_camino__object_sheet",
+      "entidad": "hoja utileria caza y camino",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-oso-y-el-hombre-uwa",
+        "monoa-el-hijo-de-la-montana",
+        "yanoa-y-sirbetuna",
+        "mensajes-de-los-animales-uwa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5365,
+      "prompt_sha256": "ac171684d20f3439cc4bacb97d8b01c18919544eb9c6df19034118357a9b4a3c"
+    },
+    {
+      "job": "tabaco__botanical_sheet--canon",
+      "modelo": "tabaco__botanical_sheet",
+      "entidad": "El tabaco",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-pajaro-carpintero-y-el-poder-de-curar",
+        "kubashoa-el-hijo-del-tabaco",
+        "monoa-el-hijo-de-la-montana",
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5112,
+      "prompt_sha256": "861cdcc5736bbba5a9e51335a94aa1fbcb325afd78d07d5337ff60c41e7e5389"
+    },
+    {
+      "job": "coca_ayo__botanical_sheet--canon",
+      "modelo": "coca_ayo__botanical_sheet",
+      "entidad": "La coca / ayo",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-u-wa",
+        "monoa-el-hijo-de-la-montana",
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4992,
+      "prompt_sha256": "8ef97e2730acbd458ed7805d17e87ecfbf531e570ae0836c79280e1ec8775f14"
+    },
+    {
+      "job": "hoja_utileria_intercambio_y_contacto__object_sheet--canon",
+      "modelo": "hoja_utileria_intercambio_y_contacto__object_sheet",
+      "entidad": "hoja utileria intercambio y contacto",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "monoa-el-hijo-de-la-montana",
+        "yanoa-y-sirbetuna",
+        "lisha-la-madre-del-agua"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5289,
+      "prompt_sha256": "a8021f28dfe64b70ab511fad66c3a79f83215af8b2152c05e2c9b4da71d33ace"
+    },
+    {
+      "job": "hoja_utileria_casa_y_alimento__object_sheet--canon",
+      "modelo": "hoja_utileria_casa_y_alimento__object_sheet",
+      "entidad": "hoja utileria casa y alimento",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "lisha-la-madre-del-agua",
+        "yanoa-y-sirbetuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5202,
+      "prompt_sha256": "0dbcd48d4b3c46dd92edc6870fe90645d115862854a396e73962658f0dc5c601"
+    },
+    {
+      "job": "miel_cera_y_cerumen__object_sheet--canon",
+      "modelo": "miel_cera_y_cerumen__object_sheet",
+      "entidad": "Miel, cera y cerumen",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "las-hijas-del-sol-y-la-miel",
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5222,
+      "prompt_sha256": "3ed44f01d868d4335d50a765973c80bec2cfa3fa4c374b8b049798a67110405f"
+    },
+    {
+      "job": "vasijas_de_barro__object_sheet--canon",
+      "modelo": "vasijas_de_barro__object_sheet",
+      "entidad": "Las vasijas de barro",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-recorrido-de-uktara",
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4907,
+      "prompt_sha256": "19c5e21c6d9bafca0a9bcf46b487b64c56da4515cf5b5051a97afe077d793727"
+    },
+    {
+      "job": "objetos_de_poder_de_yanoa__object_sheet--canon",
+      "modelo": "objetos_de_poder_de_yanoa__object_sheet",
+      "entidad": "Ituma, suskuara, kuibura y suara",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "yanoa-y-sirbetuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4922,
+      "prompt_sha256": "2c0b12ce6dc26ed84d9bb38ed97645782b88094a5c98be6cd98833fcd4523ab9"
+    }
+  ]
+}

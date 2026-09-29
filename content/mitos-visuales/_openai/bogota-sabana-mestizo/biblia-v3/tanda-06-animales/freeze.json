@@ -1,0 +1,202 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "bogota-sabana-mestizo",
+  "comunidad": "Bogotá y la sabana",
+  "tanda": "tanda-06-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/bogota-sabana-mestizo.v3.json",
+    "sha256": "55c8aadb6274065fccc72a76abc5b3542957a51530be49e80137f3b3b6996998"
+  },
+  "canon": {
+    "sha256": "f40bff7bfadd041235920c5f638d1f9ad9ce9fb5b40b91e9893d958d2674ad1d",
+    "verificado_en": "2026-09-29T02:52:27.683Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 10,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "el_diablo__identity_sheet--canon",
+      "modelo": "el_diablo__identity_sheet",
+      "entidad": "El Diablo (Satanás)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-diablo-del-puente-del-comun",
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8885,
+      "prompt_sha256": "880d285bd849ff92c01563db22e945510112cd0cdc186e6ab192a29994e845db"
+    },
+    {
+      "job": "mula_parda_herrada__identity_sheet--canon",
+      "modelo": "mula_parda_herrada__identity_sheet",
+      "entidad": "La Mula Herrada",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-mula-herrada",
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7918,
+      "prompt_sha256": "ad159667722171ebe58fe372226b4c6fcfbe599fff621e4ce798dea120853449"
+    },
+    {
+      "job": "bruja_del_tranvia__identity_sheet--canon",
+      "modelo": "bruja_del_tranvia__identity_sheet",
+      "entidad": "La Bruja del Tranvía",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-bruja-del-tranvia"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8353,
+      "prompt_sha256": "e272607cd679375c0c2ab57b462737e800672f7050eaa77855d54a6663224635"
+    },
+    {
+      "job": "el_gallo__identity_sheet--canon",
+      "modelo": "el_gallo__identity_sheet",
+      "entidad": "El gallo del amanecer",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8261,
+      "prompt_sha256": "38dd0fa186e347888ce59ecb025a1555d35d03353889108478c1fac8ea196eb8"
+    },
+    {
+      "job": "esqueletos_caminantes__identity_sheet--canon",
+      "modelo": "esqueletos_caminantes__identity_sheet",
+      "entidad": "Los dos esqueletos caminantes",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-esqueletos-caminantes"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8425,
+      "prompt_sha256": "746fd8370f6d169196eda11f7628714a5d270b7c7890d820b01c6d0304dd9030"
+    },
+    {
+      "job": "la_casaca_verde__identity_sheet--canon",
+      "modelo": "la_casaca_verde__identity_sheet",
+      "entidad": "La Casaca Verde",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8616,
+      "prompt_sha256": "ba676ee8302508c3324dafa36ff8f1835add3375645c3bdfc8803bba23d32ee6"
+    },
+    {
+      "job": "la_res_toro__identity_sheet--canon",
+      "modelo": "la_res_toro__identity_sheet",
+      "entidad": "El novillo del ascensor",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-toro-en-el-ascensor"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8566,
+      "prompt_sha256": "f87b50c94f7c5e87aa873580b393fd659c3357651526c2b2230127e4644d1153"
+    },
+    {
+      "job": "monja_pasajera__identity_sheet--canon",
+      "modelo": "monja_pasajera__identity_sheet",
+      "entidad": "La monja pasajera",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-monja-vidente-y-el-taxista"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7903,
+      "prompt_sha256": "04423418d46c913ae1050c3fa73bd1dfe1645434433e88a992c7bd43bacea617"
+    },
+    {
+      "job": "mujer_de_negro_quinta__identity_sheet--canon",
+      "modelo": "mujer_de_negro_quinta__identity_sheet",
+      "entidad": "La mujer de negro de la Quinta («la Monja de las Rosas»)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-monja-de-las-rosas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8130,
+      "prompt_sha256": "d0ddc713fd117a3d81fcc3497f043b7e80e05f549cd2bb5311edaddae346ec6d"
+    },
+    {
+      "job": "mujer_de_negro_quinta__state_sheet--estado_alejándose por el jardín con el ramo en la mano, de espaldas entre el follaje, soltando pétalos sobre el pasto",
+      "modelo": "mujer_de_negro_quinta__state_sheet",
+      "entidad": "La mujer de negro de la Quinta («la Monja de las Rosas»)",
+      "categoria": "criatura",
+      "vista": "estado_alejándose por el jardín con el ramo en la mano, de espaldas entre el follaje, soltando pétalos sobre el pasto",
+      "estados": [
+        "alejándose por el jardín con el ramo en la mano, de espaldas entre el follaje, soltando pétalos sobre el pasto"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-monja-de-las-rosas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8687,
+      "prompt_sha256": "6d0ddf5cae254e767904a73efba3018efc63d0e88fbc0f1ce3dd3c20dde59356"
+    }
+  ]
+}

@@ -1,0 +1,606 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "bolivar-cartagena-mestizo",
+  "comunidad": "Bolívar y Cartagena",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/bolivar-cartagena-mestizo.v3.json",
+    "sha256": "83a8f0f7117f21713d8a9f83d2fae957cb5e5b2dcb3f677a8464a95a80e79464"
+  },
+  "canon": {
+    "sha256": "2ed33a67c241b696ca40521259c9ed080fe10d09734bfa7b23f718b9e36a0ae6",
+    "verificado_en": "2026-09-29T02:22:59.162Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 30,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "caballero-criollo-colonial__identity_sheet--canon",
+      "modelo": "caballero-criollo-colonial__identity_sheet",
+      "entidad": "Caballero criollo de capa y sombrero (siglos XVII–XVIII y la Independencia)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "a-dios-rogando-y-con-el-mazo-dando",
+        "al-convento",
+        "castellano-viejo",
+        "la-imagen-de-san-antonio",
+        "la-sombra",
+        "maldito-sea-napoleon",
+        "por-la-boca-muere-el-pez",
+        "un-anonimo",
+        "una-reunion-clandestina",
+        "viva-la-libertad",
+        "en-el-once",
+        "en-el-sitio-de-morillo",
+        "despues-del-sitio"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9076,
+      "prompt_sha256": "e636985f62528be256e73a894b2dd096dd6e7704bcd892504e76cb6698320830"
+    },
+    {
+      "job": "dama-criolla-colonial__identity_sheet--canon",
+      "modelo": "dama-criolla-colonial__identity_sheet",
+      "entidad": "Dama criolla de balcón y mantón (siglos XVII–XVIII y la Independencia)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "al-convento",
+        "castellano-viejo",
+        "despues-del-sitio",
+        "en-el-once",
+        "en-el-sitio-de-morillo",
+        "la-imagen-de-san-antonio",
+        "la-sombra",
+        "maldito-sea-napoleon",
+        "un-anonimo",
+        "una-reunion-clandestina",
+        "viva-la-libertad",
+        "la-casa-de-don-benito",
+        "la-clave-de-la-felicidad"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9184,
+      "prompt_sha256": "348c816f9f942e125326f256ddc22661f181ac7fabcabf3af603e9e4f62ce02d"
+    },
+    {
+      "job": "caballero-republicano__identity_sheet--canon",
+      "modelo": "caballero-republicano__identity_sheet",
+      "entidad": "Caballero republicano de levita",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "doce-en-punto-de-la-noche",
+        "el-auriga-a-quien-mato-el-pasado",
+        "la-muerte-de-los-ojos-verdes",
+        "la-clave-de-la-felicidad",
+        "de-cuando-fue-regalado-el-castillo-de-san-felipe-y-la-popa",
+        "un-quejido-una-luz",
+        "la-casa-de-don-benito",
+        "el-fantasma-del-teatro-azul",
+        "el-mal-del-mar"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8958,
+      "prompt_sha256": "fe1c6b03a0f2619f3085cf26b01e81935884ec5ea689338265e46f4b92491d0a"
+    },
+    {
+      "job": "alguacil-y-agente-de-la-ley__identity_sheet--canon",
+      "modelo": "alguacil-y-agente-de-la-ley__identity_sheet",
+      "entidad": "Alguacil del Santo Oficio y agente de la ley",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "por-la-boca-muere-el-pez",
+        "la-casa-de-don-benito",
+        "una-reunion-clandestina",
+        "mona-mona",
+        "macu-y-el-collar-de-camarones-de-oro",
+        "zequiel"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9131,
+      "prompt_sha256": "9ec7025aee52a27f9f2efc9b7d2e4f9907714251414686dd16d2195744add585"
+    },
+    {
+      "job": "matrona-criolla__identity_sheet--canon",
+      "modelo": "matrona-criolla__identity_sheet",
+      "entidad": "Matrona criolla (madre, marquesa, dueña de casa)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "a-dios-rogando-y-con-el-mazo-dando",
+        "maldito-sea-napoleon",
+        "la-imagen-de-san-antonio",
+        "la-clave-de-la-felicidad",
+        "en-el-once",
+        "en-el-sitio-de-morillo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9087,
+      "prompt_sha256": "f3a99b85c22983de7a2339f27c7480b8c24f7a694508acdb70aec17d3735d13a"
+    },
+    {
+      "job": "mujer-costena-del-puerto__identity_sheet--canon",
+      "modelo": "mujer-costena-del-puerto__identity_sheet",
+      "entidad": "Mujer costeña del puerto y del barrio",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-milagro-de-la-candelaria",
+        "folklore-macabro",
+        "marineritis-sentimental",
+        "zequiel",
+        "el-talisman-funebre",
+        "la-sombra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8984,
+      "prompt_sha256": "e17cb44819759dceb3e27f6128f1010ed77d15fb5651a78165536832be306a8f"
+    },
+    {
+      "job": "hombre-del-pueblo-costeno__identity_sheet--canon",
+      "modelo": "hombre-del-pueblo-costeno__identity_sheet",
+      "entidad": "Hombre del pueblo costeño (barrio y campo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-talisman-funebre",
+        "un-quejido-una-luz",
+        "folklore-macabro",
+        "zequiel",
+        "de-cuando-fue-regalado-el-castillo-de-san-felipe-y-la-popa"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9090,
+      "prompt_sha256": "cb0bbf3459e21796c062e465c623043d31c692bd77b19a0108507dd77994b0cc"
+    },
+    {
+      "job": "sacerdote-secular__identity_sheet--canon",
+      "modelo": "sacerdote-secular__identity_sheet",
+      "entidad": "Sacerdote secular (cura, confesor, obispo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "a-dios-rogando-y-con-el-mazo-dando",
+        "el-milagro-de-la-candelaria",
+        "en-el-sitio-de-morillo",
+        "maldito-sea-napoleon",
+        "la-casa-de-don-benito"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8984,
+      "prompt_sha256": "ac19a010ced2da53d32847efe977fe4369f047f6104c9c881128dbd44b38b41d"
+    },
+    {
+      "job": "anciana-costena__identity_sheet--canon",
+      "modelo": "anciana-costena__identity_sheet",
+      "entidad": "Anciana costeña con rosario",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "un-quejido-una-luz",
+        "la-sombra",
+        "el-talisman-funebre",
+        "zequiel"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8879,
+      "prompt_sha256": "4ae01c2b5deae5741e04b87459a1862868a4a59dae124f56aacf7d3f73568564"
+    },
+    {
+      "job": "dama-republicana__identity_sheet--canon",
+      "modelo": "dama-republicana__identity_sheet",
+      "entidad": "Dama republicana",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-clave-de-la-felicidad",
+        "un-quejido-una-luz",
+        "la-casa-de-don-benito",
+        "la-muerte-de-los-ojos-verdes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8898,
+      "prompt_sha256": "458132b50db5729dffc23ad22aac5758dd402b37f8a5b64ed990ab87bafb7afd"
+    },
+    {
+      "job": "monja-de-clausura__identity_sheet--canon",
+      "modelo": "monja-de-clausura__identity_sheet",
+      "entidad": "Monja de clausura (clarisa y mercedaria descalza)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "al-convento",
+        "la-abadesa-arrodillada",
+        "maldito-sea-napoleon",
+        "en-el-sitio-de-morillo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9013,
+      "prompt_sha256": "8342ef74ee9ba25ef10860e97c2822b88c67166891a6ee89e6f4da981baaef20"
+    },
+    {
+      "job": "personas-esclavizadas-de-casa__identity_sheet--canon",
+      "modelo": "personas-esclavizadas-de-casa__identity_sheet",
+      "entidad": "Personas esclavizadas de casa señorial (Rosa, Felipe, porteadores mandingas, el anciano congo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-casa-de-don-benito",
+        "castellano-viejo",
+        "mona-mona"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9235,
+      "prompt_sha256": "aab796b9cb6f3c77a970a2ff1b14e2da15ed2d00a154d89f65b8502de21a070d"
+    },
+    {
+      "job": "fraile-dominico__identity_sheet--canon",
+      "modelo": "fraile-dominico__identity_sheet",
+      "entidad": "Fraile dominico",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "templo-de-santo-domingo-y-el-cristo-de-la-expiracion",
+        "al-convento"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8947,
+      "prompt_sha256": "32813b58f840474f8121754ae2efeae430e6605b73e11751eedb635355fda580"
+    },
+    {
+      "job": "lechero-de-cantaros__identity_sheet--canon",
+      "modelo": "lechero-de-cantaros__identity_sheet",
+      "entidad": "Lechero de cántaros (Ezequiel Ramos / Luis Cachita)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "zequiel",
+        "folklore-macabro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9201,
+      "prompt_sha256": "46674223626a5e5e8602ff9e87917a29af9e7e3801a2a56daa2db200d718d01e"
+    },
+    {
+      "job": "marinero-del-mal-del-mar__identity_sheet--canon",
+      "modelo": "marinero-del-mal-del-mar__identity_sheet",
+      "entidad": "El marinero balear del mal del mar",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-mal-del-mar",
+        "marineritis-sentimental"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9398,
+      "prompt_sha256": "dc6beb1c4fd1e397114f584a4631b09d33a217709e074ba09c9a9f72361b43c2"
+    },
+    {
+      "job": "basilio-criado-del-norte__identity_sheet--canon",
+      "modelo": "basilio-criado-del-norte__identity_sheet",
+      "entidad": "Basilio, criado del norte de España",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-casa-de-don-benito"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8802,
+      "prompt_sha256": "b22becac2c7f6583163294bd5935f73033e60efac3aedbdcaf56be7e367f48db"
+    },
+    {
+      "job": "blas-de-lezo__identity_sheet--canon",
+      "modelo": "blas-de-lezo__identity_sheet",
+      "entidad": "Don Blas de Lezo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "despues-del-sitio"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9004,
+      "prompt_sha256": "82b3aabe0abd472c3a9694c21efdee41f0626372588356dcec8e20d64442d69a"
+    },
+    {
+      "job": "diego-soria-auriga__identity_sheet--canon",
+      "modelo": "diego-soria-auriga__identity_sheet",
+      "entidad": "Diego Soria, el auriga",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-auriga-a-quien-mato-el-pasado"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8761,
+      "prompt_sha256": "7b9029a3f8e3efb8218683979c5c882e1ec01563680418ef5c181407e7cd4055"
+    },
+    {
+      "job": "domingo-da-cunha__identity_sheet--canon",
+      "modelo": "domingo-da-cunha__identity_sheet",
+      "entidad": "Domingo da Cunha, zapatero lusitano",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "por-la-boca-muere-el-pez"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9021,
+      "prompt_sha256": "f1af2e8b428fa7cebdc5133a83289c13b7e00301453cce988153262bfb12e7d1"
+    },
+    {
+      "job": "don-blas-benito-de-paz-pinto__identity_sheet--canon",
+      "modelo": "don-blas-benito-de-paz-pinto__identity_sheet",
+      "entidad": "Don Blas Benito de Paz Pinto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-casa-de-don-benito"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8987,
+      "prompt_sha256": "6151a0f4c756b4fe584271cd7de63bfd10f9379127b3edee053640a3da0fed93"
+    },
+    {
+      "job": "estrellita-azuaga__identity_sheet--canon",
+      "modelo": "estrellita-azuaga__identity_sheet",
+      "entidad": "Estrellita Azuaga",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-fantasma-del-teatro-azul"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9026,
+      "prompt_sha256": "879c646a9b421164e765243a6ffffa312c3142d34ebf2b9c118c51acb92b1761"
+    },
+    {
+      "job": "estrellita-azuaga__state_sheet--estado_envejecida de negro recorriendo las calles, sola, con la cabeza alta",
+      "modelo": "estrellita-azuaga__state_sheet",
+      "entidad": "Estrellita Azuaga",
+      "categoria": "personaje",
+      "vista": "estado_envejecida de negro recorriendo las calles, sola, con la cabeza alta",
+      "estados": [
+        "envejecida de negro recorriendo las calles, sola, con la cabeza alta"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-fantasma-del-teatro-azul"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9731,
+      "prompt_sha256": "9e2bfdd996e6d97af9dcc132b79c704f2489a63f2d8dc8bdf46d64914a6662ec"
+    },
+    {
+      "job": "hija-de-cimarrones__identity_sheet--canon",
+      "modelo": "hija-de-cimarrones__identity_sheet",
+      "entidad": "La compañera de Simón, hija de cimarrones",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "celos-de-esclavo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8972,
+      "prompt_sha256": "c26ce66b5b064fa39f8826e9c70f3e0cdbba62d177abf914daa284e73379ac01"
+    },
+    {
+      "job": "juan-perez-de-luchando__identity_sheet--canon",
+      "modelo": "juan-perez-de-luchando__identity_sheet",
+      "entidad": "Juan Pérez de Luchando y Yurreamendi",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "a-dios-rogando-y-con-el-mazo-dando"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8388,
+      "prompt_sha256": "8db47c86f01cfb76c37e2d596b4e98495287526bf61738ac74a67a8606b48358"
+    },
+    {
+      "job": "macu__identity_sheet--canon",
+      "modelo": "macu__identity_sheet",
+      "entidad": "Macú, vendedor de camarones",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "macu-y-el-collar-de-camarones-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9333,
+      "prompt_sha256": "9cd15ad8b0b02f19673d313ad2b3a77d4e45b14ef8d15b35b26a8d023c086ed0"
+    },
+    {
+      "job": "marques-de-villalta__identity_sheet--canon",
+      "modelo": "marques-de-villalta__identity_sheet",
+      "entidad": "Marqués de Villalta, don Gonzalo de Herrera",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "castellano-viejo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9051,
+      "prompt_sha256": "b94c47250bbcd7fd2e03f207465225a633ad6360f12c70d15022c148dc1fac47"
+    },
+    {
+      "job": "mona-palenquero__identity_sheet--canon",
+      "modelo": "mona-palenquero__identity_sheet",
+      "entidad": "«Mona», palenquero del muelle",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "mona-mona"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9324,
+      "prompt_sha256": "df1e285e99482b6b808e7a7f7fb2c179e20d4b3d3683ef7a4becf3c3d243fc30"
+    },
+    {
+      "job": "sabino__identity_sheet--canon",
+      "modelo": "sabino__identity_sheet",
+      "entidad": "Sabino, pescador de La Boquilla",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-heroe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9224,
+      "prompt_sha256": "26b230d0a501db05a840b4a0859ec0239bbd279468f2a9505012005edbe69eff"
+    },
+    {
+      "job": "simon-casiano__identity_sheet--canon",
+      "modelo": "simon-casiano__identity_sheet",
+      "entidad": "Simón Casiano",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "celos-de-esclavo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9058,
+      "prompt_sha256": "2b573469c7d6ca060515c60cd7a62241917ff2cc28bb8c111a4ca7012f5aa18e"
+    },
+    {
+      "job": "sor-ana-abadesa-arrodillada__identity_sheet--canon",
+      "modelo": "sor-ana-abadesa-arrodillada__identity_sheet",
+      "entidad": "Sor Ana del Perpetuo Socorro, la abadesa arrodillada",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-abadesa-arrodillada"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9406,
+      "prompt_sha256": "b9cc2124f31fe1c09bf0a77b923a52786d6001ebab76765b695d33d9cbc4c5d0"
+    }
+  ]
+}

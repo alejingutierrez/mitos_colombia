@@ -1,0 +1,96 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "motilon-bari",
+  "comunidad": "Barí",
+  "tanda": "tanda-04-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/motilon-bari.v3.json",
+    "sha256": "2775ffb3bfc432b435ab7b3dd4a3840cb24764f89acda013c3ed27d3ea99fbf9"
+  },
+  "canon": {
+    "sha256": "aa03517f459efabb921c1e2ef28e49ae58b3aa900ca061c516ba03060880951a",
+    "verificado_en": "2026-09-29T01:54:56.728Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "kokebadou__identity_sheet--canon",
+      "modelo": "kokebadou__identity_sheet",
+      "entidad": "Kokébadóu",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-gran-arbol-que-hizo-los-rios",
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6794,
+      "prompt_sha256": "dfde84f2a96d7f374449e277cd731ce1b6120f4c527a8aa6cfb431d5c1a45314"
+    },
+    {
+      "job": "joven-bari-caminante__identity_sheet--canon",
+      "modelo": "joven-bari-caminante__identity_sheet",
+      "entidad": "Joven Barí que aprende a caminar liviano",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "caminar-liviano-hacia-el-mas-alla"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6909,
+      "prompt_sha256": "0d08deff545006d9f295146aa3706a09f1a9cbeabea894d7d5d78fc0548fdf76"
+    },
+    {
+      "job": "nanbobikorai__identity_sheet--canon",
+      "modelo": "nanbobikorai__identity_sheet",
+      "entidad": "Ñanbobikorái",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nandou-chibaig-y-las-luces-del-cielo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6353,
+      "prompt_sha256": "743b94e1b332c6683c7de29e5150eab3c54e42de474b5515ae6af59351eaa406"
+    },
+    {
+      "job": "sibabio__identity_sheet--canon",
+      "modelo": "sibabio__identity_sheet",
+      "entidad": "Sibabió, la anciana ciega",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "sibabio-y-las-cenizas-del-mundo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6574,
+      "prompt_sha256": "92b263a70a630fb6c735cb88f07b4b67d1ac3f47b8e82e7b5e3b6094499de093"
+    }
+  ]
+}

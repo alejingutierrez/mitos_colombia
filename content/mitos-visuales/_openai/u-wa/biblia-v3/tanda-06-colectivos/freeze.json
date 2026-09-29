@@ -1,0 +1,171 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "u-wa",
+  "comunidad": "U’wa",
+  "tanda": "tanda-06-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/u-wa.v3.json",
+    "sha256": "5e5462ec1faa17ad393b4cbaccc5e11a5e2c3cbcf01983f403221e88f1fa1ff2"
+  },
+  "canon": {
+    "sha256": "a90c54e7ee6b64a69b74d22cb095455d84c1040f832c2a85fbbf36891e532aed",
+    "verificado_en": "2026-09-28T20:22:10.588Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "colectivo_gente_uwa__group_grammar--canon",
+      "modelo": "colectivo_gente_uwa__group_grammar",
+      "entidad": "Elenco U’wa",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-u-wa",
+        "el-oso-y-el-hombre-uwa",
+        "el-pajaro-carpintero-y-el-poder-de-curar",
+        "el-recorrido-de-uktara",
+        "lisha-la-madre-del-agua",
+        "mensajes-de-los-animales-uwa",
+        "monoa-el-hijo-de-la-montana"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6685,
+      "prompt_sha256": "fde7a0b150b6dc67f31d5a4e4a69f9c36254bcbe445b3e2033723747fbf52249"
+    },
+    {
+      "job": "abejas_sin_aguijon__group_grammar--canon",
+      "modelo": "abejas_sin_aguijon__group_grammar",
+      "entidad": "Las abejas sin aguijón, hijas del Sol",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6989,
+      "prompt_sha256": "dcadaea652eb09d2db8eb930a524e0899fc58251c78156defdad9b3a0d46014f"
+    },
+    {
+      "job": "animales_de_las_enfermedades__group_grammar--canon",
+      "modelo": "animales_de_las_enfermedades__group_grammar",
+      "entidad": "Los animales que cargan las enfermedades de Kanwara",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6105,
+      "prompt_sha256": "0680579d3011d3c8c3be91c7e5542c87f46196ede355139e98b780b5746d2ed7"
+    },
+    {
+      "job": "aves_consejeras_del_sendero__group_grammar--canon",
+      "modelo": "aves_consejeras_del_sendero__group_grammar",
+      "entidad": "Las aves que avisan junto a los senderos",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "mensajes-de-los-animales-uwa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6230,
+      "prompt_sha256": "08dbcc674ee85f0838d96e5c065af38d663fd9996b8252d66593f1b03912fab3"
+    },
+    {
+      "job": "insectos_de_ponzona__group_grammar--canon",
+      "modelo": "insectos_de_ponzona__group_grammar",
+      "entidad": "Las hijas de las hermanas de Kanwara: moscas, avispas e insectos de ponzoña",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "las-hijas-del-sol-y-la-miel"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6177,
+      "prompt_sha256": "999ef9a0ec82114d0d7e063c4d166eab3a7a8c2b79398583b61713c3ac448ff0"
+    },
+    {
+      "job": "los_tiga__group_grammar--canon",
+      "modelo": "los_tiga__group_grammar",
+      "entidad": "Los Tiga",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "kubashoa-el-hijo-del-tabaco"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6154,
+      "prompt_sha256": "56e2935135774a772bd5e96baacfffcc4c89e43e170926eac5cd7411fc026f40"
+    },
+    {
+      "job": "tigres_de_los_llanos__group_grammar--canon",
+      "modelo": "tigres_de_los_llanos__group_grammar",
+      "entidad": "Los tigres de los Llanos Orientales",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-competencia-de-los-tigres-uwa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6259,
+      "prompt_sha256": "7e4ff4a30bc8d912f3eec7980581fc7cb5bd178b827f23f19669adad4d2a0ad2"
+    },
+    {
+      "job": "tigres_del_territorio_ancestral__group_grammar--canon",
+      "modelo": "tigres_del_territorio_ancestral__group_grammar",
+      "entidad": "Los tigres del territorio ancestral",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-competencia-de-los-tigres-uwa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6350,
+      "prompt_sha256": "85c5f2075222a4bbffc0b6d824acb3d65bf94dec1a56e40e1aba3e6727c9b76d"
+    }
+  ]
+}

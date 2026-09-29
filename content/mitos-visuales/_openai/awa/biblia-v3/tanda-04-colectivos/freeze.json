@@ -1,0 +1,80 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "awa",
+  "comunidad": "Awa",
+  "tanda": "tanda-04-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/awa.v3.json",
+    "sha256": "71e999cc1d9d0241b3b7d2f9be767e3ae43f05871a9c5a55120625da99155fe1"
+  },
+  "canon": {
+    "sha256": "bae6e57ea34347d2f9cba2e03f031d8cf73be66457da7c33aebc986fe695bd02",
+    "verificado_en": "2026-09-29T02:17:19.932Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "familia_inkal_awa__group_grammar--canon",
+      "modelo": "familia_inkal_awa__group_grammar",
+      "entidad": "Los hijos y la continuidad de la gente Awá",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "barbachas-del-arbol-grande",
+        "guagaja"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7639,
+      "prompt_sha256": "923f7a4e0672ccf6eef0e0e2f801eaca31877fb6c4fd143d384147b3bba53af4"
+    },
+    {
+      "job": "ishkum_awa__group_grammar--canon",
+      "modelo": "ishkum_awa__group_grammar",
+      "entidad": "Los Ishkum Awá, la gente que come humo",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "guagaja"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7197,
+      "prompt_sha256": "bd6949b71c88a6bf05509bdaa2fba734eebe33f9ff3072a6526a473b11b284bb"
+    },
+    {
+      "job": "los_dos_hermanos__group_grammar--canon",
+      "modelo": "los_dos_hermanos__group_grammar",
+      "entidad": "Los dos hermanos cazadores",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "guagaja"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7380,
+      "prompt_sha256": "4b5fd175cafed6ee7cce3ac4ab04576ede8415a829ed2dd6511af7d70692d2b6"
+    }
+  ]
+}

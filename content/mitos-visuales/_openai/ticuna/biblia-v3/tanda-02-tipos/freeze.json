@@ -1,0 +1,137 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ticuna",
+  "comunidad": "Ticuna",
+  "tanda": "tanda-02-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ticuna.v3.json",
+    "sha256": "fd0c6ffe84de74c45161ae42823d427354bcefa0940f5eb72ce2559eac09f0a3"
+  },
+  "canon": {
+    "sha256": "508298d7f6b1c813ab2d8c0bf8438b2829b11c5b30bc6045eb9ce969dbb95dc9",
+    "verificado_en": "2026-09-29T02:03:32.554Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Hombre adulto tikuna (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe",
+        "origen-de-la-luna-tikuna",
+        "origen-del-friaje-tikuna",
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6548,
+      "prompt_sha256": "0cc4bf8bf730779521fd317579e63177bfaa51f9bce16e160150007920434101"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Mujer adulta tikuna (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-canoa-de-moe",
+        "origen-de-la-luna-tikuna",
+        "origen-del-friaje-tikuna",
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6239,
+      "prompt_sha256": "28d759c03dd0cf9979cd701d91269aecc6c479a309295f827e534671e178bc88"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Mujer joven tikuna (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-canoa-de-moe",
+        "origen-de-la-luna-tikuna",
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5808,
+      "prompt_sha256": "80674a5ba9944ec0429b5bd01fc2be60255465e5dd47b43c58c671545199d55b"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Anciana tikuna (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-canoa-de-moe",
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5843,
+      "prompt_sha256": "0a6d71e443ee4bd5a7702cd7600a3cc646482fddd90337209db9e86918197daf"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Anciano tikuna (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5746,
+      "prompt_sha256": "ff7ad5d30abb17a3516c07e77fe65a33b85ef98a17653cb2c5f2c615511bce39"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Niño tikuna (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5736,
+      "prompt_sha256": "f1525e1f50dfd504511b59054db886a85daa9e4b54a201a9b7cc2ae53ab5f849"
+    }
+  ]
+}

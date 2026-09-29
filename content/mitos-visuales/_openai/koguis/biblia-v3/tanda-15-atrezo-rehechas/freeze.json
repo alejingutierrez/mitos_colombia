@@ -1,0 +1,67 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "koguis",
+  "comunidad": "Kogui (Kággaba)",
+  "tanda": "tanda-15-atrezo-rehechas",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/koguis.v3.json",
+    "sha256": "393111cd6df3d03b8e4b21a66fc16b45d9f1eab6b75d6c1653e0fe55306f57cf"
+  },
+  "canon": {
+    "sha256": "edca8fad668f5e006d7587f11184f1111e3139a171111e1e903647bc29cfc6f3",
+    "verificado_en": "2026-09-28T04:15:46.577Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 18,
+  "fichas_ya_preparadas": 18,
+  "fichas": [
+    {
+      "job": "mochila__object_sheet--canon",
+      "modelo": "mochila__object_sheet",
+      "entidad": "La mochila",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-maiz-koguis",
+        "el-sol-mama",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6257,
+      "prompt_sha256": "7df704786daf0afdcf95e00312d64d9cfc3b827a9f6486fd77a2648628aed949"
+    },
+    {
+      "job": "bastoncito_de_oro__object_sheet--canon",
+      "modelo": "bastoncito_de_oro__object_sheet",
+      "entidad": "El bastoncito de oro de Terana",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "kimaku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5688,
+      "prompt_sha256": "7b0e14878529e01b73dcec31251ff4894bad980e5f89e56e4d284ccb541b550b"
+    }
+  ]
+}

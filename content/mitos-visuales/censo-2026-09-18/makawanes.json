@@ -1,0 +1,523 @@
+{
+  "id": "makawanes",
+  "label": "Makaguán",
+  "pages": 3,
+  "canon_pages": 3,
+  "read_note": "Leí los tres relatos completos (creacion-makawanes, el-alma, la-gran-inundacion) con sus cuatro campos, editorial/makaguan/universe.mjs y definitions.mjs (con las sceneHorizontal/sceneVertical ya escritas) y §«Qué construye la Biblia». Lo que sorprende: es el corpus más caro de los seis y no por inflado, sino porque seis animales distintos conducen cada uno su propio acto —venado, araguato, Wiri, ardilla, samuro y cangrejo— y ninguno puede sustituir a otro. La trampa grande es el nombre Wachirajua/Wuachirajua: en el mito de origen son espíritus en forma de humo convocados por la trompeta de Tacu, y en la leyenda es un ser único, peludo o del tamaño de un niño, que cambia de forma. Comparten nombre y nada más; los dejé como dos fichas con nota cruzada, porque fusionarlos por ortografía sería inventar una identidad que las fuentes no afirman. También separé dos colectivos humanos: los primeros Makaguanes del mito y la gente del resguardo hoy, que está a cuatro siglos de distancia y viste como cualquiera en Arauca. Quedó dudoso si los Wachirajua-espíritus merecen ficha: sólo llegan cantando y rodean al creador; los dejé required porque son la única presencia incorpórea del corpus y nada más los cubre. Tres exclusiones pesan: la gente de los inventos, los huesos de los muertos y la persona difunta de la práctica perdida.",
+  "entities": [
+    {
+      "id": "tacu",
+      "name": "Tacu (Padre Sol)",
+      "kind": "deidad_fuerza",
+      "myths": ["creacion-makawanes", "la-gran-inundacion"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Hace la tierra, toca la trompeta, propone la prueba al venado y al araguato, envía a Wiri y después a la ardilla, y al final reclama a los sobrevivientes. Conduce los dos mitos. Se dibuja como Sol sobrio, según la escena ya definida, sin rostro divino monumental."
+    },
+    {
+      "id": "wachirajua_espiritus",
+      "name": "Los Wachirajua (seres de humo o almas)",
+      "kind": "colectivo",
+      "myths": ["creacion-makawanes"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Convocados por la gran trompeta cuando cielo y tierra estaban cerca: «llegaron cantando y rodearon al creador». Son la única presencia incorpórea del corpus y ninguna otra ficha resuelve un cuerpo de humo. OJO: no confundir con Wuachirajua de la leyenda; comparten nombre, no cuerpo ni función, y el canon los registra en capas documentales distintas (David González, 2010)."
+    },
+    {
+      "id": "venado_grande",
+      "name": "El venado grande, abuelo del pueblo",
+      "kind": "animal",
+      "myths": ["creacion-makawanes"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el relato entero: acepta la prueba, resiste mientras Tacu le saca cada pieza, grita en la última muela y de su boca salen cuatro mujeres y cuatro hombres. El propio corpus concluye que es el abuelo del pueblo y el título restituido lo nombra. Ficha base con boca abierta como vista adicional dentro de la misma hoja, no como estado."
+    },
+    {
+      "id": "araguato_grande",
+      "name": "El araguato grande",
+      "kind": "animal",
+      "myths": ["creacion-makawanes"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Repite la prueba, soporta el dolor sin gritar y recibe los dientes de oro. Cuerpo y acto propios, no sustituibles por el venado. Se ficha el mono; lo que sale de su boca queda excluido a la espera de decisión editorial y comunitaria."
+    },
+    {
+      "id": "primeros_makaguanes",
+      "name": "Los primeros Makaguanes antiguos",
+      "kind": "colectivo",
+      "myths": ["creacion-makawanes", "la-gran-inundacion"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cuatro mujeres y cuatro hombres que buscan carne, pepas y raíces, recogen plátano de monte y caracoles, fabrican capuzas de macana, caminan montes y esteros y se multiplican. Es la gramática de cuerpos del tiempo mítico y presta figuras a la familia de Wiri, a quienes derriban la palma y a la pareja que sobrevive."
+    },
+    {
+      "id": "wiri",
+      "name": "Wiri, el perro enviado",
+      "kind": "animal",
+      "myths": ["la-gran-inundacion"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el ser por el que se cuenta el relato: Tacu lo envía con un collar de oro a observar cómo vive la gente, no recibe la comida, muere bajo la palma y su muerte desata la inundación y la obligación final de recordarlo. La escena horizontal ya lo sugiere sólo por el collar, de modo que la ficha debe resolver cuerpo y collar por separado."
+    },
+    {
+      "id": "ardilla_enviada",
+      "name": "La ardita o ardilla",
+      "kind": "animal",
+      "myths": ["la-gran-inundacion"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Enviada por Tacu al ver la muerte de Wiri: «en instantes derribó árboles grandes y montañas». Un animal pequeño con una escala de destrucción desproporcionada; esa relación de tamaño es justamente lo que la ficha tiene que fijar."
+    },
+    {
+      "id": "samuro",
+      "name": "El samuro",
+      "kind": "animal",
+      "myths": ["la-gran-inundacion"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Enviado a limpiar la tierra y comer la materia que quedó después de la inundación. Es la corrección comunitaria de Manuel Sánchez en 2023 y la versión que el canon adopta en la narración principal; ya está en las dos escenas planeadas."
+    },
+    {
+      "id": "cangrejo_con_tambor",
+      "name": "El cangrejo gigante que toca el tambor",
+      "kind": "criatura",
+      "myths": ["la-gran-inundacion"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Recoge los restos de los muertos mientras lleva y toca un tambor. Es la figura más extraña del corpus, no es un cangrejo común por su tamaño y su acción, y la corrección comunitaria de 2023 no lo eliminó. El tambor va dentro de su ficha."
+    },
+    {
+      "id": "palma_grande",
+      "name": "La palma grande derribada para vino",
+      "kind": "planta",
+      "myths": ["la-gran-inundacion"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el instrumento del giro: la derriban en el conuco para preparar vino, cae sobre Wiri y lo mata. La fuente insiste en que fue accidente, así que la ficha debe servir en pie y caída sin convertir la escena en sacrificio."
+    },
+    {
+      "id": "gran_inundacion",
+      "name": "La gran inundación",
+      "kind": "fenomeno",
+      "myths": ["la-gran-inundacion"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Cielo oscurecido, lluvia que no se detiene durante días, agua que cubre la tierra y después retrocede dejando árboles y hojas podridos. Gobierna la luz, el color y el nivel del agua de todos los fotogramas del relato; sin regla de fenómeno cada plano quedaría con un agua distinta."
+    },
+    {
+      "id": "bosque_de_galeria_y_esteros",
+      "name": "Bosque de galería y esteros de Arauca",
+      "kind": "paisaje",
+      "myths": ["creacion-makawanes", "la-gran-inundacion", "el-alma"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "El único paisaje del corpus y el que aparece en los tres relatos: montes y esteros que caminan los primeros Makaguanes, el monte alto de la supervivencia, el bosque de El Vigía y la laguna del Lipa. Debe cargar además la regla de escala de los animales enormes del comienzo."
+    },
+    {
+      "id": "el_conuco",
+      "name": "El conuco y la choza",
+      "kind": "lugar",
+      "myths": ["la-gran-inundacion"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del acto que desata todo: allí llevan a Wiri después de la choza, allí se derriba la palma para vino y allí muere. Un claro cultivado con gente trabajando no es intercambiable con el monte ni con el estero."
+    },
+    {
+      "id": "wuachirajua",
+      "name": "Wuachirajua",
+      "kind": "criatura",
+      "myths": ["el-alma"],
+      "decision": "required",
+      "sheets": 2,
+      "states": ["forma_pequena_o_sombra"],
+      "note": "Conduce la leyenda entera. El estado extra sí lo exige el relato y sí cambia la silueta: en los recuerdos más antiguos es grande, negro y peludo, de estatura de oso y uñas largas; en versiones posteriores tiene el tamaño de un niño de diez años y cruza como sombra pequeña por la escuela. Dos fichas, no tres: las formas de ave u otros animales quedan embebidas como variante."
+    },
+    {
+      "id": "gente_del_resguardo_hoy",
+      "name": "La gente del resguardo de El Vigía",
+      "kind": "colectivo",
+      "myths": ["el-alma"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Colectivo contemporáneo, de 1948 en adelante: el hombre que se enfrenta con machete, el profesor de la escuela, el sabedor que caza, quienes cuentan después haber vivido lo mismo. No puede resolverse con la gramática de los primeros Makaguanes: son cuatro siglos y otra ropa."
+    },
+    {
+      "id": "resguardo_el_vigia",
+      "name": "Lo construido del resguardo: escuela, cementerio y caminos",
+      "kind": "arquitectura",
+      "myths": ["el-alma"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del acto de la leyenda y el único entorno construido moderno del corpus: la escuela con habitaciones que una sombra atraviesa durante una falla eléctrica, el cementerio y los caminos donde ocurren los encuentros. Sin esta ficha el ilustrador inventa una escuela."
+    },
+    {
+      "id": "padre_sol",
+      "name": "Padre Sol",
+      "kind": "deidad_fuerza",
+      "myths": ["creacion-makawanes"],
+      "decision": "embedded",
+      "covered_by": "tacu",
+      "sheets": 0,
+      "note": "Mismo creador nombrado en otra capa documental: Padre Sol en el PEC de El Vigía de 2005, Tacu en la narración de David González de 2010. Variante de nombre, no de cuerpo; la ficha de Tacu declara ambos."
+    },
+    {
+      "id": "animales_enormes",
+      "name": "Los animales enormes: los que volaban, corrían y nadaban",
+      "kind": "colectivo",
+      "myths": ["creacion-makawanes"],
+      "decision": "embedded",
+      "covered_by": "bosque_de_galeria_y_esteros",
+      "sheets": 0,
+      "note": "Pueblan la tierra antes de que hubiera gente, pero no actúan ni se describe ninguno: son la condición del mundo inicial. Se resuelven dentro del modelo de paisaje, que debe declarar la regla de escala para los tres dominios."
+    },
+    {
+      "id": "dientes_y_muelas_del_venado",
+      "name": "Los dientes y muelas extraídos",
+      "kind": "objeto",
+      "myths": ["creacion-makawanes"],
+      "decision": "embedded",
+      "covered_by": "venado_grande",
+      "sheets": 0,
+      "note": "Tacu le retira cada pieza hasta la última muela. Son parte del cuerpo del venado y de su hoja, no utilería suelta."
+    },
+    {
+      "id": "grito_del_venado",
+      "name": "El grito de la última muela",
+      "kind": "fenomeno",
+      "myths": ["creacion-makawanes"],
+      "decision": "embedded",
+      "covered_by": "venado_grande",
+      "sheets": 0,
+      "note": "El instante que decide el relato: cuando no puede contener el grito, salen las ocho primeras personas. Es sonido y boca abierta, es decir, una vista de la ficha del venado, no una entidad aparte."
+    },
+    {
+      "id": "dientes_de_oro_del_araguato",
+      "name": "Los dientes de oro del araguato",
+      "kind": "objeto",
+      "myths": ["creacion-makawanes"],
+      "decision": "embedded",
+      "covered_by": "araguato_grande",
+      "sheets": 0,
+      "note": "Recompensa por soportar la prueba. Atributo del cuerpo del mono; se diseña como oro mítico y nunca copiando una pieza de orfebrería real."
+    },
+    {
+      "id": "familia_que_encuentra_a_wiri",
+      "name": "La familia que recoge a Wiri",
+      "kind": "colectivo",
+      "myths": ["la-gran-inundacion"],
+      "decision": "embedded",
+      "covered_by": "primeros_makaguanes",
+      "sheets": 0,
+      "note": "Lo encuentra, lo lleva a su choza y trata de alimentarlo varios días. Sin descripción propia: son figuras de la misma gramática de cuerpos."
+    },
+    {
+      "id": "personas_que_derriban_la_palma",
+      "name": "Quienes derriban la palma",
+      "kind": "colectivo",
+      "myths": ["la-gran-inundacion"],
+      "decision": "embedded",
+      "covered_by": "primeros_makaguanes",
+      "sheets": 0,
+      "note": "Trabajan en el conuco preparando vino cuando la palma cae. Miembros genéricos del colectivo ya fichado; la fuente subraya que no hubo intención."
+    },
+    {
+      "id": "pareja_sobreviviente",
+      "name": "El guerrero y su compañera",
+      "kind": "colectivo",
+      "myths": ["la-gran-inundacion"],
+      "decision": "embedded",
+      "covered_by": "primeros_makaguanes",
+      "sheets": 0,
+      "note": "Los únicos que alcanzan el monte que la ardilla no derribó y los que responden a Tacu al final. Son dos figuras de generaciones posteriores, pero con la misma gramática de cuerpos; se producen desde esa hoja."
+    },
+    {
+      "id": "collar_de_oro_de_wiri",
+      "name": "El collar de oro de Wiri",
+      "kind": "objeto",
+      "myths": ["la-gran-inundacion"],
+      "decision": "embedded",
+      "covered_by": "wiri",
+      "sheets": 0,
+      "note": "Marca de que viene enviado por Tacu y, en la escena horizontal ya definida, lo único que queda de él bajo la palma. Parte de su ficha; diseño propio, nunca una pieza real."
+    },
+    {
+      "id": "paloma_variante_2010",
+      "name": "La paloma de la transcripción de 2010",
+      "kind": "animal",
+      "myths": ["la-gran-inundacion"],
+      "decision": "embedded",
+      "covered_by": "samuro",
+      "sheets": 0,
+      "note": "En la transcripción de David González del 15 de agosto de 2010, Tacu enviaba una paloma a comprobar si la tierra se había secado; Manuel Sánchez corrigió en 2023 que era un samuro. Misma función narrativa, capas distintas: se declara dentro de la hoja del samuro. Si el editor decide mostrar la variante de 2010, sube a ficha propia."
+    },
+    {
+      "id": "tambor_del_cangrejo",
+      "name": "El tambor del cangrejo",
+      "kind": "objeto",
+      "myths": ["la-gran-inundacion"],
+      "decision": "embedded",
+      "covered_by": "cangrejo_con_tambor",
+      "sheets": 0,
+      "note": "Lo lleva y lo toca mientras recorre la tierra. Va sujeto al cuerpo de la criatura, así que se resuelve en su hoja y no en la de utilería."
+    },
+    {
+      "id": "monte_que_quedo_seco",
+      "name": "El monte que la ardilla no derribó",
+      "kind": "lugar",
+      "myths": ["la-gran-inundacion"],
+      "decision": "embedded",
+      "covered_by": "gran_inundacion",
+      "sheets": 0,
+      "note": "Única tierra alta durante la lluvia y lugar de la supervivencia. Es una configuración del fenómeno —lo que queda fuera del agua— más que un sitio con identidad propia; la escena horizontal ya lo trata como «una pequeña altura que permanece seca»."
+    },
+    {
+      "id": "choza_de_la_familia",
+      "name": "La choza de la familia",
+      "kind": "arquitectura",
+      "myths": ["la-gran-inundacion"],
+      "decision": "embedded",
+      "covered_by": "el_conuco",
+      "sheets": 0,
+      "note": "Allí intentan alimentar a Wiri durante varios días. Vivienda sin descripción; entra en el mismo modelo espacial del claro cultivado."
+    },
+    {
+      "id": "laguna_del_lipa",
+      "name": "La laguna del Lipa",
+      "kind": "paisaje",
+      "myths": ["el-alma"],
+      "decision": "embedded",
+      "covered_by": "bosque_de_galeria_y_esteros",
+      "sheets": 0,
+      "note": "Donde estaban varias familias hacia 1948, cuando la presencia empezó a verse. Es una configuración de agua abierta del mismo paisaje llanero, no un lugar con arquitectura ni escena propia."
+    },
+    {
+      "id": "corozo",
+      "name": "El corozo",
+      "kind": "planta",
+      "myths": ["el-alma"],
+      "decision": "embedded",
+      "covered_by": "bosque_de_galeria_y_esteros",
+      "sheets": 0,
+      "note": "Un hombre cuenta que vio a Wuachirajua comiéndolo en el bosque de El Vigía. Fruto de palma del monte, sin ciclo descrito: entra como vegetación del paisaje."
+    },
+    {
+      "id": "wuachirajua_en_forma_de_animal",
+      "name": "Wuachirajua en forma de ave u otro animal",
+      "kind": "criatura",
+      "myths": ["el-alma"],
+      "decision": "embedded",
+      "covered_by": "wuachirajua",
+      "sheets": 0,
+      "note": "«Podía tomar forma de ave o de otros animales». El relato lo enuncia como capacidad pero no describe ninguna de esas formas: variante del mismo ser, declarada como regla en su ficha y no producida como hoja aparte."
+    },
+    {
+      "id": "pareja_de_wuachirajua",
+      "name": "La pareja de Wuachirajua",
+      "kind": "criatura",
+      "myths": ["el-alma"],
+      "decision": "embedded",
+      "covered_by": "wuachirajua",
+      "sheets": 0,
+      "note": "En la memoria que Manuel Sánchez agregó en 2023, la presencia estaba acompañada por su pareja durante el encuentro con Arístides Tocaria. No se le da ningún rasgo distinto: se resuelve como segunda figura de la misma ficha."
+    },
+    {
+      "id": "aristides_tocaria",
+      "name": "El sabedor Arístides Tocaria",
+      "kind": "personaje",
+      "myths": ["el-alma"],
+      "decision": "embedded",
+      "covered_by": "gente_del_resguardo_hoy",
+      "sheets": 0,
+      "note": "Protagoniza el encuentro de caza: dialoga con la presencia sobre poderes y rezos antiguos, se enfrenta a ella y logra ocultarse en una casa. Conduce esa escena, pero es una persona real reciente sin descripción física en la fuente; se produce desde el colectivo para no inventarle un retrato."
+    },
+    {
+      "id": "hombre_del_machete",
+      "name": "El hombre que se enfrenta con machete",
+      "kind": "personaje",
+      "myths": ["el-alma"],
+      "decision": "embedded",
+      "covered_by": "gente_del_resguardo_hoy",
+      "sheets": 0,
+      "note": "Cuenta que lo vio comiendo corozo y lo enfrentó con un machete. Testigo sin nombre ni rasgos: figura del colectivo."
+    },
+    {
+      "id": "profesor_de_la_escuela",
+      "name": "El profesor de la escuela",
+      "kind": "personaje",
+      "myths": ["el-alma"],
+      "decision": "embedded",
+      "covered_by": "gente_del_resguardo_hoy",
+      "sheets": 0,
+      "note": "Después de la muerte de un compañero y durante una falla eléctrica vio una sombra pequeña atravesar las habitaciones. Testigo sin descripción: figura del colectivo."
+    },
+    {
+      "id": "falla_electrica_de_la_escuela",
+      "name": "La falla eléctrica",
+      "kind": "fenomeno",
+      "myths": ["el-alma"],
+      "decision": "embedded",
+      "covered_by": "resguardo_el_vigia",
+      "sheets": 0,
+      "note": "Condición de luz del encuentro en la escuela, no una entidad: se declara como estado nocturno y sin luz dentro del modelo espacial del resguardo."
+    },
+    {
+      "id": "gran_trompeta",
+      "name": "La gran trompeta de Tacu",
+      "kind": "objeto",
+      "myths": ["creacion-makawanes"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_makaguan",
+      "sheets": 0,
+      "note": "Con ella convoca a los Wachirajua. Objeto menor sin descripción de forma ni material: utilería."
+    },
+    {
+      "id": "capuzas_de_macana",
+      "name": "Capuzas de macana",
+      "kind": "objeto",
+      "myths": ["creacion-makawanes"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_makaguan",
+      "sheets": 0,
+      "note": "Las fabrican los primeros Makaguanes para cazar y pescar. Herramienta de mano nombrada sin detalle: utilería."
+    },
+    {
+      "id": "platano_de_monte_y_caracoles",
+      "name": "Plátano de monte, caracoles, pepas y raíces",
+      "kind": "objeto",
+      "myths": ["creacion-makawanes"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_makaguan",
+      "sheets": 0,
+      "note": "Lo que recogen los primeros Makaguanes. Conjunto de alimentos recolectados, sin planta protagonista: entra como bloque en la hoja de utilería."
+    },
+    {
+      "id": "vino_de_palma",
+      "name": "El vino de palma",
+      "kind": "objeto",
+      "myths": ["la-gran-inundacion"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_makaguan",
+      "sheets": 0,
+      "note": "Razón por la que se derriba la palma. Se nombra como propósito del trabajo, sin recipiente ni proceso descritos: utilería mínima."
+    },
+    {
+      "id": "vela_de_cera_de_abeja",
+      "name": "La vela de cera de abeja",
+      "kind": "objeto",
+      "myths": ["el-alma"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_makaguan",
+      "sheets": 0,
+      "note": "Una de las dos piezas de la práctica perdida de acompañar a los muertos y elemento central de la escena vertical ya definida. Objeto pequeño y concreto: utilería, en el bloque contemporáneo de la hoja."
+    },
+    {
+      "id": "agua_para_acompanar_al_muerto",
+      "name": "Los dos litros de agua",
+      "kind": "objeto",
+      "myths": ["el-alma"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_makaguan",
+      "sheets": 0,
+      "note": "La segunda pieza de la práctica que se dejó de hacer: «cerca de dos litros de agua». Recipiente sin descripción: utilería contemporánea."
+    },
+    {
+      "id": "machete",
+      "name": "El machete",
+      "kind": "objeto",
+      "myths": ["el-alma"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_makaguan",
+      "sheets": 0,
+      "note": "Con él se enfrenta un hombre a la presencia en el bosque. Herramienta cotidiana del resguardo: utilería contemporánea."
+    },
+    {
+      "id": "gente_de_los_inventos",
+      "name": "La gente que el relato llama blancos, con carros y aviones",
+      "kind": "colectivo",
+      "myths": ["creacion-makawanes"],
+      "decision": "excluded",
+      "reason": "Sensible · consult_required. El canon conserva el pasaje porque está en la fuente, pero advierte que es una capa de contacto colonial y que jamás debe convertirse en jerarquía entre pueblos. Cualquier dibujo fija esa jerarquía, y la fuente no describe cuerpos: sólo nombra carros, aviones y otros inventos.",
+      "sheets": 0,
+      "note": "Verificado en el quinto párrafo del mito y en la nota de investigación («CAUTELA: la oposición con los blancos se contextualiza como capa de contacto y nunca como inferioridad»). La escena ya planeada para este mito omite el episodio. Decisión editorial y comunitaria pendiente; el araguato sí se ficha."
+    },
+    {
+      "id": "huesos_de_los_muertos",
+      "name": "Los huesos de los muertos que recoge el cangrejo",
+      "kind": "objeto",
+      "myths": ["la-gran-inundacion"],
+      "decision": "excluded",
+      "reason": "Sensible · consult_required. Son restos humanos de la inundación. El canon los conserva en el texto, pero representarlos exige decisión editorial y comunitaria; la ficha del cangrejo puede sugerir la recolección sin dibujar osamentas.",
+      "sheets": 0,
+      "note": "Verificado en el cuarto párrafo del mito. La escena vertical ya definida muestra al cangrejo con su tambor junto a los esteros, sin restos a la vista."
+    },
+    {
+      "id": "persona_difunta_acompanada",
+      "name": "La persona muerta que se acompañaba",
+      "kind": "personaje",
+      "myths": ["el-alma"],
+      "decision": "excluded",
+      "reason": "Sensible · consult_required. La práctica perdida consistía en llevar vela y agua y permanecer con la persona muerta durante un tiempo. La fuente no describe la escena y representar a un difunto de una comunidad viva exige decisión comunitaria.",
+      "sheets": 0,
+      "note": "Verificado en el segundo párrafo de la leyenda. La vela y el agua sí se producen, y con ellas basta para evocar la práctica sin poner un cuerpo."
+    },
+    {
+      "id": "ceremonia_para_recibir_a_wiri",
+      "name": "La ceremonia para volver a recibir a Wiri",
+      "kind": "fenomeno",
+      "myths": ["la-gran-inundacion"],
+      "decision": "excluded",
+      "reason": "Sin evidencia visual: los sobrevivientes prometen volver a hacer una ceremonia o práctica cultural, pero «la fuente no describe sus pasos, por lo que el sitio no los inventa ni los ofrece como ritual reproducible». Dibujarla sería fabricarla.",
+      "sheets": 0,
+      "note": "Verificado en el penúltimo párrafo del mito y en la nota de investigación («RITUAL: no se inventan pasos ceremoniales»)."
+    },
+    {
+      "id": "dentadura_de_oro_prometida_al_venado",
+      "name": "La dentadura de oro que el venado no recibió",
+      "kind": "objeto",
+      "myths": ["creacion-makawanes"],
+      "decision": "excluded",
+      "reason": "Se menciona pero nunca se ve: era la recompensa condicional —«si soportaba el dolor, recibiría una dentadura de oro»— y el venado gritó en la última muela, de modo que nunca llega a existir en el relato.",
+      "sheets": 0,
+      "note": "Verificado en el tercer y cuarto párrafo del mito. Los dientes de oro que sí existen son los del araguato y están embebidos en su ficha."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_makaguan",
+      "kind": "objeto",
+      "covers": [
+        "gran_trompeta",
+        "capuzas_de_macana",
+        "platano_de_monte_y_caracoles",
+        "vino_de_palma",
+        "vela_de_cera_de_abeja",
+        "agua_para_acompanar_al_muerto",
+        "machete"
+      ],
+      "sheets": 1,
+      "note": "Una sola hoja con dos bloques declarados: el del tiempo mítico (trompeta, capuzas de macana, recolección, vino de palma) y el contemporáneo de la leyenda (vela de cera de abeja, agua, machete). Se mantienen separados dentro de la hoja para que ningún objeto del resguardo de hoy se cuele en la escena del venado ni al revés."
+    }
+  ],
+  "totals": {
+    "entities": 49,
+    "required": 16,
+    "embedded": 28,
+    "excluded": 5,
+    "sheets": 18
+  }
+}

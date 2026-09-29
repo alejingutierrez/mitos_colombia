@@ -1,0 +1,43 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "umbra",
+  "comunidad": "Umbra",
+  "tanda": "tanda-02-tipos-rehechas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-25",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/umbra.v3.json",
+    "sha256": "5fb0f118991145e9ec0264a24e0b95f73f2e968a855ed93526002df99f3def00"
+  },
+  "canon": {
+    "sha256": "6aa19a1a16d43ab735dc5998716522f47331d2189bd68238997b040f79e6fa09",
+    "verificado_en": "2026-09-25T14:21:04.665Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 3,
+  "fichas": [
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer umbra adulta",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "tasime-el-incesto",
+        "los-jeques-que-desaparecieron-en-batero"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7124,
+      "prompt_sha256": "afca63561c2ed9249dc51cfee16456240d1ff1d262b22ce3488a957f44fe24c5"
+    }
+  ]
+}

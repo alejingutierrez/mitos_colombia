@@ -1,0 +1,402 @@
+{
+  "id": "quimbaya",
+  "label": "Quimbaya",
+  "pages": 3,
+  "canon_pages": 3,
+  "read_note": "Leí los tres mitos completos (batatabati, ipiare-ebachi, nabsacadas-la-estrella-caida) con sus cuatro campos editoriales, editorial/quimbaya/universe.mjs y definitions.mjs (incluidos los imagePrompt ya escritos) y §«Qué construye la Biblia» de docs/biblia-visual-v3.md. Lo que más sorprende es que los tres relatos no comparten casi nada: una fiesta de plaza descrita por Cieza en 1553, una leyenda literaria indigenista de 1932 y un expediente colonial de 1603. No hay un panteón, no hay criaturas y no hay un solo animal en todo el corpus: el censo es casi enteramente de humanos, lugares y utilería. La época manda dos veces: ipiare-ebachi imagina una monarquía quimbaya que no existió (su comitiva y su sandalia son ficción de 1932, se dibujan sobrias y sin regalia), y nabsacadas ocurre bajo doctrina franciscana, con fraile y pueblo de indios, no con orfebrería precolombina. Quedó dudoso si Inés y los caciques nombrados merecían ficha propia: las fuentes no les dan cuerpo y los prompts prohíben regalia inventada, así que van embebidos en el colectivo de los pueblos de Vía; si el editor quiere que Inés abra el tríptico habría que subir una ficha. También quedó dudoso el estado de ánima de Ipiaré, pero el relato sí lo muestra recorriendo las laderas de noche y el prompt vertical ya lo pide translúcido, así que cuesta ficha.",
+  "entities": [
+    {
+      "id": "nabsacadas",
+      "name": "Nabsacadas, la estrella caída",
+      "kind": "personaje",
+      "myths": ["nabsacadas-la-estrella-caida"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce todo el relato: se presenta ante Inés, recorre los pueblos, se declara bisacuelo regresado del páramo, es reconocido como «cacique viejo» y organiza el plan del silbo. Figura humana sobria en los tres actos; el canon prohíbe expresamente demonio, cuernos, alas, halo y dios monumental, así que la ficha fija un cuerpo de hombre mayor, no una deidad."
+    },
+    {
+      "id": "ipiare_ebachi",
+      "name": "Ipiaré Ebachí",
+      "kind": "personaje",
+      "myths": ["ipiare-ebachi"],
+      "decision": "required",
+      "sheets": 2,
+      "states": ["anima_nocturna"],
+      "note": "Protagonista de la leyenda de 1932: sube al Cumanday con su padre, pierde la sandalia y pide que la busquen. El segundo estado cuesta ficha porque el relato sí lo muestra —«algunas personas dijeron ver su ánima recorriendo de noche las laderas»— y cambia la silueta a figura translúcida, que es justo lo que pide el prompt vertical. Vestuario deliberadamente sobrio: la monarquía quimbaya es invención literaria."
+    },
+    {
+      "id": "ultimo_rey_quimbaya",
+      "name": "El último rey (padre de Ipiaré)",
+      "kind": "personaje",
+      "myths": ["ipiare-ebachi"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce la acción: ante el presagio emprende el ascenso y decide no esperar a los conquistadores. Es el segundo cuerpo de la comitiva y el único que toma decisiones; sin su ficha el acto del volcán queda sin sujeto. Se dibuja sin corona, palanquín ni regalia, por indicación explícita del canon."
+    },
+    {
+      "id": "fray_baltasar_de_zamora",
+      "name": "Fray Baltasar de Zamora",
+      "kind": "personaje",
+      "myths": ["nabsacadas-la-estrella-caida"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce el tercer acto: obtiene información mediante azotes al cacique y llega al bohío con acompañantes. Silueta de doctrinero franciscano, inconfundible y de época verificada (1603); es el contrapeso visual de Nabsacadas y no puede salir del colectivo de aldeanos."
+    },
+    {
+      "id": "grupos_del_juego",
+      "name": "Los grupos del juego: mujeres, hombres y jóvenes",
+      "kind": "colectivo",
+      "myths": ["batatabati"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el sujeto del relato entero: se reúnen por grupos, avanzan unos contra otros al oír el son y después forman la rueda de danza. Una sola gramática de grupo diferenciada por sexo y edad resuelve las dos escenas de la fiesta y presta cuerpos al resto del siglo XVI quimbaya."
+    },
+    {
+      "id": "gente_de_los_pueblos_de_via",
+      "name": "La gente que llega de noche al bohío",
+      "kind": "colectivo",
+      "myths": ["nabsacadas-la-estrella-caida"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Colectivo distinto del anterior por época y situación: son habitantes de pueblos de doctrina de 1603 que llegan de noche desde varias jurisdicciones con masato y bollos. No se puede reusar la gramática de la fiesta prehispánica sin mentir sobre el siglo. Absorbe a todos los nombres menores del expediente."
+    },
+    {
+      "id": "sandalia_de_ipiare",
+      "name": "La sandalia perdida",
+      "kind": "objeto",
+      "myths": ["ipiare-ebachi"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Es el objeto por el que se cuenta el relato: larga y flexible, adornada con oro y sujeta al tobillo, se desprende en el camino, nadie la encuentra y el ánima sigue buscándola. Aparece en las dos escenas planeadas. Es invención literaria de 1932, así que se diseña como pieza ficticia y nunca copiando un ejemplar real de orfebrería."
+    },
+    {
+      "id": "plaza_del_caserio_quimbaya",
+      "name": "La plaza del caserío y sus casas",
+      "kind": "arquitectura",
+      "myths": ["batatabati"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del acto de Batatabatí y no intercambiable: «en la plaza sonaban dos tambores», allí se abre la rueda de danza y allí ocurre el archivo cantado. Incluye las casas de hojas de caña que la rodean y el fondo de guaduales y río del Cauca medio."
+    },
+    {
+      "id": "bohio_entre_guaduales",
+      "name": "El bohío apartado entre guaduales",
+      "kind": "arquitectura",
+      "myths": ["nabsacadas-la-estrella-caida"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del acto central del relato: lo levantan retirado entre guaduales, allí lo reconocen como «cacique viejo», allí llegan de noche con ofrendas y allí irrumpe el doctrinero. Es un interior nocturno, no el paisaje abierto del páramo ni la plaza abierta del otro mito."
+    },
+    {
+      "id": "cumanday",
+      "name": "El Cumanday: volcán, nieve y humo",
+      "kind": "paisaje",
+      "myths": ["ipiare-ebachi"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del acto y personaje ambiental del relato: humo semejante al de la madera verde, nieve sobre el relieve, suelo que tiembla, piedra, hielo y corrientes con señales de fuego. Nada del corpus se le parece; sostiene el tríptico completo de ipiare-ebachi."
+    },
+    {
+      "id": "paramo_de_tataqui",
+      "name": "El páramo de Tataquí",
+      "kind": "paisaje",
+      "myths": ["nabsacadas-la-estrella-caida"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Lugar nombrado del que Nabsacadas dice regresar después de muerto; de ahí viene su autoridad y por eso el prompt lo pone al inicio del recorrido. Páramo nublado de cordillera, distinto del guadual caliente del bohío y del nevado del otro mito."
+    },
+    {
+      "id": "comitiva_del_ultimo_rey",
+      "name": "La comitiva que sube al volcán",
+      "kind": "colectivo",
+      "myths": ["ipiare-ebachi"],
+      "decision": "embedded",
+      "covered_by": "grupos_del_juego",
+      "sheets": 0,
+      "note": "Acompaña el ascenso y continúa hacia el volcán, pero la fuente no le da número, oficio ni vestuario, y el canon prohíbe palanquín y regalia inventada. Se resuelve con la misma gramática sobria de cuerpos quimbayas del siglo XVI; abrirle ficha propia sería inventar una corte que no existió."
+    },
+    {
+      "id": "ines",
+      "name": "Inés",
+      "kind": "personaje",
+      "myths": ["nabsacadas-la-estrella-caida"],
+      "decision": "embedded",
+      "covered_by": "gente_de_los_pueblos_de_via",
+      "sheets": 0,
+      "note": "Abre el expediente —cuenta que se le presentó una figura humana— pero la crónica no le da cuerpo, edad ni traje, no vuelve a actuar y no está en ninguna de las dos escenas planeadas. Miembro identificable del colectivo. Si el editor quiere que abra el tríptico, sube a required."
+    },
+    {
+      "id": "pedro_pachuegue",
+      "name": "Pedro Pachuegue",
+      "kind": "personaje",
+      "myths": ["nabsacadas-la-estrella-caida"],
+      "decision": "embedded",
+      "covered_by": "gente_de_los_pueblos_de_via",
+      "sheets": 0,
+      "note": "Sólo transmite la noticia de su esposa al cacique. No se le describe ni vuelve a aparecer: miembro genérico del colectivo."
+    },
+    {
+      "id": "cacique_diego_orobajo",
+      "name": "El cacique Diego Orobajo",
+      "kind": "personaje",
+      "myths": ["nabsacadas-la-estrella-caida"],
+      "decision": "embedded",
+      "covered_by": "gente_de_los_pueblos_de_via",
+      "sheets": 0,
+      "note": "Recibe la noticia, entrega una hija y es azotado por el doctrinero. Su papel es narrativo, no visual: la fuente no conserva ningún rasgo de su figura y el canon prohíbe inventarle insignias de autoridad."
+    },
+    {
+      "id": "cacique_don_pedro",
+      "name": "El cacique don Pedro",
+      "kind": "personaje",
+      "myths": ["nabsacadas-la-estrella-caida"],
+      "decision": "embedded",
+      "covered_by": "gente_de_los_pueblos_de_via",
+      "sheets": 0,
+      "note": "Ante él Nabsacadas se presenta como su bisabuelo regresado. Es la bisagra del reconocimiento, pero sin descripción física; se resuelve como figura del colectivo receptora del anuncio."
+    },
+    {
+      "id": "joven_que_acompana_a_nabsacadas",
+      "name": "La joven que acompaña el viaje",
+      "kind": "personaje",
+      "myths": ["nabsacadas-la-estrella-caida"],
+      "decision": "embedded",
+      "covered_by": "gente_de_los_pueblos_de_via",
+      "sheets": 0,
+      "note": "Hija del cacique pedida por Nabsacadas; participa en el viaje y el prompt horizontal la coloca «a distancia». Es una silueta joven sin rasgos documentados: sale de la gramática del colectivo sin ficha propia."
+    },
+    {
+      "id": "estrella_caida",
+      "name": "La estrella caída",
+      "kind": "fenomeno",
+      "myths": ["nabsacadas-la-estrella-caida"],
+      "decision": "embedded",
+      "covered_by": "nabsacadas",
+      "sheets": 0,
+      "note": "Es la traducción de su nombre, no un cuerpo aparte: nadie ve caer una estrella en el relato. El prompt la usa como metáfora discreta de papel descendente sobre la escena, es decir, como atributo gráfico de la ficha de Nabsacadas."
+    },
+    {
+      "id": "tiraderas",
+      "name": "Tiraderas",
+      "kind": "objeto",
+      "myths": ["batatabati"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_quimbaya",
+      "sheets": 0,
+      "note": "Cieza las menciona como objeto del juego de fuerza y destreza. Objeto menor de mano, sin trama propia: va a la hoja de utilería."
+    },
+    {
+      "id": "varas",
+      "name": "Varas del juego",
+      "kind": "objeto",
+      "myths": ["batatabati"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_quimbaya",
+      "sheets": 0,
+      "note": "Segundo objeto del juego nombrado por la crónica, sin descripción de forma. Utilería."
+    },
+    {
+      "id": "dos_tambores",
+      "name": "Los dos tambores de la plaza",
+      "kind": "objeto",
+      "myths": ["batatabati"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_quimbaya",
+      "sheets": 0,
+      "note": "«En la plaza sonaban dos tambores» y con ellos empieza la danza. Son el gozne de la segunda escena, pero siguen siendo dos objetos sin cuerpo propio; se producen en la hoja de utilería y se montan sobre la ficha de la plaza."
+    },
+    {
+      "id": "vasijas_de_bebida_de_maiz",
+      "name": "Vasijas de bebida de maíz",
+      "kind": "objeto",
+      "myths": ["batatabati"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_quimbaya",
+      "sheets": 0,
+      "note": "Las sostienen los danzantes mientras siguen el recorrido. Objeto de mano repetido: utilería."
+    },
+    {
+      "id": "masato_y_bollos_de_maiz",
+      "name": "Masato y bollos de maíz",
+      "kind": "objeto",
+      "myths": ["nabsacadas-la-estrella-caida"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_quimbaya",
+      "sheets": 0,
+      "note": "Lo que llevan de noche al bohío. Comparte hoja con las vasijas de la fiesta porque es el mismo mundo material del Cauca medio de los siglos XVI y XVII; la hoja declara a qué relato pertenece cada pieza."
+    },
+    {
+      "id": "maiz",
+      "name": "Maíz (cultivo y alimento)",
+      "kind": "planta",
+      "myths": ["batatabati", "nabsacadas-la-estrella-caida"],
+      "decision": "embedded",
+      "covered_by": "hoja_utileria_quimbaya",
+      "sheets": 0,
+      "note": "Aparece como bebida, como bollo y como cosecha prometida, nunca como planta protagonista ni con ciclo descrito. No merece botanical_sheet: entra en la hoja de utilería como materia de los alimentos y como mata de fondo."
+    },
+    {
+      "id": "casas_de_hojas_de_cana",
+      "name": "Casas de hojas de caña",
+      "kind": "arquitectura",
+      "myths": ["batatabati"],
+      "decision": "embedded",
+      "covered_by": "plaza_del_caserio_quimbaya",
+      "sheets": 0,
+      "note": "Rodean la plaza y sólo funcionan como fondo del caserío. Parte del mismo modelo espacial."
+    },
+    {
+      "id": "guaduales",
+      "name": "Guaduales",
+      "kind": "planta",
+      "myths": ["batatabati", "nabsacadas-la-estrella-caida"],
+      "decision": "embedded",
+      "covered_by": "bohio_entre_guaduales",
+      "sheets": 0,
+      "note": "El bohío se levanta «retirado entre guaduales» y los guaduales también cierran el fondo de la plaza. Es vegetación de ambiente, no una planta con acción: se resuelve dentro del modelo espacial del bohío y se reusa como telón."
+    },
+    {
+      "id": "quebrada_de_via",
+      "name": "La quebrada del pueblo de Vía",
+      "kind": "paisaje",
+      "myths": ["nabsacadas-la-estrella-caida"],
+      "decision": "embedded",
+      "covered_by": "bohio_entre_guaduales",
+      "sheets": 0,
+      "note": "Nabsacadas vincula su agua con el cuidado de los niños frente al bautismo. Es un elemento con función narrativa pero sin escena propia: corre junto al bohío y se produce dentro de ese modelo espacial."
+    },
+    {
+      "id": "nevado_santa_isabel",
+      "name": "El nevado Santa Isabel",
+      "kind": "paisaje",
+      "myths": ["ipiare-ebachi"],
+      "decision": "embedded",
+      "covered_by": "cumanday",
+      "sheets": 0,
+      "note": "Cierre poético de 1932: las lágrimas de Ipiaré lo habrían formado. En imagen es una cumbre nevada distante dentro del mismo macizo; no se dibuja el nacimiento literal y no necesita environment_model propio."
+    },
+    {
+      "id": "princesa_batatabati_fabricada",
+      "name": "La princesa Batatabatí de ojos azules",
+      "kind": "personaje",
+      "myths": ["batatabati"],
+      "decision": "excluded",
+      "reason": "Fabricación moderna retirada por el canon: la revisión demuestra que no existe sustento para la princesa, el secuestro, los ojos arrancados ni el río de lágrimas. Ficharla repondría exactamente lo que la página eliminó.",
+      "sheets": 0,
+      "note": "Se registra para que quede constancia de que fue detectada y descartada a propósito, no por olvido. Arrastra consigo al guerrero vinculado a Calarcá y a Tacurumbí como maestro orfebre."
+    },
+    {
+      "id": "estribillo_batatabati",
+      "name": "El estribillo «batatabati»",
+      "kind": "fenomeno",
+      "myths": ["batatabati"],
+      "decision": "excluded",
+      "reason": "Sin evidencia visual: es una palabra cantada traducida como «ea, juguemos», no un ser ni un objeto. Dibujarla exigiría inventarle un cuerpo, y el canon prohíbe además texto y notación musical en la imagen.",
+      "sheets": 0,
+      "note": "El canto se resolverá como recurso gráfico (cintas de papel) dentro de la escena de la plaza, no como entidad de la biblioteca."
+    },
+    {
+      "id": "los_mayores_de_los_cantos",
+      "name": "Los mayores recordados en los cantos",
+      "kind": "colectivo",
+      "myths": ["batatabati"],
+      "decision": "excluded",
+      "reason": "Se mencionan pero nunca se ven: existen sólo como contenido de lo que la gente canta («recordaban los sucesos de los mayores»). La crónica no describe ni un rasgo suyo.",
+      "sheets": 0,
+      "note": "Verificado contra el párrafo cuarto del mito. El prompt vertical los sugiere como siluetas sobrias de memoria; eso es una licencia de composición que se apoya en la ficha de los grupos del juego, no una entidad con cuerpo documentado."
+    },
+    {
+      "id": "heridas_y_muertes_del_juego",
+      "name": "Las heridas y muertes de la contienda",
+      "kind": "fenomeno",
+      "myths": ["batatabati"],
+      "decision": "excluded",
+      "reason": "La crónica registra que la contienda podía dejar heridas y a veces muertes, pero el canon prohíbe explícitamente sangre, heridas y combate épico en la imagen; no hay descripción de cuerpos heridos que permita ficharlo sin inventar.",
+      "sheets": 0,
+      "note": "Verificado en el segundo párrafo del mito y en el imagePromptHorizontal, que pide leer varas y tiraderas como movimiento seguro y no como batalla."
+    },
+    {
+      "id": "profecia_de_los_barbudos",
+      "name": "La profecía: el fuego apagado y los extranjeros barbudos",
+      "kind": "fenomeno",
+      "myths": ["ipiare-ebachi"],
+      "decision": "excluded",
+      "reason": "Se anuncia pero nunca se ve: la leyenda termina antes de que lleguen los conquistadores y el canon los excluye de la ilustración. Ni el fuego apagándose bajo la nieve ni las armas que lanzan rayos llegan a ocurrir en escena.",
+      "sheets": 0,
+      "note": "Leído en el primer párrafo del mito; el rey decide no esperar su llegada, de modo que el episodio se cierra sin ellos."
+    },
+    {
+      "id": "piezas_de_orfebreria_quimbaya",
+      "name": "Piezas de orfebrería quimbaya",
+      "kind": "objeto",
+      "myths": ["ipiare-ebachi", "batatabati"],
+      "decision": "excluded",
+      "reason": "Sensible · do_not_visualize. El oro del Cauca medio atraviesa el expediente (la sandalia adornada, el orfebre inventado, la síntesis del Museo del Oro), pero jamás se reproduce el diseño de un ejemplar real de orfebrería. El lenguaje del oro sí; la pieza concreta no.",
+      "sheets": 0,
+      "note": "La única pieza dorada que se produce es la sandalia ficticia de 1932, con diseño propio y sin citar ningún objeto de colección. Los prompts ya prohíben «exceso de oro»."
+    },
+    {
+      "id": "tacurumbi",
+      "name": "Tacurumbí",
+      "kind": "personaje",
+      "myths": ["batatabati"],
+      "decision": "excluded",
+      "reason": "Se menciona pero nunca se ve: en Cieza es el nombre de un cacique y de un río, sin escena, sin cuerpo y sin acción. universe.mjs lo manda a community-history, no a ficha.",
+      "sheets": 0,
+      "note": "Su versión como maestro orfebre padre de una diosa pertenece a la trama fabricada que el canon retira."
+    },
+    {
+      "id": "rio_quindio_de_lagrimas",
+      "name": "El río Quindío nacido de lágrimas",
+      "kind": "paisaje",
+      "myths": ["batatabati"],
+      "decision": "excluded",
+      "reason": "Pertenece a la fabricación moderna retirada por el canon; dibujar el nacimiento del río sería volver a afirmar lo que la revisión demostró falso.",
+      "sheets": 0,
+      "note": "El imagePromptHorizontal lo prohíbe por nombre («río naciendo»)."
+    },
+    {
+      "id": "caballos_y_frenos_del_plan",
+      "name": "Los caballos y sus frenos",
+      "kind": "objeto",
+      "myths": ["nabsacadas-la-estrella-caida"],
+      "decision": "excluded",
+      "reason": "Se mencionan pero nunca se ven: forman parte de un plan que no llega a ejecutarse —retirar los frenos, esperar el silbo—, y el doctrinero interrumpe antes del día señalado.",
+      "sheets": 0,
+      "note": "Verificado en el cuarto párrafo del mito. Tampoco hay españoles en escena: el canon los excluye de la ilustración."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_utileria_quimbaya",
+      "kind": "objeto",
+      "covers": [
+        "tiraderas",
+        "varas",
+        "dos_tambores",
+        "vasijas_de_bebida_de_maiz",
+        "masato_y_bollos_de_maiz",
+        "maiz"
+      ],
+      "sheets": 1,
+      "note": "Una sola hoja con los seis objetos menores del corpus, agrupados por mundo material del Cauca medio de los siglos XVI y XVII. La hoja declara de qué relato viene cada pieza para no mezclar la fiesta descrita por Cieza con las ofrendas del bohío de 1603. Ninguna pieza se diseña citando un objeto arqueológico real."
+    }
+  ],
+  "totals": {
+    "entities": 37,
+    "required": 11,
+    "embedded": 17,
+    "excluded": 9,
+    "sheets": 13
+  }
+}

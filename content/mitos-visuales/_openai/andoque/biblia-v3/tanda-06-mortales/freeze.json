@@ -1,0 +1,284 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "andoque",
+  "comunidad": "Andoque (Gente del Hacha)",
+  "tanda": "tanda-06-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/andoque.v3.json",
+    "sha256": "97bebc22f81c7cf2a3608412318cacb3c8ed950d21e049e0fa6d156c1d897781"
+  },
+  "canon": {
+    "sha256": "1464c50fa3a580f64f525602622acdadb0f163d4bd0942dd7decb8df15cc5afb",
+    "verificado_en": "2026-09-28T16:07:34.044Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 15,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "nenefi__identity_sheet--canon",
+      "modelo": "nenefi__identity_sheet",
+      "entidad": "Nenefi",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-aguila-canibal-y-la-madre-de-los-andoques",
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7897,
+      "prompt_sha256": "bc794b37e4ae89e4e38bb6c7e8bf39a41d553bed2e33e0b7a787cd7fa35a1aa4"
+    },
+    {
+      "job": "trueno_de_piedra__identity_sheet--canon",
+      "modelo": "trueno_de_piedra__identity_sheet",
+      "entidad": "Trueno-de-piedra",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-brujeria-de-la-danta",
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7658,
+      "prompt_sha256": "1bfdb31fe720be72cfa7241a81eb68100821131dc474369fdc0b2efcf44f17f1"
+    },
+    {
+      "job": "canoa_de_piedra__identity_sheet--canon",
+      "modelo": "canoa_de_piedra__identity_sheet",
+      "entidad": "Canoa-de-Piedra",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-mundo-de-ultratumba"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7914,
+      "prompt_sha256": "6f3d01a65f180b615c18fa981d3c973814322bbef1c8a6ae275b94a96c901bba"
+    },
+    {
+      "job": "cortador__identity_sheet--canon",
+      "modelo": "cortador__identity_sheet",
+      "entidad": "Cortador",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7846,
+      "prompt_sha256": "42e845d084c12e7221cf2817dd44cefcd56238ae3bfe0d6dc7bafc868a2fd5a1"
+    },
+    {
+      "job": "dona_sueno__identity_sheet--canon",
+      "modelo": "dona_sueno__identity_sheet",
+      "entidad": "Doña Sueño",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7442,
+      "prompt_sha256": "d54cb1d5e67dadb8bedf7519615202e7c059c154d5aa6a1246066583381e3930"
+    },
+    {
+      "job": "el_visitante_desafiante__identity_sheet--canon",
+      "modelo": "el_visitante_desafiante__identity_sheet",
+      "entidad": "El visitante que desafió al fantasma",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-fantasmas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7736,
+      "prompt_sha256": "1c337108366d5aad4bbf9820310bfe67c0c7fa4d8c74d63ee6110eb64382e82f"
+    },
+    {
+      "job": "especialista_huitoto__identity_sheet--canon",
+      "modelo": "especialista_huitoto__identity_sheet",
+      "entidad": "El especialista huitoto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-brujeria-de-la-danta"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7717,
+      "prompt_sha256": "309dbdda01ea5d36e232445a57f2fb973d996f0eea51802fffd650763a638a51"
+    },
+    {
+      "job": "flor_de_guacamayo__identity_sheet--canon",
+      "modelo": "flor_de_guacamayo__identity_sheet",
+      "entidad": "Flor-de-guacamayo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-caucheros-de-la-casa-arana"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7657,
+      "prompt_sha256": "56ebafd3b992c34ea8375f9adba13d52011d561d89b7878534d34df5c9c0dbd5"
+    },
+    {
+      "job": "garza_de_bocana__identity_sheet--canon",
+      "modelo": "garza_de_bocana__identity_sheet",
+      "entidad": "Garza-de-bocana",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7611,
+      "prompt_sha256": "9e1a0e35926a8d526889d98bed16de949b5fa5c1774f00a24ea6652bdb26bda4"
+    },
+    {
+      "job": "garza_de_centro__identity_sheet--canon",
+      "modelo": "garza_de_centro__identity_sheet",
+      "entidad": "Garza-de-centro",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-guerra-del-palo-hablador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7559,
+      "prompt_sha256": "474daa4e0bfda70c295104d4ebcabf4955a1c5f0b2468dd339d3ebdf98b70854"
+    },
+    {
+      "job": "gavilan_de_piriri__identity_sheet--canon",
+      "modelo": "gavilan_de_piriri__identity_sheet",
+      "entidad": "Gavilán-de-piriri",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-grupos-de-mi-juventud"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7592,
+      "prompt_sha256": "64fe3a9d526e784cc2cf6efdce5d6b919cd4ddd08c01899a7e4577611f00c8cd"
+    },
+    {
+      "job": "huevo_de_chupaflor__identity_sheet--canon",
+      "modelo": "huevo_de_chupaflor__identity_sheet",
+      "entidad": "Huevo-de-chupaflor",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "huevo-de-chupaflor-el-diluvio-y-el-fuego"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7795,
+      "prompt_sha256": "bd0d346f95b9def593695e5cd1ea128fc04cc322e9f61a6b5d2bb4f707ff9c36"
+    },
+    {
+      "job": "mujer_de_balso__identity_sheet--canon",
+      "modelo": "mujer_de_balso__identity_sheet",
+      "entidad": "La mujer de balso",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-sol-que-nace-en-araracuara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7886,
+      "prompt_sha256": "a86b73b72f1bdd93405c8bc2eabb7d43f26c1bac99455acdaade1ed078ea5525"
+    },
+    {
+      "job": "plumon_amarillo__identity_sheet--canon",
+      "modelo": "plumon_amarillo__identity_sheet",
+      "entidad": "Plumón-amarillo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-retorno-de-plumon-amarillo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7871,
+      "prompt_sha256": "d18be86f2653980068a07c698d0bebd17538bd114efeae3762b1d7eaaaa81783"
+    },
+    {
+      "job": "plumon_de_fiebre__identity_sheet--canon",
+      "modelo": "plumon_de_fiebre__identity_sheet",
+      "entidad": "Plumón-de-fiebre",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-retorno-de-plumon-de-fiebre"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7964,
+      "prompt_sha256": "c66a2319bcecdf488acdff16c7fa22ef43953880de6e5ea614daf14c83a57d34"
+    }
+  ]
+}

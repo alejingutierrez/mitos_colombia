@@ -1,0 +1,136 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tucano",
+  "comunidad": "Tucano",
+  "tanda": "tanda-11-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tucano.v3.json",
+    "sha256": "3328d35e2cabdae942974b80bff65672e5d002bf0baa7e431e6248fdb0c51b94"
+  },
+  "canon": {
+    "sha256": "c2c891d8239e415d3d353744fa980cfb41c99c3ff809a4d7bc9ec03abd8495f4",
+    "verificado_en": "2026-09-29T02:01:25.282Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "diawi__spatial_model--canon",
+      "modelo": "diawi__spatial_model",
+      "entidad": "Diawí",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-semilla-de-la-yuca-tucano",
+        "yepa-abandona-la-tierra",
+        "yepa-castiaga-a-los-animales"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5567,
+      "prompt_sha256": "5d69370d38c853100c056353409d64d964e4e5a34d0dc7b221f4895565161a71"
+    },
+    {
+      "job": "casas_de_surgimiento__spatial_model--canon",
+      "modelo": "casas_de_surgimiento__spatial_model",
+      "entidad": "Las casas de surgimiento",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-origen-del-hombre"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5452,
+      "prompt_sha256": "17748d4b193c5dfca8e464b4046968068f93c40f4b25f087a014312d4592c609"
+    },
+    {
+      "job": "formacion_de_la_tierra__phenomenon_rule--canon",
+      "modelo": "formacion_de_la_tierra__phenomenon_rule",
+      "entidad": "La formación de la tierra",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-aparicion-del-sol-del-viento-y-los-mares"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5380,
+      "prompt_sha256": "7624f87876e2be5eeea8b9fa06a4c677b8beff18d64fd56786c692a2815ae39a"
+    },
+    {
+      "job": "memoria_sin_papel__phenomenon_rule--canon",
+      "modelo": "memoria_sin_papel__phenomenon_rule",
+      "entidad": "La memoria que no depende del papel",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-blancos-dominan-a-los-indios"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5557,
+      "prompt_sha256": "01c54f7053005bd1b8eb91876315e81cdb661e6de83379471abb5f2ba94a2419"
+    },
+    {
+      "job": "noche_y_sueno__phenomenon_rule--canon",
+      "modelo": "noche_y_sueno__phenomenon_rule",
+      "entidad": "La noche y el sueño repartidos",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "yepa-abandona-la-tierra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5134,
+      "prompt_sha256": "f1b2d421ac5a25a8142326c0daf55122fde33ab1bd2fe9a13b558b9d31865c99"
+    },
+    {
+      "job": "viento_y_soplo__phenomenon_rule--canon",
+      "modelo": "viento_y_soplo__phenomenon_rule",
+      "entidad": "El primer viento y el soplo hacia los cuatro rumbos",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-aparicion-del-sol-del-viento-y-los-mares"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5292,
+      "prompt_sha256": "fbaacb9ef8816f2805f9ab383b77248e211de58e2eb7e8729d044a62a944ced2"
+    }
+  ]
+}

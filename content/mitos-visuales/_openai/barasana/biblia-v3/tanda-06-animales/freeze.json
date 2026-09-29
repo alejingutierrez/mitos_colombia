@@ -1,0 +1,203 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "barasana",
+  "comunidad": "Barasana",
+  "tanda": "tanda-06-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/barasana.v3.json",
+    "sha256": "63a71278101405757bb0624c0ed918ebab9ba2d2df6fe234fa28db05a53a3ff2"
+  },
+  "canon": {
+    "sha256": "ff3d70797dc45bbc973d04baf1004c1e75592064c3b93d9d9dda760d8de6ff91",
+    "verificado_en": "2026-09-29T01:59:36.640Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 10,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "anaconda_celeste__identity_sheet--canon",
+      "modelo": "anaconda_celeste__identity_sheet",
+      "entidad": "Anaconda Celeste",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "kahe-sawari-kata-yai-y-el-surgimiento-barasano",
+        "la-cuerda-de-leche-y-la-anaconda-yeba",
+        "los-cerros-estantillos-y-la-cera-de-abejas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5639,
+      "prompt_sha256": "d1883fd4c1de187541db0d3f419f86c6fb116ce188fa5a1bd8da3d1f638d914a"
+    },
+    {
+      "job": "anaconda_yeba__identity_sheet--canon",
+      "modelo": "anaconda_yeba__identity_sheet",
+      "entidad": "Anaconda Yeba",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-cuerda-de-leche-y-la-anaconda-yeba",
+        "los-cerros-estantillos-y-la-cera-de-abejas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5877,
+      "prompt_sha256": "1366d97f60fbf3dc2c10b53a33ffc7fc233c31a5a4a5683f175bc1dcc8d320a0"
+    },
+    {
+      "job": "danta_barasana__identity_sheet--canon",
+      "modelo": "danta_barasana__identity_sheet",
+      "entidad": "La danta",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-origen-de-la-gente-de-los-frutales-silvestres"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5574,
+      "prompt_sha256": "58e6e583b5e195cab817839a86697907cdf0cee8bb36b058c05d02f1e3a069ef"
+    },
+    {
+      "job": "diablo_de_breo__identity_sheet--canon",
+      "modelo": "diablo_de_breo__identity_sheet",
+      "entidad": "El Diablo de Breo",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-origen-de-la-gente-de-los-frutales-silvestres"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5671,
+      "prompt_sha256": "b4cf9867a8cacdb6f38c4185e9a9e5570454090e92bfc6bddf0bcd23f67022d0"
+    },
+    {
+      "job": "diablo_de_breo__state_sheet--estado_el resplandor del breo alumbra el recinto",
+      "modelo": "diablo_de_breo__state_sheet",
+      "entidad": "El Diablo de Breo",
+      "categoria": "criatura",
+      "vista": "estado_el resplandor del breo alumbra el recinto",
+      "estados": [
+        "el resplandor del breo alumbra el recinto"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-origen-de-la-gente-de-los-frutales-silvestres"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5785,
+      "prompt_sha256": "ff23974cc568f238538795b2889a155571c494c1d4944b6ac1bd37bbec00a8cb"
+    },
+    {
+      "job": "kata_bahi__identity_sheet--canon",
+      "modelo": "kata_bahi__identity_sheet",
+      "entidad": "Kata Bahi, la pava",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-origen-de-la-gente-de-los-frutales-silvestres"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6049,
+      "prompt_sha256": "b51e256ea17e27388a580d4a4ead97097c71710acf35de2ac0f3599f62a52bca"
+    },
+    {
+      "job": "kata_rihaborea__identity_sheet--canon",
+      "modelo": "kata_rihaborea__identity_sheet",
+      "entidad": "Kata Rihaborea, la pava curadora encerrada",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-origen-de-la-gente-de-los-frutales-silvestres"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5697,
+      "prompt_sha256": "4dfe55eb45634b3e2f8c6d644cc8d33b65ad480433acd1f54a1710d6800bcc4b"
+    },
+    {
+      "job": "kata_rihaborea__state_sheet--estado_encerrada bajo el balay de cernir",
+      "modelo": "kata_rihaborea__state_sheet",
+      "entidad": "Kata Rihaborea, la pava curadora encerrada",
+      "categoria": "animal",
+      "vista": "estado_encerrada bajo el balay de cernir",
+      "estados": [
+        "encerrada bajo el balay de cernir"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-origen-de-la-gente-de-los-frutales-silvestres"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5605,
+      "prompt_sha256": "5722cbafb1899fa3bd98caed1f59d1d70b3255c53dd9957f91a53b9c4f96840f"
+    },
+    {
+      "job": "rame_aguila__identity_sheet--canon",
+      "modelo": "rame_aguila__identity_sheet",
+      "entidad": "Rame, el águila que comía gente",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5715,
+      "prompt_sha256": "056454d150ee81746ff1aea9e0554e27dc35dced663e070ad8dbec7e763298e4"
+    },
+    {
+      "job": "umu__identity_sheet--canon",
+      "modelo": "umu__identity_sheet",
+      "entidad": "Umu",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-luna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5613,
+      "prompt_sha256": "ea881d604516f98f153efff72dabb77204cef5fdd9c63ebd13a97d4c6796654e"
+    }
+  ]
+}

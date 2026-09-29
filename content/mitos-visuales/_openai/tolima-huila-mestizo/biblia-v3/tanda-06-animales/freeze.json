@@ -1,0 +1,255 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tolima-huila-mestizo",
+  "comunidad": "Tolima y Huila",
+  "tanda": "tanda-06-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tolima-huila-mestizo.v3.json",
+    "sha256": "b7f1f1559682e274cff21c66142964574468ec3ae942600e92a58a29ba06b0f9"
+  },
+  "canon": {
+    "sha256": "e3603f47534a458fbe0d16a341b049be3b48e059ddfb532221d2ee481c5cf9cf",
+    "verificado_en": "2026-09-29T02:46:27.856Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 13,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "caballo_de_camino__identity_sheet--canon",
+      "modelo": "caballo_de_camino__identity_sheet",
+      "entidad": "El caballo de camino",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-candileja",
+        "el-tunjo",
+        "el-sombreron"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7449,
+      "prompt_sha256": "3039aede52ab1e433df1d6d46828c6b97fbdbdee7282f0bb2e2ac04b78f3b797"
+    },
+    {
+      "job": "la_patasola__identity_sheet--canon",
+      "modelo": "la_patasola__identity_sheet",
+      "entidad": "La Patasola",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "mujer hermosa de una sola pierna que avanza a saltos"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-patasola",
+        "la-patasola-mixto"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7277,
+      "prompt_sha256": "c4583af201ee21a3021be6e6dde84cd1a3ff01059a66aff624de0063b3e7e42e"
+    },
+    {
+      "job": "la_patasola__state_sheet--estado_formas animales- perra negra de grandes orejas y vaca negra",
+      "modelo": "la_patasola__state_sheet",
+      "entidad": "La Patasola",
+      "categoria": "criatura",
+      "vista": "estado_formas animales: perra negra de grandes orejas y vaca negra",
+      "estados": [
+        "formas animales: perra negra de grandes orejas y vaca negra"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-patasola",
+        "la-patasola-mixto"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8018,
+      "prompt_sha256": "6a0afa29f1044775fe6e1720ad64c83bd9bb3b832580136174ddab64ce9c5e26"
+    },
+    {
+      "job": "bruja_pisca__identity_sheet--canon",
+      "modelo": "bruja_pisca__identity_sheet",
+      "entidad": "La bruja hecha pisca",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "brujas-y-duendes"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7187,
+      "prompt_sha256": "ab9abfc30bffd39edb20012cd56b4a512688e4a1785c898ee7a2add8c0669a19"
+    },
+    {
+      "job": "bruja_pisca__state_sheet--estado_en vuelo nocturno sobre los techos, con las alas abiertas en toda su envergadura",
+      "modelo": "bruja_pisca__state_sheet",
+      "entidad": "La bruja hecha pisca",
+      "categoria": "criatura",
+      "vista": "estado_en vuelo nocturno sobre los techos, con las alas abiertas en toda su envergadura",
+      "estados": [
+        "en vuelo nocturno sobre los techos, con las alas abiertas en toda su envergadura"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "brujas-y-duendes"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7686,
+      "prompt_sha256": "835a8dd02f7568d4e4ca23f3c992b724b40ea435a69b4dfa234d4ccbad839e09"
+    },
+    {
+      "job": "el_chenche__identity_sheet--canon",
+      "modelo": "el_chenche__identity_sheet",
+      "entidad": "El Chenche",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-chenche"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7578,
+      "prompt_sha256": "4bb666921c0dfc2bbdf732fda8ee834b3dbdffa14b2965bdf9f208533ca0d20e"
+    },
+    {
+      "job": "el_silbador__identity_sheet--canon",
+      "modelo": "el_silbador__identity_sheet",
+      "entidad": "El Silbador",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-silbador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7633,
+      "prompt_sha256": "77ec458aefe0630aab9eeacdad9785f1bc7d96ad74b0c84cb21ef408151faa02"
+    },
+    {
+      "job": "el_sombreron__identity_sheet--canon",
+      "modelo": "el_sombreron__identity_sheet",
+      "entidad": "El Sombrerón",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "caminante cubierto por un sombrero negro que le llega a las pantorrillas"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-sombreron"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6572,
+      "prompt_sha256": "acc0c95075ab94dccfb828030d06a9456f037997e138d909ef83d6884f89f999"
+    },
+    {
+      "job": "el_tunjo__identity_sheet--canon",
+      "modelo": "el_tunjo__identity_sheet",
+      "entidad": "El Tunjo",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "niño llorón junto al camino, con dientes y llamarada en la boca"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-tunjo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7226,
+      "prompt_sha256": "4384e3882e2af3306b48442595400033a539ee47c910f6fbb61888971221c43b"
+    },
+    {
+      "job": "el_tunjo__state_sheet--estado_figurita de oro que deja pedacitos de oro",
+      "modelo": "el_tunjo__state_sheet",
+      "entidad": "El Tunjo",
+      "categoria": "criatura",
+      "vista": "estado_figurita de oro que deja pedacitos de oro",
+      "estados": [
+        "figurita de oro que deja pedacitos de oro"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-tunjo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7684,
+      "prompt_sha256": "99e4026eeadf9f85be7e4b6461104e4b84efdf4de37e5c4faa2952d5a22a3999"
+    },
+    {
+      "job": "la_muelona__identity_sheet--canon",
+      "modelo": "la_muelona__identity_sheet",
+      "entidad": "La Muelona",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-muelona"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7712,
+      "prompt_sha256": "55301258fd160cfe36ef0419b508308c7079aeb50aff65091b20913c8d20336f"
+    },
+    {
+      "job": "la_tarasca__identity_sheet--canon",
+      "modelo": "la_tarasca__identity_sheet",
+      "entidad": "La Tarasca",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-tarasca"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7960,
+      "prompt_sha256": "926db3dfd410004af6a10ace7053cce094617eb7ff2e549159212516e66f770e"
+    },
+    {
+      "job": "venado_encantado__identity_sheet--canon",
+      "modelo": "venado_encantado__identity_sheet",
+      "entidad": "El venado grande",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-cazador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7452,
+      "prompt_sha256": "ab217fb212a92ad9974e4cb63846f5e0c4c2f003654b2d3f7396c4d98b47cef5"
+    }
+  ]
+}

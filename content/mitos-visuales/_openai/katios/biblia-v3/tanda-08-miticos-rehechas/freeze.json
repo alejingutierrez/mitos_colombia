@@ -1,0 +1,64 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "katios",
+  "comunidad": "Katíos",
+  "tanda": "tanda-08-miticos-rehechas",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/katios.v3.json",
+    "sha256": "6bb7172ee79b40b6301598b2415d0e277149dfa7ea8a0ddfc5ce827f3ea6186a"
+  },
+  "canon": {
+    "sha256": "de27d790f202032beb5e5da24c37ad0457de3c5ea66f10b4fdd7c7f234b286ef",
+    "verificado_en": "2026-09-28T04:55:20.141Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 13,
+  "fichas_ya_preparadas": 13,
+  "fichas": [
+    {
+      "job": "antomia-paima__identity_sheet--canon",
+      "modelo": "antomia-paima__identity_sheet",
+      "entidad": "Antomiá paima (el negro)",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "antomia",
+        "tradicion-del-cerro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7201,
+      "prompt_sha256": "a9ff10c97da09ffc300d4eacf1ec1dc14bea2ae7cd8dabd405475a7663d01bd0"
+    },
+    {
+      "job": "antomia-paima__state_sheet--estado_vientre inflado y reventado",
+      "modelo": "antomia-paima__state_sheet",
+      "entidad": "Antomiá paima (el negro)",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_vientre inflado y reventado",
+      "estados": [
+        "vientre inflado y reventado"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "antomia",
+        "tradicion-del-cerro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7476,
+      "prompt_sha256": "a6336b81efbd930b03102172a1c8e3abcbd0a2b516d2ee0382d0b1a2b5fa73bd"
+    }
+  ]
+}

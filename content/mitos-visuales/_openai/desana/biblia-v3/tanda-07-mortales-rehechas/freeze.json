@@ -1,0 +1,61 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "desana",
+  "comunidad": "Desana",
+  "tanda": "tanda-07-mortales-rehechas",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/desana.v3.json",
+    "sha256": "2e23d64f2624805c6e7355a7f5d755f25e7c8b1c4f287460e57927d1180b81c5"
+  },
+  "canon": {
+    "sha256": "8b8f46b02293c31171ca7a65e5be964d782b26572a712b75a0811e6db9d2dc34",
+    "verificado_en": "2026-09-29T01:13:18.385Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 14,
+  "fichas_ya_preparadas": 14,
+  "fichas": [
+    {
+      "job": "baaribo__state_sheet--estado_japú",
+      "modelo": "baaribo__state_sheet",
+      "entidad": "Baaribo",
+      "categoria": "personaje",
+      "vista": "estado_japú",
+      "estados": [
+        "japú"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-de-la-mandioca-desana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6724,
+      "prompt_sha256": "ec2a507f47c1d9db744487732bc75135b5b1742282968e1d418df019758ba501"
+    },
+    {
+      "job": "baaribo__state_sheet--estado_ardiendo en el centro del círculo",
+      "modelo": "baaribo__state_sheet",
+      "entidad": "Baaribo",
+      "categoria": "personaje",
+      "vista": "estado_ardiendo en el centro del círculo",
+      "estados": [
+        "ardiendo en el centro del círculo"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-de-la-mandioca-desana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6789,
+      "prompt_sha256": "025db7446624cbcca33cc18d2d0cf23fab92e5656d9e988eb82da124089d5cf3"
+    }
+  ]
+}

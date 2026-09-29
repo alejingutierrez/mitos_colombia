@@ -1,0 +1,81 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "umbra",
+  "comunidad": "Umbra",
+  "tanda": "tanda-07-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/umbra.v3.json",
+    "sha256": "7aeb052ddc0c7b85569c29e886c007d49e99cb442c3dc875a086150c2a9e0f17"
+  },
+  "canon": {
+    "sha256": "6aa19a1a16d43ab735dc5998716522f47331d2189bd68238997b040f79e6fa09",
+    "verificado_en": "2026-09-29T02:10:04.082Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "atrezo"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "guakurama__spatial_model--canon",
+      "modelo": "guakurama__spatial_model",
+      "entidad": "Guakurama, el pueblo grande",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "tasime-el-incesto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7481,
+      "prompt_sha256": "75f04ef3a22891ef14542f389ab4b4347de071fd6975eb4b791be35f64596898"
+    },
+    {
+      "job": "luna_pintada__phenomenon_rule--canon",
+      "modelo": "luna_pintada__phenomenon_rule",
+      "entidad": "La luna pintada y su desaparición",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "tasime-el-incesto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7163,
+      "prompt_sha256": "0efd1d31ac2ba04b2db07799f1bfbf112132d887917179beafd99c20d90f0dbf"
+    },
+    {
+      "job": "niebla_de_la_desaparicion__phenomenon_rule--canon",
+      "modelo": "niebla_de_la_desaparicion__phenomenon_rule",
+      "entidad": "La niebla y la ausencia de Batero",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-jeques-que-desaparecieron-en-batero"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7297,
+      "prompt_sha256": "651508192fbfb4f9c1c77c6dcf654bede4840dc762be4f5df6d757c209873f19"
+    }
+  ]
+}

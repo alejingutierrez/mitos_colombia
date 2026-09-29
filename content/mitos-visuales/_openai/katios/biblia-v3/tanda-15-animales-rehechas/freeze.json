@@ -1,0 +1,91 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "katios",
+  "comunidad": "Katíos",
+  "tanda": "tanda-15-animales-rehechas",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/katios.v3.json",
+    "sha256": "f9be2226192a255af2522fb3e144f1264bdda5ccada0d4efa1433ed94953b054"
+  },
+  "canon": {
+    "sha256": "de27d790f202032beb5e5da24c37ad0457de3c5ea66f10b4fdd7c7f234b286ef",
+    "verificado_en": "2026-09-28T14:46:24.803Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 18,
+  "fichas_ya_preparadas": 18,
+  "fichas": [
+    {
+      "job": "tigre__identity_sheet--canon",
+      "modelo": "tigre__identity_sheet",
+      "entidad": "Tigre (imamá)",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "coste",
+        "los-bibidigomias",
+        "cobaima",
+        "sever",
+        "creacion-katios",
+        "aribamias"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6014,
+      "prompt_sha256": "fc341b154919e666b58052ad7b3f1bd0bda2d4dbda19b55cb3c3286ea79e40f8"
+    },
+    {
+      "job": "tigre__state_sheet--estado_cachorro",
+      "modelo": "tigre__state_sheet",
+      "entidad": "Tigre (imamá)",
+      "categoria": "animal",
+      "vista": "estado_cachorro",
+      "estados": [
+        "cachorro"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "coste",
+        "los-bibidigomias",
+        "cobaima",
+        "sever",
+        "creacion-katios",
+        "aribamias"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6369,
+      "prompt_sha256": "006ce473596528ea1ef0f47e02a3e99a10c5a3ac27b0fec7e2310b777d14f58e"
+    },
+    {
+      "job": "ancastor__state_sheet--estado_forma humana",
+      "modelo": "ancastor__state_sheet",
+      "entidad": "Ancastor",
+      "categoria": "criatura",
+      "vista": "estado_forma humana",
+      "estados": [
+        "forma humana"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "ancastor"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4936,
+      "prompt_sha256": "f2ed224f0403f3ec804ce65905883d020329c17380fee187b3e738f65cb2758d"
+    }
+  ]
+}

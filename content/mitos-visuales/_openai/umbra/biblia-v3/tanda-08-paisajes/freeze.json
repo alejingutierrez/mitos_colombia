@@ -1,0 +1,82 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "umbra",
+  "comunidad": "Umbra",
+  "tanda": "tanda-08-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/umbra.v3.json",
+    "sha256": "7aeb052ddc0c7b85569c29e886c007d49e99cb442c3dc875a086150c2a9e0f17"
+  },
+  "canon": {
+    "sha256": "6aa19a1a16d43ab735dc5998716522f47331d2189bd68238997b040f79e6fa09",
+    "verificado_en": "2026-09-29T02:10:37.132Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "cerro_batero__environment_model--canon",
+      "modelo": "cerro_batero__environment_model",
+      "entidad": "El cerro Batero cubierto de niebla",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-jeques-que-desaparecieron-en-batero"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8914,
+      "prompt_sha256": "8da4efa76546cb4c1bbe24d0380bdd7cad7acad94c575d7b2ec625dcd6cd8228"
+    },
+    {
+      "job": "rio_cauca__environment_model--canon",
+      "modelo": "rio_cauca__environment_model",
+      "entidad": "El río Cauca",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "tasime-el-incesto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7990,
+      "prompt_sha256": "79a005caf3abc8e3a46fa86d52e70cbf900e9513194e2861424a92d7c5eaed63"
+    },
+    {
+      "job": "sendero_hacia_la_guaira__spatial_model--canon",
+      "modelo": "sendero_hacia_la_guaira__spatial_model",
+      "entidad": "El sendero oculto hacia La Güaira",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-jeques-que-desaparecieron-en-batero"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7878,
+      "prompt_sha256": "a825e2be0b996890dde95bd92af5e8ed4d9f35cb6b7374cbad1202158d5dfa67"
+    }
+  ]
+}

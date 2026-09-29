@@ -1,0 +1,146 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tolima-huila-mestizo",
+  "comunidad": "Tolima y Huila",
+  "tanda": "tanda-09-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tolima-huila-mestizo.v3.json",
+    "sha256": "b7f1f1559682e274cff21c66142964574468ec3ae942600e92a58a29ba06b0f9"
+  },
+  "canon": {
+    "sha256": "e3603f47534a458fbe0d16a341b049be3b48e059ddfb532221d2ee481c5cf9cf",
+    "verificado_en": "2026-09-29T02:51:33.362Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "casa_campesina_tolimense__spatial_model--canon",
+      "modelo": "casa_campesina_tolimense__spatial_model",
+      "entidad": "La casa campesina tolimense",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "habitada: techo, caballete, corredor, patio con barbacoa y corral"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "brujas-y-duendes",
+        "el-silbador",
+        "el-tunjo",
+        "la-candileja",
+        "la-madre-agua",
+        "la-patasola",
+        "la-patasola-mixto"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7078,
+      "prompt_sha256": "1dd7a73783e0b622875c4adda582e25e508a45fb3ca9b5de357448c246a8bbc6"
+    },
+    {
+      "job": "casa_campesina_tolimense__state_sheet--estado_abandonada y en ruinas",
+      "modelo": "casa_campesina_tolimense__state_sheet",
+      "entidad": "La casa campesina tolimense",
+      "categoria": "arquitectura",
+      "vista": "estado_abandonada y en ruinas",
+      "estados": [
+        "abandonada y en ruinas"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "brujas-y-duendes",
+        "el-silbador",
+        "el-tunjo",
+        "la-candileja",
+        "la-madre-agua",
+        "la-patasola",
+        "la-patasola-mixto"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7864,
+      "prompt_sha256": "a76aeabe37ac24e612dc0a19475d3dfa51c94f99ab256816d1e5830d8a240c5a"
+    },
+    {
+      "job": "capilla_rural__spatial_model--canon",
+      "modelo": "capilla_rural__spatial_model",
+      "entidad": "La capilla rural",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-cazador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7502,
+      "prompt_sha256": "5103c8a513a1819b1f45ecf245728510fc50c2dfd24d2fd7ab513ee687af5832"
+    },
+    {
+      "job": "el_cazador__phenomenon_rule--canon",
+      "modelo": "el_cazador__phenomenon_rule",
+      "entidad": "El Cazador",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "el hombre vivo con su arma y su perro, antes de entrar a la montaña"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-cazador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6915,
+      "prompt_sha256": "9883ee1809098eee85a03da065f317e9e009782dcbcf3252f340bf53cdf677e9"
+    },
+    {
+      "job": "el_cazador__state_sheet--estado_la presencia sin cuerpo- grito que azuza, ladrido triste y viento repentino",
+      "modelo": "el_cazador__state_sheet",
+      "entidad": "El Cazador",
+      "categoria": "fenomeno",
+      "vista": "estado_la presencia sin cuerpo: grito que azuza, ladrido triste y viento repentino",
+      "estados": [
+        "la presencia sin cuerpo: grito que azuza, ladrido triste y viento repentino"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-cazador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7680,
+      "prompt_sha256": "25b16f5b8fd7298ecb26e02b7d9d5971c5ba440ada729f8137797780e1e28cf0"
+    },
+    {
+      "job": "la_candileja__phenomenon_rule--canon",
+      "modelo": "la_candileja__phenomenon_rule",
+      "entidad": "La Candileja",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-candileja"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7451,
+      "prompt_sha256": "0d53e847208699d262ace7d7c96d6b52681b88f352bbd33e2a2b0d91feb9a730"
+    }
+  ]
+}

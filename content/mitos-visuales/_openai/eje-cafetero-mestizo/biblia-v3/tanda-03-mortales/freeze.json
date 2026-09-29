@@ -1,0 +1,197 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "eje-cafetero-mestizo",
+  "comunidad": "Eje cafetero (Caldas)",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/eje-cafetero-mestizo.v3.json",
+    "sha256": "9f8ba174bd5891e94e91e954f2bcea2a27d598d31a430ba67beeaa845313959f"
+  },
+  "canon": {
+    "sha256": "c480be8b294ba9a5b26ca90be264f109e039624b866d0d0c6e73f71fb7fb54da",
+    "verificado_en": "2026-09-29T03:00:16.796Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 10,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "clementina__identity_sheet--canon",
+      "modelo": "clementina__identity_sheet",
+      "entidad": "Clementina, la bruja salamineña",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "las-brujas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9955,
+      "prompt_sha256": "790647e5aa8a430a6ce3dd6d5bfbd5d719af36ef358362bb4016bf9fa6cee16c"
+    },
+    {
+      "job": "cumanday__identity_sheet--canon",
+      "modelo": "cumanday__identity_sheet",
+      "entidad": "Cumanday",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-cacique-cumanday"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 9965,
+      "prompt_sha256": "66c03b5490bef0b55c5d9fa0ecfc195d000fbc2d6feeaa55d572fcb9b7061693"
+    },
+    {
+      "job": "don_diego_de_frente_al_sol__identity_sheet--canon",
+      "modelo": "don_diego_de_frente_al_sol__identity_sheet",
+      "entidad": "Don Diego de Aguilar, señor de Consota",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "de-frente-al-sol"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8756,
+      "prompt_sha256": "069407c81474ad7d1e7f3e9fbe2ddeb2a656aff1d3355204b84f685b57ca71e2"
+    },
+    {
+      "job": "don_fernan_lopez_de_sandoval__identity_sheet--canon",
+      "modelo": "don_fernan_lopez_de_sandoval__identity_sheet",
+      "entidad": "Don Fernán López de Sandoval",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "de-frente-al-sol"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9130,
+      "prompt_sha256": "761e4745b878f2f90039d956aa4b5933774f3693852eb2e6e55b5bdee36ea2fe"
+    },
+    {
+      "job": "jeronimo_de_vezga__identity_sheet--canon",
+      "modelo": "jeronimo_de_vezga__identity_sheet",
+      "entidad": "Jerónimo de Vezga",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "in-illo-tempore"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9305,
+      "prompt_sha256": "f2b040c4b917d4010ab76477fb8a060d3f90c1492dfae755d3fd0c33c70ff7f3"
+    },
+    {
+      "job": "laurian__identity_sheet--canon",
+      "modelo": "laurian__identity_sheet",
+      "entidad": "Laurián",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "cuento-de-animas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 10260,
+      "prompt_sha256": "7861d6f855c73ec467dcc3abec1e984296af0566e6d1c0c143b308b75b4f4fda"
+    },
+    {
+      "job": "nua_ulogia__identity_sheet--canon",
+      "modelo": "nua_ulogia__identity_sheet",
+      "entidad": "Ñuá Ulogia, la costurera",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "cuento-de-animas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9725,
+      "prompt_sha256": "bcd30a696ddf00776b7e0180f84d51d2b4655b3cf5f1dea2dd2ba4491802cb7a"
+    },
+    {
+      "job": "rafael_toro__identity_sheet--canon",
+      "modelo": "rafael_toro__identity_sheet",
+      "entidad": "Rafael Toro, el aserrador",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-aserrador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9003,
+      "prompt_sha256": "822eb58688b1413eadf69379840a5995c0b612b3da3dac79a023e57b2d35d06d"
+    },
+    {
+      "job": "rodrigo__identity_sheet--canon",
+      "modelo": "rodrigo__identity_sheet",
+      "entidad": "Don Rodrigo de Aguilar",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "de-frente-al-sol"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9339,
+      "prompt_sha256": "9c779b1b2bc85abc2d738b8e12195f695ff76c17aab155b715863f90e8be7830"
+    },
+    {
+      "job": "viejo_del_costal__identity_sheet--canon",
+      "modelo": "viejo_del_costal__identity_sheet",
+      "entidad": "El Viejo del Costal",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-viejo-del-costal"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9020,
+      "prompt_sha256": "a43387ac3e1ce1976d4156456136f4b8d800ba2d3c48f10ac7e07e0fb8fd6046"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "antioquia-occidente-mixto",
+  "comunidad": "Occidente antioqueño mixto",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/antioquia-occidente-mixto.v3.json",
+    "sha256": "907cf95313f620a930af113c992f4710a28954226fc13b245385946621c5d950"
+  },
+  "canon": {
+    "sha256": "49563b7fbab3cd617190cedd3a3694581a547d150705ffb9d03a938003bb7d76",
+    "verificado_en": "2026-09-29T03:00:16.454Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "arriero_del_occidente__identity_sheet--canon",
+      "modelo": "arriero_del_occidente__identity_sheet",
+      "entidad": "El arriero",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-rescoldos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9705,
+      "prompt_sha256": "124ba314ea8e4ff96e9d255bf2914ba1020f330a7912a96cd581dc709cbdc2dd"
+    },
+    {
+      "job": "damian_el_perulero__identity_sheet--canon",
+      "modelo": "damian_el_perulero__identity_sheet",
+      "entidad": "Damián Vásquez Montiel, el perulero",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "no-hay-deuda-que-no-se-pague"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9606,
+      "prompt_sha256": "7aeb1b5fc921ef8a7663a6e3f5e4d18541b748cb9dda476558003b5e6d0fd8fb"
+    },
+    {
+      "job": "maria_centeno__identity_sheet--canon",
+      "modelo": "maria_centeno__identity_sheet",
+      "entidad": "María Centeno",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "maria-centeno"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9424,
+      "prompt_sha256": "aabd04b7399706a6c3755dc0933d6041eaf7f0843d095836d97d610de86dc6b6"
+    },
+    {
+      "job": "maria_centeno__state_sheet--estado_a lomo de su mula negra endiablada, sentada de lado, en el salto que cruza el río Cauca",
+      "modelo": "maria_centeno__state_sheet",
+      "entidad": "María Centeno",
+      "categoria": "personaje",
+      "vista": "estado_a lomo de su mula negra endiablada, sentada de lado, en el salto que cruza el río Cauca",
+      "estados": [
+        "a lomo de su mula negra endiablada, sentada de lado, en el salto que cruza el río Cauca"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "maria-centeno"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9817,
+      "prompt_sha256": "144f5b77718db39907bf695f761274618157dd1f33ac77882d97f26c7202b141"
+    },
+    {
+      "job": "sacerdote_de_pueblo__identity_sheet--canon",
+      "modelo": "sacerdote_de_pueblo__identity_sheet",
+      "entidad": "El sacerdote de pueblo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "maria-la-larga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9373,
+      "prompt_sha256": "3f55b11bb5ba99cad9a86bc2e3b3afb2d3b3434e5a6a9ff9c2638cf386f5801c"
+    }
+  ]
+}

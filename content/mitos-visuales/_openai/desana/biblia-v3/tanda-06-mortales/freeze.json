@@ -1,0 +1,283 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "desana",
+  "comunidad": "Desana",
+  "tanda": "tanda-06-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/desana.v3.json",
+    "sha256": "2e23d64f2624805c6e7355a7f5d755f25e7c8b1c4f287460e57927d1180b81c5"
+  },
+  "canon": {
+    "sha256": "8b8f46b02293c31171ca7a65e5be964d782b26572a712b75a0811e6db9d2dc34",
+    "verificado_en": "2026-09-29T01:10:33.167Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 14,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "guramuye__identity_sheet--canon",
+      "modelo": "guramuye__identity_sheet",
+      "entidad": "Guramüye",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "guelamun-ye-el-nieto-del-trueno",
+        "yurupari"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7024,
+      "prompt_sha256": "d2deecc6daa07d3c3e01c1c4a263cfabc1bad38517f4511e7f408f8ddc980ce4"
+    },
+    {
+      "job": "abuela_de_oa__identity_sheet--canon",
+      "modelo": "abuela_de_oa__identity_sheet",
+      "entidad": "La vieja que hacía ollas, abuela de Oá",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "agamahsapu-y-el-tiempo-del-umari"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5943,
+      "prompt_sha256": "eff60c0fbff5114487c50d46169e0751802f391dbcc562a0a04d552e675227ad"
+    },
+    {
+      "job": "baaribo__identity_sheet--canon",
+      "modelo": "baaribo__identity_sheet",
+      "entidad": "Baaribo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-de-la-mandioca-desana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6582,
+      "prompt_sha256": "797bb83da47a91b3783ffce4121ce7f4a180bc2dbb99ffc65baee0d49df7df69"
+    },
+    {
+      "job": "baaribo__state_sheet--estado_japú",
+      "modelo": "baaribo__state_sheet",
+      "entidad": "Baaribo",
+      "categoria": "personaje",
+      "vista": "estado_japú",
+      "estados": [
+        "japú"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-de-la-mandioca-desana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6691,
+      "prompt_sha256": "b783783e779b253c8c1847f6a239c088286d67565d40d18a0ce4677a2e687dea"
+    },
+    {
+      "job": "baaribo__state_sheet--estado_ardiendo en el centro del círculo",
+      "modelo": "baaribo__state_sheet",
+      "entidad": "Baaribo",
+      "categoria": "personaje",
+      "vista": "estado_ardiendo en el centro del círculo",
+      "estados": [
+        "ardiendo en el centro del círculo"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-de-la-mandioca-desana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6756,
+      "prompt_sha256": "62bb88f71ef6df9b37273ca9db591e1bb299b16939f7aaed212efc7aa7758ea4"
+    },
+    {
+      "job": "esposa_de_abe__identity_sheet--canon",
+      "modelo": "esposa_de_abe__identity_sheet",
+      "entidad": "La esposa de Abe",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nuguye-y-sepiro-fuego-y-creciente"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6300,
+      "prompt_sha256": "fa597045e2554fe5ce63efbe0529600abf30b408b614fcc7a4696b2a1096f74f"
+    },
+    {
+      "job": "esposa_de_gainpaya__identity_sheet--canon",
+      "modelo": "esposa_de_gainpaya__identity_sheet",
+      "entidad": "La esposa de Gãïpayã",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "gainpaya-y-el-origen-del-chontaduro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6447,
+      "prompt_sha256": "75067a10954236432cd63734bc889dc434dfe6a1581de7c7cf8bf3ec80aafa67"
+    },
+    {
+      "job": "gainpaya__identity_sheet--canon",
+      "modelo": "gainpaya__identity_sheet",
+      "entidad": "Gãïpayã",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "gainpaya-y-el-origen-del-chontaduro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6431,
+      "prompt_sha256": "6189ba0d5dbaad1c16738e2d98f16008a2238b332cdfbcf6f492f88411ded92c"
+    },
+    {
+      "job": "gainpaya__state_sheet--estado_con la piel de gavilán tijereta",
+      "modelo": "gainpaya__state_sheet",
+      "entidad": "Gãïpayã",
+      "categoria": "personaje",
+      "vista": "estado_con la piel de gavilán tijereta",
+      "estados": [
+        "con la piel de gavilán tijereta"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "gainpaya-y-el-origen-del-chontaduro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6611,
+      "prompt_sha256": "c204612eaad56aaf09c1a70089e12fe2443c8d7b63f2c4403ea8ce190ff54274"
+    },
+    {
+      "job": "hermano_menor_noche__identity_sheet--canon",
+      "modelo": "hermano_menor_noche__identity_sheet",
+      "entidad": "El hermano menor",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-de-la-noche-desana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6563,
+      "prompt_sha256": "34d69303bd6d8608b73a9aaa4b02c3678399aeeec2aa49bd1493c7064b2c758e"
+    },
+    {
+      "job": "hijo_de_baaribo__identity_sheet--canon",
+      "modelo": "hijo_de_baaribo__identity_sheet",
+      "entidad": "Doé, hijo de Baaribo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-de-la-mandioca-desana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6424,
+      "prompt_sha256": "fa8d740f1ab26d261e536bd8afae96a6dd8fc05d3b20b34ea6e763cf4e3eeec3"
+    },
+    {
+      "job": "nuguye__identity_sheet--canon",
+      "modelo": "nuguye__identity_sheet",
+      "entidad": "Nügüye",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nuguye-y-sepiro-fuego-y-creciente"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6600,
+      "prompt_sha256": "982bb36428b804753e030b563793efae03dd5b88064e9215f982ef15b0aadcd7"
+    },
+    {
+      "job": "nuguye__state_sheet--estado_gavilán",
+      "modelo": "nuguye__state_sheet",
+      "entidad": "Nügüye",
+      "categoria": "personaje",
+      "vista": "estado_gavilán",
+      "estados": [
+        "gavilán"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nuguye-y-sepiro-fuego-y-creciente"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6653,
+      "prompt_sha256": "e83669c55286cac5b1a40c33ad7f160dec984b6e78df2e0dd371c5bdeb9d81a8"
+    },
+    {
+      "job": "umukomahsu_boreka__identity_sheet--canon",
+      "modelo": "umukomahsu_boreka__identity_sheet",
+      "entidad": "Umukomahsü Boreka",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-desana"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6397,
+      "prompt_sha256": "1c40b8fcfe33ded9bdf080dac4838ea53b5df823f014ab952a950b263b348935"
+    },
+    {
+      "job": "yairo__identity_sheet--canon",
+      "modelo": "yairo__identity_sheet",
+      "entidad": "Yairó y su esposa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nuguye-y-sepiro-fuego-y-creciente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6155,
+      "prompt_sha256": "6b110b12053363713db6677bf1c0b115ed23c82530f7b3756f16de7237bc75fb"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "zenu",
+  "comunidad": "Zenú",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/zenu.v3.json",
+    "sha256": "d065f5fc0c636242bf57ac4b226b58c8693ee1dc4767e35a1fb3766157a5c4d5"
+  },
+  "canon": {
+    "sha256": "a10e153154dd795fc7a5dd4f8d66a2356fad0efc05b2dfbdb0b4ec72e6d3411c",
+    "verificado_en": "2026-09-29T01:54:03.840Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tofeme_mocan__identity_sheet--canon",
+      "modelo": "tofeme_mocan__identity_sheet",
+      "entidad": "Tofeme (Mocán), guerrero vigía",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "trono-corcovao",
+        "el-ojo-de-la-canoa",
+        "el-totumo-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8627,
+      "prompt_sha256": "457f7e1bb25ad8329abd45ddceb3605b9abd65cf186012de5b844b3d170b998a"
+    },
+    {
+      "job": "mujer_asediada__identity_sheet--canon",
+      "modelo": "mujer_asediada__identity_sheet",
+      "entidad": "La muchacha asediada",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "juan-lara-y-la-trenza-del-aire"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8736,
+      "prompt_sha256": "3abe1925f0a3c6404a7803b2779be24f47f993dbc2e3f200faeeeb03e077534d"
+    },
+    {
+      "job": "tarra__identity_sheet--canon",
+      "modelo": "tarra__identity_sheet",
+      "entidad": "Tarra",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-noche-mas-larga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8214,
+      "prompt_sha256": "a5bd78a71de8fb1a390cb772adabcb25dfac6e70a93fa21011309811ce8fb81d"
+    },
+    {
+      "job": "visitante_del_monte__identity_sheet--canon",
+      "modelo": "visitante_del_monte__identity_sheet",
+      "entidad": "Visitante que toma el fruto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-totumo-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8239,
+      "prompt_sha256": "30fd45d9eb1958d2df9ef5c1c07cecf636eb8e38b403d63bab8ba1582f7d4af8"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "caribe-restante-mestizo",
+  "comunidad": "Caribe restante (Magdalena, Cesar, San Andrés)",
+  "tanda": "tanda-07-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/caribe-restante-mestizo.v3.json",
+    "sha256": "86ece956812c9a8bfa74bdc0d8f6739e1b7e8f0c98764df37ad58c78a6b2e33b"
+  },
+  "canon": {
+    "sha256": "23c3a0846f2f3742c390ba7412138b0740a886ab53b10154ee075b8422745b46",
+    "verificado_en": "2026-09-29T03:09:10.441Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "paisaje_isleno__environment_model--canon",
+      "modelo": "paisaje_isleno__environment_model",
+      "entidad": "Isla caribeña: playa, palmeras, arrecife y mar",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-tesoro-de-morgan",
+        "tigre-y-nansi"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9441,
+      "prompt_sha256": "85d5114a0224ae52be415e67993fe1a4e4a4a03000f141e9465867e01b0073d4"
+    },
+    {
+      "job": "santa_marta_colonial__environment_model--canon",
+      "modelo": "santa_marta_colonial__environment_model",
+      "entidad": "Santa Marta colonial: ensenada, calles y Sierra al fondo",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-castellano-de-san-juan",
+        "genus-irritable-vatum"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9289,
+      "prompt_sha256": "d7b886ae7480a89a61b5cba9742ee8b27c519d944a61f33a2436f13e7a624924"
+    },
+    {
+      "job": "cabeza_de_morgan__spatial_model--canon",
+      "modelo": "cabeza_de_morgan__spatial_model",
+      "entidad": "La Cabeza de Morgan y sus cavernas",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-tesoro-de-morgan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9163,
+      "prompt_sha256": "2bb66c9f1a5c372629cc09db69794608ea438e6931142601a0d514d10297dcde"
+    },
+    {
+      "job": "gruta_del_tesoro__spatial_model--canon",
+      "modelo": "gruta_del_tesoro__spatial_model",
+      "entidad": "La Cueva de Morgan de San Andrés",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-tesoro-de-morgan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8879,
+      "prompt_sha256": "83ddc45d331f9c661b20621258695c3796884c1a702718ea479f00aaddf4b61a"
+    },
+    {
+      "job": "pozo_de_hurtado__spatial_model--canon",
+      "modelo": "pozo_de_hurtado__spatial_model",
+      "entidad": "El Pozo de Hurtado y el río Guatapurí",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-sirena-de-hurtado"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9092,
+      "prompt_sha256": "031b18d73debbac21f1fe56b49729d62ba19210836c92c6f26b1d094c52c6580"
+    },
+    {
+      "job": "valle_del_rio_cesar__environment_model--canon",
+      "modelo": "valle_del_rio_cesar__environment_model",
+      "entidad": "Valle del río Cesar: camino polvoriento y hacienda ganadera",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-bruja-del-trinche"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8836,
+      "prompt_sha256": "42d704daa8b5384ff42240b034c84a446700cb3db07d98482e44d63d2a15df02"
+    }
+  ]
+}

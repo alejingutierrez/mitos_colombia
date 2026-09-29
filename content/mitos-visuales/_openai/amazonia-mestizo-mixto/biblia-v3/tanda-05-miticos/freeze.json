@@ -1,0 +1,62 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "amazonia-mestizo-mixto",
+  "comunidad": "Amazonía ribereña mestiza",
+  "tanda": "tanda-05-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/amazonia-mestizo-mixto.v3.json",
+    "sha256": "fea46c1ab8f6b063283d925332b6158a17c0d78a373ec2dee760e858196271ec"
+  },
+  "canon": {
+    "sha256": "2f6f707553d5db5bf527413fc9dccfe903963879388b8ebee73d2d100adcfe9a",
+    "verificado_en": "2026-09-29T02:21:50.687Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "fusinamuy__identity_sheet--canon",
+      "modelo": "fusinamuy__identity_sheet",
+      "entidad": "Fusiñamuy",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-diluvio-guinadoma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8528,
+      "prompt_sha256": "aec7edd701d7b019c26fa718d892f49bb0808f8fec19b340ff797a9450804796"
+    },
+    {
+      "job": "heechumeru__identity_sheet--canon",
+      "modelo": "heechumeru__identity_sheet",
+      "entidad": "He'echúmeru, madre de las pirañas",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kanuma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7787,
+      "prompt_sha256": "ca604e83bcea6429e6a92e6707370a87a544682dd495e02bd9d49431fb57275b"
+    }
+  ]
+}

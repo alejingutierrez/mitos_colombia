@@ -1,0 +1,87 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "koguis",
+  "comunidad": "Kogui (Kággaba)",
+  "tanda": "tanda-05-mortales-rehechas",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/koguis.v3.json",
+    "sha256": "a603f6c5e746c369d9560a3f4637713cf96b631bccb71ec2f4dc34137094dac8"
+  },
+  "canon": {
+    "sha256": "edca8fad668f5e006d7587f11184f1111e3139a171111e1e903647bc29cfc6f3",
+    "verificado_en": "2026-09-28T02:18:03.046Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 27,
+  "fichas_ya_preparadas": 15,
+  "fichas": [
+    {
+      "job": "kashindukwe__state_sheet--estado_tigre (el «perfecto tigre Maluteyan» al que le quitaron gorra, poporo y todo)",
+      "modelo": "kashindukwe__state_sheet",
+      "entidad": "Kashindukwe (Kashindukue)",
+      "categoria": "personaje",
+      "vista": "estado_tigre (el «perfecto tigre Maluteyan» al que le quitaron gorra, poporo y todo)",
+      "estados": [
+        "tigre (el «perfecto tigre Maluteyan» al que le quitaron gorra, poporo y todo)"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "canibalismo",
+        "kasauge-el-padre-arbol",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7132,
+      "prompt_sha256": "c9ebbd73d6909ed708b461e4e765ef6a719792ab602603ef47fc76a8d94687a4"
+    },
+    {
+      "job": "nuanashe__identity_sheet--canon",
+      "modelo": "nuanashe__identity_sheet",
+      "entidad": "Nuánashe",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "canibalismo",
+        "kasauge-el-padre-arbol",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6972,
+      "prompt_sha256": "d59a619068f23d378375af5f31dae3349ff61754e35f6caa61f7a99e4fb66be0"
+    },
+    {
+      "job": "nuanashe__state_sheet--estado_tigre",
+      "modelo": "nuanashe__state_sheet",
+      "entidad": "Nuánashe",
+      "categoria": "personaje",
+      "vista": "estado_tigre",
+      "estados": [
+        "tigre"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "canibalismo",
+        "kasauge-el-padre-arbol",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7117,
+      "prompt_sha256": "ebc2df026b5aa568275a1b36fd9ff29547d36a5109a4d3ffeca6c8de7fe84320"
+    }
+  ]
+}

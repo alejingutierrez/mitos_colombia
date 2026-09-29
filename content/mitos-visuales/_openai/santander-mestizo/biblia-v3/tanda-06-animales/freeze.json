@@ -1,0 +1,493 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "santander-mestizo",
+  "comunidad": "Santander mestizo",
+  "tanda": "tanda-06-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/santander-mestizo.v3.json",
+    "sha256": "d5b07ab1f712e5293471956f31a70a947fceb6dc9a6f1f82ce4c214672c215a7"
+  },
+  "canon": {
+    "sha256": "001778764d5a15260f48f1d6bc2a7f74857486623e73ca5c9681e13fe8ec3cdd",
+    "verificado_en": "2026-09-29T02:24:36.484Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 26,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "caballo_de_silla__identity_sheet--canon",
+      "modelo": "caballo_de_silla__identity_sheet",
+      "entidad": "El caballo de silla",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-diablo-de-umpala",
+        "la-vista-del-libertador",
+        "nueva-version-de-la-luz-del-limonal",
+        "el-cerro-encantado",
+        "la-piedra-del-muerto",
+        "lagunas-encantadas",
+        "talabad"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7102,
+      "prompt_sha256": "8392b5821fb8a1d482e1997d15680a00bee7804fa86a20ce794a25fc2c066f01"
+    },
+    {
+      "job": "mula_de_carga__identity_sheet--canon",
+      "modelo": "mula_de_carga__identity_sheet",
+      "entidad": "La mula de carga aparejada",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-cueva-del-diablo",
+        "la-cueva-de-la-pisca",
+        "el-anima-coy",
+        "la-mula-del-diablo",
+        "los-tunjos-de-la-cantera",
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6947,
+      "prompt_sha256": "478f80019d5c630a0b091014be846264f3f34c0bf74bb971e3dffd7dab393a93"
+    },
+    {
+      "job": "perros_de_vereda__identity_sheet--canon",
+      "modelo": "perros_de_vereda__identity_sheet",
+      "entidad": "Los perros de la vereda",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-lampara-de-petroleo",
+        "el-trapiche-ardiendo",
+        "la-piedra-del-muerto",
+        "la-monedita-en-la-alcancia"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6968,
+      "prompt_sha256": "5a3bcfa5873edc774f7d5858ad82b73fe4737ee6ee50ffe563046a4495c4bd2d"
+    },
+    {
+      "job": "gallinas_y_pollo_saraviado__identity_sheet--canon",
+      "modelo": "gallinas_y_pollo_saraviado__identity_sheet",
+      "entidad": "Las gallinas del patio y el pollo saraviado",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-pollo-de-las-animas",
+        "la-monedita-en-la-alcancia",
+        "lagunas-encantadas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6972,
+      "prompt_sha256": "1d230583d916c3f7ceb1ec666fed8f5c9262c591e1c0935c99e0505f1b731169"
+    },
+    {
+      "job": "guardianes_del_roble__identity_sheet--canon",
+      "modelo": "guardianes_del_roble__identity_sheet",
+      "entidad": "La cascabel y el toro de cuernos agudos",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-carriazo-de-vereda-san-isidro",
+        "la-piedra-del-muerto",
+        "lagunas-encantadas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7068,
+      "prompt_sha256": "5f7c9625b8875ec44cb2d3985dca4a1062873bf62c4747b79e408671a97bafd0"
+    },
+    {
+      "job": "chivo_y_cabro__identity_sheet--canon",
+      "modelo": "chivo_y_cabro__identity_sheet",
+      "entidad": "El chivo y el hato de cabros",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-diablo-de-umpala",
+        "el-carriazo-de-vereda-san-isidro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6921,
+      "prompt_sha256": "ac8c98e311d18324738c011cba2ba2504948686fac81379f06e6ee7e3a166528"
+    },
+    {
+      "job": "hombre_enlutado__identity_sheet--canon",
+      "modelo": "hombre_enlutado__identity_sheet",
+      "entidad": "El hombre muy alto vestido de negro",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-reventon-de-jacobo",
+        "la-mula-del-diablo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6984,
+      "prompt_sha256": "6e3a672d49123d28556d6a9ff40a6afecf9ffb743502f9e2aeb0fd814b4c64db"
+    },
+    {
+      "job": "tunjo__identity_sheet--canon",
+      "modelo": "tunjo__identity_sheet",
+      "entidad": "El tunjo (muñeco de oro macizo viviente)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-tunjos-de-la-cantera",
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7181,
+      "prompt_sha256": "d8f46520189a904a3048f98cf3beb2466e8c88eccca455b03b06f1ab75d06c49"
+    },
+    {
+      "job": "anima_coy__identity_sheet--canon",
+      "modelo": "anima_coy__identity_sheet",
+      "entidad": "El Ánima Coy (Benedicta Rovira)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-anima-coy"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7705,
+      "prompt_sha256": "cff83ca2c5cd8adf1c139ac5e1c14fa368e009678e71aca47a2290fe05099f99"
+    },
+    {
+      "job": "caballo_negro_de_galeacer__identity_sheet--canon",
+      "modelo": "caballo_negro_de_galeacer__identity_sheet",
+      "entidad": "El caballo negro del doctor Galeacer",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-doctor-galeacer"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7199,
+      "prompt_sha256": "7c893686119096756b3d6f9dd93b56dc158ec5ad4d43e5ffdd34ed03fceddd76"
+    },
+    {
+      "job": "carriazo__identity_sheet--canon",
+      "modelo": "carriazo__identity_sheet",
+      "entidad": "El Carriazo (Conde del Carriazo)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-carriazo-de-vereda-san-isidro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7001,
+      "prompt_sha256": "e37e05ae0105c135a408bdec1f57f4ac35d2203d850a25c20fa617437254a7a6"
+    },
+    {
+      "job": "colmenero__identity_sheet--canon",
+      "modelo": "colmenero__identity_sheet",
+      "entidad": "El Colmenero (el muchacho pegado a la peña del Fonce)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7292,
+      "prompt_sha256": "1076d19863fe2428ed8f3e577fad18f0aefdecf0be8706f10bef47ee412dcbba"
+    },
+    {
+      "job": "duende_del_salto__identity_sheet--canon",
+      "modelo": "duende_del_salto__identity_sheet",
+      "entidad": "El Duende del Salto (Muki)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "duende-del-salto"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7154,
+      "prompt_sha256": "b1565912bbbb14fabb1c1857dc5626c576627c5740ffe9c603b3b6f3680ebc74"
+    },
+    {
+      "job": "ermitano_nicolas__identity_sheet--canon",
+      "modelo": "ermitano_nicolas__identity_sheet",
+      "entidad": "El ermitaño Nicolás",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-ermitano-iracundo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7511,
+      "prompt_sha256": "7a2bce7b98b8638e6f2309d810b23b918f14dd939f2bf193ebf79b755436f8f1"
+    },
+    {
+      "job": "fantasma_de_el_horizonte__identity_sheet--canon",
+      "modelo": "fantasma_de_el_horizonte__identity_sheet",
+      "entidad": "El fantasma de El Horizonte (y el burro bajo la manta)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-fantasma-de-el-horizonte"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7141,
+      "prompt_sha256": "60531a973d21f913acd2b061c09d95c92d7cec12ab6bf4320ca27bf81b7398e6"
+    },
+    {
+      "job": "luz_del_limonal__identity_sheet--canon",
+      "modelo": "luz_del_limonal__identity_sheet",
+      "entidad": "La Luz del Limonal (Luz)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "luz_viva_en_el_limonal"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "nueva-version-de-la-luz-del-limonal"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6860,
+      "prompt_sha256": "68f745732f353d756f22f7b9806eb8d43f39a428d890f03fda2fe83819e36a4a"
+    },
+    {
+      "job": "luz_del_limonal__state_sheet--estado_llamarada de fuego en el camino, a la altura de un cuerpo",
+      "modelo": "luz_del_limonal__state_sheet",
+      "entidad": "La Luz del Limonal (Luz)",
+      "categoria": "criatura",
+      "vista": "estado_llamarada de fuego en el camino, a la altura de un cuerpo",
+      "estados": [
+        "llamarada de fuego en el camino, a la altura de un cuerpo"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "nueva-version-de-la-luz-del-limonal"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7810,
+      "prompt_sha256": "fc18eb7ffdce0f5ac3f1763657e4b2afaae4bd04c11d2ce463277eaf66aee3f7"
+    },
+    {
+      "job": "mancarita__identity_sheet--canon",
+      "modelo": "mancarita__identity_sheet",
+      "entidad": "La Máncara de San Francisco (La Mancarita)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-mancarita"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7766,
+      "prompt_sha256": "5a0c721599949e3c2fa02ee2e3b62c835ab14aa63ae5d959f5ba227a04a307ef"
+    },
+    {
+      "job": "mechuda__identity_sheet--canon",
+      "modelo": "mechuda__identity_sheet",
+      "entidad": "La Mechuda",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-mechuda"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7210,
+      "prompt_sha256": "36dcb3c29eab42dc94e0d8b18655f142976cf75e65939e295cad5865ef292118"
+    },
+    {
+      "job": "mohan_de_la_laguna__identity_sheet--canon",
+      "modelo": "mohan_de_la_laguna__identity_sheet",
+      "entidad": "El mohán del Peñón de la Luchata",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "lagunas-encantadas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7190,
+      "prompt_sha256": "850c28a1d075b34861f3988f2e089f182f580481c2df2d4b69a8f43c282d028b"
+    },
+    {
+      "job": "mula_del_diablo__identity_sheet--canon",
+      "modelo": "mula_del_diablo__identity_sheet",
+      "entidad": "La Mula del Diablo (Eumelia)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "eumelia_viva"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-mula-del-diablo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6902,
+      "prompt_sha256": "b31120bac014992cee8b7084728cfa30d4103908d6efc67ff22c83ba4b8e6c2f"
+    },
+    {
+      "job": "mula_del_diablo__state_sheet--estado_mula espectral herrada",
+      "modelo": "mula_del_diablo__state_sheet",
+      "entidad": "La Mula del Diablo (Eumelia)",
+      "categoria": "criatura",
+      "vista": "estado_mula espectral herrada",
+      "estados": [
+        "mula espectral herrada"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-mula-del-diablo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7783,
+      "prompt_sha256": "403583e004600ee4692035f8bd9977f84a272f5b89a9fd34daa6d521fa3ecb94"
+    },
+    {
+      "job": "mula_maneada__identity_sheet--canon",
+      "modelo": "mula_maneada__identity_sheet",
+      "entidad": "La mula maneada (doña Petra Agudelo)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-mula-maneada"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7274,
+      "prompt_sha256": "853cbf976946e435a252dd833d270e9c3c16fcedf9292533b907a62f995cf401"
+    },
+    {
+      "job": "pisca_de_oro__identity_sheet--canon",
+      "modelo": "pisca_de_oro__identity_sheet",
+      "entidad": "La pisca y sus pisquitos amarillos",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-cueva-de-la-pisca"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6976,
+      "prompt_sha256": "a15a2878bce0a2591bcd188b5b7f7a5a0f4b4136fc3984acea98270426fae12d"
+    },
+    {
+      "job": "sayona__identity_sheet--canon",
+      "modelo": "sayona__identity_sheet",
+      "entidad": "La Sayona",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-sayona-del-cementerio"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7175,
+      "prompt_sha256": "24e4a1b7afc2e5d210cacc7d651f6c04312517b44598e10050c9c8a7ae9725a4"
+    },
+    {
+      "job": "serpiente_cabellera_de_ternero__identity_sheet--canon",
+      "modelo": "serpiente_cabellera_de_ternero__identity_sheet",
+      "entidad": "La serpiente con cresta y cabeza de ternero",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "lagunas-encantadas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6995,
+      "prompt_sha256": "19ff31646749eff22e32b657104ecf8b20486b182ca62db2a502c8f98a43456f"
+    }
+  ]
+}

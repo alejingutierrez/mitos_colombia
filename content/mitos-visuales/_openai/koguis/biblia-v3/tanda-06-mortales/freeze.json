@@ -1,0 +1,235 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "koguis",
+  "comunidad": "Kogui (Kággaba)",
+  "tanda": "tanda-06-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-28",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/koguis.v3.json",
+    "sha256": "a603f6c5e746c369d9560a3f4637713cf96b631bccb71ec2f4dc34137094dac8"
+  },
+  "canon": {
+    "sha256": "edca8fad668f5e006d7587f11184f1111e3139a171111e1e903647bc29cfc6f3",
+    "verificado_en": "2026-09-28T02:22:00.354Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 27,
+  "fichas_ya_preparadas": 15,
+  "fichas": [
+    {
+      "job": "nunkasha__identity_sheet--canon",
+      "modelo": "nunkasha__identity_sheet",
+      "entidad": "Núnkasha",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6827,
+      "prompt_sha256": "540932f74a01d783602edb8306e082391f368710b9710deda04d191c139f1be8"
+    },
+    {
+      "job": "primer_hombre__identity_sheet--canon",
+      "modelo": "primer_hombre__identity_sheet",
+      "entidad": "El primer hombre",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "madre-wastora"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6955,
+      "prompt_sha256": "1cd9ff55f3c10a25ee9c4f9f58eea94162615de730fa2b92c1808dac5906c434"
+    },
+    {
+      "job": "primera_mujer__identity_sheet--canon",
+      "modelo": "primera_mujer__identity_sheet",
+      "entidad": "La primera mujer",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-primer-hombre-y-la-primera-mujer",
+        "madre-wastora"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6928,
+      "prompt_sha256": "3dc339cbab12f6629604de17236cd9f9467f000bb9532fd69da494213f21a4f5"
+    },
+    {
+      "job": "seyunkue__identity_sheet--canon",
+      "modelo": "seyunkue__identity_sheet",
+      "entidad": "Seyunkue (Seyunkwe)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-koguis",
+        "el-sol-mama"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6783,
+      "prompt_sha256": "922c25002af809b5424797033ed9183cc80067152ad01925b367e987124a7e79"
+    },
+    {
+      "job": "ambu_ambu__identity_sheet--canon",
+      "modelo": "ambu_ambu__identity_sheet",
+      "entidad": "Ambu-Ambu",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6669,
+      "prompt_sha256": "4f06eb670bbe1774156410110d324519fa4321fc8a0b72418ecc35c263b33c92"
+    },
+    {
+      "job": "gotze__identity_sheet--canon",
+      "modelo": "gotze__identity_sheet",
+      "entidad": "Gotzé",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-candela-gotze"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6895,
+      "prompt_sha256": "94beda479444df7bee7797ab9432915ab60655b29d5010e3ecfe91670d8eb14c"
+    },
+    {
+      "job": "mamagakue__identity_sheet--canon",
+      "modelo": "mamagakue__identity_sheet",
+      "entidad": "Mamagakue (Namagakue)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-algodon-koguis"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6749,
+      "prompt_sha256": "52714539c8c81f5fcd9d14accf176e01cd67244e36500dcfbe3340ca73a7c70b"
+    },
+    {
+      "job": "nemkardi__identity_sheet--canon",
+      "modelo": "nemkardi__identity_sheet",
+      "entidad": "Némkardi",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "canibalismo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6776,
+      "prompt_sha256": "daaeb302bad5d05d9fbe063cf5e5310ed8bdcb580fe0413c0e7aafddfd384067"
+    },
+    {
+      "job": "niwalui__identity_sheet--canon",
+      "modelo": "niwalui__identity_sheet",
+      "entidad": "Niwalui (Niwalwi / Niwali)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-maiz-koguis"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6952,
+      "prompt_sha256": "7d398733121d18ec3f622f8fc674c0d46fdc7fb201d85a2c066031f552a0c3a9"
+    },
+    {
+      "job": "nunula__identity_sheet--canon",
+      "modelo": "nunula__identity_sheet",
+      "entidad": "Nunula (Nulula)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6815,
+      "prompt_sha256": "233c4c5d3c9eb180ec0c805d9c4d42dccf6bfd2faa6ba488622cbb80d7998c2c"
+    },
+    {
+      "job": "seiskwisbuche__identity_sheet--canon",
+      "modelo": "seiskwisbuche__identity_sheet",
+      "entidad": "Seiskwisbuche",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "seiskwisbuche-y-yangauki"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6958,
+      "prompt_sha256": "a0298c6e4ac809f98b50c46323b8e2e2aee3f1b7bd231321211fa725bcd55539"
+    },
+    {
+      "job": "terana__identity_sheet--canon",
+      "modelo": "terana__identity_sheet",
+      "entidad": "Terana, el Tairona",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kimaku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6970,
+      "prompt_sha256": "7f7fd7321556e6bc0936a6956a9a69aa05f1af683343916c1fdbcbdd7fb3dd45"
+    }
+  ]
+}

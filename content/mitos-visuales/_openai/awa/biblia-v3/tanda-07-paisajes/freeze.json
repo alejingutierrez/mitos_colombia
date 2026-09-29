@@ -1,0 +1,66 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "awa",
+  "comunidad": "Awa",
+  "tanda": "tanda-07-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/awa.v3.json",
+    "sha256": "71e999cc1d9d0241b3b7d2f9be767e3ae43f05871a9c5a55120625da99155fe1"
+  },
+  "canon": {
+    "sha256": "bae6e57ea34347d2f9cba2e03f031d8cf73be66457da7c33aebc986fe695bd02",
+    "verificado_en": "2026-09-29T02:19:12.479Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "montana_selva_awa__environment_model--canon",
+      "modelo": "montana_selva_awa__environment_model",
+      "entidad": "La montaña Awá: selva, ríos y cueva",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "barbachas-del-arbol-grande",
+        "guagaja"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7054,
+      "prompt_sha256": "24daeabfa567b60fc945ed06f75761c825810cd8be9abd515d8b0aec6d986ab7"
+    },
+    {
+      "job": "maza_su__environment_model--canon",
+      "modelo": "maza_su__environment_model",
+      "entidad": "Maza Su, el mundo de abajo",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "guagaja"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7667,
+      "prompt_sha256": "ac6025e041db235bdb4b5bd763543f9663bd29faa23f137441057afd23386dee"
+    }
+  ]
+}

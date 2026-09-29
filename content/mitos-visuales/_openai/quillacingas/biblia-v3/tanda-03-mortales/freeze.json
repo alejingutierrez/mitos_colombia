@@ -1,0 +1,249 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "quillacingas",
+  "comunidad": "Quillacingas",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/quillacingas.v3.json",
+    "sha256": "00c78e7401248c308d099f8a50ddcc92c795e0b0a5d20e1b6c039d6061a08654"
+  },
+  "canon": {
+    "sha256": "22e4e45588698691b545d9a3c7e306acd5795b81849509c6c8121ada8f1b03d4",
+    "verificado_en": "2026-09-29T01:54:28.128Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 13,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "cacique__identity_sheet--canon",
+      "modelo": "cacique__identity_sheet",
+      "entidad": "Cacique",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-de-los-colibries",
+        "origen-de-la-isla-la-corota"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8843,
+      "prompt_sha256": "6d7d757a2e570cfe48110fd6fc567d79878b3d44aee745ca34fab889d0a351eb"
+    },
+    {
+      "job": "acompanante_de_la_silla__identity_sheet--canon",
+      "modelo": "acompanante_de_la_silla__identity_sheet",
+      "entidad": "Acompañante que se sube a la silla",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-de-la-isla-la-corota"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7989,
+      "prompt_sha256": "7ae796fd851e14449dea2538c0dd68bae9cfba5106cd7f488bae69791318887b"
+    },
+    {
+      "job": "aji__identity_sheet--canon",
+      "modelo": "aji__identity_sheet",
+      "entidad": "Ají",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-de-los-colibries"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8533,
+      "prompt_sha256": "a86ee802177c5e735d0a3356131dba989c914be08764c318e402de46dc48175a"
+    },
+    {
+      "job": "aji__state_sheet--estado_colibri",
+      "modelo": "aji__state_sheet",
+      "entidad": "Ají",
+      "categoria": "personaje",
+      "vista": "estado_colibri",
+      "estados": [
+        "colibri"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-de-los-colibries"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8986,
+      "prompt_sha256": "5793eed3e2b6c9222d397a3ba652e46b3e526d19ed14fe4f08404d494117a4a8"
+    },
+    {
+      "job": "aurelio__identity_sheet--canon",
+      "modelo": "aurelio__identity_sheet",
+      "entidad": "Aurelio, el sabio",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8427,
+      "prompt_sha256": "07fc25c3c8b29fedb9cccc98d6a34f9632e0992c7fddf49013606b2509f2e7e9"
+    },
+    {
+      "job": "flor__identity_sheet--canon",
+      "modelo": "flor__identity_sheet",
+      "entidad": "Flor",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-de-los-colibries"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8237,
+      "prompt_sha256": "3df93f1316c283a5f019df94b737823752ccc7e861b3081eac0b232f9ea4f9bc"
+    },
+    {
+      "job": "flor__state_sheet--estado_flor_pequena",
+      "modelo": "flor__state_sheet",
+      "entidad": "Flor",
+      "categoria": "personaje",
+      "vista": "estado_flor_pequena",
+      "estados": [
+        "flor_pequena"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-de-los-colibries"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8392,
+      "prompt_sha256": "36fbd64dcfea8662438459087281b5478ec2b181d5763cc53c38a11ee11ffb8c"
+    },
+    {
+      "job": "hombre_que_sono_a_la_sirena__identity_sheet--canon",
+      "modelo": "hombre_que_sono_a_la_sirena__identity_sheet",
+      "entidad": "El hombre que soñó a la sirena (el Bordoncillo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "cualanquizan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8637,
+      "prompt_sha256": "73bef4641d88476a593cb714c04db1a475e80f9c150b6d32b9ca49733fcc6322"
+    },
+    {
+      "job": "inti__identity_sheet--canon",
+      "modelo": "inti__identity_sheet",
+      "entidad": "Inti, el guaguaquilla",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8687,
+      "prompt_sha256": "8054eeb7d733cec17f951fc7092bcc3500ec51c3c6aa57995f15885ab0987c04"
+    },
+    {
+      "job": "joven_de_la_cabellera__identity_sheet--canon",
+      "modelo": "joven_de_la_cabellera__identity_sheet",
+      "entidad": "Joven cuya cabellera se vuelve totora",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-rabo-de-casapamba"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8541,
+      "prompt_sha256": "548bb288cffd8b3f498e58dedf53a8ef31b8714a6739df3ad2073cf02c77d351"
+    },
+    {
+      "job": "mujer_del_pilche__identity_sheet--canon",
+      "modelo": "mujer_del_pilche__identity_sheet",
+      "entidad": "Mujer del pilche",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "cualanquizan"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8928,
+      "prompt_sha256": "25eecbd12ade7afe60bb2c09130e47e33924fc9eadb0f14f59793832acffc94d"
+    },
+    {
+      "job": "pareja_de_los_enamorados__identity_sheet--canon",
+      "modelo": "pareja_de_los_enamorados__identity_sheet",
+      "entidad": "La pareja con adornos en la cara (Los Enamorados)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-llamado-de-inti"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8646,
+      "prompt_sha256": "e26ddca81822222cb72748954b61a2172e2e903d44311e4cbb3ad56d1420b8db"
+    },
+    {
+      "job": "princesa_fugitiva__identity_sheet--canon",
+      "modelo": "princesa_fugitiva__identity_sheet",
+      "entidad": "Princesa que huye",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-de-la-isla-la-corota"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8425,
+      "prompt_sha256": "a565f1d20672b30e8cf9526aec757efeefda2ccea79e36db79cd110848b111bc"
+    }
+  ]
+}

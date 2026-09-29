@@ -1,0 +1,186 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "orinoquia-llanera-mestizo",
+  "comunidad": "Orinoquia llanera",
+  "tanda": "tanda-08-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/orinoquia-llanera-mestizo.v3.json",
+    "sha256": "5c9e9ba72406879a1a2374b67948c258d48aa4fad470bb90c45fc5cd2188ece4"
+  },
+  "canon": {
+    "sha256": "3ccbd7d1dc15e78468cdc4a4a8d493f21cee98326daf946d28c8d999be60fa3e",
+    "verificado_en": "2026-09-29T03:00:11.676Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 7,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "rio_llanero__environment_model--canon",
+      "modelo": "rio_llanero__environment_model",
+      "entidad": "Rio llanero de sabana",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-brujo-de-la-costa-del-pauto",
+        "el-llano-ayer-hoy",
+        "la-culebra-cascabel",
+        "el-tesoro-de-caribare",
+        "los-delfines-dorados",
+        "los-tres-luceros",
+        "el-llano-cobra-sus-deudas",
+        "el-toro-negro-patorreal",
+        "amanecer-llanero",
+        "leal-hasta-la-muerte"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7949,
+      "prompt_sha256": "1db1b3c9115b8989672461e5509746f86358934c083f8cb412a1b7ddc669550f"
+    },
+    {
+      "job": "sabana_llanera__environment_model--canon",
+      "modelo": "sabana_llanera__environment_model",
+      "entidad": "Sabana llanera",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "amanecer-llanero",
+        "el-toro-negro-patorreal",
+        "la-culebra-cascabel",
+        "el-llano-ayer-hoy",
+        "el-llano-cobra-sus-deudas",
+        "el-tesoro-de-caribare",
+        "la-bola-de-fuego",
+        "las-chanzas-de-don-felipe",
+        "los-tres-luceros",
+        "los-delfines-dorados"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7960,
+      "prompt_sha256": "6b57a0c6a1cc54dc62088d475b67b6e13d8a8799e28999d8babeb55d7009f1e2"
+    },
+    {
+      "job": "sabana_llanera__state_sheet--estado_sabana_quemada_y_agrietada",
+      "modelo": "sabana_llanera__state_sheet",
+      "entidad": "Sabana llanera",
+      "categoria": "paisaje",
+      "vista": "estado_sabana_quemada_y_agrietada",
+      "estados": [
+        "sabana_quemada_y_agrietada"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "amanecer-llanero",
+        "el-toro-negro-patorreal",
+        "la-culebra-cascabel",
+        "el-llano-ayer-hoy",
+        "el-llano-cobra-sus-deudas",
+        "el-tesoro-de-caribare",
+        "la-bola-de-fuego",
+        "las-chanzas-de-don-felipe",
+        "los-tres-luceros",
+        "los-delfines-dorados"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8155,
+      "prompt_sha256": "e8ed6e34a2998aeae6efa4d3fa5dc66fafd8cf6f095275f0d0d987d2f0ebe15e"
+    },
+    {
+      "job": "monte_y_quebrada_del_piedemonte__environment_model--canon",
+      "modelo": "monte_y_quebrada_del_piedemonte__environment_model",
+      "entidad": "Monte y quebrada del piedemonte",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-dominguez",
+        "el-tirapiedra",
+        "madre-rio-o-mohana",
+        "el-domador-de-brujas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8055,
+      "prompt_sha256": "818be6c7c452bf6c3e399e1304c453f1ae1bedef23c4070b5be876a8c6dd8de5"
+    },
+    {
+      "job": "estero_laguna_y_morichal__environment_model--canon",
+      "modelo": "estero_laguna_y_morichal__environment_model",
+      "entidad": "Estero, laguna y morichal",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "amanecer-llanero",
+        "el-llano-ayer-hoy",
+        "los-delfines-dorados"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8019,
+      "prompt_sha256": "ecaab8ea6a0b35b4f71187edab7433de0342f6afe142602d2413e4c124f2e492"
+    },
+    {
+      "job": "tumba_llanera_con_cruz__spatial_model--canon",
+      "modelo": "tumba_llanera_con_cruz__spatial_model",
+      "entidad": "Tumba llanera con cruz de madera",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-toro-negro-patorreal",
+        "los-tres-luceros",
+        "leal-hasta-la-muerte"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7845,
+      "prompt_sha256": "1259c6376bedb5ea65a95571e3902275e1e3737592be88e02f92460ad31c810f"
+    },
+    {
+      "job": "carretera_nocturna_del_piedemonte__spatial_model--canon",
+      "modelo": "carretera_nocturna_del_piedemonte__spatial_model",
+      "entidad": "Carretera nocturna",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-monstruos-de-paratebueno",
+        "la-bruja-de-los-ojos-miel"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8016,
+      "prompt_sha256": "ccf702f587e0fab9367c2ef19b0bc710d884dbf9b1b82483cce38fbbfdb7d369"
+    }
+  ]
+}

@@ -85,6 +85,25 @@ const DESIGN_FIELDS = [
   "documented_features",
   "editorial_features",
 ];
+/**
+ * Los cuatro campos editoriales son el contrato por defecto y no se tocan.
+ *
+ * Pero 218 de las 240 paginas del corpus mestizo **no tienen fila editorial**:
+ * su relato vive en `content` y no hay `historia`, `versiones` ni
+ * `research_notes` que leer. Exigirselas obligaria a declarar que se leyo algo
+ * que no existe, que es peor que no leerlo.
+ *
+ * Un plan puede entonces declarar su propio juego de campos, y al hacerlo
+ * **queda obligado a explicar por que** en `corpus.fields_note`. La excepcion
+ * es visible en el plan, no escondida en el validador.
+ */
+const CANON_FIELDS = ["mito", "historia", "versiones", "research_notes"];
+
+function requiredFields(plan) {
+  const declared = plan?.corpus?.required_fields;
+  return Array.isArray(declared) && declared.length ? declared : CANON_FIELDS;
+}
+
 const EXTRACTION_PASSES = [
   "named_entities",
   "unnamed_roles",
@@ -137,6 +156,17 @@ function validateResearch(plan, report) {
   if (missing.length) add(report, "errors", "myths", `faltan mitos del corpus: ${missing.join(", ")}`);
   if (extra.length) add(report, "errors", "myths", `hay mitos fuera del corpus: ${extra.join(", ")}`);
 
+  if (Array.isArray(corpus.required_fields) && corpus.required_fields.length) {
+    if (!hasText(corpus.fields_note)) {
+      add(report, "errors", "corpus.fields_note", "un corpus que cambia los campos exigidos debe decir por que");
+    }
+    const unknown = corpus.required_fields.filter((field) => ![...CANON_FIELDS, "content"].includes(field));
+    if (unknown.length) add(report, "errors", "corpus.required_fields", `campos desconocidos: ${unknown.join(", ")}`);
+    if (!corpus.required_fields.includes("mito") && !corpus.required_fields.includes("content")) {
+      add(report, "errors", "corpus.required_fields", "hay que leer el relato: mito o content");
+    }
+  }
+
   const source = plan.source_snapshot;
   if (!isObject(source)) {
     add(report, "errors", "source_snapshot", "falta la huella del corpus editorial leido");
@@ -147,7 +177,7 @@ function validateResearch(plan, report) {
       add(report, "errors", "source_snapshot.record_count", "debe coincidir con el corpus congelado");
     }
     const fields = requireList(report, source.fields, "source_snapshot.fields");
-    for (const field of ["mito", "historia", "versiones", "research_notes"]) {
+    for (const field of requiredFields(plan)) {
       if (!fields.includes(field)) add(report, "errors", "source_snapshot.fields", `falta leer ${field}`);
     }
   }
@@ -217,7 +247,7 @@ function validateInventory(plan, report, { requireFrozen = false } = {}) {
       add(report, "errors", `myths.${slug}.extraction`, "falta la bitacora de extraccion de entidades");
     } else {
       const fields = requireList(report, extraction.reviewed_fields, `myths.${slug}.extraction.reviewed_fields`);
-      for (const field of ["mito", "historia", "versiones", "research_notes"]) {
+      for (const field of requiredFields(plan)) {
         if (!fields.includes(field)) add(report, "errors", `myths.${slug}.extraction.reviewed_fields`, `falta revisar ${field}`);
       }
       const passes = requireList(report, extraction.passes, `myths.${slug}.extraction.passes`);
@@ -242,6 +272,22 @@ function validateInventory(plan, report, { requireFrozen = false } = {}) {
     if (duplicates.length) add(report, "errors", `myths.${slug}.entity_refs`, `entidades repetidas: ${unique(duplicates).join(", ")}`);
     if (!refs.some((ref) => ref?.role === "primary")) {
       add(report, "errors", `myths.${slug}.entity_refs`, "cada mito necesita al menos una entidad primaria");
+    } else if (!refs.some((ref) => ref?.role === "primary"
+        && plan.entities?.[ref.entity_id]?.visual_status === "required")
+        && !hasText(myth?.not_illustrated)) {
+      // Una primaria puede estar `excluded` con razon —Wayuu registra el viajero
+      // compuesto de «Los dominios de Juya» y lo excluye para no falsear una
+      // tercera identidad— y eso es el contrato funcionando: lo detectado se
+      // anota aunque no se dibuje. Lo que no puede pasar es que **todas** lo
+      // esten, porque entonces la figura que ese relato aporta y no hereda no
+      // llega a ninguna lamina. El constructor proponia candidatas por rareza
+      // —aparecer en pocos mitos— y una entidad excluida es rarisima justamente
+      // porque no se va a producir, asi que caia en la trampa sistematicamente.
+      const donde = refs.filter((ref) => ref?.role === "primary")
+        .map((ref) => `${ref.entity_id} (${plan.entities?.[ref.entity_id]?.visual_status || "sin estado"})`);
+      add(report, "errors", `myths.${slug}.entity_refs`,
+        `ninguna primaria llega a lamina: ${donde.join(", ")}`
+        + " - si la pagina no debe ilustrarse, dilo en myths.<slug>.not_illustrated");
     }
     for (const [index, ref] of refs.entries()) {
       const path = `myths.${slug}.entity_refs[${index}]`;
@@ -256,6 +302,13 @@ function validateInventory(plan, report, { requireFrozen = false } = {}) {
         actualMythsByEntity.get(ref.entity_id).push(slug);
       }
       if (!MYTH_ENTITY_ROLES_V3.includes(ref.role)) add(report, "errors", `${path}.role`, `rol invalido: ${ref.role || "vacio"}`);
+      // Marca temporal del constructor. Mientras siga puesta significa que nadie
+      // leyo ese rol contra el relato, y el rol es la unica parte del inventario
+      // que no se puede derivar de la categoria.
+      if (requireFrozen && ref.role_derivada) {
+        add(report, "errors", `${path}.role_derivada`,
+          `rol propuesto por el script y nunca revisado: ${ref.role_derivada}`);
+      }
       requireText(report, ref.note, `${path}.note`);
     }
   }
@@ -288,7 +341,7 @@ function validateInventory(plan, report, { requireFrozen = false } = {}) {
         continue;
       }
       if (!declaredMyths.includes(item.myth)) add(report, "errors", `${path}.evidence[${index}].myth`, "debe pertenecer a myth_refs");
-      if (!["mito", "historia", "versiones", "research_notes"].includes(item.field)) {
+      if (![...CANON_FIELDS, "content"].includes(item.field)) {
         add(report, "errors", `${path}.evidence[${index}].field`, "campo de corpus invalido");
       }
       requireText(report, item.note, `${path}.evidence[${index}].note`);
@@ -314,7 +367,49 @@ function validateInventory(plan, report, { requireFrozen = false } = {}) {
   }
 }
 
+/**
+ * Un estado que se produce tiene que ser un estado que la ficha declara.
+ *
+ * No exige literalidad, porque una hoja de modelo necesita mas detalle que un
+ * inventario: «sin los cuernos» se escribe «sin los cuernos, con dos muñones de
+ * canto cortado». Eso es el mismo estado. Lo que no puede pasar es que la ficha
+ * diga que no tiene estados y aun asi se le encargue una lamina de estado, o
+ * que declare uno y produzca otro: la Madremonte declaraba «forma temible» y
+ * producia «presencia insinuada», que es justo el estado que su propio
+ * `editorial` dice que NO se produce.
+ */
+function estadoDeclarado(producido, declarados) {
+  const palabras = (x) => String(x).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    // Tres letras, no cuatro: hay estados que son una sola palabra corta —«ave»,
+    // «Sol»— y con el filtro en cuatro no podian casar con nada.
+    .replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter((w) => w.length >= 3);
+  const P = new Set(palabras(producido));
+  // Expandir conserva las palabras del estado declarado y añade otras; escribir
+  // otro estado no las conserva. «en obra, con un hueco por cerrar» sobrevive
+  // entero dentro de «en obra, con el hueco del ultimo sillar abierto en el
+  // arco», y «forma temible: colmillos, manos descarnadas» no sobrevive dentro
+  // de «presencia insinuada: una zarza que se mueve». La mitad basta.
+  return declarados.some((d) => {
+    const D = palabras(d);
+    if (!D.length) return false;
+    const comunes = D.filter((w) => P.has(w)).length;
+    return comunes / D.length >= 0.5;
+  });
+}
+
 function validateDesign(plan, report) {
+  for (const [entityId, entity] of Object.entries(plan.entities || {})) {
+    const producidos = entity?.design?.states_to_model || [];
+    if (!producidos.length) continue;
+    const declarados = (entity.states || []).slice(1);
+    for (const estado of producidos) {
+      if (estadoDeclarado(estado, declarados)) continue;
+      add(report, "errors", `entities.${entityId}.design.states_to_model`,
+        declarados.length
+          ? `produce un estado que la ficha no declara: «${String(estado).slice(0, 60)}...»`
+          : `produce una lamina de estado pero la ficha no declara ninguno en \`states\``);
+    }
+  }
   if (!isObject(plan.models)) {
     add(report, "errors", "models", "falta la biblioteca de modelos V3");
     return;

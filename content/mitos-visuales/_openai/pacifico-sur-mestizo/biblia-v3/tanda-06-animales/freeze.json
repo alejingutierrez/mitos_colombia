@@ -1,0 +1,183 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "pacifico-sur-mestizo",
+  "comunidad": "Pacífico sur (Nariño, Cauca, Valle)",
+  "tanda": "tanda-06-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/pacifico-sur-mestizo.v3.json",
+    "sha256": "1afd63cc494a592771ae22e52c379f166c86061f51697ad4efdfd655e9abd34b"
+  },
+  "canon": {
+    "sha256": "117b563146a75b81fe76e90c1f490f8070a5a0a92111267442e052bf553d1334",
+    "verificado_en": "2026-09-29T02:57:48.246Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 9,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "caballo_del_morro__identity_sheet--canon",
+      "modelo": "caballo_del_morro__identity_sheet",
+      "entidad": "El caballo del Morro (Babieca)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-caballo-del-morro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7513,
+      "prompt_sha256": "d1d1ebd8633b951e919a603d59918b8bccb9074d5da0ec120c437c5e42be8f6f"
+    },
+    {
+      "job": "caballo_del_morro__state_sheet--estado_los huesos de Babieca metidos bajo la plancha mientras los obreros empotran la estatua",
+      "modelo": "caballo_del_morro__state_sheet",
+      "entidad": "El caballo del Morro (Babieca)",
+      "categoria": "criatura",
+      "vista": "estado_los huesos de Babieca metidos bajo la plancha mientras los obreros empotran la estatua",
+      "estados": [
+        "los huesos de Babieca metidos bajo la plancha mientras los obreros empotran la estatua"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-caballo-del-morro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8408,
+      "prompt_sha256": "8b4319c2f10c3eb4dbe0fdd2b2d23800e673fd02a7e5f616263794bc2081b1b3"
+    },
+    {
+      "job": "diablo_chivo_rumichaca__identity_sheet--canon",
+      "modelo": "diablo_chivo_rumichaca__identity_sheet",
+      "entidad": "El Diablo Chivo de Rumichaca",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-diablo-chivo-de-rumichaca"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8021,
+      "prompt_sha256": "fe7d68b656d439dcd827cc88274894f0f7a6513641e2ddfa81061a52051ef2e0"
+    },
+    {
+      "job": "duende_peluquero__identity_sheet--canon",
+      "modelo": "duende_peluquero__identity_sheet",
+      "entidad": "El Duende Peluquero",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-duende-peluquero"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8216,
+      "prompt_sha256": "9085fb21d0d36547cab2a6fd41ec87e2286f486587382db216e9804659e55d87"
+    },
+    {
+      "job": "el_tabano__identity_sheet--canon",
+      "modelo": "el_tabano__identity_sheet",
+      "entidad": "El tábano",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-totuma-de-la-cocha"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7559,
+      "prompt_sha256": "003da1bf85a0daf62a7c06e38f3a9b019841f6955f256ef5599cd342c6e84c1b"
+    },
+    {
+      "job": "hada_de_los_canaverales__identity_sheet--canon",
+      "modelo": "hada_de_los_canaverales__identity_sheet",
+      "entidad": "El Hada de los Cañaverales",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-hada-de-los-canaverales"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7285,
+      "prompt_sha256": "23feff92d0ce51bcaafe96d458ee60f8f163c07f4eb53b5ee89fb24193b5bf6f"
+    },
+    {
+      "job": "hada_de_los_canaverales__state_sheet--estado_franja de vegetación nativa- el cuerpo vuelto por el viento hierba, junco y flor de humedal entre el cultivo y el agua",
+      "modelo": "hada_de_los_canaverales__state_sheet",
+      "entidad": "El Hada de los Cañaverales",
+      "categoria": "criatura",
+      "vista": "estado_franja de vegetación nativa: el cuerpo vuelto por el viento hierba, junco y flor de humedal entre el cultivo y el agua",
+      "estados": [
+        "franja de vegetación nativa: el cuerpo vuelto por el viento hierba, junco y flor de humedal entre el cultivo y el agua"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-hada-de-los-canaverales"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8895,
+      "prompt_sha256": "028b6f8232a1eeeb1bf2783c9f70dec1c5774aaf68d90b58006294c74c47ad8b"
+    },
+    {
+      "job": "riviel__identity_sheet--canon",
+      "modelo": "riviel__identity_sheet",
+      "entidad": "El Riviel",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-riviel-del-rosario"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7837,
+      "prompt_sha256": "2d1061a94fbecea6899af0adfbfbb2d1b6112b8304b35ea55a9ed97c793a6d08"
+    },
+    {
+      "job": "riviel__state_sheet--estado_la mocha de don Casimiro- lámpara en la proa que encandila y una cruz por canalete, con el hombre sólo como recorte oscuro detrás de la luz",
+      "modelo": "riviel__state_sheet",
+      "entidad": "El Riviel",
+      "categoria": "criatura",
+      "vista": "estado_la mocha de don Casimiro: lámpara en la proa que encandila y una cruz por canalete, con el hombre sólo como recorte oscuro detrás de la luz",
+      "estados": [
+        "la mocha de don Casimiro: lámpara en la proa que encandila y una cruz por canalete, con el hombre sólo como recorte oscuro detrás de la luz"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-riviel-del-rosario"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8548,
+      "prompt_sha256": "0fa87b69481a06484a16ad152fa404cf77d3c7371d7f26f25ee7d14f48965f3e"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "varios-sin-territorio",
+  "comunidad": "Folclor nacional sin territorio",
+  "tanda": "tanda-08-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/varios-sin-territorio.v3.json",
+    "sha256": "960a317c807ac538873f57921f7eb1ee2bdc9f7c716935e83d742a83ff8dbcbf"
+  },
+  "canon": {
+    "sha256": "c1bf9aa902622b9cc85521f658c702c1ade9370c2901b2317eac5892c1fb77f3",
+    "verificado_en": "2026-09-29T02:57:39.636Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 7,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "camino_y_carretera_de_montana__environment_model--canon",
+      "modelo": "camino_y_carretera_de_montana__environment_model",
+      "entidad": "Camino y carretera de montaña",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-bus-fantasma",
+        "la-nina-de-la-carta",
+        "la-barbacoa-del-muerto",
+        "los-meneses",
+        "el-anima-sola"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7211,
+      "prompt_sha256": "38188a58676622225e9b488afbaf2a168b652c8f2b77cc3d7e9b8b8c7414f977"
+    },
+    {
+      "job": "rio_magdalena__environment_model--canon",
+      "modelo": "rio_magdalena__environment_model",
+      "entidad": "Río Magdalena: orilla, moya y remolino",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-mohan",
+        "el-hombre-caiman",
+        "la-llorona",
+        "el-griton"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7195,
+      "prompt_sha256": "d9da4c8f43bfd997c2bf25e597d6234fd7266d89b0e6af8ca8eedfa9458478fa"
+    },
+    {
+      "job": "cafetal_y_quebrada__environment_model--canon",
+      "modelo": "cafetal_y_quebrada__environment_model",
+      "entidad": "Cafetal y quebrada de montaña",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-llorona",
+        "la-vieja-colmillona",
+        "la-madremonte"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7191,
+      "prompt_sha256": "1ce896231cf24fddb9b094e3a2343de3919cf71df191681faff8afc3dd2f35a6"
+    },
+    {
+      "job": "litoral_y_estero_del_pacifico__environment_model--canon",
+      "modelo": "litoral_y_estero_del_pacifico__environment_model",
+      "entidad": "Litoral y estero del Pacífico de noche",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-barco-fantasma",
+        "la-sirena-del-arco"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6967,
+      "prompt_sha256": "1666c8d787771a8a62b68c19dcade2892fd07790755063bc905a866b30a7bdd4"
+    },
+    {
+      "job": "monte_andino_humedo__environment_model--canon",
+      "modelo": "monte_andino_humedo__environment_model",
+      "entidad": "Monte andino húmedo (bosque de niebla, bejucos, hojarasca)",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-hojarasquin-del-monte",
+        "la-madremonte"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7419,
+      "prompt_sha256": "3cbfd91aa5607628f341aa218d595eab6bf60fee481918ba53328a1cd6d7f694"
+    },
+    {
+      "job": "desierto_y_sabana_de_la_guajira__environment_model--canon",
+      "modelo": "desierto_y_sabana_de_la_guajira__environment_model",
+      "entidad": "Desierto y sabana de La Guajira",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "francisco-el-hombre"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7125,
+      "prompt_sha256": "e9c80aeb4e7eb4701342bc45b713fe02c8d14d22730306c608d8908e2ee993e7"
+    },
+    {
+      "job": "valle_de_guaca_y_serrania_de_abibe__environment_model--canon",
+      "modelo": "valle_de_guaca_y_serrania_de_abibe__environment_model",
+      "entidad": "El valle de Guacá y la serranía de Abibe",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-silbo-de-quinunchu"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7559,
+      "prompt_sha256": "8958d75f4cf4b62c41c6c1ff75e16d9d505f620afa763b5237d001e94530b3ee"
+    }
+  ]
+}

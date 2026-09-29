@@ -1,0 +1,314 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "cordoba-sinu-mestizo",
+  "comunidad": "Córdoba y el Sinú",
+  "tanda": "tanda-08-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/cordoba-sinu-mestizo.v3.json",
+    "sha256": "8e3b8fb8c27d4013c025448dfd2d78a3c0fd8eab108f3bdc383407093e5379d3"
+  },
+  "canon": {
+    "sha256": "2895fda0dc55b17bb0c61d11c59cfdeaa984f8a59545958e98741430b9f823d8",
+    "verificado_en": "2026-09-29T02:48:37.236Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 15,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_trabajo_y_monte__object_sheet--canon",
+      "modelo": "hoja_utileria_trabajo_y_monte__object_sheet",
+      "entidad": "hoja utileria trabajo y monte",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-costeno-y-los-cachacos",
+        "el-mocho-y-el-tigre",
+        "tio-conejo-zapatero",
+        "la-muerte-de-tio-conejo",
+        "juan-bobo-y-sus-hermanos",
+        "conejo-y-la-mona-de-cera",
+        "conejo-y-la-fiesta-de-toro",
+        "juan-bobo-y-la-vieja",
+        "las-orejas-del-tio-conejo",
+        "tia-zorra-en-el-maizal-de-tio-conejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7796,
+      "prompt_sha256": "f82d46cf612f0863845fc6837cd256ee65b00e9ca4a7a7952d58a7cbeec7b5fc"
+    },
+    {
+      "job": "hoja_utileria_cocina_y_mesa__object_sheet--canon",
+      "modelo": "hoja_utileria_cocina_y_mesa__object_sheet",
+      "entidad": "hoja utileria cocina y mesa",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "juan-bobo-y-la-vieja",
+        "el-desayuno-del-indio",
+        "la-vieja-el-burro-y-los-huevos",
+        "conejo-y-caiman",
+        "veinte-para-el-bollo",
+        "este-era-un-joven-que-estaba-estudiando"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8159,
+      "prompt_sha256": "811d329d111380ba28b24801a4fcb2d3c9fcf70793eab43df3028dfe39409356"
+    },
+    {
+      "job": "el_arbol_grande_del_camino__botanical_sheet--canon",
+      "modelo": "el_arbol_grande_del_camino__botanical_sheet",
+      "entidad": "El árbol grande del camino y del patio",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "juan-bobo-y-sus-hermanos",
+        "las-orejas-del-tio-conejo",
+        "los-tres-curas-enamorados",
+        "tio-conejo-y-morrocoy",
+        "rambao"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7969,
+      "prompt_sha256": "64e10312332c907a40995bad009c0b55465002b5c9b0c4c19817559a525d1afe"
+    },
+    {
+      "job": "hoja_utileria_plata_y_tiempo__object_sheet--canon",
+      "modelo": "hoja_utileria_plata_y_tiempo__object_sheet",
+      "entidad": "hoja utileria plata y tiempo",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "veinte-para-el-bollo",
+        "los-tres-curas-enamorados",
+        "juan-bobo-y-sus-hermanos",
+        "la-mina-de-oro-en-el-infierno",
+        "rambao"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7813,
+      "prompt_sha256": "5b1fed8278834f41594d168b89ac234a27e681b107c46ab55877ad49b0ef9ce9"
+    },
+    {
+      "job": "hoja_utileria_casa_y_devocion__object_sheet--canon",
+      "modelo": "hoja_utileria_casa_y_devocion__object_sheet",
+      "entidad": "hoja utileria casa y devocion",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-confesion",
+        "juan-bobo-y-la-vieja",
+        "este-era-un-joven-que-estaba-estudiando"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7865,
+      "prompt_sha256": "e0a2dbd921e66f8d36fed506b2efea08960697cbe12a1bf0f4bfe6639920ded1"
+    },
+    {
+      "job": "hoja_utileria_fiesta_y_camino__object_sheet--canon",
+      "modelo": "hoja_utileria_fiesta_y_camino__object_sheet",
+      "entidad": "Hoja de utilería: mesa, juego y camino",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-tres-curas-enamorados",
+        "este-era-un-joven-que-estaba-estudiando",
+        "rambao"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7056,
+      "prompt_sha256": "8e8f1397735ee2927e4048f8f38bb86c0b031fc64b533d0bfbbb9c001d0f537b"
+    },
+    {
+      "job": "el_platano_y_el_gajo__botanical_sheet--canon",
+      "modelo": "el_platano_y_el_gajo__botanical_sheet",
+      "entidad": "El plátano y el gajo de plátanos",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "lo-justo-y-lo-legal",
+        "tio-conejo-y-los-platanos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7991,
+      "prompt_sha256": "569bf496ef73b97d6b9cc12c2605060363e16d794b5384be7a1692ef74253b7f"
+    },
+    {
+      "job": "la_hamaca__object_sheet--canon",
+      "modelo": "la_hamaca__object_sheet",
+      "entidad": "La hamaca",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-mocho-y-el-tigre",
+        "juan-bobo-y-sus-hermanos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7657,
+      "prompt_sha256": "330b80cf964240d94fae7c84bfd5ab7d644497ce8134a9ff436a31bc6133590d"
+    },
+    {
+      "job": "el_bus_de_los_animales__object_sheet--canon",
+      "modelo": "el_bus_de_los_animales__object_sheet",
+      "entidad": "El bus de los animales",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-viaje-al-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8097,
+      "prompt_sha256": "e91e9aca6d095b2b9d63d7702a92fd8eb36333472e491c43ce21e9a10c6b6764"
+    },
+    {
+      "job": "hoja_utileria_encargos_de_papa_dios__object_sheet--canon",
+      "modelo": "hoja_utileria_encargos_de_papa_dios__object_sheet",
+      "entidad": "hoja utileria encargos de papa dios",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "las-orejas-del-tio-conejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8250,
+      "prompt_sha256": "273630a0450c2d94e119f52c83543af5990a42e484bfdf6b793ff33c6e90a5d8"
+    },
+    {
+      "job": "la_batea__object_sheet--canon",
+      "modelo": "la_batea__object_sheet",
+      "entidad": "La batea",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "tio-conejo-zapatero"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7421,
+      "prompt_sha256": "359bc3587041d53aaf98a49f264d5f669abb668e2fe8e35d3b184c498794e04b"
+    },
+    {
+      "job": "la_cantara_de_ron_neque__object_sheet--canon",
+      "modelo": "la_cantara_de_ron_neque__object_sheet",
+      "entidad": "La cántara de ron ñeque",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-tres-cachacos-y-la-cantara-de-ron-neque"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7391,
+      "prompt_sha256": "63462b889a01ee97cc8a9f770a9bf32838846419362897efdcd1138c6684af27"
+    },
+    {
+      "job": "la_gurupera__object_sheet--canon",
+      "modelo": "la_gurupera__object_sheet",
+      "entidad": "La gurupera y los aperos de montura",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-paisa-y-el-gringo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7792,
+      "prompt_sha256": "c40b3a2aa7881f8827b56f5c9a6e399cbbfb4a932a8fab20529939b6a51923c0"
+    },
+    {
+      "job": "la_mona_de_cera__object_sheet--canon",
+      "modelo": "la_mona_de_cera__object_sheet",
+      "entidad": "La mona de cera",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "conejo-y-la-mona-de-cera"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8159,
+      "prompt_sha256": "1928cc476ed9f46456184af70ec8efd1ff95f0cef869ba78ac0f4ff38235e2c9"
+    },
+    {
+      "job": "la_puerta_a_cuestas__object_sheet--canon",
+      "modelo": "la_puerta_a_cuestas__object_sheet",
+      "entidad": "La puerta de la casa a cuestas",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "juan-bobo-y-sus-hermanos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7551,
+      "prompt_sha256": "4927a6487f9f55d687fa842b904e7aa6a0fb89c558e27d2e2bb556dc3e4bc799"
+    }
+  ]
+}

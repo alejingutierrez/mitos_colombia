@@ -1,0 +1,302 @@
+{
+  "id": "nukak-maku",
+  "label": "Nɨkak",
+  "pages": 1,
+  "canon_pages": 1,
+  "read_note": "Leí «Machoroko y el nacimiento Nɨkak» con sus cuatro campos y editorial/nukak/{universe,definitions,sources}.mjs; canon y módulo dicen lo mismo palabra por palabra. Lo que más me sorprendió es cuánto de este relato es movimiento y cuán poco es descripción: hay una apertura entre mundos, una transformación y una dispersión por dos ríos, pero casi ningún cuerpo descrito. Machoroko escarba «con uñas de oso hormiguero» y ahí se acaba su retrato; la Gente de Árbol y la Gente Tucán se nombran sin un rasgo. Eso obliga a una biblia de pocos personajes y mucho mundo, y a una regla dura: los nombres de grupo (Gente de Árbol, Gente Tucán) no autorizan hombres-pájaro ni hombres-árbol; son grupos de gente. Por eso embebo Gente Tucán en la gramática de las familias en vez de darle lámina propia. Segundo hallazgo: lo único abundante son las semillas. El relato nombra nueve cultivos (chontaduro, tabaco, caña, totumo, plátano, yuca dulce y amarga, maíz, ñame) cargados en canastos, y eso sí hay que producirlo bien porque es lo que distingue esta migración de una caminata genérica: van dos hojas de utilería de cinco piezas. Tercero, la trampa documentada: la ficha anterior atribuía a los Nɨkak a Idn Kamni, la saliva y el Río de Leche, que son Kakua; queda excluded para que nadie la reintroduzca. Mauro, el héroe cultural Nɨkak que sí nombran las fuentes, no aparece en el relato y también queda fuera. Quedó dudoso el estatuto de los perseguidores de bak: conducen la acción (por ellos se abre el paso y por ellos se oculta la entrada) pero el texto no da una sola línea sobre su forma, así que los excluyo antes que inventarlos. También quedó dudoso si bak necesita lámina propia; la conservo porque el relato dice que allí vivían «de una manera semejante» a la selva, y esa semejanza-con-diferencia es justamente lo que hay que diseñar.",
+  "entities": [
+    {
+      "id": "machoroko",
+      "name": "Machoroko",
+      "kind": "deidad_fuerza",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Conduce el acto central: oye el ruido de abajo, lo busca y abre el paso entre bak y yê. Su único rasgo físico documentado son las uñas de oso hormiguero con que escarba, y su hoja debe resolver esa ambigüedad sin convertirlo en un híbrido."
+    },
+    {
+      "id": "aukuribo",
+      "name": "Aukurɨbo, la Gente de Árbol",
+      "kind": "personaje",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "required",
+      "sheets": 2,
+      "states": ["oruga", "mariposa"],
+      "note": "Primero en cruzar, recordado como mayor y jefe verdadero. Las dos transformaciones están mostradas y cambian la silueta, así que una hoja de identidad más una hoja de estados con oruga y mariposa. Es la escena vertical aprobada."
+    },
+    {
+      "id": "familias_nikak",
+      "name": "Familias y grupos Nɨkak en migración",
+      "kind": "colectivo",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Protagonista colectivo real del relato: se ocultan, preparan la entrada, salen en pequeños grupos, descansan juntos, se separan y siembran. Una sola gramática de grupo, con canastos y semillas, que también cubre a los mayores que guían y a la Gente Tucán."
+    },
+    {
+      "id": "bak",
+      "name": "Bak, el mundo de abajo",
+      "kind": "lugar",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Escenario del primer acto y no intercambiable con la selva de arriba: el relato dice que allí se movían, sembraban y cuidaban semillas «de una manera semejante» a la vida posterior. Esa semejanza con diferencia es el encargo de diseño; parte de los que salieron regresan allí."
+    },
+    {
+      "id": "paso_entre_bak_y_ye",
+      "name": "El paso abierto entre bak y yê",
+      "kind": "fenomeno",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Regla visual de los mundos en capas y de su abertura: es el acto por el que se cuenta el relato y gobierna la composición horizontal aprobada. Debe incluir que la entrada se preparó para dificultar el paso a los perseguidores."
+    },
+    {
+      "id": "ye_selva_y_confluencia",
+      "name": "Yê: selva del Guaviare y la confluencia de los dos ríos",
+      "kind": "paisaje",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "required",
+      "sheets": 1,
+      "states": [],
+      "note": "Modelo de entorno de este mundo, anclado en la confluencia Guaviare-Inírida donde descansan y se separan. La composición de dos ríos que divergen es el corazón del relato; caños, lagunas y sectores donde se detienen son variantes del mismo modelo. Coordenada aproximada, nunca el lugar exacto del nacimiento."
+    },
+    {
+      "id": "gente_tucan",
+      "name": "La Gente Tucán",
+      "kind": "colectivo",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "embedded",
+      "covered_by": "familias_nikak",
+      "sheets": 0,
+      "note": "Abre camino y orienta el avance, pero el relato no le da un solo rasgo propio. Se resuelve como marcador de grupo dentro de la gramática de las familias; darle lámina propia empujaría a inventar hombres-pájaro, que es exactamente lo que no se puede hacer."
+    },
+    {
+      "id": "mayores_que_guian",
+      "name": "Los mayores que guían a sus familias",
+      "kind": "colectivo",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "embedded",
+      "covered_by": "familias_nikak",
+      "sheets": 0,
+      "note": "Eligen caños, lagunas y sectores y dan nombre a los lugares, pero son miembros del colectivo ya fichado, sin descripción individual."
+    },
+    {
+      "id": "unas_de_oso_hormiguero",
+      "name": "Las uñas de oso hormiguero con que se escarba el paso",
+      "kind": "objeto",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "embedded",
+      "covered_by": "machoroko",
+      "sheets": 0,
+      "note": "El texto no aclara si son sus propias uñas o una herramienta, y el oso hormiguero nunca aparece como animal. Va en la hoja de Machoroko con la ambigüedad declarada, no como ficha de animal."
+    },
+    {
+      "id": "oruga",
+      "name": "Oruga",
+      "kind": "animal",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "embedded",
+      "covered_by": "aukuribo",
+      "sheets": 0,
+      "note": "Primera forma de Aukurɨbo, no una especie del relato."
+    },
+    {
+      "id": "mariposa",
+      "name": "Mariposa",
+      "kind": "animal",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "embedded",
+      "covered_by": "aukuribo",
+      "sheets": 0,
+      "note": "Segunda forma de Aukurɨbo, la que le permite regresar a bak con parte de su familia."
+    },
+    {
+      "id": "canos_lagunas_y_sectores",
+      "name": "Caños, lagunas y sectores donde se detienen",
+      "kind": "paisaje",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "embedded",
+      "covered_by": "ye_selva_y_confluencia",
+      "sheets": 0,
+      "note": "Variantes del mismo modelo de entorno. El relato dice que les dieron nombre, pero no nombra ninguno: no hay lugar identificable que fichar."
+    },
+    {
+      "id": "semilla_chontaduro",
+      "name": "Semilla de chontaduro",
+      "kind": "planta",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "embedded",
+      "covered_by": "hoja_semillas_nikak_1",
+      "sheets": 0,
+      "note": "Una de las nueve semillas traídas desde bak; van en hojas de semillas, no en fichas botánicas individuales."
+    },
+    {
+      "id": "semilla_tabaco",
+      "name": "Semilla de tabaco",
+      "kind": "planta",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "embedded",
+      "covered_by": "hoja_semillas_nikak_1",
+      "sheets": 0,
+      "note": "Nombrada en la lista de semillas cargadas en canastos."
+    },
+    {
+      "id": "semilla_cana",
+      "name": "Semilla de caña",
+      "kind": "planta",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "embedded",
+      "covered_by": "hoja_semillas_nikak_1",
+      "sheets": 0,
+      "note": "Nombrada en la lista de semillas cargadas en canastos."
+    },
+    {
+      "id": "totumo",
+      "name": "Totumo",
+      "kind": "planta",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "embedded",
+      "covered_by": "hoja_semillas_nikak_1",
+      "sheets": 0,
+      "note": "Nombrado entre las semillas; su fruto es además recipiente, pero el relato no lo usa como objeto."
+    },
+    {
+      "id": "platano",
+      "name": "Plátano",
+      "kind": "planta",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "embedded",
+      "covered_by": "hoja_semillas_nikak_1",
+      "sheets": 0,
+      "note": "Nombrado en la lista de semillas cargadas en canastos."
+    },
+    {
+      "id": "yuca_dulce",
+      "name": "Yuca dulce",
+      "kind": "planta",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "embedded",
+      "covered_by": "hoja_semillas_nikak_2",
+      "sheets": 0,
+      "note": "El relato distingue yuca dulce y amarga: es una diferencia que la hoja de semillas debe mostrar, no fundir."
+    },
+    {
+      "id": "yuca_amarga",
+      "name": "Yuca amarga",
+      "kind": "planta",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "embedded",
+      "covered_by": "hoja_semillas_nikak_2",
+      "sheets": 0,
+      "note": "Distinta de la dulce en el propio texto."
+    },
+    {
+      "id": "maiz",
+      "name": "Maíz",
+      "kind": "planta",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "embedded",
+      "covered_by": "hoja_semillas_nikak_2",
+      "sheets": 0,
+      "note": "Nombrado en la lista de semillas cargadas en canastos."
+    },
+    {
+      "id": "name",
+      "name": "Ñame",
+      "kind": "planta",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "embedded",
+      "covered_by": "hoja_semillas_nikak_2",
+      "sheets": 0,
+      "note": "Cierra la lista de nueve cultivos traídos desde bak."
+    },
+    {
+      "id": "canastos",
+      "name": "Canastos de carga",
+      "kind": "objeto",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "embedded",
+      "covered_by": "hoja_semillas_nikak_2",
+      "sheets": 0,
+      "note": "Único objeto manufacturado del relato: «Las cargaban con canastos». Va con las semillas porque su función es transportarlas."
+    },
+    {
+      "id": "perseguidores_de_bak",
+      "name": "Los seres que perseguían a los Nɨkak en bak",
+      "kind": "criatura",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "excluded",
+      "reason": "sin evidencia visual: el relato sólo dice que «otros seres los perseguían, los atacaban y querían impedirles continuar», sin una sola línea sobre su forma; dibujarlos sería inventarlos",
+      "sheets": 0,
+      "note": "Verificado contra el texto. Conducen la acción, pero eso no basta si no hay nada que dibujar: si un keyframe los necesita, se resuelven como amenaza fuera de campo."
+    },
+    {
+      "id": "idn_kamni_y_el_rio_de_leche",
+      "name": "Idn Kamni, la saliva, la tierra y el Río de Leche",
+      "kind": "deidad_fuerza",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "excluded",
+      "reason": "atribución Kakua retirada: la investigación de Mahecha demuestra que ese héroe y ese trayecto pertenecen al origen Kakua, no al Nɨkak, y la ficha fue reescrita por completo conservando sólo la URL",
+      "sheets": 0,
+      "note": "Es la trampa central de esta comunidad, y es exactamente la falta de mezclar iconografía de un pueblo en otro. Las dos imágenes heredadas ilustraban esta versión equivocada y fueron reemplazadas."
+    },
+    {
+      "id": "mauro",
+      "name": "Mauro",
+      "kind": "deidad_fuerza",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "excluded",
+      "reason": "se menciona en el aparato crítico pero no en el relato: la historia lo nombra como el héroe que los Nɨkak reconocen, y ninguna escena del mito lo muestra",
+      "sheets": 0,
+      "note": "Séptima pasada. Sirve para separar Nɨkak de Kakua, no para producir imagen."
+    },
+    {
+      "id": "otros_pobladores_y_la_violencia_del_contacto",
+      "name": "Los otros pobladores y su violencia",
+      "kind": "colectivo",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "excluded",
+      "reason": "materia sensible y sin descripción: el relato cierra con la llegada y la violencia de otros pobladores sin describirlos, y el canon advierte contra convertir el desplazamiento forzado en espectáculo",
+      "sheets": 0,
+      "note": "El cierre del mito es memoria de desplazamiento contemporáneo (contacto oficial 1988, epidemias). Se narra, no se ilustra."
+    },
+    {
+      "id": "cantos_formulas_y_procedimientos_chamanicos",
+      "name": "Cantos, fórmulas y procedimientos chamánicos",
+      "kind": "fenomeno",
+      "myths": ["creacion-nukak-maku"],
+      "decision": "excluded",
+      "reason": "do_not_visualize: el canon declara que sólo resume material publicado y que no reproduce cantos, fórmulas, procedimientos chamánicos ni localizaciones operativas",
+      "sheets": 0,
+      "note": "No aparecen en el relato; los registro para que el límite quede escrito antes de diseñar y no después."
+    }
+  ],
+  "sheet_groups": [
+    {
+      "id": "hoja_semillas_nikak_1",
+      "kind": "planta",
+      "covers": ["semilla_chontaduro", "semilla_tabaco", "semilla_cana", "totumo", "platano"],
+      "sheets": 1,
+      "note": "Primera hoja de cinco semillas. Las semillas no son utilería decorativa en este relato: son la prueba de que salir de bak fue trasladar una agricultura, no huir con las manos vacías."
+    },
+    {
+      "id": "hoja_semillas_nikak_2",
+      "kind": "planta",
+      "covers": ["yuca_dulce", "yuca_amarga", "maiz", "name", "canastos"],
+      "sheets": 1,
+      "note": "Segunda hoja de cinco piezas: las cuatro semillas restantes más el canasto que las carga. La yuca dulce y la amarga deben leerse distintas."
+    }
+  ],
+  "totals": {
+    "entities": 27,
+    "required": 6,
+    "embedded": 16,
+    "excluded": 5,
+    "sheets": 9
+  }
+}

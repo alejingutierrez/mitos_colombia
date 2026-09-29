@@ -1,0 +1,190 @@
+{
+  "schema": "mitos-colombia-acta-y-escenas/v1",
+  "mito": "incesto-de-padre-hija",
+  "titulo": "La unión prohibida que endureció la tierra",
+  "corpus": "koguis",
+  "comunidad": "Kogui (Kággaba)",
+  "canon_slug": "incesto-de-padre-hija",
+  "canon_field": "mito",
+  "canon_sha256": "4e063de33f48f283ed251ed75c6043f73e6cfc830fc04f2c0a8e56f19c837b31",
+  "canon_chars": 474,
+  "nudos": [
+    {
+      "id": "n01",
+      "nudo": "El mundo empieza sin consistencia",
+      "evidencia": "Cuando por vez primera existió el mundo, la tierra era blandita"
+    },
+    {
+      "id": "n02",
+      "nudo": "La tierra blanda se traga lo que se le pone encima",
+      "evidencia": "todo se enterraba"
+    },
+    {
+      "id": "n03",
+      "nudo": "El problema que hay que resolver es un idioma, no la tierra",
+      "evidencia": "los padres tuvieron que buscar un idioma"
+    },
+    {
+      "id": "n04",
+      "nudo": "La solución es una orden dada a un hombre, y el relato la dice de lado",
+      "evidencia": "mandaron a un hombre que hiciera cosas con su hija"
+    },
+    {
+      "id": "n05",
+      "nudo": "La orden funciona: la tierra se endurece",
+      "evidencia": "La tierra entonces se endureció"
+    },
+    {
+      "id": "n06",
+      "nudo": "El precio lo paga un cuerpo, y el cuerpo empieza por la cabeza",
+      "evidencia": "la hija dio a luz con la cabeza blandita"
+    },
+    {
+      "id": "n07",
+      "nudo": "La blandura del mundo se traslada entera al recién nacido",
+      "evidencia": "las manos, y los brazos, y las piernas también blanditas, como si no tuviera huesos"
+    },
+    {
+      "id": "n08",
+      "nudo": "El resultado se nombra sin rodeo",
+      "evidencia": "Salió enfermo"
+    },
+    {
+      "id": "n09",
+      "nudo": "Los mamas juzgan y el juicio es explícito",
+      "evidencia": "Entonces los mamas dijeron: eso es muy malo, no hay que hacerlo más"
+    },
+    {
+      "id": "n10",
+      "nudo": "El relato no termina en el niño: termina en una ley sin fecha de caducidad",
+      "evidencia": "Y lo prohibieron hasta el fin"
+    }
+  ],
+  "deslindes": [
+    "Este relato es de los anteriores a Kasaugue y a Gotzé, y ahí está su regla más dura: no existen todavía árbol, palma, bejuco, techo ni fuego, porque los tres materiales del techo salen del despedazamiento de Kasaugue y el fuego reparte hasta las cuatro flechas de Gotzé. Ninguna de las tres escenas lleva vegetación, techumbre ni fogón; la tierra blanda y la luz sin sol son todo el decorado que el relato autoriza.",
+    "«Los padres» que buscan idioma y «los mamas» que prohíben al final no son dos autoridades distintas que la biblia pueda separar: el corpus sólo ficha `colectivo_mamas`, y la escena no inventa un segundo consejo. Es el mismo cuerpo colectivo en dos momentos, y la diferencia se compone por postura —deliberando y luego sentenciando—, nunca por insignia.",
+    "El hombre y la hija no tienen ficha propia: los cubre `colectivo_gente_kogui`. Ninguna escena les da atributo, adorno ni rasgo que los distinga del resto, porque el relato tampoco se los da: son un hombre y una hija, sin nombre y sin cargo.",
+    "La criatura sin huesos se resuelve por materia y no por anatomía. El propio corpus pide leer el mito como origen de una prohibición y no como descripción de una práctica, así que la lámina da un cuerpo que no sostiene su propia forma —papel que cede, borde que se vence— y no un niño deforme legible con cara.",
+    "«Buscar un idioma» no es hablar ni escribir. Es el encargo, y su resultado visible es que la tierra deja de tragarse las cosas. Ninguna escena dibuja signo, letra ni boca abierta: el idioma se ve en el suelo que por fin aguanta un pie."
+  ],
+  "descartes": [
+    {
+      "que": "El acto sexual",
+      "razon": "Excluido en todo el carril kogui, y el propio canon lo dice de lado —«que hiciera cosas con su hija»—. La lámina respeta ese rodeo: los dos cuerpos aparecen apartados y sin contacto."
+    },
+    {
+      "que": "El parto",
+      "razon": "El nudo n06 se sostiene con la criatura ya nacida sobre la tierra endurecida. Poner el parto convertiría un origen de prohibición en una escena clínica."
+    },
+    {
+      "que": "La madre en la escena final",
+      "razon": "El canon la nombra sólo como quien da a luz y después la suelta; el juicio de los mamas no la incluye. Componerla en la huella le echaría encima la sentencia que el texto no le echa."
+    }
+  ],
+  "N_propuesto": 8,
+  "razon_N": "Diez nudos que son un solo movimiento con dos caras: el mundo gana consistencia exactamente al mismo tiempo que un cuerpo la pierde. Ocho bloques permiten que esas dos curvas corran en paralelo y se crucen en el parto, que es el único instante del relato; menos bloques obligarían a elegir una de las dos y el mito es la coincidencia de ambas.",
+  "escenas": [
+    {
+      "id": "e1",
+      "papel": "entrada",
+      "encuadre": "16:9",
+      "cubre": [
+        "n01",
+        "n02",
+        "n03"
+      ],
+      "momento": "El consejo está de pie sobre una tierra que no los sostiene, y de eso, no del sexo, es de lo que se habla.",
+      "composicion": "Plano general apaisado y bajo, casi a ras. Los mamas en grupo cerrado en el tercio central-izquierdo, de cuerpo entero, hundidos hasta media pantorrilla en un suelo que cede; detrás de ellos, cosas a medio tragar por la tierra que fijan la escala. A la derecha, un hombre y su hija, de pie, separados, todavía sin papel. Cielo sin sol, luz plana y sin dirección. Ni una hoja, ni un palo clavado, ni una brasa en todo el cuadro.",
+      "entity_refs": [
+        "colectivo_mamas",
+        "colectivo_gente_kogui",
+        "tierra_que_endurece",
+        "sierra_nevada"
+      ],
+      "no_mostrar": [
+        "árboles, palma o bejuco",
+        "techo o cobertizo",
+        "fuego de cualquier clase",
+        "sol en el cielo"
+      ]
+    },
+    {
+      "id": "e2",
+      "papel": "acto",
+      "encuadre": "9:16",
+      "cubre": [
+        "n04",
+        "n05"
+      ],
+      "momento": "La orden baja y el suelo sube: lo que se manda no se ve, y lo que se endurece sí.",
+      "composicion": "Vertical de tres bandas. Arriba, los mamas vistos desde abajo, con el brazo tendido hacia el fondo del cuadro: mandan. En medio, el hombre y la hija, de espaldas el uno a la otra y separados por todo el ancho del vertical, caminando cada uno hacia un borde; entre ellos, aire vacío. Abajo, el suelo, que en el tercio inferior pasa de barro que se hunde a costra partida y firme, con la línea del cambio corriendo de un lado a otro. Sube la tierra, baja la orden, y el eje las cruza en el vacío que hay entre los dos cuerpos.",
+      "entity_refs": [
+        "colectivo_mamas",
+        "colectivo_gente_kogui",
+        "tierra_que_endurece"
+      ],
+      "no_mostrar": [
+        "contacto entre el hombre y la hija",
+        "acto sexual de cualquier forma",
+        "vegetación, techo o fuego"
+      ]
+    },
+    {
+      "id": "e3",
+      "papel": "huella",
+      "encuadre": "1:1",
+      "cubre": [
+        "n06",
+        "n07",
+        "n08",
+        "n09",
+        "n10"
+      ],
+      "momento": "Sobre la tierra que ya aguanta queda un cuerpo que no aguanta, y encima la ley.",
+      "composicion": "Cuadrada y cerrada, vista desde arriba. En el centro, sobre la costra dura y agrietada, la criatura sin huesos: una masa clara que no sostiene su propia forma, con cabeza, brazos y piernas insinuados sólo por el modo en que el material se vence; sin cara, sin ojos, sin detalle anatómico. Alrededor, entrando por los cuatro bordes, los pies y los bajos del vestido de los mamas formando un anillo cerrado que es la prohibición. El contraste del cuadro es uno solo: el suelo por fin firme contra el único cuerpo blando que queda en el mundo.",
+      "entity_refs": [
+        "criatura_sin_huesos",
+        "colectivo_mamas",
+        "tierra_que_endurece"
+      ],
+      "no_mostrar": [
+        "el parto",
+        "la madre",
+        "rostro o anatomía legible de la criatura",
+        "vegetación, techo o fuego"
+      ]
+    }
+  ],
+  "entidades_disponibles": [
+    {
+      "entity_id": "colectivo_gente_kogui",
+      "role": "secondary",
+      "name": "La gente kogui (hombres, mujeres, niños y viejos)",
+      "kind": "colectivo"
+    },
+    {
+      "entity_id": "colectivo_mamas",
+      "role": "secondary",
+      "name": "Los mamas",
+      "kind": "colectivo"
+    },
+    {
+      "entity_id": "criatura_sin_huesos",
+      "role": "primary",
+      "name": "La criatura sin huesos",
+      "kind": "criatura"
+    },
+    {
+      "entity_id": "sierra_nevada",
+      "role": "setting",
+      "name": "La Sierra Nevada",
+      "kind": "paisaje"
+    },
+    {
+      "entity_id": "tierra_que_endurece",
+      "role": "magic_subject",
+      "name": "La tierra blanda que endurece",
+      "kind": "fenomeno"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "bogota-sabana-mestizo",
+  "comunidad": "Bogotá y la sabana",
+  "tanda": "tanda-08-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/bogota-sabana-mestizo.v3.json",
+    "sha256": "55c8aadb6274065fccc72a76abc5b3542957a51530be49e80137f3b3b6996998"
+  },
+  "canon": {
+    "sha256": "f40bff7bfadd041235920c5f638d1f9ad9ce9fb5b40b91e9893d958d2674ad1d",
+    "verificado_en": "2026-09-29T02:56:50.247Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 10,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "calle_bogotana__spatial_model--canon",
+      "modelo": "calle_bogotana__spatial_model",
+      "entidad": "La calle bogotana",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-bobo-del-tranvia",
+        "el-loco-arias",
+        "los-fantasmas-de-la-candelaria",
+        "el-enigmatico-abogado",
+        "el-hombre-del-farol",
+        "el-toro-en-el-ascensor",
+        "la-bruja-del-tranvia",
+        "la-mula-herrada",
+        "la-monja-vidente-y-el-taxista",
+        "la-loca-margarita",
+        "los-esqueletos-caminantes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8283,
+      "prompt_sha256": "d3ef406b1ed9be986a21d11423f7fd563bd97b005e604324196d50c52707f22d"
+    },
+    {
+      "job": "calle_bogotana__state_sheet--estado_la misma traza en el siglo XX- calzada pavimentada, rieles embebidos, acera con bordillo, automóviles, buses y camiones, y fachadas republicanas de dos niveles",
+      "modelo": "calle_bogotana__state_sheet",
+      "entidad": "La calle bogotana",
+      "categoria": "arquitectura",
+      "vista": "estado_la misma traza en el siglo XX: calzada pavimentada, rieles embebidos, acera con bordillo, automóviles, buses y camiones, y fachadas republicanas de dos niveles",
+      "estados": [
+        "la misma traza en el siglo XX: calzada pavimentada, rieles embebidos, acera con bordillo, automóviles, buses y camiones, y fachadas republicanas de dos niveles"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-bobo-del-tranvia",
+        "el-loco-arias",
+        "los-fantasmas-de-la-candelaria",
+        "el-enigmatico-abogado",
+        "el-hombre-del-farol",
+        "el-toro-en-el-ascensor",
+        "la-bruja-del-tranvia",
+        "la-mula-herrada",
+        "la-monja-vidente-y-el-taxista",
+        "la-loca-margarita",
+        "los-esqueletos-caminantes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9424,
+      "prompt_sha256": "81dbfcb0183a0cc8c05cc4b1a88cc59360d793330313659fe7ab70a71a5a2258"
+    },
+    {
+      "job": "casa_colonial_zaguan_patio__spatial_model--canon",
+      "modelo": "casa_colonial_zaguan_patio__spatial_model",
+      "entidad": "Casa colonial de zaguán, patio y balcón",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-fantasmas-de-la-candelaria",
+        "el-enigmatico-abogado",
+        "la-mula-herrada",
+        "la-loca-margarita"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8518,
+      "prompt_sha256": "277ba1c687499c215539fa26c3d7785974338feebdd4554a634b71fec0ab066e"
+    },
+    {
+      "job": "plaza_mayor_santafe__spatial_model--canon",
+      "modelo": "plaza_mayor_santafe__spatial_model",
+      "entidad": "La Plaza Mayor (Plaza de Bolívar)",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-mono-de-la-pila",
+        "el-enigmatico-abogado"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8095,
+      "prompt_sha256": "56431f8ea33579e7f0728a2b5c38602dc861bc73042b21ba554a04953b620a67"
+    },
+    {
+      "job": "sala_funeraria_y_morgue__spatial_model--canon",
+      "modelo": "sala_funeraria_y_morgue__spatial_model",
+      "entidad": "Interior funerario moderno (sala de velación y morgue)",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-monja-vidente-y-el-taxista",
+        "los-esqueletos-caminantes"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7532,
+      "prompt_sha256": "b5e61b410dd1ab8d52bb232fee6c6a74650b9b1431832a90fd1c6a4bce9b6830"
+    },
+    {
+      "job": "puente_del_comun__spatial_model--canon",
+      "modelo": "puente_del_comun__spatial_model",
+      "entidad": "El Puente del Común",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8528,
+      "prompt_sha256": "e869c9a3072cf9b3f25b6644ef8de3a9352a423feffd04947eb841e394ce7026"
+    },
+    {
+      "job": "puente_del_comun__state_sheet--estado_en obra, con el hueco del último sillar abierto en el arco y la fila de piedras aún en el suelo",
+      "modelo": "puente_del_comun__state_sheet",
+      "entidad": "El Puente del Común",
+      "categoria": "arquitectura",
+      "vista": "estado_en obra, con el hueco del último sillar abierto en el arco y la fila de piedras aún en el suelo",
+      "estados": [
+        "en obra, con el hueco del último sillar abierto en el arco y la fila de piedras aún en el suelo"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8893,
+      "prompt_sha256": "cc9d2798ea6d1daf2fdf4fe806a9ea755ad242336c88bc1f459683b2e6e32e5a"
+    },
+    {
+      "job": "quinta_de_bolivar__spatial_model--canon",
+      "modelo": "quinta_de_bolivar__spatial_model",
+      "entidad": "La Quinta de Bolívar, casa y jardín",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-monja-de-las-rosas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8424,
+      "prompt_sha256": "4b1289a91656b92ecd3243f2dbdad14f927299e9b53a5cc934adf25b7dc57b7a"
+    },
+    {
+      "job": "quinta_de_bolivar__state_sheet--estado_interior- el pasillo frente al despacho, con suelo y muros de madera encerada, una puerta a cada lado y una mesa con el florero",
+      "modelo": "quinta_de_bolivar__state_sheet",
+      "entidad": "La Quinta de Bolívar, casa y jardín",
+      "categoria": "arquitectura",
+      "vista": "estado_interior: el pasillo frente al despacho, con suelo y muros de madera encerada, una puerta a cada lado y una mesa con el florero",
+      "estados": [
+        "interior: el pasillo frente al despacho, con suelo y muros de madera encerada, una puerta a cada lado y una mesa con el florero"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-monja-de-las-rosas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8645,
+      "prompt_sha256": "002f15277522e424bba3641da0018af9470ee2c211e11b3578eb983b69416eda"
+    },
+    {
+      "job": "vestibulo_y_ascensor__spatial_model--canon",
+      "modelo": "vestibulo_y_ascensor__spatial_model",
+      "entidad": "Vestíbulo de oficinas con ascensor antiguo",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-toro-en-el-ascensor"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8119,
+      "prompt_sha256": "7612f25694e8e443a1d0994e2ca841cbe1d596aeb20a50c8e971bfd2fd351afd"
+    }
+  ]
+}

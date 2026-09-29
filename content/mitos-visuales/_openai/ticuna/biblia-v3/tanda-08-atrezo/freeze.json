@@ -1,0 +1,262 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ticuna",
+  "comunidad": "Ticuna",
+  "tanda": "tanda-08-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ticuna.v3.json",
+    "sha256": "fd0c6ffe84de74c45161ae42823d427354bcefa0940f5eb72ce2559eac09f0a3"
+  },
+  "canon": {
+    "sha256": "508298d7f6b1c813ab2d8c0bf8438b2829b11c5b30bc6045eb9ce969dbb95dc9",
+    "verificado_en": "2026-09-29T02:10:03.538Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 13,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_ticuna_pesca__object_sheet--canon",
+      "modelo": "hoja_utileria_ticuna_pesca__object_sheet",
+      "entidad": "hoja utileria ticuna pesca",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe",
+        "origen-del-friaje-tikuna",
+        "origen-de-la-luna-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4970,
+      "prompt_sha256": "dd6ff02a754ca419adf9a80f15d30f955577abfa1255b6e67676981adb028610"
+    },
+    {
+      "job": "hoja_utileria_ticuna_domestica__object_sheet--canon",
+      "modelo": "hoja_utileria_ticuna_domestica__object_sheet",
+      "entidad": "hoja utileria ticuna domestica",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-sol-tikuna",
+        "la-canoa-de-moe",
+        "origen-de-la-luna-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5246,
+      "prompt_sha256": "f082518428add967c2236d7366ab15353ae0d6ca5f4734dd241ac5aca5df51f8"
+    },
+    {
+      "job": "huito__botanical_sheet--canon",
+      "modelo": "huito__botanical_sheet",
+      "entidad": "Huito",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra",
+        "origen-de-la-luna-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5480,
+      "prompt_sha256": "b22827ce505670415c337b5b94ff4a03cb602dba8fd8180e01fc44018a241629"
+    },
+    {
+      "job": "huito__state_sheet--estado_zumo recién aplicado, todavía casi incoloro",
+      "modelo": "huito__state_sheet",
+      "entidad": "Huito",
+      "categoria": "planta",
+      "vista": "estado_zumo recién aplicado, todavía casi incoloro",
+      "estados": [
+        "zumo recién aplicado, todavía casi incoloro"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra",
+        "origen-de-la-luna-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6106,
+      "prompt_sha256": "706b817573f5a29b1dcc225486ac4491b4ca88245575e1cd8b92d3611baa9f54"
+    },
+    {
+      "job": "tinaja__object_sheet--canon",
+      "modelo": "tinaja__object_sheet",
+      "entidad": "Tinaja",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-canoa-de-moe",
+        "origen-del-friaje-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4848,
+      "prompt_sha256": "281d657dc989a7787c65aba60ad6aae6447bdcc7945a9202e51ece93b03e87d5"
+    },
+    {
+      "job": "wone__botanical_sheet--canon",
+      "modelo": "wone__botanical_sheet",
+      "entidad": "Wone, el árbol inmenso",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra",
+        "creacion"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5338,
+      "prompt_sha256": "cc6f0fa116cbab8fcb337f11a6c793dfd9ede2333e7ac767783d501a3c3d4dfb"
+    },
+    {
+      "job": "wone__state_sheet--estado_caído, convertido en la red fluvial",
+      "modelo": "wone__state_sheet",
+      "entidad": "Wone, el árbol inmenso",
+      "categoria": "planta",
+      "vista": "estado_caído, convertido en la red fluvial",
+      "estados": [
+        "caído, convertido en la red fluvial"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra",
+        "creacion"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5404,
+      "prompt_sha256": "da230316e0eb4b217ec9f62ff66fbacfc0dd7aa4226de86b313f512633ad32b1"
+    },
+    {
+      "job": "achiote__botanical_sheet--canon",
+      "modelo": "achiote__botanical_sheet",
+      "entidad": "Achiote",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5389,
+      "prompt_sha256": "a5137f61338ebcc85403c4b5060bf8f1a8f074a6a1bbeec98dae5ff4ea0400da"
+    },
+    {
+      "job": "arbol-de-umari__botanical_sheet--canon",
+      "modelo": "arbol-de-umari__botanical_sheet",
+      "entidad": "Árbol de umarí nacido del corazón",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 4865,
+      "prompt_sha256": "e0c95ca5c07bec2fb580d30b6770a410b39b50c49cf2c58d33d6374d8bfb2e0f"
+    },
+    {
+      "job": "arbol-del-centro-de-la-chagra__botanical_sheet--canon",
+      "modelo": "arbol-del-centro-de-la-chagra__botanical_sheet",
+      "entidad": "Árbol del centro de la chagra nueva",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 4983,
+      "prompt_sha256": "26bb62732fb8b1b06fbb192e0e5d2e176536118b5a6660344adf8be7cbfe7ac8"
+    },
+    {
+      "job": "canoa-de-moe__object_sheet--canon",
+      "modelo": "canoa-de-moe__object_sheet",
+      "entidad": "Canoa tallada por Moe",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-canoa-de-moe"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5090,
+      "prompt_sha256": "3c7224503287147d507ef9490acc47f93789362eab4f0ae19f3cde1a6bbf51bf"
+    },
+    {
+      "job": "envoltorio-de-hojas-con-peces__object_sheet--canon",
+      "modelo": "envoltorio-de-hojas-con-peces__object_sheet",
+      "entidad": "Envoltorio de hojas con unos pocos peces",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-friaje-tikuna"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 4863,
+      "prompt_sha256": "4b1a6a87c9dc559be85880177d11963ad3391c850b5ec00ef22639030028494e"
+    },
+    {
+      "job": "wocha__botanical_sheet--canon",
+      "modelo": "wocha__botanical_sheet",
+      "entidad": "Wocha",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-de-la-luna-tikuna"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 4808,
+      "prompt_sha256": "13606b8615034c79e2b0286e66aed548b33e1bf52fec6a5d22b5d115e370113f"
+    }
+  ]
+}
