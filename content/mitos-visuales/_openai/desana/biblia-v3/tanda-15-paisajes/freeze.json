@@ -1,0 +1,175 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "desana",
+  "comunidad": "Desana",
+  "tanda": "tanda-15-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/desana.v3.json",
+    "sha256": "5150271412e731c2bb739392ea129628445c141f3cf5dca9647a00c65ea16fd8"
+  },
+  "canon": {
+    "sha256": "8b8f46b02293c31171ca7a65e5be964d782b26572a712b75a0811e6db9d2dc34",
+    "verificado_en": "2026-09-29T01:36:20.894Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "rio_vaupes_tiquie__environment_model--canon",
+      "modelo": "rio_vaupes_tiquie__environment_model",
+      "entidad": "El sistema fluvial (Amazonas, Negro, Uaupés, Tiquié)",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-desana",
+        "agamahsapu-y-el-tiempo-del-umari",
+        "el-origen-de-la-noche-desana",
+        "yurupari",
+        "gainpaya-y-el-origen-del-chontaduro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5647,
+      "prompt_sha256": "f95d1636ce72976d9b80f87a513abc6c0422254e76dcbd6b001ca082d10c3fde"
+    },
+    {
+      "job": "selva_vaupes__environment_model--canon",
+      "modelo": "selva_vaupes__environment_model",
+      "entidad": "La selva del Alto Río Negro",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "agamahsapu-y-el-tiempo-del-umari",
+        "el-origen-de-la-mandioca-desana",
+        "guelamun-ye-el-nieto-del-trueno"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5568,
+      "prompt_sha256": "60f2c8322c009bcc4173a34b7b4a8bc5f1130f1cf7fe62b9aec43452641d8930"
+    },
+    {
+      "job": "canaveral__environment_model--canon",
+      "modelo": "canaveral__environment_model",
+      "entidad": "El cañaveral",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "nuguye-y-sepiro-fuego-y-creciente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5514,
+      "prompt_sha256": "c79922ae1072e71c159d592f0fb7fda7fde93f9941af9f71f675aec24214931d"
+    },
+    {
+      "job": "cerro_que_crece__spatial_model--canon",
+      "modelo": "cerro_que_crece__spatial_model",
+      "entidad": "El cerro que crece sobre la creciente",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "nuguye-y-sepiro-fuego-y-creciente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5392,
+      "prompt_sha256": "444485ace6caa41878da1707b33c91a510bcaa0c6482257a48ba2cf4573d74c4"
+    },
+    {
+      "job": "chagra_circular__spatial_model--canon",
+      "modelo": "chagra_circular__spatial_model",
+      "entidad": "La chagra circular de Baaribo",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-origen-de-la-mandioca-desana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5694,
+      "prompt_sha256": "270c01f534ffb7c050086168757dcf75cee6e5a787c4b2cada87b3b21d39d2d6"
+    },
+    {
+      "job": "cuatro_montanas_pilares__environment_model--canon",
+      "modelo": "cuatro_montanas_pilares__environment_model",
+      "entidad": "Las cuatro montañas pilares del cielo",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "nuguye-y-sepiro-fuego-y-creciente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5573,
+      "prompt_sha256": "6d1c6459aacac02d026c790497f78f765b752d838502f9e61ab58969189bcbbf"
+    },
+    {
+      "job": "ipanore__spatial_model--canon",
+      "modelo": "ipanore__spatial_model",
+      "entidad": "Ipanoré, la abertura en la piedra",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-desana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5403,
+      "prompt_sha256": "90db9ebc900479ffa84fc5f13ead4c0451dd37c0f65f33f4bc92f1b569d378b9"
+    },
+    {
+      "job": "lago_de_leche__spatial_model--canon",
+      "modelo": "lago_de_leche__spatial_model",
+      "entidad": "El Lago de Leche",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-desana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5480,
+      "prompt_sha256": "90e1f1cedbf873e04df476c920da18a9868a9a92507252fd71c300171e083e40"
+    }
+  ]
+}

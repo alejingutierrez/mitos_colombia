@@ -1,0 +1,98 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "desana",
+  "comunidad": "Desana",
+  "tanda": "tanda-12-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/desana.v3.json",
+    "sha256": "5150271412e731c2bb739392ea129628445c141f3cf5dca9647a00c65ea16fd8"
+  },
+  "canon": {
+    "sha256": "8b8f46b02293c31171ca7a65e5be964d782b26572a712b75a0811e6db9d2dc34",
+    "verificado_en": "2026-09-29T01:32:39.210Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "gavilanes_reales__identity_sheet--canon",
+      "modelo": "gavilanes_reales__identity_sheet",
+      "entidad": "Los dos gavilanes reales",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "agamahsapu-y-el-tiempo-del-umari"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 4804,
+      "prompt_sha256": "22a4f42a448985a8a0652a11306c0157fcfae1185de3a363f0bf623b920428d3"
+    },
+    {
+      "job": "oa_chucha__identity_sheet--canon",
+      "modelo": "oa_chucha__identity_sheet",
+      "entidad": "Oá, la chucha",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "agamahsapu-y-el-tiempo-del-umari"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5386,
+      "prompt_sha256": "525f31180bd9c45003209c3547f4ff63498337cc7449e2c768dde384e3382412"
+    },
+    {
+      "job": "pamurigahsiru__identity_sheet--canon",
+      "modelo": "pamurigahsiru__identity_sheet",
+      "entidad": "Pamürïgahsiru, la Canoa de Transformación",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-desana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5589,
+      "prompt_sha256": "58d4452d6419a63b28e6bb62c7f15b9b0a5567142d71e99dfa4878932b610809"
+    },
+    {
+      "job": "sepiro__identity_sheet--canon",
+      "modelo": "sepiro__identity_sheet",
+      "entidad": "Sëpïrõ",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "nuguye-y-sepiro-fuego-y-creciente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5496,
+      "prompt_sha256": "7d653a7504b0bcc03fb4fbcf9c7a93b372d8e6087fa7d82839faf71517e9058f"
+    }
+  ]
+}

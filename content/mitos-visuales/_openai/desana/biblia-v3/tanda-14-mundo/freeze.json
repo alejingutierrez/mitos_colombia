@@ -1,0 +1,190 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "desana",
+  "comunidad": "Desana",
+  "tanda": "tanda-14-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/desana.v3.json",
+    "sha256": "5150271412e731c2bb739392ea129628445c141f3cf5dca9647a00c65ea16fd8"
+  },
+  "canon": {
+    "sha256": "8b8f46b02293c31171ca7a65e5be964d782b26572a712b75a0811e6db9d2dc34",
+    "verificado_en": "2026-09-29T01:34:54.204Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 9,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "maloca_desana__spatial_model--canon",
+      "modelo": "maloca_desana__spatial_model",
+      "entidad": "La maloca Desana",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-origen-de-la-noche-desana",
+        "guelamun-ye-el-nieto-del-trueno",
+        "yurupari"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5372,
+      "prompt_sha256": "7ace4c681f09514da6e183f32aff47e98f53f110a0d6a3f6e8a3898df4b9c810"
+    },
+    {
+      "job": "casas_de_transformacion__spatial_model--canon",
+      "modelo": "casas_de_transformacion__spatial_model",
+      "entidad": "Las casas de transformación",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-desana",
+        "agamahsapu-y-el-tiempo-del-umari"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5163,
+      "prompt_sha256": "b8c6a63f17da368bbe3cbb5f258932b074a0169e6d8f1f01d8ccc378b8d016ee"
+    },
+    {
+      "job": "incendio_del_mundo__phenomenon_rule--canon",
+      "modelo": "incendio_del_mundo__phenomenon_rule",
+      "entidad": "El incendio que arrasa el mundo",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "guelamun-ye-el-nieto-del-trueno",
+        "nuguye-y-sepiro-fuego-y-creciente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5356,
+      "prompt_sha256": "c7962587d7405aeb3aebc7ba8362b71e9ab2434dcbba0c3f876d457b13acb37a"
+    },
+    {
+      "job": "maloca_del_universo__spatial_model--canon",
+      "modelo": "maloca_del_universo__spatial_model",
+      "entidad": "La Maloca del Universo",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-desana",
+        "guelamun-ye-el-nieto-del-trueno"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5307,
+      "prompt_sha256": "84bf75038d6485519512c7c01e2cdf42c556d4102b7dbe658fd27a7d39bd99ec"
+    },
+    {
+      "job": "gran_creciente__phenomenon_rule--canon",
+      "modelo": "gran_creciente__phenomenon_rule",
+      "entidad": "La gran creciente",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "nuguye-y-sepiro-fuego-y-creciente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5191,
+      "prompt_sha256": "b035f9560612c24ed96ffd13295688991b2ec57ff88dd96c14e48926b6d9efaf"
+    },
+    {
+      "job": "maloca_de_nami__spatial_model--canon",
+      "modelo": "maloca_de_nami__spatial_model",
+      "entidad": "La maloca de Ñami",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-origen-de-la-noche-desana"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5364,
+      "prompt_sha256": "c7b1204ca5597be00890677b2b5a628d2538071477498ecd5dd27816f7daf1d5"
+    },
+    {
+      "job": "maloca_subacuatica_piro__spatial_model--canon",
+      "modelo": "maloca_subacuatica_piro__spatial_model",
+      "entidad": "La maloca subacuática de Pïrõ",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "gainpaya-y-el-origen-del-chontaduro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5164,
+      "prompt_sha256": "efa14325ead38f8a62327faa4795ffc1be7aac361aa7f0f4aeaa27aa853b3fbb"
+    },
+    {
+      "job": "oscuridad_noche__phenomenon_rule--canon",
+      "modelo": "oscuridad_noche__phenomenon_rule",
+      "entidad": "La noche que escapa del recipiente",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-origen-de-la-noche-desana"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5046,
+      "prompt_sha256": "06c0e903870ce36dd95c4c32d48804670667ab1cfd43d2a8c658fc9b798ea2c4"
+    },
+    {
+      "job": "puerta_de_las_aguas__spatial_model--canon",
+      "modelo": "puerta_de_las_aguas__spatial_model",
+      "entidad": "La Puerta de las Aguas",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "nuguye-y-sepiro-fuego-y-creciente"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5119,
+      "prompt_sha256": "c055e83c37bde78ce88f740cbc86e4156a4ee1ac2ae83539df9f2af774bd7463"
+    }
+  ]
+}
