@@ -1,0 +1,138 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "varios-sin-territorio",
+  "comunidad": "Folclor nacional sin territorio",
+  "tanda": "tanda-02-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/varios-sin-territorio.v3.json",
+    "sha256": "960a317c807ac538873f57921f7eb1ee2bdc9f7c716935e83d742a83ff8dbcbf"
+  },
+  "canon": {
+    "sha256": "c1bf9aa902622b9cc85521f658c702c1ade9370c2901b2317eac5892c1fb77f3",
+    "verificado_en": "2026-09-29T02:32:21.143Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre adulto campesino andino",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-griton",
+        "la-barbacoa-del-muerto",
+        "la-madremonte",
+        "la-viudita",
+        "los-duendes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8221,
+      "prompt_sha256": "42a20e09690a4659e55ee2695a5fc158573521a4422b1d71c467e3f65aedf99d"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer adulta campesina andina",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-barbacoa-del-muerto",
+        "la-mano-peluda",
+        "la-vieja-colmillona"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7981,
+      "prompt_sha256": "1b5c84c0359f005fbb79dceafa7af309a1a0ce17f9514d08fd7110d1f8c565ee"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer joven campesina andina",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-griton",
+        "la-viudita",
+        "los-duendes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7502,
+      "prompt_sha256": "33909696a50d0bbcb70b8be81b02780ac7f4176c0457d334facbed7675dba773"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño campesino andino",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-barbacoa-del-muerto",
+        "la-mano-peluda",
+        "los-duendes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7195,
+      "prompt_sha256": "3b9b8ac1989f498cd24480beb9fdb1e6ed1d87ecaf0c2dbcfa8bef90704ccf20"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base · anciana campesina andina",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-anima-sola",
+        "la-barbacoa-del-muerto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7563,
+      "prompt_sha256": "e17f293e0510e45e7c16dea39b63572f5b2c27966438f72c59b36e00c46c85cf"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base · anciano campesino andino",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-silbon"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7754,
+      "prompt_sha256": "7b3792ed682b993a97bb98100119bd4bfd374624aaf1ab1f63b90c1eea650d66"
+    }
+  ]
+}

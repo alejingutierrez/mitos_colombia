@@ -1,0 +1,105 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "eje-cafetero-mestizo",
+  "comunidad": "Eje cafetero (Caldas)",
+  "tanda": "tanda-08-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/eje-cafetero-mestizo.v3.json",
+    "sha256": "9f8ba174bd5891e94e91e954f2bcea2a27d598d31a430ba67beeaa845313959f"
+  },
+  "canon": {
+    "sha256": "c480be8b294ba9a5b26ca90be264f109e039624b866d0d0c6e73f71fb7fb54da",
+    "verificado_en": "2026-09-29T03:06:49.281Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "casa_de_bahareque__spatial_model--canon",
+      "modelo": "casa_de_bahareque__spatial_model",
+      "entidad": "Casa rural de bahareque con corredor",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cuento-de-animas",
+        "el-aserrador",
+        "el-viejo-del-costal",
+        "las-brujas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9149,
+      "prompt_sha256": "29e06b465e949ebcb43a95a87f328cb3e7552db995751b4a1e309da165904d90"
+    },
+    {
+      "job": "calle_de_pueblo_riosucio__spatial_model--canon",
+      "modelo": "calle_de_pueblo_riosucio__spatial_model",
+      "entidad": "Calle tradicional de Riosucio",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-coco",
+        "el-viejo-del-costal"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8993,
+      "prompt_sha256": "7bdbfad516fcf52b92b0dc7f1b3c51959fad8ef353586f0c2a32f3be5eccc4e5"
+    },
+    {
+      "job": "casa_colonial_de_encomienda__spatial_model--canon",
+      "modelo": "casa_colonial_de_encomienda__spatial_model",
+      "entidad": "Casa colonial de encomienda",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "de-frente-al-sol",
+        "in-illo-tempore"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8104,
+      "prompt_sha256": "b3e6963781ab79c8992814b0b7b7277c03925dc3d8c3fe616b6aedad9ea64e58"
+    },
+    {
+      "job": "casa_colonial_de_encomienda__state_sheet--estado_en ruinas en Playa Rica- cubierta y corredor caídos, dos tramos de muro en pie y la hierba entrando por los huecos",
+      "modelo": "casa_colonial_de_encomienda__state_sheet",
+      "entidad": "Casa colonial de encomienda",
+      "categoria": "arquitectura",
+      "vista": "estado_en ruinas en Playa Rica: cubierta y corredor caídos, dos tramos de muro en pie y la hierba entrando por los huecos",
+      "estados": [
+        "en ruinas en Playa Rica: cubierta y corredor caídos, dos tramos de muro en pie y la hierba entrando por los huecos"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "de-frente-al-sol",
+        "in-illo-tempore"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9099,
+      "prompt_sha256": "14e53825e687d4b77d4c6cb775db99493ba3233c34e3c6de4e2ac1f3876723df"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "cordoba-sinu-mestizo",
+  "comunidad": "Córdoba y el Sinú",
+  "tanda": "tanda-05-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/cordoba-sinu-mestizo.v3.json",
+    "sha256": "8e3b8fb8c27d4013c025448dfd2d78a3c0fd8eab108f3bdc383407093e5379d3"
+  },
+  "canon": {
+    "sha256": "2895fda0dc55b17bb0c61d11c59cfdeaa984f8a59545958e98741430b9f823d8",
+    "verificado_en": "2026-09-29T02:44:05.009Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "los_cachacos__group_grammar--canon",
+      "modelo": "los_cachacos__group_grammar",
+      "entidad": "Los cachacos",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-costeno-y-los-cachacos",
+        "la-mina-de-oro-en-el-infierno",
+        "los-tres-cachacos-y-la-cantara-de-ron-neque",
+        "tio-sapo-y-cangrejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9240,
+      "prompt_sha256": "959b45ce841e68447e22e3dc823b313a6ff7a92723d8bf706965d6c6f1964416"
+    },
+    {
+      "job": "los_ladrones_del_pozo__group_grammar--canon",
+      "modelo": "los_ladrones_del_pozo__group_grammar",
+      "entidad": "Los ladrones del pozo",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "juan-bobo-y-sus-hermanos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9121,
+      "prompt_sha256": "c9cf9ed551bb5dbdba19cc05942a0486082909d3de5cfcd90f2e6b03d31c48ef"
+    }
+  ]
+}

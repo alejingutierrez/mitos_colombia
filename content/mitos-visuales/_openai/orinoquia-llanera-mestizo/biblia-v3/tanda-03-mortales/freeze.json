@@ -1,0 +1,330 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "orinoquia-llanera-mestizo",
+  "comunidad": "Orinoquia llanera",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/orinoquia-llanera-mestizo.v3.json",
+    "sha256": "5c9e9ba72406879a1a2374b67948c258d48aa4fad470bb90c45fc5cd2188ece4"
+  },
+  "canon": {
+    "sha256": "3ccbd7d1dc15e78468cdc4a4a8d493f21cee98326daf946d28c8d999be60fa3e",
+    "verificado_en": "2026-09-29T02:48:03.824Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 14,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "pascual__identity_sheet--canon",
+      "modelo": "pascual__identity_sheet",
+      "entidad": "Pascual",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-domador-de-brujas",
+        "el-dominguez",
+        "el-tirapiedra",
+        "la-bruja-de-los-ojos-miel",
+        "madre-rio-o-mohana",
+        "los-monstruos-de-paratebueno"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8362,
+      "prompt_sha256": "38339cc83bcce38b263d71a732f799c3634d24da4492590c9af1606ecbe46a1a"
+    },
+    {
+      "job": "pascual__state_sheet--estado_volando_en_escoba",
+      "modelo": "pascual__state_sheet",
+      "entidad": "Pascual",
+      "categoria": "personaje",
+      "vista": "estado_volando_en_escoba",
+      "estados": [
+        "volando_en_escoba"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-domador-de-brujas",
+        "el-dominguez",
+        "el-tirapiedra",
+        "la-bruja-de-los-ojos-miel",
+        "madre-rio-o-mohana",
+        "los-monstruos-de-paratebueno"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8223,
+      "prompt_sha256": "74c646a565f4c0dcfc307f58b824a30723d80905850505077db5515b43f22be7"
+    },
+    {
+      "job": "saul_nino_mentiroso__identity_sheet--canon",
+      "modelo": "saul_nino_mentiroso__identity_sheet",
+      "entidad": "Saul, el Nino Mentiroso",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-llano-ayer-hoy",
+        "la-culebra-cascabel",
+        "la-tertulia-de-la-italiana",
+        "el-toro-negro-patorreal",
+        "los-tres-luceros",
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8009,
+      "prompt_sha256": "735ee13954923dbd916396397f409a54b85af03381a199ca6034d77e20ef80bf"
+    },
+    {
+      "job": "saul_nino_mentiroso__state_sheet--estado_de fiesta- camisa de seda azul, pantalón blanco y dos revólveres ingleses al cinto, enfundados",
+      "modelo": "saul_nino_mentiroso__state_sheet",
+      "entidad": "Saul, el Nino Mentiroso",
+      "categoria": "personaje",
+      "vista": "estado_de fiesta: camisa de seda azul, pantalón blanco y dos revólveres ingleses al cinto, enfundados",
+      "estados": [
+        "de fiesta: camisa de seda azul, pantalón blanco y dos revólveres ingleses al cinto, enfundados"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-llano-ayer-hoy",
+        "la-culebra-cascabel",
+        "la-tertulia-de-la-italiana",
+        "el-toro-negro-patorreal",
+        "los-tres-luceros",
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8278,
+      "prompt_sha256": "77343c598082c82db7bda530ae7de46d2ce06f586354cc21fa35b7fb7b281588"
+    },
+    {
+      "job": "saul_nino_mentiroso__state_sheet--estado_viejo de cara curtida, sentado en la barranca del Cravo con una lágrima, sin zurriago",
+      "modelo": "saul_nino_mentiroso__state_sheet",
+      "entidad": "Saul, el Nino Mentiroso",
+      "categoria": "personaje",
+      "vista": "estado_viejo de cara curtida, sentado en la barranca del Cravo con una lágrima, sin zurriago",
+      "estados": [
+        "viejo de cara curtida, sentado en la barranca del Cravo con una lágrima, sin zurriago"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-llano-ayer-hoy",
+        "la-culebra-cascabel",
+        "la-tertulia-de-la-italiana",
+        "el-toro-negro-patorreal",
+        "los-tres-luceros",
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8534,
+      "prompt_sha256": "0646ad7ddbbeb89723a11b6679309a8d5190275726c05abd21b28290b3aa7372"
+    },
+    {
+      "job": "saul_nino_mentiroso__state_sheet--estado_de luto- vestido de negro de pies a cabeza, bajo la lluvia, con la taza de café",
+      "modelo": "saul_nino_mentiroso__state_sheet",
+      "entidad": "Saul, el Nino Mentiroso",
+      "categoria": "personaje",
+      "vista": "estado_de luto: vestido de negro de pies a cabeza, bajo la lluvia, con la taza de café",
+      "estados": [
+        "de luto: vestido de negro de pies a cabeza, bajo la lluvia, con la taza de café"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-llano-ayer-hoy",
+        "la-culebra-cascabel",
+        "la-tertulia-de-la-italiana",
+        "el-toro-negro-patorreal",
+        "los-tres-luceros",
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8263,
+      "prompt_sha256": "3026cb420567f9b5e1e3e5a64731d4e8b097bc4211622197de869e1a76369b09"
+    },
+    {
+      "job": "abelardo_piriachi__identity_sheet--canon",
+      "modelo": "abelardo_piriachi__identity_sheet",
+      "entidad": "Abelardo Piriachi",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-brujo-de-la-costa-del-pauto",
+        "los-tres-luceros"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8152,
+      "prompt_sha256": "e128fdc75c5e125b0b76bc31fe777d9f9132523225541d541e708127533a67a7"
+    },
+    {
+      "job": "ambrosio__identity_sheet--canon",
+      "modelo": "ambrosio__identity_sheet",
+      "entidad": "Ambrosio",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-tres-luceros"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8104,
+      "prompt_sha256": "6bd5d629080a46a3b2819de6f76e7da1ea114e40b1e99d649c57245f13ff0300"
+    },
+    {
+      "job": "catire_melecio__identity_sheet--canon",
+      "modelo": "catire_melecio__identity_sheet",
+      "entidad": "Catire Melecio",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-toro-negro-patorreal"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8413,
+      "prompt_sha256": "1a3e9ba0b302b3f63c97226e8f2cb471429982887a175f43223c935a8b26aab1"
+    },
+    {
+      "job": "jose_amalio_el_catire__identity_sheet--canon",
+      "modelo": "jose_amalio_el_catire__identity_sheet",
+      "entidad": "Catire Jose Amalio",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-delfines-dorados"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8156,
+      "prompt_sha256": "6cb000ad9e6ff6b79dbea4c1680362a60769a3b40a52f817e3a92bc90b67b53b"
+    },
+    {
+      "job": "joven_melecio_hijo__identity_sheet--canon",
+      "modelo": "joven_melecio_hijo__identity_sheet",
+      "entidad": "Melecio hijo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-toro-negro-patorreal"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8055,
+      "prompt_sha256": "fb6364071f1cd1aa9e37e816f9f8fe1f93168b6126273bac1de4e11ebfff9191"
+    },
+    {
+      "job": "padre_manare__identity_sheet--canon",
+      "modelo": "padre_manare__identity_sheet",
+      "entidad": "Padre Manare",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-tesoro-de-caribare"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7824,
+      "prompt_sha256": "4201b3d942b30a8e007d26c2ba31eaa73a298ee5b4a1877461f6da77204661cc"
+    },
+    {
+      "job": "padre_manare__state_sheet--estado_sombra_negra_de_plenilunio",
+      "modelo": "padre_manare__state_sheet",
+      "entidad": "Padre Manare",
+      "categoria": "personaje",
+      "vista": "estado_sombra_negra_de_plenilunio",
+      "estados": [
+        "sombra_negra_de_plenilunio"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-tesoro-de-caribare"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8602,
+      "prompt_sha256": "d0d1ad0e3425c466f789919e071dfc7588be0781f55064f63b833339d50bd09a"
+    },
+    {
+      "job": "pamoare__identity_sheet--canon",
+      "modelo": "pamoare__identity_sheet",
+      "entidad": "Pamoare",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "amanecer-llanero"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8196,
+      "prompt_sha256": "ddc135aedd937e45e227ce583f6fbe0b098faf4aaff9a1a683c1ca06861b00b4"
+    },
+    {
+      "job": "victoriano__identity_sheet--canon",
+      "modelo": "victoriano__identity_sheet",
+      "entidad": "Don Victoriano",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-llano-cobra-sus-deudas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7512,
+      "prompt_sha256": "5c08d1c976c3b21edfe4892a67d448e88369adb82fef0c004415274c8dd34fd4"
+    },
+    {
+      "job": "victoriano__state_sheet--estado_viejo ganadero en vela, sentado con la vela encendida y el libro de cuentas abierto, la marca del pretal todavía en la frente",
+      "modelo": "victoriano__state_sheet",
+      "entidad": "Don Victoriano",
+      "categoria": "personaje",
+      "vista": "estado_viejo ganadero en vela, sentado con la vela encendida y el libro de cuentas abierto, la marca del pretal todavía en la frente",
+      "estados": [
+        "viejo ganadero en vela, sentado con la vela encendida y el libro de cuentas abierto, la marca del pretal todavía en la frente"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-llano-cobra-sus-deudas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8355,
+      "prompt_sha256": "b32c52df10c9801146f848a6af21a57a987faf7823ffc9111c9687502ac347bf"
+    }
+  ]
+}

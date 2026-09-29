@@ -1,0 +1,110 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "caribe-restante-mestizo",
+  "comunidad": "Caribe restante (Magdalena, Cesar, San Andrés)",
+  "tanda": "tanda-01-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/caribe-restante-mestizo.v3.json",
+    "sha256": "86ece956812c9a8bfa74bdc0d8f6739e1b7e8f0c98764df37ad58c78a6b2e33b"
+  },
+  "canon": {
+    "sha256": "23c3a0846f2f3742c390ba7412138b0740a886ab53b10154ee075b8422745b46",
+    "verificado_en": "2026-09-29T03:01:48.941Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base · anciana raizal",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-tesoro-de-morgan"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8714,
+      "prompt_sha256": "3d052e61a96ed41b0c41051b9050e1ef3e59337826b1b354e4b6e8e1e7841517"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base · anciano raizal",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-tesoro-de-morgan"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8827,
+      "prompt_sha256": "0daa2ae1b873c94f3e2d2c8fd4f26bd9d152940bc2410b24fd8007642177258c"
+    },
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre adulto raizal",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "tigre-y-nansi"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8940,
+      "prompt_sha256": "777b0b0fd10f9d7bb4db958b553bff34248721329523d117c3d7a8af5c0d4d0e"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer adulta raizal",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "tigre-y-nansi"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8691,
+      "prompt_sha256": "be91b3cc6b20b80cc48da91c68683b2ad4de18acb49b16afec197dc4c79a1553"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer joven raizal",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "tigre-y-nansi"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8615,
+      "prompt_sha256": "430f99982bd5c6e86b033b070ab1c1036019d8f7a6a3f9d38893a008753d6308"
+    }
+  ]
+}

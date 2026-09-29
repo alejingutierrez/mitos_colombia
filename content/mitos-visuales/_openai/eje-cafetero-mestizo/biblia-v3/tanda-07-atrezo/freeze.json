@@ -1,0 +1,100 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "eje-cafetero-mestizo",
+  "comunidad": "Eje cafetero (Caldas)",
+  "tanda": "tanda-07-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/eje-cafetero-mestizo.v3.json",
+    "sha256": "9f8ba174bd5891e94e91e954f2bcea2a27d598d31a430ba67beeaa845313959f"
+  },
+  "canon": {
+    "sha256": "c480be8b294ba9a5b26ca90be264f109e039624b866d0d0c6e73f71fb7fb54da",
+    "verificado_en": "2026-09-29T03:05:40.597Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_animas_y_conquista__object_sheet--canon",
+      "modelo": "hoja_utileria_animas_y_conquista__object_sheet",
+      "entidad": "hoja utileria animas y conquista",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "cuento-de-animas",
+        "el-cacique-cumanday",
+        "de-frente-al-sol"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8593,
+      "prompt_sha256": "58f5e882a1ca937c62a0633c84888eb890d37ba5445b0c3d208f3dd25ac1904b"
+    },
+    {
+      "job": "baul_de_fotografias_perforadas__object_sheet--canon",
+      "modelo": "baul_de_fotografias_perforadas__object_sheet",
+      "entidad": "Los baúles de los retratos con alfileres",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "las-brujas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8356,
+      "prompt_sha256": "82d8bb4d9f29a4c985e5c173394c972405451fdf4be30b3b16ee3cdff4f5072e"
+    },
+    {
+      "job": "hoja_utileria_arriero_caldense__object_sheet--canon",
+      "modelo": "hoja_utileria_arriero_caldense__object_sheet",
+      "entidad": "hoja utileria arriero caldense",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-aserrador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8547,
+      "prompt_sha256": "086558c43ef1229a47f4bd479bbd9f19802c71986763484f62a3a246d4b16f09"
+    },
+    {
+      "job": "hoja_utileria_brujeria_de_clementina__object_sheet--canon",
+      "modelo": "hoja_utileria_brujeria_de_clementina__object_sheet",
+      "entidad": "hoja utileria brujeria de clementina",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "las-brujas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7985,
+      "prompt_sha256": "8f8d0f82490435999adc2816f362f16ecc531eeb7cf710aa4b2c7e163b022b00"
+    }
+  ]
+}

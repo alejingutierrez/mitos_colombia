@@ -1,0 +1,120 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "pananes",
+  "comunidad": "Panán",
+  "tanda": "tanda-07-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/pananes.v3.json",
+    "sha256": "8d93b70d1b0b66bb77b0d395d4643339ab639357c4bf9a86d329850dde0f158b"
+  },
+  "canon": {
+    "sha256": "e4799c1c37247920d8ac717adb1374d600de3d353adbc42bf9d861a458f135f3",
+    "verificado_en": "2026-09-29T02:28:49.556Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "entundada_quedado_y_espanto__phenomenon_rule--canon",
+      "modelo": "entundada_quedado_y_espanto__phenomenon_rule",
+      "entidad": "La entundada, el quedado y el espanto",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "al-duende",
+        "el-chutun",
+        "la-entundada-el-quedado-el-espanto",
+        "la-laguna-de-maria-panana",
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7195,
+      "prompt_sha256": "411f2a1fa9d95d220d2867dbf13bebb3375a2a4df8940c17dbd998e587144a5d"
+    },
+    {
+      "job": "cueche__phenomenon_rule--canon",
+      "modelo": "cueche__phenomenon_rule",
+      "entidad": "El Cueche",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-cueche",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7252,
+      "prompt_sha256": "3468838528472d2c2fa55800cb37e1390a612d963107c76e7f7446e9dead5a24"
+    },
+    {
+      "job": "basilica_encantada__spatial_model--canon",
+      "modelo": "basilica_encantada__spatial_model",
+      "entidad": "La Basílica encantada",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-basilica-encantada"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7478,
+      "prompt_sha256": "9b8d257a4ad923b2f928de216b585cc6c4d15118c980aef4f1e7bbb8757bc226"
+    },
+    {
+      "job": "granizo_del_cualchio__phenomenon_rule--canon",
+      "modelo": "granizo_del_cualchio__phenomenon_rule",
+      "entidad": "El granizo del Cualchio",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-cualchio-y-la-olla-del-granizo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6983,
+      "prompt_sha256": "62b81329e4cfcfe5932cf59de93c2836657ac777d9f6e949a83a1e070f4591ce"
+    },
+    {
+      "job": "huaca_como_aparicion__phenomenon_rule--canon",
+      "modelo": "huaca_como_aparicion__phenomenon_rule",
+      "entidad": "La huaca como aparición",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-huacas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7173,
+      "prompt_sha256": "a3049f241ced726fb1ebe18a680f523f13bc1f2bdd494486f08dff28bf52408a"
+    }
+  ]
+}

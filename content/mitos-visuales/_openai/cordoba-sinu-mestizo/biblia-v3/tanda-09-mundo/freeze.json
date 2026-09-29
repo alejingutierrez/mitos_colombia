@@ -1,0 +1,192 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "cordoba-sinu-mestizo",
+  "comunidad": "Córdoba y el Sinú",
+  "tanda": "tanda-09-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/cordoba-sinu-mestizo.v3.json",
+    "sha256": "8e3b8fb8c27d4013c025448dfd2d78a3c0fd8eab108f3bdc383407093e5379d3"
+  },
+  "canon": {
+    "sha256": "2895fda0dc55b17bb0c61d11c59cfdeaa984f8a59545958e98741430b9f823d8",
+    "verificado_en": "2026-09-29T02:51:29.081Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "la_casa_de_palma_y_el_patio__spatial_model--canon",
+      "modelo": "la_casa_de_palma_y_el_patio__spatial_model",
+      "entidad": "La casa de palma y su patio",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-hijo-desobediente",
+        "este-era-un-tipo-que-tenia-una-novia",
+        "juan-bobo-y-la-vieja",
+        "juan-bobo-y-sus-hermanos",
+        "la-muerte-de-tio-conejo",
+        "los-tres-cachacos-y-la-cantara-de-ron-neque",
+        "quien-manda-mas-en-casa",
+        "tia-zorra-en-el-maizal-de-tio-conejo",
+        "conejo-y-los-hijos-de-tia-tigra",
+        "el-mocho-y-el-tigre",
+        "este-era-un-joven-que-estaba-estudiando",
+        "los-tres-curas-enamorados",
+        "rambao"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8289,
+      "prompt_sha256": "7a6842c8e950872c52059371ea6cf7cffcb05ebf5c6903a3579badc0e6388aa7"
+    },
+    {
+      "job": "el_caserio_de_calles_de_tierra__spatial_model--canon",
+      "modelo": "el_caserio_de_calles_de_tierra__spatial_model",
+      "entidad": "El caserío de calles de tierra",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "conejo-y-la-fiesta-de-toro",
+        "este-era-un-joven-que-estaba-estudiando",
+        "la-vieja-el-burro-y-los-huevos",
+        "quien-manda-mas-en-casa",
+        "tio-conejo-zapatero",
+        "tio-sapo-y-cangrejo",
+        "veinte-para-el-bollo",
+        "rambao"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7872,
+      "prompt_sha256": "0a59c37e89c186f779810b0f91a4538fd599f0a0a1cd8c116b5b804f65a329e1"
+    },
+    {
+      "job": "la_tienda_de_esquina__spatial_model--canon",
+      "modelo": "la_tienda_de_esquina__spatial_model",
+      "entidad": "La tienda de esquina (tienda, cantina y taller)",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "conejo-y-la-fiesta-de-toro",
+        "conejo-y-la-mona-de-cera",
+        "las-orejas-del-tio-conejo",
+        "tio-conejo-zapatero"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7892,
+      "prompt_sha256": "b81b57e89b5f40d4cc9ad1f5be62f396fe37f8ca58c280efc26ce6f8335e46e8"
+    },
+    {
+      "job": "la_iglesia_del_pueblo__spatial_model--canon",
+      "modelo": "la_iglesia_del_pueblo__spatial_model",
+      "entidad": "La iglesia del pueblo",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-burro-y-la-policia",
+        "el-desayuno-del-indio",
+        "la-confesion"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8052,
+      "prompt_sha256": "16da8193f5e14154df53a49e5e111a22e4a545cd48411fb534c69a2cbf4f2e1c"
+    },
+    {
+      "job": "el_aguacero__phenomenon_rule--canon",
+      "modelo": "el_aguacero__phenomenon_rule",
+      "entidad": "El aguacero",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "este-era-un-tipo-que-tenia-una-novia"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7771,
+      "prompt_sha256": "2b4b44206732c46f9c0b8516e7dcaa116290917f2fecc03a43229839e8c808b2"
+    },
+    {
+      "job": "el_castillo_del_rey__spatial_model--canon",
+      "modelo": "el_castillo_del_rey__spatial_model",
+      "entidad": "El palacio del rey",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "este-era-un-rey-que-tenia-dos-hijas-bonitas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7306,
+      "prompt_sha256": "f7758bb28423d0454e84a9534d61de9afdbc9944a2291dafdb927e46c66c18e5"
+    },
+    {
+      "job": "el_rejuvenecimiento_de_los_ancianos__phenomenon_rule--canon",
+      "modelo": "el_rejuvenecimiento_de_los_ancianos__phenomenon_rule",
+      "entidad": "El rejuvenecimiento en la hornilla",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "rambao"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7746,
+      "prompt_sha256": "ef34b9786f4f748ef45e2385517051c56d1214a9c8ada4d5119715eb0468df00"
+    },
+    {
+      "job": "la_corraleja__spatial_model--canon",
+      "modelo": "la_corraleja__spatial_model",
+      "entidad": "La corraleja",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "conejo-y-la-fiesta-de-toro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7993,
+      "prompt_sha256": "934bb04f6584401312be1921628e5692aa3aa5aa99a602e055afcee761095bc9"
+    }
+  ]
+}

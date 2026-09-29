@@ -1,0 +1,430 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "bolivar-cartagena-mestizo",
+  "comunidad": "Bolívar y Cartagena",
+  "tanda": "tanda-06-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/bolivar-cartagena-mestizo.v3.json",
+    "sha256": "83a8f0f7117f21713d8a9f83d2fae957cb5e5b2dcb3f677a8464a95a80e79464"
+  },
+  "canon": {
+    "sha256": "2ed33a67c241b696ca40521259c9ed080fe10d09734bfa7b23f718b9e36a0ae6",
+    "verificado_en": "2026-09-29T02:29:59.382Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 21,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "barca-costera-de-vela__object_sheet--canon",
+      "modelo": "barca-costera-de-vela__object_sheet",
+      "entidad": "Barca costera de vela y bote de remo",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-milagro-de-la-candelaria",
+        "el-heroe",
+        "el-mal-del-mar",
+        "mona-mona",
+        "en-el-sitio-de-morillo",
+        "marineritis-sentimental",
+        "la-muerte-de-los-ojos-verdes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8224,
+      "prompt_sha256": "0a22c40df7373961cc415a881fa51e9f3fc9cdeae50d4266232824a0ce9397f7"
+    },
+    {
+      "job": "hoja-utileria-devocion__object_sheet--canon",
+      "modelo": "hoja-utileria-devocion__object_sheet",
+      "entidad": "Hoja de utilería: devoción y duelo",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "un-quejido-una-luz",
+        "al-convento",
+        "en-el-sitio-de-morillo",
+        "templo-de-santo-domingo-y-el-cristo-de-la-expiracion",
+        "la-casa-de-don-benito",
+        "a-dios-rogando-y-con-el-mazo-dando"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8420,
+      "prompt_sha256": "db4c7ce3057c3cc71f118401c0e21756169bef66d20248417de2fcdf14856698"
+    },
+    {
+      "job": "hoja-utileria-papeles-ii__object_sheet--canon",
+      "modelo": "hoja-utileria-papeles-ii__object_sheet",
+      "entidad": "Hoja de utilería: papeles II, los que alguien esconde",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "castellano-viejo",
+        "la-abadesa-arrodillada",
+        "la-casa-de-don-benito",
+        "la-muerte-de-los-ojos-verdes",
+        "de-cuando-fue-regalado-el-castillo-de-san-felipe-y-la-popa",
+        "maldito-sea-napoleon"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8415,
+      "prompt_sha256": "458fb36e61440f8249eafb786fb4e572c06144e133f177cbd97bfd8a7d193085"
+    },
+    {
+      "job": "hoja-utileria-taberna__object_sheet--canon",
+      "modelo": "hoja-utileria-taberna__object_sheet",
+      "entidad": "Hoja de utilería: mesa, bebida y tocador",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-mal-del-mar",
+        "el-talisman-funebre",
+        "por-la-boca-muere-el-pez",
+        "marineritis-sentimental",
+        "macu-y-el-collar-de-camarones-de-oro",
+        "zequiel"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8194,
+      "prompt_sha256": "afb2950c2b668138343d5a3fe8bbac6d995d3db4fa6e3a512d6a4dd533f05f10"
+    },
+    {
+      "job": "hoja-utileria-vegetacion__object_sheet--canon",
+      "modelo": "hoja-utileria-vegetacion__object_sheet",
+      "entidad": "Hoja de utilería: la vegetación de patio, claustro y balcón",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-sombra",
+        "el-talisman-funebre",
+        "al-convento",
+        "un-anonimo",
+        "despues-del-sitio",
+        "la-clave-de-la-felicidad"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8674,
+      "prompt_sha256": "952607057ec05a1e77b85ae82f7f36eef6d5ff1a658fc44a6fa0742163cd428f"
+    },
+    {
+      "job": "coche-de-caballos__object_sheet--canon",
+      "modelo": "coche-de-caballos__object_sheet",
+      "entidad": "Coche de caballos (y el automóvil que lo desplaza)",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-auriga-a-quien-mato-el-pasado",
+        "al-convento",
+        "castellano-viejo",
+        "en-el-once",
+        "la-casa-de-don-benito"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8018,
+      "prompt_sha256": "c9d5ddb0971c203b707b3dcb4f447fea3acc35630cfc481e2d4305116f030c0a"
+    },
+    {
+      "job": "hoja-utileria-papeles-i__object_sheet--canon",
+      "modelo": "hoja-utileria-papeles-i__object_sheet",
+      "entidad": "Hoja de utilería: papeles I, los que alguien lee",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "un-anonimo",
+        "viva-la-libertad",
+        "mona-mona",
+        "de-cuando-fue-regalado-el-castillo-de-san-felipe-y-la-popa",
+        "la-clave-de-la-felicidad"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8481,
+      "prompt_sha256": "0b0a40668d1151353ad0e96ba888b8c05d1de093f7ef4c70c915b6c363cd3c9b"
+    },
+    {
+      "job": "hoja-utileria-oficio__object_sheet--canon",
+      "modelo": "hoja-utileria-oficio__object_sheet",
+      "entidad": "Hoja de utilería: herramientas y productos de oficio",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "por-la-boca-muere-el-pez",
+        "la-imagen-de-san-antonio",
+        "el-fantasma-del-teatro-azul",
+        "macu-y-el-collar-de-camarones-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8432,
+      "prompt_sha256": "67102388adf879ebe203103a8b3d819517b3669305b1f7b191d6be5faa77c31b"
+    },
+    {
+      "job": "hoja-utileria-hogar__object_sheet--canon",
+      "modelo": "hoja-utileria-hogar__object_sheet",
+      "entidad": "Hoja de utilería: enseres del hogar",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "folklore-macabro",
+        "doce-en-punto-de-la-noche",
+        "un-quejido-una-luz"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8476,
+      "prompt_sha256": "b5285b9764624a4afd588870e5dc3445dbdf217abcb8730eeaf1b86f7ea65432"
+    },
+    {
+      "job": "imagen-virgen-de-la-candelaria__object_sheet--canon",
+      "modelo": "imagen-virgen-de-la-candelaria__object_sheet",
+      "entidad": "Imagen de la Virgen de la Candelaria de La Popa",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-milagro-de-la-candelaria",
+        "la-abadesa-arrodillada",
+        "macu-y-el-collar-de-camarones-de-oro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7952,
+      "prompt_sha256": "7426add3c8d3a90735547f7a7bf4696defcfabe7ddb2ed1d3c95354b3c74a70f"
+    },
+    {
+      "job": "entierro-de-oro-y-plata__object_sheet--canon",
+      "modelo": "entierro-de-oro-y-plata__object_sheet",
+      "entidad": "El entierro: talegos de oro y ánforas de plata",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-sombra",
+        "doce-en-punto-de-la-noche"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8115,
+      "prompt_sha256": "8b51f53cffdf2dfb6d5fd6ff3e1b15e46be92da5fe98a87adb180acde090af4e"
+    },
+    {
+      "job": "piano-de-cola__object_sheet--canon",
+      "modelo": "piano-de-cola__object_sheet",
+      "entidad": "El piano de la romanza",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-clave-de-la-felicidad",
+        "un-anonimo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7814,
+      "prompt_sha256": "5041b5ec4e86bb569c0907d39ea01c79237217e25504730c5f3612531674260e"
+    },
+    {
+      "job": "arbol-de-guayaba__botanical_sheet--canon",
+      "modelo": "arbol-de-guayaba__botanical_sheet",
+      "entidad": "El guayabo de Los Rosales",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "un-quejido-una-luz"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7697,
+      "prompt_sha256": "5e5e8bdcafee7efe276d736474768a79604d7bd90451458aa059813380d20ec2"
+    },
+    {
+      "job": "ataud-del-zarzo__object_sheet--canon",
+      "modelo": "ataud-del-zarzo__object_sheet",
+      "entidad": "El ataúd sobre el zarzo",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-talisman-funebre"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7797,
+      "prompt_sha256": "28805283bf0b5264115098b222a148680160842f77412a48ab10b6a173132a43"
+    },
+    {
+      "job": "ataud-del-zarzo__state_sheet--estado_destapado y bajado al zarzo, junto al durmiente, sin la lona",
+      "modelo": "ataud-del-zarzo__state_sheet",
+      "entidad": "El ataúd sobre el zarzo",
+      "categoria": "objeto",
+      "vista": "estado_destapado y bajado al zarzo, junto al durmiente, sin la lona",
+      "estados": [
+        "destapado y bajado al zarzo, junto al durmiente, sin la lona"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-talisman-funebre"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7874,
+      "prompt_sha256": "4d14f11bbe0aee3f856ee634461f94b988a5872a0a4adebf3188cbd437bd3e5a"
+    },
+    {
+      "job": "collar-de-camarones-de-oro__object_sheet--canon",
+      "modelo": "collar-de-camarones-de-oro__object_sheet",
+      "entidad": "El collar de camarones de oro",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "macu-y-el-collar-de-camarones-de-oro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7947,
+      "prompt_sha256": "ff03837c1ffa2d1fc2d97a7a64bc2de588c333886e7653dcae9660cba5eb58b2"
+    },
+    {
+      "job": "craneo-con-dentadura-de-oro__object_sheet--canon",
+      "modelo": "craneo-con-dentadura-de-oro__object_sheet",
+      "entidad": "El cráneo con dentadura de oro",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "macu-y-el-collar-de-camarones-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7581,
+      "prompt_sha256": "a4f5e003d95dd612c7a667267364f57de5ec5227cd3299b2c240818d6bc6c5bd"
+    },
+    {
+      "job": "cristo-de-la-expiracion__object_sheet--canon",
+      "modelo": "cristo-de-la-expiracion__object_sheet",
+      "entidad": "El Cristo de la Expiración",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "templo-de-santo-domingo-y-el-cristo-de-la-expiracion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8127,
+      "prompt_sha256": "3e0546b7205e402630cb25583fb080c98b5f517c3a949c9fa695498e3442661a"
+    },
+    {
+      "job": "imagen-de-san-antonio__object_sheet--canon",
+      "modelo": "imagen-de-san-antonio__object_sheet",
+      "entidad": "La imagen de San Antonio",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-imagen-de-san-antonio"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7791,
+      "prompt_sha256": "37029dd6563bbe000c0d45273ed74f05c6166879691a11eaeb096f1689237b1b"
+    },
+    {
+      "job": "imagen-virgen-de-las-mercedes__object_sheet--canon",
+      "modelo": "imagen-virgen-de-las-mercedes__object_sheet",
+      "entidad": "Imagen de la Virgen de las Mercedes del Cabrero",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "macu-y-el-collar-de-camarones-de-oro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7674,
+      "prompt_sha256": "cb573993eb2f88c547237d26624511c31a62121e79cdad06c46d94e3b3ee1e85"
+    },
+    {
+      "job": "joyas-de-la-subida-a-la-popa__object_sheet--canon",
+      "modelo": "joyas-de-la-subida-a-la-popa__object_sheet",
+      "entidad": "Joyas coloniales de la subida a La Popa",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "celos-de-esclavo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7725,
+      "prompt_sha256": "c6c6570f58bbd41e061e3da825b5984387534bee468358965168f8457cb44798"
+    }
+  ]
+}

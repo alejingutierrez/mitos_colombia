@@ -1,0 +1,48 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "santander-mestizo",
+  "comunidad": "Santander mestizo",
+  "tanda": "tanda-07-animales-recatadas",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/santander-mestizo.v3.json",
+    "sha256": "d5b07ab1f712e5293471956f31a70a947fceb6dc9a6f1f82ce4c214672c215a7"
+  },
+  "canon": {
+    "sha256": "001778764d5a15260f48f1d6bc2a7f74857486623e73ca5c9681e13fe8ec3cdd",
+    "verificado_en": "2026-09-29T02:29:53.157Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 26,
+  "fichas_ya_preparadas": 26,
+  "fichas": [
+    {
+      "job": "mancarita__identity_sheet--canon",
+      "modelo": "mancarita__identity_sheet",
+      "entidad": "La Máncara de San Francisco (La Mancarita)",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-mancarita"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8114,
+      "prompt_sha256": "3063dd7b9f2f347c88de5352783ab8fb91ef23200a1a9c4bda20b13fe53b54ab"
+    }
+  ]
+}

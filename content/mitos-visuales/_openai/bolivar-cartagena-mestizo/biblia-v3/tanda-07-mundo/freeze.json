@@ -1,0 +1,378 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "bolivar-cartagena-mestizo",
+  "comunidad": "Bolívar y Cartagena",
+  "tanda": "tanda-07-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/bolivar-cartagena-mestizo.v3.json",
+    "sha256": "83a8f0f7117f21713d8a9f83d2fae957cb5e5b2dcb3f677a8464a95a80e79464"
+  },
+  "canon": {
+    "sha256": "2ed33a67c241b696ca40521259c9ed080fe10d09734bfa7b23f718b9e36a0ae6",
+    "verificado_en": "2026-09-29T02:44:16.865Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 17,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "casa-senorial-de-balcon__spatial_model--canon",
+      "modelo": "casa-senorial-de-balcon__spatial_model",
+      "entidad": "Casa señorial de balcón, zaguán y patio",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-imagen-de-san-antonio",
+        "doce-en-punto-de-la-noche",
+        "la-sombra",
+        "la-clave-de-la-felicidad",
+        "castellano-viejo",
+        "la-casa-de-don-benito",
+        "maldito-sea-napoleon",
+        "en-el-sitio-de-morillo",
+        "al-convento",
+        "en-el-once",
+        "la-muerte-de-los-ojos-verdes",
+        "un-anonimo",
+        "a-dios-rogando-y-con-el-mazo-dando"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8448,
+      "prompt_sha256": "be8871cd981c712d2488ca4480458b8e97f6075678eca9c718eec826fb29dd91"
+    },
+    {
+      "job": "calle-colonial-de-noche__spatial_model--canon",
+      "modelo": "calle-colonial-de-noche__spatial_model",
+      "entidad": "Calle colonial de noche",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "doce-en-punto-de-la-noche",
+        "la-sombra",
+        "una-reunion-clandestina",
+        "un-anonimo",
+        "al-convento",
+        "la-clave-de-la-felicidad",
+        "macu-y-el-collar-de-camarones-de-oro",
+        "en-el-once",
+        "la-imagen-de-san-antonio",
+        "por-la-boca-muere-el-pez",
+        "el-fantasma-del-teatro-azul"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8170,
+      "prompt_sha256": "58a5725269d27b22aa864de76a476a593bcf713af13afd8ade78055c366e4924"
+    },
+    {
+      "job": "carcel-y-calabozo__spatial_model--canon",
+      "modelo": "carcel-y-calabozo__spatial_model",
+      "entidad": "Cárcel, calabozo y mazmorra",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "por-la-boca-muere-el-pez",
+        "la-muerte-de-los-ojos-verdes",
+        "viva-la-libertad",
+        "la-sombra",
+        "macu-y-el-collar-de-camarones-de-oro",
+        "zequiel"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7770,
+      "prompt_sha256": "79ebddae9129f3acf5f497c6637f7924fbcbeceed25f9b8a241c9ff39e448d90"
+    },
+    {
+      "job": "caserio-de-palma-y-bahareque__spatial_model--canon",
+      "modelo": "caserio-de-palma-y-bahareque__spatial_model",
+      "entidad": "Caserío de palma y bahareque",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "folklore-macabro",
+        "macu-y-el-collar-de-camarones-de-oro",
+        "zequiel",
+        "el-heroe",
+        "el-talisman-funebre",
+        "el-auriga-a-quien-mato-el-pasado"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8128,
+      "prompt_sha256": "65a75118a2919e6391ed0075d7a6ca07eedf857e06bca0147f9c104ad5be464e"
+    },
+    {
+      "job": "muralla-y-baluartes__spatial_model--canon",
+      "modelo": "muralla-y-baluartes__spatial_model",
+      "entidad": "Muralla, baluartes y Bóvedas",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "despues-del-sitio",
+        "la-clave-de-la-felicidad",
+        "macu-y-el-collar-de-camarones-de-oro",
+        "viva-la-libertad",
+        "de-cuando-fue-regalado-el-castillo-de-san-felipe-y-la-popa",
+        "templo-de-santo-domingo-y-el-cristo-de-la-expiracion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8359,
+      "prompt_sha256": "66f410c6fd5d77d7e8cb513b15ce1fe0761758d298ca0968d594a925b4815751"
+    },
+    {
+      "job": "plaza-colonial__spatial_model--canon",
+      "modelo": "plaza-colonial__spatial_model",
+      "entidad": "Plaza colonial y balcón del Cabildo",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "viva-la-libertad",
+        "el-auriga-a-quien-mato-el-pasado",
+        "castellano-viejo",
+        "por-la-boca-muere-el-pez",
+        "despues-del-sitio",
+        "un-anonimo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7921,
+      "prompt_sha256": "d509cfe0cab5fadd20e94cdb29bfda24f563d506046aa0348b0b969917b3c22d"
+    },
+    {
+      "job": "puerto-y-muelle-del-arsenal__spatial_model--canon",
+      "modelo": "puerto-y-muelle-del-arsenal__spatial_model",
+      "entidad": "Puerto, muelle y barrio del Arsenal",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-mal-del-mar",
+        "el-fantasma-del-teatro-azul",
+        "mona-mona",
+        "marineritis-sentimental",
+        "la-muerte-de-los-ojos-verdes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7858,
+      "prompt_sha256": "dbcad552005cf8678a2602965b25d35218010a3732cc054f9eca7aaf60501f64"
+    },
+    {
+      "job": "convento-de-clausura__spatial_model--canon",
+      "modelo": "convento-de-clausura__spatial_model",
+      "entidad": "Convento de clausura",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "al-convento",
+        "la-abadesa-arrodillada",
+        "maldito-sea-napoleon",
+        "en-el-sitio-de-morillo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8111,
+      "prompt_sha256": "a59db71c5ab8d91e47fa368ebd86f9181cccfb3cca6b0582c8d498e9f11d2a4a"
+    },
+    {
+      "job": "salon-de-sarao__spatial_model--canon",
+      "modelo": "salon-de-sarao__spatial_model",
+      "entidad": "Salón de sarao y tertulia",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "despues-del-sitio",
+        "un-anonimo",
+        "la-imagen-de-san-antonio",
+        "la-sombra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7773,
+      "prompt_sha256": "63ac6f4e500fc1682929af72a4f639c49741f190eaf9732d4b076decacc45ced"
+    },
+    {
+      "job": "santuario-de-la-popa__spatial_model--canon",
+      "modelo": "santuario-de-la-popa__spatial_model",
+      "entidad": "Santuario de La Popa (y la ermita del Cabrero)",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-milagro-de-la-candelaria",
+        "la-abadesa-arrodillada",
+        "macu-y-el-collar-de-camarones-de-oro",
+        "celos-de-esclavo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7870,
+      "prompt_sha256": "59710767c4683cd43fda110135f870d561a99eb705243e291a941b33f6251f6c"
+    },
+    {
+      "job": "templo-de-santo-domingo__spatial_model--canon",
+      "modelo": "templo-de-santo-domingo__spatial_model",
+      "entidad": "Templo de Santo Domingo",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "templo-de-santo-domingo-y-el-cristo-de-la-expiracion",
+        "la-imagen-de-san-antonio",
+        "al-convento"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8007,
+      "prompt_sha256": "aaa870b32d8c2e6c24213a401a722fb24d976ccc6416068e5a44f9b49b0a0a19"
+    },
+    {
+      "job": "castillo-de-san-felipe__spatial_model--canon",
+      "modelo": "castillo-de-san-felipe__spatial_model",
+      "entidad": "Castillo de San Felipe de Barajas",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "de-cuando-fue-regalado-el-castillo-de-san-felipe-y-la-popa",
+        "despues-del-sitio"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7958,
+      "prompt_sha256": "a043be2a90fab9a35d139e174a65014515fc9fe35be8c1fdbb15fd89c204d7b2"
+    },
+    {
+      "job": "casucha-y-tunel-de-reunion-clandestina__spatial_model--canon",
+      "modelo": "casucha-y-tunel-de-reunion-clandestina__spatial_model",
+      "entidad": "Casucha de reunión clandestina y su túnel",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "una-reunion-clandestina"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7788,
+      "prompt_sha256": "3c361026a99742b6058c17e9d20f392239bd218c2a17c98ab09d4daf17a80e4d"
+    },
+    {
+      "job": "cementerio__spatial_model--canon",
+      "modelo": "cementerio__spatial_model",
+      "entidad": "Camposanto de noche",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "macu-y-el-collar-de-camarones-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7552,
+      "prompt_sha256": "f264e562c7b780f074e341c8650e9afa0c6e3ceaf5c246c9596568243b873078"
+    },
+    {
+      "job": "hacienda-los-rosales__spatial_model--canon",
+      "modelo": "hacienda-los-rosales__spatial_model",
+      "entidad": "Hacienda Los Rosales",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "un-quejido-una-luz"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7886,
+      "prompt_sha256": "1cc42f26ae5700e740bf6420e27ece2eeac5e42013f0b8653d454ae7d279a069"
+    },
+    {
+      "job": "luces-flotantes-nocturnas__phenomenon_rule--canon",
+      "modelo": "luces-flotantes-nocturnas__phenomenon_rule",
+      "entidad": "La luz del sendero",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "un-quejido-una-luz"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7914,
+      "prompt_sha256": "73f2a2beee45aa18160478b99f823202fb66c556e4b7ad6fbc73e8e46a42f98f"
+    },
+    {
+      "job": "taller-de-zapatero__spatial_model--canon",
+      "modelo": "taller-de-zapatero__spatial_model",
+      "entidad": "Taller de zapatero",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "por-la-boca-muere-el-pez"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7791,
+      "prompt_sha256": "2357cc30bccab7f519f53432c7b1ce18bd87b12ed16cc03a535665640768c378"
+    }
+  ]
+}

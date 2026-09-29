@@ -1,0 +1,269 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "orinoquia-llanera-mestizo",
+  "comunidad": "Orinoquia llanera",
+  "tanda": "tanda-04-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/orinoquia-llanera-mestizo.v3.json",
+    "sha256": "5c9e9ba72406879a1a2374b67948c258d48aa4fad470bb90c45fc5cd2188ece4"
+  },
+  "canon": {
+    "sha256": "3ccbd7d1dc15e78468cdc4a4a8d493f21cee98326daf946d28c8d999be60fa3e",
+    "verificado_en": "2026-09-29T02:50:39.133Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 12,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "comunidad_llanera__group_grammar--canon",
+      "modelo": "comunidad_llanera__group_grammar",
+      "entidad": "Comunidad llanera",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-brujo-de-la-costa-del-pauto",
+        "el-domador-de-brujas",
+        "el-dominguez",
+        "el-llano-ayer-hoy",
+        "el-tirapiedra",
+        "la-bola-de-fuego",
+        "la-bruja-de-los-ojos-miel",
+        "la-culebra-cascabel",
+        "la-tertulia-de-la-italiana",
+        "las-chanzas-de-don-felipe",
+        "los-monstruos-de-paratebueno",
+        "madre-rio-o-mohana"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8605,
+      "prompt_sha256": "42e874ee07f98be050ddbd665c3f7c0fa884054ded6a6d6850f21bbe8d87561e"
+    },
+    {
+      "job": "ganado_llanero__group_grammar--canon",
+      "modelo": "ganado_llanero__group_grammar",
+      "entidad": "Ganado llanero",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-toro-negro-patorreal",
+        "los-delfines-dorados",
+        "el-llano-cobra-sus-deudas",
+        "el-llano-ayer-hoy",
+        "los-tres-luceros",
+        "el-brujo-de-la-costa-del-pauto",
+        "el-domador-de-brujas",
+        "la-culebra-cascabel",
+        "las-chanzas-de-don-felipe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8005,
+      "prompt_sha256": "34480fba9280c8035aab6997f68309d6459053b344da2b23f8c480e0917baeba"
+    },
+    {
+      "job": "hoja_reparto_de_hato__group_grammar--canon",
+      "modelo": "hoja_reparto_de_hato__group_grammar",
+      "entidad": "hoja reparto de hato",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "amanecer-llanero",
+        "el-toro-negro-patorreal",
+        "las-chanzas-de-don-felipe",
+        "los-delfines-dorados",
+        "los-tres-luceros",
+        "el-brujo-de-la-costa-del-pauto",
+        "el-llano-cobra-sus-deudas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9019,
+      "prompt_sha256": "ddfbedf379ae726ad05e0672e5dcc4f933d0c1738b7d838d17ecece8f25b86a4"
+    },
+    {
+      "job": "aves_del_llano__group_grammar--canon",
+      "modelo": "aves_del_llano__group_grammar",
+      "entidad": "Aves del llano",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-llano-ayer-hoy",
+        "amanecer-llanero",
+        "los-delfines-dorados",
+        "la-culebra-cascabel",
+        "leal-hasta-la-muerte",
+        "madre-rio-o-mohana"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8030,
+      "prompt_sha256": "699a0810f734810e8812cd6cf9ca238dc8b82001ab005664118cf9bacb4b673a"
+    },
+    {
+      "job": "peonada_del_hato__group_grammar--canon",
+      "modelo": "peonada_del_hato__group_grammar",
+      "entidad": "Peonada del hato",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-tesoro-de-caribare",
+        "el-toro-negro-patorreal",
+        "los-delfines-dorados",
+        "las-chanzas-de-don-felipe",
+        "el-llano-cobra-sus-deudas",
+        "el-llano-ayer-hoy"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8282,
+      "prompt_sha256": "571954eb606d75b24ee347da8b8ab69f00f2319165a64327589b2c5c243f95be"
+    },
+    {
+      "job": "hoja_reparto_del_piedemonte__group_grammar--canon",
+      "modelo": "hoja_reparto_del_piedemonte__group_grammar",
+      "entidad": "hoja reparto del piedemonte",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-domador-de-brujas",
+        "el-tirapiedra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8528,
+      "prompt_sha256": "430a648500ea1930f04d3fc3369c70c433654edb95b99db46ed5f8baf40991ff"
+    },
+    {
+      "job": "ninos_del_llano__group_grammar--canon",
+      "modelo": "ninos_del_llano__group_grammar",
+      "entidad": "Ninos del llano",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-tertulia-de-la-italiana",
+        "los-tres-luceros"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8037,
+      "prompt_sha256": "83eb5ad4aed6ca1275e2581e80c20182435ce17d2785cb9eed5347379fabd59c"
+    },
+    {
+      "job": "brujas_de_la_vereda_del_carmen__group_grammar--canon",
+      "modelo": "brujas_de_la_vereda_del_carmen__group_grammar",
+      "entidad": "Las brujas de la Vereda del Carmen",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-domador-de-brujas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7521,
+      "prompt_sha256": "346f0c1c8ef137ac854b1a63e9965fdb064251d5e052445ea630231680a25009"
+    },
+    {
+      "job": "corte_del_rey_de_la_fabula__group_grammar--canon",
+      "modelo": "corte_del_rey_de_la_fabula__group_grammar",
+      "entidad": "La corte del rey de la fabula",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "leal-hasta-la-muerte"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7839,
+      "prompt_sha256": "d0278abd1849ea9e228980559d5313cab345f3d5f51ff7b294a0758890ebe4fa"
+    },
+    {
+      "job": "guates_campesinos_de_tierra_fria__group_grammar--canon",
+      "modelo": "guates_campesinos_de_tierra_fria__group_grammar",
+      "entidad": "Los guates",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "las-chanzas-de-don-felipe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8039,
+      "prompt_sha256": "a68a10be3a4ecf0a1a3bc172fe2d985b3530d88b6465dd21cae52bac0d664f6a"
+    },
+    {
+      "job": "mono_pantera_y_serpiente_de_la_fabula__group_grammar--canon",
+      "modelo": "mono_pantera_y_serpiente_de_la_fabula__group_grammar",
+      "entidad": "Mono, pantera y serpiente de la fabula",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "leal-hasta-la-muerte"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8118,
+      "prompt_sha256": "6e749fda8879a538725f4f33bdfb392faa0ac36bff3b9614b0b0c7ade0e3a9d0"
+    },
+    {
+      "job": "piara_de_cerdos__group_grammar--canon",
+      "modelo": "piara_de_cerdos__group_grammar",
+      "entidad": "La marranera",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-culebra-cascabel"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7798,
+      "prompt_sha256": "613f18ea3dc0e52997b045c7d6b072b91101a99a3b8bb592581980b15d1452bb"
+    }
+  ]
+}

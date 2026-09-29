@@ -1,0 +1,61 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tolima-huila-mestizo",
+  "comunidad": "Tolima y Huila",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tolima-huila-mestizo.v3.json",
+    "sha256": "b7f1f1559682e274cff21c66142964574468ec3ae942600e92a58a29ba06b0f9"
+  },
+  "canon": {
+    "sha256": "e3603f47534a458fbe0d16a341b049be3b48e059ddfb532221d2ee481c5cf9cf",
+    "verificado_en": "2026-09-29T02:44:31.191Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "mineralogista_extranjero__identity_sheet--canon",
+      "modelo": "mineralogista_extranjero__identity_sheet",
+      "entidad": "El mineralogista extranjero",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-tarasca"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9090,
+      "prompt_sha256": "5a8cf801ab667ae1d49fc6bf9997de0aca107b7b44951dd13be9162aa9cceae2"
+    },
+    {
+      "job": "nor_mica__identity_sheet--canon",
+      "modelo": "nor_mica__identity_sheet",
+      "entidad": "Ñor Mica (Nicolás Caicedo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-patasola-mixto"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8907,
+      "prompt_sha256": "f08dd6e31455cdbb2af1ac7cb0202e5cf0a817eada40a7e037fdd5ccbe7230cb"
+    }
+  ]
+}

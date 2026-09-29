@@ -1,0 +1,85 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "caribe-restante-mestizo",
+  "comunidad": "Caribe restante (Magdalena, Cesar, San Andrés)",
+  "tanda": "tanda-06-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/caribe-restante-mestizo.v3.json",
+    "sha256": "86ece956812c9a8bfa74bdc0d8f6739e1b7e8f0c98764df37ad58c78a6b2e33b"
+  },
+  "canon": {
+    "sha256": "23c3a0846f2f3742c390ba7412138b0740a886ab53b10154ee075b8422745b46",
+    "verificado_en": "2026-09-29T03:08:35.916Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "casa_islena_madera_y_zinc__spatial_model--canon",
+      "modelo": "casa_islena_madera_y_zinc__spatial_model",
+      "entidad": "Casa isleña de madera y zinc",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "tiger-y-el-baile-de-perros",
+        "un-perro-una-cabra-y-beda-tiger",
+        "tigre-y-nansi"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8561,
+      "prompt_sha256": "98c8d7965d8d6c1698ffb6d97857a7b12c39a423e8dba4ea47f35807bfed214e"
+    },
+    {
+      "job": "casa_de_bahareque_del_cesar__spatial_model--canon",
+      "modelo": "casa_de_bahareque_del_cesar__spatial_model",
+      "entidad": "Casa de bahareque del Cesar (cocina y patio)",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-bruja-del-trinche",
+        "la-sirena-de-hurtado"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8052,
+      "prompt_sha256": "c5ac483581bc7304c57db5258d41a74e58ec00fe057172e5af05693721836265"
+    },
+    {
+      "job": "castillo_de_san_juan__spatial_model--canon",
+      "modelo": "castillo_de_san_juan__spatial_model",
+      "entidad": "El castillo de San Juan",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-castellano-de-san-juan"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8855,
+      "prompt_sha256": "0fd8659434d8ee8e7f06d108c10a23f414458bf30bdc3cbe1d1f2ba78c292757"
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "bogota-sabana-mestizo",
+  "comunidad": "Bogotá y la sabana",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/bogota-sabana-mestizo.v3.json",
+    "sha256": "55c8aadb6274065fccc72a76abc5b3542957a51530be49e80137f3b3b6996998"
+  },
+  "canon": {
+    "sha256": "f40bff7bfadd041235920c5f638d1f9ad9ce9fb5b40b91e9893d958d2674ad1d",
+    "verificado_en": "2026-09-29T02:48:49.465Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 15,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "alvaro_sanchez__identity_sheet--canon",
+      "modelo": "alvaro_sanchez__identity_sheet",
+      "entidad": "Don Álvaro Sánchez",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-mula-herrada",
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9107,
+      "prompt_sha256": "706960a528dda5403e5b4520ff7a17618e893e61e3624749ea064d066e469e07"
+    },
+    {
+      "job": "jose_raimundo_russi__identity_sheet--canon",
+      "modelo": "jose_raimundo_russi__identity_sheet",
+      "entidad": "José Raimundo Russi",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-enigmatico-abogado",
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8577,
+      "prompt_sha256": "50d7757286ee666e1f5798e05330b6e012e76c4e2cacbad476d1c8b150350437"
+    },
+    {
+      "job": "jose_raimundo_russi__state_sheet--estado_aparición nocturna en La Candelaria- el mismo cuerpo con pantalón negro, camisa blanca, capa negra y sombrero de copa, la cara en la sombra del ala",
+      "modelo": "jose_raimundo_russi__state_sheet",
+      "entidad": "José Raimundo Russi",
+      "categoria": "personaje",
+      "vista": "estado_aparición nocturna en La Candelaria: el mismo cuerpo con pantalón negro, camisa blanca, capa negra y sombrero de copa, la cara en la sombra del ala",
+      "estados": [
+        "aparición nocturna en La Candelaria: el mismo cuerpo con pantalón negro, camisa blanca, capa negra y sombrero de copa, la cara en la sombra del ala"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-enigmatico-abogado",
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 10771,
+      "prompt_sha256": "2e5f53da3dde7387fc867f8bb7339e36d6fea70618b054bf5a34dd18de1f1f40"
+    },
+    {
+      "job": "antonin__identity_sheet--canon",
+      "modelo": "antonin__identity_sheet",
+      "entidad": "Antonín, el comandante de circulación",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-bobo-del-tranvia"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 10100,
+      "prompt_sha256": "1871f6e92855dd2d5829bae34c8a6987a37fb85ec897697e8f80a5cb118543f7"
+    },
+    {
+      "job": "diego_barreto__identity_sheet--canon",
+      "modelo": "diego_barreto__identity_sheet",
+      "entidad": "Diego Barreto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-venado-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9728,
+      "prompt_sha256": "04329a26cf1dfe8b6ad584472d529606319de0afc7051eb1f3d17934b04d8180"
+    },
+    {
+      "job": "eduardo_arias__identity_sheet--canon",
+      "modelo": "eduardo_arias__identity_sheet",
+      "entidad": "Eduardo Arias Jiménez, el orador de calle",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-loco-arias"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9545,
+      "prompt_sha256": "7172904049f9ab3c55e460041d45242029be6b05bea2b58403837b8d7e15a41f"
+    },
+    {
+      "job": "el_taxista__identity_sheet--canon",
+      "modelo": "el_taxista__identity_sheet",
+      "entidad": "El taxista",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-monja-vidente-y-el-taxista"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8542,
+      "prompt_sha256": "84d813632ab654bd4e2ac347333d67fe74b9dfed123c5fea7cc0780ebaa5923e"
+    },
+    {
+      "job": "ezequiel__identity_sheet--canon",
+      "modelo": "ezequiel__identity_sheet",
+      "entidad": "Ezequiel Revetés",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-bruja-del-tranvia"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8914,
+      "prompt_sha256": "8b0746c2413d3fe6b640217e11c4a26bdfc1924dcc9b1d5814d6920cae13d34f"
+    },
+    {
+      "job": "florentino__identity_sheet--canon",
+      "modelo": "florentino__identity_sheet",
+      "entidad": "Florentino, el constructor del puente",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9559,
+      "prompt_sha256": "adaffc83ea062e4f949af80c5e04337793a360624082e01b1b607361490ce295"
+    },
+    {
+      "job": "harry_warner_equilibrista__identity_sheet--canon",
+      "modelo": "harry_warner_equilibrista__identity_sheet",
+      "entidad": "El equilibrista Harry Warner",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-leyenda-del-santuario-de-monserrate"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9502,
+      "prompt_sha256": "a2fa9bdbb980c0c2a33d2c56a85b8853afe4a2b78b5c4134543e228ae9c27e8d"
+    },
+    {
+      "job": "juan_miguel_acevedo__identity_sheet--canon",
+      "modelo": "juan_miguel_acevedo__identity_sheet",
+      "entidad": "Juan Miguel Acevedo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-hombre-del-farol"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9552,
+      "prompt_sha256": "d2dd6e62f21d4fdd1fdd248fa0b31bf5e22e91e2a11cee357b200e1c2aa12b4a"
+    },
+    {
+      "job": "manuelito_llanos__identity_sheet--canon",
+      "modelo": "manuelito_llanos__identity_sheet",
+      "entidad": "Manué Llanos",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-hombre-del-farol"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 9962,
+      "prompt_sha256": "612b200d73edd486dab65c1650a65c38b6893a87e9a35a06005b803e967c446d"
+    },
+    {
+      "job": "margarita_villaquira__identity_sheet--canon",
+      "modelo": "margarita_villaquira__identity_sheet",
+      "entidad": "Margarita, la Loca Margarita",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-loca-margarita"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 9392,
+      "prompt_sha256": "32af8403ef1b70b8ab8b234b77876d44a1cd309ce015472bc3172faa43bd3b5e"
+    },
+    {
+      "job": "margarita_villaquira__state_sheet--estado_hábito gris de capucha en el patio del asilo, sin la cinta roja, con el pétalo rojo saliendo de la manga",
+      "modelo": "margarita_villaquira__state_sheet",
+      "entidad": "Margarita, la Loca Margarita",
+      "categoria": "personaje",
+      "vista": "estado_hábito gris de capucha en el patio del asilo, sin la cinta roja, con el pétalo rojo saliendo de la manga",
+      "estados": [
+        "hábito gris de capucha en el patio del asilo, sin la cinta roja, con el pétalo rojo saliendo de la manga"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-loca-margarita"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 10335,
+      "prompt_sha256": "617d0a37640333df5a0ae645ad3799ec33061b9792d372dfd027731d1d955081"
+    },
+    {
+      "job": "nina_de_la_quinta__identity_sheet--canon",
+      "modelo": "nina_de_la_quinta__identity_sheet",
+      "entidad": "La niña de la Quinta",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-monja-de-las-rosas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9398,
+      "prompt_sha256": "46b4daa5831f177e6f144166a8f493fe446db9714bf893469e2112c0edc3168b"
+    }
+  ]
+}

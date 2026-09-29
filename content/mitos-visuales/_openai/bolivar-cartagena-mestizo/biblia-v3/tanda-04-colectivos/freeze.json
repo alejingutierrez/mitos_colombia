@@ -1,0 +1,147 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "bolivar-cartagena-mestizo",
+  "comunidad": "Bolívar y Cartagena",
+  "tanda": "tanda-04-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/bolivar-cartagena-mestizo.v3.json",
+    "sha256": "83a8f0f7117f21713d8a9f83d2fae957cb5e5b2dcb3f677a8464a95a80e79464"
+  },
+  "canon": {
+    "sha256": "2ed33a67c241b696ca40521259c9ed080fe10d09734bfa7b23f718b9e36a0ae6",
+    "verificado_en": "2026-09-29T02:27:41.230Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "lanceros-y-patriotas__group_grammar--canon",
+      "modelo": "lanceros-y-patriotas__group_grammar",
+      "entidad": "Lanceros de Getsemaní y patriotas",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "viva-la-libertad",
+        "una-reunion-clandestina",
+        "en-el-once",
+        "un-anonimo",
+        "la-abadesa-arrodillada",
+        "en-el-sitio-de-morillo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9063,
+      "prompt_sha256": "ca310e24d85772d5408ea6e530d3573b733eb7f90770efac9d4b85bdb4cd928d"
+    },
+    {
+      "job": "gente-del-puerto__group_grammar--canon",
+      "modelo": "gente-del-puerto__group_grammar",
+      "entidad": "Gente del puerto y del barrio portuario",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-mal-del-mar",
+        "marineritis-sentimental",
+        "mona-mona",
+        "el-fantasma-del-teatro-azul",
+        "la-muerte-de-los-ojos-verdes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8924,
+      "prompt_sha256": "e918d6ab882f376ddeae96f3c04a6f5c75faa7078fc8746d481279b9bf997001"
+    },
+    {
+      "job": "tropa-realista__group_grammar--canon",
+      "modelo": "tropa-realista__group_grammar",
+      "entidad": "Tropa y oficialidad realista",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "en-el-sitio-de-morillo",
+        "la-abadesa-arrodillada",
+        "una-reunion-clandestina",
+        "viva-la-libertad",
+        "mona-mona"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8914,
+      "prompt_sha256": "94f7f61d507aac7157171cc10f95531eacf7ae7142f5d93bed801d65de40838d"
+    },
+    {
+      "job": "hombres-de-mar-pescadores-y-contrabandistas__group_grammar--canon",
+      "modelo": "hombres-de-mar-pescadores-y-contrabandistas__group_grammar",
+      "entidad": "Hombres de mar: pescadores y contrabandistas",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-heroe",
+        "en-el-sitio-de-morillo",
+        "el-milagro-de-la-candelaria",
+        "macu-y-el-collar-de-camarones-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8984,
+      "prompt_sha256": "026613a2e056f5f5900dbd8eb15a0429aba2c93acaa82291651cf6737e208db0"
+    },
+    {
+      "job": "poblacion-hambrienta-del-sitio__group_grammar--canon",
+      "modelo": "poblacion-hambrienta-del-sitio__group_grammar",
+      "entidad": "Población hambrienta del sitio",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "en-el-sitio-de-morillo",
+        "la-abadesa-arrodillada"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8982,
+      "prompt_sha256": "5ac307ed601afbab4a689bd722becb2fd027f2804d853a77d0dacdc7f487de68"
+    },
+    {
+      "job": "cabildo-de-nacion-en-la-popa__group_grammar--canon",
+      "modelo": "cabildo-de-nacion-en-la-popa__group_grammar",
+      "entidad": "Cabildos de nación en la subida a La Popa",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "celos-de-esclavo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9565,
+      "prompt_sha256": "c8d2c2539c7c2f27e09b115f0079be15fc5081808367636a668687018d2db2d4"
+    }
+  ]
+}

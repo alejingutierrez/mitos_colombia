@@ -1,0 +1,106 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "antioquia-occidente-mixto",
+  "comunidad": "Occidente antioqueño mixto",
+  "tanda": "tanda-06-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/antioquia-occidente-mixto.v3.json",
+    "sha256": "907cf95313f620a930af113c992f4710a28954226fc13b245385946621c5d950"
+  },
+  "canon": {
+    "sha256": "49563b7fbab3cd617190cedd3a3694581a547d150705ffb9d03a938003bb7d76",
+    "verificado_en": "2026-09-29T03:06:28.530Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_finca_y_camino__object_sheet--canon",
+      "modelo": "hoja_utileria_finca_y_camino__object_sheet",
+      "entidad": "hoja utileria finca y camino",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-paton",
+        "los-rescoldos",
+        "las-ilusiones",
+        "la-rodillona",
+        "el-perro-negro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8514,
+      "prompt_sha256": "80ffe9c3cdeee5826f2c50b694948e3b818521bd78b60c5ec06c39a06d56bb27"
+    },
+    {
+      "job": "hoja_utileria_colonial_y_del_oro__object_sheet--canon",
+      "modelo": "hoja_utileria_colonial_y_del_oro__object_sheet",
+      "entidad": "hoja utileria colonial y de mesa",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "no-hay-deuda-que-no-se-pague",
+        "el-mareco",
+        "el-tesoro-de-dabeiba",
+        "la-rodillona"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8138,
+      "prompt_sha256": "d88421cc0b01828ad1f256f51d35e9ba9462c34198bc947d36b7a755a260ea62"
+    },
+    {
+      "job": "sementera_antioquena__botanical_sheet--canon",
+      "modelo": "sementera_antioquena__botanical_sheet",
+      "entidad": "La sementera antioqueña",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-patetarro",
+        "el-paton"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8442,
+      "prompt_sha256": "7d64a384a94ecf0c7e271b422575fca3eb3536d3bb4e5f86d2a2f35105d8ca69"
+    },
+    {
+      "job": "calavera_de_vaca_sobre_el_sembrado__object_sheet--canon",
+      "modelo": "calavera_de_vaca_sobre_el_sembrado__object_sheet",
+      "entidad": "La calavera de vaca sobre el sembrado",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-patetarro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8106,
+      "prompt_sha256": "58b47a8bc22aa9f8e1992ae6b7d59e0bbf2a199075c9e3228f181d72184874e0"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "choco-afro",
+  "comunidad": "Chocó afrodescendiente",
+  "tanda": "tanda-05-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/choco-afro.v3.json",
+    "sha256": "a9f012588cba4d7584dcaa120def60e260984c8e26850fba51e8794f31806cf9"
+  },
+  "canon": {
+    "sha256": "0188296e71d30b1ac2f9e6a28efd8ede61858969899d9c739dda74cec673e3d2",
+    "verificado_en": "2026-09-29T03:05:53.591Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "anansi_arana_sacristana__identity_sheet--canon",
+      "modelo": "anansi_arana_sacristana__identity_sheet",
+      "entidad": "Anansi, la araña sacristana",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "anansi"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9698,
+      "prompt_sha256": "078afa7dca763c2fd6b92f94fd0e9d82db596b318a7d762b3cc34ac5e6664e2d"
+    },
+    {
+      "job": "la_sierpe_de_bete__identity_sheet--canon",
+      "modelo": "la_sierpe_de_bete__identity_sheet",
+      "entidad": "La Sierpe de Beté",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-sierpe-de-bete"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9187,
+      "prompt_sha256": "fe8e12b38ffda64233340b36a657e4b5a4f8adc97598ef3e5dca2c001a6978cd"
+    },
+    {
+      "job": "la_tunda_tulavieja__identity_sheet--canon",
+      "modelo": "la_tunda_tulavieja__identity_sheet",
+      "entidad": "La Tunda",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "tulavieja-tunda"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8862,
+      "prompt_sha256": "669e200a8ec4733b9f699ab20e19936349842c63310af16f146bfe44066caa5e"
+    },
+    {
+      "job": "la_tunda_tulavieja__state_sheet--estado_con el rostro de la madre, caminando adelante sin volverse",
+      "modelo": "la_tunda_tulavieja__state_sheet",
+      "entidad": "La Tunda",
+      "categoria": "criatura",
+      "vista": "estado_con el rostro de la madre, caminando adelante sin volverse",
+      "estados": [
+        "con el rostro de la madre, caminando adelante sin volverse"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "tulavieja-tunda"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 9478,
+      "prompt_sha256": "150615d8a03f0305b4edf4be4421beffaef3cf0e1a0bf8f58371264475af9b55"
+    },
+    {
+      "job": "la_yesca__identity_sheet--canon",
+      "modelo": "la_yesca__identity_sheet",
+      "entidad": "La Yesca",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-yesca"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7622,
+      "prompt_sha256": "4ef0cb160a40975bd283964b70da946848ebcad6b94576132e529509539974e3"
+    },
+    {
+      "job": "la_yesca__state_sheet--estado_daño invisible- la persona que se ahoga sin nada visible alrededor",
+      "modelo": "la_yesca__state_sheet",
+      "entidad": "La Yesca",
+      "categoria": "criatura",
+      "vista": "estado_daño invisible: la persona que se ahoga sin nada visible alrededor",
+      "estados": [
+        "daño invisible: la persona que se ahoga sin nada visible alrededor"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-yesca"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8953,
+      "prompt_sha256": "938a233cf67a1c641ce914fdb8244fa81ded31afb28696e739fdd31a53cac70f"
+    }
+  ]
+}

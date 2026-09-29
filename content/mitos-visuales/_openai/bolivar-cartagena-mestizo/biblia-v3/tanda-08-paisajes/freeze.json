@@ -1,0 +1,95 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "bolivar-cartagena-mestizo",
+  "comunidad": "Bolívar y Cartagena",
+  "tanda": "tanda-08-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/bolivar-cartagena-mestizo.v3.json",
+    "sha256": "83a8f0f7117f21713d8a9f83d2fae957cb5e5b2dcb3f677a8464a95a80e79464"
+  },
+  "canon": {
+    "sha256": "2ed33a67c241b696ca40521259c9ed080fe10d09734bfa7b23f718b9e36a0ae6",
+    "verificado_en": "2026-09-29T02:47:23.168Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "bahia-y-mar-caribe__environment_model--canon",
+      "modelo": "bahia-y-mar-caribe__environment_model",
+      "entidad": "Bahía, Bocachica y mar Caribe",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "despues-del-sitio",
+        "el-heroe",
+        "el-mal-del-mar",
+        "el-milagro-de-la-candelaria",
+        "en-el-sitio-de-morillo",
+        "marineritis-sentimental",
+        "templo-de-santo-domingo-y-el-cristo-de-la-expiracion",
+        "el-talisman-funebre"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9146,
+      "prompt_sha256": "12492f623d7de8749cbe2d3a95b499a90334eb7a9ef455763bff89ff44d25788"
+    },
+    {
+      "job": "colina-de-la-popa__environment_model--canon",
+      "modelo": "colina-de-la-popa__environment_model",
+      "entidad": "Colina de La Popa",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "celos-de-esclavo",
+        "la-abadesa-arrodillada",
+        "el-milagro-de-la-candelaria",
+        "la-sombra"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8997,
+      "prompt_sha256": "0b816cd18905e12f38e50a5e68521a8bfe458251e2b3d7473cd6a59ca743b833"
+    },
+    {
+      "job": "cienaga-y-cano__environment_model--canon",
+      "modelo": "cienaga-y-cano__environment_model",
+      "entidad": "Ciénaga, caño y río",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "zequiel",
+        "mona-mona",
+        "en-el-sitio-de-morillo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8875,
+      "prompt_sha256": "d587a953d0f9a4b561ab12d5e9abe58d40908b439b4e98126d7cdd625d6a9560"
+    }
+  ]
+}

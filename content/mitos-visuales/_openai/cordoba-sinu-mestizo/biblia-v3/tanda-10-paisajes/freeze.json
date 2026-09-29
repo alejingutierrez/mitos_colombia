@@ -1,0 +1,156 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "cordoba-sinu-mestizo",
+  "comunidad": "Córdoba y el Sinú",
+  "tanda": "tanda-10-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/cordoba-sinu-mestizo.v3.json",
+    "sha256": "8e3b8fb8c27d4013c025448dfd2d78a3c0fd8eab108f3bdc383407093e5379d3"
+  },
+  "canon": {
+    "sha256": "2895fda0dc55b17bb0c61d11c59cfdeaa984f8a59545958e98741430b9f823d8",
+    "verificado_en": "2026-09-29T02:53:07.032Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "el_camino_de_tierra__environment_model--canon",
+      "modelo": "el_camino_de_tierra__environment_model",
+      "entidad": "El camino de tierra",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "conejo-y-la-mona-de-cera",
+        "el-viaje-al-cielo",
+        "la-vieja-el-burro-y-los-huevos",
+        "los-tres-cachacos-y-la-cantara-de-ron-neque",
+        "rambao",
+        "tio-conejo-y-los-platanos",
+        "tio-conejo-y-morrocoy",
+        "juan-bobo-y-sus-hermanos",
+        "conejo-y-la-fiesta-de-toro",
+        "juan-bobo-y-la-vieja",
+        "las-orejas-del-tio-conejo",
+        "lo-justo-y-lo-legal",
+        "veinte-para-el-bollo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8998,
+      "prompt_sha256": "8a7f113d6c394b8f7ca26e09bc52dc830100ea26c927f003b55e757ca9dd081f"
+    },
+    {
+      "job": "el_monte__environment_model--canon",
+      "modelo": "el_monte__environment_model",
+      "entidad": "El monte",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "conejo-y-los-hijos-de-tia-tigra",
+        "el-mocho-y-el-tigre",
+        "tia-zorra-en-el-maizal-de-tio-conejo",
+        "tio-conejo-y-morrocoy",
+        "tio-conejo-y-los-platanos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9364,
+      "prompt_sha256": "2c5481b4fa92a81c5d1e21d3047daedfbf9136dbb93fa01b49656a758fd73a4d"
+    },
+    {
+      "job": "el_cielo__spatial_model--canon",
+      "modelo": "el_cielo__spatial_model",
+      "entidad": "El cielo (las puertas y la Gloria)",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-mina-de-oro-en-el-infierno",
+        "las-orejas-del-tio-conejo",
+        "rambao"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8046,
+      "prompt_sha256": "eca0de5c3d202386dc02359eb25cf159cdd18a94ce928146cc48647960ae4b19"
+    },
+    {
+      "job": "el_rio_y_el_arroyo__environment_model--canon",
+      "modelo": "el_rio_y_el_arroyo__environment_model",
+      "entidad": "El río y el arroyo",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "conejo-y-caiman",
+        "el-costeno-y-los-cachacos",
+        "el-mocho-y-el-tigre"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8714,
+      "prompt_sha256": "e05e97c9849cf6e5eaac3c0c8724703143052c6097cca1eaecfd9628da70ebdc"
+    },
+    {
+      "job": "la_roza__environment_model--canon",
+      "modelo": "la_roza__environment_model",
+      "entidad": "La roza (maizal, platanera y yucal)",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "conejo-y-la-mona-de-cera",
+        "tia-zorra-en-el-maizal-de-tio-conejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8907,
+      "prompt_sha256": "bb3b7f60a47182cf74959d3c947e779123abb8fda22b1f345c880844113c2d41"
+    },
+    {
+      "job": "el_pozo_de_los_ladrones__spatial_model--canon",
+      "modelo": "el_pozo_de_los_ladrones__spatial_model",
+      "entidad": "El pozo que se abre bajo el árbol",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "juan-bobo-y-sus-hermanos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8774,
+      "prompt_sha256": "cfb3d32f6b201cb3fa231db509cb0c613b92af819a0694a15bf19845910ee68a"
+    }
+  ]
+}

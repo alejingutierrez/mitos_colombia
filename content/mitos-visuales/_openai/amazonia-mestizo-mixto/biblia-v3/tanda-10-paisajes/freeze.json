@@ -1,0 +1,142 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "amazonia-mestizo-mixto",
+  "comunidad": "Amazonía ribereña mestiza",
+  "tanda": "tanda-10-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/amazonia-mestizo-mixto.v3.json",
+    "sha256": "fea46c1ab8f6b063283d925332b6158a17c0d78a373ec2dee760e858196271ec"
+  },
+  "canon": {
+    "sha256": "2f6f707553d5db5bf527413fc9dccfe903963879388b8ebee73d2d100adcfe9a",
+    "verificado_en": "2026-09-29T02:42:30.370Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "rio_amazonico__environment_model--canon",
+      "modelo": "rio_amazonico__environment_model",
+      "entidad": "Río amazónico",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-bufeo",
+        "el-hijo-de-tuhixana",
+        "la-cobra-grande",
+        "madre-de-playa",
+        "yacuruna",
+        "kanuma",
+        "origen-del-agua",
+        "el-cotomachaco",
+        "nonuetoma",
+        "el-descubrimiento-del-agua-y-los-peces",
+        "taik",
+        "chuya-chaqui",
+        "el-chuy-achaque",
+        "la-curupira",
+        "moe-e-ipi",
+        "ngutapa-y-chimuiyae",
+        "origen-de-la-luna",
+        "origen-de-los-vegetales-cultivaldos"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7414,
+      "prompt_sha256": "a9153a23585acc2888a480faf9c8d2ac7e6dbec08c5d939f70e50389cf0444cf"
+    },
+    {
+      "job": "selva_humeda__environment_model--canon",
+      "modelo": "selva_humeda__environment_model",
+      "entidad": "Selva húmeda",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "chuya-chaqui",
+        "el-chuy-achaque",
+        "la-curupira",
+        "el-cotomachaco",
+        "nonuetoma",
+        "ngutapa-y-chimuiyae",
+        "taik",
+        "origen-del-gavilan",
+        "el-nacimiento-de-los-matapi",
+        "origen-de-los-micos-boquiblancos",
+        "el-descubrimiento-del-agua-y-los-peces",
+        "el-diluvio-guinadoma",
+        "origen-de-la-luna",
+        "peleas-y-aventuras-entre-el-sobrino-conejo-y-el-tio-tigre",
+        "petapeta"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7578,
+      "prompt_sha256": "d9f46dfbc5bc1c6428917ba95f86a09b82d1174cb4fb6215a3c2301560993350"
+    },
+    {
+      "job": "chagra__spatial_model--canon",
+      "modelo": "chagra__spatial_model",
+      "entidad": "Chagra / chacra / huerta",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "chuya-chaqui",
+        "kanuma",
+        "taife",
+        "peleas-y-aventuras-entre-el-sobrino-conejo-y-el-tio-tigre",
+        "origen-de-los-vegetales-cultivaldos",
+        "el-origen-de-las-frutas",
+        "petapeta",
+        "el-nacimiento-de-los-matapi",
+        "ngutapa-y-chimuiyae",
+        "nonuetoma"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7823,
+      "prompt_sha256": "49a063237ea7b91694352578fac88257f4caeb22931a8df2829a40b5125c5f07"
+    },
+    {
+      "job": "cueva_y_guarida_de_monte__spatial_model--canon",
+      "modelo": "cueva_y_guarida_de_monte__spatial_model",
+      "entidad": "Cueva y guarida bajo tierra",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "peleas-y-aventuras-entre-el-sobrino-conejo-y-el-tio-tigre",
+        "taife"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7968,
+      "prompt_sha256": "9aeb80d30bfdc7c2eb42f31405d16bf210d26035792ddba72712fe7f97712a3a"
+    }
+  ]
+}

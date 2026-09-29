@@ -1,0 +1,64 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "choco-afro",
+  "comunidad": "Chocó afrodescendiente",
+  "tanda": "tanda-06-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/choco-afro.v3.json",
+    "sha256": "a9f012588cba4d7584dcaa120def60e260984c8e26850fba51e8794f31806cf9"
+  },
+  "canon": {
+    "sha256": "0188296e71d30b1ac2f9e6a28efd8ede61858969899d9c739dda74cec673e3d2",
+    "verificado_en": "2026-09-29T03:07:13.317Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "casa_sobre_pilotes__spatial_model--canon",
+      "modelo": "casa_sobre_pilotes__spatial_model",
+      "entidad": "Casa de tabla sobre pilotes, techo de palma o zinc",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "kijimba-de-las-animas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9323,
+      "prompt_sha256": "d8ed07688dca6a377b2d60f08538f04d270313c5323cbb5215f47b96875dc5c3"
+    },
+    {
+      "job": "iglesia_y_camposanto_chocoano__spatial_model--canon",
+      "modelo": "iglesia_y_camposanto_chocoano__spatial_model",
+      "entidad": "Iglesia de pueblo con torre y campanas",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "anansi"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8636,
+      "prompt_sha256": "8ab9a33aeba405456adc214c484d36fe678ce781542d480974f3a0c3b5771e33"
+    }
+  ]
+}

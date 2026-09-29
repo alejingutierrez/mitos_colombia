@@ -1,0 +1,142 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "amazonia-mestizo-mixto",
+  "comunidad": "Amazonía ribereña mestiza",
+  "tanda": "tanda-09-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/amazonia-mestizo-mixto.v3.json",
+    "sha256": "fea46c1ab8f6b063283d925332b6158a17c0d78a373ec2dee760e858196271ec"
+  },
+  "canon": {
+    "sha256": "2f6f707553d5db5bf527413fc9dccfe903963879388b8ebee73d2d100adcfe9a",
+    "verificado_en": "2026-09-29T02:41:28.172Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "fuego_humo_y_ceniza__phenomenon_rule--canon",
+      "modelo": "fuego_humo_y_ceniza__phenomenon_rule",
+      "entidad": "Fuego, humo y ceniza",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "nonuetoma",
+        "taife",
+        "origen-del-sol",
+        "el-nacimiento-de-los-matapi",
+        "el-origen-de-las-frutas",
+        "el-descubrimiento-del-agua-y-los-peces",
+        "kanuma",
+        "la-cobra-grande",
+        "la-curupira",
+        "ngutapa-y-chimuiyae"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7409,
+      "prompt_sha256": "78b027bedb90530b8dd0be0e4cb131bc4eb47782db6b247e616b77e63c8eaa31"
+    },
+    {
+      "job": "maloca__spatial_model--canon",
+      "modelo": "maloca__spatial_model",
+      "entidad": "Maloca",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "chuya-chaqui",
+        "el-nacimiento-de-los-matapi",
+        "kanuma",
+        "ngutapa-y-chimuiyae",
+        "taik",
+        "el-descubrimiento-del-agua-y-los-peces",
+        "el-origen-de-las-frutas",
+        "taife"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9258,
+      "prompt_sha256": "b2a11c3e0563269a32b3052136735c33470bd7579bf20325a5e09c610e3ce44d"
+    },
+    {
+      "job": "astros_sol_y_luna__phenomenon_rule--canon",
+      "modelo": "astros_sol_y_luna__phenomenon_rule",
+      "entidad": "Sol y Luna",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "origen-del-sol",
+        "origen-de-la-luna",
+        "el-origen-de-las-frutas",
+        "madre-de-playa",
+        "ngutapa-y-chimuiyae"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6829,
+      "prompt_sha256": "5fdb763a1be78b0649a97a5d91f3f2d1d9703628bcaf980f73aaaf262441b3dc"
+    },
+    {
+      "job": "caserio_ribereno__spatial_model--canon",
+      "modelo": "caserio_ribereno__spatial_model",
+      "entidad": "Casa y caserío de orilla",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-bufeo",
+        "el-chuy-achaque",
+        "la-cobra-grande",
+        "yacuruna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7515,
+      "prompt_sha256": "7165f2a04d2c62480179701ccd314ac081c7c39dfada4b9adb1debf0f25a4dfc"
+    },
+    {
+      "job": "lluvia_tormenta_y_diluvio__phenomenon_rule--canon",
+      "modelo": "lluvia_tormenta_y_diluvio__phenomenon_rule",
+      "entidad": "Lluvia, tormenta y diluvio",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "chuya-chaqui",
+        "el-diluvio-guinadoma",
+        "la-curupira"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6396,
+      "prompt_sha256": "e30b821d712c01ef5d342886ae430daf03aa7bc13a1a74fa6af85c4529cbc66c"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "pananes",
+  "comunidad": "Panán",
+  "tanda": "tanda-04-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/pananes.v3.json",
+    "sha256": "8d93b70d1b0b66bb77b0d395d4643339ab639357c4bf9a86d329850dde0f158b"
+  },
+  "canon": {
+    "sha256": "e4799c1c37247920d8ac717adb1374d600de3d353adbc42bf9d861a458f135f3",
+    "verificado_en": "2026-09-29T02:24:48.784Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "colectivo_comuneros_de_panan__group_grammar--canon",
+      "modelo": "colectivo_comuneros_de_panan__group_grammar",
+      "entidad": "Comuneras y comuneros de Panán",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "al-duende",
+        "el-chuchun-y-las-tres-quebradas",
+        "el-chutun",
+        "el-cualchio-y-la-olla-del-granizo",
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo",
+        "el-cueche",
+        "la-basilica-encantada",
+        "la-cangagua-o-la-chorrera-del-duende",
+        "la-entundada-el-quedado-el-espanto",
+        "la-huacas",
+        "la-laguna-de-maria-panana",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan",
+        "la-tuta",
+        "la-vieja-la-viuda-y-el-anima",
+        "la-waka"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8519,
+      "prompt_sha256": "c87c8300b1399d6a120105bd7d2d248962fab2a9967e84afd4e5845effc5322d"
+    },
+    {
+      "job": "colectivo_comuneros_de_panan__state_sheet--estado_epoca_de_hacienda_y_frontera",
+      "modelo": "colectivo_comuneros_de_panan__state_sheet",
+      "entidad": "Comuneras y comuneros de Panán",
+      "categoria": "colectivo",
+      "vista": "estado_epoca_de_hacienda_y_frontera",
+      "estados": [
+        "epoca_de_hacienda_y_frontera"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "al-duende",
+        "el-chuchun-y-las-tres-quebradas",
+        "el-chutun",
+        "el-cualchio-y-la-olla-del-granizo",
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo",
+        "el-cueche",
+        "la-basilica-encantada",
+        "la-cangagua-o-la-chorrera-del-duende",
+        "la-entundada-el-quedado-el-espanto",
+        "la-huacas",
+        "la-laguna-de-maria-panana",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan",
+        "la-tuta",
+        "la-vieja-la-viuda-y-el-anima",
+        "la-waka"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8346,
+      "prompt_sha256": "77e5659440a4a4857f72d6349b31f629cab5d8448492db29dc5bf1def0691bb6"
+    },
+    {
+      "job": "medicos_tradicionales_yerbateros_y_parteras__group_grammar--canon",
+      "modelo": "medicos_tradicionales_yerbateros_y_parteras__group_grammar",
+      "entidad": "Médicos tradicionales, yerbateros y parteras",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "al-duende",
+        "el-chuchun-y-las-tres-quebradas",
+        "el-chutun",
+        "el-cueche",
+        "la-entundada-el-quedado-el-espanto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8135,
+      "prompt_sha256": "e41f1853b16749429c09652e71adee48d14ff8ee7be36c8a36ce14710742523f"
+    },
+    {
+      "job": "fauna_menor_de_cuchicuelan_y_paramo__group_grammar--canon",
+      "modelo": "fauna_menor_de_cuchicuelan_y_paramo__group_grammar",
+      "entidad": "Fauna menor de Cuchicuelan y del páramo",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-laguna-de-maria-panana",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan",
+        "la-tuta"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8202,
+      "prompt_sha256": "d100388f1b6aa08465b6fc089ad886337411f95a31f1342b8a82ded7e240f3d3"
+    },
+    {
+      "job": "animales_de_la_waka__group_grammar--canon",
+      "modelo": "animales_de_la_waka__group_grammar",
+      "entidad": "Los animales de la Waka",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-huacas",
+        "la-waka"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8238,
+      "prompt_sha256": "16315490da08e1825f22f137ba224a33cdea4a39b4b895fdcb4152d5e585a18a"
+    },
+    {
+      "job": "tres_caciques_fundadores__group_grammar--canon",
+      "modelo": "tres_caciques_fundadores__group_grammar",
+      "entidad": "Los tres caciques fundadores",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-tuta"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8334,
+      "prompt_sha256": "f19dbd819643becbcfa31472bcab9cb87fbb036f67dbb6e8a31a39315964651c"
+    }
+  ]
+}

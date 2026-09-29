@@ -1,0 +1,103 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "eje-cafetero-mestizo",
+  "comunidad": "Eje cafetero (Caldas)",
+  "tanda": "tanda-04-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/eje-cafetero-mestizo.v3.json",
+    "sha256": "9f8ba174bd5891e94e91e954f2bcea2a27d598d31a430ba67beeaa845313959f"
+  },
+  "canon": {
+    "sha256": "c480be8b294ba9a5b26ca90be264f109e039624b866d0d0c6e73f71fb7fb54da",
+    "verificado_en": "2026-09-29T03:02:05.906Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "colectivo_campesinos_y_arrieros__group_grammar--canon",
+      "modelo": "colectivo_campesinos_y_arrieros__group_grammar",
+      "entidad": "Campesinos, arrieros y familias del occidente caldense",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cuento-de-animas",
+        "el-aserrador",
+        "el-cacique-cumanday",
+        "el-coco",
+        "el-cole-cabuya",
+        "el-viejo-del-costal",
+        "las-brujas"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 9849,
+      "prompt_sha256": "643f4f7a84b7ff085f8fe3595e62081f2d452e4815179c58c276256d612fdc41"
+    },
+    {
+      "job": "colectivo_espanoles_de_la_conquista__group_grammar--canon",
+      "modelo": "colectivo_espanoles_de_la_conquista__group_grammar",
+      "entidad": "Españoles de la conquista: encomenderos, administradores, vigías y sus familias",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "de-frente-al-sol",
+        "in-illo-tempore"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 10119,
+      "prompt_sha256": "533eb39892e11b59ea94a5de679eacd60b3dcdaeb56100caf1ccf6eeec3c8f3b"
+    },
+    {
+      "job": "colectivo_indios_y_negros_de_la_encomienda__group_grammar--canon",
+      "modelo": "colectivo_indios_y_negros_de_la_encomienda__group_grammar",
+      "entidad": "Los indios quimbayas y los negros mineros de las encomiendas",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "de-frente-al-sol"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 9769,
+      "prompt_sha256": "f85473c97c0d2a7cbde0e8814961a64a4aaaaf08b703488188c92d8586cd06d0"
+    },
+    {
+      "job": "procesion_de_animas__group_grammar--canon",
+      "modelo": "procesion_de_animas__group_grammar",
+      "entidad": "La procesión de ánimas",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cuento-de-animas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 10307,
+      "prompt_sha256": "4d60eeca48dab5d41e5aafb5933afcb6e571d714922a4f2c1feaf0ce88ad5a85"
+    }
+  ]
+}

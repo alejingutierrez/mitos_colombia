@@ -1,0 +1,51 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "cordoba-sinu-mestizo",
+  "comunidad": "Córdoba y el Sinú",
+  "tanda": "tanda-07-animales-recatadas",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/cordoba-sinu-mestizo.v3.json",
+    "sha256": "8e3b8fb8c27d4013c025448dfd2d78a3c0fd8eab108f3bdc383407093e5379d3"
+  },
+  "canon": {
+    "sha256": "2895fda0dc55b17bb0c61d11c59cfdeaa984f8a59545958e98741430b9f823d8",
+    "verificado_en": "2026-09-29T02:47:57.944Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 16,
+  "fichas_ya_preparadas": 16,
+  "fichas": [
+    {
+      "job": "tia_zorra__identity_sheet--canon",
+      "modelo": "tia_zorra__identity_sheet",
+      "entidad": "Tía Zorra",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "conejo-y-la-mona-de-cera",
+        "el-viaje-al-cielo",
+        "tia-zorra-en-el-maizal-de-tio-conejo",
+        "tio-conejo-zapatero"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8127,
+      "prompt_sha256": "9162ab0751a4f11cd3498b233905aadc8e13592346fb5ea830806debd3b7a72f"
+    }
+  ]
+}

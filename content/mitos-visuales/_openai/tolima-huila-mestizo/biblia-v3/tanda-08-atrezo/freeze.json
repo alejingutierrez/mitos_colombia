@@ -1,0 +1,169 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tolima-huila-mestizo",
+  "comunidad": "Tolima y Huila",
+  "tanda": "tanda-08-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tolima-huila-mestizo.v3.json",
+    "sha256": "b7f1f1559682e274cff21c66142964574468ec3ae942600e92a58a29ba06b0f9"
+  },
+  "canon": {
+    "sha256": "e3603f47534a458fbe0d16a341b049be3b48e059ddfb532221d2ee481c5cf9cf",
+    "verificado_en": "2026-09-29T02:49:52.380Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 7,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_papel_oro_y_tabaco__object_sheet--canon",
+      "modelo": "hoja_utileria_papel_oro_y_tabaco__object_sheet",
+      "entidad": "hoja utileria papel oro y tabaco",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-chenche",
+        "dioses-lares",
+        "la-tarasca",
+        "el-silbador",
+        "el-poira",
+        "la-patasola-mixto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8184,
+      "prompt_sha256": "fb7f72189602b53cd9684306ba17edc5a74655eb1e571ab694c4f2ebe837d3c3"
+    },
+    {
+      "job": "cultivos_y_vegetacion_del_alto_magdalena__botanical_sheet--canon",
+      "modelo": "cultivos_y_vegetacion_del_alto_magdalena__botanical_sheet",
+      "entidad": "Cultivos y vegetación del alto Magdalena",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-cazador",
+        "el-silbador",
+        "el-tunjo",
+        "la-patasola",
+        "la-patasola-mixto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7635,
+      "prompt_sha256": "ba2250e1814eb8fb4e72b73ae6513f374621aba57b3e2aafdc6d820d92a6cc6f"
+    },
+    {
+      "job": "hoja_utileria_casa_y_entierro__object_sheet--canon",
+      "modelo": "hoja_utileria_casa_y_entierro__object_sheet",
+      "entidad": "hoja utileria casa y entierro",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-guango",
+        "la-candileja",
+        "la-madre-agua",
+        "brujas-y-duendes",
+        "el-tunjo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8092,
+      "prompt_sha256": "8f520b1256a8bba909c1bf0810e7f4d39ed547777efacc1c622f2c8618eb81c2"
+    },
+    {
+      "job": "hoja_utileria_labranza_y_rio__object_sheet--canon",
+      "modelo": "hoja_utileria_labranza_y_rio__object_sheet",
+      "entidad": "hoja utileria labranza y rio",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-patasola",
+        "el-cazador",
+        "el-silbador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7796,
+      "prompt_sha256": "5b5bc1940882124e3a669450783102cb0c5aa2ea816c21b82e639fe8f611865f"
+    },
+    {
+      "job": "tiple_tolimense__object_sheet--canon",
+      "modelo": "tiple_tolimense__object_sheet",
+      "entidad": "El tiple",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "brujas-y-duendes",
+        "la-patasola-mixto",
+        "el-tunjo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6575,
+      "prompt_sha256": "4aa164fc7b48f4e83bfae34efdccffe6f56ef529c63fcbe0ad7c7bd286512781"
+    },
+    {
+      "job": "tiple_tolimense__state_sheet--estado_tiplecito de ocho cuerdas, como un requinto, más pequeño que el de doce, con las ocho cuerdas contables, apoyado en un rincón",
+      "modelo": "tiple_tolimense__state_sheet",
+      "entidad": "El tiple",
+      "categoria": "objeto",
+      "vista": "estado_tiplecito de ocho cuerdas, como un requinto, más pequeño que el de doce, con las ocho cuerdas contables, apoyado en un rincón",
+      "estados": [
+        "tiplecito de ocho cuerdas, como un requinto, más pequeño que el de doce, con las ocho cuerdas contables, apoyado en un rincón"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "brujas-y-duendes",
+        "la-patasola-mixto",
+        "el-tunjo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7567,
+      "prompt_sha256": "0f5539a24a3bf0969d081cea8a30aa83469922bd96fcdcd5d18d132fbbcf043c"
+    },
+    {
+      "job": "el_guando__object_sheet--canon",
+      "modelo": "el_guando__object_sheet",
+      "entidad": "El guando (camilla de guaduas)",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-guango"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7335,
+      "prompt_sha256": "05a29024c049156d1352ebb30775fd61d8bf9b4333912d03f4a73aed239fb026"
+    }
+  ]
+}

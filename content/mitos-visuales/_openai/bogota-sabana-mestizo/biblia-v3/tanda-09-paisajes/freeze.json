@@ -1,0 +1,68 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "bogota-sabana-mestizo",
+  "comunidad": "Bogotá y la sabana",
+  "tanda": "tanda-09-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/bogota-sabana-mestizo.v3.json",
+    "sha256": "55c8aadb6274065fccc72a76abc5b3542957a51530be49e80137f3b3b6996998"
+  },
+  "canon": {
+    "sha256": "f40bff7bfadd041235920c5f638d1f9ad9ce9fb5b40b91e9893d958d2674ad1d",
+    "verificado_en": "2026-09-29T02:58:46.871Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "cerro_y_santuario_monserrate__environment_model--canon",
+      "modelo": "cerro_y_santuario_monserrate__environment_model",
+      "entidad": "Cerro y santuario de Monserrate",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-leyenda-del-santuario-de-monserrate",
+        "el-venado-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 10361,
+      "prompt_sha256": "25cdb0eb4865700a77c85df7164bab48b4e9a88e76450e0c79cf2380e51f703f"
+    },
+    {
+      "job": "gruta_de_guadalupe__spatial_model--canon",
+      "modelo": "gruta_de_guadalupe__spatial_model",
+      "entidad": "La grieta de la peña de El Boquerón",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-venado-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9626,
+      "prompt_sha256": "5771b5e3da333406b801e1df44dd439735d16a6a57e9c549bd2fd10e00da0b1b"
+    }
+  ]
+}

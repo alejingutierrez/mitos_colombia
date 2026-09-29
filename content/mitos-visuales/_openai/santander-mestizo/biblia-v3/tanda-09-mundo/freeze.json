@@ -1,0 +1,199 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "santander-mestizo",
+  "comunidad": "Santander mestizo",
+  "tanda": "tanda-09-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/santander-mestizo.v3.json",
+    "sha256": "d5b07ab1f712e5293471956f31a70a947fceb6dc9a6f1f82ce4c214672c215a7"
+  },
+  "canon": {
+    "sha256": "001778764d5a15260f48f1d6bc2a7f74857486623e73ca5c9681e13fe8ec3cdd",
+    "verificado_en": "2026-09-29T02:33:26.520Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "casa_de_bahareque__spatial_model--canon",
+      "modelo": "casa_de_bahareque__spatial_model",
+      "entidad": "La casa campesina de bahareque",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-lampara-de-petroleo",
+        "la-diabla-castigadora",
+        "los-tunjos-de-la-cantera",
+        "el-cerro-encantado",
+        "el-reventon-de-jacobo",
+        "el-pollo-de-las-animas",
+        "el-anima-coy",
+        "la-mula-del-diablo",
+        "el-trapiche-ardiendo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7025,
+      "prompt_sha256": "865e7f30786791f88ad9ab4da5206a14c665cb11d1eab360bfab71feadc67b9e"
+    },
+    {
+      "job": "iglesia_de_pueblo__spatial_model--canon",
+      "modelo": "iglesia_de_pueblo__spatial_model",
+      "entidad": "La iglesia y su atrio",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-anima-coy",
+        "la-mechuda",
+        "la-vista-del-libertador",
+        "la-sayona-del-cementerio",
+        "nueva-version-de-la-luz-del-limonal",
+        "cuento-fantastico",
+        "tal-para-cual",
+        "lo-que-ensenan-las-cuevas",
+        "duende-del-salto"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6861,
+      "prompt_sha256": "005a9e21e2cdd865234ef51fd731a3a6c35b38792c01576d28171780810e0be1"
+    },
+    {
+      "job": "casona_de_tapia_pisada__spatial_model--canon",
+      "modelo": "casona_de_tapia_pisada__spatial_model",
+      "entidad": "La casona de pueblo de tapia pisada",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-monedita-en-la-alcancia",
+        "tal-para-cual",
+        "la-vista-del-libertador",
+        "la-mula-maneada",
+        "nueva-version-de-la-luz-del-limonal",
+        "la-piedra-del-muerto",
+        "la-hilandera"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7119,
+      "prompt_sha256": "9214e370181b16e4e532dd9dbc5504bce8ad7b4ec06630d0ab3ceb482e9d161c"
+    },
+    {
+      "job": "tienda_de_pueblo__spatial_model--canon",
+      "modelo": "tienda_de_pueblo__spatial_model",
+      "entidad": "La tienda y el local de oficio",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-sayona-del-cementerio",
+        "la-campana-del-diablo",
+        "el-diablo-de-umpala",
+        "la-mula-del-diablo",
+        "el-carriazo-de-vereda-san-isidro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6815,
+      "prompt_sha256": "f8bc56c4735c1a909a872baf11eca9c9459f5be59f41c09b462c767354cbbb77"
+    },
+    {
+      "job": "tormenta_de_montana__phenomenon_rule--canon",
+      "modelo": "tormenta_de_montana__phenomenon_rule",
+      "entidad": "La tormenta de montaña",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-piedra-del-muerto",
+        "la-lampara-de-petroleo",
+        "el-cerro-encantado",
+        "lagunas-encantadas",
+        "el-ermitano-iracundo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6944,
+      "prompt_sha256": "ff84d03b6a7e27fe65a5fd2aa881447ec16150f7205071f6c0fd33224f9b8022"
+    },
+    {
+      "job": "luz_errante_nocturna__phenomenon_rule--canon",
+      "modelo": "luz_errante_nocturna__phenomenon_rule",
+      "entidad": "La luz errante",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-lampara-de-petroleo",
+        "la-monedita-en-la-alcancia"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6916,
+      "prompt_sha256": "1473e03dbf0703dd701c6aca335a7c3b2425c964a23d2c398c067bc26055fb89"
+    },
+    {
+      "job": "puerta_del_perdon__spatial_model--canon",
+      "modelo": "puerta_del_perdon__spatial_model",
+      "entidad": "La Puerta del Perdón",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-puerta-del-perdon"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6948,
+      "prompt_sha256": "c569ae84a1465bfffd765ed1f8704865af47d08fe193312b4a687a0786f83cf2"
+    },
+    {
+      "job": "trapiche_ardiendo__spatial_model--canon",
+      "modelo": "trapiche_ardiendo__spatial_model",
+      "entidad": "El trapiche ardiendo de Nazario",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-trapiche-ardiendo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7237,
+      "prompt_sha256": "762a23f315c9a4f5d93d1405ce8705a4d1d69fddbc89f3e263caa4d034edd97d"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "antioquia-occidente-mixto",
+  "comunidad": "Occidente antioqueño mixto",
+  "tanda": "tanda-04-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/antioquia-occidente-mixto.v3.json",
+    "sha256": "907cf95313f620a930af113c992f4710a28954226fc13b245385946621c5d950"
+  },
+  "canon": {
+    "sha256": "49563b7fbab3cd617190cedd3a3694581a547d150705ffb9d03a938003bb7d76",
+    "verificado_en": "2026-09-29T03:01:13.995Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "gente_colonial_espanola__group_grammar--canon",
+      "modelo": "gente_colonial_espanola__group_grammar",
+      "entidad": "Gente colonial española",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-tesoro-de-dabeiba",
+        "no-hay-deuda-que-no-se-pague"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 9780,
+      "prompt_sha256": "a8b626b3e9f35f114dbfa8f40e6f942258222ea6fb92214ebcb26241932e4240"
+    },
+    {
+      "job": "mineros_antioquenos__group_grammar--canon",
+      "modelo": "mineros_antioquenos__group_grammar",
+      "entidad": "Los mineros",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-patetarro",
+        "maria-centeno"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9418,
+      "prompt_sha256": "9cd2adb1b27433c4355dc0ae2cc189ddfa13452d885949a097427eb723503f08"
+    }
+  ]
+}

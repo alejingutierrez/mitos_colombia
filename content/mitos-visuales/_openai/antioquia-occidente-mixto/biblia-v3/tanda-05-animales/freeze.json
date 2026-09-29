@@ -1,0 +1,406 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "antioquia-occidente-mixto",
+  "comunidad": "Occidente antioqueño mixto",
+  "tanda": "tanda-05-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/antioquia-occidente-mixto.v3.json",
+    "sha256": "907cf95313f620a930af113c992f4710a28954226fc13b245385946621c5d950"
+  },
+  "canon": {
+    "sha256": "49563b7fbab3cd617190cedd3a3694581a547d150705ffb9d03a938003bb7d76",
+    "verificado_en": "2026-09-29T03:01:47.409Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos"
+  ],
+  "fichas_en_capa": 19,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "la_rodillona__identity_sheet--canon",
+      "modelo": "la_rodillona__identity_sheet",
+      "entidad": "La Rodillona",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-rodillona",
+        "la-cabellona"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8172,
+      "prompt_sha256": "d6c4f2695090f986e2177bcc61ee9a18e68ba9d171583443899fbfd34f42c54d"
+    },
+    {
+      "job": "la_rodillona__state_sheet--estado_murciélago negro que baja sobre la ruana tendida y les apaga el farol a los jugadores",
+      "modelo": "la_rodillona__state_sheet",
+      "entidad": "La Rodillona",
+      "categoria": "criatura",
+      "vista": "estado_murciélago negro que baja sobre la ruana tendida y les apaga el farol a los jugadores",
+      "estados": [
+        "murciélago negro que baja sobre la ruana tendida y les apaga el farol a los jugadores"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-rodillona",
+        "la-cabellona"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8872,
+      "prompt_sha256": "a6c6e76cf47930d418105d96ddce5e2839198a041ec07ee015cc75f906fb81c3"
+    },
+    {
+      "job": "la_rodillona__state_sheet--estado_penitente de muletas de madera, con medallas y escapularios, bajando de rodillas las escalinatas del templo",
+      "modelo": "la_rodillona__state_sheet",
+      "entidad": "La Rodillona",
+      "categoria": "criatura",
+      "vista": "estado_penitente de muletas de madera, con medallas y escapularios, bajando de rodillas las escalinatas del templo",
+      "estados": [
+        "penitente de muletas de madera, con medallas y escapularios, bajando de rodillas las escalinatas del templo"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-rodillona",
+        "la-cabellona"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9225,
+      "prompt_sha256": "a060a52fbacf45d67368a9686a09395fe310848e6251f52a8371eb5e845bca19"
+    },
+    {
+      "job": "el_mareco__identity_sheet--canon",
+      "modelo": "el_mareco__identity_sheet",
+      "entidad": "El Mareco",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-mareco"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7899,
+      "prompt_sha256": "403a2bcab8eb169cc17f84a8c6ff4e596b59d8e565fdfdf2ae0204151d9595c9"
+    },
+    {
+      "job": "el_mareco__state_sheet--estado_ventarrón- torbellino de polvo y chispas con ojos de matorral y boca de polvareda, que levanta al niño entre luces",
+      "modelo": "el_mareco__state_sheet",
+      "entidad": "El Mareco",
+      "categoria": "criatura",
+      "vista": "estado_ventarrón: torbellino de polvo y chispas con ojos de matorral y boca de polvareda, que levanta al niño entre luces",
+      "estados": [
+        "ventarrón: torbellino de polvo y chispas con ojos de matorral y boca de polvareda, que levanta al niño entre luces"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-mareco"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8766,
+      "prompt_sha256": "303a275c60c6ffa65825a3e055ad22d944f77b0f2c9bd044d4a516dd67ec30b3"
+    },
+    {
+      "job": "el_patetarro__identity_sheet--canon",
+      "modelo": "el_patetarro__identity_sheet",
+      "entidad": "El Patetarro",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-patetarro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7827,
+      "prompt_sha256": "744a9bffe0f127e5ad9751f1ea812ac3d5d0ecc0bf1e9b099503cc91ab71db81"
+    },
+    {
+      "job": "el_patetarro__state_sheet--estado_la Patetarro de los pueblos mineros- cubierta de hojarasca, rostro entre mujer y bestia a medias tapado, colmillos y uñas cortos, la pierna de guadua conservada",
+      "modelo": "el_patetarro__state_sheet",
+      "entidad": "El Patetarro",
+      "categoria": "criatura",
+      "vista": "estado_la Patetarro de los pueblos mineros: cubierta de hojarasca, rostro entre mujer y bestia a medias tapado, colmillos y uñas cortos, la pierna de guadua conservada",
+      "estados": [
+        "la Patetarro de los pueblos mineros: cubierta de hojarasca, rostro entre mujer y bestia a medias tapado, colmillos y uñas cortos, la pierna de guadua conservada"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-patetarro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9834,
+      "prompt_sha256": "4a3d4dbb1ad5c4a6e0cf8f6755cfd41b8e029dbf759241b1cf85094b4ae61d30"
+    },
+    {
+      "job": "el_patetarro__state_sheet--estado_búho enorme que revolotea azotando las copas y levantando la hojarasca sobre el campamento apagado",
+      "modelo": "el_patetarro__state_sheet",
+      "entidad": "El Patetarro",
+      "categoria": "criatura",
+      "vista": "estado_búho enorme que revolotea azotando las copas y levantando la hojarasca sobre el campamento apagado",
+      "estados": [
+        "búho enorme que revolotea azotando las copas y levantando la hojarasca sobre el campamento apagado"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-patetarro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9321,
+      "prompt_sha256": "b7e6eb24ff26f9611a64e157ad10c1baa8cfc7ba5bf6bffdbd5c6da33818556d"
+    },
+    {
+      "job": "el_paton__identity_sheet--canon",
+      "modelo": "el_paton__identity_sheet",
+      "entidad": "El Patón",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-paton"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8015,
+      "prompt_sha256": "d5cd6dcbfc0d97d884647a1f201e222aceae6a7e242251c87c92e9cd42bb8bab"
+    },
+    {
+      "job": "el_paton__state_sheet--estado_los pies solos- un par de pies de un metro que pasan por el camino de tierra sin cuerpo ni piernas",
+      "modelo": "el_paton__state_sheet",
+      "entidad": "El Patón",
+      "categoria": "criatura",
+      "vista": "estado_los pies solos: un par de pies de un metro que pasan por el camino de tierra sin cuerpo ni piernas",
+      "estados": [
+        "los pies solos: un par de pies de un metro que pasan por el camino de tierra sin cuerpo ni piernas"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-paton"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8788,
+      "prompt_sha256": "b7fb21490f8e097bffdabcbb0cae48965acf6449d26907682191125260cd3c81"
+    },
+    {
+      "job": "el_perro_negro__identity_sheet--canon",
+      "modelo": "el_perro_negro__identity_sheet",
+      "entidad": "El Perro Negro",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-perro-negro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8189,
+      "prompt_sha256": "4ba6c6d573f0b5ef298e639625f968033ef9bbf3814ba236d525520163c0d44f"
+    },
+    {
+      "job": "el_perro_negro__state_sheet--estado_perro corriente, ni muy grande ni muy pequeño, sentado en la esquina y rondando meneando la cola",
+      "modelo": "el_perro_negro__state_sheet",
+      "entidad": "El Perro Negro",
+      "categoria": "criatura",
+      "vista": "estado_perro corriente, ni muy grande ni muy pequeño, sentado en la esquina y rondando meneando la cola",
+      "estados": [
+        "perro corriente, ni muy grande ni muy pequeño, sentado en la esquina y rondando meneando la cola"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-perro-negro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9256,
+      "prompt_sha256": "5bf52ced36cb69cecf2217064930c5904037dfdefe7130d2961a9b4b54fee2c1"
+    },
+    {
+      "job": "el_perro_negro__state_sheet--estado_mula grande, orejona y gorda, negra, en que se convierte para llevarse al borracho calle abajo",
+      "modelo": "el_perro_negro__state_sheet",
+      "entidad": "El Perro Negro",
+      "categoria": "criatura",
+      "vista": "estado_mula grande, orejona y gorda, negra, en que se convierte para llevarse al borracho calle abajo",
+      "estados": [
+        "mula grande, orejona y gorda, negra, en que se convierte para llevarse al borracho calle abajo"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-perro-negro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9349,
+      "prompt_sha256": "511d49cf47aee346e10ecbf0add737e414d590b397b2d5ffa81f0b70119a5758"
+    },
+    {
+      "job": "jinete_oscuro_con_mula_negra__identity_sheet--canon",
+      "modelo": "jinete_oscuro_con_mula_negra__identity_sheet",
+      "entidad": "El jinete oscuro y la mula negra",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "no-hay-deuda-que-no-se-pague"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7724,
+      "prompt_sha256": "c973c4178761f6c2585ba72765dbabb108f943ea20dce7e8b5b955efb47ca1b3"
+    },
+    {
+      "job": "jinete_oscuro_con_mula_negra__state_sheet--estado_la forma luminosa contenida que se aleja de la plaza, sin humo, sin chispa y sin rostro dentro",
+      "modelo": "jinete_oscuro_con_mula_negra__state_sheet",
+      "entidad": "El jinete oscuro y la mula negra",
+      "categoria": "criatura",
+      "vista": "estado_la forma luminosa contenida que se aleja de la plaza, sin humo, sin chispa y sin rostro dentro",
+      "estados": [
+        "la forma luminosa contenida que se aleja de la plaza, sin humo, sin chispa y sin rostro dentro"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "no-hay-deuda-que-no-se-pague"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8589,
+      "prompt_sha256": "6897838eef584a42db15911d419972e02e2efa97182e9ec3806e5dc2370828ae"
+    },
+    {
+      "job": "la_cabellona__identity_sheet--canon",
+      "modelo": "la_cabellona__identity_sheet",
+      "entidad": "La Cabellona",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-cabellona"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8332,
+      "prompt_sha256": "1d19bad9ca423e318b993ee70b74bf987d9087ad04cf0d629026c86d8f26a0d6"
+    },
+    {
+      "job": "la_dama_verde__identity_sheet--canon",
+      "modelo": "la_dama_verde__identity_sheet",
+      "entidad": "La Dama Verde",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-dama-verde"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8731,
+      "prompt_sha256": "a3b8c8e88990a37e8a960fb4cf5181d8dc3b8790c378ccbbd0fb5ae43fe5572e"
+    },
+    {
+      "job": "la_dama_verde__state_sheet--estado_sin la luz- la figura que se apaga de abajo arriba hasta quedar en un último punto de luz sobre el suelo, la seña del entierro",
+      "modelo": "la_dama_verde__state_sheet",
+      "entidad": "La Dama Verde",
+      "categoria": "criatura",
+      "vista": "estado_sin la luz: la figura que se apaga de abajo arriba hasta quedar en un último punto de luz sobre el suelo, la seña del entierro",
+      "estados": [
+        "sin la luz: la figura que se apaga de abajo arriba hasta quedar en un último punto de luz sobre el suelo, la seña del entierro"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-dama-verde"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8973,
+      "prompt_sha256": "3d35821148136f11c08ce7ddf00255aae5950dd9304004f6ef93454a2eb2ef57"
+    },
+    {
+      "job": "los_rescoldados__identity_sheet--canon",
+      "modelo": "los_rescoldados__identity_sheet",
+      "entidad": "Los Rescoldados",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-rescoldos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8753,
+      "prompt_sha256": "bf1d6f5f648b5c355ce6c1ef688372b63b552f18826ca822b1871ea98d806954"
+    },
+    {
+      "job": "maria_la_larga__identity_sheet--canon",
+      "modelo": "maria_la_larga__identity_sheet",
+      "entidad": "María la Larga",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "maria-la-larga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7789,
+      "prompt_sha256": "c1af70322fa224ebf9d0dd760651bb01ca41f03e2da0dfb140db390a7ecde24d"
+    },
+    {
+      "job": "maria_la_larga__state_sheet--estado_sentada de blanco junto a una piedra inmensa en un potrero de noche, y la misma figura de pie creciendo hasta las nubes",
+      "modelo": "maria_la_larga__state_sheet",
+      "entidad": "María la Larga",
+      "categoria": "criatura",
+      "vista": "estado_sentada de blanco junto a una piedra inmensa en un potrero de noche, y la misma figura de pie creciendo hasta las nubes",
+      "estados": [
+        "sentada de blanco junto a una piedra inmensa en un potrero de noche, y la misma figura de pie creciendo hasta las nubes"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "maria-la-larga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9237,
+      "prompt_sha256": "e7bfc7d8973ddee0a9fa5a1e095d61b476d67c3986cd1a61eb1861d5bb083316"
+    },
+    {
+      "job": "mula_de_arrieria_con_aparejo__identity_sheet--canon",
+      "modelo": "mula_de_arrieria_con_aparejo__identity_sheet",
+      "entidad": "La mula de arriería con su aparejo",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "maria-centeno"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8400,
+      "prompt_sha256": "74f7478245af12ea56b29c083084b45182ef53fa5dba1625b0ef61f9250d68e1"
+    }
+  ]
+}

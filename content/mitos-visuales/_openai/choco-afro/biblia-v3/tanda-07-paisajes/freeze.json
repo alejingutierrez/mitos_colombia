@@ -1,0 +1,49 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "choco-afro",
+  "comunidad": "Chocó afrodescendiente",
+  "tanda": "tanda-07-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/choco-afro.v3.json",
+    "sha256": "a9f012588cba4d7584dcaa120def60e260984c8e26850fba51e8794f31806cf9"
+  },
+  "canon": {
+    "sha256": "0188296e71d30b1ac2f9e6a28efd8ede61858969899d9c739dda74cec673e3d2",
+    "verificado_en": "2026-09-29T03:07:46.114Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "mundo"
+  ],
+  "fichas_en_capa": 1,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "atrato_ancho_y_sus_canoas__environment_model--canon",
+      "modelo": "atrato_ancho_y_sus_canoas__environment_model",
+      "entidad": "El Atrato ancho y sus canoas",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "kijimba-de-las-animas",
+        "la-sierpe-de-bete"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 10174,
+      "prompt_sha256": "5d860923ee873192df9d17cd80401d3f9cba692b6224ab06594825c4ddcef69b"
+    }
+  ]
+}

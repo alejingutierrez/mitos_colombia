@@ -1,0 +1,381 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "cordoba-sinu-mestizo",
+  "comunidad": "Córdoba y el Sinú",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/cordoba-sinu-mestizo.v3.json",
+    "sha256": "8e3b8fb8c27d4013c025448dfd2d78a3c0fd8eab108f3bdc383407093e5379d3"
+  },
+  "canon": {
+    "sha256": "2895fda0dc55b17bb0c61d11c59cfdeaa984f8a59545958e98741430b9f823d8",
+    "verificado_en": "2026-09-29T02:30:09.700Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 19,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "el_campesino_del_sinu__identity_sheet--canon",
+      "modelo": "el_campesino_del_sinu__identity_sheet",
+      "entidad": "El campesino del Sinú (el Hombre)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "conejo-y-la-mona-de-cera",
+        "el-mocho-y-el-tigre",
+        "lo-justo-y-lo-legal",
+        "los-tres-cachacos-y-la-cantara-de-ron-neque",
+        "los-tres-curas-enamorados",
+        "quien-manda-mas-en-casa",
+        "tia-zorra-en-el-maizal-de-tio-conejo",
+        "tio-conejo-zapatero",
+        "veinte-para-el-bollo",
+        "el-desayuno-del-indio",
+        "conejo-y-la-fiesta-de-toro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9275,
+      "prompt_sha256": "16205f232853e272ab1b26fd35e4b77a8ceecd58d160a9909287e2b984099e38"
+    },
+    {
+      "job": "la_mujer_joven_del_sinu__identity_sheet--canon",
+      "modelo": "la_mujer_joven_del_sinu__identity_sheet",
+      "entidad": "La mujer joven del Sinú",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "este-era-un-joven-que-estaba-estudiando",
+        "este-era-un-tipo-que-tenia-una-novia",
+        "la-confesion",
+        "los-tres-curas-enamorados",
+        "quien-manda-mas-en-casa",
+        "el-mocho-y-el-tigre",
+        "rambao"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8785,
+      "prompt_sha256": "456af23fa8435557551a530f3ec9541d538525ca7fb923084ebab4d4560c67fa"
+    },
+    {
+      "job": "el_cura__identity_sheet--canon",
+      "modelo": "el_cura__identity_sheet",
+      "entidad": "El cura de pueblo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-burro-y-la-policia",
+        "el-desayuno-del-indio",
+        "juan-bobo-y-la-vieja",
+        "la-confesion",
+        "los-tres-curas-enamorados"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8933,
+      "prompt_sha256": "31e6fb121902bee1acc8c2048c064043d3a69f623e17c8ae5d72f44915405012"
+    },
+    {
+      "job": "el_muchacho_del_caserio__identity_sheet--canon",
+      "modelo": "el_muchacho_del_caserio__identity_sheet",
+      "entidad": "El muchacho del caserío",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-burro-y-la-policia",
+        "el-hijo-desobediente",
+        "este-era-un-joven-que-estaba-estudiando",
+        "este-era-un-tipo-que-tenia-una-novia",
+        "juan-bobo-y-sus-hermanos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8896,
+      "prompt_sha256": "8c4033c41eb1ce5d3dd5283528303b13cade787f791d4401126daf28db6a6d30"
+    },
+    {
+      "job": "la_anciana_campesina__identity_sheet--canon",
+      "modelo": "la_anciana_campesina__identity_sheet",
+      "entidad": "La anciana campesina",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "juan-bobo-y-la-vieja",
+        "la-confesion",
+        "la-vieja-el-burro-y-los-huevos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8355,
+      "prompt_sha256": "6c26e03f23a9d3037a3448dc99612e1430b2fefc415c528f6038ed9933f515df"
+    },
+    {
+      "job": "la_anciana_campesina__state_sheet--estado_muerta, sentada bien derecha y firme en la silla del caballo, con la garrocha amarrada a la mano",
+      "modelo": "la_anciana_campesina__state_sheet",
+      "entidad": "La anciana campesina",
+      "categoria": "personaje",
+      "vista": "estado_muerta, sentada bien derecha y firme en la silla del caballo, con la garrocha amarrada a la mano",
+      "estados": [
+        "muerta, sentada bien derecha y firme en la silla del caballo, con la garrocha amarrada a la mano"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "juan-bobo-y-la-vieja",
+        "la-confesion",
+        "la-vieja-el-burro-y-los-huevos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9388,
+      "prompt_sha256": "4202e144ae24622ef23c84b06cfde5703e7315b53e557b07784de14442bd08b0"
+    },
+    {
+      "job": "el_paisa__identity_sheet--canon",
+      "modelo": "el_paisa__identity_sheet",
+      "entidad": "El paisa (Jaime Restrepo de Marinilla)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-paisa-y-el-gringo",
+        "la-mina-de-oro-en-el-infierno"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8910,
+      "prompt_sha256": "ad6748e3454436ff724f7c151911cbf5f63ab24115db99e1c7eae168b6293540"
+    },
+    {
+      "job": "el_policia__identity_sheet--canon",
+      "modelo": "el_policia__identity_sheet",
+      "entidad": "El policía",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-burro-y-la-policia",
+        "rambao"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8444,
+      "prompt_sha256": "b4292022489ba20f308a43b9bd9625436029f5390f357a64c7365b00d72989ea"
+    },
+    {
+      "job": "juan_bobo__identity_sheet--canon",
+      "modelo": "juan_bobo__identity_sheet",
+      "entidad": "Juan Bobo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "juan-bobo-y-la-vieja",
+        "juan-bobo-y-sus-hermanos"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8801,
+      "prompt_sha256": "6fc8a8b9c189a84da2e2f6efb586c2b33bc0bf5a1c3d24b5336adaf961526960"
+    },
+    {
+      "job": "el_costeno_pescador__identity_sheet--canon",
+      "modelo": "el_costeno_pescador__identity_sheet",
+      "entidad": "El costeño pescador",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-costeno-y-los-cachacos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8738,
+      "prompt_sha256": "ba11cd53e2526f0427cf622e86eb5717e504ea44ca78391f3c21fce9b2a370ac"
+    },
+    {
+      "job": "el_gringo__identity_sheet--canon",
+      "modelo": "el_gringo__identity_sheet",
+      "entidad": "El gringo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-paisa-y-el-gringo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8439,
+      "prompt_sha256": "8c7a2b3233dbeef262fa67eed058a6078a567be321d25c0f66ed03658f5e6409"
+    },
+    {
+      "job": "el_indio_del_desayuno__identity_sheet--canon",
+      "modelo": "el_indio_del_desayuno__identity_sheet",
+      "entidad": "El indio de la misa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-desayuno-del-indio"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 9079,
+      "prompt_sha256": "3bf7b4f70d5c46bb68c126783335892808ab5f0bf65ef2a6601f65eca94578b8"
+    },
+    {
+      "job": "el_mocho__identity_sheet--canon",
+      "modelo": "el_mocho__identity_sheet",
+      "entidad": "El Mocho",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-mocho-y-el-tigre"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8997,
+      "prompt_sha256": "9dadb7035a5fa9fc886f8e43777b36e110cb7b221ce5df11a036a19fb21c810a"
+    },
+    {
+      "job": "el_rey__identity_sheet--canon",
+      "modelo": "el_rey__identity_sheet",
+      "entidad": "El rey de las dos hijas",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "este-era-un-rey-que-tenia-dos-hijas-bonitas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8584,
+      "prompt_sha256": "f4df9d7fce2023bb59f3af34ff44f20346d4ac330b79f81ee8ffc04dbc7a2ef5"
+    },
+    {
+      "job": "el_vendedor_de_flores__identity_sheet--canon",
+      "modelo": "el_vendedor_de_flores__identity_sheet",
+      "entidad": "El hombre de la apuesta, vendedor de flores",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "este-era-un-rey-que-tenia-dos-hijas-bonitas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8525,
+      "prompt_sha256": "eddff005a3a052e64560ca4a2c4360db1458452af0a60e00ff79e55650d96c32"
+    },
+    {
+      "job": "el_viejo_del_camino__identity_sheet--canon",
+      "modelo": "el_viejo_del_camino__identity_sheet",
+      "entidad": "El viejo del camino",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "rambao"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8290,
+      "prompt_sha256": "35c5384b6f50f3dbd188f69a962a398ace299ab1b0cafbab58d2e79eb4a8ece8"
+    },
+    {
+      "job": "la_hija_coja_del_rey__identity_sheet--canon",
+      "modelo": "la_hija_coja_del_rey__identity_sheet",
+      "entidad": "Las dos hijas bonitas del rey",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "este-era-un-rey-que-tenia-dos-hijas-bonitas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8230,
+      "prompt_sha256": "7d1a2a077a3283fdf4d70c375f5026f9c194926b8cedeed7cc88178567d174f4"
+    },
+    {
+      "job": "rambao__identity_sheet--canon",
+      "modelo": "rambao__identity_sheet",
+      "entidad": "Rambao",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "rambao"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8115,
+      "prompt_sha256": "52581b583e7d836d7bded3cb43f7e58bf1d1de13b5f21786d2abbf93ef029cab"
+    },
+    {
+      "job": "rambao__state_sheet--estado_rapado y gateando como un pelao, envuelto en el ropón de la Muerte",
+      "modelo": "rambao__state_sheet",
+      "entidad": "Rambao",
+      "categoria": "personaje",
+      "vista": "estado_rapado y gateando como un pelao, envuelto en el ropón de la Muerte",
+      "estados": [
+        "rapado y gateando como un pelao, envuelto en el ropón de la Muerte"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "rambao"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8961,
+      "prompt_sha256": "b130efac26c7c9a57df0959d3677f5e4b4631cd9c515365952e3cf7e6833c6d2"
+    }
+  ]
+}

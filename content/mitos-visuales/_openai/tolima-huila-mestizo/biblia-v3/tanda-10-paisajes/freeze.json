@@ -1,0 +1,169 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tolima-huila-mestizo",
+  "comunidad": "Tolima y Huila",
+  "tanda": "tanda-10-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tolima-huila-mestizo.v3.json",
+    "sha256": "b7f1f1559682e274cff21c66142964574468ec3ae942600e92a58a29ba06b0f9"
+  },
+  "canon": {
+    "sha256": "e3603f47534a458fbe0d16a341b049be3b48e059ddfb532221d2ee481c5cf9cf",
+    "verificado_en": "2026-09-29T02:52:36.571Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "monte_canada_y_camino_real__environment_model--canon",
+      "modelo": "monte_canada_y_camino_real__environment_model",
+      "entidad": "Monte, cañada y camino real",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "monte, cañada y rastrojo de día, con farallones y mesetas"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-cazador",
+        "el-guango",
+        "el-sombreron",
+        "el-tunjo",
+        "la-candileja",
+        "la-muelona",
+        "la-patasola",
+        "la-tarasca",
+        "el-silbador",
+        "brujas-y-duendes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7547,
+      "prompt_sha256": "e697ba6d62c8bcb3aa0666fc984902dc8991bf17fe3fe48517bb0a8d8ed2e7e2"
+    },
+    {
+      "job": "monte_canada_y_camino_real__state_sheet--estado_camino real solitario de noche",
+      "modelo": "monte_canada_y_camino_real__state_sheet",
+      "entidad": "Monte, cañada y camino real",
+      "categoria": "paisaje",
+      "vista": "estado_camino real solitario de noche",
+      "estados": [
+        "camino real solitario de noche"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-cazador",
+        "el-guango",
+        "el-sombreron",
+        "el-tunjo",
+        "la-candileja",
+        "la-muelona",
+        "la-patasola",
+        "la-tarasca",
+        "el-silbador",
+        "brujas-y-duendes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9229,
+      "prompt_sha256": "7bdddfb63563f9f0d98b549a61da446a1844b213c46151ca90ea0bd5b9c6caae"
+    },
+    {
+      "job": "aguas_del_alto_magdalena__environment_model--canon",
+      "modelo": "aguas_del_alto_magdalena__environment_model",
+      "entidad": "Aguas del alto Magdalena",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "río ancho con playón y subienda, moyas y pozos hondos"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-chenche",
+        "el-poira",
+        "el-guango",
+        "el-tunjo",
+        "la-candileja",
+        "la-madre-agua",
+        "el-silbador",
+        "la-patasola-mixto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8056,
+      "prompt_sha256": "c9790b3ad3fdb646796976c3cded59fa9aee462eda6fb487ab0c15bd2d8f7b17"
+    },
+    {
+      "job": "aguas_del_alto_magdalena__state_sheet--estado_creciente que se sale de cauce",
+      "modelo": "aguas_del_alto_magdalena__state_sheet",
+      "entidad": "Aguas del alto Magdalena",
+      "categoria": "paisaje",
+      "vista": "estado_creciente que se sale de cauce",
+      "estados": [
+        "creciente que se sale de cauce"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-chenche",
+        "el-poira",
+        "el-guango",
+        "el-tunjo",
+        "la-candileja",
+        "la-madre-agua",
+        "el-silbador",
+        "la-patasola-mixto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8654,
+      "prompt_sha256": "66b90e78b8f86527464a23b8af4628cede0559efeaf476254b138cf3e050a120"
+    },
+    {
+      "job": "laguna_quebrada_y_manantial__environment_model--canon",
+      "modelo": "laguna_quebrada_y_manantial__environment_model",
+      "entidad": "Laguna, quebrada y manantial de los llanos",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-madre-agua",
+        "la-candileja",
+        "la-patasola-mixto"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8314,
+      "prompt_sha256": "e7ab7e513e2c1c2142a690b01628e2373c0637739d84e5b6d10511d2a372bbff"
+    },
+    {
+      "job": "altiplano_lache_piedra_y_sombra__environment_model--canon",
+      "modelo": "altiplano_lache_piedra_y_sombra__environment_model",
+      "entidad": "Altiplano Lache: la piedra y la sombra",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "dioses-lares"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8574,
+      "prompt_sha256": "23813739afafc0cccd3ebbe293c8324e7ae80ffc95ebf1a5a6f65162ac87bb8e"
+    }
+  ]
+}

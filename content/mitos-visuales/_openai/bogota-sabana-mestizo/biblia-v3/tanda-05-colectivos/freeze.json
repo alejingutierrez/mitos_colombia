@@ -1,0 +1,113 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "bogota-sabana-mestizo",
+  "comunidad": "Bogotá y la sabana",
+  "tanda": "tanda-05-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/bogota-sabana-mestizo.v3.json",
+    "sha256": "55c8aadb6274065fccc72a76abc5b3542957a51530be49e80137f3b3b6996998"
+  },
+  "canon": {
+    "sha256": "f40bff7bfadd041235920c5f638d1f9ad9ce9fb5b40b91e9893d958d2674ad1d",
+    "verificado_en": "2026-09-29T02:51:32.106Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "colectivo_vecinos_artesanos_santafe__group_grammar--canon",
+      "modelo": "colectivo_vecinos_artesanos_santafe__group_grammar",
+      "entidad": "Vecinos, artesanos y transeúntes de Santafé (siglos XVIII y XIX)",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-loco-arias",
+        "el-mono-de-la-pila",
+        "el-enigmatico-abogado",
+        "los-fantasmas-de-la-candelaria",
+        "la-leyenda-del-santuario-de-monserrate",
+        "el-venado-de-oro",
+        "el-hombre-del-farol",
+        "la-mula-herrada"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9878,
+      "prompt_sha256": "1904cbed5f8466a4770c35b8a419cdec0b80bcf1ff572d33a3d07e9e71d3e0d9"
+    },
+    {
+      "job": "colectivo_transeuntes_siglo_xx__group_grammar--canon",
+      "modelo": "colectivo_transeuntes_siglo_xx__group_grammar",
+      "entidad": "Transeúntes bogotanos del siglo XX",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-bobo-del-tranvia",
+        "la-bruja-del-tranvia",
+        "el-toro-en-el-ascensor",
+        "la-monja-de-las-rosas",
+        "la-monja-vidente-y-el-taxista",
+        "los-fantasmas-de-la-candelaria",
+        "la-loca-margarita"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9161,
+      "prompt_sha256": "7c2460d893d96a889a626618b6165a78f0d78371e72e81f804b6b470ec72f44d"
+    },
+    {
+      "job": "colectivo_autoridades_funcionarios_clero__group_grammar--canon",
+      "modelo": "colectivo_autoridades_funcionarios_clero__group_grammar",
+      "entidad": "Autoridades, funcionarios y clero de la ciudad",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-loca-margarita",
+        "el-enigmatico-abogado",
+        "el-hombre-del-farol",
+        "el-diablo-del-puente-del-comun"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9339,
+      "prompt_sha256": "ff868d23710bbd4b71bb8ec98cdc0be3f4bf27e9e58a6c93069b0be2a9359052"
+    },
+    {
+      "job": "diablillos__group_grammar--canon",
+      "modelo": "diablillos__group_grammar",
+      "entidad": "Cuadrilla de diablos y diablillos",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-diablo-del-puente-del-comun"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9201,
+      "prompt_sha256": "1fcbfb3fde65b08c79fb7ee36fa38f70f0cf8dd0f8bb23a4be1a33f75d7cb2ec"
+    }
+  ]
+}

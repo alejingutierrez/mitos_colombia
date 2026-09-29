@@ -1,0 +1,208 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "bogota-sabana-mestizo",
+  "comunidad": "Bogotá y la sabana",
+  "tanda": "tanda-07-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/bogota-sabana-mestizo.v3.json",
+    "sha256": "55c8aadb6274065fccc72a76abc5b3542957a51530be49e80137f3b3b6996998"
+  },
+  "canon": {
+    "sha256": "f40bff7bfadd041235920c5f638d1f9ad9ce9fb5b40b91e9893d958d2674ad1d",
+    "verificado_en": "2026-09-29T02:54:38.659Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 10,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_calle_y_oficio__object_sheet--canon",
+      "modelo": "hoja_utileria_calle_y_oficio__object_sheet",
+      "entidad": "hoja utileria calle y oficio",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-mono-de-la-pila",
+        "el-loco-arias",
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7596,
+      "prompt_sha256": "7a4e5113c614a26f4e82da9297939216e3588da1ab42930639e2b6719d8bc99b"
+    },
+    {
+      "job": "hoja_utileria_devocion_y_tesoro__object_sheet--canon",
+      "modelo": "hoja_utileria_devocion_y_tesoro__object_sheet",
+      "entidad": "hoja utileria devocion y tesoro",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-leyenda-del-santuario-de-monserrate",
+        "el-venado-de-oro",
+        "los-esqueletos-caminantes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7770,
+      "prompt_sha256": "8f9db86e162447c2d99736c5cf427f625accce1dc8c6778dd37e19bd9d682747"
+    },
+    {
+      "job": "hoja_utileria_papeles_y_pruebas__object_sheet--canon",
+      "modelo": "hoja_utileria_papeles_y_pruebas__object_sheet",
+      "entidad": "hoja utileria papeles y pruebas",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-enigmatico-abogado",
+        "el-hombre-del-farol",
+        "la-bruja-del-tranvia"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8680,
+      "prompt_sha256": "b29ed4e8e7ecc40bcfb50a79365c89c1632d36a8c523b799f0cd98551fec725d"
+    },
+    {
+      "job": "tranvia_bogotano__object_sheet--canon",
+      "modelo": "tranvia_bogotano__object_sheet",
+      "entidad": "El tranvía de Bogotá",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-bobo-del-tranvia",
+        "la-bruja-del-tranvia"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7806,
+      "prompt_sha256": "fd59c5a3a324af9bc395d60be690c51a6eb7aa20d88207cfe6162e8de5deef65"
+    },
+    {
+      "job": "el_farol__object_sheet--canon",
+      "modelo": "el_farol__object_sheet",
+      "entidad": "El farol",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-hombre-del-farol"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8428,
+      "prompt_sha256": "01ccbfc2ac1775971a0f2595e9d9f9f1677101053fab153e7456161b272b4be4"
+    },
+    {
+      "job": "mono_de_la_pila__object_sheet--canon",
+      "modelo": "mono_de_la_pila__object_sheet",
+      "entidad": "El Mono de la Pila y su fuente",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-mono-de-la-pila"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7953,
+      "prompt_sha256": "6759240051e70aaeea8c6b20864730111f314d18746eac9ada325eda5c2bbe39"
+    },
+    {
+      "job": "ramo_rosas_amarillas__object_sheet--canon",
+      "modelo": "ramo_rosas_amarillas__object_sheet",
+      "entidad": "El ramo de rosas amarillas",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-monja-de-las-rosas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7389,
+      "prompt_sha256": "bec0fb81984be45f520938bf882b43e938bd3241b0e6819873a8237e9d3c41d0"
+    },
+    {
+      "job": "taxi_amarillo__object_sheet--canon",
+      "modelo": "taxi_amarillo__object_sheet",
+      "entidad": "El taxi",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-monja-vidente-y-el-taxista"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7947,
+      "prompt_sha256": "d48d2300f22f6b37b89bf8599e16b1a28bc5efb5e554c5b6fc7f5042d2ae1371"
+    },
+    {
+      "job": "venado_de_oro__object_sheet--canon",
+      "modelo": "venado_de_oro__object_sheet",
+      "entidad": "El venado de oro",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-venado-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8076,
+      "prompt_sha256": "32de261064a4ba5a9710146b570b4a650c9c880841eae3a50230d191eb0308e3"
+    },
+    {
+      "job": "venado_de_oro__state_sheet--estado_sin los cuernos, con dos muñones golpeados en la cabeza donde la espada y los guijarros los arrancaron",
+      "modelo": "venado_de_oro__state_sheet",
+      "entidad": "El venado de oro",
+      "categoria": "objeto",
+      "vista": "estado_sin los cuernos, con dos muñones golpeados en la cabeza donde la espada y los guijarros los arrancaron",
+      "estados": [
+        "sin los cuernos, con dos muñones golpeados en la cabeza donde la espada y los guijarros los arrancaron"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-venado-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8677,
+      "prompt_sha256": "4a5c33bedde59c40439383564b71e2dc6e71d53861a872ee0d778b334c9e1670"
+    }
+  ]
+}

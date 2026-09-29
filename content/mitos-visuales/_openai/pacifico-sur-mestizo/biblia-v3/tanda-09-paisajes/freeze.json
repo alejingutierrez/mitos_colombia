@@ -1,0 +1,204 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "pacifico-sur-mestizo",
+  "comunidad": "Pacífico sur (Nariño, Cauca, Valle)",
+  "tanda": "tanda-09-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/pacifico-sur-mestizo.v3.json",
+    "sha256": "1afd63cc494a592771ae22e52c379f166c86061f51697ad4efdfd655e9abd34b"
+  },
+  "canon": {
+    "sha256": "117b563146a75b81fe76e90c1f490f8070a5a0a92111267442e052bf553d1334",
+    "verificado_en": "2026-09-29T03:01:16.541Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 10,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "litoral_narinense__environment_model--canon",
+      "modelo": "litoral_narinense__environment_model",
+      "entidad": "Litoral del Pacífico sur: ríos, esteros, manglar y caserío",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-riviel-del-rosario",
+        "el-padre-mera"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9948,
+      "prompt_sha256": "10e77d72baf80de63f08931956167cfc85d439f626f35adc6be2e66b5327c239"
+    },
+    {
+      "job": "canaduzal__environment_model--canon",
+      "modelo": "canaduzal__environment_model",
+      "entidad": "Cañaduzal del Valle",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-hada-de-los-canaverales"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8334,
+      "prompt_sha256": "f73623b733f13655d2cefce31996100f62bcb0051973717242ea6db96310ed13"
+    },
+    {
+      "job": "canaduzal__state_sheet--estado_tras la quema- ceniza y hojas quebradas entre los tallos, la acequia seca y una franja sin quemar",
+      "modelo": "canaduzal__state_sheet",
+      "entidad": "Cañaduzal del Valle",
+      "categoria": "paisaje",
+      "vista": "estado_tras la quema: ceniza y hojas quebradas entre los tallos, la acequia seca y una franja sin quemar",
+      "estados": [
+        "tras la quema: ceniza y hojas quebradas entre los tallos, la acequia seca y una franja sin quemar"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-hada-de-los-canaverales"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9334,
+      "prompt_sha256": "acf3fdb1f9b6e4fd8f3b1fdd4d879384b510d663db6637dbc78f61ff5d73b544"
+    },
+    {
+      "job": "canon_del_guaitara__environment_model--canon",
+      "modelo": "canon_del_guaitara__environment_model",
+      "entidad": "El cañón del Güaitara",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-diablo-chivo-de-rumichaca"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8545,
+      "prompt_sha256": "2516bb0e456c8c8fb1efaec67cd8b55ff9c99d2a86cf944de8488ccfd8461409"
+    },
+    {
+      "job": "cerro_de_las_tres_cruces__spatial_model--canon",
+      "modelo": "cerro_de_las_tres_cruces__spatial_model",
+      "entidad": "El Cerro de las Tres Cruces",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "buziraco"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8994,
+      "prompt_sha256": "8a389744f8c3c4187de005d212e3c0944456ed0a33d4729c799967a8f87adb60"
+    },
+    {
+      "job": "laguna_la_cocha_y_la_corota__environment_model--canon",
+      "modelo": "laguna_la_cocha_y_la_corota__environment_model",
+      "entidad": "La Cocha y la Isla de La Corota",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-totuma-de-la-cocha"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8452,
+      "prompt_sha256": "90b7e2e013a9bd905f75532c0e574d1ce472c17b5c645c600c8e025de3bf095b"
+    },
+    {
+      "job": "laguna_la_cocha_y_la_corota__state_sheet--estado_las siete ciudades en el fondo del agua, con la campana que se oyó al último",
+      "modelo": "laguna_la_cocha_y_la_corota__state_sheet",
+      "entidad": "La Cocha y la Isla de La Corota",
+      "categoria": "paisaje",
+      "vista": "estado_las siete ciudades en el fondo del agua, con la campana que se oyó al último",
+      "estados": [
+        "las siete ciudades en el fondo del agua, con la campana que se oyó al último"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-totuma-de-la-cocha"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8819,
+      "prompt_sha256": "2a18f040133f642fb4e7e0c6aecc908a1469ea93ff5f4cbbc4f79bd668652668"
+    },
+    {
+      "job": "morro_de_tulcan__spatial_model--canon",
+      "modelo": "morro_de_tulcan__spatial_model",
+      "entidad": "El Morro de Tulcán",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-caballo-del-morro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8318,
+      "prompt_sha256": "0a5376f515d77e350b296686f093c2f06327a57cd2271e07fdd3a56e792c1ac7"
+    },
+    {
+      "job": "morro_de_tulcan__state_sheet--estado_pedestal vacío desde el derribo de 2020",
+      "modelo": "morro_de_tulcan__state_sheet",
+      "entidad": "El Morro de Tulcán",
+      "categoria": "lugar",
+      "vista": "estado_pedestal vacío desde el derribo de 2020",
+      "estados": [
+        "pedestal vacío desde el derribo de 2020"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-caballo-del-morro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9353,
+      "prompt_sha256": "3eda0314fc578bbc740025b981bc6f3bf137ada3b2f0abdea447bab01d72d667"
+    },
+    {
+      "job": "rio_cauca_y_su_playon__environment_model--canon",
+      "modelo": "rio_cauca_y_su_playon__environment_model",
+      "entidad": "El humedal del Cauca junto al cañaduzal",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-hada-de-los-canaverales"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8786,
+      "prompt_sha256": "cbcc92e0263099f8344f9786a8d05cff218a2e7fdfb651a8cd90617e1db34b00"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "boyaca-mestizo",
+  "comunidad": "Boyaca mestizo",
+  "tanda": "tanda-06-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/boyaca-mestizo.v3.json",
+    "sha256": "444d54391d1a18ae4afcbb4489c6a9dadc6218f3ef00f0a60112c4033012ca91"
+  },
+  "canon": {
+    "sha256": "4734a8c80e7f44d4d1a061f43160737e9a8e7ce1e2db619bd38883a4fc672eed",
+    "verificado_en": "2026-09-29T02:57:38.484Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "cucacuy__identity_sheet--canon",
+      "modelo": "cucacuy__identity_sheet",
+      "entidad": "El Cucacuy",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-cucacuy"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7481,
+      "prompt_sha256": "17670bbc26b450de2696cee0436c55975663484f6ff4511f1af25a2632bc0b6e"
+    },
+    {
+      "job": "cucacuy__state_sheet--estado_en harapos, a pie y descalzo- la miseria que el pacto le impone en la variante de San Eduardo, con bordón, calabazo y uña intactos",
+      "modelo": "cucacuy__state_sheet",
+      "entidad": "El Cucacuy",
+      "categoria": "criatura",
+      "vista": "estado_en harapos, a pie y descalzo: la miseria que el pacto le impone en la variante de San Eduardo, con bordón, calabazo y uña intactos",
+      "estados": [
+        "en harapos, a pie y descalzo: la miseria que el pacto le impone en la variante de San Eduardo, con bordón, calabazo y uña intactos"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-cucacuy"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8161,
+      "prompt_sha256": "b95c0e63ec62f51787af17234df1a5cdeb857ba86ecfe929555f1c3c6a1f78d0"
+    },
+    {
+      "job": "figuras_de_madera__identity_sheet--canon",
+      "modelo": "figuras_de_madera__identity_sheet",
+      "entidad": "Las figuras de madera",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "estatua_en_la_orilla"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-sombra-creadora"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6632,
+      "prompt_sha256": "bad88629965e4a7a085cde78d8e77d3d42696ed856bc5ca0c487f05fd37cc4b3"
+    },
+    {
+      "job": "figuras_de_madera__state_sheet--estado_nacidos_del_agua",
+      "modelo": "figuras_de_madera__state_sheet",
+      "entidad": "Las figuras de madera",
+      "categoria": "criatura",
+      "vista": "estado_nacidos_del_agua",
+      "estados": [
+        "nacidos_del_agua"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-sombra-creadora"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6948,
+      "prompt_sha256": "7519531ec74bcfaa6adf559af6c0a0768ec9d6bfcb4df08a5ac8b4c518478a5d"
+    },
+    {
+      "job": "guacamayas_de_mayavita__identity_sheet--canon",
+      "modelo": "guacamayas_de_mayavita__identity_sheet",
+      "entidad": "Las guacamayas de Mayavita",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "aves_de_hojas"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6521,
+      "prompt_sha256": "60f700f73fb8a036fc937ac063c6cf561109ff56cbef7c3d96e28836e02f819e"
+    },
+    {
+      "job": "guacamayas_de_mayavita__state_sheet--estado_guacamayas de cuatro colores —verde de maizal, oro, azul de cielo y rojo de sangre— que se desprenden del Sol rojizo y hablan",
+      "modelo": "guacamayas_de_mayavita__state_sheet",
+      "entidad": "Las guacamayas de Mayavita",
+      "categoria": "animal",
+      "vista": "estado_guacamayas de cuatro colores —verde de maizal, oro, azul de cielo y rojo de sangre— que se desprenden del Sol rojizo y hablan",
+      "estados": [
+        "guacamayas de cuatro colores —verde de maizal, oro, azul de cielo y rojo de sangre— que se desprenden del Sol rojizo y hablan"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7250,
+      "prompt_sha256": "8bd16737373dcf86eaa6d7a307b6df4732eda127f5b34da088a4e0408f2eadda"
+    },
+    {
+      "job": "mohan_de_buzaga__identity_sheet--canon",
+      "modelo": "mohan_de_buzaga__identity_sheet",
+      "entidad": "El mohan de Buzaga",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "mohan_sentado_en_el_bohio"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-tesoro-de-buzaga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7123,
+      "prompt_sha256": "2ff9ef273b3b1cf606478b9bd5cc6ace81e3d667032ac6e265aea43232db07dc"
+    },
+    {
+      "job": "mohan_de_buzaga__state_sheet--estado_caído en el abismo, seco y amojamado como un leño- figura inerte vista de lejos, sin hueso ni resto legible",
+      "modelo": "mohan_de_buzaga__state_sheet",
+      "entidad": "El mohan de Buzaga",
+      "categoria": "criatura",
+      "vista": "estado_caído en el abismo, seco y amojamado como un leño: figura inerte vista de lejos, sin hueso ni resto legible",
+      "estados": [
+        "caído en el abismo, seco y amojamado como un leño: figura inerte vista de lejos, sin hueso ni resto legible"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-tesoro-de-buzaga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7566,
+      "prompt_sha256": "fddf1cdd4a0d65504d9992f1b15d3c9cb9f30a0d33d6a92601ea289ab9ba811c"
+    }
+  ]
+}

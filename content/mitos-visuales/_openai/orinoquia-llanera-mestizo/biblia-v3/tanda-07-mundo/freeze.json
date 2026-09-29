@@ -1,0 +1,232 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "orinoquia-llanera-mestizo",
+  "comunidad": "Orinoquia llanera",
+  "tanda": "tanda-07-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/orinoquia-llanera-mestizo.v3.json",
+    "sha256": "5c9e9ba72406879a1a2374b67948c258d48aa4fad470bb90c45fc5cd2188ece4"
+  },
+  "canon": {
+    "sha256": "3ccbd7d1dc15e78468cdc4a4a8d493f21cee98326daf946d28c8d999be60fa3e",
+    "verificado_en": "2026-09-29T02:58:26.552Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 10,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hato_llanero__spatial_model--canon",
+      "modelo": "hato_llanero__spatial_model",
+      "entidad": "Hato llanero",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-toro-negro-patorreal",
+        "los-delfines-dorados",
+        "las-chanzas-de-don-felipe",
+        "la-bruja-de-los-ojos-miel",
+        "el-dominguez",
+        "el-brujo-de-la-costa-del-pauto",
+        "el-tesoro-de-caribare",
+        "el-llano-ayer-hoy",
+        "el-llano-cobra-sus-deudas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8089,
+      "prompt_sha256": "17097ca22484dabfeedb05250b56ebd15053303b51acda8900119dccf09bf40e"
+    },
+    {
+      "job": "hato_llanero__state_sheet--estado_hato en ruina- cercas de los mangones caídas, horcones quemados por la candela y casas derrumbadas bajo la maraña, sin ganado",
+      "modelo": "hato_llanero__state_sheet",
+      "entidad": "Hato llanero",
+      "categoria": "arquitectura",
+      "vista": "estado_hato en ruina: cercas de los mangones caídas, horcones quemados por la candela y casas derrumbadas bajo la maraña, sin ganado",
+      "estados": [
+        "hato en ruina: cercas de los mangones caídas, horcones quemados por la candela y casas derrumbadas bajo la maraña, sin ganado"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-toro-negro-patorreal",
+        "los-delfines-dorados",
+        "las-chanzas-de-don-felipe",
+        "la-bruja-de-los-ojos-miel",
+        "el-dominguez",
+        "el-brujo-de-la-costa-del-pauto",
+        "el-tesoro-de-caribare",
+        "el-llano-ayer-hoy",
+        "el-llano-cobra-sus-deudas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8158,
+      "prompt_sha256": "ff05a07725dffd20549f11e6cf3241f0c05312d68bb4bf736f75d60dad8b3b16"
+    },
+    {
+      "job": "sitio_de_parrando_y_cantina__spatial_model--canon",
+      "modelo": "sitio_de_parrando_y_cantina__spatial_model",
+      "entidad": "Sitio de parrando, cantina y gallera",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-domador-de-brujas",
+        "la-tertulia-de-la-italiana",
+        "los-monstruos-de-paratebueno",
+        "las-chanzas-de-don-felipe",
+        "el-brujo-de-la-costa-del-pauto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7025,
+      "prompt_sha256": "a3cf985a2dd769c97a538867c7a19ae3d34b6d3dcf45a392a90d6eff912f1a59"
+    },
+    {
+      "job": "tormenta_y_aguacero_llanero__phenomenon_rule--canon",
+      "modelo": "tormenta_y_aguacero_llanero__phenomenon_rule",
+      "entidad": "Tormenta y aguacero llanero",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-bola-de-fuego",
+        "la-bruja-de-los-ojos-miel",
+        "la-culebra-cascabel",
+        "la-tertulia-de-la-italiana",
+        "los-tres-luceros"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6800,
+      "prompt_sha256": "460e0988a4bb3a7030ca414289b2b61ab69890b92c8589c8f3db8f74fd5c7043"
+    },
+    {
+      "job": "pueblo_llanero_de_tapia_y_teja__spatial_model--canon",
+      "modelo": "pueblo_llanero_de_tapia_y_teja__spatial_model",
+      "entidad": "Pueblo llanero colonial",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-llano-cobra-sus-deudas",
+        "los-tres-luceros",
+        "el-tesoro-de-caribare",
+        "el-toro-negro-patorreal"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7326,
+      "prompt_sha256": "be09acbcf0d72f967c4c9c174f363f9aa897f3959ebbae438b3c937d9d33d3e7"
+    },
+    {
+      "job": "rancho_llanero_de_conuco__spatial_model--canon",
+      "modelo": "rancho_llanero_de_conuco__spatial_model",
+      "entidad": "Rancho de conuco",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-tres-luceros",
+        "amanecer-llanero",
+        "la-culebra-cascabel",
+        "la-bola-de-fuego"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7009,
+      "prompt_sha256": "ada5a7467e1ea80ade1065d80e6cb285797e32c071d14d4b21d5349406e6c629"
+    },
+    {
+      "job": "tres_luceros__phenomenon_rule--canon",
+      "modelo": "tres_luceros__phenomenon_rule",
+      "entidad": "Los tres luceros",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-tres-luceros",
+        "leal-hasta-la-muerte"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6731,
+      "prompt_sha256": "c2f6c9ce09245ba986f98567c95ecb2cf9046dec7395d9ede2b4f08cff8d9c12"
+    },
+    {
+      "job": "boveda_del_tesoro_de_caribabare__spatial_model--canon",
+      "modelo": "boveda_del_tesoro_de_caribabare__spatial_model",
+      "entidad": "Boveda de mamposteria de Caribabare",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-tesoro-de-caribare"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7498,
+      "prompt_sha256": "7cf23348ec1bc078f1fa50492074c54a7d4cf2c1cf2422df030b90612dbe3e4d"
+    },
+    {
+      "job": "casona_vieja_de_la_botija__spatial_model--canon",
+      "modelo": "casona_vieja_de_la_botija__spatial_model",
+      "entidad": "Casona vieja de muros gruesos",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-tertulia-de-la-italiana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7177,
+      "prompt_sha256": "a78a46bcef712bf0879d11bb5ca3a125c371849ea8ab565e61116d0e3bb8bc18"
+    },
+    {
+      "job": "escenario_de_la_fabula_de_calila__spatial_model--canon",
+      "modelo": "escenario_de_la_fabula_de_calila__spatial_model",
+      "entidad": "Escenario de la fabula de Calila",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "leal-hasta-la-muerte"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6847,
+      "prompt_sha256": "9851a1bf34dc94e3814655de27512d5fe366f61f1ba19b9caccd240012803fd9"
+    }
+  ]
+}

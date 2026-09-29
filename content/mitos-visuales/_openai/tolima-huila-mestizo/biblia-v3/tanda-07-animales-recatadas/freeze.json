@@ -1,0 +1,48 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "tolima-huila-mestizo",
+  "comunidad": "Tolima y Huila",
+  "tanda": "tanda-07-animales-recatadas",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/tolima-huila-mestizo.v3.json",
+    "sha256": "b7f1f1559682e274cff21c66142964574468ec3ae942600e92a58a29ba06b0f9"
+  },
+  "canon": {
+    "sha256": "e3603f47534a458fbe0d16a341b049be3b48e059ddfb532221d2ee481c5cf9cf",
+    "verificado_en": "2026-09-29T02:49:15.715Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 13,
+  "fichas_ya_preparadas": 13,
+  "fichas": [
+    {
+      "job": "el_tunjo__identity_sheet--canon",
+      "modelo": "el_tunjo__identity_sheet",
+      "entidad": "El Tunjo",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "niño llorón junto al camino, con dientes y llamarada en la boca"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-tunjo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7574,
+      "prompt_sha256": "c58c1167c7d9705409d3dade0002038d4d1845d433aa3eb8fa6267126c02d13a"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "boyaca-mestizo",
+  "comunidad": "Boyaca mestizo",
+  "tanda": "tanda-05-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/boyaca-mestizo.v3.json",
+    "sha256": "444d54391d1a18ae4afcbb4489c6a9dadc6218f3ef00f0a60112c4033012ca91"
+  },
+  "canon": {
+    "sha256": "4734a8c80e7f44d4d1a061f43160737e9a8e7ce1e2db619bd38883a4fc672eed",
+    "verificado_en": "2026-09-29T02:56:42.349Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "comunidad_campesina_boyacense__group_grammar--canon",
+      "modelo": "comunidad_campesina_boyacense__group_grammar",
+      "entidad": "Comunidad campesina boyacense",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-cucacuy",
+        "el-tesoro-de-buzaga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8152,
+      "prompt_sha256": "bdf81ec3746d7756096b92988bfcb1e92af5dfc139b0f394e61c9cefa593494c"
+    },
+    {
+      "job": "comunidad_muisca_chibcha__group_grammar--canon",
+      "modelo": "comunidad_muisca_chibcha__group_grammar",
+      "entidad": "La comunidad muisca o chibcha",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "furatena",
+        "los-mensajeros-de-los-dioses"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8227,
+      "prompt_sha256": "75b5639b34b204b19f0abc245101da90c93ef2be5323fb8f9df0321675d5d550"
+    },
+    {
+      "job": "pueblo_muzo__group_grammar--canon",
+      "modelo": "pueblo_muzo__group_grammar",
+      "entidad": "El pueblo muzo",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "furatena",
+        "la-sombra-creadora"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8065,
+      "prompt_sha256": "4cee5558e940b893a3e48a3b35f9502e750e81920ed5dd121fad7ef56e261f63"
+    },
+    {
+      "job": "mariposas_de_muzo__group_grammar--canon",
+      "modelo": "mariposas_de_muzo__group_grammar",
+      "entidad": "Las mariposas de Muzo",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "furatena"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7736,
+      "prompt_sha256": "ae4019ff6756e4b22873940c98d13863f3c318e277215bf9564cbf00a2b55127"
+    }
+  ]
+}

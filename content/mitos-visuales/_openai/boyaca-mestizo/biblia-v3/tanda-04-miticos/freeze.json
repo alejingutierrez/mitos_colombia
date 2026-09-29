@@ -1,0 +1,63 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "boyaca-mestizo",
+  "comunidad": "Boyaca mestizo",
+  "tanda": "tanda-04-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/boyaca-mestizo.v3.json",
+    "sha256": "444d54391d1a18ae4afcbb4489c6a9dadc6218f3ef00f0a60112c4033012ca91"
+  },
+  "canon": {
+    "sha256": "4734a8c80e7f44d4d1a061f43160737e9a8e7ce1e2db619bd38883a4fc672eed",
+    "verificado_en": "2026-09-29T02:56:11.327Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "are_dios_creador__identity_sheet--canon",
+      "modelo": "are_dios_creador__identity_sheet",
+      "entidad": "Are",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-sombra-creadora",
+        "furatena"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8059,
+      "prompt_sha256": "ad5b604b4e6c3337c1518dfb76389cc9e1bf174c76b91363de023cb00ad53ade"
+    },
+    {
+      "job": "sua_el_sol__identity_sheet--canon",
+      "modelo": "sua_el_sol__identity_sheet",
+      "entidad": "Sua",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8259,
+      "prompt_sha256": "bd5df7d50c8f5496a5845440971bd88cbc39937177f732d10766312f9c36c250"
+    }
+  ]
+}

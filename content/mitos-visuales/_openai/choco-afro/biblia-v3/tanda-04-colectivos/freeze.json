@@ -1,0 +1,63 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "choco-afro",
+  "comunidad": "Chocó afrodescendiente",
+  "tanda": "tanda-04-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/choco-afro.v3.json",
+    "sha256": "a9f012588cba4d7584dcaa120def60e260984c8e26850fba51e8794f31806cf9"
+  },
+  "canon": {
+    "sha256": "0188296e71d30b1ac2f9e6a28efd8ede61858969899d9c739dda74cec673e3d2",
+    "verificado_en": "2026-09-29T03:05:21.486Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "gente_de_pueblo_chocoano__group_grammar--canon",
+      "modelo": "gente_de_pueblo_chocoano__group_grammar",
+      "entidad": "Gente de pueblo chocoano",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "anansi",
+        "la-sierpe-de-bete"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 10597,
+      "prompt_sha256": "6630e319b3226aca14f6f6beb609f6a9b9087fcd71138d2a8f4a0a2dff90cf1d"
+    },
+    {
+      "job": "las_animas_en_fila__group_grammar--canon",
+      "modelo": "las_animas_en_fila__group_grammar",
+      "entidad": "Las ánimas del baile de blanco",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "kijimba-de-las-animas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 10084,
+      "prompt_sha256": "f68541e6e2d73979d46b391c6edfa9b195ab1a360d6a293ae6a8f2e918b24a6f"
+    }
+  ]
+}

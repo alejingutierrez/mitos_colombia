@@ -1,0 +1,136 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "boyaca-mestizo",
+  "comunidad": "Boyaca mestizo",
+  "tanda": "tanda-09-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/boyaca-mestizo.v3.json",
+    "sha256": "444d54391d1a18ae4afcbb4489c6a9dadc6218f3ef00f0a60112c4033012ca91"
+  },
+  "canon": {
+    "sha256": "4734a8c80e7f44d4d1a061f43160737e9a8e7ce1e2db619bd38883a4fc672eed",
+    "verificado_en": "2026-09-29T03:00:31.956Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "selva_y_rio_de_tierra_caliente__environment_model--canon",
+      "modelo": "selva_y_rio_de_tierra_caliente__environment_model",
+      "entidad": "Selva y rio de tierra caliente",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-sombra-creadora",
+        "los-mensajeros-de-los-dioses"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8082,
+      "prompt_sha256": "a0fd6d43d9f4040e8b5eff1666be1c08916158b6d69a8ab7990d24f3a4d98081"
+    },
+    {
+      "job": "cumbres_del_valle_de_iza__environment_model--canon",
+      "modelo": "cumbres_del_valle_de_iza__environment_model",
+      "entidad": "Cumbres verdes del valle de Iza",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "cumbres_de_iza"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-tesoro-de-buzaga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7797,
+      "prompt_sha256": "169fb41223a9b276e753fb2152e811de15d14c82c88848680981ede86eac9b22"
+    },
+    {
+      "job": "cumbres_del_valle_de_iza__state_sheet--estado_camino que se estira- la cima se aleja a medida que avanzan, capas idénticas de cuesta repetidas en profundidad",
+      "modelo": "cumbres_del_valle_de_iza__state_sheet",
+      "entidad": "Cumbres verdes del valle de Iza",
+      "categoria": "paisaje",
+      "vista": "estado_camino que se estira: la cima se aleja a medida que avanzan, capas idénticas de cuesta repetidas en profundidad",
+      "estados": [
+        "camino que se estira: la cima se aleja a medida que avanzan, capas idénticas de cuesta repetidas en profundidad"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-tesoro-de-buzaga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8410,
+      "prompt_sha256": "50b68b1e9bde2fd40fcf4acea354e3b44692d835545ad2c3af6decc3b3eff104"
+    },
+    {
+      "job": "lago_y_fuente_de_turubiuta__environment_model--canon",
+      "modelo": "lago_y_fuente_de_turubiuta__environment_model",
+      "entidad": "El lago y la fuente de Turubiuta",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-mensajeros-de-los-dioses"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7762,
+      "prompt_sha256": "98748fafb372216121f48a50b138cc97083e01a90abe082fd0c48d1e28fff14f"
+    },
+    {
+      "job": "penones_de_fura_y_tena__environment_model--canon",
+      "modelo": "penones_de_fura_y_tena__environment_model",
+      "entidad": "Los penones de Fura y Tena sobre el Minero",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "furatena"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8801,
+      "prompt_sha256": "5cf5bf07388b2fa54d0111f5343418384df0daa42bc08f0b90482166412c7ae9"
+    },
+    {
+      "job": "veredas_nocturnas_del_valle_de_tenza__environment_model--canon",
+      "modelo": "veredas_nocturnas_del_valle_de_tenza__environment_model",
+      "entidad": "Veredas nocturnas del Valle de Tenza",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-cucacuy"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8363,
+      "prompt_sha256": "b8fdfbbdc84e3ebd413ca457ba0808d5efce4bf3e0ff7356ffc3622014820633"
+    }
+  ]
+}

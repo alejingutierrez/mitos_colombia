@@ -1,0 +1,200 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "eje-cafetero-mestizo",
+  "comunidad": "Eje cafetero (Caldas)",
+  "tanda": "tanda-06-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/eje-cafetero-mestizo.v3.json",
+    "sha256": "9f8ba174bd5891e94e91e954f2bcea2a27d598d31a430ba67beeaa845313959f"
+  },
+  "canon": {
+    "sha256": "c480be8b294ba9a5b26ca90be264f109e039624b866d0d0c6e73f71fb7fb54da",
+    "verificado_en": "2026-09-29T03:03:28.911Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos"
+  ],
+  "fichas_en_capa": 10,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "alazan_de_rodrigo__identity_sheet--canon",
+      "modelo": "alazan_de_rodrigo__identity_sheet",
+      "entidad": "El alazán de don Rodrigo y los caballos del escuadrón",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "de-frente-al-sol",
+        "in-illo-tempore"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7815,
+      "prompt_sha256": "4c028cb08d8c67fc41ec01e4e3ff61c83a3972bb5ac72ae84dcd9db9b28ee5dc"
+    },
+    {
+      "job": "calabazo_iluminado_de_tatinez__identity_sheet--canon",
+      "modelo": "calabazo_iluminado_de_tatinez__identity_sheet",
+      "entidad": "El calabazo iluminado de Tatínez",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-coco"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7726,
+      "prompt_sha256": "2381c5942c90e4b3f0434f2780241ec0c22f36c2bad9b7049d566c198841bbbf"
+    },
+    {
+      "job": "calabazo_iluminado_de_tatinez__state_sheet--estado_el artificio desmontado- calabazo apagado, vela suelta y portador visible, los tres separados en el encuadre",
+      "modelo": "calabazo_iluminado_de_tatinez__state_sheet",
+      "entidad": "El calabazo iluminado de Tatínez",
+      "categoria": "criatura",
+      "vista": "estado_el artificio desmontado: calabazo apagado, vela suelta y portador visible, los tres separados en el encuadre",
+      "estados": [
+        "el artificio desmontado: calabazo apagado, vela suelta y portador visible, los tres separados en el encuadre"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-coco"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9294,
+      "prompt_sha256": "3ac47d943fa28b2bc9ce196172fc511254822f841994857cee6075f1015ca9c3"
+    },
+    {
+      "job": "cole_cabuya__identity_sheet--canon",
+      "modelo": "cole_cabuya__identity_sheet",
+      "entidad": "El Cole-cabuya",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-cole-cabuya"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7890,
+      "prompt_sha256": "58bc773b9f6b4e5fe5e5463a8a6441ec5a87336ab270781b18b85dce02d0dba1"
+    },
+    {
+      "job": "cole_cabuya__state_sheet--estado_echado en la tierra, atravesado en el camino, esperando- el mismo cuerpo tendido de lado a lado del sendero, la cola caída sobre el barro y la cabeza alzada",
+      "modelo": "cole_cabuya__state_sheet",
+      "entidad": "El Cole-cabuya",
+      "categoria": "criatura",
+      "vista": "estado_echado en la tierra, atravesado en el camino, esperando: el mismo cuerpo tendido de lado a lado del sendero, la cola caída sobre el barro y la cabeza alzada",
+      "estados": [
+        "echado en la tierra, atravesado en el camino, esperando: el mismo cuerpo tendido de lado a lado del sendero, la cola caída sobre el barro y la cabeza alzada"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-cole-cabuya"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 9718,
+      "prompt_sha256": "730035acd4e22083bd05b6b997c02259c471d9020ffc05037e0a815cc1f51b33"
+    },
+    {
+      "job": "el_unon__identity_sheet--canon",
+      "modelo": "el_unon__identity_sheet",
+      "entidad": "El Uñón",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-aserrador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9130,
+      "prompt_sha256": "6633b127c6854fedb205c5ed3ca8f3d3884227e5e0ff06e1d7a61f1a5129c377"
+    },
+    {
+      "job": "fantasma_de_ruben_bayer__identity_sheet--canon",
+      "modelo": "fantasma_de_ruben_bayer__identity_sheet",
+      "entidad": "El fantasma de Rubén Bayer",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-coco"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7890,
+      "prompt_sha256": "d22245f3c0f5ddbe97389109bd76e068856a64934902483ae381120483096f34"
+    },
+    {
+      "job": "fantasma_de_ruben_bayer__state_sheet--estado_alargado- el palo empujado hacia arriba desde dentro, el mismo cono estirado y el calabazo mucho más alto que una persona",
+      "modelo": "fantasma_de_ruben_bayer__state_sheet",
+      "entidad": "El fantasma de Rubén Bayer",
+      "categoria": "criatura",
+      "vista": "estado_alargado: el palo empujado hacia arriba desde dentro, el mismo cono estirado y el calabazo mucho más alto que una persona",
+      "estados": [
+        "alargado: el palo empujado hacia arriba desde dentro, el mismo cono estirado y el calabazo mucho más alto que una persona"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-coco"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8972,
+      "prompt_sha256": "09d4bd3771ad012f68458702a4eb0faebeecfc063052819319899c124635c3f3"
+    },
+    {
+      "job": "jovita_la_difunta__identity_sheet--canon",
+      "modelo": "jovita_la_difunta__identity_sheet",
+      "entidad": "Jovita, la difunta de la mortaja larga",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "cuento-de-animas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7991,
+      "prompt_sha256": "0b155e1d98db57ffe96432ca6c1efc84c7feedfa2ebbf1acccf8dc201ebd5e18"
+    },
+    {
+      "job": "mano_peluda__identity_sheet--canon",
+      "modelo": "mano_peluda__identity_sheet",
+      "entidad": "La Mano Peluda",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-viejo-del-costal"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8456,
+      "prompt_sha256": "c9d8050e5816e00cc5df0134dfd61cd23fb6fa8de60a785a8cc14ed66bd90390"
+    }
+  ]
+}

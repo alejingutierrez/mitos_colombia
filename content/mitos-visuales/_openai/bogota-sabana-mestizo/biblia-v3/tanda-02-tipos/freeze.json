@@ -1,0 +1,126 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "bogota-sabana-mestizo",
+  "comunidad": "Bogotá y la sabana",
+  "tanda": "tanda-02-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/bogota-sabana-mestizo.v3.json",
+    "sha256": "55c8aadb6274065fccc72a76abc5b3542957a51530be49e80137f3b3b6996998"
+  },
+  "canon": {
+    "sha256": "f40bff7bfadd041235920c5f638d1f9ad9ce9fb5b40b91e9893d958d2674ad1d",
+    "verificado_en": "2026-09-29T02:47:57.638Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre del pueblo santafereño (siglo XIX a comienzos del XX)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-enigmatico-abogado",
+        "el-hombre-del-farol",
+        "el-loco-arias",
+        "el-mono-de-la-pila",
+        "el-venado-de-oro",
+        "la-leyenda-del-santuario-de-monserrate",
+        "la-mula-herrada",
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9451,
+      "prompt_sha256": "83d5d9cabae3155b646356b02836a61125cce5928ad50999341d06d0893f8fd5"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer santafereña (siglo XIX a comienzos del XX)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-enigmatico-abogado",
+        "el-loco-arias",
+        "el-mono-de-la-pila",
+        "la-leyenda-del-santuario-de-monserrate",
+        "la-loca-margarita",
+        "la-mula-herrada",
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9507,
+      "prompt_sha256": "22d26ae8b82583b4f38c572dd842e5e2da6b160bb8f772a198d145c9c2fb0a21"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base · anciana santafereña",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-loca-margarita",
+        "los-fantasmas-de-la-candelaria"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8813,
+      "prompt_sha256": "8ec163acfb48fcdb00f8308e1bc968853553c1fb6daf6fc647c4c0a6b4ba6b14"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer joven santafereña",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-venado-de-oro",
+        "la-leyenda-del-santuario-de-monserrate"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8834,
+      "prompt_sha256": "61400b57afd130a69438db2cc08be55a63d728fb71d30bf6f82819fb9f4ebc14"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño santafereño (siglo XIX a comienzos del XX)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-mono-de-la-pila",
+        "la-loca-margarita"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8659,
+      "prompt_sha256": "38886b0b5e7e687f72f204a7851a521fad3c94e6c3fbf55a44352c4e65a94470"
+    }
+  ]
+}

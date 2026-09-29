@@ -1,0 +1,385 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "orinoquia-llanera-mestizo",
+  "comunidad": "Orinoquia llanera",
+  "tanda": "tanda-05-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/orinoquia-llanera-mestizo.v3.json",
+    "sha256": "5c9e9ba72406879a1a2374b67948c258d48aa4fad470bb90c45fc5cd2188ece4"
+  },
+  "canon": {
+    "sha256": "3ccbd7d1dc15e78468cdc4a4a8d493f21cee98326daf946d28c8d999be60fa3e",
+    "verificado_en": "2026-09-29T02:52:35.579Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos"
+  ],
+  "fichas_en_capa": 20,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "caballo_llanero__identity_sheet--canon",
+      "modelo": "caballo_llanero__identity_sheet",
+      "entidad": "Caballo llanero con silla",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-llano-ayer-hoy",
+        "los-tres-luceros",
+        "las-chanzas-de-don-felipe",
+        "el-toro-negro-patorreal",
+        "leal-hasta-la-muerte"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7327,
+      "prompt_sha256": "96a58c51f9bed551ee75e95d3dd7aa199329c348445b95c5f76d4d77b1326b56"
+    },
+    {
+      "job": "mula_y_burro_de_carga__identity_sheet--canon",
+      "modelo": "mula_y_burro_de_carga__identity_sheet",
+      "entidad": "Mula y burro de carga",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "las-chanzas-de-don-felipe",
+        "el-brujo-de-la-costa-del-pauto",
+        "el-llano-ayer-hoy",
+        "el-llano-cobra-sus-deudas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7035,
+      "prompt_sha256": "3f349fc5b1faaacc5a307c78db3abe1ef550170128e72e5ce76b093388ac38d9"
+    },
+    {
+      "job": "bola_de_fuego_candileja__identity_sheet--canon",
+      "modelo": "bola_de_fuego_candileja__identity_sheet",
+      "entidad": "La Bola de Fuego o Candileja",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-bola-de-fuego",
+        "el-llano-ayer-hoy",
+        "la-culebra-cascabel"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6866,
+      "prompt_sha256": "cd756bf640e0582e830f058a9a0886ffa07980fe7e1ea125c8a1256f7d7acc90"
+    },
+    {
+      "job": "bola_de_fuego_candileja__state_sheet--estado_punto pequeño de candela a lo lejos sobre la sabana negra, que se va acercando y creciendo",
+      "modelo": "bola_de_fuego_candileja__state_sheet",
+      "entidad": "La Bola de Fuego o Candileja",
+      "categoria": "criatura",
+      "vista": "estado_punto pequeño de candela a lo lejos sobre la sabana negra, que se va acercando y creciendo",
+      "estados": [
+        "punto pequeño de candela a lo lejos sobre la sabana negra, que se va acercando y creciendo"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-bola-de-fuego",
+        "el-llano-ayer-hoy",
+        "la-culebra-cascabel"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7164,
+      "prompt_sha256": "24e5d85d049c440f9ed7e18dd598c11d7c28c75f878a6466389e0d3b492c7d42"
+    },
+    {
+      "job": "encuentro_perro__identity_sheet--canon",
+      "modelo": "encuentro_perro__identity_sheet",
+      "entidad": "Encuentro, el perro",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "leal-hasta-la-muerte",
+        "la-culebra-cascabel",
+        "el-toro-negro-patorreal"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7031,
+      "prompt_sha256": "b3b3b994373bc85285e2a72ade58d5e78f4e4902ce7b8ff24e61084327a507a0"
+    },
+    {
+      "job": "encuentro_perro__state_sheet--estado_viejo, ciego y sordo, echado junto a la cruz de la tumba, con el hocico canoso y los ojos cerrados",
+      "modelo": "encuentro_perro__state_sheet",
+      "entidad": "Encuentro, el perro",
+      "categoria": "animal",
+      "vista": "estado_viejo, ciego y sordo, echado junto a la cruz de la tumba, con el hocico canoso y los ojos cerrados",
+      "estados": [
+        "viejo, ciego y sordo, echado junto a la cruz de la tumba, con el hocico canoso y los ojos cerrados"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "leal-hasta-la-muerte",
+        "la-culebra-cascabel",
+        "el-toro-negro-patorreal"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7042,
+      "prompt_sha256": "c6a77ce093cf16bb542e5976fbcc5cb41b077d9ad9e986de7be5bacd187b2f0c"
+    },
+    {
+      "job": "culebra_cascabel__identity_sheet--canon",
+      "modelo": "culebra_cascabel__identity_sheet",
+      "entidad": "Culebra cascabel",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-culebra-cascabel",
+        "los-delfines-dorados"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7161,
+      "prompt_sha256": "bbf0513d87c3b8a5947a8a88e3ce51c891d820563d39e868f93abfc92260d495"
+    },
+    {
+      "job": "el_dominguez__identity_sheet--canon",
+      "modelo": "el_dominguez__identity_sheet",
+      "entidad": "El Dominguez",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-dominguez"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7096,
+      "prompt_sha256": "cad00844eaf49d49781b977830a5024d20d3bdb59e6a327bf4b53ca932c361f5"
+    },
+    {
+      "job": "el_dominguez__state_sheet--estado_brazo largo y verdoso estirado que se deshace en el aire en tiras, con la figura desapareciendo tras él",
+      "modelo": "el_dominguez__state_sheet",
+      "entidad": "El Dominguez",
+      "categoria": "criatura",
+      "vista": "estado_brazo largo y verdoso estirado que se deshace en el aire en tiras, con la figura desapareciendo tras él",
+      "estados": [
+        "brazo largo y verdoso estirado que se deshace en el aire en tiras, con la figura desapareciendo tras él"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-dominguez"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7644,
+      "prompt_sha256": "83cdb4f0629878e6cfd7c11de5a0454b7d9d56d6c9eb82de36dcf761d5d5f6b6"
+    },
+    {
+      "job": "el_tirapiedra__identity_sheet--canon",
+      "modelo": "el_tirapiedra__identity_sheet",
+      "entidad": "El Tirapiedra",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-tirapiedra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7132,
+      "prompt_sha256": "46b11a07a69497276175d94a5cfd3dc9cbab582425f834dcabe4519392b3392f"
+    },
+    {
+      "job": "jaguar__identity_sheet--canon",
+      "modelo": "jaguar__identity_sheet",
+      "entidad": "El jaguar",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "amanecer-llanero"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6963,
+      "prompt_sha256": "ffa5c39183b1306f23405713880b6209d604648b848bf2f390193493d5dd9e09"
+    },
+    {
+      "job": "mojana_madre_rio__identity_sheet--canon",
+      "modelo": "mojana_madre_rio__identity_sheet",
+      "entidad": "La Mojana o Madre Rio",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "madre-rio-o-mohana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7077,
+      "prompt_sha256": "f075678aaeb6e8ca2defa907c84f6e00f1298b65bf5da38b717ec24e10b431f8"
+    },
+    {
+      "job": "mojana_madre_rio__state_sheet--estado_con el pelo suelto hasta más abajo de la cintura y el mundo detenido- pájaros suspendidos en el aire y una mariposa quieta sobre el agua",
+      "modelo": "mojana_madre_rio__state_sheet",
+      "entidad": "La Mojana o Madre Rio",
+      "categoria": "criatura",
+      "vista": "estado_con el pelo suelto hasta más abajo de la cintura y el mundo detenido: pájaros suspendidos en el aire y una mariposa quieta sobre el agua",
+      "estados": [
+        "con el pelo suelto hasta más abajo de la cintura y el mundo detenido: pájaros suspendidos en el aire y una mariposa quieta sobre el agua"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "madre-rio-o-mohana"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7292,
+      "prompt_sha256": "da417b131fa9c7e1572619f081c5865ec55699a8bef5cfef80ac30538965efe0"
+    },
+    {
+      "job": "mujer_de_ojos_de_miel__identity_sheet--canon",
+      "modelo": "mujer_de_ojos_de_miel__identity_sheet",
+      "entidad": "La bruja de los ojos de miel",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-bruja-de-los-ojos-miel"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7114,
+      "prompt_sha256": "8f2cb47ed2e92d0e252e83e004a6479d1fff66c709d4a9ecaaed59d98892918a"
+    },
+    {
+      "job": "mujer_de_ojos_de_miel__state_sheet--estado_caminando por el vacío sobre el abismo, vuelta hacia el campero, con sólo los ojos color miel visibles en la sombra de la pañoleta y una lágrima cayendo",
+      "modelo": "mujer_de_ojos_de_miel__state_sheet",
+      "entidad": "La bruja de los ojos de miel",
+      "categoria": "criatura",
+      "vista": "estado_caminando por el vacío sobre el abismo, vuelta hacia el campero, con sólo los ojos color miel visibles en la sombra de la pañoleta y una lágrima cayendo",
+      "estados": [
+        "caminando por el vacío sobre el abismo, vuelta hacia el campero, con sólo los ojos color miel visibles en la sombra de la pañoleta y una lágrima cayendo"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-bruja-de-los-ojos-miel"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7562,
+      "prompt_sha256": "dffedd9f82dcf460269cd4d50baa62a325ae29acc01b0c91dd0d499ae3956919"
+    },
+    {
+      "job": "patorreal_toro_negro__identity_sheet--canon",
+      "modelo": "patorreal_toro_negro__identity_sheet",
+      "entidad": "El toro negro Patorreal",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-toro-negro-patorreal"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6815,
+      "prompt_sha256": "29d81499135e7062eb74c200553aee2c008b63df0217ad807fba3d0f95927054"
+    },
+    {
+      "job": "patorreal_toro_negro__state_sheet--estado_manso, echado en la arena de los médanos, dejándose acariciar, con la cabeza baja y tranquila",
+      "modelo": "patorreal_toro_negro__state_sheet",
+      "entidad": "El toro negro Patorreal",
+      "categoria": "criatura",
+      "vista": "estado_manso, echado en la arena de los médanos, dejándose acariciar, con la cabeza baja y tranquila",
+      "estados": [
+        "manso, echado en la arena de los médanos, dejándose acariciar, con la cabeza baja y tranquila"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-toro-negro-patorreal"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7392,
+      "prompt_sha256": "60378ce518898ae1997ba612ae96dbb39a8b32f4ac93f38e32924324bcf729bb"
+    },
+    {
+      "job": "tres_damas_espectrales__identity_sheet--canon",
+      "modelo": "tres_damas_espectrales__identity_sheet",
+      "entidad": "Las tres damas de Paratebueno",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-monstruos-de-paratebueno"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6804,
+      "prompt_sha256": "5c43773f1ecb8aa47bc2198e5d701fa2d085a78a3092cf14ddb9a26fdfedd52e"
+    },
+    {
+      "job": "tres_damas_espectrales__state_sheet--estado_calaveras en la camioneta al amanecer- tres óvalos claros con dos huecos recortados junto a los hombres dormidos, sin fémur ni cuerpo modelado",
+      "modelo": "tres_damas_espectrales__state_sheet",
+      "entidad": "Las tres damas de Paratebueno",
+      "categoria": "criatura",
+      "vista": "estado_calaveras en la camioneta al amanecer: tres óvalos claros con dos huecos recortados junto a los hombres dormidos, sin fémur ni cuerpo modelado",
+      "estados": [
+        "calaveras en la camioneta al amanecer: tres óvalos claros con dos huecos recortados junto a los hombres dormidos, sin fémur ni cuerpo modelado"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-monstruos-de-paratebueno"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7689,
+      "prompt_sha256": "e247dcbfb601acc0319d78f41452609a20570547b8923c60d2fa4c95887b890e"
+    },
+    {
+      "job": "verraco_negro__identity_sheet--canon",
+      "modelo": "verraco_negro__identity_sheet",
+      "entidad": "El verraco negro",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-tres-luceros"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7119,
+      "prompt_sha256": "e722ac279e0ea5b1a06951e6fa0b8f481f07add1f9787f6b1b664cfb03aec9d0"
+    }
+  ]
+}

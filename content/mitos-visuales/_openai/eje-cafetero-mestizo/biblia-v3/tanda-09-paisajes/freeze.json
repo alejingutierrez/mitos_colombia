@@ -1,0 +1,93 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "eje-cafetero-mestizo",
+  "comunidad": "Eje cafetero (Caldas)",
+  "tanda": "tanda-09-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/eje-cafetero-mestizo.v3.json",
+    "sha256": "9f8ba174bd5891e94e91e954f2bcea2a27d598d31a430ba67beeaa845313959f"
+  },
+  "canon": {
+    "sha256": "c480be8b294ba9a5b26ca90be264f109e039624b866d0d0c6e73f71fb7fb54da",
+    "verificado_en": "2026-09-29T03:07:54.532Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "camino_de_montana_caldense__environment_model--canon",
+      "modelo": "camino_de_montana_caldense__environment_model",
+      "entidad": "El camino de montaña",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cuento-de-animas",
+        "de-frente-al-sol",
+        "el-aserrador",
+        "el-cole-cabuya",
+        "in-illo-tempore",
+        "las-brujas"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 9511,
+      "prompt_sha256": "c6476bdb609c3ce2959264bedd1cb83ebf60ad94e7638934eb4e548ee0501e55"
+    },
+    {
+      "job": "camino_de_montana_caldense__state_sheet--estado_de noche- zanja, desnivel y piedra suelta dentro del alcance corto de un farol, con el resto de la ladera en negro de sombra",
+      "modelo": "camino_de_montana_caldense__state_sheet",
+      "entidad": "El camino de montaña",
+      "categoria": "paisaje",
+      "vista": "estado_de noche: zanja, desnivel y piedra suelta dentro del alcance corto de un farol, con el resto de la ladera en negro de sombra",
+      "estados": [
+        "de noche: zanja, desnivel y piedra suelta dentro del alcance corto de un farol, con el resto de la ladera en negro de sombra"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "cuento-de-animas",
+        "de-frente-al-sol",
+        "el-aserrador",
+        "el-cole-cabuya",
+        "in-illo-tempore",
+        "las-brujas"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 10483,
+      "prompt_sha256": "1ecfb655bb0c28101aebf0805b4d2672265443a14a71c111630016f4df4d24fd"
+    },
+    {
+      "job": "nevado_del_ruiz_cumanday__environment_model--canon",
+      "modelo": "nevado_del_ruiz_cumanday__environment_model",
+      "entidad": "El Nevado del Ruiz (Cumanday)",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-cacique-cumanday"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 10236,
+      "prompt_sha256": "9a670e051f7f4bf30bd27207150ce1b9c78bf83cb7e8a1f6cbedd8ac6f0ba0cb"
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "santander-mestizo",
+  "comunidad": "Santander mestizo",
+  "tanda": "tanda-10-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/santander-mestizo.v3.json",
+    "sha256": "d5b07ab1f712e5293471956f31a70a947fceb6dc9a6f1f82ce4c214672c215a7"
+  },
+  "canon": {
+    "sha256": "001778764d5a15260f48f1d6bc2a7f74857486623e73ca5c9681e13fe8ec3cdd",
+    "verificado_en": "2026-09-29T02:44:53.796Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 11,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "monte_y_vereda__environment_model--canon",
+      "modelo": "monte_y_vereda__environment_model",
+      "entidad": "El monte y la vereda",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-mancarita",
+        "el-carriazo-de-vereda-san-isidro",
+        "el-cerro-encantado",
+        "el-trapiche-ardiendo",
+        "talabad",
+        "tal-para-cual",
+        "la-diabla-castigadora",
+        "los-tunjos-de-la-cantera",
+        "el-cacique-salomon",
+        "la-piedra-del-muerto",
+        "la-sayona-del-cementerio",
+        "nueva-version-de-la-luz-del-limonal"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8006,
+      "prompt_sha256": "835d4c370007ce7a51c913d5be669e906911a801927a9e8a6c1ae40a5f2f5148"
+    },
+    {
+      "job": "rio_y_quebradas__environment_model--canon",
+      "modelo": "rio_y_quebradas__environment_model",
+      "entidad": "El río y la quebrada",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cuento-fantastico",
+        "el-carriazo-de-vereda-san-isidro",
+        "nueva-version-de-la-luz-del-limonal",
+        "la-cueva-del-diablo",
+        "la-mechuda",
+        "la-lampara-de-petroleo",
+        "duende-del-salto",
+        "la-piedra-del-muerto",
+        "el-cacique-salomon",
+        "el-reventon-de-jacobo",
+        "la-diabla-castigadora"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7990,
+      "prompt_sha256": "6902d9afa6119b8576070a44899892e0706572ce534f4f739cfc350b7bfb0d6f"
+    },
+    {
+      "job": "calle_empedrada__spatial_model--canon",
+      "modelo": "calle_empedrada__spatial_model",
+      "entidad": "La calle empedrada de noche",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "cuento-fantastico",
+        "el-anima-coy",
+        "el-diablo-de-umpala",
+        "la-mula-del-diablo",
+        "la-mula-maneada",
+        "el-fantasma-de-el-horizonte",
+        "la-mechuda",
+        "la-vista-del-libertador"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8067,
+      "prompt_sha256": "a9354ea1ba8d53729261366b7641cd23e26651d6d75f228ee092cb7bd32164cf"
+    },
+    {
+      "job": "camino_de_herradura__environment_model--canon",
+      "modelo": "camino_de_herradura__environment_model",
+      "entidad": "El camino de herradura",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-cueva-del-diablo",
+        "la-cueva-de-la-pisca",
+        "el-carriazo-de-vereda-san-isidro",
+        "nueva-version-de-la-luz-del-limonal",
+        "los-tunjos-de-la-cantera",
+        "el-reventon-de-jacobo",
+        "la-piedra-del-muerto",
+        "la-puerta-del-perdon"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8131,
+      "prompt_sha256": "829d230a3dedc350be0a1172005a5442fce4d92ac55f17ac643dd7cb54164513"
+    },
+    {
+      "job": "plaza_del_pueblo__spatial_model--canon",
+      "modelo": "plaza_del_pueblo__spatial_model",
+      "entidad": "La plaza",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-cerro-encantado",
+        "la-mula-maneada",
+        "talabad",
+        "el-quijote-piedecuestano",
+        "la-vista-del-libertador",
+        "el-diablo-de-umpala",
+        "el-cacique-salomon"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7932,
+      "prompt_sha256": "4793c0d8cf5fce7364a5b1c325d60bbc52b61d943f2f685597e19f2aa44200e1"
+    },
+    {
+      "job": "canon_del_chicamocha__environment_model--canon",
+      "modelo": "canon_del_chicamocha__environment_model",
+      "entidad": "El cañón del Chicamocha y la Mesa de Los Santos",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-cueva-del-diablo",
+        "la-cueva-de-la-pisca",
+        "lagunas-encantadas",
+        "duende-del-salto",
+        "el-quijote-piedecuestano"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7970,
+      "prompt_sha256": "cab13c421e3e75ad5c5324a35aee09e46d0668ecc7df6f770f559872dc3b44f3"
+    },
+    {
+      "job": "cueva_de_tesoro__spatial_model--canon",
+      "modelo": "cueva_de_tesoro__spatial_model",
+      "entidad": "La cueva de tesoro",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-cueva-de-la-pisca",
+        "lo-que-ensenan-las-cuevas",
+        "el-ermitano-iracundo",
+        "duende-del-salto",
+        "el-quijote-piedecuestano"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8111,
+      "prompt_sha256": "bdea6d0ca9f1bb0b346067ebbab27ae33cba90374eddce0d91715632b5a78e24"
+    },
+    {
+      "job": "paramo_y_cordillera__environment_model--canon",
+      "modelo": "paramo_y_cordillera__environment_model",
+      "entidad": "El páramo y la Cordillera Oriental",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-doctor-galeacer",
+        "lagunas-encantadas",
+        "la-mancarita",
+        "el-ermitano-iracundo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8228,
+      "prompt_sha256": "18a77ed4f22766f7b786af08f6a06ce558afee8d1198fdcba2c8f54283db8a62"
+    },
+    {
+      "job": "laguna_brava__environment_model--canon",
+      "modelo": "laguna_brava__environment_model",
+      "entidad": "La laguna brava",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "lagunas-encantadas",
+        "la-mancarita"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7923,
+      "prompt_sha256": "02347baa631c3da6968ac1b0eebd41941b45193cbb364619dd8943d7bd9f6fad"
+    },
+    {
+      "job": "cementerio__spatial_model--canon",
+      "modelo": "cementerio__spatial_model",
+      "entidad": "El cementerio",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-sayona-del-cementerio"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7669,
+      "prompt_sha256": "8ec8f057ca2b4052eb31eff47d322ddc77b3ac66bd8a0c46dcdda79b2a434378"
+    },
+    {
+      "job": "piedra_del_muerto__spatial_model--canon",
+      "modelo": "piedra_del_muerto__spatial_model",
+      "entidad": "La piedra del muerto",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-piedra-del-muerto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8117,
+      "prompt_sha256": "fb599ab5376b862a103fc3810106346e8350895fbb216847c38d09a38da7e18b"
+    }
+  ]
+}

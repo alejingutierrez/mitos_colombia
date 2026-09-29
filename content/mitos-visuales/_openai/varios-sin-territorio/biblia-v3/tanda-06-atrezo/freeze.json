@@ -1,0 +1,257 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "varios-sin-territorio",
+  "comunidad": "Folclor nacional sin territorio",
+  "tanda": "tanda-06-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/varios-sin-territorio.v3.json",
+    "sha256": "960a317c807ac538873f57921f7eb1ee2bdc9f7c716935e83d742a83ff8dbcbf"
+  },
+  "canon": {
+    "sha256": "c1bf9aa902622b9cc85521f658c702c1ade9370c2901b2317eac5892c1fb77f3",
+    "verificado_en": "2026-09-29T02:52:36.110Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 13,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "instrumentos_del_folclor__object_sheet--canon",
+      "modelo": "instrumentos_del_folclor__object_sheet",
+      "entidad": "Instrumentos del folclor (acordeón, tiple, tambora, bandola, flauta de caña)",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "francisco-el-hombre",
+        "los-duendes",
+        "el-mandingas",
+        "el-mohan",
+        "el-griton"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6506,
+      "prompt_sha256": "28949022fba62a9592200e51b14301e412535e2d4d5ddfcbee601695232bce86"
+    },
+    {
+      "job": "el_saco_de_huesos__object_sheet--canon",
+      "modelo": "el_saco_de_huesos__object_sheet",
+      "entidad": "El saco de huesos / el costal",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-silbon",
+        "la-mano-peluda"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6193,
+      "prompt_sha256": "e67f2e1050450d360b9d31ee453fd15f2933df649e3a36d3e17dd042b8e367af"
+    },
+    {
+      "job": "guayacan__botanical_sheet--canon",
+      "modelo": "guayacan__botanical_sheet",
+      "entidad": "Guayacán",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-hojarasquin-del-monte",
+        "la-madremonte"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6419,
+      "prompt_sha256": "e8959cb23a65ad7e726a6463003d3d69018723dd688502cd0100da7c4e857bce"
+    },
+    {
+      "job": "el_bus_fantasma__object_sheet--canon",
+      "modelo": "el_bus_fantasma__object_sheet",
+      "entidad": "El Bus Fantasma",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-bus-fantasma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6261,
+      "prompt_sha256": "0d34fcc4cc992230a36ae7b4da14b739117f0c5b15df70e22826120d5da74ad6"
+    },
+    {
+      "job": "el_bus_fantasma__state_sheet--estado_articulado urbano morado de madrugada, sin conductor, en la estación cerrada",
+      "modelo": "el_bus_fantasma__state_sheet",
+      "entidad": "El Bus Fantasma",
+      "categoria": "objeto",
+      "vista": "estado_articulado urbano morado de madrugada, sin conductor, en la estación cerrada",
+      "estados": [
+        "articulado urbano morado de madrugada, sin conductor, en la estación cerrada"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-bus-fantasma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7167,
+      "prompt_sha256": "1f5eea76c0a08f74658118ad946a6211d3a7e205556cb50a5934a5726221e35a"
+    },
+    {
+      "job": "el_maraveli__object_sheet--canon",
+      "modelo": "el_maraveli__object_sheet",
+      "entidad": "El Maravelí (barco fantasma)",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-barco-fantasma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6494,
+      "prompt_sha256": "5128be1ebc889526c4bd653e979b1d084e712ef2c3309ec134992ef232cd04ab"
+    },
+    {
+      "job": "el_maraveli__state_sheet--estado_desaparece por la proa y reaparece por babor y por estribor alrededor del bote",
+      "modelo": "el_maraveli__state_sheet",
+      "entidad": "El Maravelí (barco fantasma)",
+      "categoria": "objeto",
+      "vista": "estado_desaparece por la proa y reaparece por babor y por estribor alrededor del bote",
+      "estados": [
+        "desaparece por la proa y reaparece por babor y por estribor alrededor del bote"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-barco-fantasma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6570,
+      "prompt_sha256": "6fca0e14502f3400f9c489c1e84958820626e2df158312f1805bf6645154b4ef"
+    },
+    {
+      "job": "la_barbacoa_guando__object_sheet--canon",
+      "modelo": "la_barbacoa_guando__object_sheet",
+      "entidad": "La barbacoa / el guando",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-barbacoa-del-muerto"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6384,
+      "prompt_sha256": "1bb233d9cfbda0631009c59bc21b2364bb91de4ad409015a164d3ec68ed2e249"
+    },
+    {
+      "job": "la_carta_de_la_nina__object_sheet--canon",
+      "modelo": "la_carta_de_la_nina__object_sheet",
+      "entidad": "La carta",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-nina-de-la-carta"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6349,
+      "prompt_sha256": "3048ba3c9c837de36aa6c1eb3ca5ac3379c3ea7e4078e2c6e94425cdbef92a0a"
+    },
+    {
+      "job": "la_talla_el_judio__object_sheet--canon",
+      "modelo": "la_talla_el_judio__object_sheet",
+      "entidad": "La talla policromada llamada 'El Judío'",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-judio-errante"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6316,
+      "prompt_sha256": "720b8e865f66340d5db6bf2ae7250f50b006133818305f994ae61e1f03ea0d58"
+    },
+    {
+      "job": "la_talla_el_judio__state_sheet--estado_la talla sentada en la celda llorando con la frente escondida entre los brazos",
+      "modelo": "la_talla_el_judio__state_sheet",
+      "entidad": "La talla policromada llamada 'El Judío'",
+      "categoria": "objeto",
+      "vista": "estado_la talla sentada en la celda llorando con la frente escondida entre los brazos",
+      "estados": [
+        "la talla sentada en la celda llorando con la frente escondida entre los brazos"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-judio-errante"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6693,
+      "prompt_sha256": "ef734ef2ce54649aede310201148f613dbce4b115a3148a5360c1242c8b52c51"
+    },
+    {
+      "job": "las_dos_pocimas__object_sheet--canon",
+      "modelo": "las_dos_pocimas__object_sheet",
+      "entidad": "El frasco del color del azufre",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-hombre-caiman"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5618,
+      "prompt_sha256": "e985251fdb235355e57a7ffaf45e6561386a4e3c424de4a0c6029bb5901663aa"
+    },
+    {
+      "job": "las_dos_pocimas__state_sheet--estado_frasco tapado que se hunde en el agua parda del caño",
+      "modelo": "las_dos_pocimas__state_sheet",
+      "entidad": "El frasco del color del azufre",
+      "categoria": "objeto",
+      "vista": "estado_frasco tapado que se hunde en el agua parda del caño",
+      "estados": [
+        "frasco tapado que se hunde en el agua parda del caño"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-hombre-caiman"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6350,
+      "prompt_sha256": "9fb818a93a749116b24b3ff92174f8e4468b69112eaecf267077e2fdae22f442"
+    }
+  ]
+}

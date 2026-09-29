@@ -1,0 +1,137 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "antioquia-occidente-mixto",
+  "comunidad": "Occidente antioqueño mixto",
+  "tanda": "tanda-08-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/antioquia-occidente-mixto.v3.json",
+    "sha256": "907cf95313f620a930af113c992f4710a28954226fc13b245385946621c5d950"
+  },
+  "canon": {
+    "sha256": "49563b7fbab3cd617190cedd3a3694581a547d150705ffb9d03a938003bb7d76",
+    "verificado_en": "2026-09-29T03:09:21.275Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "paisaje_loma_y_camino_de_herradura__environment_model--canon",
+      "modelo": "paisaje_loma_y_camino_de_herradura__environment_model",
+      "entidad": "Loma, neblina y camino de herradura",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-paton",
+        "el-perro-negro",
+        "la-cabellona",
+        "la-rodillona",
+        "los-rescoldos",
+        "el-patetarro",
+        "maria-centeno",
+        "las-ilusiones",
+        "maria-la-larga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8867,
+      "prompt_sha256": "23c354bce27db9bbf80292f1e397e943cdd61317bd50973dae2194786a63e65e"
+    },
+    {
+      "job": "paisaje_loma_y_camino_de_herradura__state_sheet--estado_camino de herradura de noche- barro, curva cerrada, piedras sueltas y el canto del barranco como único recorte claro",
+      "modelo": "paisaje_loma_y_camino_de_herradura__state_sheet",
+      "entidad": "Loma, neblina y camino de herradura",
+      "categoria": "paisaje",
+      "vista": "estado_camino de herradura de noche: barro, curva cerrada, piedras sueltas y el canto del barranco como único recorte claro",
+      "estados": [
+        "camino de herradura de noche: barro, curva cerrada, piedras sueltas y el canto del barranco como único recorte claro"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-paton",
+        "el-perro-negro",
+        "la-cabellona",
+        "la-rodillona",
+        "los-rescoldos",
+        "el-patetarro",
+        "maria-centeno",
+        "las-ilusiones",
+        "maria-la-larga"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 10530,
+      "prompt_sha256": "b61d2c4553d82a98af6cff60531605a8bff62c278971250dcd51024b5ce0c07e"
+    },
+    {
+      "job": "quebrada_y_rio_de_creciente__environment_model--canon",
+      "modelo": "quebrada_y_rio_de_creciente__environment_model",
+      "entidad": "Quebrada y río de creciente rápida",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-patetarro",
+        "maria-la-larga",
+        "el-perro-negro"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9353,
+      "prompt_sha256": "46a7e7bdab02c6e4f008d2276098397f6fe67c36e6ea93b8878e1901ed443da1"
+    },
+    {
+      "job": "paisaje_bajo_atrato__environment_model--canon",
+      "modelo": "paisaje_bajo_atrato__environment_model",
+      "entidad": "El bajo Atrato",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "dobaida",
+        "el-tesoro-de-dabeiba"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 9721,
+      "prompt_sha256": "f31d0f24edc2f26c3b2262c3d7243f2a293d5bab61c9d00f5d5564bf131d0f22"
+    },
+    {
+      "job": "paisaje_bajo_atrato__state_sheet--estado_sequía primordial- ríos y manantiales secos, cauce de arena partida y la playa del golfo con hoyos cavados, sin figuras",
+      "modelo": "paisaje_bajo_atrato__state_sheet",
+      "entidad": "El bajo Atrato",
+      "categoria": "paisaje",
+      "vista": "estado_sequía primordial: ríos y manantiales secos, cauce de arena partida y la playa del golfo con hoyos cavados, sin figuras",
+      "estados": [
+        "sequía primordial: ríos y manantiales secos, cauce de arena partida y la playa del golfo con hoyos cavados, sin figuras"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "dobaida",
+        "el-tesoro-de-dabeiba"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 9887,
+      "prompt_sha256": "67c79413022e16c1dc9d0cc62cb65a5a45e06c0e07065cb2635a30daa7360caa"
+    }
+  ]
+}

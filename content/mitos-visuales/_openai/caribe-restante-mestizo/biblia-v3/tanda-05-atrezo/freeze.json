@@ -1,0 +1,137 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "caribe-restante-mestizo",
+  "comunidad": "Caribe restante (Magdalena, Cesar, San Andrés)",
+  "tanda": "tanda-05-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/caribe-restante-mestizo.v3.json",
+    "sha256": "86ece956812c9a8bfa74bdc0d8f6739e1b7e8f0c98764df37ad58c78a6b2e33b"
+  },
+  "canon": {
+    "sha256": "23c3a0846f2f3742c390ba7412138b0740a886ab53b10154ee075b8422745b46",
+    "verificado_en": "2026-09-29T03:07:24.717Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_islena__object_sheet--canon",
+      "modelo": "hoja_utileria_islena__object_sheet",
+      "entidad": "Hoja de utilería: props de mano del ciclo Nansi",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "beda-nansi-beda-monkey-y-el-molino",
+        "mico-y-nansi",
+        "tigre-y-nansi",
+        "un-perro-una-cabra-y-beda-tiger"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8468,
+      "prompt_sha256": "6d75329d0d1828bb547f1eed6c7bddb192a97983fdc69487ec07d8a3d4cf6a32"
+    },
+    {
+      "job": "hoja_utileria_colonial_y_vallenata__object_sheet--canon",
+      "modelo": "hoja_utileria_colonial_y_vallenata__object_sheet",
+      "entidad": "Hoja de utilería: Magdalena colonial y Cesar juglar",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "genus-irritable-vatum",
+        "las-clavelinas",
+        "la-bruja-del-trinche"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8258,
+      "prompt_sha256": "285c6c48fc0d8d94dbefee559e2313f19e1c66223639a87c5be4118e4826dd0d"
+    },
+    {
+      "job": "conjunto_vallenato__object_sheet--canon",
+      "modelo": "conjunto_vallenato__object_sheet",
+      "entidad": "El conjunto vallenato (acordeón, caja y guacharaca)",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-bruja-del-trinche"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7979,
+      "prompt_sha256": "d985d7f584633fc2445b3a310ed886911329c506eb60e2a8cdcb2bb1423a3c89"
+    },
+    {
+      "job": "el_molino__object_sheet--canon",
+      "modelo": "el_molino__object_sheet",
+      "entidad": "El molino que dice «Yo, molinero»",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "beda-nansi-beda-monkey-y-el-molino"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8203,
+      "prompt_sha256": "427e64eb25fc7a6c7543eed59db2f96f7cb6a7734bba47576051ee5669771b83"
+    },
+    {
+      "job": "hoja_utileria_mar_y_botin__object_sheet--canon",
+      "modelo": "hoja_utileria_mar_y_botin__object_sheet",
+      "entidad": "Hoja de utilería: el botín de Santa Marta",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-castellano-de-san-juan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7566,
+      "prompt_sha256": "8752582365fb2eee575d8948b979efca132c9e4e64fda08877151e2e9a483583"
+    },
+    {
+      "job": "la_clavelina__botanical_sheet--canon",
+      "modelo": "la_clavelina__botanical_sheet",
+      "entidad": "La clavelina, la flor sin aroma",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "las-clavelinas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8080,
+      "prompt_sha256": "662de64270eb0037c518fffa2cb33a9acab147d8485045b0c06fa3d3fbcad099"
+    }
+  ]
+}
