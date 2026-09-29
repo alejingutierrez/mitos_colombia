@@ -1,0 +1,129 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "guahibo-sikuani",
+  "comunidad": "Sikuani (Guahíbo)",
+  "tanda": "tanda-15-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/guahibo-sikuani.v3.json",
+    "sha256": "35c28e13ea11ddb6be4aab0a681cee6a1383795becb773f65cf72d7e52c94940"
+  },
+  "canon": {
+    "sha256": "b915af478564a4987fb3256d1d08a4fe205b8aebfd5572ecf4fe54ec6e1ed923",
+    "verificado_en": "2026-09-29T00:52:08.986Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "paisaje_sabana_llanera__environment_model--canon",
+      "modelo": "paisaje_sabana_llanera__environment_model",
+      "entidad": "Sabana inundable de los Llanos Orientales",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "historia-de-un-tigre",
+        "kawiri-monae",
+        "la-comida-para-los-muertos",
+        "la-danta-y-el-terecay",
+        "el-creador-del-cosmos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6168,
+      "prompt_sha256": "0e850a1b498694431c9a789244150a71590482476f127b39d9001d3bd4030d95"
+    },
+    {
+      "job": "aguas_del_llano__environment_model--canon",
+      "modelo": "aguas_del_llano__environment_model",
+      "entidad": "Ríos, caños y lagunas del llano",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "historia-de-un-brujo",
+        "kaliwirnae-el-arbol-de-los-alimentos",
+        "la-danta-y-el-terecay",
+        "la-mujer-sarnosa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5698,
+      "prompt_sha256": "ceb018cf2f23944d89b7e14e4dacc16f621bdfe500d79a3cdc11e23ecf6b1aae"
+    },
+    {
+      "job": "paisaje_morichal_y_bosque_de_galeria__environment_model--canon",
+      "modelo": "paisaje_morichal_y_bosque_de_galeria__environment_model",
+      "entidad": "Morichal y bosque de galería",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-creador-del-cosmos",
+        "historia-de-un-viejo",
+        "kaliwirnae-el-arbol-de-los-alimentos",
+        "la-mujer-sarnosa"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5857,
+      "prompt_sha256": "492311e911ab0eba0b78b00c8df7fc69d69bb60747ccac9386065ce66f87ec8b"
+    },
+    {
+      "job": "cielo_estrellado_del_llano__environment_model--canon",
+      "modelo": "cielo_estrellado_del_llano__environment_model",
+      "entidad": "El cielo estrellado del llano",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-creador-del-cosmos",
+        "la-comida-para-los-muertos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5893,
+      "prompt_sha256": "7b601bbf8f7f5a754e420f2a15b8374725556b1140443a8a5328ee5938b1b39c"
+    },
+    {
+      "job": "el_mar__environment_model--canon",
+      "modelo": "el_mar__environment_model",
+      "entidad": "El mar",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "historia-de-un-viejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5356,
+      "prompt_sha256": "c9865baad17079b014cf96a96dfb7d9d9c4b78b5df79b48f4d8ac1b4dcba0ec2"
+    }
+  ]
+}
