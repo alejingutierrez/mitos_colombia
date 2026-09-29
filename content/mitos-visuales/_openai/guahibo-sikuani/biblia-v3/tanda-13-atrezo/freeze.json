@@ -1,0 +1,119 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "guahibo-sikuani",
+  "comunidad": "Sikuani (Guahíbo)",
+  "tanda": "tanda-13-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/guahibo-sikuani.v3.json",
+    "sha256": "35c28e13ea11ddb6be4aab0a681cee6a1383795becb773f65cf72d7e52c94940"
+  },
+  "canon": {
+    "sha256": "b915af478564a4987fb3256d1d08a4fe205b8aebfd5572ecf4fe54ec6e1ed923",
+    "verificado_en": "2026-09-29T00:48:08.251Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_camino_y_engano__object_sheet--canon",
+      "modelo": "hoja_utileria_camino_y_engano__object_sheet",
+      "entidad": "hoja utileria camino y engano",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "historia-de-un-viejo",
+        "kaliwirnae-el-arbol-de-los-alimentos",
+        "historia-de-un-tigre"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5434,
+      "prompt_sha256": "dfa8febd4f98199e83e29431377775ce955da1c62ec89fa4f73808e50b50792b"
+    },
+    {
+      "job": "hoja_utileria_cuidado_y_curacion__object_sheet--canon",
+      "modelo": "hoja_utileria_cuidado_y_curacion__object_sheet",
+      "entidad": "hoja utileria cuidado y curacion",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-mujer-sarnosa",
+        "historia-de-un-viejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5424,
+      "prompt_sha256": "d82d07c77cdae781a799b29f33f6716254f84e58138d7bbc64747c710d112450"
+    },
+    {
+      "job": "gran_vasija_hirviendo__object_sheet--canon",
+      "modelo": "gran_vasija_hirviendo__object_sheet",
+      "entidad": "La gran vasija hirviendo",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "historia-de-un-viejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4894,
+      "prompt_sha256": "bb26f610b5cc6a7f888ae6b393150c95990ba0edec4ca659cf2c7997e31ca2f2"
+    },
+    {
+      "job": "kaliwirnae__botanical_sheet--canon",
+      "modelo": "kaliwirnae__botanical_sheet",
+      "entidad": "Kaliwirnae, el árbol de los alimentos",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "kaliwirnae-el-arbol-de-los-alimentos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5270,
+      "prompt_sha256": "6c33908129299bd735d296709b92d3d878f751f6fbc9e2977dd75bc2be824a6e"
+    },
+    {
+      "job": "maraca__object_sheet--canon",
+      "modelo": "maraca__object_sheet",
+      "entidad": "La maraca",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "historia-de-un-brujo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 4949,
+      "prompt_sha256": "5c5707f8fb2c09effc7f5e3495154a5616e017e7a0a0a5c48b9aa95a54aa82b3"
+    }
+  ]
+}
