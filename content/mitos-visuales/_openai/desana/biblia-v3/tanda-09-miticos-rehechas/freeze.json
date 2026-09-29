@@ -1,0 +1,62 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "desana",
+  "comunidad": "Desana",
+  "tanda": "tanda-09-miticos-rehechas",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/desana.v3.json",
+    "sha256": "1579f98eb3bb8c3857a7ddede829604a73a1968d43e47fb1b758b065dde7909d"
+  },
+  "canon": {
+    "sha256": "8b8f46b02293c31171ca7a65e5be964d782b26572a712b75a0811e6db9d2dc34",
+    "verificado_en": "2026-09-29T01:16:54.732Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 9,
+  "fichas_ya_preparadas": 9,
+  "fichas": [
+    {
+      "job": "piro__identity_sheet--canon",
+      "modelo": "piro__identity_sheet",
+      "entidad": "Pirõ, la culebra más grande del río",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "gainpaya-y-el-origen-del-chontaduro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6144,
+      "prompt_sha256": "f208a454ee4e0e1d93882ac7e492df7b5c371f44c0e3281fb9c859d613d5ead9"
+    },
+    {
+      "job": "piro__state_sheet--estado_culebra más grande del río",
+      "modelo": "piro__state_sheet",
+      "entidad": "Pirõ, la culebra más grande del río",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_culebra más grande del río",
+      "estados": [
+        "culebra más grande del río"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "gainpaya-y-el-origen-del-chontaduro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6463,
+      "prompt_sha256": "75a1762f42a66a8af91e88c465932985adf40fe8e98e5048b1d7bf4bff8ed682"
+    }
+  ]
+}
