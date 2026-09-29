@@ -1,0 +1,67 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "eperara-siapidara",
+  "comunidad": "Eperara Siapidara",
+  "tanda": "tanda-10-mortales-rehechas",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/eperara-siapidara.v3.json",
+    "sha256": "80f4093f42d00cbbde2f68bb88e75971938c0805ec430ad6c1544d2187a65e58"
+  },
+  "canon": {
+    "sha256": "b8209cc2e51efedb8160a2273d05eb0f6f1990842891324ddd3568e633bad132",
+    "verificado_en": "2026-09-29T03:31:09.255Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 2,
+  "fichas": [
+    {
+      "job": "hesaa_la_conga__identity_sheet--canon",
+      "modelo": "hesaa_la_conga__identity_sheet",
+      "entidad": "Hesaa, la Conga",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "tachi-akhore-y-la-palabra-de-mangle"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6079,
+      "prompt_sha256": "2f07fed335f88ea11b8944f238f2e396b2de2a42ed7f68f0fc1d3cfc10e99bb6"
+    },
+    {
+      "job": "hesaa_la_conga__state_sheet--estado_hormiga_conga",
+      "modelo": "hesaa_la_conga__state_sheet",
+      "entidad": "Hesaa, la Conga",
+      "categoria": "personaje",
+      "vista": "estado_hormiga_conga",
+      "estados": [
+        "hormiga_conga"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "tachi-akhore-y-la-palabra-de-mangle"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6768,
+      "prompt_sha256": "215e79973fbda86c94867272a6edb259b78d9baa7f792b21b0e091732c958f38"
+    }
+  ]
+}

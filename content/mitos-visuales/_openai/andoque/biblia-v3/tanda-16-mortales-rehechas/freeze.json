@@ -1,0 +1,51 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "andoque",
+  "comunidad": "Andoque (Gente del Hacha)",
+  "tanda": "tanda-16-mortales-rehechas",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/andoque.v3.json",
+    "sha256": "f3181ca264d802225e34d6d1a1a39f739f5f17b51ff76701499f72e636dfdcc6"
+  },
+  "canon": {
+    "sha256": "1464c50fa3a580f64f525602622acdadb0f163d4bd0942dd7decb8df15cc5afb",
+    "verificado_en": "2026-09-29T03:31:05.141Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 15,
+  "fichas_ya_preparadas": 15,
+  "fichas": [
+    {
+      "job": "especialista_huitoto__identity_sheet--canon",
+      "modelo": "especialista_huitoto__identity_sheet",
+      "entidad": "El especialista huitoto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-brujeria-de-la-danta"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6800,
+      "prompt_sha256": "6ba777a62f04b66895101cbe190843373bda8ba663b70bd6c7f727a042415253"
+    }
+  ]
+}

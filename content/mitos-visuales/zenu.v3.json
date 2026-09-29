@@ -1736,10 +1736,10 @@
       ],
       "census_note": "Madre creadora, recordada con un solo seno: rasgo documentado y distintivo que exige ficha propia y no se puede resolver como variante de Mexión.",
       "design": {
-        "silhouette": "Figura femenina de pie, frontal y completamente quieta, con el torso armado en dos planos distintos: uno con el seno recortado como pieza propia y el otro como un plano liso continuo hasta el hombro. Ninguna otra figura de la biblia se reconoce por una asimetría del torso, y ninguna otra deja de actuar dentro de su propia lámina.",
+        "silhouette": "Silueta de recorte de un solo tono pardo oscuro, sin rasgos ni detalle anatómico, de una figura femenina de pie, frontal y completamente quieta, cuyo contorno de torso es asimétrico: un lado se abre en una pieza aparte y el otro sigue liso hasta el hombro. Sobre la silueta, en color, sólo la falda larga de algodón en tiras claras y oscuras y la sarta de cuentas de oro laminar al cuello.",
         "materials": [
+          "un solo recorte de papel de un tono, de canto limpio, sin rasgos ni detalle anatómico",
           "falda larga de algodón tejido en tiras claras y oscuras alternas de anchura desigual, sin patrón legible",
-          "torso desnudo de papel pardo con una sarta de cuentas de oro laminar mate al cuello",
           "pelo en dos piezas planas grandes de papel negro con el borde recortado en dientes",
           "rostro de óvalo plano de un solo tono con los rasgos recortados aparte, sin modelado"
         ],
@@ -1758,9 +1758,11 @@
         "editorial": [
           "la asimetría se dibuja sin herida, sin cicatriz y sin marca de mutilación: la fuente la recuerda como rasgo de belleza y tratarla como daño le cambiaría el sentido",
           "la falda tejida es lectura iconográfica y no descripción: es la carencia 2 del dossier y es reversible",
-          "no lleva pintura corporal, por la misma razón que Mexión: el repertorio que la fuente describe es el de las pintas"
+          "no lleva pintura corporal, por la misma razón que Mexión: el repertorio que la fuente describe es el de las pintas",
+          "Resuelta en silueta el 2026-09-28: el filtro de OpenAI bloqueó la figura en todos los intentos (plan con desnudez o definido por el cuerpo). Se dibuja como recorte de un solo tono sin detalle anatómico; los rasgos documentados que no son del cuerpo se conservan en color. Decisión editorial reversible."
         ],
-        "states_to_model": []
+        "states_to_model": [],
+        "silhouette_previa": "Figura femenina de pie, frontal y completamente quieta, con el torso armado en dos planos distintos: uno con el seno recortado como pieza propia y el otro como un plano liso continuo hasta el hombro. Ninguna otra figura de la biblia se reconoce por una asimetría del torso, y ninguna otra deja de actuar dentro de su propia lámina."
       },
       "states_declared": [],
       "evidence_basis_mix": [
@@ -6055,10 +6057,10 @@
         }
       ],
       "design_contract": {
-        "distinctive_silhouette": "Figura femenina de pie, frontal y completamente quieta, con el torso armado en dos planos distintos: uno con el seno recortado como pieza propia y el otro como un plano liso continuo hasta el hombro. Ninguna otra figura de la biblia se reconoce por una asimetría del torso, y ninguna otra deja de actuar dentro de su propia lámina.",
+        "distinctive_silhouette": "Silueta de recorte de un solo tono pardo oscuro, sin rasgos ni detalle anatómico, de una figura femenina de pie, frontal y completamente quieta, cuyo contorno de torso es asimétrico: un lado se abre en una pieza aparte y el otro sigue liso hasta el hombro. Sobre la silueta, en color, sólo la falda larga de algodón en tiras claras y oscuras y la sarta de cuentas de oro laminar al cuello.",
         "materials": [
+          "un solo recorte de papel de un tono, de canto limpio, sin rasgos ni detalle anatómico",
           "falda larga de algodón tejido en tiras claras y oscuras alternas de anchura desigual, sin patrón legible",
-          "torso desnudo de papel pardo con una sarta de cuentas de oro laminar mate al cuello",
           "pelo en dos piezas planas grandes de papel negro con el borde recortado en dientes",
           "rostro de óvalo plano de un solo tono con los rasgos recortados aparte, sin modelado"
         ],
@@ -6077,17 +6079,18 @@
         "editorial_features": [
           "la asimetría se dibuja sin herida, sin cicatriz y sin marca de mutilación: la fuente la recuerda como rasgo de belleza y tratarla como daño le cambiaría el sentido",
           "la falda tejida es lectura iconográfica y no descripción: es la carencia 2 del dossier y es reversible",
-          "no lleva pintura corporal, por la misma razón que Mexión: el repertorio que la fuente describe es el de las pintas"
+          "no lleva pintura corporal, por la misma razón que Mexión: el repertorio que la fuente describe es el de las pintas",
+          "Resuelta en silueta el 2026-09-28: el filtro de OpenAI bloqueó la figura en todos los intentos (plan con desnudez o definido por el cuerpo). Se dibuja como recorte de un solo tono sin detalle anatómico; los rasgos documentados que no son del cuerpo se conservan en color. Decisión editorial reversible."
         ]
       },
       "prompt_spec": {
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Zenú V1 - identity_sheet",
         "technique_first": "TÉCNICA, MANDA SOBRE TODO LO DEMÁS: ilustración íntegramente de papel recortado y quilling, fotografiada como una maqueta tridimensional inmersiva en la que la cámara está dentro de la escena. Cada elemento es una pieza de papel cortada con filo, con su canto visible y su sombra propia proyectada sobre la capa de atrás. A sangre hasta los cuatro límites del encuadre: sin borde, sin cartón soporte, sin mesa, sin marco y sin fondo neutro. Papel de fibra mate, grueso y sin brillo, de gramajes distintos según la capa; papel dorado a la hoja, mate y granulado, sólo para el oro; capas escalonadas en profundidad que construyen la sabana y la ciénaga por planos superpuestos y no por perspectiva atmosférica pintada. La textura de la fibra ripiada, del barro cocido, de la palma amarga en capas y del bejuco de amarre se resuelve por corte y por canto, no por dibujo.",
-        "primary_request": "identidad corporal completa y legible para Manexca. Figura femenina de pie, frontal y completamente quieta, con el torso armado en dos planos distintos: uno con el seno recortado como pieza propia y el otro como un plano liso continuo hasta el hombro. Ninguna otra figura de la biblia se reconoce por una asimetría del torso, y ninguna otra deja de actuar dentro de su propia lámina.",
+        "primary_request": "identidad corporal completa y legible para Manexca. Silueta de recorte de un solo tono pardo oscuro, sin rasgos ni detalle anatómico, de una figura femenina de pie, frontal y completamente quieta, cuyo contorno de torso es asimétrico: un lado se abre en una pieza aparte y el otro sigue liso hasta el hombro. Sobre la silueta, en color, sólo la falda larga de algodón en tiras claras y oscuras y la sarta de cuentas de oro laminar al cuello.",
         "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Mujer adulta de la misma estatura que Mexión: la fuente la recuerda junto a él y no por debajo de él, y la lámina no la empequeñece.",
         "lighting_mood": "Luz alta y difusa de sabana caribe bajo cielo cubierto, sin disco solar y sin rayos volumétricos, que cae en los cantos del papel y define cada capa por su sombra. Toda luz dirigida queda reservada al prodigio y el corpus dice cuál: la claridad de Ninha que seca la tierra —única vez en que el disco solar es legítimo, porque es el personaje—, el resplandor apagado del tesoro bajo el agua de la canoa, el relámpago seco del Corcovao sobre cielo despejado y las arenas de la laguna encantada «brillantes como el sol».",
-        "materials_textures": "falda larga de algodón tejido en tiras claras y oscuras alternas de anchura desigual, sin patrón legible; torso desnudo de papel pardo con una sarta de cuentas de oro laminar mate al cuello; pelo en dos piezas planas grandes de papel negro con el borde recortado en dientes; rostro de óvalo plano de un solo tono con los rasgos recortados aparte, sin modelado",
+        "materials_textures": "un solo recorte de papel de un tono, de canto limpio, sin rasgos ni detalle anatómico; falda larga de algodón tejido en tiras claras y oscuras alternas de anchura desigual, sin patrón legible; pelo en dos piezas planas grandes de papel negro con el borde recortado en dientes; rostro de óvalo plano de un solo tono con los rasgos recortados aparte, sin modelado",
         "era": "Tres estratos que no se mezclan, y cada lámina de paisaje declara además su estación. FUNDACIÓN PRECOLOMBINA (Mexión y Manexca, el sombrero-universo): barro modelado en tinajas, múcuras, platos y vasijas; oro trabajado y tumbaga; fibras de iraca, caña flecha, enea y bejuco; yuca y maíz; casa en loma con techo de palma amarga transportable, paredes de caña flecha y amarres de bejuco; sin metal forjado, sin moneda, sin plata, sin arma de fuego, sin animal doméstico europeo y sin nada de pueblo colonial. ENCANTO TERRITORIAL (el caimán, Corcovao, Torcorá, el totumo): lo mismo, más canoa labrada, mochila, totuma, ají, y un solo objeto que no es precolombino y está en el núcleo del relato, el limón de acero, que se dibuja tal cual. PUEBLO CORDOBÉS MESTIZO (Juan Lara): vivienda rural de pueblo, patio, umbral, techo, luces de vigilia, y absolutamente ninguna iconografía zenú. ESTACIÓN: verano de diciembre a marzo, tierra dura y agrietada con playones descubiertos; invierno de abril a noviembre, lámina de agua sobre la sabana.",
         "constraints": [
           "paleta de esta ficha: Blanco de caña agria y sol en la falda contra el pardo del cuerpo, con el oro reducido a la sarta del cuello. Es la ficha más clara del estrato de fundación, y así se separa de Mexión, que va en pardo y negro.",

@@ -1,0 +1,53 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "motilon-bari",
+  "comunidad": "Barí",
+  "tanda": "tanda-16-miticos-rehechas",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/motilon-bari.v3.json",
+    "sha256": "1c0e1fb68cf483a0ae959d1016161646072a67b2ad830700abc1c783c9c7ab48"
+  },
+  "canon": {
+    "sha256": "aa03517f459efabb921c1e2ef28e49ae58b3aa900ca061c516ba03060880951a",
+    "verificado_en": "2026-09-29T03:33:33.375Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 6,
+  "fichas": [
+    {
+      "job": "chibaig__identity_sheet--canon",
+      "modelo": "chibaig__identity_sheet",
+      "entidad": "Chibáig",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nandou-chibaig-y-las-luces-del-cielo",
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron",
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5997,
+      "prompt_sha256": "daf991ffa0af3a62ea25f178054832cc392aa0a2ab27421ae6c733cc53514fb4"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "cuycuyes",
+  "comunidad": "Cuycuyes",
+  "tanda": "tanda-10-tipos-rehechas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/cuycuyes.v3.json",
+    "sha256": "e8d1cd5ca1e86fc923acc9b1fbce092f54f803a7e4dd51c7a0f280fb3ea3c8aa"
+  },
+  "canon": {
+    "sha256": "565ecebefc0ba4d3e8232b92b40be1ab8340f033f3c2b786ee1cb0eb93a1283e",
+    "verificado_en": "2026-09-29T03:31:07.950Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 3,
+  "fichas": [
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer de Arma adulta (capa de contacto)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-diablo",
+        "el-tesoro-del-pipinta"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7309,
+      "prompt_sha256": "43949bbac850c2d38f6ce14e421893790bb33c6aa63db3c999b0ef11cd2b4180"
+    }
+  ]
+}

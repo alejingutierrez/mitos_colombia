@@ -1,0 +1,51 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "guahibo-sikuani",
+  "comunidad": "Sikuani (Guahíbo)",
+  "tanda": "tanda-17-paisajes-rehechas",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/guahibo-sikuani.v3.json",
+    "sha256": "f31365ca787fed38f67fa645eee7ed781e880f1fbfe8053318de0ab20740566c"
+  },
+  "canon": {
+    "sha256": "b915af478564a4987fb3256d1d08a4fe205b8aebfd5572ecf4fe54ec6e1ed923",
+    "verificado_en": "2026-09-29T03:35:06.189Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 5,
+  "fichas": [
+    {
+      "job": "el_mar__environment_model--canon",
+      "modelo": "el_mar__environment_model",
+      "entidad": "El agua grande del borde del mundo (el «mar» del relato)",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "historia-de-un-viejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5402,
+      "prompt_sha256": "4ff05fc142ef58f5fd25dfb67b7a049f1a5458ab336f76facd1965642195c1b0"
+    }
+  ]
+}

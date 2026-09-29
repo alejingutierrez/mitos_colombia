@@ -1,0 +1,54 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "koguis",
+  "comunidad": "Kogui (Kággaba)",
+  "tanda": "tanda-22-mortales-rehechas",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/koguis.v3.json",
+    "sha256": "9b1505b8acc19e0cb12fd3be7dcd96525d308ec98fe8b935ad8e8659077b2e31"
+  },
+  "canon": {
+    "sha256": "edca8fad668f5e006d7587f11184f1111e3139a171111e1e903647bc29cfc6f3",
+    "verificado_en": "2026-09-29T03:36:19.578Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 27,
+  "fichas_ya_preparadas": 27,
+  "fichas": [
+    {
+      "job": "kashindukwe__state_sheet--estado_tigre (el «perfecto tigre Maluteyan» al que le quitaron gorra, poporo y todo)",
+      "modelo": "kashindukwe__state_sheet",
+      "entidad": "Kashindukwe (Kashindukue)",
+      "categoria": "personaje",
+      "vista": "estado_tigre (el «perfecto tigre Maluteyan» al que le quitaron gorra, poporo y todo)",
+      "estados": [
+        "tigre (el «perfecto tigre Maluteyan» al que le quitaron gorra, poporo y todo)"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "canibalismo",
+        "kasauge-el-padre-arbol",
+        "kashindukwe",
+        "nunkasha-y-kashindukwe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7833,
+      "prompt_sha256": "c016b8988acddafcf335f047878be4a29de19964fd16debb48bbd0b6b74ab212"
+    }
+  ]
+}

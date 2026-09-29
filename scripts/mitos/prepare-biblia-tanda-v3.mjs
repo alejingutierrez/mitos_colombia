@@ -282,7 +282,7 @@ export function peticionDeEstado(model, view, nombre) {
     .filter((t) => /^(sin|nunca|ning[uú]n|no )/i.test(t.trim()) && !nombra(t, otrosEstados));
   const continuidad = [...new Set([...elegir(model.design_contract?.continuity_markers || []), ...prohibiciones])];
   const jaguar = /tigre|jaguar/i.test(estado + continuidad.join(" "))
-    ? " El tigre es el de Colombia: jaguar americano, rosetas con punto interior; nunca tigre de bengala ni leopardo."
+    ? " El tigre es el de Colombia: jaguar americano, nunca tigre de bengala ni leopardo; el pelaje, el que diga la ficha."
     : "";
   const punto = (t) => (/[.!?]$/.test(t.trim()) ? t.trim() : `${t.trim()}.`);
   return `${view.purpose}, para ${nombre}. Dibuja solo la forma que ese estado describe, entera, aunque ya no sea humana; de la figura canonica conserva solo lo que aqui se dice que conserva. ${[...silueta, ...continuidad].map(punto).join(" ")}${jaguar}`;
@@ -387,9 +387,32 @@ function promptDeVista(model, view, capaId, kind, nombre, estados = []) {
   }
   if (!CON_FONDO.has(kind)) spec = sobrePapel(spec);
   else spec = { ...spec, technique_first: `${PAISAJE_EN_PAPEL}\n${spec.technique_first}` };
+  // Una figura que el editor cubrio o paso a silueta por el filtro no puede
+  // seguir citando «desnuda» en sus rasgos documentados: la cita sigue en el
+  // plan y en el contrato, pero no viaja al prompt de la lamina.
+  const resuelta = (model.design_contract?.editorial_features || []).some((x) => /^(Resuelta en silueta|Segunda salida|Cubierta con el tsitse)/.test(x));
+  if (resuelta) {
+    spec = { ...spec, constraints: (spec.constraints || []).filter((c) => !/(desnud|senos?\b|pecho|sexo|provocativ)/i.test(c)) };
+  }
+  // El «mar» sikuani es el agua del borde del mundo: las citas que dicen
+  // «mar» o «playa» hacian que el modelo pintara una costa.
+  const bordeDelMundo = (model.design_contract?.editorial_features || []).some((x) => /^El agua del borde/.test(x));
+  if (bordeDelMundo) {
+    spec = {
+      ...spec,
+      primary_request: spec.primary_request.replace(/\s*\(el «mar» del relato\)/, ""),
+      constraints: (spec.constraints || []).filter((c) => !/\b(mar|playa|costa|oc[eé]ano)\b/i.test(c)),
+      avoid: [...(spec.avoid || []), "nada de mar, costa, playa, arena, olas, rompiente ni palmeras de playa: es el agua dulce y quieta del llano que se pierde en el cielo"],
+    };
+  }
   let base = ensamblar(spec);
   if (conPudor) base = base.replace(/\n\nUse case: /, `\n\n${PUDOR}\n\nUse case: `);
-  if (CAPAS_CON_CUERPO.has(capaId)) {
+  // Una figura resuelta en silueta (bloqueos del filtro) no lleva la regla de
+  // cara y cuerpo: pediria ojos y boca sobre un recorte que no los tiene.
+  const enSilueta = /siluetas? de recorte/i.test(model.design_contract?.distinctive_silhouette || "");
+  if (enSilueta) {
+    base = base.replace(/\n\nUse case: /, `\n\nFIGURA EN SILUETA: cada cuerpo es un solo recorte plano de un tono, sin cara, sin ojos, sin boca y sin ningun detalle anatomico; se lee por el contorno. Solo los objetos y adornos nombrados llevan color y detalle.\n${SIN_LAMINA_TECNICA}\n\nUse case: `);
+  } else if (CAPAS_CON_CUERPO.has(capaId)) {
     // Un colectivo es un solo grupo en un solo cuadro: los ninos katios
     // salieron con rotulos y la gente katia como collage de ocho vinetas.
     const extra = CAPAS_DE_UNA_FIGURA.has(capaId) ? `\n${UNA_SOLA_FIGURA}` : `\n${UN_SOLO_GRUPO}`;

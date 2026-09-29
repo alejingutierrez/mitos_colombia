@@ -42,7 +42,10 @@ function vigentes(corpus) {
 for (const corpus of corpora) {
   const plan = JSON.parse(readFileSync(`content/mitos-visuales/${corpus}.v3.json`, "utf8"));
   const hechas = vigentes(corpus);
-  const balance = { corpus, fecha: new Date().toISOString().slice(0, 10), capas: {}, faltan: [] };
+  const balance = { corpus, fecha: new Date().toISOString().slice(0, 10), capas: {}, faltan: [], ausentes: [] };
+  // Laminas declaradas ausentes con su razon (bloqueo irresoluble del filtro).
+  const rutaAusentes = resolve("content/mitos-visuales/_openai", corpus, "biblia-v3", "AUSENTES.json");
+  const ausentes = new Map(existsSync(rutaAusentes) ? JSON.parse(readFileSync(rutaAusentes, "utf8")).declaradas.map((a) => [a.job, a]) : []);
   for (const [ci, capa] of CAPAS.entries()) {
     const jobs = [];
     for (const [id, m] of Object.entries(plan.models || {})) {
@@ -53,7 +56,10 @@ for (const corpus of corpora) {
     if (!jobs.length) continue;
     const ok = jobs.filter((j) => hechas.has(j.job));
     balance.capas[capa.id] = { plan: jobs.length, generadas: ok.length };
-    for (const j of jobs.filter((j) => !hechas.has(j.job))) balance.faltan.push({ capa: capa.id, entidad: j.nombre, vista: j.vista });
+    for (const j of jobs.filter((j) => !hechas.has(j.job))) {
+      if (ausentes.has(j.job)) balance.ausentes.push({ capa: capa.id, entidad: j.nombre, vista: j.vista, razon: ausentes.get(j.job).razon });
+      else balance.faltan.push({ capa: capa.id, entidad: j.nombre, vista: j.vista });
+    }
     if (sinHojas || !ok.length) continue;
     const dir = join(tmpdir(), `hoja-${corpus}-${capa.id}`);
     rmSync(dir, { recursive: true, force: true });
@@ -71,5 +77,5 @@ for (const corpus of corpora) {
   const total = Object.values(balance.capas).reduce((a, c) => ({ plan: a.plan + c.plan, gen: a.gen + c.generadas }), { plan: 0, gen: 0 });
   balance.total = total;
   writeFileSync(resolve("content/mitos-visuales/_openai", corpus, "biblia-v3", "BALANCE.json"), `${JSON.stringify(balance, null, 2)}\n`);
-  console.log(`${corpus.padEnd(28)} ${String(total.gen).padStart(4)} de ${String(total.plan).padEnd(4)} faltan ${balance.faltan.length}`);
+  console.log(`${corpus.padEnd(28)} ${String(total.gen).padStart(4)} de ${String(total.plan).padEnd(4)} faltan ${balance.faltan.length}  ausentes ${balance.ausentes.length}`);
 }

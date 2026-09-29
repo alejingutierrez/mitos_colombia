@@ -1,0 +1,51 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ansermas",
+  "comunidad": "Ansermas",
+  "tanda": "tanda-10-tipos-rehechas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ansermas.v3.json",
+    "sha256": "58062a892e2fffe14647fdfcf012d618e033176472ac2747adcfb968b89559ab"
+  },
+  "canon": {
+    "sha256": "ec2e513c8def2f32c0bec9c1fabcce9c07393d0a7339f7f2b1675a864c90203b",
+    "verificado_en": "2026-09-29T03:31:07.065Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 2,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre de Guacuma adulto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "las-huellas-de-mapura",
+        "los-pasos-de-xixaraca"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7525,
+      "prompt_sha256": "2e12ed62353c69d62586507edcda13f82f34748ddc066c1de17a990aa18393e0"
+    }
+  ]
+}

@@ -43,6 +43,23 @@ declaradas son `veneracion-a-los-soberanos` y `el-trueno`, ambas con N=16: una
 es una sola escena continua, la otra son cuatro relatos breves. Estirarlas a
 dieciocho bloques habría sido rellenar, y el acta de cada una lo razona.
 
+### Las 42 biblias V3 · cerradas el 2026-09-28
+
+Todas las comunidades indígenas, mestizas y mixtas que no tenían biblia la
+tienen ya: **42 biblias V3, 1.999 láminas generadas y 3 declaradas ausentes de
+2.002**. Fichas sobre papel blanco hueso, sólo paisajes y lugares a fondo
+completo, producidas comunidad por comunidad y capa por capa (tipos base →
+mortales → míticos → colectivos → animales → atrezo → mundo → paisajes).
+Koguis, katíos, andoque, u'wa, sikuani y desana se revisaron capa por capa con
+el editor; las otras 36 se produjeron en masa y esperan su revisión en hoja.
+
+Antes, el cierre del catálogo había reescrito 365 de los 461 relatos después de
+congelar los inventarios: se descongelaron y releyeron los 37 corpus
+afectados (`scripts/mitos/descongelar-corpus-biblia.mjs`).
+
+Balance, método, decisiones del editor y consultas pendientes (barasana,
+wounaan, misak, raizales) en [`docs/biblias-v3-produccion.md`](docs/biblias-v3-produccion.md).
+
 ### La biblia wayúu V4 · 2026-09-17
 
 La V3 quedó **huérfana**: estaba congelada contra un snapshot del 2026-07-29 y el

@@ -2733,9 +2733,9 @@
         }
       ],
       "design": {
-        "silhouette": "Hombre adulto de pie en la ladera, desnudo y descalzo, con el pelo cortado por encima del hombro, el bulto de chaquira blanca bajo la rodilla y sobre el tobillo, una cinta de chaquira al cuello con una ranita de oro y un palo de sembrar en la mano.",
+        "silhouette": "Hombre adulto de pie en la ladera, de perfil, envuelto de los hombros a las rodillas en la manta larga de algodón pintada que el corpus da a los principales de Anserma, con el pelo cortado por encima del hombro, el bulto de chaquira blanca sobre el tobillo, la cinta de chaquira al cuello con una ranita de oro y un palo de sembrar en la mano.",
         "materials": [
-          "piel en papel pardo mate",
+          "un solo recorte de papel de un tono, de canto limpio, sin rasgos ni detalle anatómico",
           "chaquira blanca menuda en bulto bajo la rodilla y sobre el tobillo, de canto granulado",
           "cinta de chaquira al cuello con figurita de rana en papel dorado mate",
           "palo de sembrar recto de madera"
@@ -2759,9 +2759,12 @@
           "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y la pintura facial, si la lleva, va como campos planos, nunca como trazo; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
           "Los dibujos de la manta son lenguaje de forma —bandas, campos, trazos— y nunca un patrón real (regla del ejemplar).",
           "Ninguna lámina presenta a estos cuerpos como los Embera de hoy ni como sus herederos automáticos (dossier §3).",
-          "El palo de sembrar es atrezo de oficio elegido porque lo que el relato defiende es «lo sembrado»; reversible."
+          "El palo de sembrar es atrezo de oficio elegido porque lo que el relato defiende es «lo sembrado»; reversible.",
+          "Resuelta en silueta el 2026-09-28: el filtro de OpenAI bloqueó la figura en todos los intentos (plan con desnudez o definido por el cuerpo). Se dibuja como recorte de un solo tono sin detalle anatómico; los rasgos documentados que no son del cuerpo se conservan en color. Decisión editorial reversible.",
+          "Segunda salida el 2026-09-28, tras bloquearse también en silueta: se viste con la prenda que documenta el propio corpus (o se resuelve sin figura humana). Decisión editorial reversible."
         ],
-        "states_to_model": []
+        "states_to_model": [],
+        "silhouette_previa": "Hombre adulto de pie en la ladera, desnudo y descalzo, con el pelo cortado por encima del hombro, el bulto de chaquira blanca bajo la rodilla y sobre el tobillo, una cinta de chaquira al cuello con una ranita de oro y un palo de sembrar en la mano."
       }
     },
     "tipo_mujer_adulta": {
@@ -4026,9 +4029,9 @@
         }
       ],
       "design_contract": {
-        "distinctive_silhouette": "Hombre adulto de pie en la ladera, desnudo y descalzo, con el pelo cortado por encima del hombro, el bulto de chaquira blanca bajo la rodilla y sobre el tobillo, una cinta de chaquira al cuello con una ranita de oro y un palo de sembrar en la mano.",
+        "distinctive_silhouette": "Hombre adulto de pie en la ladera, de perfil, envuelto de los hombros a las rodillas en la manta larga de algodón pintada que el corpus da a los principales de Anserma, con el pelo cortado por encima del hombro, el bulto de chaquira blanca sobre el tobillo, la cinta de chaquira al cuello con una ranita de oro y un palo de sembrar en la mano.",
         "materials": [
-          "piel en papel pardo mate",
+          "un solo recorte de papel de un tono, de canto limpio, sin rasgos ni detalle anatómico",
           "chaquira blanca menuda en bulto bajo la rodilla y sobre el tobillo, de canto granulado",
           "cinta de chaquira al cuello con figurita de rana en papel dorado mate",
           "palo de sembrar recto de madera"
@@ -4052,17 +4055,19 @@
           "Cara y cuerpo por separado: el rostro es un óvalo plano de un solo tono con los rasgos recortados aparte, y la pintura facial, si la lleva, va como campos planos, nunca como trazo; el cuerpo, en pocos planos grandes de papel pardo mate, sin músculo modelado.",
           "Los dibujos de la manta son lenguaje de forma —bandas, campos, trazos— y nunca un patrón real (regla del ejemplar).",
           "Ninguna lámina presenta a estos cuerpos como los Embera de hoy ni como sus herederos automáticos (dossier §3).",
-          "El palo de sembrar es atrezo de oficio elegido porque lo que el relato defiende es «lo sembrado»; reversible."
+          "El palo de sembrar es atrezo de oficio elegido porque lo que el relato defiende es «lo sembrado»; reversible.",
+          "Resuelta en silueta el 2026-09-28: el filtro de OpenAI bloqueó la figura en todos los intentos (plan con desnudez o definido por el cuerpo). Se dibuja como recorte de un solo tono sin detalle anatómico; los rasgos documentados que no son del cuerpo se conservan en color. Decisión editorial reversible.",
+          "Segunda salida el 2026-09-28, tras bloquearse también en silueta: se viste con la prenda que documenta el propio corpus (o se resuelve sin figura humana). Decisión editorial reversible."
         ]
       },
       "prompt_spec": {
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Ansermas V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiado como maqueta tridimensional inmersiva, a sangre hasta los cuatro límites del encuadre. La cámara está dentro del diorama y recorta su perímetro: no hay borde, ni cartón soporte, ni corrugado, ni mesa, ni marco. Primer plano, plano medio y fondo son capas físicas de papel a distancias distintas, con aire entre ellas, cantos internos visibles y sombras proyectadas de una capa sobre otra. La técnica abre y cierra el prompt y manda sobre todo lo demás. Ilustración editorial en papel, de composición limpia y silueta legible a distancia. El quilling se reserva a lo que en este territorio se enrolla y se descarga: el rayo, el remolino de la tormenta, el chorro doble de las dos cascadas y el enjambre en espiral que sale de la grieta. Las huellas son hueco recortado en la roca, no relieve. Sin trama decorativa de relleno.",
-        "primary_request": "identidad corporal completa y legible para Tipo base · hombre de Guacuma adulto. Hombre adulto de pie en la ladera, desnudo y descalzo, con el pelo cortado por encima del hombro, el bulto de chaquira blanca bajo la rodilla y sobre el tobillo, una cinta de chaquira al cuello con una ranita de oro y un palo de sembrar en la mano.",
+        "primary_request": "identidad corporal completa y legible para Tipo base · hombre de Guacuma adulto. Hombre adulto de pie en la ladera, de perfil, envuelto de los hombros a las rodillas en la manta larga de algodón pintada que el corpus da a los principales de Anserma, con el pelo cortado por encima del hombro, el bulto de chaquira blanca sobre el tobillo, la cinta de chaquira al cuello con una ranita de oro y un palo de sembrar en la mano.",
         "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Estatura adulta corriente, escalonada por la pendiente. Cuerpo entero 9:16.",
         "lighting_mood": "Luz de tormenta de vertiente cafetera, que es la única atmósfera que el corpus documenta: cielo cargado y bajo, contraste alto y momentáneo del relámpago contra masas oscuras, y el resto del tiempo una luz plana de día cubierto sobre laderas sembradas. La escena de la despedida cambia el registro y sólo ése: luz rasante de tarde, larga y baja, sobre la roca del río. No hay luz propia en ninguna entidad: ni halo, ni aura, ni ojos brillantes; lo sobrenatural ocurre en el cielo y en el agua, nunca en un cuerpo.",
-        "materials_textures": "piel en papel pardo mate; chaquira blanca menuda en bulto bajo la rodilla y sobre el tobillo, de canto granulado; cinta de chaquira al cuello con figurita de rana en papel dorado mate; palo de sembrar recto de madera",
+        "materials_textures": "un solo recorte de papel de un tono, de canto limpio, sin rasgos ni detalle anatómico; chaquira blanca menuda en bulto bajo la rodilla y sobre el tobillo, de canto granulado; cinta de chaquira al cuello con figurita de rana en papel dorado mate; palo de sembrar recto de madera",
         "era": "Dos capas que no se mezclan y un umbral entre ellas. La capa del relato es el mundo anserma anterior y contemporáneo a la entrada española, hasta 1540: cuerpo desnudo y descalzo, manta pintada, maure, chaquira bajo la rodilla, adorno de oro laminado, casas de madera desviadas unas de otras, esteras, armas de dardo, lanza y macana de palma negra, sierras sembradas sin bosque cerrado. Nada de hierro, caballo, teja, rueda ni cruz. La capa de la memoria que transmite el relato es el siglo XX del mercado de Quinchía —camisa blanca, jíquera, achiote en la cara, ollas y cayanas de barro, canastas de bejuco— y sólo entra si el guion la pide explícitamente como marco, nunca mezclada con la anterior.",
         "constraints": [
           "paleta de esta ficha: Pardo de piel, el blanco de la chaquira como punto claro y un solo punto de oro mate.",

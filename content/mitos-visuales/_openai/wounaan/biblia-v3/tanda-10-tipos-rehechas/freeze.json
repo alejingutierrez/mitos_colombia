@@ -1,0 +1,50 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "wounaan",
+  "comunidad": "Wounaan",
+  "tanda": "tanda-10-tipos-rehechas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/wounaan.v3.json",
+    "sha256": "677c898296f4df42dda71faff2dbb851cc72efe371fd50d9d1608d25c710ee26"
+  },
+  "canon": {
+    "sha256": "4b1d21cb745ba08ba396fa1a73653b34d5c61368954d4e50d2e4719efce1a7ce",
+    "verificado_en": "2026-09-29T03:31:20.069Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "atrezo",
+    "mundo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 6,
+  "fichas": [
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño wounaan",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "madre-name"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5974,
+      "prompt_sha256": "a51ffd359f4f9d0cdab7e76283cbb11bbfb08cb7723a0ec206a292c7334be0ce"
+    }
+  ]
+}

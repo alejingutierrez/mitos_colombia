@@ -1,0 +1,51 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "guahibo-sikuani",
+  "comunidad": "Sikuani (Guahíbo)",
+  "tanda": "tanda-18-mortales-rehechas",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/guahibo-sikuani.v3.json",
+    "sha256": "a2d020cc58551a90a1fafb36b634e7a3e9eb0cbc81731e1e5f9581f949aaf3b0"
+  },
+  "canon": {
+    "sha256": "b915af478564a4987fb3256d1d08a4fe205b8aebfd5572ecf4fe54ec6e1ed923",
+    "verificado_en": "2026-09-29T03:36:20.638Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 27,
+  "fichas_ya_preparadas": 27,
+  "fichas": [
+    {
+      "job": "nino_de_historia_de_un_viejo__identity_sheet--canon",
+      "modelo": "nino_de_historia_de_un_viejo__identity_sheet",
+      "entidad": "El hermano",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "historia-de-un-viejo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6181,
+      "prompt_sha256": "ca791b5bbc1d2bf7aff68f0504bb5b7c44441bc6f5d2e7f755fecd412ac6e1a4"
+    }
+  ]
+}

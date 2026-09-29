@@ -1,0 +1,51 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "katios",
+  "comunidad": "Katíos",
+  "tanda": "tanda-20-colectivos-rehechas",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/katios.v3.json",
+    "sha256": "f6b39f5f60e768232d4b7b6af7eecec77095cf1c882db19897c4a01e470bed5d"
+  },
+  "canon": {
+    "sha256": "de27d790f202032beb5e5da24c37ad0457de3c5ea66f10b4fdd7c7f234b286ef",
+    "verificado_en": "2026-09-29T03:33:35.617Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo",
+    "paisajes"
+  ],
+  "fichas_en_capa": 18,
+  "fichas_ya_preparadas": 18,
+  "fichas": [
+    {
+      "job": "mujeres-de-senos-grandes-del-bajia__group_grammar--canon",
+      "modelo": "mujeres-de-senos-grandes-del-bajia__group_grammar",
+      "entidad": "Las mujeres de senos grandes del Bajía",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "ancastor"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6080,
+      "prompt_sha256": "7afd259f669bac9cbcc62dca9d04340c6714760e4ef48232d657ecb24d93528d"
+    }
+  ]
+}

@@ -1,97 +1,108 @@
-# Biblias V3 · producción de las 42 comunidades
+# Biblias V3 · las 42 comunidades, cerradas
 
-Estado al 2026-09-28. **1982 de 2002 láminas** generadas en las 42 biblias
-V3 (todas las comunidades y corpus que no tenían biblia; wayúu, chamí,
-huitoto, muiscas, nasa y ette ennaka tienen la suya aparte).
+Estado al 2026-09-28: **las 42 biblias V3 están terminadas**. De 2002 láminas del
+plan, **1999 generadas** y **3 declaradas ausentes** con su razón
+(`AUSENTES.json` de cada biblia). No queda ninguna lámina sin resolver.
 
-Método: fichas sobre papel blanco hueso y sólo paisajes y lugares a fondo
-completo; una comunidad a la vez y, dentro de ella, capa por capa (tipos →
-mortales → míticos → colectivos → animales → atrezo → arquitectura y
-fenómenos → paisajes). Seis biblias se revisaron capa por capa con el editor;
-las otras 36 se produjeron en masa el 2026-09-28 por su pedido
-(`scripts/mitos/producir-biblia-v3.sh`) y quedan registradas como
-«producida en masa, pendiente de revisión» en su `APROBACIONES.json`.
+Cubren todas las comunidades indígenas, los corpus mestizos y los mixtos que no
+tenían biblia (wayúu, chamí, huitoto, muiscas, nasa y ette ennaka tienen la suya
+aparte).
 
-Cada biblia tiene su `BALANCE.json` en `content/mitos-visuales/_openai/<corpus>/biblia-v3/`
-y sus hojas de contacto en `output/imagegen/_hojas/` (`node scripts/mitos/hojas-biblia-v3.mjs <corpus>`).
+## Método
 
-| comunidad | láminas | revisión |
-|---|---|---|
-| koguis | 95 de 96 | capa por capa, revisada |
-| katios | 108 de 109 | capa por capa, revisada |
-| andoque | 68 de 70 | capa por capa, revisada |
-| u-wa | 76 de 76 | capa por capa, revisada |
-| guahibo-sikuani | 75 de 75 | capa por capa, revisada |
-| desana | 70 de 70 | capa por capa, revisada |
-| amazonia-mestizo-mixto | 87 de 87 | en masa, pendiente de revisión |
-| ansermas | 12 de 13 | en masa, pendiente de revisión |
-| antioquia-occidente-mixto | 53 de 53 | en masa, pendiente de revisión |
-| awa | 19 de 19 | en masa, pendiente de revisión |
-| barasana | 62 de 62 | en masa, pendiente de revisión |
-| bogota-sabana-mestizo | 57 de 57 | en masa, pendiente de revisión |
-| bolivar-cartagena-mestizo | 89 de 89 | en masa, pendiente de revisión |
-| boyaca-mestizo | 37 de 37 | en masa, pendiente de revisión |
-| caribe-restante-mestizo | 43 de 43 | en masa, pendiente de revisión |
-| choco-afro | 21 de 21 | en masa, pendiente de revisión |
-| cordoba-sinu-mestizo | 79 de 79 | en masa, pendiente de revisión |
-| cuycuyes | 18 de 19 | en masa, pendiente de revisión |
-| eje-cafetero-mestizo | 39 de 39 | en masa, pendiente de revisión |
-| embera | 19 de 19 | en masa, pendiente de revisión |
-| eperara-siapidara | 20 de 21 | en masa, pendiente de revisión |
-| kuibas | 19 de 19 | en masa, pendiente de revisión |
-| makawanes | 26 de 26 | en masa, pendiente de revisión |
-| misak-guambianos | 53 de 55 | en masa, pendiente de revisión |
-| motilon-bari | 42 de 46 | en masa, pendiente de revisión |
-| nukak-maku | 16 de 16 | en masa, pendiente de revisión |
-| orinoquia-llanera-mestizo | 79 de 79 | en masa, pendiente de revisión |
-| pacifico-sur-mestizo | 43 de 43 | en masa, pendiente de revisión |
-| pananes | 43 de 43 | en masa, pendiente de revisión |
-| pirsa | 14 de 15 | en masa, pendiente de revisión |
-| quillacingas | 49 de 49 | en masa, pendiente de revisión |
-| quimbaya | 15 de 18 | en masa, pendiente de revisión |
-| santander-mestizo | 88 de 88 | en masa, pendiente de revisión |
-| ticuna | 60 de 61 | en masa, pendiente de revisión |
-| tolima-huila-mestizo | 46 de 46 | en masa, pendiente de revisión |
-| tucano | 45 de 45 | en masa, pendiente de revisión |
-| ufaina | 19 de 19 | en masa, pendiente de revisión |
-| umbra | 15 de 15 | en masa, pendiente de revisión |
-| varios-sin-territorio | 84 de 84 | en masa, pendiente de revisión |
-| wounaan | 32 de 33 | en masa, pendiente de revisión |
-| yukpa | 13 de 13 | en masa, pendiente de revisión |
-| zenu | 34 de 35 | en masa, pendiente de revisión |
+Fichas sobre papel blanco hueso y sólo paisajes y lugares a fondo completo; una
+comunidad a la vez y, dentro de ella, capa por capa: tipos base → mortales →
+míticos → colectivos → animales y criaturas → atrezo → arquitectura y fenómenos
+→ paisajes y lugares (`scripts/mitos/prepare-biblia-tanda-v3.mjs`). Seis
+biblias se revisaron capa por capa con el editor; las otras 36 se produjeron en
+masa el 2026-09-28 por su pedido (`scripts/mitos/producir-biblia-v3.sh`).
 
-## Las 20 láminas que el filtro de OpenAI no deja pasar
+Cada biblia tiene su `APROBACIONES.json`, su `BALANCE.json` y, las revisadas,
+su `CIERRE.md` en `content/mitos-visuales/_openai/<corpus>/biblia-v3/`. Las
+hojas de contacto se regeneran con `node scripts/mitos/hojas-biblia-v3.mjs <corpus>`
+en `output/imagegen/_hojas/`.
 
-Casi todas son figuras que el plan dibuja desnudas o se definen por el cuerpo.
-Se reintentaron con composición recatada (`--pudor`) y volvieron a bloquearse.
-Esperan decisión del editor: declararlas ausentes con su razón, cubrirlas con
-una prenda documentada (como el tsitse misak) o resolverlas por silueta.
-
-| comunidad | capa | entidad | vista |
+| comunidad | láminas | estado | revisión |
 |---|---|---|---|
-| andoque | mortales | El especialista huitoto | canon |
-| andoque | animales | Los seres del agua de Sitakara | canon |
-| ansermas | tipos | Tipo base · hombre de Guacuma adulto | canon |
-| cuycuyes | tipos | Tipo base · mujer de Arma adulta (capa de contacto) | canon |
-| eperara-siapidara | mortales | Hesaa, la Conga | canon |
-| katios | colectivos | Las mujeres de senos grandes del Bajía | canon |
-| koguis | colectivos | Las mujeres inventadas por el padre malo | canon |
-| misak-guambianos | mortales | Mama Manuela Caramaya | canon |
-| misak-guambianos | colectivos | Guerreros pijaos | estado_transformados_en_frailejones |
-| motilon-bari | tipos | Mujer adulta barí (tipo) | canon |
-| motilon-bari | tipos | Niño barí (tipo) | canon |
-| motilon-bari | miticos | Chibáig | canon |
-| motilon-bari | miticos | Chibáig | estado_sombrero pequeño, la fase menguante |
-| pirsa | tipos | Tipo base · niño de Pirsa | canon |
-| quimbaya | tipos | Tipo base · hombre quimbaya adulto (capa de 1553) | canon |
-| quimbaya | tipos | Tipo base · mujer quimbaya adulta (capa de 1553) | canon |
-| quimbaya | tipos | Tipo base · muchacho quimbaya (capa de 1553) | canon |
-| ticuna | tipos | Niño tikuna (tipo) | canon |
-| wounaan | tipos | Tipo base · niño wounaan | canon |
-| zenu | miticos | Manexca | canon |
+| koguis | 96 de 96 | completa | capa por capa con el editor |
+| katios | 108 de 109 | 1 declarada ausente | capa por capa con el editor |
+| andoque | 70 de 70 | completa | capa por capa con el editor |
+| u-wa | 76 de 76 | completa | capa por capa con el editor |
+| guahibo-sikuani | 75 de 75 | completa | capa por capa con el editor |
+| desana | 70 de 70 | completa | capa por capa con el editor |
+| amazonia-mestizo-mixto | 87 de 87 | completa | en masa, revisión del editor en hoja |
+| ansermas | 13 de 13 | completa | en masa, revisión del editor en hoja |
+| antioquia-occidente-mixto | 53 de 53 | completa | en masa, revisión del editor en hoja |
+| awa | 19 de 19 | completa | en masa, revisión del editor en hoja |
+| barasana | 62 de 62 | completa | en masa, revisión del editor en hoja |
+| bogota-sabana-mestizo | 57 de 57 | completa | en masa, revisión del editor en hoja |
+| bolivar-cartagena-mestizo | 89 de 89 | completa | en masa, revisión del editor en hoja |
+| boyaca-mestizo | 37 de 37 | completa | en masa, revisión del editor en hoja |
+| caribe-restante-mestizo | 43 de 43 | completa | en masa, revisión del editor en hoja |
+| choco-afro | 21 de 21 | completa | en masa, revisión del editor en hoja |
+| cordoba-sinu-mestizo | 79 de 79 | completa | en masa, revisión del editor en hoja |
+| cuycuyes | 18 de 19 | 1 declarada ausente | en masa, revisión del editor en hoja |
+| eje-cafetero-mestizo | 39 de 39 | completa | en masa, revisión del editor en hoja |
+| embera | 19 de 19 | completa | en masa, revisión del editor en hoja |
+| eperara-siapidara | 21 de 21 | completa | en masa, revisión del editor en hoja |
+| kuibas | 19 de 19 | completa | en masa, revisión del editor en hoja |
+| makawanes | 26 de 26 | completa | en masa, revisión del editor en hoja |
+| misak-guambianos | 55 de 55 | completa | en masa, revisión del editor en hoja |
+| motilon-bari | 45 de 46 | 1 declarada ausente | en masa, revisión del editor en hoja |
+| nukak-maku | 16 de 16 | completa | en masa, revisión del editor en hoja |
+| orinoquia-llanera-mestizo | 79 de 79 | completa | en masa, revisión del editor en hoja |
+| pacifico-sur-mestizo | 43 de 43 | completa | en masa, revisión del editor en hoja |
+| pananes | 43 de 43 | completa | en masa, revisión del editor en hoja |
+| pirsa | 15 de 15 | completa | en masa, revisión del editor en hoja |
+| quillacingas | 49 de 49 | completa | en masa, revisión del editor en hoja |
+| quimbaya | 18 de 18 | completa | en masa, revisión del editor en hoja |
+| santander-mestizo | 88 de 88 | completa | en masa, revisión del editor en hoja |
+| ticuna | 61 de 61 | completa | en masa, revisión del editor en hoja |
+| tolima-huila-mestizo | 46 de 46 | completa | en masa, revisión del editor en hoja |
+| tucano | 45 de 45 | completa | en masa, revisión del editor en hoja |
+| ufaina | 19 de 19 | completa | en masa, revisión del editor en hoja |
+| umbra | 15 de 15 | completa | en masa, revisión del editor en hoja |
+| varios-sin-territorio | 84 de 84 | completa | en masa, revisión del editor en hoja |
+| wounaan | 33 de 33 | completa | en masa, revisión del editor en hoja |
+| yukpa | 13 de 13 | completa | en masa, revisión del editor en hoja |
+| zenu | 35 de 35 | completa | en masa, revisión del editor en hoja |
 
-## Consultas que siguen abiertas
+## Cómo se cerró el hueco del filtro de OpenAI
 
-Barasana (ACAIPI), wounaan (protocolo del WPNP), misak (Cabildo) y los raizales
-del Caribe (Cátedra Raizal) se produjeron por pedido del editor sin que esas
-consultas se hayan hecho. Las láminas no deben publicarse antes.
+Veinte láminas (casi todas figuras que el plan dibuja desnudas o que se definen
+por el cuerpo) no pasaban el filtro de seguridad. Se resolvieron así, cada una
+declarada en el `design.editorial` de su ficha con la silueta anterior guardada:
+
+- **Cubiertas con la prenda que documenta el corpus**: los tipos misak con el
+  tsitse; el hombre ansermá con la manta larga de los principales; la mujer
+  quimbaya con la manta de la capa de 1603.
+- **En silueta de un solo tono**, conservando en color los rasgos documentados
+  que no son del cuerpo: el especialista huitoto y los seres del agua de
+  Sitakara (andoque), Hesaa la Conga (eperara), las mujeres inventadas (koguis),
+  Mama Manuela Caramaya y los guerreros pijaos (misak), la mujer y el niño barí,
+  los tipos de niño de pirsa, ticuna y wounaan, el hombre y el muchacho
+  quimbaya, y Manexca (zenú).
+- **Declaradas ausentes** (3), porque no admiten otra solución sin inventar:
+  Tipo base · mujer de Arma adulta (capa de contacto) (cuycuyes, tipos);
+  Las mujeres de senos grandes del Bajía (katios, colectivos);
+  Chibáig (motilon-bari, miticos). Su ficha sigue en el plan.
+
+## Decisiones del editor en esta producción
+
+- Antomiá paima (katíos) en carbón, no en piel.
+- Urkoa (u'wa) como silueta sin especie.
+- Las esferas de colores u'wa, concéntricas: en franjas se leían como la bandera.
+- El «mar» sikuani es el agua dulce del borde del mundo, no una costa: el
+  paisaje y la lámina del hermano, rehechos con orilla de sabana.
+- El jaguar kogui, pardo y sin rosetas como pide su ficha, también en los
+  estados de tigre de Nuánashe y Kashindukwe.
+
+## Antes de publicar
+
+- **Consultas abiertas**: barasana (ACAIPI), wounaan (protocolo del WPNP), misak
+  (Cabildo) y los raizales del Caribe (Cátedra Raizal). Las láminas existen por
+  pedido del editor; no deben publicarse antes de la consulta.
+- Las 36 biblias producidas en masa están pendientes de la revisión del editor
+  en hoja; sus `APROBACIONES.json` lo dicen así.
+- Detalles abiertos de calidad: la luz de cine de animación de los paisajes
+  desana, el caraiuru como antifaz (desana) y la chica extendida (sikuani).

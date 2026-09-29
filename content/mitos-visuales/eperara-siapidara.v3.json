@@ -1809,9 +1809,9 @@
       ],
       "census_note": "Guardiana mezquina del árbol y motor del conflicto. La transformación está mostrada (Tachi Akhore le aprieta la cintura y queda negra, de cintura delgada, cargando agua en la boca): cambia la silueta y cuesta hoja de estado.",
       "design": {
-        "silhouette": "Persona de cintura marcadísima —el único cuerpo de la biblia que se dibuja estrechándose en la mitad antes de que nada le ocurra— en postura de guarda: de pie delante del tronco, de frente al que llega y con las dos manos ocupadas sosteniendo agua que no reparte. Transformada, el mismo eje de cintura pero en una hormiga de cuerpo entero.",
+        "silhouette": "Silueta de recorte de un solo tono pardo muy oscuro, sin rasgos ni detalle anatómico, de una figura de pie delante de un tronco, de cintura estrechísima en la mitad —el contorno se estrecha como el de una hormiga—, con las dos manos sosteniendo una totuma de agua que no reparte. Transformada, el mismo eje de cintura pero en una hormiga de cuerpo entero.",
         "materials": [
-          "cuerpo humano en papel pardo oscuro, más oscuro que el de la gente, sin estampado y sin adorno: el relato no le da una sola palabra de descripción",
+          "un solo recorte de papel de un tono, de canto limpio, sin rasgos ni detalle anatómico",
           "en el estado de hormiga, tres piezas planas grandes —cabeza, tórax y gáster— unidas por dos cantos estrechos, en papel negro rojizo mate",
           "vellosidad resuelta por el borde recortado en dientes menudos de esas tres piezas, jamás pelo por pelo",
           "gota de agua en la boca como una sola pieza de papel claro, que es el rasgo con el que el relato la deja para siempre"
@@ -1835,11 +1835,13 @@
           "el estado de persona es interpretación editorial pura y la ficha lo dice: el relato no le da una sola palabra de descripción y todo lo que se dibuja sale de su función —guardiana mezquina— y de la regla de que los animales eran personas",
           "adelantar la cintura y el color negro rojizo al estado de persona es una decisión de continuidad reversible: hace legible la transformación, pero también podría dibujarse una persona sin ningún rasgo de hormiga",
           "identificar «conga» con Paraponera clavata es una inferencia por el nombre castellano en Colombia, no un dato eperara; si aparece un nombre en sia pedee que apunte a otra especie, la segunda hoja se rehace",
-          "la postura de guarda delante del tronco es composición, no descripción"
+          "la postura de guarda delante del tronco es composición, no descripción",
+          "Resuelta en silueta el 2026-09-28: el filtro de OpenAI bloqueó la figura en todos los intentos (plan con desnudez o definido por el cuerpo). Se dibuja como recorte de un solo tono sin detalle anatómico; los rasgos documentados que no son del cuerpo se conservan en color. Decisión editorial reversible."
         ],
         "states_to_model": [
           "hormiga_conga"
-        ]
+        ],
+        "silhouette_previa": "Persona de cintura marcadísima —el único cuerpo de la biblia que se dibuja estrechándose en la mitad antes de que nada le ocurra— en postura de guarda: de pie delante del tronco, de frente al que llega y con las dos manos ocupadas sosteniendo agua que no reparte. Transformada, el mismo eje de cintura pero en una hormiga de cuerpo entero."
       },
       "states_declared": [
         "hormiga_conga"
@@ -4181,9 +4183,9 @@
         }
       ],
       "design_contract": {
-        "distinctive_silhouette": "Persona de cintura marcadísima —el único cuerpo de la biblia que se dibuja estrechándose en la mitad antes de que nada le ocurra— en postura de guarda: de pie delante del tronco, de frente al que llega y con las dos manos ocupadas sosteniendo agua que no reparte. Transformada, el mismo eje de cintura pero en una hormiga de cuerpo entero.",
+        "distinctive_silhouette": "Silueta de recorte de un solo tono pardo muy oscuro, sin rasgos ni detalle anatómico, de una figura de pie delante de un tronco, de cintura estrechísima en la mitad —el contorno se estrecha como el de una hormiga—, con las dos manos sosteniendo una totuma de agua que no reparte. Transformada, el mismo eje de cintura pero en una hormiga de cuerpo entero.",
         "materials": [
-          "cuerpo humano en papel pardo oscuro, más oscuro que el de la gente, sin estampado y sin adorno: el relato no le da una sola palabra de descripción",
+          "un solo recorte de papel de un tono, de canto limpio, sin rasgos ni detalle anatómico",
           "en el estado de hormiga, tres piezas planas grandes —cabeza, tórax y gáster— unidas por dos cantos estrechos, en papel negro rojizo mate",
           "vellosidad resuelta por el borde recortado en dientes menudos de esas tres piezas, jamás pelo por pelo",
           "gota de agua en la boca como una sola pieza de papel claro, que es el rasgo con el que el relato la deja para siempre"
@@ -4207,17 +4209,18 @@
           "el estado de persona es interpretación editorial pura y la ficha lo dice: el relato no le da una sola palabra de descripción y todo lo que se dibuja sale de su función —guardiana mezquina— y de la regla de que los animales eran personas",
           "adelantar la cintura y el color negro rojizo al estado de persona es una decisión de continuidad reversible: hace legible la transformación, pero también podría dibujarse una persona sin ningún rasgo de hormiga",
           "identificar «conga» con Paraponera clavata es una inferencia por el nombre castellano en Colombia, no un dato eperara; si aparece un nombre en sia pedee que apunte a otra especie, la segunda hoja se rehace",
-          "la postura de guarda delante del tronco es composición, no descripción"
+          "la postura de guarda delante del tronco es composición, no descripción",
+          "Resuelta en silueta el 2026-09-28: el filtro de OpenAI bloqueó la figura en todos los intentos (plan con desnudez o definido por el cuerpo). Se dibuja como recorte de un solo tono sin detalle anatómico; los rasgos documentados que no son del cuerpo se conservan en color. Decisión editorial reversible."
         ]
       },
       "prompt_spec": {
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Eperara Siapidara V1 - identity_sheet",
         "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
-        "primary_request": "identidad corporal completa y legible para Hesaa, la Conga. Persona de cintura marcadísima —el único cuerpo de la biblia que se dibuja estrechándose en la mitad antes de que nada le ocurra— en postura de guarda: de pie delante del tronco, de frente al que llega y con las dos manos ocupadas sosteniendo agua que no reparte. Transformada, el mismo eje de cintura pero en una hormiga de cuerpo entero.",
+        "primary_request": "identidad corporal completa y legible para Hesaa, la Conga. Silueta de recorte de un solo tono pardo muy oscuro, sin rasgos ni detalle anatómico, de una figura de pie delante de un tronco, de cintura estrechísima en la mitad —el contorno se estrecha como el de una hormiga—, con las dos manos sosteniendo una totuma de agua que no reparte. Transformada, el mismo eje de cintura pero en una hormiga de cuerpo entero.",
         "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Como persona, estatura adulta enfrentada de igual a igual con Tachi Akhore, porque el relato la hace oponerse y resistir. Como hormiga, se dibuja en primer plano cerrado y a tamaño de mano, con el agua en la boca dando la medida: 18 a 30 mm de obrera, enormes para una hormiga y todas del mismo tamaño.",
         "lighting_mood": "Luz de Pacífico cubierto: cielo bajo y sin sol visible, sin sombra proyectada dura, con el agua devolviendo más luz que el cielo y la silueta del mangle recortada contra ese reflejo. De noche, el firmamento «oscuro y vacío» sobre la playa, con la luna como única fuente, porque Tachi Nawe es la luna y el acto central ocurre cerca de la medianoche.",
-        "materials_textures": "cuerpo humano en papel pardo oscuro, más oscuro que el de la gente, sin estampado y sin adorno: el relato no le da una sola palabra de descripción; en el estado de hormiga, tres piezas planas grandes —cabeza, tórax y gáster— unidas por dos cantos estrechos, en papel negro rojizo mate; vellosidad resuelta por el borde recortado en dientes menudos de esas tres piezas, jamás pelo por pelo; gota de agua en la boca como una sola pieza de papel claro, que es el rasgo con el que el relato la deja para siempre",
+        "materials_textures": "un solo recorte de papel de un tono, de canto limpio, sin rasgos ni detalle anatómico; en el estado de hormiga, tres piezas planas grandes —cabeza, tórax y gáster— unidas por dos cantos estrechos, en papel negro rojizo mate; vellosidad resuelta por el borde recortado en dientes menudos de esas tres piezas, jamás pelo por pelo; gota de agua en la boca como una sola pieza de papel claro, que es el rasgo con el que el relato la deja para siempre",
         "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
         "constraints": [
           "paleta de esta ficha: Negro rojizo mate en los dos estados, que es el color que el relato le impone al final —«quedó negra»— y que la ficha adelanta al estado de persona para que la transformación se lea como continuidad y no como cambio de personaje. Ningún otro color: no lleva tela, no lleva pintura y no lleva adorno.",
@@ -4292,9 +4295,9 @@
         }
       ],
       "design_contract": {
-        "distinctive_silhouette": "Persona de cintura marcadísima —el único cuerpo de la biblia que se dibuja estrechándose en la mitad antes de que nada le ocurra— en postura de guarda: de pie delante del tronco, de frente al que llega y con las dos manos ocupadas sosteniendo agua que no reparte. Transformada, el mismo eje de cintura pero en una hormiga de cuerpo entero.",
+        "distinctive_silhouette": "Silueta de recorte de un solo tono pardo muy oscuro, sin rasgos ni detalle anatómico, de una figura de pie delante de un tronco, de cintura estrechísima en la mitad —el contorno se estrecha como el de una hormiga—, con las dos manos sosteniendo una totuma de agua que no reparte. Transformada, el mismo eje de cintura pero en una hormiga de cuerpo entero.",
         "materials": [
-          "cuerpo humano en papel pardo oscuro, más oscuro que el de la gente, sin estampado y sin adorno: el relato no le da una sola palabra de descripción",
+          "un solo recorte de papel de un tono, de canto limpio, sin rasgos ni detalle anatómico",
           "en el estado de hormiga, tres piezas planas grandes —cabeza, tórax y gáster— unidas por dos cantos estrechos, en papel negro rojizo mate",
           "vellosidad resuelta por el borde recortado en dientes menudos de esas tres piezas, jamás pelo por pelo",
           "gota de agua en la boca como una sola pieza de papel claro, que es el rasgo con el que el relato la deja para siempre"
@@ -4318,17 +4321,18 @@
           "el estado de persona es interpretación editorial pura y la ficha lo dice: el relato no le da una sola palabra de descripción y todo lo que se dibuja sale de su función —guardiana mezquina— y de la regla de que los animales eran personas",
           "adelantar la cintura y el color negro rojizo al estado de persona es una decisión de continuidad reversible: hace legible la transformación, pero también podría dibujarse una persona sin ningún rasgo de hormiga",
           "identificar «conga» con Paraponera clavata es una inferencia por el nombre castellano en Colombia, no un dato eperara; si aparece un nombre en sia pedee que apunte a otra especie, la segunda hoja se rehace",
-          "la postura de guarda delante del tronco es composición, no descripción"
+          "la postura de guarda delante del tronco es composición, no descripción",
+          "Resuelta en silueta el 2026-09-28: el filtro de OpenAI bloqueó la figura en todos los intentos (plan con desnudez o definido por el cuerpo). Se dibuja como recorte de un solo tono sin detalle anatómico; los rasgos documentados que no son del cuerpo se conservan en color. Decisión editorial reversible."
         ]
       },
       "prompt_spec": {
         "use_case": "stylized-concept",
         "asset_type": "Biblia visual Eperara Siapidara V1 - state_sheet",
         "technique_first": "Papel recortado y quilling fotografiados como una maqueta tridimensional inmersiva: capas planas de papel de fibra, cantos vistos y sombra física corta entre planos, a sangre hasta los cuatro límites del encuadre, sin borde, sin cartón soporte, sin mesa y sin marco.",
-        "primary_request": "el cambio de estado sin perder la identidad para Hesaa, la Conga. Persona de cintura marcadísima —el único cuerpo de la biblia que se dibuja estrechándose en la mitad antes de que nada le ocurra— en postura de guarda: de pie delante del tronco, de frente al que llega y con las dos manos ocupadas sosteniendo agua que no reparte. Transformada, el mismo eje de cintura pero en una hormiga de cuerpo entero.",
+        "primary_request": "el cambio de estado sin perder la identidad para Hesaa, la Conga. Silueta de recorte de un solo tono pardo muy oscuro, sin rasgos ni detalle anatómico, de una figura de pie delante de un tronco, de cintura estrechísima en la mitad —el contorno se estrecha como el de una hormiga—, con las dos manos sosteniendo una totuma de agua que no reparte. Transformada, el mismo eje de cintura pero en una hormiga de cuerpo entero.",
         "composition_framing": "9:16; mundo full bleed hasta los cuatro limites; Como persona, estatura adulta enfrentada de igual a igual con Tachi Akhore, porque el relato la hace oponerse y resistir. Como hormiga, se dibuja en primer plano cerrado y a tamaño de mano, con el agua en la boca dando la medida: 18 a 30 mm de obrera, enormes para una hormiga y todas del mismo tamaño.",
         "lighting_mood": "Luz de Pacífico cubierto: cielo bajo y sin sol visible, sin sombra proyectada dura, con el agua devolviendo más luz que el cielo y la silueta del mangle recortada contra ese reflejo. De noche, el firmamento «oscuro y vacío» sobre la playa, con la luna como única fuente, porque Tachi Nawe es la luna y el acto central ocurre cerca de la medianoche.",
-        "materials_textures": "cuerpo humano en papel pardo oscuro, más oscuro que el de la gente, sin estampado y sin adorno: el relato no le da una sola palabra de descripción; en el estado de hormiga, tres piezas planas grandes —cabeza, tórax y gáster— unidas por dos cantos estrechos, en papel negro rojizo mate; vellosidad resuelta por el borde recortado en dientes menudos de esas tres piezas, jamás pelo por pelo; gota de agua en la boca como una sola pieza de papel claro, que es el rasgo con el que el relato la deja para siempre",
+        "materials_textures": "un solo recorte de papel de un tono, de canto limpio, sin rasgos ni detalle anatómico; en el estado de hormiga, tres piezas planas grandes —cabeza, tórax y gáster— unidas por dos cantos estrechos, en papel negro rojizo mate; vellosidad resuelta por el borde recortado en dientes menudos de esas tres piezas, jamás pelo por pelo; gota de agua en la boca como una sola pieza de papel claro, que es el rasgo con el que el relato la deja para siempre",
         "era": "Ley de Origen, antes del agua y antes de la gente: no hay lancha, ni motor, ni tabla aserrada, ni zinc, ni plástico, ni red de nailon, ni prenda industrial, ni cruz cristiana, ni oro. El inventario material entero del corpus son la palma sembrada y cortada, las estacas puntiagudas con fibras, el rejo de yaré, el jugo de granadilla y las hachas, cuyo material no está documentado y se declara. El cristianismo llegó en 1970-1971 y queda fuera.",
         "constraints": [
           "paleta de esta ficha: Negro rojizo mate en los dos estados, que es el color que el relato le impone al final —«quedó negra»— y que la ficha adelanta al estado de persona para que la transformación se lea como continuidad y no como cambio de personaje. Ningún otro color: no lleva tela, no lleva pintura y no lleva adorno.",
