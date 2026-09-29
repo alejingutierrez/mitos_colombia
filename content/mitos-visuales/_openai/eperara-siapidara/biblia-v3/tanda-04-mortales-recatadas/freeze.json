@@ -1,0 +1,45 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "eperara-siapidara",
+  "comunidad": "Eperara Siapidara",
+  "tanda": "tanda-04-mortales-recatadas",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/eperara-siapidara.v3.json",
+    "sha256": "f1e09e8865885cbc1c82b23127acb4831384108fbe78b9de2e448e7afee04951"
+  },
+  "canon": {
+    "sha256": "b8209cc2e51efedb8160a2273d05eb0f6f1990842891324ddd3568e633bad132",
+    "verificado_en": "2026-09-29T02:13:03.078Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 2,
+  "fichas": [
+    {
+      "job": "hesaa_la_conga__identity_sheet--canon",
+      "modelo": "hesaa_la_conga__identity_sheet",
+      "entidad": "Hesaa, la Conga",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "tachi-akhore-y-la-palabra-de-mangle"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7691,
+      "prompt_sha256": "0fbcc8cc11531ee819b259c5245e33cefd96ac02cfdcf1e1045fa425baffe5cb"
+    }
+  ]
+}

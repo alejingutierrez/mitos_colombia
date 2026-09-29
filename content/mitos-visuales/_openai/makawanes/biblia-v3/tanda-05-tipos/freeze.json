@@ -1,0 +1,169 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "makawanes",
+  "comunidad": "Makaguán",
+  "tanda": "tanda-05-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/makawanes.v3.json",
+    "sha256": "9cea69eda49e020a1469dd5cee333493e6ddee57f343165fe3e5d34e2cad317c"
+  },
+  "canon": {
+    "sha256": "4b909272d7fc7ea60af087d7555d666ff1de6e8bc91a706f308ff8f08a1f8b6d",
+    "verificado_en": "2026-09-29T02:06:20.113Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre adulto makaguán",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-makawanes",
+        "la-gran-inundacion",
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7203,
+      "prompt_sha256": "c3d47df000389c89e2b6000fcb57cb50432d194933d3b24ae3cc56956cb9669d"
+    },
+    {
+      "job": "tipo_hombre_adulto__state_sheet--estado_estrato contemporáneo de El Vigía, con ropa de hoy",
+      "modelo": "tipo_hombre_adulto__state_sheet",
+      "entidad": "Tipo base · hombre adulto makaguán",
+      "categoria": "personaje",
+      "vista": "estado_estrato contemporáneo de El Vigía, con ropa de hoy",
+      "estados": [
+        "estrato contemporáneo de El Vigía, con ropa de hoy"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-makawanes",
+        "la-gran-inundacion",
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7841,
+      "prompt_sha256": "dc03a38af75200385159dc3aca1027c8a4c0349a4d90f1f18bb3e9168f7c2dbc"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer joven makaguán",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-makawanes",
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6979,
+      "prompt_sha256": "228be13f56dc5b36851ee9b1d77410116c5125d5720094c2aa3027e55b6b7ec4"
+    },
+    {
+      "job": "tipo_mujer_joven__state_sheet--estado_estrato contemporáneo de El Vigía, con ropa de hoy",
+      "modelo": "tipo_mujer_joven__state_sheet",
+      "entidad": "Tipo base · mujer joven makaguán",
+      "categoria": "personaje",
+      "vista": "estado_estrato contemporáneo de El Vigía, con ropa de hoy",
+      "estados": [
+        "estrato contemporáneo de El Vigía, con ropa de hoy"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-makawanes",
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7552,
+      "prompt_sha256": "1d223c7b595e53ec3df484032aaf555c0efad5d1b6cdfb3b624eacae85cc8bb0"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño makaguán",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-makawanes",
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6661,
+      "prompt_sha256": "fe31a18dbec417574b2e71272a17a1f7a9e7d1d07e9206db18083bea96e903c4"
+    },
+    {
+      "job": "tipo_nino__state_sheet--estado_estrato contemporáneo de El Vigía, con ropa de hoy",
+      "modelo": "tipo_nino__state_sheet",
+      "entidad": "Tipo base · niño makaguán",
+      "categoria": "personaje",
+      "vista": "estado_estrato contemporáneo de El Vigía, con ropa de hoy",
+      "estados": [
+        "estrato contemporáneo de El Vigía, con ropa de hoy"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-makawanes",
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7021,
+      "prompt_sha256": "5d51cc69753755df5a549fcfeb60b5527dd7aba6c090432ef5a3e6e13aed8e0a"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base · anciano makaguán (sabedor)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6898,
+      "prompt_sha256": "e43b11092ed60e79796840dd2d92913b89396769cb019f6c5b259d5fdfc0ae91"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer adulta makaguán",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-gran-inundacion"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6949,
+      "prompt_sha256": "4b3802b26d269ef027fdc76a5094ad18e4ebf7e46b78a0032683a96109f50935"
+    }
+  ]
+}

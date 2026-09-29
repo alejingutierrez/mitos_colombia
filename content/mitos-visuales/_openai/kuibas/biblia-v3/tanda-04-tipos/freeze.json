@@ -1,0 +1,130 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "kuibas",
+  "comunidad": "Kuiva (Wamonae)",
+  "tanda": "tanda-04-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/kuibas.v3.json",
+    "sha256": "5f20302091e9a8b7f757ce1357cb393e9a0a54b801d479c6155d1c16037c25e4"
+  },
+  "canon": {
+    "sha256": "7d0004d1ca8d0709864534a5c645a05b716b82370b7891be44d5fe97a3f0d5ff",
+    "verificado_en": "2026-09-29T02:18:59.081Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Hombre kuiva adulto (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-kuibas",
+        "namon-y-la-inundacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6808,
+      "prompt_sha256": "490ff0efc8a25065fb2c8f11a94104b16d286754d1ff80aec76784b9ea33809b"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Mujer kuiva adulta (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-kuibas",
+        "namon-y-la-inundacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6533,
+      "prompt_sha256": "ebd5d23db242fd9843daf56f9cfa77faab0706b858561c1e4b14bf504acd53fb"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Mujer kuiva joven (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-kuibas",
+        "namon-y-la-inundacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6300,
+      "prompt_sha256": "836088a92b2d9efd746682f1965bc3cffda318e995453c16f80be146ec08d121"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Anciana kuiva (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "namon-y-la-inundacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6224,
+      "prompt_sha256": "41367e4ddb5fb88358e878e564a8fbafeb68fe1f82868562bfbe9e9c20a86202"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Anciano kuiva (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "namon-y-la-inundacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6384,
+      "prompt_sha256": "f476d2d1127f2d72164b12bf94ccb8207b9450d7dcbf4b2b7b34e9aa89a14d43"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Niño kuiva (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "namon-y-la-inundacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6074,
+      "prompt_sha256": "a9b88ed446b1c3328f623985dbd8492d8aabaa4c54d01bdfc9d876782d1320a4"
+    }
+  ]
+}

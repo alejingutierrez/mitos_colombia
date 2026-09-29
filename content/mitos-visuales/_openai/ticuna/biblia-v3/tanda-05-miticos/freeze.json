@@ -1,0 +1,99 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ticuna",
+  "comunidad": "Ticuna",
+  "tanda": "tanda-05-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ticuna.v3.json",
+    "sha256": "fd0c6ffe84de74c45161ae42823d427354bcefa0940f5eb72ce2559eac09f0a3"
+  },
+  "canon": {
+    "sha256": "508298d7f6b1c813ab2d8c0bf8438b2829b11c5b30bc6045eb9ce969dbb95dc9",
+    "verificado_en": "2026-09-29T02:07:08.011Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "ipi__identity_sheet--canon",
+      "modelo": "ipi__identity_sheet",
+      "entidad": "Ípi",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5873,
+      "prompt_sha256": "798f0a5b4bf79727bc61ebb04a6b8e5d5d124affc1b44adb6ff0b487f0b01070"
+    },
+    {
+      "job": "ipi__state_sheet--estado_pez con la frente brillante",
+      "modelo": "ipi__state_sheet",
+      "entidad": "Ípi",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_pez con la frente brillante",
+      "estados": [
+        "pez con la frente brillante"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6653,
+      "prompt_sha256": "baaf5b8345428a8785e20087febe9ab1e146ba8c44e5a924fd82b126dfeae2f1"
+    },
+    {
+      "job": "yoi__identity_sheet--canon",
+      "modelo": "yoi__identity_sheet",
+      "entidad": "Yoí",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6508,
+      "prompt_sha256": "1ad9c86e35755e98adb7cdef129e92dcdccbc341a901dd225f1a00acb3f5e4bb"
+    },
+    {
+      "job": "ngutapa__identity_sheet--canon",
+      "modelo": "ngutapa__identity_sheet",
+      "entidad": "Ngutapa",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7156,
+      "prompt_sha256": "52adffba57799463e99e687f3025c272e609432ebb2d514b9036110eb2984be4"
+    }
+  ]
+}

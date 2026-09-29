@@ -1,0 +1,78 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "nukak-maku",
+  "comunidad": "Nɨkak",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/nukak-maku.v3.json",
+    "sha256": "63fc63c7b3c4fe485cb66c73a147a07ef03b7ca129bebe44d38fe04e145c3f7e"
+  },
+  "canon": {
+    "sha256": "ad8318bbd3861726280aba3914f17446c3f6b3cb32895a703a1e2698caf8d476",
+    "verificado_en": "2026-09-29T02:18:40.526Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "aukuribo__identity_sheet--canon",
+      "modelo": "aukuribo__identity_sheet",
+      "entidad": "Aukurɨbo, la Gente de Árbol",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-nukak-maku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7834,
+      "prompt_sha256": "5a212ab399172375644e5b8fdcdf7d837950c920355c3aae9a61d8364d9b54b6"
+    },
+    {
+      "job": "aukuribo__state_sheet--estado_oruga",
+      "modelo": "aukuribo__state_sheet",
+      "entidad": "Aukurɨbo, la Gente de Árbol",
+      "categoria": "personaje",
+      "vista": "estado_oruga",
+      "estados": [
+        "oruga"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-nukak-maku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8426,
+      "prompt_sha256": "acfec734d9215f30d1c826c8b0630cb55aef6b8f39a1976748d56f168de60dcd"
+    },
+    {
+      "job": "aukuribo__state_sheet--estado_mariposa",
+      "modelo": "aukuribo__state_sheet",
+      "entidad": "Aukurɨbo, la Gente de Árbol",
+      "categoria": "personaje",
+      "vista": "estado_mariposa",
+      "estados": [
+        "mariposa"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-nukak-maku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8429,
+      "prompt_sha256": "5d29838530fba6ecf8fc0b686b409943378565a47bc095754de373a3408b7f62"
+    }
+  ]
+}

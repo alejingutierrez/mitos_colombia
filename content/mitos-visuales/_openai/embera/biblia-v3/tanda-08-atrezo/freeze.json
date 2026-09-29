@@ -1,0 +1,98 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "embera",
+  "comunidad": "Embera",
+  "tanda": "tanda-08-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/embera.v3.json",
+    "sha256": "43c7f4f10e60ebf1b050bc1d22039f0fa7372f99d0f9242acc6c6ac0e7157dd8"
+  },
+  "canon": {
+    "sha256": "c63a3ed13c323e894a92ebe4c994be06637f9a34d1e703031bad914c4b1edebd",
+    "verificado_en": "2026-09-29T02:16:58.134Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "canoa__object_sheet--canon",
+      "modelo": "canoa__object_sheet",
+      "entidad": "La canoa grande",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6296,
+      "prompt_sha256": "55b3f44565428b55f0d7233c896003ee761b250255794755ec81f4ed5d7ee727"
+    },
+    {
+      "job": "canoa__state_sheet--estado_pequena_rota_en_la_orilla",
+      "modelo": "canoa__state_sheet",
+      "entidad": "La canoa grande",
+      "categoria": "objeto",
+      "vista": "estado_pequena_rota_en_la_orilla",
+      "estados": [
+        "pequena_rota_en_la_orilla"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6012,
+      "prompt_sha256": "a0ff9904ad721d8cbf5c1583fc8ff6c17f8103668539cebf34c076602327ff50"
+    },
+    {
+      "job": "canoa__state_sheet--estado_casco_recien_labrado_en_el_rio_valle",
+      "modelo": "canoa__state_sheet",
+      "entidad": "La canoa grande",
+      "categoria": "objeto",
+      "vista": "estado_casco_recien_labrado_en_el_rio_valle",
+      "estados": [
+        "casco_recien_labrado_en_el_rio_valle"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6023,
+      "prompt_sha256": "823f7b29372556bf24cca53fd529618cc603dd3d868e8fb900d533df1f93b775"
+    },
+    {
+      "job": "hoja_utileria_embera__object_sheet--canon",
+      "modelo": "hoja_utileria_embera__object_sheet",
+      "entidad": "hoja utileria embera",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6524,
+      "prompt_sha256": "73a36d4fd9d1ff3992d2a85c76d6afcd9208415d8d84e3bf00e333f0ebcd21b6"
+    }
+  ]
+}

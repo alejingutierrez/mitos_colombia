@@ -1,0 +1,68 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "makawanes",
+  "comunidad": "Makaguán",
+  "tanda": "tanda-11-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/makawanes.v3.json",
+    "sha256": "9cea69eda49e020a1469dd5cee333493e6ddee57f343165fe3e5d34e2cad317c"
+  },
+  "canon": {
+    "sha256": "4b909272d7fc7ea60af087d7555d666ff1de6e8bc91a706f308ff8f08a1f8b6d",
+    "verificado_en": "2026-09-29T02:11:15.381Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "bosque_de_galeria_y_esteros__environment_model--canon",
+      "modelo": "bosque_de_galeria_y_esteros__environment_model",
+      "entidad": "Bosque de galería y esteros de Arauca",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-makawanes",
+        "la-gran-inundacion",
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7659,
+      "prompt_sha256": "376bd93d02599ba47e1f832389614ac347923d50b0b268f06dfd2b3b4686bdca"
+    },
+    {
+      "job": "el_conuco__spatial_model--canon",
+      "modelo": "el_conuco__spatial_model",
+      "entidad": "El conuco y la choza",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-gran-inundacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6795,
+      "prompt_sha256": "b7684b6dec3e74204bce26204cfd14dc39bbbef03d4dc3969b8a1d342b1832d7"
+    }
+  ]
+}

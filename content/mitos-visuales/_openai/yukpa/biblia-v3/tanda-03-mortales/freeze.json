@@ -1,0 +1,44 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "yukpa",
+  "comunidad": "Yukpa",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/yukpa.v3.json",
+    "sha256": "cfd2272fc59a92456b0411462623adfc6cfc0494b59b8c706d08512aa4ea342c"
+  },
+  "canon": {
+    "sha256": "c6e8138cdb632f14fc5002dbde79f78b7451a54c8cf3412c8a5d6b65d535bb71",
+    "verificado_en": "2026-09-29T02:20:24.951Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 1,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "amoricha__identity_sheet--canon",
+      "modelo": "amoricha__identity_sheet",
+      "entidad": "Amoricha",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-dos-caminos-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7271,
+      "prompt_sha256": "d9f416103f01b89b54c9e3b98ab8572ce0759400c7fca79af486cc67477b4bb1"
+    }
+  ]
+}

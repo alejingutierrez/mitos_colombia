@@ -1,0 +1,112 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "quimbaya",
+  "comunidad": "Quimbaya",
+  "tanda": "tanda-04-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/quimbaya.v3.json",
+    "sha256": "7a8c010af754b07a8d4715ae9be991c98819d264ed16211b189e0d5df6e75ce9"
+  },
+  "canon": {
+    "sha256": "f3d06bb1d1580d062cde491b91523719658943e00e9b8d7758863a7405e21b1e",
+    "verificado_en": "2026-09-29T02:14:04.012Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "fray_baltasar_de_zamora__identity_sheet--canon",
+      "modelo": "fray_baltasar_de_zamora__identity_sheet",
+      "entidad": "Fray Baltasar de Zamora",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nabsacadas-la-estrella-caida"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9478,
+      "prompt_sha256": "9fd301cbf0ff38b0174cd1e7b4d20d846f92abc21f2401bc1379f6d977618727"
+    },
+    {
+      "job": "ipiare_ebachi__identity_sheet--canon",
+      "modelo": "ipiare_ebachi__identity_sheet",
+      "entidad": "Ipiaré Ebachí",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "ipiare-ebachi"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 10345,
+      "prompt_sha256": "e18012323cbad18ae97fb1b4987530ee279a36fd721ff33176406b8521156c34"
+    },
+    {
+      "job": "ipiare_ebachi__state_sheet--estado_anima_nocturna",
+      "modelo": "ipiare_ebachi__state_sheet",
+      "entidad": "Ipiaré Ebachí",
+      "categoria": "personaje",
+      "vista": "estado_anima_nocturna",
+      "estados": [
+        "anima_nocturna"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "ipiare-ebachi"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 10444,
+      "prompt_sha256": "9ab90d0e69904e19b5abe7e32c9545476d194d1464e984293c012e53485bcf95"
+    },
+    {
+      "job": "nabsacadas__identity_sheet--canon",
+      "modelo": "nabsacadas__identity_sheet",
+      "entidad": "Nabsacadas, la estrella caída",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nabsacadas-la-estrella-caida"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 10331,
+      "prompt_sha256": "caf3a391796b8ac741b45aeaa4618019e6c33b13cfa8d9c2d353bd9bf7ebd217"
+    },
+    {
+      "job": "ultimo_rey_quimbaya__identity_sheet--canon",
+      "modelo": "ultimo_rey_quimbaya__identity_sheet",
+      "entidad": "El último rey (padre de Ipiaré)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "ipiare-ebachi"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 10418,
+      "prompt_sha256": "ff9d1cf722cafa2e065c116bc1b96d57f29a1931e14953172660f92e1af52a2e"
+    }
+  ]
+}

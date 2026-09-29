@@ -1,0 +1,148 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "bolivar-cartagena-mestizo",
+  "comunidad": "Bolívar y Cartagena",
+  "tanda": "tanda-02-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/bolivar-cartagena-mestizo.v3.json",
+    "sha256": "83a8f0f7117f21713d8a9f83d2fae957cb5e5b2dcb3f677a8464a95a80e79464"
+  },
+  "canon": {
+    "sha256": "2ed33a67c241b696ca40521259c9ed080fe10d09734bfa7b23f718b9e36a0ae6",
+    "verificado_en": "2026-09-29T02:22:05.878Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre adulto del común",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-heroe",
+        "folklore-macabro",
+        "zequiel",
+        "el-talisman-funebre",
+        "mona-mona",
+        "de-cuando-fue-regalado-el-castillo-de-san-felipe-y-la-popa",
+        "macu-y-el-collar-de-camarones-de-oro",
+        "el-milagro-de-la-candelaria",
+        "un-quejido-una-luz"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9270,
+      "prompt_sha256": "2e892c562740277925562d17cb890b6116ea8a43b3d4fdb82029a27eb66f03f3"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer adulta del común",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "folklore-macabro",
+        "el-auriga-a-quien-mato-el-pasado",
+        "macu-y-el-collar-de-camarones-de-oro",
+        "el-milagro-de-la-candelaria",
+        "el-talisman-funebre"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9306,
+      "prompt_sha256": "75a0fd3264e353dc6fa0fe9052a0c20a94230b8e1d8b919e630c24ab3dd952e9"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer joven del común",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "marineritis-sentimental",
+        "el-talisman-funebre",
+        "zequiel",
+        "el-auriga-a-quien-mato-el-pasado",
+        "macu-y-el-collar-de-camarones-de-oro"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9000,
+      "prompt_sha256": "6afc29aa156a4ec2167a58847f0c75a87c070f897c769fcf94285ecb1266e782"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base · anciana del común",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "un-quejido-una-luz",
+        "el-talisman-funebre",
+        "zequiel"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9021,
+      "prompt_sha256": "a8df5375e63b6fa0cf918556ae64937a28b3caf9b3bf26e7bdf7ac3a87898a6e"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base · anciano del común",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "macu-y-el-collar-de-camarones-de-oro",
+        "el-auriga-a-quien-mato-el-pasado",
+        "zequiel"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 9030,
+      "prompt_sha256": "901d126f81da94f25bf3e341f9b06bb26fe78d45b082d7f946241dde4d3aa6cf"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño del común",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-fantasma-del-teatro-azul",
+        "marineritis-sentimental"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8797,
+      "prompt_sha256": "04172c8917b26629b7a42249411f952ec7ace6458deefbda3c920bb82260499f"
+    }
+  ]
+}

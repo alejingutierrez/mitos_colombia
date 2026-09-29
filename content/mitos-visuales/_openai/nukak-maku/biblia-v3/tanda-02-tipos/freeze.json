@@ -1,0 +1,127 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "nukak-maku",
+  "comunidad": "Nɨkak",
+  "tanda": "tanda-02-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/nukak-maku.v3.json",
+    "sha256": "63fc63c7b3c4fe485cb66c73a147a07ef03b7ca129bebe44d38fe04e145c3f7e"
+  },
+  "canon": {
+    "sha256": "ad8318bbd3861726280aba3914f17446c3f6b3cb32895a703a1e2698caf8d476",
+    "verificado_en": "2026-09-29T02:17:46.096Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Tipo base · anciana nɨkak",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-nukak-maku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7288,
+      "prompt_sha256": "64a3538edf2d56c265250bc4abb55d0b8c2639d09a4d7b033482e9a734518bd1"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Tipo base · anciano nɨkak",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-nukak-maku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7302,
+      "prompt_sha256": "91b79278b6f9ff1b2afb4eec481dfaa834c2dc2a4d40e9decda803a75845984c"
+    },
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre nɨkak adulto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-nukak-maku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7470,
+      "prompt_sha256": "7216ebff305688f1c511e420cec3c10bda7a55c9cac25d8128025d4c4799836c"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer nɨkak adulta",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-nukak-maku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7453,
+      "prompt_sha256": "6be5dd42110373fb18de9c0c491ed4eb2c46918b3bbd64f5d29d942db9c16847"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer nɨkak joven",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-nukak-maku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7184,
+      "prompt_sha256": "a9abd5dabee2c44595069a71cf152d7e84ef2df4c29e84feec3b21031ac3624b"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · niño nɨkak",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-nukak-maku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7371,
+      "prompt_sha256": "82c4a4f4bde57741f6bcd02b5b8ed8e4818757ce37433ff4342eb1efd229958e"
+    }
+  ]
+}

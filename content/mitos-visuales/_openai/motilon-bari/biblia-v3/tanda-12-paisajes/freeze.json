@@ -1,0 +1,106 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "motilon-bari",
+  "comunidad": "Barí",
+  "tanda": "tanda-12-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/motilon-bari.v3.json",
+    "sha256": "2775ffb3bfc432b435ab7b3dd4a3840cb24764f89acda013c3ed27d3ea99fbf9"
+  },
+  "canon": {
+    "sha256": "aa03517f459efabb921c1e2ef28e49ae58b3aa900ca061c516ba03060880951a",
+    "verificado_en": "2026-09-29T02:11:18.690Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 4,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "ishtana__environment_model--canon",
+      "modelo": "ishtana__environment_model",
+      "entidad": "Ishtana, el mundo y el territorio Barí",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "caminar-liviano-hacia-el-mas-alla",
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron",
+        "el-gran-arbol-que-hizo-los-rios",
+        "nandou-chibaig-y-las-luces-del-cielo",
+        "sabaseba-y-los-hijos-de-la-pina",
+        "sibabio-y-las-cenizas-del-mundo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7324,
+      "prompt_sha256": "5f0353e4350d8414db9d29909f58c4860c55a30f6adc392a6d4632693d02f1ff"
+    },
+    {
+      "job": "cuencas-dabogyi-e-iquibocyi__environment_model--canon",
+      "modelo": "cuencas-dabogyi-e-iquibocyi__environment_model",
+      "entidad": "Cuencas del Dabogyi (Catatumbo) y el Iquibocyi (Río de Oro)",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-gran-arbol-que-hizo-los-rios"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6421,
+      "prompt_sha256": "8d3c51f250993669556474f8f108c9e56b5a0ee772fa345e7e8fab680c5e0445"
+    },
+    {
+      "job": "estacion-de-los-muertos__spatial_model--canon",
+      "modelo": "estacion-de-los-muertos__spatial_model",
+      "entidad": "Estación donde se recibe a los Barí muertos",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "caminar-liviano-hacia-el-mas-alla"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5697,
+      "prompt_sha256": "ac9dbae421de9e2fb9e97171ab760b77ee9e2a335a7efa5990e4fdda6eadf8d6"
+    },
+    {
+      "job": "mundos-superpuestos-de-ishtana__environment_model--canon",
+      "modelo": "mundos-superpuestos-de-ishtana__environment_model",
+      "entidad": "Mundos superpuestos de Ishtana",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "caminar-liviano-hacia-el-mas-alla"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6136,
+      "prompt_sha256": "d51cdfefe8e520183a62dc89508dc719ebbc6d76280bc480f3dadebb0b8c9c0f"
+    }
+  ]
+}

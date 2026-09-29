@@ -1,0 +1,78 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "quimbaya",
+  "comunidad": "Quimbaya",
+  "tanda": "tanda-03-tipos-recatadas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/quimbaya.v3.json",
+    "sha256": "7a8c010af754b07a8d4715ae9be991c98819d264ed16211b189e0d5df6e75ce9"
+  },
+  "canon": {
+    "sha256": "f3d06bb1d1580d062cde491b91523719658943e00e9b8d7758863a7405e21b1e",
+    "verificado_en": "2026-09-29T02:13:35.315Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 5,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre quimbaya adulto (capa de 1553)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "batatabati"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8271,
+      "prompt_sha256": "13320bd04fbfab61946f92416b424fe4239023e980d50ef44f672c49a3a4e959"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer quimbaya adulta (capa de 1553)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "batatabati"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8317,
+      "prompt_sha256": "6b9e4b974c9fc1c9b95cb2be7dfb12176e1225b509470b5f508be887fcf6433d"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Tipo base · muchacho quimbaya (capa de 1553)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "batatabati"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8023,
+      "prompt_sha256": "19e1a721456cffd55781b5e9f4e91032a9329bc37ea5d913dade7782d819eb7c"
+    }
+  ]
+}

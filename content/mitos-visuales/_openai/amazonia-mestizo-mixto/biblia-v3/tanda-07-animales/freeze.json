@@ -1,0 +1,435 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "amazonia-mestizo-mixto",
+  "comunidad": "Amazonía ribereña mestiza",
+  "tanda": "tanda-07-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/amazonia-mestizo-mixto.v3.json",
+    "sha256": "fea46c1ab8f6b063283d925332b6158a17c0d78a373ec2dee760e858196271ec"
+  },
+  "canon": {
+    "sha256": "2f6f707553d5db5bf527413fc9dccfe903963879388b8ebee73d2d100adcfe9a",
+    "verificado_en": "2026-09-29T02:24:16.674Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 23,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "boa_culebra_gigante__identity_sheet--canon",
+      "modelo": "boa_culebra_gigante__identity_sheet",
+      "entidad": "Boa / culebra grande del río",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-diluvio-guinadoma",
+        "taik",
+        "yacuruna",
+        "el-descubrimiento-del-agua-y-los-peces"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7318,
+      "prompt_sha256": "abef61c8e2fea8c483bb3a112479d38f534a55a9bf096ac36bb011e5427d35de"
+    },
+    {
+      "job": "bufeo_colorado__identity_sheet--canon",
+      "modelo": "bufeo_colorado__identity_sheet",
+      "entidad": "Bufeo colorado / delfín rosado y su forma humana",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "delfín rosado en el río"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-bufeo",
+        "yacuruna",
+        "la-cobra-grande"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6925,
+      "prompt_sha256": "700d104fbab899255d002293f84494ccfb674f0ef1491e443aa7a61c4a9f140e"
+    },
+    {
+      "job": "bufeo_colorado__state_sheet--estado_hombre de blanco con sombrero calado, grande y bien vestido, con el huequito oculto bajo el ala",
+      "modelo": "bufeo_colorado__state_sheet",
+      "entidad": "Bufeo colorado / delfín rosado y su forma humana",
+      "categoria": "criatura",
+      "vista": "estado_hombre de blanco con sombrero calado, grande y bien vestido, con el huequito oculto bajo el ala",
+      "estados": [
+        "hombre de blanco con sombrero calado, grande y bien vestido, con el huequito oculto bajo el ala"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-bufeo",
+        "yacuruna",
+        "la-cobra-grande"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 9103,
+      "prompt_sha256": "5ed443a871000b40d4eaa0cb7405727dbc4877992d1c54cb32263207902a963d"
+    },
+    {
+      "job": "mico_de_la_selva__identity_sheet--canon",
+      "modelo": "mico_de_la_selva__identity_sheet",
+      "entidad": "Mico de la selva",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-cotomachaco",
+        "ngutapa-y-chimuiyae",
+        "origen-de-los-micos-boquiblancos"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6346,
+      "prompt_sha256": "818b735d8879f74455a395ba4052bc807ab32ae116653e1e8e1633c855b1d711"
+    },
+    {
+      "job": "tigre_jaguar__identity_sheet--canon",
+      "modelo": "tigre_jaguar__identity_sheet",
+      "entidad": "El tío Tigre (jaguar)",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "peleas-y-aventuras-entre-el-sobrino-conejo-y-el-tio-tigre",
+        "nonuetoma",
+        "ngutapa-y-chimuiyae"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7937,
+      "prompt_sha256": "9ef4d3ad912991c38bdefc7135acb2a45759bc9a1127bad95dfe74e0bd868e47"
+    },
+    {
+      "job": "chullachaqui__identity_sheet--canon",
+      "modelo": "chullachaqui__identity_sheet",
+      "entidad": "Chullachaqui / Chuya-Chaki / Chuyachaque",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "chuya-chaqui",
+        "el-chuy-achaque"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7695,
+      "prompt_sha256": "36942f3659d4a556859c859fef78ce3f0452132f88fe65f19b66b68d2698a85e"
+    },
+    {
+      "job": "chullachaqui__state_sheet--estado_con la figura de un pariente- una hermana o un hermano de la niña, delatado sólo por el pie más pequeño",
+      "modelo": "chullachaqui__state_sheet",
+      "entidad": "Chullachaqui / Chuya-Chaki / Chuyachaque",
+      "categoria": "criatura",
+      "vista": "estado_con la figura de un pariente: una hermana o un hermano de la niña, delatado sólo por el pie más pequeño",
+      "estados": [
+        "con la figura de un pariente: una hermana o un hermano de la niña, delatado sólo por el pie más pequeño"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "chuya-chaqui",
+        "el-chuy-achaque"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8365,
+      "prompt_sha256": "955e5af361758b6b53ab671648277e8acbd2e84845a0d4354dfc4557032962a7"
+    },
+    {
+      "job": "mariposa_guia__identity_sheet--canon",
+      "modelo": "mariposa_guia__identity_sheet",
+      "entidad": "Mariposa guía",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "ngutapa-y-chimuiyae",
+        "taik"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7276,
+      "prompt_sha256": "49d7ec864bf5fbeaddf50e51689e383c1a2ebb2f1ea9667eca852d8a2a80ed91"
+    },
+    {
+      "job": "ardilla_del_aji__identity_sheet--canon",
+      "modelo": "ardilla_del_aji__identity_sheet",
+      "entidad": "La ardilla pequeña del ají",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-agua"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6665,
+      "prompt_sha256": "963b797c166f6dded22609b02743b153307913193970d65f5bdebc522872ae48"
+    },
+    {
+      "job": "ardilla_del_aji__state_sheet--estado_cola levantada hacia arriba, cogida por las raíces al caer la lupuna",
+      "modelo": "ardilla_del_aji__state_sheet",
+      "entidad": "La ardilla pequeña del ají",
+      "categoria": "animal",
+      "vista": "estado_cola levantada hacia arriba, cogida por las raíces al caer la lupuna",
+      "estados": [
+        "cola levantada hacia arriba, cogida por las raíces al caer la lupuna"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-agua"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7326,
+      "prompt_sha256": "0871d29c5244232d77de6cd6f4a1cc5f66f22d51809b1cbcc119f0f6316a2ac9"
+    },
+    {
+      "job": "cobra_grande_hermana__identity_sheet--canon",
+      "modelo": "cobra_grande_hermana__identity_sheet",
+      "entidad": "Maria Caninana, la Cobra Grande mala",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-cobra-grande"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6198,
+      "prompt_sha256": "cd8e6de4082bb3385eb43804126cd0225f926dcec11cbd6acb2ac2874730d8ed"
+    },
+    {
+      "job": "conejo__identity_sheet--canon",
+      "modelo": "conejo__identity_sheet",
+      "entidad": "El sobrino Conejo",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "peleas-y-aventuras-entre-el-sobrino-conejo-y-el-tio-tigre"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6972,
+      "prompt_sha256": "31bc0853161c9900fa3970bbb999dacce4ee2d82687e5978d856c083a9d2f7ab"
+    },
+    {
+      "job": "cotomachaco__identity_sheet--canon",
+      "modelo": "cotomachaco__identity_sheet",
+      "entidad": "Cotomachaco, la boa de dos cabezas",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-cotomachaco"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7608,
+      "prompt_sha256": "851c4305e153ef50ac092c696827dab47673974fe6fb9d0202dc11b44c2dedc1"
+    },
+    {
+      "job": "criaturas_del_camino_de_taik__identity_sheet--canon",
+      "modelo": "criaturas_del_camino_de_taik__identity_sheet",
+      "entidad": "Criaturas del camino de Taik",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "diablo que suplanta al tío Neimuada, ojos como tizones y manos con luz extraña"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "taik"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6576,
+      "prompt_sha256": "b51af8ee41523e5aaa8fbafbbe5110a984bfa134b63d08bf46051c7386e0576c"
+    },
+    {
+      "job": "criaturas_del_camino_de_taik__state_sheet--estado_demonio de cabeza desproporcionada y cuerpo alargado",
+      "modelo": "criaturas_del_camino_de_taik__state_sheet",
+      "entidad": "Criaturas del camino de Taik",
+      "categoria": "criatura",
+      "vista": "estado_demonio de cabeza desproporcionada y cuerpo alargado",
+      "estados": [
+        "demonio de cabeza desproporcionada y cuerpo alargado"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "taik"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7576,
+      "prompt_sha256": "498e66fa49a95c64b7a9286577d71291f580d9cb20c40e8dc16b67ee0d40ec72"
+    },
+    {
+      "job": "curupira__identity_sheet--canon",
+      "modelo": "curupira__identity_sheet",
+      "entidad": "Curupira",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-curupira"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6986,
+      "prompt_sha256": "4185e00ac276423bb30a1da6119e2cede8a4acd265cc4b6191a3158bee54953b"
+    },
+    {
+      "job": "guacamaya__identity_sheet--canon",
+      "modelo": "guacamaya__identity_sheet",
+      "entidad": "Guacamaya",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-sol"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6871,
+      "prompt_sha256": "c1beec53b2999a7ec0c41272f0c2983718a990bd847c0dbbea5f5ef1b0b3bee1"
+    },
+    {
+      "job": "guardian_que_sostiene_el_arbol__identity_sheet--canon",
+      "modelo": "guardian_que_sostiene_el_arbol__identity_sheet",
+      "entidad": "El pelejo gigante de la copa",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-agua"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6604,
+      "prompt_sha256": "9ed763b1db0f5518d3c8cad873f23d8b67d9bbde5eda73480d238fac074d2240"
+    },
+    {
+      "job": "madre_de_playa__identity_sheet--canon",
+      "modelo": "madre_de_playa__identity_sheet",
+      "entidad": "Madre de Playa",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "madre-de-playa"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7708,
+      "prompt_sha256": "093c09adb91a98753138521dd48a37acf3def1eb29ffd4899dcfe12e6b47d532"
+    },
+    {
+      "job": "morrocoy__identity_sheet--canon",
+      "modelo": "morrocoy__identity_sheet",
+      "entidad": "Morrocoy",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "ngutapa-y-chimuiyae"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7290,
+      "prompt_sha256": "ccc82a351003796b76d1790ec710f9b85c1bda564635f028736ed08353d66fac"
+    },
+    {
+      "job": "taife_madre_de_monte__identity_sheet--canon",
+      "modelo": "taife_madre_de_monte__identity_sheet",
+      "entidad": "Taife, la Madre de Monte",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "taife"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7096,
+      "prompt_sha256": "ba68c03f14b8c87b567313a8fb713ae527fc4d79ee268c420ae04633b105e669"
+    },
+    {
+      "job": "taife_madre_de_monte__state_sheet--estado_bastón marcado de muescas que se parte al apoyarse, y ella rodando por el suelo sin él",
+      "modelo": "taife_madre_de_monte__state_sheet",
+      "entidad": "Taife, la Madre de Monte",
+      "categoria": "criatura",
+      "vista": "estado_bastón marcado de muescas que se parte al apoyarse, y ella rodando por el suelo sin él",
+      "estados": [
+        "bastón marcado de muescas que se parte al apoyarse, y ella rodando por el suelo sin él"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "taife"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7949,
+      "prompt_sha256": "548df22e4da13f98106aa3914930528992e54e41e6fcee56f15b9b6514278894"
+    },
+    {
+      "job": "yacuruna__identity_sheet--canon",
+      "modelo": "yacuruna__identity_sheet",
+      "entidad": "Los yacurunas, la gente del agua",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "yacuruna"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7328,
+      "prompt_sha256": "d78f307003abfd6e3600996552844c46b1e8442d2195f3c3624c2e099f11d449"
+    }
+  ]
+}

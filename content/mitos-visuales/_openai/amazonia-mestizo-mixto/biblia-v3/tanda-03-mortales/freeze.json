@@ -1,0 +1,436 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "amazonia-mestizo-mixto",
+  "comunidad": "Amazonía ribereña mestiza",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/amazonia-mestizo-mixto.v3.json",
+    "sha256": "fea46c1ab8f6b063283d925332b6158a17c0d78a373ec2dee760e858196271ec"
+  },
+  "canon": {
+    "sha256": "2f6f707553d5db5bf527413fc9dccfe903963879388b8ebee73d2d100adcfe9a",
+    "verificado_en": "2026-09-29T02:17:40.951Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 24,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "moe__identity_sheet--canon",
+      "modelo": "moe__identity_sheet",
+      "entidad": "Yoí (Moé en la página anterior)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "moe-e-ipi",
+        "origen-del-agua"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7940,
+      "prompt_sha256": "966988b9a6b6f58102714ee8ee3bd8077663f09eee69ee7bdd0e9db0a57a9f31"
+    },
+    {
+      "job": "ariana_la_santa__identity_sheet--canon",
+      "modelo": "ariana_la_santa__identity_sheet",
+      "entidad": "La santa de la canastica (Ariana en la página anterior)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-de-los-vegetales-cultivaldos"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8902,
+      "prompt_sha256": "09847edcd41def82b39000b4a80fead0f6693a4860793c634482b212b22a13a8"
+    },
+    {
+      "job": "chimuiyae__identity_sheet--canon",
+      "modelo": "chimuiyae__identity_sheet",
+      "entidad": "Cimidyue (Chimuiyaé en la página anterior)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "ngutapa-y-chimuiyae"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8183,
+      "prompt_sha256": "74c57bdb011c657aceb8dfb183948116bf9e1bb2f5b45d7e1214827e0bacce19"
+    },
+    {
+      "job": "chimuiyae__state_sheet--estado_vuelta libélula roja por la mariposa azul, volando sobre el río hacia la casa de su padre",
+      "modelo": "chimuiyae__state_sheet",
+      "entidad": "Cimidyue (Chimuiyaé en la página anterior)",
+      "categoria": "personaje",
+      "vista": "estado_vuelta libélula roja por la mariposa azul, volando sobre el río hacia la casa de su padre",
+      "estados": [
+        "vuelta libélula roja por la mariposa azul, volando sobre el río hacia la casa de su padre"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "ngutapa-y-chimuiyae"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8433,
+      "prompt_sha256": "91cd7193f3a5594cd56bee13255fb3f7caa25d8ecebda7243abb4f9476eb56a8"
+    },
+    {
+      "job": "hermano_menor_gavilan__identity_sheet--canon",
+      "modelo": "hermano_menor_gavilan__identity_sheet",
+      "entidad": "El hermano menor que se vuelve gavilán",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "hombre al que le arrancaron una pierna"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-del-gavilan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7749,
+      "prompt_sha256": "b237bf82453adcfd3c23c8b7de9959bf96e0f55b32f4b8785b099088019214f4"
+    },
+    {
+      "job": "hermano_menor_gavilan__state_sheet--estado_gavilán",
+      "modelo": "hermano_menor_gavilan__state_sheet",
+      "entidad": "El hermano menor que se vuelve gavilán",
+      "categoria": "personaje",
+      "vista": "estado_gavilán",
+      "estados": [
+        "gavilán"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-del-gavilan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8833,
+      "prompt_sha256": "c4b587a24d678f5ed11e2e0a2170599cf450d9469f66682d5890e84d36d19e7a"
+    },
+    {
+      "job": "hombre_enmascarado_de_pigmentos__identity_sheet--canon",
+      "modelo": "hombre_enmascarado_de_pigmentos__identity_sheet",
+      "entidad": "Jau, cubierto de plumas",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "petapeta"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7649,
+      "prompt_sha256": "3c21974ff7c47e0895c32406e4c97251f9cbc8ea55ace2f88076055e07e03ab8"
+    },
+    {
+      "job": "hombre_sol__identity_sheet--canon",
+      "modelo": "hombre_sol__identity_sheet",
+      "entidad": "El hombre que se volvió Sol",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-del-sol"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8571,
+      "prompt_sha256": "40ac18ac2c02b22d575ce795eab556bd0416ead4fe6a950ff523bab79a889a4e"
+    },
+    {
+      "job": "honorato_cobragrande__identity_sheet--canon",
+      "modelo": "honorato_cobragrande__identity_sheet",
+      "entidad": "Norato, la Cobra Grande buena",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-cobra-grande"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7587,
+      "prompt_sha256": "f6a4700b439485f614b49e7c5db8d5aca1d1248a9b092e6a760688a65e20cf1b"
+    },
+    {
+      "job": "honorato_cobragrande__state_sheet--estado_muchacho apuesto en la fiesta de la orilla, tuerto, sin rasgo de serpiente salvo el ojo",
+      "modelo": "honorato_cobragrande__state_sheet",
+      "entidad": "Norato, la Cobra Grande buena",
+      "categoria": "personaje",
+      "vista": "estado_muchacho apuesto en la fiesta de la orilla, tuerto, sin rasgo de serpiente salvo el ojo",
+      "estados": [
+        "muchacho apuesto en la fiesta de la orilla, tuerto, sin rasgo de serpiente salvo el ojo"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-cobra-grande"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8692,
+      "prompt_sha256": "6fff474a3eabead2d9cf96c4da9a5aa3ca6faabff9fd6cc76dd09d9707a1867c"
+    },
+    {
+      "job": "ipi_el_loco__identity_sheet--canon",
+      "modelo": "ipi_el_loco__identity_sheet",
+      "entidad": "Ipi",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "moe-e-ipi"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8037,
+      "prompt_sha256": "07bae5fdb29459a3c45bb3660e7b9099bed561b1206eaefc6df4b712f92bcd91"
+    },
+    {
+      "job": "ipi_el_loco__state_sheet--estado_pez solitario con una mancha de color oro en la frente, lejos del cardumen",
+      "modelo": "ipi_el_loco__state_sheet",
+      "entidad": "Ipi",
+      "categoria": "personaje",
+      "vista": "estado_pez solitario con una mancha de color oro en la frente, lejos del cardumen",
+      "estados": [
+        "pez solitario con una mancha de color oro en la frente, lejos del cardumen"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "moe-e-ipi"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8339,
+      "prompt_sha256": "ef29ecbad3b9376c41c9540a591d7e292b8506474d479d6126d8bc619e45127b"
+    },
+    {
+      "job": "kaamari__identity_sheet--canon",
+      "modelo": "kaamari__identity_sheet",
+      "entidad": "Ka'amari (Wihimi)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-nacimiento-de-los-matapi"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7932,
+      "prompt_sha256": "8b2b4c33f75ae12a968098622511a5908c8d682c0a93a764d02640bbc7368bbc"
+    },
+    {
+      "job": "kaamari__state_sheet--estado_recién nacido debajo del árbol wiri, con rabo y manos de tigre, antes de que Luariya sople el tabaco",
+      "modelo": "kaamari__state_sheet",
+      "entidad": "Ka'amari (Wihimi)",
+      "categoria": "personaje",
+      "vista": "estado_recién nacido debajo del árbol wiri, con rabo y manos de tigre, antes de que Luariya sople el tabaco",
+      "estados": [
+        "recién nacido debajo del árbol wiri, con rabo y manos de tigre, antes de que Luariya sople el tabaco"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-nacimiento-de-los-matapi"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7044,
+      "prompt_sha256": "68b98eac79bac8b342cc2afa2a775a6fb539bc47b6c8e29b7305052da7708731"
+    },
+    {
+      "job": "kanuma_forastero__identity_sheet--canon",
+      "modelo": "kanuma_forastero__identity_sheet",
+      "entidad": "Kanumá",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "kanuma"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8486,
+      "prompt_sha256": "355a1f38fc34bb1751e7812b028825180542a9ed55ab802c67abced7ce050601"
+    },
+    {
+      "job": "mayari__identity_sheet--canon",
+      "modelo": "mayari__identity_sheet",
+      "entidad": "El hermano que se vuelve Luna (Mayari en la página anterior)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "origen-de-la-luna"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7236,
+      "prompt_sha256": "0eb140aa76aeea8c05cec6eb23918e8cc31f590c3faf38e900515a6366abb60f"
+    },
+    {
+      "job": "monalla_jurama__identity_sheet--canon",
+      "modelo": "monalla_jurama__identity_sheet",
+      "entidad": "Monalla Jurama, el cacique tuerto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-de-las-frutas"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8394,
+      "prompt_sha256": "6d787c76d050353e56a4190f9e71b7196e0ac098ddaeebb3fcbf67cf69740486"
+    },
+    {
+      "job": "monalla_tirisa__identity_sheet--canon",
+      "modelo": "monalla_tirisa__identity_sheet",
+      "entidad": "Monalla Tirisa",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-origen-de-las-frutas"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8727,
+      "prompt_sha256": "90750da3f1c8ad703dbb88e940a06e95b7f49cabb937a3855063ae18d839901e"
+    },
+    {
+      "job": "ngutapa__identity_sheet--canon",
+      "modelo": "ngutapa__identity_sheet",
+      "entidad": "El marido de Cimidyue (Ngútapa en la página anterior)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "ngutapa-y-chimuiyae"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7894,
+      "prompt_sha256": "76993b998a9b71d684b9be1a56af58b05a9b7b8d7f25b2173da108d07399d107"
+    },
+    {
+      "job": "nonuetoma__identity_sheet--canon",
+      "modelo": "nonuetoma__identity_sheet",
+      "entidad": "Nonuetoma",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nonuetoma"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7991,
+      "prompt_sha256": "8e8827e82c0829a0d479f3d2ab8a6c4153bc63047e6e53a84ffd6920eb47242e"
+    },
+    {
+      "job": "petapeta__identity_sheet--canon",
+      "modelo": "petapeta__identity_sheet",
+      "entidad": "Petapeta",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "petapeta"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7390,
+      "prompt_sha256": "c812de47c5f9196bd083fe9309107ebe7d179944f1d616361667337426e9ceb5"
+    },
+    {
+      "job": "petapeta__state_sheet--estado_vuelto venado, con el costal de sustento atado al lomo",
+      "modelo": "petapeta__state_sheet",
+      "entidad": "Petapeta",
+      "categoria": "personaje",
+      "vista": "estado_vuelto venado, con el costal de sustento atado al lomo",
+      "estados": [
+        "vuelto venado, con el costal de sustento atado al lomo"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "petapeta"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8185,
+      "prompt_sha256": "728c3cf872497153768f446d0e2ab7f2fcaa7f4bb81ae35a31f271ae661a5e23"
+    },
+    {
+      "job": "senor_de_los_monos__identity_sheet--canon",
+      "modelo": "senor_de_los_monos__identity_sheet",
+      "entidad": "El señor de los monos",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "ngutapa-y-chimuiyae"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7454,
+      "prompt_sha256": "d6e893cb00ffbed355feee1c8baa7afad05480c9deb29c6194e1617e24c78386"
+    },
+    {
+      "job": "senora_del_umari__identity_sheet--canon",
+      "modelo": "senora_del_umari__identity_sheet",
+      "entidad": "Techi, la mujer del humarí",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "moe-e-ipi"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7730,
+      "prompt_sha256": "566ec0ecf75ceb2a1f0308910cf5a290f1bc73f66ae289b9e73aafe15b5904e1"
+    }
+  ]
+}

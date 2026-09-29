@@ -1,0 +1,64 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "eperara-siapidara",
+  "comunidad": "Eperara Siapidara",
+  "tanda": "tanda-07-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/eperara-siapidara.v3.json",
+    "sha256": "f1e09e8865885cbc1c82b23127acb4831384108fbe78b9de2e448e7afee04951"
+  },
+  "canon": {
+    "sha256": "b8209cc2e51efedb8160a2273d05eb0f6f1990842891324ddd3568e633bad132",
+    "verificado_en": "2026-09-29T02:14:26.539Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "iguana__identity_sheet--canon",
+      "modelo": "iguana__identity_sheet",
+      "entidad": "La iguana que mide el agua",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "origen-del-pueblo-eperara"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5273,
+      "prompt_sha256": "3d94a9ee3532a386c51ddf3abbb79695d5724477e7ee8044f6f1515882cfc097"
+    },
+    {
+      "job": "pericos_perezosos__identity_sheet--canon",
+      "modelo": "pericos_perezosos__identity_sheet",
+      "entidad": "Los dos pericos perezosos",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "tachi-akhore-y-la-palabra-de-mangle"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6353,
+      "prompt_sha256": "a00e8483a892bcb4d135e22e05293888cd0830f6b24f32e4628d6ee62851b6a9"
+    }
+  ]
+}

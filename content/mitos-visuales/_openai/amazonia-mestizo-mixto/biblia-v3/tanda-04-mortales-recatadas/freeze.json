@@ -1,0 +1,45 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "amazonia-mestizo-mixto",
+  "comunidad": "Amazonía ribereña mestiza",
+  "tanda": "tanda-04-mortales-recatadas",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/amazonia-mestizo-mixto.v3.json",
+    "sha256": "fea46c1ab8f6b063283d925332b6158a17c0d78a373ec2dee760e858196271ec"
+  },
+  "canon": {
+    "sha256": "2f6f707553d5db5bf527413fc9dccfe903963879388b8ebee73d2d100adcfe9a",
+    "verificado_en": "2026-09-29T02:21:21.042Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 24,
+  "fichas_ya_preparadas": 24,
+  "fichas": [
+    {
+      "job": "kaamari__state_sheet--estado_recién nacido debajo del árbol wiri, con rabo y manos de tigre, antes de que Luariya sople el tabaco",
+      "modelo": "kaamari__state_sheet",
+      "entidad": "Ka'amari (Wihimi)",
+      "categoria": "personaje",
+      "vista": "estado_recién nacido debajo del árbol wiri, con rabo y manos de tigre, antes de que Luariya sople el tabaco",
+      "estados": [
+        "recién nacido debajo del árbol wiri, con rabo y manos de tigre, antes de que Luariya sople el tabaco"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-nacimiento-de-los-matapi"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7392,
+      "prompt_sha256": "cd4c1c0b023e1f07cf8112dd80064a43cc3a2717a4692294a1947697c66f09f0"
+    }
+  ]
+}

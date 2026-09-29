@@ -1,0 +1,78 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "awa",
+  "comunidad": "Awa",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/awa.v3.json",
+    "sha256": "71e999cc1d9d0241b3b7d2f9be767e3ae43f05871a9c5a55120625da99155fe1"
+  },
+  "canon": {
+    "sha256": "bae6e57ea34347d2f9cba2e03f031d8cf73be66457da7c33aebc986fe695bd02",
+    "verificado_en": "2026-09-29T02:16:20.066Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "attim_awa__identity_sheet--canon",
+      "modelo": "attim_awa__identity_sheet",
+      "entidad": "Attɨm Awá, el primer hombre",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "barbachas-del-arbol-grande"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7731,
+      "prompt_sha256": "64b3af5850f7779e4330eb3f0baea4d495c86dbb95728044c9aa251839095f3d"
+    },
+    {
+      "job": "attim_awa__state_sheet--estado_anciano_encanecido",
+      "modelo": "attim_awa__state_sheet",
+      "entidad": "Attɨm Awá, el primer hombre",
+      "categoria": "personaje",
+      "vista": "estado_anciano_encanecido",
+      "estados": [
+        "anciano_encanecido"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "barbachas-del-arbol-grande"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7789,
+      "prompt_sha256": "18665e4470fee5e80fdd18dbb550b56c4cc4c7383640a26506e2102c15e43710"
+    },
+    {
+      "job": "primera_mujer__identity_sheet--canon",
+      "modelo": "primera_mujer__identity_sheet",
+      "entidad": "La primera mujer",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "barbachas-del-arbol-grande"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7177,
+      "prompt_sha256": "92a4a18adb1d2b28470fed0d0f3d4af2cf082ccfb5c450d4ea590098b43b4cab"
+    }
+  ]
+}

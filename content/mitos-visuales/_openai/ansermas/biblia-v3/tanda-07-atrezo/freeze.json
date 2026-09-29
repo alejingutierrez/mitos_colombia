@@ -1,0 +1,64 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ansermas",
+  "comunidad": "Ansermas",
+  "tanda": "tanda-07-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ansermas.v3.json",
+    "sha256": "44ef24e617ea8a3cfc4ed5663025742227371ccb7af362bae4a15d486a95cb87"
+  },
+  "canon": {
+    "sha256": "ec2e513c8def2f32c0bec9c1fabcce9c07393d0a7339f7f2b1675a864c90203b",
+    "verificado_en": "2026-09-29T02:06:06.250Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "miticos",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "cultivos_de_maiz_y_chontaduro__botanical_sheet--canon",
+      "modelo": "cultivos_de_maiz_y_chontaduro__botanical_sheet",
+      "entidad": "El maíz y el chontaduro",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "las-huellas-de-mapura"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7901,
+      "prompt_sha256": "c1ae08f6ddb87ca958ba534d46026e4e83aab91914c02a222223a9c66c78ff6e"
+    },
+    {
+      "job": "huellas_en_la_roca__object_sheet--canon",
+      "modelo": "huellas_en_la_roca__object_sheet",
+      "entidad": "Las grandes huellas humanas sobre la roca",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-pasos-de-xixaraca"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7514,
+      "prompt_sha256": "eff809e7f6ccf5f5ab5db624142b3c34db5952155be419f881fd3e698df2f909"
+    }
+  ]
+}

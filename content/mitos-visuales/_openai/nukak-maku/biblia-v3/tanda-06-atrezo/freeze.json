@@ -1,0 +1,64 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "nukak-maku",
+  "comunidad": "Nɨkak",
+  "tanda": "tanda-06-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/nukak-maku.v3.json",
+    "sha256": "63fc63c7b3c4fe485cb66c73a147a07ef03b7ca129bebe44d38fe04e145c3f7e"
+  },
+  "canon": {
+    "sha256": "ad8318bbd3861726280aba3914f17446c3f6b3cb32895a703a1e2698caf8d476",
+    "verificado_en": "2026-09-29T02:20:11.941Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_semillas_nikak_1__botanical_sheet--canon",
+      "modelo": "hoja_semillas_nikak_1__botanical_sheet",
+      "entidad": "hoja semillas nikak 1",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-nukak-maku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7011,
+      "prompt_sha256": "8b692c686ba7ef796aa6e480003a46ece7f7db6acd1fd9a5bc78302a2c60644e"
+    },
+    {
+      "job": "hoja_semillas_nikak_2__botanical_sheet--canon",
+      "modelo": "hoja_semillas_nikak_2__botanical_sheet",
+      "entidad": "hoja semillas nikak 2",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-nukak-maku"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6657,
+      "prompt_sha256": "d5cde3b7af0aff33fd8f2405fde57e80fd443a6e7b5abca887c1c3e243b61e4b"
+    }
+  ]
+}

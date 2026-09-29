@@ -1,0 +1,122 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ticuna",
+  "comunidad": "Ticuna",
+  "tanda": "tanda-06-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ticuna.v3.json",
+    "sha256": "fd0c6ffe84de74c45161ae42823d427354bcefa0940f5eb72ce2559eac09f0a3"
+  },
+  "canon": {
+    "sha256": "508298d7f6b1c813ab2d8c0bf8438b2829b11c5b30bc6045eb9ce969dbb95dc9",
+    "verificado_en": "2026-09-29T02:08:00.680Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos"
+  ],
+  "fichas_en_capa": 5,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "comunidad-tikuna__group_grammar--canon",
+      "modelo": "comunidad-tikuna__group_grammar",
+      "entidad": "Comunidad Tikuna",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe",
+        "origen-de-la-luna-tikuna",
+        "origen-del-friaje-tikuna",
+        "origen-del-sol-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6846,
+      "prompt_sha256": "aea3af236f750bb10874a7e30a53238c13279346c303d283b4252a9ae0ab82b9"
+    },
+    {
+      "job": "peces-de-eware__group_grammar--canon",
+      "modelo": "peces-de-eware__group_grammar",
+      "entidad": "Peces que cruzan la orilla y se hacen gente",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-combate-del-sueno-y-la-palabra",
+        "la-canoa-de-moe",
+        "origen-del-friaje-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6374,
+      "prompt_sha256": "d0597f145cfa124b03bc93f5a3100334528cea4eeff47398cb590383ba992b2f"
+    },
+    {
+      "job": "inmortales__group_grammar--canon",
+      "modelo": "inmortales__group_grammar",
+      "entidad": "Seres inmortales del tiempo anterior",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6014,
+      "prompt_sha256": "af7bc35913af993288d09882968327c7ac53d7476e1a93db94a2588f64b04aa5"
+    },
+    {
+      "job": "grullas__group_grammar--canon",
+      "modelo": "grullas__group_grammar",
+      "entidad": "Bandada de grullas",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "origen-del-friaje-tikuna"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6349,
+      "prompt_sha256": "474142be1ad8d3ad0dc418febddb71189bf77198ed043e5a195ced6e1f2af673"
+    },
+    {
+      "job": "loros-moru__group_grammar--canon",
+      "modelo": "loros-moru__group_grammar",
+      "entidad": "Loros Moru",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-canoa-de-moe"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5968,
+      "prompt_sha256": "8b6f5d533443aac493bd0932856193f8d40a5468d1faa9979f0257e807c0470c"
+    }
+  ]
+}

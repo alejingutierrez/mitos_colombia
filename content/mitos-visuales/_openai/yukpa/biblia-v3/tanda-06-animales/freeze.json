@@ -1,0 +1,47 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "yukpa",
+  "comunidad": "Yukpa",
+  "tanda": "tanda-06-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/yukpa.v3.json",
+    "sha256": "cfd2272fc59a92456b0411462623adfc6cfc0494b59b8c706d08512aa4ea342c"
+  },
+  "canon": {
+    "sha256": "c6e8138cdb632f14fc5002dbde79f78b7451a54c8cf3412c8a5d6b65d535bb71",
+    "verificado_en": "2026-09-29T02:21:51.022Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 1,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "armadillos__identity_sheet--canon",
+      "modelo": "armadillos__identity_sheet",
+      "entidad": "Armadillos que retiran las aguas",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-piedra-que-flota"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 6910,
+      "prompt_sha256": "94563515c971eba1772a3cd4ebf2564e4e0e55f803445116559ec1169bd8e36a"
+    }
+  ]
+}

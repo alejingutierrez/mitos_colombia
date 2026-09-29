@@ -1,0 +1,45 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "makawanes",
+  "comunidad": "Makaguán",
+  "tanda": "tanda-06-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/makawanes.v3.json",
+    "sha256": "9cea69eda49e020a1469dd5cee333493e6ddee57f343165fe3e5d34e2cad317c"
+  },
+  "canon": {
+    "sha256": "4b909272d7fc7ea60af087d7555d666ff1de6e8bc91a706f308ff8f08a1f8b6d",
+    "verificado_en": "2026-09-29T02:07:36.905Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 1,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tacu__identity_sheet--canon",
+      "modelo": "tacu__identity_sheet",
+      "entidad": "Tacu (Padre Sol)",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-makawanes",
+        "la-gran-inundacion"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7318,
+      "prompt_sha256": "5409d5adef673a680e27b91ccd054e27d1e09940986e1ce457eec0d5097a9999"
+    }
+  ]
+}

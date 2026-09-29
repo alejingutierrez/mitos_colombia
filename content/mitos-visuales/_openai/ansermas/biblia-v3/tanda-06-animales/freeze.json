@@ -1,0 +1,80 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ansermas",
+  "comunidad": "Ansermas",
+  "tanda": "tanda-06-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ansermas.v3.json",
+    "sha256": "44ef24e617ea8a3cfc4ed5663025742227371ccb7af362bae4a15d486a95cb87"
+  },
+  "canon": {
+    "sha256": "ec2e513c8def2f32c0bec9c1fabcce9c07393d0a7339f7f2b1675a864c90203b",
+    "verificado_en": "2026-09-29T02:05:27.095Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tamaracas__identity_sheet--canon",
+      "modelo": "tamaracas__identity_sheet",
+      "entidad": "Los Tamaracas, potencias enemigas",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "las-huellas-de-mapura"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7116,
+      "prompt_sha256": "4bd2cc2e658cacd4f86713a3dfe46f9eaf9ee0d03227e6190b064c8a7c9a53b5"
+    },
+    {
+      "job": "tamaracas__state_sheet--estado_nube_de_langostas",
+      "modelo": "tamaracas__state_sheet",
+      "entidad": "Los Tamaracas, potencias enemigas",
+      "categoria": "criatura",
+      "vista": "estado_nube_de_langostas",
+      "estados": [
+        "nube_de_langostas"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "las-huellas-de-mapura"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8458,
+      "prompt_sha256": "f4190b698db7bbea3e09c39761707f32ff1f6d89e767b5d36cdc8288098d36ed"
+    },
+    {
+      "job": "tamaracas__state_sheet--estado_hueste a pie con barbas y caballos, en silueta sin rostro",
+      "modelo": "tamaracas__state_sheet",
+      "entidad": "Los Tamaracas, potencias enemigas",
+      "categoria": "criatura",
+      "vista": "estado_hueste a pie con barbas y caballos, en silueta sin rostro",
+      "estados": [
+        "hueste a pie con barbas y caballos, en silueta sin rostro"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "las-huellas-de-mapura"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8667,
+      "prompt_sha256": "467116749bf684b73e8d10518487c16032ac5c9a21318d2f31d9f95aa81bd1d1"
+    }
+  ]
+}

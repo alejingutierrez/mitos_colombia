@@ -1,0 +1,352 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "santander-mestizo",
+  "comunidad": "Santander mestizo",
+  "tanda": "tanda-03-mortales",
+  "capa": "mortales",
+  "capa_titulo": "personas · mortales con nombre",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/santander-mestizo.v3.json",
+    "sha256": "d5b07ab1f712e5293471956f31a70a947fceb6dc9a6f1f82ce4c214672c215a7"
+  },
+  "canon": {
+    "sha256": "001778764d5a15260f48f1d6bc2a7f74857486623e73ca5c9681e13fe8ec3cdd",
+    "verificado_en": "2026-09-29T02:20:23.187Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 16,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "mujer_del_pueblo__identity_sheet--canon",
+      "modelo": "mujer_del_pueblo__identity_sheet",
+      "entidad": "La mujer del pueblo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-diabla-castigadora",
+        "la-mula-del-diablo",
+        "el-cerro-encantado",
+        "talabad",
+        "la-mechuda",
+        "la-monedita-en-la-alcancia",
+        "la-puerta-del-perdon",
+        "tal-para-cual",
+        "duende-del-salto",
+        "la-hilandera",
+        "el-pollo-de-las-animas"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8123,
+      "prompt_sha256": "e31191e4755302ef1f9c8cdd321a124d810702f3c153f598979099f9b300e99c"
+    },
+    {
+      "job": "campesino_labriego__identity_sheet--canon",
+      "modelo": "campesino_labriego__identity_sheet",
+      "entidad": "El campesino labriego",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-reventon-de-jacobo",
+        "el-doctor-galeacer",
+        "los-tunjos-de-la-cantera",
+        "la-campana-del-diablo",
+        "el-carriazo-de-vereda-san-isidro",
+        "la-cueva-de-la-pisca",
+        "el-trapiche-ardiendo",
+        "la-lampara-de-petroleo",
+        "lo-que-ensenan-las-cuevas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8188,
+      "prompt_sha256": "429bf6354ced9ad67e9136b4b7ba646ff1206fe82b003f2c1db5e1d64b3ae696"
+    },
+    {
+      "job": "cura_de_pueblo__identity_sheet--canon",
+      "modelo": "cura_de_pueblo__identity_sheet",
+      "entidad": "El cura de pueblo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "nueva-version-de-la-luz-del-limonal",
+        "la-mula-maneada",
+        "lagunas-encantadas",
+        "lo-que-ensenan-las-cuevas",
+        "la-vista-del-libertador",
+        "tal-para-cual",
+        "el-quijote-piedecuestano",
+        "talabad"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8218,
+      "prompt_sha256": "1c66f365335d137a4eb1fb3fb30ffe9a0e2b9f1245db0e3fb4211f55baeed4aa"
+    },
+    {
+      "job": "mozo_del_pueblo__identity_sheet--canon",
+      "modelo": "mozo_del_pueblo__identity_sheet",
+      "entidad": "El mozo del pueblo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-mechuda",
+        "el-fantasma-de-el-horizonte",
+        "la-campana-del-diablo",
+        "la-diabla-castigadora",
+        "la-sayona-del-cementerio",
+        "cuento-fantastico",
+        "el-pollo-de-las-animas",
+        "los-tunjos-de-la-cantera"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7943,
+      "prompt_sha256": "077f08fcb30c16c05b7cd3b1b40de77bde8a512294a4c6f095069efa9c924857"
+    },
+    {
+      "job": "nino_campesino__identity_sheet--canon",
+      "modelo": "nino_campesino__identity_sheet",
+      "entidad": "El niño del pueblo",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-monedita-en-la-alcancia",
+        "nueva-version-de-la-luz-del-limonal",
+        "lo-que-ensenan-las-cuevas",
+        "la-puerta-del-perdon",
+        "el-carriazo-de-vereda-san-isidro",
+        "la-campana-del-diablo",
+        "el-trapiche-ardiendo",
+        "la-sayona-del-cementerio"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7831,
+      "prompt_sha256": "3c8c2399418d2b6fcb0b31d9b0b076dcbb235b7630659ee1d164d6d947c628b7"
+    },
+    {
+      "job": "curandera_del_fogon__identity_sheet--canon",
+      "modelo": "curandera_del_fogon__identity_sheet",
+      "entidad": "La curandera del fogón",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-mechuda",
+        "el-pollo-de-las-animas",
+        "el-trapiche-ardiendo",
+        "los-tunjos-de-la-cantera",
+        "la-hilandera"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8049,
+      "prompt_sha256": "b7a3ae8b09286c38fbbbfdab292ab909ea7e9cf81c6997a999c7789ef98e1d46"
+    },
+    {
+      "job": "hidalgo_criollo_colonial__identity_sheet--canon",
+      "modelo": "hidalgo_criollo_colonial__identity_sheet",
+      "entidad": "El hidalgo criollo de la colonia",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "talabad",
+        "el-quijote-piedecuestano",
+        "el-cacique-salomon",
+        "tal-para-cual"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8202,
+      "prompt_sha256": "5a222c15e2314f6efb39f9943dd4159634a4adcfbabf66fec832e375ecc2c635"
+    },
+    {
+      "job": "arriero__identity_sheet--canon",
+      "modelo": "arriero__identity_sheet",
+      "entidad": "El arriero y su recua",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-cueva-del-diablo",
+        "la-cueva-de-la-pisca",
+        "los-tunjos-de-la-cantera"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8420,
+      "prompt_sha256": "da28e9b9e90d90b45a44130e412fdf75cfc1fae54c79d3efe69804858913c6ab"
+    },
+    {
+      "job": "hacendado_impio__identity_sheet--canon",
+      "modelo": "hacendado_impio__identity_sheet",
+      "entidad": "El hacendado impío",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-piedra-del-muerto",
+        "el-trapiche-ardiendo",
+        "el-cerro-encantado"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8051,
+      "prompt_sha256": "8458849deb28bb7e0ce459bc6461ef3883151854c265662f2ae0b6583b3d9212"
+    },
+    {
+      "job": "don_vicente_arenas__identity_sheet--canon",
+      "modelo": "don_vicente_arenas__identity_sheet",
+      "entidad": "Don Vicente Arenas Mantilla",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-fantasma-de-el-horizonte",
+        "los-tunjos-de-la-cantera"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8068,
+      "prompt_sha256": "7174371ce6f47475e7299d1c049ed2f59e03a6eebc9e77ae148762d41e28aea2"
+    },
+    {
+      "job": "simon_bolivar__identity_sheet--canon",
+      "modelo": "simon_bolivar__identity_sheet",
+      "entidad": "Simón Bolívar",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-vista-del-libertador",
+        "un-libertador-piedecuestano"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8298,
+      "prompt_sha256": "eb77f58e57c6e41b6ef4bd6b9faa7a9b562005d6fda04fe166f2a758a1a3f3d7"
+    },
+    {
+      "job": "talabali__identity_sheet--canon",
+      "modelo": "talabali__identity_sheet",
+      "entidad": "Talabalí",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "talabad",
+        "el-quijote-piedecuestano"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8470,
+      "prompt_sha256": "1676613a06f6bd4799775950cc64b67188f2edc953113e7179b65e28dd28b6b5"
+    },
+    {
+      "job": "diabla_castigadora__identity_sheet--canon",
+      "modelo": "diabla_castigadora__identity_sheet",
+      "entidad": "La diabla castigadora (Rebeca vestida de Tenorio)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-diabla-castigadora"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 8205,
+      "prompt_sha256": "31d5dabe25c4d8dcf11e06eef6c8602b6290f0116d551aa42ec9724c175a836b"
+    },
+    {
+      "job": "felix_el_diablo__identity_sheet--canon",
+      "modelo": "felix_el_diablo__identity_sheet",
+      "entidad": "Félix María Rueda, «El Diablo» de Umpalá",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-diablo-de-umpala"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8178,
+      "prompt_sha256": "78b32929d27c18daced934ec67ab7085712ab9a1faa7a2e3d5899f16cc8c93ab"
+    },
+    {
+      "job": "herrero__identity_sheet--canon",
+      "modelo": "herrero__identity_sheet",
+      "entidad": "El herrero y su fragua",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-mula-del-diablo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7964,
+      "prompt_sha256": "5b366dc5ec7f77b61ea07c9cf4a777f809af496bf6d815802680bd82cce4e63b"
+    },
+    {
+      "job": "mendigo_del_camino__identity_sheet--canon",
+      "modelo": "mendigo_del_camino__identity_sheet",
+      "entidad": "El mendigo del camino",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-piedra-del-muerto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7925,
+      "prompt_sha256": "debe518db82ffb5601365d12ff0efcde24f3eecfe5053ec729b8d126733908dd"
+    }
+  ]
+}

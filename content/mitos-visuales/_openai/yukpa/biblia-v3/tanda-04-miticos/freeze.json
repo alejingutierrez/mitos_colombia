@@ -1,0 +1,62 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "yukpa",
+  "comunidad": "Yukpa",
+  "tanda": "tanda-04-miticos",
+  "capa": "miticos",
+  "capa_titulo": "personas · miticos y fuerzas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/yukpa.v3.json",
+    "sha256": "cfd2272fc59a92456b0411462623adfc6cfc0494b59b8c706d08512aa4ea342c"
+  },
+  "canon": {
+    "sha256": "c6e8138cdb632f14fc5002dbde79f78b7451a54c8cf3412c8a5d6b65d535bb71",
+    "verificado_en": "2026-09-29T02:20:52.352Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "soles_hermanos__identity_sheet--canon",
+      "modelo": "soles_hermanos__identity_sheet",
+      "entidad": "Los dos soles (uno se vuelve Luna)",
+      "categoria": "deidad_fuerza",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-dos-caminos-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8427,
+      "prompt_sha256": "ef897a1ab8fc786b97144e2243ecc6e7578b573d9fe899507d850696306f52da"
+    },
+    {
+      "job": "soles_hermanos__state_sheet--estado_luna",
+      "modelo": "soles_hermanos__state_sheet",
+      "entidad": "Los dos soles (uno se vuelve Luna)",
+      "categoria": "deidad_fuerza",
+      "vista": "estado_luna",
+      "estados": [
+        "luna"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "los-dos-caminos-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8265,
+      "prompt_sha256": "8f5c2e25ed9c8156bc4cd73c82dfa94da878c26326224aad4cb3ec8175343ceb"
+    }
+  ]
+}

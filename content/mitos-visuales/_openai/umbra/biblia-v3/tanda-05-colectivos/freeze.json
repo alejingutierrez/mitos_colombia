@@ -1,0 +1,63 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "umbra",
+  "comunidad": "Umbra",
+  "tanda": "tanda-05-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/umbra.v3.json",
+    "sha256": "7aeb052ddc0c7b85569c29e886c007d49e99cb442c3dc875a086150c2a9e0f17"
+  },
+  "canon": {
+    "sha256": "6aa19a1a16d43ab735dc5998716522f47331d2189bd68238997b040f79e6fa09",
+    "verificado_en": "2026-09-29T02:08:57.977Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "gente_umbra__group_grammar--canon",
+      "modelo": "gente_umbra__group_grammar",
+      "entidad": "La gente del pueblo y del valle",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "tasime-el-incesto",
+        "los-jeques-que-desaparecieron-en-batero"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8939,
+      "prompt_sha256": "42f3396cd76ceafaa544a213d3237926677a8e2fde19b8a625fa33030f4274f2"
+    },
+    {
+      "job": "los_jeques_de_guacuma__group_grammar--canon",
+      "modelo": "los_jeques_de_guacuma__group_grammar",
+      "entidad": "Los jeques de Guacuma",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-jeques-que-desaparecieron-en-batero"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8860,
+      "prompt_sha256": "29a3178b999f4ce63d1c81dee600f84b522e7166eba1dc2e3f73e04c30860339"
+    }
+  ]
+}

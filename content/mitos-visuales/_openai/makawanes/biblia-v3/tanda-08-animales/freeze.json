@@ -1,0 +1,165 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "makawanes",
+  "comunidad": "Makaguán",
+  "tanda": "tanda-08-animales",
+  "capa": "animales",
+  "capa_titulo": "animales y criaturas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/makawanes.v3.json",
+    "sha256": "9cea69eda49e020a1469dd5cee333493e6ddee57f343165fe3e5d34e2cad317c"
+  },
+  "canon": {
+    "sha256": "4b909272d7fc7ea60af087d7555d666ff1de6e8bc91a706f308ff8f08a1f8b6d",
+    "verificado_en": "2026-09-29T02:08:28.049Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "miticos",
+    "colectivos"
+  ],
+  "fichas_en_capa": 8,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "araguato_grande__identity_sheet--canon",
+      "modelo": "araguato_grande__identity_sheet",
+      "entidad": "El araguato grande",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-makawanes"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6880,
+      "prompt_sha256": "846e370b60e58dfbda8117a42eda05d9b9fd9a4f0bd2b00426d4231ce212f5ac"
+    },
+    {
+      "job": "ardilla_enviada__identity_sheet--canon",
+      "modelo": "ardilla_enviada__identity_sheet",
+      "entidad": "La ardita o ardilla",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-gran-inundacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6006,
+      "prompt_sha256": "a40a2a89882ddac701b1af1d9dd3b84cdbd6e08186f006422b150deabec289e3"
+    },
+    {
+      "job": "cangrejo_con_tambor__identity_sheet--canon",
+      "modelo": "cangrejo_con_tambor__identity_sheet",
+      "entidad": "El cangrejo gigante que toca el tambor",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-gran-inundacion"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6366,
+      "prompt_sha256": "3b1a8ddbdbb4da66f0c688936f776efe3485b499a96e2513ab6b6e5bc5349266"
+    },
+    {
+      "job": "samuro__identity_sheet--canon",
+      "modelo": "samuro__identity_sheet",
+      "entidad": "El samuro",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-gran-inundacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6512,
+      "prompt_sha256": "4d88d9b3954ff8952a15e07f19f0012c0c255301d2ca8c3701c11c7946480546"
+    },
+    {
+      "job": "venado_grande__identity_sheet--canon",
+      "modelo": "venado_grande__identity_sheet",
+      "entidad": "El venado grande, abuelo del pueblo",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "creacion-makawanes"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7008,
+      "prompt_sha256": "e25714fea751b731f8eb9b9b904348dba05795cefc58bf82513399283d4f8be9"
+    },
+    {
+      "job": "wiri__identity_sheet--canon",
+      "modelo": "wiri__identity_sheet",
+      "entidad": "Wiri, el perro enviado",
+      "categoria": "animal",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "la-gran-inundacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6737,
+      "prompt_sha256": "60db48cc09945f1088d7ed135ce2b07b4999e4022e57efc38bbe3d66fa21623d"
+    },
+    {
+      "job": "wuachirajua__identity_sheet--canon",
+      "modelo": "wuachirajua__identity_sheet",
+      "entidad": "Wuachirajua",
+      "categoria": "criatura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7864,
+      "prompt_sha256": "ad9e484e5322a8655368c10b0ed4c869a0627e2d5fbd96da8ecc286e03a6a6b3"
+    },
+    {
+      "job": "wuachirajua__state_sheet--estado_iconografia_2022_cubierto_de_pelo",
+      "modelo": "wuachirajua__state_sheet",
+      "entidad": "Wuachirajua",
+      "categoria": "criatura",
+      "vista": "estado_iconografia_2022_cubierto_de_pelo",
+      "estados": [
+        "iconografia_2022_cubierto_de_pelo"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "el-alma"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7644,
+      "prompt_sha256": "12b311df53387e685826992622781cca945fd2883a6577072df4034d0d64b5b0"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "kuibas",
+  "comunidad": "Kuiva (Wamonae)",
+  "tanda": "tanda-05-tipos-recatadas",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/kuibas.v3.json",
+    "sha256": "5f20302091e9a8b7f757ce1357cb393e9a0a54b801d479c6155d1c16037c25e4"
+  },
+  "canon": {
+    "sha256": "7d0004d1ca8d0709864534a5c645a05b716b82370b7891be44d5fe97a3f0d5ff",
+    "verificado_en": "2026-09-29T02:19:53.409Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 6,
+  "fichas": [
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Mujer kuiva joven (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "creacion-kuibas",
+        "namon-y-la-inundacion"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6648,
+      "prompt_sha256": "8625715fa349f0710e25f2656f90954c3571999fc14db8d1d9b69cc6b80f6b30"
+    }
+  ]
+}

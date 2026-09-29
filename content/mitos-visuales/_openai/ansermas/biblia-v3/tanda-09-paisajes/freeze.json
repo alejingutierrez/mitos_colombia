@@ -1,0 +1,67 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ansermas",
+  "comunidad": "Ansermas",
+  "tanda": "tanda-09-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ansermas.v3.json",
+    "sha256": "44ef24e617ea8a3cfc4ed5663025742227371ccb7af362bae4a15d486a95cb87"
+  },
+  "canon": {
+    "sha256": "ec2e513c8def2f32c0bec9c1fabcce9c07393d0a7339f7f2b1675a864c90203b",
+    "verificado_en": "2026-09-29T02:07:21.372Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "cerro_karamba_batero__environment_model--canon",
+      "modelo": "cerro_karamba_batero__environment_model",
+      "entidad": "El cerro Karambá, también llamado Batero",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "las-huellas-de-mapura",
+        "los-pasos-de-xixaraca"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8690,
+      "prompt_sha256": "71ca0d92e9cbd1cd3a946ddfac534cdfd5660c7bf32c1b0f0f2df106a65de92e"
+    },
+    {
+      "job": "rio_mapura__environment_model--canon",
+      "modelo": "rio_mapura__environment_model",
+      "entidad": "El río Mápura y sus rocas",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-pasos-de-xixaraca"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 8177,
+      "prompt_sha256": "3ebf7b5f85faecfa0ea9890ad29665ac55d1c9cbdbc93d3307d2316d1d541248"
+    }
+  ]
+}

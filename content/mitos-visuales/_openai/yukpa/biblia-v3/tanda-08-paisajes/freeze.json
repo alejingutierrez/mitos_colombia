@@ -1,0 +1,85 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "yukpa",
+  "comunidad": "Yukpa",
+  "tanda": "tanda-08-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/yukpa.v3.json",
+    "sha256": "cfd2272fc59a92456b0411462623adfc6cfc0494b59b8c706d08512aa4ea342c"
+  },
+  "canon": {
+    "sha256": "c6e8138cdb632f14fc5002dbde79f78b7451a54c8cf3412c8a5d6b65d535bb71",
+    "verificado_en": "2026-09-29T02:22:58.406Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "mundo"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "serrania_del_perija__environment_model--canon",
+      "modelo": "serrania_del_perija__environment_model",
+      "entidad": "Serranía del Perijá (nacederos, quebradas, monte del Cesar)",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-dos-caminos-del-cielo",
+        "la-piedra-que-flota"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7653,
+      "prompt_sha256": "f36e36ee05158a1602eea86850ff5f41b5a024a2fac669efdb857df578c33838"
+    },
+    {
+      "job": "serrania_del_perija__state_sheet--estado_quema_y_sequia",
+      "modelo": "serrania_del_perija__state_sheet",
+      "entidad": "Serranía del Perijá (nacederos, quebradas, monte del Cesar)",
+      "categoria": "paisaje",
+      "vista": "estado_quema_y_sequia",
+      "estados": [
+        "quema_y_sequia"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "los-dos-caminos-del-cielo",
+        "la-piedra-que-flota"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7387,
+      "prompt_sha256": "9403df627b50697ba51c9021089950888e3144dbe42944a1ff9c6de1e954f5ac"
+    },
+    {
+      "job": "cumbres_shkhimo_y_tutarhi__spatial_model--canon",
+      "modelo": "cumbres_shkhimo_y_tutarhi__spatial_model",
+      "entidad": "Cumbres Shkhimo y Tütarhi",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-piedra-que-flota"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 7378,
+      "prompt_sha256": "df06cda895e2b24cea21248d6813d4156f0453a1b267e2a5dbddf64f89933a7d"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "pananes",
+  "comunidad": "Panán",
+  "tanda": "tanda-03-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/pananes.v3.json",
+    "sha256": "8d93b70d1b0b66bb77b0d395d4643339ab639357c4bf9a86d329850dde0f158b"
+  },
+  "canon": {
+    "sha256": "e4799c1c37247920d8ac717adb1374d600de3d353adbc42bf9d861a458f135f3",
+    "verificado_en": "2026-09-29T02:23:38.991Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Comunero de Panán adulto (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-chuchun-y-las-tres-quebradas",
+        "el-cucho-de-cuaichala-y-la-bajada-del-palo-santo",
+        "la-cangagua-o-la-chorrera-del-duende",
+        "la-entundada-el-quedado-el-espanto",
+        "la-huacas",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan",
+        "la-vieja-la-viuda-y-el-anima"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7943,
+      "prompt_sha256": "3d110e4f2c61b19d4e7b7a3cf7f1fd6fd06567fd4d02eece96c120256bb7d3f2"
+    },
+    {
+      "job": "tipo_anciano__identity_sheet--canon",
+      "modelo": "tipo_anciano__identity_sheet",
+      "entidad": "Mayor de Panán (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-chuchun-y-las-tres-quebradas",
+        "el-cualchio-y-la-olla-del-granizo",
+        "el-cueche",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan",
+        "la-tuta",
+        "la-waka"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7548,
+      "prompt_sha256": "e6ef0567514ed46b79b0bf1d26eb44cfdd74905d9673bdda44492c313275096d"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Comunera de Panán adulta (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "al-duende",
+        "el-chuchun-y-las-tres-quebradas",
+        "el-cueche",
+        "la-entundada-el-quedado-el-espanto",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8108,
+      "prompt_sha256": "c824dc4f99c8432670d877d211c997259bc7d78e5dabaec920cec79c7d9568a0"
+    },
+    {
+      "job": "tipo_anciana__identity_sheet--canon",
+      "modelo": "tipo_anciana__identity_sheet",
+      "entidad": "Mayora de Panán (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "el-cualchio-y-la-olla-del-granizo",
+        "la-laguna-de-maria-panana",
+        "la-waka"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7973,
+      "prompt_sha256": "0a95b5b2a37dc15ffd551190da2289c817718a9a7cd49dff3d2c62daade71040"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Comunera de Panán joven (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "al-duende",
+        "el-cueche",
+        "la-lechuza-y-el-cuichi-de-cuchicuelan"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7759,
+      "prompt_sha256": "0f5e30feff6db2032736d5c39e104ffdc8b58965132089eb05730a74334c886e"
+    },
+    {
+      "job": "tipo_nino__identity_sheet--canon",
+      "modelo": "tipo_nino__identity_sheet",
+      "entidad": "Niño de Panán (tipo)",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "al-duende",
+        "el-chutun",
+        "la-entundada-el-quedado-el-espanto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7422,
+      "prompt_sha256": "51669ab63f3ff58f9b98f32dab5671c8fabae22f5599591cf8177d47eb7e4dbb"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ufaina",
+  "comunidad": "Tanimuka (Ufaina)",
+  "tanda": "tanda-09-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ufaina.v3.json",
+    "sha256": "aa64b80ecc70f5aaf4142aa291dc9c4bd8964c26d6d3253721afa1ec6f44d595"
+  },
+  "canon": {
+    "sha256": "1aaa30b3d70bf5aafd9d3828039d6e628c8a39470a236d76f2cfa906cd8e6361",
+    "verificado_en": "2026-09-29T02:15:31.360Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "obtencion_de_la_noche__phenomenon_rule--canon",
+      "modelo": "obtencion_de_la_noche__phenomenon_rule",
+      "entidad": "La obtención de la noche",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8775,
+      "prompt_sha256": "716386fcc058d569544b2252dc26667ac18a79a5fb1a89ede4c2e5717664f751"
+    },
+    {
+      "job": "primera_maloca__spatial_model--canon",
+      "modelo": "primera_maloca__spatial_model",
+      "entidad": "La primera maloca (estructura y cubierta)",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "creacion-ufaina"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8855,
+      "prompt_sha256": "a10eb05e1ea30b74a060c8622716cf4059b8d982950f09991bf878d9e3b80486"
+    }
+  ]
+}

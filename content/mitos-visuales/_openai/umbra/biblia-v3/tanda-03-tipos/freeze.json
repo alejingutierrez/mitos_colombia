@@ -1,0 +1,78 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "umbra",
+  "comunidad": "Umbra",
+  "tanda": "tanda-03-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/umbra.v3.json",
+    "sha256": "7aeb052ddc0c7b85569c29e886c007d49e99cb442c3dc875a086150c2a9e0f17"
+  },
+  "canon": {
+    "sha256": "6aa19a1a16d43ab735dc5998716522f47331d2189bd68238997b040f79e6fa09",
+    "verificado_en": "2026-09-29T02:07:59.860Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre umbra adulto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "tasime-el-incesto",
+        "los-jeques-que-desaparecieron-en-batero"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7222,
+      "prompt_sha256": "967854aeb45160451556fa6a1392b0ac1b9a69d0cc4fb645bb44495df66b5405"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer umbra adulta",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "tasime-el-incesto",
+        "los-jeques-que-desaparecieron-en-batero"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7317,
+      "prompt_sha256": "6991c76ebf5b262533b65b08a05149cc37218e43f290bc7dda9058d28d8c6838"
+    },
+    {
+      "job": "tipo_mujer_joven__identity_sheet--canon",
+      "modelo": "tipo_mujer_joven__identity_sheet",
+      "entidad": "Tipo base · mujer umbra joven",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "tasime-el-incesto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7226,
+      "prompt_sha256": "e5c073485168716d44a87d78de3cc5603c89e96069ee9c8d9b91ddddc450e7f7"
+    }
+  ]
+}

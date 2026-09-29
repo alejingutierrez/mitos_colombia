@@ -1,0 +1,81 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "awa",
+  "comunidad": "Awa",
+  "tanda": "tanda-06-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/awa.v3.json",
+    "sha256": "71e999cc1d9d0241b3b7d2f9be767e3ae43f05871a9c5a55120625da99155fe1"
+  },
+  "canon": {
+    "sha256": "bae6e57ea34347d2f9cba2e03f031d8cf73be66457da7c33aebc986fe695bd02",
+    "verificado_en": "2026-09-29T02:18:26.845Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos",
+    "animales"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "arbol_grande__botanical_sheet--canon",
+      "modelo": "arbol_grande__botanical_sheet",
+      "entidad": "El árbol grande",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "barbachas-del-arbol-grande"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6345,
+      "prompt_sha256": "fc469f793fbb2970fd483f6715ad7a30a713eb9ab1c5e6147b6aac5e9330da49"
+    },
+    {
+      "job": "barbacha__botanical_sheet--canon",
+      "modelo": "barbacha__botanical_sheet",
+      "entidad": "La barbacha (negra y blanca)",
+      "categoria": "planta",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "barbachas-del-arbol-grande"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6264,
+      "prompt_sha256": "0bed5b6c0b3caf01e87a21dc081a759d569a6e87c7b26f84a8f7257d44ae2691"
+    },
+    {
+      "job": "hoja_utileria_awa__object_sheet--canon",
+      "modelo": "hoja_utileria_awa__object_sheet",
+      "entidad": "hoja utileria awa",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "guagaja"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6392,
+      "prompt_sha256": "cb8af9adc8c299c01986366290f87f55639df9216539692bfe15503d791e4159"
+    }
+  ]
+}

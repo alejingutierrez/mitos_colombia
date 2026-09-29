@@ -1,0 +1,46 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "umbra",
+  "comunidad": "Umbra",
+  "tanda": "tanda-06-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/umbra.v3.json",
+    "sha256": "7aeb052ddc0c7b85569c29e886c007d49e99cb442c3dc875a086150c2a9e0f17"
+  },
+  "canon": {
+    "sha256": "6aa19a1a16d43ab735dc5998716522f47331d2189bd68238997b040f79e6fa09",
+    "verificado_en": "2026-09-29T02:09:31.372Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos"
+  ],
+  "fichas_en_capa": 1,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "bee__object_sheet--canon",
+      "modelo": "bee__object_sheet",
+      "entidad": "El beé, la pintura negra",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "tasime-el-incesto"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7357,
+      "prompt_sha256": "457602b59dbf9b07c595fb2200f0989fc09c3e35c7f4106fb879c4f8061c5cf0"
+    }
+  ]
+}

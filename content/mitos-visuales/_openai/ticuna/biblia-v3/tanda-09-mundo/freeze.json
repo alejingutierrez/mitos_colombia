@@ -1,0 +1,71 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "ticuna",
+  "comunidad": "Ticuna",
+  "tanda": "tanda-09-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/ticuna.v3.json",
+    "sha256": "fd0c6ffe84de74c45161ae42823d427354bcefa0940f5eb72ce2559eac09f0a3"
+  },
+  "canon": {
+    "sha256": "508298d7f6b1c813ab2d8c0bf8438b2829b11c5b30bc6045eb9ce969dbb95dc9",
+    "verificado_en": "2026-09-29T02:12:53.797Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "vivienda-tikuna__spatial_model--canon",
+      "modelo": "vivienda-tikuna__spatial_model",
+      "entidad": "Vivienda Tikuna",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "la-canoa-de-moe",
+        "origen-del-friaje-tikuna",
+        "origen-del-sol-tikuna",
+        "origen-de-la-luna-tikuna",
+        "creacion",
+        "el-combate-del-sueno-y-la-palabra"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5553,
+      "prompt_sha256": "863956ec90baefe1e9ecf28b68aa0a8fec5f42956d02f8ceb01a230cf513172c"
+    },
+    {
+      "job": "friaje__phenomenon_rule--canon",
+      "modelo": "friaje__phenomenon_rule",
+      "entidad": "Friaje",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "origen-del-friaje-tikuna"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5860,
+      "prompt_sha256": "647398d8e0e87d80c831c953cf8dc77d44f12e7763afff1a272bf1359ef17dde"
+    }
+  ]
+}

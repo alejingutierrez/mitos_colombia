@@ -1,0 +1,61 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "yukpa",
+  "comunidad": "Yukpa",
+  "tanda": "tanda-02-tipos",
+  "capa": "tipos",
+  "capa_titulo": "personas · la gente de la comunidad",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/yukpa.v3.json",
+    "sha256": "cfd2272fc59a92456b0411462623adfc6cfc0494b59b8c706d08512aa4ea342c"
+  },
+  "canon": {
+    "sha256": "c6e8138cdb632f14fc5002dbde79f78b7451a54c8cf3412c8a5d6b65d535bb71",
+    "verificado_en": "2026-09-29T02:19:53.423Z"
+  },
+  "capas_aprobadas_antes": [],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "tipo_hombre_adulto__identity_sheet--canon",
+      "modelo": "tipo_hombre_adulto__identity_sheet",
+      "entidad": "Tipo base · hombre yukpa adulto",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-piedra-que-flota",
+        "los-dos-caminos-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6843,
+      "prompt_sha256": "9f04cdf7c8996fb0c8ca3692d8b8767bc2f14a1322c0038b6c64c0307ef54101"
+    },
+    {
+      "job": "tipo_mujer_adulta__identity_sheet--canon",
+      "modelo": "tipo_mujer_adulta__identity_sheet",
+      "entidad": "Tipo base · mujer yukpa adulta",
+      "categoria": "personaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "9:16",
+      "mitos": [
+        "la-piedra-que-flota",
+        "los-dos-caminos-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 6772,
+      "prompt_sha256": "858c44596033334decb6fe8cb3a790c9a2417d5e05aad8e058e92b28578800e9"
+    }
+  ]
+}

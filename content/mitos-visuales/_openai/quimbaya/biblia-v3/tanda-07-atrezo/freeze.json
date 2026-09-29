@@ -1,0 +1,64 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "quimbaya",
+  "comunidad": "Quimbaya",
+  "tanda": "tanda-07-atrezo",
+  "capa": "atrezo",
+  "capa_titulo": "atrezo, objetos y plantas",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/quimbaya.v3.json",
+    "sha256": "7a8c010af754b07a8d4715ae9be991c98819d264ed16211b189e0d5df6e75ce9"
+  },
+  "canon": {
+    "sha256": "f3d06bb1d1580d062cde491b91523719658943e00e9b8d7758863a7405e21b1e",
+    "verificado_en": "2026-09-29T02:16:10.920Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "colectivos"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "hoja_utileria_quimbaya__object_sheet--canon",
+      "modelo": "hoja_utileria_quimbaya__object_sheet",
+      "entidad": "hoja utileria quimbaya",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "batatabati",
+        "nabsacadas-la-estrella-caida"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8584,
+      "prompt_sha256": "de82b088cb994783e21b8caa37a36b3abbd7e64f423ed30876987acb6ea14d03"
+    },
+    {
+      "job": "sandalia_de_ipiare__object_sheet--canon",
+      "modelo": "sandalia_de_ipiare__object_sheet",
+      "entidad": "La sandalia perdida",
+      "categoria": "objeto",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "1:1",
+      "mitos": [
+        "ipiare-ebachi"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8722,
+      "prompt_sha256": "8457a84fa541af6d5679e96d589943c45f70b3540d9c7bc451d19884c1108db6"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "wounaan",
+  "comunidad": "Wounaan",
+  "tanda": "tanda-09-paisajes",
+  "capa": "paisajes",
+  "capa_titulo": "paisajes y lugares, a fondo completo",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/wounaan.v3.json",
+    "sha256": "260ca9c8d6260e63fc8772b82840e7288036bc9bd46f6591cc2a53bb4354747b"
+  },
+  "canon": {
+    "sha256": "4b1d21cb745ba08ba396fa1a73653b34d5c61368954d4e50d2e4719efce1a7ce",
+    "verificado_en": "2026-09-29T02:08:06.742Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "atrezo",
+    "mundo"
+  ],
+  "fichas_en_capa": 3,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "rio-y-selva-del-pacifico__environment_model--canon",
+      "modelo": "rio-y-selva-del-pacifico__environment_model",
+      "entidad": "Ríos y selva húmeda del Pacífico",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-baston-de-sueno",
+        "la-barca-de-dos-tintas",
+        "la-sal-del-weguer",
+        "las-manos-de-barro",
+        "madre-name"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6911,
+      "prompt_sha256": "1123bff33373bfc0c174f178cebcdd2be652795e8b45619e39ec4cbc09d0c3c8"
+    },
+    {
+      "job": "mar__environment_model--canon",
+      "modelo": "mar__environment_model",
+      "entidad": "Mar abierto por Maach Aai",
+      "categoria": "paisaje",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "las-manos-de-barro",
+        "la-sal-del-weguer"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6450,
+      "prompt_sha256": "bd6d3ea32841350962946de32812575c3fb359c2d1888dd168125aa9a15d3ef3"
+    },
+    {
+      "job": "playa-del-rio-baudo__spatial_model--canon",
+      "modelo": "playa-del-rio-baudo__spatial_model",
+      "entidad": "Playa del río Sábalo, en el Baudó",
+      "categoria": "lugar",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "las-manos-de-barro"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 6648,
+      "prompt_sha256": "91d82f803dc481227def63361f9171ac473eb540b9afe63c5e109a81adcd9ff7"
+    }
+  ]
+}

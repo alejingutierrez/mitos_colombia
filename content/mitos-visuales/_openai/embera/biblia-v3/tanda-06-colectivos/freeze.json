@@ -1,0 +1,62 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "embera",
+  "comunidad": "Embera",
+  "tanda": "tanda-06-colectivos",
+  "capa": "colectivos",
+  "capa_titulo": "personas · colectivos",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/embera.v3.json",
+    "sha256": "43c7f4f10e60ebf1b050bc1d22039f0fa7372f99d0f9242acc6c6ac0e7157dd8"
+  },
+  "canon": {
+    "sha256": "c63a3ed13c323e894a92ebe4c994be06637f9a34d1e703031bad914c4b1edebd",
+    "verificado_en": "2026-09-29T02:15:27.682Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales"
+  ],
+  "fichas_en_capa": 2,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "burumia__group_grammar--canon",
+      "modelo": "burumia__group_grammar",
+      "entidad": "Los Burumia",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 7707,
+      "prompt_sha256": "f0d50af997cc3593d1bec12152eeb50a716c254d08be7beebd349806a2e3481c"
+    },
+    {
+      "job": "gente_embera__group_grammar--canon",
+      "modelo": "gente_embera__group_grammar",
+      "entidad": "Gente Emberá del Bojayá",
+      "categoria": "colectivo",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "los-burumias-y-carautas"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 8073,
+      "prompt_sha256": "798331e22126d76af35afe77fc58d4d31dc34d6017f4e019335480be55d40d03"
+    }
+  ]
+}

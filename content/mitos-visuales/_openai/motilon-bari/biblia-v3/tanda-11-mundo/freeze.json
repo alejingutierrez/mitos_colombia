@@ -1,0 +1,137 @@
+{
+  "schema": "biblia-tanda-freeze/v3",
+  "corpus": "motilon-bari",
+  "comunidad": "Barí",
+  "tanda": "tanda-11-mundo",
+  "capa": "mundo",
+  "capa_titulo": "arquitectura y fenomenos, sobre papel",
+  "fecha": "2026-09-29",
+  "modelo": "gpt-image-2.5-sunburst",
+  "calidad": "high",
+  "generador": "prepare-biblia-tanda-v3.mjs · ensamblar() de prepare-biblia-probe-v3.mjs",
+  "plan": {
+    "ruta": "content/mitos-visuales/motilon-bari.v3.json",
+    "sha256": "2775ffb3bfc432b435ab7b3dd4a3840cb24764f89acda013c3ed27d3ea99fbf9"
+  },
+  "canon": {
+    "sha256": "aa03517f459efabb921c1e2ef28e49ae58b3aa900ca061c516ba03060880951a",
+    "verificado_en": "2026-09-29T02:10:17.237Z"
+  },
+  "capas_aprobadas_antes": [
+    "tipos",
+    "mortales",
+    "miticos",
+    "colectivos",
+    "animales",
+    "atrezo"
+  ],
+  "fichas_en_capa": 6,
+  "fichas_ya_preparadas": 0,
+  "fichas": [
+    {
+      "job": "bohio__spatial_model--canon",
+      "modelo": "bohio__spatial_model",
+      "entidad": "Bohío comunal",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "caminar-liviano-hacia-el-mas-alla",
+        "el-gran-arbol-que-hizo-los-rios",
+        "sabaseba-y-los-hijos-de-la-pina"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 7287,
+      "prompt_sha256": "39e659f147dda5da13627c31687446cf2cc23d28d485a6d88582a6a8b86f29ca"
+    },
+    {
+      "job": "luna__phenomenon_rule--canon",
+      "modelo": "luna__phenomenon_rule",
+      "entidad": "Luna como cuerpo celeste",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron",
+        "nandou-chibaig-y-las-luces-del-cielo"
+      ],
+      "sensibilidad": "sensitive",
+      "largo_prompt": 5428,
+      "prompt_sha256": "8d11246acb1e3951a31a6dd6ebdf4be59c33c2f0c8f2725bd5904736dd2b88f7"
+    },
+    {
+      "job": "casitas-de-los-zamuros__spatial_model--canon",
+      "modelo": "casitas-de-los-zamuros__spatial_model",
+      "entidad": "Las casitas de los zamuros en el cielo",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "el-dia-en-que-la-luna-y-la-tierra-se-separaron"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 5191,
+      "prompt_sha256": "167aaa30f1f36a3975bdc2beab85511c4dc0585af4b8c46ca852180e7e97daf8"
+    },
+    {
+      "job": "cenizas-dispersadas__phenomenon_rule--canon",
+      "modelo": "cenizas-dispersadas__phenomenon_rule",
+      "entidad": "Cenizas dispersadas por el viento",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "sibabio-y-las-cenizas-del-mundo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5789,
+      "prompt_sha256": "300ebbe42e691c3aa96254a40682eec1e71eeb7fbdcc1336dab1e4ca3073cb6f"
+    },
+    {
+      "job": "dia-y-noche__phenomenon_rule--canon",
+      "modelo": "dia-y-noche__phenomenon_rule",
+      "entidad": "El día y la noche: el recorrido de Ñandóu y el paseo de Chibáig",
+      "categoria": "fenomeno",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "nandou-chibaig-y-las-luces-del-cielo"
+      ],
+      "sensibilidad": "public",
+      "largo_prompt": 5466,
+      "prompt_sha256": "03587f85861e356ed15a49d2c95c2fdddd9bccbc3dde183f5e82c92726d9da65"
+    },
+    {
+      "job": "trampa-de-bijao__spatial_model--canon",
+      "modelo": "trampa-de-bijao__spatial_model",
+      "entidad": "La trampa de palos y hojas de bijao",
+      "categoria": "arquitectura",
+      "vista": "canon",
+      "estados": [
+        "canonico"
+      ],
+      "aspect": "16:9",
+      "mitos": [
+        "sibabio-y-las-cenizas-del-mundo"
+      ],
+      "sensibilidad": "contextual",
+      "largo_prompt": 4841,
+      "prompt_sha256": "68d26559ab1fe2c056d5ab8eeb9a9c43832790b949ae6de9f8c1bda182e52f86"
+    }
+  ]
+}
