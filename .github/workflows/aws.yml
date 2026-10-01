@@ -17,6 +17,7 @@ env:
 jobs:
   checks:
     runs-on: ubuntu-24.04
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
@@ -32,6 +33,7 @@ jobs:
     needs: checks
     if: github.event_name != 'pull_request' && vars.MITOS_AWS_BUILD_ENABLED == 'true' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/codex/aws-migration')
     runs-on: ubuntu-24.04-arm
+    timeout-minutes: 45
     permissions:
       contents: read
       id-token: write
@@ -61,27 +63,12 @@ jobs:
         env:
           NEXT_PUBLIC_GA_ID: ${{ vars.MITOS_PUBLIC_GA_ID }}
           NEXT_PUBLIC_GTM_ID: ${{ vars.MITOS_PUBLIC_GTM_ID }}
-        run: |
-          registry="$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com"
-          aws ecr get-login-password | docker login --username AWS --password-stdin "$registry"
-          docker build --platform linux/arm64 --target prod --build-arg MITOS_DEPLOYMENT_SHA="$GITHUB_SHA" --build-arg NEXT_PUBLIC_GA_ID --build-arg NEXT_PUBLIC_GTM_ID -t "$registry/$ECR_REPOSITORY:$GITHUB_SHA" .
-          docker push "$registry/$ECR_REPOSITORY:$GITHUB_SHA"
-          digest=$(aws ecr describe-images --repository-name "$ECR_REPOSITORY" --image-ids imageTag="$GITHUB_SHA" --query 'imageDetails[0].imageDigest' --output text)
-          test "${digest#sha256:}" != "$digest"
-          echo "digest=$digest" >> "$GITHUB_OUTPUT"
-          aws ecr wait image-scan-complete --repository-name "$ECR_REPOSITORY" --image-id imageDigest="$digest"
-          aws ecr describe-image-scan-findings --repository-name "$ECR_REPOSITORY" --image-id imageDigest="$digest" > build-input/image-scan.json
-          node -e 'const r=require("./build-input/image-scan.json"); const c=r.imageScanFindings.findingSeverityCounts||{};if((c.CRITICAL||0)>0||(c.HIGH||0)>0)process.exit(1)'
-          docker create --name mitos-assets "$registry/$ECR_REPOSITORY@$digest"
-          docker cp mitos-assets:/app/.next/static build-input/static
-          docker rm mitos-assets
-          aws s3 cp build-input/static "s3://mitos-colombia-$AWS_ACCOUNT_ID-media/static/$GITHUB_SHA/_next/static/" --recursive --cache-control 'public,max-age=31536000,immutable' --only-show-errors
-          node scripts/aws/release-receipt.mjs "$digest" > build-input/release.json
-          aws s3 cp build-input/release.json "s3://$OPERATIONS_BUCKET/ci/$GITHUB_SHA/release.json" --only-show-errors
+        run: bash scripts/aws/build-image.sh
   deploy:
     needs: image
     if: github.ref == 'refs/heads/main' && vars.MITOS_AWS_CUTOVER_COMPLETE == 'true' && needs.image.outputs.source_verified == 'true'
     runs-on: ubuntu-24.04
+    timeout-minutes: 15
     environment: mitos-aws-production
     permissions:
       contents: read

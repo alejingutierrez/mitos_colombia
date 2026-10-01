@@ -11,7 +11,7 @@ La migración está en curso. La web pública continúa en Vercel y Neon sigue s
 | P0 inventario | Parcial | Vincular conexiones y Blob locales a las variables reales del deployment; propietarios de seis tablas sin consumidor; tráfico y baseline colombiano comparable. |
 | P1 aplicación | Build y contratos locales pasan | Integración completa con RDS/S3, restore y conmutación ensayada; sacar generación/exportaciones largas del proceso HTTP. |
 | P2 destino | Base propia creada | CDN, WAF, TLS, observación completa, jobs bajo demanda y entorno temporal de QA. |
-| P3 ensayo/copia | Respaldo inicial local en marcha | Universo Blob ligado a producción, DB de ensayo, mapa de URLs, paridad final y restauración. |
+| P3 ensayo/copia | Respaldo inicial local verificado | Universo Blob ligado a producción, DB de ensayo, mapa de URLs, paridad final y restauración. |
 | P4 QA | Smoke local de lectura | Edición/publicación de fixtures, auth, pagos test, RSC, medios y taller en AWS. |
 | P5 carga/fallos | Pendiente | Carga, créditos CPU, memoria, pérdida del host, restore, deploy fallido y conciliación de cola. |
 | P6 corte | Bloqueado por las puertas previas | Freeze, callback inbox provisional, dump final, un writer, DNS/CDN y smoke público. |
@@ -45,17 +45,19 @@ Los tres servicios de RAG/Cocina permanecen `RUNNING` y su raíz HTTP respondió
 
 ## Automatización preparada
 
-`.github/workflows/aws.yml` hace checks, build ARM64, scan ECR, publicación de estáticos por SHA y recibo SHA → digest → snapshot. OIDC no necesita llaves AWS permanentes en GitHub. La rama de migración tiene deshabilitados previews Vercel para impedir builds contra la base viva durante esta preparación.
+`.github/workflows/aws.yml` hace checks, build ARM64, scan ECR, publicación de estáticos por SHA y recibo SHA → digest → snapshot. OIDC no necesita llaves AWS permanentes en GitHub. Cada job tiene timeout y los reintentos reutilizan una imagen existente únicamente si coinciden SHA, snapshot, procedencia verificada e IDs públicos; nunca reemplazan una etiqueta inmutable. La rama de migración tiene deshabilitados previews Vercel para impedir builds contra la base viva durante esta preparación.
 
 `MITOS_AWS_BUILD_ENABLED=true` habilita probar imágenes. `MITOS_AWS_CUTOVER_COMPLETE=false` mantiene bloqueado el deploy público. El snapshot inicial conserva `sourceVerified=false`; esa marca no se cambia para hacer pasar una puerta.
 
-`infra/aws/host/deploy.sh` está preparado para readiness/calentar un candidato, comprobar margen de RAM, conmutar el proxy, smoke público y volver a la imagen anterior sobre la misma RDS ante fallo. El worker se drena aparte. Su sintaxis pasa, pero el flujo completo todavía no fue ensayado. No se instala ni activa como release de producción hasta P3–P5.
+`infra/aws/host/deploy.sh` está preparado para readiness/calentar un candidato, comprobar margen de RAM, conmutar el proxy, smoke público y volver a la imagen anterior sobre la misma RDS ante fallo. El worker se drena aparte. La reversión arranca/verifica la imagen previa antes de devolverle tráfico; si no puede recuperarla, conserva el candidato y reporta atención manual. Pasan siete ensayos de fallos con CLI simuladas: smoke público, validación Nginx, worker, recibo final, primer release, reintento y predecesor no recuperable. El ensayo real en EC2/RDS sigue pendiente; no se confunden esas simulaciones con recuperación productiva. No se instala ni activa como release de producción hasta P3–P5.
 
 Antes de habilitar releases ordinarios falta automatizar refresco de snapshot desde RDS verificada, migraciones con rol separado y QA temporal. No basta con cambiar la variable del corte a true.
 
+El PR público [#76](https://github.com/alejingutierrez/mitos_colombia/pull/76) está en borrador. Los checks de su primer commit pasaron en [GitHub Actions](https://github.com/alejingutierrez/mitos_colombia/actions/runs/36886428189); esa ejecución omite imagen y deploy por ser un PR. La construcción ARM64 por push se verifica por separado.
+
 ## Evidencia local
 
-- 96 tests focalizados de runtime, pagos, tarot y comentarios: PASS.
+- 104 tests focalizados de runtime, pagos, tarot y comentarios: PASS.
 - ESLint focalizado: PASS.
 - Build sin secretos: 886 páginas generadas; solo aviso de fallback de Asimovian.
 - Auditoría standalone: sin taller, `.env`, fuentes de archivo ni symlinks que salgan del paquete; ver [standalone-package.json](receipts/standalone-package.json).
@@ -63,6 +65,14 @@ Antes de habilitar releases ordinarios falta automatizar refresco de snapshot de
 - Navegador local: navegación del home al relato de El Alma, imagen visible cargada, sin overflow ni errores de consola en esa lectura.
 
 Estas pruebas no prueban producción AWS ni sus objetivos de rendimiento.
+
+## Respaldo inicial del taller
+
+Se archivaron 39.078 archivos y 17.914.015.376 bytes desde `content`, `editorial`, `docs`, `output`, `artifacts` y `public` del checkout original. Cada objeto tiene versión S3, checksum SHA-256, tamaño y comprobación de que el archivo fuente no cambió durante la copia. Las 66 referencias por symlink apuntan a archivos también archivados; no quedan destinos sin resolver. Se excluyeron seis archivos regenerables.
+
+El manifiesto completo y el mapa de aliases permanecen en el bucket privado. El repo público conserva únicamente el recibo agregado: [local-archive.json](receipts/local-archive.json).
+
+Se restauraron cinco archivos de versiones concretas —freeze, audio, fuente editorial, imagen de referencia y manifiesto de hashes— y todos coincidieron por bytes y SHA-256: [representative-restore.json](receipts/representative-restore.json). Esto verifica restauración de archivos; aún falta reconstruir una edición completa y preservar bundles/overlays de todas las ramas y worktrees vivos. Tampoco sustituye el respaldo final de Neon y Blob durante P3/P6.
 
 ## Bloqueo de secretos
 

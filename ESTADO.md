@@ -327,6 +327,10 @@ output/<comunidad>/     ← espejo, sólo binarios, ignorado
 docs/                   ← sólo doctrina
 ```
 
+## Migración AWS en curso · 2026-10-01
+
+La implementación vive en la rama `codex/aws-migration`, aislada de los cambios locales del home y del taller. Se creó infraestructura propia en la cuenta de RAG/Cocina y se verificó el respaldo inicial del taller. La web continúa en Vercel; Neon sigue siendo el writer. El estado de las puertas y los recibos están en [`docs/migration-aws-2026-09-30/IMPLEMENTACION.md`](docs/migration-aws-2026-09-30/IMPLEMENTACION.md), junto al spec económico sin presupuesto de IA.
+
 ## Trampas conocidas
 
 - **`git` no arranca en esta máquina**: `/usr/bin/git` exige aceptar la licencia

@@ -21,6 +21,12 @@ RUN test -s build-input/catalog.sqlite && npm run build && node scripts/aws/audi
 
 FROM node:24-bookworm-slim AS prod
 WORKDIR /app
+ARG MITOS_DEPLOYMENT_SHA
+ARG MITOS_SNAPSHOT_SHA256
+ARG MITOS_SOURCE_VERIFIED
+ARG NEXT_PUBLIC_GA_ID
+ARG NEXT_PUBLIC_GTM_ID
+LABEL org.opencontainers.image.revision=$MITOS_DEPLOYMENT_SHA com.mitos.snapshot.sha256=$MITOS_SNAPSHOT_SHA256 com.mitos.snapshot.verified=$MITOS_SOURCE_VERIFIED com.mitos.public.ga=$NEXT_PUBLIC_GA_ID com.mitos.public.gtm=$NEXT_PUBLIC_GTM_ID
 ENV NODE_ENV=production NEXT_TELEMETRY_DISABLED=1 HOSTNAME=0.0.0.0 PORT=3000
 RUN groupadd --gid 1001 nextjs && useradd --uid 1001 --gid nextjs --no-create-home nextjs
 COPY --from=build --chown=nextjs:nextjs /app/.next/standalone ./
