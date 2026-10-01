@@ -94,7 +94,7 @@ export async function POST(request) {
     );
   }
 
-  for (const tag of tags) revalidateTag(tag);
+  for (const tag of tags) revalidateTag(tag, { expire: 0 });
   // El `revalidatePath` es el que tumba el HTML prerenderizado; sin él la
   // página sigue sirviéndose del CDN aunque el dato ya esté fresco.
   for (const path of paths) revalidatePath(path);

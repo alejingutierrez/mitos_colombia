@@ -3,6 +3,7 @@ const fs = require('node:fs/promises');
 const path = require('node:path');
 const { createHash, randomUUID } = require('node:crypto');
 const { serialize, deserialize } = require('node:v8');
+const responseTags = value => String(value?.headers?.['x-next-cache-tags'] || '').split(',').map(t => t.trim()).filter(Boolean);
 const hash = value => createHash('sha256').update(String(value)).digest('hex');
 module.exports = class FileCache {
   constructor() {
@@ -15,7 +16,7 @@ module.exports = class FileCache {
   async get(key, ctx = {}) {
     try {
       const entry = deserialize(await fs.readFile(/* turbopackIgnore: true */ path.join(/* turbopackIgnore: true */ this.entries, hash(key))));
-      for (const tag of new Set([...(entry.tags || []), ...(ctx.softTags || [])])) {
+      for (const tag of new Set([...(entry.tags || []), ...responseTags(entry.value), ...(ctx.tags || []), ...(ctx.softTags || [])])) {
         if ((entry.markers?.[tag] || '') !== await this.marker(tag)) return null;
       }
       return { value: entry.value, lastModified: entry.lastModified };
@@ -23,7 +24,7 @@ module.exports = class FileCache {
   }
   async set(key, value, ctx = {}) {
     await fs.mkdir(/* turbopackIgnore: true */ this.entries, { recursive: true });
-    const tags = [...new Set([...(ctx.tags || []), ...(ctx.softTags || []), ...(value?.tags || [])])];
+    const tags = [...new Set([...(ctx.tags || []), ...(ctx.softTags || []), ...(value?.tags || []), ...responseTags(value)])];
     const markers = Object.fromEntries(await Promise.all(tags.map(async t => [t, await this.marker(t)])));
     const dest = path.join(/* turbopackIgnore: true */ this.entries, hash(key)), temp = dest + '.' + randomUUID();
     await fs.writeFile(/* turbopackIgnore: true */ temp, serialize({ value, lastModified: Date.now(), tags, markers }));

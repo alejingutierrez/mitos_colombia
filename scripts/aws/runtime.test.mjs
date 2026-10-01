@@ -108,3 +108,18 @@ test('media without an explicit type retains usable image, audio and font MIME t
   assert.equal(mediaContentType('x.woff2'),'font/woff2');
   assert.equal(mediaContentType('x.bin',null,'image/png'),'image/png');
 });
+
+// Next stores APP_PAGE/APP_ROUTE invalidation tags in the response headers.
+// This mirrors the observed stage edit: PUT persisted while cached HTML stayed old.
+test('route response tags invalidate prerendered HTML and RSC across processes',async()=>{
+ const dir=await mkdtemp(path.join(os.tmpdir(),'mitos-page-cache-test-'));const before=process.env.MITOS_CACHE_DIR;process.env.MITOS_CACHE_DIR=dir;
+ try{
+  const reader=new Cache(),writer=new Cache();const routeTag='_N_T_/mitos/qa-cache';
+  await reader.set('/mitos/qa-cache',{kind:'APP_PAGE',html:'old title',rscData:Buffer.from('old RSC'),headers:{'x-next-cache-tags':'_N_T_/layout,'+routeTag}},{kind:'APP_PAGE'});
+  assert.equal((await reader.get('/mitos/qa-cache',{kind:'APP_PAGE'})).value.html,'old title');
+  await writer.revalidateTag(routeTag,{expire:0});
+  assert.equal(await reader.get('/mitos/qa-cache',{kind:'APP_PAGE'}),null);
+  await writer.set('/mitos/qa-cache',{kind:'APP_PAGE',html:'new title',rscData:Buffer.from('new RSC'),headers:{'x-next-cache-tags':routeTag}},{kind:'APP_PAGE'});
+  assert.equal((await reader.get('/mitos/qa-cache',{kind:'APP_PAGE'})).value.rscData.toString(),'new RSC');
+ }finally{if(before===undefined)delete process.env.MITOS_CACHE_DIR;else process.env.MITOS_CACHE_DIR=before;await rm(dir,{recursive:true,force:true});}
+});

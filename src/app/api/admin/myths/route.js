@@ -1016,8 +1016,8 @@ export async function POST(request) {
     const keywords = parseKeywordsRaw(normalized.focus_keywords_raw);
     await replaceMythKeywords(created.id, keywords);
 
-    revalidateTag("myth");
-    revalidateTag("taxonomy");
+    revalidateTag("myth", { expire: 0 });
+    revalidateTag("taxonomy", { expire: 0 });
     // La interna del mito está prerenderizada: sin `revalidatePath` el CDN
     // sigue sirviendo el HTML viejo aunque el dato ya esté fresco.
     revalidatePath(`/mitos/${data.slug}`);
@@ -1147,8 +1147,8 @@ export async function PUT(request) {
     const keywords = parseKeywordsRaw(normalized.focus_keywords_raw);
     await replaceMythKeywords(id, keywords);
 
-    revalidateTag("myth");
-    revalidateTag("taxonomy");
+    revalidateTag("myth", { expire: 0 });
+    revalidateTag("taxonomy", { expire: 0 });
     revalidatePath(`/mitos/${data.slug}`);
     if (existing.slug && existing.slug !== data.slug) {
       revalidatePath(`/mitos/${existing.slug}`);
