@@ -7,7 +7,7 @@ import {
   filterAllowedCommunities,
   listEmptyCommunities,
 } from "../../lib/communityFilters";
-import { getTaxonomy, listMythLinksByTaxon } from "../../lib/myths";
+import { getTaxonomy, getCommunitySpotlights, listMythLinksByTaxon } from "../../lib/myths";
 import { REGION_MOTIFS, regionAccent } from "../../lib/region-info";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
@@ -41,7 +41,7 @@ const ACENTO = {
 };
 
 export default async function ComunidadesPage() {
-  const taxonomy = await getTaxonomy();
+  const [taxonomy, spotlights] = await Promise.all([getTaxonomy(), getCommunitySpotlights({ perCommunity: 4 })]);
 
   // Todas las comunidades con al menos un relato. El listón bajó de seis a uno
   // —ver `communityFilters`—: con seis se escondían diecisiete comunidades con
@@ -57,7 +57,7 @@ export default async function ComunidadesPage() {
       slug: c.slug,
       name: c.name,
       count: Number(c.myth_count) || 0,
-      imageUrl: c.image_url,
+      imageUrl: c.image_url || spotlights.find((group) => group.slug === c.slug && group.regionSlug === c.region_slug)?.myths[0]?.imageUrl,
       motif: REGION_MOTIFS[c.region_slug] || "condor",
       regionName: c.region,
       regionSlug: c.region_slug,
@@ -69,6 +69,7 @@ export default async function ComunidadesPage() {
   // Los relatos que entraron sin pueblo atribuido. No son una comunidad y no
   // van en la mesa: tienen su propio registro, y desde aquí su puerta.
   const unattributed = collectUnattributed(taxonomy.communities);
+  if (unattributed) unattributed.territories = unattributed.territories.map((territory) => ({...territory, imageUrl: spotlights.find((group) => group.generic && group.regionSlug === territory.slug)?.myths[0]?.imageUrl}));
 
   // Lo que queda fuera, dicho con nombre y apellido en vez de con un umbral.
   const sinRelatos = listEmptyCommunities(taxonomy.communities);
@@ -103,11 +104,7 @@ export default async function ComunidadesPage() {
     .filter((group) => group.myths.length > 0);
 
   const totalRelatos = communities.reduce((t, c) => t + (c.count || 0), 0);
-  const alcanzables = totalRelatos + (unattributed?.total || 0);
-  const totalArchivo = (taxonomy.regions || []).reduce(
-    (t, region) => t + (Number(region.myth_count) || 0),
-    0
-  );
+
 
   const nota = [
     `Están las ${communities.length} comunidades que tienen al menos un relato en el archivo, sin umbral: las de tres relatos y las de uno también aparecen, porque su página es la única puerta a esos relatos.`,
@@ -125,12 +122,8 @@ export default async function ComunidadesPage() {
   return (
     <CommunityIndexTemplate
       eyebrow="Las comunidades del archivo"
-      title="Comunidades que preservan la tradición oral"
-      description={`${communities.length} comunidades con página propia y ${totalRelatos} relatos entre todas, a la vista de entrada. El tamaño de cada pieza dice cuántos relatos guarda; la búsqueda y los filtros recomponen la mesa sin cambiar de página. Más abajo entran los ${
-        unattributed?.total || 0
-      } relatos que llegaron sin pueblo identificado${
-        totalArchivo ? `: entre unos y otros, ${alcanzables} de los ${totalArchivo} del archivo` : ""
-      }.`}
+      title="Una comunidad, muchas voces"
+      description={`${communities.length} comunidades y ${totalRelatos} relatos. Entra por una ilustración o encuentra una voz por su nombre y territorio.`}
       communities={communities}
       regions={regions}
       unattributed={unattributed}

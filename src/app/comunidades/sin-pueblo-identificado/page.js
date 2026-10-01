@@ -35,9 +35,9 @@ const SITE_URL = (
   .trim()
   .replace(/\/+$/, "");
 
-const TITULO = "Relatos sin pueblo identificado";
+const TITULO = "Mitos mestizos y mixtos";
 const DESCRIPCION =
-  "Los relatos del archivo que llegaron sin constancia de qué pueblo los contaba, ordenados por el territorio donde se recogieron.";
+  "Relatos clasificados en el archivo como mestizos o mixtos, organizados por territorio y con sus ilustraciones.";
 
 export async function generateMetadata() {
   const seo = await getSeoEntry("page", "sin-pueblo-identificado");
@@ -111,7 +111,7 @@ export default async function SinPuebloIdentificadoPage() {
       name: relato.title,
     }));
 
-  const lead = `${total} relatos del archivo llegaron sin que la fuente dejara constancia de qué pueblo los contaba. No son una comunidad: son lo que queda cuando la atribución se pierde por el camino.`;
+  const lead = `${total} relatos clasificados en el archivo como mestizos o mixtos. Explora sus imágenes y las historias que conectan pueblos, ciudades y territorios.`;
 
   const sections = [
     {
@@ -122,7 +122,7 @@ export default async function SinPuebloIdentificadoPage() {
     },
     {
       title: "Qué hay dentro",
-      body: "Conviven dos cosas distintas. Una parte son relatos de tradición mestiza y campesina que circulan por pueblos y veredas de todo el país, sin dueño único, y para los que «pueblo de origen» no es la pregunta adecuada. La otra parte son relatos claramente indígenas —de la Amazonía sobre todo— cuya comunidad la fuente sí conocía pero no anotó.\nEl archivo no puede distinguirlas sin volver a las fuentes, y no va a adivinar. Por eso el rótulo dice lo que sabe: no se identificó el pueblo.",
+      body: "Conviven dos cosas distintas. Una parte son relatos de tradición mestiza y campesina que circulan por pueblos y veredas de todo el país, sin dueño único, y para los que «pueblo de origen» no es la pregunta adecuada. La otra parte son relatos claramente indígenas —de la Amazonía sobre todo— cuya comunidad la fuente sí conocía pero no anotó.\nEl archivo no puede distinguirlas sin volver a las fuentes, y no va a adivinar. Las etiquetas mestizo y mixto conservan esa clasificación del archivo; no reemplazan la atribución específica cuando una fuente la permite.",
     },
     {
       title: "Por qué se ordenan por territorio",

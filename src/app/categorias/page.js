@@ -1,7 +1,7 @@
 import { TaxonomyIndexTemplate } from "../../components/templates";
 import { Pagination } from "../../components/molecules";
 import { formatCategoryName } from "../../lib/formatters";
-import { getTaxonomy, listMythLinksByTaxon } from "../../lib/myths";
+import { getTaxonomy, listMyths, listMythLinksByTaxon } from "../../lib/myths";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 import { resolveSearchParams } from "../../lib/next-route-props";
 
@@ -58,12 +58,13 @@ export default async function CategoriasPage({ searchParams }) {
     )
   );
 
+  const fallbackArt = new Map(await Promise.all(paginatedTags.filter((tag) => !tag.image_url).map(async (tag) => [tag.slug, (await listMyths({tag:tag.slug,limit:1})).items[0]?.image_url])));
   const items = paginatedTags.map((tag) => ({
     title: formatCategoryName(tag.name),
     href: `/categorias/${tag.slug}`,
     count: tag.myth_count,
     motif: "sol",
-    imageUrl: tag.image_url,
+    imageUrl: tag.image_url || fallbackArt.get(tag.slug),
     description: undefined,
   }));
 
@@ -83,7 +84,7 @@ export default async function CategoriasPage({ searchParams }) {
   return (
     <TaxonomyIndexTemplate
       eyebrow="Categorías temáticas"
-      title="Mitos por tema y motivo narrativo"
+      title="Los hilos del archivo"
       description="Cada categoría reúne relatos que comparten un tema, un motivo o una característica común: creación, castigo, criaturas, transformación y más."
       items={items}
       mythIndex={mythIndex}

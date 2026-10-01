@@ -249,7 +249,7 @@ const IMPORTER_BUCKETS = new Set([
   "sin comunidad",
 ]);
 
-export const UNATTRIBUTED_LABEL = "Sin pueblo identificado";
+export const UNATTRIBUTED_LABEL = "Mestizos y mixtos";
 
 export function isImporterBucket(name) {
   return IMPORTER_BUCKETS.has(String(name || "").trim().toLowerCase());
@@ -294,7 +294,7 @@ export function assignThemeChips({
   items = [],
   tagsOf = () => [],
   keyOf = (item) => item?.slug,
-  max = 4,
+  max = 8,
   min = 2,
 } = {}) {
   const frequency = new Map();
@@ -307,37 +307,32 @@ export function assignThemeChips({
     });
   });
 
-  const ranked = [...frequency.values()].sort(
-    (a, b) => b.count - a.count || String(a.name).localeCompare(String(b.name))
+  const core = new Set(["origen", "agua", "animales", "transformacion", "muerte", "naturaleza", "amor", "astucia"]);
+  const ranked = [...frequency.values()].filter((tag) => tag.count >= min).sort(
+    (a, b) => Number(core.has(b.slug)) - Number(core.has(a.slug)) || b.count - a.count || String(a.name).localeCompare(String(b.name))
   );
 
   const assign = (candidates) => {
     const counts = new Map();
+    const themeOf = new Map();
     items.forEach((item) => {
       const tags = tagsOf(item) || [];
-      const chip = candidates.find((candidate) =>
-        tags.some((tag) => tag.slug === candidate.slug)
-      );
+      const chip = candidates.filter((candidate) => tags.some((tag) => tag.slug === candidate.slug))
+        .sort((a, b) => (counts.get(a.slug) || 0) - (counts.get(b.slug) || 0))[0];
       if (chip) counts.set(chip.slug, (counts.get(chip.slug) || 0) + 1);
+      themeOf.set(keyOf(item), chip?.slug || null);
     });
-    return counts;
+    return { counts, themeOf };
   };
 
-  let chips = ranked.slice(0, Math.max(max, 0) + 2);
-  for (let pass = 0; pass < 4; pass += 1) {
-    const counts = assign(chips);
+  let chips = ranked.slice(0, Math.max(max, 0));
+  for (let pass = 0; pass < max + 1; pass += 1) {
+    const { counts } = assign(chips);
     const kept = chips.filter((chip) => (counts.get(chip.slug) || 0) >= min);
     if (kept.length === chips.length) break;
     chips = kept;
   }
-  chips = chips.slice(0, max);
-
-  const themeOf = new Map();
-  items.forEach((item) => {
-    const tags = tagsOf(item) || [];
-    const chip = chips.find((candidate) => tags.some((tag) => tag.slug === candidate.slug));
-    themeOf.set(keyOf(item), chip ? chip.slug : null);
-  });
+  const { themeOf } = assign(chips);
 
   return { chips: chips.map(({ name, slug }) => ({ name, slug })), themeOf };
 }

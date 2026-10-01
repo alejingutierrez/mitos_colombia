@@ -97,6 +97,7 @@ export function readArchiveParams(searchParams = {}, page = 1) {
     routePage > 1 ? routePage : pageFromOffset(source.offset, limit);
 
   return {
+    vista: paramValue(source.vista) === "columnas" ? "columnas" : "imagen",
     region,
     community,
     tag,
@@ -126,6 +127,7 @@ export function buildArchiveQuery(values = {}) {
   if (Number.isFinite(limit) && limit !== ARCHIVE_DEFAULT_LIMIT) {
     params.set("limit", String(parseArchiveLimit(limit)));
   }
+  if (values.vista === "columnas") params.set("vista", "columnas");
   const query = params.toString();
   return query ? `?${query}` : "";
 }

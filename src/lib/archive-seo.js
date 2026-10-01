@@ -5,6 +5,7 @@ export const ARCHIVE_QUERY_KEYS = [
   "tag",
   "limit",
   "offset",
+  "vista",
 ];
 
 export function hasArchiveQuery(searchParams = {}) {

@@ -45,17 +45,17 @@ export function RoutePlate({
       href={`/rutas/${slug}`}
       className={cn(
         styles.card,
-        "group relative flex h-full flex-col overflow-hidden border border-line-200 bg-paper"
+        "group relative flex h-full flex-col overflow-hidden bg-paper"
       )}
     >
       <span className={styles.thread} aria-hidden="true" />
       <ImageFrame
         src={imageUrl}
         alt=""
-        ratio="16 / 9"
+        ratio="3 / 2"
         sizes={sizes}
         /* `images.qualities` de next.config.js es lista blanca: 68 · 75 · 90. */
-        quality={68}
+        quality={90}
         priority={priority}
         placeholderMotif={MOTIF_BY_ACCENT[accent] || "hoja"}
         placeholderSize={72}

@@ -295,8 +295,9 @@ function Hero({ variant, product, onAction }) {
           src={heroVisual.src}
           alt={heroVisual.alt}
           fill
-          priority
-          loading="eager"
+          preload
+          unoptimized
+          quality={90}
           sizes="(max-width: 900px) 100vw, 58vw"
           className={styles.heroImage}
         />
@@ -831,7 +832,7 @@ function CloseSection({ variant, product, onCart }) {
         data-visual-intent={variant.id}
         data-visual-status={heroVisual.status}
         aria-hidden="true"
-      ><Image src={heroVisual.src} alt="" fill loading="eager" sizes="100vw" className={styles.closeImage} /></div>
+      ><Image src={heroVisual.src} alt="" fill unoptimized quality={90} loading="eager" sizes="100vw" className={styles.closeImage} /></div>
       <div className={styles.closeShade} aria-hidden="true" />
       <div className={styles.closeInner}>
         <h2>{variant.closeTitle}</h2>

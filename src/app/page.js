@@ -6,7 +6,7 @@ import {
   getCommunitySpotlights,
   getHomeStats,
   getMythExtrasBySlugs,
-  getRotatingMythPool,
+  getMesaCandidates,
   getTaxonomy,
 } from "../lib/myths";
 import {
@@ -24,6 +24,7 @@ import {
   shuffleSeeded,
   toMesaCard,
 } from "../lib/home-rotation";
+import { MESA_COUNT, communityCatalog, communitySelection, discoveryPick } from "../lib/home-discovery";
 import { getTarotCards, getDailyTarotSelection } from "../lib/tarot";
 import { getMythImage, withMythImageVariants } from "../lib/myth-images";
 
@@ -97,10 +98,10 @@ export default async function Home() {
 
   const [pool, communityRows, stats, taxonomy, routePreviews, tarotCards] =
     await Promise.all([
-      getRotatingMythPool({ seed: daySeed, perRegion: 20 }),
-      // Se piden SEIS por comunidad para pintar cuatro: los que ya están en la
-      // portada se descartan abajo y hace falta ese margen.
-      getCommunitySpotlights({ seed: daySeed, perCommunity: 6 }),
+      getMesaCandidates({ seed: daySeed, perRegion: 40 }),
+      // Hasta diez por comunidad para ofrecer ocho, con margen para excluir
+      // las obras que ya aparecen en portada y mesa.
+      getCommunitySpotlights({ seed: daySeed, perCommunity: 10 }),
       getHomeStats(),
       getTaxonomy(),
       getRoutePreviews(daySeed),
@@ -129,13 +130,12 @@ export default async function Home() {
     groupBy: (myth) => myth.region_slug || "sin-region",
     sections: [
       { key: HOME_SECTIONS.PORTADA, count: 5 },
-      { key: HOME_SECTIONS.MESA, count: 10 },
       { key: HOME_SECTIONS.MAPA, count: 1 },
     ],
   });
 
   const coverRaw = picks[HOME_SECTIONS.PORTADA] || [];
-  const mesaRaw = picks[HOME_SECTIONS.MESA] || [];
+  const mesaRaw = discoveryPick({ items: pool, count: MESA_COUNT, seed: sectionSeed(daySeed, HOME_SECTIONS.MESA), exclude: [...coverRaw, ...(picks[HOME_SECTIONS.MAPA] || [])].map((myth) => myth.slug) });
   const mapMythRaw = (picks[HOME_SECTIONS.MAPA] || [])[0] || null;
 
   // Etiquetas y obra vertical, sólo de los mitos que la página va a pintar.
@@ -170,7 +170,7 @@ export default async function Home() {
   /* Los chips salen de las etiquetas reales de los diez elegidos, y el conteo se
      hace después de repartir (cada mito cae en UN chip). La misma función la usa
      `/api/mesa`, para que «Barajar» devuelva chips coherentes con los pintados. */
-  const tagsOf = (myth) => extras.get(myth.slug)?.tags || [];
+  const tagsOf = (myth) => myth.tags || extras.get(myth.slug)?.tags || [];
   const { chips, themeOf } = assignThemeChips({ items: mesaRaw, tagsOf });
 
   const today = mesaRaw.map((myth) =>
@@ -182,74 +182,32 @@ export default async function Home() {
   );
   const todayFilters = buildMesaFilters(today, chips);
 
-  /* ---- Comunidades ---------------------------------------------------- *
-     Antes llegaban SIEMPRE las mismas cinco: la consulta ordenaba por número de
-     relatos y la página cortaba a cinco, sin que la semilla tocara nada. Ahora la
-     selección rota y se reparte entre territorios, así que ningún pueblo se
-     queda con la pestaña en propiedad. */
-  /* El piso son CUATRO relatos: es lo que pinta una pestaña, y con menos queda a
-     medias. Deja fuera a los pueblos con uno, dos o tres relatos registrados
-     (Awa, Yukpa, Ansermas…), que siguen llegando por la mesa y por /comunidades:
-     la pestaña promete «muchas voces» y con dos tarjetas eso no se cumple.
-     Quedan 21 pueblos reales rotando sobre las cinco regiones. */
-  const COMMUNITY_MYTHS = 4;
-  const peoples = (communityRows || [])
-    .filter((item) => item?.name && !item.generic && item.mythCount >= COMMUNITY_MYTHS)
-    .map((item) => ({
-      ...item,
-      myths: (item.myths || []).filter(
-        (myth) => myth.imageUrl && !shownSlugs.has(myth.slug)
-      ),
-    }))
-    .filter((item) => item.myths.length >= COMMUNITY_MYTHS);
-
-  const communities = balancedPick({
-    items: peoples,
-    count: 8,
-    seed: sectionSeed(daySeed, HOME_SECTIONS.COMUNIDADES),
-    groupBy: (item) => item.regionSlug || "sin-region",
-    keyOf: (item) => String(item.id),
-  }).map((item) => {
-    const myths = item.myths.slice(0, COMMUNITY_MYTHS).map((myth) => ({
-      slug: myth.slug,
-      title: myth.title,
-      excerpt: myth.excerpt,
-      imageUrl: myth.imageUrl,
-      motif: mythMotif({ slug: myth.slug, title: myth.title }),
-    }));
-    return {
-      name: item.name,
-      slug: item.slug,
-      region: item.region,
-      regionSlug: item.regionSlug,
-      mythCount: item.mythCount,
-      kind: "pueblo",
-      label: item.name,
-      myths,
-      // `myth` = `myths[0]`. Lo conserva `CommunityTabs`, que hoy pinta uno solo.
-      myth: myths[0] || null,
-    };
-  });
+  const communityPool = communityCatalog(communityRows, [...shownSlugs]).map((item) => ({
+    name: item.name, slug: item.slug, region: item.region, regionSlug: item.regionSlug, mythCount: item.mythCount,
+    myths: item.myths.map((myth) => ({ slug: myth.slug, title: myth.title, imageUrl: myth.imageUrl })),
+  }));
+  const communities = communitySelection(communityPool, sectionSeed(daySeed, HOME_SECTIONS.COMUNIDADES));
 
   /* ---- Sin pueblo identificado ---------------------------------------- *
      «Mestizo» y «Mixto» son diez bolsas del importador con 253 relatos: el 42,5 %
-     del archivo, que hasta ahora la home descartaba entero por no ser un pueblo.
+     del archivo. Mantienen sus etiquetas en una sección propia y abierta.
      No lo son —y por eso NO entran a las pestañas de comunidad— pero sí son
      archivo, y entran con su propia etiqueta y su propio nombre. */
   const buckets = (communityRows || []).filter((item) => item?.generic && item.myths?.length);
   const unattributedMyths = balancedPick({
     items: buckets.flatMap((item) => item.myths),
-    count: 4,
+    count: 12,
     seed: sectionSeed(daySeed, HOME_SECTIONS.SIN_PUEBLO),
     groupBy: (myth) => myth.regionSlug || "sin-region",
     keyOf: (myth) => myth.slug,
-    exclude: coverSlugs,
+    exclude: shownSlugs,
   }).map((myth) => ({
     slug: myth.slug,
     title: myth.title,
     excerpt: myth.excerpt,
     imageUrl: myth.imageUrl,
     region: myth.region,
+    community: myth.community,
     motif: mythMotif({ slug: myth.slug, title: myth.title }),
   }));
 
@@ -258,7 +216,7 @@ export default async function Home() {
         kind: "sin-pueblo",
         label: UNATTRIBUTED_LABEL,
         description:
-          "Relatos que el archivo no puede atribuir a un pueblo concreto. Se recogieron sin esa procedencia, así que se muestran por territorio y no por comunidad.",
+          "Historias que el archivo clasifica como mestizas o mixtas: encuentros, viajes y memorias compartidas entre territorios.",
         mythCount: buckets.reduce((total, item) => total + (item.mythCount || 0), 0),
         regions: [...new Set(buckets.map((item) => item.region).filter(Boolean))],
         myths: unattributedMyths,
@@ -300,6 +258,7 @@ export default async function Home() {
       count: Number(region.myth_count) || 0,
       imageUrl: region.image_url,
       motif: REGION_MOTIFS[region.name] || "hoja",
+      myths: pickSeeded(pool.filter((myth) => myth.region_slug === region.slug), 4, sectionSeed(daySeed, region.slug)).map((myth) => ({ slug: myth.slug, title: myth.title, imageUrl: myth.image_url })),
     }));
 
   /* ---- Categorías ------------------------------------------------------ *
@@ -351,6 +310,8 @@ export default async function Home() {
       today={today}
       todayFilters={todayFilters}
       communities={communities}
+      communityPool={communityPool}
+      communitySeed={sectionSeed(daySeed, HOME_SECTIONS.COMUNIDADES)}
       unattributed={unattributed}
       featuredRoute={featuredRoute}
       routes={routes}

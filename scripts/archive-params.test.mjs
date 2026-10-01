@@ -200,3 +200,12 @@ test("el rango mostrado corresponde a la página", () => {
     total: 0,
   });
 });
+
+test("la vista se conserva al filtrar y paginar, y la imagen es el valor por defecto", () => {
+  const params = readArchiveParams({ vista: "columnas", q: "agua", region: "andina" });
+  assert.equal(params.vista,"columnas");
+  assert.equal(archivePageHref(2,buildArchiveQuery(params)),"/mitos/pagina/2?q=agua&region=andina&vista=columnas");
+  assert.equal(archiveQueryWithout(params,"q"),"?region=andina&vista=columnas");
+  assert.equal(readArchiveParams({ vista:"desconocida" }).vista,"imagen");
+  assert.equal(buildArchiveQuery(readArchiveParams({})),"");
+});

@@ -1,6 +1,7 @@
 import { cn } from "../../lib/utils";
+import { ArtworkLink } from "../molecules/ArtworkLink";
 import { Stagger, StaggerItem } from "../atoms";
-import { MythCard, SectionHeader, EmptyState, Pagination } from "../molecules";
+import { SectionHeader, EmptyState, Pagination } from "../molecules";
 
 /**
  * Organismo · MythGrid
@@ -83,12 +84,12 @@ export function MythGrid({
         />
       ) : (
         <Stagger
-          className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-[2px] sm:grid-cols-2 lg:grid-cols-3"
           gap={0.06}
         >
           {items.map((m, i) => (
             <StaggerItem key={m.slug || i} className="h-full">
-              <MythCard myth={m} motif={m.motif} className="h-full" />
+              <ArtworkLink myth={m} priority={i === 0} loading={i < 3 ? "eager" : undefined} />
             </StaggerItem>
           ))}
         </Stagger>

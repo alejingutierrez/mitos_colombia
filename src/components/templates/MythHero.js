@@ -126,44 +126,30 @@ export function MythHero({ myth }) {
         </span>
       )}
 
-      {/* Móvil: cartela en degradado largo, no barra opaca — la obra se apaga
-          hacia el pie y el halo de `atlas-on-image` hace el resto.
-          Escritorio: el scrim de siempre, que nunca pasa del 15%. */}
-      <span
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-[15rem] bg-gradient-to-t from-[rgb(var(--atlas-night)/0.94)] via-[rgb(var(--atlas-night)/0.55)] to-transparent md:hidden"
-      />
-      <span className="atlas-scrim-myth pointer-events-none absolute inset-0 hidden md:block" />
-
       <Container
         size="atlas"
         // `md:relative` y no `static`: las obras van posicionadas y pintarían
         // encima de un contenedor sin posicionar, tapando el título.
-        className="atlas-on-image absolute inset-x-0 bottom-0 pb-[calc(1.15rem+env(safe-area-inset-bottom))] pt-4 text-white md:relative md:flex md:min-h-[calc(100svh-4rem)] md:items-end md:py-8 md:pb-14 md:pt-24"
+        className="absolute inset-x-0 bottom-0 pb-[calc(1.15rem+env(safe-area-inset-bottom))] pt-4 text-white md:relative md:flex md:min-h-[calc(100svh-4rem)] md:items-end md:py-8 md:pb-14 md:pt-24"
       >
-        <div className="max-w-3xl">
-          <p className="atlas-kicker text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-white/85 md:text-xs md:tracking-[0.18em] md:text-white/75">
+        <div className="w-fit max-w-3xl bg-paper px-4 py-3 text-jungle-700 md:max-w-[38rem] md:px-6 md:py-5">
+          <p className="atlas-kicker text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-ink-700 md:text-xs md:tracking-[0.18em]">
             {[myth.region, myth.community].filter(Boolean).join(" · ")}
           </p>
           <h1
-            className={`mt-1.5 font-editorial font-semibold tracking-[-0.03em] !text-white md:mt-4 md:tracking-[-0.035em] ${
+            className={`mt-1.5 font-display font-normal tracking-normal text-jungle-700 md:mt-4 md:tracking-[-0.035em] ${
               long
                 ? "!text-[1.5rem] !leading-[1.06]"
                 : "!text-[2rem] !leading-[0.96]"
-            } md:!text-[6.4rem] md:!leading-[0.92]`}
+            } md:!text-[clamp(2.5rem,4vw,3.75rem)] md:!leading-[1.06]`}
           >
             {myth.title}
           </h1>
           {/* En móvil el resumen y la llamada viven en `MythIntroMobile`, justo
               debajo de la portada: dentro del hero le comían la obra. */}
-          {myth.excerpt ? (
-            <p className="mt-5 hidden max-w-2xl text-base leading-relaxed text-white/85 md:block">
-              {myth.excerpt}
-            </p>
-          ) : null}
           <Link
             href="#relato"
-            className="mt-6 hidden min-h-11 items-center gap-2 border-b border-ember-500 text-sm font-semibold text-white md:inline-flex"
+            className="mt-6 hidden min-h-11 items-center gap-2 border-b border-jungle-500 text-sm font-semibold text-jungle-700 md:inline-flex"
           >
             Leer el relato
           </Link>

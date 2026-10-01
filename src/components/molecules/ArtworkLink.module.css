@@ -1,0 +1,6 @@
+.artwork { display: flex; height: 100%; flex-direction: column; color: rgb(var(--jungle-700)); }
+.artwork:focus-visible { outline: 2px solid rgb(var(--jungle-500)); outline-offset: 4px; }
+.caption { display: flex; flex: 1; flex-direction: column; padding: 0.85rem 0.75rem 1.25rem; }
+.caption h3 { font-family: var(--font-display),sans-serif; font-size: clamp(1.125rem,1.5vw,1.5rem); font-weight: 400; line-height: 1.25; text-wrap: pretty; }
+.caption p { margin-top: auto; padding-top: 0.6rem; color: rgb(var(--ink-700)); font-size: 0.75rem; line-height: 1.5; }
+.artwork:hover h3 { color: rgb(var(--jungle-500)); }

@@ -1,4 +1,5 @@
 import { cn } from "../../lib/utils";
+import canvas from "../editorial/archive-canvas.module.css";
 import {
   Container,
   Heading,
@@ -63,7 +64,7 @@ export function DocumentTemplate({
   return (
     <>
       <Header />
-      <main id="contenido" className="min-h-[100dvh] bg-paper">
+      <main id="contenido" className={canvas.canvas}>
         {/* Hero del documento */}
         <Container size="wide" className="pt-10 md:pt-14">
           <Breadcrumb items={crumbs} className="mb-8" />
@@ -74,7 +75,7 @@ export function DocumentTemplate({
             <Heading
               level={1}
               accent={accent}
-              className="font-editorial text-[3.25rem] font-semibold leading-[0.94] tracking-[-0.035em] md:text-[4.6rem]"
+              className="font-display text-[clamp(2rem,4vw,3.25rem)] font-normal leading-[1.12]"
             >
               {title}
             </Heading>

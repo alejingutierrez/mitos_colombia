@@ -5,68 +5,19 @@ import Link from "next/link";
 import { useReducedMotion } from "framer-motion";
 import { cn } from "../../lib/utils";
 import { Icon, ImageFrame, Spinner } from "../atoms";
-import { MAX_SLOTS, SMALL, mosaicSlots } from "./mesa-mosaic";
+import { MESA_COUNT } from "../../lib/home-discovery";
+import styles from "./home-journey.module.css";
 
-/**
- * Home · la mesa de hoy.
- *
- * Un mosaico editorial: una pieza que abre y cuatro que la acompañan, repetido
- * hasta llenar la mano. Cada tarjeta declara por qué está ahí («por comunidad ·
- * muiscas»), los chips cambian la lente y «Barajar» pide una mano NUEVA al
- * archivo entero.
- *
- * ── La retícula ──────────────────────────────────────────────────────────────
- * El mosaico anterior era una lista de diez formas fijas por posición, calibrada
- * para `lg` y aplicada en todos los anchos. Costaba caro:
- *
- *  · En móvil el hueco 5 pedía dos columnas y sólo quedaba una libre, así que la
- *    retícula dejaba SIEMPRE un cuadrado vacío de 169×169.
- *  · Entre 768 y 1023 px no había nada: seguían mandando las formas de móvil, o
- *    sea dos columnas de 348 px con proporción 16/9 y cuadrados de 348×348. La
- *    sección medía ahí unos 2.660 px.
- *  · Al filtrar, las tarjetas ocultas dejaban su forma reservada: el mosaico se
- *    convertía en un colador.
- *
- * Ahora la forma NO depende de la posición absoluta sino de un patrón de período
- * 5 que embaldosa exacto en los tres puntos de quiebre, elegido justamente para
- * que la suma de columnas de un período sea múltiplo del número de columnas:
- *
- *      columnas:      2 (base)     4 (md)      12 (lg)
- *      pieza que abre     2           4            4
- *      cuatro piezas      1 c/u       1 c/u        2 c/u
- *      suma del período   6 ✓         8 ✓         12 ✓
- *
- * Como la suma cierra en los tres, ningún período deja huecos y el siguiente
- * arranca en fila limpia. Lo que sobra (1 a 4 tarjetas) tiene su propia cola en
- * `TAILS`, también embaldosada en los tres anchos. Por eso `mosaicSlots` recibe
- * CUÁNTAS tarjetas hay que pintar y no dónde: al filtrar se recalculan las
- * formas sobre las visibles y el mosaico se recompone entero en vez de agujerearse.
- *
- * Medido con las mismas tarjetas (390 / 768 / 1460 px de ancho de ventana):
- *   diez piezas    1.338 → 946 px   ·   2.661 → 962 px   ·   863 → 602 px
- *   doce piezas            1.082 px           1.206 px           843 px
- * Es decir: DOCE relatos caben en menos alto del que ocupaban DIEZ, en los tres
- * anchos. Por eso «Barajar» pide doce (el techo de `/api/mesa`).
- *
- * Las proporciones de cada fila están elegidas para que las alturas coincidan
- * (una pieza de 4/12 en 3/2 mide lo mismo que una de 2/12 en 5/7): con
- * `items-start` cualquier descuadre queda como borde irregular abajo, y así el
- * error es de pocos píxeles.
- *
- * ── Barajar ──────────────────────────────────────────────────────────────────
- * Antes permutaba en memoria las diez tarjetas ya pintadas: el archivo entero
- * quedaba fuera del alcance del botón. Ahora pide `GET /api/mesa` con el turno,
- * el tema activo y los slugs ya vistos, y reemplaza mano y chips a la vez —los
- * conteos de los chips mienten si se cambia sólo uno de los dos—. Si hay un
- * tema activo, la mano nueva viene entera de ese tema: eso queda «fijado»
- * (`pinned`) y el filtro local se desactiva para no volver a colar el mismo tamiz.
- */
+/** La mesa conserva su filtro y su consulta al archivo. La mano ahora forma
+ * un carril de escenas grandes, con desplazamiento nativo y controles de
+ * avance; filtrar o barajar vuelve al comienzo de la mano. */
 
 /* ------------------------------------------------------------------ *
  * Barajar
  * ------------------------------------------------------------------ */
 
 const EXCLUDE_MAX = 40; // el tope que declara `/api/mesa`.
+const MAX_SLOTS = MESA_COUNT;
 const MAX_TURN = 99;
 const SWAP_MS = 220; // lo que dura el velo antes de cambiar la mano.
 
@@ -110,7 +61,7 @@ function mergeFilters(incoming, pinned, total) {
  * Componente
  * ------------------------------------------------------------------ */
 
-export function TodayTable({ myths = [], filters = [] }) {
+export function TodayTable({ myths = [], filters = [], exclude = [] }) {
   const reduce = useReducedMotion();
 
   const [hand, setHand] = useState(() => dedupe(myths).slice(0, MAX_SLOTS));
@@ -125,7 +76,9 @@ export function TodayTable({ myths = [], filters = [] }) {
   const [live, setLive] = useState("");
   // `veiled` = las tarjetas están bajando el telón; se levanta al pintar la mano.
   const [veiled, setVeiled] = useState(false);
+  const [edges, setEdges] = useState({ start: true, end: false });
 
+  const railRef = useRef(null);
   const seenRef = useRef(hand.map((myth) => myth.slug).filter(Boolean));
   const swapRef = useRef(null);
   const raiseRef = useRef(null);
@@ -186,7 +139,10 @@ export function TodayTable({ myths = [], filters = [] }) {
     (key) => {
       if (busy || key === filter) return;
       setNotice("");
-      runSwap(() => setFilter(key));
+      runSwap(() => {
+        setFilter(key);
+        railRef.current?.scrollTo({ left: 0, behavior: "instant" });
+      });
     },
     [busy, filter, runSwap]
   );
@@ -200,7 +156,9 @@ export function TodayTable({ myths = [], filters = [] }) {
     const temaLabel = tema
       ? chips.find((item) => item.key === tema)?.label || null
       : null;
-    const excluir = restart ? [] : seenRef.current.slice(-EXCLUDE_MAX);
+    const protectedSlugs = exclude.slice(0, EXCLUDE_MAX);
+    const recentSlugs = restart ? [] : seenRef.current.slice(-(EXCLUDE_MAX - protectedSlugs.length));
+    const excluir = [...new Set([...protectedSlugs, ...recentSlugs])];
 
     const params = new URLSearchParams();
     params.set("n", String(MAX_SLOTS));
@@ -248,6 +206,7 @@ export function TodayTable({ myths = [], filters = [] }) {
 
       const pin = tema ? { key: tema, label: temaLabel } : null;
       setHand(fresh);
+      railRef.current?.scrollTo({ left: 0, behavior: "instant" });
       setChips(mergeFilters(data?.filtros, pin, fresh.length));
       setPinned(pin);
       setTurn(nextTurn);
@@ -266,7 +225,7 @@ export function TodayTable({ myths = [], filters = [] }) {
     } finally {
       if (aliveRef.current) setBusy(false);
     }
-  }, [busy, chips, filter, raiseVeil, reduce, spent, turn]);
+  }, [busy, chips, exclude, filter, raiseVeil, reduce, spent, turn]);
 
   // Con el tema ya aplicado por el servidor, volver a tamizar en el cliente
   // escondería tarjetas que SÍ llevan la etiqueta pero cayeron en otro chip.
@@ -278,13 +237,27 @@ export function TodayTable({ myths = [], filters = [] }) {
         : hand.filter((myth) => myth.theme === filter),
     [hand, filter, serverThemed]
   );
-  const slots = useMemo(() => mosaicSlots(visible.length), [visible.length]);
+
+  useEffect(() => {
+    const rail = railRef.current;
+    if (!rail) return undefined;
+    const sync = () => {
+      const start = rail.scrollLeft <= 2;
+      const end = rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 2;
+      setEdges((previous) => previous.start === start && previous.end === end ? previous : { start, end });
+    };
+    sync();
+    rail.addEventListener("scroll", sync, { passive: true });
+    const observer = new ResizeObserver(sync);
+    observer.observe(rail);
+    return () => { rail.removeEventListener("scroll", sync); observer.disconnect(); };
+  }, [visible]);
 
   if (!hand.length) return null;
 
   return (
     <>
-      <div className="mb-6 flex flex-col gap-3 border-b border-line-200 pb-5 lg:flex-row lg:items-center lg:gap-5">
+      <div className={styles.tableToolbar}>
         <div
           role="group"
           aria-label="Filtrar la mesa"
@@ -300,9 +273,9 @@ export function TodayTable({ myths = [], filters = [] }) {
                 aria-pressed={active}
                 disabled={busy}
                 className={cn(
-                  "inline-flex h-11 shrink-0 items-center gap-2 rounded border px-[18px] text-sm font-semibold transition-colors disabled:opacity-60",
+                  "inline-flex h-11 shrink-0 items-center gap-2 rounded-full border px-4 text-[13px] font-semibold transition-colors disabled:opacity-60",
                   active
-                    ? "border-jungle-500 bg-jungle-tint text-jungle-700"
+                    ? "border-jungle-700 bg-jungle-700 text-white"
                     : "border-line-200 text-ink-700 hover:border-line-300 hover:text-ink-900"
                 )}
               >
@@ -310,7 +283,7 @@ export function TodayTable({ myths = [], filters = [] }) {
                 <b
                   className={cn(
                     "atlas-figure text-xs font-semibold",
-                    active ? "text-jungle-600" : "text-ink-500"
+                    active ? "text-white" : "text-ink-700"
                   )}
                 >
                   {item.count}
@@ -320,12 +293,13 @@ export function TodayTable({ myths = [], filters = [] }) {
           })}
         </div>
 
+        <div className="flex items-center gap-3">
         <button
           type="button"
           onClick={shuffle}
           disabled={busy}
           aria-busy={busy}
-          className="inline-flex h-11 w-full shrink-0 items-center justify-center gap-2.5 rounded bg-jungle-500 px-5 text-sm font-semibold text-white transition-colors hover:bg-jungle-600 disabled:cursor-progress disabled:bg-jungle-600 active:translate-y-px lg:w-auto"
+          className="inline-flex h-11 min-w-0 flex-1 items-center justify-center gap-2.5 rounded bg-jungle-500 px-3 text-[13px] font-semibold text-white transition-colors hover:bg-jungle-600 disabled:cursor-progress disabled:bg-jungle-600 active:translate-y-px lg:flex-none lg:px-5 lg:text-sm"
         >
           {busy ? (
             <Spinner size={17} className="text-white" label="Barajando" />
@@ -334,6 +308,11 @@ export function TodayTable({ myths = [], filters = [] }) {
           )}
           {busy ? "Barajando…" : spent ? "Empezar de nuevo" : "Barajar la mesa"}
         </button>
+        <div className={styles.tableControls}>
+          <button type="button" aria-label="Relatos anteriores" disabled={busy || edges.start} onClick={() => railRef.current?.scrollBy({ left: -railRef.current.clientWidth * 0.9, behavior: reduce ? "instant" : "smooth" })}><Icon name="chevron-left" size={20} /></button>
+          <button type="button" aria-label="Más relatos de la mesa" disabled={busy || edges.end} onClick={() => railRef.current?.scrollBy({ left: railRef.current.clientWidth * 0.9, behavior: reduce ? "instant" : "smooth" })}><Icon name="chevron-right" size={20} /></button>
+        </div>
+        </div>
       </div>
 
       <p className="sr-only" role="status" aria-live="polite">
@@ -347,17 +326,16 @@ export function TodayTable({ myths = [], filters = [] }) {
       ) : null}
 
       {visible.length ? (
-        <div className="grid grid-cols-2 items-start gap-2 md:grid-cols-4 md:gap-3 lg:grid-cols-12 lg:gap-5">
+        <div ref={railRef} className={styles.tableRail}>
           {visible.map((myth, index) => {
-            const slot = slots[index] || SMALL;
             return (
               <Link
                 key={myth.slug || index}
                 href={myth.slug ? `/mitos/${myth.slug}` : "/mitos"}
                 className={cn(
-                  "group relative block overflow-hidden bg-[rgb(var(--atlas-night))]",
+                  styles.artwork,
+                  "group relative",
                   "transition-[opacity,transform] duration-300 ease-editorial motion-reduce:!transition-none",
-                  slot.cell,
                   veiled ? "translate-y-2 opacity-0" : "translate-y-0 opacity-100"
                 )}
                 style={
@@ -369,42 +347,30 @@ export function TodayTable({ myths = [], filters = [] }) {
                 <ImageFrame
                   src={myth.imageUrl}
                   alt=""
-                  ratio={null}
-                  sizes={slot.sizes}
-                  // 70 no está en `images.qualities` de `next.config` ([68, 75,
-                  // 90]): Next 16 responde 400 a esa variante en producción y
-                  // la tarjeta se quedaba sin obra. La pieza que abre se lleva
-                  // la calidad alta; las pequeñas, la barata.
-                  quality={slot.lead ? 75 : 68}
+                  ratio="3 / 2"
+                  sizes="(max-width: 767px) 82vw, (max-width: 1023px) 48vw, 32vw"
+                  quality={90}
+                  unoptimized
                   placeholderMotif={myth.motif || "jaguar"}
-                  className="absolute inset-0 h-full w-full rounded-none border-0"
+                  className={styles.artworkImage}
                   imgClassName="atlas-image-zoom object-cover"
                 />
-                <span
-                  className="atlas-scrim pointer-events-none absolute inset-0"
-                  aria-hidden="true"
-                />
-                <div
-                  className={cn(
-                    "atlas-on-image absolute inset-x-0 bottom-0 text-white",
-                    slot.lead ? "p-4 md:p-5" : "p-3 md:p-4"
-                  )}
-                >
+                <div className={styles.artworkCaption}>
                   {myth.why ? (
-                    <span className="block truncate text-[9px] font-bold uppercase tracking-[0.16em] text-ember-400 md:text-[10px]">
+                    <span className={styles.artworkWhy}>
                       {myth.why}
                     </span>
                   ) : null}
                   <h3
                     className={cn(
-                      "mt-1.5 line-clamp-2 !text-white",
-                      slot.lead ? "atlas-title-md" : "atlas-title-sm"
+                      "mt-1.5",
+                      "atlas-title-md"
                     )}
                   >
                     {myth.title}
                   </h3>
-                  {slot.lead && myth.meta ? (
-                    <span className="mt-2 block truncate text-[10px] font-semibold uppercase tracking-[0.14em] text-white/70">
+                  {myth.meta ? (
+                    <span className={styles.artworkMeta}>
                       {myth.meta}
                     </span>
                   ) : null}

@@ -80,7 +80,7 @@ export function RouteMovements({ momentos = [], motif = "hoja" }) {
             {momento.myths.length ? (
               <ul
                 className={cn(
-                  "grid list-none grid-cols-2 gap-[3px] sm:grid-cols-3 xl:grid-cols-4",
+                  "grid list-none grid-cols-2 gap-[2px]",
                   momento.proseParagraphs?.length ? "mt-7 md:mt-8" : ""
                 )}
               >
