@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "sourceSha": "31a8740d1827b7da712ff3dbd5ecffc347a4a7db",
+  "sourceVerified": false,
+  "imageDigest": "sha256:dc910987f6b87a863746f47b1a334ac0e8b6e7469997e8fb2856bb0d787403fa",
+  "architecture": "arm64",
+  "base": "node:24-bookworm-slim",
+  "nativeSmoke": {
+    "postgresDriver": true,
+    "runtimeSdk": true,
+    "nativeImageCodec": true,
+    "nativeSnapshotBinding": true
+  },
+  "scanStatus": "COMPLETE",
+  "scanCompletedAt": "2026-10-01T11:42:46-05:00",
+  "findingSeverityCounts": {
+    "HIGH": 12,
+    "MEDIUM": 7,
+    "LOW": 2,
+    "CRITICAL": 3
+  },
+  "eligibleForRelease": false,
+  "staticAssetsPublished": false,
+  "productionDeployed": false,
+  "ciRun": "https://github.com/alejingutierrez/mitos_colombia/actions/runs/36893113902"
+}

@@ -15,7 +15,7 @@ const [cmd,...a]=process.argv.slice(2), root=process.env.MITOS_TEST_ROOT;
 const stateFile=root+'/state.json',s=JSON.parse(fs.readFileSync(stateFile));
 const conf=root+'/etc/nginx/mitos-upstream.conf';
 const port=()=>Number(fs.readFileSync(conf,'utf8').match(/127\.0\.0\.1:(\d+)/)[1]);
-const end=(code=0,out='')=>{fs.writeFileSync(stateFile,JSON.stringify(s));if(out)process.stdout.write(out);process.exit(code)};
+const end=(code=0,out='')=>{const temp=stateFile+'.'+process.pid;fs.writeFileSync(temp,JSON.stringify(s));fs.renameSync(temp,stateFile);if(out)fs.writeSync(1,out);process.exit(code)};
 s.calls.push([cmd,...a]);
 if(['flock','sleep'].includes(cmd))end();
 if(cmd==='awk')end(0,'1500000\n');

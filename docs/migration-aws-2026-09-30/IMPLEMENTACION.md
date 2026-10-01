@@ -53,11 +53,15 @@ Los tres servicios de RAG/Cocina permanecen `RUNNING` y su raíz HTTP respondió
 
 Antes de habilitar releases ordinarios falta automatizar refresco de snapshot desde RDS verificada, migraciones con rol separado y QA temporal. No basta con cambiar la variable del corte a true.
 
-El PR público [#76](https://github.com/alejingutierrez/mitos_colombia/pull/76) está en borrador. Los checks de su primer commit pasaron en [GitHub Actions](https://github.com/alejingutierrez/mitos_colombia/actions/runs/36886428189); esa ejecución omite imagen y deploy por ser un PR. La construcción ARM64 por push se verifica por separado.
+El PR público [#76](https://github.com/alejingutierrez/mitos_colombia/pull/76) está en borrador. Los checks de su primer commit pasaron en [GitHub Actions](https://github.com/alejingutierrez/mitos_colombia/actions/runs/36886428189); esa ejecución omite imagen y deploy por ser un PR. La primera construcción ARM64 por push compiló y pasó el smoke de dependencias nativas en [Actions](https://github.com/alejingutierrez/mitos_colombia/actions/runs/36893113902), pero no publicó estáticos ni recibo de release: el waiter consultó ECR antes de que hubiera resultado, y el escaneo posterior confirmó 3 hallazgos críticos y 12 altos en la base Debian. Su imagen no es elegible para release; ver [first-image-scan.json](receipts/first-image-scan.json).
+
+La corrección usa una base Node 24 / Alpine 3.24 fijada por digest, compartida entre builder y runtime, con paquetes actualizados y compiladores solo en el builder. La [matriz de Node](https://github.com/nodejs/docker-node/blob/main/versions.json) incluye ARM64 y la [matriz de AWS](https://docs.aws.amazon.com/inspector/latest/user/supported.html) incluye su escaneo. Node advierte que sus builds musl ARM64 no reciben pruebas previas a publicación: por eso se exige nuestro smoke ARM64 real, y la validación funcional completa permanece en P4 antes del corte. La nueva imagen aún debe pasar build, native smoke y scan real en CI. El gate mantiene cero hallazgos altos/críticos; espera hasta diez minutos, solicita únicamente el scan de nuestra imagen si scan-on-push no aparece y rechaza resultados ausentes, fallidos o mayores de 24 horas.
+
+Se corrigió también una carrera en el simulador de CLI del ensayo de rollback: el archivo de estado se escribe por reemplazo atómico. El fallo de lectura parcial apareció en un run del PR; no era un fallo de rollback del host real.
 
 ## Evidencia local
 
-- 104 tests focalizados de runtime, pagos, tarot y comentarios: PASS.
+- 112 tests focalizados de runtime, pagos, tarot, comentarios y escaneo: PASS local (104 anteriores + 8 escenarios del gate ECR).
 - ESLint focalizado: PASS.
 - Build sin secretos: 886 páginas generadas; solo aviso de fallback de Asimovian.
 - Auditoría standalone: sin taller, `.env`, fuentes de archivo ni symlinks que salgan del paquete; ver [standalone-package.json](receipts/standalone-package.json).

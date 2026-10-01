@@ -28,9 +28,7 @@ fi
 [[ "$digest" =~ ^sha256:[a-f0-9]{64}$ ]] || exit 3
 image="$registry/$ECR_REPOSITORY@$digest"
 printf 'digest=%s\n' "$digest" >> "$GITHUB_OUTPUT"
-aws ecr wait image-scan-complete --repository-name "$ECR_REPOSITORY" --image-id imageDigest="$digest"
-aws ecr describe-image-scan-findings --repository-name "$ECR_REPOSITORY" --image-id imageDigest="$digest" > build-input/image-scan.json
-node -e 'const r=require("./build-input/image-scan.json"); const c=r.imageScanFindings.findingSeverityCounts||{};if((c.CRITICAL||0)>0||(c.HIGH||0)>0)process.exit(1)'
+node scripts/aws/scan-image.mjs "$digest"
 docker create --name mitos-assets "$image"
 docker cp mitos-assets:/app/.next/static build-input/static
 docker rm mitos-assets
