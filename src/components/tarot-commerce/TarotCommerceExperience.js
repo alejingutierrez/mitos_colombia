@@ -243,7 +243,7 @@ function GalleryZoom({ card, onClose }) {
               <CommerceIcon name="close" />
             </button>
             <div className={styles.galleryZoomImage}>
-              <Image
+              <Image unoptimized quality={90}
                 src={card.image_url}
                 alt={`Ampliación de ${card.card_name}`}
                 fill
@@ -364,7 +364,7 @@ function StorySection({ variant, featured, index }) {
           </div>
           <div className={styles.featureCardWrap}>
             {featured?.image_url ? (
-              <Image
+              <Image quality={90}
                 src={featured.image_url}
                 alt={`${featured.card_name}, vinculada con ${featured.myth_title}`}
                 width={420}
@@ -523,7 +523,7 @@ function IntentSignatureSection({ variant, cards, onCart, onDiagnostic, index })
             <div className={styles.readingExample} aria-live="polite">
               <div className={styles.readingCard}>
                 {activeReflectionCard?.image_url ? (
-                  <Image
+                  <Image quality={90}
                     src={activeReflectionCard.image_url}
                     alt={activeReflectionCard.card_name}
                     fill
@@ -555,7 +555,7 @@ function IntentSignatureSection({ variant, cards, onCart, onDiagnostic, index })
           <div className={styles.visualDetail}>
             <div className={styles.detailImage}>
               {featured?.image_url ? (
-                <Image
+                <Image quality={90}
                   src={featured.image_url}
                   alt={`Detalle provisional de ${featured.card_name}`}
                   fill
@@ -664,7 +664,7 @@ function GallerySection({ variant, cards, onDiagnostic, index }) {
             >
               <div className={styles.galleryImageWrap}>
                 {card.image_url ? (
-                  <Image
+                  <Image quality={90}
                     src={card.image_url}
                     alt={card.card_name}
                     fill
@@ -952,7 +952,7 @@ function CartDrawer({ open, onClose, product, quantity, onQuantity, variant }) {
             </div>
             {quantity > 0 ? (
               <div className={styles.drawerItem}>
-                <Image src={product.image} alt={product.imageAlt} width={152} height={102} className={styles.drawerImage} />
+                <Image quality={90} src={product.image} alt={product.imageAlt} width={152} height={102} className={styles.drawerImage} />
                 <div className={styles.drawerItemCopy}>
                   <h3>{product.name}</h3>
                   <p>{formatPrice(product)}</p>
