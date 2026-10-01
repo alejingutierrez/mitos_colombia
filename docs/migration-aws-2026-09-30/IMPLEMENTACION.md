@@ -45,7 +45,7 @@ Los tres servicios de RAG/Cocina permanecen `RUNNING` y su raíz HTTP respondió
 
 ## Automatización preparada
 
-`.github/workflows/aws.yml` hace checks, build ARM64, scan ECR, publicación de estáticos por SHA y recibo SHA → digest → snapshot. OIDC no necesita llaves AWS permanentes en GitHub. Cada job tiene timeout y los reintentos reutilizan una imagen existente únicamente si coinciden SHA, snapshot, procedencia verificada e IDs públicos; nunca reemplazan una etiqueta inmutable. La rama de migración tiene deshabilitados previews Vercel para impedir builds contra la base viva durante esta preparación.
+`.github/workflows/aws.yml` hace checks, build ARM64, scan ECR, publicación de estáticos por SHA y recibo SHA → digest → snapshot. OIDC no necesita llaves AWS permanentes en GitHub. Antes de publicar la imagen se ejercitan sus bindings ARM64 de imagen/SQLite, el driver pg y los SDK directos del entrypoint sin secretos ni llamadas externas. Cada job tiene timeout y los reintentos reutilizan una imagen existente únicamente si coinciden SHA, snapshot, procedencia verificada e IDs públicos; nunca reemplazan una etiqueta inmutable. La rama de migración tiene deshabilitados previews Vercel para impedir builds contra la base viva durante esta preparación.
 
 `MITOS_AWS_BUILD_ENABLED=true` habilita probar imágenes. `MITOS_AWS_CUTOVER_COMPLETE=false` mantiene bloqueado el deploy público. El snapshot inicial conserva `sourceVerified=false`; esa marca no se cambia para hacer pasar una puerta.
 

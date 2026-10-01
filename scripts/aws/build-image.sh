@@ -8,19 +8,25 @@ snapshot=$(node -p 'require("./build-input/receipt.json").sha256')
 verified=$(node -p 'String(require("./build-input/receipt.json").sourceVerified===true)')
 aws ecr get-login-password | docker login --username AWS --password-stdin "$registry"
 trap 'docker logout "$registry" >/dev/null 2>&1 || true; docker rm -f mitos-assets >/dev/null 2>&1 || true' EXIT
+new_image=false
 # A rerun may resume asset publication after a push. It cannot replace a SHA tag.
 if digest=$(aws ecr describe-images --repository-name "$ECR_REPOSITORY" --image-ids imageTag="$GITHUB_SHA" --query 'imageDetails[0].imageDigest' --output text 2> build-input/image-lookup.err); then
-  docker pull "$registry/$ECR_REPOSITORY@$digest"
+  image="$registry/$ECR_REPOSITORY@$digest"
+  docker pull "$image"
 else
   if ! grep -q ImageNotFoundException build-input/image-lookup.err; then cat build-input/image-lookup.err >&2; exit 1; fi
   docker build --platform linux/arm64 --target prod --build-arg MITOS_DEPLOYMENT_SHA="$GITHUB_SHA" --build-arg MITOS_SNAPSHOT_SHA256="$snapshot" --build-arg MITOS_SOURCE_VERIFIED="$verified" --build-arg NEXT_PUBLIC_GA_ID --build-arg NEXT_PUBLIC_GTM_ID -t "$image" .
+  new_image=true
+fi
+docker image inspect --format '{{json .Config.Labels}}' "$image" > build-input/image-labels.json
+node scripts/aws/verify-image.mjs
+docker run --rm -i --entrypoint node "$image" --input-type=module < scripts/aws/smoke-image.mjs
+if $new_image; then
   docker push "$image"
   digest=$(aws ecr describe-images --repository-name "$ECR_REPOSITORY" --image-ids imageTag="$GITHUB_SHA" --query 'imageDetails[0].imageDigest' --output text)
 fi
 [[ "$digest" =~ ^sha256:[a-f0-9]{64}$ ]] || exit 3
 image="$registry/$ECR_REPOSITORY@$digest"
-docker image inspect --format '{{json .Config.Labels}}' "$image" > build-input/image-labels.json
-node scripts/aws/verify-image.mjs
 printf 'digest=%s\n' "$digest" >> "$GITHUB_OUTPUT"
 aws ecr wait image-scan-complete --repository-name "$ECR_REPOSITORY" --image-id imageDigest="$digest"
 aws ecr describe-image-scan-findings --repository-name "$ECR_REPOSITORY" --image-id imageDigest="$digest" > build-input/image-scan.json
