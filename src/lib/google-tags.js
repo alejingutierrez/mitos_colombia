@@ -19,7 +19,7 @@ export const GTM_CONTAINER_ID = normalizeGtmContainerId(
 );
 
 function publicAnalyticsBootstrap(measurementId) {
-  return `if (w.location.pathname.indexOf('/admin') === 0) return;
+  return `if (w.location.pathname.indexOf('/admin') === 0 || w.location.hostname !== 'www.mitosdecolombia.com') return;
 w.dataLayer = w.dataLayer || [];
 w.gtag = w.gtag || function(){w.dataLayer.push(arguments);};
 if (!w.__mitosAnalyticsClickTracking) {

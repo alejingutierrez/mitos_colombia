@@ -40,6 +40,7 @@ if(cmd==='docker'){
  if(action==='run'){
   const n=a[a.indexOf('--name')+1];
   if(n==='mitos-payment-worker'&&s.failure==='worker')end(1);
+  if(n==='mitos-admin-worker'&&s.failure==='admin')end(1);
   if(s.containers[n])end(1);
   const binding=a.includes('-p')?a[a.indexOf('-p')+1]:'';
   s.containers[n]={running:true,port:binding?Number(binding.split(':')[1]):null,image:a.at(-2)};end(0,'fixture-container\n');
@@ -74,9 +75,9 @@ async function scenario(failure='',firstRelease=false,retry=false){
   await writeFile(root+'/opt/mitos/runtime.env','fixture-only');
   await writeFile(root+'/etc/nginx/mitos-upstream.conf','upstream mitos_web { server 127.0.0.1:3102; }\n');
   if(!firstRelease)await writeFile(root+'/var/lib/mitos/active.json',JSON.stringify(old));
-  const containers=firstRelease?{}:{[old.container]:{running:true,port:3102,image:'old'},'mitos-payment-worker':{running:true,port:null,image:'old'}};
+  const containers=firstRelease?{}:{[old.container]:{running:true,port:3102,image:'old'},'mitos-payment-worker':{running:true,port:null,image:'old'},'mitos-admin-worker':{running:true,port:null,image:'old'}};
   if(retry)containers['mitos-web-'+sha]={running:false,port:3101,image};
-  await writeFile(root+'/state.json',JSON.stringify({failure,firstRelease,containers,proxy:3102,calls:[],reloads:[],release:{sha,digest,sourceVerified:true,schemaVersion:'001-operations'}}));
+  await writeFile(root+'/state.json',JSON.stringify({failure,firstRelease,containers,proxy:3102,calls:[],reloads:[],release:{sha,digest,sourceVerified:true,schemaVersion:'002-admin-jobs'}}));
   await writeFile(root+'/cli.mjs',cli);
   const quote=s=>"'"+s.replaceAll("'","'\\''")+"'";
   for(const cmd of ['flock','sleep','awk','install','aws','docker','nginx','systemctl','curl']){
@@ -93,7 +94,7 @@ async function scenario(failure='',firstRelease=false,retry=false){
  }finally{await rm(root,{recursive:true,force:true})}
 }
 
-for(const failure of ['public','nginx','worker','receipt']){
+for(const failure of ['public','nginx','worker','admin','receipt']){
  test('failed '+failure+' restores a healthy previous upstream and worker',async()=>{
   const {result,state,active}=await scenario(failure);
   assert.notEqual(result.status,0,result.stderr);
@@ -101,6 +102,8 @@ for(const failure of ['public','nginx','worker','receipt']){
   assert.equal(state.containers[old.container].running,true);
   assert.equal(state.containers['mitos-payment-worker'].running,true);
   assert.equal(state.containers['mitos-payment-worker'].image,'old');
+  assert.equal(state.containers['mitos-admin-worker'].running,true);
+  assert.equal(state.containers['mitos-admin-worker'].image,'old');
   assert.ok(state.containers['mitos-web-'+sha],result.stderr);
   assert.equal(state.containers['mitos-web-'+sha].running,false);
   assert.deepEqual(active,old);
@@ -119,6 +122,7 @@ test('retry removes only its abandoned candidate and completes a new release',as
  assert.equal(result.status,0,result.stderr);
  assert.equal(active.sha,sha);assert.equal(state.proxy,3101);
  assert.equal(state.containers['mitos-payment-worker'].image,image);
+ assert.equal(state.containers['mitos-admin-worker'].image,image);
  assert.equal(state.containers[old.container].running,false);
 });
 test('an unhealthy predecessor prevents teardown of the still serving candidate',async()=>{

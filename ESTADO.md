@@ -355,3 +355,7 @@ npm run seo:audit:indexability
 
 El runbook completo de producción está en `docs/mitos-produccion-imagenes.md`.
 El de video, en `docs/videos/TRASPASO-SIGUIENTE-COMUNIDAD.md`.
+
+## Migración AWS · en curso
+
+El DNS autoritativo de mitosdecolombia.com ya está en Route 53 de AWS 907264907058. La web pública/ventas siguen en Vercel y Neon sigue como writer. Hay copia inicial de 21 tablas en RDS, medios en S3/CloudFront y staging HTTPS restringido; la aceptación y el corte permanecen cerrados. Detalle y pruebas: [IMPLEMENTACION.md](docs/migration-aws-2026-09-30/IMPLEMENTACION.md). No se tocó el trabajo local de home/taller ni se regeneraron imágenes.

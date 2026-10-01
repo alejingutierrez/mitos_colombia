@@ -1,3 +1,4 @@
+import { maybeQueueAdminJob } from "../../../../../runtime/admin-jobs.mjs";
 import { createHash, randomUUID } from "node:crypto";
 import { execFile } from "node:child_process";
 import fs from "node:fs/promises";
@@ -877,6 +878,8 @@ export async function GET(request) {
 }
 
 export async function POST(request) {
+  const queued = await maybeQueueAdminJob(request);
+  if (queued) return queued;
   if (!LOCAL_ONLY) return disabledResponse();
   if (!checkAuth(request)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

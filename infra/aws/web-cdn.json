@@ -1,0 +1,489 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Mitos own HTTPS web CDN/WAF; operator-only until acceptance; www DNS is changed separately after final parity",
+  "Parameters": {
+    "OperatorCidr": {
+      "Type": "String",
+      "AllowedPattern": "[0-9.]+/32"
+    },
+    "PublicEnabled": {
+      "Type": "String",
+      "Default": "false",
+      "AllowedValues": [
+        "false",
+        "true"
+      ]
+    },
+    "CertificateArn": {
+      "Type": "String",
+      "Default": "arn:aws:acm:us-east-1:907264907058:certificate/bb62eb2e-bead-491d-a0e9-3e906a32d128"
+    }
+  },
+  "Conditions": {
+    "PrivateStage": {
+      "Fn::Equals": [
+        {
+          "Ref": "PublicEnabled"
+        },
+        "false"
+      ]
+    }
+  },
+  "Resources": {
+    "Operators": {
+      "Type": "AWS::WAFv2::IPSet",
+      "Properties": {
+        "Name": "mitos-colombia-stage-operators",
+        "Scope": "CLOUDFRONT",
+        "IPAddressVersion": "IPV4",
+        "Addresses": [
+          {
+            "Ref": "OperatorCidr"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "ManagedBy",
+            "Value": "CloudFormation"
+          }
+        ]
+      }
+    },
+    "Firewall": {
+      "Type": "AWS::WAFv2::WebACL",
+      "Properties": {
+        "Name": "mitos-colombia-web",
+        "Scope": "CLOUDFRONT",
+        "DefaultAction": {
+          "Allow": {}
+        },
+        "Rules": [
+          {
+            "Fn::If": [
+              "PrivateStage",
+              {
+                "Name": "RestrictBeforeCutover",
+                "Priority": 0,
+                "Action": {
+                  "Block": {}
+                },
+                "Statement": {
+                  "NotStatement": {
+                    "Statement": {
+                      "IPSetReferenceStatement": {
+                        "ARN": {
+                          "Fn::GetAtt": [
+                            "Operators",
+                            "Arn"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "VisibilityConfig": {
+                  "CloudWatchMetricsEnabled": true,
+                  "SampledRequestsEnabled": false,
+                  "MetricName": "MitosPrecutover"
+                }
+              },
+              {
+                "Ref": "AWS::NoValue"
+              }
+            ]
+          },
+          {
+            "Name": "AWSManagedRulesAmazonIpReputationList",
+            "Priority": 1,
+            "OverrideAction": {
+              "None": {}
+            },
+            "Statement": {
+              "ManagedRuleGroupStatement": {
+                "VendorName": "AWS",
+                "Name": "AWSManagedRulesAmazonIpReputationList"
+              }
+            },
+            "VisibilityConfig": {
+              "CloudWatchMetricsEnabled": true,
+              "SampledRequestsEnabled": false,
+              "MetricName": "Mitos1"
+            }
+          },
+          {
+            "Name": "AWSManagedRulesKnownBadInputsRuleSet",
+            "Priority": 2,
+            "OverrideAction": {
+              "None": {}
+            },
+            "Statement": {
+              "ManagedRuleGroupStatement": {
+                "VendorName": "AWS",
+                "Name": "AWSManagedRulesKnownBadInputsRuleSet"
+              }
+            },
+            "VisibilityConfig": {
+              "CloudWatchMetricsEnabled": true,
+              "SampledRequestsEnabled": false,
+              "MetricName": "Mitos2"
+            }
+          },
+          {
+            "Name": "RequestRate",
+            "Priority": 3,
+            "Action": {
+              "Block": {}
+            },
+            "Statement": {
+              "RateBasedStatement": {
+                "Limit": 6000,
+                "AggregateKeyType": "IP",
+                "EvaluationWindowSec": 300
+              }
+            },
+            "VisibilityConfig": {
+              "CloudWatchMetricsEnabled": true,
+              "SampledRequestsEnabled": false,
+              "MetricName": "MitosRate"
+            }
+          },
+          {
+            "Name": "RestrictStaging",
+            "Priority": 4,
+            "Action": {
+              "Block": {}
+            },
+            "Statement": {
+              "AndStatement": {
+                "Statements": [
+                  {
+                    "ByteMatchStatement": {
+                      "FieldToMatch": {
+                        "SingleHeader": {
+                          "Name": "host"
+                        }
+                      },
+                      "SearchString": "staging.mitosdecolombia.com",
+                      "PositionalConstraint": "EXACTLY",
+                      "TextTransformations": [
+                        {
+                          "Priority": 0,
+                          "Type": "LOWERCASE"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "NotStatement": {
+                      "Statement": {
+                        "IPSetReferenceStatement": {
+                          "ARN": {
+                            "Fn::GetAtt": [
+                              "Operators",
+                              "Arn"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "VisibilityConfig": {
+              "CloudWatchMetricsEnabled": true,
+              "SampledRequestsEnabled": false,
+              "MetricName": "MitosStage"
+            }
+          }
+        ],
+        "VisibilityConfig": {
+          "CloudWatchMetricsEnabled": true,
+          "SampledRequestsEnabled": false,
+          "MetricName": "MitosWeb"
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "ManagedBy",
+            "Value": "CloudFormation"
+          }
+        ]
+      }
+    },
+    "WafLogs": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "aws-waf-logs-mitos-colombia",
+        "RetentionInDays": 7,
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "ManagedBy",
+            "Value": "CloudFormation"
+          }
+        ]
+      }
+    },
+    "WafLogging": {
+      "Type": "AWS::WAFv2::LoggingConfiguration",
+      "Properties": {
+        "ResourceArn": {
+          "Fn::GetAtt": [
+            "Firewall",
+            "Arn"
+          ]
+        },
+        "LogDestinationConfigs": [
+          {
+            "Fn::GetAtt": [
+              "WafLogs",
+              "Arn"
+            ]
+          }
+        ],
+        "RedactedFields": [
+          {
+            "SingleHeader": {
+              "Name": "authorization"
+            }
+          },
+          {
+            "SingleHeader": {
+              "Name": "cookie"
+            }
+          },
+          {
+            "QueryString": {}
+          }
+        ],
+        "LoggingFilter": {
+          "DefaultBehavior": "DROP",
+          "Filters": [
+            {
+              "Behavior": "KEEP",
+              "Requirement": "MEETS_ANY",
+              "Conditions": [
+                {
+                  "ActionCondition": {
+                    "Action": "BLOCK"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "Redirect": {
+      "Type": "AWS::CloudFront::Function",
+      "Properties": {
+        "Name": "mitos-colombia-apex",
+        "AutoPublish": true,
+        "FunctionConfig": {
+          "Comment": "Preserve URI and encoded campaign parameters on canonical www redirect",
+          "Runtime": "cloudfront-js-2.0"
+        },
+        "FunctionCode": "function handler(event) {\n  var request = event.request;\n  request.headers['x-mitos-stage'] = { value: request.headers.host.value === 'staging.mitosdecolombia.com' ? '1' : '0' };\n  if (request.headers.host.value !== 'mitosdecolombia.com') return request;\n  var parts = [];\n  for (var key in request.querystring) {\n    var item = request.querystring[key];\n    var values = item.multiValue || [item];\n    for (var i = 0; i < values.length; i++) parts.push(key + '=' + values[i].value);\n  }\n  var location = 'https://www.mitosdecolombia.com' + request.uri + (parts.length ? '?' + parts.join('&') : '');\n  // Requests with literal control characters never become response headers.\n  if (/[\\x00-\\x1f\\x7f]/.test(location)) return { statusCode: 400, statusDescription: 'Bad Request' };\n  return { statusCode: 308, statusDescription: 'Permanent Redirect', headers: { location: { value: location }, 'cache-control': { value: 'public,max-age=300' } } };\n}\n"
+      }
+    },
+    "Distribution": {
+      "Type": "AWS::CloudFront::Distribution",
+      "Properties": {
+        "DistributionConfig": {
+          "Enabled": true,
+          "Comment": "Mitos web - initially restricted to operator IPv4",
+          "Aliases": [
+            "mitosdecolombia.com",
+            "www.mitosdecolombia.com",
+            "staging.mitosdecolombia.com"
+          ],
+          "HttpVersion": "http2and3",
+          "IPV6Enabled": true,
+          "PriceClass": "PriceClass_All",
+          "ViewerCertificate": {
+            "AcmCertificateArn": {
+              "Ref": "CertificateArn"
+            },
+            "SslSupportMethod": "sni-only",
+            "MinimumProtocolVersion": "TLSv1.2_2021"
+          },
+          "WebACLId": {
+            "Fn::GetAtt": [
+              "Firewall",
+              "Arn"
+            ]
+          },
+          "Origins": [
+            {
+              "Id": "owned-host",
+              "DomainName": "origin.mitosdecolombia.com",
+              "CustomOriginConfig": {
+                "HTTPSPort": 443,
+                "HTTPPort": 80,
+                "OriginProtocolPolicy": "https-only",
+                "OriginSSLProtocols": [
+                  "TLSv1.2"
+                ],
+                "OriginReadTimeout": 60,
+                "OriginKeepaliveTimeout": 5
+              },
+              "OriginCustomHeaders": [
+                {
+                  "HeaderName": "X-Mitos-Origin",
+                  "HeaderValue": "{{resolve:secretsmanager:arn:aws:secretsmanager:us-east-1:907264907058:secret:mitos-colombia/prod/origin-3oQ31L:SecretString}}"
+                }
+              ]
+            }
+          ],
+          "DefaultCacheBehavior": {
+            "TargetOriginId": "owned-host",
+            "ViewerProtocolPolicy": "redirect-to-https",
+            "AllowedMethods": [
+              "GET",
+              "HEAD",
+              "OPTIONS",
+              "PUT",
+              "POST",
+              "PATCH",
+              "DELETE"
+            ],
+            "CachedMethods": [
+              "GET",
+              "HEAD"
+            ],
+            "Compress": true,
+            "CachePolicyId": "4135ea2d-6df8-44a3-9df3-4b5a84be39ad",
+            "OriginRequestPolicyId": "b689b0a8-53d0-40ab-baf2-68738e2966ac",
+            "FunctionAssociations": [
+              {
+                "EventType": "viewer-request",
+                "FunctionARN": {
+                  "Fn::GetAtt": [
+                    "Redirect",
+                    "FunctionARN"
+                  ]
+                }
+              }
+            ]
+          },
+          "CustomErrorResponses": [
+            {
+              "ErrorCode": 502,
+              "ErrorCachingMinTTL": 0
+            },
+            {
+              "ErrorCode": 503,
+              "ErrorCachingMinTTL": 0
+            }
+          ]
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "ManagedBy",
+            "Value": "CloudFormation"
+          }
+        ]
+      }
+    },
+    "StageA": {
+      "Type": "AWS::Route53::RecordSet",
+      "Properties": {
+        "HostedZoneId": "Z10003897KR85ZBPM93O",
+        "Name": "staging.mitosdecolombia.com",
+        "Type": "A",
+        "AliasTarget": {
+          "HostedZoneId": "Z2FDTNDATAQYW2",
+          "DNSName": {
+            "Fn::GetAtt": [
+              "Distribution",
+              "DomainName"
+            ]
+          },
+          "EvaluateTargetHealth": false
+        }
+      }
+    },
+    "StageAAAA": {
+      "Type": "AWS::Route53::RecordSet",
+      "Properties": {
+        "HostedZoneId": "Z10003897KR85ZBPM93O",
+        "Name": "staging.mitosdecolombia.com",
+        "Type": "AAAA",
+        "AliasTarget": {
+          "HostedZoneId": "Z2FDTNDATAQYW2",
+          "DNSName": {
+            "Fn::GetAtt": [
+              "Distribution",
+              "DomainName"
+            ]
+          },
+          "EvaluateTargetHealth": false
+        }
+      }
+    },
+    "Errors": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "mitos-colombia-web-5xx",
+        "Namespace": "AWS/CloudFront",
+        "MetricName": "5xxErrorRate",
+        "Dimensions": [
+          {
+            "Name": "DistributionId",
+            "Value": {
+              "Ref": "Distribution"
+            }
+          },
+          {
+            "Name": "Region",
+            "Value": "Global"
+          }
+        ],
+        "Statistic": "Average",
+        "Period": 300,
+        "EvaluationPeriods": 3,
+        "Threshold": 2,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching"
+      }
+    }
+  },
+  "Outputs": {
+    "DistributionId": {
+      "Value": {
+        "Ref": "Distribution"
+      }
+    },
+    "DistributionDomain": {
+      "Value": {
+        "Fn::GetAtt": [
+          "Distribution",
+          "DomainName"
+        ]
+      }
+    },
+    "FirewallArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "Firewall",
+          "Arn"
+        ]
+      }
+    }
+  }
+}

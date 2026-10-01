@@ -18,7 +18,7 @@ const MYTH = {
   imageUrl: "/samples/pacifico.jpg",
   // Vertical real del archivo (1024×1536): es la que alimenta la portada móvil.
   verticalImageUrl:
-    "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-madremonte-1784913022399.jpg",
+    "https://media.mitosdecolombia.com/blob/vertical/myth/la-madremonte-1784913022399.jpg",
   latitude: 5.6918,
   longitude: -76.6583,
   excerpt:

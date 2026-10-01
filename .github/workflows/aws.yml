@@ -82,6 +82,11 @@ jobs:
           role-to-assume: arn:aws:iam::907264907058:role/mitos-colombia-ci-build
           aws-region: us-east-1
           allowed-account-ids: '907264907058'
+      - name: Refresh public snapshot from accepted writer
+        if: vars.MITOS_AWS_CUTOVER_COMPLETE == 'true'
+        env:
+          INSTANCE_ID: ${{ vars.MITOS_AWS_INSTANCE_ID }}
+        run: node scripts/aws/refresh-snapshot.mjs
       - name: Obtain published snapshot
         id: snapshot
         env:
@@ -89,8 +94,10 @@ jobs:
           NEXT_PUBLIC_GTM_ID: ${{ vars.MITOS_PUBLIC_GTM_ID }}
         run: |
           mkdir -p build-input
-          aws s3 cp "s3://$OPERATIONS_BUCKET/build-input/current/catalog.sqlite" build-input/catalog.sqlite --only-show-errors
-          aws s3 cp "s3://$OPERATIONS_BUCKET/build-input/current/receipt.json" build-input/receipt.json --only-show-errors
+          aws s3 cp "s3://$OPERATIONS_BUCKET/build-input/current/manifest.json" build-input/manifest.json --only-show-errors
+          prefix=$(node -e 'const m=require("./build-input/manifest.json"); if(!/^build-input\/snapshots\/[a-f0-9-]{36}$/.test(m.prefix)) throw Error("Invalid snapshot prefix"); process.stdout.write(m.prefix)')
+          aws s3 cp "s3://$OPERATIONS_BUCKET/$prefix/catalog.sqlite" build-input/catalog.sqlite --only-show-errors
+          aws s3 cp "s3://$OPERATIONS_BUCKET/$prefix/receipt.json" build-input/receipt.json --only-show-errors
           node scripts/aws/verify-snapshot.mjs
           node -e 'const r=require("./build-input/receipt.json"); console.log("source_verified="+String(r.sourceVerified===true))' >> "$GITHUB_OUTPUT"
       - name: Build immutable ARM image

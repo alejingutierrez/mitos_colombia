@@ -1,3 +1,4 @@
+import { maybeQueueAdminJob } from "../../../../../runtime/admin-jobs.mjs";
 import { NextResponse } from "next/server";
 import { createLazyOpenAI } from "../../../../../runtime/openai.mjs";
 import {
@@ -401,6 +402,8 @@ export async function GET(request) {
 }
 
 export async function POST(request) {
+  const queued = await maybeQueueAdminJob(request);
+  if (queued) return queued;
   try {
     if (!checkAuth(request)) {
       return NextResponse.json(

@@ -9,7 +9,7 @@ export const metadata = {
   robots: { index: false, follow: false },
 };
 
-const BLOB = "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth";
+const BLOB = "https://media.mitosdecolombia.com/blob/vertical/myth";
 
 const MYTHS = {
   anansi: {

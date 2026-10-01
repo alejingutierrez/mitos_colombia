@@ -1,3 +1,4 @@
+import { maybeQueueAdminJob } from "../../../../../../runtime/admin-jobs.mjs";
 import { NextResponse } from "next/server";
 import { createLazyOpenAI } from "../../../../../../runtime/openai.mjs";
 import sharp from "sharp";
@@ -317,6 +318,8 @@ async function deleteOldImage(imageUrl) {
 }
 
 export async function POST(request) {
+  const queued = await maybeQueueAdminJob(request);
+  if (queued) return queued;
   try {
     if (!checkAuth(request)) {
       return NextResponse.json(

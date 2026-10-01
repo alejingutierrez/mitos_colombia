@@ -1,0 +1,91 @@
+{
+  "at": "2026-10-01T19:27:52.882Z",
+  "kind": "initial-owned-database-restore-check",
+  "sourceVerified": true,
+  "sourceDeployment": "dpl_DnEtz4eXPTi63Wo9FBWLVS85T7pn",
+  "database": "mitos",
+  "destination": "mitos-colombia-prod.c2v4uumucd2n.us-east-1.rds.amazonaws.com",
+  "writerActive": false,
+  "tables": {
+    "comments": {
+      "count": 2
+    },
+    "communities": {
+      "count": 51
+    },
+    "contact_messages": {
+      "count": 4
+    },
+    "editorial_myth_keywords": {
+      "count": 2356
+    },
+    "editorial_myth_research": {
+      "count": 5
+    },
+    "editorial_myth_tags": {
+      "count": 1818
+    },
+    "editorial_myths": {
+      "count": 596
+    },
+    "home_banners": {
+      "count": 5
+    },
+    "myth_keywords": {
+      "count": 6115
+    },
+    "myth_narrations": {
+      "count": 182
+    },
+    "myth_tags": {
+      "count": 2893
+    },
+    "myths": {
+      "count": 596
+    },
+    "narration_beds": {
+      "count": 143
+    },
+    "regions": {
+      "count": 6
+    },
+    "seo_pages": {
+      "count": 746
+    },
+    "tags": {
+      "count": 1108
+    },
+    "tarot_cards": {
+      "count": 78
+    },
+    "tarot_orders": {
+      "count": 1
+    },
+    "tarot_user_sessions": {
+      "count": 6
+    },
+    "tarot_users": {
+      "count": 6
+    },
+    "vertical_images": {
+      "count": 1260
+    }
+  },
+  "currentSourceDrift": [
+    {
+      "table": "tarot_cards",
+      "sourceCount": 78,
+      "destinationCount": 78
+    }
+  ],
+  "initialComparison": "All 21 row digests matched in the earlier post-restore comparison; the source remains active.",
+  "excludedUnclassifiedTables": [
+    "analysis_results",
+    "backlinks_checks",
+    "backlinks_messages",
+    "backlinks_prospects",
+    "insights",
+    "news_articles"
+  ],
+  "note": "This check uses SELECT in read-only snapshots and the dedicated backup role. Final writer freeze, copy and parity remain required."
+}

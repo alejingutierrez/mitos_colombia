@@ -1,5 +1,6 @@
 # TLS origin config. Render @ORIGIN_SECRET@ in a root-owned file (0600).
 # Enable only after a trusted origin certificate and CF origin headers exist.
+map_hash_bucket_size 128;
 map $http_x_mitos_origin $mitos_origin_allowed {
     default 0;
     "@ORIGIN_SECRET@" 1;
@@ -8,6 +9,10 @@ map $http_cloudfront_viewer_address $mitos_viewer_ip {
     default "";
     ~^([0-9.]+):[0-9]+$ $1;
     ~^\[(.+)\]:[0-9]+$ $1;
+}
+map $http_x_mitos_stage $mitos_stage_robots {
+    default "";
+    "1" "noindex, nofollow, noarchive";
 }
 include /etc/nginx/mitos-upstream.conf;
 server {
@@ -30,6 +35,7 @@ server {
     ssl_protocols TLSv1.2 TLSv1.3;
     if ($mitos_origin_allowed = 0) { return 403; }
     if ($mitos_viewer_ip = "") { return 403; }
+    add_header X-Robots-Tag $mitos_stage_robots always;
     client_max_body_size 10m;
     location ^~ /api/internal/ { return 404; }
     location / {

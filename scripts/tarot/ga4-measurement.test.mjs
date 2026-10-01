@@ -56,6 +56,7 @@ test("accepts only pseudonymous GA session identifiers", () => {
 test("reads the browser client and session identifiers without blocking checkout", async () => {
   const previousWindow = global.window;
   global.window = {
+    location: {hostname: "www.mitosdecolombia.com"},
     dataLayer: [],
     setTimeout,
     clearTimeout,

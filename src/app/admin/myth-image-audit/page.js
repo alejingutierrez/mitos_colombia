@@ -1,5 +1,7 @@
 "use client";
 
+import { adminFetch as fetch } from "../../../lib/admin-fetch.js";
+
 /* eslint-disable @next/next/no-img-element */
 
 import { useCallback, useEffect, useMemo, useState } from "react";

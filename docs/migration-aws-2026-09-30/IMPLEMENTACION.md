@@ -1,91 +1,89 @@
 # Implementación y migración AWS de Mitos
 
-Actualizado: 1 de octubre de 2026. Rama `codex/aws-migration`; base publicada `582d4b4f653c5e983fb39bfab537c4f768a37bb4`. Worktree aislado; los cambios locales del home y del taller no se modifican.
+Actualizado: 1 de octubre de 2026. Rama `codex/aws-migration`; base publicada `582d4b4f653c5e983fb39bfab537c4f768a37bb4`. Se trabaja en un worktree aislado; el home y el taller locales no se modifican.
 
-La migración está en curso. La web pública continúa en Vercel y Neon sigue siendo el writer. No se cambió DNS, no se corrieron seeds ni campañas de IA y no se retiraron servicios.
+**Migración en curso. El DNS autoritativo ya está en AWS. La web pública y las ventas continúan en Vercel; Neon sigue siendo el writer.** El nuevo sitio está en staging restringido. No se ejecutó el seed Excel, ninguna campaña de IA ni retiro del origen.
 
-## Estado de las puertas
+## Estado actual
 
-| Puerta | Estado real | Lo que falta |
+| Parte | Evidencia real | Pendiente |
 |---|---|---|
-| P0 inventario | Parcial | Vincular conexiones y Blob locales a las variables reales del deployment; propietarios de seis tablas sin consumidor; tráfico y baseline colombiano comparable. |
-| P1 aplicación | Build y contratos locales pasan | Integración completa con RDS/S3, restore y conmutación ensayada; sacar generación/exportaciones largas del proceso HTTP. |
-| P2 destino | Base propia creada | CDN, WAF, TLS, observación completa, jobs bajo demanda y entorno temporal de QA. |
-| P3 ensayo/copia | Respaldo inicial local verificado | Universo Blob ligado a producción, DB de ensayo, mapa de URLs, paridad final y restauración. |
-| P4 QA | Smoke local de lectura | Edición/publicación de fixtures, auth, pagos test, RSC, medios y taller en AWS. |
-| P5 carga/fallos | Pendiente | Carga, créditos CPU, memoria, pérdida del host, restore, deploy fallido y conciliación de cola. |
-| P6 corte | Bloqueado por las puertas previas | Freeze, callback inbox provisional, dump final, un writer, DNS/CDN y smoke público. |
-| P7/P8 | Pendientes | Observación, compatibilidad y retiro de origen con allowlist. |
+| DNS | Delegación GoDaddy y registro `.com` confirman los cuatro NS de Route 53. Registros existentes preservados. | Corte de apex/www después de aceptación. |
+| Registro del dominio | Continúa en GoDaddy, bloqueado para transferencia; AWS confirma `UNTRANSFERABLE`. | Verificación SMS del titular, desbloqueo y traslado del registro. |
+| Base | 21 tablas propias restauradas; roles separados; migraciones 000, 001 y 002 aplicadas; app sin CREATE. | Freeze y copia/paridad final; el origen activo volvió a modificar tarot_cards. |
+| Medios | 5.701 objetos, 9.236.150.891 bytes, SHA y versión S3 comprobados. CDN HTTPS propia entrega JPEG/MP3 y rango 206. | Delta final bajo freeze. |
+| URLs | 3.546 referencias en 12 columnas de la copia RDS; 407 referencias en 26 módulos públicos. Todas tienen objeto copiado. | Paridad normalizada final; los freezes históricos conservan procedencia original. |
+| Aplicación | Imagen inicial ARM real saludable contra RDS en staging por CloudFront Bogotá. | Nueva imagen con URLs propias y workers, QA completa y fallo/rollback real. |
+| Configuración | Config recuperable de Vercel trasladada por allowlist en memoria; RDS usa mitos_app; token interno propio. | Claves privadas Bold y configuración comercial Secret originales. |
+| Automatización | GitHub OIDC, ARM, scan, estáticos por SHA; snapshot público de solo lectura con publicación atómica y documento SSM limitado. | Ensayo real del refresco después de aceptar el writer. Gate público sigue cerrado. |
+| Taller | Archivo privado inicial de 39.078 archivos/17.914.015.376 bytes; restauración de edición completa y muestras por versión/hash. | Ramas, overlays vivos y reconexión operativa del taller. |
 
-## Infraestructura provisionada
+## Infraestructura propia
 
-Cuenta `907264907058`, región `us-east-1`, tres stacks propios:
+Cuenta `907264907058`, `us-east-1`. Stacks: foundation, runtime, ci, certificate, origin-dns, media y web; todos pertenecen a Mitos.
 
-- `mitos-colombia-foundation`: VPC `10.77.0.0/16`, subred pública para salida sin NAT, RDS PostgreSQL 17.11 privada `db.t4g.micro` SingleAZ, 20 GB gp3; tres buckets privados versionados; ECR inmutable; SQS de pagos y DLQ; secretos propios y roles de runtime/job.
-- `mitos-colombia-runtime`: EC2 ARM64 `t4g.small`, 30 GB cifrados, IMDSv2, sin SSH; acceso 443 solo desde la lista de orígenes CloudFront. El host está instalado por SSM y mantiene respuesta 503 local; no tiene la aplicación ni credenciales productivas cargadas.
-- `mitos-colombia-ci`: roles OIDC del repo y documento SSM que admite SHA/digest validados. El environment `mitos-aws-production` solo admite `main`.
+- VPC `10.77.0.0/16`, RDS PostgreSQL 17.11 privada `db.t4g.micro` SingleAZ/20 GB gp3, 35 días de backups y protección de borrado.
+- EC2 ARM64 `t4g.small`, disco 30 GB cifrado, IMDSv2, sin SSH; 443 solo desde CloudFront. Docker/Nginx/PostgreSQL CLI/SSM instalados.
+- Buckets media/archive/operations privados, cifrados, versionados y con bloqueo de acceso público. Solo CloudFront OAC propio puede GET al bucket de medios; acceso S3 anónimo respondió 403.
+- ECR inmutable por SHA, SQS propia de pagos y DLQ. Roles runtime/job y OIDC propios; ningún permiso nuevo a recursos de RAG/Cocina.
+- ACM emitió apex + wildcard. El origen usa certificado DNS-01 y renovación systemd dos veces al día; dry-run de renovación pasó. El respaldo de claves/certificados permanece únicamente en operations privado.
+- CloudFront web `E12OCIT65B9EUU`: HTTPS al origen, header propio, RSC/cookies/query reenviados y caché CDN desactivada. WAF propio con reglas administradas/rate limit; staging permanece limitado a operadores incluso tras abrir www.
+- CloudFront media `E10WLYMIZWFTI`: S3 con firma SigV4, HTTP2/3, compresión, CORS para medios públicos y caché por MIME. Imágenes/audio copiados son inmutables; se conserva reproducción por rangos.
 
-RDS tiene protección contra borrado y 35 días de backups. Foundation/runtime tienen protección de terminación. La política de stack bloquea sustitución/borrado de base, buckets, zona y secretos.
+Foundation/runtime mantienen protección de terminación y una política que impide sustituir/borrar base, buckets, zona y secretos. El endpoint S3 admite solo nuestros buckets y GET a los repositorios regionales de Amazon Linux/ECR requeridos para bootstrap.
 
-El primer arranque falló porque el endpoint S3 solo admitía nuestros buckets y bloqueaba los repositorios de Amazon Linux. Se corrigió mediante un change set que modificó únicamente ese endpoint: GET a los paquetes regionales de Amazon y al bucket regional de capas ECR. Docker, Nginx y PostgreSQL CLI están instalados; SSM responde. No se abrieron permisos a buckets de otros proyectos.
+No se cambió el origen público: apex conserva A anterior y www su CNAME Vercel. `origin`, `media` y `staging` ya pertenecen al destino AWS. Se preservaron `_domainconnect` y `_dmarc`; no existían MX/CAA y DNSSEC estaba apagado.
 
-Los tres servicios de RAG/Cocina permanecen `RUNNING` y su raíz HTTP respondió 200 después de esta provisión. Ese smoke no sustituye sus suites funcionales; ver [peer-health.json](receipts/peer-health.json).
+## Copia y restauración
 
-## Cambios de aplicación
+El snapshot inicial se obtuvo de la conexión local después de contrastar identidad y credencial con la configuración del deployment publicado. Dump PostgreSQL bajo snapshot exportado de transacción de solo lectura, con tablas y secuencias propias. Ningún seed ni DDL en el origen.
 
-- Driver `pg` con SQL parametrizado, pool acotado y conexión fijada para transacciones; AWS exige RDS y CA verificada.
-- Adaptador S3 con URLs propias, tipos MIME, objetos inmutables por defecto, paginación y borrado mediante marcadores de versión. AWS rechaza fallback a Blob.
-- Caché de disco exclusiva del build AWS, separada por release y con invalidación de tags compartida; no se introduce Redis.
-- Snapshot de build en transacción PostgreSQL de solo lectura. Incluye datos usados por el catálogo y únicamente comentarios aprobados; excluye emails privados, cuentas, pedidos, sesiones y expedientes. El build no ejecuta seeds ni escritura SQLite.
-- Contenedor standalone, CA RDS, secretos leídos en memoria desde el secret propio, guard de cuenta/rol y endpoints live/ready/version.
-- Autenticación AWS con contadores PostgreSQL distintos por IP y cuenta; el proxy debe sobrescribir la IP con `CloudFront-Viewer-Address`.
-- Webhook AWS confirma SQS antes de 2xx. Worker separado, deduplicación/lease y DLQ. Faltan pruebas integradas con datos sintéticos y el inbox provisional para propagación DNS.
-- DDL retirado del arranque AWS; migraciones con digest y advisory lock. Se ejecutarán después de importar el esquema real, no para recrear el catálogo desde Excel.
-- Next.js actualizado a 16.3.8 por parches de seguridad; `npm audit` quedó en cero. OpenGraph usa Node. Los clientes de IA se inicializan solo al invocarlos, de modo que el build no usa sus claves.
+Las 21 tablas incluyen catálogo, editoriales, imágenes, narraciones, tarot, comentarios, contactos, cuentas, sesiones y pedidos. Los 21 hashes de filas coincidieron después del restore inicial. Un control posterior encontró cambio en `tarot_cards` mientras Neon seguía activo: ese drift está registrado y obliga a repetir copia/paridad en el corte. Se excluyeron sin tocarlas seis tablas sin consumidor Mitos y sin FK hacia ellas: analysis_results, backlinks_checks, backlinks_messages, backlinks_prospects, insights y news_articles.
 
-## Automatización preparada
+El dump inicial tiene 10.767.147 bytes y SHA `0b80985eda0c59d1eb187802a7d21da7181e8e705753f4a6d4524213f25855af`. Está guardado como una versión inmutable en archive privado. Los recibos públicos conservan conteos/estado; dumps, payloads privados, manifests completos y credenciales quedan fuera del repo.
 
-`.github/workflows/aws.yml` hace checks, build ARM64, scan ECR, publicación de estáticos por SHA y recibo SHA → digest → snapshot. OIDC no necesita llaves AWS permanentes en GitHub. Antes de publicar la imagen se ejercitan sus bindings ARM64 de imagen/SQLite, el driver pg y los SDK directos del entrypoint sin secretos ni llamadas externas. Cada job tiene timeout y los reintentos reutilizan una imagen existente únicamente si coinciden SHA, snapshot, procedencia verificada e IDs públicos; nunca reemplazan una etiqueta inmutable. La rama de migración tiene deshabilitados previews Vercel para impedir builds contra la base viva durante esta preparación. CI trae únicamente los archivos necesarios para aplicación/pruebas, rutas y módulos community/media: el ensayo sparse conserva las 112 pruebas y trae 107.909.902 bytes frente al corpus de contenido versionado de casi 2,9 GB. El índice Git sigue completo para chequear rutas de secretos. Las actualizaciones exclusivas del expediente de migración o de ESTADO no reconstruyen imágenes; los PR mantienen sus checks. En GitHub el checkout reducido tardó siete segundos en checks y seis en imagen; ambas ejecuciones pasaron.
+Blob se inventarió antes y después de la copia, sin cambios durante esa tanda: 5.701 objetos y cero fallos, con checksum SHA-256 y HEAD de versión específica. La fuente sigue activa: esta copia inicial no es una garantía de paridad final.
 
-`MITOS_AWS_BUILD_ENABLED=true` habilita probar imágenes. `MITOS_AWS_CUTOVER_COMPLETE=false` mantiene bloqueado el deploy público. El snapshot inicial conserva `sourceVerified=false`; esa marca no se cambia para hacer pasar una puerta.
+Se conservan [recibo de DB](receipts/database-initial-copy.json), [backup](receipts/database-backup.json), [Blob](receipts/blob-initial-copy.json), [reescritura](receipts/media-rewrite.json) y [CDN](receipts/media-cdn.json). Los recibos son puntos en el tiempo, no certificaciones del corte.
 
-`infra/aws/host/deploy.sh` está preparado para readiness/calentar un candidato, comprobar margen de RAM, conmutar el proxy, smoke público y volver a la imagen anterior sobre la misma RDS ante fallo. El worker se drena aparte. La reversión arranca/verifica la imagen previa antes de devolverle tráfico; si no puede recuperarla, conserva el candidato y reporta atención manual. Pasan siete ensayos de fallos con CLI simuladas: smoke público, validación Nginx, worker, recibo final, primer release, reintento y predecesor no recuperable. El ensayo real en EC2/RDS sigue pendiente; no se confunden esas simulaciones con recuperación productiva. No se instala ni activa como release de producción hasta P3–P5.
+## Aplicación y trabajos largos
 
-Antes de habilitar releases ordinarios falta automatizar refresco de snapshot desde RDS verificada, migraciones con rol separado y QA temporal. No basta con cambiar la variable del corte a true.
+Runtime `pg` con parámetros, pool acotado y TLS/CA RDS; S3 reemplaza Blob; standalone ARM no incluye taller, fuentes privadas ni secretos. AWS rechaza credenciales Blob, bearer Bedrock ajeno y perfiles explícitos. Secrets Manager inyecta únicamente la allowlist en memoria; el contenedor no contiene claves.
 
-El PR público [#76](https://github.com/alejingutierrez/mitos_colombia/pull/76) está en borrador. Los checks actuales del PR pasaron con las 112 pruebas, lint y auditorías npm en [GitHub Actions](https://github.com/alejingutierrez/mitos_colombia/actions/runs/36900030863); esa ejecución omite imagen y deploy por ser un PR. La primera construcción ARM64 por push compiló y pasó el smoke de dependencias nativas en [Actions](https://github.com/alejingutierrez/mitos_colombia/actions/runs/36893113902), pero no publicó estáticos ni recibo de release: el waiter consultó ECR antes de que hubiera resultado, y el escaneo posterior confirmó 3 hallazgos críticos y 12 altos en la base Debian. Su imagen no es elegible para release; ver [first-image-scan.json](receipts/first-image-scan.json).
+La cuenta `mitos_app` hace CRUD de tablas propias, sin CREATE; `mitos_migrator` aplica SQL con digest/advisory lock y `mitos_backup` lee. La tabla de migraciones no admite escritura del rol app.
 
-La corrección usa una base Node 24 / Alpine 3.24 fijada por digest, compartida entre builder y runtime, con paquetes actualizados y compiladores solo en el builder. La [matriz de Node](https://github.com/nodejs/docker-node/blob/main/versions.json) incluye ARM64 y la [matriz de AWS](https://docs.aws.amazon.com/inspector/latest/user/supported.html) incluye su escaneo. Node advierte que sus builds musl ARM64 no reciben pruebas previas a publicación: por eso se exige nuestro smoke ARM64 real, y la validación funcional completa permanece en P4 antes del corte. La imagen corregida pasó build, smoke ARM64 y scan ECR real sin hallazgos en [CI](https://github.com/alejingutierrez/mitos_colombia/actions/runs/36900023764); se publicaron sus estáticos y recibo de preparación, con `sourceVerified=false` y deploy omitido. Ver [prepared-image.json](receipts/prepared-image.json). El gate mantiene cero hallazgos altos/críticos; espera hasta diez minutos, solicita únicamente el scan de nuestra imagen si scan-on-push no aparece y rechaza resultados ausentes, fallidos o mayores de 24 horas.
+Los 16 POST largos del admin pasan a una cola RDS propia; el navegador espera su resultado mediante polling autenticado, conservando los formularios. Un contenedor editorial separado, máximo un trabajo, límite 512 MB/0,5 CPU, ejecuta la tarea fuera del proceso web. Un lock de kernel impide superponer una generación y un release. Los resultados ambiguos se marcan para revisión, sin regenerar automáticamente y duplicar créditos. Esto mantiene la variante económica sin añadir capacidad permanente. La cola admite un probe sintético RDS/S3 sin llamadas de IA; su ejecución real con la nueva imagen sigue pendiente.
 
-Se corrigió también una carrera en el simulador de CLI del ensayo de rollback: el archivo de estado se escribe por reemplazo atómico. El fallo de lectura parcial apareció en un run del PR; no era un fallo de rollback del host real.
+Pagos: webhook verifica firma y exige recibo SQS antes de 2xx; worker separado deduplica por lease/hash, con reintentos acotados y DLQ. Falta QA integrada con claves test y la captura/forward durante propagación DNS. Ningún pago real se usa como fixture.
 
-## Evidencia local
+Las páginas comerciales leen configuración en runtime, evitando que un build sin secretos fije una tienda preview en el artefacto. Staging tiene noindex y no carga GTM/GA ni emite mediciones de compra.
 
-- 112 tests focalizados de runtime, pagos, tarot, comentarios y escaneo: PASS local (104 anteriores + 8 escenarios del gate ECR).
-- ESLint focalizado: PASS.
-- Build sin secretos: 886 páginas generadas; solo aviso de fallback de Asimovian.
-- Auditoría standalone: sin taller, `.env`, fuentes de archivo ni symlinks que salgan del paquete; ver [standalone-package.json](receipts/standalone-package.json).
-- HTTP 200 en home, mitos, tarot, sitemap, robots, taxonomy, live y OpenGraph: [standalone-http.json](receipts/standalone-http.json).
-- Navegador local: navegación del home al relato de El Alma, imagen visible cargada, sin overflow ni errores de consola en esa lectura.
+## CI/CD
 
-Estas pruebas no prueban producción AWS ni sus objetivos de rendimiento. El origen existente volvió a responder 200 en home, El Alma y tarot desde Vercel después de la preparación: [existing-origin-http.json](receipts/existing-origin-http.json). Ese smoke anónimo tampoco verifica flujos privados.
+GitHub Actions verifica tests/lint/secret paths/audit, construye ARM64, ejercita codecs/SQLite/SDK/lock reales, exige escaneo ECR fresco sin HIGH/CRITICAL y publica estáticos por SHA. OIDC no emplea llaves AWS permanentes.
 
-## Respaldo inicial del taller
+Tras el corte, el build invoca únicamente el documento `mitos-colombia-snapshot` del host propio. El script exige el archivo local de aceptación y una release activa sana, exporta solo catálogo/comentarios aprobados y publica dos objetos inmutables antes de cambiar un manifest atómico. No exporta cuentas, pedidos, contactos ni emails de comentarios.
 
-Se archivaron 39.078 archivos y 17.914.015.376 bytes desde `content`, `editorial`, `docs`, `output`, `artifacts` y `public` del checkout original. Cada objeto tiene versión S3, checksum SHA-256, tamaño y comprobación de que el archivo fuente no cambió durante la copia. Las 66 referencias por symlink apuntan a archivos también archivados; no quedan destinos sin resolver. Se excluyeron seis archivos regenerables.
+`MITOS_AWS_BUILD_ENABLED=true`, `MITOS_AWS_CUTOVER_COMPLETE=false`. El snapshot nuevo de ensayo sigue `sourceVerified=false`. No se modifica esa marca ni el gate para forzar un release.
 
-El manifiesto completo y el mapa de aliases permanecen en el bucket privado. El repo público conserva únicamente el recibo agregado: [local-archive.json](receipts/local-archive.json).
+Deploy valida SHA/digest/migración, memoria, candidato/readiness, proxy y smoke público. Rollback recupera primero el predecesor sano y restaura ambos workers. Los ensayos de CLI simuladas cubren fallos de proxy, smoke, workers y recibo, reintento y predecesor irrecuperable. La prueba real y el corte siguen pendientes.
 
-Se restauraron cinco archivos de versiones concretas —freeze, audio, fuente editorial, imagen de referencia y manifiesto de hashes— y todos coincidieron por bytes y SHA-256: [representative-restore.json](receipts/representative-restore.json). Además, se recuperó una edición completa guardada de Bachué (`prepared-99`): 23 archivos, 19.734.577 bytes, sus diez láminas 1080 × 1350, freeze, fuentes y siete imágenes referenciadas; todos coinciden con hashes y versiones del archivo. Se comprobó también el hash de cada asset contra el freeze. Recibo: [edition-restore.json](receipts/edition-restore.json). La restauración ocurrió en una carpeta temporal nueva, sin modificar fuentes ni regenerar imágenes. Falta preservar bundles/overlays de las ramas y worktrees vivos, recuperar la versión histórica del renderer y reconectar el taller. Estas pruebas no sustituyen el respaldo final de Neon y Blob durante P3/P6.
+La imagen inicial corregida pasó ARM y ECR 0 HIGH/CRITICAL en [CI](https://github.com/alejingutierrez/mitos_colombia/actions/runs/36900023764); su recibo [prepared-image.json](receipts/prepared-image.json) la mantiene no aceptada. La imagen Debian anterior falló por vulnerabilidades y nunca se liberó; [first-image-scan.json](receipts/first-image-scan.json). El nuevo build con trabajos largos y URLs propias debe volver a pasar todos los gates.
 
-## Bloqueo de secretos
+## Secretos y pasos externos
 
-La revisión automática rechazó la exportación amplia de todas las variables de Vercel a texto plano en `/private/tmp`. No se hizo ese volcado. Solo se obtuvo metadata de nombres/tipos y deployment SHA.
+Las variables Vercel Config necesarias se recuperaron por ID/allowlist y se trasladaron directamente en memoria, sin un dump global a texto plano. Se vincularon credenciales locales de DB/Blob al deployment vigente. El runtime AWS ya contiene configuración parcial, POSTGRES propio y token worker; no está vacío.
 
-Está pendiente la autorización para leer únicamente variables necesarias y trasladarlas directamente a Secrets Manager de Mitos, sin mostrarlas ni persistir un archivo local con sus valores. El secreto runtime de AWS sigue vacío. No se asumen valores locales para Bold, flags comerciales o legales. Nunca se llevan tokens Blob, bearer Bedrock ajeno ni conexiones Neon al runtime final AWS.
+Vercel Secret no permite recuperar valores después de guardarlos: [contrato oficial](https://vercel.com/docs/environment-variables/sensitive-environment-variables). No se creó un endpoint de extracción en producción. La tienda actual sí vende a COP 119.900 y checkoutReady=true; sin sus llaves privadas Bold el corte desactivaría ventas. Sigue pendiente la fuente original de esas claves.
 
-Hay un segundo requisito de configuración: las variables `sensitive` (ahora Secret) no son recuperables después de guardarlas, incluso mediante API; ver [contrato de Vercel](https://vercel.com/docs/environment-variables/sensitive-environment-variables) y [Config/Secret](https://vercel.com/changelog/environment-variables-now-use-config-and-secret-types). El inventario incluye así las claves de Botón Bold y parte de los flags/datos comerciales. Para ellas se necesita la fuente original autorizada o una reposición coordinada; no se intenta extraerlas desde un endpoint temporal en producción. Las variables recuperables se leerán por ID y allowlist únicamente tras autorización, no mediante un dump global. Los IDs públicos de GA/GTM ya se contrastaron con la página publicada.
+Se preparó una copia limitada de datos comerciales ya publicados. La revisión automática rechazó escribirlos en runtime incluso sin flags; esa copia no se ejecutó y se solicitó aprobación específica. Nunca se infieren flags de pagos listos para pasar un gate.
 
-## Costos
+El DNS está migrado y [su recibo](receipts/domain-delegation.json) diferencia delegación, registrador y origen. GoDaddy exige SMS para continuar hacia el traslado del registro; no se ha desbloqueado ni pagado una transferencia. Precio AWS consultado para `.com`: USD 16 por traslado y USD 16/año de renovación; el traslado agrega un año según [AWS](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53-expiration.html).
 
-Se mantiene la arquitectura económica del spec: USD 60–80/mes para hosting en el escenario definido, más USD 5–15 durante meses con capacidad temporal de release. No se incluyen IA, tokens, imágenes, voz ni créditos. No se añadieron NAT, ALB, Redis ni standby permanentes. Los recursos ya provisionados generan cargos; el origen permanece activo durante la migración.
+## Taller, recuperación y costos
+
+Se archivaron 39.078 archivos/17.914.015.376 bytes; 66 aliases resueltos. Cinco restauraciones por versión/hash y una edición Bachué completa de 23 archivos/19.734.577 bytes pasaron, sin sobrescribir ni regenerar. [Recibos](receipts/edition-restore.json). Faltan referencias Git/overlays vivos y reconectar scripts del taller a la base/almacenamiento nuevos.
+
+El hosting conserva el escenario económico de USD 60–80/mes y USD 5–15 temporales en meses con capacidad de release. IA, imágenes, voz, tokens y créditos están excluidos. No se añaden NAT, ALB, Redis ni standby permanentes. Durante la migración coexiste el origen; los recursos ya creados generan cargos.
+
+El cierre requiere: claves/configuración completa, QA de lectura/edición/auth/pagos test, restauración y rollback reales, snapshot/delta bajo freeze, un único writer, corte www/apex, smoke público, observación y retiro del origen mediante allowlist. Ningún estado de staging sustituye ese cierre.

@@ -1,3 +1,4 @@
+import { maybeQueueAdminJob } from "../../../../../runtime/admin-jobs.mjs";
 import { NextResponse } from "next/server";
 import fs from "node:fs/promises";
 import { createLazyOpenAI } from "../../../../../runtime/openai.mjs";
@@ -977,6 +978,8 @@ export async function GET(request) {
 }
 
 export async function POST(request) {
+  const queued = await maybeQueueAdminJob(request);
+  if (queued) return queued;
   if (!LOCAL_COMPANION_ENABLED) {
     return disabledResponse();
   }

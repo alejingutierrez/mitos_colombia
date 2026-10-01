@@ -1,3 +1,4 @@
+import { maybeQueueAdminJob } from "../../../../../runtime/admin-jobs.mjs";
 import { NextResponse } from "next/server";
 import { createLazyOpenAI } from "../../../../../runtime/openai.mjs";
 import { isPostgres, getSqlClient, getSqliteDb, getSqliteDbWritable } from "../../../../lib/db.js";
@@ -149,6 +150,8 @@ async function updateMythContent(mythId, formattedContent) {
 }
 
 export async function POST(request) {
+  const queued = await maybeQueueAdminJob(request);
+  if (queued) return queued;
   try {
     // Check authentication
     if (!checkAuth(request)) {

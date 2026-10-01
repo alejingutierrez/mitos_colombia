@@ -6,7 +6,7 @@ export const STYLE_REVIEW_SAMPLES = [
     region: "Andina",
     community: "Muiscas",
     imageUrl:
-      "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/samples/image-craft/amanecer-de-bachue-y-furachoque-1783552979457.jpg",
+      "https://media.mitosdecolombia.com/blob/samples/image-craft/amanecer-de-bachue-y-furachoque-1783552979457.jpg",
   },
   {
     id: 32,
@@ -15,7 +15,7 @@ export const STYLE_REVIEW_SAMPLES = [
     region: "Caribe",
     community: "Wayuu",
     imageUrl:
-      "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/samples/image-craft/jinete-dorado-y-la-noche-eterna-1783553102179.jpg",
+      "https://media.mitosdecolombia.com/blob/samples/image-craft/jinete-dorado-y-la-noche-eterna-1783553102179.jpg",
   },
   {
     id: 184,
@@ -24,7 +24,7 @@ export const STYLE_REVIEW_SAMPLES = [
     region: "Amazonas",
     community: "Yukuna",
     imageUrl:
-      "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/samples/image-craft/desafio-magico-en-el-rio-yurupari-1783553228427.jpg",
+      "https://media.mitosdecolombia.com/blob/samples/image-craft/desafio-magico-en-el-rio-yurupari-1783553228427.jpg",
   },
   {
     id: 869,
@@ -33,7 +33,7 @@ export const STYLE_REVIEW_SAMPLES = [
     region: "Orinoquia",
     community: "Orinoquia",
     imageUrl:
-      "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/samples/image-craft/inirida-princesa-del-cerro-encantado-1783553357266.jpg",
+      "https://media.mitosdecolombia.com/blob/samples/image-craft/inirida-princesa-del-cerro-encantado-1783553357266.jpg",
   },
   {
     id: 65,
@@ -42,7 +42,7 @@ export const STYLE_REVIEW_SAMPLES = [
     region: "Pacifico",
     community: "Nasa",
     imageUrl:
-      "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/samples/image-craft/chauteh-y-el-rio-perseverante-1783553487446.jpg",
+      "https://media.mitosdecolombia.com/blob/samples/image-craft/chauteh-y-el-rio-perseverante-1783553487446.jpg",
   },
 ];
 

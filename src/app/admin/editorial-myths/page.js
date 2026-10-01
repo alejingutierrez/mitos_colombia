@@ -1,5 +1,7 @@
 "use client";
 
+import { adminFetch as fetch } from "../../../lib/admin-fetch.js";
+
 /* eslint-disable react-hooks/exhaustive-deps */
 
 import { useEffect, useMemo, useState } from "react";

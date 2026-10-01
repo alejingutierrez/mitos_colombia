@@ -78,6 +78,19 @@
                     "s3:PutObject"
                   ],
                   "Resource": "arn:aws:s3:::mitos-colombia-907264907058-media/static/*"
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": "ssm:SendCommand",
+                  "Resource": [
+                    "arn:aws:ssm:us-east-1:907264907058:document/mitos-colombia-snapshot",
+                    "arn:aws:ec2:us-east-1:907264907058:instance/i-042678e0b71dbefaa"
+                  ]
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": "ssm:GetCommandInvocation",
+                  "Resource": "*"
                 }
               ]
             }
@@ -194,6 +207,41 @@
                 "runCommand": [
                   "set -eu",
                   "/opt/mitos/deploy.sh \"$SSM_Sha\" \"$SSM_Digest\""
+                ]
+              }
+            }
+          ]
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "ManagedBy",
+            "Value": "CloudFormation"
+          }
+        ]
+      }
+    },
+    "SnapshotDocument": {
+      "Type": "AWS::SSM::Document",
+      "Properties": {
+        "Name": "mitos-colombia-snapshot",
+        "DocumentType": "Command",
+        "UpdateMethod": "NewVersion",
+        "Content": {
+          "schemaVersion": "2.2",
+          "description": "Public build snapshot from the accepted own writer; credentials remain in memory",
+          "mainSteps": [
+            {
+              "action": "aws:runShellScript",
+              "name": "snapshot",
+              "inputs": {
+                "timeoutSeconds": "300",
+                "runCommand": [
+                  "set -eu",
+                  "/opt/mitos/snapshot.sh"
                 ]
               }
             }

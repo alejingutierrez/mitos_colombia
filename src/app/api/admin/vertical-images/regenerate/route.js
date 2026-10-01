@@ -1,3 +1,4 @@
+import { maybeQueueAdminJob } from "../../../../../../runtime/admin-jobs.mjs";
 import { NextResponse } from "next/server";
 import { createLazyOpenAI } from "../../../../../../runtime/openai.mjs";
 import { put, del } from "../../../../../../runtime/storage.mjs";
@@ -174,6 +175,8 @@ async function updateVerticalImageUrl(id, imageUrl) {
 }
 
 export async function POST(request) {
+  const queued = await maybeQueueAdminJob(request);
+  if (queued) return queued;
   try {
     // Check authentication
     if (!checkAuth(request)) {

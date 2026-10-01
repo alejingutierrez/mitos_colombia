@@ -641,6 +641,34 @@
                   "aws:SecureTransport": "false"
                 }
               }
+            },
+            {
+              "Fn::If": [
+                "HasMediaDistribution",
+                {
+                  "Effect": "Allow",
+                  "Principal": {
+                    "Service": "cloudfront.amazonaws.com"
+                  },
+                  "Action": "s3:GetObject",
+                  "Resource": {
+                    "Fn::Sub": "${MediaBucket.Arn}/*"
+                  },
+                  "Condition": {
+                    "StringEquals": {
+                      "AWS:SourceArn": {
+                        "Ref": "MediaDistributionArn"
+                      },
+                      "AWS:SourceAccount": {
+                        "Ref": "AWS::AccountId"
+                      }
+                    }
+                  }
+                },
+                {
+                  "Ref": "AWS::NoValue"
+                }
+              ]
             }
           ]
         }
@@ -1532,6 +1560,27 @@
           }
         ]
       }
+    }
+  },
+  "Parameters": {
+    "MediaDistributionArn": {
+      "Type": "String",
+      "Default": "",
+      "AllowedPattern": "^$|arn:aws:cloudfront::907264907058:distribution/[A-Z0-9]+"
+    }
+  },
+  "Conditions": {
+    "HasMediaDistribution": {
+      "Fn::Not": [
+        {
+          "Fn::Equals": [
+            {
+              "Ref": "MediaDistributionArn"
+            },
+            ""
+          ]
+        }
+      ]
     }
   }
 }
