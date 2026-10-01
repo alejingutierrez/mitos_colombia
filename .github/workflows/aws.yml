@@ -28,7 +28,9 @@ jobs:
       - run: node --test scripts/aws/*.test.mjs scripts/tarot/*.test.mjs scripts/comments.test.mjs
       - run: npx eslint runtime scripts/aws src/instrumentation.js src/app/api/health src/app/api/internal src/app/api/version
       - run: node scripts/aws/check-tracked-secrets.mjs
-      - run: npm audit --omit=dev --audit-level=high
+      - run: |
+          npm audit --omit=dev --audit-level=high
+          npm audit --prefix runtime --omit=dev --audit-level=high
   image:
     needs: checks
     if: github.event_name != 'pull_request' && vars.MITOS_AWS_BUILD_ENABLED == 'true' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/codex/aws-migration')

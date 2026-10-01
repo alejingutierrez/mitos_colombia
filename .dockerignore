@@ -10,8 +10,16 @@ node_modules
 .codex
 artifacts
 output
-content
-editorial
+# Compile the public route definitions, without the workshop tree.
+content/*
+!content/rutas/
+!content/rutas/**
+# Community pages import these public modules and their media URL maps.
+editorial/*
+!editorial/*/
+editorial/*/*
+!editorial/*/community.mjs
+!editorial/*/media.mjs
 docs
 data
 *.db
