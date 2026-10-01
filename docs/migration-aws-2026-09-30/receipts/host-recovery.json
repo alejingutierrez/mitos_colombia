@@ -1,0 +1,15 @@
+{
+  "kind": "quarantined-new-host-recovery",
+  "sha": "08ee0eba5d2a5b1adccae2ed8dff0f9bcccd4bd6",
+  "digest": "sha256:09113f6b74d8644472622deec7a1fce67b4781d92adb7502c325fd3101b44536",
+  "at": "2026-10-01T21:43:52Z",
+  "ready": true,
+  "tlsVerified": true,
+  "routes": 6,
+  "workersStarted": false,
+  "publicDnsChanged": false,
+  "productionAccepted": false,
+  "ssmStatus": "Success",
+  "measuredCreateToReadySeconds": 314,
+  "note": "New quarantined host restored image/config/certificate and read 6 routes against existing own RDS. No production traffic takeover, workers or final-writer acceptance was tested."
+}

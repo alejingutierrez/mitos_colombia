@@ -196,6 +196,71 @@
           "EvaluateTargetHealth": false
         }
       }
+    },
+    "PrivateMediaZone": {
+      "Type": "AWS::Route53::HostedZone",
+      "Properties": {
+        "Name": "media.mitosdecolombia.com",
+        "HostedZoneConfig": {
+          "Comment": "Owned media hostname for the Mitos VPC; same CloudFront alias as the public zone"
+        },
+        "VPCs": [
+          {
+            "VPCId": "vpc-0857bb1d01692317c",
+            "VPCRegion": "us-east-1"
+          }
+        ],
+        "HostedZoneTags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "ManagedBy",
+            "Value": "CloudFormation"
+          }
+        ]
+      }
+    },
+    "PrivateAliasA": {
+      "Type": "AWS::Route53::RecordSet",
+      "Properties": {
+        "HostedZoneId": {
+          "Ref": "PrivateMediaZone"
+        },
+        "Name": "media.mitosdecolombia.com",
+        "Type": "A",
+        "AliasTarget": {
+          "HostedZoneId": "Z2FDTNDATAQYW2",
+          "DNSName": {
+            "Fn::GetAtt": [
+              "Distribution",
+              "DomainName"
+            ]
+          },
+          "EvaluateTargetHealth": false
+        }
+      }
+    },
+    "PrivateAliasAAAA": {
+      "Type": "AWS::Route53::RecordSet",
+      "Properties": {
+        "HostedZoneId": {
+          "Ref": "PrivateMediaZone"
+        },
+        "Name": "media.mitosdecolombia.com",
+        "Type": "AAAA",
+        "AliasTarget": {
+          "HostedZoneId": "Z2FDTNDATAQYW2",
+          "DNSName": {
+            "Fn::GetAtt": [
+              "Distribution",
+              "DomainName"
+            ]
+          },
+          "EvaluateTargetHealth": false
+        }
+      }
     }
   },
   "Outputs": {

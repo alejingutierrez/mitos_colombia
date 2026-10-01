@@ -329,7 +329,7 @@ docs/                   ← sólo doctrina
 
 ## Migración AWS en curso · 2026-10-01
 
-La implementación vive en la rama `codex/aws-migration`, aislada de los cambios locales del home y del taller. Se creó infraestructura propia en la cuenta de RAG/Cocina y se verificó el respaldo inicial del taller. La web continúa en Vercel; Neon sigue siendo el writer. El estado de las puertas y los recibos están en [`docs/migration-aws-2026-09-30/IMPLEMENTACION.md`](docs/migration-aws-2026-09-30/IMPLEMENTACION.md), junto al spec económico sin presupuesto de IA.
+La implementación vive en la rama `codex/aws-migration`, aislada de los cambios locales del home y del taller. DNS autoritativo ya está en AWS 907264907058; RDS y medios propios, staging HTTPS, probe editorial y lectura del taller funcionan. Se restauraron las 21 tablas por hash y un host nuevo con certificado; se archivaron la historia de 100 ramas y overlays de 15 worktrees. La web/ventas continúan en Vercel; Neon sigue siendo el writer. Registro GoDaddy pendiente de SMS; falta la fuente de claves Bold/config comercial y el corte/paridad final. El estado de las puertas y los recibos están en [`docs/migration-aws-2026-09-30/IMPLEMENTACION.md`](docs/migration-aws-2026-09-30/IMPLEMENTACION.md), junto al spec económico sin presupuesto de IA.
 
 ## Trampas conocidas
 
@@ -355,7 +355,3 @@ npm run seo:audit:indexability
 
 El runbook completo de producción está en `docs/mitos-produccion-imagenes.md`.
 El de video, en `docs/videos/TRASPASO-SIGUIENTE-COMUNIDAD.md`.
-
-## Migración AWS · en curso
-
-El DNS autoritativo de mitosdecolombia.com ya está en Route 53 de AWS 907264907058. La web pública/ventas siguen en Vercel y Neon sigue como writer. Hay copia inicial de 21 tablas en RDS, medios en S3/CloudFront y staging HTTPS restringido; la aceptación y el corte permanecen cerrados. Detalle y pruebas: [IMPLEMENTACION.md](docs/migration-aws-2026-09-30/IMPLEMENTACION.md). No se tocó el trabajo local de home/taller ni se regeneraron imágenes.

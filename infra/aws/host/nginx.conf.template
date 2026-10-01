@@ -22,6 +22,7 @@ server {
         proxy_pass http://mitos_web;
         proxy_http_version 1.1;
         proxy_set_header Host www.mitosdecolombia.com;
+        proxy_set_header X-Mitos-Stage "";
         proxy_set_header Connection "";
         proxy_buffering off;
         proxy_read_timeout 60s;
@@ -44,6 +45,7 @@ server {
         proxy_set_header Host www.mitosdecolombia.com;
         proxy_set_header X-Forwarded-Host www.mitosdecolombia.com;
         proxy_set_header X-Forwarded-Proto https;
+        proxy_set_header X-Mitos-Stage $http_x_mitos_stage;
         proxy_set_header X-Forwarded-For $mitos_viewer_ip;
         proxy_set_header X-Mitos-Client-IP $mitos_viewer_ip;
         proxy_set_header X-Mitos-Worker-Token "";

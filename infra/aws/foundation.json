@@ -924,6 +924,19 @@
                 "arn:aws:s3:::al2023-repos-us-east-1-de612dc2/*",
                 "arn:aws:s3:::prod-us-east-1-starport-layer-bucket/*"
               ]
+            },
+            {
+              "Sid": "VerifyOwnedObjectVersions",
+              "Effect": "Allow",
+              "Principal": "*",
+              "Action": [
+                "s3:GetObjectVersion"
+              ],
+              "Resource": [
+                {
+                  "Fn::Sub": "${OperationsBucket.Arn}/qa/*"
+                }
+              ]
             }
           ]
         }
@@ -1247,6 +1260,18 @@
                       "cloudwatch:namespace": "MitosColombia"
                     }
                   }
+                },
+                {
+                  "Sid": "VerifyOwnedObjectVersions",
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:GetObjectVersion"
+                  ],
+                  "Resource": [
+                    {
+                      "Fn::Sub": "${OperationsBucket.Arn}/qa/*"
+                    }
+                  ]
                 }
               ]
             }
@@ -1418,6 +1443,18 @@
                       "cloudwatch:namespace": "MitosColombia"
                     }
                   }
+                },
+                {
+                  "Sid": "VerifyOwnedObjectVersions",
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:GetObjectVersion"
+                  ],
+                  "Resource": [
+                    {
+                      "Fn::Sub": "${OperationsBucket.Arn}/qa/*"
+                    }
+                  ]
                 }
               ]
             }

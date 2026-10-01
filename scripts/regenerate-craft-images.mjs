@@ -1,3 +1,4 @@
+import { storageConfigured } from "../runtime/storage.mjs";
 import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
@@ -6,7 +7,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { del, put } from "../runtime/storage.mjs";
 import dotenv from "dotenv";
 import OpenAI from "openai";
-import pg from "pg";
+import pg from "../runtime/workshop-postgres.mjs";
 import sharp from "sharp";
 
 import {
@@ -126,8 +127,8 @@ function ensureConfig() {
   if (!process.env.OPENAI_API_KEY && !dryRun) {
     throw new Error("OPENAI_API_KEY es requerido.");
   }
-  if (!process.env.BLOB_READ_WRITE_TOKEN && !dryRun) {
-    throw new Error("BLOB_READ_WRITE_TOKEN es requerido.");
+  if (!storageConfigured() && !dryRun) {
+    throw new Error("La configuración de medios es requerida.");
   }
 }
 

@@ -1,3 +1,4 @@
+import { storageConfigured } from "../../runtime/storage.mjs";
 import { createHash } from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -166,8 +167,8 @@ async function run() {
     throw new Error(`Para aplicar usa --confirm=${confirmationPhrase}.`);
   }
   dotenv.config({ path: path.resolve(options.envFile), quiet: true });
-  if (!process.env.BLOB_READ_WRITE_TOKEN) {
-    throw new Error(`Falta BLOB_READ_WRITE_TOKEN en ${options.envFile}.`);
+  if (!storageConfigured()) {
+    throw new Error(`Falta la configuración de medios en ${options.envFile}.`);
   }
   const uploaded = await uploadAssets(assets);
   const manifestPath = await saveManifest(uploaded);

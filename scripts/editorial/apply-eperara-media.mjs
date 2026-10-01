@@ -3,7 +3,7 @@ import path from "node:path";
 import process from "node:process";
 
 import dotenv from "dotenv";
-import pg from "pg";
+import pg from "../../runtime/workshop-postgres.mjs";
 
 import { eperaraMedia } from "../../editorial/eperara/media.mjs";
 import { eperaraMythsBySlug } from "../../editorial/eperara/records.mjs";

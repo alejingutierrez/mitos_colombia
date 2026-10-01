@@ -1,3 +1,4 @@
+import { trustedAwsAuthOrigin } from '../../runtime/auth-origin.mjs';
 import { authRateLimitKeys } from '../../runtime/auth-rate-limits.mjs';
 import "server-only";
 
@@ -301,7 +302,7 @@ export async function revokeTarotSession(token) {
 export function isTrustedTarotAuthRequest(request) {
   const origin = request.headers.get("origin");
   if (process.env.MITOS_RUNTIME === "aws" && origin) {
-    try { return new URL(origin).origin === new URL(process.env.NEXT_PUBLIC_SITE_URL).origin; } catch { return false; }
+    return trustedAwsAuthOrigin(request);
   }
   if (!origin) return true;
   try {

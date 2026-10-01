@@ -5,7 +5,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 import dotenv from "dotenv";
 import OpenAI from "openai";
-import pg from "pg";
+import pg from "../runtime/workshop-postgres.mjs";
 
 import {
   APPROVED_IMAGE_STYLE_PROFILE,

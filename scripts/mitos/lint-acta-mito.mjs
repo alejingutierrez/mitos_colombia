@@ -17,7 +17,7 @@
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join, resolve } from "node:path";
-import pg from "pg";
+import pg from "../../runtime/workshop-postgres.mjs";
 import { stripHtml } from "./freeze-acta-mito.mjs";
 
 const PLANES = "content/mitos-visuales";

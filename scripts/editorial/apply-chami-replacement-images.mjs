@@ -1,3 +1,4 @@
+import { storageConfigured } from "../../runtime/storage.mjs";
 import { createHash } from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -5,7 +6,7 @@ import process from "node:process";
 
 import { del, put } from "../../runtime/storage.mjs";
 import dotenv from "dotenv";
-import pg from "pg";
+import pg from "../../runtime/workshop-postgres.mjs";
 import sharp from "sharp";
 
 import { chamiMythsBySlug } from "../../editorial/chami/records.mjs";
@@ -259,8 +260,8 @@ async function run() {
   const options = parseArgs(process.argv.slice(2));
   dotenv.config({ path: path.resolve(options.envFile), quiet: true });
   if (!connectionString()) throw new Error("No hay conexión Postgres.");
-  if (options.apply && !process.env.BLOB_READ_WRITE_TOKEN) {
-    throw new Error("Falta BLOB_READ_WRITE_TOKEN.");
+  if (options.apply && !storageConfigured()) {
+    throw new Error("Falta la configuración de medios.");
   }
   if (options.apply && options.confirmation !== confirmationPhrase) {
     throw new Error(`Para aplicar usa --confirm=${confirmationPhrase}.`);

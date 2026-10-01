@@ -134,6 +134,12 @@ mv /etc/nginx/mitos-upstream.conf.tmp /etc/nginx/mitos-upstream.conf
 upstream_changed=true
 nginx -t
 systemctl reload nginx
+proxy_ready=false
+for attempt in $(seq 1 15); do
+  if curl -fsS --max-time 5 http://127.0.0.1:3080/api/version | jq -e --arg sha "$sha" '.sha==$sha' >/dev/null; then proxy_ready=true; break; fi
+  sleep 1
+done
+$proxy_ready || { echo 'Proxy did not switch to the healthy candidate.' >&2; exit 5; }
 for route in /api/health/ready /api/version /mitos /tarot; do curl -fsS --max-time 20 "http://127.0.0.1:3080$route" >/dev/null; done
 # A public smoke failure rolls the application image back on the same RDS.
 curl -fsS --max-time 30 "https://www.mitosdecolombia.com/api/version?release=$sha" | jq -e --arg sha "$sha" '.sha==$sha' >/dev/null

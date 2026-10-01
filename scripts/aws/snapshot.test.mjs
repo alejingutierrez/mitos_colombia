@@ -30,3 +30,9 @@ test('public snapshot excludes customer tables, comment email, unapproved text a
     assert.equal(JSON.parse(await readFile(directory+'/receipt.json','utf8')).sha256,receipt.sha256);
   } finally {await rm(directory,{recursive:true,force:true});}
 });
+test('atomic manifest binds snapshot digest, receipt time and acceptance without mixing builds',async()=>{
+ const {verifySnapshot}=await import('./verify-snapshot.mjs');const digest='a'.repeat(64),at='2026-10-01T20:09:21.843Z';
+ const receipt={kind:'public-build-snapshot',sha256:digest,at,sourceVerified:false,tables:{myths:{count:596}}},manifest={prefix:'build-input/snapshots/6d3a61ca-0826-4db8-8a52-a9e023dc0b25',sha256:digest,at,sourceVerified:false};
+ assert.equal(verifySnapshot(receipt,manifest,digest).sourceVerified,false);
+ for(const m of [{...manifest,sourceVerified:true},{...manifest,sha256:'b'.repeat(64)},{...manifest,at:'old'},{...manifest,prefix:'foreign'}])assert.throws(()=>verifySnapshot(receipt,m,digest),/integrity/);
+});

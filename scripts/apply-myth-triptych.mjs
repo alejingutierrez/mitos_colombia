@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { storageConfigured } from "../runtime/storage.mjs";
 
 /**
  * Publica el tríptico de un mito: sube las tres escenas a Vercel Blob y deja
@@ -136,9 +137,10 @@ function loadEnv(explicitPath) {
   if (!process.env.POSTGRES_URL && process.env.DATABASE_URL) {
     process.env.POSTGRES_URL = process.env.DATABASE_URL;
   }
-  const missing = ["POSTGRES_URL", "BLOB_READ_WRITE_TOKEN"].filter(
+  const missing = ["POSTGRES_URL"].filter(
     (key) => !process.env[key]
   );
+  if (!storageConfigured()) missing.push("media storage");
   if (missing.length) {
     throw new Error(
       `Faltan variables de entorno: ${missing.join(", ")}. Pasa --env <ruta al .env>.`

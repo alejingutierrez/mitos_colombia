@@ -17,7 +17,7 @@
  */
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
-import pg from "pg";
+import pg from "../../runtime/workshop-postgres.mjs";
 
 const DECISION = { propio: "required", required: "required", embedded: "embedded", excluded: "excluded", excluido: "excluded" };
 const KINDS = new Set(["personaje", "deidad_fuerza", "criatura", "animal", "colectivo", "objeto",

@@ -27,3 +27,20 @@ test('staging does not load GTM/GA or emit client checkout measurement',async()=
   const previous=globalThis.window;globalThis.window={location:{hostname:'staging.mitosdecolombia.com'}};
   try {trackEvent({action:'begin_checkout'});assert.equal(globalThis.window.dataLayer,undefined);assert.deepEqual(await getAnalyticsSessionContext(),{});}finally{globalThis.window=previous;}
 });
+test('optimized-image cache varies on format and trusted staging marker, never auth or cookies',async()=>{
+ const t=JSON.parse(await readFile('infra/aws/web-cdn.json','utf8'));
+ const c=t.Resources.ImageCache.Properties.CachePolicyConfig.ParametersInCacheKeyAndForwardedToOrigin;
+ assert.deepEqual(c.HeadersConfig.Headers,['Accept','X-Mitos-Stage']);assert.equal(c.CookiesConfig.CookieBehavior,'none');assert.deepEqual(c.QueryStringsConfig.QueryStrings,['url','w','q']);
+ const origin=t.Resources.ImageOrigin.Properties.OriginRequestPolicyConfig;
+ assert.deepEqual(origin.HeadersConfig.Headers,['CloudFront-Viewer-Address']);assert.equal(origin.CookiesConfig.CookieBehavior,'none');
+ assert.equal(t.Resources.Distribution.Properties.DistributionConfig.CacheBehaviors[0].FunctionAssociations[0].EventType,'viewer-request');
+});
+test('staging auth origin requires the trusted viewer marker; production rejects a spoofed staging marker',async()=>{
+ const {trustedAwsAuthOrigin}=await import('../../runtime/auth-origin.mjs');const env={NEXT_PUBLIC_SITE_URL:'https://www.mitosdecolombia.com'};
+ const req=(origin,marker)=>new Request('https://www.mitosdecolombia.com/api/tarot/auth/login',{headers:{origin,'x-mitos-stage':marker}});
+ assert.equal(trustedAwsAuthOrigin(req('https://www.mitosdecolombia.com','0'),env),true);
+ assert.equal(trustedAwsAuthOrigin(req('https://staging.mitosdecolombia.com','1'),env),true);
+ assert.equal(trustedAwsAuthOrigin(req('https://staging.mitosdecolombia.com','0'),env),false);
+ assert.equal(trustedAwsAuthOrigin(req('https://evil.example','1'),env),false);
+ const r=request('www.mitosdecolombia.com');r.headers['x-mitos-stage'].value='1';context.handler({request:r});assert.equal(r.headers['x-mitos-stage'].value,'0');
+});

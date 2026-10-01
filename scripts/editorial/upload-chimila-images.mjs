@@ -1,3 +1,4 @@
+import { storageConfigured } from "../../runtime/storage.mjs";
 import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
@@ -87,8 +88,8 @@ async function run() {
     throw new Error(`Para aplicar usa --confirm=${confirmationPhrase}.`);
   }
   dotenv.config({ path: path.resolve(options.envFile), quiet: true });
-  if (!process.env.BLOB_READ_WRITE_TOKEN) {
-    throw new Error("Falta BLOB_READ_WRITE_TOKEN.");
+  if (!storageConfigured()) {
+    throw new Error("Falta la configuración de medios.");
   }
   const manifest = {
     createdAt: new Date().toISOString(),

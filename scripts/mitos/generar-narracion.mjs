@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { storageConfigured } from "../../runtime/storage.mjs";
 
 /**
  * Narración de un mito con ElevenLabs → Vercel Blob → tabla `myth_narrations`.
@@ -102,8 +103,8 @@ if (!API_KEY && !dryRun) {
   console.error("[narración] falta ELEVENLABS_API_KEY en .env.local");
   process.exit(1);
 }
-if (!process.env.BLOB_READ_WRITE_TOKEN && !dryRun) {
-  console.error("[narración] falta BLOB_READ_WRITE_TOKEN en .env.local");
+if (!storageConfigured() && !dryRun) {
+  console.error("[narración] falta la configuración de medios");
   process.exit(1);
 }
 

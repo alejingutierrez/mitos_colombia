@@ -1,3 +1,4 @@
+import { storageConfigured } from "../../runtime/storage.mjs";
 import { createHash } from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -6,7 +7,7 @@ import { fileURLToPath } from "node:url";
 
 import { del, put } from "../../runtime/storage.mjs";
 import dotenv from "dotenv";
-import pg from "pg";
+import pg from "../../runtime/workshop-postgres.mjs";
 import sharp from "sharp";
 
 import mellizos from "../../editorial/wayuu/myths/los-mellizos-transformadores.mjs";
@@ -407,8 +408,8 @@ async function run() {
       `La escritura exige --confirm=${confirmationPhrase}.`,
     );
   }
-  if (options.apply && !process.env.BLOB_READ_WRITE_TOKEN) {
-    throw new Error("BLOB_READ_WRITE_TOKEN es requerido para subir las imágenes.");
+  if (options.apply && !storageConfigured()) {
+    throw new Error("La configuración de medios es requerida para subir las imágenes.");
   }
 
   const validated = await validateAssets();

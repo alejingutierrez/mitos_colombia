@@ -20,6 +20,8 @@ async function copy(item) {
   if (completed.has(item.path)) return;
   if (item.path.includes('..') || path.isAbsolute(item.path)) throw new Error('Unsafe archive key.');
   const file=path.join(inventory.root,item.path), before=await stat(file);
+  const scanned=await stat(file,{bigint:true});
+  if (before.size!==item.bytes || Number(scanned.mtimeNs)!==Number(item.mtimeNs)) { const error=new Error('Source changed after credential preflight; review a fresh inventory.'); error.code='SOURCE_CHANGED'; throw error; }
   if(before.size>5*1024**3)throw new Error('File requires a separate multipart copy.');
   const checksum=await hashFile(file), afterHash=await stat(file);
   if(before.size!==afterHash.size || before.mtimeMs!==afterHash.mtimeMs)throw new Error('Source changed during hash.');
@@ -37,7 +39,11 @@ async function copy(item) {
 await Promise.all(Array.from({length:12},async()=>{
   while(cursor<inventory.items.length) {
     const item=inventory.items[cursor++];
-    try {await copy(item);} catch(error){errors++;await appendFile(ledgerPath,JSON.stringify({path:item.path,status:'FAILED',code:error.code||error.name})+'\n',{mode:0o600});}
+    let failure;
+    for(let attempt=0;attempt<3;attempt++){
+      try{await copy(item);failure=undefined;break;}catch(error){failure=error;if(error.code==='SOURCE_CHANGED')break;if(attempt<2)await new Promise(resolve=>setTimeout(resolve,1000*(attempt+1)));}
+    }
+    if(failure){errors++;await appendFile(ledgerPath,JSON.stringify({path:item.path,status:'FAILED',code:failure.code||failure.name})+'\n',{mode:0o600});}
   }
 }));
 console.log(JSON.stringify({copied:done,total:inventory.items.length,bytesThisRun:bytes,errors,prefix}));

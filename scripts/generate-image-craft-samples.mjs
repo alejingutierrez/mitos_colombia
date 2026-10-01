@@ -1,3 +1,4 @@
+import { storageConfigured } from "../runtime/storage.mjs";
 import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
@@ -184,8 +185,8 @@ async function run() {
   }
 
   const shouldUpload = process.argv.includes("--upload");
-  if (shouldUpload && !process.env.BLOB_READ_WRITE_TOKEN) {
-    throw new Error("BLOB_READ_WRITE_TOKEN is required for --upload");
+  if (shouldUpload && !storageConfigured()) {
+    throw new Error("Media storage configuration is required for --upload");
   }
 
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });

@@ -1,3 +1,4 @@
+import { storageConfigured } from "../../runtime/storage.mjs";
 import { createHash } from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -6,7 +7,7 @@ import { fileURLToPath } from "node:url";
 
 import { del, put } from "../../runtime/storage.mjs";
 import dotenv from "dotenv";
-import pg from "pg";
+import pg from "../../runtime/workshop-postgres.mjs";
 import sharp from "sharp";
 
 import dossier from "../../editorial/embera/myths/los-burumias-y-carautas.mjs";
@@ -263,8 +264,8 @@ async function run() {
   if (!postgresUrl) {
     throw new Error("No se encontró una conexión Postgres.");
   }
-  if (!process.env.BLOB_READ_WRITE_TOKEN && options.apply) {
-    throw new Error("Falta BLOB_READ_WRITE_TOKEN.");
+  if (!storageConfigured() && options.apply) {
+    throw new Error("Falta la configuración de medios.");
   }
   if (options.apply && options.confirmation !== confirmationPhrase) {
     throw new Error(

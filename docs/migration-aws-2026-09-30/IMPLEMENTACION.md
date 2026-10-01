@@ -13,10 +13,10 @@ Actualizado: 1 de octubre de 2026. Rama `codex/aws-migration`; base publicada `5
 | Base | 21 tablas propias restauradas; roles separados; migraciones 000, 001 y 002 aplicadas; app sin CREATE. | Freeze y copia/paridad final; el origen activo volvió a modificar tarot_cards. |
 | Medios | 5.701 objetos, 9.236.150.891 bytes, SHA y versión S3 comprobados. CDN HTTPS propia entrega JPEG/MP3 y rango 206. | Delta final bajo freeze. |
 | URLs | 3.546 referencias en 12 columnas de la copia RDS; 407 referencias en 26 módulos públicos. Todas tienen objeto copiado. | Paridad normalizada final; los freezes históricos conservan procedencia original. |
-| Aplicación | Imagen inicial ARM real saludable contra RDS en staging por CloudFront Bogotá. | Nueva imagen con URLs propias y workers, QA completa y fallo/rollback real. |
+| Aplicación | Imagen 08ee ARM saludable, URLs propias, probe editorial autenticado y lectura móvil DOM en staging. | Pagos test/config completa, QA de edición/auth y corte público. |
 | Configuración | Config recuperable de Vercel trasladada por allowlist en memoria; RDS usa mitos_app; token interno propio. | Claves privadas Bold y configuración comercial Secret originales. |
 | Automatización | GitHub OIDC, ARM, scan, estáticos por SHA; snapshot público de solo lectura con publicación atómica y documento SSM limitado. | Ensayo real del refresco después de aceptar el writer. Gate público sigue cerrado. |
-| Taller | Archivo privado inicial de 39.078 archivos/17.914.015.376 bytes; restauración de edición completa y muestras por versión/hash. | Ramas, overlays vivos y reconexión operativa del taller. |
+| Taller | Archivo inicial + 16.672 archivos/17.615.054.369 bytes de overlays de 15 worktrees; bundle de 100 ramas; lectura propia con TLS y 41 muiscas. | Delta final y activación de publicación tras aceptar RDS como writer. |
 
 ## Infraestructura propia
 
@@ -27,10 +27,10 @@ Cuenta `907264907058`, `us-east-1`. Stacks: foundation, runtime, ci, certificate
 - Buckets media/archive/operations privados, cifrados, versionados y con bloqueo de acceso público. Solo CloudFront OAC propio puede GET al bucket de medios; acceso S3 anónimo respondió 403.
 - ECR inmutable por SHA, SQS propia de pagos y DLQ. Roles runtime/job y OIDC propios; ningún permiso nuevo a recursos de RAG/Cocina.
 - ACM emitió apex + wildcard. El origen usa certificado DNS-01 y renovación systemd dos veces al día; dry-run de renovación pasó. El respaldo de claves/certificados permanece únicamente en operations privado.
-- CloudFront web `E12OCIT65B9EUU`: HTTPS al origen, header propio, RSC/cookies/query reenviados y caché CDN desactivada. WAF propio con reglas administradas/rate limit; staging permanece limitado a operadores incluso tras abrir www.
+- CloudFront web `E12OCIT65B9EUU`: HTTPS al origen, header propio, RSC/cookies/query reenviados y caché HTML/API desactivada. `/_next/image` usa un caché propio por Accept, URL, ancho, calidad y marcador staging confiable; no reenvía cookies/Authorization. WAF propio con reglas administradas/rate limit; staging permanece limitado a operadores incluso tras abrir www.
 - CloudFront media `E10WLYMIZWFTI`: S3 con firma SigV4, HTTP2/3, compresión, CORS para medios públicos y caché por MIME. Imágenes/audio copiados son inmutables; se conserva reproducción por rangos.
 
-Foundation/runtime mantienen protección de terminación y una política que impide sustituir/borrar base, buckets, zona y secretos. El endpoint S3 admite solo nuestros buckets y GET a los repositorios regionales de Amazon Linux/ECR requeridos para bootstrap.
+Foundation/runtime mantienen protección de terminación y una política que impide sustituir/borrar base, buckets, zona y secretos. El endpoint S3 admite solo nuestros buckets y GET a los repositorios regionales de Amazon Linux/ECR requeridos para bootstrap. Roles/endpoint leen versiones únicamente en el prefijo QA de operations para verificar fixtures. Una zona privada exacta `media.mitosdecolombia.com`, asociada solo a la VPC Mitos, apunta a la misma CloudFront pública: el resolver VPC conservaba los NS GoDaddy durante la propagación; la zona no afecta otros nombres.
 
 No se cambió el origen público: apex conserva A anterior y www su CNAME Vercel. `origin`, `media` y `staging` ya pertenecen al destino AWS. Se preservaron `_domainconnect` y `_dmarc`; no existían MX/CAA y DNSSEC estaba apagado.
 
@@ -39,6 +39,8 @@ No se cambió el origen público: apex conserva A anterior y www su CNAME Vercel
 El snapshot inicial se obtuvo de la conexión local después de contrastar identidad y credencial con la configuración del deployment publicado. Dump PostgreSQL bajo snapshot exportado de transacción de solo lectura, con tablas y secuencias propias. Ningún seed ni DDL en el origen.
 
 Las 21 tablas incluyen catálogo, editoriales, imágenes, narraciones, tarot, comentarios, contactos, cuentas, sesiones y pedidos. Los 21 hashes de filas coincidieron después del restore inicial. Un control posterior encontró cambio en `tarot_cards` mientras Neon seguía activo: ese drift está registrado y obliga a repetir copia/paridad en el corte. Se excluyeron sin tocarlas seis tablas sin consumidor Mitos y sin FK hacia ellas: analysis_results, backlinks_checks, backlinks_messages, backlinks_prospects, insights y news_articles.
+
+La restauración real del dump descargado por versión/checksum en una base QA nueva pasó los hashes de las 21 tablas en 148 segundos, sin modificar la base runtime. [Recibo DR](receipts/database-dr.json). Un host QA nuevo recuperó imagen, configuración y certificado con TLS validado y leyó seis rutas en 314 segundos desde su creación; sin DNS público, workers ni aceptación. [Recibo host](receipts/host-recovery.json). Este ensayo no certifica un takeover público ni el writer final. El host y su EIP temporales se retiran al terminar.
 
 El dump inicial tiene 10.767.147 bytes y SHA `0b80985eda0c59d1eb187802a7d21da7181e8e705753f4a6d4524213f25855af`. Está guardado como una versión inmutable en archive privado. Los recibos públicos conservan conteos/estado; dumps, payloads privados, manifests completos y credenciales quedan fuera del repo.
 
@@ -52,7 +54,7 @@ Runtime `pg` con parámetros, pool acotado y TLS/CA RDS; S3 reemplaza Blob; stan
 
 La cuenta `mitos_app` hace CRUD de tablas propias, sin CREATE; `mitos_migrator` aplica SQL con digest/advisory lock y `mitos_backup` lee. La tabla de migraciones no admite escritura del rol app.
 
-Los 16 POST largos del admin pasan a una cola RDS propia; el navegador espera su resultado mediante polling autenticado, conservando los formularios. Un contenedor editorial separado, máximo un trabajo, límite 512 MB/0,5 CPU, ejecuta la tarea fuera del proceso web. Un lock de kernel impide superponer una generación y un release. Los resultados ambiguos se marcan para revisión, sin regenerar automáticamente y duplicar créditos. Esto mantiene la variante económica sin añadir capacidad permanente. La cola admite un probe sintético RDS/S3 sin llamadas de IA; su ejecución real con la nueva imagen sigue pendiente.
+Los 16 POST largos del admin pasan a una cola RDS propia; el navegador espera su resultado mediante polling autenticado, conservando los formularios. Un contenedor editorial separado, máximo un trabajo, límite 512 MB/0,5 CPU, ejecuta la tarea fuera del proceso web. Un lock de kernel impide superponer una generación y un release. Los resultados ambiguos se marcan para revisión, sin regenerar automáticamente y duplicar créditos. Esto mantiene la variante económica sin añadir capacidad permanente. La cola pasó un probe real autenticado: 401 sin auth, 202 al encolar y éxito del worker al leer RDS y escribir/restaurar una versión S3; sin IA ni consumidor de pagos. [Recibo](receipts/editorial-job.json). El primer probe encontró GetObjectVersion denegado: se corrigió solo el prefijo QA de operations y el nuevo probe pasó. Los trabajos reales de generación siguen sin ejecutarse durante la migración.
 
 Pagos: webhook verifica firma y exige recibo SQS antes de 2xx; worker separado deduplica por lease/hash, con reintentos acotados y DLQ. Falta QA integrada con claves test y la captura/forward durante propagación DNS. Ningún pago real se usa como fixture.
 
@@ -66,9 +68,9 @@ Tras el corte, el build invoca únicamente el documento `mitos-colombia-snapshot
 
 `MITOS_AWS_BUILD_ENABLED=true`, `MITOS_AWS_CUTOVER_COMPLETE=false`. El snapshot nuevo de ensayo sigue `sourceVerified=false`. No se modifica esa marca ni el gate para forzar un release.
 
-Deploy valida SHA/digest/migración, memoria, candidato/readiness, proxy y smoke público. Rollback recupera primero el predecesor sano y restaura ambos workers. Los ensayos de CLI simuladas cubren fallos de proxy, smoke, workers y recibo, reintento y predecesor irrecuperable. La prueba real y el corte siguen pendientes.
+Deploy valida SHA/digest/migración, memoria, candidato/readiness, proxy y smoke público. Rollback recupera primero el predecesor sano y restaura ambos workers. Los ensayos de CLI simuladas cubren fallos de proxy, smoke, workers y recibo, reintento y predecesor irrecuperable. El primer cambio real de staging falló al comprobar identidad inmediatamente tras reload y recuperó el upstream anterior; el reintento con espera acotada pasó. Producción incorpora esa espera. El rollback del despliegue público permanece pendiente del corte.
 
-La imagen inicial corregida pasó ARM y ECR 0 HIGH/CRITICAL en [CI](https://github.com/alejingutierrez/mitos_colombia/actions/runs/36900023764); su recibo [prepared-image.json](receipts/prepared-image.json) la mantiene no aceptada. La imagen Debian anterior falló por vulnerabilidades y nunca se liberó; [first-image-scan.json](receipts/first-image-scan.json). El nuevo build con trabajos largos y URLs propias debe volver a pasar todos los gates.
+La imagen inicial corregida pasó ARM y ECR 0 HIGH/CRITICAL en [CI](https://github.com/alejingutierrez/mitos_colombia/actions/runs/36900023764); su recibo [prepared-image.json](receipts/prepared-image.json) la mantiene no aceptada. La imagen Debian anterior falló por vulnerabilidades y nunca se liberó; [first-image-scan.json](receipts/first-image-scan.json). La imagen `08ee0eba5d2a5b1adccae2ed8dff0f9bcccd4bd6` pasó ARM, codecs y ECR 0 HIGH/CRITICAL en [CI](https://github.com/alejingutierrez/mitos_colombia/actions/runs/36924001336); está en staging como sourceVerified=false. La continuación de infraestructura/taller exige un nuevo build y checks antes de aceptarse.
 
 ## Secretos y pasos externos
 
@@ -82,8 +84,14 @@ El DNS está migrado y [su recibo](receipts/domain-delegation.json) diferencia d
 
 ## Taller, recuperación y costos
 
-Se archivaron 39.078 archivos/17.914.015.376 bytes; 66 aliases resueltos. Cinco restauraciones por versión/hash y una edición Bachué completa de 23 archivos/19.734.577 bytes pasaron, sin sobrescribir ni regenerar. [Recibos](receipts/edition-restore.json). Faltan referencias Git/overlays vivos y reconectar scripts del taller a la base/almacenamiento nuevos.
+Se archivaron 39.078 archivos/17.914.015.376 bytes; 66 aliases resueltos. Cinco restauraciones por versión/hash y una edición Bachué completa de 23 archivos/19.734.577 bytes pasaron, sin sobrescribir ni regenerar. [Recibos](receipts/edition-restore.json). Se preservaron además las 100 ramas/151 referencias en un bundle privado de 3.928.169.449 bytes: la copia filtra historial de .env/settings locales, conserva mapas original/restaurado y no reescribe el repo original. [Recibo Git](receipts/git-knowledge.json). Se verificaron 16.672 archivos/17.615.054.369 bytes de cambios y material pagado en los 15 worktrees, incluyendo videos, con manifests privados de archivos/deleciones y versiones; los 73 paths excluidos permanecen fuera por credenciales/symlinks; los 66 aliases del archivo inicial conservan su mapa de recuperación. [Overlays](receipts/worktree-overlays.json). Es una copia por archivo con tiempos registrados; el taller mutable necesita un delta final.
+
+122 imports pg del taller pasan por un adaptador que conserva comportamiento legacy y exige la RDS/rol propios con CA/servername verificados en AWS; checks de medios aceptan S3 y ya no exigen token Blob. Se retiró el cliente Neon HTTP restante del lint de actas. `node scripts/aws/workshop.mjs read scripts/aws/workshop-check.mjs` pasó por túnel SSM: mitos_backup, 596 mitos, TLS y lectura S3. El dump de censo devolvió los 41 muiscas completos. [Recibo](receipts/workshop-read.json). `workshop.mjs write` exige el recibo privado cutover/accepted.json; no se habilita antes del writer único. Credenciales permanecen en memoria; el seed destructivo no es admitido por este wrapper.
 
 El hosting conserva el escenario económico de USD 60–80/mes y USD 5–15 temporales en meses con capacidad de release. IA, imágenes, voz, tokens y créditos están excluidos. No se añaden NAT, ALB, Redis ni standby permanentes. Durante la migración coexiste el origen; los recursos ya creados generan cargos.
 
-El cierre requiere: claves/configuración completa, QA de lectura/edición/auth/pagos test, restauración y rollback reales, snapshot/delta bajo freeze, un único writer, corte www/apex, smoke público, observación y retiro del origen mediante allowlist. Ningún estado de staging sustituye ese cierre.
+Se corrigió también el origen de autenticación en staging: solo se admite su Origin cuando el marcador sobrescrito por CloudFront confirma staging; www no puede habilitarlo por un header del cliente. El nuevo build debe ejercitar esa corrección.
+
+La QA real adicional confirmó AVIF 200/Hit (incluso con auth/cookie sintéticos) y WebP 200 separado. Un primer WebP dio 502 transitorio durante propagación; se conserva esa limitación en [el recibo](receipts/image-cache.json). Lectura en navegador a 390 px: imagen cargada, sin overflow ni scripts GA/GTM; la captura de pantalla falló en la herramienta, por lo que [el recibo](receipts/browser-mobile.json) acredita DOM y carga, no una revisión visual completa.
+
+El cierre requiere: claves/configuración completa, QA de edición/auth/pagos test, rollback público, snapshot/delta bajo freeze, un único writer, captura de callbacks durante propagación, corte www/apex, smoke público, observación y retiro del origen mediante allowlist. Ningún estado de staging sustituye ese cierre.

@@ -1,3 +1,4 @@
+import { storageConfigured } from "../../../runtime/storage.mjs";
 import { createHash } from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -318,7 +319,7 @@ export async function runCommunityImageGeneration(
   }
 
   dotenv.config({ path: path.resolve(options.envFile), quiet: true });
-  if (!process.env.OPENAI_API_KEY || !process.env.BLOB_READ_WRITE_TOKEN) {
+  if (!process.env.OPENAI_API_KEY || !storageConfigured()) {
     throw new Error("Faltan OPENAI_API_KEY o BLOB_READ_WRITE_TOKEN.");
   }
 

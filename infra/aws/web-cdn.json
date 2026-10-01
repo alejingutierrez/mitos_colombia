@@ -385,6 +385,52 @@
             {
               "ErrorCode": 503,
               "ErrorCachingMinTTL": 0
+            },
+            {
+              "ErrorCode": 400,
+              "ErrorCachingMinTTL": 0
+            },
+            {
+              "ErrorCode": 403,
+              "ErrorCachingMinTTL": 0
+            },
+            {
+              "ErrorCode": 404,
+              "ErrorCachingMinTTL": 0
+            }
+          ],
+          "CacheBehaviors": [
+            {
+              "PathPattern": "/_next/image",
+              "TargetOriginId": "owned-host",
+              "ViewerProtocolPolicy": "redirect-to-https",
+              "AllowedMethods": [
+                "GET",
+                "HEAD",
+                "OPTIONS"
+              ],
+              "CachedMethods": [
+                "GET",
+                "HEAD"
+              ],
+              "Compress": true,
+              "CachePolicyId": {
+                "Ref": "ImageCache"
+              },
+              "OriginRequestPolicyId": {
+                "Ref": "ImageOrigin"
+              },
+              "FunctionAssociations": [
+                {
+                  "EventType": "viewer-request",
+                  "FunctionARN": {
+                    "Fn::GetAtt": [
+                      "Redirect",
+                      "FunctionARN"
+                    ]
+                  }
+                }
+              ]
             }
           ]
         },
@@ -460,6 +506,59 @@
         "Threshold": 2,
         "ComparisonOperator": "GreaterThanThreshold",
         "TreatMissingData": "notBreaching"
+      }
+    },
+    "ImageCache": {
+      "Type": "AWS::CloudFront::CachePolicy",
+      "Properties": {
+        "CachePolicyConfig": {
+          "Name": "mitos-colombia-public-image",
+          "MinTTL": 0,
+          "DefaultTTL": 3600,
+          "MaxTTL": 31536000,
+          "ParametersInCacheKeyAndForwardedToOrigin": {
+            "EnableAcceptEncodingGzip": true,
+            "EnableAcceptEncodingBrotli": true,
+            "HeadersConfig": {
+              "HeaderBehavior": "whitelist",
+              "Headers": [
+                "Accept",
+                "X-Mitos-Stage"
+              ]
+            },
+            "CookiesConfig": {
+              "CookieBehavior": "none"
+            },
+            "QueryStringsConfig": {
+              "QueryStringBehavior": "whitelist",
+              "QueryStrings": [
+                "url",
+                "w",
+                "q"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ImageOrigin": {
+      "Type": "AWS::CloudFront::OriginRequestPolicy",
+      "Properties": {
+        "OriginRequestPolicyConfig": {
+          "Name": "mitos-colombia-public-image",
+          "HeadersConfig": {
+            "HeaderBehavior": "whitelist",
+            "Headers": [
+              "CloudFront-Viewer-Address"
+            ]
+          },
+          "CookiesConfig": {
+            "CookieBehavior": "none"
+          },
+          "QueryStringsConfig": {
+            "QueryStringBehavior": "none"
+          }
+        }
       }
     }
   },

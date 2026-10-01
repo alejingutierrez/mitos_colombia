@@ -20,8 +20,15 @@ export function postgresOptions(env = process.env) {
   for (const key of ['sslmode', 'sslcert', 'sslkey', 'sslrootcert']) url.searchParams.delete(key);
   const max = Number(env.MITOS_PG_POOL_MAX || 5);
   if (!Number.isInteger(max) || max < 1 || max > 20) throw new Error('Pool limit must be between 1 and 20.');
-  return { connectionString: url.toString(), ssl, max, idleTimeoutMillis: 30000,
+  const options = { connectionString: url.toString(), ssl, max, idleTimeoutMillis: 30000,
     connectionTimeoutMillis: 5000, statement_timeout: 15000, application_name: 'mitos-colombia-' + (env.MITOS_PROCESS || 'web') };
+  if (env.MITOS_OPERATOR_TUNNEL_PORT) {
+    const port = Number(env.MITOS_OPERATOR_TUNNEL_PORT);
+    if (!aws || env.MITOS_PROCESS !== 'workshop' || url.hostname !== 'mitos-colombia-prod.c2v4uumucd2n.us-east-1.rds.amazonaws.com' || !/^\d{4,5}$/.test(env.MITOS_OPERATOR_TUNNEL_PORT) || port > 65535) throw new Error('Invalid workshop tunnel.');
+    delete options.connectionString;
+    Object.assign(options, { host: '127.0.0.1', port, user: url.username, password: decodeURIComponent(url.password), database: url.pathname.slice(1), ssl: { ...ssl, servername: url.hostname } });
+  }
+  return options;
 }
 
 export function taggedClient(client) {
