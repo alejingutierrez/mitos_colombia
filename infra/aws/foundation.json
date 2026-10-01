@@ -484,7 +484,10 @@
             "Key": "CostCenter",
             "Value": "mitos-colombia"
           }
-        ]
+        ],
+        "DBParameterGroupName": {
+          "Ref": "DatabaseParameters"
+        }
       },
       "DeletionPolicy": "Retain",
       "UpdateReplacePolicy": "Retain"
@@ -1272,6 +1275,16 @@
                       "Fn::Sub": "${OperationsBucket.Arn}/qa/*"
                     }
                   ]
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": "cloudwatch:PutMetricData",
+                  "Resource": "*",
+                  "Condition": {
+                    "StringEquals": {
+                      "cloudwatch:namespace": "Mitos/Runtime"
+                    }
+                  }
                 }
               ]
             }
@@ -1476,6 +1489,28 @@
           {
             "Key": "Owner",
             "Value": "alegut"
+          },
+          {
+            "Key": "CostCenter",
+            "Value": "mitos-colombia"
+          }
+        ]
+      }
+    },
+    "DatabaseParameters": {
+      "Type": "AWS::RDS::DBParameterGroup",
+      "Properties": {
+        "Description": "Own Mitos PostgreSQL17 bounded-memory settings for the economical micro host",
+        "Family": "postgres17",
+        "Parameters": {
+          "shared_buffers": "8192",
+          "max_connections": "40",
+          "maintenance_work_mem": "32768"
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
           },
           {
             "Key": "CostCenter",

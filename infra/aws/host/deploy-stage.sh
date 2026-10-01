@@ -29,7 +29,7 @@ if docker inspect "$name" >/dev/null 2>&1;then
  test "$(docker inspect --format '{{.State.Status}}' "$name")" = exited || exit 8
  docker rm "$name" >/dev/null
 fi
-docker run -d --name "$name" --restart unless-stopped --memory 768m --memory-swap 768m --cpus 1.5 --pids-limit 160 --init \
+docker run -d --name "$name" --restart unless-stopped --log-driver local --log-opt max-size=10m --log-opt max-file=3 --memory 768m --memory-swap 768m --cpus 1.5 --pids-limit 160 --init \
  --env-file /opt/mitos/runtime.env -e MITOS_DEPLOYMENT_SHA="$sha" -e MITOS_IMAGE_DIGEST="$digest" -e MITOS_CACHE_DIR=/var/lib/mitos/cache -e NODE_OPTIONS=--max-old-space-size=384 \
  -p "127.0.0.1:$port:3000" -v /var/lib/mitos/qa-cache:/var/lib/mitos/cache -v /var/lib/mitos/qa-image-cache:/app/.next/cache "$image" web >/dev/null
 ready=false
@@ -61,7 +61,7 @@ if docker inspect mitos-qa-editorial-worker >/dev/null 2>&1;then
  docker stop -t 20 mitos-qa-editorial-worker >/dev/null
  docker rename mitos-qa-editorial-worker "mitos-qa-editorial-worker-before-$sha"
 fi
-docker run -d --name mitos-qa-editorial-worker --restart unless-stopped --memory 512m --memory-swap 512m --cpus 0.5 --pids-limit 180 --init \
+docker run -d --name mitos-qa-editorial-worker --restart unless-stopped --log-driver local --log-opt max-size=10m --log-opt max-file=3 --memory 512m --memory-swap 512m --cpus 0.5 --pids-limit 180 --init \
  --env-file /opt/mitos/runtime.env -e NODE_OPTIONS=--max-old-space-size=96 -e MITOS_PG_POOL_MAX=1 -e MITOS_CACHE_DIR=/var/lib/mitos/cache \
  -v /var/lib/mitos/qa-locks:/var/lib/mitos/locks -v /var/lib/mitos/qa-cache:/var/lib/mitos/cache -v /var/lib/mitos/qa-image-cache:/app/.next/cache "$image" admin-worker >/dev/null
 jq -n --arg sha "$sha" --arg digest "$digest" --arg container "$name" --argjson port "$port" '{sha:$sha,digest:$digest,container:$container,port:$port,kind:"stage-only",productionAccepted:false}' > "$work/active.json"

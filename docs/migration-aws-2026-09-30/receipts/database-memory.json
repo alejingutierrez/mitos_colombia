@@ -1,0 +1,168 @@
+{
+  "at": "2026-10-01T23:21:14.562752+00:00",
+  "kind": "own-rds-bounded-memory-tuning",
+  "sameDatabaseResourceId": true,
+  "resourceId": "db-LTTSKPEUWMVPN5R3U4F5LVHH3I",
+  "class": "db.t4g.micro",
+  "storageGb": 20,
+  "preChangeSnapshot": "mitos-pre-memory-20261001",
+  "snapshotVerifiedAvailable": true,
+  "effectiveSettings": [
+    {
+      "name": "idle_in_transaction_session_timeout",
+      "setting": "86400000",
+      "unit": "ms"
+    },
+    {
+      "name": "maintenance_work_mem",
+      "setting": "32768",
+      "unit": "kB"
+    },
+    {
+      "name": "max_connections",
+      "setting": "40",
+      "unit": null
+    },
+    {
+      "name": "shared_buffers",
+      "setting": "8192",
+      "unit": "8kB"
+    },
+    {
+      "name": "work_mem",
+      "setting": "4096",
+      "unit": "kB"
+    }
+  ],
+  "cloudwatch": {
+    "FreeableMemory": [
+      {
+        "Timestamp": "2026-10-01T18:09:00-05:00",
+        "Average": 183861248.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:10:00-05:00",
+        "Average": 187240448.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:11:00-05:00",
+        "Average": 180989952.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:12:00-05:00",
+        "Average": 177836032.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:13:00-05:00",
+        "Average": 177016832.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:14:00-05:00",
+        "Average": 185335808.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:15:00-05:00",
+        "Average": 187080704.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:16:00-05:00",
+        "Average": 186621952.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:17:00-05:00",
+        "Average": 184262656.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:18:00-05:00",
+        "Average": 184451072.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:19:00-05:00",
+        "Average": 186646528.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:20:00-05:00",
+        "Average": 188059648.0,
+        "Unit": "Bytes"
+      }
+    ],
+    "SwapUsage": [
+      {
+        "Timestamp": "2026-10-01T18:09:00-05:00",
+        "Average": 1228800.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:10:00-05:00",
+        "Average": 1261568.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:11:00-05:00",
+        "Average": 1261568.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:12:00-05:00",
+        "Average": 1261568.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:13:00-05:00",
+        "Average": 1257472.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:14:00-05:00",
+        "Average": 1245184.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:15:00-05:00",
+        "Average": 1245184.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:16:00-05:00",
+        "Average": 1245184.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:17:00-05:00",
+        "Average": 1245184.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:18:00-05:00",
+        "Average": 1245184.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:19:00-05:00",
+        "Average": 1249280.0,
+        "Unit": "Bytes"
+      },
+      {
+        "Timestamp": "2026-10-01T18:20:00-05:00",
+        "Average": 1253376.0,
+        "Unit": "Bytes"
+      }
+    ]
+  },
+  "memoryAlarm": "OK",
+  "runtimeReadiness": true,
+  "sourceNeonChanged": false,
+  "productionAccepted": false,
+  "limits": "Small staging workload; public traffic and load acceptance remain pending."
+}

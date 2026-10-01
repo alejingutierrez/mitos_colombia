@@ -1,3 +1,4 @@
+import { awsClientAddress } from '../../runtime/bridge-address.mjs';
 import { trustedAwsAuthOrigin } from '../../runtime/auth-origin.mjs';
 import { authRateLimitKeys } from '../../runtime/auth-rate-limits.mjs';
 import "server-only";
@@ -355,14 +356,14 @@ export async function checkTarotAuthRateLimit(key, { maximum = 8, windowMs = 15 
 export function tarotAuthRateLimitKey(request, scope, email = "") {
   const forwarded = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
   const address = process.env.MITOS_RUNTIME === "aws"
-    ? (request.headers.get("x-mitos-client-ip") || "unknown")
+    ? awsClientAddress(request)
     : (forwarded || request.headers.get("x-real-ip") || "unknown");
   return `${scope}:${address}:${normalizeTarotEmail(email)}`;
 }
 
 export async function checkTarotAuthRequestRateLimit(request, scope, email, options) {
   if (process.env.MITOS_RUNTIME !== 'aws') return checkTarotAuthRateLimit(tarotAuthRateLimitKey(request,scope,email),options);
-  const address=request.headers.get('x-mitos-client-ip') || 'unknown';
+  const address=awsClientAddress(request);
   const limits=await Promise.all(authRateLimitKeys(scope,address,normalizeTarotEmail(email)).map(key=>checkTarotAuthRateLimit(key,options)));
   return {allowed:limits.every(limit=>limit.allowed),retryAfter:Math.max(...limits.map(limit=>limit.retryAfter))};
 }

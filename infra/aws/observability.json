@@ -1,0 +1,364 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Own Mitos runtime and durable-payment health alarms; no changes to peer projects or notification recipients",
+  "Parameters": {
+    "InstanceId": {
+      "Type": "AWS::EC2::Instance::Id"
+    }
+  },
+  "Resources": {
+    "HostMemory": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "mitos-colombia-hostmemory",
+        "Namespace": "Mitos/Runtime",
+        "MetricName": "AvailableMemoryPercent",
+        "Dimensions": [
+          {
+            "Name": "InstanceId",
+            "Value": {
+              "Ref": "InstanceId"
+            }
+          }
+        ],
+        "Statistic": "Minimum",
+        "Period": 300,
+        "EvaluationPeriods": 2,
+        "Threshold": 15,
+        "ComparisonOperator": "LessThanThreshold",
+        "TreatMissingData": "breaching",
+        "AlarmDescription": "Own Mitos resources only; inspect state in CloudWatch. No notifications or writer/DNS actions.",
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "CostCenter",
+            "Value": "mitos-colombia"
+          }
+        ]
+      }
+    },
+    "HostDisk": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "mitos-colombia-hostdisk",
+        "Namespace": "Mitos/Runtime",
+        "MetricName": "FreeDiskPercent",
+        "Dimensions": [
+          {
+            "Name": "InstanceId",
+            "Value": {
+              "Ref": "InstanceId"
+            }
+          }
+        ],
+        "Statistic": "Minimum",
+        "Period": 300,
+        "EvaluationPeriods": 2,
+        "Threshold": 20,
+        "ComparisonOperator": "LessThanThreshold",
+        "TreatMissingData": "breaching",
+        "AlarmDescription": "Own Mitos resources only; inspect state in CloudWatch. No notifications or writer/DNS actions.",
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "CostCenter",
+            "Value": "mitos-colombia"
+          }
+        ]
+      }
+    },
+    "HostReady": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "mitos-colombia-hostready",
+        "Namespace": "Mitos/Runtime",
+        "MetricName": "WebReady",
+        "Dimensions": [
+          {
+            "Name": "InstanceId",
+            "Value": {
+              "Ref": "InstanceId"
+            }
+          }
+        ],
+        "Statistic": "Minimum",
+        "Period": 300,
+        "EvaluationPeriods": 2,
+        "Threshold": 1,
+        "ComparisonOperator": "LessThanThreshold",
+        "TreatMissingData": "breaching",
+        "AlarmDescription": "Own Mitos resources only; inspect state in CloudWatch. No notifications or writer/DNS actions.",
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "CostCenter",
+            "Value": "mitos-colombia"
+          }
+        ]
+      }
+    },
+    "HostContainers": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "mitos-colombia-hostcontainers",
+        "Namespace": "Mitos/Runtime",
+        "MetricName": "ContainersHealthy",
+        "Dimensions": [
+          {
+            "Name": "InstanceId",
+            "Value": {
+              "Ref": "InstanceId"
+            }
+          }
+        ],
+        "Statistic": "Minimum",
+        "Period": 300,
+        "EvaluationPeriods": 2,
+        "Threshold": 1,
+        "ComparisonOperator": "LessThanThreshold",
+        "TreatMissingData": "breaching",
+        "AlarmDescription": "Own Mitos resources only; inspect state in CloudWatch. No notifications or writer/DNS actions.",
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "CostCenter",
+            "Value": "mitos-colombia"
+          }
+        ]
+      }
+    },
+    "OriginCertificate": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "mitos-colombia-origincertificate",
+        "Namespace": "Mitos/Runtime",
+        "MetricName": "CertificateDays",
+        "Dimensions": [
+          {
+            "Name": "InstanceId",
+            "Value": {
+              "Ref": "InstanceId"
+            }
+          }
+        ],
+        "Statistic": "Minimum",
+        "Period": 300,
+        "EvaluationPeriods": 2,
+        "Threshold": 14,
+        "ComparisonOperator": "LessThanThreshold",
+        "TreatMissingData": "breaching",
+        "AlarmDescription": "Own Mitos resources only; inspect state in CloudWatch. No notifications or writer/DNS actions.",
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "CostCenter",
+            "Value": "mitos-colombia"
+          }
+        ]
+      }
+    },
+    "HostCredits": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "mitos-colombia-hostcredits",
+        "Namespace": "AWS/EC2",
+        "MetricName": "CPUCreditBalance",
+        "Dimensions": [
+          {
+            "Name": "InstanceId",
+            "Value": {
+              "Ref": "InstanceId"
+            }
+          }
+        ],
+        "Statistic": "Minimum",
+        "Period": 900,
+        "EvaluationPeriods": 2,
+        "Threshold": 20,
+        "ComparisonOperator": "LessThanThreshold",
+        "TreatMissingData": "missing",
+        "AlarmDescription": "Own Mitos resources only; inspect state in CloudWatch. No notifications or writer/DNS actions.",
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "CostCenter",
+            "Value": "mitos-colombia"
+          }
+        ]
+      }
+    },
+    "DatabaseMemory": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "mitos-colombia-databasememory",
+        "Namespace": "AWS/RDS",
+        "MetricName": "FreeableMemory",
+        "Dimensions": [
+          {
+            "Name": "DBInstanceIdentifier",
+            "Value": "mitos-colombia-prod"
+          }
+        ],
+        "Statistic": "Minimum",
+        "Period": 300,
+        "EvaluationPeriods": 2,
+        "Threshold": 104857600,
+        "ComparisonOperator": "LessThanThreshold",
+        "TreatMissingData": "missing",
+        "AlarmDescription": "Own Mitos resources only; inspect state in CloudWatch. No notifications or writer/DNS actions.",
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "CostCenter",
+            "Value": "mitos-colombia"
+          }
+        ]
+      }
+    },
+    "DatabaseDisk": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "mitos-colombia-databasedisk",
+        "Namespace": "AWS/RDS",
+        "MetricName": "FreeStorageSpace",
+        "Dimensions": [
+          {
+            "Name": "DBInstanceIdentifier",
+            "Value": "mitos-colombia-prod"
+          }
+        ],
+        "Statistic": "Minimum",
+        "Period": 300,
+        "EvaluationPeriods": 2,
+        "Threshold": 3221225472,
+        "ComparisonOperator": "LessThanThreshold",
+        "TreatMissingData": "missing",
+        "AlarmDescription": "Own Mitos resources only; inspect state in CloudWatch. No notifications or writer/DNS actions.",
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "CostCenter",
+            "Value": "mitos-colombia"
+          }
+        ]
+      }
+    },
+    "DatabaseCredits": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "mitos-colombia-databasecredits",
+        "Namespace": "AWS/RDS",
+        "MetricName": "CPUCreditBalance",
+        "Dimensions": [
+          {
+            "Name": "DBInstanceIdentifier",
+            "Value": "mitos-colombia-prod"
+          }
+        ],
+        "Statistic": "Minimum",
+        "Period": 900,
+        "EvaluationPeriods": 2,
+        "Threshold": 20,
+        "ComparisonOperator": "LessThanThreshold",
+        "TreatMissingData": "missing",
+        "AlarmDescription": "Own Mitos resources only; inspect state in CloudWatch. No notifications or writer/DNS actions.",
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "CostCenter",
+            "Value": "mitos-colombia"
+          }
+        ]
+      }
+    },
+    "PaymentBacklog": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "mitos-colombia-paymentbacklog",
+        "Namespace": "AWS/SQS",
+        "MetricName": "ApproximateAgeOfOldestMessage",
+        "Dimensions": [
+          {
+            "Name": "QueueName",
+            "Value": "mitos-colombia-payments"
+          }
+        ],
+        "Statistic": "Maximum",
+        "Period": 300,
+        "EvaluationPeriods": 2,
+        "Threshold": 300,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "AlarmDescription": "Own Mitos resources only; inspect state in CloudWatch. No notifications or writer/DNS actions.",
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "CostCenter",
+            "Value": "mitos-colombia"
+          }
+        ]
+      }
+    },
+    "PaymentDlq": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": "mitos-colombia-paymentdlq",
+        "Namespace": "AWS/SQS",
+        "MetricName": "ApproximateNumberOfMessagesVisible",
+        "Dimensions": [
+          {
+            "Name": "QueueName",
+            "Value": "mitos-colombia-payments-dlq"
+          }
+        ],
+        "Statistic": "Maximum",
+        "Period": 300,
+        "EvaluationPeriods": 2,
+        "Threshold": 0,
+        "ComparisonOperator": "GreaterThanThreshold",
+        "TreatMissingData": "notBreaching",
+        "AlarmDescription": "Own Mitos resources only; inspect state in CloudWatch. No notifications or writer/DNS actions.",
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "CostCenter",
+            "Value": "mitos-colombia"
+          }
+        ]
+      }
+    }
+  }
+}

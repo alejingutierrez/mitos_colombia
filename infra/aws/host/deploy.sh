@@ -112,7 +112,7 @@ if docker inspect "$candidate" >/dev/null 2>&1; then
   test "$candidate" != "$old_name" || exit 6
   docker rm -f "$candidate" >/dev/null
 fi
-docker run -d --name "$candidate" --restart unless-stopped --memory 768m --memory-swap 768m --cpus 1.5 --pids-limit 160 --init \
+docker run -d --name "$candidate" --restart unless-stopped --log-driver local --log-opt max-size=10m --log-opt max-file=3 --memory 768m --memory-swap 768m --cpus 1.5 --pids-limit 160 --init \
   --env-file /opt/mitos/runtime.env -e MITOS_DEPLOYMENT_SHA="$sha" -e MITOS_IMAGE_DIGEST="$digest" \
   -e MITOS_CACHE_DIR=/var/lib/mitos/cache -e NODE_OPTIONS=--max-old-space-size=384 \
   -p "127.0.0.1:$port:3000" -v /var/lib/mitos/cache:/var/lib/mitos/cache \
@@ -155,7 +155,7 @@ if docker inspect mitos-admin-worker >/dev/null 2>&1; then
   admin_saved=true
 fi
 admin_changed=true
-docker run -d --name mitos-admin-worker --restart unless-stopped --memory 512m --memory-swap 512m --cpus 0.5 --pids-limit 180 --init \
+docker run -d --name mitos-admin-worker --restart unless-stopped --log-driver local --log-opt max-size=10m --log-opt max-file=3 --memory 512m --memory-swap 512m --cpus 0.5 --pids-limit 180 --init \
   --env-file /opt/mitos/runtime.env -e NODE_OPTIONS=--max-old-space-size=96 -e MITOS_PG_POOL_MAX=1 -e MITOS_CACHE_DIR=/var/lib/mitos/cache \
   -v /var/lib/mitos/locks:/var/lib/mitos/locks -v /var/lib/mitos/cache:/var/lib/mitos/cache -v /var/lib/mitos/image-cache:/app/.next/cache "$image" admin-worker >/dev/null
 # Drain payment work before restarting its process; the durable queue remains active.
@@ -167,7 +167,7 @@ if docker inspect mitos-payment-worker >/dev/null 2>&1; then
   old_worker_saved=true
 fi
 worker_changed=true
-docker run -d --name mitos-payment-worker --restart unless-stopped --memory 128m --memory-swap 128m --cpus 0.25 --pids-limit 64 --init \
+docker run -d --name mitos-payment-worker --restart unless-stopped --log-driver local --log-opt max-size=10m --log-opt max-file=3 --memory 128m --memory-swap 128m --cpus 0.25 --pids-limit 64 --init \
   --network host --env-file /opt/mitos/runtime.env -e MITOS_DEPLOYMENT_SHA="$sha" -e MITOS_IMAGE_DIGEST="$digest" \
   -e NODE_OPTIONS=--max-old-space-size=64 "$image" worker >/dev/null
 sleep 5

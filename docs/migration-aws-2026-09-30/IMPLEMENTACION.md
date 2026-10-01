@@ -13,14 +13,14 @@ Actualizado: 1 de octubre de 2026. Rama `codex/aws-migration`; base publicada `5
 | Base | 21 tablas propias restauradas; roles separados; migraciones 000, 001 y 002 aplicadas; app sin CREATE. | Freeze y copia/paridad final; el origen activo volvió a modificar tarot_cards. |
 | Medios | 5.701 objetos, 9.236.150.891 bytes, SHA y versión S3 comprobados. CDN HTTPS propia entrega JPEG/MP3 y rango 206. | Delta final bajo freeze. |
 | URLs | 3.546 referencias en 12 columnas de la copia RDS; 407 referencias en 26 módulos públicos. Todas tienen objeto copiado. | Paridad normalizada final; los freezes históricos conservan procedencia original. |
-| Aplicación | Imagen 45bed ARM saludable, URLs propias, probe editorial y auth integrados en staging. | Pagos test/config completa, corrección/QA de invalidación editorial y corte público. |
+| Aplicación | Imagen a8c35 ARM saludable; edición real, auth, URLs propias, HTML/RSC y estáticos propios comprobados en staging. | Pagos test/config completa, carga/corte público y actualización del siguiente artefacto. |
 | Configuración | Config recuperable de Vercel trasladada por allowlist en memoria; RDS usa mitos_app; token interno propio. | Claves privadas Bold y configuración comercial Secret originales. |
 | Automatización | GitHub OIDC, ARM, scan, estáticos por SHA; snapshot público de solo lectura con publicación atómica y documento SSM limitado. | Ensayo real del refresco después de aceptar el writer. Gate público sigue cerrado. |
 | Taller | Archivo inicial + 16.672 archivos/17.615.054.369 bytes de overlays de 15 worktrees; bundle de 100 ramas; lectura propia con TLS y 41 muiscas. | Delta final y activación de publicación tras aceptar RDS como writer. |
 
 ## Infraestructura propia
 
-Cuenta `907264907058`, `us-east-1`. Stacks: foundation, runtime, ci, certificate, origin-dns, media y web; todos pertenecen a Mitos.
+Cuenta `907264907058`, `us-east-1`. Stacks: foundation, runtime, ci, certificate, origin-dns, media, web, observability y payment-secret; todos pertenecen a Mitos.
 
 - VPC `10.77.0.0/16`, RDS PostgreSQL 17.11 privada `db.t4g.micro` SingleAZ/20 GB gp3, 35 días de backups y protección de borrado.
 - EC2 ARM64 `t4g.small`, disco 30 GB cifrado, IMDSv2, sin SSH; 443 solo desde CloudFront. Docker/Nginx/PostgreSQL CLI/SSM instalados.
@@ -94,6 +94,21 @@ Se corrigió también el origen de autenticación en staging: solo se admite su 
 
 La QA real adicional confirmó AVIF 200/Hit (incluso con auth/cookie sintéticos) y WebP 200 separado. Un primer WebP dio 502 transitorio durante propagación; se conserva esa limitación en [el recibo](receipts/image-cache.json). Lectura en navegador a 390 px: imagen cargada, sin overflow ni scripts GA/GTM; la captura de pantalla falló en la herramienta, por lo que [el recibo](receipts/browser-mobile.json) acredita DOM y carga, no una revisión visual completa.
 
-La QA de edición detectó que el PUT persistía pero el HTML conservaba el título anterior: el adaptador omitía x-next-cache-tags del APP_PAGE. La corrección y regresión HTML/RSC local pasan; falta el build y repetir el ensayo real. El fixture se retiró de RDS.
+La QA de edición detectó que el PUT persistía pero el HTML conservaba el título anterior: el adaptador omitía x-next-cache-tags del APP_PAGE. La corrección pasó build ARM/ECR y el ensayo real en a8c35: crear, leer, editar y ver el título nuevo, eliminar el fixture y recibir 404. [Recibo de edición](receipts/stage-edit.json). Se comprobaron 17 rutas/API, 18 estáticos, HTML y RSC separados; mediana TTFB de 138 ms desde una sola ubicación de operador. [Recibo de lectura](receipts/stage-routes.json). Esto no sustituye una prueba de capacidad ni un corte DNS.
 
-El cierre requiere: claves/configuración completa, QA de edición/pagos test, rollback público, snapshot/delta bajo freeze, un único writer, captura de callbacks durante propagación, corte www/apex, smoke público, observación y retiro del origen mediante allowlist. Ningún estado de staging sustituye ese cierre.
+El cierre requiere: claves/configuración completa, QA de pagos test, rollback público, snapshot/delta bajo freeze, un único writer, captura de callbacks durante propagación, corte www/apex, smoke público, observación y retiro del origen mediante allowlist. Ningún estado de staging sustituye ese cierre.
+
+
+## Continuación: observabilidad y primer corte
+
+El servicio de salud del host publica cinco métricas cada cinco minutos con identidad AWS/host y namespace propios. Once alarmas vigilan memoria, disco, readiness, contenedores, certificado, créditos EC2/RDS, memoria/disco RDS, edad de SQS y DLQ. Están visibles en CloudWatch; no se configuró envío de notificaciones. [Recibo](receipts/observability.json). Los nuevos comandos acotan los logs Docker a tres archivos de 10 MB por contenedor; se aplican al crear el siguiente contenedor.
+
+RDS mostró memoria libre de aproximadamente 87 MB y swap creciente con unas dos conexiones. Tras respaldo y detener sólo QA, se aplicó un parameter group PostgreSQL 17 propio: shared_buffers 64 MiB, max_connections 40 y maintenance_work_mem 32 MiB. Se conservaron DbiResourceId, clase micro, disco y protección contra reemplazo. Los valores efectivos se verificaron por SQL; el staging volvió a responder y la alarma de memoria pasó a OK con lecturas iniciales superiores a 170 MB. [Recibo](receipts/database-memory.json). Es una observación corta; falta la aceptación de carga pública. AWS documenta las interrupciones/reinicio de [parámetros RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.Associating.html).
+
+La preparación del freeze se probó y revirtió sólo en la base DR aislada: bloqueó 21 writers propios, dejó escribir una tabla ajena de ensayo y conservó los 21 hashes. [Recibo](receipts/source-freeze-dr.json). Nunca se ejecutó en Neon. El bridge de origen preparado mantiene el flujo actual con modo sin configurar; durante freeze cierra escrituras y reenvía callbacks con cuerpo/firma exactos, y después del corte apunta a AWS. La dirección IP reenviada se autentica por HMAC con método, ruta/query y tiempo; encabezados falsos no sustituyen la dirección CloudFront. Sigue sin publicarse en Vercel ni activarse.
+
+Se separó la vía del primer despliegue de los gates de releases posteriores: bootstrap-snapshot verifica por lectura la congelación real y los hashes, esquema y secuencias de las 21 tablas antes de publicar input verificado; prepare-initial prepara un candidato restringido sin DNS ni workers; accept-initial exige pruebas públicas y crea los gates al final. Las CLI simuladas probaron rechazo de snapshot no verificado, callbacks sin QA y rollback de Nginx; el primer corte real sigue pendiente. [Procedimiento y contratos de recibos](CORTE.md).
+
+El ingreso independiente de pagos está preparado y tiene cinco pruebas de firma/cuerpo exacto/durabilidad/alcance. AWS rechazó su reserved concurrency 2 porque la cuenta tiene cuota efectiva 10 y exige mantener 10 sin reservar. El stack fallido y sus función/API/role se retiraron. Quedó únicamente un secreto separado vacío con flags cerrados, administrado y protegido. La solicitud de cuota continúa CASE_OPENED; no hay función ni API declaradas como activas. [Estado](receipts/payment-ingress-state.json). La captura equivalente por el webhook web propio también requiere claves y QA real antes del freeze.
+
+El gate nuevo se comprobó además por lectura contra la producción actual: rechazó Neon sin congelar, verificó el deployment asignado al proyecto y no escribió en ninguna base ni publicó snapshot. [Recibo](receipts/first-snapshot-closed-gate.json). Checks locales: 146 pruebas completas y cuatro pruebas de paridad posteriores al refuerzo de URLs, ESLint y revisión de secretos; la imagen siguiente queda pendiente hasta su CI.

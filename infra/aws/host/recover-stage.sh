@@ -23,7 +23,7 @@ aws ecr get-login-password --region us-east-1 | docker login --username AWS --pa
 trap 'docker logout "$registry" >/dev/null 2>&1 || true' EXIT
 docker pull "$registry/mitos-colombia@$digest" >/dev/null
 docker logout "$registry" >/dev/null
-docker run -d --name mitos-recovery-stage --restart unless-stopped --memory 768m --memory-swap 768m --cpus 1.5 --pids-limit 160 --init \
+docker run -d --name mitos-recovery-stage --restart unless-stopped --log-driver local --log-opt max-size=10m --log-opt max-file=3 --memory 768m --memory-swap 768m --cpus 1.5 --pids-limit 160 --init \
  --env-file /opt/mitos/runtime.env -e MITOS_DEPLOYMENT_SHA="$sha" -e MITOS_IMAGE_DIGEST="$digest" -e MITOS_CACHE_DIR=/var/lib/mitos/cache -e NODE_OPTIONS=--max-old-space-size=384 \
  -p 127.0.0.1:3101:3000 -v /var/lib/mitos/qa-cache:/var/lib/mitos/cache -v /var/lib/mitos/qa-image-cache:/app/.next/cache "$registry/mitos-colombia@$digest" web >/dev/null
 ready=false
