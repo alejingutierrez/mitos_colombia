@@ -11,19 +11,19 @@ import { digest, mapLimit, readJson, resolveCatalogAsset } from "./story-catalog
 const run = promisify(execFile);
 export async function prepareStoryEdition(story, catalog, { root = process.cwd() } = {}) {
   const composition = await compileStory(story, catalog, { root });
-  const parent = path.join(root, "content/instagram/editions", story.community, story.slug);
+  const parent = path.join(/* turbopackIgnore: true */ root, "content/instagram/editions", story.community, story.slug);
   await fs.mkdir(parent, { recursive: true });
   let directory;
   let edition;
   for (let n = 1; n <= 9999; n++) {
     edition = `prepared-${String(n).padStart(2, "0")}`;
-    directory = path.join(parent, edition);
+    directory = path.join(/* turbopackIgnore: true */ parent, edition);
     try { await fs.mkdir(directory); break; }
     catch (error) { if (error.code !== "EEXIST" || n === 9999) throw error; }
   }
   const engineFiles = ["src/app/layout.js", "src/app/globals.css", "src/app/design-system/instagram-story/page.js", "src/components/instagram/StorySlide.js", "src/components/instagram/StoryVariant.js", "src/components/instagram/variants.module.css", "src/lib/instagram-story-variants.js", "src/components/instagram/story.module.css", "src/lib/instagram-story.js", "src/lib/instagram-abstract-motifs.js", "scripts/instagram/lib/story-compiler.mjs", "scripts/instagram/lib/story-renderer.mjs", "scripts/instagram/lib/story-photo-contrast.mjs", "package-lock.json"];
-  const engine = Object.fromEntries(await Promise.all(engineFiles.map(async (file) => [file, digest(await fs.readFile(path.join(root, file)))])));
-  const write = (file, value) => fs.writeFile(path.join(directory, file), `${JSON.stringify(value, null, 2)}\n`, { flag: "wx" });
+  const engine = Object.fromEntries(await Promise.all(engineFiles.map(async (file) => [file, digest(await fs.readFile(path.join(/* turbopackIgnore: true */ root, file)))])));
+  const write = (file, value) => fs.writeFile(path.join(/* turbopackIgnore: true */ directory, file), `${JSON.stringify(value, null, 2)}\n`, { flag: "wx" });
   await write("story.json", story);
   await write("composition.json", composition);
   await write("freeze.json", { schema: "carousel-freeze-v1", created_at: new Date().toISOString(), edition,
@@ -36,12 +36,12 @@ export async function renderPreparedStory(prepared, { root = process.cwd(), base
   const target = new URL(baseUrl);
   if (!["127.0.0.1", "localhost", "[::1]"].includes(target.hostname) || !["http:", "https:"].includes(target.protocol)) throw new Error("El render solo admite el servidor local.");
   const { composition, edition } = prepared;
-  const freeze = await readJson(path.join(prepared.directory, "freeze.json"));
+  const freeze = await readJson(path.join(/* turbopackIgnore: true */ prepared.directory, "freeze.json"));
   if (digest(JSON.stringify(composition)) !== freeze.composition_sha256) throw new Error("La composición cambió después del freeze: prepara una edición nueva.");
   for (const [file, hash] of Object.entries(freeze.engine)) {
-    if (digest(await fs.readFile(path.join(root, file))) !== hash) throw new Error("El motor cambió después del freeze: prepara una edición nueva.");
+    if (digest(await fs.readFile(path.join(/* turbopackIgnore: true */ root, file))) !== hash) throw new Error("El motor cambió después del freeze: prepara una edición nueva.");
   }
-  const output = path.join(root, "output/instagram", composition.community, composition.slug, edition);
+  const output = path.join(/* turbopackIgnore: true */ root, "output/instagram", composition.community, composition.slug, edition);
   await fs.mkdir(output, { recursive: true });
   const pinned = new Map();
   for (const asset of composition.assets) {
@@ -50,7 +50,7 @@ export async function renderPreparedStory(prepared, { root = process.cwd(), base
     pinned.set(asset.src, { bytes, contentType: asset.file.endsWith(".png") ? "image/png" : "image/jpeg" });
   }
   for (const decoration of composition.decorations || []) {
-    const bytes = await fs.readFile(path.join(root, decoration.file));
+    const bytes = await fs.readFile(path.join(/* turbopackIgnore: true */ root, decoration.file));
     if (digest(bytes) !== decoration.sha256) throw new Error(`El adorno cambió después del freeze: ${decoration.id}`);
     pinned.set(decoration.src, { bytes, contentType: "image/png" });
   }
@@ -109,30 +109,30 @@ export async function renderPreparedStory(prepared, { root = process.cwd(), base
         if (geometry.width !== 1080 || geometry.height !== 1350) errors.push("Dimensiones de lienzo incorrectas.");
         errors.push(...geometry.issues);
         const file = `${String(index + 1).padStart(2, "0")}-${slide.role}.png`;
-        await frame.screenshot({ path: path.join(output, file), animations: "disabled" });
-        const metadata = await sharp(path.join(output, file)).metadata();
+        await frame.screenshot({ path: path.join(/* turbopackIgnore: true */ output, file), animations: "disabled" });
+        const metadata = await sharp(path.join(/* turbopackIgnore: true */ output, file)).metadata();
         if (metadata.width !== 1080 || metadata.height !== 1350) throw new Error("PNG con dimensiones incorrectas.");
-        return { sequence: index + 1, file, sha256: digest(await fs.readFile(path.join(output, file))), geometry, photoContrast, errors };
+        return { sequence: index + 1, file, sha256: digest(await fs.readFile(path.join(/* turbopackIgnore: true */ output, file))), geometry, photoContrast, errors };
       } finally { await page.close(); }
     });
   } finally { await browser.close(); }
   const failures = rendered.filter((item) => item.errors.length);
   if (failures.length) {
-    await fs.writeFile(path.join(output, "qa-failures.json"), JSON.stringify(failures, null, 2));
+    await fs.writeFile(path.join(/* turbopackIgnore: true */ output, "qa-failures.json"), JSON.stringify(failures, null, 2));
     throw new Error(failures.map((item) => `Lámina ${item.sequence}: ${item.errors.join("; ")}`).join("\n"));
   }
   const thumbWidth = 260, gap = 20, cols = 4, top = 100;
   const sheetWidth = cols * (thumbWidth + gap) + gap;
   const sheetHeight = top + Math.ceil(rendered.length / cols) * 370 + gap;
-  const layers = await Promise.all(rendered.map(async (item, index) => ({ input: await sharp(path.join(output, item.file)).resize(thumbWidth, 325).png().toBuffer(), left: gap + (index % cols) * (thumbWidth + gap), top: top + Math.floor(index / cols) * 370 })));
+  const layers = await Promise.all(rendered.map(async (item, index) => ({ input: await sharp(path.join(/* turbopackIgnore: true */ output, item.file)).resize(thumbWidth, 325).png().toBuffer(), left: gap + (index % cols) * (thumbWidth + gap), top: top + Math.floor(index / cols) * 370 })));
   const xml = (value) => String(value).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&apos;" }[c]));
   const labels = rendered.map((item, index) => `<text x="${gap + (index % cols) * (thumbWidth + gap)}" y="${top + Math.floor(index / cols) * 370 + 347}" font-size="12">${String(index + 1).padStart(2, "0")} · ${xml(composition.slides[index].headline)}</text>`).join("");
   const overlay = `<svg xmlns="http://www.w3.org/2000/svg" width="${sheetWidth}" height="${sheetHeight}"><g fill="#173c2f" font-family="Arial"><text x="20" y="43" font-size="30">${xml(composition.title)} · Relato ilustrado</text><text x="20" y="72" font-size="14">${rendered.length} momentos · ${composition.assets.length} imágenes del archivo · Borrador editorial</text>${labels}</g></svg>`;
-  await sharp({ create: { width: sheetWidth, height: sheetHeight, channels: 3, background: "#e8ece2" } }).composite([...layers, { input: Buffer.from(overlay), left: 0, top: 0 }]).png().toFile(path.join(output, "contact-sheet.png"));
-  await fs.writeFile(path.join(output, "caption.txt"), `${composition.caption}\n`);
-  await fs.writeFile(path.join(output, "alt-text.txt"), composition.slides.map((s, i) => `${String(i + 1).padStart(2, "0")} · ${s.alt}`).join("\n\n") + "\n");
-  await fs.writeFile(path.join(output, "manifest.json"), JSON.stringify({ schema: "carousel-export-v1", status: "draft", edition, story_sha256: composition.story_sha256, freeze: path.relative(root, path.join(prepared.directory, "freeze.json")), qa: composition.qa, slides: rendered }, null, 2) + "\n");
-  const zip = path.join(output, `${composition.slug}-carrusel.zip`);
-  await run("zip", ["-q", "-j", zip, ...rendered.map((r) => path.join(output, r.file)), ...["contact-sheet.png", "caption.txt", "alt-text.txt", "manifest.json"].map((file) => path.join(output, file)), path.join(prepared.directory, "story.json"), path.join(prepared.directory, "freeze.json")]);
+  await sharp({ create: { width: sheetWidth, height: sheetHeight, channels: 3, background: "#e8ece2" } }).composite([...layers, { input: Buffer.from(overlay), left: 0, top: 0 }]).png().toFile(path.join(/* turbopackIgnore: true */ output, "contact-sheet.png"));
+  await fs.writeFile(path.join(/* turbopackIgnore: true */ output, "caption.txt"), `${composition.caption}\n`);
+  await fs.writeFile(path.join(/* turbopackIgnore: true */ output, "alt-text.txt"), composition.slides.map((s, i) => `${String(i + 1).padStart(2, "0")} · ${s.alt}`).join("\n\n") + "\n");
+  await fs.writeFile(path.join(/* turbopackIgnore: true */ output, "manifest.json"), JSON.stringify({ schema: "carousel-export-v1", status: "draft", edition, story_sha256: composition.story_sha256, freeze: path.relative(root, path.join(/* turbopackIgnore: true */ prepared.directory, "freeze.json")), qa: composition.qa, slides: rendered }, null, 2) + "\n");
+  const zip = path.join(/* turbopackIgnore: true */ output, `${composition.slug}-carrusel.zip`);
+  await run("zip", ["-q", "-j", zip, ...rendered.map((r) => path.join(/* turbopackIgnore: true */ output, r.file)), ...["contact-sheet.png", "caption.txt", "alt-text.txt", "manifest.json"].map((file) => path.join(/* turbopackIgnore: true */ output, file)), path.join(/* turbopackIgnore: true */ prepared.directory, "story.json"), path.join(/* turbopackIgnore: true */ prepared.directory, "freeze.json")]);
   return { output, zip, slides: rendered.length, edition };
 }

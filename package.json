@@ -82,6 +82,10 @@
   },
   "dependencies": {
     "@aws-sdk/client-bedrock-runtime": "^3.1095.0",
+    "@aws-sdk/client-s3": "^3.1144.0",
+    "@aws-sdk/client-secrets-manager": "^3.1144.0",
+    "@aws-sdk/client-sqs": "^3.1144.0",
+    "@aws-sdk/client-sts": "^3.1144.0",
     "@vercel/blob": "^2.5.0",
     "@vercel/postgres": "^0.10.0",
     "better-sqlite3": "^11.7.0",
@@ -94,7 +98,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-leaflet": "^5.0.0",
-    "tailwind-merge": "^2.5.4"
+    "tailwind-merge": "^2.5.4",
+    "pg": "^8.23.1"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.9",
@@ -102,7 +107,6 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^9.14.0",
     "eslint-config-next": "^16.2.10",
-    "pg": "^8.13.1",
     "playwright": "1.60.0",
     "postcss": "^8.5.16",
     "read-excel-file": "^9.2.0",

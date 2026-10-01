@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import OpenAI from "openai";
+import { createLazyOpenAI } from "../../../../../runtime/openai.mjs";
 import { revalidatePath, revalidateTag } from "next/cache";
 import {
   getSqlClient,
@@ -12,7 +12,7 @@ import { ensureTarotSeeded } from "../../../../lib/tarot";
 export const runtime = "nodejs";
 export const maxDuration = 300;
 
-const openai = new OpenAI({
+const openai = createLazyOpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 

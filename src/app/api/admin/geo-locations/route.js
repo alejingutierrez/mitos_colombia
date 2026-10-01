@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import OpenAI from "openai";
+import { createLazyOpenAI } from "../../../../../runtime/openai.mjs";
 import {
   getSqlClient,
   getSqliteDb,
@@ -10,7 +10,7 @@ import {
 export const runtime = "nodejs";
 export const maxDuration = 300;
 
-const openai = new OpenAI({
+const openai = createLazyOpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
@@ -92,6 +92,7 @@ function checkAuth(request) {
 }
 
 async function ensureGeoColumns() {
+  if (process.env.MITOS_RUNTIME === "aws") return;
   if (isPostgres()) {
     const db = getSqlClient();
     await db`ALTER TABLE myths ADD COLUMN IF NOT EXISTS latitude DOUBLE PRECISION`;

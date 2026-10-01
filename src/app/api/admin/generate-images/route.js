@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import OpenAI from "openai";
-import { put } from "@vercel/blob";
+import { createLazyOpenAI } from "../../../../../runtime/openai.mjs";
+import { put } from "../../../../../runtime/storage.mjs";
 import { isPostgres, getSqlClient, getSqliteDb, getSqliteDbWritable } from "../../../../lib/db.js";
 import {
   buildBlobFilename,
@@ -13,7 +13,7 @@ import {
 export const runtime = "nodejs";
 export const maxDuration = 300; // 5 minutes max for image generation
 
-const openai = new OpenAI({
+const openai = createLazyOpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 

@@ -29,8 +29,8 @@
  * Requiere ELEVENLABS_API_KEY, BLOB_READ_WRITE_TOKEN y POSTGRES_URL en .env.local.
  */
 
-import { put } from "@vercel/blob";
-import { sql } from "@vercel/postgres";
+import { put } from "../../runtime/storage.mjs";
+import { sql } from "../../runtime/postgres.mjs";
 import { spawnSync } from "node:child_process";
 import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";

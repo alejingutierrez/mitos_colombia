@@ -1,0 +1,100 @@
+name: Mitos AWS
+on:
+  pull_request:
+  push:
+    branches: [main, codex/aws-migration]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: mitos-aws-${{ github.ref }}
+  cancel-in-progress: false
+env:
+  AWS_REGION: us-east-1
+  AWS_ACCOUNT_ID: '907264907058'
+  ECR_REPOSITORY: mitos-colombia
+  OPERATIONS_BUCKET: mitos-colombia-907264907058-operations
+jobs:
+  checks:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: node --test scripts/aws/*.test.mjs scripts/tarot/*.test.mjs scripts/comments.test.mjs
+      - run: npx eslint runtime scripts/aws src/instrumentation.js src/app/api/health src/app/api/internal src/app/api/version
+      - run: node scripts/aws/check-tracked-secrets.mjs
+      - run: npm audit --omit=dev --audit-level=high
+  image:
+    needs: checks
+    if: github.event_name != 'pull_request' && vars.MITOS_AWS_BUILD_ENABLED == 'true' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/codex/aws-migration')
+    runs-on: ubuntu-24.04-arm
+    permissions:
+      contents: read
+      id-token: write
+    outputs:
+      digest: ${{ steps.image.outputs.digest }}
+      source_verified: ${{ steps.snapshot.outputs.source_verified }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: aws-actions/configure-aws-credentials@cabfdba3510de1431bac9dba27511d97497fc100 # v5
+        with:
+          role-to-assume: arn:aws:iam::907264907058:role/mitos-colombia-ci-build
+          aws-region: us-east-1
+          allowed-account-ids: '907264907058'
+      - name: Obtain published snapshot
+        id: snapshot
+        env:
+          NEXT_PUBLIC_GA_ID: ${{ vars.MITOS_PUBLIC_GA_ID }}
+          NEXT_PUBLIC_GTM_ID: ${{ vars.MITOS_PUBLIC_GTM_ID }}
+        run: |
+          mkdir -p build-input
+          aws s3 cp "s3://$OPERATIONS_BUCKET/build-input/current/catalog.sqlite" build-input/catalog.sqlite --only-show-errors
+          aws s3 cp "s3://$OPERATIONS_BUCKET/build-input/current/receipt.json" build-input/receipt.json --only-show-errors
+          node scripts/aws/verify-snapshot.mjs
+          node -e 'const r=require("./build-input/receipt.json"); console.log("source_verified="+String(r.sourceVerified===true))' >> "$GITHUB_OUTPUT"
+      - name: Build immutable ARM image
+        id: image
+        env:
+          NEXT_PUBLIC_GA_ID: ${{ vars.MITOS_PUBLIC_GA_ID }}
+          NEXT_PUBLIC_GTM_ID: ${{ vars.MITOS_PUBLIC_GTM_ID }}
+        run: |
+          registry="$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com"
+          aws ecr get-login-password | docker login --username AWS --password-stdin "$registry"
+          docker build --platform linux/arm64 --target prod --build-arg MITOS_DEPLOYMENT_SHA="$GITHUB_SHA" --build-arg NEXT_PUBLIC_GA_ID --build-arg NEXT_PUBLIC_GTM_ID -t "$registry/$ECR_REPOSITORY:$GITHUB_SHA" .
+          docker push "$registry/$ECR_REPOSITORY:$GITHUB_SHA"
+          digest=$(aws ecr describe-images --repository-name "$ECR_REPOSITORY" --image-ids imageTag="$GITHUB_SHA" --query 'imageDetails[0].imageDigest' --output text)
+          test "${digest#sha256:}" != "$digest"
+          echo "digest=$digest" >> "$GITHUB_OUTPUT"
+          aws ecr wait image-scan-complete --repository-name "$ECR_REPOSITORY" --image-id imageDigest="$digest"
+          aws ecr describe-image-scan-findings --repository-name "$ECR_REPOSITORY" --image-id imageDigest="$digest" > build-input/image-scan.json
+          node -e 'const r=require("./build-input/image-scan.json"); const c=r.imageScanFindings.findingSeverityCounts||{};if((c.CRITICAL||0)>0||(c.HIGH||0)>0)process.exit(1)'
+          docker create --name mitos-assets "$registry/$ECR_REPOSITORY@$digest"
+          docker cp mitos-assets:/app/.next/static build-input/static
+          docker rm mitos-assets
+          aws s3 cp build-input/static "s3://mitos-colombia-$AWS_ACCOUNT_ID-media/static/$GITHUB_SHA/_next/static/" --recursive --cache-control 'public,max-age=31536000,immutable' --only-show-errors
+          node scripts/aws/release-receipt.mjs "$digest" > build-input/release.json
+          aws s3 cp build-input/release.json "s3://$OPERATIONS_BUCKET/ci/$GITHUB_SHA/release.json" --only-show-errors
+  deploy:
+    needs: image
+    if: github.ref == 'refs/heads/main' && vars.MITOS_AWS_CUTOVER_COMPLETE == 'true' && needs.image.outputs.source_verified == 'true'
+    runs-on: ubuntu-24.04
+    environment: mitos-aws-production
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: aws-actions/configure-aws-credentials@cabfdba3510de1431bac9dba27511d97497fc100 # v5
+        with:
+          role-to-assume: arn:aws:iam::907264907058:role/mitos-colombia-ci-deploy
+          aws-region: us-east-1
+          allowed-account-ids: '907264907058'
+      - name: Deploy digest through owned SSM document
+        env:
+          RELEASE_DIGEST: ${{ needs.image.outputs.digest }}
+          INSTANCE_ID: ${{ vars.MITOS_AWS_INSTANCE_ID }}
+        run: node scripts/aws/deploy-command.mjs

@@ -1,0 +1,75 @@
+# Implementación y migración AWS de Mitos
+
+Actualizado: 1 de octubre de 2026. Rama `codex/aws-migration`; base publicada `582d4b4f653c5e983fb39bfab537c4f768a37bb4`. Worktree aislado; los cambios locales del home y del taller no se modifican.
+
+La migración está en curso. La web pública continúa en Vercel y Neon sigue siendo el writer. No se cambió DNS, no se corrieron seeds ni campañas de IA y no se retiraron servicios.
+
+## Estado de las puertas
+
+| Puerta | Estado real | Lo que falta |
+|---|---|---|
+| P0 inventario | Parcial | Vincular conexiones y Blob locales a las variables reales del deployment; propietarios de seis tablas sin consumidor; tráfico y baseline colombiano comparable. |
+| P1 aplicación | Build y contratos locales pasan | Integración completa con RDS/S3, restore y conmutación ensayada; sacar generación/exportaciones largas del proceso HTTP. |
+| P2 destino | Base propia creada | CDN, WAF, TLS, observación completa, jobs bajo demanda y entorno temporal de QA. |
+| P3 ensayo/copia | Respaldo inicial local en marcha | Universo Blob ligado a producción, DB de ensayo, mapa de URLs, paridad final y restauración. |
+| P4 QA | Smoke local de lectura | Edición/publicación de fixtures, auth, pagos test, RSC, medios y taller en AWS. |
+| P5 carga/fallos | Pendiente | Carga, créditos CPU, memoria, pérdida del host, restore, deploy fallido y conciliación de cola. |
+| P6 corte | Bloqueado por las puertas previas | Freeze, callback inbox provisional, dump final, un writer, DNS/CDN y smoke público. |
+| P7/P8 | Pendientes | Observación, compatibilidad y retiro de origen con allowlist. |
+
+## Infraestructura provisionada
+
+Cuenta `907264907058`, región `us-east-1`, tres stacks propios:
+
+- `mitos-colombia-foundation`: VPC `10.77.0.0/16`, subred pública para salida sin NAT, RDS PostgreSQL 17.11 privada `db.t4g.micro` SingleAZ, 20 GB gp3; tres buckets privados versionados; ECR inmutable; SQS de pagos y DLQ; secretos propios y roles de runtime/job.
+- `mitos-colombia-runtime`: EC2 ARM64 `t4g.small`, 30 GB cifrados, IMDSv2, sin SSH; acceso 443 solo desde la lista de orígenes CloudFront. El host está instalado por SSM y mantiene respuesta 503 local; no tiene la aplicación ni credenciales productivas cargadas.
+- `mitos-colombia-ci`: roles OIDC del repo y documento SSM que admite SHA/digest validados. El environment `mitos-aws-production` solo admite `main`.
+
+RDS tiene protección contra borrado y 35 días de backups. Foundation/runtime tienen protección de terminación. La política de stack bloquea sustitución/borrado de base, buckets, zona y secretos.
+
+El primer arranque falló porque el endpoint S3 solo admitía nuestros buckets y bloqueaba los repositorios de Amazon Linux. Se corrigió mediante un change set que modificó únicamente ese endpoint: GET a los paquetes regionales de Amazon y al bucket regional de capas ECR. Docker, Nginx y PostgreSQL CLI están instalados; SSM responde. No se abrieron permisos a buckets de otros proyectos.
+
+Los tres servicios de RAG/Cocina permanecen `RUNNING` y su raíz HTTP respondió 200 después de esta provisión. Ese smoke no sustituye sus suites funcionales; ver [peer-health.json](receipts/peer-health.json).
+
+## Cambios de aplicación
+
+- Driver `pg` con SQL parametrizado, pool acotado y conexión fijada para transacciones; AWS exige RDS y CA verificada.
+- Adaptador S3 con URLs propias, tipos MIME, objetos inmutables por defecto, paginación y borrado mediante marcadores de versión. AWS rechaza fallback a Blob.
+- Caché de disco exclusiva del build AWS, separada por release y con invalidación de tags compartida; no se introduce Redis.
+- Snapshot de build en transacción PostgreSQL de solo lectura. Incluye datos usados por el catálogo y únicamente comentarios aprobados; excluye emails privados, cuentas, pedidos, sesiones y expedientes. El build no ejecuta seeds ni escritura SQLite.
+- Contenedor standalone, CA RDS, secretos leídos en memoria desde el secret propio, guard de cuenta/rol y endpoints live/ready/version.
+- Autenticación AWS con contadores PostgreSQL distintos por IP y cuenta; el proxy debe sobrescribir la IP con `CloudFront-Viewer-Address`.
+- Webhook AWS confirma SQS antes de 2xx. Worker separado, deduplicación/lease y DLQ. Faltan pruebas integradas con datos sintéticos y el inbox provisional para propagación DNS.
+- DDL retirado del arranque AWS; migraciones con digest y advisory lock. Se ejecutarán después de importar el esquema real, no para recrear el catálogo desde Excel.
+- Next.js actualizado a 16.3.8 por parches de seguridad; `npm audit` quedó en cero. OpenGraph usa Node. Los clientes de IA se inicializan solo al invocarlos, de modo que el build no usa sus claves.
+
+## Automatización preparada
+
+`.github/workflows/aws.yml` hace checks, build ARM64, scan ECR, publicación de estáticos por SHA y recibo SHA → digest → snapshot. OIDC no necesita llaves AWS permanentes en GitHub. La rama de migración tiene deshabilitados previews Vercel para impedir builds contra la base viva durante esta preparación.
+
+`MITOS_AWS_BUILD_ENABLED=true` habilita probar imágenes. `MITOS_AWS_CUTOVER_COMPLETE=false` mantiene bloqueado el deploy público. El snapshot inicial conserva `sourceVerified=false`; esa marca no se cambia para hacer pasar una puerta.
+
+`infra/aws/host/deploy.sh` está preparado para readiness/calentar un candidato, comprobar margen de RAM, conmutar el proxy, smoke público y volver a la imagen anterior sobre la misma RDS ante fallo. El worker se drena aparte. Su sintaxis pasa, pero el flujo completo todavía no fue ensayado. No se instala ni activa como release de producción hasta P3–P5.
+
+Antes de habilitar releases ordinarios falta automatizar refresco de snapshot desde RDS verificada, migraciones con rol separado y QA temporal. No basta con cambiar la variable del corte a true.
+
+## Evidencia local
+
+- 96 tests focalizados de runtime, pagos, tarot y comentarios: PASS.
+- ESLint focalizado: PASS.
+- Build sin secretos: 886 páginas generadas; solo aviso de fallback de Asimovian.
+- Auditoría standalone: sin taller, `.env`, fuentes de archivo ni symlinks que salgan del paquete; ver [standalone-package.json](receipts/standalone-package.json).
+- HTTP 200 en home, mitos, tarot, sitemap, robots, taxonomy, live y OpenGraph: [standalone-http.json](receipts/standalone-http.json).
+- Navegador local: navegación del home al relato de El Alma, imagen visible cargada, sin overflow ni errores de consola en esa lectura.
+
+Estas pruebas no prueban producción AWS ni sus objetivos de rendimiento.
+
+## Bloqueo de secretos
+
+La revisión automática rechazó la exportación amplia de todas las variables de Vercel a texto plano en `/private/tmp`. No se hizo ese volcado. Solo se obtuvo metadata de nombres/tipos y deployment SHA.
+
+Está pendiente la autorización para leer únicamente variables necesarias y trasladarlas directamente a Secrets Manager de Mitos, sin mostrarlas ni persistir un archivo local con sus valores. El secreto runtime de AWS sigue vacío. No se asumen valores locales para Bold, flags comerciales o legales. Nunca se llevan tokens Blob, bearer Bedrock ajeno ni conexiones Neon al runtime final AWS.
+
+## Costos
+
+Se mantiene la arquitectura económica del spec: USD 60–80/mes para hosting en el escenario definido, más USD 5–15 durante meses con capacidad temporal de release. No se incluyen IA, tokens, imágenes, voz ni créditos. No se añadieron NAT, ALB, Redis ni standby permanentes. Los recursos ya provisionados generan cargos; el origen permanece activo durante la migración.

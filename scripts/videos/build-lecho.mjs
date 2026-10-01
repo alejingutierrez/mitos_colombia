@@ -26,7 +26,7 @@
  * Requiere POSTGRES_URL (o DATABASE_URL) en .env.local/.env del repo principal.
  */
 
-import { sql } from "@vercel/postgres";
+import { sql } from "../../runtime/postgres.mjs";
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import { mkdtemp, rm, writeFile } from "node:fs/promises";

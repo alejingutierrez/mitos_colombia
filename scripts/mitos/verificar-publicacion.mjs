@@ -13,7 +13,7 @@ import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { basename, join, resolve } from "node:path";
 
 import dotenv from "dotenv";
-import { sql } from "@vercel/postgres";
+import { sql } from "../../runtime/postgres.mjs";
 
 const REPO_ROOT = resolve(new URL("../../", import.meta.url).pathname);
 const COMMUNITY_ROOT = join(REPO_ROOT, "content/videos/muiscas");

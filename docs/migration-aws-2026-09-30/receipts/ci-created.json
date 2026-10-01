@@ -1,0 +1,49 @@
+{
+    "Stacks": [
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:907264907058:stack/mitos-colombia-ci/bd24b8f0-bda5-11f1-a764-12f71462998f",
+            "StackName": "mitos-colombia-ci",
+            "ChangeSetId": "arn:aws:cloudformation:us-east-1:907264907058:changeSet/ci-20261001/180939e7-b3d0-4a55-be54-5ae24db0c386",
+            "Description": "Mitos CI identity: OIDC, one repository and owned resources only",
+            "CreationTime": "2026-10-01T14:38:16.636000+00:00",
+            "LastUpdatedTime": "2026-10-01T14:39:48.609000+00:00",
+            "RollbackConfiguration": {},
+            "StackStatus": "CREATE_COMPLETE",
+            "DisableRollback": false,
+            "NotificationARNs": [],
+            "Capabilities": [
+                "CAPABILITY_NAMED_IAM"
+            ],
+            "Outputs": [
+                {
+                    "OutputKey": "BuildRole",
+                    "OutputValue": "arn:aws:iam::907264907058:role/mitos-colombia-ci-build"
+                },
+                {
+                    "OutputKey": "DeployRole",
+                    "OutputValue": "arn:aws:iam::907264907058:role/mitos-colombia-ci-deploy"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "Project",
+                    "Value": "mitos-colombia"
+                },
+                {
+                    "Key": "ManagedBy",
+                    "Value": "CloudFormation"
+                }
+            ],
+            "EnableTerminationProtection": false,
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            },
+            "LastOperations": [
+                {
+                    "OperationType": "CREATE_STACK",
+                    "OperationId": "299729b6-031b-4e63-b83c-e8a68e12e5da"
+                }
+            ]
+        }
+    ]
+}

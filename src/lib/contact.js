@@ -15,6 +15,7 @@ function clampNumber(value, min, max, fallback) {
 }
 
 async function ensureContactTable() {
+  if (process.env.MITOS_RUNTIME === "aws") return;
   if (isPostgres()) {
     const sql = getSqlClient();
     await sql.query(`

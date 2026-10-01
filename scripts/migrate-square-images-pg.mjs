@@ -7,7 +7,7 @@
  * Uso: node scripts/migrate-square-images-pg.mjs [--env <ruta al .env>]
  */
 
-import { sql } from "@vercel/postgres";
+import { sql } from "../runtime/postgres.mjs";
 import dotenv from "dotenv";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";

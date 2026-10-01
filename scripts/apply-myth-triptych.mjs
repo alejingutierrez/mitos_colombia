@@ -30,8 +30,8 @@ import { fileURLToPath } from "node:url";
 import { dirname } from "node:path";
 import { createHash } from "node:crypto";
 
-import { put } from "@vercel/blob";
-import { sql } from "@vercel/postgres";
+import { put } from "../runtime/storage.mjs";
+import { sql } from "../runtime/postgres.mjs";
 import dotenv from "dotenv";
 import sharp from "sharp";
 

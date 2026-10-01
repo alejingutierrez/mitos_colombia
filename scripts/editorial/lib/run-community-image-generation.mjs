@@ -3,7 +3,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 
-import { put } from "@vercel/blob";
+import { put } from "../../../runtime/storage.mjs";
 import dotenv from "dotenv";
 import OpenAI from "openai";
 import sharp from "sharp";

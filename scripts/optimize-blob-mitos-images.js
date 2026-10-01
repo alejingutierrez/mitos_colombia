@@ -1,5 +1,5 @@
 import "dotenv/config";
-import { list, put } from "@vercel/blob";
+import { list, put } from "../runtime/storage.mjs";
 import sharp from "sharp";
 
 const args = process.argv.slice(2);

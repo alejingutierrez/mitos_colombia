@@ -72,6 +72,10 @@ function bedrockBearerToken(env = process.env) {
  * describe lo que la ruta necesita.
  */
 export function assertBedrockConfigured(env = process.env) {
+  if (env.MITOS_RUNTIME === "aws") {
+    assertOwnRuntimeRole(env);
+    return;
+  }
   if (bedrockBearerToken(env)) return;
   const hasKeys =
     envValue(env, "BEDROCK_AWS_ACCESS_KEY_ID", "INSTAGRAM_BEDROCK_ACCESS_KEY_ID", "AWS_ACCESS_KEY_ID") &&
@@ -85,7 +89,18 @@ export function assertBedrockConfigured(env = process.env) {
   );
 }
 
+function assertOwnRuntimeRole(env) {
+  const forbidden = ["AWS_BEARER_TOKEN_BEDROCK", "BEDROCK_API_KEY", "BEDROCK_ACCESS_KEY",
+    "BEDROCK_PROFILE", "INSTAGRAM_BEDROCK_PROFILE", "AWS_PROFILE", "BEDROCK_AWS_ACCESS_KEY_ID",
+    "INSTAGRAM_BEDROCK_ACCESS_KEY_ID", "AWS_ACCESS_KEY_ID"];
+  if (forbidden.some(key => env[key])) throw new Error("AWS Mitos must use its own runtime role; explicit credentials are forbidden.");
+}
+
 export function createBedrockRuntimeClient(env = process.env) {
+  if (env.MITOS_RUNTIME === "aws") {
+    assertOwnRuntimeRole(env);
+    return new BedrockRuntimeClient({ region: env.AWS_REGION || "us-east-1" });
+  }
   const region =
     envValue(env, "BEDROCK_REGION", "INSTAGRAM_BEDROCK_REGION", "AWS_REGION") ||
     "us-east-2";

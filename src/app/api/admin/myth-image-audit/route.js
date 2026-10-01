@@ -4,7 +4,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { promisify } from "node:util";
 
-import { list } from "@vercel/blob";
+import { list, storageConfigured } from "../../../../../runtime/storage.mjs";
 import { NextResponse } from "next/server";
 
 import { getSqlClient, isPostgres } from "../../../../lib/db.js";
@@ -227,7 +227,7 @@ async function loadDatabaseInventory() {
 }
 
 async function listAllBlobs(prefix) {
-  if (!process.env.BLOB_READ_WRITE_TOKEN) return [];
+  if (!storageConfigured()) return [];
   const blobs = [];
   let cursor;
   do {

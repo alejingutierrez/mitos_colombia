@@ -1,4 +1,4 @@
-import { sql } from '@vercel/postgres';
+import { sql } from '../runtime/postgres.mjs';
 
 // Community info with image prompts (top 10)
 const COMMUNITY_INFO = {

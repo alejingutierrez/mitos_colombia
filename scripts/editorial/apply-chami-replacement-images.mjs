@@ -3,7 +3,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 
-import { del, put } from "@vercel/blob";
+import { del, put } from "../../runtime/storage.mjs";
 import dotenv from "dotenv";
 import pg from "pg";
 import sharp from "sharp";

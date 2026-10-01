@@ -5,7 +5,7 @@ import { execFile } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
 
-import { put } from "@vercel/blob";
+import { put } from "../runtime/storage.mjs";
 import dotenv from "dotenv";
 import OpenAI from "openai";
 import sharp from "sharp";

@@ -3,7 +3,7 @@ import path from "node:path";
 import process from "node:process";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { del, put } from "@vercel/blob";
+import { del, put } from "../runtime/storage.mjs";
 import dotenv from "dotenv";
 import OpenAI from "openai";
 import pg from "pg";

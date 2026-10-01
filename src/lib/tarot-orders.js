@@ -40,6 +40,7 @@ function parseJsonObject(value) {
 }
 
 async function initializePostgres() {
+  if (process.env.MITOS_RUNTIME === "aws") return;
   const db = getSqlClient();
   await db`
     CREATE TABLE IF NOT EXISTS tarot_orders (

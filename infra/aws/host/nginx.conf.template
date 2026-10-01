@@ -1,0 +1,48 @@
+# TLS origin config. Render @ORIGIN_SECRET@ in a root-owned file (0600).
+# Enable only after a trusted origin certificate and CF origin headers exist.
+map $http_x_mitos_origin $mitos_origin_allowed {
+    default 0;
+    "@ORIGIN_SECRET@" 1;
+}
+map $http_cloudfront_viewer_address $mitos_viewer_ip {
+    default "";
+    ~^([0-9.]+):[0-9]+$ $1;
+    ~^\[(.+)\]:[0-9]+$ $1;
+}
+include /etc/nginx/mitos-upstream.conf;
+server {
+    listen 127.0.0.1:3080;
+    server_name localhost;
+    location / {
+        proxy_pass http://mitos_web;
+        proxy_http_version 1.1;
+        proxy_set_header Host www.mitosdecolombia.com;
+        proxy_set_header Connection "";
+        proxy_buffering off;
+        proxy_read_timeout 60s;
+    }
+}
+server {
+    listen 443 ssl;
+    server_name origin.mitosdecolombia.com;
+    ssl_certificate /etc/letsencrypt/live/origin.mitosdecolombia.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/origin.mitosdecolombia.com/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    if ($mitos_origin_allowed = 0) { return 403; }
+    if ($mitos_viewer_ip = "") { return 403; }
+    client_max_body_size 10m;
+    location ^~ /api/internal/ { return 404; }
+    location / {
+        proxy_pass http://mitos_web;
+        proxy_http_version 1.1;
+        proxy_set_header Host www.mitosdecolombia.com;
+        proxy_set_header X-Forwarded-Host www.mitosdecolombia.com;
+        proxy_set_header X-Forwarded-Proto https;
+        proxy_set_header X-Forwarded-For $mitos_viewer_ip;
+        proxy_set_header X-Mitos-Client-IP $mitos_viewer_ip;
+        proxy_set_header X-Mitos-Worker-Token "";
+        proxy_set_header Connection "";
+        proxy_buffering off;
+        proxy_read_timeout 60s;
+    }
+}

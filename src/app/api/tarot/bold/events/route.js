@@ -1,19 +1,8 @@
 import { after, NextResponse } from "next/server";
+import { processSaleEvent } from "../../../../../lib/bold-event-processor";
+import { enqueuePayment } from "../../../../../../runtime/payment-queue.mjs";
 import {
-  applyBoldPayment,
-  claimTarotPurchaseAnalytics,
-  findTarotOrderByPaymentTransactionId,
-  markTarotPurchaseAnalyticsSent,
-  releaseTarotPurchaseAnalyticsClaim,
-} from "../../../../../lib/tarot-orders";
-import {
-  getGa4ServerTrackingConfiguration,
-  sendGa4Purchase,
-} from "../../../../../lib/ga4-measurement";
-import {
-  fetchBoldPayment,
   getBoldConfiguration,
-  normalizeBoldPaymentStatus,
   verifyBoldWebhookSignature,
 } from "../../../../../lib/bold";
 
@@ -32,73 +21,6 @@ const SALE_EVENTS = new Set([
   "VOID_APPROVED",
   "VOID_REJECTED",
 ]);
-
-async function deliverPurchaseAnalytics(order) {
-  if (order?.status !== "APPROVED") return false;
-  const configuration = getGa4ServerTrackingConfiguration();
-  if (!configuration.ready) throw new Error("GA4 server purchase tracking is not ready.");
-  const claim = await claimTarotPurchaseAnalytics(order.reference);
-  if (claim.reason === "already_sent") return true;
-  if (!claim.claimed) throw new Error(`Purchase tracking could not be claimed: ${claim.reason}`);
-  try {
-    await sendGa4Purchase(claim.order, configuration);
-    await markTarotPurchaseAnalyticsSent(order.reference);
-    return true;
-  } catch (error) {
-    await releaseTarotPurchaseAnalyticsClaim(order.reference, error);
-    throw error;
-  }
-}
-
-async function processSaleEvent(event, configuration) {
-  const transactionId = String(
-    event?.data?.payment_id || event?.subject || ""
-  ).trim();
-  const orderByTransaction = transactionId
-    ? await findTarotOrderByPaymentTransactionId(transactionId)
-    : null;
-  const reference = String(
-    event?.data?.metadata?.reference || orderByTransaction?.reference || ""
-  ).trim();
-
-  if (!reference) {
-    console.error("Bold event could not be matched to an order", {
-      eventId: String(event?.id || "").slice(0, 80),
-      transactionId: transactionId.slice(0, 80),
-    });
-    return;
-  }
-
-  try {
-    /* La firma prueba que el aviso viene de Bold, no cuánto se pagó: el estado
-       y el monto se leen del comprobante consultado directamente a Bold. */
-    const payment = await fetchBoldPayment(reference, {
-      apiKey: configuration.apiKey,
-    });
-    const normalizedStatus = normalizeBoldPaymentStatus(payment?.status);
-    /* `NO_TRANSACTION_FOUND` llega cuando el comprobante todavía no existe
-       (puede tardar hasta 10 minutos). No es un fallo ni un rechazo: la orden
-       se queda como está y el siguiente aviso o la consulta la resuelven. */
-    if (!normalizedStatus) return;
-    const result = await applyBoldPayment({ ...payment, status: normalizedStatus });
-    if (result.reason === "order_amount_mismatch") {
-      /* Se registran los dos montos porque la unidad del comprobante es lo
-         único que la documentación de Bold no declara. Ante la duda la orden
-         NO se aprueba. */
-      const error = new Error("Bold payment and order amounts do not match.");
-      error.boldTotal = payment?.amount?.total_amount;
-      throw error;
-    }
-    if (result.matched) await deliverPurchaseAnalytics(result.order);
-  } catch (error) {
-    console.error("Error applying Bold payment event", {
-      code: error?.code || "bold_event_processing_failed",
-      status: error?.status || 500,
-      reference,
-      ...(error?.boldTotal !== undefined && { boldTotal: error.boldTotal }),
-    });
-  }
-}
 
 export async function POST(request) {
   const configuration = getBoldConfiguration();
@@ -145,7 +67,14 @@ export async function POST(request) {
     );
   }
 
-  after(() => processSaleEvent(event, configuration));
+  if (process.env.MITOS_RUNTIME === "aws") {
+    try { await enqueuePayment(rawBody, signature); }
+    catch { return NextResponse.json({ error: "durable_receipt_failed" }, { status: 503, headers: NO_STORE }); }
+  } else {
+    after(() => processSaleEvent(event, configuration).catch(error => {
+      console.error("Bold legacy processing failed", { code: error.code || "bold_processing_failed" });
+    }));
+  }
   return NextResponse.json(
     { received: true, queued: true },
     { status: 200, headers: NO_STORE }

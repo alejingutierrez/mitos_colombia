@@ -1,16 +1,17 @@
+import { createLazyOpenAI } from "../../../../../../runtime/openai.mjs";
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
-import OpenAI, { toFile } from "openai";
+import { toFile } from "openai";
 import sharp from "sharp";
-import { put, del } from "@vercel/blob";
+import { put, del } from "../../../../../../runtime/storage.mjs";
 import { getTarotCardById, updateTarotCardImage } from "../../../../../lib/tarot";
 import { IMAGE_QUALITY_POLICY } from "../../../../../lib/image-quality-policy";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
 
-const openai = new OpenAI({
+const openai = createLazyOpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import OpenAI from "openai";
+import { createLazyOpenAI } from "../../../../../runtime/openai.mjs";
 import {
   getSqlClient,
   getSqliteDb,
@@ -13,7 +13,7 @@ import { getHomeStats } from "../../../../lib/myths";
 export const runtime = "nodejs";
 export const maxDuration = 300;
 
-const openai = new OpenAI({
+const openai = createLazyOpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
@@ -214,6 +214,7 @@ function truncateText(text, max = MAX_CONTENT_CHARS) {
 }
 
 async function ensureSeoTable() {
+  if (process.env.MITOS_RUNTIME === "aws") return;
   if (isPostgres()) {
     const db = getSqlClient();
     await db`

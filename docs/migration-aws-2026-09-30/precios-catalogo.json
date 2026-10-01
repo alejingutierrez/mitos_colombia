@@ -1,0 +1,98 @@
+{
+  "rds": [
+    {
+      "sku": "5SY529FVXY3EARD8",
+      "publication_date": "2026-09-29T23:30:06Z",
+      "effective_date": "2026-09-01T00:00:00Z",
+      "attributes": {
+        "instanceType": "db.t4g.small",
+        "usagetype": "Multi-AZUsage:db.t4g.small",
+        "databaseEngine": "PostgreSQL",
+        "regionCode": "us-east-1",
+        "deploymentOption": "Multi-AZ"
+      },
+      "description": "$ 0.065 per RDS db.t4g.small Multi-AZ instance hour (or partial hour) running PostgreSQL",
+      "unit": "Hrs",
+      "usd": 0.065
+    },
+    {
+      "sku": "S9H3AXMBHSKRFJTA",
+      "publication_date": "2026-09-29T23:30:06Z",
+      "effective_date": "2026-09-01T00:00:00Z",
+      "attributes": {
+        "instanceType": "db.t4g.small",
+        "usagetype": "InstanceUsage:db.t4g.small",
+        "databaseEngine": "PostgreSQL",
+        "regionCode": "us-east-1",
+        "deploymentOption": "Single-AZ"
+      },
+      "description": "$ 0.032 per RDS db.t4g.small Single-AZ instance hour (or partial hour) running PostgreSQL",
+      "unit": "Hrs",
+      "usd": 0.032
+    }
+  ],
+  "cache": [
+    {
+      "sku": "JSGVEAU2ZJSWY42F",
+      "publication_date": "2026-09-14T06:37:14Z",
+      "effective_date": "2026-09-01T00:00:00Z",
+      "attributes": {
+        "instanceType": "cache.t4g.micro",
+        "usagetype": "NodeUsage:cache.t4g.micro",
+        "cacheEngine": "Valkey",
+        "regionCode": "us-east-1"
+      },
+      "description": "$0.0128 per T4G Micro Cache node-hour (or partial hour) running Valkey",
+      "unit": "Hrs",
+      "usd": 0.0128
+    }
+  ],
+  "ecs": [
+    {
+      "sku": "8CESGAFWKAJ98PME",
+      "publication_date": "2026-09-11T12:44:25Z",
+      "effective_date": "2026-07-01T00:00:00Z",
+      "attributes": {
+        "regionCode": "us-east-1",
+        "usagetype": "USE1-Fargate-vCPU-Hours:perCPU"
+      },
+      "description": "AWS Fargate - vCPU - US East (N.Virginia)",
+      "unit": "hours",
+      "usd": 0.04048
+    },
+    {
+      "sku": "PBZNQUSEXZUC34C9",
+      "publication_date": "2026-09-11T12:44:25Z",
+      "effective_date": "2026-07-01T00:00:00Z",
+      "attributes": {
+        "regionCode": "us-east-1",
+        "usagetype": "USE1-Fargate-GB-Hours"
+      },
+      "description": "AWS Fargate - Memory  - US East (N.Virginia)",
+      "unit": "hours",
+      "usd": 0.004445
+    }
+  ],
+  "storage": [
+    {
+      "sku": "J7S7KD4WFDNQWKNX",
+      "publication_date": "2026-09-29T23:30:06Z",
+      "effective_date": "2026-09-01T00:00:00Z",
+      "attributes": {
+        "usagetype": "RDS:Multi-AZ-GP3-Storage",
+        "databaseEngine": "PostgreSQL",
+        "regionCode": "us-east-1",
+        "deploymentOption": "Multi-AZ"
+      },
+      "description": "$0.23 per GB-month of provisioned GP3 storage for Multi-AZ deployments running PostgreSQL",
+      "unit": "GB-Mo",
+      "usd": 0.23
+    }
+  ],
+  "assumptions": {
+    "month_hours": 730,
+    "region": "us-east-1",
+    "free_tier_or_savings_plans_included": false,
+    "note": "These are catalog unit rates, not an AWS Calculator quote or invoice; CDN/logs/egress/workers/staging variable costs require measured usage."
+  }
+}

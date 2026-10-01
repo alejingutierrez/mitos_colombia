@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import fs from "node:fs/promises";
-import OpenAI from "openai";
+import { createLazyOpenAI } from "../../../../../runtime/openai.mjs";
 import path from "node:path";
 import { getSqlClient, getSqliteDb, isPostgres } from "../../../../lib/db.js";
 import {
@@ -25,7 +25,7 @@ import {
 export const runtime = "nodejs";
 export const maxDuration = 300;
 
-const openai = new OpenAI({
+const openai = createLazyOpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 const LOCAL_COMPANION_ENABLED =
