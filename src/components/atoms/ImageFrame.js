@@ -32,7 +32,8 @@ export function ImageFrame({
   sizes = "(max-width: 768px) 100vw, 400px",
   mobileSizes = "100vw",
   priority = false,
-  quality = 75,
+  loading,
+  quality = 90,
   // Preserve an original artwork without recompressing the desktop source.
   unoptimized = false,
   mobileUnoptimized = false,
@@ -42,6 +43,7 @@ export function ImageFrame({
   // todas sería pedir obras que aún no se ven.
   preloadArtDirection = false,
   fetchPriority = priority ? "high" : undefined,
+  crossOrigin,
   placeholderMotif = "jaguar",
   placeholderSize = 56,
   className,
@@ -57,6 +59,7 @@ export function ImageFrame({
         sizes: mobileSizes,
         quality,
         unoptimized: mobileUnoptimized,
+        crossOrigin,
       }).props
     : null;
 
@@ -84,6 +87,7 @@ export function ImageFrame({
       // portada del mito activa `preloadArtDirection` y a la vez `unoptimized`
       // cuando el mito trae obra propia.
       unoptimized,
+      crossOrigin,
     }).props;
     ReactDOM.preload(mobileSource.src, {
       as: "image",
@@ -91,6 +95,7 @@ export function ImageFrame({
       imageSizes: mobileSource.sizes,
       fetchPriority: "high",
       media: MOBILE_MEDIA,
+      crossOrigin,
     });
     ReactDOM.preload(desktopSource.src, {
       as: "image",
@@ -98,6 +103,7 @@ export function ImageFrame({
       imageSizes: desktopSource.sizes,
       fetchPriority: "high",
       media: DESKTOP_MEDIA,
+      crossOrigin,
     });
   }
 
@@ -133,11 +139,12 @@ export function ImageFrame({
             alt={alt}
             fill
             sizes={sizes}
-            priority={priority && !hasMobileArtDirection}
-            loading={priority && hasMobileArtDirection ? "eager" : undefined}
+            preload={priority && !hasMobileArtDirection}
+            loading={priority ? (hasMobileArtDirection ? "eager" : undefined) : loading}
             quality={quality}
             unoptimized={unoptimized}
-            fetchPriority={fetchPriority}
+            crossOrigin={crossOrigin}
+            fetchPriority={priority && !hasMobileArtDirection ? undefined : fetchPriority}
             className={cn("object-cover", imgClassName)}
           />
         </picture>

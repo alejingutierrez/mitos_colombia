@@ -1159,3 +1159,42 @@
 @media (prefers-reduced-motion: reduce) {
   .commercePage *, .commercePage *::before, .commercePage *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
 }
+
+/* Misma composición del archivo: texto sobre papel, obra sin velo. */
+.commercePage { --commerce-green: #103524; background: #f7f3ea; }
+.commercePage .hero,
+.commercePage .closeSection { display: grid; grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); background: #f7f3ea; color: #3c3b35; min-height: 0; }
+.commercePage .hero .heroMedia,
+.commercePage .closeSection .closeMedia { position: relative; grid-column: 2; grid-row: 1; inset: auto; height: auto; min-height: 440px; }
+.commercePage .hero .heroInner { display: contents; }
+.commercePage .hero .heroCopy { grid-column: 1; grid-row: 1; align-self: center; max-width: none; padding: clamp(1.5rem,3vw,3rem); }
+.commercePage .heroShade,
+.commercePage .closeShade,
+.commercePage .heroArtifact,
+.commercePage .heroBottomMark { display: none; }
+.commercePage .heroCopy h1,
+.commercePage .closeInner h2 { color: #103524; font-size: clamp(2rem,3.4vw,3.25rem); line-height: 1.12; letter-spacing: 0; }
+.commercePage .heroSubtitle { color: #3c3b35; font-size: .9375rem; line-height: 1.6; }
+.commercePage .heroProof,
+.commercePage .heroEyebrow { color: #79511f; }
+.commercePage .ornamentLine { margin: 1.2rem 0; }
+.commercePage .heroActions { gap: .6rem; margin-top: 1.25rem; }
+.commercePage .actionButton { border-radius: 2px; min-height: 44px; font-size: .875rem; color: #f7f3ea; }
+.commercePage .actionSecondary { background: transparent; border-color: #103524; color: #103524; }
+.commercePage .hero .productStatusInverse,
+.commercePage .closeSection .productStatusInverse { color: #103524; border-color: #c9c7bf; }
+.commercePage .closeInner { grid-column: 1; grid-row: 1; min-height: 0; padding: clamp(1.5rem,3vw,3rem); }
+.commercePage .closeInner > p { color: #3c3b35; }
+.commercePage .closeInner .goldLink { color: #103524; }
+.commercePage .featureCard,
+.commercePage .galleryImageWrap { box-shadow: none; rotate: 0deg; }
+.commercePage .provisionalLabel { position: static; grid-column: 1 / -1; background: #f7f3ea; color: #3c3b35; padding: .75rem 1.5rem; font-size: .75rem; }
+@media(max-width:820px) {
+  .commercePage .hero,
+  .commercePage .closeSection { grid-template-columns: minmax(0,1fr); }
+  .commercePage .hero .heroCopy,
+  .commercePage .closeSection .closeInner { grid-column: 1; grid-row: 1; padding: 1.5rem 1.25rem; }
+  .commercePage .hero .heroMedia,
+  .commercePage .closeSection .closeMedia { grid-column: 1; grid-row: 2; min-height: 0; height: auto; aspect-ratio: 3 / 2; inset: auto; }
+  .commercePage .heroCopy h1 { font-size: 2.1rem; }
+}

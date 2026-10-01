@@ -8,13 +8,13 @@
   transition:
     transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
     border-color 0.35s ease,
-    box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    color 0.35s ease;
 }
 .card:hover,
 .card:focus-visible {
-  transform: translateY(-4px);
+  transform: none;
   border-color: rgb(var(--jungle-500));
-  box-shadow: 0 24px 48px -28px rgba(22, 22, 17, 0.34);
+
 }
 .card:focus-visible {
   outline: 2px solid rgb(var(--ember-500));

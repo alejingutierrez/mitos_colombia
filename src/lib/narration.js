@@ -276,16 +276,4 @@ export function pcmDuration(byteLength) {
  * Etiqueta corta para el cintillo: "3 min", "12 min". Por debajo del minuto
  * dice "1 min" en vez de "0 min", que se leería como un error.
  */
-export function formatNarrationLength(seconds) {
-  if (!Number.isFinite(seconds) || seconds <= 0) return null;
-  return `${Math.max(1, Math.round(seconds / 60))} min`;
-}
-
-/** Reloj del reproductor: m:ss. */
-export function formatClock(seconds) {
-  if (!Number.isFinite(seconds) || seconds < 0) return "0:00";
-  const total = Math.floor(seconds);
-  const minutes = Math.floor(total / 60);
-  const rest = total % 60;
-  return `${minutes}:${String(rest).padStart(2, "0")}`;
-}
+export { formatNarrationLength, formatClock } from "./narration-display.js";

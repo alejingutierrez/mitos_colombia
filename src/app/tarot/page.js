@@ -1,8 +1,9 @@
 import { TarotTemplate } from "../../components/templates";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
+import { dailySeed } from "../../lib/home-rotation";
 import { getTarotCards, getDailyTarotSelection } from "../../lib/tarot";
 
-export const revalidate = 86400;
+export const revalidate = 1800;
 
 export async function generateMetadata() {
   const seo = await getSeoEntry("page", "tarot");
@@ -24,17 +25,13 @@ export async function generateMetadata() {
   });
 }
 
-function getDailySeed() {
-  const now = new Date();
-  const startOfYear = new Date(now.getFullYear(), 0, 0);
-  const diff = now - startOfYear;
-  const oneDay = 1000 * 60 * 60 * 24;
-  return Math.floor(diff / oneDay);
-}
-
 export default async function TarotPage() {
-  const seed = getDailySeed();
-  const tarotCards = await getTarotCards();
+  const seed = dailySeed();
+  const tarotCards = (await getTarotCards()).map((card) => ({
+    slug: card.slug, card_name: card.card_name, arcana: card.arcana, suit: card.suit,
+    myth_title: card.myth_title, myth_slug: card.myth_slug, image_url: card.display_image_url || card.image_url || card.myth_image_url,
+    reading_summary: card.reading_summary || card.meaning, selection_reason: card.selection_reason,
+  }));
 
   // Carta del día: prioriza las que enlazan a un mito para que sea navegable.
   const linkable = (tarotCards || []).filter((c) => c.myth_slug);
@@ -43,7 +40,7 @@ export default async function TarotPage() {
 
   return (
     <TarotTemplate
-      title="Tarot de la mitología colombiana"
+      title="Tarot de Colombia"
       description="Una baraja editorial que traduce relatos ancestrales en arcanos visuales. No es adivinación: es leer los arquetipos del territorio a través de sus mitos."
       cards={tarotCards}
       daily={daily}

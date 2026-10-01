@@ -1,9 +1,10 @@
 import { Children } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { cn } from "../../lib/utils";
-import { Container, Motif } from "../atoms";
+import { Container } from "../atoms";
 import { Header, MythWall } from "../organisms";
+import { ArchivePageHeader } from "../editorial/ArchivePageHeader";
+import canvas from "../editorial/archive-canvas.module.css";
 
 /**
  * Plantilla · MuralTemplate — el armazón de las internas de taxonomía.
@@ -107,67 +108,9 @@ export function MuralTemplate({
   return (
     <>
       <Header active={active} />
-      <main id="contenido" className="min-h-[100dvh] overflow-x-clip bg-paper">
-        <section className="relative min-h-[24rem] overflow-hidden bg-[rgb(var(--atlas-night))] md:min-h-[35rem]">
-          {imageUrl ? (
-            <Image
-              src={imageUrl}
-              alt=""
-              fill
-              priority
-              sizes="100vw"
-              quality={68}
-              className="object-cover"
-            />
-          ) : (
-            <span className="absolute inset-0 flex items-center justify-center opacity-20">
-              <Motif name={motif} size={220} />
-            </span>
-          )}
-          {/* `atlas-scrim-portada` y no `atlas-scrim-cover`: la cifra bajó a la
-              banda de ficha, así que el velo vertical puede ceder y dejar ver
-              la obra, que es el mejor activo del archivo. */}
-          <span className="atlas-scrim-portada absolute inset-0" />
-          <Container
-            size="atlas"
-            className="atlas-on-image relative flex min-h-[24rem] items-end pb-9 text-white md:min-h-[35rem] md:pb-14"
-          >
-            <div className="min-w-0 max-w-[34ch]">
-              {breadcrumb.length ? (
-                <nav
-                  aria-label="Ruta de navegación"
-                  className="flex flex-wrap items-center gap-2 text-[0.8125rem] text-white/76"
-                >
-                  {breadcrumb.map((crumb, i) => (
-                    <span key={crumb.label} className="flex items-center gap-2">
-                      {i > 0 ? (
-                        <span aria-hidden className="opacity-60">
-                          /
-                        </span>
-                      ) : null}
-                      {crumb.href ? (
-                        <Link
-                          href={crumb.href}
-                          className="border-b border-white/40 transition-colors hover:text-white"
-                        >
-                          {crumb.label}
-                        </Link>
-                      ) : (
-                        <span aria-current="page">{crumb.label}</span>
-                      )}
-                    </span>
-                  ))}
-                </nav>
-              ) : null}
-
-              {kicker ? (
-                <p className="atlas-kicker mt-5 !text-white/85">{kicker}</p>
-              ) : null}
-              <h1 className="atlas-h1 mt-3 !text-white">{name}</h1>
-              <span className="atlas-rule bg-ember-500" />
-            </div>
-          </Container>
-        </section>
+      <main id="contenido" className={canvas.canvas}>
+        <ArchivePageHeader eyebrow={kicker} title={name} breadcrumb={breadcrumb} imageUrl={imageUrl} meta={`${total} ${total === 1 ? "relato" : "relatos"}`} />
+        <MythWall myths={myths} motif={motif} heading={countLabel || (total === 1 ? "Su relato" : `Los ${total} relatos`)} meta="Archivo completo" />
 
         {strip ? (
           <section className="border-b border-line-100">
@@ -213,13 +156,6 @@ export function MuralTemplate({
             ) : null}
           </Container>
         ) : null}
-
-        <MythWall
-          myths={myths}
-          motif={motif}
-          heading={countLabel || (total === 1 ? "Su relato" : `Los ${total} relatos`)}
-          meta="Archivo completo"
-        />
 
         {children}
       </main>

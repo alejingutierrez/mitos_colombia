@@ -243,7 +243,7 @@ function GalleryZoom({ card, onClose }) {
               <CommerceIcon name="close" />
             </button>
             <div className={styles.galleryZoomImage}>
-              <Image
+              <Image unoptimized quality={90}
                 src={card.image_url}
                 alt={`Ampliación de ${card.card_name}`}
                 fill
@@ -295,8 +295,9 @@ function Hero({ variant, product, onAction }) {
           src={heroVisual.src}
           alt={heroVisual.alt}
           fill
-          priority
-          loading="eager"
+          preload
+          unoptimized
+          quality={90}
           sizes="(max-width: 900px) 100vw, 58vw"
           className={styles.heroImage}
         />
@@ -363,7 +364,7 @@ function StorySection({ variant, featured, index }) {
           </div>
           <div className={styles.featureCardWrap}>
             {featured?.image_url ? (
-              <Image
+              <Image quality={90}
                 src={featured.image_url}
                 alt={`${featured.card_name}, vinculada con ${featured.myth_title}`}
                 width={420}
@@ -522,7 +523,7 @@ function IntentSignatureSection({ variant, cards, onCart, onDiagnostic, index })
             <div className={styles.readingExample} aria-live="polite">
               <div className={styles.readingCard}>
                 {activeReflectionCard?.image_url ? (
-                  <Image
+                  <Image quality={90}
                     src={activeReflectionCard.image_url}
                     alt={activeReflectionCard.card_name}
                     fill
@@ -554,7 +555,7 @@ function IntentSignatureSection({ variant, cards, onCart, onDiagnostic, index })
           <div className={styles.visualDetail}>
             <div className={styles.detailImage}>
               {featured?.image_url ? (
-                <Image
+                <Image quality={90}
                   src={featured.image_url}
                   alt={`Detalle provisional de ${featured.card_name}`}
                   fill
@@ -663,7 +664,7 @@ function GallerySection({ variant, cards, onDiagnostic, index }) {
             >
               <div className={styles.galleryImageWrap}>
                 {card.image_url ? (
-                  <Image
+                  <Image quality={90}
                     src={card.image_url}
                     alt={card.card_name}
                     fill
@@ -831,7 +832,7 @@ function CloseSection({ variant, product, onCart }) {
         data-visual-intent={variant.id}
         data-visual-status={heroVisual.status}
         aria-hidden="true"
-      ><Image src={heroVisual.src} alt="" fill loading="eager" sizes="100vw" className={styles.closeImage} /></div>
+      ><Image src={heroVisual.src} alt="" fill unoptimized quality={90} loading="eager" sizes="100vw" className={styles.closeImage} /></div>
       <div className={styles.closeShade} aria-hidden="true" />
       <div className={styles.closeInner}>
         <h2>{variant.closeTitle}</h2>
@@ -951,7 +952,7 @@ function CartDrawer({ open, onClose, product, quantity, onQuantity, variant }) {
             </div>
             {quantity > 0 ? (
               <div className={styles.drawerItem}>
-                <Image src={product.image} alt={product.imageAlt} width={152} height={102} className={styles.drawerImage} />
+                <Image quality={90} src={product.image} alt={product.imageAlt} width={152} height={102} className={styles.drawerImage} />
                 <div className={styles.drawerItemCopy}>
                   <h3>{product.name}</h3>
                   <p>{formatPrice(product)}</p>

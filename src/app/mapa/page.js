@@ -1,5 +1,6 @@
 import { Container, Eyebrow, Heading, Text } from "../../components/atoms";
 import { Header } from "../../components/organisms";
+import canvas from "../../components/editorial/archive-canvas.module.css";
 import MapaPageClient from "./MapaPageClient";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
@@ -21,7 +22,7 @@ export default function MapaPage() {
   return (
     <>
       <Header active="/mapa" />
-      <main id="contenido" className="min-h-[100dvh] overflow-x-clip bg-paper">
+      <main id="contenido" className={canvas.canvas}>
         <MapaPageClient />
         <Container size="atlas" className="border-t border-line-100 py-12 md:py-16">
           <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">

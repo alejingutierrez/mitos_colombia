@@ -2,6 +2,9 @@ import { Container } from "../atoms";
 import { Header } from "../organisms";
 import { CommunityIndexBoard } from "../comunidades/CommunityIndexBoard";
 import { UnattributedEntry } from "../comunidades/UnattributedEntry";
+import Link from "next/link";
+import { ArchivePageHeader } from "../editorial/ArchivePageHeader";
+import canvas from "../editorial/archive-canvas.module.css";
 
 /**
  * Plantilla · CommunityIndexTemplate — dirección «Mesa de pueblos» para
@@ -30,21 +33,10 @@ export function CommunityIndexTemplate({
   return (
     <>
       <Header active={active} />
-      <main id="contenido" className="min-h-[100dvh] overflow-x-clip bg-paper">
-        <Container size="atlas" className="pb-8 pt-10 md:pt-14">
-          <div className="grid gap-6 md:grid-cols-[1.05fr_0.95fr] md:items-end md:gap-16">
-            <div>
-              {eyebrow ? <p className="atlas-kicker">{eyebrow}</p> : null}
-              <h1 className="atlas-h1 mt-4">{title}</h1>
-              <span className="atlas-rule" />
-            </div>
-            {description ? (
-              <p className="max-w-prose leading-relaxed text-ink-700">
-                {description}
-              </p>
-            ) : null}
-          </div>
-        </Container>
+      <main id="contenido" className={canvas.canvas}>
+        <ArchivePageHeader eyebrow={eyebrow} title={title} description={description}>
+          {unattributed?.total ? <Link href={unattributed.href} className="atlas-link mt-4 inline-flex min-h-11">Mestizos y mixtos · {unattributed.total} relatos →</Link> : null}
+        </ArchivePageHeader>
 
         <Container size="atlas" className="pb-12">
           <CommunityIndexBoard communities={communities} regions={regions} />

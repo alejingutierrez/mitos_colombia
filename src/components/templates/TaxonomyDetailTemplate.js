@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Container, Icon, Motif, Prose } from "../atoms";
-import { Breadcrumb } from "../molecules";
 import { Header, MythGrid } from "../organisms";
 import { AtlasSectionHeader } from "../editorial/AtlasEditorial";
+import { ArchivePageHeader } from "../editorial/ArchivePageHeader";
+import canvas from "../editorial/archive-canvas.module.css";
 
 function introParagraphs(intro) {
   if (typeof intro !== "string") return null;
@@ -72,53 +72,26 @@ export function TaxonomyDetailTemplate({
   return (
     <>
       <Header />
-      <main id="contenido" className="min-h-[100dvh] overflow-x-clip bg-paper">
-        <section className="relative min-h-[32rem] overflow-hidden bg-[rgb(var(--atlas-night))] md:min-h-[38rem]">
-          {imageUrl ? (
-            <Image
-              src={imageUrl}
-              alt=""
-              fill
-              priority
-              sizes="100vw"
-              quality={68}
-              className="object-cover"
-            />
+      <main id="contenido" className={canvas.canvas}>
+        <ArchivePageHeader eyebrow={kind || "Los hilos del archivo"} title={name} description={description} imageUrl={imageUrl} breadcrumb={crumbs} meta={count != null ? `${count} relatos` : null} />
+
+        <section className="border-t border-line-100">
+          {filterable ? (
+            filterable
           ) : (
-            <span className="absolute inset-0 flex items-center justify-center opacity-25">
-              <Motif name={motif} size={320} />
-            </span>
+            <Container size="atlas" className="py-14">
+              <MythGrid
+                eyebrow={count != null ? `${count} relatos` : "Relatos"}
+                title={`Mitos de ${name}`}
+                myths={myths}
+                pagination={pagination}
+              />
+            </Container>
           )}
-          <span className="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent" />
-          <Container
-            size="atlas"
-            className="relative flex min-h-[32rem] min-w-0 items-end pb-10 text-white md:min-h-[38rem] md:pb-14"
-          >
-            <div className="w-full min-w-0 max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/68">
-                {kind || "Archivo territorial"}
-              </p>
-              <h1 className="mt-4 max-w-full text-balance font-editorial text-[clamp(3rem,15vw,4.2rem)] font-semibold leading-[0.9] tracking-[-0.035em] !text-white [overflow-wrap:anywhere] md:text-[6.2rem] md:leading-[0.88]">
-                {name}
-              </h1>
-              {count != null ? (
-                <p className="mt-5 text-base text-white/82">
-                  <span className="font-editorial text-3xl">{count}</span>{" "}
-                  {Number(count) === 1 ? "mito" : "mitos"} en el archivo
-                </p>
-              ) : null}
-              <span className="mt-3 block h-0.5 w-14 bg-ember-500" />
-              {description ? (
-                <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
-                  {description}
-                </p>
-              ) : null}
-            </div>
-          </Container>
         </section>
 
+        <details className="border-y border-line-100"><summary className="mx-auto max-w-[var(--container-atlas)] cursor-pointer px-[var(--gutter)] py-5 font-display text-xl text-jungle-700">Sobre esta categoría</summary>
         <Container size="atlas" className="py-10">
-          <Breadcrumb items={crumbs} />
           {intro || hasCharacteristics ? (
             <div
               className={`mt-10 grid gap-12 ${
@@ -181,20 +154,7 @@ export function TaxonomyDetailTemplate({
           ) : null}
         </Container>
 
-        <section className="border-t border-line-100">
-          {filterable ? (
-            filterable
-          ) : (
-            <Container size="atlas" className="py-14">
-              <MythGrid
-                eyebrow={count != null ? `${count} relatos` : "Relatos"}
-                title={`Mitos de ${name}`}
-                myths={myths}
-                pagination={pagination}
-              />
-            </Container>
-          )}
-        </section>
+        </details>
 
         {children}
 

@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { Container, Icon, Motif } from "../../components/atoms";
+import { Container, Icon } from "../../components/atoms";
 import { Header } from "../../components/organisms";
-import { RoutePlate } from "../../components/rutas";
+import { VisualIndex } from "../../components/organisms/VisualIndex";
+import { ArchivePageHeader } from "../../components/editorial/ArchivePageHeader";
+import canvas from "../../components/editorial/archive-canvas.module.css";
 import { ROUTES } from "../../lib/routes";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 import { getArchiveTotals, getRoutesAtlas, summarizeRoute } from "./route-data";
@@ -69,82 +71,10 @@ export default async function RutasPage() {
   return (
     <>
       <Header active="/rutas" />
-      <main id="contenido" className="min-h-[100dvh] overflow-x-clip bg-paper">
-        {/* Portada tipográfica: las diecinueve fichas de abajo son obra, y
-            una foto más arriba las apagaría. Además ninguna ruta merece ser
-            la cara de todas las demás. */}
-        <section className="relative overflow-hidden bg-[rgb(var(--atlas-night))] text-white">
-          {/* Marca de agua. Oculta en teléfono: a 340px sobre una pantalla de
-              375 no es una marca, es el fondo entero detrás del texto. */}
-          <span
-            className="pointer-events-none absolute right-10 top-1/2 hidden -translate-y-1/2 opacity-[0.12] md:block"
-            aria-hidden="true"
-          >
-            <Motif name="montana" size={340} />
-          </span>
-          <Container size="atlas" className="relative py-16 md:py-24">
-            <p className="atlas-kicker !text-ember-400">El atlas de rutas</p>
-            <h1 className="atlas-h1 mt-4 max-w-[18ch] !text-white">
-              Maneras de cruzar el archivo
-            </h1>
-            <span className="atlas-rule bg-ember-500" />
-            <p className="mt-6 max-w-[54ch] text-[length:var(--step-1)] leading-[1.6] text-white/82">
-              Una ruta reúne relatos que resuelven el mismo asunto, aunque los
-              cuenten pueblos que nunca se cruzaron. Cada una se lee de
-              principio a fin o se abre por donde interese.
-            </p>
-
-            <dl className="mt-10 flex flex-wrap gap-x-12 gap-y-6 border-t border-white/15 pt-7">
-              <div>
-                <dt className="atlas-kicker !text-white/60">Rutas publicadas</dt>
-                <dd className="atlas-figure mt-1.5 font-editorial text-[length:var(--step-4)] leading-none text-ember-400">
-                  {ROUTES.length}
-                </dd>
-              </div>
-              <div>
-                <dt className="atlas-kicker !text-white/60">Relatos reunidos</dt>
-                <dd className="atlas-figure mt-1.5 font-editorial text-[length:var(--step-4)] leading-none text-ember-400">
-                  {reunidos}
-                  {totals.myths ? (
-                    <span className="text-[length:var(--step-1)] text-white/60">
-                      {" "}
-                      de {totals.myths}
-                    </span>
-                  ) : null}
-                </dd>
-              </div>
-              {totals.regions ? (
-                <div>
-                  <dt className="atlas-kicker !text-white/60">Territorios</dt>
-                  <dd className="atlas-figure mt-1.5 font-editorial text-[length:var(--step-4)] leading-none text-ember-400">
-                    {totals.regions}
-                  </dd>
-                </div>
-              ) : null}
-            </dl>
-          </Container>
-        </section>
-
-        {/* El índice. Una ficha por ruta, todas del mismo tamaño: el punto es
-            poder compararlas, no que una destaque. */}
-        <Container id="rutas" size="atlas" className="scroll-mt-20 py-14 md:py-20">
-          <div className="flex flex-wrap items-end justify-between gap-5">
-            <div>
-              <h2 className="atlas-section-heading">El índice</h2>
-              <span className="atlas-rule" />
-            </div>
-            <p className="atlas-kicker shrink-0 text-ink-500">
-              En orden de publicación
-            </p>
-          </div>
-
-          <ul className="mt-9 grid list-none gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {routes.map((route) => (
-              <li key={route.slug}>
-                <RoutePlate {...route} priority={route.index < 3} />
-              </li>
-            ))}
-          </ul>
+      <main id="contenido" className={canvas.canvas}>
+        <ArchivePageHeader eyebrow="Las otras cartografías" title="Maneras de cruzar el archivo" description="Recorridos que conectan relatos de distintos pueblos y territorios. Elige una imagen y sigue el hilo." meta={`${ROUTES.length} rutas · ${reunidos} relatos reunidos${totals.myths ? ` de ${totals.myths}` : ""}`} />
+        <Container id="rutas" size="atlas" className="pb-12">
+          <VisualIndex label="rutas" items={routes.map((route) => ({...route,href:`/rutas/${route.slug}`,count:route.mythCount,regionName:route.regions.join(" · ")}))} />
         </Container>
 
         <section className="border-t border-line-100 bg-mist-50">

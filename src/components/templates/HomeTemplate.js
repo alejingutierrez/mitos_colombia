@@ -1,6 +1,8 @@
 import { Container } from "../atoms";
 import { Header } from "../organisms";
 import { AtlasSectionHeader } from "../editorial/AtlasEditorial";
+import { HomeJourney } from "../home/HomeJourney";
+import styles from "../home/home-journey.module.css";
 import {
   CategoryCloud,
   CommunityTabs,
@@ -18,10 +20,8 @@ import {
 /**
  * Home · plantilla.
  *
- * Ritmo de la página, una mecánica distinta por sección: portada rotativa →
- * mesa curada con filtros → comunidades en pestañas → ruta a sangre → fichas de
- * las otras cartografías → medallones de territorio → mapa en noche → nube de
- * categorías a escala → oráculo → cierre.
+ * Escena de portada y contactos → mesa en carril → comunidades panorámicas →
+ * rutas en bandas → cinco territorios → mapa e hilos → oráculo y cierre.
  *
  * Lo que no se debe deshacer:
  *  · El buscador vive en el header, no en la portada (tapaba la obra).
@@ -38,6 +38,8 @@ export function HomeTemplate({
   today = [],
   todayFilters = [],
   communities = [],
+  communityPool = [],
+  communitySeed = 0,
   unattributed = null,
   featuredRoute,
   routes = [],
@@ -49,89 +51,81 @@ export function HomeTemplate({
 }) {
   return (
     <>
-      <Header active="/" />
-      <main id="contenido" className="overflow-x-clip bg-paper">
+      <Header active="/" immersive />
+      <main id="contenido" className={`${styles.home} overflow-x-clip`}>
         <HomeCover hero={hero} slides={cover} />
+        <HomeJourney />
 
-        <section className="atlas-section-y border-b border-line-100 bg-mist-50">
+        <section id="mesa" data-home-chapter className={`${styles.section} ${styles.mesa}`}>
           <Container size="atlas">
             <AtlasSectionHeader
+              className={styles.sectionHeader}
               title="La mesa de hoy"
-              description="Diez relatos, distinto cada día. Filtra por tema o vuelve a barajar."
+              description={`${today.length} relatos para explorar y barajar.`}
               actionHref="/mitos"
               actionLabel="Ver todos los mitos"
             />
-            <TodayTable myths={today} filters={todayFilters} />
+            <TodayTable myths={today} filters={todayFilters} exclude={cover.map((slide) => slide.slug)} />
           </Container>
         </section>
 
-        <Container size="atlas" className="atlas-section-y">
+        <section id="comunidades" data-home-chapter className={styles.section}>
+          <Container size="atlas">
           <AtlasSectionHeader
+            className={styles.sectionHeader}
             title="Una comunidad, muchas voces"
-            description="Los relatos sobreviven porque un pueblo los cuenta, los transforma y los vuelve a contar. Cambia de comunidad y cambia el archivo entero."
+            description="Conoce las historias desde quienes las viven y las transmiten."
             actionHref="/comunidades"
             actionLabel="Explorar comunidades"
           />
-          <CommunityTabs communities={communities} />
-        </Container>
+          </Container>
+          <CommunityTabs communities={communities} pool={communityPool} seed={communitySeed} />
+        </section>
 
         {/* Va DESPUÉS de los pueblos y fuera de sus pestañas a propósito: son
             relatos sin procedencia atribuible, no un pueblo más. */}
         <UnattributedBand data={unattributed} />
 
-        <section>
+        <section id="rutas" data-home-chapter className={styles.panorama}>
           <RouteBanner route={featuredRoute} />
         </section>
 
-        <Container size="atlas" className="atlas-section-y">
+        <Container size="atlas" className={styles.section}>
           <AtlasSectionHeader
+            className={styles.sectionHeader}
             title="Las otras cartografías"
-            description="Cada ruta agrupa relatos por lo que comparten —un elemento, una hora, una frontera— y no por la región de la que vienen."
+            description="Rutas para explorar el territorio a través de sus historias."
             actionHref="/rutas"
             actionLabel="Ver todas las rutas"
           />
-          <RouteCards routes={routes} />
         </Container>
+        <RouteCards routes={routes} />
 
-        <section className="atlas-section-y border-y border-line-100 bg-mist-50">
+        <section id="territorios" data-home-chapter className={styles.section}>
           <Container size="atlas">
             <AtlasSectionHeader
+              className={styles.sectionHeader}
               title="Los cinco territorios"
-              description="Cada paisaje cambia la voz, los seres y los pactos de sus relatos. La cifra es lo que hay documentado hoy."
+              description="Cinco formas de habitar, contar y sentir Colombia."
               actionHref="/regiones"
               actionLabel="Ver todas las regiones"
             />
-            <TerritoryMedallions regions={regions} />
           </Container>
+          <TerritoryMedallions regions={regions} />
         </section>
 
-        <Container size="atlas" className="atlas-section-y">
-          <AtlasSectionHeader
-            title="El territorio también cuenta"
-            description="Buena parte del archivo tiene coordenadas. El mapa deja leerlo como geografía y no como índice."
-            actionHref="/mapa"
-            actionLabel="Explorar el mapa"
-          />
-          <TerritoryBanner imageUrl={mapImageUrl} />
-        </Container>
-
-        <section className="atlas-section-y border-y border-line-100 bg-mist-50">
-          <Container size="atlas">
-            <AtlasSectionHeader
-              title="Los hilos del archivo"
-              description="Cada categoría reúne relatos que comparten un tema o un motivo. El tamaño es cuántos hay."
-              actionHref="/categorias"
-              actionLabel="Ver todas las categorías"
-            />
+        <Container size="atlas" className={`${styles.section} ${styles.lowerWorlds}`}>
+          <section className="min-w-0">
+            <AtlasSectionHeader className={styles.sectionHeader} title="El territorio también cuenta" description="Explora los lugares, mitos y rutas en nuestro mapa interactivo." />
+            <TerritoryBanner imageUrl={mapImageUrl} />
+          </section>
+          <section className="min-w-0">
+            <AtlasSectionHeader className={styles.sectionHeader} title="Los hilos del archivo" description="Temas que tejen las historias de todo el país." actionHref="/categorias" actionLabel="Ver las categorías" />
             <CategoryCloud categories={categories} />
-          </Container>
-        </section>
-
-        <TarotBand cards={tarot} />
-
-        <Container size="atlas" className="atlas-section-y">
-          <HomeClosing totalMyths={totalMyths} />
+          </section>
         </Container>
+
+        <TarotBand cards={tarot}><HomeClosing totalMyths={totalMyths} /></TarotBand>
       </main>
     </>
   );

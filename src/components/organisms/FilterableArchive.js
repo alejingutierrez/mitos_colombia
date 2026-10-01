@@ -4,10 +4,9 @@ import { useMemo, useState } from "react";
 import { cn } from "../../lib/utils";
 import { Container } from "../atoms/Container";
 import { Text } from "../atoms/Text";
-import { ArchiveRow } from "../molecules/ArchiveRow";
+import { ArtworkLink } from "../molecules/ArtworkLink";
 import { EmptyState } from "../molecules/EmptyState";
 import { FilterBar } from "../molecules/FilterBar";
-import { OverlayMythCard } from "../editorial/AtlasEditorial";
 
 /**
  * Organismo · FilterableArchive — explorador de una categoría.
@@ -20,54 +19,7 @@ import { OverlayMythCard } from "../editorial/AtlasEditorial";
  */
 
 function MixedResults({ myths }) {
-  const [lead, second, third, ...rest] = myths;
-
-  return (
-    <>
-      <div className="grid gap-3 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
-        <OverlayMythCard
-          myth={lead}
-          ratio="16 / 10"
-          sizes="(max-width: 1024px) 100vw, 45vw"
-          className="lg:row-span-2"
-          titleClass="atlas-title-xl"
-        />
-        <OverlayMythCard
-          myth={second}
-          ratio="4 / 3"
-          sizes="(max-width: 1024px) 100vw, 27vw"
-          showExcerpt={false}
-          titleClass="atlas-title-md"
-        />
-        <OverlayMythCard
-          myth={third}
-          ratio="4 / 3"
-          sizes="(max-width: 1024px) 100vw, 27vw"
-          showExcerpt={false}
-          titleClass="atlas-title-md"
-        />
-        {rest.length ? (
-          <ol className="list-none border-t border-line-100 lg:col-span-2">
-            {rest.slice(0, 4).map((myth, index) => (
-              <li key={myth.slug}>
-                <ArchiveRow myth={myth} folio={index + 4} />
-              </li>
-            ))}
-          </ol>
-        ) : null}
-      </div>
-
-      {rest.length > 4 ? (
-        <ol className="mt-10 list-none border-t border-line-100">
-          {rest.slice(4).map((myth, index) => (
-            <li key={myth.slug}>
-              <ArchiveRow myth={myth} folio={index + 8} />
-            </li>
-          ))}
-        </ol>
-      ) : null}
-    </>
-  );
+  return <ul className="grid grid-cols-1 gap-[2px] sm:grid-cols-2 lg:grid-cols-3">{myths.map((myth,index) => <li key={myth.slug}><ArtworkLink myth={myth} priority={index === 0} loading={index < 3 ? "eager" : undefined} /></li>)}</ul>;
 }
 
 export function FilterableArchive({
@@ -88,8 +40,8 @@ export function FilterableArchive({
   }, [myths, filterValues]);
 
   return (
-    <Container size="atlas" as="section" className={cn("py-12", className)}>
-      <div className="mb-8 flex flex-col gap-5 border-b border-line-100 pb-6 lg:flex-row lg:items-end lg:justify-between">
+    <Container size="atlas" as="section" className={cn("py-6", className)}>
+      <div className="mb-5 flex flex-col gap-3 border-b border-line-100 pb-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <h2 className="atlas-section-heading">Relatos para explorar</h2>
           <span className="atlas-rule" />

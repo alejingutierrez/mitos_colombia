@@ -1,6 +1,8 @@
+import Link from "next/link";
 import { RegionIndexTemplate } from "../../components/templates";
 import { Container, Heading, Text } from "../../components/atoms";
-import { getTaxonomy, listMythLinksByTaxon } from "../../lib/myths";
+import { getTaxonomy, getMesaCandidates } from "../../lib/myths";
+import { dailySeed, isImporterBucket, pickSeeded, sectionSeed } from "../../lib/home-rotation";
 import { REGION_INFO, REGION_MOTIFS } from "../../lib/region-info";
 import { buildSeoMetadata, getSeoEntry } from "../../lib/seo";
 
@@ -22,22 +24,16 @@ export async function generateMetadata() {
 }
 
 export default async function RegionesPage() {
-  const taxonomy = await getTaxonomy();
+  const [taxonomy, pool] = await Promise.all([getTaxonomy(), getMesaCandidates({ seed: dailySeed(), perRegion: 20 })]);
 
   // Orden por volumen: es el que manda en la composición. El reparto de área
   // de `RegionMosaic` lo recalcula de todas formas, pero así el HTML servido
   // ya viene de mayor a menor.
-  const regions = [...(taxonomy.regions || [])].sort(
+  const regions = [...(taxonomy.regions || [])].filter((region) => !isImporterBucket(region.name)).sort(
     (a, b) => (b.myth_count || 0) - (a.myth_count || 0)
   );
 
-  // Cuatro relatos por región para el panel. Van servidos en el HTML para las
-  // seis, no sólo para la abierta: es índice rastreable, no adorno.
-  const regionMyths = await Promise.all(
-    regions.map((region) => listMythLinksByTaxon("region", region.slug))
-  );
-
-  const items = regions.map((region, i) => {
+  const items = regions.map((region) => {
     const info = REGION_INFO[region.slug] || {};
     return {
       slug: region.slug,
@@ -48,15 +44,14 @@ export default async function RegionesPage() {
       // El párrafo editorial vivía sólo en la interna; aquí es lo que sostiene
       // el panel de la región abierta.
       paragraph: info.description || null,
-      myths: (regionMyths[i] || []).slice(0, 4),
+      myths: pickSeeded(pool.filter((myth) => myth.region_slug === region.slug), 4, sectionSeed(dailySeed(), region.slug)),
     };
   });
 
   return (
     <RegionIndexTemplate
-      eyebrow="El archivo por territorio"
-      title="Regiones culturales de Colombia"
-      description="Seis territorios repartidos por lo que pesan: cada pieza ocupa el área que le corresponde entre todos los relatos del archivo. Andina es más de un tercio; Varios, apenas un filo."
+      title="Los territorios del archivo"
+      description="Pasa sobre una región para descubrir sus mitos. También puedes seleccionarla con el teclado o tocarla."
       regions={items}
       active="/regiones"
     >
@@ -81,6 +76,7 @@ export default async function RegionesPage() {
             </Text>
           </div>
         </div>
+        <Link href="/mitos?region=varios" className="atlas-link mt-6">Relatos de varios territorios →</Link>
       </Container>
     </RegionIndexTemplate>
   );

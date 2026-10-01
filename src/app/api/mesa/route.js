@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 import { mythMotif } from "../../../components/templates/MythSections";
+import { MESA_COUNT, discoveryPick } from "../../../lib/home-discovery";
 import { getMesaCandidates } from "../../../lib/myths";
 import {
   assignThemeChips,
-  balancedPick,
   bogotaDayKey,
   buildMesaFilters,
   dailySeed,
@@ -28,7 +28,7 @@ import {
  *    puede cachear cada una y la segunda persona que baraje igual no toca Neon.
  *
  * Parámetros (todos opcionales):
- *  · `n`       — cuántas tarjetas, 1..12 (por defecto 10).
+ *  · `n`       — cuántas tarjetas, 1..24 (por defecto 24).
  *  · `tema`    — slug de etiqueta; sólo mitos con esa etiqueta.
  *  · `excluir` — slugs separados por coma que el cliente ya tiene (máx. 40).
  *  · `turno`   — 0..99, el número de barajada. Cambia la semilla y la URL.
@@ -39,8 +39,8 @@ import {
 
 export const runtime = "nodejs";
 
-const MAX_CARDS = 12;
-const DEFAULT_CARDS = 10;
+const MAX_CARDS = MESA_COUNT;
+const DEFAULT_CARDS = MESA_COUNT;
 const MAX_EXCLUDE = 40;
 const MAX_TURN = 99;
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -86,7 +86,7 @@ export async function GET(request) {
        territorio tenga de dónde elegir; con 8 por región son ~48 filas. */
     const candidates = await getMesaCandidates({
       seed,
-      perRegion: 8,
+      perRegion: 40,
       exclude,
       tag: theme,
     });
@@ -95,12 +95,10 @@ export async function GET(request) {
        del servidor (page.js): sin este filtro, barajar reintroduce justo lo que
        la portada excluye a propósito, y esa bolsa pesa como una sexta region
        en el reparto. */
-    const picked = balancedPick({
+    const picked = discoveryPick({
       items: candidates.filter((myth) => !isImporterBucket(myth.region)),
       count,
       seed,
-      groupBy: (myth) => myth.region_slug || "sin-region",
-      keyOf: (myth) => myth.slug,
     });
 
     const { chips, themeOf } = assignThemeChips({

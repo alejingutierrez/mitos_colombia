@@ -38,7 +38,7 @@ export const MIN_COMMUNITY_MYTHS = 1;
 
 /** La superficie de los relatos sin procedencia atribuida. */
 export const UNATTRIBUTED_SLUG = "sin-pueblo-identificado";
-export const UNATTRIBUTED_LABEL = "Sin pueblo identificado";
+export const UNATTRIBUTED_LABEL = "Mestizos y mixtos";
 export const UNATTRIBUTED_PATH = `/comunidades/${UNATTRIBUTED_SLUG}`;
 
 /**

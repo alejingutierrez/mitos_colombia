@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { Container, Icon, MotifMask } from "../atoms";
-import { REGION_MOTIFS } from "../../lib/region-info";
+import { Container, Icon, ImageFrame } from "../atoms";
 
 /**
  * La puerta a los relatos sin pueblo atribuido, dentro de /comunidades.
@@ -31,16 +30,11 @@ export function UnattributedEntry({ data }) {
       <Container size="atlas" className="py-14 md:py-16">
         <div className="grid gap-9 lg:grid-cols-[minmax(0,26rem)_1fr] lg:gap-14">
           <div>
-            <p className="atlas-kicker">Territorio sin pueblo atribuido</p>
+            <p className="atlas-kicker">Otras voces de Colombia</p>
             <h2 className="atlas-section-heading mt-2">{label}</h2>
             <span className="atlas-rule" />
             <p className="mt-5 max-w-prose leading-relaxed text-ink-700">
-              {total} relatos entraron al archivo bajo las etiquetas {etiquetas},
-              que el importador usó cuando la fuente no dejó constancia de quién
-              los contaba. Son el 42,5 % del corpus. No nombran a un pueblo, así
-              que no aparecen en la mesa de arriba: tienen su propio registro,
-              ordenado por lo único que sí consta, el territorio donde se
-              recogieron.
+              {total} relatos mestizos y mixtos, entre ciudades, campos y caminos. Explóralos por territorio. Las etiquetas {etiquetas} no identifican un pueblo específico en las fuentes del archivo.
             </p>
             <Link href={href} className="atlas-link group mt-6 inline-flex">
               Entrar a los {total} relatos
@@ -48,27 +42,8 @@ export function UnattributedEntry({ data }) {
             </Link>
           </div>
 
-          <ul className="grid grid-cols-1 gap-px self-start border border-line-200 bg-line-200 sm:grid-cols-2">
-            {territories.map((territorio) => (
-              <li key={territorio.slug}>
-                <Link
-                  href={`${href}#territorio-${territorio.slug}`}
-                  className="group flex items-center justify-between gap-4 bg-paper px-5 py-4 transition-colors hover:bg-white"
-                >
-                  <span className="flex min-w-0 items-center gap-3">
-                    <MotifMask
-                      src={`/motifs/${REGION_MOTIFS[territorio.slug] || "condor"}-96.png`}
-                      width={22}
-                      className="shrink-0 text-jungle-500/60 transition-colors group-hover:text-jungle-600"
-                    />
-                    <span className="atlas-title-sm truncate">{territorio.name}</span>
-                  </span>
-                  <span className="atlas-figure shrink-0 text-[0.8125rem] text-ink-500">
-                    {territorio.count}
-                  </span>
-                </Link>
-              </li>
-            ))}
+          <ul className="grid grid-cols-2 gap-[2px] sm:grid-cols-3">
+            {territories.map((territory) => <li key={territory.slug}><Link href={`${href}#territorio-${territory.slug}`} className="group block"><ImageFrame src={territory.imageUrl} alt="" ratio="3 / 2" sizes="(max-width: 767px) 45vw, 20vw" quality={90} className="border-0 rounded-none" /><span className="block px-2 py-3"><span className="atlas-title-sm">{territory.name}</span><span className="mt-1 block text-xs text-ink-700">{territory.count} relatos</span></span></Link></li>)}
           </ul>
         </div>
       </Container>

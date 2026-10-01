@@ -1,10 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Container, Icon, Motif } from "../atoms";
 import { Header } from "../organisms";
 import { MuralCell, MuralInlineList } from "./MuralTemplate";
 import { RouteCensus, RouteMovements, RoutePlate } from "../rutas";
 import { cn } from "../../lib/utils";
+import { ArchivePageHeader } from "../editorial/ArchivePageHeader";
+import canvas from "../editorial/archive-canvas.module.css";
 
 /**
  * Plantilla · RouteDetailTemplate — una ruta editorial completa.
@@ -25,13 +26,6 @@ import { cn } from "../../lib/utils";
  *   censo        los relatos completos, por territorio
  *   otras rutas  la salida
  */
-
-const MOTIF_BY_ACCENT = {
-  river: "agua",
-  jungle: "hoja",
-  ember: "sol",
-  ink: "luna",
-};
 
 /** Reparte los párrafos en dos columnas conservando el orden de lectura. */
 function splitInTwo(paragraphs = []) {
@@ -58,7 +52,7 @@ export function RouteDetailTemplate({
   otherRoutes = [],
 }) {
   const summary = { ...EMPTY_SUMMARY, ...(rawSummary || {}) };
-  const motif = MOTIF_BY_ACCENT[route.accent] || "hoja";
+  const motif = ({river:"agua",jungle:"hoja",ember:"sol",ink:"luna"})[route.accent] || "agua";
   const folio = Number.isFinite(index) ? String(index + 1).padStart(2, "0") : null;
   const linkableCommunities = new Set(communityPageSlugs);
   const [leadParagraph, ...restParagraphs] = route.introParagraphs || [];
@@ -67,73 +61,9 @@ export function RouteDetailTemplate({
   return (
     <>
       <Header active="/rutas" />
-      <main id="contenido" className="min-h-[100dvh] overflow-x-clip bg-paper">
+      <main id="contenido" className={canvas.canvas}>
         {/* ---------- Portada ---------- */}
-        <section className="relative min-h-[26rem] overflow-hidden bg-[rgb(var(--atlas-night))] md:min-h-[36rem]">
-          {heroImage ? (
-            <Image
-              src={heroImage}
-              alt=""
-              fill
-              priority
-              sizes="100vw"
-              quality={68}
-              className="object-cover"
-            />
-          ) : (
-            <span className="absolute inset-0 flex items-center justify-center opacity-20">
-              <Motif name={motif} size={240} />
-            </span>
-          )}
-          <span className="atlas-scrim-portada absolute inset-0" aria-hidden="true" />
-          <Container
-            size="atlas"
-            className="atlas-on-image relative flex min-h-[26rem] items-end pb-9 text-white md:min-h-[36rem] md:pb-14"
-          >
-            <div className="min-w-0 max-w-[42ch]">
-              <nav
-                aria-label="Ruta de navegación"
-                className="flex flex-wrap items-center gap-2 text-[0.8125rem] text-white/76"
-              >
-                <Link
-                  href="/"
-                  className="border-b border-white/40 transition-colors hover:text-white"
-                >
-                  Inicio
-                </Link>
-                <span aria-hidden className="opacity-60">
-                  /
-                </span>
-                <Link
-                  href="/rutas"
-                  className="border-b border-white/40 transition-colors hover:text-white"
-                >
-                  Rutas
-                </Link>
-                <span aria-hidden className="opacity-60">
-                  /
-                </span>
-                <span aria-current="page">{route.title}</span>
-              </nav>
-
-              <p className="atlas-kicker mt-5 !text-ember-400">
-                {folio ? `Ruta ${folio}` : "Ruta editorial"}
-                {route.tone ? ` · ${route.tone}` : ""}
-              </p>
-              <h1 className="atlas-h1 mt-3 !text-white">{route.title}</h1>
-              <span className="atlas-rule bg-ember-500" />
-              {route.detail ? (
-                <p className="mt-5 max-w-[46ch] leading-[1.6] text-white/85">
-                  {route.detail}
-                </p>
-              ) : null}
-              <p className="atlas-figure mt-5 text-[0.8125rem] font-semibold uppercase tracking-[0.14em] text-white/70">
-                {summary.mythCount} relatos · {summary.momentCount}{" "}
-                {summary.momentCount === 1 ? "movimiento" : "movimientos"}
-              </p>
-            </div>
-          </Container>
-        </section>
+        <ArchivePageHeader eyebrow={`${folio ? `Ruta ${folio}` : "Ruta editorial"}${route.tone ? ` · ${route.tone}` : ""}`} title={route.title} description={route.detail} imageUrl={heroImage} breadcrumb={[{label:"Rutas",href:"/rutas"},{label:route.title}]} meta={`${summary.mythCount} relatos · ${summary.momentCount} movimientos`} />
 
         {/* ---------- Ficha: el recorrido y de dónde viene ---------- */}
         <section className="border-b border-line-100">

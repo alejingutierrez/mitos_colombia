@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { Icon } from "./atoms";
 import { cn } from "../lib/utils";
-import { formatClock, formatNarrationLength } from "../lib/narration";
+import { formatClock, formatNarrationLength } from "../lib/narration-display";
 
 /** Sin tocar el scroll durante este rato, la página vuelve a la lectura. */
 const SEGUIMIENTO_PAUSA_MS = 8000;

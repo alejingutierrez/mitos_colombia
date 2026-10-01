@@ -495,6 +495,14 @@ export default function DesignSystemPage() {
                   title: "Composición responsive",
                   body: "Desktop mezcla mosaicos, bandas y listas; mobile convierte esas mismas historias en imágenes dominantes, carriles horizontales y lectura lineal.",
                 },
+                {
+                  title: "Contraste por composición",
+                  body: "En el home, las escenas conservan su color y luminosidad. El titular elige tinta o blanco según la luz de la obra; si el fondo es irregular, sólo sus líneas llevan papel. Metadatos sobre selva sólida; sin velos ni filtros sobre la ilustración.",
+                },
+                {
+                  title: "Movimiento con intención",
+                  body: "Una escena ocupa la portada y cinco contactos permiten elegirla. La rotación se detiene al interactuar, al salir de pantalla o con movimiento reducido. Mesa, rutas y temas usan carriles nativos; las bandas panorámicas y los bordes de papel conectan el recorrido.",
+                },
               ].map((rule) => (
                 <Surface key={rule.title} className="p-6">
                   <p className="atlas-kicker">{rule.title}</p>
@@ -511,6 +519,7 @@ export default function DesignSystemPage() {
               <span className="atlas-link">
                 Acción de lectura <Icon name="arrow-right" size={17} />
               </span>
+              <ButtonLink href="/design-system/home" variant="outline">Ver el home con contenido real</ButtonLink>
             </div>
           </div>
         </Section>

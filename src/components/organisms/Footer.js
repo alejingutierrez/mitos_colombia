@@ -60,10 +60,11 @@ export function Footer({
   return (
     <footer className={cn("bg-ink-900 text-mist-100 py-14", className)}>
       <Container size="atlas">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,2fr)]">
+        <div data-footer-layout className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,2fr)]">
           {/* Wordmark tipográfico y contexto editorial. */}
           <div className="max-w-sm">
             <Link
+              data-footer-brand
               href="/"
               aria-label={`${SITE_NAME}, inicio`}
               className="inline-flex flex-col rounded-sm font-display text-[2.4rem] font-normal leading-[0.9] tracking-[-0.025em] text-white transition-colors hover:text-mist-100/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mist-100/50 md:text-[2.75rem]"
@@ -71,7 +72,7 @@ export function Footer({
               <span aria-hidden="true">Mitos de</span>
               <span aria-hidden="true">Colombia</span>
             </Link>
-            <p className="mt-5 max-w-xs font-body text-base leading-relaxed text-mist-100/80">
+            <p data-footer-description className="mt-5 max-w-xs font-body text-base leading-relaxed text-mist-100/80">
               {description}
             </p>
           </div>
@@ -80,7 +81,7 @@ export function Footer({
               Cada grupo es su propio landmark rotulado por su título. Antes los
               títulos eran <h2> de 12px, al mismo nivel del esquema que los
               encabezados de sección de la página. */}
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+          <div data-footer-columns className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {columns.map((column) => {
               const headingId = `footer-${column.title
                 .toLowerCase()
@@ -114,7 +115,7 @@ export function Footer({
         </div>
 
         {/* Barra inferior */}
-        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <div data-footer-meta className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-body text-sm text-mist-100/60">
             © {year} {SITE_NAME}
           </p>

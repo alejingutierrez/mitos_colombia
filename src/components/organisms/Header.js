@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SITE_NAME } from "../../lib/brand";
@@ -28,8 +28,16 @@ const NAV_LINKS = [
   { href: "/mapa", label: "Mapa" },
 ];
 
-export function Header({ active, commerce }) {
+export function Header({ active, commerce, immersive = false }) {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    if (!immersive) return undefined;
+    const sync = () => setScrolled(window.scrollY > 48);
+    sync();
+    window.addEventListener("scroll", sync, { passive: true });
+    return () => window.removeEventListener("scroll", sync);
+  }, [immersive]);
   const pathname = usePathname();
   const current = active ?? pathname;
 
@@ -40,22 +48,22 @@ export function Header({ active, commerce }) {
   return (
     // Fondo opaco: con `bg-paper/80 + blur(8px)` el contenido se veía cruzar
     // el header sobre las imágenes de alto contraste del archivo.
-    <header className="sticky top-0 z-40 border-b border-line-100 bg-paper">
+    <header className={cn("top-0 z-40 w-full", immersive ? "fixed transition-colors duration-300" : "sticky", !immersive || scrolled || open ? "border-b border-line-100 bg-paper" : "border-b border-transparent bg-transparent")}>
       <Container size="atlas">
         <div className="flex h-16 items-center justify-between gap-4">
           <Link
             href="/"
             onClick={() => setOpen(false)}
             aria-label={`${SITE_NAME}, inicio`}
-            className="inline-flex min-h-11 shrink-0 items-center rounded-sm font-display text-[1.2rem] font-normal leading-none tracking-[-0.02em] text-jungle-700 transition-colors hover:text-jungle-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jungle-500/40 lg:text-[1.35rem]"
+            className={cn("inline-flex min-h-11 shrink-0 items-center rounded-sm font-display text-[1.2rem] font-normal leading-none tracking-[-0.02em] text-jungle-700 transition-colors hover:text-jungle-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jungle-500/40 lg:text-[1.35rem]", immersive && !scrolled && "bg-[#f7f3ea] px-2")}
           >
-            {SITE_NAME}
+            {immersive ? <span className="leading-[0.95]">Mitos<br />de Colombia</span> : SITE_NAME}
           </Link>
 
           {/* Navegación desktop */}
           <nav
             aria-label="Navegación principal"
-            className="hidden items-center gap-1 lg:flex"
+            className={cn("hidden items-center gap-1 lg:flex", immersive && !scrolled && "bg-[#f7f3ea]")}
           >
             {NAV_LINKS.map((item) => (
               <Link
@@ -77,7 +85,7 @@ export function Header({ active, commerce }) {
           </nav>
 
           {/* Acciones derecha */}
-          <div className="flex items-center gap-1">
+          <div className={cn("flex items-center gap-1", immersive && !scrolled && "bg-[#f7f3ea]")}>
             {/* El buscador vive aquí, no en la portada: sobre la obra a sangre
                 tapaba la ilustración, que es el mejor activo del archivo. */}
             <div className="hidden lg:block">
@@ -138,6 +146,8 @@ export function Header({ active, commerce }) {
       {/* Panel móvil desplegable */}
       <div
         id="mobile-menu"
+        inert={!open}
+        aria-hidden={!open}
         className={cn(
           "overflow-hidden border-line-100 bg-paper transition-[max-height,opacity] duration-300 ease-editorial lg:hidden",
           open ? "max-h-[520px] border-b opacity-100" : "max-h-0 opacity-0"

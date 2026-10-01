@@ -1,8 +1,8 @@
 .accountPage {
   --account-ink: #111a15;
-  --account-green: #143f2c;
+  --account-green: #103524;
   --account-gold: #9a642c;
-  --account-paper: #f4efe5;
+  --account-paper: #f7f3ea;
   background: var(--account-paper);
   color: #17211b;
   min-height: 100vh;
@@ -11,7 +11,7 @@
 .accountShell {
   margin-inline: auto;
   max-width: 1240px;
-  padding: clamp(3rem, 7vw, 7rem) clamp(1.25rem, 4vw, 4rem) 8rem;
+  padding: clamp(1.5rem, 3vw, 3rem) clamp(1.25rem, 4vw, 4rem) 8rem;
 }
 
 .authLayout {
@@ -164,3 +164,5 @@
   .authPanel { padding: 2.5rem 1.25rem; }
   .orderCard { grid-template-columns: 1fr; }
 }
+
+.authHeading h1, .dashboardHeader h1 { font-size: clamp(2rem,3.8vw,3.25rem); line-height: 1.12; letter-spacing: 0; }
