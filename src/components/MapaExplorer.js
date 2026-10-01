@@ -385,7 +385,7 @@ function MythPreviewCard({ myth, onOpen }) {
   return (
     <div className="pointer-events-none absolute bottom-5 left-5 right-5 z-[600] md:right-auto md:max-w-sm">
       <div
-        className="pointer-events-auto cursor-pointer overflow-hidden border border-line-200 bg-white shadow-float transition hover:-translate-y-1"
+        className="pointer-events-auto cursor-pointer overflow-hidden border border-line-200 bg-paper transition-colors"
         onClick={() => onOpen(myth)}
         role="button"
         tabIndex={0}
@@ -398,12 +398,13 @@ function MythPreviewCard({ myth, onOpen }) {
         }}
       >
         {myth.image_url ? (
-          <div className="relative h-36 w-full">
+          <div className="relative aspect-[3/2] w-full">
             <Image
               src={myth.image_url}
               alt={myth.title}
               fill
               sizes="(max-width: 640px) 100vw, 360px"
+              quality={90}
               className="object-cover"
             />
           </div>
@@ -576,7 +577,7 @@ export default function MapaExplorer() {
 
   return (
     <section
-      className="flex flex-col border-b border-line-100 bg-white lg:grid lg:h-[calc(100svh-4rem)] lg:grid-cols-[26rem_1fr]"
+      className="flex flex-col border-b border-line-100 bg-paper lg:grid lg:h-[calc(100svh-4rem)] lg:grid-cols-[26rem_1fr]"
       aria-labelledby="mapa-interactivo"
     >
       {/* El mapa va primero en móvil (`order-1`): queda a la vista apenas
@@ -631,7 +632,7 @@ export default function MapaExplorer() {
         {loading || error ? (
           <p
             role="status"
-            className="pointer-events-none absolute left-1/2 top-4 z-[600] -translate-x-1/2 border border-line-200 bg-white/95 px-4 py-2 text-xs text-ink-700 shadow-float"
+            className="pointer-events-none absolute left-1/2 top-4 z-[600] -translate-x-1/2 border border-line-200 bg-paper px-4 py-2 text-xs text-ink-700 "
           >
             {error ? (
               <span className="text-ember-600">{error}</span>
@@ -655,7 +656,7 @@ export default function MapaExplorer() {
               `font-display`, que no arrastra esa regla. */}
           <h1
             id="mapa-interactivo"
-            className="font-display text-[length:var(--step-4)] leading-[1.04] tracking-[-0.012em] text-balance text-ink-900"
+            className="font-display text-[length:var(--step-4)] leading-[1.12] tracking-normal text-balance text-jungle-700"
           >
             El mapa de los mitos de Colombia
           </h1>
@@ -699,7 +700,7 @@ export default function MapaExplorer() {
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder="Buscar mito o lugar…"
-                className="min-h-12 w-full border border-line-200 bg-white pl-11 pr-4 text-sm text-ink-900 placeholder:text-ink-500 focus:border-jungle-600 focus:ring-0"
+                className="min-h-12 w-full border border-line-200 bg-paper pl-11 pr-4 text-sm text-ink-900 placeholder:text-ink-500 focus:border-jungle-600 focus:ring-0"
               />
             </label>
             <div className="grid grid-cols-2 gap-3">
@@ -708,7 +709,7 @@ export default function MapaExplorer() {
                 <select
                   value={region}
                   onChange={(event) => setRegion(event.target.value)}
-                  className="mt-2 min-h-12 w-full border border-line-200 bg-white px-3 text-sm focus:border-jungle-600 focus:ring-0"
+                  className="mt-2 min-h-12 w-full border border-line-200 bg-paper px-3 text-sm focus:border-jungle-600 focus:ring-0"
                 >
                   <option value="">Todas</option>
                   {options.regions.map((option) => (
@@ -723,7 +724,7 @@ export default function MapaExplorer() {
                 <select
                   value={community}
                   onChange={(event) => setCommunity(event.target.value)}
-                  className="mt-2 min-h-12 w-full border border-line-200 bg-white px-3 text-sm focus:border-jungle-600 focus:ring-0"
+                  className="mt-2 min-h-12 w-full border border-line-200 bg-paper px-3 text-sm focus:border-jungle-600 focus:ring-0"
                 >
                   <option value="">Todas</option>
                   {options.communities.map((option) => (
