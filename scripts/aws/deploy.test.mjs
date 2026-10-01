@@ -34,7 +34,8 @@ if(cmd==='aws'){
 }
 if(cmd==='docker'){
  const action=a[0],name=a.at(-1);
- if(['login','logout','pull'].includes(action))end();
+ if(action==='login'){fs.readFileSync(0);end()}
+ if(['logout','pull'].includes(action))end();
  if(action==='inspect'){const c=s.containers[name];end(c?0:1,c?JSON.stringify([{State:{Running:c.running},RestartCount:0,Config:{Image:c.image}}]):'')}
  if(action==='run'){
   const n=a[a.indexOf('--name')+1];
@@ -100,6 +101,7 @@ for(const failure of ['public','nginx','worker','receipt']){
   assert.equal(state.containers[old.container].running,true);
   assert.equal(state.containers['mitos-payment-worker'].running,true);
   assert.equal(state.containers['mitos-payment-worker'].image,'old');
+  assert.ok(state.containers['mitos-web-'+sha],result.stderr);
   assert.equal(state.containers['mitos-web-'+sha].running,false);
   assert.deepEqual(active,old);
   assert.ok(state.reloads.every(r=>r.healthy),'never reload traffic to a stopped predecessor');
@@ -109,7 +111,8 @@ test('failed first release returns to maintenance and removes its active metadat
  const {result,state,active}=await scenario('worker',true);
  assert.notEqual(result.status,0);
  assert.equal(state.proxy,3102);assert.equal(active,null);
- assert.equal(state.containers['mitos-web-'+sha].running,false);
+ assert.ok(state.containers['mitos-web-'+sha],result.stderr);
+  assert.equal(state.containers['mitos-web-'+sha].running,false);
 });
 test('retry removes only its abandoned candidate and completes a new release',async()=>{
  const {result,state,active}=await scenario('',false,true);

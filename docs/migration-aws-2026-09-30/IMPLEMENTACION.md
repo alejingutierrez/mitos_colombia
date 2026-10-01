@@ -80,6 +80,8 @@ La revisión automática rechazó la exportación amplia de todas las variables 
 
 Está pendiente la autorización para leer únicamente variables necesarias y trasladarlas directamente a Secrets Manager de Mitos, sin mostrarlas ni persistir un archivo local con sus valores. El secreto runtime de AWS sigue vacío. No se asumen valores locales para Bold, flags comerciales o legales. Nunca se llevan tokens Blob, bearer Bedrock ajeno ni conexiones Neon al runtime final AWS.
 
+Hay un segundo requisito de configuración: las variables `sensitive` (ahora Secret) no son recuperables después de guardarlas, incluso mediante API; ver [contrato de Vercel](https://vercel.com/docs/environment-variables/sensitive-environment-variables) y [Config/Secret](https://vercel.com/changelog/environment-variables-now-use-config-and-secret-types). El inventario incluye así las claves de Botón Bold y parte de los flags/datos comerciales. Para ellas se necesita la fuente original autorizada o una reposición coordinada; no se intenta extraerlas desde un endpoint temporal en producción. Las variables recuperables se leerán por ID y allowlist únicamente tras autorización, no mediante un dump global. Los IDs públicos de GA/GTM ya se contrastaron con la página publicada.
+
 ## Costos
 
 Se mantiene la arquitectura económica del spec: USD 60–80/mes para hosting en el escenario definido, más USD 5–15 durante meses con capacidad temporal de release. No se incluyen IA, tokens, imágenes, voz ni créditos. No se añadieron NAT, ALB, Redis ni standby permanentes. Los recursos ya provisionados generan cargos; el origen permanece activo durante la migración.
