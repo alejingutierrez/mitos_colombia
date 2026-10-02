@@ -1,6 +1,7 @@
+import { maybeQueueAdminJob } from "../../../../../../runtime/admin-jobs.mjs";
 import { NextResponse } from "next/server";
-import OpenAI from "openai";
-import { put, del } from "@vercel/blob";
+import { createLazyOpenAI } from "../../../../../../runtime/openai.mjs";
+import { put, del } from "../../../../../../runtime/storage.mjs";
 import { isPostgres, getSqlClient, getSqliteDb, getSqliteDbWritable } from "../../../../../lib/db.js";
 import {
   buildBlobFilename,
@@ -13,7 +14,7 @@ import {
 export const runtime = "nodejs";
 export const maxDuration = 300; // 5 minutes max for image generation
 
-const openai = new OpenAI({
+const openai = createLazyOpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
@@ -174,6 +175,8 @@ async function updateVerticalImageUrl(id, imageUrl) {
 }
 
 export async function POST(request) {
+  const queued = await maybeQueueAdminJob(request);
+  if (queued) return queued;
   try {
     // Check authentication
     if (!checkAuth(request)) {

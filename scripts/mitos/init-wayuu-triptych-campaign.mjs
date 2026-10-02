@@ -5,7 +5,7 @@ import { existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { resolve, join } from 'node:path';
 import dotenv from 'dotenv';
-import { sql } from '@vercel/postgres';
+import { sql } from '../../runtime/postgres.mjs';
 
 const root = resolve('content/mitos-visuales/production/wayuu-2026-09-05');
 if (existsSync(join(root, 'scope.json'))) throw new Error('Alcance ya congelado; no sobrescribir.');

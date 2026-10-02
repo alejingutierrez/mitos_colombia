@@ -1,0 +1,144 @@
+name: Mitos AWS
+on:
+  pull_request:
+  push:
+    branches: [main, codex/aws-migration]
+    paths-ignore:
+      - 'docs/migration-aws-2026-09-30/**'
+      - 'ESTADO.md'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: mitos-aws-${{ github.ref }}
+  cancel-in-progress: false
+env:
+  AWS_REGION: us-east-1
+  AWS_ACCOUNT_ID: '907264907058'
+  ECR_REPOSITORY: mitos-colombia
+  OPERATIONS_BUCKET: mitos-colombia-907264907058-operations
+jobs:
+  checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/*/
+            /.github/
+            /src/
+            /public/
+            /runtime/
+            /scripts/
+            /infra/
+            /content/rutas/
+            /editorial/*/community.mjs
+            /editorial/*/media.mjs
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: node --test scripts/aws/*.test.mjs scripts/tarot/*.test.mjs scripts/comments.test.mjs
+      - run: npx eslint runtime scripts/aws src/instrumentation.js src/app/api/health src/app/api/internal src/app/api/version
+      - run: node scripts/aws/check-tracked-secrets.mjs
+      - run: |
+          npm audit --omit=dev --audit-level=high
+          npm audit --prefix runtime --omit=dev --audit-level=high
+  image:
+    needs: checks
+    if: github.event_name != 'pull_request' && vars.MITOS_AWS_BUILD_ENABLED == 'true' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/codex/aws-migration')
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 45
+    permissions:
+      contents: read
+      id-token: write
+    outputs:
+      digest: ${{ steps.image.outputs.digest }}
+      source_verified: ${{ steps.snapshot.outputs.source_verified }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/*/
+            /.github/
+            /src/
+            /public/
+            /runtime/
+            /scripts/
+            /infra/
+            /content/rutas/
+            /editorial/*/community.mjs
+            /editorial/*/media.mjs
+      - uses: aws-actions/configure-aws-credentials@cabfdba3510de1431bac9dba27511d97497fc100 # v5
+        with:
+          role-to-assume: arn:aws:iam::907264907058:role/mitos-colombia-ci-build
+          aws-region: us-east-1
+          allowed-account-ids: '907264907058'
+      - name: Refresh public snapshot from accepted writer
+        if: vars.MITOS_AWS_CUTOVER_COMPLETE == 'true'
+        env:
+          INSTANCE_ID: ${{ vars.MITOS_AWS_INSTANCE_ID }}
+        run: node scripts/aws/refresh-snapshot.mjs
+      - name: Obtain published snapshot
+        id: snapshot
+        env:
+          NEXT_PUBLIC_GA_ID: ${{ vars.MITOS_PUBLIC_GA_ID }}
+          NEXT_PUBLIC_GTM_ID: ${{ vars.MITOS_PUBLIC_GTM_ID }}
+        run: |
+          mkdir -p build-input
+          aws s3 cp "s3://$OPERATIONS_BUCKET/build-input/current/manifest.json" build-input/manifest.json --only-show-errors
+          prefix=$(node -e 'const m=require("./build-input/manifest.json"); if(!/^build-input\/snapshots\/[a-f0-9-]{36}$/.test(m.prefix)) throw Error("Invalid snapshot prefix"); process.stdout.write(m.prefix)')
+          aws s3 cp "s3://$OPERATIONS_BUCKET/$prefix/catalog.sqlite" build-input/catalog.sqlite --only-show-errors
+          aws s3 cp "s3://$OPERATIONS_BUCKET/$prefix/receipt.json" build-input/receipt.json --only-show-errors
+          node scripts/aws/verify-snapshot.mjs
+          node -e 'const r=require("./build-input/receipt.json"); console.log("source_verified="+String(r.sourceVerified===true))' >> "$GITHUB_OUTPUT"
+      - name: Build immutable ARM image
+        id: image
+        env:
+          NEXT_PUBLIC_GA_ID: ${{ vars.MITOS_PUBLIC_GA_ID }}
+          NEXT_PUBLIC_GTM_ID: ${{ vars.MITOS_PUBLIC_GTM_ID }}
+        run: bash scripts/aws/build-image.sh
+  deploy:
+    needs: image
+    if: github.ref == 'refs/heads/main' && vars.MITOS_AWS_CUTOVER_COMPLETE == 'true' && needs.image.outputs.source_verified == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    environment: mitos-aws-production
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/*/
+            /.github/
+            /src/
+            /public/
+            /runtime/
+            /scripts/
+            /infra/
+            /content/rutas/
+            /editorial/*/community.mjs
+            /editorial/*/media.mjs
+      - uses: aws-actions/configure-aws-credentials@cabfdba3510de1431bac9dba27511d97497fc100 # v5
+        with:
+          role-to-assume: arn:aws:iam::907264907058:role/mitos-colombia-ci-deploy
+          aws-region: us-east-1
+          allowed-account-ids: '907264907058'
+      - name: Deploy digest through owned SSM document
+        env:
+          RELEASE_DIGEST: ${{ needs.image.outputs.digest }}
+          INSTANCE_ID: ${{ vars.MITOS_AWS_INSTANCE_ID }}
+        run: node scripts/aws/deploy-command.mjs

@@ -1,0 +1,72 @@
+{
+  "at": "2026-10-01T19:41:05.846552+00:00",
+  "kind": "public-media-cdn-check",
+  "distribution": "E10WLYMIZWFTI",
+  "privateS3AnonymousStatus": 403,
+  "records": [
+    {
+      "url": "https://media.mitosdecolombia.com/blob/mitos/a-dios-rogando-y-con-el-mazo-dando-1784766122938.jpg",
+      "attempt": 1,
+      "status": 200,
+      "bytes": 305678,
+      "sha256Matches": true,
+      "ttfbMs": 343,
+      "totalMs": 553,
+      "cache": "Miss from cloudfront",
+      "pop": "BOG51-P2",
+      "cors": "*",
+      "contentType": "image/jpeg",
+      "cacheControl": "public,max-age=31536000,immutable"
+    },
+    {
+      "url": "https://media.mitosdecolombia.com/blob/mitos/a-dios-rogando-y-con-el-mazo-dando-1784766122938.jpg",
+      "attempt": 2,
+      "status": 200,
+      "bytes": 305678,
+      "sha256Matches": true,
+      "ttfbMs": 130,
+      "totalMs": 158,
+      "cache": "Miss from cloudfront",
+      "pop": "BOG51-P2",
+      "cors": "*",
+      "contentType": "image/jpeg",
+      "cacheControl": "public,max-age=31536000,immutable"
+    },
+    {
+      "url": "https://media.mitosdecolombia.com/blob/narraciones/alejandro/aramai-d3ff9915.mp3",
+      "attempt": 1,
+      "status": 200,
+      "bytes": 3417453,
+      "sha256Matches": true,
+      "ttfbMs": 410,
+      "totalMs": 885,
+      "cache": "Miss from cloudfront",
+      "pop": "BOG51-P2",
+      "cors": "*",
+      "contentType": "audio/mpeg",
+      "cacheControl": "public,max-age=31536000,immutable"
+    },
+    {
+      "url": "https://media.mitosdecolombia.com/blob/narraciones/alejandro/aramai-d3ff9915.mp3",
+      "attempt": 2,
+      "status": 200,
+      "bytes": 3417453,
+      "sha256Matches": true,
+      "ttfbMs": 123,
+      "totalMs": 210,
+      "cache": "Miss from cloudfront",
+      "pop": "BOG51-P2",
+      "cors": "*",
+      "contentType": "audio/mpeg",
+      "cacheControl": "public,max-age=31536000,immutable"
+    },
+    {
+      "url": "https://media.mitosdecolombia.com/blob/narraciones/alejandro/aramai-d3ff9915.mp3",
+      "rangeStatus": 206,
+      "bytes": 1024,
+      "contentRange": "bytes 0-1023/3417453",
+      "rangeMatches": true
+    }
+  ],
+  "note": "Probe from current operator connection; confirms BOG edge and bytes/cache/ranges, not a full Colombian mobile web benchmark."
+}

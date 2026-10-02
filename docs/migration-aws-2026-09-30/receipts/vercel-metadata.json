@@ -1,0 +1,384 @@
+{
+  "at": "2026-10-01T05:35:07.119Z",
+  "project": {
+    "id": "prj_DAxmdB0trnBDWBpR6mmfwHIUzHVz",
+    "name": "mitos-colombia",
+    "framework": "nextjs",
+    "git": {
+      "repo": "mitos_colombia",
+      "productionBranch": "main"
+    }
+  },
+  "deployments": [
+    {
+      "id": "dpl_DnEtz4eXPTi63Wo9FBWLVS85T7pn",
+      "url": "mitos-colombia-93r75po4l-alejingutierrezs-projects.vercel.app",
+      "state": "READY",
+      "sha": "582d4b4f653c5e983fb39bfab537c4f768a37bb4",
+      "ref": "main"
+    },
+    {
+      "id": "dpl_3EmVAUHBwB8Ti6qWsd12rRQWg6NV",
+      "url": "mitos-colombia-9z85271vq-alejingutierrezs-projects.vercel.app",
+      "state": "READY",
+      "sha": "e531fddff4808e766f2578b0998cea9e333c195a",
+      "ref": "main"
+    },
+    {
+      "id": "dpl_Kn3xuLCAzJBS14tuA3U97HYasabW",
+      "url": "mitos-colombia-3vrk8kh2x-alejingutierrezs-projects.vercel.app",
+      "state": "READY",
+      "sha": "b7af793df99033e2dc59d62e828a4da25797b356",
+      "ref": "main"
+    }
+  ],
+  "productionEnv": [
+    {
+      "key": "TAROT_COMMERCE_STATUS",
+      "id": "9emdVifpRZ80MIiM",
+      "type": "sensitive",
+      "updatedAt": 1788473901204
+    },
+    {
+      "key": "BOLD_ENVIRONMENT",
+      "id": "Jhm1dXVzukzPbeMl",
+      "type": "sensitive",
+      "updatedAt": 1788473898461
+    },
+    {
+      "key": "TAROT_PHYSICAL_SPECS",
+      "id": "1PexUeyvw2lIMpSe",
+      "type": "sensitive",
+      "updatedAt": 1788473874674
+    },
+    {
+      "key": "TAROT_PRODUCT_CONTENTS",
+      "id": "xpyFgSaZiJE5VtTL",
+      "type": "sensitive",
+      "updatedAt": 1788473871950
+    },
+    {
+      "key": "TAROT_DISPATCH_TEXT",
+      "id": "h0L9XWgaukT57b3S",
+      "type": "sensitive",
+      "updatedAt": 1788473869273
+    },
+    {
+      "key": "TAROT_SHIPPING_TEXT",
+      "id": "8Kv0f7maLfHKCGed",
+      "type": "sensitive",
+      "updatedAt": 1788473728798
+    },
+    {
+      "key": "BOLD_BUTTON_SECRET_KEY_TEST",
+      "id": "WDEqQAhElocHuII7",
+      "type": "sensitive",
+      "updatedAt": 1788471552496
+    },
+    {
+      "key": "BOLD_BUTTON_IDENTITY_KEY_TEST",
+      "id": "Brrr7cPFo09z4VZT",
+      "type": "sensitive",
+      "updatedAt": 1788471538525
+    },
+    {
+      "key": "BOLD_BUTTON_SECRET_KEY_PRODUCTION",
+      "id": "8mVwrhHZJVWeWAyP",
+      "type": "sensitive",
+      "updatedAt": 1788471525847
+    },
+    {
+      "key": "BOLD_BUTTON_IDENTITY_KEY_PRODUCTION",
+      "id": "66FASverv9Ep9A2E",
+      "type": "sensitive",
+      "updatedAt": 1788471505629
+    },
+    {
+      "key": "BOLD_SECRET_KEY_TEST",
+      "id": "UWVMYUxhkN3aA4yQ",
+      "type": "sensitive",
+      "updatedAt": 1788467059902
+    },
+    {
+      "key": "BOLD_API_KEY_TEST",
+      "id": "RcTqgjgHCCQ9APBA",
+      "type": "sensitive",
+      "updatedAt": 1788467044464
+    },
+    {
+      "key": "TAROT_SELLER_PHONE",
+      "id": "8QVz8szY1yYNyVFI",
+      "type": "sensitive",
+      "updatedAt": 1788463582405
+    },
+    {
+      "key": "TAROT_SELLER_EMAIL",
+      "id": "MTQsNNPuUiweHTzY",
+      "type": "sensitive",
+      "updatedAt": 1788463579722
+    },
+    {
+      "key": "TAROT_SELLER_ADDRESS",
+      "id": "qMoF4Q7BGTDpcY2N",
+      "type": "sensitive",
+      "updatedAt": 1788463567276
+    },
+    {
+      "key": "TAROT_SELLER_LEGAL_ID",
+      "id": "ZuVaW6wFojNExf3e",
+      "type": "sensitive",
+      "updatedAt": 1788463564503
+    },
+    {
+      "key": "TAROT_SELLER_LEGAL_NAME",
+      "id": "qGMQuVjGDIiWcQF1",
+      "type": "sensitive",
+      "updatedAt": 1788463561801
+    },
+    {
+      "key": "TAROT_BOLD_PAYMENT_METHODS",
+      "id": "J2YReZa9qDJoVnS5",
+      "type": "sensitive",
+      "updatedAt": 1788463107443
+    },
+    {
+      "key": "GA4_MEASUREMENT_PROTOCOL_API_SECRET",
+      "id": "T2sIyg0ardGD0R6y",
+      "type": "encrypted",
+      "updatedAt": 1788462149077
+    },
+    {
+      "key": "TAROT_SERVER_PURCHASE_TRACKING_READY",
+      "id": "wVAw46Zn2qvcFYSz",
+      "type": "sensitive",
+      "updatedAt": 1788461189244
+    },
+    {
+      "key": "TAROT_BOLD_WEBHOOK_READY",
+      "id": "dxOBS9UrJAxLuLdI",
+      "type": "sensitive",
+      "updatedAt": 1788461125449
+    },
+    {
+      "key": "TAROT_ORDERS_READY",
+      "id": "kM7AIUz3YAeEZvEw",
+      "type": "sensitive",
+      "updatedAt": 1788461122992
+    },
+    {
+      "key": "TAROT_SHIPPING_REGIONS",
+      "id": "KmwsO6IbB4MIYPj8",
+      "type": "sensitive",
+      "updatedAt": 1788460662305
+    },
+    {
+      "key": "TAROT_RETURNS_TEXT",
+      "id": "6ia4j6GzmkgQU34S",
+      "type": "sensitive",
+      "updatedAt": 1788460661146
+    },
+    {
+      "key": "TAROT_PRODUCT_IMAGE_APPROVED_FOR_SALE",
+      "id": "XAcvwuMADdYmlMtK",
+      "type": "encrypted",
+      "updatedAt": 1786738009155
+    },
+    {
+      "key": "TAROT_PRODUCT_IMAGE_STATUS",
+      "id": "Ce2gQGvCsIIoI47y",
+      "type": "encrypted",
+      "updatedAt": 1786738002235
+    },
+    {
+      "key": "TAROT_PRODUCT_IMAGE",
+      "id": "82LEdwXpTIY4yt1V",
+      "type": "encrypted",
+      "updatedAt": 1786738000161
+    },
+    {
+      "key": "TAROT_SHIPPING_INCLUDED",
+      "id": "eyiqelQOZxjlsKto",
+      "type": "encrypted",
+      "updatedAt": 1786737995996
+    },
+    {
+      "key": "TAROT_TAXES_INCLUDED",
+      "id": "nQ9Z4TSBHFvxjBmB",
+      "type": "encrypted",
+      "updatedAt": 1786737993866
+    },
+    {
+      "key": "TAROT_PRICE_COP",
+      "id": "oH6qXfAxUa99zCyy",
+      "type": "sensitive",
+      "updatedAt": 1788460642464
+    },
+    {
+      "key": "NEXT_PUBLIC_GTM_ID",
+      "id": "2zDHEovLk1uHcFq0",
+      "type": "sensitive",
+      "updatedAt": 1785775076380
+    },
+    {
+      "key": "NEXT_PUBLIC_SITE_URL",
+      "id": "eVnWPaKXK8Sm04Iw",
+      "type": "encrypted",
+      "updatedAt": 1776375620217
+    },
+    {
+      "key": "NEXT_PUBLIC_MUTE_GTAG_LOGS",
+      "id": "gljd6lJxw5upQldI",
+      "type": "encrypted",
+      "updatedAt": 1768353653587
+    },
+    {
+      "key": "GA_MEASUREMENT_API_SECRET",
+      "id": "q1wsZ3g6WpqISCjg",
+      "type": "encrypted",
+      "updatedAt": 1768352452851
+    },
+    {
+      "key": "NEXT_PUBLIC_GA_ID",
+      "id": "d0g2BXK0xgYCFIdE",
+      "type": "encrypted",
+      "updatedAt": 1768352275335
+    },
+    {
+      "key": "BLOB_READ_WRITE_TOKEN",
+      "id": "uTrH6O1nnNWqWEu3",
+      "type": "encrypted",
+      "updatedAt": 1767759229357
+    },
+    {
+      "key": "OPENAI_API_KEY",
+      "id": "FU9aiAFXN8fOoSFp",
+      "type": "encrypted",
+      "updatedAt": 1767758683848
+    },
+    {
+      "key": "ADMIN_PASSWORD",
+      "id": "XLiTrifHKXjvJ6WG",
+      "type": "encrypted",
+      "updatedAt": 1767758682443
+    },
+    {
+      "key": "ADMIN_USERNAME",
+      "id": "MDRzs8tYVdUPkJ2X",
+      "type": "encrypted",
+      "updatedAt": 1767758668136
+    },
+    {
+      "key": "POSTGRES_DATABASE",
+      "id": "8Vu47jNzXQpe4PCX",
+      "type": "encrypted",
+      "updatedAt": 1767750751712
+    },
+    {
+      "key": "PGPASSWORD",
+      "id": "MIwoVM5p14ehnJRB",
+      "type": "encrypted",
+      "updatedAt": 1767750751712
+    },
+    {
+      "key": "PGDATABASE",
+      "id": "8ToXmUF7uVjL8aWO",
+      "type": "encrypted",
+      "updatedAt": 1767750751712
+    },
+    {
+      "key": "PGHOST_UNPOOLED",
+      "id": "MujZynZv5yILnj0f",
+      "type": "encrypted",
+      "updatedAt": 1767750751712
+    },
+    {
+      "key": "PGUSER",
+      "id": "QROjTlo8P9sdosZ8",
+      "type": "encrypted",
+      "updatedAt": 1767750751712
+    },
+    {
+      "key": "POSTGRES_URL_NO_SSL",
+      "id": "hnz2Qb22V4UA49PT",
+      "type": "encrypted",
+      "updatedAt": 1767750751712
+    },
+    {
+      "key": "POSTGRES_HOST",
+      "id": "FLlf9mHJMat51uUg",
+      "type": "encrypted",
+      "updatedAt": 1767750751712
+    },
+    {
+      "key": "NEON_PROJECT_ID",
+      "id": "sPWNhHlTl4qL9sUE",
+      "type": "encrypted",
+      "updatedAt": 1767750751712
+    },
+    {
+      "key": "POSTGRES_URL",
+      "id": "JwzPTkqyDIBLYc1V",
+      "type": "encrypted",
+      "updatedAt": 1767750751711
+    },
+    {
+      "key": "POSTGRES_PRISMA_URL",
+      "id": "hIHUFdFvw6pdGx1q",
+      "type": "encrypted",
+      "updatedAt": 1767750751711
+    },
+    {
+      "key": "DATABASE_URL_UNPOOLED",
+      "id": "BxuUsRYRoBKnyEf9",
+      "type": "encrypted",
+      "updatedAt": 1767750751711
+    },
+    {
+      "key": "POSTGRES_URL_NON_POOLING",
+      "id": "qcgTDazAD823Y7gY",
+      "type": "encrypted",
+      "updatedAt": 1767750751711
+    },
+    {
+      "key": "PGHOST",
+      "id": "kEQRlxD1NhtKdHJr",
+      "type": "encrypted",
+      "updatedAt": 1767750751711
+    },
+    {
+      "key": "POSTGRES_USER",
+      "id": "5sk0H8YJpWJi3DeP",
+      "type": "encrypted",
+      "updatedAt": 1767750751711
+    },
+    {
+      "key": "DATABASE_URL",
+      "id": "NMtsBeZqiXYQJ7YP",
+      "type": "encrypted",
+      "updatedAt": 1767750751711
+    },
+    {
+      "key": "POSTGRES_PASSWORD",
+      "id": "cS8o2YIqcaUj1mOX",
+      "type": "encrypted",
+      "updatedAt": 1767750751711
+    }
+  ],
+  "domains": [
+    {
+      "name": "mitosdecolombia.com",
+      "verified": true,
+      "apexName": "mitosdecolombia.com"
+    },
+    {
+      "name": "www.mitosdecolombia.com",
+      "verified": true,
+      "apexName": "mitosdecolombia.com"
+    },
+    {
+      "name": "mitos-colombia.vercel.app",
+      "verified": true,
+      "apexName": "vercel.app"
+    }
+  ]
+}

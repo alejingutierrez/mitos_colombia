@@ -1,3 +1,6 @@
+import { awsClientAddress } from '../../runtime/bridge-address.mjs';
+import { trustedAwsAuthOrigin } from '../../runtime/auth-origin.mjs';
+import { authRateLimitKeys } from '../../runtime/auth-rate-limits.mjs';
 import "server-only";
 
 import {
@@ -64,6 +67,7 @@ function createUserId() {
 }
 
 async function initializePostgres() {
+  if (process.env.MITOS_RUNTIME === "aws") return;
   const db = getSqlClient();
   await db`
     CREATE TABLE IF NOT EXISTS tarot_users (
@@ -298,6 +302,9 @@ export async function revokeTarotSession(token) {
 
 export function isTrustedTarotAuthRequest(request) {
   const origin = request.headers.get("origin");
+  if (process.env.MITOS_RUNTIME === "aws" && origin) {
+    return trustedAwsAuthOrigin(request);
+  }
   if (!origin) return true;
   try {
     const originHost = new URL(origin).host.toLowerCase();
@@ -315,9 +322,20 @@ export function isTrustedTarotAuthRequest(request) {
   }
 }
 
-export function checkTarotAuthRateLimit(key, { maximum = 8, windowMs = 15 * 60 * 1000 } = {}) {
+export async function checkTarotAuthRateLimit(key, { maximum = 8, windowMs = 15 * 60 * 1000 } = {}) {
   const now = Date.now();
   const value = String(key || "anonymous").slice(0, 220);
+  if (process.env.MITOS_RUNTIME === "aws") {
+    const keyHash = createHash("sha256").update(value).digest("hex");
+    const result = await getSqlClient().query(
+      "INSERT INTO auth_rate_limits(key_hash, count, reset_at) VALUES ($1, 1, NOW() + ($2 * INTERVAL '1 millisecond')) " +
+      "ON CONFLICT (key_hash) DO UPDATE SET count = CASE WHEN auth_rate_limits.reset_at <= NOW() THEN 1 ELSE auth_rate_limits.count + 1 END, " +
+      "reset_at = CASE WHEN auth_rate_limits.reset_at <= NOW() THEN EXCLUDED.reset_at ELSE auth_rate_limits.reset_at END " +
+      "RETURNING count, GREATEST(1, CEIL(EXTRACT(EPOCH FROM (reset_at - NOW())))) AS retry_after",
+      [keyHash, windowMs]
+    );
+    return { allowed: Number(result.rows[0].count) <= maximum, retryAfter: Number(result.rows[0].retry_after) };
+  }
   const current = rateLimits.get(value);
   if (!current || current.resetAt <= now) {
     rateLimits.set(value, { count: 1, resetAt: now + windowMs });
@@ -337,6 +355,15 @@ export function checkTarotAuthRateLimit(key, { maximum = 8, windowMs = 15 * 60 *
 
 export function tarotAuthRateLimitKey(request, scope, email = "") {
   const forwarded = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
-  const address = forwarded || request.headers.get("x-real-ip") || "unknown";
+  const address = process.env.MITOS_RUNTIME === "aws"
+    ? awsClientAddress(request)
+    : (forwarded || request.headers.get("x-real-ip") || "unknown");
   return `${scope}:${address}:${normalizeTarotEmail(email)}`;
+}
+
+export async function checkTarotAuthRequestRateLimit(request, scope, email, options) {
+  if (process.env.MITOS_RUNTIME !== 'aws') return checkTarotAuthRateLimit(tarotAuthRateLimitKey(request,scope,email),options);
+  const address=awsClientAddress(request);
+  const limits=await Promise.all(authRateLimitKeys(scope,address,normalizeTarotEmail(email)).map(key=>checkTarotAuthRateLimit(key,options)));
+  return {allowed:limits.every(limit=>limit.allowed),retryAfter:Math.max(...limits.map(limit=>limit.retryAfter))};
 }

@@ -1,0 +1,148 @@
+{
+  "ec2": [
+    {
+      "sku": "9GWX7R3VJUG9P8Y8",
+      "publication_date": "2026-09-25T17:45:21Z",
+      "effective_date": "2026-09-01T00:00:00Z",
+      "attributes": {
+        "regionCode": "us-east-1",
+        "instanceType": "t4g.small",
+        "usagetype": "BoxUsage:t4g.small",
+        "location": "US East (N. Virginia)"
+      },
+      "unit": "Hrs",
+      "usd": 0.0168,
+      "begin_range": "0",
+      "end_range": "Inf",
+      "description": "$0.0168 per On Demand Linux t4g.small Instance Hour"
+    }
+  ],
+  "rds": [
+    {
+      "sku": "9HPEGXQTDDGH53C9",
+      "publication_date": "2026-09-29T23:30:06Z",
+      "effective_date": "2026-09-01T00:00:00Z",
+      "attributes": {
+        "instanceType": "db.t4g.micro",
+        "usagetype": "InstanceUsage:db.t4g.micro",
+        "regionCode": "us-east-1",
+        "deploymentOption": "Single-AZ",
+        "location": "US East (N. Virginia)"
+      },
+      "unit": "Hrs",
+      "usd": 0.016,
+      "begin_range": "0",
+      "end_range": "Inf",
+      "description": "$ 0.016 per RDS db.t4g.micro Single-AZ instance hour (or partial hour) running PostgreSQL"
+    }
+  ],
+  "rds-storage": [
+    {
+      "sku": "KYVYY29G957PKY3B",
+      "publication_date": "2026-09-29T23:30:06Z",
+      "effective_date": "2026-09-01T00:00:00Z",
+      "attributes": {
+        "usagetype": "RDS:GP3-Storage",
+        "regionCode": "us-east-1",
+        "deploymentOption": "Single-AZ",
+        "location": "US East (N. Virginia)"
+      },
+      "unit": "GB-Mo",
+      "usd": 0.115,
+      "begin_range": "0",
+      "end_range": "Inf",
+      "description": "$0.115 per GB-month of provisioned GP3 storage running PostgreSQL"
+    }
+  ],
+  "cloudfront": [
+    {
+      "sku": "FUWQBJC8EW2AP9J4",
+      "publication_date": "2026-09-16T13:22:08Z",
+      "effective_date": "2025-04-01T00:00:00Z",
+      "attributes": {
+        "regionCode": "",
+        "usagetype": "SA-Requests-Tier2-HTTPS",
+        "location": "South America"
+      },
+      "unit": "Requests",
+      "usd": 2.2e-06,
+      "begin_range": "0",
+      "end_range": "Inf",
+      "description": "$0.0220 per 10,000 HTTPS Requests"
+    }
+  ],
+  "cloudfront-transfer": [
+    {
+      "sku": "ZT3N6V49SHDM9P3G",
+      "publication_date": "2026-09-16T13:22:08Z",
+      "effective_date": "2025-04-01T00:00:00Z",
+      "attributes": {
+        "fromLocationType": "AWS Edge Location",
+        "toRegionCode": "",
+        "servicecode": "AmazonCloudFront",
+        "usagetype": "SA-DataTransfer-Out-Bytes",
+        "fromRegionCode": "",
+        "transferType": "CloudFront Outbound",
+        "servicename": "Amazon CloudFront",
+        "fromLocation": "South America",
+        "toLocationType": "Other",
+        "toLocation": "External",
+        "operation": ""
+      },
+      "unit": "GB",
+      "usd": 0.11,
+      "begin_range": "0",
+      "end_range": "10240",
+      "description": "$0.110 per GB - first 10 TB / month data transfer out"
+    }
+  ],
+  "assumptions": {
+    "month_hours": 730,
+    "monthly_requests": 1000000,
+    "monthly_cdn_out_gb": 100,
+    "archive_gb": 50,
+    "runtime_log_gb": 1,
+    "ai_costs_included": false,
+    "variable_costs_are_estimates": true,
+    "free_tier_or_savings_included": false,
+    "monthly_hosting_estimate_usd": [
+      60,
+      80
+    ],
+    "note": "Unit rates from AWS public catalog; not measured monthly usage, quote, or billing cap. EBS and IPv4 unit estimates are sourced in SPEC.md."
+  },
+  "consulted_at_utc": "2026-10-01T05:11:34.050617+00:00",
+  "web_sourced_unit_rates": {
+    "ebs_gp3_gb_month": {
+      "usd": 0.08,
+      "source": "https://aws.amazon.com/ebs/pricing/"
+    },
+    "public_ipv4_hour": {
+      "usd": 0.005,
+      "source": "https://aws.amazon.com/vpc/pricing/"
+    },
+    "waf_basic": {
+      "acl_month_usd": 5,
+      "rule_month_usd": 1,
+      "million_requests_usd": 0.6,
+      "source": "https://aws.amazon.com/waf/pricing/"
+    }
+  },
+  "calculation": {
+    "fixed_monthly_usd": 32.29,
+    "cdn_scenario_usd": 13.2,
+    "waf_scenario_usd": 8.6,
+    "edge_dns_reserve_usd": [
+      20,
+      30
+    ],
+    "operations_reserve_usd": [
+      6,
+      15
+    ],
+    "unrounded_total_range_usd": [
+      58.29,
+      77.29
+    ]
+  }
+}

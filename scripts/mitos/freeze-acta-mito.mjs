@@ -22,7 +22,7 @@
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
-import pg from "pg";
+import pg from "../../runtime/workshop-postgres.mjs";
 
 const PLANES = "content/mitos-visuales";
 const ACTAS = "content/mitos-visuales/actas";

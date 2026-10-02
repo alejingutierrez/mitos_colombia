@@ -1,0 +1,48 @@
+{
+  "kind": "source-freeze-durable-forward-qa",
+  "at": "2026-10-02T05:39:46.393Z",
+  "binding": {
+    "project": "prj_DAxmdB0trnBDWBpR6mmfwHIUzHVz",
+    "productionDeployment": "dpl_F3V1RCnWb77gpyP8snXsF5FYAeZ8",
+    "productionSha": "5eda812b19f82d706130a21fca4c4698c6ce58c5",
+    "publishedAliasVerified": true,
+    "deploymentReady": true,
+    "verifiedAt": "2026-10-02T05:39:43.005Z"
+  },
+  "mode": "freeze",
+  "checks": [
+    {
+      "method": "GET",
+      "path": "/",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/myths",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/tarot/checkout",
+      "status": 503
+    },
+    {
+      "method": "POST",
+      "path": "/api/comments",
+      "status": 503
+    },
+    {
+      "method": "GET",
+      "path": "/api/tarot/account/orders",
+      "status": 503
+    }
+  ],
+  "callbackStatus": 200,
+  "actualForwardedSqsBodySignatureAndHash": true,
+  "syntheticFixtureDeleted": true,
+  "providerProductionCalled": false,
+  "realOrderCreated": false,
+  "realCharge": false,
+  "sourceSqlFrozen": false,
+  "productionAccepted": false
+}

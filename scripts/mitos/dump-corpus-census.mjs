@@ -17,7 +17,7 @@
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
-import pg from "pg";
+import pg from "../../runtime/workshop-postgres.mjs";
 
 function parseArgs(argv) {
   const out = {};

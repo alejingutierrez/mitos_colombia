@@ -1,0 +1,83 @@
+{
+  "at": "2026-10-01T20:03:07.298Z",
+  "mode": "apply-to-unpublished-copy",
+  "ownedDatabase": "mitos",
+  "plan": [
+    {
+      "table": "communities",
+      "column": "image_url",
+      "rows": 47,
+      "references": 47
+    },
+    {
+      "table": "editorial_myths",
+      "column": "image_url",
+      "rows": 348,
+      "references": 348
+    },
+    {
+      "table": "home_banners",
+      "column": "image_url",
+      "rows": 5,
+      "references": 5
+    },
+    {
+      "table": "myth_narrations",
+      "column": "audio_url",
+      "rows": 182,
+      "references": 182
+    },
+    {
+      "table": "myth_narrations",
+      "column": "master_url",
+      "rows": 182,
+      "references": 182
+    },
+    {
+      "table": "myths",
+      "column": "image_url",
+      "rows": 596,
+      "references": 596
+    },
+    {
+      "table": "myths",
+      "column": "square_image_url",
+      "rows": 589,
+      "references": 589
+    },
+    {
+      "table": "narration_beds",
+      "column": "audio_url",
+      "rows": 143,
+      "references": 143
+    },
+    {
+      "table": "regions",
+      "column": "image_url",
+      "rows": 6,
+      "references": 6
+    },
+    {
+      "table": "tags",
+      "column": "image_url",
+      "rows": 110,
+      "references": 110
+    },
+    {
+      "table": "tarot_cards",
+      "column": "image_url",
+      "rows": 78,
+      "references": 78
+    },
+    {
+      "table": "vertical_images",
+      "column": "image_url",
+      "rows": 1260,
+      "references": 1260
+    }
+  ],
+  "missingCopiedKeys": [],
+  "sourceBase": "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/",
+  "destinationBase": "https://media.mitosdecolombia.com/blob/",
+  "applied": true
+}

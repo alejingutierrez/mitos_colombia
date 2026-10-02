@@ -1,11 +1,12 @@
+import { storageConfigured } from "../../runtime/storage.mjs";
 import { createHash } from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 
-import { del, put } from "@vercel/blob";
+import { del, put } from "../../runtime/storage.mjs";
 import dotenv from "dotenv";
-import pg from "pg";
+import pg from "../../runtime/workshop-postgres.mjs";
 import sharp from "sharp";
 
 import juanTama from "../../editorial/nasa/myths/juan-tama.mjs";
@@ -396,7 +397,7 @@ async function run() {
   if (!connectionString()) {
     throw new Error(`No se encontró conexión Postgres en ${options.envFile}.`);
   }
-  if (!process.env.BLOB_READ_WRITE_TOKEN) {
+  if (!storageConfigured()) {
     throw new Error(`No se encontró BLOB_READ_WRITE_TOKEN en ${options.envFile}.`);
   }
 

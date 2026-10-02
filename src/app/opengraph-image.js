@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { BRAND_MARK, SITE_NAME } from "../lib/brand";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 export const alt = "Mitos de Colombia – Archivo editorial de mitos colombianos";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";

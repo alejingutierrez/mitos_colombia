@@ -1,0 +1,279 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Own durable Bold inbox independent of source DNS, EC2 and DB; initially closed until exact private configuration/provider QA.",
+  "Parameters": {
+    "CodeKey": {
+      "Type": "String",
+      "AllowedPattern": "qa/ingress/[a-f0-9]{64}\\.zip"
+    },
+    "CodeVersion": {
+      "Type": "String"
+    },
+    "BoldSecretArn": {
+      "Type": "String",
+      "AllowedPattern": "arn:aws:secretsmanager:us-east-1:907264907058:secret:mitos-colombia/prod/bold-inbox-[A-Za-z0-9]{6}"
+    }
+  },
+  "Resources": {
+    "Logs": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/mitos-colombia-payment-inbox",
+        "RetentionInDays": 7,
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "Environment",
+            "Value": "prod"
+          },
+          {
+            "Key": "ManagedBy",
+            "Value": "CloudFormation"
+          },
+          {
+            "Key": "Owner",
+            "Value": "alegut"
+          },
+          {
+            "Key": "CostCenter",
+            "Value": "mitos-colombia"
+          }
+        ]
+      }
+    },
+    "InboxRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "RoleName": "mitos-colombia-payment-inbox",
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "inbox-only",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": "secretsmanager:GetSecretValue",
+                  "Resource": {
+                    "Ref": "BoldSecretArn"
+                  }
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": "sqs:SendMessage",
+                  "Resource": "arn:aws:sqs:us-east-1:907264907058:mitos-colombia-payments"
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents"
+                  ],
+                  "Resource": {
+                    "Fn::Sub": "${Logs.Arn}:*"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "Environment",
+            "Value": "prod"
+          },
+          {
+            "Key": "ManagedBy",
+            "Value": "CloudFormation"
+          },
+          {
+            "Key": "Owner",
+            "Value": "alegut"
+          },
+          {
+            "Key": "CostCenter",
+            "Value": "mitos-colombia"
+          }
+        ]
+      }
+    },
+    "Inbox": {
+      "Type": "AWS::Lambda::Function",
+      "DependsOn": "Logs",
+      "Properties": {
+        "FunctionName": "mitos-colombia-payment-inbox",
+        "Runtime": "nodejs24.x",
+        "Architectures": [
+          "arm64"
+        ],
+        "Handler": "handler.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "InboxRole",
+            "Arn"
+          ]
+        },
+        "Timeout": 15,
+        "MemorySize": 128,
+        "ReservedConcurrentExecutions": 2,
+        "Code": {
+          "S3Bucket": "mitos-colombia-907264907058-operations",
+          "S3Key": {
+            "Ref": "CodeKey"
+          },
+          "S3ObjectVersion": {
+            "Ref": "CodeVersion"
+          }
+        },
+        "Environment": {
+          "Variables": {
+            "BOLD_SECRET_ARN": {
+              "Ref": "BoldSecretArn"
+            },
+            "PAYMENT_QUEUE_URL": "https://sqs.us-east-1.amazonaws.com/907264907058/mitos-colombia-payments"
+          }
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "Environment",
+            "Value": "prod"
+          },
+          {
+            "Key": "ManagedBy",
+            "Value": "CloudFormation"
+          },
+          {
+            "Key": "Owner",
+            "Value": "alegut"
+          },
+          {
+            "Key": "CostCenter",
+            "Value": "mitos-colombia"
+          }
+        ]
+      }
+    },
+    "Api": {
+      "Type": "AWS::ApiGatewayV2::Api",
+      "Properties": {
+        "Name": "mitos-colombia-payment-inbox",
+        "ProtocolType": "HTTP",
+        "Tags": {
+          "Project": "mitos-colombia",
+          "Environment": "prod",
+          "ManagedBy": "CloudFormation",
+          "Owner": "alegut",
+          "CostCenter": "mitos-colombia"
+        }
+      }
+    },
+    "Integration": {
+      "Type": "AWS::ApiGatewayV2::Integration",
+      "Properties": {
+        "ApiId": {
+          "Ref": "Api"
+        },
+        "IntegrationType": "AWS_PROXY",
+        "IntegrationMethod": "POST",
+        "PayloadFormatVersion": "2.0",
+        "TimeoutInMillis": 20000,
+        "IntegrationUri": {
+          "Fn::GetAtt": [
+            "Inbox",
+            "Arn"
+          ]
+        }
+      }
+    },
+    "Route": {
+      "Type": "AWS::ApiGatewayV2::Route",
+      "Properties": {
+        "ApiId": {
+          "Ref": "Api"
+        },
+        "RouteKey": "POST /bold/events",
+        "Target": {
+          "Fn::Join": [
+            "/",
+            [
+              "integrations",
+              {
+                "Ref": "Integration"
+              }
+            ]
+          ]
+        }
+      }
+    },
+    "Stage": {
+      "Type": "AWS::ApiGatewayV2::Stage",
+      "Properties": {
+        "ApiId": {
+          "Ref": "Api"
+        },
+        "StageName": "$default",
+        "AutoDeploy": true,
+        "DefaultRouteSettings": {
+          "ThrottlingBurstLimit": 10,
+          "ThrottlingRateLimit": 5
+        },
+        "Tags": {
+          "Project": "mitos-colombia",
+          "Environment": "prod",
+          "ManagedBy": "CloudFormation",
+          "Owner": "alegut",
+          "CostCenter": "mitos-colombia"
+        }
+      }
+    },
+    "Permission": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Ref": "Inbox"
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceAccount": "907264907058",
+        "SourceArn": {
+          "Fn::Sub": "arn:aws:execute-api:us-east-1:907264907058:${Api}/*/POST/bold/events"
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "IngressUrl": {
+      "Value": {
+        "Fn::Sub": "${Api.ApiEndpoint}/bold/events"
+      }
+    },
+    "BoldSecretArn": {
+      "Value": {
+        "Ref": "BoldSecretArn"
+      }
+    }
+  }
+}

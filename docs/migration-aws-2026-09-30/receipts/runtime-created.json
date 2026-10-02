@@ -1,0 +1,77 @@
+{
+    "Stacks": [
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:907264907058:stack/mitos-colombia-runtime/26abbe90-bda1-11f1-9b0a-0e72a83c6429",
+            "StackName": "mitos-colombia-runtime",
+            "ChangeSetId": "arn:aws:cloudformation:us-east-1:907264907058:changeSet/runtime-20261001/473426b0-7792-4c7a-9ea2-b75350731cd6",
+            "Description": "Single owned ARM64 Mitos host; no public SSH or database; activated by SSM only",
+            "Parameters": [
+                {
+                    "ParameterKey": "SubnetId",
+                    "ParameterValue": "subnet-0d5a390feba0cdbdc"
+                },
+                {
+                    "ParameterKey": "Ami",
+                    "ParameterValue": "/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-arm64",
+                    "ResolvedValue": "ami-065b1b834d2a83a7a"
+                },
+                {
+                    "ParameterKey": "SecurityGroupId",
+                    "ParameterValue": "sg-0e67e3f1daf229b29"
+                },
+                {
+                    "ParameterKey": "InstanceProfile",
+                    "ParameterValue": "mitos-colombia-foundation-InstanceProfile-aK2XVGkxf0zi"
+                }
+            ],
+            "CreationTime": "2026-10-01T14:05:26.243000+00:00",
+            "LastUpdatedTime": "2026-10-01T14:11:00.847000+00:00",
+            "RollbackConfiguration": {},
+            "StackStatus": "CREATE_COMPLETE",
+            "DisableRollback": false,
+            "NotificationARNs": [],
+            "Outputs": [
+                {
+                    "OutputKey": "InstanceId",
+                    "OutputValue": "i-042678e0b71dbefaa"
+                },
+                {
+                    "OutputKey": "PublicIp",
+                    "OutputValue": "3.215.243.33"
+                },
+                {
+                    "OutputKey": "AllocationId",
+                    "OutputValue": "eipalloc-0bd7957a3a44ab5fa"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "Project",
+                    "Value": "mitos-colombia"
+                },
+                {
+                    "Key": "Owner",
+                    "Value": "alegut"
+                },
+                {
+                    "Key": "ManagedBy",
+                    "Value": "CloudFormation"
+                },
+                {
+                    "Key": "Environment",
+                    "Value": "prod"
+                }
+            ],
+            "EnableTerminationProtection": true,
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            },
+            "LastOperations": [
+                {
+                    "OperationType": "CREATE_STACK",
+                    "OperationId": "33526667-b344-4e6e-96cb-20561e67e766"
+                }
+            ]
+        }
+    ]
+}

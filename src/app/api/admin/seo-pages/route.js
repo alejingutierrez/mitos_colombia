@@ -1,5 +1,6 @@
+import { maybeQueueAdminJob } from "../../../../../runtime/admin-jobs.mjs";
 import { NextResponse } from "next/server";
-import OpenAI from "openai";
+import { createLazyOpenAI } from "../../../../../runtime/openai.mjs";
 import {
   getSqlClient,
   getSqliteDb,
@@ -13,7 +14,7 @@ import { getHomeStats } from "../../../../lib/myths";
 export const runtime = "nodejs";
 export const maxDuration = 300;
 
-const openai = new OpenAI({
+const openai = createLazyOpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
@@ -214,6 +215,7 @@ function truncateText(text, max = MAX_CONTENT_CHARS) {
 }
 
 async function ensureSeoTable() {
+  if (process.env.MITOS_RUNTIME === "aws") return;
   if (isPostgres()) {
     const db = getSqlClient();
     await db`
@@ -1153,6 +1155,8 @@ export async function GET(request) {
 }
 
 export async function POST(request) {
+  const queued = await maybeQueueAdminJob(request);
+  if (queued) return queued;
   try {
     if (!checkAuth(request)) {
       return NextResponse.json(

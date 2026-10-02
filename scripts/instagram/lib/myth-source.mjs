@@ -1,6 +1,6 @@
 import Database from "better-sqlite3";
 import fs from "node:fs/promises";
-import pg from "pg";
+import pg from "../../../runtime/workshop-postgres.mjs";
 
 function parseJson(value, fallback = []) {
   if (!value) return fallback;

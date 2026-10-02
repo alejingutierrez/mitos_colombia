@@ -1,0 +1,27 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "Update:*",
+      "Principal": "*",
+      "Resource": "*"
+    },
+    {
+      "Effect": "Deny",
+      "Action": [
+        "Update:Replace",
+        "Update:Delete"
+      ],
+      "Principal": "*",
+      "Resource": [
+        "LogicalResourceId/Database",
+        "LogicalResourceId/MediaBucket",
+        "LogicalResourceId/ArchiveBucket",
+        "LogicalResourceId/OperationsBucket",
+        "LogicalResourceId/RuntimeSecret",
+        "LogicalResourceId/OriginSecret",
+        "LogicalResourceId/HostedZone"
+      ]
+    }
+  ]
+}

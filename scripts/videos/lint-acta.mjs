@@ -19,7 +19,7 @@
  */
 import fs from "node:fs";
 import crypto from "node:crypto";
-import { neon } from "@neondatabase/serverless";
+import { sql } from "../../runtime/postgres.mjs";
 
 const norm = (s) =>
   s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
@@ -31,8 +31,8 @@ const acta = JSON.parse(fs.readFileSync(ruta, "utf8"));
 const errs = [];
 const avisos = [];
 
-const sql = neon(process.env.POSTGRES_URL);
-const filas = await sql`SELECT mito FROM myths WHERE slug = ${acta.canon_slug}`;
+const { rows: filas } = await sql`SELECT mito FROM myths WHERE slug = ${acta.canon_slug}`;
+await sql.end();
 if (!filas.length) errs.push(`el slug ${acta.canon_slug} no existe o no tiene canon`);
 const canon = filas[0]?.mito || "";
 const canonNorm = norm(canon);

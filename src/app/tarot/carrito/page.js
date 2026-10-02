@@ -9,3 +9,6 @@ export const metadata = {
 export default function CarritoPage() {
   return <TarotCartPage product={getTarotProduct()} />;
 }
+
+// Seller and payment configuration is injected at runtime, outside the public build snapshot.
+export const dynamic = "force-dynamic";

@@ -21,7 +21,7 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { pathToFileURL } from "node:url";
 import dotenv from "dotenv";
-import pg from "pg";
+import pg from "../../../runtime/workshop-postgres.mjs";
 
 const { Client } = pg;
 const execFileAsync = promisify(execFile);

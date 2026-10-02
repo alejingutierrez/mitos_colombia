@@ -1,3 +1,4 @@
+import { awsClientAddress } from '../../../../runtime/bridge-address.mjs';
 import { NextResponse } from "next/server";
 import {
   addComment,
@@ -32,6 +33,7 @@ export const runtime = "nodejs";
 const rateLimiter = createRateLimiter({ limit: 3, windowMs: 10 * 60 * 1000 });
 
 function clientKey(request) {
+  if (process.env.MITOS_RUNTIME === "aws") return awsClientAddress(request);
   const forwarded = request.headers.get("x-forwarded-for");
   if (forwarded) return forwarded.split(",")[0].trim();
   return request.headers.get("x-real-ip") || "desconocido";

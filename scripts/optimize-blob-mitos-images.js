@@ -1,5 +1,6 @@
+import { storageConfigured } from "../runtime/storage.mjs";
 import "dotenv/config";
-import { list, put } from "@vercel/blob";
+import { list, put } from "../runtime/storage.mjs";
 import sharp from "sharp";
 
 const args = process.argv.slice(2);
@@ -153,8 +154,8 @@ async function optimizeBlob(blob, index, total) {
 }
 
 async function run() {
-  if (!process.env.BLOB_READ_WRITE_TOKEN) {
-    console.error("BLOB_READ_WRITE_TOKEN is required.");
+  if (!storageConfigured()) {
+    console.error("Media storage configuration is required.");
     process.exit(1);
   }
 

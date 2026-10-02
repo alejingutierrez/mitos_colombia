@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { boldCheckoutSite } from "../../../../../runtime/bold-checkout-site.mjs";
 import {
   buildBoldCheckoutConfig,
   getBoldConfiguration,
@@ -126,7 +127,7 @@ export async function POST(request) {
 
   const unitPriceCop = product.priceCop;
   const totalCop = unitPriceCop * quantity;
-  const siteUrl = String(process.env.NEXT_PUBLIC_SITE_URL || "").trim().replace(/\/+$/, "");
+  const siteUrl = boldCheckoutSite(configuration, request.headers.get("x-mitos-stage"), String(process.env.NEXT_PUBLIC_SITE_URL || "").trim().replace(/\/+$/, ""), process.env.MITOS_RUNTIME);
   const order = await createTarotOrder({
     sku: product.sku,
     quantity,

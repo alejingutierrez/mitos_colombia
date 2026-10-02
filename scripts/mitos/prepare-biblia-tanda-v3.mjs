@@ -30,7 +30,7 @@
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
-import pg from "pg";
+import pg from "../../runtime/workshop-postgres.mjs";
 import { validateBibleV3 } from "./biblia-v3.mjs";
 import { ensamblar } from "./prepare-biblia-probe-v3.mjs";
 

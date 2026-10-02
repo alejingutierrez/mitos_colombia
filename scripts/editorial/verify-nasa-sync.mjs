@@ -3,7 +3,7 @@ import process from "node:process";
 import { pathToFileURL } from "node:url";
 
 import dotenv from "dotenv";
-import pg from "pg";
+import pg from "../../runtime/workshop-postgres.mjs";
 
 import { nasaMedia } from "../../editorial/nasa/media.mjs";
 import { canonicalNasaSlugs } from "../../editorial/nasa/universe.mjs";

@@ -3,7 +3,7 @@ import path from "node:path";
 import process from "node:process";
 
 import dotenv from "dotenv";
-import pg from "pg";
+import pg from "../../runtime/workshop-postgres.mjs";
 
 import baha from "../../editorial/katio/myths/baha.mjs";
 import { katioMedia } from "../../editorial/katio/media.mjs";

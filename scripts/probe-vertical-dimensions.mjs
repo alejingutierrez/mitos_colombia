@@ -52,7 +52,7 @@ import process from "node:process";
 import { fileURLToPath } from "node:url";
 
 import dotenv from "dotenv";
-import pg from "pg";
+import pg from "../runtime/workshop-postgres.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");

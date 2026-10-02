@@ -1,11 +1,10 @@
 import { NextResponse } from "next/server";
 import {
-  checkTarotAuthRateLimit,
+  checkTarotAuthRequestRateLimit,
   createTarotAccount,
   createTarotSession,
   isTrustedTarotAuthRequest,
   setTarotSessionCookie,
-  tarotAuthRateLimitKey,
 } from "../../../../../lib/tarot-auth";
 import { claimTarotOrderForAccount } from "../../../../../lib/tarot-orders";
 
@@ -22,7 +21,7 @@ export async function POST(request) {
   } catch {
     return NextResponse.json({ error: "invalid_request", message: "Revisa los datos enviados." }, { status: 400 });
   }
-  const limit = checkTarotAuthRateLimit(tarotAuthRateLimitKey(request, "register", body?.email), { maximum: 5 });
+  const limit = await checkTarotAuthRequestRateLimit(request, "register", body?.email, { maximum: 5 });
   if (!limit.allowed) {
     return NextResponse.json(
       { error: "rate_limited", message: "Espera unos minutos antes de intentarlo de nuevo." },

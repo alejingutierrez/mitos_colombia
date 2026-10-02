@@ -6,7 +6,7 @@
  * Uso: node scripts/migrate-vertical-images-pg.js
  */
 
-import { sql } from "@vercel/postgres";
+import { sql } from "../runtime/postgres.mjs";
 import dotenv from "dotenv";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";

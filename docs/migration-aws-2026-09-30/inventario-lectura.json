@@ -1,0 +1,820 @@
+{
+  "observed_at_utc": "2026-10-01T04:05:13.294Z",
+  "local_env_sources": [
+    ".env",
+    ".env.local"
+  ],
+  "database": {
+    "status": "verified_readonly",
+    "provider": "Neon",
+    "version": "17.11 (8a81ecb)",
+    "bytes": 59072512,
+    "tables": [
+      {
+        "table": "analysis_results",
+        "count": 8,
+        "columns": [
+          "id",
+          "term",
+          "insight_ids",
+          "result_json",
+          "count",
+          "created_at",
+          "sintesis_general",
+          "narrativa_principal",
+          "narrativas_alternativas",
+          "framing_predominante",
+          "linea_temporal",
+          "contexto_necesario",
+          "actores_principales",
+          "voces_presentes",
+          "voces_ausentes",
+          "posiciones_enfrentadas",
+          "puntos_de_consenso",
+          "puntos_de_conflicto",
+          "datos_clave",
+          "fuentes_primarias",
+          "citas_destacadas",
+          "tono_general_cobertura",
+          "equilibrio_cobertura",
+          "calidad_periodistica",
+          "nivel_credibilidad",
+          "consistencia_hechos",
+          "verificacion_necesaria",
+          "sesgos_identificados",
+          "lenguaje_cargado",
+          "epicentro_geografico",
+          "alcance_geografico",
+          "zonas_afectadas",
+          "temas_dominantes",
+          "temas_emergentes",
+          "palabras_clave_frecuentes",
+          "hashtags_tendencia",
+          "impacto_social_proyectado",
+          "impacto_politico_proyectado",
+          "impacto_economico_proyectado",
+          "escenarios_posibles",
+          "eventos_por_vigilar",
+          "aspectos_ignorados",
+          "audiencia_objetivo_agregada",
+          "nivel_tecnico"
+        ],
+        "media": [],
+        "scope": "ownership_unresolved_no_migration_or_retirement_until_classified"
+      },
+      {
+        "table": "backlinks_checks",
+        "count": 2,
+        "columns": [
+          "id",
+          "prospect_id",
+          "page_url",
+          "found",
+          "anchor_text",
+          "rel",
+          "target_url",
+          "status_code",
+          "notes",
+          "checked_at"
+        ],
+        "media": [],
+        "scope": "ownership_unresolved_no_migration_or_retirement_until_classified"
+      },
+      {
+        "table": "backlinks_messages",
+        "count": 1,
+        "columns": [
+          "id",
+          "prospect_id",
+          "subject",
+          "body",
+          "model",
+          "created_at"
+        ],
+        "media": [],
+        "scope": "ownership_unresolved_no_migration_or_retirement_until_classified"
+      },
+      {
+        "table": "backlinks_prospects",
+        "count": 14,
+        "columns": [
+          "id",
+          "url",
+          "domain",
+          "title",
+          "category",
+          "affinity_tags",
+          "contact_name",
+          "contact_email",
+          "contact_page",
+          "submission_url",
+          "submission_method",
+          "form_selector",
+          "comment_hint",
+          "anchor_hint",
+          "recommended_links",
+          "priority",
+          "status",
+          "last_status_at",
+          "last_checked_at",
+          "last_submission_at",
+          "auto_allowed",
+          "notes",
+          "created_at",
+          "updated_at"
+        ],
+        "media": [],
+        "scope": "ownership_unresolved_no_migration_or_retirement_until_classified"
+      },
+      {
+        "table": "comments",
+        "count": 2,
+        "columns": [
+          "id",
+          "myth_id",
+          "author_name",
+          "author_email",
+          "content",
+          "status",
+          "created_at"
+        ],
+        "media": [],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "communities",
+        "count": 51,
+        "columns": [
+          "id",
+          "region_id",
+          "name",
+          "slug",
+          "image_url",
+          "image_prompt"
+        ],
+        "media": [
+          {
+            "column": "image_url",
+            "groups": [
+              {
+                "host": "c5htob7za0dl3b5x.public.blob.vercel-storage.com",
+                "count": "47"
+              }
+            ]
+          }
+        ],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "contact_messages",
+        "count": 4,
+        "columns": [
+          "id",
+          "name",
+          "email",
+          "subject",
+          "message",
+          "status",
+          "created_at"
+        ],
+        "media": [],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "editorial_myth_keywords",
+        "count": 2356,
+        "columns": [
+          "editorial_myth_id",
+          "keyword"
+        ],
+        "media": [],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "editorial_myth_research",
+        "count": 5,
+        "columns": [
+          "myth_id",
+          "sources_json",
+          "key_sources_json",
+          "search_queries_json",
+          "scraped_sources_json",
+          "created_at",
+          "updated_at"
+        ],
+        "media": [],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "editorial_myth_tags",
+        "count": 1818,
+        "columns": [
+          "editorial_myth_id",
+          "tag_id"
+        ],
+        "media": [],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "editorial_myths",
+        "count": 596,
+        "columns": [
+          "id",
+          "source_myth_id",
+          "title",
+          "slug",
+          "region_id",
+          "community_id",
+          "category_path",
+          "tags_raw",
+          "content",
+          "excerpt",
+          "seo_title",
+          "seo_description",
+          "focus_keyword",
+          "focus_keywords_raw",
+          "image_prompt",
+          "image_url",
+          "latitude",
+          "longitude",
+          "content_formatted",
+          "source_row",
+          "sources_json",
+          "key_sources_json",
+          "research_notes",
+          "created_at",
+          "updated_at",
+          "mito",
+          "historia",
+          "versiones",
+          "leccion",
+          "similitudes",
+          "image_prompt_horizontal",
+          "image_prompt_vertical"
+        ],
+        "media": [
+          {
+            "column": "image_url",
+            "groups": [
+              {
+                "host": "c5htob7za0dl3b5x.public.blob.vercel-storage.com",
+                "count": "348"
+              }
+            ]
+          }
+        ],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "home_banners",
+        "count": 5,
+        "columns": [
+          "id",
+          "slug",
+          "title",
+          "subtitle",
+          "description",
+          "cta_label",
+          "cta_href",
+          "image_prompt",
+          "image_url",
+          "order_index",
+          "is_active",
+          "created_at",
+          "updated_at"
+        ],
+        "media": [
+          {
+            "column": "image_url",
+            "groups": [
+              {
+                "host": "c5htob7za0dl3b5x.public.blob.vercel-storage.com",
+                "count": "5"
+              }
+            ]
+          }
+        ],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "insights",
+        "count": 95,
+        "columns": [
+          "id",
+          "term",
+          "sentimiento",
+          "resumen",
+          "categoria",
+          "etiquetas",
+          "marca",
+          "entidad",
+          "article_title",
+          "article_description",
+          "article_content",
+          "article_url",
+          "article_image",
+          "created_at",
+          "idioma",
+          "confianza",
+          "relevancia",
+          "accion_recomendada",
+          "cita_clave",
+          "resumen_ejecutivo",
+          "tono",
+          "temas_principales",
+          "subtemas",
+          "stakeholders",
+          "impacto_social",
+          "impacto_economico",
+          "impacto_politico",
+          "palabras_clave_contextuales",
+          "trending_topics",
+          "analisis_competitivo",
+          "credibilidad_fuente",
+          "sesgo_detectado",
+          "localizacion_geografica",
+          "fuentes_citadas",
+          "datos_numericos",
+          "urgencia",
+          "audiencia_objetivo"
+        ],
+        "media": [],
+        "scope": "ownership_unresolved_no_migration_or_retirement_until_classified"
+      },
+      {
+        "table": "myth_keywords",
+        "count": 6115,
+        "columns": [
+          "myth_id",
+          "keyword"
+        ],
+        "media": [],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "myth_narrations",
+        "count": 182,
+        "columns": [
+          "id",
+          "myth_id",
+          "myth_slug",
+          "audio_url",
+          "voice_id",
+          "voice_name",
+          "model_id",
+          "render_hash",
+          "char_count",
+          "duration_seconds",
+          "created_at",
+          "updated_at",
+          "master_url",
+          "bed_gain_db",
+          "word_timings",
+          "bed_slugs"
+        ],
+        "media": [
+          {
+            "column": "audio_url",
+            "groups": [
+              {
+                "host": "c5htob7za0dl3b5x.public.blob.vercel-storage.com",
+                "count": "182"
+              }
+            ]
+          },
+          {
+            "column": "master_url",
+            "groups": [
+              {
+                "host": "c5htob7za0dl3b5x.public.blob.vercel-storage.com",
+                "count": "182"
+              }
+            ]
+          }
+        ],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "myth_tags",
+        "count": 2893,
+        "columns": [
+          "myth_id",
+          "tag_id"
+        ],
+        "media": [],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "myths",
+        "count": 596,
+        "columns": [
+          "id",
+          "title",
+          "slug",
+          "region_id",
+          "community_id",
+          "category_path",
+          "tags_raw",
+          "content",
+          "excerpt",
+          "seo_title",
+          "seo_description",
+          "focus_keyword",
+          "focus_keywords_raw",
+          "image_prompt",
+          "source_row",
+          "created_at",
+          "updated_at",
+          "image_url",
+          "content_formatted",
+          "latitude",
+          "longitude",
+          "mito",
+          "historia",
+          "versiones",
+          "leccion",
+          "similitudes",
+          "square_image_url",
+          "image_prompt_horizontal",
+          "image_prompt_vertical",
+          "image_prompt_square"
+        ],
+        "media": [
+          {
+            "column": "image_url",
+            "groups": [
+              {
+                "host": "c5htob7za0dl3b5x.public.blob.vercel-storage.com",
+                "count": "596"
+              }
+            ]
+          },
+          {
+            "column": "square_image_url",
+            "groups": [
+              {
+                "host": "c5htob7za0dl3b5x.public.blob.vercel-storage.com",
+                "count": "589"
+              }
+            ]
+          }
+        ],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "narration_beds",
+        "count": 143,
+        "columns": [
+          "id",
+          "slug",
+          "title",
+          "audio_url",
+          "duration_seconds",
+          "lufs",
+          "seam_step_db",
+          "prompt",
+          "created_at",
+          "characters",
+          "world"
+        ],
+        "media": [
+          {
+            "column": "audio_url",
+            "groups": [
+              {
+                "host": "c5htob7za0dl3b5x.public.blob.vercel-storage.com",
+                "count": "143"
+              }
+            ]
+          }
+        ],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "news_articles",
+        "count": 857,
+        "columns": [
+          "id",
+          "term",
+          "provider",
+          "source",
+          "author",
+          "title",
+          "description",
+          "content",
+          "url",
+          "url_hash",
+          "url_to_image",
+          "published_at",
+          "created_at",
+          "category"
+        ],
+        "media": [],
+        "scope": "ownership_unresolved_no_migration_or_retirement_until_classified"
+      },
+      {
+        "table": "regions",
+        "count": 6,
+        "columns": [
+          "id",
+          "name",
+          "slug",
+          "image_url",
+          "image_prompt"
+        ],
+        "media": [
+          {
+            "column": "image_url",
+            "groups": [
+              {
+                "host": "c5htob7za0dl3b5x.public.blob.vercel-storage.com",
+                "count": "6"
+              }
+            ]
+          }
+        ],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "seo_pages",
+        "count": 746,
+        "columns": [
+          "id",
+          "page_type",
+          "slug",
+          "meta_title",
+          "meta_description",
+          "meta_keywords",
+          "og_title",
+          "og_description",
+          "twitter_title",
+          "twitter_description",
+          "canonical_path",
+          "summary",
+          "payload",
+          "created_at",
+          "updated_at"
+        ],
+        "media": [],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "tags",
+        "count": 1108,
+        "columns": [
+          "id",
+          "name",
+          "slug",
+          "image_url",
+          "image_prompt",
+          "description"
+        ],
+        "media": [
+          {
+            "column": "image_url",
+            "groups": [
+              {
+                "host": "c5htob7za0dl3b5x.public.blob.vercel-storage.com",
+                "count": "110"
+              }
+            ]
+          }
+        ],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "tarot_cards",
+        "count": 78,
+        "columns": [
+          "id",
+          "slug",
+          "card_name",
+          "arcana",
+          "suit",
+          "rank_label",
+          "order_index",
+          "myth_title",
+          "myth_id",
+          "myth_slug",
+          "meaning",
+          "selection_reason",
+          "base_prompt",
+          "custom_prompt",
+          "image_url",
+          "created_at",
+          "updated_at",
+          "reading_summary"
+        ],
+        "media": [
+          {
+            "column": "image_url",
+            "groups": [
+              {
+                "host": "c5htob7za0dl3b5x.public.blob.vercel-storage.com",
+                "count": "78"
+              }
+            ]
+          }
+        ],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "tarot_orders",
+        "count": 1,
+        "columns": [
+          "reference",
+          "status_token",
+          "status",
+          "sku",
+          "quantity",
+          "unit_price_cop",
+          "amount_in_cents",
+          "currency",
+          "email",
+          "full_name",
+          "phone",
+          "region",
+          "city",
+          "address_line_1",
+          "address_line_2",
+          "user_id",
+          "fulfillment_status",
+          "tracking_carrier",
+          "tracking_code",
+          "tracking_url",
+          "shipped_at",
+          "delivered_at",
+          "campaign_json",
+          "analytics_json",
+          "payment_provider",
+          "payment_transaction_id",
+          "payment_method_type",
+          "analytics_purchase_claimed_at",
+          "analytics_purchase_sent_at",
+          "analytics_purchase_last_error",
+          "created_at",
+          "updated_at",
+          "approved_at"
+        ],
+        "media": [],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "tarot_user_sessions",
+        "count": 6,
+        "columns": [
+          "token_hash",
+          "user_id",
+          "expires_at",
+          "created_at"
+        ],
+        "media": [],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "tarot_users",
+        "count": 6,
+        "columns": [
+          "id",
+          "email",
+          "full_name",
+          "password_hash",
+          "email_verified_at",
+          "created_at",
+          "updated_at"
+        ],
+        "media": [],
+        "scope": "mitos_candidate_confirm_consumers"
+      },
+      {
+        "table": "vertical_images",
+        "count": 1260,
+        "columns": [
+          "id",
+          "entity_type",
+          "entity_id",
+          "entity_name",
+          "entity_slug",
+          "base_prompt",
+          "custom_prompt",
+          "image_url",
+          "created_at",
+          "updated_at"
+        ],
+        "media": [
+          {
+            "column": "image_url",
+            "groups": [
+              {
+                "host": "c5htob7za0dl3b5x.public.blob.vercel-storage.com",
+                "count": "1260"
+              }
+            ]
+          }
+        ],
+        "scope": "mitos_candidate_confirm_consumers"
+      }
+    ],
+    "extensions": [
+      {
+        "extname": "plpgsql",
+        "extversion": "1.0"
+      }
+    ]
+  },
+  "blob": {
+    "status": "verified_readonly",
+    "count": 5701,
+    "bytes": 9236150891,
+    "pages": 6,
+    "prefixes": {
+      "banners": 21,
+      "mitos": 2100,
+      "narraciones": 663,
+      "samples": 10,
+      "site-visuals": 222,
+      "square": 652,
+      "tarot": 78,
+      "triptych-history": 604,
+      "vertical": 1351
+    },
+    "extensions": {
+      ".jpg": 3731,
+      ".png": 703,
+      ".mp3": 260,
+      ".wav": 403,
+      ".json": 604
+    },
+    "hosts": {
+      "c5htob7za0dl3b5x.public.blob.vercel-storage.com": 5701
+    },
+    "scope": "store accessible with current local token; verify against deployed runtime before cutover"
+  },
+  "public_site": {
+    "status": "read_probe",
+    "note": "Single probe per route from audit host; not a Colombian mobile performance baseline.",
+    "routes": [
+      {
+        "path": "/",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate",
+        "server": "Vercel",
+        "vercel_cache": "HIT",
+        "ttfb_ms_from_audit_host": 737,
+        "bytes": 534045
+      },
+      {
+        "path": "/sitemap.xml",
+        "status": 200,
+        "content_type": "application/xml",
+        "cache_control": "public, max-age=0, must-revalidate",
+        "server": "Vercel",
+        "vercel_cache": "MISS",
+        "ttfb_ms_from_audit_host": 125,
+        "bytes": 730,
+        "sitemap_children": [
+          "https://www.mitosdecolombia.com/sitemap-static.xml",
+          "https://www.mitosdecolombia.com/sitemap-rutas.xml",
+          "https://www.mitosdecolombia.com/sitemap-taxonomia.xml",
+          "https://www.mitosdecolombia.com/sitemap-mitos/1",
+          "https://www.mitosdecolombia.com/sitemap-mitos/2"
+        ]
+      },
+      {
+        "path": "/robots.txt",
+        "status": 200,
+        "content_type": "text/plain",
+        "cache_control": "public",
+        "server": "Vercel",
+        "vercel_cache": "MISS",
+        "ttfb_ms_from_audit_host": 568,
+        "bytes": 77
+      },
+      {
+        "path": "/mitos",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "server": "Vercel",
+        "vercel_cache": "MISS",
+        "ttfb_ms_from_audit_host": 227,
+        "bytes": 191910
+      },
+      {
+        "path": "/tarot",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "cache_control": "public, max-age=0, must-revalidate",
+        "server": "Vercel",
+        "vercel_cache": "HIT",
+        "ttfb_ms_from_audit_host": 527,
+        "bytes": 366531
+      },
+      {
+        "path": "/api/taxonomy",
+        "error_code": 23
+      }
+    ]
+  }
+}

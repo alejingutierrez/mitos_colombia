@@ -1,0 +1,129 @@
+{
+    "Stacks": [
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:907264907058:stack/mitos-colombia-foundation/f4421550-bd9e-11f1-b1ed-0affca0b1f83",
+            "StackName": "mitos-colombia-foundation",
+            "ChangeSetId": "arn:aws:cloudformation:us-east-1:907264907058:changeSet/foundation-20261001/362cd086-7801-49c4-a4c0-72271e28cddf",
+            "Description": "Mitos own low-cost foundation; no changes to RAG or Cocina; no public DB, NAT, ALB or cache cluster",
+            "CreationTime": "2026-10-01T13:49:42.701000+00:00",
+            "LastUpdatedTime": "2026-10-01T13:52:46.037000+00:00",
+            "RollbackConfiguration": {},
+            "StackStatus": "CREATE_COMPLETE",
+            "DisableRollback": false,
+            "NotificationARNs": [],
+            "Capabilities": [
+                "CAPABILITY_NAMED_IAM"
+            ],
+            "Outputs": [
+                {
+                    "OutputKey": "HostedZone",
+                    "OutputValue": "Z10003897KR85ZBPM93O"
+                },
+                {
+                    "OutputKey": "DbSubnetB",
+                    "OutputValue": "subnet-07294963b4c0f7892"
+                },
+                {
+                    "OutputKey": "DbSubnetA",
+                    "OutputValue": "subnet-040e8cb67a4a484af"
+                },
+                {
+                    "OutputKey": "DbSecurityGroup",
+                    "OutputValue": "sg-01f3c7eb66ddf50d9"
+                },
+                {
+                    "OutputKey": "JobSecurityGroup",
+                    "OutputValue": "sg-043845ed66ad4dfd1"
+                },
+                {
+                    "OutputKey": "Vpc",
+                    "OutputValue": "vpc-0857bb1d01692317c"
+                },
+                {
+                    "OutputKey": "DatabaseHost",
+                    "OutputValue": "mitos-colombia-prod.c2v4uumucd2n.us-east-1.rds.amazonaws.com"
+                },
+                {
+                    "OutputKey": "DatabaseMasterSecret",
+                    "OutputValue": "arn:aws:secretsmanager:us-east-1:907264907058:secret:rds!db-23448d31-f688-4d57-904b-b8ab5a2ee319-ZQTPEs"
+                },
+                {
+                    "OutputKey": "OriginSecret",
+                    "OutputValue": "arn:aws:secretsmanager:us-east-1:907264907058:secret:mitos-colombia/prod/origin-3oQ31L"
+                },
+                {
+                    "OutputKey": "PaymentQueue",
+                    "OutputValue": "https://sqs.us-east-1.amazonaws.com/907264907058/mitos-colombia-payments"
+                },
+                {
+                    "OutputKey": "WebSubnet",
+                    "OutputValue": "subnet-0d5a390feba0cdbdc"
+                },
+                {
+                    "OutputKey": "OperationsBucket",
+                    "OutputValue": "mitos-colombia-907264907058-operations"
+                },
+                {
+                    "OutputKey": "RuntimeSecret",
+                    "OutputValue": "arn:aws:secretsmanager:us-east-1:907264907058:secret:mitos-colombia/prod/runtime-sBLLFm"
+                },
+                {
+                    "OutputKey": "ArchiveBucket",
+                    "OutputValue": "mitos-colombia-907264907058-archive"
+                },
+                {
+                    "OutputKey": "WebSecurityGroup",
+                    "OutputValue": "sg-0e67e3f1daf229b29"
+                },
+                {
+                    "OutputKey": "InstanceProfile",
+                    "OutputValue": "mitos-colombia-foundation-InstanceProfile-aK2XVGkxf0zi"
+                },
+                {
+                    "OutputKey": "MediaBucket",
+                    "OutputValue": "mitos-colombia-907264907058-media"
+                },
+                {
+                    "OutputKey": "NameServers",
+                    "OutputValue": "ns-872.awsdns-45.net,ns-1253.awsdns-28.org,ns-1876.awsdns-42.co.uk,ns-304.awsdns-38.com"
+                },
+                {
+                    "OutputKey": "EcrUri",
+                    "OutputValue": "907264907058.dkr.ecr.us-east-1.amazonaws.com/mitos-colombia"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "Project",
+                    "Value": "mitos-colombia"
+                },
+                {
+                    "Key": "Owner",
+                    "Value": "alegut"
+                },
+                {
+                    "Key": "ManagedBy",
+                    "Value": "CloudFormation"
+                },
+                {
+                    "Key": "CostCenter",
+                    "Value": "mitos-colombia"
+                },
+                {
+                    "Key": "Environment",
+                    "Value": "prod"
+                }
+            ],
+            "EnableTerminationProtection": true,
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            },
+            "LastOperations": [
+                {
+                    "OperationType": "CREATE_STACK",
+                    "OperationId": "e18557e8-9fb0-4e95-a18a-fbbe4a301a50"
+                }
+            ]
+        }
+    ]
+}

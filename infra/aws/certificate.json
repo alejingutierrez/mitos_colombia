@@ -1,0 +1,39 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Mitos own viewer TLS certificate; existing routing unchanged",
+  "Resources": {
+    "Certificate": {
+      "Type": "AWS::CertificateManager::Certificate",
+      "Properties": {
+        "DomainName": "mitosdecolombia.com",
+        "SubjectAlternativeNames": [
+          "*.mitosdecolombia.com"
+        ],
+        "ValidationMethod": "DNS",
+        "DomainValidationOptions": [
+          {
+            "DomainName": "mitosdecolombia.com",
+            "HostedZoneId": "Z10003897KR85ZBPM93O"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "ManagedBy",
+            "Value": "CloudFormation"
+          }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "CertificateArn": {
+      "Value": {
+        "Ref": "Certificate"
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@ import process from "node:process";
 import { pathToFileURL } from "node:url";
 
 import dotenv from "dotenv";
-import pg from "pg";
+import pg from "../runtime/workshop-postgres.mjs";
 
 const { Client } = pg;
 const confirmationPhrase = "create-new-editorial-myth";

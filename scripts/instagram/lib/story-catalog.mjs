@@ -25,7 +25,7 @@ export async function mapLimit(items, limit, fn) {
 
 export async function communitySlugs(community, root = process.cwd()) {
   if (!identifier(community)) throw new Error("Comunidad inválida.");
-  const files = await fs.readdir(path.join(root, "docs/videos", community, "actas"));
+  const files = await fs.readdir(path.join(/* turbopackIgnore: true */ root, "docs/videos", community, "actas"));
   return files.filter((file) => /^acta-[a-z0-9-]+\.json$/.test(file))
     .map((file) => file.slice(5, -5)).sort();
 }
@@ -41,7 +41,7 @@ function sceneDescription(item, key) {
 export async function loadStoryCatalog({ community, slug, root = process.cwd() }) {
   if (!identifier(community) || !identifier(slug)) throw new Error("Mito o comunidad inválidos.");
   const actaPath = `docs/videos/${community}/actas/acta-${slug}.json`;
-  const actaBytes = await fs.readFile(path.join(root, actaPath));
+  const actaBytes = await fs.readFile(path.join(/* turbopackIgnore: true */ root, actaPath));
   const acta = JSON.parse(actaBytes);
   if ((acta.canon_slug || acta.mito) !== slug || acta.comunidad !== community) {
     throw new Error(`El acta no pertenece a ${community}/${slug}.`);
@@ -52,17 +52,17 @@ export async function loadStoryCatalog({ community, slug, root = process.cwd() }
   const biblePath = `${base}/biblia/manifest.json`;
   const overridesPath = `content/instagram/asset-reviews/${community}/${slug}.json`;
   const [keyframes, triptych, bible, overrides] = await Promise.all([
-    optionalJson(path.join(root, keyframePath)), optionalJson(path.join(root, triptychPath)),
-    optionalJson(path.join(root, biblePath)), optionalJson(path.join(root, overridesPath)),
+    optionalJson(path.join(/* turbopackIgnore: true */ root, keyframePath)), optionalJson(path.join(/* turbopackIgnore: true */ root, triptychPath)),
+    optionalJson(path.join(/* turbopackIgnore: true */ root, biblePath)), optionalJson(path.join(/* turbopackIgnore: true */ root, overridesPath)),
   ]);
-  const guionDirectory = path.join(root, "docs/videos", community, "mvp-guiones");
+  const guionDirectory = path.join(/* turbopackIgnore: true */ root, "docs/videos", community, "mvp-guiones");
   const guionFiles = await fs.readdir(guionDirectory).catch((error) => {
     if (error.code === "ENOENT") return []; throw error;
   });
   const latest = guionFiles.filter((name) => new RegExp(`^guion-${slug}-v\\d+\\.json$`).test(name))
     .sort((a, b) => Number(b.match(/-v(\d+)/)[1]) - Number(a.match(/-v(\d+)/)[1]))[0];
   const guionPath = latest ? `docs/videos/${community}/mvp-guiones/${latest}` : null;
-  const guion = guionPath ? await readJson(path.join(root, guionPath)) : null;
+  const guion = guionPath ? await readJson(path.join(/* turbopackIgnore: true */ root, guionPath)) : null;
   const referenced = new Set();
   const requests = [];
   for (const [key, item] of Object.entries(keyframes?.items || {})) {
@@ -91,7 +91,7 @@ export async function loadStoryCatalog({ community, slug, root = process.cwd() }
       if (path.basename(name) !== name) throw new Error(`Archivo fuera del manifiesto: ${name}`);
       const file = `${directory}/${name}`;
       try {
-        const metadata = await sharp(path.join(root, file)).metadata();
+        const metadata = await sharp(path.join(/* turbopackIgnore: true */ root, file)).metadata();
         const id = `${kind}:${key}`;
         const review = overrides?.assets?.[id];
         return { id, kind, file, manifest, width: metadata.width, height: metadata.height,
@@ -115,8 +115,8 @@ export async function loadStoryCatalog({ community, slug, root = process.cwd() }
 
 // Check real paths too: an in-tree symlink must not expose an unrelated file.
 export async function resolveCatalogAsset(asset, root = process.cwd()) {
-  const allowed = await fs.realpath(path.join(root, "content/videos"));
-  const resolved = await fs.realpath(path.join(root, asset.file));
+  const allowed = await fs.realpath(path.join(/* turbopackIgnore: true */ root, "content/videos"));
+  const resolved = await fs.realpath(path.join(/* turbopackIgnore: true */ root, asset.file));
   const relative = path.relative(allowed, resolved);
   if (relative.startsWith("..") || path.isAbsolute(relative)) throw new Error("Imagen fuera del catálogo.");
   return resolved;

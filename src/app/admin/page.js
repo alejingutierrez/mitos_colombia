@@ -1,5 +1,7 @@
 "use client";
 
+import { adminFetch as fetch } from "../../lib/admin-fetch.js";
+
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import AdminLayout from "../../components/AdminLayout";

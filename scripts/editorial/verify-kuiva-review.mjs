@@ -2,7 +2,7 @@ import path from "node:path";
 import process from "node:process";
 
 import dotenv from "dotenv";
-import pg from "pg";
+import pg from "../../runtime/workshop-postgres.mjs";
 
 import { kuivaCommunitySeo } from "../../editorial/kuiva/community.mjs";
 import { kuivaMedia } from "../../editorial/kuiva/media.mjs";

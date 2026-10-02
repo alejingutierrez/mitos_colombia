@@ -3,7 +3,7 @@ import { GA_MEASUREMENT_ID } from "./google-tags.js";
 export { GA_MEASUREMENT_ID };
 
 function getGtag() {
-  if (typeof window === "undefined") return null;
+  if (typeof window === "undefined" || window.location.hostname !== "www.mitosdecolombia.com") return null;
 
   window.dataLayer = window.dataLayer || [];
   window.gtag =

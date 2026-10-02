@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-01T23:21:16.331454+00:00",
+  "kind": "prepared-payment-ingress",
+  "functionDeployed": false,
+  "httpApiDeployed": false,
+  "failedStackRemoved": true,
+  "closedSecretManaged": true,
+  "originalBoldKeysPresent": false,
+  "failure": "Own reserved concurrency 2 would reduce the account unreserved concurrency below its minimum 10.",
+  "quotaRequest": {
+    "id": "e0794efaf7f249e7beb1efe3001fa7faobyBTmCq",
+    "status": "CASE_OPENED",
+    "desiredConcurrentExecutions": 1001.0
+  },
+  "provisionedConcurrencyRequested": false,
+  "productionAccepted": false
+}

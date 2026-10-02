@@ -1,0 +1,281 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Mitos CI identity: OIDC, one repository and owned resources only",
+  "Resources": {
+    "BuildRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "RoleName": "mitos-colombia-ci-build",
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "arn:aws:iam::907264907058:oidc-provider/token.actions.githubusercontent.com"
+              },
+              "Action": "sts:AssumeRoleWithWebIdentity",
+              "Condition": {
+                "StringEquals": {
+                  "token.actions.githubusercontent.com:aud": "sts.amazonaws.com",
+                  "token.actions.githubusercontent.com:sub": [
+                    "repo:alejingutierrez/mitos_colombia:ref:refs/heads/main",
+                    "repo:alejingutierrez/mitos_colombia:ref:refs/heads/codex/aws-migration"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "mitos-owned-ci",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "ecr:GetAuthorizationToken"
+                  ],
+                  "Resource": "*"
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "ecr:BatchCheckLayerAvailability",
+                    "ecr:InitiateLayerUpload",
+                    "ecr:UploadLayerPart",
+                    "ecr:CompleteLayerUpload",
+                    "ecr:PutImage",
+                    "ecr:BatchGetImage",
+                    "ecr:GetDownloadUrlForLayer",
+                    "ecr:DescribeImages",
+                    "ecr:DescribeImageScanFindings",
+                    "ecr:StartImageScan"
+                  ],
+                  "Resource": "arn:aws:ecr:us-east-1:907264907058:repository/mitos-colombia"
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:GetObject"
+                  ],
+                  "Resource": "arn:aws:s3:::mitos-colombia-907264907058-operations/build-input/*"
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:PutObject"
+                  ],
+                  "Resource": [
+                    "arn:aws:s3:::mitos-colombia-907264907058-operations/ci/*"
+                  ]
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:PutObject"
+                  ],
+                  "Resource": "arn:aws:s3:::mitos-colombia-907264907058-media/static/*"
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": "ssm:SendCommand",
+                  "Resource": [
+                    "arn:aws:ssm:us-east-1:907264907058:document/mitos-colombia-snapshot",
+                    "arn:aws:ec2:us-east-1:907264907058:instance/i-042678e0b71dbefaa"
+                  ]
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": "ssm:GetCommandInvocation",
+                  "Resource": "*"
+                }
+              ]
+            }
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "ManagedBy",
+            "Value": "CloudFormation"
+          }
+        ]
+      }
+    },
+    "DeployRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "RoleName": "mitos-colombia-ci-deploy",
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Federated": "arn:aws:iam::907264907058:oidc-provider/token.actions.githubusercontent.com"
+              },
+              "Action": "sts:AssumeRoleWithWebIdentity",
+              "Condition": {
+                "StringEquals": {
+                  "token.actions.githubusercontent.com:aud": "sts.amazonaws.com",
+                  "token.actions.githubusercontent.com:sub": "repo:alejingutierrez/mitos_colombia:environment:mitos-aws-production"
+                }
+              }
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "mitos-owned-ci",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "ssm:SendCommand"
+                  ],
+                  "Resource": [
+                    "arn:aws:ssm:us-east-1:907264907058:document/mitos-colombia-release",
+                    "arn:aws:ec2:us-east-1:907264907058:instance/i-042678e0b71dbefaa"
+                  ]
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "ssm:GetCommandInvocation",
+                    "ssm:ListCommandInvocations",
+                    "ssm:ListCommands"
+                  ],
+                  "Resource": "*"
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:GetObject"
+                  ],
+                  "Resource": "arn:aws:s3:::mitos-colombia-907264907058-operations/ci/*"
+                }
+              ]
+            }
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "ManagedBy",
+            "Value": "CloudFormation"
+          }
+        ]
+      }
+    },
+    "ReleaseDocument": {
+      "Type": "AWS::SSM::Document",
+      "Properties": {
+        "Name": "mitos-colombia-release",
+        "DocumentType": "Command",
+        "Content": {
+          "schemaVersion": "2.2",
+          "description": "Deploy a verified immutable Mitos release on its owned host",
+          "parameters": {
+            "Sha": {
+              "type": "String",
+              "allowedPattern": "^[a-f0-9]{40}$",
+              "interpolationType": "ENV_VAR"
+            },
+            "Digest": {
+              "type": "String",
+              "allowedPattern": "^sha256:[a-f0-9]{64}$",
+              "interpolationType": "ENV_VAR"
+            }
+          },
+          "mainSteps": [
+            {
+              "action": "aws:runShellScript",
+              "name": "release",
+              "inputs": {
+                "timeoutSeconds": "600",
+                "runCommand": [
+                  "set -eu",
+                  "/opt/mitos/deploy.sh \"$SSM_Sha\" \"$SSM_Digest\""
+                ]
+              }
+            }
+          ]
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "ManagedBy",
+            "Value": "CloudFormation"
+          }
+        ]
+      }
+    },
+    "SnapshotDocument": {
+      "Type": "AWS::SSM::Document",
+      "Properties": {
+        "Name": "mitos-colombia-snapshot",
+        "DocumentType": "Command",
+        "UpdateMethod": "NewVersion",
+        "Content": {
+          "schemaVersion": "2.2",
+          "description": "Public build snapshot from the accepted own writer; credentials remain in memory",
+          "mainSteps": [
+            {
+              "action": "aws:runShellScript",
+              "name": "snapshot",
+              "inputs": {
+                "timeoutSeconds": "300",
+                "runCommand": [
+                  "set -eu",
+                  "/opt/mitos/snapshot.sh"
+                ]
+              }
+            }
+          ]
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "ManagedBy",
+            "Value": "CloudFormation"
+          }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "BuildRole": {
+      "Value": {
+        "Fn::GetAtt": [
+          "BuildRole",
+          "Arn"
+        ]
+      }
+    },
+    "DeployRole": {
+      "Value": {
+        "Fn::GetAtt": [
+          "DeployRole",
+          "Arn"
+        ]
+      }
+    }
+  }
+}

@@ -1,8 +1,9 @@
+import { storageConfigured } from "../../runtime/storage.mjs";
 import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 
-import { put } from "@vercel/blob";
+import { put } from "../../runtime/storage.mjs";
 import dotenv from "dotenv";
 import OpenAI from "openai";
 import sharp from "sharp";
@@ -193,7 +194,7 @@ async function run() {
     throw new Error(`Para aplicar usa --confirm=${confirmationPhrase}.`);
   }
   dotenv.config({ path: path.resolve(options.envFile), quiet: true });
-  if (!process.env.OPENAI_API_KEY || !process.env.BLOB_READ_WRITE_TOKEN) {
+  if (!process.env.OPENAI_API_KEY || !storageConfigured()) {
     throw new Error("Faltan OPENAI_API_KEY o BLOB_READ_WRITE_TOKEN.");
   }
   await fs.mkdir(outputDir, { recursive: true });

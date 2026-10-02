@@ -32,7 +32,7 @@ function memoryStorage() {
 function withBrowser(run) {
   const previousWindow = globalThis.window;
   const previousDocument = globalThis.document;
-  globalThis.window = { location: { href: "https://www.mitosdecolombia.com/tarot/comprar" } };
+  globalThis.window = { location: { href: "https://www.mitosdecolombia.com/tarot/comprar", hostname: "www.mitosdecolombia.com" } };
   globalThis.document = { title: "Tarot" };
   try {
     return run();

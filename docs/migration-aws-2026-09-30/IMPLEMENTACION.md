@@ -1,0 +1,164 @@
+# Implementación y migración AWS de Mitos
+
+Actualizado: 2 de octubre de 2026. Rama `codex/aws-migration`; base inicial `582d4b4f653c5e983fb39bfab537c4f768a37bb4`; origen vigente con bridge inactivo `5eda812b19f82d706130a21fca4c4698c6ce58c5`. Se trabaja en un worktree aislado; el home y el taller locales no se modifican.
+
+**Migración en curso. El DNS autoritativo ya está en AWS. La web pública y las ventas continúan en Vercel; Neon sigue siendo el writer.** El nuevo sitio está en staging restringido. No se ejecutó el seed Excel, ninguna campaña de IA ni retiro del origen.
+
+## Estado actual
+
+| Parte | Evidencia real | Pendiente |
+|---|---|---|
+| DNS | Delegación GoDaddy y registro `.com` confirman los cuatro NS de Route 53. Registros existentes preservados. | Corte de apex/www después de aceptación. |
+| Registro del dominio | Traslado a AWS SUCCESSFUL; privacidad de los tres contactos, renovación automática y bloqueo de traslado verificados. | Mantener verificación de contacto y renovación. |
+| Base | 21 tablas propias restauradas; roles separados; migraciones 000, 001 y 002 aplicadas; app sin CREATE. | Freeze y copia/paridad final; el origen activo volvió a modificar tarot_cards. |
+| Medios | 5.701 objetos, 9.236.150.891 bytes, SHA y versión S3 comprobados. CDN HTTPS propia entrega JPEG/MP3 y rango 206. | Delta final bajo freeze. |
+| URLs | 3.546 referencias en 12 columnas de la copia RDS; 407 referencias en 26 módulos públicos. Todas tienen objeto copiado. | Paridad normalizada final; los freezes históricos conservan procedencia original. |
+| Aplicación | Imagen 806e ARM saludable; edición/auth y rutas propias ya comprobadas en staging; inbox separado en el mismo host. | Pagos test/config completa, carga representativa y corte público. |
+| Configuración | Allowlist en memoria, RDS mitos_app y token propio; cuatro claves Bold originales y configuración comercial autorizada copiadas con readback. Producción nunca habilitada; test temporal sólo en staging restringido. | Completar la transacción sandbox y QA integrada antes de abrir producción. |
+| Automatización | GitHub OIDC, ARM, scan, estáticos por SHA; snapshot público de solo lectura con publicación atómica y documento SSM limitado. | Ensayo real del refresco después de aceptar el writer. Gate público sigue cerrado. |
+| Taller | Archivo inicial + 16.672 archivos/17.615.054.369 bytes de overlays de 15 worktrees; bundle de 100 ramas; lectura propia con TLS y 41 muiscas. | Delta final y activación de publicación tras aceptar RDS como writer. |
+
+## Infraestructura propia
+
+Cuenta `907264907058`, `us-east-1`. Stacks: foundation, runtime, ci, certificate, origin-dns, media, web, observability y payment-secret; todos pertenecen a Mitos.
+
+- VPC `10.77.0.0/16`, RDS PostgreSQL 17.11 privada `db.t4g.micro` SingleAZ/20 GB gp3, 35 días de backups y protección de borrado.
+- EC2 ARM64 `t4g.small`, disco 30 GB cifrado, IMDSv2, sin SSH; 443 solo desde CloudFront. Docker/Nginx/PostgreSQL CLI/SSM instalados.
+- Buckets media/archive/operations privados, cifrados, versionados y con bloqueo de acceso público. Solo CloudFront OAC propio puede GET al bucket de medios; acceso S3 anónimo respondió 403.
+- ECR inmutable por SHA, SQS propia de pagos y DLQ. Roles runtime/job y OIDC propios; ningún permiso nuevo a recursos de RAG/Cocina.
+- ACM emitió apex + wildcard. El origen usa certificado DNS-01 y renovación systemd dos veces al día; dry-run de renovación pasó. El respaldo de claves/certificados permanece únicamente en operations privado.
+- CloudFront web `E12OCIT65B9EUU`: HTTPS al origen, header propio, RSC/cookies/query reenviados y caché HTML/API desactivada. `/_next/image` usa un caché propio por Accept, URL, ancho, calidad y marcador staging confiable; no reenvía cookies/Authorization. WAF propio con reglas administradas/rate limit; staging permanece limitado a operadores incluso tras abrir www.
+- CloudFront media `E10WLYMIZWFTI`: S3 con firma SigV4, HTTP2/3, compresión, CORS para medios públicos y caché por MIME. Imágenes/audio copiados son inmutables; se conserva reproducción por rangos.
+
+Foundation/runtime mantienen protección de terminación y una política que impide sustituir/borrar base, buckets, zona y secretos. El endpoint S3 admite solo nuestros buckets y GET a los repositorios regionales de Amazon Linux/ECR requeridos para bootstrap. Roles/endpoint leen versiones únicamente en el prefijo QA de operations para verificar fixtures. Una zona privada exacta `media.mitosdecolombia.com`, asociada solo a la VPC Mitos, apunta a la misma CloudFront pública: el resolver VPC conservaba los NS GoDaddy durante la propagación; la zona no afecta otros nombres.
+
+No se cambió el origen público: apex conserva A anterior y www su CNAME Vercel. `origin`, `media` y `staging` ya pertenecen al destino AWS. Se preservaron `_domainconnect` y `_dmarc`; no existían MX/CAA y DNSSEC estaba apagado.
+
+## Copia y restauración
+
+El snapshot inicial se obtuvo de la conexión local después de contrastar identidad y credencial con la configuración del deployment publicado. Dump PostgreSQL bajo snapshot exportado de transacción de solo lectura, con tablas y secuencias propias. Ningún seed ni DDL en el origen.
+
+Las 21 tablas incluyen catálogo, editoriales, imágenes, narraciones, tarot, comentarios, contactos, cuentas, sesiones y pedidos. Los 21 hashes de filas coincidieron después del restore inicial. Un control posterior encontró cambio en `tarot_cards` mientras Neon seguía activo: ese drift está registrado y obliga a repetir copia/paridad en el corte. Se excluyeron sin tocarlas seis tablas sin consumidor Mitos y sin FK hacia ellas: analysis_results, backlinks_checks, backlinks_messages, backlinks_prospects, insights y news_articles.
+
+La restauración real del dump descargado por versión/checksum en una base QA nueva pasó los hashes de las 21 tablas en 148 segundos, sin modificar la base runtime. [Recibo DR](receipts/database-dr.json). Un host QA nuevo recuperó imagen, configuración y certificado con TLS validado y leyó seis rutas en 314 segundos desde su creación; sin DNS público, workers ni aceptación. [Recibo host](receipts/host-recovery.json). Este ensayo no certifica un takeover público ni el writer final. El host y su EIP temporales se retiraron; el stack QA ya no existe.
+
+El dump inicial tiene 10.767.147 bytes y SHA `0b80985eda0c59d1eb187802a7d21da7181e8e705753f4a6d4524213f25855af`. Está guardado como una versión inmutable en archive privado. Los recibos públicos conservan conteos/estado; dumps, payloads privados, manifests completos y credenciales quedan fuera del repo.
+
+Blob se inventarió antes y después de la copia, sin cambios durante esa tanda: 5.701 objetos y cero fallos, con checksum SHA-256 y HEAD de versión específica. La fuente sigue activa: esta copia inicial no es una garantía de paridad final.
+
+Se conservan [recibo de DB](receipts/database-initial-copy.json), [backup](receipts/database-backup.json), [Blob](receipts/blob-initial-copy.json), [reescritura](receipts/media-rewrite.json) y [CDN](receipts/media-cdn.json). Los recibos son puntos en el tiempo, no certificaciones del corte.
+
+## Aplicación y trabajos largos
+
+Runtime `pg` con parámetros, pool acotado y TLS/CA RDS; S3 reemplaza Blob; standalone ARM no incluye taller, fuentes privadas ni secretos. AWS rechaza credenciales Blob, bearer Bedrock ajeno y perfiles explícitos. Secrets Manager inyecta únicamente la allowlist en memoria; el contenedor no contiene claves.
+
+La cuenta `mitos_app` hace CRUD de tablas propias, sin CREATE; `mitos_migrator` aplica SQL con digest/advisory lock y `mitos_backup` lee. La tabla de migraciones no admite escritura del rol app.
+
+Los 16 POST largos del admin pasan a una cola RDS propia; el navegador espera su resultado mediante polling autenticado, conservando los formularios. Un contenedor editorial separado, máximo un trabajo, límite 512 MB/0,5 CPU, ejecuta la tarea fuera del proceso web. Un lock de kernel impide superponer una generación y un release. Los resultados ambiguos se marcan para revisión, sin regenerar automáticamente y duplicar créditos. Esto mantiene la variante económica sin añadir capacidad permanente. La cola pasó un probe real autenticado: 401 sin auth, 202 al encolar y éxito del worker al leer RDS y escribir/restaurar una versión S3; sin IA ni consumidor de pagos. [Recibo](receipts/editorial-job.json). El primer probe encontró GetObjectVersion denegado: se corrigió solo el prefijo QA de operations y el nuevo probe pasó. Los trabajos reales de generación siguen sin ejecutarse durante la migración.
+
+Pagos: webhook verifica firma y exige recibo SQS antes de 2xx; worker separado deduplica por lease/hash, con reintentos acotados y DLQ. Falta QA integrada con claves test y la captura/forward durante propagación DNS. Ningún pago real se usa como fixture.
+
+Las páginas comerciales leen configuración en runtime, evitando que un build sin secretos fije una tienda preview en el artefacto. Staging tiene noindex y no carga GTM/GA ni emite mediciones de compra.
+
+## CI/CD
+
+GitHub Actions verifica tests/lint/secret paths/audit, construye ARM64, ejercita codecs/SQLite/SDK/lock reales, exige escaneo ECR fresco sin HIGH/CRITICAL y publica estáticos por SHA. OIDC no emplea llaves AWS permanentes.
+
+Tras el corte, el build invoca únicamente el documento `mitos-colombia-snapshot` del host propio. El script exige el archivo local de aceptación y una release activa sana, exporta solo catálogo/comentarios aprobados y publica dos objetos inmutables antes de cambiar un manifest atómico. No exporta cuentas, pedidos, contactos ni emails de comentarios.
+
+`MITOS_AWS_BUILD_ENABLED=true`, `MITOS_AWS_CUTOVER_COMPLETE=false`. El snapshot nuevo de ensayo sigue `sourceVerified=false`. No se modifica esa marca ni el gate para forzar un release.
+
+Deploy valida SHA/digest/migración, memoria, candidato/readiness, proxy y smoke público. Rollback recupera primero el predecesor sano y restaura ambos workers. Los ensayos de CLI simuladas cubren fallos de proxy, smoke, workers y recibo, reintento y predecesor irrecuperable. El primer cambio real de staging falló al comprobar identidad inmediatamente tras reload y recuperó el upstream anterior; el reintento con espera acotada pasó. Producción incorpora esa espera. El rollback del despliegue público permanece pendiente del corte.
+
+La imagen inicial corregida pasó ARM y ECR 0 HIGH/CRITICAL en [CI](https://github.com/alejingutierrez/mitos_colombia/actions/runs/36900023764); su recibo [prepared-image.json](receipts/prepared-image.json) la mantiene no aceptada. La imagen Debian anterior falló por vulnerabilidades y nunca se liberó; [first-image-scan.json](receipts/first-image-scan.json). La imagen `08ee0eba5d2a5b1adccae2ed8dff0f9bcccd4bd6` pasó ARM, codecs y ECR 0 HIGH/CRITICAL en [CI](https://github.com/alejingutierrez/mitos_colombia/actions/runs/36924001336); está en staging como sourceVerified=false. La continuación `45bedb83c8fbfb73991af92eafaa6edf3bff2748` pasó checks y ARM/ECR 0 HIGH/CRITICAL en [CI](https://github.com/alejingutierrez/mitos_colombia/actions/runs/36932222743), y se desplegó en staging. [Recibo](receipts/stage-45bed.json). Sigue sin aceptación pública.
+
+## Secretos y pasos externos
+
+Las variables Vercel Config necesarias se recuperaron por ID/allowlist y se trasladaron directamente en memoria, sin un dump global a texto plano. Se vincularon credenciales locales de DB/Blob al deployment vigente. El runtime AWS ya contiene configuración parcial, POSTGRES propio y token worker; no está vacío.
+
+Vercel Secret no permite recuperar valores después de guardarlos: [contrato oficial](https://vercel.com/docs/environment-variables/sensitive-environment-variables). No se creó un endpoint de extracción en producción. La tienda actual vende a COP 119.900 y checkoutReady=true. Tras inicio de sesión del titular en Bold, se copiaron los cuatro valores existentes de Botón de pagos, producción y pruebas; no se generaron ni rotaron claves. La aprobación específica permitió copiar configuración y datos comerciales publicados a runtime, y sólo claves/config de captura al inbox. El readback pasó y la copia temporal de claves se eliminó. Los tres flags de producción nunca se habilitaron y providerQaPassed=false. Durante la QA posterior, el runtime y el inbox usan temporalmente test con readiness de pruebas, exclusivamente en staging restringido; hay versiones de recuperación de producción cerrada. [Recibo](receipts/commerce-binding.json).
+
+La primera copia de configuración comercial no se ejecutó por falta de aprobación específica; el titular la autorizó después y la copia descrita arriba pasó. Nunca se infieren flags de pagos listos a partir de la tienda publicada.
+
+El DNS está migrado y [su recibo](receipts/domain-delegation.json) diferencia delegación, registrador y origen. El titular autorizó desactivar temporalmente privacidad en GoDaddy y solicitar el traslado por USD 16 más impuestos, máximo USD 20, manteniendo renovación a USD 16/año. La operación `7b0a129f-eeec-45b5-9dce-f703ed362f84` terminó SUCCESSFUL; se aprobó la salida en GoDaddy. AWS confirma privacidad, renovación automática, bloqueo y los mismos cuatro NS; vencimiento 31 de enero de 2028 UTC. EPP/contactos no están en el recibo público. [Traslado](receipts/domain-transfer.json). Precio AWS consultado para `.com`: USD 16 por traslado y USD 16/año de renovación; el traslado agrega un año según [AWS](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53-expiration.html).
+
+## Taller, recuperación y costos
+
+Se archivaron 39.078 archivos/17.914.015.376 bytes; 66 aliases resueltos. Cinco restauraciones por versión/hash y una edición Bachué completa de 23 archivos/19.734.577 bytes pasaron, sin sobrescribir ni regenerar. [Recibos](receipts/edition-restore.json). Se preservaron además las 100 ramas/151 referencias en un bundle privado de 3.928.169.449 bytes: la copia filtra historial de .env/settings locales, conserva mapas original/restaurado y no reescribe el repo original. [Recibo Git](receipts/git-knowledge.json). La restauración completa desde su versión S3 pasó el SHA del bundle, las 151 referencias/100 ramas y git fsck en una copia nueva. [Restauración Git](receipts/git-restore.json). Se verificaron 16.672 archivos/17.615.054.369 bytes de cambios y material pagado en los 15 worktrees, incluyendo videos, con manifests privados de archivos/deleciones y versiones; los 73 paths excluidos permanecen fuera por credenciales/symlinks; los 66 aliases del archivo inicial conservan su mapa de recuperación. [Overlays](receipts/worktree-overlays.json). Cinco archivos completos recuperados en una carpeta nueva —código pendiente, freeze, video pagado e imágenes de dos worktrees— pasaron versión y SHA (35.572.351 bytes), sin escribir el origen. [Restauración de overlays](receipts/worktree-overlay-restore.json). Es una copia por archivo con tiempos registrados; el taller mutable necesita un delta final.
+
+122 imports pg del taller pasan por un adaptador que conserva comportamiento legacy y exige la RDS/rol propios con CA/servername verificados en AWS; checks de medios aceptan S3 y ya no exigen token Blob. Se retiró el cliente Neon HTTP restante del lint de actas. `node scripts/aws/workshop.mjs read scripts/aws/workshop-check.mjs` pasó por túnel SSM: mitos_backup, 596 mitos, TLS y lectura S3. El dump de censo devolvió los 41 muiscas completos. [Recibo](receipts/workshop-read.json). `workshop.mjs write` exige el recibo privado cutover/accepted.json; no se habilita antes del writer único. Credenciales permanecen en memoria; el seed destructivo no es admitido por este wrapper.
+
+El hosting conserva el escenario económico de USD 60–80/mes y USD 5–15 temporales en meses con capacidad de release. IA, imágenes, voz, tokens y créditos están excluidos. No se añaden NAT, ALB, Redis ni standby permanentes. Durante la migración coexiste el origen; los recursos ya creados generan cargos.
+
+Se corrigió también el origen de autenticación en staging: solo se admite su Origin cuando el marcador sobrescrito por CloudFront confirma staging; www no puede habilitarlo por un header del cliente. La integración real pasó registro/login/logout, cookie Secure/HttpOnly/SameSite, sesión revocada, CSRF y origen ajeno 403. La cuenta ficticia .invalid se eliminó; no hubo correos ni pagos. [Recibo](receipts/stage-auth.json).
+
+La QA real adicional confirmó AVIF 200/Hit (incluso con auth/cookie sintéticos) y WebP 200 separado. Un primer WebP dio 502 transitorio durante propagación; se conserva esa limitación en [el recibo](receipts/image-cache.json). Lectura en navegador a 390 px: imagen cargada, sin overflow ni scripts GA/GTM; la captura de pantalla falló en la herramienta, por lo que [el recibo](receipts/browser-mobile.json) acredita DOM y carga, no una revisión visual completa.
+
+La QA de edición detectó que el PUT persistía pero el HTML conservaba el título anterior: el adaptador omitía x-next-cache-tags del APP_PAGE. La corrección pasó build ARM/ECR y el ensayo real en a8c35: crear, leer, editar y ver el título nuevo, eliminar el fixture y recibir 404. [Recibo de edición](receipts/stage-edit.json). Se comprobaron 17 rutas/API, 18 estáticos, HTML y RSC separados; mediana TTFB de 138 ms desde una sola ubicación de operador. [Recibo de lectura](receipts/stage-routes.json). Esto no sustituye una prueba de capacidad ni un corte DNS.
+
+El cierre requiere: QA de pagos test/configuración completa, rollback público, snapshot/delta bajo freeze, un único writer, captura de callbacks durante propagación, corte www/apex, smoke público, observación y retiro del origen mediante allowlist. Ningún estado de staging sustituye ese cierre.
+
+
+## Continuación: observabilidad y primer corte
+
+El servicio de salud del host publica cinco métricas cada cinco minutos con identidad AWS/host y namespace propios. Once alarmas vigilan memoria, disco, readiness, contenedores, certificado, créditos EC2/RDS, memoria/disco RDS, edad de SQS y DLQ. Están visibles en CloudWatch; no se configuró envío de notificaciones. [Recibo](receipts/observability.json). Los nuevos comandos acotan los logs Docker a tres archivos de 10 MB por contenedor; se aplican al crear el siguiente contenedor.
+
+RDS mostró memoria libre de aproximadamente 87 MB y swap creciente con unas dos conexiones. Tras respaldo y detener sólo QA, se aplicó un parameter group PostgreSQL 17 propio: shared_buffers 64 MiB, max_connections 40 y maintenance_work_mem 32 MiB. Se conservaron DbiResourceId, clase micro, disco y protección contra reemplazo. Los valores efectivos se verificaron por SQL; el staging volvió a responder y la alarma de memoria pasó a OK con lecturas iniciales superiores a 170 MB. [Recibo](receipts/database-memory.json). Es una observación corta; falta la aceptación de carga pública. AWS documenta las interrupciones/reinicio de [parámetros RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.Associating.html).
+
+La preparación del freeze se probó y revirtió sólo en la base DR aislada: bloqueó 21 writers propios, dejó escribir una tabla ajena de ensayo y conservó los 21 hashes. [Recibo](receipts/source-freeze-dr.json). Nunca se ejecutó en Neon. El bridge de origen preparado mantiene el flujo actual con modo sin configurar; durante freeze cierra escrituras y reenvía callbacks con cuerpo/firma exactos, y después del corte apunta a AWS. La dirección IP reenviada se autentica por HMAC con método, ruta/query y tiempo; encabezados falsos no sustituyen la dirección CloudFront. Se publicó por Git desde una rama quirúrgica como `5eda812b19f82d706130a21fca4c4698c6ce58c5`, deployment READY `dpl_HakgT5Q52iXSPmfSXg7XrZGvebrk`; la variable de modo permanece ausente. 17 rutas, 14 estáticos y RSC pasaron, conservando precio, vendedor y checkoutReady=true. [Deployment](receipts/source-git-deployment.json), [QA](receipts/source-inactive-qa.json). Freeze/forward aún no están activados.
+
+Se separó la vía del primer despliegue de los gates de releases posteriores: bootstrap-snapshot verifica por lectura la congelación real y los hashes, esquema y secuencias de las 21 tablas antes de publicar input verificado; prepare-initial prepara un candidato restringido sin DNS ni workers; accept-initial exige pruebas públicas y crea los gates al final. Las CLI simuladas probaron rechazo de snapshot no verificado, callbacks sin QA y rollback de Nginx; el primer corte real sigue pendiente. [Procedimiento y contratos de recibos](CORTE.md).
+
+El ingreso independiente de pagos está preparado y tiene cinco pruebas de firma/cuerpo exacto/durabilidad/alcance. AWS rechazó su reserved concurrency 2 porque la cuenta tiene cuota efectiva 10 y exige mantener 10 sin reservar. El stack fallido y sus función/API/role se retiraron. Quedó un secreto separado administrado y protegido; contiene las claves originales autorizadas. La alternativa posterior usa ese secreto en un contenedor de inbox propio sin DB. La solicitud de cuota continúa CASE_OPENED; no hay función ni API declaradas como activas. [Estado](receipts/payment-ingress-state.json). El inbox separado descrito abajo ya captura en SQS; la transacción de proveedor y el forward real del origen siguen pendientes antes del freeze.
+
+El gate nuevo se comprobó además por lectura contra la producción actual: rechazó Neon sin congelar, verificó el deployment asignado al proyecto y no escribió en ninguna base ni publicó snapshot. [Recibo](receipts/first-snapshot-closed-gate.json). Checks locales: 146 pruebas completas y cuatro pruebas de paridad posteriores al refuerzo de URLs, ESLint y revisión de secretos; la imagen siguiente queda pendiente hasta su CI.
+
+
+La continuación `3b81dcfdd14f9e05811485db7c45b7e270ab8ef1` pasó [CI ARM](https://github.com/alejingutierrez/mitos_colombia/actions/runs/36940699725): 147 pruebas, audit de producción sin vulnerabilidades y ECR completo sin HIGH/CRITICAL. Se desplegó sólo en staging con sourceVerified=false. [Recibo de release y salud](receipts/stage-3b81.json). Se repitieron auth y edición; sus fixtures se eliminaron. Las 17 rutas/18 estáticos/RSC pasaron de nuevo. Una lectura acotada de 60 peticiones, concurrencia cuatro, tuvo cero errores, mediana TTFB 119 ms y p95 353 ms desde el operador; no certifica picos públicos. [Recibo](receipts/stage-small-load.json). Después del ensayo, memoria disponible del host 56 %, disco libre 80 %, web y contenedores sanos; driver local de logs y ausencia de credenciales ECR temporales verificados.
+
+La clave interna HMAC nueva se envió en memoria a runtime propio y a una variable Sensitive/Secret de producción de este proyecto Vercel; no se activó modo; el proxy se publicó después en la rama quirúrgica descrita arriba. Vercel no permite verificar su valor por lectura, así que el recibo acredita presencia y versión AWS, manteniendo sourceRewriteQaPassed=false. [Preparación](receipts/bridge-key-preparation.json). La prueba funcional del bridge permanece obligatoria antes del freeze. Se preservó esa clave HMAC al copiar después las claves Bold y datos comerciales autorizados. La prueba funcional de forward sigue pendiente.
+
+Verificación de servicios vecinos al cierre de esta continuación: RAG App Runner RUNNING y raíz HTTP 200; Cocina raíz HTTP 200. Mitos público sigue respondiendo 200 desde Vercel; Route 53 mantiene apex A y www CNAME de origen. La delegación completada no se confunde con el corte del sitio ni el traslado del registrador. La solicitud de cuota Lambda sigue CASE_OPENED; el registro del dominio ya está en AWS y tiene privacidad/bloqueo activos. El inbox propio sin DB ya está desplegado y probado como captura SQS/DLQ. La cuota Lambda no bloquea esa alternativa; el forward del origen durante freeze permanece pendiente.
+
+## Continuación: inbox propio y checkout sandbox
+
+La imagen `806e61ea9bf0467b2b4ab0fecf7a6869a0fdf9d7` pasó [checks/ARM](https://github.com/alejingutierrez/mitos_colombia/actions/runs/36950395097), ECR COMPLETE sin HIGH/CRITICAL y se desplegó sólo en staging con sourceVerified=false. Web e inbox siguen saludables y sin reinicios. [Recibo](receipts/stage-806e.json).
+
+El inbox corre aparte de web y de RDS en el host existente: 96 MiB, logs locales acotados y blue/green en loopback. Sólo lee su secreto dedicado y escribe SQS; no obtiene el secreto de runtime ni accede a la DB. Nginx dirige únicamente el POST exacto de Bold a ese proceso. WAF conserva reglas administradas/rate limit y PublicEnabled=false; permite ese callback firmado antes del corte, con el resto de la web restringida. La actualización de foundation cambió únicamente el permiso GetSecretValue del role propio para ese secreto; se preservó el ARN media y los recursos vecinos.
+
+La prueba real de captura rechazó firma inválida (400), confirmó recibo durable (200), comparó cuerpo/firma/hash exactos en SQS y eliminó sólo su fixture. [Recibo](receipts/owned-inbox-qa.json). Otra prueba de broker llevó únicamente un mensaje ficticio a la DLQ tras ocho recepciones, acelerando su visibilidad; comprobó el cuerpo/firma y lo eliminó de la DLQ. No sustituye una prueba del worker con un recibo Bold real. [Recibo](receipts/owned-dlq-qa.json).
+
+Se corrigió la configuración de regiones: usa el separador que consume la aplicación y ahora presenta 33 opciones independientes. Los cinco métodos publicados, COP 119.900 y condiciones comerciales se conservaron. El checkout abrió el modal oficial en Modo de pruebas; existe un único pedido ficticio CREATED para completar la simulación. Todavía no hay transacción de proveedor, worker aprobado ni compra GA4 enviada. Los dos caminos de conciliación —callback y polling— comparten una guarda que impide enviar compras GA4 de sandbox. El retorno de test se liga sólo al staging confiable.
+
+La copia final quedó preparada y su plan de sólo lectura confirmó 21 tablas/13 secuencias, sin FK hacia alcance ajeno. No se ejecutó restore ni freeze de origen. La aplicación exige writers del destino detenidos, origen congelado, backups de origen/destino por versión/checksum y excluir únicamente los 21 triggers del freeze al restaurar. [Plan](receipts/final-owned-copy-plan.json). El inventario local previo al corte sigue sin cambios: 39.078 archivos frente al respaldo inicial; aún requiere comprobar el delta de todos los worktrees y Git al cerrar.
+
+La actualización del backup Git previo al corte conserva 101 ramas locales/153 referencias en un bundle privado cifrado y versionado en S3. La recuperación independiente igualó las 153 referencias y pasó `fsck` completo; el repositorio fuente no fue modificado. [Recibo](receipts/precut-git-recovery.json). Los 16 worktrees se volvieron a inventariar: no apareció contenido nuevo o cambiado frente al archivo previo, aunque aún falta el delta congelado final.
+
+Una carga inicial del carrito mostró una imagen vacía. La repetición y la carga sin caché de navegador/CDN/servidor dieron HTTP 200 AVIF y dimensiones naturales válidas para ambas variantes; el proceso mantuvo cero reinicios/OOM. No se cambió código de imágenes ni se atribuye una causa al primer fallo. [Recibo de carga sin caché](receipts/cold-cart-images.json). Debe repetirse la comprobación con el candidato del corte.
+
+
+## Validación real de Bold · 2 de octubre
+
+El titular completó el pago ficticio en el modal oficial de pruebas. Bold confirmó COP 119.900 y el worker propio concilió el pedido como APPROVED al consultar el voucher real; el callback firmado quedó DONE con un intento. El botón oficial «Probar el webhook» entrega metadatos de demostración (importe cero y otros identificadores): la conciliación usa su referencia para consultar el voucher, no confía en esos importes del callback.
+
+El procesador real confirmó repetición idempotente 200 sin modificar pedido/evento, conflicto de identidad 409, firma inválida 400 y autorización interna incorrecta 403. Al variar únicamente el pedido ficticio en COP 1, rechazó el voucher con 503 y conservó RETRY; se restauró el importe en finally. No se reclamó ni envió compra GA4 de sandbox. Se eliminaron sólo el pedido y sus eventos de prueba, conservando los hashes del resto. El worker acotado se detuvo. Las versiones AWSCURRENT volvieron a producción cerrada con readback; el proceso web necesita reiniciar para cargar esa versión. [Recibo del proveedor y limpieza](receipts/provider-sandbox-qa.json).
+
+Las consultas externas con credencial Bold de producción y el servidor debug de GA4 no se ejecutaron: mantienen pendiente su autorización específica. La QA del proveedor en sandbox pasó; no se afirma una compra real, entrega GA4 productiva ni aceptación del corte. Freeze, forward de origen, copia/deltas finales y writer único continúan pendientes.
+
+
+La web de QA se reinició con la versión cerrada de producción y devolvió checkout_not_ready, sin worker de pagos activo ni OOM. Se eliminó su copia temporal privada de callback. El inbox independiente sí quedó listo para capturar callbacks con firma de producción: una firma correcta recibió 200 y cuerpo/firma/hash idénticos en SQS; la firma sandbox fue rechazada 400 y se retiró sólo el fixture. No se llamó a Bold producción ni a GA4 y el checkout sigue cerrado. [Captura productiva propia](receipts/production-callback-capture-qa.json).
+
+El rewrite de medios ahora exige ausencia de los dos gates privados (writer-opened y accepted) y cero conexiones de mitos_app antes de actualizar; el encabezado del proveedor no se usa como prueba de que RDS siga sin writer. La copia final archiva además el SQL canónico de recuperación del freeze junto al dump, por versión/checksum; los triggers del dump fuente necesitan recrear primero esa función para una recuperación del origen.
+
+
+Avance del corte, 2 de octubre de 2026: Neon tiene desde 05:41 UTC los 21 triggers exactos de bloqueo de escrituras; las seis tablas ajenas siguen intactas. El deployment fuente `dpl_F3V1RCnWb77gpyP8snXsF5FYAeZ8` usa modo freeze y conserva catálogo público y callbacks durables en SQS. [Freeze real](receipts/source-live-freeze.json), [forward real](receipts/source-freeze-forward.json).
+
+Los respaldos privados completos de fuente y destino se verificaron por SHA y versión S3 antes del restore transaccional. El restore terminó con igualdad completa de las 21 tablas, incluidos campos privados, sin abrir escritores. Se reescribieron 3.560 referencias en 12 columnas hacia el CDN propio, todas con copia verificada. [Restore](receipts/final-owned-restore.json), [medios](receipts/final-media-rewrite.json).
+
+La paridad calcula en PostgreSQL el hash de cada fila JSONB completa, conservando duplicados y precisión temporal, y compara el hash de sus hashes ordenados. Sólo normaliza el prefijo auditado en columnas de texto y rechaza referencias no clasificadas en otros tipos. La QA SQL real detectó deriva privada, duplicados y microsegundos. El export público pagina los mismos campos permitidos; cuentas/pedidos y dossiers privados nunca entran en el input público. [QA SQL](receipts/server-row-fingerprint-qa.json). Las 159 pruebas y ESLint pasaron.
+
+El delta final del taller conservó y restauró por versiones/checksums 21 archivos nuevos o cambiados, sin modificar freezes ni regenerar piezas pagadas. [Recuperación](receipts/final-workshop-delta-recovery.json). El archivo de medios congelado contiene 5.715 objetos (9.342.481.160 bytes), sin discrepancias entre los dos inventarios finales.
+
+El corte público, la aceptación, los workers definitivos, la continuidad local del taller y el retiro del proveedor previo siguen pendientes. La integración Git de Vercel queda desactivada en la rama AWS para preservar el bridge al fusionar; las publicaciones definitivas son por GitHub Actions con snapshot verificado. Las pruebas opcionales de API de Bold en producción y debug GA4 no se ejecutaron; no se declara validación externa de esos endpoints.
+
+El input inicial verificado se publicó después de doble paridad de esquema, filas y 13 secuencias: snapshot `cde4ba93e480a2ae1cdb522ffdfac401dd8fafc3ccd8a592c5eb2f554d732101`. [Paridad final](receipts/final-frozen-parity.json). Se habilitó readiness de comercio para el candidato restringido, conservando todos los demás valores de la configuración aprobada y el inbox de firma de producción; aún no existe aceptación pública ni escritor activo. [Binding de producción](receipts/production-readiness.json).

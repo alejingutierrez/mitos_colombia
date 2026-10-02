@@ -22,7 +22,7 @@
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
-import pg from "pg";
+import pg from "../../runtime/workshop-postgres.mjs";
 
 const FIELDS = ["mito", "historia", "versiones", "research_notes"];
 /** El relato de una pagina sin fila editorial vive aqui y en ningun otro sitio. */

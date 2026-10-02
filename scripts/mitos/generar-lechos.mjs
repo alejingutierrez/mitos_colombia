@@ -20,8 +20,8 @@
  * barrido busca el corte donde ese escalón es mínimo (bajó de 8,8 dB a 0,1 dB).
  */
 
-import { put } from "@vercel/blob";
-import { sql } from "@vercel/postgres";
+import { put } from "../../runtime/storage.mjs";
+import { sql } from "../../runtime/postgres.mjs";
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import { mkdtemp, rm } from "node:fs/promises";

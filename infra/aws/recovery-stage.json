@@ -1,0 +1,134 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Temporary quarantined Mitos host recovery drill; no public DNS, queues or writer activation",
+  "Parameters": {
+    "SubnetId": {
+      "Type": "AWS::EC2::Subnet::Id"
+    },
+    "SecurityGroupId": {
+      "Type": "AWS::EC2::SecurityGroup::Id"
+    },
+    "InstanceProfile": {
+      "Type": "String"
+    },
+    "Ami": {
+      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+      "Default": "/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-arm64"
+    }
+  },
+  "Resources": {
+    "Web": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "InstanceType": "t4g.small",
+        "ImageId": {
+          "Ref": "Ami"
+        },
+        "IamInstanceProfile": {
+          "Ref": "InstanceProfile"
+        },
+        "SubnetId": {
+          "Ref": "SubnetId"
+        },
+        "SecurityGroupIds": [
+          {
+            "Ref": "SecurityGroupId"
+          }
+        ],
+        "MetadataOptions": {
+          "HttpTokens": "required",
+          "HttpPutResponseHopLimit": 2,
+          "InstanceMetadataTags": "enabled"
+        },
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/xvda",
+            "Ebs": {
+              "VolumeSize": 30,
+              "VolumeType": "gp3",
+              "Encrypted": true,
+              "DeleteOnTermination": true
+            }
+          }
+        ],
+        "CreditSpecification": {
+          "CPUCredits": "standard"
+        },
+        "UserData": {
+          "Fn::Base64": "#!/bin/bash\nset -euo pipefail\ndnf install -y docker nginx postgresql17 jq\nsystemctl enable --now docker\ninstall -d -m 0750 /opt/mitos /var/lib/mitos/cache /var/lib/mitos/releases\ncat > /etc/nginx/conf.d/mitos-maintenance.conf <<'CONFIG'\nserver { listen 127.0.0.1:3080; location / { return 503; } }\nCONFIG\nsystemctl enable --now nginx\n"
+        },
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "Environment",
+            "Value": "recovery-qa"
+          },
+          {
+            "Key": "ManagedBy",
+            "Value": "CloudFormation"
+          },
+          {
+            "Key": "Owner",
+            "Value": "alegut"
+          },
+          {
+            "Key": "CostCenter",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "Name",
+            "Value": "mitos-colombia-recovery-qa-20261001"
+          },
+          {
+            "Key": "Temporary",
+            "Value": "delete-after-recovery-proof"
+          }
+        ]
+      }
+    },
+    "Address": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc",
+        "Tags": [
+          {
+            "Key": "Project",
+            "Value": "mitos-colombia"
+          },
+          {
+            "Key": "Environment",
+            "Value": "recovery-qa"
+          },
+          {
+            "Key": "Temporary",
+            "Value": "delete-after-recovery-proof"
+          }
+        ]
+      }
+    },
+    "AddressAssociation": {
+      "Type": "AWS::EC2::EIPAssociation",
+      "Properties": {
+        "InstanceId": {
+          "Ref": "Web"
+        },
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "Address",
+            "AllocationId"
+          ]
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "InstanceId": {
+      "Value": {
+        "Ref": "Web"
+      }
+    }
+  }
+}

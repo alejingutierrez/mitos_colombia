@@ -1,10 +1,11 @@
+import { maybeQueueAdminJob } from "../../../../../runtime/admin-jobs.mjs";
 import { createHash, randomUUID } from "node:crypto";
 import { execFile } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { promisify } from "node:util";
 
-import { list } from "@vercel/blob";
+import { list, storageConfigured } from "../../../../../runtime/storage.mjs";
 import { NextResponse } from "next/server";
 
 import { getSqlClient, isPostgres } from "../../../../lib/db.js";
@@ -227,7 +228,7 @@ async function loadDatabaseInventory() {
 }
 
 async function listAllBlobs(prefix) {
-  if (!process.env.BLOB_READ_WRITE_TOKEN) return [];
+  if (!storageConfigured()) return [];
   const blobs = [];
   let cursor;
   do {
@@ -877,6 +878,8 @@ export async function GET(request) {
 }
 
 export async function POST(request) {
+  const queued = await maybeQueueAdminJob(request);
+  if (queued) return queued;
   if (!LOCAL_ONLY) return disabledResponse();
   if (!checkAuth(request)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

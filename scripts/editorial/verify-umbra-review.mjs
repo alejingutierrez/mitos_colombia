@@ -2,7 +2,7 @@ import path from "node:path";
 import process from "node:process";
 
 import dotenv from "dotenv";
-import pg from "pg";
+import pg from "../../runtime/workshop-postgres.mjs";
 
 import { umbraMedia } from "../../editorial/umbra/media.mjs";
 import { umbraMythsBySlug } from "../../editorial/umbra/records.mjs";

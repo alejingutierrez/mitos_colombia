@@ -1,5 +1,6 @@
+import { maybeQueueAdminJob } from "../../../../../runtime/admin-jobs.mjs";
 import { NextResponse } from "next/server";
-import OpenAI from "openai";
+import { createLazyOpenAI } from "../../../../../runtime/openai.mjs";
 import {
   getSqlClient,
   getSqliteDb,
@@ -10,7 +11,7 @@ import {
 export const runtime = "nodejs";
 export const maxDuration = 300;
 
-const openai = new OpenAI({
+const openai = createLazyOpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
@@ -64,6 +65,7 @@ function truncateText(text, max = 900) {
 }
 
 async function ensureDescriptionColumn() {
+  if (process.env.MITOS_RUNTIME === "aws") return;
   if (isPostgres()) {
     const db = getSqlClient();
     await db`ALTER TABLE tags ADD COLUMN IF NOT EXISTS description TEXT`;
@@ -383,6 +385,8 @@ export async function GET(request) {
 }
 
 export async function POST(request) {
+  const queued = await maybeQueueAdminJob(request);
+  if (queued) return queued;
   try {
     if (!checkAuth(request)) {
       return NextResponse.json(

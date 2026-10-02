@@ -63,6 +63,10 @@ la imagen y resuelve contraste con composición, ubicación y color de texto;
 la sombra es un apoyo. Revisa geometría, contraste y lectura visual en móvil
 antes de exportar. Cada preparación conserva un `freeze.json` nuevo.
 
+## Operación AWS vigente · 2026-10-02
+
+La web y el dominio viven en AWS `907264907058`; RDS es el único writer y Neon permanece congelado. No restaures la copia inicial ni uses Neon/Blob para publicar. El taller carga su configuración propia desde Secrets Manager mediante `runtime/workshop-env.mjs` y el túnel SSM TLS local 15433. Usa los adaptadores locales de Postgres y S3; no ejecutes utilidades CommonJS antiguas con conexiones directas hasta migrar su conexión. Los freezes y sus URLs históricas se conservan: el runtime resuelve GET/HEAD del Blob auditado al CDN propio. Los presupuestos de infraestructura excluyen IA.
+
 ## Operación
 
 ```bash
@@ -72,10 +76,10 @@ npm run mitos:tanda          # emitir una tanda
 npm run mitos:test:biblia    # pruebas del pipeline visual
 ```
 
-- **Despliegue por Git.** `vercel --prod` sube el disco, no `main`, y puede
+- **Despliegue por Git a AWS.** `vercel --prod` sube el disco, no `main`, y puede
   revertir lo que la integración ya publicó.
-- **Secretos fuera del repo.** `.env` local o variables en Vercel. `POSTGRES_URL`
-  contra Neon.
+- **Secretos fuera del repo.** configuración privada local o Secrets Manager. `POSTGRES_URL`
+  apunta al RDS propio; no cargar credenciales antiguas de Neon.
 - **`npm run db:import:pg` NO es rutina: es un seed DESTRUCTIVO de arranque.**
   Vacía y reconstruye `myths`, `regions`, `communities`, `tags`, `myth_tags` y
   `myth_keywords` desde `docs/mitos_seo_actualizados.xlsx` —una foto de enero de

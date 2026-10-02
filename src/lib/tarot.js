@@ -100,6 +100,7 @@ function buildBasePrompt(card) {
 }
 
 async function ensureTarotTable() {
+  if (process.env.MITOS_RUNTIME === "aws" || process.env.MITOS_SNAPSHOT_BUILD === "1") return;
   if (isPostgres()) {
     const sql = getSqlClient();
     await sql.query(`
@@ -338,6 +339,7 @@ async function seedTarotCards() {
 }
 
 async function ensureTarotSeeded() {
+  if (process.env.MITOS_RUNTIME === "aws" || process.env.MITOS_SNAPSHOT_BUILD === "1") return;
   await ensureTarotTable();
   await seedTarotCards();
 }

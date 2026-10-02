@@ -1,5 +1,7 @@
 "use client";
 
+import { adminFetch as fetch } from "../../../lib/admin-fetch.js";
+
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";

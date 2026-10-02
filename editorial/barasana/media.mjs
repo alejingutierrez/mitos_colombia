@@ -16,9 +16,9 @@ function reused(pair, reusedFrom) {
 export const barasanaMedia = {
   "la-luna": {
     horizontal:
-      "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/mitos/la-luna-1784764382512.jpg",
+      "https://media.mitosdecolombia.com/blob/mitos/la-luna-1784764382512.jpg",
     vertical:
-      "https://c5htob7za0dl3b5x.public.blob.vercel-storage.com/vertical/myth/la-luna-1784811845823.jpg",
+      "https://media.mitosdecolombia.com/blob/vertical/myth/la-luna-1784811845823.jpg",
     reusedFrom: "barasana/la-luna",
     ...piraParanaApproximate,
   },

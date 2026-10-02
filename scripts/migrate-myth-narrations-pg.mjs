@@ -8,7 +8,7 @@
  * Idempotente: sólo CREATE ... IF NOT EXISTS. No toca ninguna tabla existente.
  */
 
-import { sql } from "@vercel/postgres";
+import { sql } from "../runtime/postgres.mjs";
 import dotenv from "dotenv";
 import { dirname, join } from "node:path";
 import process from "node:process";
