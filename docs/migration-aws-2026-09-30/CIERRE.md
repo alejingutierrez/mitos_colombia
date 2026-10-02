@@ -18,6 +18,8 @@ La web fue aceptada en AWS el 2026-10-02 a las 16:36 UTC. RDS es el único write
 
 Los scripts existentes usan los adaptadores `runtime/postgres.mjs`, `runtime/workshop-postgres.mjs` y `runtime/storage.mjs`. Las ediciones históricas conservan sus freezes: sus GET/HEAD al host Blob auditado se resuelven a la copia exacta en el CDN propio. No se reescribe material pagado. Para scripts CommonJS históricos, migrar su conexión al adaptador antes de usarlos; el seed destructivo nunca es parte de una publicación.
 
+Los 14 talleres conservados pasaron lectura TLS con rol `mitos_app`, 596 mitos y los 41 muiscas; cada uno insertó un fixture y revirtió la transacción. S3/CDN pasó escritura, lectura por bytes y retiro versionado de una muestra. Un asset histórico leyó su hash exacto desde AWS usando la URL conservada del freeze. El túnel mantiene actividad por SELECT 1 para evitar expiración por inactividad. Recibo: `receipts/local-workshops-qa.json`.
+
 ## Comprobaciones de cierre todavía pendientes
 
-Primer release automático desde main y refresco del snapshot RDS; recuperación de imagen sobre la misma RDS; evidencia final del taller y reanudación de los dos asistentes pausados; propagación DNS completa y retiro por allowlist de las dependencias Mitos anteriores. No borrar el proyecto Neon compartido ni sus tablas ajenas.
+Primer release automático desde main y refresco del snapshot RDS; recuperación de imagen sobre la misma RDS; reanudación de los dos asistentes pausados, pendiente de autorización específica por revisión automática; propagación DNS completa y retiro por allowlist de las dependencias Mitos anteriores. No borrar el proyecto Neon compartido ni sus tablas ajenas.
