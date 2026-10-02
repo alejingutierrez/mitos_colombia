@@ -32,6 +32,6 @@ sleep 5
 for name in mitos-admin-worker mitos-payment-worker;do docker inspect "$name" | jq -e --arg image "$image" '.[0].State.Running==true and .[0].RestartCount==0 and .[0].Config.Image==$image' >/dev/null;done
 jq '{sha,digest,container,port}' "$prepared" > /var/lib/mitos/active.json.tmp
 mv /var/lib/mitos/active.json.tmp /var/lib/mitos/active.json
-jq -n --arg at "$(date -u +%FT%TZ)" --arg sha "$sha" --arg digest "$digest" '{kind:"migration-accepted",at:$at,sha:$sha,digest:$digest,writer:"rds",productionAccepted:true}' > /var/lib/mitos/initial/accepted.json
+jq -n --arg at "$(date -u +%FT%TZ)" --arg sha "$sha" --arg digest "$digest" '{kind:"migration-accepted",account:"907264907058",at:$at,sha:$sha,digest:$digest,writer:"rds",productionAccepted:true}' > /var/lib/mitos/initial/accepted.json
 aws s3 cp /var/lib/mitos/initial/accepted.json s3://mitos-colombia-907264907058-operations/cutover/accepted.json --only-show-errors
 install -m 0640 /var/lib/mitos/initial/accepted.json /opt/mitos/cutover-complete

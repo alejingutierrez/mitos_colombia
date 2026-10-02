@@ -1,3 +1,4 @@
+import './workshop-env.mjs';
 import pg from 'pg';
 import { readFileSync } from 'node:fs';
 

@@ -1,3 +1,4 @@
+import './workshop-env.mjs';
 import { randomBytes } from 'node:crypto';
 import { S3Client, PutObjectCommand, DeleteObjectCommand, ListObjectsV2Command } from '@aws-sdk/client-s3';
 

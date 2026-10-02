@@ -4,6 +4,10 @@
 dónde está cada cosa y en qué punto va cada comunidad. Si algo de aquí ya no es
 cierto, corrígelo aquí primero.
 
+## Infraestructura propia de AWS · 2026-10-02
+
+Web y registro del dominio están en la cuenta `907264907058`. RDS es el único writer; imágenes y audio usan S3/CloudFront; pagos usan ingreso firmado, SQS y worker propios. Aceptación pública: `docs/migration-aws-2026-09-30/receipts/production-accepted.json`. Nunca ejecutar de nuevo el restore inicial ni descongelar Neon. El taller local conserva sus trabajos y freezes; su runtime obtiene la configuración propia y usa túnel SSM TLS. Estado operativo y pendientes de cierre: `docs/migration-aws-2026-09-30/CIERRE.md`.
+
 ## Qué es esto
 
 Catálogo web de mitos de Colombia (Next.js 16, en producción en

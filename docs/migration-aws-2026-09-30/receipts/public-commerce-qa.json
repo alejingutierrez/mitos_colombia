@@ -1,0 +1,71 @@
+{
+  "kind": "public-production-checkout-preparation-qa",
+  "at": "2026-10-02T16:32:07.667Z",
+  "sha": "7b5757a234c042dd5cef282f20375d9eeb9c311c",
+  "checks": {
+    "routes": [
+      {
+        "path": "/",
+        "status": 200,
+        "cdnHeader": "Miss from cloudfront",
+        "cacheControl": "s-maxage=1800, stale-while-revalidate=31534200"
+      },
+      {
+        "path": "/mitos",
+        "status": 200,
+        "cdnHeader": "Miss from cloudfront",
+        "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/comunidades",
+        "status": 200,
+        "cdnHeader": "Miss from cloudfront",
+        "cacheControl": "s-maxage=3600, stale-while-revalidate=31532400"
+      },
+      {
+        "path": "/regiones",
+        "status": 200,
+        "cdnHeader": "Miss from cloudfront",
+        "cacheControl": "s-maxage=3600, stale-while-revalidate=31532400"
+      },
+      {
+        "path": "/mapa",
+        "status": 200,
+        "cdnHeader": "Miss from cloudfront",
+        "cacheControl": "s-maxage=31536000"
+      },
+      {
+        "path": "/tarot/comprar",
+        "status": 200,
+        "cdnHeader": "Miss from cloudfront",
+        "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/tarot/carrito",
+        "status": 200,
+        "cdnHeader": "Miss from cloudfront",
+        "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/tarot/checkout",
+        "status": 200,
+        "cdnHeader": "Miss from cloudfront",
+        "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+      }
+    ],
+    "checkoutRendered": true,
+    "invalidCheckoutStatus": 400,
+    "preparedStatus": 201,
+    "correctPrice": true,
+    "productionIdentity": true,
+    "verifiedSignature": true,
+    "canonicalReturn": true,
+    "noStore": true,
+    "ownedRdsOrder": true,
+    "onlyOwnFixtureRemoved": true
+  },
+  "productionProviderCalled": false,
+  "realCharge": false,
+  "productionPurchaseSent": false,
+  "customerDataUsed": false
+}
