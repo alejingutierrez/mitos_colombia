@@ -53,7 +53,7 @@ server {
     location ^~ /_next/static/ {
         limit_except GET { deny all; }
         resolver 169.254.169.253 valid=300s ipv6=off;
-        set $mitos_legacy_static https://media.mitosdecolombia.com/legacy-static;
+        set $mitos_legacy_static https://media.mitosdecolombia.com/legacy-static/5eda812b19f82d706130a21fca4c4698c6ce58c5;
         proxy_pass $mitos_legacy_static$request_uri;
         proxy_set_header Host media.mitosdecolombia.com;
         proxy_ssl_server_name on;
