@@ -56,12 +56,17 @@ try{
   const rawToc=await tool('pg_restore',['--list',sourceDump],{},true),guards=rawToc.split('\n').filter(l=>l.includes(' TRIGGER ')&&l.includes(' mitos_cutover_write_guard_v1 '));if(guards.length!==21)throw Error('Expected exactly the 21 own source freeze TOC entries');
   const safeToc=rawToc.split('\n').filter(l=>!guards.includes(l)).join('\n');await writeFile(toc,safeToc,{flag:'wx',mode:0o600});
   const sourceBackup=await archive(sourceDump,'database/final-'+stamp+'/source-owned-with-freeze.dump');
+  const freezeSql=await readFile('infra/aws/source/freeze.sql','utf8'),functionEnd=freezeSql.indexOf('\nDO $$');
+  if(functionEnd<0)throw Error('Canonical source freeze recovery definition missing');
+  const freezeRecoveryPath='/private/tmp/mitos-source-freeze-recovery-'+stamp+'.sql';
+  await writeFile(freezeRecoveryPath,freezeSql.slice(0,functionEnd)+'\nCOMMIT;\n',{flag:'wx',mode:0o600});
+  const sourceFreezeRecovery=await archive(freezeRecoveryPath,'database/final-'+stamp+'/source-freeze-schema-function.sql');
   await source.query('COMMIT');await target.query('COMMIT');await assertSourceFrozen(source);
   await assertDestinationInactive();
   await tool('pg_restore',['--clean','--if-exists','--no-owner','--no-acl','--exit-on-error','--single-transaction','--use-list='+toc,'--dbname=mitos',sourceDump],targetEnv);
   for(const t of OWNED_TABLES){await target.query('GRANT SELECT,INSERT,UPDATE,DELETE ON public.'+q(t)+' TO mitos_app');await target.query('GRANT SELECT ON public.'+q(t)+' TO mitos_backup');}
   for(const s of sourceSequences){await target.query('GRANT USAGE,SELECT ON public.'+q(s)+' TO mitos_app');await target.query('GRANT SELECT ON public.'+q(s)+' TO mitos_backup');}
   const after=await fingerprints(target);if(JSON.stringify(canonical(beforeSource,false))!==JSON.stringify(canonical(after,false)))throw Error('Raw source restore parity failed');
-  const receipt={at:new Date().toISOString(),kind:'final-owned-database-restore',binding,checks,tables:after,targetBeforeRestore:beforeTarget,targetBackup,sourceBackup,excludedFreezeTriggers:21,writer:'source-frozen',targetWriterActive:false,productionAccepted:false,mediaRewritePending:true};await writeFile(receiptPath,JSON.stringify(receipt,null,2)+'\n',{mode:0o600});console.log(JSON.stringify({kind:receipt.kind,tables:21,excludedFreezeTriggers:21,sourceBackupSha:sourceBackup.sha256,targetBackupSha:targetBackup.sha256,productionAccepted:false}));
+  const receipt={at:new Date().toISOString(),kind:'final-owned-database-restore',binding,checks,tables:after,targetBeforeRestore:beforeTarget,targetBackup,sourceBackup,sourceFreezeRecovery,excludedFreezeTriggers:21,writer:'source-frozen',targetWriterActive:false,productionAccepted:false,mediaRewritePending:true};await writeFile(receiptPath,JSON.stringify(receipt,null,2)+'\n',{mode:0o600});console.log(JSON.stringify({kind:receipt.kind,tables:21,excludedFreezeTriggers:21,sourceBackupSha:sourceBackup.sha256,targetBackupSha:targetBackup.sha256,productionAccepted:false}));
  }
 }finally{await source.query('ROLLBACK').catch(()=>{});await target.query('ROLLBACK').catch(()=>{});await source.end();await target.end();}

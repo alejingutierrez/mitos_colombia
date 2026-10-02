@@ -1,6 +1,6 @@
 # Implementación y migración AWS de Mitos
 
-Actualizado: 1 de octubre de 2026. Rama `codex/aws-migration`; base inicial `582d4b4f653c5e983fb39bfab537c4f768a37bb4`; origen vigente con bridge inactivo `5eda812b19f82d706130a21fca4c4698c6ce58c5`. Se trabaja en un worktree aislado; el home y el taller locales no se modifican.
+Actualizado: 2 de octubre de 2026. Rama `codex/aws-migration`; base inicial `582d4b4f653c5e983fb39bfab537c4f768a37bb4`; origen vigente con bridge inactivo `5eda812b19f82d706130a21fca4c4698c6ce58c5`. Se trabaja en un worktree aislado; el home y el taller locales no se modifican.
 
 **Migración en curso. El DNS autoritativo ya está en AWS. La web pública y las ventas continúan en Vercel; Neon sigue siendo el writer.** El nuevo sitio está en staging restringido. No se ejecutó el seed Excel, ninguna campaña de IA ni retiro del origen.
 
@@ -135,3 +135,17 @@ La copia final quedó preparada y su plan de sólo lectura confirmó 21 tablas/1
 La actualización del backup Git previo al corte conserva 101 ramas locales/153 referencias en un bundle privado cifrado y versionado en S3. La recuperación independiente igualó las 153 referencias y pasó `fsck` completo; el repositorio fuente no fue modificado. [Recibo](receipts/precut-git-recovery.json). Los 16 worktrees se volvieron a inventariar: no apareció contenido nuevo o cambiado frente al archivo previo, aunque aún falta el delta congelado final.
 
 Una carga inicial del carrito mostró una imagen vacía. La repetición y la carga sin caché de navegador/CDN/servidor dieron HTTP 200 AVIF y dimensiones naturales válidas para ambas variantes; el proceso mantuvo cero reinicios/OOM. No se cambió código de imágenes ni se atribuye una causa al primer fallo. [Recibo de carga sin caché](receipts/cold-cart-images.json). Debe repetirse la comprobación con el candidato del corte.
+
+
+## Validación real de Bold · 2 de octubre
+
+El titular completó el pago ficticio en el modal oficial de pruebas. Bold confirmó COP 119.900 y el worker propio concilió el pedido como APPROVED al consultar el voucher real; el callback firmado quedó DONE con un intento. El botón oficial «Probar el webhook» entrega metadatos de demostración (importe cero y otros identificadores): la conciliación usa su referencia para consultar el voucher, no confía en esos importes del callback.
+
+El procesador real confirmó repetición idempotente 200 sin modificar pedido/evento, conflicto de identidad 409, firma inválida 400 y autorización interna incorrecta 403. Al variar únicamente el pedido ficticio en COP 1, rechazó el voucher con 503 y conservó RETRY; se restauró el importe en finally. No se reclamó ni envió compra GA4 de sandbox. Se eliminaron sólo el pedido y sus eventos de prueba, conservando los hashes del resto. El worker acotado se detuvo. Las versiones AWSCURRENT volvieron a producción cerrada con readback; el proceso web necesita reiniciar para cargar esa versión. [Recibo del proveedor y limpieza](receipts/provider-sandbox-qa.json).
+
+Las consultas externas con credencial Bold de producción y el servidor debug de GA4 no se ejecutaron: mantienen pendiente su autorización específica. La QA del proveedor en sandbox pasó; no se afirma una compra real, entrega GA4 productiva ni aceptación del corte. Freeze, forward de origen, copia/deltas finales y writer único continúan pendientes.
+
+
+La web de QA se reinició con la versión cerrada de producción y devolvió checkout_not_ready, sin worker de pagos activo ni OOM. Se eliminó su copia temporal privada de callback. El inbox independiente sí quedó listo para capturar callbacks con firma de producción: una firma correcta recibió 200 y cuerpo/firma/hash idénticos en SQS; la firma sandbox fue rechazada 400 y se retiró sólo el fixture. No se llamó a Bold producción ni a GA4 y el checkout sigue cerrado. [Captura productiva propia](receipts/production-callback-capture-qa.json).
+
+El rewrite de medios ahora exige ausencia de los dos gates privados (writer-opened y accepted) y cero conexiones de mitos_app antes de actualizar; el encabezado del proveedor no se usa como prueba de que RDS siga sin writer. La copia final archiva además el SQL canónico de recuperación del freeze junto al dump, por versión/checksum; los triggers del dump fuente necesitan recrear primero esa función para una recuperación del origen.

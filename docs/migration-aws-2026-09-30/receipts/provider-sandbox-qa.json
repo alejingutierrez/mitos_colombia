@@ -1,0 +1,81 @@
+{
+  "kind": "actual-bold-provider-sandbox-qa",
+  "at": "2026-10-02T05:11:20.010Z",
+  "sha": "806e61ea9bf0467b2b4ab0fecf7a6869a0fdf9d7",
+  "environment": "test",
+  "userCompletedOfficialCheckout": true,
+  "approvedAt": "2026-10-02T03:07:34.401Z",
+  "orderApproved": true,
+  "unitPriceCop": 119900,
+  "quantity": 1,
+  "amountInCents": 11990000,
+  "currency": "COP",
+  "actualCallbackCapturedInOwnSqs": true,
+  "signatureAndExactBodyVerified": true,
+  "actualProviderVoucherFetched": true,
+  "eventCompleted": true,
+  "eventAttempts": 1,
+  "callbackTestMetadataNote": "El callback de Probar el webhook tiene importe cero e identificadores de demostracion; la referencia liga el pedido y la conciliacion consulta el voucher real de Bold.",
+  "workerStartCommand": "253fd1de-a915-4300-abf5-195284a23c89",
+  "workerStopCommand": "917f260d-bce3-498b-ab12-d730dd1a7655",
+  "processorQaCommand": "fd5ed07b-9c40-42c2-82a3-09fbeaf05bf6",
+  "processorCases": {
+    "duplicateStatus": 200,
+    "duplicateDidNotUpdateOrderOrEvent": true,
+    "eventIdentityConflictStatus": 409,
+    "invalidSignatureStatus": 400,
+    "unauthorizedStatus": 403
+  },
+  "amountMismatchQa": {
+    "at": "2026-10-02T04:55:52.011Z",
+    "kind": "provider-receipt-amount-mismatch-qa",
+    "commandId": "de3bc17c-d6bd-41b1-8f12-26c12f498f59",
+    "differenceCop": 1,
+    "actualProviderReceiptUsed": true,
+    "httpStatus": 503,
+    "eventRetainedAsRetry": true,
+    "duplicateOrderAndEventUnchanged": true,
+    "testAnalyticsUnclaimed": true,
+    "testAnalyticsUnsent": true,
+    "productionAccepted": false
+  },
+  "cleanup": {
+    "at": "2026-10-02T05:05:53.264Z",
+    "kind": "completed-sandbox-fixture-cleanup",
+    "removedOrders": 1,
+    "removedEvents": 1,
+    "negativeEventAlreadyRemoved": true,
+    "otherOrdersPreserved": true,
+    "otherEventsPreserved": true,
+    "remainingOrders": 1,
+    "remainingEvents": 0,
+    "productionPurchaseSent": false,
+    "productionAccepted": false
+  },
+  "productionConfigRestored": {
+    "at": "2026-10-02T05:11:20.010Z",
+    "kind": "temporary-sandbox-secret-versions-closed",
+    "restored": [
+      {
+        "secret": "mitos-colombia/prod/bold-inbox",
+        "version": "a4779f8d-65a8-4ef1-b027-654b82baa97b",
+        "readbackVerified": true
+      },
+      {
+        "secret": "mitos-colombia/prod/runtime",
+        "version": "1a894d34-b02a-4eff-96df-01cc8c131d55",
+        "readbackVerified": true
+      }
+    ],
+    "fixtureCleanupVerified": true,
+    "productionReadinessEnabled": false,
+    "publicEnabled": false,
+    "productionAccepted": false
+  },
+  "sandboxAnalyticsUnclaimed": true,
+  "sandboxAnalyticsUnsent": true,
+  "realCharge": false,
+  "productionVoucherProbeRun": false,
+  "ga4DebugProbeRun": false,
+  "productionAccepted": false
+}
