@@ -21,7 +21,10 @@ try {
     const columns = visible ? info.filter(c => visible.includes(c.column_name)) : info;
     if (!columns.length) throw new Error('Public table missing: ' + table);
     db.exec('CREATE TABLE '+quote(table)+' ('+columns.map(c => quote(c.column_name)+' '+(c.data_type.includes('integer')||c.data_type==='boolean'?'INTEGER':c.data_type==='double precision'||c.data_type==='real'?'REAL':'TEXT')).join(',')+')');
-    const rows = (await client.query('SELECT '+columns.map(c => quote(c.column_name)).join(',')+' FROM public.'+quote(table)+(table === 'comments' ? " WHERE status='approved'" : '')+' ORDER BY '+(columns.some(c=>c.column_name==='id')?'id':columns.map(c=>quote(c.column_name)).join(',')))).rows;
+    const select = 'SELECT '+columns.map(c => quote(c.column_name)).join(',')+' FROM public.'+quote(table)+(table === 'comments' ? " WHERE status='approved'" : '')+' ORDER BY '+(columns.some(c=>c.column_name==='id')?'id':columns.map(c=>quote(c.column_name)).join(','));
+    const rows=[],limit=['myths','vertical_images','editorial_myths'].includes(table)?25:100;
+    for(let offset=0;;offset+=limit){const page=(await client.query(select+' LIMIT $1 OFFSET $2',[limit,offset])).rows;rows.push(...page);if(page.length<limit)break;}
+
     const insert = db.prepare('INSERT INTO '+quote(table)+' VALUES ('+columns.map(()=>'?').join(',')+')');
     db.transaction(() => { for (const row of rows) insert.run(...columns.map(c => {
       const v=row[c.column_name];

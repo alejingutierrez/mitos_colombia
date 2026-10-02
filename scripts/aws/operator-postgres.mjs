@@ -12,6 +12,6 @@ export async function operatorClient(role) {
   if (url.hostname!==host || url.pathname!=='/mitos' || url.username!==role) throw new Error('Operator database ownership mismatch.');
   const tunnel=process.env.MITOS_OPERATOR_TUNNEL_PORT;
   if (tunnel && !/^\d{4,5}$/.test(tunnel)) throw new Error('Invalid private tunnel.');
-  const client=new pg.Client({host:tunnel?'127.0.0.1':host,port:tunnel?Number(tunnel):5432,user:role,password:decodeURIComponent(url.password),database:'mitos',ssl:{rejectUnauthorized:true,ca:await readFile('infra/aws/certs/us-east-1-bundle.pem','utf8'),servername:host},connectionTimeoutMillis:10000,statement_timeout:60000});
+  const client=new pg.Client({host:tunnel?'127.0.0.1':host,port:tunnel?Number(tunnel):5432,user:role,password:decodeURIComponent(url.password),database:'mitos',ssl:{rejectUnauthorized:true,ca:await readFile('infra/aws/certs/us-east-1-bundle.pem','utf8'),servername:host},connectionTimeoutMillis:10000,statement_timeout:60000,query_timeout:60000});
   await client.connect(); return client;
 }

@@ -12,10 +12,11 @@ import {exportPublicSnapshot} from '../../runtime/public-snapshot.mjs';
 const [expectedSha,receiptPath]=process.argv.slice(2);
 if(!receiptPath)throw new Error('Private parity receipt path required.');
 const {url,binding}=await sourceProduction(expectedSha);
-const source=new pg.Client({host:url.hostname,port:Number(url.port)||5432,user:decodeURIComponent(url.username),password:decodeURIComponent(url.password),database:decodeURIComponent(url.pathname.slice(1)),ssl:{rejectUnauthorized:true},connectionTimeoutMillis:15000,statement_timeout:60000});
+const source=new pg.Client({host:url.hostname,port:Number(url.port)||5432,user:decodeURIComponent(url.username),password:decodeURIComponent(url.password),database:decodeURIComponent(url.pathname.slice(1)),ssl:{rejectUnauthorized:true},connectionTimeoutMillis:15000,statement_timeout:60000,query_timeout:60000});
 await source.connect();const target=await operatorClient('mitos_backup');
 const directory=await mkdtemp(join(tmpdir(),'mitos-verified-snapshot-'));
 try{
+ await source.query("SET idle_in_transaction_session_timeout='60min'");await target.query("SET idle_in_transaction_session_timeout='60min'");
  await source.query('BEGIN ISOLATION LEVEL REPEATABLE READ READ ONLY');await target.query('BEGIN ISOLATION LEVEL REPEATABLE READ READ ONLY');
  await source.query("SET LOCAL TIME ZONE 'UTC'");await target.query("SET LOCAL TIME ZONE 'UTC'");
  const parity=await verifyFrozenParity(source,target);

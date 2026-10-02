@@ -1,0 +1,218 @@
+{
+  "at": "2026-10-02T15:26:03.764Z",
+  "kind": "final-owned-database-restore",
+  "binding": {
+    "project": "prj_DAxmdB0trnBDWBpR6mmfwHIUzHVz",
+    "productionDeployment": "dpl_F3V1RCnWb77gpyP8snXsF5FYAeZ8",
+    "productionSha": "5eda812b19f82d706130a21fca4c4698c6ce58c5",
+    "publishedAliasVerified": true,
+    "deploymentReady": true,
+    "verifiedAt": "2026-10-02T15:23:31.236Z"
+  },
+  "checks": {
+    "ownedTables": 21,
+    "sourceSequenceCount": 13,
+    "targetSequenceCount": 13,
+    "externalDependencies": 0
+  },
+  "tableDigestKind": "sorted-complete-jsonb-row-sha256-v1",
+  "resumedCompletedPrivateDumps": true,
+  "tables": {
+    "comments": {
+      "count": 2,
+      "sha256": "6faf1f5e4c481696267952e849c2edfbf7b2090ad7993ef7829be034126fdd5a"
+    },
+    "communities": {
+      "count": 51,
+      "sha256": "074a4a82de5ed1da938137f4b44a1f7d9a86029f59fbca4456f5855a8d011c6f"
+    },
+    "contact_messages": {
+      "count": 4,
+      "sha256": "1b0abad1ea328d6f7403258f550deef68c30368f5a86ac685901b3ebe43f6b77"
+    },
+    "editorial_myth_keywords": {
+      "count": 2356,
+      "sha256": "6a69da580b84b95cdaa4e4150074d121677116bc1d6c9eb3e90e44868e884ccd"
+    },
+    "editorial_myth_research": {
+      "count": 5,
+      "sha256": "c3813c2f5d43f6f647d27763d4f54e02ab0821bb126cf112941ef15d0417011e"
+    },
+    "editorial_myth_tags": {
+      "count": 1818,
+      "sha256": "ca81b1046aa7827cbde315e375e7a1ff9abf78d72723c08903d412a1c5b5f2b3"
+    },
+    "editorial_myths": {
+      "count": 596,
+      "sha256": "2f25e13eb25e61ee8467eeb509a9f279685354e3330048bb03c44f9dec755b46"
+    },
+    "home_banners": {
+      "count": 5,
+      "sha256": "27cb7cf0dd541cf3fe0c6d0d9da5c505b766150175c81dbf1fcba320127707d3"
+    },
+    "myth_keywords": {
+      "count": 6115,
+      "sha256": "e7aaeae9ae0964e91cea3be0045a5457b5e830a484e767deb47e2b32e6ea5282"
+    },
+    "myth_narrations": {
+      "count": 189,
+      "sha256": "6cea6b38b28a4db89f05f7c0e31fb7bcf3846172ae0724f2bf8c41903f9f6d4c"
+    },
+    "myth_tags": {
+      "count": 2893,
+      "sha256": "e1ddd9f2d0d13308a239bf11a13e9419b13e05c81b4474323690bb7934e5d2bc"
+    },
+    "myths": {
+      "count": 596,
+      "sha256": "8250b9f44c3a2cac65b8878d1ec7adf55045d5047303c05a3221314097013698"
+    },
+    "narration_beds": {
+      "count": 143,
+      "sha256": "5ba75b39ed7f68b8ac04d5878391b7d3f305686b3ef9993fd2736db725849595"
+    },
+    "regions": {
+      "count": 6,
+      "sha256": "a2f97261f7ae6386e4621ea4fb6d6584e657185cbeca2669c104cd687d340aad"
+    },
+    "seo_pages": {
+      "count": 746,
+      "sha256": "c10c3934138bc14bcf8021486b4b63f824025c04064f1440f6c569ab69573b89"
+    },
+    "tags": {
+      "count": 1108,
+      "sha256": "3c592d6f4aa9dbc81a61f64dd917fbed6de6a353795e276b3b5c502396bc5faf"
+    },
+    "tarot_cards": {
+      "count": 78,
+      "sha256": "47d10264a15e9bb3574415a2b6195f59d88855a1392d3761e53823ddbfad7614"
+    },
+    "tarot_orders": {
+      "count": 1,
+      "sha256": "cbf0e79783b5f5b2c71ef0d6bd63efa0d038569118f24a54aeb1ab0d7ecbe7a3"
+    },
+    "tarot_user_sessions": {
+      "count": 6,
+      "sha256": "52541dec8275b02f2cece2124c834b665411996a3a26f01642e9f6e45a6253c7"
+    },
+    "tarot_users": {
+      "count": 6,
+      "sha256": "2d7a245acd0d49fb16406336878c68ee7f10fcb18196b36464e0a0e457af967b"
+    },
+    "vertical_images": {
+      "count": 1260,
+      "sha256": "1c39b1868c3d1477a45d077e10baea3f4d96bda51b2e8542e425a75fbeb375ac"
+    }
+  },
+  "targetBeforeRestore": {
+    "comments": {
+      "count": 2,
+      "sha256": "6faf1f5e4c481696267952e849c2edfbf7b2090ad7993ef7829be034126fdd5a"
+    },
+    "communities": {
+      "count": 51,
+      "sha256": "0e77e5da3ecdb2292f0b8a9e92b4b883d28ea0cba036f82ee2e33ad544c10c47"
+    },
+    "contact_messages": {
+      "count": 4,
+      "sha256": "1b0abad1ea328d6f7403258f550deef68c30368f5a86ac685901b3ebe43f6b77"
+    },
+    "editorial_myth_keywords": {
+      "count": 2356,
+      "sha256": "6a69da580b84b95cdaa4e4150074d121677116bc1d6c9eb3e90e44868e884ccd"
+    },
+    "editorial_myth_research": {
+      "count": 5,
+      "sha256": "c3813c2f5d43f6f647d27763d4f54e02ab0821bb126cf112941ef15d0417011e"
+    },
+    "editorial_myth_tags": {
+      "count": 1818,
+      "sha256": "ca81b1046aa7827cbde315e375e7a1ff9abf78d72723c08903d412a1c5b5f2b3"
+    },
+    "editorial_myths": {
+      "count": 596,
+      "sha256": "a08bd96077eee71c6cac48fef07bf677df93edf415e59daea760b654b6a0c07e"
+    },
+    "home_banners": {
+      "count": 5,
+      "sha256": "ad6707423b0397e2411ac01207a99bc67d8c4e2101ecca47595a1c8147bd5f02"
+    },
+    "myth_keywords": {
+      "count": 6115,
+      "sha256": "e7aaeae9ae0964e91cea3be0045a5457b5e830a484e767deb47e2b32e6ea5282"
+    },
+    "myth_narrations": {
+      "count": 182,
+      "sha256": "0529b13578406416811e3cd07e1a6c2c5ef5f04f318e04569d2aa7916c5c97fb"
+    },
+    "myth_tags": {
+      "count": 2893,
+      "sha256": "e1ddd9f2d0d13308a239bf11a13e9419b13e05c81b4474323690bb7934e5d2bc"
+    },
+    "myths": {
+      "count": 596,
+      "sha256": "d191cf40943c7c108a5ebe5bd1c2a1b1a85304490baec17dd098fded9aaa93be"
+    },
+    "narration_beds": {
+      "count": 143,
+      "sha256": "9ccfc44dadd0bfb2fcb738ff47fd650087f6f930eff4058c943feb611f916b8c"
+    },
+    "regions": {
+      "count": 6,
+      "sha256": "4a0d56a2212bdb7586df552db8c5ccd06143661053ef92e1a07dafee2dfb2439"
+    },
+    "seo_pages": {
+      "count": 746,
+      "sha256": "c10c3934138bc14bcf8021486b4b63f824025c04064f1440f6c569ab69573b89"
+    },
+    "tags": {
+      "count": 1108,
+      "sha256": "dd8e4e941985bd79036dfde91e7dbcbcbe5ab63f83f3e5fc2ac278bffc28b969"
+    },
+    "tarot_cards": {
+      "count": 78,
+      "sha256": "256d0ac65a9b5b5296725d5880410cc492912d60cea642a4abc4807f28656c3f"
+    },
+    "tarot_orders": {
+      "count": 1,
+      "sha256": "cbf0e79783b5f5b2c71ef0d6bd63efa0d038569118f24a54aeb1ab0d7ecbe7a3"
+    },
+    "tarot_user_sessions": {
+      "count": 6,
+      "sha256": "52541dec8275b02f2cece2124c834b665411996a3a26f01642e9f6e45a6253c7"
+    },
+    "tarot_users": {
+      "count": 6,
+      "sha256": "2d7a245acd0d49fb16406336878c68ee7f10fcb18196b36464e0a0e457af967b"
+    },
+    "vertical_images": {
+      "count": 1260,
+      "sha256": "0dcb5e2258fab26b2a371922cf418391652da67bcfbd9d628ab2606aef3b81a5"
+    }
+  },
+  "targetBackup": {
+    "bucket": "mitos-colombia-907264907058-archive",
+    "key": "database/final-20261002145354718/target-before-final.dump",
+    "versionId": "kwbiGSE2H77hPiKxUlIREetxb_wafu7f",
+    "bytes": 10764026,
+    "sha256": "d91f8a72fb2e1abe58f0da356b450e4957df4de2eceff5649d6eb97316b32e93"
+  },
+  "sourceBackup": {
+    "bucket": "mitos-colombia-907264907058-archive",
+    "key": "database/final-20261002145354718/source-owned-with-freeze.dump",
+    "versionId": "66QB.fX4dTLW6JLIbd7dSEzLlIlyNnuU",
+    "bytes": 10790366,
+    "sha256": "206a50ffc457fc2d19881ad210098bbf68889bb61bbfb1a24dd21e2705fe55f4"
+  },
+  "sourceFreezeRecovery": {
+    "bucket": "mitos-colombia-907264907058-archive",
+    "key": "database/final-20261002145354718/source-freeze-schema-function.sql",
+    "versionId": "QTXKge.WANiO.FakUWwx1S1BuaSBwc.c",
+    "bytes": 596,
+    "sha256": "d67ca2b0935eddc803942b1d1721d4fd4e7623ef69e83eef87fe0ca1bea12a04"
+  },
+  "excludedFreezeTriggers": 21,
+  "writer": "source-frozen",
+  "targetWriterActive": false,
+  "productionAccepted": false,
+  "mediaRewritePending": true
+}

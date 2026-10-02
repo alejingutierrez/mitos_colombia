@@ -27,7 +27,7 @@ await c.connect();try{
  await c.query('BEGIN ISOLATION LEVEL REPEATABLE READ');
  const columns=(await c.query("SELECT table_name,column_name FROM information_schema.columns WHERE table_schema='public' AND data_type IN ('text','character varying') ORDER BY table_name,ordinal_position")).rows.filter(r=>owned.has(r.table_name));
  const plan=[],missing=new Set();
- for(const {table_name:t,column_name:col} of columns){const rows=(await c.query('SELECT '+q(col)+' AS value FROM public.'+q(t)+' WHERE strpos('+q(col)+',$1)>0',[oldBase])).rows;if(!rows.length)continue;
+ for(const {table_name:t,column_name:col} of columns){const rows=[];for(let offset=0;;offset+=25){const page=(await c.query('SELECT '+q(col)+' AS value FROM public.'+q(t)+' WHERE strpos('+q(col)+',$1)>0 ORDER BY ctid LIMIT 25 OFFSET $2',[oldBase,offset])).rows;rows.push(...page);if(page.length<25)break;}if(!rows.length)continue;
   let refs=0;for(const r of rows)for(const match of r.value.matchAll(/https:\/\/c5htob7za0dl3b5x\.public\.blob\.vercel-storage\.com\/[^\s"'<>\\]+/g)){const u=new URL(match[0]),key=decodeURIComponent(u.pathname.slice(1));refs++;if(!keys.has(key))missing.add(key);}
   plan.push({table:t,column:col,rows:rows.length,references:refs});
  }
