@@ -1,10 +1,7 @@
 import { NextResponse } from "next/server";
 import {
   applyBoldPayment,
-  claimTarotPurchaseAnalytics,
   findTarotOrderByStatusToken,
-  markTarotPurchaseAnalyticsSent,
-  releaseTarotPurchaseAnalyticsClaim,
   toPublicTarotOrder,
 } from "../../../../../lib/tarot-orders";
 import {
@@ -12,10 +9,7 @@ import {
   getBoldConfiguration,
   normalizeBoldPaymentStatus,
 } from "../../../../../lib/bold";
-import {
-  getGa4ServerTrackingConfiguration,
-  sendGa4Purchase,
-} from "../../../../../lib/ga4-measurement";
+import { deliverBoldPurchaseAnalytics } from "../../../../../lib/bold-purchase-analytics";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -46,8 +40,8 @@ export async function GET(_request, context) {
     );
   }
 
+  const bold = getBoldConfiguration();
   if (["CREATED", "PENDING"].includes(order.status)) {
-    const bold = getBoldConfiguration();
     if (bold.ready) {
       try {
         const payment = await fetchBoldPayment(order.reference, {
@@ -66,18 +60,8 @@ export async function GET(_request, context) {
   }
 
   if (order.status === "APPROVED") {
-    const ga4 = getGa4ServerTrackingConfiguration();
-    if (ga4.ready) {
-      const claim = await claimTarotPurchaseAnalytics(order.reference);
-      if (claim.claimed) {
-        try {
-          await sendGa4Purchase(claim.order, ga4);
-          await markTarotPurchaseAnalyticsSent(order.reference);
-        } catch (error) {
-          await releaseTarotPurchaseAnalyticsClaim(order.reference, error);
-        }
-      }
-    }
+    try { await deliverBoldPurchaseAnalytics(order, bold); }
+    catch { /* A later receipt/webhook retries the leased analytics delivery. */ }
   }
 
   return NextResponse.json(

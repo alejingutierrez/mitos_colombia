@@ -38,3 +38,25 @@ test('a signed event cannot approve a missing receipt or mismatched amount',asyn
  const pending=processor({status:'NO_TRANSACTION_FOUND'},approved);await assert.rejects(pending.run(event,{environment:'test'}),/receipt_not_ready/);
  const mismatch=processor({status:'APPROVED'},{matched:true,reason:'order_amount_mismatch'});await assert.rejects(mismatch.run(event,{environment:'production'}),/amounts/);assert.equal(mismatch.analytics(),0);
 });
+
+import {createPurchaseAnalyticsDelivery} from '../../runtime/purchase-tracking.mjs';
+import {boldCheckoutSite} from '../../runtime/bold-checkout-site.mjs';
+test('both polling and callback analytics delivery refuse sandbox before accessing GA or claiming the order',async()=>{
+ const never=()=>{throw Error('Production service must not be reached');};
+ const deliver=createPurchaseAnalyticsDelivery({configuration:never,claim:never,send:never,markSent:never,release:never});
+ assert.equal(await deliver({status:'APPROVED'},{environment:'test'}),false);
+ assert.equal(await deliver({status:'PENDING'},{environment:'production'}),false);
+});
+test('production purchase lease still deduplicates and releases a failed send for retry',async()=>{
+ let sends=0,released=0;const order={status:'APPROVED',reference:'fixture'};
+ const common={configuration:()=>({ready:true}),markSent:async()=>{},release:async()=>{released++;}};
+ const duplicate=createPurchaseAnalyticsDelivery({...common,claim:async()=>({reason:'already_sent'}),send:async()=>{sends++;}});
+ assert.equal(await duplicate(order,{environment:'production'}),true);assert.equal(sends,0);
+ const failed=createPurchaseAnalyticsDelivery({...common,claim:async()=>({claimed:true,order}),send:async()=>{throw Error('retry');}});
+ await assert.rejects(failed(order,{environment:'production'}),/retry/);assert.equal(released,1);
+});
+test('only trusted AWS staging with sandbox keys changes the payment return destination',()=>{
+ const canonical='https://www.mitosdecolombia.com';
+ assert.equal(boldCheckoutSite({environment:'test'},'1',canonical,'aws'),'https://staging.mitosdecolombia.com');
+ for(const [environment,marker,runtime] of [['production','1','aws'],['test','0','aws'],['test','1','legacy']])assert.equal(boldCheckoutSite({environment},marker,canonical,runtime),canonical);
+});

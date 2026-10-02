@@ -13,7 +13,7 @@ export function createSaleEventProcessor({findOrder, fetchPayment, normalizeStat
   const result = await applyPayment({...payment, status});
   if (result.reason === 'order_amount_mismatch') throw new Error('Bold payment and order amounts do not match.');
   if (!result.matched) throw new Error('bold_order_not_found');
-  if (configuration.environment === 'production') await deliverAnalytics(result.order);
+  if (configuration.environment === 'production') await deliverAnalytics(result.order, configuration);
   return result;
  };
 }
