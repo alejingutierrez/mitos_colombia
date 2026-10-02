@@ -1,0 +1,31 @@
+{
+  "kind": "live-same-rds-application-image-rollback",
+  "at": "2026-10-02T17:43:50.064Z",
+  "phases": [
+    {
+      "sha": "7b5757a234c042dd5cef282f20375d9eeb9c311c",
+      "digest": "sha256:5a0ad309f2acf0ceb4b1324b7b10fe4bdbfbd540f609aabf16aa4c144178ab6d",
+      "commandId": "b6c1a35e-77ff-404c-9834-79526d6da18e",
+      "status": "Success",
+      "publicVersionMatched": true,
+      "publicReadinessStatus": 200,
+      "committedRdsFixtureSurvived": true,
+      "sameDatabaseProcessAndConnection": true
+    },
+    {
+      "sha": "18233011a5234b22d03e299c08f8b7a93625a544",
+      "digest": "sha256:488d4670a4e300c1e0596748ab552f2233e2455dd68ecc4571be050741bd371a",
+      "commandId": "cfbd76d7-484d-4b04-b462-5cfb68702479",
+      "status": "Success",
+      "publicVersionMatched": true,
+      "publicReadinessStatus": 200,
+      "committedRdsFixtureSurvived": true,
+      "sameDatabaseProcessAndConnection": true
+    }
+  ],
+  "fixtureRemoved": true,
+  "noDatabaseRestore": true,
+  "noSourceWriterOpened": true,
+  "noAiCalls": true,
+  "noProviderCalls": true
+}

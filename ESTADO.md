@@ -6,7 +6,7 @@ cierto, corrígelo aquí primero.
 
 ## Infraestructura propia de AWS · 2026-10-02
 
-Web y registro del dominio están en la cuenta `907264907058`. RDS es el único writer; imágenes y audio usan S3/CloudFront; pagos usan ingreso firmado, SQS y worker propios. Aceptación pública: `docs/migration-aws-2026-09-30/receipts/production-accepted.json`. Nunca ejecutar de nuevo el restore inicial ni descongelar Neon. El taller local conserva sus trabajos y freezes; su runtime obtiene la configuración propia y usa túnel SSM TLS. Estado operativo y pendientes de cierre: `docs/migration-aws-2026-09-30/CIERRE.md`.
+Web y registro del dominio están en la cuenta `907264907058`. RDS es el único writer; imágenes y audio usan S3/CloudFront; pagos usan ingreso firmado, SQS y worker propios. Aceptación pública: `docs/migration-aws-2026-09-30/receipts/production-accepted.json`. Nunca ejecutar de nuevo el restore inicial ni descongelar Neon. El taller local conserva sus trabajos y freezes; su runtime obtiene la configuración propia y usa túnel SSM TLS. Estado operativo y autorización pendiente del taller: `docs/migration-aws-2026-09-30/CIERRE.md`.
 
 ## Qué es esto
 
@@ -331,9 +331,9 @@ output/<comunidad>/     ← espejo, sólo binarios, ignorado
 docs/                   ← sólo doctrina
 ```
 
-## Migración AWS en curso · 2026-10-01
+## Migración AWS operativa · 2026-10-02
 
-La implementación vive en la rama `codex/aws-migration`, aislada de los cambios locales del home y del taller. DNS autoritativo ya está en AWS 907264907058; RDS y medios propios, staging HTTPS, probe editorial y lectura del taller funcionan. Se restauraron las 21 tablas por hash y un host nuevo con certificado; se archivaron la historia de 100 ramas y overlays de 15 worktrees. La web/ventas continúan en Vercel; Neon sigue siendo el writer. Registro GoDaddy pendiente de SMS; falta la fuente de claves Bold/config comercial y el corte/paridad final. El estado de las puertas y los recibos están en [`docs/migration-aws-2026-09-30/IMPLEMENTACION.md`](docs/migration-aws-2026-09-30/IMPLEMENTACION.md), junto al spec económico sin presupuesto de IA.
+La web, el dominio, RDS, S3/CloudFront, colas y despliegues ya operan en AWS `907264907058`, con recursos propios. El pipeline desde main y la recuperación de imagen sobre la misma RDS pasaron; el origen Vercel está pausado y desconectado de Git. Los 14 talleres conservan el material y pasaron sus pruebas; sólo la reanudación de dos asistentes sigue pendiente de autorización específica. Estado y evidencias: [`CIERRE.md`](docs/migration-aws-2026-09-30/CIERRE.md). IA sigue fuera del presupuesto.
 
 ## Trampas conocidas
 

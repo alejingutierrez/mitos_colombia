@@ -1,22 +1,24 @@
 # Implementación y migración AWS de Mitos
 
-Actualizado: 2 de octubre de 2026. Rama `codex/aws-migration`; base inicial `582d4b4f653c5e983fb39bfab537c4f768a37bb4`; origen vigente con bridge inactivo `5eda812b19f82d706130a21fca4c4698c6ce58c5`. Se trabaja en un worktree aislado; el home y el taller locales no se modifican.
+Actualizado: 2 de octubre de 2026. Implementación fusionada y publicada mediante los PR #76 y #77. El estado operativo y la única autorización pendiente del taller están en [CIERRE.md](CIERRE.md).
 
-**Migración en curso. El DNS autoritativo ya está en AWS. La web pública y las ventas continúan en Vercel; Neon sigue siendo el writer.** El nuevo sitio está en staging restringido. No se ejecutó el seed Excel, ninguna campaña de IA ni retiro del origen.
+**Web y ventas operan en AWS. RDS es el único writer; el dominio está registrado y delegado en Route 53. Vercel quedó pausado y desconectado de Git.** No se ejecutó el seed Excel ni una campaña de IA.
 
-## Estado actual
+## Estado vigente
 
-| Parte | Evidencia real | Pendiente |
-|---|---|---|
-| DNS | Delegación GoDaddy y registro `.com` confirman los cuatro NS de Route 53. Registros existentes preservados. | Corte de apex/www después de aceptación. |
-| Registro del dominio | Traslado a AWS SUCCESSFUL; privacidad de los tres contactos, renovación automática y bloqueo de traslado verificados. | Mantener verificación de contacto y renovación. |
-| Base | 21 tablas propias restauradas; roles separados; migraciones 000, 001 y 002 aplicadas; app sin CREATE. | Freeze y copia/paridad final; el origen activo volvió a modificar tarot_cards. |
-| Medios | 5.701 objetos, 9.236.150.891 bytes, SHA y versión S3 comprobados. CDN HTTPS propia entrega JPEG/MP3 y rango 206. | Delta final bajo freeze. |
-| URLs | 3.546 referencias en 12 columnas de la copia RDS; 407 referencias en 26 módulos públicos. Todas tienen objeto copiado. | Paridad normalizada final; los freezes históricos conservan procedencia original. |
-| Aplicación | Imagen 806e ARM saludable; edición/auth y rutas propias ya comprobadas en staging; inbox separado en el mismo host. | Pagos test/config completa, carga representativa y corte público. |
-| Configuración | Allowlist en memoria, RDS mitos_app y token propio; cuatro claves Bold originales y configuración comercial autorizada copiadas con readback. Producción nunca habilitada; test temporal sólo en staging restringido. | Completar la transacción sandbox y QA integrada antes de abrir producción. |
-| Automatización | GitHub OIDC, ARM, scan, estáticos por SHA; snapshot público de solo lectura con publicación atómica y documento SSM limitado. | Ensayo real del refresco después de aceptar el writer. Gate público sigue cerrado. |
-| Taller | Archivo inicial + 16.672 archivos/17.615.054.369 bytes de overlays de 15 worktrees; bundle de 100 ramas; lectura propia con TLS y 41 muiscas. | Delta final y activación de publicación tras aceptar RDS como writer. |
+| Parte | Evidencia real |
+|---|---|
+| Dominio | Transferencia completada, privacidad, renovación y bloqueo; apex/www A/AAAA a CloudFront y TTL anterior agotado. |
+| Base | Copia/paridad final de 21 tablas y 13 secuencias, 596 mitos y 41 muiscas; writer RDS aceptado, restore inicial cerrado permanentemente. |
+| Medios | 5.715 objetos verificados por bytes/hash/versión, URLs propias y audio/rangos conservados. |
+| Aplicación | Trece rutas finales públicas 200; auth, admin, callback, comercio y pago sandbox real aprobados. |
+| Automatización | Dos releases automáticos main SUCCESS; último `66ca01fc`, snapshot RDS, imagen ARM escaneada y helpers por hash. Recuperación de imagen en vivo pasó conservando el registro RDS. |
+| Taller | Catorce entornos TLS/S3 comprobados, narración dry-run 596/0 fallos, overlay de 2.442 archivos recuperable. Dos asistentes aún pausados por aprobación específica de IA. |
+| Retiro | Sólo el proyecto Vercel Mitos pausado/desconectado; 47 estáticos anteriores servidos desde AWS. Tablas/recursos ajenos del origen compartido intactos. |
+
+## Bitácora anterior al corte
+
+Los apartados siguientes conservan decisiones y ensayos de preparación. Sus frases de staging, pagos cerrados y corte pendiente describen ese momento histórico; el estado actual y los recibos finales están arriba y en CIERRE.md.
 
 ## Infraestructura propia
 

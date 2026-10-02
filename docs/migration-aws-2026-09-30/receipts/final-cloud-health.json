@@ -1,0 +1,27 @@
+{
+  "kind": "final-owned-cloud-and-peer-health",
+  "at": "2026-10-02T17:58:24.709Z",
+  "peers": [
+    {
+      "name": "rag-master",
+      "status": "RUNNING"
+    }
+  ],
+  "rds": {
+    "id": "mitos-colombia-prod",
+    "status": "available",
+    "class": "db.t4g.micro",
+    "private": true,
+    "encrypted": true,
+    "backupDays": 35,
+    "deletionProtected": true,
+    "vpc": "vpc-0857bb1d01692317c"
+  },
+  "queue": {
+    "ApproximateNumberOfMessages": "0",
+    "ApproximateNumberOfMessagesNotVisible": "0",
+    "ApproximateNumberOfMessagesDelayed": "0"
+  },
+  "diagnosticCommand": "0aa456c8-6f4b-46db-9e8d-f6896d355bcb",
+  "noForeignResourceMutations": true
+}

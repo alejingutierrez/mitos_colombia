@@ -1,0 +1,112 @@
+{
+  "kind": "scoped-legacy-mitos-runtime-retirement",
+  "at": "2026-10-02T18:11:11.715Z",
+  "project": "prj_DAxmdB0trnBDWBpR6mmfwHIUzHVz",
+  "productionDeployment": "dpl_6pgZ8SQFWT6gnYdr6AvyZVVXD4n3",
+  "sourceProductionSha": "8914888e8fc3e75c85ecf6041d8e2b6adb3983f8",
+  "gitDisconnected": true,
+  "pauseHttpStatus": null,
+  "pauseConfirmedByOldHost": true,
+  "pauseResponseBodyEmpty": true,
+  "oldHostStatus": 503,
+  "oldHostPausedConfirmed": true,
+  "publicAwsReadiness": 200,
+  "publicAwsSha": "66ca01fc50a7bb6cdb47a467682004b11a18e8a5",
+  "dnsChecks": [
+    {
+      "server": "1.1.1.1",
+      "name": "mitosdecolombia.com",
+      "values": [
+        {
+          "address": "3.166.152.46",
+          "ttl": 60
+        },
+        {
+          "address": "3.166.152.81",
+          "ttl": 60
+        },
+        {
+          "address": "3.166.152.38",
+          "ttl": 60
+        },
+        {
+          "address": "3.166.152.121",
+          "ttl": 60
+        }
+      ]
+    },
+    {
+      "server": "1.1.1.1",
+      "name": "www.mitosdecolombia.com",
+      "values": [
+        {
+          "address": "3.166.152.81",
+          "ttl": 60
+        },
+        {
+          "address": "3.166.152.121",
+          "ttl": 60
+        },
+        {
+          "address": "3.166.152.46",
+          "ttl": 60
+        },
+        {
+          "address": "3.166.152.38",
+          "ttl": 60
+        }
+      ]
+    },
+    {
+      "server": "8.8.8.8",
+      "name": "mitosdecolombia.com",
+      "values": [
+        {
+          "address": "3.163.60.80",
+          "ttl": 60
+        },
+        {
+          "address": "3.163.60.12",
+          "ttl": 60
+        },
+        {
+          "address": "3.163.60.88",
+          "ttl": 60
+        },
+        {
+          "address": "3.163.60.84",
+          "ttl": 60
+        }
+      ]
+    },
+    {
+      "server": "8.8.8.8",
+      "name": "www.mitosdecolombia.com",
+      "values": [
+        {
+          "address": "3.163.60.12",
+          "ttl": 60
+        },
+        {
+          "address": "3.163.60.80",
+          "ttl": 60
+        },
+        {
+          "address": "3.163.60.88",
+          "ttl": 60
+        },
+        {
+          "address": "3.163.60.84",
+          "ttl": 60
+        }
+      ]
+    }
+  ],
+  "previousMaximumTtlElapsed": true,
+  "autoAssignCustomDomains": false,
+  "productionBlocked": null,
+  "reversiblePause": true,
+  "legacyDataRetainedReadOnly": true,
+  "sharedNeonProjectUntouched": true,
+  "otherVercelProjectsUntouched": true
+}
