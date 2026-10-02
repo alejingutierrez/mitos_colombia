@@ -127,6 +127,7 @@ for route in / /mitos /tarot /sitemap.xml /robots.txt /api/taxonomy; do
   curl -fsS --max-time 20 "http://127.0.0.1:$port$route" >/dev/null
 done
 curl -fsS --max-time 5 "http://127.0.0.1:$port/api/version" | jq -e --arg sha "$sha" '.sha==$sha' >/dev/null
+bash /opt/mitos/deploy-inbox.sh "$sha" "$digest"
 cp /etc/nginx/mitos-upstream.conf "$workdir/previous-upstream.conf"
 printf 'upstream mitos_web { server 127.0.0.1:%s; keepalive 16; }\n' "$port" > "$workdir/upstream.conf"
 install -m 0644 "$workdir/upstream.conf" /etc/nginx/mitos-upstream.conf.tmp

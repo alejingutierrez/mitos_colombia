@@ -75,6 +75,7 @@ async function scenario(failure='',firstRelease=false,retry=false,initial=false)
   for(const p of ['bin','opt/mitos','etc/nginx','var/lib/mitos','var/lock'])await mkdir(path.join(root,p),{recursive:true});
   if(!initial)await writeFile(root+'/opt/mitos/cutover-complete','fixture');
   await writeFile(root+'/opt/mitos/runtime.env','fixture-only');
+  await writeFile(root+'/opt/mitos/deploy-inbox.sh', '#!/bin/sh\n'+(failure==='inbox'?'exit 1\n':'exit 0\n'));
   await writeFile(root+'/etc/nginx/mitos-upstream.conf','upstream mitos_web { server 127.0.0.1:3102; }\n');
   if(!firstRelease&&!initial)await writeFile(root+'/var/lib/mitos/active.json',JSON.stringify(old));
   const containers=firstRelease?{}:{[old.container]:{running:true,port:3102,image:'old'},'mitos-payment-worker':{running:true,port:null,image:'old'},'mitos-admin-worker':{running:true,port:null,image:'old'}};
@@ -99,7 +100,7 @@ async function scenario(failure='',firstRelease=false,retry=false,initial=false)
  }finally{await rm(root,{recursive:true,force:true})}
 }
 
-for(const failure of ['public','nginx','worker','admin','receipt']){
+for(const failure of ['public','nginx','worker','admin','receipt','inbox']){
  test('failed '+failure+' restores a healthy previous upstream and worker',async()=>{
   const {result,state,active}=await scenario(failure);
   assert.notEqual(result.status,0,result.stderr);

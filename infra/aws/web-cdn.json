@@ -74,13 +74,55 @@
                 "Statement": {
                   "NotStatement": {
                     "Statement": {
-                      "IPSetReferenceStatement": {
-                        "ARN": {
-                          "Fn::GetAtt": [
-                            "Operators",
-                            "Arn"
-                          ]
-                        }
+                      "OrStatement": {
+                        "Statements": [
+                          {
+                            "IPSetReferenceStatement": {
+                              "ARN": {
+                                "Fn::GetAtt": [
+                                  "Operators",
+                                  "Arn"
+                                ]
+                              }
+                            }
+                          },
+                          {
+                            "AndStatement": {
+                              "Statements": [
+                                {
+                                  "ByteMatchStatement": {
+                                    "FieldToMatch": {
+                                      "UriPath": {}
+                                    },
+                                    "SearchString": "/api/tarot/bold/events",
+                                    "PositionalConstraint": "EXACTLY",
+                                    "TextTransformations": [
+                                      {
+                                        "Priority": 0,
+                                        "Type": "NONE"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "ByteMatchStatement": {
+                                    "FieldToMatch": {
+                                      "Method": {}
+                                    },
+                                    "SearchString": "POST",
+                                    "PositionalConstraint": "EXACTLY",
+                                    "TextTransformations": [
+                                      {
+                                        "Priority": 0,
+                                        "Type": "NONE"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   }

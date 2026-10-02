@@ -35,6 +35,7 @@ docker pull "$image" >/dev/null;docker logout "$registry" >/dev/null
 # An interrupted candidate is preserved for inspection; operator decides recovery.
 if docker inspect "$name" >/dev/null 2>&1;then echo 'Initial candidate already exists; inspect before retry.' >&2;exit 4;fi
 install -d -o 1001 -g 1001 /var/lib/mitos/cache /var/lib/mitos/image-cache
+bash /opt/mitos/deploy-inbox.sh "$sha" "$digest"
 cp /etc/nginx/mitos-upstream.conf "$work/previous-upstream.conf"
 switched=false
 cleanup(){ result=$?;if (( result != 0 ));then set +e;if $switched;then cp "$work/previous-upstream.conf" /etc/nginx/mitos-upstream.conf;nginx -t && systemctl reload nginx;fi;docker stop -t 20 "$name" >/dev/null 2>&1;fi;exit "$result"; }

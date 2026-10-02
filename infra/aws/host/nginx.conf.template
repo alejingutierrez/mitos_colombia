@@ -15,6 +15,7 @@ map $http_x_mitos_stage $mitos_stage_robots {
     "1" "noindex, nofollow, noarchive";
 }
 include /etc/nginx/mitos-upstream.conf;
+include /etc/nginx/mitos-inbox-upstream.conf;
 server {
     listen 127.0.0.1:3080;
     server_name localhost;
@@ -38,6 +39,16 @@ server {
     if ($mitos_viewer_ip = "") { return 403; }
     add_header X-Robots-Tag $mitos_stage_robots always;
     client_max_body_size 10m;
+    # Durable callback stays up while web candidates and RDS writers are stopped.
+    location = /api/tarot/bold/events {
+        limit_except POST { deny all; }
+        client_max_body_size 200k;
+        proxy_pass http://mitos_inbox;
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_buffering off;
+        proxy_read_timeout 20s;
+    }
     location ^~ /api/internal/ { return 404; }
     location / {
         proxy_pass http://mitos_web;

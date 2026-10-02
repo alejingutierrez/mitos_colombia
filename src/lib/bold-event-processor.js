@@ -1,4 +1,5 @@
 import "server-only";
+import { createSaleEventProcessor } from "./bold-event-core";
 import {
   applyBoldPayment,
   claimTarotPurchaseAnalytics,
@@ -32,46 +33,10 @@ async function deliverPurchaseAnalytics(order) {
   }
 }
 
-export async function processSaleEvent(event, configuration) {
-  const transactionId = String(
-    event?.data?.payment_id || event?.subject || ""
-  ).trim();
-  const orderByTransaction = transactionId
-    ? await findTarotOrderByPaymentTransactionId(transactionId)
-    : null;
-  const reference = String(
-    event?.data?.metadata?.reference || orderByTransaction?.reference || ""
-  ).trim();
-
-  if (!reference) {
-    console.error("Bold event could not be matched to an order", {
-      eventId: String(event?.id || "").slice(0, 80),
-      transactionId: transactionId.slice(0, 80),
-    });
-    throw new Error("bold_order_unmatched");
-  }
-
-  {
-    /* La firma prueba que el aviso viene de Bold, no cuánto se pagó: el estado
-       y el monto se leen del comprobante consultado directamente a Bold. */
-    const payment = await fetchBoldPayment(reference, {
-      apiKey: configuration.apiKey,
-    });
-    const normalizedStatus = normalizeBoldPaymentStatus(payment?.status);
-    /* `NO_TRANSACTION_FOUND` llega cuando el comprobante todavía no existe
-       (puede tardar hasta 10 minutos). No es un fallo ni un rechazo: la orden
-       se queda como está y el siguiente aviso o la consulta la resuelven. */
-    if (!normalizedStatus) throw new Error("bold_receipt_not_ready");
-    const result = await applyBoldPayment({ ...payment, status: normalizedStatus });
-    if (result.reason === "order_amount_mismatch") {
-      /* Se registran los dos montos porque la unidad del comprobante es lo
-         único que la documentación de Bold no declara. Ante la duda la orden
-         NO se aprueba. */
-      const error = new Error("Bold payment and order amounts do not match.");
-      error.boldTotal = payment?.amount?.total_amount;
-      throw error;
-    }
-    if (!result.matched) throw new Error("bold_order_not_found");
-    await deliverPurchaseAnalytics(result.order);
-  }
-}
+export const processSaleEvent = createSaleEventProcessor({
+  findOrder: findTarotOrderByPaymentTransactionId,
+  fetchPayment: fetchBoldPayment,
+  normalizeStatus: normalizeBoldPaymentStatus,
+  applyPayment: applyBoldPayment,
+  deliverAnalytics: deliverPurchaseAnalytics,
+});
