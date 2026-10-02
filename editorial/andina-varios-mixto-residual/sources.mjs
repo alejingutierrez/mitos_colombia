@@ -1,0 +1,445 @@
+function source({ title, author, year, type, url, summary, limitation }) {
+  return { title, author, year, type, url, summary, limitation };
+}
+
+export const andinaVariosMixtoResidualSources = {
+  ocampoAntioquia: source({
+    title: "Mitos y leyendas de Antioquia la grande",
+    author: "Javier Ocampo López",
+    year: 2001,
+    type: "compilación folclórica con ficha bibliográfica",
+    url: "https://books.google.com/books/about/Mitos_y_leyendas_de_Antioquia_la_grande.html?id=9DeSlEufFMEC",
+    summary:
+      "Compila a la Mano Peluda, el Viejo del Costal y el Hojarasquín del Monte y permite ubicar sus motivos en repertorios regionales colombianos.",
+    limitation:
+      "La vista disponible no expone todas las notas ni la cadena completa de informantes para cada pasaje.",
+  }),
+  ocampoColombia: source({
+    title: "Mitos, leyendas y relatos colombianos",
+    author: "Javier Ocampo López",
+    year: 2006,
+    type: "síntesis folclórica nacional",
+    url: "https://books.google.com/books/about/Mitos_leyendas_y_relatos_colombianos.html?id=lARg1lafMBAC",
+    summary:
+      "Registra la Mano Peluda y otros espantos dentro de una síntesis nacional y aporta una segunda referencia bibliográfica del compilador.",
+    limitation:
+      "Es una compilación posterior y no convierte por sí sola cada motivo en testimonio oral independiente.",
+  }),
+  tunjaMano: source({
+    title: "El Espanto de La Mano Peluda",
+    author: "Javier Ocampo López; Tunja Tesoros Escondidos",
+    type: "divulgación local atribuida",
+    url: "https://www.tunjatesorosescondidos.com/index.php/escudo-de-tunja/193-el-espanto-de-la-mano-peluda",
+    summary:
+      "Describe una mano verdosa, peluda e incorpórea que aparece en el convento de La Candelaria y en casas antiguas de Tunja.",
+    limitation:
+      "La ambientación colonial no aporta una fecha comprobada para el nacimiento de la creencia.",
+  }),
+  senalMano: source({
+    title: "Mitos y leyendas colombianas",
+    author: "Señal Colombia",
+    type: "divulgación cultural pública",
+    url: "https://www.senalcolombia.tv/cultura/mitos-y-leyendas-colombianas",
+    summary:
+      "Difunde la variante cundiboyacense de una mano grande, peluda, de uñas largas y separada del cuerpo que asusta o arrastra niños.",
+    limitation:
+      "Resume circulación contemporánea y no identifica informantes ni demuestra una antigüedad colonial exacta.",
+  }),
+  radioNacionalMano: source({
+    title: "Nueve mitos y leyendas en las regiones de Colombia",
+    author: "Radio Nacional de Colombia",
+    type: "divulgación regional de medio público",
+    url: "https://www.radionacional.co/cultura/historia-colombiana/mitos-y-leyendas-de-colombia-nueve-relatos-en-las-regiones",
+    summary:
+      "Sitúa la Mano Peluda entre Cundinamarca y Boyacá y confirma la circulación nacional del núcleo incorpóreo.",
+    limitation:
+      "Es una síntesis periodística y no una recolección etnográfica autónoma.",
+  }),
+  boyacaRadioMano: source({
+    title: "La Mano Peluda, espanto de Boyacá",
+    author: "Boyacá Radio",
+    year: 2018,
+    type: "divulgación periodística local",
+    url: "https://www.boyacaradio.com/noticia.php?id=19514",
+    summary:
+      "Asocia la aparición con La Candelaria y casas antiguas de Tunja, donde se mueve por muros y ventanas y asusta caminantes.",
+    limitation:
+      "Su calificativo colonial es una atribución divulgativa, no una datación archivística demostrada.",
+  }),
+  raeCoco: source({
+    title: "coco",
+    author: "Real Academia Española",
+    type: "entrada lexicográfica comparativa",
+    url: "https://dle.rae.es/coco",
+    summary:
+      "Define al coco como ser imaginario usado para meter miedo a los niños, comparación funcional con amenazas disciplinarias.",
+    limitation:
+      "La definición no describe una mano autónoma ni prueba parentesco con la tradición cundiboyacense.",
+  }),
+  cervantesSaco: source({
+    title: "Personajes del miedo en la tradición oral",
+    author: "Centro Virtual Cervantes",
+    type: "estudio paremiológico comparativo",
+    url: "https://cvc.cervantes.es/lengua/paremia/pdf/031/005_garcia.pdf",
+    summary:
+      "Examina al coco y al hombre del saco como figuras usadas para disciplinar o asustar niños en tradiciones hispánicas.",
+    limitation:
+      "La semejanza de función no demuestra que la Mano Peluda colombiana proceda de una figura europea única.",
+  }),
+
+  colombiaAprendeHojarasquin: source({
+    title: "Proyecto 5: La Colombia de todos",
+    author: "Colombia Aprende; Ministerio de Educación Nacional",
+    type: "material educativo público con atribución bibliográfica",
+    url: "https://colombiaaprende.edu.co/sites/default/files/files_public/rural-adultos/1_Coleccion_Avanzada_Programa_de_Educacion_Rural_PER/4-Modelos_Educativos_Flexibles/3-Aceleracion%20_del_aprendizaje/Materiales_Estudiantes/Proyecto-5-La_Colombia_de_todos.pdf",
+    summary:
+      "Reproduce una versión atribuida a Ocampo: un leñador corta un guayacán, la Madremonte lo juzga y lo obliga a reemplazar el árbol.",
+    limitation:
+      "Es una adaptación escolar de una compilación, no transcripción directa de una entrevista comunitaria.",
+  }),
+  esapHojarasquin: source({
+    title: "Inventario turístico y cultural de Risaralda",
+    author: "ESAP y entidades territoriales de Risaralda",
+    type: "inventario institucional de patrimonio local",
+    url: "https://repositoriocdim.esap.edu.co/bitstreams/572d52ab-2933-4d57-97f6-e17f39163934/download",
+    summary:
+      "Registra al protector de bosques como hombre-árbol, mico velludo o híbrido, capaz de perder o guiar viajeros y confundir cazadores con huellas.",
+    limitation:
+      "El inventario sintetiza variantes y no identifica la cadena de informantes detrás de cada forma.",
+  }),
+  caldasHojarasquin: source({
+    title: "Información general del municipio de Samaná",
+    author: "Gobernación de Caldas",
+    type: "ficha municipal institucional",
+    url: "https://caldas.gov.co/media/pdf/2014/infomunicipios/INFORMACION%20DE%20SAMANa.pdf",
+    summary:
+      "Documenta circulación local del Hojarasquín como protector del monte que puede adoptar rasgos vegetales o animales.",
+    limitation:
+      "Repite una síntesis administrativa cercana a otros inventarios y no cuenta como tradición independiente para cada detalle.",
+  }),
+  redalycProtectores: source({
+    title: "Seres protectores y sentido de arraigo en narrativas ambientales",
+    author: "Artículo académico alojado en Redalyc",
+    year: 2023,
+    type: "análisis académico ecocrítico",
+    url: "https://www.redalyc.org/journal/4983/498380014009/html/",
+    summary:
+      "Analiza al Hojarasquín como guardián del bosque y distingue formas de árbol humano, híbrido y mico gigante en compilaciones colombianas.",
+    limitation:
+      "Interpreta textos publicados y no sustituye trabajo etnográfico con las comunidades que los transmiten.",
+  }),
+  banrepFolclor: source({
+    title: "El pueblo boyacense y su folclor",
+    author: "Javier Ocampo López; Biblioteca del Banco de la República",
+    type: "monografía folclórica digitalizada",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll10/id/2782/download",
+    summary:
+      "Incluye al Hojarasquín dentro de repertorios colombianos y aporta contexto regional a la circulación del personaje.",
+    limitation:
+      "Su alcance comparativo no vuelve boyacense cada variante ni proporciona informantes para todos los motivos.",
+  }),
+  semanaOcampo: source({
+    title: "Relatos de terror y misterio",
+    author: "Javier Ocampo López; Semana",
+    year: 2005,
+    type: "entrevista y divulgación de folclor",
+    url: "https://www.semana.com/amp/relatos-terror-misterio/73421-3/",
+    summary:
+      "Explica procesos de transmisión folclórica y enumera al Hojarasquín entre figuras antropomorfas de repertorios colombianos.",
+    limitation:
+      "Es una intervención divulgativa del compilador y no una fuente primaria de una versión local concreta.",
+  }),
+  samanaTioConejo: source({
+    title: "El Hojarasquín",
+    author: "Agustín Jaramillo Londoño; Samaná Caldas",
+    year: 1963,
+    type: "cuento literario local del ciclo de Tío Conejo",
+    url: "https://www.samanacaldas.net.co/folclorver.php?idfolclor=4",
+    summary:
+      "Presenta a Tío Conejo cubierto de miel y hojas que usa el nombre Hojarasquín para asustar animales en un bebedero.",
+    limitation:
+      "Es un homónimo literario y no debe mezclarse con el guardián forestal de las compilaciones folclóricas.",
+  }),
+  curupiraInstituto: source({
+    title: "Curupira",
+    author: "Instituto Florestal, Gobierno del Estado de São Paulo",
+    type: "divulgación institucional comparativa",
+    url: "https://www.infraestruturameioambiente.sp.gov.br/institutoflorestal/curupira/",
+    summary:
+      "Describe al protector brasileño de bosques y animales que confunde cazadores mediante huellas invertidas.",
+    limitation:
+      "Pertenece a contextos brasileños y tupíes; la función semejante no demuestra genealogía con el Hojarasquín.",
+  }),
+
+  izquierdoVilla: source({
+    title: "Mitos aborígenes de Colombia, volumen III",
+    author: "Villa Posse, compilador; sección de Mariano Izquierdo Gallo",
+    year: 1993,
+    type: "compilación digitalizada de ensayo comparativo de 1956",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
+    summary:
+      "Reproduce Esperanza en el Oriente y explicita sus reservas: propone, sin demostrarla, una lectura común de héroes y entierros orientados al este.",
+    limitation:
+      "Es una hipótesis del autor basada en comparaciones selectivas, no una narración oral ni consenso arqueológico.",
+  }),
+  tacitoPerseus: source({
+    title: "Histories 5.13",
+    author: "Tácito; Perseus Digital Library",
+    type: "texto clásico primario en edición digital",
+    url: "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0080%3Abook%3D5%3Achapter%3D13",
+    summary:
+      "El pasaje habla de un poder surgido en Oriente y de gobernantes procedentes de Judea con dominio universal.",
+    limitation:
+      "No formula una creencia universal en un salvador oriental ni se refiere a pueblos americanos.",
+  }),
+  uvaWorldLeader: source({
+    title: "The World Leader from the Land of the Jews",
+    author: "Universidad de Ámsterdam",
+    type: "estudio académico de la profecía en fuentes romanas y judías",
+    url: "https://dare.uva.nl/id/50bd6e18-a895-4cfb-892a-01273d5581a2",
+    summary:
+      "Contextualiza el oráculo paralelo en Josefo, Tácito y Suetonio como interpretación política de liderazgo mundial.",
+    limitation:
+      "Estudia el mundo romano y judío; no respalda una conexión con Bochica, Quetzalcóatl o entierros zenúes.",
+  }),
+  acostaCementerio: source({
+    title: "Biografías de hombres ilustres o notables de Colombia",
+    author: "Joaquín Acosta y compiladores decimonónicos",
+    type: "obra histórica digitalizada con descripción funeraria",
+    url: "https://upload.wikimedia.org/wikipedia/commons/3/32/Biografias_de_hombres_ilustres_o_notables%2C_relativas_a_la_epoca_del_descubrimiento%2C_conquista_y_colonizacion_de_la_parte_de_America_denominada_actualmente_EE._UU._de_Colombia_%28IA_biografiasdehomb00acos%29.pdf",
+    summary:
+      "Conserva descripciones históricas de túmulos, cuerpos y ajuares en el ámbito zenú utilizadas por comparatistas posteriores.",
+    limitation:
+      "Una orientación corporal observada no demuestra por sí sola esperanza de resurrección ni una doctrina común americana.",
+  }),
+  banrepMuiscas: source({
+    title: "Los señores muiscas",
+    author: "Martha Herrera Ángel; Banco de la República",
+    type: "ensayo histórico institucional",
+    url: "https://www.banrepcultural.org/biblioteca-virtual/credencial-historia/numero-44/los-senores-muiscas",
+    summary:
+      "Presenta versiones cronísticas sobre Bochica, su llegada y su papel cultural dentro de tradiciones muiscas diferenciadas.",
+    limitation:
+      "Las divergencias cronísticas impiden usar a Bochica como prueba simple de un héroe panamericano venido del este.",
+  }),
+  inahSerpiente: source({
+    title: "La serpiente emplumada en Mesoamérica",
+    author: "Instituto Nacional de Antropología e Historia de México",
+    type: "ficha institucional de iconografía y religión mesoamericana",
+    url: "https://repositorio.inah.gob.mx/o-35233",
+    summary:
+      "Contextualiza a Quetzalcóatl y Kukulcán dentro de historias, ciudades y funciones religiosas mesoamericanas específicas.",
+    limitation:
+      "Compartir rasgos civilizadores no convierte esas deidades en versiones de Bochica ni prueba un origen oriental común.",
+  }),
+  inahQuetzalcoatl: source({
+    title: "Quetzalcóatl: historia y complejidad de una deidad",
+    author: "Instituto Nacional de Antropología e Historia de México",
+    type: "divulgación académica institucional",
+    url: "https://www.feriadelibro.inah.gob.mx/FILAH36/views/user/detalle_evento.php?id=329",
+    summary:
+      "Subraya la complejidad histórica de Quetzalcóatl y evita reducirlo a un único extranjero civilizador.",
+    limitation:
+      "No trata a Colombia ni valida las equivalencias propuestas por Izquierdo Gallo.",
+  }),
+  banrepArqueologia: source({
+    title: "Arqueología de Colombia: un texto introductorio",
+    author: "Gerardo Reichel-Dolmatoff; Biblioteca del Banco de la República",
+    year: 1997,
+    type: "síntesis arqueológica e historia comparativa",
+    url: "https://babel.banrepcultural.org/digital/api/collection/p17054coll9/id/18/download",
+    summary:
+      "Contextualiza a Bochica como héroe cultural muisca y muestra cómo la arqueología del siglo XX comparó elementos colombianos y mesoamericanos.",
+    limitation:
+      "Las semejanzas comparativas requieren evidencia material e histórica específica y no establecen una religión panamericana única.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-22 ———
+  nacionalProyectosf: source({
+    title: "Proyecto 5: La Colombia de todos (Aceleración del Aprendizaje)",
+    author: "Ministerio de Educación Nacional",
+    year: "s. f.",
+    type: "material educativo",
+    url: "https://colombiaaprende.edu.co/sites/default/files/files_public/rural-adultos/1_Coleccion_Avanzada_Programa_de_Educacion_Rural_PER/4-Modelos_Educativos_Flexibles/3-Aceleracion%20_del_aprendizaje/Materiales_Estudiantes/Proyecto-5-La_Colombia_de_todos.pdf",
+    summary:
+      "Cita textual de Ocampo López (Mitos y leyendas de Antioquia la Grande, 2001): el leñador que corta un guayacán y la madre monte convierte en árbol (p. 170).",
+    limitation:
+      "Es un material escolar que reproduce el pasaje; el libro de Ocampo no tiene texto abierto.",
+  }),
+  eSAPFichasf: source({
+    title: "Ficha municipal de Risaralda (Caldas)",
+    author: "Municipio de Risaralda (repositorio ESAP)",
+    year: "s. f.",
+    type: "documento municipal",
+    url: "https://repositoriocdim.esap.edu.co/bitstreams/572d52ab-2933-4d57-97f6-e17f39163934/download",
+    summary:
+      "Ficha municipal de Risaralda (Caldas) que describe al Hojarasquín como protector de bosques y animales, hombre árbol o mono gigante musgoso, tronco seco y huellas de venado.",
+    limitation:
+      "El texto es casi literal de la ficha técnica del libro de 2004.",
+  }),
+  caldasInformacion2014: source({
+    title: "Información de Samaná",
+    author: "Gobernación de Caldas",
+    year: 2014,
+    type: "documento institucional",
+    url: "https://caldas.gov.co/media/pdf/2014/infomunicipios/INFORMACION%20DE%20SAMANa.pdf",
+    summary:
+      "Ficha de Samaná con el mismo texto sobre el Hojarasquín del Monte.",
+    limitation:
+      "Texto idéntico al de Risaralda; derivado.",
+  }),
+  compiladoraInforme1997: source({
+    title: "Informe Fulbright-Hays 1997 con «Niños de las regiones de Colombia» (Esmeralda Van Vliet, ICAN)",
+    author: "Ana María Alfaro (compiladora), ERIC ED430849",
+    year: 1997,
+    type: "informe educativo",
+    url: "https://files.eric.ed.gov/fulltext/ED430849.pdf",
+    summary:
+      "La página infantil de Van Vliet (1997) lo describe con cuerpo frondoso de árbol, que cambia de lugar para hacer perder a leñadores y cazadores.",
+    limitation:
+      "Divulgación infantil impresa en un informe educativo.",
+  }),
+  tiempoCuentos2004: source({
+    title: "Cuentos de espantos y otros seres fantásticos del folclor colombiano",
+    author: "Casa Editorial El Tiempo, dir. Juan Torres Mantilla",
+    year: 2004,
+    type: "libro ilustrado de ficción declarada",
+    url: "https://archive.org/details/CuentosDeEspantosYOtrosSeresFantasticosDelFolclorColombiano..compressed",
+    summary:
+      "Le dedica las pp. 39-40: ficha técnica (hombre árbol, monstruo mitad asno) y el diario inventado de un botánico de 1928.",
+    limitation:
+      "Se declara «recopilación de documentos imaginarios»: su entrada es composición de autor.",
+  }),
+  samanacaldasnetcoHojarasquinsf: source({
+    title: "El Hojarasquín del Monte",
+    author: "Portal municipal de Samaná (samanacaldas.net.co)",
+    year: "s. f.",
+    type: "página cultural municipal",
+    url: "https://www.samanacaldas.net.co/folclorver.php?idfolclor=4",
+    summary:
+      "Recoge un cuento de Tío Conejo en que el conejo se disfraza de «hojarasquín del monte» con miel y hojarasca, el homónimo que registra Versiones.",
+    limitation:
+      "Es otra tradición con el mismo nombre.",
+  }),
+  correaMitos1997: source({
+    title: "Mitos, espantos y leyendas de Caldas",
+    author: "Fabio Vélez Correa",
+    year: 1997,
+    type: "libro (edición ampliada en El Libro Total)",
+    url: "https://www.ellibrototal.com/ltotal/?d=4731&t=1",
+    summary:
+      "Capítulo «La Mano Peluda», con la Mano Negra y la cita de Escobar Uribe (p. 179), y en «El Viejo del Costal» la mano escondida del limosnero según Julián Bueno.",
+    limitation:
+      "Se lee la edición ampliada de El Libro Total (posterior a 2007), no la de 1997; se cita por capítulo.",
+  }),
+
+  // ——— Búsqueda profunda 2026-09-23 ———
+  investigacionMitos1993: source({
+    title: "Mitos y leyendas de Colombia, tomo III",
+    author: "Eugenia Villa Posse (investigación y compilación); texto de Mariano Izquierdo Gallo",
+    year: 1993,
+    type: "antología con textos reproducidos (IADAP, Quito)",
+    url: "https://www.flacso.edu.ec/biblio/catalog/resGet.php?resId=44622",
+    summary:
+      "Sección 30, pp. 52-53: el apartado 2.4 «Esperanza en el oriente» de la Mitología americana de Izquierdo Gallo (1956), con la profecía del salvador oriental, los héroes que «proceden del Oriente» y el cementerio del Zenú con los cuerpos de cara al sol naciente; pp. 33-34, el apartado 1.8 sobre Nemterequeteba, que «vino por el Oriente, de la Tierra del Sol»; p. 15, la nota que califica el trabajo de presentación elaborada literariamente; pp. 121-122 (Ocampo López), el zaque que espera la salida del sol.",
+    limitation:
+      "Es un ensayo de compilador, no un relato recogido: el autor admite que no puede demostrar la creencia y conjetura con «acaso». La nota da las páginas del libro de 1956 con errata (p. 219-207).",
+  }),
+  latinoHistoriae: source({
+    title: "Historiae, liber V",
+    author: "Publio Cornelio Tácito (texto latino, The Latin Library)",
+    type: "fuente clásica (texto latino)",
+    url: "https://www.thelatinlibrary.com/tacitus/tac.hist5.shtml",
+    summary:
+      "Capítulo 13: la creencia de que en ese tiempo prevalecería el Oriente y que hombres salidos de Judea se harían con el poder, que Tácito aplica a Vespasiano y a Tito. Es el pasaje que Izquierdo Gallo atribuye a los Anales y convierte en esperanza de un salvador del mundo.",
+    limitation:
+      "Texto latino sin aparato crítico; no trata América ni el Zenú: sólo sirve para corregir la cita y como paralelo.",
+  }),
+  mateosTodo2018: source({
+    title: "«Todo lo que se hallare en las sepulturas es nuestro». Política y fiscalidad Real en torno a los tesoros indígenas del Zenú (Cartagena de Indias, 1534-1554)",
+    author: "Rocío Delibes Mateos",
+    year: 2018,
+    type: "artículo de revista (Memorias. Revista Digital de Historia y Arqueología desde el Caribe, n.º 36, pp. 7-30, Universidad del Norte)",
+    url: "https://www.redalyc.org/journal/855/85559556002/html/",
+    summary:
+      "Sitúa el gran cementerio del Zenú en el Finzenú, el pueblo más próximo a Cartagena, saqueado por Pedro de Heredia desde 1534; cita a Las Casas (la provincia era «fosario y entierro» de gentes que traían a sus muertos con todo su oro) y a Simón sobre los túmulos de tierra visibles desde lejos. Corrige el «cerca de Mompós» del ensayo y explica la riqueza que alimentó El Dorado.",
+    limitation:
+      "Historia fiscal del saqueo; no menciona la orientación de los cuerpos hacia el oriente ni ninguna creencia en la resurrección.",
+  }),
+  religionQuetzalcoatl2018: source({
+    title: "Quetzalcoatl",
+    author: "Encyclopedia of Religion y Myths and Legends of the World (Gale), en Encyclopedia.com",
+    year: 2018,
+    type: "entrada de obra de referencia reproducida en portal",
+    url: "https://www.encyclopedia.com/people/history/mesoamerican-indigenous-peoples-biographies/quetzalcoatl",
+    summary:
+      "Recoge la partida de Quetzalcóatl hacia el oriente, a la costa del Golfo o en una balsa de serpientes, su transformación en el lucero, la espera de su regreso y la identificación con Cortés que atribuyen varias crónicas; también que los mayas lo llamaron Kukulcán. Sostiene el paralelo que el propio ensayo convoca.",
+    limitation:
+      "Portal que reproduce obras de referencia; se cita como paralelo, no como fuente clave, y no menciona a Bochica ni el Zenú.",
+  }),
+};
+
+const sourceKeysBySlug = {
+  "la-mano-peluda": [
+    "ocampoAntioquia",
+    "tunjaMano",
+    "senalMano",
+    "ocampoColombia",
+    "radioNacionalMano",
+    "boyacaRadioMano",
+    "raeCoco",
+    "cervantesSaco",
+  ],
+  "el-hojarasquin-del-monte": [
+    "ocampoAntioquia",
+    "colombiaAprendeHojarasquin",
+    "esapHojarasquin",
+    "caldasHojarasquin",
+    "redalycProtectores",
+    "banrepFolclor",
+    "samanaTioConejo",
+    "curupiraInstituto",
+  ],
+  "esperanza-en-el-oriente": [
+    "izquierdoVilla",
+    "tacitoPerseus",
+    "uvaWorldLeader",
+    "acostaCementerio",
+    "banrepMuiscas",
+    "inahSerpiente",
+    "inahQuetzalcoatl",
+    "banrepArqueologia",
+  ],
+};
+
+/**
+ * Resuelve las fuentes de una ficha. Con una lista —la `sourceKeys` que la
+ * ficha declara— devuelve esas obras en ese orden, y cada entrada puede ser una
+ * clave suelta o `{ key, summary, limitation }` con lo que esa obra dice de
+ * ESE relato. Con un slug cae en el reparto heredado, que se conserva tal cual
+ * para las fichas que todavía no se han rehecho.
+ */
+export function pickAndinaVariosMixtoResidualSources(slugOrEntries) {
+  if (!Array.isArray(slugOrEntries)) return pickAndinaVariosMixtoResidualSourcesHeredadas(slugOrEntries);
+  return slugOrEntries.map((entrada) => {
+    const key = typeof entrada === "string" ? entrada : entrada?.key;
+    const selected = andinaVariosMixtoResidualSources[key];
+    if (!selected) throw new Error(`Fuente desconocida: ${JSON.stringify(entrada)}.`);
+    return {
+      ...selected,
+      ...(typeof entrada === "object" && entrada.summary ? { summary: entrada.summary } : {}),
+      ...(typeof entrada === "object" && entrada.limitation ? { limitation: entrada.limitation } : {}),
+    };
+  });
+}
+
+// El reparto heredado, por slug. Sólo lo usan las fichas sin `sourceKeys`.
+function pickAndinaVariosMixtoResidualSourcesHeredadas(slug) {
+  const keys = sourceKeysBySlug[slug];
+  if (!keys) throw new Error(`${slug}: no tiene expediente de fuentes.`);
+  return keys.map((key) => {
+    const selected = andinaVariosMixtoResidualSources[key];
+    if (!selected) throw new Error(`${slug}: fuente desconocida ${key}.`);
+    return selected;
+  });
+}

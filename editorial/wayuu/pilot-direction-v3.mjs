@@ -1,0 +1,92 @@
+/** Dirección específica del piloto multicategoría Wayuu V3. */
+
+export const WAYUU_PILOT_DIRECTIONS_V3 = {
+  "jose_juan__identity_sheet": {
+    title: "José Juan · identidad joven",
+    focus: "Un único José Juan joven, ya crecido pero todavía de proporciones ágiles, de cuerpo completo y de pie en gesto sereno de atención. Es un personaje diseñado, no una silueta-placeholder: rostro de paper craft sobrio e individual, cabello negro corto construido en capas, manos y articulaciones legibles. Vestuario deliberadamente no canónico: prendas lisas, funcionales y sin patrones, en algodón mate arena, crudo y carbón; ningún elemento se presenta como reconstrucción histórica exacta.",
+    scene: "Umbral amplio de la cueva de Juramía: roca de papel en primer plano, José Juan separado físicamente en plano medio y una franja lejana de territorio y cielo; el entorno sólo da escala y no narra una escena de cautiverio.",
+    must_show: [
+      "figura única de cuerpo completo, pies y manos visibles",
+      "rostro artesanal individual y repetible, sin realismo fotográfico humano",
+      "silueta joven, esbelta y determinada que pueda conservarse en niño, joven y viajero",
+      "tres profundidades físicas claras con aire y sombras entre capas",
+    ],
+    avoid: [
+      "madre, cóndor, Jujía, serpientes, caballo u otros personajes",
+      "cautiverio, lesión, pelea, arma, sangre o sufrimiento",
+      "poncho estampado, manta con kanas, mochila decorativa, joyería, tocado, plumas o pintura corporal",
+      "figura geométrica neutral, maniquí, cabeza circular vacía o manos tipo mitón",
+      "pose de superhéroe, musculatura épica o retrato cinematográfico genérico",
+    ],
+  },
+  "mareiwa__presence_model": {
+    title: "Mareiwa · presencia sin cuerpo",
+    focus: "Mareiwa se reconoce sin figura antropomorfa: una misma inteligencia material relaciona tres acciones separadas pero coherentes, piedra y mar que retrocede, aves que dispersan semillas y lluvia localizada que despierta brotes. La continuidad nace de un pliegue mineral ocre que reaparece en las tres acciones, nunca de un cuerpo oculto.",
+    scene: "Paisaje horizontal profundo de costa, planicie y serranía conectado por estratos físicos; cada acción ocupa un plano y mantiene distancia real de las otras.",
+    must_show: ["ausencia total de cuerpo divino", "tres acciones legibles sin texto", "agua y verde localizados", "huella material ocre repetida"],
+    avoid: ["dios humano, mano gigante, rostro en el cielo, halo, trono, corona, luz divina", "mapa, diagrama, flechas, etiquetas o división en viñetas", "creación instantánea o explosión mágica"],
+  },
+  "juramia__identity_sheet": {
+    title: "Juramía · identidad de cóndor",
+    focus: "Un único cóndor andino Juramía de cuerpo completo y anatomía zoológica inequívoca: cuerpo negro muy grande y pesado, alas plegadas amplias con parches blancos, cabeza y cuello desnudos de tono rojizo oscuro, collar blanco de plumas en la base del cuello y pico fuerte ganchudo. Todo construido en capas de papel negro, carbón, rojizo, gris y marfil. Debe sentirse como individuo poderoso por porte, escala y mirada, no mediante anatomía híbrida, corona o aura.",
+    scene: "Repisa rocosa dentro de una cueva alta; ala plegada y patas visibles en primer plano, vacío de la cueva en plano medio y una abertura luminosa distante que da escala.",
+    must_show: ["cuerpo completo de cóndor andino", "cabeza y cuello desnudos, collar blanco, pico ganchudo, garras y plumas estratificadas legibles", "alas negras plegadas con parches blancos propios del cóndor", "gran escala frente a la cueva", "profundidad física real"],
+    avoid: ["cabeza emplumada blanca de águila calva", "ceja de águila, cabeza de águila real o silueta de águila", "cuerpo humano, hombre-pájaro, brazos, rostro humano, ropa, joyas o tocado", "madre, José Juan, cautiverio o violencia", "alas abiertas que corten el encuadre", "ave fantástica luminosa"],
+  },
+  "caballo_kosina__identity_sheet": {
+    title: "Caballo de Kosina · identidad animal",
+    focus: "Un único caballo completo y repetible, de proporciones ecuestres reales, elegante pero no sobrenatural. Su identidad combina pecho amplio, cuello largo ligeramente arqueado, orejas atentas y un pequeño parche irregular asimétrico de papel rojizo oscuro en el hombro, con bordes rasgados que siguen el volumen muscular. El parche es una unión material abstracta, nunca un dibujo, letra, cruz, glifo, emblema o marca clanil; debe sobrevivir a sus futuros estados gigante, potro, corredor y guía.",
+    scene: "Pista de arena vacía con huellas en primer plano, caballo en plano medio y colinas bajas distantes; sin carrera ni público.",
+    must_show: ["cuatro patas y silueta completa", "anatomía ecuestre correcta", "parche de continuidad irregular y sin geometría en el hombro", "escala y sombras físicas"],
+    avoid: ["cualquier cruz, signo de suma, letra, pictograma, glifo, símbolo, tatuaje, hierro ganadero, emblema o marca clanil", "parche con borde geométrico, simétrico o pintado", "jinete, Kosina, otros caballos, carrera, amenaza o multitud", "unicornio, alas, armadura, fuego, ojos luminosos", "caballo fotográfico de piel real en vez de paper craft"],
+  },
+  "hermanas_kuriruputa__group_grammar": {
+    title: "Hermanas de Kuriruputá · gramática de colectivo",
+    focus: "Tres hermanas adultas como grupo de decisión y defensa, claramente individualizadas por altura, edad aparente, postura y un acento cromático liso diferente. Ninguna queda detrás como extra: sus miradas y manos forman una relación triangular de deliberación.",
+    scene: "Enramada abierta y corral al fondo, con figuras en tres distancias cortas y un espacio central vacío que hace visible la conversación.",
+    must_show: ["tres figuras completas y distintas", "agencia compartida", "manos no armadas", "vestuario liso sin patrones"],
+    avoid: ["clones, fila frontal, pose de catálogo o multitud", "Kuriruputá, atacantes, armas, rescate o herida", "sexualización, pasividad o una líder monumental", "kanas, mochilas estampadas, tocados o símbolos inventados"],
+  },
+  "tuma_roja__object_sheet": {
+    title: "Tuma roja · objeto mineral",
+    focus: "Una tuma roja como piedra mineral pequeña, densa e irregular, de color rojo profundo no luminoso, con inclusiones y cantos estratificados de papel prensado. Debe verse valiosa por materia, peso y cuidado, no como gema fantástica.",
+    scene: "La piedra descansa sobre una bandeja simple de fibra en primer plano; una mano de paper craft desenfocada en plano medio establece escala y un interior de enramada queda al fondo.",
+    must_show: ["objeto completo", "escala de palma", "capas minerales visibles", "sombra con peso"],
+    avoid: ["rubí tallado, joya, collar, resplandor, halo, partículas o magia", "texto, medidas, vitrina de museo o fondo de estudio"],
+  },
+  "cardon_iguaraya__botanical_sheet": {
+    title: "Cardón e iguaraya · morfología botánica",
+    focus: "Cardón guajiro de varios tallos columnares acanalados que nacen desde la base, con ramificación natural baja y pocos frutos rojos de iguaraya claramente unidos a la planta. No es un saguaro de brazos simétricos.",
+    scene: "Planta completa creciendo en suelo pedregoso, con una sección joven en primer plano, ejemplar principal en plano medio y planicie seca al fondo.",
+    must_show: ["múltiples tallos desde la base", "acanaladuras y espinas de papel", "pocos frutos rojos localizados", "planta completa y escala territorial"],
+    avoid: ["saguaro con brazos levantados", "cactus ornamental en maceta", "selva, oasis o abundancia de frutos", "ilustración botánica plana, etiquetas o texto"],
+  },
+  "rancheria_wayuu__spatial_model": {
+    title: "Ranchería y piichipala · sistema espacial",
+    focus: "Maqueta artesanal inequívoca de paper craft 3D que representa un conjunto familiar disperso, no una casa única: vivienda con tiras de yotojoro de papel, postes de papel enrollado con juntas visibles, cubierta de paja traducida a muchas tiras recortadas, barro mate construido con capas prensadas, enramada abierta, corral y senderos de papel que conectan espacios separados. La arquitectura debe explicar uso, ventilación, sombra y distancia sin parecer una fotografía de construcciones reales.",
+    scene: "Cámara dentro del sistema: postes y sombra en primer plano, enramada y vivienda en plano medio, corral y territorio al fondo.",
+    must_show: ["cuatro componentes espaciales legibles", "pliegues, cantos, cortes, uniones y fibras de papel visibles en toda la arquitectura", "postes enrollados y paja hecha de tiras de papel, no madera o paja fotográficas", "senderos y vacíos", "escala habitable sin borde de maqueta"],
+    avoid: ["fotografía de arquitectura real, troncos reales, paja realista, vegetación fotográfica o suelo fotográfico", "render arquitectónico fotorrealista", "casa genérica aislada", "aldea densa, tipis, chozas amazónicas o arquitectura colonial", "patrones textiles decorativos", "vista aérea de maqueta sobre una base"],
+  },
+  "cueva_juramia__spatial_model": {
+    title: "Cueva de Juramía · gramática espacial",
+    focus: "Cueva alta con repisa de entrada, cámara interior profunda y una salida estrecha visible a distancia. Debe permitir imaginar escala de cóndor y recorrido humano sin mostrar a nadie ni reconstruir cautiverio.",
+    scene: "Cámara situada dentro de la cueva, detrás de estratos rocosos de primer plano; cámara central en penumbra y abertura exterior distante.",
+    must_show: ["entrada, repisa, cámara y salida", "recorrido espacial legible", "tres o más capas rocosas separadas", "luz natural que entra sin magia"],
+    avoid: ["personajes, ave, nido, cadenas, restos, huesos o signos de violencia", "cristales luminosos, runas, tesoro o cueva de videojuego", "corte lateral diagramático o casa amueblada"],
+  },
+  "territorio_alta_guajira__environment_model": {
+    title: "Alta Guajira · sistema territorial",
+    focus: "Continuidad entre costa, planicie árida y serranías distantes, con vegetación baja localizada y caminos discretos. No desierto vacío ni duna sahariana: el territorio muestra variación, huellas de agua estacional y escala habitable.",
+    scene: "Piedra y fibra seca en primer plano, planicie y sendero en plano medio, costa y serranías en capas lejanas; horizonte amplio dentro de la maqueta.",
+    must_show: ["costa, planicie y serranía conectadas", "profundidad atmosférica por capas", "vegetación baja localizada", "mundo full bleed"],
+    avoid: ["dunas infinitas, camellos, saguaro, selva continua o Caribe turístico", "mapa, vista satelital o maqueta vista desde afuera", "ruinas fantásticas o luz mística"],
+  },
+  "fuego_compartido__phenomenon_rule": {
+    title: "Fuego compartido · regla material",
+    focus: "Una brasa única pasa de una madera a otra y de un fogón a otro mediante una cadena física de cuidado. La misma forma roja plegada disminuye en un punto y reaparece en el siguiente sin convertirse en rayo o aura; la huella final queda en varitas de fricción y pequeños fogones separados. Todas las mangas, recipientes y superficies son completamente lisos y monocromos, sin rombos, triángulos, franjas, bordados, dibujos ni patrones.",
+    scene: "Composición horizontal continua con tres planos de vivienda y manos de paper craft que acercan materiales sin tocarse; el fuego recorre profundidad, no viñetas.",
+    must_show: ["causa, transferencia y huella", "fuego pequeño y material", "varitas y fogones legibles", "relación comunitaria sin protagonista monumental", "mangas y recipientes lisos de un solo color"],
+    avoid: ["rombos, triángulos, zigzags, franjas, bordados, cenefas, patrones, marcas o símbolos en manga, ropa, vasija, cesta o recipiente", "incendio, casa quemada, víctima, humo asfixiante o destrucción", "Siki antropomorfo", "rayo, fénix, chispa flotante, aura o ojos luminosos", "diagrama, flechas o texto"],
+  },
+};

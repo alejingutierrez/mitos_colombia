@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-28T00:00:00.000Z",
+  "myth": {
+    "id": 218,
+    "title": "Bachué",
+    "slug": "bachue",
+    "region": "Andina",
+    "community": "Muiscas",
+    "latitude": 5.68728,
+    "longitude": -73.43681,
+    "updated_at": null
+  },
+  "provider": "fixture_guion_aprobado",
+  "model_id": "lienzo-guion-v10 (copy aprobada por Alejandro; pendiente run de modelo)",
+  "usage": null,
+  "guion": "v10",
+  "source_assets": {},
+  "production_policy": {
+    "require_third_image": true
+  },
+  "plan": {
+    "template_id": "retrato_en_capas",
+    "editorial_thesis": "Bachué funda una comunidad y enseña que quien da origen también debe saber irse: el relato termina en la renuncia, no en el origen.",
+    "sequence_count": 11,
+    "palette_id": "laguna",
+    "generated_image": {
+      "needed": true,
+      "narrative_gap": "La entrada final de Bachué y su compañero al agua y su transformación en serpientes.",
+      "brief": "La pareja anciana entra a la laguna tomada de la mano; sobre la superficie aparecen dos grandes serpientes que dan una vuelta y se hunden. Encuadre distinto de las dos imágenes canónicas, acción central visible.",
+      "art_direction": {
+        "moment": "El regreso al agua al final del relato.",
+        "subject": "Bachué y su compañero ancianos; dos serpientes sobre la superficie.",
+        "action": "Entran al agua tomados de la mano y se transforman.",
+        "setting": "Laguna de Iguaque al atardecer, frailejones en la orilla.",
+        "framing": "Desde la orilla, la multitud de espaldas en primer plano.",
+        "continuity": "Vestuario y paleta de las imágenes canónicas; papel recortado en capas.",
+        "differentiation": "Ni la salida del agua (portada) ni el recorrido (paisaje): sólo la entrada final."
+      },
+      "avoid": [
+        "repetir el encuadre de la portada",
+        "texto dentro de la imagen",
+        "fantasía genérica"
+      ]
+    },
+    "slides": [
+      {
+        "sequence": 1,
+        "kind": "image",
+        "narrative_role": "hook",
+        "design_role": "identity",
+        "text_density": "short",
+        "headline": "Bachué",
+        "body": "Salió del agua con un niño de la mano. Volvió convertida en serpiente.",
+        "asset_id": "existing_portrait",
+        "crop_focus": "attention",
+        "image_overlay": "",
+        "alt_text": "Bachué emerge de la laguna de Iguaque con un niño en brazos, en papel recortado.",
+        "palette_id": "laguna"
+      },
+      {
+        "sequence": 2,
+        "kind": "typographic",
+        "narrative_role": "setting",
+        "design_role": "context",
+        "text_density": "medium",
+        "headline": "Antes de los caminos ya había orillas.",
+        "body": "Iguaque, en el altiplano de Boyacá: frailejones, venados y viento frío entre las piedras.",
+        "asset_id": "none",
+        "crop_focus": "centre",
+        "image_overlay": "",
+        "alt_text": "",
+        "palette_id": "paramo"
+      },
+      {
+        "sequence": 3,
+        "kind": "location",
+        "narrative_role": "setting",
+        "design_role": "context",
+        "text_density": "short",
+        "headline": "Laguna de Iguaque",
+        "body": "Un santuario de páramo en la cuenca alta.",
+        "asset_id": "none",
+        "crop_focus": "centre",
+        "image_overlay": "",
+        "alt_text": "",
+        "palette_id": "tierra"
+      },
+      {
+        "sequence": 4,
+        "kind": "image",
+        "narrative_role": "inciting_event",
+        "design_role": "sequence",
+        "text_density": "short",
+        "headline": "Del agua salieron dos.",
+        "body": "Una mujer adulta y un niño de tres años tomado de su mano.",
+        "asset_id": "existing_landscape",
+        "crop_focus": "attention",
+        "image_overlay": "",
+        "alt_text": "Escena horizontal: Bachué y el niño salen de la laguna hacia la orilla.",
+        "palette_id": "laguna"
+      },
+      {
+        "sequence": 5,
+        "kind": "typographic",
+        "narrative_role": "turn",
+        "design_role": "turn",
+        "text_density": "short",
+        "headline": "Ella lo crió. Después se casó con él.",
+        "body": "Los cronistas anotaron el detalle sin explicarlo.",
+        "asset_id": "none",
+        "crop_focus": "centre",
+        "image_overlay": "",
+        "alt_text": "",
+        "palette_id": "noche"
+      },
+      {
+        "sequence": 6,
+        "kind": "typographic",
+        "narrative_role": "development",
+        "design_role": "development",
+        "text_density": "short",
+        "headline": "Cuatro en un parto. Seis en el siguiente.",
+        "body": "El altiplano se llenó de sus hijos antes de tener nombre.",
+        "asset_id": "none",
+        "crop_focus": "centre",
+        "image_overlay": "",
+        "alt_text": "",
+        "palette_id": "selva"
+      },
+      {
+        "sequence": 7,
+        "kind": "typographic",
+        "narrative_role": "development",
+        "design_role": "testimony",
+        "text_density": "medium",
+        "headline": "Puso límites antes de irse.",
+        "body": "Una familia no prospera destruyendo la casa vecina. Nadie guarda el agua sólo para sí.",
+        "asset_id": "none",
+        "crop_focus": "centre",
+        "image_overlay": "",
+        "alt_text": "",
+        "palette_id": "oro"
+      },
+      {
+        "sequence": 8,
+        "kind": "image",
+        "narrative_role": "climax",
+        "design_role": "climax",
+        "text_density": "short",
+        "headline": "Entraron al agua tomados de la mano.",
+        "body": "Eran ancianos. Toda su descendencia los siguió hasta la orilla.",
+        "asset_id": "generated_third",
+        "crop_focus": "attention",
+        "image_overlay": "",
+        "alt_text": "La pareja anciana entra a la laguna; dos serpientes doradas asoman en el agua.",
+        "palette_id": "noche"
+      },
+      {
+        "sequence": 9,
+        "kind": "typographic",
+        "narrative_role": "climax",
+        "design_role": "climax",
+        "text_density": "short",
+        "headline": "El agua los recibió como serpientes.",
+        "body": "Dieron una vuelta a la laguna y se hundieron para siempre.",
+        "asset_id": "none",
+        "crop_focus": "centre",
+        "image_overlay": "",
+        "alt_text": "",
+        "palette_id": "noche"
+      },
+      {
+        "sequence": 10,
+        "kind": "typographic",
+        "narrative_role": "meaning",
+        "design_role": "pause",
+        "text_density": "short",
+        "headline": "Quien funda también tiene que saber irse.",
+        "body": "El relato no termina en el origen: termina en la renuncia.",
+        "asset_id": "none",
+        "crop_focus": "centre",
+        "image_overlay": "",
+        "alt_text": "",
+        "palette_id": "paramo"
+      },
+      {
+        "sequence": 11,
+        "kind": "closing",
+        "narrative_role": "closing",
+        "design_role": "closing",
+        "text_density": "short",
+        "headline": "¿Qué comunidad sabe dejar ir a quien la fundó?",
+        "body": "",
+        "asset_id": "none",
+        "crop_focus": "centre",
+        "image_overlay": "",
+        "alt_text": "",
+        "palette_id": "laguna"
+      }
+    ],
+    "caption": "Bachué salió de la laguna de Iguaque con un niño de la mano y llenó el altiplano de gente. Enseñó a cuidar el agua y a no destruir la casa vecina, y cuando su trabajo estuvo cumplido volvió al agua con su compañero, convertidos en serpientes. Lee la historia completa, sus versiones y su territorio en mitosdecolombia.com. Fuentes: Fray Pedro Simón (1627) y Alonso de Zamora (1701).",
+    "hashtags": [
+      "#MitosDeColombia",
+      "#Bachué",
+      "#Muiscas",
+      "#Boyacá",
+      "#LagunaDeIguaque"
+    ],
+    "factual_guardrails": [
+      "Bachué emerge de la laguna de Iguaque con un niño de tres años.",
+      "Al final ambos regresan al agua transformados en serpientes.",
+      "Las crónicas de referencia son Simón (1627) y Zamora (1701) y sólo se citan en el caption."
+    ]
+  }
+}

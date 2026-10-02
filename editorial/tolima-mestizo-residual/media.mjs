@@ -1,0 +1,46 @@
+export const tolimaMestizoResidualMedia = {
+  "la-patasola": {
+    horizontal: "pending://tolima-mestizo-residual/la-patasola/horizontal",
+    vertical: "pending://tolima-mestizo-residual/la-patasola/vertical",
+    provenanceStatus: "pending",
+    provider: "openai",
+    model: "gpt-image-2",
+    provenanceKeys: ["la-patasola:horizontal", "la-patasola:vertical"],
+    latitude: 4.43573,
+    longitude: -75.20289,
+  },
+  "la-patasola-mixto": {
+    horizontal:
+      "pending://tolima-mestizo-residual/la-patasola-mixto/horizontal",
+    vertical: "pending://tolima-mestizo-residual/la-patasola-mixto/vertical",
+    provenanceStatus: "pending",
+    provider: "openai",
+    model: "gpt-image-2",
+    provenanceKeys: [
+      "la-patasola-mixto:horizontal",
+      "la-patasola-mixto:vertical",
+    ],
+    latitude: 3.93916667,
+    longitude: -75.21994444,
+  },
+  "el-poira": {
+    horizontal: "pending://tolima-mestizo-residual/el-poira/horizontal",
+    vertical: "pending://tolima-mestizo-residual/el-poira/vertical",
+    provenanceStatus: "pending",
+    provider: "openai",
+    model: "gpt-image-2",
+    provenanceKeys: ["el-poira:horizontal", "el-poira:vertical"],
+    latitude: 3.9347,
+    longitude: -75.015,
+  },
+  "el-sombreron": {
+    horizontal: "pending://tolima-mestizo-residual/el-sombreron/horizontal",
+    vertical: "pending://tolima-mestizo-residual/el-sombreron/vertical",
+    provenanceStatus: "pending",
+    provider: "openai",
+    model: "gpt-image-2",
+    provenanceKeys: ["el-sombreron:horizontal", "el-sombreron:vertical"],
+    latitude: 4.863333,
+    longitude: -74.912778,
+  },
+};

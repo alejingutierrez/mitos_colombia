@@ -1,0 +1,843 @@
+{
+  "version": "v2",
+  "generated_at": "2026-08-05T19:33:32.920Z",
+  "standard": {
+    "edition": "system-100",
+    "line": {
+      "strokeWidth": 2.6,
+      "linecap": "round",
+      "linejoin": "round",
+      "fill": "none"
+    },
+    "palette": {
+      "ink": "#1c5c3f",
+      "accent": "#b18a32",
+      "paper": "#e7decb"
+    },
+    "roles": {
+      "glyph": "semantic-primary",
+      "divider": "narrative-pause",
+      "corner": "boundary-accent",
+      "frame": "layout-scaffold",
+      "ornament": "micro-accent",
+      "pattern": "low-contrast-texture"
+    },
+    "usage": {
+      "maxPrimaryPerSlide": 1,
+      "maxSupportPerSlide": 1,
+      "maxPatternOpacity": 0.08,
+      "communitySpecificSymbolsRequireDocumentedReference": true
+    }
+  },
+  "counts": {
+    "total": 100,
+    "glyphs": 48,
+    "dividers": 12,
+    "corners": 12,
+    "frames": 8,
+    "ornaments": 12,
+    "patterns": 8
+  },
+  "assets": [
+    {
+      "id": "water-current",
+      "group": "territory",
+      "label": "Corriente de agua",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "mountain-paramo",
+      "group": "territory",
+      "label": "Montaña y páramo",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "sun",
+      "group": "territory",
+      "label": "Sol",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "moon",
+      "group": "territory",
+      "label": "Luna",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "wind",
+      "group": "territory",
+      "label": "Viento",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "forest-leaf",
+      "group": "territory",
+      "label": "Bosque y hoja",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "origin-spiral",
+      "group": "narrative",
+      "label": "Origen",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "transformation",
+      "group": "narrative",
+      "label": "Transformación",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "memory-knot",
+      "group": "narrative",
+      "label": "Memoria",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "journey-path",
+      "group": "narrative",
+      "label": "Camino",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "warning-radiance",
+      "group": "narrative",
+      "label": "Advertencia",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "return-water",
+      "group": "narrative",
+      "label": "Regreso al agua",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "gathering-circle",
+      "group": "community",
+      "label": "Reunión",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "weaving",
+      "group": "community",
+      "label": "Tejido",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "oral-voice",
+      "group": "community",
+      "label": "Oralidad",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "territory-contour",
+      "group": "community",
+      "label": "Territorio",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "shared-hearth",
+      "group": "community",
+      "label": "Casa y fogón",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "reciprocity",
+      "group": "community",
+      "label": "Reciprocidad",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "region-andina",
+      "group": "region",
+      "label": "Región Andina",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "region-caribe",
+      "group": "region",
+      "label": "Región Caribe",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "region-pacifico",
+      "group": "region",
+      "label": "Región Pacífico",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "region-amazonia",
+      "group": "region",
+      "label": "Región Amazonía",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "region-orinoquia",
+      "group": "region",
+      "label": "Región Orinoquía",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "region-insular",
+      "group": "region",
+      "label": "Región Insular",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "rain-cloud",
+      "group": "atmosphere",
+      "label": "Lluvia",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "lightning",
+      "group": "atmosphere",
+      "label": "Relámpago",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "mist",
+      "group": "atmosphere",
+      "label": "Niebla",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "stone",
+      "group": "atmosphere",
+      "label": "Piedra",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "ember",
+      "group": "atmosphere",
+      "label": "Brasa",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "seed-sprout",
+      "group": "atmosphere",
+      "label": "Semilla",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "time-dawn",
+      "group": "time",
+      "label": "Amanecer",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "time-dusk",
+      "group": "time",
+      "label": "Anochecer",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "season-cycle",
+      "group": "time",
+      "label": "Ciclo",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "time-pause",
+      "group": "time",
+      "label": "Pausa",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "generations",
+      "group": "time",
+      "label": "Generaciones",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "time-continuation",
+      "group": "time",
+      "label": "Continuación",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "presence-serpent",
+      "group": "presence",
+      "label": "Presencia serpiente",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "presence-feline",
+      "group": "presence",
+      "label": "Presencia felina",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "presence-bird",
+      "group": "presence",
+      "label": "Presencia ave",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "presence-amphibian",
+      "group": "presence",
+      "label": "Presencia anfibia",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "presence-fish",
+      "group": "presence",
+      "label": "Presencia pez",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "presence-light",
+      "group": "presence",
+      "label": "Presencia luminosa",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "signal-footprint",
+      "group": "signal",
+      "label": "Huella",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "signal-witness",
+      "group": "signal",
+      "label": "Testigo",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "signal-echo",
+      "group": "signal",
+      "label": "Eco",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "signal-threshold",
+      "group": "signal",
+      "label": "Umbral",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "signal-shelter",
+      "group": "signal",
+      "label": "Resguardo",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "signal-encounter",
+      "group": "signal",
+      "label": "Encuentro",
+      "kind": "glyph",
+      "role": "semantic-primary",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "divider-water",
+      "group": "separator",
+      "label": "Separador de agua",
+      "kind": "divider",
+      "role": "narrative-pause",
+      "master_viewbox": "0 0 432 64"
+    },
+    {
+      "id": "divider-mountain",
+      "group": "separator",
+      "label": "Separador de montaña",
+      "kind": "divider",
+      "role": "narrative-pause",
+      "master_viewbox": "0 0 432 64"
+    },
+    {
+      "id": "divider-seed",
+      "group": "separator",
+      "label": "Separador de semilla",
+      "kind": "divider",
+      "role": "narrative-pause",
+      "master_viewbox": "0 0 432 64"
+    },
+    {
+      "id": "divider-path",
+      "group": "separator",
+      "label": "Separador de camino",
+      "kind": "divider",
+      "role": "narrative-pause",
+      "master_viewbox": "0 0 432 64"
+    },
+    {
+      "id": "divider-weave",
+      "group": "separator",
+      "label": "Separador de tejido",
+      "kind": "divider",
+      "role": "narrative-pause",
+      "master_viewbox": "0 0 432 64"
+    },
+    {
+      "id": "divider-horizon",
+      "group": "separator",
+      "label": "Separador de horizonte",
+      "kind": "divider",
+      "role": "narrative-pause",
+      "master_viewbox": "0 0 432 64"
+    },
+    {
+      "id": "divider-rain",
+      "group": "separator",
+      "label": "Separador de lluvia",
+      "kind": "divider",
+      "role": "narrative-pause",
+      "master_viewbox": "0 0 432 64"
+    },
+    {
+      "id": "divider-constellation",
+      "group": "separator",
+      "label": "Separador de constelación",
+      "kind": "divider",
+      "role": "narrative-pause",
+      "master_viewbox": "0 0 432 64"
+    },
+    {
+      "id": "divider-footsteps",
+      "group": "separator",
+      "label": "Separador de huellas",
+      "kind": "divider",
+      "role": "narrative-pause",
+      "master_viewbox": "0 0 432 64"
+    },
+    {
+      "id": "divider-ember",
+      "group": "separator",
+      "label": "Separador de brasa",
+      "kind": "divider",
+      "role": "narrative-pause",
+      "master_viewbox": "0 0 432 64"
+    },
+    {
+      "id": "divider-echo",
+      "group": "separator",
+      "label": "Separador de eco",
+      "kind": "divider",
+      "role": "narrative-pause",
+      "master_viewbox": "0 0 432 64"
+    },
+    {
+      "id": "divider-two-paths",
+      "group": "separator",
+      "label": "Separador de dos caminos",
+      "kind": "divider",
+      "role": "narrative-pause",
+      "master_viewbox": "0 0 432 64"
+    },
+    {
+      "id": "corner-water",
+      "group": "corner",
+      "label": "Esquina de agua",
+      "kind": "corner",
+      "role": "boundary-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "corner-mountain",
+      "group": "corner",
+      "label": "Esquina de montaña",
+      "kind": "corner",
+      "role": "boundary-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "corner-leaf",
+      "group": "corner",
+      "label": "Esquina de hoja",
+      "kind": "corner",
+      "role": "boundary-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "corner-weave",
+      "group": "corner",
+      "label": "Esquina de tejido",
+      "kind": "corner",
+      "role": "boundary-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "corner-sun",
+      "group": "corner",
+      "label": "Esquina de sol",
+      "kind": "corner",
+      "role": "boundary-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "corner-moon",
+      "group": "corner",
+      "label": "Esquina de luna",
+      "kind": "corner",
+      "role": "boundary-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "corner-seed",
+      "group": "corner",
+      "label": "Esquina de semilla",
+      "kind": "corner",
+      "role": "boundary-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "corner-path",
+      "group": "corner",
+      "label": "Esquina de camino",
+      "kind": "corner",
+      "role": "boundary-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "corner-rain",
+      "group": "corner",
+      "label": "Esquina de lluvia",
+      "kind": "corner",
+      "role": "boundary-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "corner-constellation",
+      "group": "corner",
+      "label": "Esquina de constelación",
+      "kind": "corner",
+      "role": "boundary-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "corner-archive",
+      "group": "corner",
+      "label": "Esquina de archivo",
+      "kind": "corner",
+      "role": "boundary-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "corner-protection",
+      "group": "corner",
+      "label": "Esquina de resguardo",
+      "kind": "corner",
+      "role": "boundary-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "frame-water",
+      "group": "frame",
+      "label": "Marco de agua",
+      "kind": "frame",
+      "role": "layout-scaffold",
+      "master_viewbox": "0 0 80 100"
+    },
+    {
+      "id": "frame-mountain",
+      "group": "frame",
+      "label": "Marco de montaña",
+      "kind": "frame",
+      "role": "layout-scaffold",
+      "master_viewbox": "0 0 80 100"
+    },
+    {
+      "id": "frame-leaf",
+      "group": "frame",
+      "label": "Marco de hoja",
+      "kind": "frame",
+      "role": "layout-scaffold",
+      "master_viewbox": "0 0 80 100"
+    },
+    {
+      "id": "frame-weave",
+      "group": "frame",
+      "label": "Marco de tejido",
+      "kind": "frame",
+      "role": "layout-scaffold",
+      "master_viewbox": "0 0 80 100"
+    },
+    {
+      "id": "frame-horizon",
+      "group": "frame",
+      "label": "Marco de horizonte",
+      "kind": "frame",
+      "role": "layout-scaffold",
+      "master_viewbox": "0 0 80 100"
+    },
+    {
+      "id": "frame-constellation",
+      "group": "frame",
+      "label": "Marco de constelación",
+      "kind": "frame",
+      "role": "layout-scaffold",
+      "master_viewbox": "0 0 80 100"
+    },
+    {
+      "id": "frame-archive",
+      "group": "frame",
+      "label": "Marco de archivo",
+      "kind": "frame",
+      "role": "layout-scaffold",
+      "master_viewbox": "0 0 80 100"
+    },
+    {
+      "id": "frame-path",
+      "group": "frame",
+      "label": "Marco de camino",
+      "kind": "frame",
+      "role": "layout-scaffold",
+      "master_viewbox": "0 0 80 100"
+    },
+    {
+      "id": "ornament-three-dots",
+      "group": "ornament",
+      "label": "Tres puntos",
+      "kind": "ornament",
+      "role": "micro-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "ornament-seed-trio",
+      "group": "ornament",
+      "label": "Trío de semillas",
+      "kind": "ornament",
+      "role": "micro-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "ornament-star-cluster",
+      "group": "ornament",
+      "label": "Constelación breve",
+      "kind": "ornament",
+      "role": "micro-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "ornament-rain-marks",
+      "group": "ornament",
+      "label": "Marcas de lluvia",
+      "kind": "ornament",
+      "role": "micro-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "ornament-wind-curls",
+      "group": "ornament",
+      "label": "Espirales de viento",
+      "kind": "ornament",
+      "role": "micro-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "ornament-pebbles",
+      "group": "ornament",
+      "label": "Guijarros",
+      "kind": "ornament",
+      "role": "micro-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "ornament-leaf-sprig",
+      "group": "ornament",
+      "label": "Ramita",
+      "kind": "ornament",
+      "role": "micro-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "ornament-rays",
+      "group": "ornament",
+      "label": "Rayos",
+      "kind": "ornament",
+      "role": "micro-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "ornament-contour-rings",
+      "group": "ornament",
+      "label": "Anillos de contorno",
+      "kind": "ornament",
+      "role": "micro-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "ornament-footsteps",
+      "group": "ornament",
+      "label": "Huellas breves",
+      "kind": "ornament",
+      "role": "micro-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "ornament-echo-arcs",
+      "group": "ornament",
+      "label": "Arcos de eco",
+      "kind": "ornament",
+      "role": "micro-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "ornament-crossed-paths",
+      "group": "ornament",
+      "label": "Caminos cruzados",
+      "kind": "ornament",
+      "role": "micro-accent",
+      "master_viewbox": "0 0 64 64"
+    },
+    {
+      "id": "pattern-water",
+      "group": "pattern",
+      "label": "Trama de agua",
+      "kind": "pattern",
+      "role": "low-contrast-texture",
+      "master_viewbox": "0 0 96 96"
+    },
+    {
+      "id": "pattern-contour",
+      "group": "pattern",
+      "label": "Trama de contorno",
+      "kind": "pattern",
+      "role": "low-contrast-texture",
+      "master_viewbox": "0 0 96 96"
+    },
+    {
+      "id": "pattern-seed",
+      "group": "pattern",
+      "label": "Trama de semillas",
+      "kind": "pattern",
+      "role": "low-contrast-texture",
+      "master_viewbox": "0 0 96 96"
+    },
+    {
+      "id": "pattern-leaf",
+      "group": "pattern",
+      "label": "Trama de hojas",
+      "kind": "pattern",
+      "role": "low-contrast-texture",
+      "master_viewbox": "0 0 96 96"
+    },
+    {
+      "id": "pattern-constellation",
+      "group": "pattern",
+      "label": "Trama de constelación",
+      "kind": "pattern",
+      "role": "low-contrast-texture",
+      "master_viewbox": "0 0 96 96"
+    },
+    {
+      "id": "pattern-path",
+      "group": "pattern",
+      "label": "Trama de caminos",
+      "kind": "pattern",
+      "role": "low-contrast-texture",
+      "master_viewbox": "0 0 96 96"
+    },
+    {
+      "id": "pattern-rain",
+      "group": "pattern",
+      "label": "Trama de lluvia",
+      "kind": "pattern",
+      "role": "low-contrast-texture",
+      "master_viewbox": "0 0 96 96"
+    },
+    {
+      "id": "pattern-weave",
+      "group": "pattern",
+      "label": "Trama de tejido",
+      "kind": "pattern",
+      "role": "low-contrast-texture",
+      "master_viewbox": "0 0 96 96"
+    }
+  ]
+}

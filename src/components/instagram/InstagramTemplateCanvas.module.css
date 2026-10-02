@@ -1,0 +1,6268 @@
+.canvas {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  isolation: isolate;
+  container-type: inline-size;
+  color: var(--ig-fg);
+  background: var(--ig-bg);
+}
+
+.coverMedia,
+.coverShade,
+.coverFrame {
+  position: absolute;
+}
+
+.coverMedia {
+  overflow: hidden;
+}
+
+.coverImage {
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.coverShade,
+.coverFrame {
+  pointer-events: none;
+}
+
+.coverTitle,
+.coverCommunity {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+}
+
+.coverTitle {
+  font-family: var(--font-display), serif;
+  font-weight: 400;
+}
+
+.coverCommunity {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.cover_immersive .coverMedia {
+  inset: 0;
+}
+
+.cover_immersive .coverShade {
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 40%, rgb(7 19 19 / 86%) 100%),
+    linear-gradient(90deg, rgb(8 20 19 / 18%), transparent 55%);
+}
+
+.cover_immersive .coverCommunity {
+  bottom: 25.2cqw;
+  left: 10.5cqw;
+  font-size: 2.55cqw;
+}
+
+.cover_immersive .coverTitle {
+  right: 9.5cqw;
+  bottom: 8.7cqw;
+  left: 9.5cqw;
+  font-size: 14.8cqw;
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+}
+
+.cover_archive {
+  background: var(--ig-bg);
+}
+
+.cover_archive .coverMedia {
+  inset: 4.2cqw;
+  background: #20302d;
+}
+
+.cover_archive .coverImage {
+  object-fit: contain;
+}
+
+.cover_archive .coverFrame {
+  inset: 4.2cqw;
+  border: 1px solid rgb(245 239 225 / 42%);
+  box-shadow: inset 0 0 0 3.7cqw rgb(19 31 29 / 68%);
+}
+
+.cover_archive .coverShade {
+  right: 7.8cqw;
+  bottom: 7.8cqw;
+  left: 7.8cqw;
+  height: 39cqw;
+  background: linear-gradient(180deg, transparent, rgb(10 21 20 / 94%) 72%);
+}
+
+.cover_archive .coverCommunity {
+  top: 8.2cqw;
+  left: 8cqw;
+  font-size: 2.1cqw;
+  color: #f4efe2;
+  text-shadow: 0 0.3cqw 2cqw rgb(0 0 0 / 85%);
+}
+
+.cover_archive .coverTitle {
+  right: 8cqw;
+  bottom: 11cqw;
+  left: 8cqw;
+  font-size: 13.9cqw;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  color: #f4efe2;
+}
+
+.cover_folio_left {
+  display: grid;
+  grid-template-columns: 19.5cqw 1fr;
+  background: var(--ig-bg);
+}
+
+.cover_folio_left .coverMedia {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 19.5cqw;
+}
+
+.cover_folio_left .coverImage {
+  object-position: 50% 50%;
+}
+
+.cover_folio_left .coverTitle {
+  top: 50%;
+  left: 9.75cqw;
+  font-size: 11.1cqw;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--ig-fg);
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.cover_folio_left .coverCommunity {
+  bottom: 8cqw;
+  left: 2.8cqw;
+  font-size: 1.95cqw;
+}
+
+.cover_folio_right {
+  background: var(--ig-bg);
+}
+
+.cover_folio_right .coverMedia {
+  inset: 0 19.5cqw 0 0;
+}
+
+.cover_folio_right .coverTitle {
+  top: 50%;
+  right: -34.2cqw;
+  width: 88cqw;
+  font-size: 11.1cqw;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.cover_folio_right .coverCommunity {
+  right: 4cqw;
+  bottom: 8cqw;
+  font-size: 1.95cqw;
+}
+
+.cover_threshold .coverMedia {
+  inset: 0;
+}
+
+.cover_threshold .coverImage {
+  object-position: 50% 44%;
+}
+
+.cover_threshold .coverShade {
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgb(9 28 30 / 76%) 0, transparent 38%),
+    linear-gradient(180deg, transparent 63%, rgb(9 28 30 / 74%) 100%);
+}
+
+.cover_threshold .coverFrame {
+  inset: 5.5cqw;
+  border: 1px solid rgb(243 237 222 / 68%);
+}
+
+.cover_threshold .coverCommunity {
+  top: 8.4cqw;
+  right: 8.4cqw;
+  font-size: 2.2cqw;
+  color: #f3edde;
+}
+
+.cover_threshold .coverTitle {
+  bottom: 9.2cqw;
+  left: 8.4cqw;
+  font-size: 15cqw;
+  line-height: 0.86;
+  letter-spacing: -0.055em;
+  color: #f3edde;
+}
+
+.cover_museum {
+  background: var(--ig-bg);
+}
+
+.cover_museum .coverMedia {
+  inset: 7cqw 7cqw 18.5cqw;
+}
+
+.cover_museum .coverImage {
+  object-fit: contain;
+}
+
+.cover_museum .coverTitle {
+  bottom: 4.8cqw;
+  left: 7cqw;
+  font-size: 9.6cqw;
+  line-height: 1;
+}
+
+.cover_museum .coverCommunity {
+  right: 7cqw;
+  bottom: 6cqw;
+  font-size: 1.9cqw;
+}
+
+.cover_museum .coverFrame {
+  inset: 3.5cqw;
+  border: 1px solid color-mix(in srgb, var(--ig-fg) 28%, transparent);
+}
+
+.cover_horizon .coverMedia {
+  inset: 0;
+}
+
+.cover_horizon .coverImage {
+  object-position: 50% 49%;
+}
+
+.cover_horizon .coverShade {
+  inset: 0;
+  background: linear-gradient(180deg, rgb(8 13 20 / 88%) 0 25%, transparent 55%);
+}
+
+.cover_horizon .coverTitle {
+  top: 8.2cqw;
+  right: 7.5cqw;
+  left: 7.5cqw;
+  font-size: 14cqw;
+  line-height: 0.86;
+  text-align: center;
+  color: #f3ebdd;
+}
+
+.cover_horizon .coverCommunity {
+  top: 24.5cqw;
+  right: 0;
+  left: 0;
+  font-size: 2.2cqw;
+  text-align: center;
+  color: #f3ebdd;
+}
+
+.cover_bottom_folio {
+  background: var(--ig-bg);
+}
+
+.cover_bottom_folio .coverMedia {
+  inset: 0 0 23.5cqw;
+}
+
+.cover_bottom_folio .coverImage {
+  object-position: 50% 44%;
+}
+
+.cover_bottom_folio .coverTitle {
+  bottom: 5cqw;
+  left: 6.5cqw;
+  font-size: 11.6cqw;
+  line-height: 0.9;
+}
+
+.cover_bottom_folio .coverCommunity {
+  right: 6.5cqw;
+  bottom: 7.3cqw;
+  font-size: 1.9cqw;
+}
+
+.cover_offset {
+  background: var(--ig-bg);
+}
+
+.cover_offset .coverMedia {
+  top: 7cqw;
+  right: 5cqw;
+  bottom: 7cqw;
+  left: 14cqw;
+}
+
+.cover_offset .coverImage {
+  object-position: 50% 50%;
+}
+
+.cover_offset .coverTitle {
+  bottom: 8.5cqw;
+  left: 4.6cqw;
+  padding: 2.1cqw 3.8cqw 2.7cqw;
+  font-size: 10.4cqw;
+  line-height: 0.9;
+  color: var(--ig-bg);
+  background: var(--ig-paper);
+}
+
+.cover_offset .coverCommunity {
+  top: 4.5cqw;
+  right: 5cqw;
+  font-size: 1.9cqw;
+}
+
+.cover_monument .coverMedia {
+  inset: 0;
+}
+
+.cover_monument .coverImage {
+  object-position: 50% 50%;
+}
+
+.cover_monument .coverShade {
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(10 20 16 / 62%) 0, transparent 48%),
+    linear-gradient(180deg, transparent 72%, rgb(8 17 14 / 68%));
+}
+
+.cover_monument .coverTitle {
+  top: 48%;
+  left: 5.8cqw;
+  font-size: 10.8cqw;
+  line-height: 0.9;
+  color: #f2ead9;
+  transform: translateY(-50%);
+}
+
+.cover_monument .coverCommunity {
+  top: 8cqw;
+  left: 6.3cqw;
+  font-size: 2.1cqw;
+  color: #f2ead9;
+}
+
+.typographic {
+  padding: 6.7cqw;
+  background: var(--ig-bg);
+}
+
+.typographic::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  opacity: 0.11;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.36'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+.typeKicker,
+.typeBody,
+.typeShortTitle,
+.typeWordStack,
+.typeKeywords,
+.typeDialogue,
+.typeNumber,
+.typeInitial,
+.typeTitle {
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+}
+
+.typeKicker,
+.typeBody,
+.typeShortTitle,
+.typeWordStack,
+.typeKeywords,
+.typeDialogue,
+.typeNumber {
+  font-family: var(--font-body), sans-serif;
+}
+
+.typeKicker {
+  font-size: 2.35cqw;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.typeTitle,
+.typeInitial {
+  font-family: var(--font-display), serif;
+  font-weight: 400;
+}
+
+.typeTitle {
+  line-height: 0.99;
+  text-wrap: balance;
+}
+
+.typeBody {
+  font-size: 3.2cqw;
+  line-height: 1.42;
+}
+
+.typeDevice,
+.typeInitial,
+.typeShortTitle,
+.typeWordStack,
+.typeKeywords,
+.typeDialogue,
+.typeNumber {
+  display: none;
+}
+
+.type_monument .typeKicker {
+  top: 7.5cqw;
+  left: 7.5cqw;
+}
+
+.type_monument .typeTitle {
+  right: 6.7cqw;
+  bottom: 18cqw;
+  left: 6.7cqw;
+  font-size: 13.5cqw;
+  letter-spacing: -0.045em;
+}
+
+.type_monument .typeBody {
+  right: 7.5cqw;
+  bottom: 7cqw;
+  left: 43cqw;
+}
+
+.type_monument .typeDevice {
+  position: absolute;
+  top: 12cqw;
+  right: 7cqw;
+  display: block;
+  width: 24cqw;
+  height: 1.2cqw;
+  background: var(--ig-accent);
+}
+
+.type_syllabic .typeTitle,
+.type_syllabic .typeBody {
+  display: none;
+}
+
+.type_syllabic .typeKicker {
+  top: 7cqw;
+  right: 7cqw;
+}
+
+.type_syllabic .typeWordStack {
+  top: 50%;
+  right: 6cqw;
+  left: 6cqw;
+  display: grid;
+  font-family: var(--font-display), serif;
+  font-size: 13.5cqw;
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+  transform: translateY(-50%);
+}
+
+.type_syllabic .typeWordStack span:nth-child(1) {
+  justify-self: start;
+}
+
+.type_syllabic .typeWordStack span:nth-child(2) {
+  justify-self: center;
+}
+
+.type_syllabic .typeWordStack span:nth-child(3) {
+  justify-self: end;
+}
+
+.type_syllabic .typeDevice {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 32cqw;
+  height: 14cqw;
+  background: var(--ig-accent);
+}
+
+.type_quote .typeKicker {
+  top: 8cqw;
+  left: 8cqw;
+}
+
+.type_quote .typeTitle {
+  top: 31cqw;
+  right: 10cqw;
+  left: 13cqw;
+  font-size: 9.8cqw;
+}
+
+.type_quote .typeTitle::before {
+  position: absolute;
+  top: -15cqw;
+  left: -7cqw;
+  font-family: var(--font-display), serif;
+  font-size: 25cqw;
+  line-height: 1;
+  content: "“";
+  color: var(--ig-accent);
+}
+
+.type_quote .typeBody {
+  right: 10cqw;
+  bottom: 10cqw;
+  left: 40cqw;
+  padding-top: 3cqw;
+  border-top: 1px solid var(--ig-accent);
+}
+
+.type_vertical .typeTitle {
+  top: 50%;
+  left: -27cqw;
+  width: 93cqw;
+  font-size: 7.2cqw;
+  line-height: 1;
+  white-space: nowrap;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.type_vertical .typeKicker {
+  top: 8cqw;
+  right: 7cqw;
+}
+
+.type_vertical .typeBody {
+  right: 8cqw;
+  bottom: 9cqw;
+  left: 45cqw;
+}
+
+.type_vertical .typeDevice {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 24cqw;
+  display: block;
+  width: 1px;
+  background: color-mix(in srgb, var(--ig-accent) 75%, transparent);
+}
+
+.type_margin .typeKicker {
+  top: 8cqw;
+  left: 8cqw;
+}
+
+.type_margin .typeTitle {
+  top: 31cqw;
+  right: 9cqw;
+  left: 28cqw;
+  font-size: 9.4cqw;
+}
+
+.type_margin .typeBody {
+  right: 9cqw;
+  bottom: 9cqw;
+  left: 28cqw;
+}
+
+.type_margin .typeNumber {
+  top: 34cqw;
+  left: 7.5cqw;
+  display: block;
+  font-size: 7cqw;
+  font-weight: 700;
+  color: var(--ig-accent);
+}
+
+.type_margin .typeDevice {
+  position: absolute;
+  top: 7cqw;
+  bottom: 7cqw;
+  left: 23cqw;
+  display: block;
+  width: 1px;
+  background: var(--ig-muted);
+}
+
+.type_triptych .typeTitle,
+.type_triptych .typeBody {
+  display: none;
+}
+
+.type_triptych .typeKicker {
+  top: 7cqw;
+  left: 7cqw;
+}
+
+.type_triptych .typeKeywords {
+  right: 6cqw;
+  bottom: 9cqw;
+  left: 6cqw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.3cqw;
+  height: 88cqw;
+}
+
+.type_triptych .typeKeywords span {
+  display: flex;
+  align-items: flex-end;
+  padding: 3cqw 1.7cqw;
+  overflow: hidden;
+  font-size: 3.1cqw;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ig-bg);
+  background: var(--ig-accent);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.type_triptych .typeKeywords span:nth-child(2) {
+  height: 68cqw;
+  align-self: end;
+  background: var(--ig-muted);
+}
+
+.type_triptych .typeKeywords span:nth-child(3) {
+  height: 48cqw;
+  align-self: end;
+  color: var(--ig-fg);
+  background: var(--ig-bg);
+  border: 1px solid var(--ig-fg);
+}
+
+.type_numbered .typeNumber {
+  top: 2cqw;
+  right: 2cqw;
+  display: block;
+  font-size: 47cqw;
+  font-weight: 700;
+  line-height: 0.8;
+  color: color-mix(in srgb, var(--ig-accent) 28%, transparent);
+}
+
+.type_numbered .typeKicker {
+  top: 8cqw;
+  left: 8cqw;
+}
+
+.type_numbered .typeTitle {
+  right: 8cqw;
+  bottom: 28cqw;
+  left: 8cqw;
+  font-size: 10.2cqw;
+}
+
+.type_numbered .typeBody {
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 52cqw;
+}
+
+.type_stair .typeTitle,
+.type_stair .typeBody {
+  display: none;
+}
+
+.type_stair .typeKicker {
+  top: 7cqw;
+  left: 7cqw;
+}
+
+.type_stair .typeWordStack {
+  top: 50%;
+  right: 6cqw;
+  left: 6cqw;
+  display: grid;
+  gap: 3cqw;
+  font-family: var(--font-display), serif;
+  font-size: 10.5cqw;
+  line-height: 0.96;
+  transform: translateY(-50%);
+}
+
+.type_stair .typeWordStack span:nth-child(1) {
+  justify-self: start;
+}
+
+.type_stair .typeWordStack span:nth-child(2) {
+  justify-self: center;
+}
+
+.type_stair .typeWordStack span:nth-child(3) {
+  justify-self: end;
+}
+
+.type_stair .typeDevice {
+  position: absolute;
+  right: 7cqw;
+  bottom: 7cqw;
+  display: block;
+  width: 28cqw;
+  height: 1cqw;
+  background: var(--ig-accent);
+}
+
+.type_whisper .typeKicker {
+  top: 7cqw;
+  left: 7cqw;
+}
+
+.type_whisper .typeTitle {
+  top: 50%;
+  right: 24cqw;
+  left: 24cqw;
+  font-size: 5.8cqw;
+  line-height: 1.08;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.type_whisper .typeBody {
+  right: 25cqw;
+  bottom: 8cqw;
+  left: 25cqw;
+  font-size: 2.9cqw;
+  text-align: center;
+}
+
+.type_manifesto .typeKicker {
+  top: 8cqw;
+  left: 8cqw;
+}
+
+.type_manifesto .typeTitle {
+  top: 25cqw;
+  right: 7cqw;
+  left: 7cqw;
+  font-size: 11.2cqw;
+}
+
+.type_manifesto .typeBody {
+  right: 8cqw;
+  bottom: 10cqw;
+  left: 8cqw;
+  padding-top: 3cqw;
+  border-top: 1.2cqw solid var(--ig-accent);
+}
+
+.type_outline .typeKicker {
+  top: 8cqw;
+  left: 8cqw;
+}
+
+.type_outline .typeTitle {
+  top: 28cqw;
+  right: 4cqw;
+  left: 4cqw;
+  font-size: 13.5cqw;
+  line-height: 0.88;
+  color: transparent;
+  -webkit-text-stroke: 0.18cqw var(--ig-fg);
+}
+
+.type_outline .typeBody {
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 55cqw;
+}
+
+.type_vocabulary .typeTitle,
+.type_vocabulary .typeBody {
+  display: none;
+}
+
+.type_vocabulary .typeKicker {
+  top: 8cqw;
+  left: 8cqw;
+}
+
+.type_vocabulary .typeShortTitle {
+  top: 38cqw;
+  right: 0;
+  left: 0;
+  display: block;
+  font-family: var(--font-display), serif;
+  font-size: 17cqw;
+  line-height: 0.9;
+  text-align: center;
+}
+
+.type_vocabulary .typeShortTitle::after {
+  display: block;
+  width: 34cqw;
+  height: 1cqw;
+  margin: 6cqw auto 0;
+  content: "";
+  background: var(--ig-accent);
+}
+
+.type_vocabulary .typeDevice {
+  position: absolute;
+  inset: 21cqw 8cqw 20cqw;
+  display: block;
+  border: 1px solid color-mix(in srgb, var(--ig-fg) 48%, transparent);
+}
+
+.type_initial .typeInitial {
+  top: 4cqw;
+  left: 1cqw;
+  display: block;
+  font-size: 68cqw;
+  line-height: 0.85;
+  color: color-mix(in srgb, var(--ig-accent) 38%, transparent);
+}
+
+.type_initial .typeKicker {
+  top: 8cqw;
+  right: 7cqw;
+}
+
+.type_initial .typeTitle {
+  right: 8cqw;
+  bottom: 30cqw;
+  left: 32cqw;
+  font-size: 8.8cqw;
+}
+
+.type_initial .typeBody {
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 32cqw;
+}
+
+.type_columns .typeKicker {
+  top: 8cqw;
+  left: 8cqw;
+}
+
+.type_columns .typeTitle {
+  top: 31cqw;
+  left: 8cqw;
+  width: 39cqw;
+  font-size: 8.7cqw;
+}
+
+.type_columns .typeBody {
+  top: 33cqw;
+  right: 8cqw;
+  width: 38cqw;
+}
+
+.type_columns .typeDevice {
+  position: absolute;
+  top: 25cqw;
+  bottom: 9cqw;
+  left: 50%;
+  display: block;
+  width: 1px;
+  background: var(--ig-accent);
+}
+
+.type_ledger .typeKicker {
+  top: 8cqw;
+  left: 8cqw;
+}
+
+.type_ledger .typeTitle {
+  top: 31cqw;
+  right: 8cqw;
+  left: 8cqw;
+  padding: 4cqw 0;
+  font-size: 8.9cqw;
+  border-top: 1px solid var(--ig-muted);
+  border-bottom: 1px solid var(--ig-muted);
+}
+
+.type_ledger .typeBody {
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 48cqw;
+}
+
+.type_ledger .typeNumber {
+  bottom: 8cqw;
+  left: 8cqw;
+  display: block;
+  font-size: 8cqw;
+  color: var(--ig-accent);
+}
+
+.type_cascade .typeTitle,
+.type_cascade .typeBody {
+  display: none;
+}
+
+.type_cascade .typeKicker {
+  top: 7cqw;
+  left: 7cqw;
+}
+
+.type_cascade .typeWordStack {
+  top: 28cqw;
+  right: 7cqw;
+  left: 7cqw;
+  display: grid;
+  font-family: var(--font-display), serif;
+  font-size: 11.5cqw;
+  line-height: 1;
+}
+
+.type_cascade .typeWordStack span:nth-child(1) {
+  opacity: 0.35;
+}
+
+.type_cascade .typeWordStack span:nth-child(2) {
+  margin-left: 9cqw;
+  opacity: 0.65;
+}
+
+.type_cascade .typeWordStack span:nth-child(3) {
+  margin-left: 18cqw;
+}
+
+.type_floating .typeKicker {
+  top: 7cqw;
+  left: 7cqw;
+}
+
+.type_floating .typeTitle {
+  top: 24cqw;
+  right: 7cqw;
+  width: 59cqw;
+  padding: 6cqw;
+  font-size: 7.7cqw;
+  color: var(--ig-bg);
+  background: var(--ig-paper);
+  box-shadow: -4cqw 4cqw 0 var(--ig-accent);
+}
+
+.type_floating .typeBody {
+  bottom: 8cqw;
+  left: 8cqw;
+  width: 44cqw;
+}
+
+.type_four_voices .typeTitle,
+.type_four_voices .typeBody {
+  display: none;
+}
+
+.type_four_voices .typeKicker {
+  top: 7cqw;
+  left: 7cqw;
+}
+
+.type_four_voices .typeKeywords {
+  top: 25cqw;
+  right: 6cqw;
+  bottom: 7cqw;
+  left: 6cqw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.2cqw;
+}
+
+.type_four_voices .typeKeywords span {
+  display: flex;
+  align-items: flex-end;
+  padding: 3cqw;
+  font-size: 4.2cqw;
+  font-weight: 700;
+  color: var(--ig-bg);
+  background: var(--ig-paper);
+}
+
+.type_four_voices .typeKeywords span:nth-child(2) {
+  color: var(--ig-fg);
+  background: var(--ig-accent);
+}
+
+.type_four_voices .typeKeywords span:nth-child(3) {
+  grid-column: 1 / -1;
+  justify-content: flex-end;
+  background: var(--ig-muted);
+}
+
+.type_top_bottom .typeKicker {
+  top: 7cqw;
+  left: 7cqw;
+}
+
+.type_top_bottom .typeTitle {
+  top: 19cqw;
+  right: 7cqw;
+  left: 7cqw;
+  font-size: 9.4cqw;
+}
+
+.type_top_bottom .typeBody {
+  right: 7cqw;
+  bottom: 9cqw;
+  left: 47cqw;
+}
+
+.type_top_bottom .typeDevice {
+  position: absolute;
+  right: 7cqw;
+  bottom: 31cqw;
+  left: 7cqw;
+  display: block;
+  height: 18cqw;
+  border-top: 1px solid var(--ig-accent);
+  border-bottom: 1px solid var(--ig-accent);
+}
+
+.type_long_line .typeKicker {
+  top: 8cqw;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+
+.type_long_line .typeTitle {
+  top: 49%;
+  right: 6cqw;
+  left: 6cqw;
+  padding: 4cqw 0;
+  font-size: 7.6cqw;
+  text-align: center;
+  border-top: 1px solid var(--ig-accent);
+  border-bottom: 1px solid var(--ig-accent);
+  transform: translateY(-50%);
+}
+
+.type_long_line .typeBody {
+  right: 24cqw;
+  bottom: 8cqw;
+  left: 24cqw;
+  font-size: 2.9cqw;
+  text-align: center;
+}
+
+.type_index_grid .typeKicker {
+  top: 8cqw;
+  left: 8cqw;
+}
+
+.type_index_grid .typeTitle {
+  top: 39cqw;
+  right: 8cqw;
+  left: 8cqw;
+  font-size: 8.8cqw;
+}
+
+.type_index_grid .typeBody {
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 52cqw;
+}
+
+.type_index_grid .typeNumber {
+  top: 8cqw;
+  right: 8cqw;
+  display: block;
+  font-size: 11cqw;
+  color: var(--ig-accent);
+}
+
+.type_index_grid .typeDevice {
+  position: absolute;
+  inset: 23cqw 8cqw 25cqw;
+  display: block;
+  background:
+    linear-gradient(90deg, transparent calc(50% - 0.5px), var(--ig-muted) 50%, transparent calc(50% + 0.5px)),
+    linear-gradient(transparent calc(50% - 0.5px), var(--ig-muted) 50%, transparent calc(50% + 0.5px));
+  opacity: 0.45;
+}
+
+.type_thesis .typeKicker {
+  top: 8cqw;
+  left: 8cqw;
+}
+
+.type_thesis .typeTitle {
+  top: 33cqw;
+  right: 8cqw;
+  left: 8cqw;
+  font-size: 10.1cqw;
+}
+
+.type_thesis .typeTitle::after {
+  display: block;
+  width: 62cqw;
+  height: 2.2cqw;
+  margin-top: 4cqw;
+  content: "";
+  background: var(--ig-accent);
+}
+
+.type_thesis .typeBody {
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 40cqw;
+}
+
+.type_corner .typeKicker {
+  right: 7cqw;
+  top: 7cqw;
+  color: var(--ig-bg);
+}
+
+.type_corner .typeTitle {
+  right: 8cqw;
+  bottom: 22cqw;
+  left: 8cqw;
+  font-size: 10.4cqw;
+}
+
+.type_corner .typeBody {
+  right: 8cqw;
+  bottom: 7cqw;
+  left: 48cqw;
+}
+
+.type_corner .typeDevice {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 49cqw;
+  height: 22cqw;
+  background: var(--ig-accent);
+}
+
+.type_three_beats .typeTitle,
+.type_three_beats .typeBody {
+  display: none;
+}
+
+.type_three_beats .typeKicker {
+  top: 7cqw;
+  left: 7cqw;
+}
+
+.type_three_beats .typeWordStack {
+  top: 25cqw;
+  right: 7cqw;
+  left: 7cqw;
+  display: grid;
+}
+
+.type_three_beats .typeWordStack span {
+  min-height: 25cqw;
+  padding: 4cqw 3cqw;
+  font-family: var(--font-display), serif;
+  font-size: 7.2cqw;
+  line-height: 0.95;
+  border-top: 1px solid var(--ig-muted);
+}
+
+.type_three_beats .typeWordStack span::before {
+  margin-right: 3cqw;
+  font-family: var(--font-body), sans-serif;
+  font-size: 2cqw;
+  color: var(--ig-accent);
+}
+
+.type_three_beats .typeWordStack span:nth-child(1)::before { content: "01"; }
+.type_three_beats .typeWordStack span:nth-child(2)::before { content: "02"; }
+.type_three_beats .typeWordStack span:nth-child(3)::before { content: "03"; }
+
+.type_parenthetical .typeKicker {
+  top: 7cqw;
+  left: 7cqw;
+}
+
+.type_parenthetical .typeTitle {
+  top: 50%;
+  right: 19cqw;
+  left: 19cqw;
+  font-size: 7.8cqw;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.type_parenthetical .typeTitle::before,
+.type_parenthetical .typeTitle::after {
+  position: absolute;
+  top: 50%;
+  font-family: var(--font-display), serif;
+  font-size: 29cqw;
+  line-height: 1;
+  color: var(--ig-accent);
+  transform: translateY(-55%);
+}
+
+.type_parenthetical .typeTitle::before {
+  left: -16cqw;
+  content: "(";
+}
+
+.type_parenthetical .typeTitle::after {
+  right: -16cqw;
+  content: ")";
+}
+
+.type_parenthetical .typeBody {
+  right: 24cqw;
+  bottom: 8cqw;
+  left: 24cqw;
+  font-size: 2.9cqw;
+  text-align: center;
+}
+
+.type_call_response .typeTitle,
+.type_call_response .typeBody {
+  display: none;
+}
+
+.type_call_response .typeKicker {
+  top: 7cqw;
+  left: 7cqw;
+}
+
+.type_call_response .typeDialogue {
+  top: 30cqw;
+  right: 7cqw;
+  left: 7cqw;
+  display: grid;
+  gap: 13cqw;
+}
+
+.type_call_response .typeDialogue span,
+.type_call_response .typeDialogue strong {
+  display: block;
+  font-family: var(--font-display), serif;
+  font-size: 8.8cqw;
+  font-weight: 400;
+  line-height: 1.02;
+}
+
+.type_call_response .typeDialogue strong {
+  justify-self: end;
+  color: var(--ig-accent);
+}
+
+.type_call_response .typeDevice {
+  position: absolute;
+  top: 59cqw;
+  right: 15cqw;
+  left: 15cqw;
+  display: block;
+  height: 1px;
+  background: var(--ig-muted);
+}
+
+.type_word_field .typeTitle,
+.type_word_field .typeBody {
+  display: none;
+}
+
+.type_word_field .typeKicker {
+  top: 7cqw;
+  left: 7cqw;
+}
+
+.type_word_field .typeKeywords {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.type_word_field .typeKeywords span {
+  position: absolute;
+  font-family: var(--font-display), serif;
+  font-size: 9cqw;
+}
+
+.type_word_field .typeKeywords span:nth-child(1) {
+  top: 26cqw;
+  left: 10cqw;
+}
+
+.type_word_field .typeKeywords span:nth-child(2) {
+  top: 57cqw;
+  right: 8cqw;
+  color: var(--ig-accent);
+}
+
+.type_word_field .typeKeywords span:nth-child(3) {
+  bottom: 16cqw;
+  left: 27cqw;
+}
+
+.type_blocks .typeTitle,
+.type_blocks .typeBody {
+  display: none;
+}
+
+.type_blocks .typeKicker {
+  top: 7cqw;
+  left: 7cqw;
+}
+
+.type_blocks .typeWordStack {
+  top: 50%;
+  right: 7cqw;
+  left: 7cqw;
+  display: grid;
+  gap: 2.5cqw;
+  transform: translateY(-50%);
+}
+
+.type_blocks .typeWordStack span {
+  width: max-content;
+  padding: 2.5cqw 3.5cqw;
+  font-family: var(--font-display), serif;
+  font-size: 8.8cqw;
+  line-height: 0.98;
+  color: var(--ig-bg);
+  background: var(--ig-paper);
+}
+
+.type_blocks .typeWordStack span:nth-child(1) {
+  justify-self: start;
+}
+
+.type_blocks .typeWordStack span:nth-child(2) {
+  justify-self: center;
+  background: var(--ig-accent);
+}
+
+.type_blocks .typeWordStack span:nth-child(3) {
+  justify-self: end;
+  color: var(--ig-fg);
+  background: var(--ig-muted);
+}
+
+.type_archive_note {
+  padding: 10cqw;
+  background: var(--ig-paper);
+  color: var(--ig-fg);
+}
+
+.type_archive_note .typeKicker {
+  top: 12cqw;
+  left: 12cqw;
+}
+
+.type_archive_note .typeTitle {
+  top: 34cqw;
+  right: 12cqw;
+  left: 12cqw;
+  font-size: 8.6cqw;
+}
+
+.type_archive_note .typeBody {
+  right: 12cqw;
+  bottom: 16cqw;
+  left: 40cqw;
+}
+
+.type_archive_note .typeNumber {
+  bottom: 14cqw;
+  left: 12cqw;
+  display: block;
+  font-size: 7cqw;
+  color: var(--ig-accent);
+}
+
+.type_archive_note .typeDevice {
+  position: absolute;
+  inset: 7cqw;
+  display: block;
+  border: 1px solid var(--ig-muted);
+}
+
+.type_question .typeKicker {
+  top: 8cqw;
+  left: 8cqw;
+}
+
+.type_question .typeTitle {
+  top: 33cqw;
+  right: 8cqw;
+  left: 8cqw;
+  font-size: 10.2cqw;
+}
+
+.type_question .typeTitle::after {
+  display: block;
+  margin-top: 6cqw;
+  font-family: var(--font-display), serif;
+  font-size: 16cqw;
+  content: "?";
+  color: var(--ig-accent);
+}
+
+.type_question .typeBody {
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 46cqw;
+}
+
+.typographic.density_medium .typeTitle {
+  line-height: 1;
+}
+
+.typographic.density_medium .typeBody {
+  font-size: 3.15cqw;
+  line-height: 1.38;
+}
+
+.typographic.density_medium.type_monument .typeTitle {
+  top: 39cqw;
+  bottom: auto;
+  font-size: 9.2cqw;
+  line-height: 0.98;
+}
+
+.typographic.density_medium.type_monument .typeBody {
+  top: 82cqw;
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 28cqw;
+}
+
+.typographic.density_medium.type_numbered .typeTitle {
+  top: 48cqw;
+  bottom: auto;
+  font-size: 8.4cqw;
+  line-height: 1;
+}
+
+.typographic.density_medium.type_numbered .typeBody {
+  top: 84cqw;
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 28cqw;
+  font-size: 2.95cqw;
+}
+
+.typographic.density_narrative .typeTitle {
+  font-size: 6.8cqw;
+  line-height: 1.03;
+}
+
+.typographic.density_narrative .typeBody {
+  font-size: 3.15cqw;
+  line-height: 1.4;
+  text-wrap: pretty;
+}
+
+.typographic.density_narrative.type_margin .typeTitle {
+  top: 27cqw;
+}
+
+.typographic.density_narrative.type_margin .typeBody {
+  top: 58cqw;
+  right: 9cqw;
+  bottom: 8cqw;
+  left: 28cqw;
+}
+
+.typographic.density_narrative.type_manifesto .typeTitle {
+  top: 20cqw;
+}
+
+.typographic.density_narrative.type_manifesto .typeBody {
+  top: 55cqw;
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 8cqw;
+  padding: 5cqw 6cqw;
+}
+
+.typographic.density_narrative.type_columns .typeTitle {
+  top: 29cqw;
+  width: 39cqw;
+}
+
+.typographic.density_narrative.type_columns .typeBody {
+  top: 29cqw;
+  right: 8cqw;
+  bottom: 9cqw;
+  width: 40cqw;
+  font-size: 3.05cqw;
+}
+
+.typographic.density_narrative.type_ledger .typeTitle {
+  top: 27cqw;
+}
+
+.typographic.density_narrative.type_ledger .typeBody {
+  top: 61cqw;
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 29cqw;
+}
+
+.typographic.density_narrative.type_floating .typeTitle {
+  top: 20cqw;
+  width: 63cqw;
+  padding: 5cqw;
+}
+
+.typographic.density_narrative.type_floating .typeBody {
+  top: 72cqw;
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 8cqw;
+  width: auto;
+  column-count: 2;
+  column-gap: 6cqw;
+}
+
+.typographic.density_narrative.type_top_bottom .typeTitle {
+  top: 17cqw;
+}
+
+.typographic.density_narrative.type_top_bottom .typeBody {
+  top: 63cqw;
+  right: 7cqw;
+  bottom: 8cqw;
+  left: 29cqw;
+}
+
+.typographic.density_narrative.type_top_bottom .typeDevice {
+  top: 58cqw;
+  bottom: auto;
+  height: 1px;
+  border-bottom: 0;
+}
+
+.typographic.density_narrative.type_index_grid .typeTitle {
+  top: 29cqw;
+}
+
+.typographic.density_narrative.type_index_grid .typeBody {
+  top: 62cqw;
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 28cqw;
+}
+
+.typographic.density_narrative.type_thesis .typeTitle {
+  top: 27cqw;
+}
+
+.typographic.density_narrative.type_thesis .typeBody {
+  top: 61cqw;
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 28cqw;
+}
+
+.typographic.density_narrative.type_corner .typeTitle {
+  top: 43cqw;
+  bottom: auto;
+}
+
+.typographic.density_narrative.type_corner .typeBody {
+  top: 78cqw;
+  right: 8cqw;
+  bottom: 7cqw;
+  left: 8cqw;
+}
+
+.typographic.density_narrative.type_archive_note .typeTitle {
+  top: 27cqw;
+}
+
+.typographic.density_narrative.type_archive_note .typeBody {
+  top: 58cqw;
+  right: 12cqw;
+  bottom: 12cqw;
+  left: 25cqw;
+  font-size: 3.35cqw;
+}
+
+/*
+ * Las fichas gráficas breves conservan su gesto tipográfico, pero ya no
+ * descartan el tramo narrativo. El tercio inferior funciona como una segunda
+ * zona de lectura estable para que incluso un mito corto pueda avanzar la
+ * historia y no quedarse en una sucesión de consignas.
+ */
+.typographic.density_short:is(
+    .type_syllabic,
+    .type_triptych,
+    .type_stair,
+    .type_vocabulary,
+    .type_cascade,
+    .type_three_beats,
+    .type_word_field,
+    .type_blocks
+  ) .typeBody,
+.typographic.density_medium:is(
+    .type_four_voices,
+    .type_call_response
+  ) .typeBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 36cqw;
+  display: block;
+  font-size: 3.05cqw;
+  line-height: 1.38;
+  text-align: right;
+  text-wrap: pretty;
+}
+
+.typographic.density_short.type_syllabic .typeWordStack,
+.typographic.density_short.type_stair .typeWordStack,
+.typographic.density_short.type_blocks .typeWordStack {
+  top: 42%;
+}
+
+.typographic.density_short.type_triptych .typeKeywords {
+  bottom: 37cqw;
+  height: 62cqw;
+}
+
+.typographic.density_short.type_vocabulary .typeShortTitle {
+  top: 31cqw;
+}
+
+.typographic.density_short.type_vocabulary .typeBody {
+  right: 17cqw;
+  bottom: 13cqw;
+  left: 17cqw;
+  text-align: center;
+}
+
+.typographic.density_short.type_cascade .typeWordStack {
+  top: 24cqw;
+}
+
+.typographic.density_medium.type_cascade .typeBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 18cqw;
+  display: block;
+  font-size: 3.05cqw;
+  line-height: 1.38;
+}
+
+.typographic.density_medium.type_four_voices .typeKeywords {
+  bottom: 43cqw;
+}
+
+.typographic.density_medium:is(
+    .type_cascade,
+    .type_four_voices,
+    .type_call_response
+  ) .typeBody {
+  right: 7cqw;
+  left: 18cqw;
+  display: block;
+  text-align: left;
+}
+
+.typographic.density_short.type_three_beats .typeWordStack {
+  top: 22cqw;
+}
+
+.typographic.density_short.type_three_beats .typeWordStack span {
+  min-height: 18cqw;
+  padding-block: 3cqw;
+}
+
+.typographic.density_medium.type_call_response .typeDialogue {
+  top: 24cqw;
+  gap: 9cqw;
+}
+
+.typographic.density_medium.type_call_response .typeDevice {
+  top: 63cqw;
+}
+
+.typographic.density_short.type_word_field .typeKeywords span:nth-child(1) {
+  top: 21cqw;
+}
+
+.typographic.density_short.type_word_field .typeKeywords span:nth-child(2) {
+  top: 49cqw;
+}
+
+.typographic.density_short.type_word_field .typeKeywords span:nth-child(3) {
+  bottom: 40cqw;
+}
+
+.typographic.density_short.type_blocks .typeBody,
+.typographic.density_short.type_stair .typeBody,
+.typographic.density_short.type_syllabic .typeBody {
+  left: 31cqw;
+}
+
+.storyMedia,
+.storyDetail,
+.storyStrips,
+.storyShade,
+.storyFrame,
+.storyKicker,
+.storyTitle,
+.storyBody,
+.storyWord,
+.storyIndex {
+  position: absolute;
+}
+
+.storyMedia,
+.storyDetail,
+.storyStrips {
+  overflow: hidden;
+}
+
+.storyStrips > div {
+  position: relative;
+}
+
+.storyImageAsset {
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.storyShade,
+.storyFrame {
+  z-index: 1;
+  pointer-events: none;
+}
+
+.storyKicker,
+.storyTitle,
+.storyBody,
+.storyWord,
+.storyIndex {
+  z-index: 2;
+  margin: 0;
+}
+
+.storyTitle {
+  font-family: var(--font-display), serif;
+  font-weight: 400;
+  line-height: 0.94;
+  text-wrap: balance;
+}
+
+.storyKicker,
+.storyBody,
+.storyWord,
+.storyIndex {
+  font-family: var(--font-body), sans-serif;
+}
+
+.storyKicker,
+.storyIndex {
+  font-size: 2cqw;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.storyBody {
+  font-size: 3cqw;
+  line-height: 1.38;
+  text-wrap: pretty;
+}
+
+.storyDetail,
+.storyStrips,
+.storyWord,
+.storyIndex {
+  display: none;
+}
+
+.secondary_cinema .storyMedia {
+  top: 28cqw;
+  right: 0;
+  left: 0;
+  height: 56.25cqw;
+}
+
+.secondary_cinema .storyKicker {
+  top: 8cqw;
+  left: 7cqw;
+}
+
+.secondary_cinema .storyTitle {
+  right: 7cqw;
+  bottom: 20cqw;
+  left: 7cqw;
+  font-size: 8.5cqw;
+}
+
+.secondary_cinema .storyBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 48cqw;
+}
+
+.secondary_full .storyMedia {
+  inset: 0;
+}
+
+.secondary_full .storyImageAsset {
+  object-position: 50% 50%;
+}
+
+.secondary_full .storyShade {
+  inset: 0;
+  background: linear-gradient(180deg, rgb(8 20 20 / 8%) 42%, rgb(7 18 19 / 92%) 100%);
+}
+
+.secondary_full .storyKicker {
+  top: 7cqw;
+  left: 7cqw;
+  color: #f4edde;
+}
+
+.secondary_full .storyTitle {
+  right: 7cqw;
+  bottom: 20cqw;
+  left: 7cqw;
+  font-size: 9.4cqw;
+  color: #f4edde;
+}
+
+.secondary_full .storyBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 45cqw;
+  color: #f4edde;
+}
+
+.secondary_postcard .storyMedia {
+  top: 13cqw;
+  right: 8cqw;
+  left: 8cqw;
+  height: 47.25cqw;
+  box-shadow: 0 2cqw 5cqw rgb(0 0 0 / 18%);
+}
+
+.secondary_postcard .storyFrame {
+  top: 9cqw;
+  right: 5cqw;
+  left: 5cqw;
+  height: 55cqw;
+  border: 1px solid var(--ig-muted);
+}
+
+.secondary_postcard .storyKicker {
+  top: 7cqw;
+  left: 8cqw;
+  padding: 0 1cqw;
+  background: var(--ig-bg);
+}
+
+.secondary_postcard .storyTitle {
+  right: 8cqw;
+  bottom: 25cqw;
+  left: 8cqw;
+  font-size: 8.8cqw;
+}
+
+.secondary_postcard .storyBody {
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 45cqw;
+}
+
+.secondary_top .storyMedia {
+  inset: 0 0 auto;
+  height: 65cqw;
+}
+
+.secondary_top .storyKicker {
+  top: 69cqw;
+  left: 7cqw;
+}
+
+.secondary_top .storyTitle {
+  right: 7cqw;
+  bottom: 20cqw;
+  left: 7cqw;
+  font-size: 8.6cqw;
+}
+
+.secondary_top .storyBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 47cqw;
+}
+
+.secondary_bottom .storyMedia {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 65cqw;
+}
+
+.secondary_bottom .storyKicker {
+  top: 7cqw;
+  left: 7cqw;
+}
+
+.secondary_bottom .storyTitle {
+  top: 18cqw;
+  right: 7cqw;
+  left: 7cqw;
+  font-size: 8.6cqw;
+}
+
+.secondary_bottom .storyBody {
+  top: 45cqw;
+  right: 7cqw;
+  left: 48cqw;
+}
+
+.secondary_split_left .storyMedia {
+  inset: 0 46cqw 0 0;
+}
+
+.secondary_split_left .storyImageAsset {
+  object-position: 48% 50%;
+}
+
+.secondary_split_left .storyKicker {
+  top: 8cqw;
+  right: 6cqw;
+  left: 58cqw;
+}
+
+.secondary_split_left .storyTitle {
+  top: 34cqw;
+  right: 6cqw;
+  left: 58cqw;
+  font-size: 7.1cqw;
+}
+
+.secondary_split_left .storyBody {
+  right: 6cqw;
+  bottom: 8cqw;
+  left: 58cqw;
+}
+
+.secondary_split_right .storyMedia {
+  inset: 0 0 0 46cqw;
+}
+
+.secondary_split_right .storyImageAsset {
+  object-position: 52% 50%;
+}
+
+.secondary_split_right .storyKicker {
+  top: 8cqw;
+  left: 6cqw;
+  width: 35cqw;
+}
+
+.secondary_split_right .storyTitle {
+  top: 34cqw;
+  left: 6cqw;
+  width: 35cqw;
+  font-size: 7.1cqw;
+}
+
+.secondary_split_right .storyBody {
+  bottom: 8cqw;
+  left: 6cqw;
+  width: 35cqw;
+}
+
+.secondary_vertical_caption .storyMedia {
+  inset: 7cqw 7cqw 7cqw 20cqw;
+}
+
+.secondary_vertical_caption .storyKicker {
+  bottom: 8cqw;
+  left: 7cqw;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.secondary_vertical_caption .storyTitle {
+  top: 50%;
+  left: -28cqw;
+  width: 88cqw;
+  font-size: 6.5cqw;
+  text-align: center;
+  white-space: nowrap;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.secondary_vertical_caption .storyBody {
+  display: none;
+}
+
+.secondary_strips .storyMedia,
+.secondary_strips .storyDetail,
+.secondary_strips .storyBody {
+  display: none;
+}
+
+.secondary_strips .storyStrips {
+  inset: 19cqw 6cqw 10cqw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5cqw;
+}
+
+.secondary_strips .storyStrips > div {
+  position: relative;
+  overflow: hidden;
+}
+
+.secondary_strips .storyStrips > div:nth-child(1) img { object-position: 28% 50%; }
+.secondary_strips .storyStrips > div:nth-child(2) img { object-position: 50% 50%; }
+.secondary_strips .storyStrips > div:nth-child(3) img { object-position: 72% 50%; }
+
+.secondary_strips .storyKicker {
+  top: 7cqw;
+  left: 6cqw;
+}
+
+.secondary_strips .storyTitle {
+  right: 6cqw;
+  bottom: 5cqw;
+  left: 6cqw;
+  padding: 2cqw;
+  font-size: 6.8cqw;
+  color: var(--ig-fg);
+  background: var(--ig-paper);
+}
+
+.secondary_overlay .storyMedia {
+  inset: 0;
+}
+
+.secondary_overlay .storyShade {
+  inset: 0;
+  background: linear-gradient(90deg, rgb(8 19 19 / 90%) 0 48%, transparent 76%);
+}
+
+.secondary_overlay .storyKicker {
+  top: 8cqw;
+  left: 7cqw;
+  color: #f4edde;
+}
+
+.secondary_overlay .storyTitle {
+  top: 34cqw;
+  left: 7cqw;
+  width: 42cqw;
+  font-size: 8.2cqw;
+  color: #f4edde;
+}
+
+.secondary_overlay .storyBody {
+  bottom: 8cqw;
+  left: 7cqw;
+  width: 38cqw;
+  color: #f4edde;
+}
+
+.secondary_evidence .storyMedia {
+  top: 30cqw;
+  right: 18cqw;
+  left: 18cqw;
+  height: 36cqw;
+  box-shadow: 0 2cqw 6cqw rgb(0 0 0 / 20%);
+}
+
+.secondary_evidence .storyKicker {
+  top: 8cqw;
+  left: 8cqw;
+}
+
+.secondary_evidence .storyTitle {
+  right: 8cqw;
+  bottom: 26cqw;
+  left: 8cqw;
+  font-size: 8cqw;
+  text-align: center;
+}
+
+.secondary_evidence .storyBody {
+  right: 25cqw;
+  bottom: 8cqw;
+  left: 25cqw;
+  font-size: 2.8cqw;
+  text-align: center;
+}
+
+.secondary_offset .storyMedia {
+  top: 11cqw;
+  right: 6cqw;
+  left: 13cqw;
+  height: 59cqw;
+}
+
+.secondary_offset .storyFrame {
+  top: 7cqw;
+  right: 12cqw;
+  left: 7cqw;
+  height: 59cqw;
+  border: 1.1cqw solid var(--ig-accent);
+}
+
+.secondary_offset .storyKicker {
+  top: 76cqw;
+  left: 7cqw;
+}
+
+.secondary_offset .storyTitle {
+  right: 7cqw;
+  bottom: 19cqw;
+  left: 7cqw;
+  font-size: 8.4cqw;
+}
+
+.secondary_offset .storyBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 47cqw;
+}
+
+.secondary_corner .storyMedia {
+  top: 0;
+  right: 0;
+  width: 76cqw;
+  height: 74cqw;
+}
+
+.secondary_corner .storyKicker {
+  top: 8cqw;
+  left: 7cqw;
+  width: 18cqw;
+}
+
+.secondary_corner .storyTitle {
+  right: 7cqw;
+  bottom: 21cqw;
+  left: 7cqw;
+  font-size: 8.7cqw;
+}
+
+.secondary_corner .storyBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 46cqw;
+}
+
+.secondary_detail_pair .storyMedia {
+  top: 7cqw;
+  right: 7cqw;
+  left: 7cqw;
+  height: 48cqw;
+}
+
+.secondary_detail_pair .storyDetail {
+  right: 7cqw;
+  bottom: 26cqw;
+  display: block;
+  width: 38cqw;
+  height: 38cqw;
+  border: 1.2cqw solid var(--ig-bg);
+  box-shadow: 0 2cqw 5cqw rgb(0 0 0 / 25%);
+}
+
+.secondary_detail_pair .storyDetail img {
+  object-position: 68% 50%;
+}
+
+.secondary_detail_pair .storyKicker {
+  bottom: 8cqw;
+  left: 7cqw;
+}
+
+.secondary_detail_pair .storyTitle {
+  bottom: 25cqw;
+  left: 7cqw;
+  width: 43cqw;
+  font-size: 7.2cqw;
+}
+
+.secondary_detail_pair .storyBody {
+  display: none;
+}
+
+.secondary_arch .storyMedia {
+  top: 10cqw;
+  right: 12cqw;
+  left: 12cqw;
+  height: 69cqw;
+  border-radius: 50cqw 50cqw 0 0;
+}
+
+.secondary_arch .storyKicker {
+  bottom: 37cqw;
+  left: 12cqw;
+}
+
+.secondary_arch .storyTitle {
+  right: 9cqw;
+  bottom: 22cqw;
+  left: 9cqw;
+  font-size: 8.3cqw;
+}
+
+.secondary_arch .storyBody {
+  right: 9cqw;
+  bottom: 6cqw;
+  left: 50cqw;
+  font-size: 2.8cqw;
+}
+
+.secondary_title_band .storyMedia {
+  inset: 0;
+}
+
+.secondary_title_band .storyShade {
+  right: 0;
+  bottom: 15cqw;
+  left: 0;
+  height: 33cqw;
+  background: var(--ig-bg);
+  opacity: 0.94;
+}
+
+.secondary_title_band .storyKicker {
+  top: 7cqw;
+  left: 7cqw;
+  color: #f4edde;
+  text-shadow: 0 0.2cqw 1.5cqw rgb(0 0 0 / 80%);
+}
+
+.secondary_title_band .storyTitle {
+  right: 7cqw;
+  bottom: 24cqw;
+  left: 7cqw;
+  font-size: 8.6cqw;
+}
+
+.secondary_title_band .storyBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 47cqw;
+  color: #f4edde;
+}
+
+.secondary_lower_field .storyMedia {
+  inset: 0 0 52cqw;
+}
+
+.secondary_lower_field .storyKicker {
+  top: 80cqw;
+  left: 7cqw;
+}
+
+.secondary_lower_field .storyTitle {
+  right: 7cqw;
+  bottom: 20cqw;
+  left: 7cqw;
+  font-size: 8.8cqw;
+}
+
+.secondary_lower_field .storyBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 48cqw;
+}
+
+.secondary_diagonal .storyMedia {
+  inset: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 66%, 0 87%);
+}
+
+.secondary_diagonal .storyShade {
+  inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgb(9 16 23 / 56%) 68%, transparent 70%);
+}
+
+.secondary_diagonal .storyKicker {
+  top: 7cqw;
+  left: 7cqw;
+  color: #f4edde;
+}
+
+.secondary_diagonal .storyTitle {
+  right: 7cqw;
+  bottom: 23cqw;
+  left: 20cqw;
+  font-size: 8.6cqw;
+}
+
+.secondary_diagonal .storyBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 49cqw;
+  font-size: 2.8cqw;
+}
+
+.secondary_double_mat {
+  background: var(--ig-paper);
+}
+
+.secondary_double_mat .storyMedia {
+  top: 18cqw;
+  right: 12cqw;
+  left: 12cqw;
+  height: 53cqw;
+  outline: 1.6cqw solid var(--ig-bg);
+  box-shadow: 0 0 0 3cqw var(--ig-accent);
+}
+
+.secondary_double_mat .storyKicker {
+  top: 6cqw;
+  left: 7cqw;
+}
+
+.secondary_double_mat .storyTitle {
+  right: 7cqw;
+  bottom: 20cqw;
+  left: 7cqw;
+  font-size: 8.4cqw;
+}
+
+.secondary_double_mat .storyBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 48cqw;
+}
+
+.secondary_contact .storyMedia {
+  top: 8cqw;
+  left: 7cqw;
+  width: 54cqw;
+  height: 38cqw;
+}
+
+.secondary_contact .storyDetail {
+  top: 49cqw;
+  right: 7cqw;
+  display: block;
+  width: 54cqw;
+  height: 38cqw;
+}
+
+.secondary_contact .storyDetail img {
+  object-position: 72% 50%;
+}
+
+.secondary_contact .storyKicker {
+  top: 9cqw;
+  right: 7cqw;
+  width: 24cqw;
+}
+
+.secondary_contact .storyTitle {
+  bottom: 20cqw;
+  left: 7cqw;
+  width: 54cqw;
+  font-size: 7.3cqw;
+}
+
+.secondary_contact .storyBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 48cqw;
+}
+
+.tertiary_full .storyMedia {
+  inset: 0;
+}
+
+.tertiary_full .storyShade {
+  inset: 0;
+  background: linear-gradient(180deg, transparent 53%, rgb(8 19 19 / 88%) 100%);
+}
+
+.tertiary_full .storyKicker {
+  top: 7cqw;
+  left: 7cqw;
+  color: #f4edde;
+}
+
+.tertiary_full .storyTitle {
+  right: 7cqw;
+  bottom: 18cqw;
+  left: 7cqw;
+  font-size: 9.5cqw;
+  color: #f4edde;
+}
+
+.tertiary_full .storyBody {
+  right: 7cqw;
+  bottom: 6.5cqw;
+  left: 48cqw;
+  color: #f4edde;
+}
+
+.tertiary_letterbox .storyMedia {
+  inset: 7cqw;
+}
+
+.tertiary_letterbox .storyImageAsset {
+  object-fit: contain;
+}
+
+.tertiary_letterbox .storyFrame {
+  inset: 4cqw;
+  border: 1px solid var(--ig-muted);
+}
+
+.tertiary_letterbox .storyKicker {
+  top: 9cqw;
+  left: 9cqw;
+  color: #f4edde;
+  text-shadow: 0 0.2cqw 1.5cqw rgb(0 0 0 / 80%);
+}
+
+.tertiary_letterbox .storyTitle {
+  right: 9cqw;
+  bottom: 12cqw;
+  left: 9cqw;
+  font-size: 8.6cqw;
+  color: #f4edde;
+  text-shadow: 0 0.2cqw 2cqw rgb(0 0 0 / 75%);
+}
+
+.tertiary_letterbox .storyBody {
+  display: none;
+}
+
+.tertiary_left_rail .storyMedia {
+  inset: 0 0 0 22cqw;
+}
+
+.tertiary_left_rail .storyTitle {
+  top: 50%;
+  left: -28cqw;
+  width: 78cqw;
+  font-size: 7.1cqw;
+  text-align: center;
+  white-space: nowrap;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.tertiary_left_rail .storyKicker {
+  bottom: 8cqw;
+  left: 5cqw;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.tertiary_left_rail .storyBody {
+  display: none;
+}
+
+.tertiary_right_rail .storyMedia {
+  inset: 0 22cqw 0 0;
+}
+
+.tertiary_right_rail .storyTitle {
+  top: 50%;
+  right: -27cqw;
+  width: 78cqw;
+  font-size: 7.1cqw;
+  text-align: center;
+  white-space: nowrap;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.tertiary_right_rail .storyKicker {
+  right: 5cqw;
+  bottom: 8cqw;
+  writing-mode: vertical-rl;
+}
+
+.tertiary_right_rail .storyBody {
+  display: none;
+}
+
+.tertiary_top_label .storyMedia {
+  inset: 19cqw 0 0;
+}
+
+.tertiary_top_label .storyKicker {
+  top: 6cqw;
+  left: 7cqw;
+}
+
+.tertiary_top_label .storyTitle {
+  top: 8.2cqw;
+  right: 7cqw;
+  left: 34cqw;
+  font-size: 5.8cqw;
+  line-height: 0.94;
+  text-align: right;
+}
+
+.tertiary_top_label .storyBody {
+  display: none;
+}
+
+.tertiary_bottom_label .storyMedia {
+  inset: 0 0 24cqw;
+}
+
+.tertiary_bottom_label .storyKicker {
+  bottom: 16.5cqw;
+  left: 7cqw;
+}
+
+.tertiary_bottom_label .storyTitle {
+  right: 7cqw;
+  bottom: 4cqw;
+  left: 7cqw;
+  font-size: 7.4cqw;
+}
+
+.tertiary_bottom_label .storyBody {
+  display: none;
+}
+
+.tertiary_inset .storyMedia {
+  inset: 11cqw 10cqw 17cqw;
+  box-shadow: 0 3cqw 8cqw rgb(0 0 0 / 22%);
+}
+
+.tertiary_inset .storyKicker {
+  top: 6cqw;
+  left: 10cqw;
+}
+
+.tertiary_inset .storyTitle {
+  right: 10cqw;
+  bottom: 5cqw;
+  left: 10cqw;
+  font-size: 7.2cqw;
+}
+
+.tertiary_inset .storyBody {
+  display: none;
+}
+
+.tertiary_close .storyMedia {
+  inset: 0;
+}
+
+.tertiary_close .storyImageAsset {
+  object-position: 50% 58%;
+  transform: scale(1.24);
+}
+
+.tertiary_close .storyShade {
+  inset: 0;
+  background: linear-gradient(90deg, rgb(9 16 24 / 90%) 0 39%, transparent 68%);
+}
+
+.tertiary_close .storyKicker {
+  top: 7cqw;
+  left: 6cqw;
+  color: #f4edde;
+}
+
+.tertiary_close .storyTitle {
+  top: 36cqw;
+  left: 6cqw;
+  width: 36cqw;
+  font-size: 8cqw;
+  color: #f4edde;
+}
+
+.tertiary_close .storyBody {
+  bottom: 8cqw;
+  left: 6cqw;
+  width: 33cqw;
+  color: #f4edde;
+}
+
+.tertiary_slice .storyMedia {
+  top: 31cqw;
+  right: 0;
+  left: 0;
+  height: 54cqw;
+}
+
+.tertiary_slice .storyImageAsset {
+  object-position: 50% 57%;
+}
+
+.tertiary_slice .storyKicker {
+  top: 7cqw;
+  left: 7cqw;
+}
+
+.tertiary_slice .storyTitle {
+  right: 7cqw;
+  bottom: 18cqw;
+  left: 7cqw;
+  font-size: 8.8cqw;
+}
+
+.tertiary_slice .storyBody {
+  right: 7cqw;
+  bottom: 6cqw;
+  left: 50cqw;
+}
+
+.tertiary_echo .storyMedia {
+  inset: 0;
+}
+
+.tertiary_echo .storyDetail {
+  top: 8cqw;
+  right: 7cqw;
+  display: block;
+  width: 35cqw;
+  height: 35cqw;
+  border: 1.3cqw solid var(--ig-paper);
+  border-radius: 50%;
+  box-shadow: 0 2cqw 6cqw rgb(0 0 0 / 38%);
+}
+
+.tertiary_echo .storyDetail img {
+  object-position: 50% 82%;
+  transform: scale(1.6);
+}
+
+.tertiary_echo .storyShade {
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgb(8 16 16 / 82%));
+}
+
+.tertiary_echo .storyKicker {
+  top: 8cqw;
+  left: 7cqw;
+  color: #f4edde;
+}
+
+.tertiary_echo .storyTitle {
+  right: 7cqw;
+  bottom: 8cqw;
+  left: 7cqw;
+  font-size: 8.5cqw;
+  color: #f4edde;
+}
+
+.tertiary_echo .storyBody {
+  display: none;
+}
+
+.tertiary_margin .storyMedia {
+  inset: 7cqw 38cqw 7cqw 7cqw;
+}
+
+.tertiary_margin .storyKicker {
+  top: 8cqw;
+  right: 5cqw;
+  width: 27cqw;
+}
+
+.tertiary_margin .storyTitle {
+  top: 35cqw;
+  right: 5cqw;
+  width: 27cqw;
+  font-size: 4.8cqw;
+}
+
+.tertiary_margin .storyBody {
+  right: 5cqw;
+  bottom: 8cqw;
+  width: 27cqw;
+}
+
+.tertiary_overprint .storyMedia {
+  inset: 0;
+}
+
+.tertiary_overprint .storyShade {
+  inset: 0;
+  background: rgb(10 28 28 / 18%);
+}
+
+.tertiary_overprint .storyTitle {
+  top: 45%;
+  right: 3cqw;
+  left: 3cqw;
+  font-size: 13cqw;
+  line-height: 0.85;
+  text-align: center;
+  color: #f4edde;
+  text-shadow: 0 0.4cqw 3cqw rgb(0 0 0 / 68%);
+  transform: translateY(-50%);
+}
+
+.tertiary_overprint .storyKicker {
+  top: 7cqw;
+  left: 7cqw;
+  color: #f4edde;
+}
+
+.tertiary_overprint .storyBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 48cqw;
+  color: #f4edde;
+}
+
+.tertiary_word .storyMedia {
+  inset: 0;
+}
+
+.tertiary_word .storyShade {
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgb(8 15 21 / 86%));
+}
+
+.tertiary_word .storyTitle,
+.tertiary_word .storyBody {
+  display: none;
+}
+
+.tertiary_word .storyWord {
+  right: 0;
+  bottom: 8cqw;
+  left: 0;
+  display: block;
+  font-family: var(--font-display), serif;
+  font-size: 15cqw;
+  line-height: 0.9;
+  text-align: center;
+  color: #f4edde;
+}
+
+.tertiary_word .storyKicker {
+  top: 7cqw;
+  left: 7cqw;
+  color: #f4edde;
+}
+
+.tertiary_lower_plaque .storyMedia {
+  inset: 0;
+}
+
+.tertiary_lower_plaque .storyTitle {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 7cqw;
+  padding: 4cqw;
+  font-size: 7.8cqw;
+  color: var(--ig-fg);
+  background: var(--ig-paper);
+}
+
+.tertiary_lower_plaque .storyKicker {
+  top: 7cqw;
+  left: 7cqw;
+  color: #f4edde;
+  text-shadow: 0 0.2cqw 1.5cqw rgb(0 0 0 / 80%);
+}
+
+.tertiary_lower_plaque .storyBody {
+  display: none;
+}
+
+.tertiary_upper_plaque .storyMedia {
+  inset: 0;
+}
+
+.tertiary_upper_plaque .storyTitle {
+  top: 7cqw;
+  right: 7cqw;
+  left: 7cqw;
+  padding: 4cqw;
+  font-size: 7.8cqw;
+  color: var(--ig-bg);
+  background: var(--ig-paper);
+}
+
+.tertiary_upper_plaque .storyKicker {
+  right: 8cqw;
+  bottom: 7cqw;
+  color: #f4edde;
+  text-shadow: 0 0.2cqw 1.5cqw rgb(0 0 0 / 80%);
+}
+
+.tertiary_upper_plaque .storyBody {
+  display: none;
+}
+
+.tertiary_edge .storyMedia {
+  inset: 0 14cqw 0 0;
+}
+
+.tertiary_edge .storyTitle {
+  top: 50%;
+  right: -30cqw;
+  width: 75cqw;
+  font-size: 6.6cqw;
+  text-align: center;
+  white-space: nowrap;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.tertiary_edge .storyKicker,
+.tertiary_edge .storyBody {
+  display: none;
+}
+
+.tertiary_edge .storyIndex {
+  right: 4cqw;
+  bottom: 6cqw;
+  display: block;
+}
+
+.tertiary_paper {
+  background: var(--ig-paper);
+}
+
+.tertiary_paper .storyMedia {
+  inset: 6cqw 6cqw 18cqw;
+}
+
+.tertiary_paper .storyFrame {
+  inset: 3cqw;
+  border: 1px solid var(--ig-muted);
+}
+
+.tertiary_paper .storyKicker {
+  bottom: 12cqw;
+  left: 6cqw;
+}
+
+.tertiary_paper .storyTitle {
+  right: 6cqw;
+  bottom: 4cqw;
+  left: 6cqw;
+  font-size: 6.6cqw;
+}
+
+.tertiary_paper .storyBody {
+  display: none;
+}
+
+.tertiary_caption .storyMedia {
+  top: 7cqw;
+  right: 7cqw;
+  left: 7cqw;
+  height: 90cqw;
+}
+
+.tertiary_caption .storyKicker {
+  top: 101cqw;
+  left: 7cqw;
+}
+
+.tertiary_caption .storyTitle {
+  right: 7cqw;
+  bottom: 4cqw;
+  left: 7cqw;
+  font-size: 6.5cqw;
+}
+
+.tertiary_caption .storyBody {
+  display: none;
+}
+
+.tertiary_dark_frame {
+  background: var(--ig-bg);
+}
+
+.tertiary_dark_frame .storyMedia {
+  inset: 10cqw;
+}
+
+.tertiary_dark_frame .storyFrame {
+  inset: 6cqw;
+  border: 1px solid var(--ig-accent);
+}
+
+.tertiary_dark_frame .storyKicker {
+  top: 7cqw;
+  left: 7cqw;
+}
+
+.tertiary_dark_frame .storyTitle {
+  right: 7cqw;
+  bottom: 10cqw;
+  left: 7cqw;
+  font-size: 7.4cqw;
+  text-shadow: 0 0.3cqw 2cqw rgb(0 0 0 / 80%);
+}
+
+.tertiary_dark_frame .storyBody {
+  display: none;
+}
+
+.tertiary_quiet .storyMedia {
+  inset: 12cqw 13cqw 31cqw;
+  filter: saturate(0.82);
+}
+
+.tertiary_quiet .storyKicker {
+  top: 7cqw;
+  left: 13cqw;
+}
+
+.tertiary_quiet .storyTitle {
+  right: 13cqw;
+  bottom: 14cqw;
+  left: 13cqw;
+  font-size: 7.5cqw;
+  text-align: center;
+}
+
+.tertiary_quiet .storyBody {
+  right: 22cqw;
+  bottom: 5cqw;
+  left: 22cqw;
+  font-size: 2.8cqw;
+  text-align: center;
+}
+
+.mapMain,
+.mapInset,
+.mapTiles,
+.mapTint,
+.mapGrid,
+.mapMarker,
+.mapRouteLine,
+.mapKicker,
+.mapTitle,
+.mapCoordinates,
+.mapCountry,
+.mapLegend,
+.mapAttribution {
+  position: absolute;
+}
+
+.mapMain,
+.mapInset,
+.mapTiles {
+  overflow: hidden;
+}
+
+.mapTiles {
+  inset: 0;
+  background: #d9d3c5;
+}
+
+.mapTileGrid {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(var(--map-tile-count), var(--map-tile-size));
+  grid-template-rows: repeat(var(--map-tile-count), var(--map-tile-size));
+  width: calc(var(--map-tile-count) * var(--map-tile-size));
+  height: calc(var(--map-tile-count) * var(--map-tile-size));
+}
+
+.mapTile {
+  width: var(--map-tile-size);
+  height: var(--map-tile-size);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.mapTint,
+.mapGrid,
+.mapMarker,
+.mapRouteLine,
+.mapKicker,
+.mapTitle,
+.mapCoordinates,
+.mapCountry,
+.mapLegend,
+.mapAttribution {
+  z-index: 2;
+}
+
+.mapKicker,
+.mapCoordinates,
+.mapCountry,
+.mapLegend,
+.mapAttribution {
+  margin: 0;
+  font-family: var(--font-body), sans-serif;
+}
+
+.mapKicker,
+.mapCountry,
+.mapLegend {
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.mapTitle {
+  margin: 0;
+  font-family: var(--font-display), serif;
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+.mapMarker {
+  display: grid;
+  width: 6cqw;
+  aspect-ratio: 1;
+  place-items: center;
+  color: #9b3d2c;
+  background: #f7f0df;
+  border: 0.55cqw solid currentColor;
+  border-radius: 50% 50% 50% 0;
+  box-shadow:
+    0 0 0 0.65cqw rgb(255 255 255 / 58%),
+    0 1.2cqw 2.4cqw rgb(28 40 38 / 24%);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.mapMarker i {
+  width: 1.55cqw;
+  aspect-ratio: 1;
+  background: currentColor;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.mapAttribution {
+  z-index: 4;
+  padding: 0.7cqw 1cqw;
+  font-size: 1.15cqw;
+  color: #1c2826;
+  background: rgb(245 242 232 / 82%);
+}
+
+.map_atlas .mapMain {
+  inset: 20cqw 7cqw 17cqw;
+  border: 1px solid color-mix(in srgb, var(--ig-fg) 40%, transparent);
+}
+
+.map_atlas .mapMain .mapTiles {
+  filter: grayscale(0.35) sepia(0.18) contrast(0.9);
+}
+
+.map_atlas .mapTint {
+  inset: 20cqw 7cqw 17cqw;
+  background: color-mix(in srgb, var(--ig-paper) 24%, transparent);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.map_atlas .mapGrid {
+  inset: 20cqw 7cqw 17cqw;
+  background-image:
+    linear-gradient(rgb(24 44 41 / 15%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(24 44 41 / 15%) 1px, transparent 1px);
+  background-size: 12cqw 12cqw;
+}
+
+.map_atlas .mapKicker {
+  top: 7cqw;
+  left: 7cqw;
+  font-size: 2.2cqw;
+}
+
+.map_atlas .mapTitle {
+  top: 10.5cqw;
+  right: 7cqw;
+  left: 7cqw;
+  font-size: 7.4cqw;
+}
+
+.map_atlas .mapCoordinates {
+  bottom: 8cqw;
+  left: 7cqw;
+  font-size: 2.5cqw;
+}
+
+.map_atlas .mapCountry {
+  right: 7cqw;
+  bottom: 8cqw;
+  font-size: 2cqw;
+}
+
+.map_atlas .mapMarker {
+  top: 59cqw;
+  left: 48cqw;
+}
+
+.map_atlas .mapLegend {
+  top: 22.5cqw;
+  left: 9.5cqw;
+  padding: 1.5cqw 2cqw;
+  font-size: 1.65cqw;
+  color: var(--ig-bg);
+  background: var(--ig-fg);
+}
+
+.map_atlas .mapAttribution {
+  right: 7cqw;
+  bottom: 17cqw;
+}
+
+.map_coordinates {
+  color: #f4edde;
+  background: var(--ig-bg);
+}
+
+.map_coordinates .mapMain {
+  inset: 8cqw 8cqw 42cqw 31cqw;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--ig-accent);
+}
+
+.map_coordinates .mapMain .mapTiles {
+  filter: grayscale(1) contrast(1.05) brightness(0.58) sepia(0.2)
+    hue-rotate(120deg);
+}
+
+.map_coordinates .mapTint {
+  inset: 8cqw 8cqw 42cqw 31cqw;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--ig-bg) 28%, transparent);
+  mix-blend-mode: multiply;
+}
+
+.map_coordinates .mapKicker {
+  top: 9cqw;
+  left: 7cqw;
+  width: 20cqw;
+  font-size: 2cqw;
+  line-height: 1.45;
+}
+
+.map_coordinates .mapTitle {
+  right: 7cqw;
+  bottom: 17cqw;
+  left: 7cqw;
+  font-size: 10.5cqw;
+}
+
+.map_coordinates .mapCoordinates {
+  bottom: 8cqw;
+  left: 7cqw;
+  font-size: 3.2cqw;
+  letter-spacing: 0.08em;
+  color: var(--ig-accent);
+}
+
+.map_coordinates .mapCountry {
+  top: 32cqw;
+  left: 7cqw;
+  font-size: 1.9cqw;
+  color: var(--ig-muted);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.map_coordinates .mapMarker {
+  top: 44cqw;
+  left: 62cqw;
+  color: var(--ig-accent);
+}
+
+.map_coordinates .mapLegend,
+.map_coordinates .mapAttribution {
+  display: none;
+}
+
+.map_locator .mapMain {
+  inset: 0;
+}
+
+.map_locator .mapMain .mapTiles {
+  filter: grayscale(0.62) sepia(0.18) brightness(0.9);
+}
+
+.map_locator .mapTint {
+  inset: 0;
+  background:
+    linear-gradient(180deg, var(--ig-bg) 0 17%, transparent 45%),
+    linear-gradient(180deg, transparent 55%, var(--ig-bg) 98%);
+  opacity: 0.92;
+}
+
+.map_locator .mapInset {
+  z-index: 3;
+  right: 7cqw;
+  bottom: 8cqw;
+  width: 39cqw;
+  height: 39cqw;
+  border: 1cqw solid var(--ig-paper);
+  border-radius: 50%;
+  box-shadow: 0 2cqw 7cqw rgb(0 0 0 / 30%);
+}
+
+.map_locator .mapInset .mapTiles {
+  filter: saturate(0.7) contrast(0.92);
+}
+
+.mapInsetMarker {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  width: 2.2cqw;
+  aspect-ratio: 1;
+  background: #9b3d2c;
+  border: 0.6cqw solid #f4edde;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.map_locator .mapKicker {
+  top: 7cqw;
+  left: 7cqw;
+  font-size: 2.2cqw;
+}
+
+.map_locator .mapTitle {
+  top: 11cqw;
+  left: 7cqw;
+  width: 68cqw;
+  font-size: 9.2cqw;
+}
+
+.map_locator .mapCountry {
+  bottom: 16cqw;
+  left: 7cqw;
+  font-size: 5cqw;
+  color: var(--ig-accent);
+}
+
+.map_locator .mapCoordinates {
+  bottom: 8cqw;
+  left: 7cqw;
+  width: 38cqw;
+  font-size: 2.4cqw;
+}
+
+.map_locator .mapLegend {
+  right: 14cqw;
+  bottom: 4.7cqw;
+  font-size: 1.5cqw;
+}
+
+.map_locator .mapMarker,
+.map_locator .mapAttribution {
+  display: none;
+}
+
+.map_route .mapMain {
+  inset: 0;
+}
+
+.map_route .mapMain .mapTiles {
+  filter: grayscale(0.78) sepia(0.45) contrast(0.88) brightness(0.92);
+}
+
+.map_route .mapTint {
+  inset: 0;
+  background:
+    linear-gradient(180deg, var(--ig-bg) 0, transparent 35%),
+    linear-gradient(180deg, transparent 48%, var(--ig-paper) 105%);
+  opacity: 0.64;
+  mix-blend-mode: multiply;
+}
+
+.map_route .mapRouteLine {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: var(--ig-accent);
+  stroke: var(--ig-accent);
+  stroke-width: 0.75;
+  stroke-dasharray: 2 1.4;
+}
+
+.map_route .mapRouteLine path {
+  fill: none;
+}
+
+.map_route .mapKicker {
+  top: 7cqw;
+  left: 7cqw;
+  font-size: 2.1cqw;
+  color: #f4edde;
+  text-shadow: 0 0.2cqw 1.4cqw rgb(0 0 0 / 70%);
+}
+
+.map_route .mapTitle {
+  top: 11cqw;
+  left: 7cqw;
+  width: 72cqw;
+  font-size: 9cqw;
+  color: #f4edde;
+  text-shadow: 0 0.3cqw 2cqw rgb(0 0 0 / 76%);
+}
+
+.map_route .mapCoordinates {
+  right: 7cqw;
+  bottom: 7cqw;
+  padding: 2cqw 2.5cqw;
+  font-size: 2.3cqw;
+  color: var(--ig-bg);
+  background: var(--ig-paper);
+}
+
+.map_route .mapLegend {
+  bottom: 7.4cqw;
+  left: 7cqw;
+  font-size: 2cqw;
+}
+
+.map_route .mapCountry,
+.map_route .mapMarker {
+  display: none;
+}
+
+.map_route .mapAttribution {
+  right: 0;
+  bottom: 0;
+}
+
+.map_topographic .mapMain {
+  inset: 14cqw 8cqw 30cqw;
+  border: 1px solid color-mix(in srgb, var(--ig-fg) 46%, transparent);
+}
+
+.map_topographic .mapMain .mapTiles {
+  filter: grayscale(0.35) sepia(0.24) saturate(0.8) contrast(0.95);
+}
+
+.map_topographic .mapTint {
+  inset: 14cqw 8cqw 30cqw;
+  background: color-mix(in srgb, var(--ig-accent) 12%, transparent);
+  mix-blend-mode: multiply;
+}
+
+.map_topographic .mapGrid {
+  inset: 14cqw 8cqw 30cqw;
+  background:
+    linear-gradient(90deg, transparent calc(50% - 0.5px), rgb(21 47 48 / 24%) 50%, transparent calc(50% + 0.5px)),
+    linear-gradient(transparent calc(50% - 0.5px), rgb(21 47 48 / 24%) 50%, transparent calc(50% + 0.5px));
+  pointer-events: none;
+}
+
+.map_topographic .mapKicker {
+  top: 7.5cqw;
+  left: 8cqw;
+  font-size: 2.2cqw;
+}
+
+.map_topographic .mapTitle {
+  right: 12cqw;
+  bottom: 14cqw;
+  left: 12cqw;
+  font-size: 4.8cqw;
+  line-height: 0.96;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.map_topographic .mapCoordinates {
+  right: 12cqw;
+  bottom: 6cqw;
+  left: 12cqw;
+  font-size: 2.45cqw;
+  text-align: center;
+}
+
+.map_topographic .mapCountry {
+  top: 15cqw;
+  right: 3.3cqw;
+  font-size: 2cqw;
+  writing-mode: vertical-rl;
+}
+
+.map_topographic .mapMarker {
+  top: 52cqw;
+  left: 50%;
+}
+
+.map_topographic .mapLegend {
+  top: 62.5cqw;
+  left: 50%;
+  padding: 1.25cqw 1.9cqw;
+  font-size: 1.75cqw;
+  white-space: nowrap;
+  color: var(--ig-bg);
+  background: var(--ig-paper);
+  transform: translateX(-50%);
+}
+
+.map_topographic .mapLegend::before {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 1px;
+  height: 5cqw;
+  content: "";
+  background: color-mix(in srgb, var(--ig-fg) 58%, transparent);
+}
+
+.map_topographic .mapAttribution {
+  right: 8cqw;
+  bottom: 30cqw;
+}
+
+.placeholder {
+  display: grid;
+  align-content: center;
+  padding: 8cqw;
+}
+
+.placeholder span,
+.placeholder p {
+  font-family: var(--font-body), sans-serif;
+}
+
+.placeholder span {
+  font-size: 2.2cqw;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.placeholder h2 {
+  margin: 5cqw 0;
+  font-family: var(--font-display), serif;
+  font-size: 10cqw;
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.placeholder p {
+  font-size: 2.8cqw;
+}
+
+/*
+ * Revisión editorial v5
+ * ---------------------
+ * Esta capa no unifica las composiciones. Refuerza cinco reglas comunes:
+ * textura material, zona segura, cuerpo legible, encuadre protagonista y
+ * contraste óptico. Los ajustes posteriores conservan el gesto propio de
+ * cada una de las 85 plantillas.
+ */
+
+.surfaceTexture {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: block;
+  pointer-events: none;
+  opacity: 0.1;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.34'/%3E%3C/svg%3E"),
+    linear-gradient(115deg, rgb(255 255 255 / 14%), transparent 32%, rgb(0 0 0 / 10%));
+  mix-blend-mode: soft-light;
+}
+
+.typographic::after {
+  display: none;
+}
+
+.typographic .surfaceTexture,
+.map .surfaceTexture {
+  opacity: 0.065;
+  mix-blend-mode: multiply;
+}
+
+/* Portadas: la imagen manda; título y cultura ocupan zonas ópticamente estables. */
+
+.coverTitle {
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.coverCommunity {
+  font-size: max(2.05cqw, 22px);
+  line-height: 1.25;
+}
+
+.cover_immersive .coverCommunity {
+  bottom: 24cqw;
+}
+
+.cover_immersive .coverTitle {
+  bottom: 7.8cqw;
+  font-size: 15.4cqw;
+}
+
+.cover_archive .coverMedia,
+.cover_archive .coverFrame {
+  inset: 4.8cqw;
+}
+
+.cover_archive .coverFrame {
+  box-shadow:
+    inset 0 0 0 3.3cqw rgb(19 31 29 / 65%),
+    0 0 0 1px rgb(245 239 225 / 30%);
+}
+
+.cover_archive .coverTitle {
+  right: 9cqw;
+  bottom: 10cqw;
+  left: 9cqw;
+}
+
+.cover_folio_left {
+  grid-template-columns: 21.5cqw 1fr;
+}
+
+.cover_folio_left .coverMedia {
+  left: 21.5cqw;
+}
+
+.cover_folio_left .coverTitle {
+  left: 10.75cqw;
+  font-size: 10.4cqw;
+}
+
+.cover_folio_left .coverCommunity {
+  bottom: 6.5cqw;
+  left: 3.6cqw;
+}
+
+.cover_folio_right .coverMedia {
+  right: 21.5cqw;
+}
+
+.cover_folio_right .coverTitle {
+  right: -33.4cqw;
+  font-size: 10.4cqw;
+}
+
+.cover_folio_right .coverCommunity {
+  right: 4.8cqw;
+  bottom: 6.5cqw;
+}
+
+.cover_threshold .coverFrame {
+  inset: 4.6cqw;
+  border-color: rgb(243 237 222 / 78%);
+}
+
+.cover_threshold .coverTitle {
+  bottom: 8.2cqw;
+  font-size: 15.4cqw;
+}
+
+.cover_museum .coverMedia {
+  inset: 6cqw 6cqw 19.5cqw;
+}
+
+.cover_museum .coverFrame {
+  inset: 3.8cqw;
+}
+
+.cover_museum .coverTitle {
+  bottom: 5.2cqw;
+  left: 6cqw;
+  font-size: 9.9cqw;
+}
+
+.cover_museum .coverCommunity {
+  right: 6cqw;
+  bottom: 6.3cqw;
+}
+
+.cover_horizon .coverShade {
+  background:
+    linear-gradient(180deg, rgb(8 13 20 / 92%) 0 22%, transparent 54%),
+    linear-gradient(180deg, transparent 76%, rgb(8 13 20 / 28%));
+}
+
+.cover_horizon .coverTitle {
+  top: 7cqw;
+  font-size: 13.4cqw;
+}
+
+.cover_horizon .coverCommunity {
+  top: 23.5cqw;
+}
+
+.cover_bottom_folio .coverMedia {
+  bottom: 25cqw;
+}
+
+.cover_bottom_folio .coverFrame {
+  inset: 4cqw 4cqw 28cqw;
+  border: 1px solid rgb(243 237 222 / 44%);
+}
+
+.cover_bottom_folio .coverTitle {
+  bottom: 5.5cqw;
+  font-size: 11.2cqw;
+}
+
+.cover_offset .coverMedia {
+  top: 6cqw;
+  right: 5.5cqw;
+  bottom: 6cqw;
+  left: 15cqw;
+}
+
+.cover_offset .coverTitle {
+  bottom: 7.8cqw;
+  left: 4.2cqw;
+  padding: 2.3cqw 4cqw 2.8cqw;
+  font-size: 10.8cqw;
+  box-shadow: 1.3cqw 1.3cqw 0 color-mix(in srgb, var(--ig-accent) 42%, transparent);
+}
+
+.cover_monument .coverShade {
+  background:
+    linear-gradient(180deg, transparent 55%, rgb(8 17 14 / 82%)),
+    linear-gradient(90deg, rgb(10 20 16 / 22%), transparent 46%);
+}
+
+.cover_monument .coverTitle {
+  top: auto;
+  right: 6.5cqw;
+  bottom: 9cqw;
+  left: 6.5cqw;
+  font-size: 12.4cqw;
+  transform: none;
+}
+
+/* Tipográficas: el gesto expresivo convive con una segunda zona de lectura. */
+
+.typeKicker {
+  font-size: 2.3cqw;
+  line-height: 1.25;
+}
+
+.typeTitle {
+  letter-spacing: -0.026em;
+}
+
+.typeBody {
+  font-size: 3.2cqw;
+  line-height: 1.43;
+  letter-spacing: -0.012em;
+  text-wrap: pretty;
+}
+
+.typographic.density_short .typeBody {
+  font-size: 3.25cqw;
+}
+
+.typographic.density_medium .typeBody {
+  font-size: 3.2cqw;
+  line-height: 1.42;
+}
+
+.typographic.density_narrative .typeBody {
+  font-size: 3.12cqw;
+  line-height: 1.43;
+}
+
+.typographic.density_medium.type_monument .typeTitle {
+  top: 35cqw;
+  font-size: 9.6cqw;
+}
+
+.typographic.density_medium.type_monument .typeBody {
+  top: 79cqw;
+  left: 31cqw;
+}
+
+.typographic.density_short.type_syllabic .typeWordStack {
+  top: 34cqw;
+  font-size: 12.3cqw;
+  transform: none;
+}
+
+.typographic.density_short.type_syllabic .typeBody {
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 34cqw;
+  text-align: right;
+}
+
+.type_quote .typeTitle {
+  top: 27cqw;
+  font-size: 9.5cqw;
+}
+
+.type_quote .typeBody {
+  right: 9cqw;
+  bottom: 8cqw;
+  left: 43cqw;
+}
+
+.type_vertical .typeTitle {
+  left: -25cqw;
+  width: 89cqw;
+  font-size: 7.4cqw;
+}
+
+.type_vertical .typeBody {
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 42cqw;
+}
+
+.typographic.density_narrative.type_margin .typeTitle {
+  top: 24cqw;
+}
+
+.typographic.density_narrative.type_margin .typeBody {
+  top: 55cqw;
+  left: 29cqw;
+}
+
+.typographic.density_short.type_triptych .typeKeywords {
+  top: 20cqw;
+  bottom: 43cqw;
+  height: auto;
+}
+
+.typographic.density_short.type_triptych .typeBody {
+  right: 7cqw;
+  bottom: 8cqw;
+  left: 29cqw;
+}
+
+.typographic.density_medium.type_numbered .typeTitle {
+  top: 44cqw;
+  font-size: 8.7cqw;
+}
+
+.typographic.density_medium.type_numbered .typeBody {
+  top: 81cqw;
+  left: 31cqw;
+  font-size: 3.12cqw;
+}
+
+.typographic.density_short.type_stair .typeWordStack {
+  top: 31cqw;
+  gap: 2cqw;
+  transform: none;
+}
+
+.typographic.density_short.type_stair .typeBody {
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 34cqw;
+}
+
+.type_whisper .typeTitle {
+  right: 19cqw;
+  left: 19cqw;
+  font-size: 6.3cqw;
+}
+
+.type_whisper .typeBody {
+  right: 20cqw;
+  bottom: 9cqw;
+  left: 20cqw;
+  font-size: 3.05cqw;
+}
+
+.typographic.density_narrative.type_manifesto .typeTitle {
+  top: 18cqw;
+  font-size: 9.8cqw;
+}
+
+.typographic.density_narrative.type_manifesto .typeBody {
+  top: 51cqw;
+  padding: 4cqw 5cqw;
+}
+
+.type_outline .typeTitle {
+  top: 24cqw;
+  color: color-mix(in srgb, var(--ig-fg) 10%, transparent);
+  -webkit-text-stroke: 0.15cqw var(--ig-fg);
+}
+
+.type_outline .typeBody {
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 45cqw;
+}
+
+.typographic.density_short.type_vocabulary .typeShortTitle {
+  top: 27cqw;
+  font-size: 16cqw;
+}
+
+.typographic.density_short.type_vocabulary .typeBody {
+  right: 15cqw;
+  bottom: 10cqw;
+  left: 15cqw;
+}
+
+.type_initial .typeInitial {
+  top: 2cqw;
+  left: 0;
+  font-size: 64cqw;
+}
+
+.type_initial .typeTitle {
+  right: 8cqw;
+  bottom: 25cqw;
+  left: 29cqw;
+}
+
+.type_initial .typeBody {
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 29cqw;
+}
+
+.typographic.density_narrative.type_columns .typeTitle,
+.typographic.density_narrative.type_columns .typeBody {
+  top: 26cqw;
+}
+
+.typographic.density_narrative.type_columns .typeBody {
+  right: 7cqw;
+  width: 41cqw;
+  font-size: 3.08cqw;
+}
+
+.typographic.density_narrative.type_ledger .typeTitle {
+  top: 24cqw;
+}
+
+.typographic.density_narrative.type_ledger .typeBody {
+  top: 57cqw;
+  left: 31cqw;
+}
+
+.typographic.density_medium.type_cascade .typeWordStack {
+  top: 21cqw;
+}
+
+.typographic.density_medium.type_cascade .typeBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 25cqw;
+}
+
+.typographic.density_narrative.type_floating .typeTitle {
+  top: 18cqw;
+  width: 66cqw;
+  padding: 4cqw 5cqw;
+  color: var(--ig-fg);
+}
+
+.typographic.density_narrative.type_floating .typeBody {
+  top: 69cqw;
+  column-gap: 5cqw;
+}
+
+.typographic.density_medium.type_four_voices .typeKeywords {
+  top: 22cqw;
+  bottom: 46cqw;
+}
+
+.typographic.density_medium.type_four_voices .typeBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 25cqw;
+}
+
+.typographic.density_narrative.type_top_bottom .typeTitle {
+  top: 15cqw;
+  font-size: 7.2cqw;
+}
+
+.typographic.density_narrative.type_top_bottom .typeBody {
+  top: 59cqw;
+  left: 31cqw;
+}
+
+.typographic.density_narrative.type_top_bottom .typeDevice {
+  top: 55cqw;
+}
+
+.type_long_line .typeTitle {
+  top: 44%;
+  right: 7cqw;
+  left: 7cqw;
+  font-size: 8cqw;
+}
+
+.type_long_line .typeBody {
+  right: 20cqw;
+  bottom: 9cqw;
+  left: 20cqw;
+  font-size: 3.1cqw;
+}
+
+.typographic.density_narrative.type_index_grid .typeTitle {
+  top: 26cqw;
+}
+
+.typographic.density_narrative.type_index_grid .typeBody {
+  top: 58cqw;
+  left: 31cqw;
+}
+
+.typographic.density_narrative.type_thesis .typeTitle {
+  top: 24cqw;
+}
+
+.typographic.density_narrative.type_thesis .typeBody {
+  top: 59cqw;
+  left: 31cqw;
+}
+
+.typographic.density_narrative.type_corner .typeTitle {
+  top: 38cqw;
+}
+
+.typographic.density_narrative.type_corner .typeBody {
+  top: 72cqw;
+}
+
+.typographic.density_short.type_three_beats .typeWordStack {
+  top: 19cqw;
+}
+
+.typographic.density_short.type_three_beats .typeWordStack span {
+  min-height: 17cqw;
+}
+
+.typographic.density_short.type_three_beats .typeBody {
+  right: 7cqw;
+  bottom: 8cqw;
+  left: 35cqw;
+}
+
+.type_parenthetical .typeTitle {
+  right: 17cqw;
+  left: 17cqw;
+  font-size: 8.1cqw;
+}
+
+.type_parenthetical .typeBody {
+  right: 20cqw;
+  bottom: 9cqw;
+  left: 20cqw;
+  font-size: 3.1cqw;
+}
+
+.typographic.density_medium.type_call_response .typeDialogue {
+  top: 21cqw;
+  gap: 7cqw;
+}
+
+.typographic.density_medium.type_call_response .typeDevice {
+  top: 58cqw;
+}
+
+.typographic.density_medium.type_call_response .typeBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 23cqw;
+}
+
+.typographic.density_short.type_word_field .typeKeywords span:nth-child(1) {
+  top: 18cqw;
+}
+
+.typographic.density_short.type_word_field .typeKeywords span:nth-child(2) {
+  top: 44cqw;
+}
+
+.typographic.density_short.type_word_field .typeKeywords span:nth-child(3) {
+  bottom: 43cqw;
+}
+
+.typographic.density_short.type_word_field .typeBody {
+  right: 34cqw;
+  bottom: 8cqw;
+  left: 8cqw;
+  text-align: left;
+}
+
+.typographic.density_short.type_blocks .typeWordStack {
+  top: 27cqw;
+}
+
+.typographic.density_short.type_blocks .typeBody {
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 34cqw;
+}
+
+.typographic.density_short.type_blocks .typeKicker {
+  top: auto;
+  bottom: 8cqw;
+  left: 7cqw;
+}
+
+.typographic.density_narrative.type_archive_note .typeTitle {
+  top: 23cqw;
+}
+
+.typographic.density_narrative.type_archive_note .typeBody {
+  top: 54cqw;
+  right: 11cqw;
+  bottom: 10cqw;
+  left: 27cqw;
+  font-size: 3.2cqw;
+}
+
+.type_question .typeTitle {
+  top: 28cqw;
+  font-size: 9.7cqw;
+}
+
+.type_question .typeBody {
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 42cqw;
+  font-size: 3.15cqw;
+}
+
+/* Imágenes secundarias: la escena sigue siendo protagonista y la leyenda deja de ser microscópica. */
+
+.storyTitle {
+  letter-spacing: -0.025em;
+}
+
+.storyKicker,
+.storyIndex {
+  font-size: 2.15cqw;
+  line-height: 1.25;
+}
+
+.storyBody {
+  font-size: 3.18cqw;
+  line-height: 1.42;
+  letter-spacing: -0.01em;
+}
+
+.secondary_cinema .storyMedia {
+  top: 26cqw;
+}
+
+.secondary_cinema .storyTitle {
+  bottom: 21cqw;
+}
+
+.secondary_cinema .storyBody,
+.secondary_full .storyBody,
+.secondary_postcard .storyBody,
+.secondary_top .storyBody,
+.secondary_bottom .storyBody,
+.secondary_offset .storyBody,
+.secondary_corner .storyBody,
+.secondary_title_band .storyBody,
+.secondary_lower_field .storyBody,
+.secondary_double_mat .storyBody,
+.secondary_contact .storyBody {
+  left: 43cqw;
+}
+
+.secondary_full .storyShade {
+  background:
+    linear-gradient(180deg, rgb(8 20 20 / 6%) 38%, transparent 58%),
+    linear-gradient(180deg, transparent 54%, rgb(7 18 19 / 94%) 100%);
+}
+
+.secondary_postcard .storyMedia {
+  top: 12cqw;
+  height: 49cqw;
+}
+
+.secondary_top .storyMedia,
+.secondary_bottom .storyMedia {
+  height: 67cqw;
+}
+
+.secondary_split_left .storyTitle,
+.secondary_split_right .storyTitle {
+  top: 30cqw;
+  font-size: 7.4cqw;
+}
+
+.secondary_split_left .storyBody,
+.secondary_split_right .storyBody {
+  bottom: 7cqw;
+  font-size: 3.08cqw;
+}
+
+.secondary_vertical_caption .storyMedia {
+  inset: 6cqw 6cqw 6cqw 22cqw;
+}
+
+.secondary_vertical_caption .storyTitle {
+  left: -27cqw;
+  width: 90cqw;
+  font-size: 6.1cqw;
+}
+
+.secondary_vertical_caption .storyBody {
+  right: 9cqw;
+  bottom: 9cqw;
+  left: 54cqw;
+  display: block;
+  padding: 2.4cqw;
+  font-size: 2.9cqw;
+  color: #f4edde;
+  background: rgb(12 22 29 / 78%);
+}
+
+.secondary_strips .storyStrips {
+  inset: 18cqw 6cqw 39cqw;
+}
+
+.secondary_strips .storyTitle {
+  right: 6cqw;
+  bottom: 21cqw;
+  left: 6cqw;
+  padding: 0;
+  background: transparent;
+}
+
+.secondary_strips .storyBody {
+  right: 6cqw;
+  bottom: 6cqw;
+  left: 39cqw;
+  display: block;
+  font-size: 2.95cqw;
+}
+
+.secondary_overlay .storyShade {
+  background:
+    linear-gradient(90deg, rgb(8 19 19 / 94%) 0 46%, transparent 78%),
+    linear-gradient(180deg, transparent 70%, rgb(8 19 19 / 36%));
+}
+
+.secondary_overlay .storyBody {
+  width: 40cqw;
+  font-size: 3.05cqw;
+}
+
+.secondary_evidence .storyMedia {
+  top: 27cqw;
+  right: 15cqw;
+  left: 15cqw;
+  height: 41cqw;
+}
+
+.secondary_evidence .storyTitle {
+  bottom: 24cqw;
+}
+
+.secondary_evidence .storyBody {
+  right: 19cqw;
+  bottom: 7cqw;
+  left: 19cqw;
+  font-size: 3.05cqw;
+}
+
+.secondary_detail_pair .storyMedia {
+  height: 50cqw;
+}
+
+.secondary_detail_pair .storyDetail {
+  bottom: 24cqw;
+}
+
+.secondary_detail_pair .storyTitle {
+  bottom: 25cqw;
+}
+
+.secondary_detail_pair .storyKicker {
+  top: 64cqw;
+  bottom: auto;
+}
+
+.secondary_detail_pair .storyBody {
+  right: 52cqw;
+  bottom: 7cqw;
+  left: 7cqw;
+  display: block;
+  font-size: 2.95cqw;
+}
+
+.secondary_arch .storyMedia {
+  top: 8cqw;
+  height: 70cqw;
+}
+
+.secondary_arch .storyKicker {
+  bottom: 39cqw;
+}
+
+.secondary_arch .storyBody,
+.secondary_diagonal .storyBody {
+  left: 43cqw;
+  font-size: 3.05cqw;
+}
+
+.secondary_title_band .storyShade {
+  bottom: 14cqw;
+  height: 35cqw;
+}
+
+.secondary_diagonal .storyMedia {
+  clip-path: polygon(0 0, 100% 0, 100% 64%, 0 85%);
+}
+
+.secondary_double_mat .storyMedia {
+  top: 17cqw;
+  height: 54cqw;
+}
+
+.secondary_contact .storyMedia,
+.secondary_contact .storyDetail {
+  width: 56cqw;
+}
+
+.secondary_contact .storyTitle {
+  width: 56cqw;
+}
+
+/* Terceras escenas: cada clímax recibe un tratamiento más gráfico y un encuadre inequívoco. */
+
+.tertiary_full .storyShade {
+  background:
+    linear-gradient(180deg, transparent 46%, rgb(8 19 19 / 92%) 100%),
+    linear-gradient(90deg, rgb(8 19 19 / 20%), transparent 45%);
+}
+
+.tertiary_full .storyBody {
+  left: 43cqw;
+}
+
+.tertiary_letterbox .storyMedia {
+  inset: 6cqw;
+}
+
+.tertiary_letterbox .storyFrame {
+  inset: 3.5cqw;
+}
+
+.tertiary_letterbox .storyTitle {
+  font-size: 8.5cqw;
+}
+
+.tertiary_left_rail .storyMedia {
+  left: 23cqw;
+}
+
+.tertiary_left_rail .storyTitle {
+  left: -25cqw;
+  width: 80cqw;
+  font-size: 5.9cqw;
+}
+
+.tertiary_right_rail .storyMedia {
+  right: 23cqw;
+}
+
+.tertiary_right_rail .storyTitle {
+  right: -27cqw;
+  width: 82cqw;
+  font-size: 5.9cqw;
+}
+
+.tertiary_top_label .storyTitle,
+.tertiary_bottom_label .storyTitle {
+  font-size: 7.1cqw;
+}
+
+.tertiary_top_label .storyMedia {
+  inset: 22cqw 0 0;
+}
+
+.tertiary_top_label .storyTitle {
+  top: 6.6cqw;
+  left: 39cqw;
+  font-size: 5.8cqw;
+  line-height: 0.9;
+}
+
+.tertiary_inset .storyMedia {
+  inset: 9cqw 9cqw 26cqw;
+}
+
+.tertiary_inset .storyTitle {
+  right: 9cqw;
+  bottom: 6cqw;
+  left: 9cqw;
+}
+
+.tertiary_close .storyShade {
+  background:
+    linear-gradient(90deg, rgb(9 16 24 / 94%) 0 37%, transparent 72%),
+    linear-gradient(180deg, transparent 62%, rgb(9 16 24 / 35%));
+}
+
+.tertiary_close .storyTitle {
+  top: 32cqw;
+  width: 38cqw;
+}
+
+.tertiary_slice .storyMedia {
+  top: 28cqw;
+  height: 57cqw;
+}
+
+.tertiary_slice .storyBody {
+  left: 43cqw;
+}
+
+.tertiary_echo .storyDetail {
+  width: 33cqw;
+  height: 33cqw;
+}
+
+.tertiary_echo .storyTitle {
+  bottom: 7cqw;
+  font-size: 8.8cqw;
+}
+
+.tertiary_margin .storyMedia {
+  inset: 6cqw 39cqw 6cqw 6cqw;
+}
+
+.tertiary_margin .storyTitle {
+  top: 32cqw;
+  font-size: 5.1cqw;
+}
+
+.tertiary_margin .storyBody {
+  bottom: 7cqw;
+  font-size: 2.95cqw;
+}
+
+.tertiary_overprint .storyShade {
+  background:
+    linear-gradient(180deg, rgb(10 28 28 / 12%), rgb(10 28 28 / 32%)),
+    linear-gradient(90deg, transparent 55%, rgb(8 18 18 / 28%));
+}
+
+.tertiary_overprint .storyTitle {
+  font-size: 12.2cqw;
+  text-shadow: 0 0.5cqw 3.4cqw rgb(0 0 0 / 72%);
+}
+
+.tertiary_overprint .storyBody {
+  left: 43cqw;
+}
+
+.tertiary_word .storyWord {
+  bottom: 7cqw;
+  font-size: 14.2cqw;
+  letter-spacing: -0.045em;
+}
+
+.tertiary_lower_plaque .storyTitle,
+.tertiary_upper_plaque .storyTitle {
+  padding: 3.5cqw 4cqw;
+  font-size: 7.4cqw;
+}
+
+.tertiary_edge .storyMedia {
+  right: 16cqw;
+}
+
+.tertiary_edge .storyTitle {
+  right: -29cqw;
+  width: 77cqw;
+  font-size: 6.1cqw;
+}
+
+.tertiary_paper .storyMedia {
+  inset: 5cqw 5cqw 19cqw;
+}
+
+.tertiary_paper .storyTitle {
+  right: 5cqw;
+  bottom: 4.5cqw;
+  left: 5cqw;
+  font-size: 6.8cqw;
+}
+
+.tertiary_caption .storyMedia {
+  top: 6cqw;
+  right: 6cqw;
+  left: 6cqw;
+  height: 91cqw;
+}
+
+.tertiary_caption .storyKicker {
+  top: 100cqw;
+  left: 6cqw;
+}
+
+.tertiary_caption .storyTitle {
+  right: 6cqw;
+  left: 6cqw;
+  font-size: 6.7cqw;
+}
+
+.tertiary_dark_frame .storyMedia {
+  inset: 9cqw;
+}
+
+.tertiary_dark_frame .storyFrame {
+  inset: 5.5cqw;
+}
+
+.tertiary_dark_frame .storyTitle {
+  bottom: 9cqw;
+}
+
+.tertiary_quiet .storyMedia {
+  inset: 10cqw 12cqw 31cqw;
+  filter: saturate(0.78) contrast(0.96);
+}
+
+.tertiary_quiet .storyTitle {
+  bottom: 13cqw;
+}
+
+.tertiary_quiet .storyBody {
+  right: 18cqw;
+  bottom: 5cqw;
+  left: 18cqw;
+  font-size: 3cqw;
+}
+
+/* Mapas: marcador, topónimo y coordenadas forman una sola jerarquía territorial. */
+
+.mapMarker {
+  width: 7.2cqw;
+  border-width: 0.62cqw;
+  box-shadow:
+    0 0 0 0.8cqw rgb(255 255 255 / 64%),
+    0 1.5cqw 3cqw rgb(28 40 38 / 30%);
+}
+
+.mapMarker i {
+  width: 1.8cqw;
+}
+
+.mapKicker {
+  line-height: 1.3;
+}
+
+.mapLegend {
+  letter-spacing: 0.14em;
+}
+
+.map_atlas .mapMain,
+.map_atlas .mapTint,
+.map_atlas .mapGrid {
+  bottom: 18cqw;
+}
+
+.map_atlas .mapTitle {
+  top: 10cqw;
+  font-size: 7.1cqw;
+}
+
+.map_atlas .mapLegend {
+  font-size: 1.8cqw;
+}
+
+.map_coordinates .mapMain,
+.map_coordinates .mapTint {
+  inset: 8cqw 7cqw 43cqw 30cqw;
+}
+
+.map_coordinates .mapTitle {
+  bottom: 17cqw;
+  font-size: 9.8cqw;
+}
+
+.map_coordinates .mapMarker {
+  top: 43cqw;
+  left: 62cqw;
+}
+
+.map_locator .mapInset {
+  width: 41cqw;
+  height: 41cqw;
+}
+
+.mapInsetMarker {
+  width: 4.2cqw;
+  border-width: 0.75cqw;
+  box-shadow: 0 0 0 0.6cqw rgb(155 61 44 / 18%);
+}
+
+.map_locator .mapTitle {
+  top: 10cqw;
+  width: 64cqw;
+  font-size: 8.5cqw;
+}
+
+.map_locator .mapCountry {
+  font-size: 4.4cqw;
+}
+
+.map_route .mapRouteLine {
+  stroke-width: 0.9;
+  stroke-dasharray: 2.4 1.4;
+}
+
+.map_route .mapRouteLine circle:first-of-type {
+  r: 2.2px;
+}
+
+.map_route .mapTitle {
+  top: 10cqw;
+  width: 67cqw;
+  font-size: 8.4cqw;
+}
+
+.map_route .mapLegend {
+  padding: 1.2cqw 1.7cqw;
+  color: var(--ig-bg);
+  background: var(--ig-paper);
+}
+
+.map_topographic .mapMain,
+.map_topographic .mapTint,
+.map_topographic .mapGrid {
+  inset: 13cqw 7cqw 31cqw;
+}
+
+.map_topographic .mapTitle {
+  right: 14cqw;
+  bottom: 14cqw;
+  left: 14cqw;
+  font-size: 5.1cqw;
+}
+
+.map_topographic .mapCoordinates {
+  bottom: 6cqw;
+  font-size: 2.5cqw;
+}
+
+.map_topographic .mapLegend {
+  top: 61.5cqw;
+  padding: 1.35cqw 2cqw;
+  font-size: 1.85cqw;
+}
+
+/*
+ * Sistema editorial v6
+ * --------------------
+ * Tres signos construyen reconocimiento sin uniformar las láminas:
+ * sello de origen, marcas de registro y folio de secuencia. Cinco modos
+ * distribuyen esos signos para que el ritmo de marca también tenga variación.
+ */
+
+.brandChrome {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  overflow: hidden;
+  pointer-events: none;
+  color: currentColor;
+}
+
+.brandRail,
+.folioNumber,
+.brandVertical,
+.brandRole,
+.sequenceCount,
+.registrationMark {
+  position: absolute;
+}
+
+.brandRail {
+  inset: 0 auto 0 0;
+}
+
+.folioNumber,
+.sequenceCount {
+  font-family: var(--font-display), serif;
+  font-variant-numeric: tabular-nums;
+}
+
+.brandVertical,
+.brandRole {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.originSeal {
+  position: absolute;
+  width: 4.1cqw;
+  height: 4.1cqw;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.registrationMark {
+  width: 4.2cqw;
+  height: 4.2cqw;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: 0.42;
+}
+
+.registrationMark::before,
+.registrationMark::after {
+  position: absolute;
+  content: "";
+  background: currentColor;
+}
+
+.registrationMark::before {
+  top: 50%;
+  right: -1.7cqw;
+  left: -1.7cqw;
+  height: 1px;
+}
+
+.registrationMark::after {
+  top: -1.7cqw;
+  bottom: -1.7cqw;
+  left: 50%;
+  width: 1px;
+}
+
+.sequenceCount {
+  display: flex;
+  align-items: center;
+  gap: 1.1cqw;
+  font-size: 2.35cqw;
+  line-height: 1;
+}
+
+.sequenceCount i {
+  width: 5.5cqw;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.58;
+}
+
+/* Riel izquierdo: lectura vertical y una apertura editorial más ceremonial. */
+
+.brand_rail_left .brandRail {
+  width: 5.3cqw;
+  color: var(--ig-paper);
+  background: color-mix(in srgb, var(--ig-bg) 88%, #07110f);
+  border-right: 1px solid color-mix(in srgb, var(--ig-paper) 24%, transparent);
+}
+
+.brand_rail_left .folioNumber {
+  top: 2.4cqw;
+  left: 50%;
+  font-size: 3.2cqw;
+  transform: translateX(-50%);
+}
+
+.brand_rail_left .originSeal {
+  top: 10.5cqw;
+  left: 0.6cqw;
+}
+
+.brand_rail_left .brandVertical {
+  top: 22cqw;
+  left: 1.9cqw;
+  font-size: 1.12cqw;
+  letter-spacing: 0.18em;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.brand_rail_left .brandRole {
+  bottom: 3cqw;
+  left: 50%;
+  font-size: 1.08cqw;
+  letter-spacing: 0.14em;
+  writing-mode: vertical-rl;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.brand_rail_left .registrationMark {
+  top: 4cqw;
+  right: 4cqw;
+}
+
+.brand_rail_left .sequenceCount {
+  display: none;
+}
+
+/* Riel derecho: mismo ADN, dirección contraria y tensión lateral distinta. */
+
+.brand_rail_right .brandRail {
+  right: 0;
+  left: auto;
+  width: 5.3cqw;
+  color: var(--ig-paper);
+  background: color-mix(in srgb, var(--ig-bg) 88%, #07110f);
+  border-left: 1px solid color-mix(in srgb, var(--ig-paper) 24%, transparent);
+}
+
+.brand_rail_right .folioNumber {
+  top: 2.4cqw;
+  left: 50%;
+  font-size: 3.2cqw;
+  transform: translateX(-50%);
+}
+
+.brand_rail_right .originSeal {
+  top: 10.5cqw;
+  left: 0.6cqw;
+}
+
+.brand_rail_right .brandVertical {
+  top: 22cqw;
+  left: 1.9cqw;
+  font-size: 1.12cqw;
+  letter-spacing: 0.18em;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+}
+
+.brand_rail_right .brandRole {
+  right: 1.9cqw;
+  bottom: 3cqw;
+  font-size: 1.08cqw;
+  letter-spacing: 0.14em;
+  writing-mode: vertical-rl;
+}
+
+.brand_rail_right .registrationMark {
+  top: 4cqw;
+  left: 4cqw;
+}
+
+.brand_rail_right .sequenceCount {
+  display: none;
+}
+
+/* Esquina: marca contenida, más aire y lectura de folio horizontal. */
+
+.brand_corner .brandRail {
+  inset: 0;
+}
+
+.brand_corner .folioNumber {
+  top: 3.8cqw;
+  left: 4.2cqw;
+  font-size: 5cqw;
+  line-height: 0.85;
+}
+
+.brand_corner .originSeal {
+  right: 4.2cqw;
+  bottom: 4.2cqw;
+  color: var(--ig-accent);
+}
+
+.brand_corner .brandVertical {
+  bottom: 4.8cqw;
+  left: 4.2cqw;
+  font-size: 1.15cqw;
+  letter-spacing: 0.18em;
+}
+
+.brand_corner .brandRole {
+  top: 5cqw;
+  right: 4.2cqw;
+  font-size: 1.25cqw;
+  letter-spacing: 0.16em;
+}
+
+.brand_corner .registrationMark {
+  display: none;
+}
+
+.brand_corner .sequenceCount {
+  display: none;
+}
+
+.brand_corner .coverCommunity,
+.brand_corner .storyKicker,
+.brand_corner .typeKicker,
+.brand_corner .mapKicker {
+  margin-left: 6cqw;
+}
+
+/* Línea base: folio monumental y una firma editorial casi tipográfica. */
+
+.brand_baseline .brandRail {
+  inset: 0;
+}
+
+.brand_baseline .folioNumber {
+  top: 1.5cqw;
+  right: 4cqw;
+  font-size: 18cqw;
+  line-height: 0.8;
+  color: var(--ig-accent);
+  opacity: 0.14;
+}
+
+.brand_baseline .originSeal {
+  right: 4.5cqw;
+  bottom: 4.2cqw;
+  color: var(--ig-accent);
+}
+
+.brand_baseline .brandVertical {
+  bottom: 4.8cqw;
+  left: 4.4cqw;
+  font-size: 1.18cqw;
+  letter-spacing: 0.18em;
+}
+
+.brand_baseline .brandRole {
+  top: 4.8cqw;
+  left: 4.4cqw;
+  padding-bottom: 1cqw;
+  font-size: 1.25cqw;
+  letter-spacing: 0.16em;
+  border-bottom: 1px solid currentColor;
+}
+
+.brand_baseline .registrationMark {
+  display: none;
+}
+
+.brand_baseline .sequenceCount {
+  display: none;
+}
+
+/* Registro: precisión cartográfica sin riel ni placa. */
+
+.brand_register .brandRail {
+  inset: 0;
+}
+
+.brand_register .folioNumber {
+  display: none;
+}
+
+.brand_register .originSeal {
+  bottom: 4.1cqw;
+  left: 4.2cqw;
+  color: var(--ig-accent);
+}
+
+.brand_register .brandVertical {
+  display: none;
+}
+
+.brand_register .brandRole {
+  right: 4.2cqw;
+  bottom: 4.7cqw;
+  font-size: 1.2cqw;
+  letter-spacing: 0.18em;
+}
+
+.brand_register .registrationMark {
+  top: 4.6cqw;
+  right: 4.6cqw;
+}
+
+.brand_register .sequenceCount {
+  top: 3.2cqw;
+  left: 4.2cqw;
+}
+
+/* La portada no incorpora metadatos verbales extra: sólo folio y sello. */
+
+.cover .brandVertical,
+.cover .brandRole,
+.cover .sequenceCount {
+  display: none;
+}
+
+.cover.brand_corner .originSeal,
+.cover.brand_baseline .originSeal,
+.cover.brand_register .originSeal {
+  color: var(--ig-accent);
+}
+
+/* Jerarquía de información: el cuerpo narrativo ya no es un bloque indiferenciado. */
+
+.typeBodyLead,
+.typeBodyRest {
+  position: relative;
+}
+
+.density_narrative .typeBody {
+  padding-top: 2cqw;
+  border-top: 1px solid color-mix(in srgb, currentColor 28%, transparent);
+}
+
+.density_narrative .typeBodyLead {
+  display: block;
+  margin-bottom: 1.15cqw;
+  font-family: var(--font-display), serif;
+  font-size: 1.18em;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.density_narrative .typeBodyRest {
+  display: block;
+}
+
+.typographic.density_narrative.type_manifesto .typeTitle {
+  top: 17cqw;
+  font-size: 8.15cqw;
+  line-height: 0.94;
+}
+
+.typographic.density_narrative.type_manifesto .typeBody {
+  top: 58cqw;
+}
+
+.typographic.density_narrative.type_manifesto .typeBodyLead {
+  font-size: 1.08em;
+}
+
+.type_syllabic .typeWordStack span,
+.type_stair .typeWordStack span,
+.type_blocks .typeWordStack span {
+  box-shadow:
+    0.7cqw 0.7cqw 0 color-mix(in srgb, var(--ig-accent) 22%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--ig-fg) 10%, transparent);
+}
+
+.type_triptych .typeKeywords span,
+.type_four_voices .typeKeywords span {
+  position: relative;
+  overflow: hidden;
+}
+
+.type_triptych .typeKeywords span::after,
+.type_four_voices .typeKeywords span::after {
+  position: absolute;
+  right: 1.4cqw;
+  bottom: 1.2cqw;
+  width: 3cqw;
+  height: 3cqw;
+  content: "";
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  opacity: 0.28;
+}
+
+.type_quote .typeTitle::first-letter,
+.type_parenthetical .typeTitle::first-letter {
+  color: var(--ig-accent);
+}
+
+.type_manifesto .typeTitle,
+.type_thesis .typeTitle,
+.type_question .typeTitle {
+  text-wrap: pretty;
+}
+
+/* Imagen editorial: el pie se comporta como una pieza informativa, no como sobrante. */
+
+.storyBody {
+  padding-left: 2.2cqw;
+  border-left: 0.35cqw solid var(--ig-accent);
+}
+
+.storyDetail {
+  box-shadow:
+    0 0 0 0.8cqw var(--ig-paper),
+    0 1.6cqw 4cqw rgb(5 13 12 / 28%);
+}
+
+.secondary_postcard .storyMedia,
+.secondary_evidence .storyMedia,
+.secondary_double_mat .storyMedia,
+.secondary_contact .storyMedia,
+.tertiary_inset .storyMedia,
+.tertiary_paper .storyMedia,
+.tertiary_quiet .storyMedia {
+  box-shadow: 0 1.6cqw 4cqw rgb(5 13 12 / 22%);
+}
+
+.brand_rail_left.storyImage .storyIndex,
+.brand_rail_right.storyImage .storyIndex {
+  display: none;
+}
+
+.brand_rail_left.storyImage .storyMedia,
+.brand_rail_left.map .mapMain,
+.brand_rail_left.cover .coverMedia {
+  border-left: 5.3cqw solid transparent;
+}
+
+.brand_rail_right.storyImage .storyMedia,
+.brand_rail_right.map .mapMain,
+.brand_rail_right.cover .coverMedia {
+  border-right: 5.3cqw solid transparent;
+}
+
+/* Mapas: cartografía, sello y localización comparten un único lenguaje de precisión. */
+
+.map .brandRole {
+  color: var(--ig-accent);
+}
+
+.mapLegend {
+  min-height: 3.8cqw;
+  padding: 1.1cqw 1.6cqw;
+  font-size: max(2.15cqw, 23px);
+  line-height: 1.15;
+}
+
+.mapKicker {
+  padding-left: 1.6cqw;
+  border-left: 0.35cqw solid var(--ig-accent);
+}
+
+.map_coordinates .mapCoordinates,
+.map_topographic .mapCoordinates {
+  font-variant-numeric: tabular-nums;
+}
+
+.map_atlas .mapLegend,
+.map_topographic .mapLegend {
+  font-size: max(2.05cqw, 22px);
+}
+
+/*
+ * Sistema editorial v7
+ * --------------------
+ * Esta revisión reduce los efectos que competían con el contenido. La imagen
+ * conserva su contraste original, las escenas apaisadas ocupan marcos 16:9,
+ * las sombras internas desaparecen y la cartografía se dibuja con teselas a
+ * su tamaño nativo. El ritmo proviene de retícula, escala y posición.
+ */
+
+/* Profundidad editorial: borde, plano y aire; no sombras decorativas. */
+
+.canvas .coverFrame,
+.canvas .storyMedia,
+.canvas .storyDetail,
+.canvas .storyStrips > div,
+.canvas .storyFrame,
+.canvas .typeDevice,
+.canvas .typeWordStack span,
+.canvas .typeKeywords span,
+.canvas .mapMain,
+.canvas .mapInset,
+.canvas .mapMarker,
+.canvas .mapInsetMarker {
+  box-shadow: none;
+}
+
+.canvas .coverTitle,
+.canvas .coverCommunity,
+.canvas .storyTitle,
+.canvas .storyKicker,
+.canvas .storyBody,
+.canvas .mapTitle,
+.canvas .mapKicker {
+  text-shadow: none;
+}
+
+.cover .surfaceTexture,
+.storyImage .surfaceTexture,
+.map .surfaceTexture {
+  display: none;
+}
+
+.typographic .surfaceTexture {
+  opacity: 0.035;
+}
+
+/* Portadas: la ilustración conserva luz, textura y detalle originales. */
+
+.coverTitle {
+  line-height: 0.98;
+}
+
+.cover_horizon .coverShade {
+  display: none;
+}
+
+.cover_horizon .coverTitle {
+  top: 5.8cqw;
+  font-size: 12.5cqw;
+  line-height: 0.98;
+}
+
+.cover_horizon .coverCommunity {
+  top: 20.5cqw;
+}
+
+.cover_archive .coverFrame {
+  box-shadow: none;
+}
+
+.cover_offset .coverTitle {
+  box-shadow: none;
+}
+
+/* Tipografía: una métrica de lectura común evita líneas comprimidas. */
+
+.typographic .typeTitle {
+  line-height: 1.04;
+}
+
+.typographic.density_short .typeTitle {
+  line-height: 1.02;
+}
+
+.typographic.density_medium .typeTitle {
+  line-height: 1.05;
+}
+
+.typographic.density_narrative .typeTitle {
+  line-height: 1.08;
+}
+
+.typographic .typeBody {
+  line-height: 1.5;
+}
+
+.typographic.density_medium .typeBody {
+  line-height: 1.5;
+}
+
+.typographic.density_narrative .typeBody {
+  font-size: 3.05cqw;
+  line-height: 1.54;
+}
+
+.density_narrative .typeBodyLead {
+  margin-bottom: 1.8cqw;
+  font-size: 1.08em;
+  line-height: 1.28;
+  letter-spacing: -0.012em;
+}
+
+.type_quote .typeTitle,
+.type_long_line .typeTitle,
+.type_question .typeTitle,
+.type_thesis .typeTitle {
+  line-height: 1.06;
+}
+
+.type_three_beats .typeWordStack span,
+.type_call_response .typeDialogue span,
+.type_call_response .typeDialogue strong {
+  line-height: 1.08;
+}
+
+/* Imágenes: las escenas panorámicas no se estiran para llenar un 4:5. */
+
+.storyImageAsset {
+  filter: none;
+}
+
+.storyShade {
+  display: none;
+}
+
+.storyTitle {
+  line-height: 1.04;
+}
+
+.storyBody {
+  line-height: 1.5;
+}
+
+.secondary_full .storyMedia,
+.secondary_overlay .storyMedia {
+  top: 7cqw;
+  right: 7cqw;
+  bottom: auto;
+  left: 7cqw;
+  height: 48.375cqw;
+  border: 1px solid color-mix(in srgb, var(--ig-fg) 20%, transparent);
+}
+
+.secondary_full .storyImageAsset,
+.secondary_overlay .storyImageAsset {
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.secondary_full .storyKicker,
+.secondary_overlay .storyKicker {
+  top: 60cqw;
+  left: 7cqw;
+  color: var(--ig-fg);
+}
+
+.secondary_full .storyTitle,
+.secondary_overlay .storyTitle {
+  top: 68cqw;
+  right: 7cqw;
+  bottom: auto;
+  left: 7cqw;
+  width: auto;
+  font-size: 7.6cqw;
+  color: var(--ig-fg);
+}
+
+.secondary_full .storyBody,
+.secondary_overlay .storyBody {
+  right: 7cqw;
+  bottom: 7cqw;
+  left: 43cqw;
+  width: auto;
+  font-size: 3.05cqw;
+  color: var(--ig-fg);
+}
+
+.secondary_split_left .storyImageAsset,
+.secondary_split_right .storyImageAsset,
+.secondary_vertical_caption .storyImageAsset {
+  object-fit: contain;
+  background: color-mix(in srgb, var(--ig-bg) 86%, #07110f);
+}
+
+.secondary_title_band .storyShade,
+.secondary_diagonal .storyShade {
+  display: none;
+}
+
+.secondary_title_band .storyKicker,
+.secondary_diagonal .storyKicker {
+  padding: 0.8cqw 1.2cqw;
+  color: var(--ig-fg);
+  background: var(--ig-bg);
+}
+
+/* Terceras escenas: texto fuera del centro de atención. */
+
+.tertiary_letterbox .storyMedia,
+.tertiary_close .storyMedia {
+  inset: 7cqw 8cqw 29cqw;
+}
+
+.tertiary_close .storyImageAsset {
+  object-position: 50% 50%;
+  transform: none;
+}
+
+.tertiary_letterbox .storyTitle,
+.tertiary_close .storyTitle {
+  top: auto;
+  right: 8cqw;
+  bottom: 7cqw;
+  left: 8cqw;
+  width: auto;
+  font-size: 6.8cqw;
+  color: var(--ig-fg);
+}
+
+.tertiary_letterbox .storyKicker,
+.tertiary_close .storyKicker {
+  color: var(--ig-fg);
+}
+
+.tertiary_overprint .storyTitle {
+  top: auto;
+  right: 6cqw;
+  bottom: 6cqw;
+  left: 6cqw;
+  padding: 2.4cqw 3cqw;
+  font-size: 7.2cqw;
+  line-height: 1.02;
+  color: var(--ig-fg);
+  background: var(--ig-bg);
+  transform: none;
+}
+
+.tertiary_word .storyWord {
+  right: 6cqw;
+  bottom: 6cqw;
+  left: 6cqw;
+  padding: 2cqw 2.5cqw;
+  font-size: 10cqw;
+  line-height: 1;
+  background: var(--ig-bg);
+}
+
+.tertiary_dark_frame .storyMedia {
+  inset: 11cqw 14cqw 24cqw;
+}
+
+.tertiary_dark_frame .storyFrame {
+  inset: 7cqw 11cqw 20cqw;
+}
+
+.tertiary_dark_frame .storyKicker {
+  top: 5cqw;
+  left: 14cqw;
+  font-size: 1.9cqw;
+}
+
+.tertiary_dark_frame .storyTitle {
+  right: 14cqw;
+  bottom: 5cqw;
+  left: 14cqw;
+  font-size: 6.2cqw;
+  line-height: 1.04;
+}
+
+/* Cartografía: teselas y etiquetas reales, sin filtros que borren topónimos. */
+
+.mapTile {
+  image-rendering: auto;
+}
+
+.map .mapMain .mapTiles {
+  filter: none;
+}
+
+.mapTint {
+  display: none;
+}
+
+.mapGrid {
+  opacity: 0.22;
+}
+
+.mapMarker {
+  width: 5.4cqw;
+  color: #a54e37;
+  background: #fffaf0;
+  border-width: 0.45cqw;
+  box-shadow: none;
+}
+
+.mapMarker i {
+  width: 1.35cqw;
+}
+
+.mapTitle {
+  line-height: 1;
+}
+
+.map_coordinates .mapMain {
+  inset: 14cqw 7cqw 46cqw 29cqw;
+  border: 1px solid var(--ig-accent);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.map_coordinates .mapTitle {
+  bottom: 17cqw;
+  font-size: 9.3cqw;
+  line-height: 1;
+}
+
+.map_coordinates .mapMarker {
+  top: 46.5cqw;
+  left: 61cqw;
+}
+
+.map_coordinates .mapAttribution {
+  top: 75.5cqw;
+  right: 7cqw;
+  bottom: auto;
+  display: block;
+  font-size: 1.05cqw;
+}
+
+.map_locator .mapAttribution {
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+
+.map_route .mapRouteLine {
+  display: none;
+}
+
+.map_route .mapKicker,
+.map_route .mapTitle {
+  padding: 1cqw 1.4cqw;
+  color: var(--ig-fg);
+  background: color-mix(in srgb, var(--ig-bg) 92%, transparent);
+}
+
+.mapInset {
+  box-shadow: none;
+}
+
+/* Excepciones detectadas en la auditoría nativa de las 85 plantillas. */
+
+.secondary_title_band .storyMedia {
+  inset: 0 0 auto;
+  height: 67cqw;
+}
+
+.secondary_title_band .storyTitle {
+  top: 76cqw;
+  right: 7cqw;
+  bottom: auto;
+  left: 7cqw;
+  color: var(--ig-fg);
+}
+
+.secondary_diagonal .storyMedia {
+  inset: 0 0 auto;
+  height: 70cqw;
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 0 94%);
+}
+
+.secondary_diagonal .storyTitle {
+  top: 76cqw;
+  right: 7cqw;
+  bottom: auto;
+  left: 18cqw;
+}
+
+.tertiary_full .storyMedia {
+  inset: 0 10cqw 23cqw;
+}
+
+.tertiary_full .storyTitle {
+  right: 10cqw;
+  bottom: 7cqw;
+  left: 10cqw;
+  font-size: 7.2cqw;
+  color: var(--ig-fg);
+}
+
+.tertiary_full .storyBody {
+  display: none;
+}
+
+.tertiary_full .storyKicker {
+  top: 3.2cqw;
+  left: 12cqw;
+  padding: 0.8cqw 1.2cqw;
+  color: var(--ig-fg);
+  background: var(--ig-bg);
+}
+
+.tertiary_echo .storyMedia {
+  inset: 0 8cqw 22cqw;
+}
+
+.tertiary_echo .storyTitle {
+  right: 8cqw;
+  bottom: 5cqw;
+  left: 8cqw;
+  color: var(--ig-fg);
+}
+
+.tertiary_overprint .storyMedia {
+  inset: 0 7cqw 24cqw;
+}
+
+.tertiary_overprint .storyTitle {
+  bottom: 5cqw;
+  padding: 0;
+  background: transparent;
+}
+
+.tertiary_overprint .storyBody {
+  display: none;
+}
+
+.tertiary_word .storyMedia {
+  inset: 0 7cqw 22cqw;
+}
+
+.tertiary_word .storyWord {
+  bottom: 4.5cqw;
+  padding: 0;
+  background: transparent;
+}
+
+.tertiary_lower_plaque .storyMedia {
+  inset: 0 7cqw 24cqw;
+}
+
+.tertiary_lower_plaque .storyTitle {
+  bottom: 5cqw;
+}
+
+.map_locator .mapMain {
+  inset: 28cqw 0 0;
+}
+
+.map_locator .mapKicker {
+  top: 7cqw;
+}
+
+.map_locator .mapTitle {
+  top: 11cqw;
+  font-size: 8.2cqw;
+}
+
+.map_locator .mapInset {
+  right: 5cqw;
+  bottom: 5cqw;
+}
+
+.map_locator .mapLegend {
+  z-index: 4;
+  right: 7cqw;
+  bottom: 6.5cqw;
+  padding: 1cqw 1.4cqw;
+  color: var(--ig-bg);
+  background: var(--ig-paper);
+}
+
+/*
+ * Sistema editorial v8
+ * --------------------
+ * La variación ocurre dentro de una retícula común. Títulos, cuerpos, kickers
+ * y chrome reservan carriles distintos; ningún texto narrativo termina en la
+ * franja inferior ocupada por sello, firma o función editorial.
+ */
+
+.canvas {
+  --ig-grid-inline: 7cqw;
+  --ig-grid-top: 8.5cqw;
+  --ig-grid-bottom: 11.5cqw;
+  --ig-grid-gap: 3cqw;
+  --ig-copy-size: 3.15cqw;
+  --ig-label-size: 2.15cqw;
+}
+
+/* Chrome compartido: los cinco modos usan las mismas líneas ópticas. */
+
+.brandChrome {
+  z-index: 6;
+}
+
+.brand_corner .folioNumber {
+  top: 2.6cqw;
+  left: 4.4cqw;
+  font-size: 4.35cqw;
+}
+
+.brand_corner .brandRole {
+  top: 4.1cqw;
+  right: 4.4cqw;
+  font-size: 1.42cqw;
+}
+
+.brand_corner .brandVertical,
+.brand_baseline .brandVertical {
+  bottom: 4.8cqw;
+  left: 4.4cqw;
+  font-size: 1.4cqw;
+}
+
+.brand_corner .originSeal,
+.brand_baseline .originSeal {
+  right: 4.4cqw;
+  bottom: 4.2cqw;
+}
+
+.brand_baseline .brandRole {
+  top: 4.1cqw;
+  left: 4.4cqw;
+  font-size: 1.42cqw;
+}
+
+.brand_baseline .folioNumber {
+  top: 1.8cqw;
+  right: 4cqw;
+  font-size: 15cqw;
+  opacity: 0.09;
+}
+
+.brand_register .sequenceCount {
+  top: 3.1cqw;
+  left: 4.4cqw;
+}
+
+.brand_register .registrationMark {
+  top: 3.8cqw;
+  right: 4.4cqw;
+}
+
+.brand_register .originSeal {
+  bottom: 4.2cqw;
+  left: 4.4cqw;
+}
+
+.brand_register .brandRole {
+  right: 4.4cqw;
+  bottom: 4.8cqw;
+  font-size: 1.42cqw;
+}
+
+.brand_rail_left .brandRole,
+.brand_rail_right .brandRole {
+  bottom: 4.2cqw;
+  font-size: 1.36cqw;
+}
+
+.brand_rail_left .brandVertical,
+.brand_rail_right .brandVertical {
+  font-size: 1.34cqw;
+}
+
+.brand_corner .coverCommunity,
+.brand_corner .storyKicker,
+.brand_corner .typeKicker,
+.brand_corner .mapKicker {
+  margin-left: 0;
+}
+
+/* Etiquetas: una escala mínima y un carril superior estable. */
+
+.typeKicker,
+.storyKicker,
+.mapKicker,
+.coverCommunity {
+  font-size: 2.3cqw;
+  line-height: 1.32;
+}
+
+.canvas.typographic .typeKicker {
+  top: var(--ig-grid-top) !important;
+  right: auto;
+  bottom: auto !important;
+  left: var(--ig-grid-inline);
+  text-align: left;
+}
+
+.map .mapKicker {
+  top: var(--ig-grid-top);
+}
+
+.typeBody,
+.storyBody {
+  font-size: 3.3cqw;
+  line-height: 1.48;
+}
+
+/* Fichas tipográficas: el cuerpo termina antes del chrome inferior. */
+
+.typographic .typeBody {
+  bottom: var(--ig-grid-bottom) !important;
+}
+
+.typographic.density_short .typeBody,
+.typographic.density_medium .typeBody {
+  font-size: 3.3cqw;
+  line-height: 1.48;
+}
+
+.typographic.density_narrative .typeBody {
+  bottom: 11.5cqw !important;
+  font-size: 3.12cqw;
+  line-height: 1.5;
+}
+
+.typographic.density_medium.type_monument .typeBody,
+.typographic.density_medium.type_numbered .typeBody {
+  left: 34cqw;
+}
+
+.type_outline .typeBody {
+  left: 44cqw;
+}
+
+.type_vocabulary .typeShortTitle {
+  right: 8cqw;
+  left: 8cqw;
+  font-size: 15cqw;
+}
+
+.type_initial .typeTitle {
+  bottom: 35cqw;
+}
+
+.type_ledger .typeBody {
+  left: 38cqw;
+}
+
+.type_top_bottom .typeBody,
+.type_index_grid .typeBody {
+  left: 38cqw;
+}
+
+.type_thesis .typeBody {
+  left: 32cqw;
+}
+
+.type_question .typeBody {
+  left: 38cqw;
+}
+
+.type_long_line .typeKicker {
+  right: auto;
+  left: var(--ig-grid-inline);
+}
+
+.typographic.density_short:is(
+    .type_syllabic,
+    .type_triptych,
+    .type_stair,
+    .type_vocabulary,
+    .type_three_beats,
+    .type_word_field,
+    .type_blocks
+  ) .typeBody,
+.typographic.density_medium:is(
+    .type_cascade,
+    .type_four_voices,
+    .type_call_response
+  ) .typeBody {
+  right: 8cqw;
+  bottom: 11.5cqw;
+  left: 28cqw;
+}
+
+.typographic.density_medium.type_numbered .typeTitle,
+.typographic.density_medium.type_monument .typeTitle {
+  right: 8cqw;
+  left: 8cqw;
+}
+
+/* Imágenes secundarias: pie legible y separado del sello. */
+
+.secondary .storyBody {
+  bottom: 11.5cqw;
+  font-size: 3.3cqw;
+  line-height: 1.46;
+}
+
+.secondary_bottom .storyBody {
+  top: 41.5cqw;
+  bottom: auto;
+  font-size: 3.2cqw;
+  line-height: 1.42;
+}
+
+.secondary_cinema .storyTitle,
+.secondary_postcard .storyTitle,
+.secondary_top .storyTitle,
+.secondary_offset .storyTitle,
+.secondary_corner .storyTitle,
+.secondary_lower_field .storyTitle,
+.secondary_double_mat .storyTitle,
+.secondary_contact .storyTitle {
+  bottom: 32cqw;
+}
+
+.secondary_evidence .storyTitle {
+  bottom: 29cqw;
+}
+
+.secondary_arch .storyKicker {
+  bottom: 49cqw;
+}
+
+.secondary_arch .storyTitle {
+  bottom: 30cqw;
+}
+
+.secondary_title_band .storyKicker,
+.secondary_diagonal .storyKicker {
+  top: 9cqw;
+}
+
+.secondary_title_band .storyTitle,
+.secondary_diagonal .storyTitle {
+  top: 75cqw;
+}
+
+.secondary_detail_pair .storyKicker {
+  top: 60cqw;
+  bottom: auto;
+}
+
+.secondary_detail_pair .storyTitle {
+  top: 67cqw;
+  bottom: auto;
+  width: 40cqw;
+  font-size: 6.2cqw;
+}
+
+.secondary_lower_field .storyKicker {
+  top: 73.5cqw;
+}
+
+.secondary_lower_field .storyTitle {
+  bottom: 29cqw;
+}
+
+.secondary_offset .storyKicker {
+  top: 72cqw;
+}
+
+.secondary_strips .storyTitle {
+  bottom: 28cqw;
+}
+
+.secondary_diagonal .storyTitle {
+  top: 70cqw;
+}
+
+.typographic.density_narrative.type_archive_note .typeBody {
+  bottom: 15cqw !important;
+}
+
+.type_outline .typeTitle {
+  right: 6cqw;
+  left: 6cqw;
+}
+
+.typographic.density_short.type_blocks .typeWordStack {
+  top: 27cqw;
+  transform: none;
+}
+
+/* Terceras escenas: el pie inferior queda libre de marcas editoriales. */
+
+.tertiary_full .storyTitle,
+.tertiary_letterbox .storyTitle,
+.tertiary_inset .storyTitle,
+.tertiary_echo .storyTitle,
+.tertiary_overprint .storyTitle,
+.tertiary_lower_plaque .storyTitle,
+.tertiary_paper .storyTitle,
+.tertiary_caption .storyTitle,
+.tertiary_dark_frame .storyTitle {
+  bottom: 10.5cqw;
+}
+
+.tertiary_bottom_label .storyTitle {
+  bottom: 10.5cqw;
+}
+
+.tertiary_bottom_label .storyKicker {
+  bottom: 21.5cqw;
+}
+
+.tertiary_slice .storyTitle {
+  bottom: 25cqw;
+}
+
+.tertiary_slice .storyBody,
+.tertiary_margin .storyBody {
+  bottom: 11.5cqw;
+}
+
+.tertiary_word .storyWord {
+  bottom: 10.5cqw;
+}
+
+.tertiary_upper_plaque .storyTitle {
+  top: 9cqw;
+}
+
+.tertiary_upper_plaque .storyKicker {
+  right: 9cqw;
+  bottom: 10.5cqw;
+}
+
+.tertiary_paper .storyKicker {
+  bottom: 19cqw;
+}
+
+.tertiary_close .storyMedia {
+  inset: 7cqw 8cqw 46cqw;
+}
+
+.tertiary_close .storyTitle {
+  top: 81cqw;
+  right: 8cqw;
+  bottom: auto;
+  left: 8cqw;
+  font-size: 6.5cqw;
+}
+
+.tertiary_close .storyBody {
+  right: 8cqw;
+  bottom: 10.5cqw;
+  left: 36cqw;
+  width: auto;
+  font-size: 3.05cqw;
+  color: var(--ig-fg);
+}
+
+.tertiary_quiet .storyMedia {
+  inset: 12cqw 13cqw 38cqw;
+}
+
+.tertiary_quiet .storyTitle {
+  top: 91cqw;
+  right: 13cqw;
+  bottom: auto;
+  left: 13cqw;
+}
+
+.tertiary_quiet .storyBody {
+  right: 18cqw;
+  bottom: 10.5cqw;
+  left: 18cqw;
+  font-size: 3cqw;
+}
+
+/* Mapas: cabecera, cartografía y pie ocupan bandas independientes. */
+
+.mapAttribution {
+  font-size: 1.3cqw;
+}
+
+.map_atlas .mapCoordinates,
+.map_atlas .mapCountry {
+  bottom: 11.5cqw;
+}
+
+.map_coordinates .mapTitle {
+  bottom: 21cqw;
+}
+
+.map_coordinates .mapCoordinates {
+  bottom: 11.5cqw;
+}
+
+.map_locator .mapKicker {
+  top: 8.5cqw;
+}
+
+.map_locator .mapTitle {
+  top: 12.5cqw;
+  width: 60cqw;
+  font-size: 6.8cqw;
+  line-height: 1.02;
+}
+
+.map_locator .mapCountry {
+  bottom: 20cqw;
+  font-size: 4.4cqw;
+}
+
+.map_locator .mapCoordinates {
+  bottom: 11.5cqw;
+}
+
+.map_locator .mapInset {
+  right: 7cqw;
+  bottom: 10cqw;
+}
+
+.map_locator .mapLegend {
+  right: 10cqw;
+  bottom: 12cqw;
+}
+
+.map_route .mapKicker {
+  top: 8cqw;
+  font-size: 1.9cqw;
+  white-space: nowrap;
+}
+
+.map_route .mapTitle {
+  top: 14cqw;
+  font-size: 7.6cqw;
+  line-height: 1.02;
+}
+
+.map_route .mapCoordinates,
+.map_route .mapLegend {
+  bottom: 11.5cqw;
+}
+
+.map_topographic .mapKicker {
+  top: 9cqw;
+}
+
+.map_topographic .mapTitle {
+  bottom: 19cqw;
+}
+
+.map_topographic .mapCoordinates {
+  bottom: 11.5cqw;
+}
+
+.map_topographic .mapCountry {
+  right: 5.5cqw;
+}
+
+/* Portadas: folio y título nunca compiten por la misma esquina. */
+
+.cover_folio_right .coverCommunity {
+  bottom: 11cqw;
+}
+
+.cover_folio_left .coverCommunity {
+  bottom: 10.5cqw;
+  left: 5.5cqw;
+}
+
+.cover_horizon .coverTitle {
+  top: 8cqw;
+  right: 14cqw;
+  left: 14cqw;
+}
+
+.cover_horizon .coverCommunity {
+  top: 22.5cqw;
+  right: 14cqw;
+  left: 14cqw;
+}
+
+.cover_offset .coverCommunity {
+  top: 8.5cqw;
+  right: 7cqw;
+}
+
+.tertiary_full .storyKicker {
+  top: 9cqw;
+}
+
+.tertiary_right_rail .storyKicker {
+  right: 7cqw;
+  bottom: 11.5cqw;
+}
+
+.tertiary_top_label .storyKicker {
+  top: 9cqw;
+}
+
+.tertiary_margin .storyBody {
+  font-size: 3.2cqw;
+}
+
+.map_atlas .mapTitle {
+  top: 13cqw;
+  font-size: 6.8cqw;
+  line-height: 1;
+}
+
+/*
+ * Auditoría de producción v8.1
+ * ----------------------------
+ * Las escenas conservan el relato en las fichas tipográficas. En las láminas
+ * de imagen, el pie se reduce a kicker + titular para que la ilustración tenga
+ * aire y para que ninguna longitud real de contenido produzca colisiones.
+ */
+
+.storyImage .storyBody {
+  display: none !important;
+}
+
+.secondary .storyTitle {
+  font-size: 6.4cqw;
+  line-height: 1.04;
+}
+
+.secondary_split_left .storyTitle,
+.secondary_split_right .storyTitle {
+  top: 27cqw;
+  font-size: 6.2cqw;
+}
+
+.secondary_lower_field .storyKicker,
+.secondary_offset .storyKicker {
+  top: 72cqw;
+  bottom: auto;
+}
+
+.secondary_lower_field .storyTitle,
+.secondary_offset .storyTitle {
+  top: 79cqw;
+  right: 7cqw;
+  bottom: auto;
+  left: 7cqw;
+  font-size: 6.2cqw;
+}
+
+.secondary_strips .storyTitle {
+  bottom: 12cqw;
+}
+
+.secondary_detail_pair .storyTitle {
+  top: 67cqw;
+  font-size: 5.8cqw;
+}
+
+.tertiary .storyTitle {
+  line-height: 1.04;
+}
+
+.tertiary_top_label .storyKicker {
+  top: 7cqw;
+  right: auto;
+  bottom: auto;
+  left: 7cqw;
+}
+
+.tertiary_top_label .storyTitle {
+  top: 13cqw;
+  right: 7cqw;
+  left: 30cqw;
+  font-size: 5.2cqw;
+}
+
+.tertiary_bottom_label .storyKicker {
+  right: auto;
+  bottom: 35cqw;
+  left: 7cqw;
+}
+
+.tertiary_bottom_label .storyTitle {
+  font-size: 6.2cqw;
+}
+
+.tertiary_paper .storyKicker,
+.tertiary_caption .storyKicker {
+  top: 7cqw;
+  bottom: auto;
+}
+
+.tertiary_paper .storyTitle,
+.tertiary_caption .storyTitle {
+  font-size: 6cqw;
+}
+
+.cover_immersive .coverCommunity,
+.cover_museum .coverCommunity,
+.cover_horizon .coverCommunity,
+.cover_bottom_folio .coverCommunity {
+  top: 8cqw;
+  right: auto;
+  bottom: auto;
+  left: 7cqw;
+  text-align: left;
+}
+
+.cover_horizon .coverTitle {
+  top: 14cqw;
+  right: 10cqw;
+  left: 10cqw;
+  font-size: 9.4cqw;
+  line-height: 1;
+}
+
+.cover_threshold .coverTitle {
+  right: 8.4cqw;
+  left: 8.4cqw;
+  font-size: 10.5cqw;
+  line-height: 0.98;
+}
+
+.cover_immersive .coverTitle {
+  right: 8cqw;
+  bottom: 8cqw;
+  left: 8cqw;
+  font-size: 11.2cqw;
+  line-height: 0.98;
+}
+
+.cover_museum .coverTitle,
+.cover_bottom_folio .coverTitle {
+  right: 7cqw;
+  left: 7cqw;
+  font-size: 8.8cqw;
+  line-height: 1;
+}
+
+.typographic.density_medium.type_numbered .typeTitle {
+  top: 42cqw;
+  font-size: 7.4cqw;
+  line-height: 1.04;
+}
+
+.typographic.density_medium.type_numbered .typeBody {
+  top: 80cqw;
+}
+
+.typographic.density_short.type_blocks .typeWordStack {
+  right: 8cqw;
+  left: 8cqw;
+}
+
+.type_blocks .typeWordStack span {
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  font-size: 7.4cqw;
+}
+
+.typographic.density_narrative.type_floating .typeBody {
+  top: 82cqw;
+}
+
+/*
+ * Auditoría de producción v8.2
+ * ----------------------------
+ * Los títulos largos deben conservarse completos. Archivo vivo reduce su
+ * escala antes de cortar una palabra; Doble columna reserva una medida de
+ * lectura más generosa; Borde de papel separa físicamente imagen y pie.
+ */
+
+.cover_archive .coverTitle {
+  font-size: 10cqw;
+  line-height: 0.96;
+  overflow-wrap: normal;
+}
+
+.typographic.density_narrative.type_columns .typeTitle {
+  width: 40cqw;
+  font-size: 5.5cqw;
+  line-height: 1.04;
+}
+
+.cover_monument .coverTitle {
+  font-size: 11.2cqw;
+}
+
+.tertiary_paper .storyMedia {
+  inset: 5cqw 5cqw 34cqw;
+}
+
+.tertiary_paper .storyKicker {
+  top: auto;
+  bottom: 25.5cqw;
+  left: 6cqw;
+  color: var(--ig-fg);
+}
+
+.tertiary_paper .storyTitle {
+  right: 6cqw;
+  bottom: 6.5cqw;
+  left: 6cqw;
+  font-size: 5.6cqw;
+  line-height: 1.02;
+}

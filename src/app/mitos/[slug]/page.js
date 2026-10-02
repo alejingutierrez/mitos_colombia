@@ -1,0 +1,210 @@
+import { notFound } from "next/navigation";
+import {
+  getMythBySlug,
+  getRecommendedMyths,
+  listAllMythSlugs,
+} from "../../../lib/myths";
+import { CommentThread } from "../../../components/organisms";
+import { getApprovedCommentsForMyth } from "../../../lib/comments";
+import { buildSeoMetadata, getSeoEntry } from "../../../lib/seo";
+import { resolveRouteParams } from "../../../lib/next-route-props";
+import MythLocationMapClient from "../../../components/MythLocationMapClient";
+import { ArticleJsonLd, BreadcrumbJsonLd } from "../../../components/StructuredData";
+import { regionSlugFromName, communitySlugFromName } from "../../../lib/taxonomy-slug";
+import { MythDetailTemplate } from "../../../components/templates";
+
+export const runtime = "nodejs";
+export const revalidate = 3600;
+
+export async function generateStaticParams() {
+  const slugs = await listAllMythSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
+
+const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "")
+)
+  .trim()
+  .replace(/\/+$/, "");
+
+const COLOMBIA_CENTER = { lat: 4.5709, lng: -74.2973 };
+
+export async function generateMetadata({ params }) {
+  const { slug } = await resolveRouteParams(params);
+  const myth = await getMythBySlug(slug);
+  if (!myth) {
+    return {
+      title: "Mito no encontrado | Mitos de Colombia",
+      description: "El mito solicitado no esta disponible.",
+    };
+  }
+
+  const keywords = [myth.focus_keyword, ...(myth.keywords || [])].filter(Boolean);
+  const seo = await getSeoEntry("myth", slug);
+
+  return buildSeoMetadata({
+    fallback: {
+      title: myth.seo_title || myth.title,
+      description: myth.seo_description || myth.excerpt,
+      keywords,
+    },
+    seo,
+    canonicalPath: `/mitos/${slug}`,
+    openGraphType: "article",
+    imageUrl: myth.image_url || undefined,
+  });
+}
+
+function parseCoord(value) {
+  if (value === null || value === undefined) return null;
+  const normalized = String(value).trim().replace(/,/g, ".");
+  const parsed = Number.parseFloat(normalized);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function latestIsoDate(...values) {
+  const validDates = values
+    .filter(Boolean)
+    .map((value) => new Date(value))
+    .filter((date) => !Number.isNaN(date.getTime()));
+  if (!validDates.length) return undefined;
+  return new Date(Math.max(...validDates.map((date) => date.getTime()))).toISOString();
+}
+
+function sourceUrls(myth) {
+  return [
+    ...(myth.keySources || []),
+    ...(myth.sources || []),
+  ]
+    .map((source) => source?.url)
+    .filter(Boolean)
+    .filter((url, index, urls) => urls.indexOf(url) === index);
+}
+
+export default async function MythDetailPage({ params }) {
+  const { slug } = await resolveRouteParams(params);
+  const myth = await getMythBySlug(slug);
+  if (!myth) {
+    notFound();
+  }
+
+  // Los comentarios aprobados se resuelven EN SERVIDOR y viajan en el HTML.
+  // Antes sólo llegaban por `fetch` después de hidratar, así que ni Google ni
+  // un lector sin JS veían jamás una conversación que sí existe.
+  const [recommended, approvedComments] = await Promise.all([
+    getRecommendedMyths(myth, 6),
+    getApprovedCommentsForMyth(myth.id),
+  ]);
+  const related = recommended.map((r) => ({
+    slug: r.slug,
+    title: r.title,
+    excerpt: r.excerpt,
+    region: r.region,
+    community: r.community,
+    imageUrl: r.image_url,
+  }));
+
+  const lat = parseCoord(myth.latitude);
+  const lng = parseCoord(myth.longitude);
+  const hasGeo = lat !== null && lng !== null;
+  const regionSlug = myth.region_slug || (myth.region ? regionSlugFromName(myth.region) : undefined);
+
+  // Objeto de mito normalizado para la plantilla (soporta esquema viejo `content`
+  // y el nuevo con columnas separadas mito/historia/...).
+  const mythProps = {
+    slug: myth.slug,
+    title: myth.title,
+    region: myth.region,
+    region_slug: regionSlug,
+    community: myth.community,
+    excerpt: myth.excerpt,
+    // Tríptico: entrada (16:9), acto (9:16) y huella (1:1). Cada una es una
+    // escena distinta del mito, no un recorte de la misma imagen.
+    imageUrl: myth.image_url,
+    verticalImageUrl: myth.vertical_image_url,
+    squareImageUrl: myth.square_image_url,
+    content: myth.content,
+    category_path: myth.category_path,
+    keywords: myth.keywords,
+    focus_keyword: myth.focus_keyword,
+    latitude: lat,
+    longitude: lng,
+    showTerritorio: true,
+    mito: myth.mito,
+    historia: myth.historia,
+    versiones: myth.versiones,
+    leccion: myth.leccion,
+    similitudes: myth.similitudes,
+    tags: myth.tags,
+    // Narración de audio (ElevenLabs) cuando el mito ya está grabado. Sin fila
+    // en `myth_narrations` no baja nada al cliente y no aparece el cintillo.
+    narration: myth.narration,
+    sources: myth.sources,
+    keySources: myth.keySources,
+    editorialUpdatedAt: myth.editorialUpdatedAt,
+    updatedAt: myth.updated_at,
+  };
+
+  const map = (
+    <div className="h-[320px] overflow-hidden md:h-[440px]">
+      <MythLocationMapClient
+        title={myth.title}
+        latitude={hasGeo ? lat : COLOMBIA_CENTER.lat}
+        longitude={hasGeo ? lng : COLOMBIA_CENTER.lng}
+        isApproximate={!hasGeo}
+      />
+    </div>
+  );
+
+  const breadcrumb = [
+    { label: "Mitos", href: "/mitos" },
+    ...(myth.region ? [{ label: myth.region, href: `/regiones/${regionSlug}` }] : []),
+    { label: myth.title },
+  ];
+
+  return (
+    <>
+      <ArticleJsonLd
+        title={myth.title}
+        description={myth.excerpt}
+        url={SITE_URL ? `${SITE_URL}/mitos/${myth.slug}` : undefined}
+        imageUrl={myth.image_url}
+        keywords={myth.keywords?.length ? myth.keywords.join(", ") : undefined}
+        siteUrl={SITE_URL}
+        datePublished={myth.created_at ? new Date(myth.created_at).toISOString() : undefined}
+        dateModified={latestIsoDate(myth.updated_at, myth.editorialUpdatedAt)}
+        citations={sourceUrls(myth)}
+      />
+      {SITE_URL && (
+        <BreadcrumbJsonLd
+          items={[
+            { name: "Inicio", url: `${SITE_URL}/` },
+            { name: "Mitos", url: `${SITE_URL}/mitos` },
+            ...(myth.region
+              ? [{ name: myth.region, url: `${SITE_URL}/regiones/${regionSlug}` }]
+              : []),
+            { name: myth.title, url: `${SITE_URL}/mitos/${myth.slug}` },
+          ]}
+        />
+      )}
+      <MythDetailTemplate
+        myth={mythProps}
+        related={related}
+        breadcrumb={breadcrumb}
+        map={map}
+        commentsSlot={
+          <CommentThread
+            mythId={myth.id}
+            mythTitle={myth.title}
+            initialComments={approvedComments}
+            // La plantilla ya abre la sección con un h3 ("Voces de la
+            // comunidad"), así que el titular del hilo entra como hermano y no
+            // salta de nivel.
+            headingAs="h3"
+          />
+        }
+      />
+    </>
+  );
+}

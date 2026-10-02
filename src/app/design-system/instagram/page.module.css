@@ -1,0 +1,341 @@
+.page {
+  min-height: 100vh;
+  padding: 72px clamp(24px, 5vw, 88px) 56px;
+  color: #f2eee3;
+  background:
+    radial-gradient(circle at 18% -10%, rgb(60 83 76 / 32%), transparent 34%),
+    #111716;
+}
+
+.exportPage {
+  min-height: 100vh;
+  margin: 0;
+  background: #111716;
+}
+
+.exportCover {
+  width: 1080px;
+}
+
+.exportCover .immersiveText {
+  right: 105px;
+  bottom: 95px;
+  left: 105px;
+}
+
+.exportCover .immersiveText span {
+  margin: 0 0 20px 15px;
+  font-size: 28px;
+}
+
+.exportCover .immersiveText strong {
+  font-size: 160px;
+}
+
+.exportCover .archive {
+  padding: 45px;
+}
+
+.exportCover .archiveFrame,
+.exportCover .archive::after {
+  inset: 45px;
+}
+
+.exportCover .archiveTopline {
+  top: 85px;
+  right: 85px;
+  left: 85px;
+  font-size: 23px;
+}
+
+.exportCover .archiveText {
+  right: 85px;
+  bottom: 85px;
+  left: 85px;
+  padding: 210px 45px 45px;
+}
+
+.exportCover .archiveText strong {
+  font-size: 150px;
+}
+
+.exportCover .folio {
+  grid-template-columns: 210px 1fr;
+}
+
+.exportCover .folioRail strong {
+  top: 85px;
+  font-size: 120px;
+}
+
+.exportCover .folioRail span {
+  bottom: 75px;
+  font-size: 23px;
+}
+
+.header {
+  width: min(780px, 100%);
+  margin: 0 auto 54px;
+}
+
+.kicker {
+  margin: 0 0 18px;
+  font-family: var(--font-body), sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #c5aa63;
+}
+
+.header h1 {
+  margin: 0;
+  font-family: var(--font-display), serif;
+  font-size: clamp(48px, 7vw, 84px);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.header > p:last-child {
+  max-width: 650px;
+  margin: 24px 0 0;
+  font-family: var(--font-body), sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #aeb8b3;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 432px));
+  justify-content: center;
+  gap: clamp(28px, 4vw, 56px);
+}
+
+.study {
+  min-width: 0;
+}
+
+.cover {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  isolation: isolate;
+  background: #17201e;
+  box-shadow: 0 30px 70px rgb(0 0 0 / 28%);
+}
+
+.cover img {
+  object-fit: cover;
+}
+
+.immersiveImage {
+  object-position: 50% 50%;
+  z-index: -2;
+}
+
+.immersiveShade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgb(5 18 19 / 8%) 42%, rgb(5 18 19 / 82%) 100%),
+    linear-gradient(90deg, rgb(5 18 19 / 20%), transparent 50%);
+}
+
+.immersiveText {
+  position: absolute;
+  right: 42px;
+  bottom: 38px;
+  left: 42px;
+  color: #f4efe1;
+  text-shadow: 0 3px 28px rgb(0 0 0 / 56%);
+}
+
+.immersiveText span {
+  display: block;
+  margin: 0 0 8px 6px;
+  font-family: var(--font-body), sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+}
+
+.immersiveText strong {
+  display: block;
+  font-family: var(--font-display), serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+}
+
+.archive {
+  padding: 18px;
+  background: #d9c7a4;
+}
+
+.archiveFrame {
+  position: absolute;
+  inset: 18px;
+  overflow: hidden;
+  background: #24302d;
+}
+
+.archiveImage {
+  object-fit: contain !important;
+  object-position: 50% 50%;
+}
+
+.archive::after {
+  position: absolute;
+  inset: 18px;
+  content: "";
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgb(244 239 225 / 45%);
+}
+
+.archiveTopline {
+  position: absolute;
+  top: 34px;
+  right: 34px;
+  left: 34px;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  font-family: var(--font-body), sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f4efe1;
+  text-shadow: 0 2px 14px rgb(0 0 0 / 90%);
+}
+
+.archiveText {
+  position: absolute;
+  right: 34px;
+  bottom: 34px;
+  left: 34px;
+  z-index: 1;
+  padding: 84px 18px 18px;
+  color: #f4efe1;
+  background: linear-gradient(180deg, transparent, rgb(9 20 20 / 90%) 72%);
+}
+
+.archiveText strong {
+  display: block;
+  font-family: var(--font-display), serif;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+.archiveText span {
+  display: block;
+  margin-top: 12px;
+  font-family: var(--font-body), sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.folio {
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  background: #e7dfcc;
+}
+
+.folioRail {
+  position: relative;
+  z-index: 1;
+  color: #172220;
+  background: #e7dfcc;
+  box-shadow: 12px 0 26px rgb(0 0 0 / 16%);
+}
+
+.folioRail strong {
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  font-family: var(--font-display), serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  transform: translateX(-50%) rotate(90deg);
+  transform-origin: 50% 50%;
+}
+
+.folioRail span {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  left: 0;
+  font-family: var(--font-body), sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.folioImage {
+  position: relative;
+  min-width: 0;
+}
+
+.folioImage img {
+  object-position: 50% 50%;
+}
+
+.caption {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 16px;
+  margin-top: 22px;
+  font-family: var(--font-body), sans-serif;
+}
+
+.caption > span {
+  padding-top: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: #c5aa63;
+}
+
+.caption strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.caption p {
+  margin: 6px 0 0;
+  font-size: 12px;
+  line-height: 1.55;
+  color: #8f9b96;
+}
+
+.footer {
+  margin-top: 64px;
+  font-family: var(--font-body), sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #67716d;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: minmax(0, 432px);
+  }
+}

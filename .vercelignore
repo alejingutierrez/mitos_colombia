@@ -1,0 +1,27 @@
+.claude
+.git
+.next
+.playwright-cli
+.vercel/.env*.local
+.vercel/node
+.vercel/output
+.DS_Store
+node_modules
+output
+artifacts/
+
+.env
+.env.*
+!.env.example
+
+# Biblioteca de video: 78 MB que el sitio no lee ni en build ni en runtime
+# (las imágenes publicadas se sirven desde Vercel Blob). Está en git para no
+# perderla, pero no tiene por qué viajar en cada despliegue.
+content/videos
+
+data/*.sqlite
+data/*.sqlite-shm
+data/*.sqlite-wal
+data/*.db
+mitos.db
+myths.db
