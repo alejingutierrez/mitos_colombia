@@ -206,6 +206,19 @@
                 "timeoutSeconds": "600",
                 "runCommand": [
                   "set -eu",
+                  "work=\"/var/lib/mitos/releases/$SSM_Sha/host\"",
+                  "install -d -m 0750 \"$work\"",
+                  "aws s3 cp \"s3://mitos-colombia-907264907058-operations/ci/$SSM_Sha/release.json\" \"$work/release.json\" --only-show-errors",
+                  "jq -e --arg sha \"$SSM_Sha\" --arg digest \"$SSM_Digest\" '.sha==$sha and .digest==$digest and .sourceVerified==true and .schemaVersion==\"002-admin-jobs\"' \"$work/release.json\" >/dev/null",
+                  "if jq -e '.hostHelpers != null' \"$work/release.json\" >/dev/null; then",
+                  "  jq -e '.hostHelpers | keys == [\"deploy-inbox.sh\",\"deploy.sh\"] and all(.[]; test(\"^[a-f0-9]{64}$\"))' \"$work/release.json\" >/dev/null",
+                  "  for helper in deploy.sh deploy-inbox.sh; do",
+                  "    aws s3 cp \"s3://mitos-colombia-907264907058-operations/ci/$SSM_Sha/host/$helper\" \"$work/$helper\" --only-show-errors",
+                  "    sum=$(jq -r --arg name \"$helper\" '.hostHelpers[$name]' \"$work/release.json\")",
+                  "    (cd \"$work\" && printf '%s  %s\\n' \"$sum\" \"$helper\" | sha256sum --check)",
+                  "  done",
+                  "  for helper in deploy.sh deploy-inbox.sh; do install -m 0700 \"$work/$helper\" \"/opt/mitos/$helper.next\"; mv \"/opt/mitos/$helper.next\" \"/opt/mitos/$helper\"; done",
+                  "fi",
                   "/opt/mitos/deploy.sh \"$SSM_Sha\" \"$SSM_Digest\""
                 ]
               }
@@ -221,7 +234,8 @@
             "Key": "ManagedBy",
             "Value": "CloudFormation"
           }
-        ]
+        ],
+        "UpdateMethod": "NewVersion"
       }
     },
     "SnapshotDocument": {

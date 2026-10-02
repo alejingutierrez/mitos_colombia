@@ -28,7 +28,12 @@ test -e /var/lib/mitos/locks/work.lock || install -o 1001 -g 1001 -m 0640 /dev/n
 exec 8>/var/lib/mitos/locks/work.lock
 flock -n 8 || { echo 'An editorial task is active; release deferred without interrupting it.' >&2; exit 4; }
 test -s /etc/nginx/mitos-upstream.conf || { echo 'A recoverable previous upstream is required.' >&2; exit 4; }
-available=$(awk '/MemAvailable:/{print $2}' /proc/meminfo)
+# Let a short snapshot/cache burst settle without lowering the safety margin.
+for attempt in $(seq 1 30); do
+  available=$(awk '/MemAvailable:/{print $2}' /proc/meminfo)
+  (( available >= 900000 )) && break
+  sleep 2
+done
 (( available >= 900000 )) || { echo 'Not enough memory for a candidate without risking the active release.' >&2; exit 4; }
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin "$registry" >/dev/null
 docker pull "$image" >/dev/null
@@ -50,8 +55,8 @@ had_worker=false
 admin_changed=false
 admin_saved=false
 had_admin=false
-old_admin="mitos-admin-worker-before-$sha"
-old_worker="mitos-payment-worker-before-$sha"
+old_admin="mitos-admin-worker-before-$sha-$$"
+old_worker="mitos-payment-worker-before-$sha-$$"
 if test -s /var/lib/mitos/active.json; then cp /var/lib/mitos/active.json "$workdir/previous-active.json"; else rm -f "$workdir/previous-active.json"; fi
 cleanup() {
   result=$?
