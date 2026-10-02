@@ -1,3 +1,4 @@
+import { sourceStartupWritesBlocked } from "../../runtime/source-cutover.mjs";
 import { unstable_cache } from "next/cache";
 import {
   getSqlClient,
@@ -100,6 +101,7 @@ function buildBasePrompt(card) {
 }
 
 async function ensureTarotTable() {
+  if (sourceStartupWritesBlocked()) return;
   if (isPostgres()) {
     const sql = getSqlClient();
     await sql.query(`
@@ -338,6 +340,7 @@ async function seedTarotCards() {
 }
 
 async function ensureTarotSeeded() {
+  if (sourceStartupWritesBlocked()) return;
   await ensureTarotTable();
   await seedTarotCards();
 }

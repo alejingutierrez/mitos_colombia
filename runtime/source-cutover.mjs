@@ -3,6 +3,7 @@
 import {bridgeHeaders} from './bridge-address.mjs';
 export const AWS_WEB='https://d1ufovyt065ux1.cloudfront.net';
 export const AWS_CALLBACK=AWS_WEB+'/api/tarot/bold/events';
+export function sourceStartupWritesBlocked(env=process.env){return env.VERCEL==='1'&&env.VERCEL_ENV==='production'&&['freeze','aws'].includes(env.MITOS_SOURCE_BRIDGE_MODE);}
 const readApis=/^\/api\/(?:myths(?:\/[^/]+)?|taxonomy|search|mapa|comments)$/;
 export function sourceDecision(request,env=process.env){
  const mode=env.MITOS_SOURCE_BRIDGE_MODE;
