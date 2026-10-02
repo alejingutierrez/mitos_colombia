@@ -1,5 +1,7 @@
 # Primer corte y migración del registro
 
+Estado al 2026-10-02: corte público aceptado, writer RDS único, dominio transferido, releases main y recuperación de imagen comprobados. El origen Vercel quedó pausado/desconectado tras el TTL; el procedimiento siguiente se conserva como runbook y **no autoriza repetir el restore inicial**. [Cierre y autorización pendiente del taller](CIERRE.md).
+
 Estado al **2026-10-02 16:36 UTC**: web aceptada en AWS, RDS es el único writer, ambos workers activos y DNS apex/www cambiado por alias A/AAAA a CloudFront. Registro, privacidad y renovación del dominio ya están en AWS. Las pruebas públicas de cuentas, edición, compra preparada sin cobro y callbacks SQS pasaron. El origen permanece congelado y funciona como puente durante la propagación DNS. El taller local, el primer release automático desde main y el retiro de dependencias anteriores se cierran por separado.
 
 Los pasos siguientes documentan el procedimiento del corte. Las frases de preparación anteriores quedan sustituidas por los recibos de ejecución en `receipts/production-accepted.json` y `receipts/public-acceptance.json`. **No ejecutar de nuevo la copia inicial: el writer RDS ya fue abierto.**
