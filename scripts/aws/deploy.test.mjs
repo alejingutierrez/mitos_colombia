@@ -79,7 +79,11 @@ async function scenario(failure='',firstRelease=false,retry=false,initial=false)
   await writeFile(root+'/etc/nginx/mitos-upstream.conf','upstream mitos_web { server 127.0.0.1:3102; }\n');
   if(!firstRelease&&!initial)await writeFile(root+'/var/lib/mitos/active.json',JSON.stringify(old));
   const containers=firstRelease?{}:{[old.container]:{running:true,port:3102,image:'old'},'mitos-payment-worker':{running:true,port:null,image:'old'},'mitos-admin-worker':{running:true,port:null,image:'old'}};
-  if(retry)containers['mitos-web-'+sha]={running:false,port:3101,image};
+  if(retry){
+   containers['mitos-web-'+sha]={running:false,port:3101,image};
+   containers['mitos-admin-worker-before-'+sha]={running:false,port:null,image:'retained-older'};
+   containers['mitos-payment-worker-before-'+sha]={running:false,port:null,image:'retained-older'};
+  }
   const prefix='build-input/snapshots/00000000-0000-0000-0000-000000000000',snapshotSha256='e'.repeat(64);
   const parity={kind:'frozen-owned-parity',writer:'source-frozen',productionAccepted:false,prefix,snapshotSha256,tables:Object.fromEntries(Array.from({length:20},(_,i)=>['table'+i,{count:1}]).concat([['myths',{count:596}]]))};
   const preflight={kind:'initial-cut-preflight',sha,digest,snapshotSha256,at:new Date().toISOString(),configurationBound:true,commerceQaPassed:true,callbackCaptureQaPassed:failure!=='capture',finalMediaDeltaVerified:true,finalWorkshopDeltaVerified:true,sourceFrozen:true,targetWritersStopped:true};
@@ -127,6 +131,8 @@ test('retry removes only its abandoned candidate and completes a new release',as
  const {result,state,active}=await scenario('',false,true);
  assert.equal(result.status,0,result.stderr);
  assert.equal(active.sha,sha);assert.equal(state.proxy,3101);
+ assert.equal(state.containers['mitos-admin-worker-before-'+sha].image,'retained-older');
+ assert.equal(state.containers['mitos-payment-worker-before-'+sha].image,'retained-older');
  assert.equal(state.containers['mitos-payment-worker'].image,image);
  assert.equal(state.containers['mitos-admin-worker'].image,image);
  assert.equal(state.containers[old.container].running,false);

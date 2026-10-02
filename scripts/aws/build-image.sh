@@ -33,5 +33,8 @@ docker create --name mitos-assets "$image"
 docker cp mitos-assets:/app/.next/static build-input/static
 docker rm mitos-assets
 aws s3 cp build-input/static "s3://mitos-colombia-$AWS_ACCOUNT_ID-media/static/$GITHUB_SHA/_next/static/" --recursive --cache-control 'public,max-age=31536000,immutable' --only-show-errors
+for helper in deploy.sh deploy-inbox.sh; do
+  aws s3 cp "infra/aws/host/$helper" "s3://$OPERATIONS_BUCKET/ci/$GITHUB_SHA/host/$helper" --only-show-errors
+done
 node scripts/aws/release-receipt.mjs "$digest" > build-input/release.json
 aws s3 cp build-input/release.json "s3://$OPERATIONS_BUCKET/ci/$GITHUB_SHA/release.json" --only-show-errors
